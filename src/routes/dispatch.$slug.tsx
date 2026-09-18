@@ -1,0 +1,214 @@
+import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { NarrativeFrames } from "@/components/narrative-frames";
+import { EraCompare } from "@/components/era-compare";
+import { getPost, nextInSeries, SITE } from "@/lib/content";
+import { nextChapter } from "@/lib/flow";
+import { essayHead } from "@/lib/share-head";
+import { DispatchMenu } from "@/components/dispatch-menu";
+
+export const Route = createFileRoute("/dispatch/$slug")({
+  component: EssayPage,
+  loader: ({ params }) => {
+    const post = getPost(params.slug);
+    if (!post) throw notFound();
+    return post;
+  },
+  head: ({ loaderData }) => (loaderData ? essayHead(loaderData) : {}),
+});
+
+function LinkedText({ text }: { text: string }) {
+  const parts = text.split(/(https?:\/\/[^\s]+)/g);
+  return (
+    <>
+      {parts.map((part, i) =>
+        part.startsWith("http") ? (
+          <a
+            key={i}
+            href={part}
+            className="break-all text-sage"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {part}
+          </a>
+        ) : (
+          <span key={i}>{part}</span>
+        ),
+      )}
+    </>
+  );
+}
+
+function EssayPage() {
+  const post = Route.useLoaderData();
+  const next = nextInSeries(post.slug);
+  const door = nextChapter(post.slug);
+
+  return (
+    <main>
+      <div className="relative min-h-[52vh] overflow-hidden">
+        <img
+          src={post.image}
+          alt={post.imageAlt}
+          className="absolute inset-0 size-full object-cover"
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-bg via-bg/60 to-bg/20" />
+        <div className="relative mx-auto flex min-h-[52vh] max-w-3xl flex-col justify-end px-4 pb-10 sm:px-6">
+          <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+            {post.series || post.category}
+          </p>
+          <h1 className="mt-3 font-display text-5xl leading-[0.92] font-bold tracking-wide uppercase sm:text-7xl">
+            {post.title}
+          </h1>
+        </div>
+      </div>
+
+      <article className="mx-auto max-w-2xl px-4 py-12 sm:px-6">
+        <p className="font-serif text-2xl leading-snug text-fg/90">{post.dek}</p>
+        <p className="mt-3 font-display text-xs tracking-[0.16em] text-muted uppercase">
+          {SITE.author} · {SITE.copyright}
+        </p>
+        {post.receipts?.length ? (
+          <div className="mt-8 rounded-lg bg-surface p-4">
+            <p className="font-display text-xs font-semibold tracking-[0.18em] text-sage uppercase">
+              Receipts
+            </p>
+            <ul className="mt-3 space-y-2">
+              {post.receipts.map((r) => (
+                <li key={r.href}>
+                  <a
+                    href={r.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm text-sage underline-offset-2 hover:underline"
+                  >
+                    {r.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+        <div className="mt-10 space-y-6">
+          {post.body.map((block, i) => {
+            if (block.type === "h") {
+              return (
+                <h2
+                  key={i}
+                  className="pt-4 font-display text-2xl font-semibold tracking-wide uppercase"
+                >
+                  {block.text}
+                </h2>
+              );
+            }
+            if (block.type === "ul") {
+              return (
+                <ul
+                  key={i}
+                  className="list-disc space-y-3 pl-6 font-serif text-lg leading-relaxed text-fg/85"
+                >
+                  {block.items.map((item) => (
+                    <li key={item.slice(0, 48)}>
+                      <LinkedText text={item} />
+                    </li>
+                  ))}
+                </ul>
+              );
+            }
+            if (block.type === "q") {
+              return (
+                <blockquote
+                  key={i}
+                  className="border-l-2 border-sage pl-5 font-serif text-xl leading-snug text-fg/90"
+                >
+                  {block.text}
+                </blockquote>
+              );
+            }
+            return (
+              <p key={i} className="font-serif text-lg leading-relaxed text-fg/85">
+                <LinkedText text={block.text} />
+              </p>
+            );
+          })}
+        </div>
+        {post.eras?.length ? (
+          <div className="sm:-mx-8 lg:-mx-24">
+            <EraCompare topics={post.eras} />
+          </div>
+        ) : null}
+        {post.frames?.length ? (
+          <div className="sm:-mx-8 lg:-mx-24">
+            <NarrativeFrames frames={post.frames} />
+          </div>
+        ) : null}
+        {post.video ? (
+          <video
+            className="mt-8 w-full rounded-lg bg-black"
+            controls
+            playsInline
+            poster={post.image}
+            src={post.video}
+          />
+        ) : null}
+        {door ? (
+          <Link
+            to="/dispatch/$slug"
+            params={{ slug: door.slug }}
+            className="mt-12 flex items-center justify-between gap-4 rounded-lg bg-sage px-5 py-4 text-sage-fg no-underline"
+          >
+            <span>
+              <span className="block font-display text-xs tracking-[0.18em] uppercase">
+                Next door · {door.n}
+              </span>
+              <span className="mt-1 block font-display text-lg font-semibold tracking-wide uppercase">
+                {door.title}
+              </span>
+            </span>
+            <span className="font-display text-xs tracking-[0.16em] uppercase">
+              Read →
+            </span>
+          </Link>
+        ) : null}
+        {next && next.slug !== door?.slug ? (
+          <Link
+            to="/dispatch/$slug"
+            params={{ slug: next.slug }}
+            className="mt-12 flex items-center justify-between gap-4 rounded-lg bg-surface px-5 py-4 text-fg no-underline"
+          >
+            <span>
+              <span className="block font-display text-xs tracking-[0.18em] text-sage uppercase">
+                Next in {post.series}
+              </span>
+              <span className="mt-1 block font-display text-lg font-semibold tracking-wide uppercase">
+                {next.title}
+              </span>
+            </span>
+            <span className="font-display text-xs tracking-[0.16em] text-muted uppercase">
+              {next.readMinutes} min →
+            </span>
+          </Link>
+        ) : null}
+        <p className="mt-12 font-display text-xs tracking-[0.18em] text-muted uppercase">
+          <Link to="/dispatch" className="text-sage no-underline">
+            ← The Dispatch
+          </Link>
+        </p>
+      </article>
+
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-2xl px-4 py-14 sm:px-6">
+          <h2 className="font-display text-2xl font-semibold tracking-wide uppercase">
+            Another file
+          </h2>
+          <p className="mt-2 text-sm text-muted">
+            The rest stay closed until you open one.
+          </p>
+          <div className="mt-6">
+            <DispatchMenu currentSlug={post.slug} />
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
