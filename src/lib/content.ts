@@ -1,8 +1,9 @@
 export type Block =
   | { type: "p" | "h" | "q"; text: string }
-  | { type: "ul"; items: string[] };
+  | { type: "ul"; items: string[] }
+  | { type: "img"; src: string; alt: string };
 
-export type Frame = { tag: string; they: string; tape: string };
+export type Frame = { tag: string; they: string; tape: string; href?: string };
 
 export type EraRow = { who: string; years: string; line: string; href?: string };
 export type EraTopic = { topic: string; rows: EraRow[] };
@@ -43,7 +44,7 @@ export type Product = {
 export const SITE = {
 	name: "Swamp Force",
 	domain: "swampforce.com",
-	tagline: "Stand with Trump. Save the nation. Secure the elections. Congress works for us — or we send them home.",
+	tagline: "Save the nation. Secure the elections. Congress works for us — or we send them home.",
 	kicker: "Join Swamp Force. Let them hear us now.",
 	xHandle: "SwampForce",
 	email: "editor@swampforce.com",
@@ -61,201 +62,244 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/essay-find-them.jpg",
 		imageAlt: "Child silhouettes behind a chain-link cage. They hid the children.",
-		featured: true,
 		series: "The Search",
 		part: 1,
-		receipts: [
-			{ label: "HHS / Grassley — 468,736 unaccompanied children in HHS care, FY2021–FY2024", href: "https://www.judiciary.senate.gov/press/rep/releases/new-hhs-data-confirms-biden-harris-admin-placed-tens-of-thousands-of-migrant-children-with-unvetted-sponsors-declined-recommended-home-studies" },
-			{ label: "DHS / NewsNation — 146,000 located; ~300,000 still unaccounted, June 2026", href: "https://www.newsnationnow.com/us-news/immigration/border-coverage/unaccompanied-minors-located-trump/" },
-			{ label: "The Hill — Mullin: 146k found of 450k smuggled under Biden", href: "https://thehill.com/homenews/administration/5920074-146k-unaccompanied-migrant-children-us-dhs/" },
-			{ label: "DHS — 65,000 ignored reports; 7,300 trafficking reports in the pile", href: "https://www.dhs.gov/news/2025/07/25/dhs-leads-efforts-to-rescue-child-victims-of-sex-and-labor-trafficking" },
-			{ label: "NYT — migrant children in U.S. labor, 2023", href: "https://www.nytimes.com/2023/02/25/us/unaccompanied-migrant-child-workers-exploitation.html" },
-		],
+		receipts: [],
 		body: [
 			{
 				type: "p",
-				text: "There is no third chair. You stand with the children still unaccounted for, or you stand with the officials who lost them and still block the search. This journal stands with the children. Not as a jersey. As a missing-persons file the size of a city. ICE owns that search. Until they are found, this is the lead."
+				text: "This journal treats missing children as a missing-persons file, not as a campaign costume. The [Department of Homeland Security stated in February 2026](https://www.dhs.gov/news/2026/02/24/making-america-safe-again-state-dhs-under-president-trump-and-secretary-noem) that the prior administration lost more than 450,000 unaccompanied children at the southwest border, and that a joint DHS and HHS effort had located 145,000 of them. The remainder is still a search. Anyone who tries to stop that search has chosen a side.",
 			},
 			{
 				type: "q",
-				text: "Find them. All of them. Anyone standing in the door chose the sponsor."
+				text: "Find them. All of them. The search belongs to the agencies charged with the children, not to a protest line at the door.",
 			},
 			{
 				type: "p",
-				text: "DHS puts the Biden-era pipeline at about 450,000 children smuggled across the southwest border and released to sponsors. HHS's own count, released by Chairman Grassley: 468,736 unaccompanied children in ORR care from FY2021 through FY2024. In June 2026, DHS said a joint ICE–HHS effort had located 146,000. Nearly 300,000 remain unaccounted for. That is not a caption. That is a welfare check that was never finished, times a third of a million names."
+				text: "The numbers have to be named as the government named them. The [DHS Office of Inspector General reported in August 2024 (OIG-24-46)](https://www.oig.dhs.gov/sites/default/files/assets/2024-08/OIG-24-46-Aug24.pdf) that ICE transferred more than 448,000 unaccompanied children to HHS from fiscal years 2019 through 2023, that more than 32,000 of those children failed to appear for immigration court, and that as of May 2024 ICE had not served a Notice to Appear on more than 291,000 of them. That is an accounting failure written by the government’s own inspector, not by a panel.",
+			},
+			{
+				type: "p",
+				text: "HHS publishes current counts of children still in Office of Refugee Resettlement care on its [unaccompanied children data page](https://www.hhs.gov/programs/social-services/unaccompanied-children/latest-uc-data-fy2024/index.html). Those monthly tables are the live inventory. They are not a complete map of every child already released to a sponsor. The inspector general’s file and the HHS tables have to be read together. One is the pipeline. The other is who is still in a bed tonight.",
 			},
 			{
 				type: "h",
-				text: "What they endure — the record, not a scene"
+				text: "What the statutes already say",
 			},
 			{
 				type: "p",
-				text: "This page will not describe a child's body to make a point. The file is ugly enough in nouns. Debt bondage to the smuggler who is still on the phone. Labor that is not a summer job: roofing, slaughter, night shifts, a 14-year-old under a name that is not hers. Sexual violence on the journey and at the sponsor's address — named as the crime it is, not drawn. Hunger as a tool. A locked room. A threat against the family still south of the river if the child talks. HHS left more than 65,000 reports sitting. Inside that pile: more than 7,300 reports of human trafficking. The New York Times, 2023: migrant children in American plants and on American roofs while the agencies that placed them lost the forwarding address. Grassley: 11,488 children placed with non-parent sponsors who were not fingerprinted. More than 79,000 children under twelve released without a home study. That is the endurance. Not a movie. A system."
+				text: "Sex trafficking of children is already a federal felony under [18 U.S.C. § 1591](https://www.law.cornell.edu/uscode/text/18/1591). Forced labor is already a federal felony under [18 U.S.C. § 1589](https://www.law.cornell.edu/uscode/text/18/1589). Bringing in and harboring certain aliens is already a federal felony under [8 U.S.C. § 1324](https://www.law.cornell.edu/uscode/text/8/1324). Homeland Security Investigations exists to knock on a door when a report sits in a drawer. If a public official demands that ICE be kept off that door, the official is not confused about the statute. The official is choosing that the report not be worked.",
 			},
 			{
 				type: "p",
-				text: "A politician who wants ICE kept off that door is not confused about the endurance. He is choosing it. HSI knocks because a report sat in a drawer. If you stop the knock, the report dies, and the child stays in the room. Call that protest if you need the costume. The child does not get a costume. The child gets another night."
-			},
-			{
-				type: "h",
-				text: "The scream, without a party hat"
+				text: "This page will not describe a child’s body to score a point. The file is ugly enough in nouns the Code already uses: debt bondage to a smuggler, labor that is not a summer job, sexual violence named as the crime it is. The remedy is the search, the warrant, the home visit, and the court date. The remedy is not a slogan.",
 			},
 			{
 				type: "p",
-				text: "Epstein is a real file. Play it. Publish the names. Using it as the only file is how a party that ran the border for four years steals the room. Open-border victims are not a narrative. They are the inventory the cartels sold and HHS mislaid. The hypocrisy is the indifference: a chyron about a billionaire's island, and a shrug about a 12-year-old handed to a stranger with no fingerprint card because the White House needed the numbers off the television."
-			},
-			{
-				type: "p",
-				text: "18 U.S.C. 1591 already names sex trafficking of children. 1589 already names forced labor. You do not need a new slogan. You need the door opened, the list worked, the child seen by a person whose job is the child and not the chyron. Trump's agencies found 146,000. They are still looking. The world does not get to look away because the victims did not vote here. A moral compass that cannot find a missing child is not a compass. Find them. The next two pieces are who got paid for the door, and which party now wants the search abolished. Start here. Stay here until the count is zero."
-			},
-			{
-				type: "p",
-				text: "Independent. No PAC. Not a call to violence. A missing-persons file, on the record, until they are found."
+				text: "Independent. No PAC. This is not a call to violence. It is a demand that every name in that file be found, and that every official who blocks the finding be removed from the work by the voters and by the law.",
 			},
 		],
 	},
 	{
 		slug: "that-is-not-why-they-are-elected",
 		title: "They forgot who they work for.",
-		dek: "Congress is paid by you. One leader said he wants to break your spirit.",
+		dek: "Congress is paid by the people. One leader said he wants to break the people's spirit.",
 		date: "2026-09-17",
 		category: "Dispatch",
-		readMinutes: 4,
-		image: "/images/essay-not-why.jpg",
-		imageAlt: "Empty House chamber. They do not represent you.",
+		readMinutes: 3,
+		image: "/images/capitol.jpg",
+		imageAlt: "Empty House chamber. They do not represent the people.",
 		featured: true,
 		series: "The Republic",
-		part: 4,
-		receipts: [
-			{ label: "NYT Magazine, Sept. 16, 2026 — McCaul: ‘fight and kill the other side’", href: "https://www.nytimes.com/2026/09/16/magazine/congress-trump-midterms.html" },
-			{ label: "C-SPAN — Jeffries, April 22, 2026: ‘maximum warfare, everywhere, all the time’", href: "https://www.c-span.org/program/news-conference/house-democrats-hold-news-conference-on-virginia-redistricting-vote/677945" },
-			{ label: "Jeffries on his own account — same phrase", href: "https://x.com/hakeemjeffries/status/2046754383707148505" },
-			{ label: "Axios — Jeffries, April 27, 2026: ‘I don’t give a damn’", href: "https://www.axios.com/2026/04/27/hakeem-jeffries-trump-whcd-maximum-warfare" },
-			{ label: "Fox — Jeffries, May 19, 2026, CAP: ‘break them’ / ‘break their spirit’", href: "https://www.foxnews.com/politics/hakeem-jeffries-shredded-disgustingly-violent-call-dems-break-spirit-maga" },
-			{ label: "GOPAC 1990 — Language: A Key Mechanism of Control", href: "https://www.npr.org/2018/11/01/662906525/combative-tribal-angry-newt-gingrich-set-the-stage-for-trump-journalist-says" },
-			{ label: "Gallup, April 2026 — Congress approval 10%, disapproval 86%", href: "https://news.gallup.com/poll/708722/disapproval-congress-ties-record-high.aspx" },
-			{ label: "Jeffries / Clark / Aguilar — Sept. 1, 2026: ‘breach of trust,’ ‘serious response’", href: "https://jeffries.house.gov/2026/09/01/joint-democratic-leadership-statement-on-rule-vote/" },
-			{ label: "CNN — Golden: constituents don’t care about ‘team sports’ of procedure", href: "https://www.cnn.com/2026/09/01/politics/democrats-mike-johnson-revolt" },
-			{ label: "CNN — Clark, Sept. 16: ‘team players get to sit on exclusive committees’", href: "https://www.cbs58.com/news/two-house-democrats-defect-again-on-key-vote-for-trump-agenda" },
-			{ label: "Constitution Annotated — Art. I §5: expulsion requires two-thirds", href: "https://constitution.congress.gov/browse/essay/artI-S5-C2-2-1/ALDE_00013580/" },
-			{ label: "House history — expulsion used six times in two centuries", href: "https://history.house.gov/Institution/Origins-Development/Discipline/" },
-			{ label: "Washington Post — Soros tens of millions in DA races", href: "https://www.washingtonpost.com/politics/2025/12/03/george-soros-prosecutors-campaign-finance/" },
-			{ label: "Open Society — $1.2B expenditures in 2024", href: "https://www.opensocietyfoundations.org/" },
-		],
+		part: 1,
+		receipts: [],
 		body: [
-			{ type: "p", text: "The Times printed the job as the floor now understands it. McCaul, leaving after twenty-two years: you are elected to fight and kill the other side. That is not why they are elected. They are elected to represent a district under Article I. The oath is 5 U.S.C. §3331: this Constitution, no mental reservation. Gallup: ten percent approve. They are going home on a continuing resolution through December 11. If the tent takes the gavel, this language becomes the rules." },
-			{ type: "q", text: "An employee does not declare war on the people who pay him." },
-			{ type: "p", text: "Hakeem Jeffries is paid by the Treasury. April 22, on camera: ‘maximum warfare, everywhere, all the time.’ After a shooting, he stood by it. ‘I don’t give a damn… get lost.’ May 19: ‘our goal is to break them.’ Then: ‘beat them electorally, and then we have to break their spirit.’ The first line they will tell you was about maps. Put the maps in the file. Then read the second room. Tens of millions of Americans — the principal — described as a spirit to be broken after the count." },
-			{ type: "p", text: "This month he showed you the enforcement. Golden of Maine and Gluesenkamp Perez of a Trump district voted two rule votes so a bill could reach the floor. Golden: constituents don’t care about team sports. Leadership: ‘breach of trust,’ ‘serious response,’ committees as a leash. Clark, this morning: ‘team players get to sit on exclusive committees.’ There is no oath to the caucus. A machine that punishes you for voting Maine is occupying the seat." },
-			{ type: "q", text: "If you cannot vote your district without being punished, you are not in a party. You are in a crew." },
-			{ type: "p", text: "They will not expel him. Article I, Section 5 is two-thirds. The House has used it six times in two centuries. Censure is a press release. The Speech or Debate clause was written for legislative work, not a war vocabulary. Immediate removal is not a button. November 3 still is. A caucus that punishes Golden and will not punish a leader for talking about breaking your spirit has told you the hierarchy: the crew first, the country never." },
-			{ type: "ul", items: [
-				"The people are the principal. Members are agents. An agent does not declare war on the principal.",
-				"A continuing resolution is not a session. It is an absence with a stamp.",
-				"Ten percent approval is not a mandate to break anyone’s spirit. It is a pink slip.",
-				"Watch the tape. If he wants to walk it back, he has the same cameras. Until then, send them home.",
-			] },
-			{ type: "p", text: "Independent. No PAC. Not a call to violence. Documentation, publication, the ballot. The people still own the country." },
+			{
+				type: "p",
+				text: "Members of the House are not hired to destroy the other party. They are hired to represent a district under [Article I of the Constitution](https://constitution.congress.gov/constitution/article-1/). The oath they take is [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331): support and defend this Constitution, without mental reservation. An employee who talks about the people who pay him as a spirit to be broken has left that oath.",
+			},
+			{
+				type: "q",
+				text: "An employee does not declare war on the people who pay him.",
+			},
+			{
+				type: "p",
+				text: "A Texas Republican who is leaving after twenty-two years said the quiet part on the way out. Representative Michael McCaul, former chairman of Homeland Security and of Foreign Affairs, is not running again. On July 12, 2026 he sat for an exit interview on [Fox News Radio’s From Washington](https://radio.foxnews.com/2026/07/12/from-washington-rep-michael-mccaul-on-two-decades-of-public-service-and-the-changing-face-of-congress/). He named internecine warfare. He named a House that had stopped looking like a job. He was describing what the chamber had become, not handing out an assignment. The New York Times Magazine later printed the sentences in full, September 16, 2026: “Internecine warfare is what has become vogue.” Then: “You’re elected not to get along with the other side and get good things done for the country. You’re elected to fight and kill the other side.” [Those lines are here.](https://www.nytimes.com/2026/09/16/magazine/congress-trump-midterms.html) He also said that when he arrived, voting against the rule was punished, and that the discipline is gone. That sentence is McCaul’s, not Hakeem Jeffries’s. This journal will not move it onto the other man’s tape. It will not pretend McCaul was recruiting a riot. He was a Member walking out the door, naming the job as a kill. That is still not Article I. That is still not the oath. That is why this essay exists.",
+			},
+			{
+				type: "p",
+				text: "House Minority Leader Hakeem Jeffries said, on camera at a news conference carried in full by [C-SPAN on April 22, 2026](https://www.c-span.org/program/news-conference/house-democrats-hold-news-conference-on-virginia-redistricting-vote/677945), that “we are in an era of maximum warfare, everywhere, all the time.” The isolated sentence is [this C-SPAN clip](https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623). The next sentences in the same answer were about congressional maps. Play the whole file. The words “maximum warfare” were still said, on camera, by an employee of the House, about tens of millions of Americans who vote.",
+			},
+			{
+				type: "p",
+				text: "On May 19, 2026, Jeffries sat for a [C-SPAN recording of the Center for American Progress IDEAS conference](https://www.c-span.org/program/public-affairs-event/house-minority-leader-jeffries-on-democracy/679567). In that room he said the goal was to “break them,” then: beat them electorally, “and then we have to break their spirit.” That is a second tape, a second room, not a caption. Watch it uncut.",
+			},
+			{
+				type: "p",
+				text: "On March 4, 2020, Senate Minority Leader Chuck Schumer stood on the steps of the Supreme Court and said, of Justices Gorsuch and Kavanaugh, “you have released the whirlwind and you will pay the price” and “you won’t know what hit you.” [C-SPAN preserved the clip](https://www.c-span.org/clip/us-senate/user-clip-youve-released-the-whirlwind-and-you-will-pay-the-price--sen-chuck-schumer/4944670). Chief Justice Roberts issued a statement the same day.",
+			},
+			{
+				type: "p",
+				text: "The next essay is the method: words cut just short of a crime, a crowd that takes the hint, a bill the taxpayer pays, and a Member who still has clean hands. Independent. No PAC. This is not a call to violence. Watch the tape. If the words were not meant, the same cameras are still there.",
+			},
 		],
 	},
 	{
-		slug: "you-should-not-have-to-wait",
+		slug: "clean-hands",
+		title: "They keep their hands clean.",
+		dek: "Careful words. A crowd takes the hint. Cities burn. Insurers counted a billion. The Member still has the chair.",
+		date: "2026-09-16",
+		category: "Dispatch",
+		readMinutes: 5,
+		image: "/images/essay-the-noise.jpg",
+		imageAlt: "Empty chamber. The shrug is the policy.",
+		featured: true,
+		series: "The Republic",
+		part: 2,
+		receipts: [],
+		body: [
+			{
+				type: "p",
+				text: "The method is not a memo that says “burn it.” The method is a sentence cut just short of [the Supreme Court's incitement test](https://supreme.justia.com/cases/federal/us/395/444/). That test: speech is punishable as incitement only if it is meant to cause imminent lawless action and is likely to cause it. So they do not say “torch the precinct at eight.” They say create a crowd. They should not let up. Bring the fire. People will do what they do. The crowd hears the rest. The Member keeps clean hands. The city pays.",
+			},
+			{
+				type: "q",
+				text: "They never light the match. They narrate the room until someone else does. Then they call it weather.",
+			},
+			{
+				type: "h",
+				text: "The wording",
+			},
+			{
+				type: "p",
+				text: "On June 23, 2018, Representative Maxine Waters told a Los Angeles rally: if anybody from that Cabinet is seen in a restaurant, a department store, or a gasoline station, “you get out and you create a crowd and you push back on them.” [The tape of her saying and defending it is here.](https://www.realclearpolitics.com/video/2018/06/26/maxine_waters_pelosi_and_schumer_dont_really_say_im_out_of_line.html) She did not say assault. She said crowd. A parking lot already knows what a crowd is for.",
+			},
+			{
+				type: "p",
+				text: "On February 9, 2020, Representative Ayanna Pressley, with the Squad, said: “If you don’t see the light, then we will bring the fire.” [RealClearPolitics has the tape.](https://www.realclearpolitics.com/video/2020/02/09/ayanna_pressley_threatens_if_you_dont_see_the_light_then_we_will_bring_the_fire.html) Fire is a metaphor until it is not. She did not name a block. She named a method.",
+			},
+			{
+				type: "p",
+				text: "On June 1, 2020, then-Senator Kamala Harris posted: “If you’re able to, chip in now to the @MNFreedomFund to help post bail for those protesting on the ground in Minnesota.” [Her post is still up.](https://x.com/KamalaHarris/status/1267555018128965643) Sixteen days later, on CBS, she said they are not going to stop before Election Day, not after, “they’re not going to let up, and they should not, and we should not.” [The Late Show posted the segment.](https://www.youtube.com/watch?v=NTg1ynIPGls) She named protest. Minneapolis had already seen a precinct burn. She did not say stop the arson. She said they should not let up. Then she pointed donors at a bail fund so the people in the street could return to the street.",
+			},
+			{
+				type: "p",
+				text: "On July 9, 2020, Speaker Nancy Pelosi was asked about a Columbus statue pulled down and thrown in Baltimore’s harbor. She said, “People will do what they do.” That is the cleanest pair of hands in the record: a shrug from the Speaker while property comes down. Not a statute. A weather report.",
+			},
+			{
+				type: "p",
+				text: "On December 8, 2020, Michigan State Representative Cynthia Johnson of Detroit posted: “This is just a warning to you Trumpers. Be careful. Walk lightly. We ain’t playing with you. … And for those of you who are soldiers, you know how to do it. Do it right. Be in order. Make them pay.” [AP](https://apnews.com/article/donald-trump-media-michigan-social-media-elections-553da610af99fee8c0119330dbac57d4) · [MLive](https://www.mlive.com/public-interest/2020/12/michigan-lawmaker-who-faced-death-threats-punished-for-warning-trumpers-in-viral-video.html). She had been threatened with lynching. That is in the record. The next day she said “soldiers” meant soldiers of Christ. The first tape still says “you know how to do it.” The House stripped her committees. No prosecutor took that incitement test into court.",
+			},
+			{
+				type: "h",
+				text: "The bill",
+			},
+			{
+				type: "p",
+				text: "Property Claim Services, a Verisk unit that has tracked insured civil-disorder losses in this country since 1950, classified the unrest of May 26 through June 8, 2020, as a catastrophe — the first time it had to treat a civil-disorder event as multi-state, across more than twenty states. The Insurance Information Institute put the insured range at one to two billion dollars. That beat the prior record, the 1992 Los Angeles riots, which PCS had at $775 million. Insured claims are not the whole bill. They are the part an actuary would sign. Small shops that had no policy, or a deductible that ate the rebuild, are not in that number. City overtime is not in that number. National Guard pay is not in that number. Those land on the taxpayer and on the premium the rest of us pay the next year.",
+			},
+			{
+				type: "p",
+				text: "The people who said create a crowd, bring the fire, they should not let up, people will do what they do, did not receive an invoice. They kept the chair. Speech or Debate in [Article I, Section 6](https://constitution.congress.gov/constitution/article-1/) covers words on the floor. The incitement test covers the rally and the talk show if no prosecutor can prove imminence. The arsonist, if caught, is a local case. The Member is a national brand. That is the split: rage is delegated. Liability is not.",
+			},
+			{
+				type: "h",
+				text: "The cover",
+			},
+			{
+				type: "p",
+				text: "The First Amendment protects “the right of the people peaceably to assemble.” That word is in the [text](https://constitution.congress.gov/constitution/amendment-1/). It is not a mood. It is the condition. A march that stays on the sidewalk is the right. A police station on fire is a crime. A panel is not required to tell which one is on the screen.",
+			},
+			{
+				type: "p",
+				text: "On the night of May 28, 2020, the Minneapolis Third Precinct was abandoned and burned. That is not a metaphor and it is not a protest. It is a municipal building used by the people who are paid to keep a city. The next weeks, other cities copied the method. The partners in the newsroom supplied the caption. CNN put a Kenosha fire on the screen and a caption under it: “fiery but mostly peaceful protests.” The fire was not a graphic. It was the story. The caption said not to believe the picture. That is gaslight: a word for when an institution asks a country to distrust the evidence of the senses so the speaker can keep clean hands.",
+			},
+			{
+				type: "p",
+				text: "“Mostly peaceful” is how the arson is hidden inside the assembly. If ninety-nine people walk and one person lights the precinct, the honest sentence is that a precinct burned. The dishonest sentence is that the night was mostly a march. The Member who said they should not let up, and the anchor who said it was mostly peaceful, are doing the same job from two desks. One heats the crowd. One launders the heat. The taxpayer still pays for the building.",
+			},
+			{
+				type: "p",
+				text: "This journal will not pretend every marcher was an arsonist. It will not pretend a burning precinct was a parade. Peaceable assembly is the right. What was done to that station, and to storefronts across twenty states, was not peaceable, was not assembly, and was not covered as crime by the people whose job is to describe what is in front of the camera. Independent. No PAC. This is not a call to answer fire with fire. Watch the tape. Read the Amendment. Refuse the caption.",
+			},
+		],
+	},
+	{
+		slug: "they-want-a-new-constitution",
 		title: "They want a new Constitution.",
 		dek: "A group running as Democrats wrote it down: replace this country. November 3 is the last easy stop.",
 		date: "2026-09-18",
 		category: "Dispatch",
 		readMinutes: 4,
-		image: "/images/essay-not-wait.jpg",
-		imageAlt: "Empty House. You should not have to wait.",
+		image: "/images/constitution.jpg",
+		imageAlt: "Empty House. Waiting is not the job.",
 		featured: true,
 		series: "The Republic",
 		part: 5,
-		receipts: [
-			{ label: "Art. I §5 — each House expels its own, two-thirds", href: "https://constitution.congress.gov/browse/essay/artI-S5-C2-2-1/ALDE_00013580/" },
-			{ label: "CRS / courts — no federal recall of Members of Congress", href: "https://www.cga.ct.gov/PS98/rpt%5Colr%5Chtm/98-R-1540.htm" },
-			{ label: "H.J.Res.105, 104th Congress — recall amendment, buried", href: "https://www.congress.gov/bill/104th-congress/house-joint-resolution-105/text" },
-			{ label: "Article V — states may call a convention", href: "https://constitution.congress.gov/constitution/article-5/" },
-			{ label: "Art. IV §4 — Guarantee of a Republican Form of Government", href: "https://constitution.congress.gov/browse/article-4/section-4/" },
-			{ label: "18 U.S.C. §2385 — Smith Act; Brandenburg limits it to imminent force", href: "https://www.law.cornell.edu/uscode/text/18/2385" },
-			{ label: "DSA 2026 program — new constitution, democratic socialist republic", href: "https://program.dsausa.org/wp-content/uploads/2026/07/WDM-Program.pdf" },
-			{ label: "DSA 2021 platform — abolition of capitalism", href: "https://www.dsausa.org/dsa-political-platform-from-2021-convention/" },
-			{ label: "Art. VI — oath to this Constitution", href: "https://constitution.congress.gov/constitution/article-6/" },
-			{ label: "5 U.S.C. §3331 — oath of office, no mental reservation", href: "https://www.law.cornell.edu/uscode/text/5/3331" },
-			{ label: "Art. III §3 / 18 U.S.C. §2381 — treason: levy war or adhere to enemies", href: "https://www.law.cornell.edu/uscode/text/18/2381" },
-			{ label: "Art. II §2 cl. 3 — Recess Appointments", href: "https://constitution.congress.gov/browse/essay/artII-S2-C3-1/ALDE_00013094/" },
-			{ label: "NLRB v. Noel Canning (2014) — pro forma sessions block the recess", href: "https://www.oyez.org/cases/2013/12-1281" },
-			{ label: "50 U.S.C. §§841–844 — Communist Control Act of 1954", href: "https://www.law.cornell.edu/uscode/text/50/841" },
-			{ label: "Art. I §5 cl. 4 — neither House adjourns more than three days without the other", href: "https://constitution.congress.gov/browse/essay/artI-S5-C4-1/ALDE_00001059/" },
-			{ label: "Powell v. McCormack (1969) — House cannot add qualifications to exclude a seated member", href: "https://supreme.justia.com/cases/federal/us/395/486/" },
-			{ label: "U.S. Term Limits v. Thornton (1995) — states cannot add qualifications for Congress", href: "https://supreme.justia.com/cases/federal/us/514/779/" },
-			{ label: "5 U.S.C. §7311 — bar on holding a federal position if you advocate overthrow", href: "https://www.law.cornell.edu/uscode/text/5/7311" },
-			{ label: "14th Amdt §3 — disqualification after oath, for insurrection", href: "https://constitution.congress.gov/browse/essay/amdt14-S3-1/ALDE_00000848/" },
-			{ label: "Omar, Jan. 27, 2024, Minneapolis — viral translation and the one she prefers, both in the file", href: "https://www.rollingstone.com/politics/politics-news/ilhan-omar-attacked-deportation-calls-mistranslated-speech-1234959112/" },
-			{ label: "Omar, Dec. 5, 2025 — ‘We are not leaving’", href: "https://nypost.com/2025/12/10/us-news/elon-musk-suggests-ilhan-omar-committed-treason-with-2024-pro-somalia-remarks-after-trump-rants-about-lawmaker-at-rally/" },
-			{ label: "Politico, June 24, 2026 — Squad 2.0, DSA in the Democratic tent", href: "https://www.politico.com/news/2026/06/24/squad-house-democrats-jeffries-nyc-00975224" },
-			{ label: "Mamdani, Feb. 2021, YDSA — ‘end goal of seizing the means of production’", href: "https://www.politifact.com/article/2025/jul/03/seizing-means-production-zohran-mamdani/" },
-			{ label: "Red Star caucus, DSA — ‘abolish capitalism and, ultimately, to achieve communism’", href: "https://redstarcaucus.org/zenith4-points-of-unity/" },
-			{ label: "AOC — ‘We need to abolish ICE’ (2018; again 2026)", href: "https://inthesetimes.com/article/alexandria-ocasio-cortez-ice-new-york-cynthia-nixon-democrats" },
-			{ label: "Tlaib — ‘From the river to the sea’; House censure, Nov. 2023", href: "https://www.jta.org/2023/11/08/politics/from-the-river-to-the-sea-the-pro-palestinian-slogan-that-led-to-rashida-tlaibs-censure-explained" },
-			{ label: "18 U.S.C. §611 — noncitizen voting in federal elections", href: "https://www.law.cornell.edu/uscode/text/18/611" },
-			{ label: "Evenwel v. Abbott (2016) — states may count all persons for district lines", href: "https://supreme.justia.com/cases/federal/us/578/14-940/" },
-			{ label: "Commerce, Sept. 2026 — proposed 2030 apportionment excluding illegal/temporary aliens", href: "https://rollcall.com/2026/09/09/census-overhaul-proposed-trump-administration-reshape-congress" },
-		],
+		receipts: [],
 		body: [
-			{ type: "p", text: "If you only read this: DSA’s own 2026 program says draft a new constitution and a democratic socialist republic. Red Star, inside DSA: achieve communism. They are running as Democrats in districts that will not see a competitive November. November 3 is the last easy off-ramp. Miss it and you wait two years while they hold the gavel." },
-			{ type: "q", text: "They wrote a replacement country on a PDF. They want the House to print it." },
-			{ type: "p", text: "Article VI: they swear this Constitution, no mental reservation — 5 U.S.C. §3331. A faction that writes ‘new constitution’ has a reservation. Powell and Thornton will not let you bounce them at the clerk. Two-thirds expulsion they will not take. So the people fire them on November 3, then the states write a recall so you never wait two years again." },
-			{ type: "p", text: "You cannot recall a Member of Congress today. Courts killed the state statutes. Article I, Section 5: only the club expels the club. Luther Martin told Maryland in 1788. They kept the privilege. H.J.Res.105 in 1995 would have given the district a petition and a special election. They buried it. Article V is the door Congress will not walk: two-thirds of the state legislatures apply, Congress shall call a convention. Put recall and oath-fidelity in the same package. Until then you are under-armed, not helpless: the purse, the Guarantee Clause, the November map." },
-			{ type: "p", text: "Omar, January 2024, even the translation she has not disowned: ‘the U.S. government will do what we tell the U.S. government to do.’ December 2025: ‘We are not leaving.’ Mamdani, on tape: the end goal of seizing the means of production. AOC: abolish ICE. Tlaib: from the river to the sea. Jeffries: warfare, break them, break their spirit. Politico this June: Squad 2.0. That is not Sweden. That is a different country using the Democratic line as the vehicle." },
-			{ type: "p", text: "Treason is Article III: levy war or adhere to enemies. A pamphlet is not treason. Brandenburg fences the rest. Do not empty the word. Do this: vote like the document is on the ballot — because it is. Then apply in the legislatures for the recall they refused you. Independent. No PAC. Not a call to violence. The people still own the country." },
-			{ type: "q", text: "You should not have to wait two years to fire a servant who is building a different regime on your dime." },
-		]
+			{
+				type: "p",
+				text: "The Democratic Socialists of America published a 2026 program that calls for drafting a new constitution and building a democratic socialist republic. That document is on their own site: the [DSA 2026 program PDF](https://program.dsausa.org/wp-content/uploads/2026/07/WDM-Program.pdf). A caucus inside that organization, [Red Star](https://redstarcaucus.org/zenith4-points-of-unity/), states that the aim is to abolish capitalism and ultimately to achieve communism. Those are their words. This journal does not need a reporter to translate them.",
+			},
+			{
+				type: "q",
+				text: "They wrote a replacement country on a PDF. Members who swear this Constitution cannot pretend they did not read it.",
+			},
+			{
+				type: "p",
+				text: "Every Member swears, under [Article VI](https://constitution.congress.gov/constitution/article-6/) and [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331), to support this Constitution, without mental reservation. A faction that writes “new constitution” has announced a reservation. Federal law already bars a person from holding a federal position if that person advocates the overthrow of our constitutional form of government. See [5 U.S.C. § 7311](https://www.law.cornell.edu/uscode/text/5/7311). The [Communist Control Act, 50 U.S.C. § 841](https://www.law.cornell.edu/uscode/text/50/841), is still on the books. Pamphlets are not treason. Treason is [Article III, Section 3](https://constitution.congress.gov/constitution/article-3/) and [18 U.S.C. § 2381](https://www.law.cornell.edu/uscode/text/18/2381): levying war or adhering to enemies. Do not empty that word. Do not ignore the oath either.",
+			},
+			{
+				type: "p",
+				text: "A seated Member cannot be bounced at the clerk because a district dislikes the platform. [Powell v. McCormack](https://supreme.justia.com/cases/federal/us/395/486/) and [U.S. Term Limits v. Thornton](https://supreme.justia.com/cases/federal/us/514/779/) closed that door. A Member of Congress cannot be recalled under current federal law. [Article I, Section 5](https://constitution.congress.gov/browse/essay/artI-S5-C2-2-1/ALDE_00013580/) leaves expulsion to a two-thirds vote of the House. [H.J.Res. 105 in the 104th Congress](https://www.congress.gov/bill/104th-congress/house-joint-resolution-105/text) would have given districts a recall. It died. [Article V](https://constitution.congress.gov/constitution/article-5/) is the remaining door: two-thirds of the state legislatures apply, and Congress shall call a convention. Until the states walk it, the lawful instruments are the purse, the Guarantee Clause in [Article IV, Section 4](https://constitution.congress.gov/browse/article-4/section-4/), and the next election.",
+			},
+			{
+				type: "p",
+				text: "Independent. No PAC. This is not a call to violence. Read the PDF. Read the oath. Then vote as if the document is on the ballot, because for this faction it is.",
+			},
+		],
 	},
 	{
 		slug: "the-docket",
-		title: "You can sue. This is how.",
-		dek: "You cannot sue Congress for being Congress. You can force a dirty voter list into court in 90 days. Step by step.",
+		title: "How a dirty list goes to court.",
+		dek: "Congress cannot be sued for being Congress. A dirty voter list into court in 90 days. Step by step.",
 		date: "2026-09-21",
 		category: "Dispatch",
 		readMinutes: 3,
-		image: "/images/essay-not-wait.jpg",
+		image: "/images/chamber.jpg",
 		imageAlt: "Empty House. The docket is the other election.",
 		featured: true,
 		series: "The Correction",
-		part: 1,
-		receipts: [
-			{ label: "52 U.S.C. §20510 — NVRA private right of action, 90-day notice", href: "https://www.law.cornell.edu/uscode/text/52/20510" },
-			{ label: "52 U.S.C. §20507 — Section 8, list maintenance", href: "https://www.law.cornell.edu/uscode/text/52/20507" },
-			{ label: "18 U.S.C. §611 — alien voting in federal elections", href: "https://www.law.cornell.edu/uscode/text/18/611" },
-			{ label: "8 U.S.C. §1227(a)(6) — deportable for unlawful voting", href: "https://www.law.cornell.edu/uscode/text/8/1227" },
-			{ label: "8 U.S.C. §1324 — bringing in and harboring certain aliens", href: "https://www.law.cornell.edu/uscode/text/8/1324" },
-			{ label: "5 U.S.C. §3331 — oath of office", href: "https://www.law.cornell.edu/uscode/text/5/3331" },
-			{ label: "5 U.S.C. §7311 — no federal position if you advocate overthrow", href: "https://www.law.cornell.edu/uscode/text/5/7311" },
-			{ label: "Art. VI — oath to this Constitution", href: "https://constitution.congress.gov/constitution/article-6/" },
-			{ label: "Powell v. McCormack — House cannot add qualifications", href: "https://supreme.justia.com/cases/federal/us/395/486/" },
-			{ label: "Luther v. Borden — Guarantee Clause is a political question", href: "https://supreme.justia.com/cases/federal/us/48/1/" },
-			{ label: "DSA 2026 program — new constitution, socialist republic", href: "https://program.dsausa.org/wp-content/uploads/2026/07/WDM-Program.pdf" },
-			{ label: "Red Star caucus — ‘achieve communism’", href: "https://redstarcaucus.org/zenith4-points-of-unity/" },
-			{ label: "Mamdani 2021 — ‘seizing the means of production’", href: "https://www.politifact.com/article/2025/jul/03/seizing-means-production-zohran-mamdani/" },
-			{ label: "D.C. Code §16-3501 — federal quo warranto in the District", href: "https://code.dccouncil.gov/us/dc/council/code/titles/16/chapters/35/" },
-		],
+		part: 3,
+		receipts: [],
 		body: [
-			{ type: "p", text: "If you only read this: you cannot sue Congress for being Congress. You can send a 90-day letter under 52 U.S.C. §20510 and force a dirty voter roll into federal court. That is the lawsuit a citizen can actually file before November." },
-			{ type: "q", text: "The tent does not need a palace. It needs a roll and a gavel. Clean the roll. Keep the gavel." },
-			{ type: "p", text: "Lujan: no case from being angry. Speech or Debate: no case from a floor speech. Powell: no ‘ban DSA’ at the clerk. Luther v. Borden: Guarantee Clause is for Congress, not a judge. Cort v. Ash: no private suit on the oath. Anyone selling a class action that vacates the House is selling a dismissal." },
-			{ type: "ul", items: [
-				"52 U.S.C. §20507 / §20510. You are aggrieved. Written notice to the secretary of state. Ninety days. Then an injunction. Fees if you win. Judicial Watch just made Oregon review hundreds of thousands of names. California is in the dock for 873,000 inactive registrations.",
-				"18 U.S.C. §611. Noncitizen votes in a federal race: crime. 8 U.S.C. §1227(a)(6): deportable. You send names. The U.S. Attorney files. Texas charged seven.",
-				"8 U.S.C. §1324 and Article VI. Sanctuary that conceals is harboring. A governor who spends past §1621 is nullifying supreme federal law. Packet to DOJ.",
-				"FOIA, 5 U.S.C. §552. The grant, the NGO, the child file. No standing fight.",
-			] },
-			{ type: "p", text: "DSA’s PDF is a new constitution. They swear this one. November 3 is the hiring. The docket is the other election, and it runs now. Independent. No PAC. Not a call to violence. Next: who to call." },
-		]
+			{
+				type: "p",
+				text: "Congress cannot be sued for being Congress. The Speech or Debate Clause in [Article I, Section 6](https://constitution.congress.gov/constitution/article-1/) and the standing rule in [Lujan v. Defenders of Wildlife](https://supreme.justia.com/cases/federal/us/504/555/) close that door. A dirty voter registration list into federal court. [52 U.S.C. § 20510](https://www.law.cornell.edu/uscode/text/52/20510) gives an aggrieved person a private right of action under the National Voter Registration Act. Written notice goes to the chief election official of the State. If the violation is not corrected in ninety days, the case may be filed in district court for an injunction. The court may award fees if the plaintiff prevails.",
+			},
+			{
+				type: "q",
+				text: "The tent does not need a palace. It needs a clean roll and a gavel. Clean the roll. Keep the gavel.",
+			},
+			{
+				type: "p",
+				text: "List maintenance is [52 U.S.C. § 20507](https://www.law.cornell.edu/uscode/text/52/20507). A noncitizen who votes in a federal election commits a crime under [18 U.S.C. § 611](https://www.law.cornell.edu/uscode/text/18/611). Unlawful voting is a deportable offense under [8 U.S.C. § 1227(a)(6)](https://www.law.cornell.edu/uscode/text/8/1227). Names go to the United States Attorney. The United States Attorney files. That is the lawful path. It is slow. It is real.",
+			},
+			{
+				type: "p",
+				text: "Bringing in and harboring certain aliens is [8 U.S.C. § 1324](https://www.law.cornell.edu/uscode/text/8/1324). Records of federal grants sit under the Freedom of Information Act, [5 U.S.C. § 552](https://www.law.cornell.edu/uscode/text/5/552). A class action that claims to vacate the House will be dismissed. [Powell v. McCormack](https://supreme.justia.com/cases/federal/us/395/486/) and [Luther v. Borden](https://supreme.justia.com/cases/federal/us/48/1/) already said why. Anyone selling that suit is selling a dismissal.",
+			},
+			{
+				type: "p",
+				text: "Independent. No PAC. This is not a call to violence. The next essay is who to call, with addresses, not a stranger on a video asking for the card.",
+			},
+		],
 	},
 	{
 		slug: "call-these-first",
 		title: "Who to call.",
-		dek: "Real groups. Real addresses. Not a stranger on a video asking for your money.",
+		dek: "Real groups. Real addresses. Not a stranger on a video asking for a money.",
 		date: "2026-09-22",
 		category: "Dispatch",
 		readMinutes: 3,
@@ -263,36 +307,35 @@ export const posts: Post[] = [
 		imageAlt: "The House. Call counsel. The docket is open.",
 		featured: true,
 		series: "The Correction",
-		part: 2,
-		receipts: [
-			{ label: "Judicial Watch — NVRA Section 8 litigation", href: "https://www.judicialwatch.org/" },
-			{ label: "America First Legal — election integrity docket", href: "https://aflegal.org/priority/election-integrity/" },
-			{ label: "52 U.S.C. §20510 — how a private NVRA suit starts", href: "https://www.law.cornell.edu/uscode/text/52/20510" },
-			{ label: "Immigration Reform Law Institute", href: "https://www.irli.org/" },
-			{ label: "FAIR — sanctuary litigation", href: "https://www.fairus.org/" },
-			{ label: "Public Interest Legal Foundation", href: "https://www.publicinterestlegal.org/" },
-			{ label: "New Civil Liberties Alliance", href: "https://nclalegal.org/" },
-			{ label: "Pacific Legal Foundation", href: "https://pacificlegal.org/" },
-			{ label: "Texas AG — noncitizen voting charges, Sept. 16, 2026", href: "https://www.houstonpublicmedia.org/articles/news/politics/election-2026/2026/09/16/562026/texas-and-feds-announce-noncitizen-voting-charges-against-seven-people/" },
-		],
+		part: 4,
+		receipts: [],
 		body: [
-			{ type: "p", text: "If you only read this: this journal is not your lawyer. The shops below already have captions. The first envelope is a 90-day NVRA notice, not a class action against the House." },
-			{ type: "q", text: "Call the people who already have a docket. Do not mail a check to a stranger on a video." },
-			{ type: "ul", items: [
-				"Judicial Watch — judicialwatch.org — voter rolls. Oregon settlement. California, Illinois live.",
-				"America First Legal — aflegal.org — census, SAVE, 6,600 aliens registered in New Jersey.",
-				"Public Interest Legal Foundation — publicinterestlegal.org — Section 8.",
-				"Immigration Reform Law Institute — irli.org — sanctuary, harboring, 8 U.S.C. §1621.",
-				"FAIR — fairus.org — Maryland sheriffs v. sanctuary.",
-				"Your state attorney general and the U.S. Attorney for your district. Texas charged seven for noncitizen voting on September 16. Harmeet Dhillon already put every chief election officer on notice.",
-			] },
-			{ type: "p", text: "Envelope: your name, the statute, the names, no manifesto. NVRA to the secretary of state. §611 names to the U.S. Attorney. Hotel invoices to IRLI under Article VI and §1621. Expulsion letter to your member citing §3331. FOIA the grant. Independent. No PAC. Not a call to violence." },
-		]
+			{
+				type: "p",
+				text: "This journal is not a law firm. The first envelope is a ninety-day notice under [52 U.S.C. § 20510](https://www.law.cornell.edu/uscode/text/52/20510), sent to the chief election official of the State, not a class action against the House. A check mailed to a stranger on a video has left the docket.",
+			},
+			{
+				type: "q",
+				text: "Call the groups that already sue. Do not invent a lawsuit from a clip.",
+			},
+			{
+				type: "p",
+				text: "For dirty voter rolls, start with counsel that already files National Voter Registration Act cases: [Judicial Watch](https://www.judicialwatch.org/), [America First Legal](https://aflegal.org/priority/election-integrity/), and the [Public Interest Legal Foundation](https://www.publicinterestlegal.org/). Those are their own sites. This journal does not vouch for a donation. It names who already knows how to write the ninety-day letter.",
+			},
+			{
+				type: "p",
+				text: "For sanctuary ordinances and public-benefit spending past [8 U.S.C. § 1621](https://www.law.cornell.edu/uscode/text/8/1621), the [Immigration Reform Law Institute](https://www.irli.org/) and [FAIR](https://www.fairus.org/) publish their own dockets. A state attorney general and the United States Attorney for the district are the public offices. Names of noncitizens who voted in a federal race go to the United States Attorney under [18 U.S.C. § 611](https://www.law.cornell.edu/uscode/text/18/611).",
+			},
+			{
+				type: "p",
+				text: "The envelope is a name, the statute, the records, and no manifesto. Independent. No PAC. This is not a call to violence and not a request for money to this journal.",
+			},
+		],
 	},
 	{
-		slug: "the-bill-they-sent-you",
-		title: "They're spending your taxes on illegal immigrants.",
-		dek: "Hotels. Debit cards. Clothes. Federal law already said no. Your governor did it anyway.",
+		slug: "the-bill-they-sent",
+		title: "They're spending taxpayer money on illegal immigrants.",
+		dek: "Hotels. Debit cards. Clothes. Federal law already said no. Governors did it anyway.",
 		date: "2026-09-20",
 		category: "Dispatch",
 		readMinutes: 4,
@@ -300,30 +343,30 @@ export const posts: Post[] = [
 		imageAlt: "The bill. Taxpayers covering what the statute already barred.",
 		featured: true,
 		series: "The Correction",
-		part: 3,
-		receipts: [
-			{ label: "Art. VI cl. 2 — Supremacy Clause", href: "https://constitution.congress.gov/constitution/article-6/" },
-			{ label: "Arizona v. United States, 567 U.S. 387 (2012) — Congress occupies immigration", href: "https://supreme.justia.com/cases/federal/us/567/387/" },
-			{ label: "8 U.S.C. §1611 — federal public benefits", href: "https://www.law.cornell.edu/uscode/text/8/1611" },
-			{ label: "8 U.S.C. §1324 — bringing in and harboring", href: "https://www.law.cornell.edu/uscode/text/8/1324" },
-			{ label: "8 U.S.C. §1373 — no gag on immigration-status information", href: "https://www.law.cornell.edu/uscode/text/8/1373" },
-			{ label: "DOJ, Sept. 10, 2026 — suits vs states giving in-state tuition to illegal aliens; Kansas already enjoined", href: "https://www.justice.gov/opa/pr/department-justice-files-complaints-against-hawaii-dc-arkansas-and-utah-over-preferential" },
-			{ label: "HHS, July 10, 2025 — PRWORA restored; illegal aliens off HHS programs", href: "https://www.hhs.gov/press-room/prwora-hhs-bans-illegal-aliens-accessing-taxpayer-funded-programs.html" },
-			{ label: "Maryland sheriffs v. sanctuary statute — FAIR, 2026", href: "https://news.bloomberglaw.com/litigation/county-sheriffs-in-maryland-sue-over-states-sanctuary-status" },
-		],
+		part: 2,
+		receipts: [],
 		body: [
-			{ type: "p", text: "If you only read this: 8 U.S.C. §1621 already made illegal aliens ineligible for state and local public benefits unless a state law after August 22, 1996, said yes. Hotels, prepaid cards, clothes, and in-state tuition are not an emergency room. Your governor is spending past supreme federal law. That is the caption." },
-			{ type: "q", text: "Article VI is the same article as the oath. They swore it. Then they nullified it with your check." },
-			{ type: "p", text: "Arizona v. United States: Congress occupies immigration. A state need not loan ICE its police. A state may not run a welcome mat federal law closed. DOJ has now sued every state giving illegal aliens in-state tuition. Kansas lost. HHS restored PRWORA on federal benefits in 2025. Twenty Democratic AGs sued to keep the pipeline open. Print the side." },
-			{ type: "p", text: "Harboring is 8 U.S.C. §1324 — a U.S. Attorney case, not a complaint you file against a sitting governor. Send the ordinance and the NGO contract. Do not promise a prison date. Anti-commandeering is not a license to conceal." },
-			{ type: "ul", items: [
-				"DOJ / U.S. Attorney — add benefits to the tuition docket. Article VI · §1621 · §1324.",
-				"State legislature — defund the line. Repeal the post-1996 statute. Fastest lever.",
-				"Taxpayer standing / gift-of-public-funds clauses — some state courts will enjoin the spend. Hire local counsel.",
-				"Sheriffs — Maryland already sued. Recall where the state allows it. Public-records the hotel.",
-			] },
-			{ type: "p", text: "Not a family in an ER. The hotel, the card, the tuition. Independent. No PAC. Not a call to violence. November 3 is coming. Make the inn close on the statute Congress already passed." },
-		]
+			{
+				type: "p",
+				text: "Federal law already said who may receive a public benefit. [8 U.S.C. § 1611](https://www.law.cornell.edu/uscode/text/8/1611) makes an alien who is not a qualified alien ineligible for federal public benefits, with narrow exceptions such as emergency medical care. [8 U.S.C. § 1621](https://www.law.cornell.edu/uscode/text/8/1621) does the same for state and local public benefits unless a state enacted an affirmative law after August 22, 1996. A hotel room, a prepaid card, a clothing stipend, and in-state tuition are not an emergency room. A governor who spends those items on people the statute bars is spending past supreme federal law.",
+			},
+			{
+				type: "q",
+				text: "Article VI is the same article as the oath. They swore it. Then they spent past it with taxpayer money.",
+			},
+			{
+				type: "p",
+				text: "[Article VI](https://constitution.congress.gov/constitution/article-6/) makes the Constitution and federal statutes the supreme law of the land. [Arizona v. United States](https://supreme.justia.com/cases/federal/us/567/387/) held that Congress occupies the field of immigration. A state need not loan its police to ICE. A state may not run a welcome mat federal law closed. [8 U.S.C. § 1373](https://www.law.cornell.edu/uscode/text/8/1373) forbids a gag on exchanging immigration-status information with federal officials. [8 U.S.C. § 1324](https://www.law.cornell.edu/uscode/text/8/1324) is harboring. That is a United States Attorney case, not a kitchen-table complaint against a sitting governor.",
+			},
+			{
+				type: "p",
+				text: "The [Department of Justice has filed complaints](https://www.justice.gov/opa/pr/department-justice-files-complaints-against-hawaii-dc-arkansas-and-utah-over-preferential) against jurisdictions that give illegal aliens in-state tuition. [HHS restored the 1996 welfare restrictions](https://www.hhs.gov/press-room/prwora-hhs-bans-illegal-aliens-accessing-taxpayer-funded-programs.html) on its own programs. Print those dockets. Do not invent a prison date the statute does not give. Send the ordinance and the contract. Let the United States Attorney decide whether harboring is in the record.",
+			},
+			{
+				type: "p",
+				text: "Independent. No PAC. This is not a call to violence. The next lever is the legislature that can repeal the post-1996 statute, and the voter who hires that legislature.",
+			},
+		],
 	},
 	{
 		slug: "they-let-them-walk",
@@ -336,23 +379,30 @@ export const posts: Post[] = [
 		imageAlt: "The chamber. They let them walk.",
 		featured: true,
 		series: "The Correction",
-		part: 4,
-		receipts: [
-			{ label: "18 U.S.C. §3142 — Bail Reform Act; detention if danger to the community", href: "https://www.law.cornell.edu/uscode/text/18/3142" },
-			{ label: "8 U.S.C. §1226(c) — Attorney General shall take criminal aliens into custody", href: "https://www.law.cornell.edu/uscode/text/8/1226" },
-			{ label: "Art. I §2–3 / Art. III — impeachment of civil officers, including judges", href: "https://constitution.congress.gov/browse/essay/artII-S4-4-5/ALDE_00013659/" },
-			{ label: "Townhall, Sept. 14, 2026 — Officer Bartholomew; Talley, seven-time felon, SAFE-T Act release", href: "https://townhall.com/columnists/jay-rogers/2026/09/14/judges-keep-betting-your-life-on-career-criminals-time-to-change-the-odds-n2682904" },
-			{ label: "KSTP, Sept. 16, 2026 — Minnesota sentencing grid: fraud rarely means prison", href: "https://kstp.com/kstp-news/top-news/inside-minnesotas-sentencing-guidelines-why-fraud-cases-rarely-lead-to-prison/" },
-			{ label: "DOJ — Feeding Our Future; 28-year federal sentence, Abdiaziz Farah", href: "https://www.justice.gov/usao-mn/pr/minneapolis-man-sentenced-more-28-years-prison-role-feeding-our-future-fraud-scheme" },
-		],
+		part: 1,
+		receipts: [],
 		body: [
-			{ type: "p", text: "If you only read this: a Cook County judge twice put a seven-time felon on an ankle monitor. Officer John Bartholomew is dead. The judge is still on the bench. 18 U.S.C. §3142 says detain when the community is not safe. 8 U.S.C. §1226(c) says the Attorney General shall take criminal aliens into custody. They let them walk anyway." },
-			{ type: "q", text: "The statute said shall. The robe said walk. The public paid in blood and in the till." },
-			{ type: "p", text: "Brooklyn Judge Janice Robinson: eight of thirteen recent cases no bail, two attempted murder. Queens Judge Wanda Licitra: 29 of 34 accused violent felons released. San Francisco’s DA says a spring ruling emptied the jail of repeat thieves. Minnesota: Feeding Our Future is hundreds of millions stolen from children. Federal court caged some. The state grid, KSTP reported, still sends fraud to probation." },
-			{ type: "p", text: "Name the judge. Repeal cashless bail. Put 1226(c) on the criminal alien. Impeach or fail to retain the robe. A dashboard that publishes the repeat rate is not vengeance. It is oversight. The JAIL Act is a bill, not a law. Do not wait on it." },
-			{ type: "p", text: "This is not a call to storm a courthouse. The walk-out is the siege. November 3 still hires the DAs and the benches your state lets you hire. Independent. No PAC. Not a call to violence. A country that lets the repeat killer and the meal-program thief walk has stopped being the principal." },
-			{ type: "q", text: "They let them walk. Name the judge. November is the last easy lock on the door." },
-		]
+			{
+				type: "p",
+				text: "Federal detention law is not a suggestion. [18 U.S.C. § 3142](https://www.law.cornell.edu/uscode/text/18/3142) directs a court to detain a defendant when no condition of release will reasonably assure the safety of any other person and the community. [8 U.S.C. § 1226(c)](https://www.law.cornell.edu/uscode/text/8/1226) says the Attorney General shall take into custody certain criminal aliens. When a court or a local statute sends a repeat felon home on an ankle monitor, the statute said shall and the robe said walk.",
+			},
+			{
+				type: "q",
+				text: "The statute said shall. The robe said walk. The public paid.",
+			},
+			{
+				type: "p",
+				text: "This journal will not recycle a local news item as if it were a federal finding. Name the charging document. Name the statute. If a judge released a defendant who then killed a police officer, the remedy is the record, the appellate court, impeachment or failure to retain under [Article I and Article II](https://constitution.congress.gov/browse/essay/artII-S4-4-5/ALDE_00013659/) where those tools apply, and the next election of the district attorney and the bench the state elects. It is not a crowd at the courthouse door.",
+			},
+			{
+				type: "p",
+				text: "The [United States Attorney for the District of Minnesota](https://www.justice.gov/usao-mn/pr/minneapolis-man-sentenced-more-28-years-prison-role-feeding-our-future-fraud-scheme) obtained a twenty-eight-year sentence in the Feeding Our Future fraud. That is a federal judgment. State sentencing grids are a different file. Print both. Do not mix them.",
+			},
+			{
+				type: "p",
+				text: "Independent. No PAC. This is not a call to violence and not a call to storm a courthouse. Oversight is a docket, a retention vote, and a legislature that can repeal cashless-bail experiments that the blood already tested.",
+			},
+		],
 	},
 	{
 		slug: "who-got-paid",
@@ -391,7 +441,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "This journal will not invent a Congressman on a Sinaloa payroll because a chyron wants one. If there is no indictment, we say so. April 2026: the United States indicted ten current and former Mexican officials — Morena party — for aiding Sinaloa trafficking. On this side of the river: Rep. Henry Cuellar (D-Texas) and his wife were indicted May 3, 2024, for about $600,000 in alleged bribes from Azerbaijan's state oil company and a Mexico City bank — not a named cartel, a bank and a foreign government. Two of his advisers pleaded guilty to laundering more than $200,000 of the Mexican-bank money. Trump later pardoned Cuellar. The pardon does not erase the charging document. It also does not turn the document into a Sinaloa membership card. We will not do that cut. If a Republican took the same cash, print his name the same day."
+				text: "This journal will not invent a Congressman on a Sinaloa payroll because a caption wants one. If there is no indictment, we say so. April 2026: the United States indicted ten current and former Mexican officials — Morena party — for aiding Sinaloa trafficking. On this side of the river: Rep. Henry Cuellar (D-Texas) and his wife were indicted May 3, 2024, for about $600,000 in alleged bribes from Azerbaijan's state oil company and a Mexico City bank — not a named cartel, a bank and a foreign government. Two of his advisers pleaded guilty to laundering more than $200,000 of the Mexican-bank money. Trump later pardoned Cuellar. The pardon does not erase the charging document. It also does not turn the document into a Sinaloa membership card. We will not do that cut. If a Republican took the same cash, print his name the same day."
 			},
 			{
 				type: "p",
@@ -431,7 +481,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "They use Epstein survivors as a costume. Epstein is a real file — play it, every name. Using those survivors as a chyron while the same party obstructs the locating of open-border children is not solidarity. It is theft of the room. Labor trafficking is trafficking. Sex trafficking is trafficking. A sponsor who is a gang cutout is trafficking. The 7,300 reports in the ignored pile are not a subplot. They are the plot. A politician who screams about a billionaire's island and then votes, marches, or mayors-orders ICE out of the search has told you which children count."
+				text: "They use Epstein survivors as a costume. Epstein is a real file — play it, every name. Using those survivors as a caption while the same party obstructs the locating of open-border children is not solidarity. It is theft of the room. Labor trafficking is trafficking. Sex trafficking is trafficking. A sponsor who is a gang cutout is trafficking. The 7,300 reports in the ignored pile are not a subplot. They are the plot. A politician who screams about a billionaire's island and then votes, marches, or mayors-orders ICE out of the search has named which children count."
 			},
 			{
 				type: "h",
@@ -439,11 +489,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "When a mayor forbids cooperation, when a campus rings a building, when a member of Congress calls ICE the villain and the cartel the weather, they are not protecting a child. They are protecting the adult who has the child. If you stop the knock, the report dies in the drawer. This journal will not pretend a protest sign is a warrant. 18 U.S.C. 1591 and 1589 already exist. Harboring and obstruction already exist. Where the statute fits a person who hid a child or sold a lane, use it. Where the person held a gavel and voted to starve the search, remove the gavel. Call the first a crime because it is. Call the second a firing because the people still own the chair."
+				text: "When a mayor forbids cooperation, when a campus rings a building, when a member of Congress calls ICE the villain and the cartel the weather, they are not protecting a child. They are protecting the adult who has the child. If the knock is stopped, the report dies in the drawer. This journal will not pretend a protest sign is a warrant. 18 U.S.C. 1591 and 1589 already exist. Harboring and obstruction already exist. Where the statute fits a person who hid a child or sold a lane, use it. Where the person held a gavel and voted to starve the search, remove the gavel. Call the first a crime because it is. Call the second a firing because the people still own the chair."
 			},
 			{
 				type: "p",
-				text: "Democrats refused Grassley's whistleblower roundtable. They opposed his bills to cut off contractors who enabled sexual harm and to overturn a Biden rule that made the pipeline easier. They voted no on citizenship checks and yes on the abolish-ICE pose that made the search illegal in their cities. Indifference is not a personality. It is the policy. The hypocrisy is the policy with a camera on. This movement is not a jersey. It is a demand that the world find a compass, find the children, and treat anyone who blocks that effort as having taken the sponsor's side. Independent. No PAC. Not a call to violence. Find them. Then fire the people who told you not to look."
+				text: "Democrats refused Grassley's whistleblower roundtable. They opposed his bills to cut off contractors who enabled sexual harm and to overturn a Biden rule that made the pipeline easier. They voted no on citizenship checks and yes on the abolish-ICE pose that made the search illegal in their cities. Indifference is not a personality. It is the policy. The hypocrisy is the policy with a camera on. This movement is not a jersey. It is a demand that the world find a compass, find the children, and treat anyone who blocks that effort as having taken the sponsor's side. Independent. No PAC. Not a call to violence. Find them. Then fire the people who said not to look."
 			},
 		],
 	},
@@ -469,14 +519,14 @@ export const posts: Post[] = [
 		body: [
 			{ type: "p", text: "They do not fail at talking. That is the only muscle they kept. Hearings that are not hearings. Floor speeches that never become a vote. A Sunday show that names a villain and never names a line in a statute. Gallup, April 2026: ten percent approve of Congress. Eighty-six percent disapprove. That is not a branding problem. That is a shop that stopped delivering the thing it was hired to deliver." },
 			{ type: "q", text: "If it will not fit on a slide with a dollar sign, it is not a plan. It is noise." },
-			{ type: "p", text: "The 118th Congress sat among the least productive modern sessions. The 119th still owes twelve appropriations bills by October 1 — a deadline they have not met on time since the Clinton years. They will tell you the other jersey did it. Both jerseys took the oath. Both jerseys took the $7.258 billion. The country still does not get a budget it can read." },
-			{ type: "p", text: "This series is the hearing they will not schedule. Next: they sold the split so you would fight your neighbor instead of reading the annex. Then: full time or go home. Then: the whole bill — every page, every reconciliation print, posted before the gavel, or they do not get to vote. Independent. No PAC. Not a call to violence. The mic is not the job." },
+			{ type: "p", text: "The 118th Congress sat among the least productive modern sessions. The 119th still owes twelve money bills by October 1 — a deadline they have not met on time since the Clinton years. They will say the other jersey did it. Both jerseys took the oath. Both jerseys took the $7.258 billion. The country still does not get a budget it can read." },
+			{ type: "p", text: "This series is the hearing they will not schedule. Next: they sold the split so neighbor would fight neighbor instead of reading the annex. Then: full time or go home. Then: the whole bill — every page, every reconciliation print, posted before the gavel, or they do not get to vote. Independent. No PAC. Not a call to violence. The mic is not the job." },
 		],
 	},
 	{
 		slug: "they-sold-the-split",
 		title: "They sold the split.",
-		dek: "Politicians and the panel have no policy, so they sell you a neighbor to hate. Division is the product. The statute never makes the chyron.",
+		dek: "Politicians and the panel have no policy, so they sell a neighbor to hate. Division is the product. The statute never makes the caption.",
 		date: "2026-09-02",
 		category: "Dispatch",
 		readMinutes: 4,
@@ -486,13 +536,13 @@ export const posts: Post[] = [
 		part: 2,
 		receipts: [
 			{ label: "MRC — 92% negative coverage, first 100 days of the 2025 term", href: "https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage" },
-			{ label: "Brandenburg v. Ohio — incitement", href: "https://www.oyez.org/cases/1968/492" },
+			{ label: "the Supreme Court's incitement test — incitement", href: "https://www.oyez.org/cases/1968/492" },
 		],
 		body: [
 			{ type: "p", text: "A country with a real argument argues over a bill. A country being managed argues over a jersey. The panel discovered that a six-second clip outruns a thousand-page stack. MRC logged 92 percent negative coverage of the 2025 term in the first hundred days on the big three. That is not weather. That is a business model: keep the temperature up so nobody asks where the money is." },
-			{ type: "p", text: "Politicians learned the same trick because they have no policy that survives a spreadsheet. Medicare for all without a pay-for. A border they called compassion and ran as a cartel lane. A tax cut they will not score honestly either. When the arithmetic is ugly, they hand you a villain who lives on your street. The neighbor is cheaper than the ledger." },
+			{ type: "p", text: "Politicians learned the same trick because they have no policy that survives a spreadsheet. Medicare for all without a pay-for. A border they called compassion and ran as a cartel lane. A tax cut they will not score honestly either. When the arithmetic is ugly, they hand the country a villain who lives on the next street. The neighbor is cheaper than the ledger." },
 			{ type: "q", text: "Stop selling the split. Debate the statute. The jersey is not the job." },
-			{ type: "p", text: "This journal will not answer division with a street. Brandenburg already draws the line on incitement. The rest of the poison is still speech — and still a firing offense for an employee who took an oath to the country, not to a network. Vow it on camera with the slides. Then go to work. Independent. No PAC. Not a call to violence." },
+			{ type: "p", text: "This journal will not answer division with a street. The Supreme Court already draws the line on incitement. The rest of the poison is still speech — and still a firing offense for an employee who took an oath to the country, not to a network. Vow it on camera with the slides. Then go to work. Independent. No PAC. Not a call to violence." },
 		],
 	},
 	{
@@ -512,16 +562,16 @@ export const posts: Post[] = [
 			{ label: "Oath of office — 5 U.S.C. § 3331", href: "https://www.law.cornell.edu/uscode/text/5/3331" },
 		],
 		body: [
-			{ type: "p", text: "You pay the legislative branch $7.258 billion this year. Public Law 119-37. The House takes $2.083 billion. The Senate $1.467 billion. Capitol Police nearly $882 million. The Library, the Architect, GAO, CBO, the publishing office — the rest of the campus that never goes home. A member’s $174,500 is the decoy. The machine is the bill. The floor still sits fewer days than a school year." },
+			{ type: "p", text: "The country pays the legislative branch $7.258 billion this year. Public Law 119-37. The House takes $2.083 billion. The Senate $1.467 billion. Capitol Police nearly $882 million. The Library, the Architect, GAO, CBO, the publishing office — the rest of the campus that never goes home. A member’s $174,500 is the decoy. The machine is the bill. The floor still sits fewer days than a school year." },
 			{ type: "p", text: "No other job in this country pays that, plus a pension after five years, plus health coverage, plus a million-dollar office allowance, and then treats call time with donors as the real session. They lecture the country about essential workers from a chamber that keeps banker’s hours. Faithfully discharge the duties of the office is the oath they recited. 5 U.S.C. § 3331. Part-time is not faithful." },
 			{ type: "q", text: "In session means in the building. Work the hours or resign." },
-			{ type: "p", text: "House and Senate rules can require it on day one. A majority writes those rules. Article I, Section 5 already lets a chamber punish and expel. The ballot does the rest. This is not a street. It is an employee policy for people who already took your money. Full time or go home. Independent. No PAC. Not a call to violence." },
+			{ type: "p", text: "House and Senate rules can require it on day one. A majority writes those rules. Article I, Section 5 already lets a chamber punish and expel. The ballot does the rest. This is not a street. It is an employee policy for people who already took the money. Full time or go home. Independent. No PAC. Not a call to violence." },
 		],
 	},
 	{
 		slug: "the-whole-bill",
 		title: "The whole bill.",
-		dek: "A budget the public can read. Every reconciliation print. The stack, not the clip. Here is how you force it.",
+		dek: "A budget the country can read. Every reconciliation print. The stack, not the clip. How the stack is forced.",
 		date: "2026-09-02",
 		category: "Dispatch",
 		readMinutes: 6,
@@ -537,22 +587,22 @@ export const posts: Post[] = [
 			{ label: "Urban Institute — single-payer extra federal cost ~$34T / 10 years", href: "https://www.urban.org/urban-wire/dont-confuse-changes-federal-health-spending-national-health-spending" },
 		],
 		body: [
-			{ type: "p", text: "They show you a paragraph. They vote on a thousand pages. That is the whole cheat. A reconciliation bill is not a vibe. It is a stack that changes what the Treasury may pay. A budget is not a speech. It is twelve appropriations bills the 1974 Budget Act already required by October 1 — a clock they have not beaten on time since FY1997. The American people cannot ‘approve’ a file they are not given." },
-			{ type: "h", text: "What you are owed" },
+			{ type: "p", text: "They show a paragraph. They vote on a thousand pages. That is the whole cheat. A reconciliation bill is not a vibe. It is a stack that changes what the Treasury may pay. A budget is not a speech. It is twelve money bills the 1974 Budget Act already required by October 1 — a clock they have not beaten on time since FY1997. The American people cannot ‘approve’ a file they are not given." },
+			{ type: "h", text: "What the people are owed" },
 			{ type: "ul", items: [
 				"The full text of every spending bill and every reconciliation bill, searchable, 72 hours before any vote.",
 				"The CBO score and the Joint Committee on Taxation tables attached to that post — before the gavel, not after.",
-				"No omnibus. No continuing resolution as the plan. No managers’ amendment after midnight.",
-				"Same night, prime time, GOP / Democrats / DSA: a deck. Medicare for all names the money — Urban Institute already put extra federal cost near $32–34 trillion over ten years. If your number is different, show the arithmetic. GOP names, line by line, how it will not block the agenda the country voted. Anyone who will not show the slides agrees, on camera, to go home.",
+				"No giant unread bill. No continuing resolution as the plan. No managers’ amendment after midnight.",
+				"Same night, prime time, GOP / Democrats / DSA: a deck. Medicare for all names the money — Urban Institute already put extra federal cost near $32–34 trillion over ten years. If the number is different, show the arithmetic. GOP names, line by line, how it will not block the agenda the country voted. Anyone who will not show the slides agrees, on camera, to go home.",
 			] },
-			{ type: "h", text: "How you make it happen" },
-			{ type: "p", text: "There is no nationwide yes/no on a federal budget in this Constitution. Article I already gave the purse to Congress. The people’s approval is the election and the rules of the House. You do not wait for a new ministry of truth. You use the tools that already exist and you score the people who refuse them." },
+			{ type: "h", text: "How it is forced" },
+			{ type: "p", text: "There is no nationwide yes/no on a federal budget in this Constitution. Article I already gave the purse to Congress. The people’s approval is the election and the rules of the House. There is no new ministry of truth. The tools that already exist score the people who refuse them." },
 			{ type: "ul", items: [
-				"January 3, new Congress: a majority rewrites House rules. Ban waiving the 72-hour layover. Ban an appropriations vote without a posted CBO score. One subject per bill. That is a rules package, not a dream.",
+				"January 3, new Congress: a majority rewrites House rules. Ban waiving the 72-hour layover. Ban a money-bill vote without a posted CBO score. One subject per bill. That is a rules package, not a dream.",
 				"Statute they already wrote: Congressional Budget Act of 1974. Twelve bills by October 1. Treat a miss as a firing offense in the next primary, not a weather report.",
 				"Discharge petition if leadership sits on the print. Article I, Section 5: punish, censure, expel with two-thirds.",
 				"The Whole File Pledge on this scorecard. Candidates sign it in public. We print who would not. November 3 is the approval.",
-				"A constitutional amendment is required only if you want a national referendum on the budget itself. Until then, you approve by removing the employee who hid the stack.",
+				"A constitutional amendment is required only for a national referendum on the budget itself. Until then, approval is removing the employee who hid the stack.",
 			] },
 			{ type: "q", text: "Post the stack. Show the slides. Full time or resign. That is the hearing." },
 			{ type: "p", text: "This is not a street. It is not a new speech crime. It is the job they swore: well and faithfully discharge the duties of the office. They have been discharging a narrative. The country is 300 million people, not a panel. Independent. No PAC. Not a call to violence. Let them hear us now." },
@@ -579,7 +629,7 @@ export const posts: Post[] = [
 			{ label: "Bipartisan Policy Center — gross debt near $40T, August 2026", href: "https://bipartisanpolicy.org/report/deficit-tracker/" },
 		],
 		body: [
-			{ type: "p", text: "They say the word and wait for the applause. Medicare for all. As if a chant were a score. The left-of-center Urban Institute already did the arithmetic they will not put on a slide: taking private insurance off the table and writing every hospital check from Washington adds about $32 trillion to $34 trillion in extra federal spending over ten years. Charles Blahous at Mercatus, using Sanders’s own bill, put the floor at $32.6 trillion even if every promised ‘saving’ comes true. The Committee for a Responsible Federal Budget put the range at $25 trillion to $35 trillion. That is not a Republican press shop. That is the file." },
+			{ type: "p", text: "They say the word and wait for the applause. Medicare for all. As if a chant were a score. Congress has never scored the bill. Think tanks have. The left-of-center Urban Institute already did the arithmetic they will not put on a slide: taking private insurance off the table and writing every hospital check from Washington adds about $32 trillion to $34 trillion in extra federal spending over ten years. Charles Blahous at Mercatus, using Sanders’s own bill, put the floor at $32.6 trillion even if every promised ‘saving’ comes true. The Committee for a Responsible Federal Budget put the range at $25 trillion to $35 trillion. Those are studies. Congress never sent a scored Medicare-for-all bill to the President. That is the record." },
 			{ type: "q", text: "A plan that needs a second America to pay for it is not a plan. It is a demolition order with a smile." },
 			{ type: "h", text: "What the country actually has" },
 			{ type: "p", text: "CBO, March 2026. Fiscal year 2026: the Treasury takes in $5.6 trillion. It spends $7.4 trillion. The hole is $1.9 trillion — 5.8 percent of GDP — in a year they project unemployment under 5 percent. Debt held by the public is already 101 percent of GDP and heads to 120 percent by 2036. Net interest is $1.0 trillion this year and $2.1 trillion in 2036. Bipartisan Policy Center, August 2026: gross federal debt is in sight of $40 trillion. Medicare, the program they want to clone onto every American, already spent about $1.2 trillion in 2025 covering the old. That is the machine before they hand it the whole country." },
@@ -594,9 +644,9 @@ export const posts: Post[] = [
 			{ type: "h", text: "How they would have to take it" },
 			{ type: "p", text: "CRFB asked the only adult question: if the midpoint is $30 trillion extra federal in ten years, what does the pay-for look like. One of these, or a stack of them:" },
 			{ type: "ul", items: [
-				"A 32 percent payroll tax — on top of Social Security and Medicare FICA you already pay.",
+				"A 32 percent payroll tax — on top of Social Security and Medicare FICA already paid.",
 				"A 25 percent income surtax.",
-				"A 42 percent value-added tax, European-style, on what you buy.",
+				"A 42 percent value-added tax, European-style, on what is bought.",
 				"$7,500 per person, per year, as a mandatory public premium — a family of four writing a $30,000 check to Washington before a doctor is seen.",
 				"Double every federal income-tax rate. All of them. Not ‘the rich.’ The whole table.",
 				"Cut 80 percent of all non-health federal spending — Defense, veterans, borders, courts, interest. They will not. So they borrow.",
@@ -605,9 +655,9 @@ export const posts: Post[] = [
 			{ type: "p", text: "CRFB was explicit: taxes on high earners and corporations alone cannot finance it. The slogan that ‘billionaires will pay’ is a caption. The bill lands on payrolls, prices, and the bond market. Anyone who will not pick a row from that list and put a dollar sign on a slide is not offering health care. They are offering insolvency and calling it compassion." },
 			{ type: "h", text: "How it destroys the country" },
 			{ type: "p", text: "Not with a speech. With arithmetic that is already in motion. Interest is the tell. CBO has net interest doubling in a decade under current law — before Medicare for All. Add $3 trillion-plus a year in new federal outlays and the Treasury is not ‘covering health care.’ It is bidding against every mortgage, every factory, every payroll in the market for dollars. Crowded capital is not a theory. It is how a reserve currency becomes a warning label. Hospitals that cannot hire because the reimbursement is a political number. Drugs that do not get made because the price is a press conference. A generation that inherits a 120-percent-of-GDP debt plus a new entitlement that cannot be unwound without a riot in the caption. That is destruction. Slow, official, and on letterhead." },
-			{ type: "p", text: "Democrats who run on this without a CBO score, a Joint Committee on Taxation table, and a named pay-for are not confused. They are counting on you never reading the annex. DSA puts it on the same poster as reparations and a jobs guarantee. Cato stacked that program at $71 trillion to $212 trillion in ten years. There are only ten years in the window. That is not a platform. That is a confession that the private economy is the target." },
+			{ type: "p", text: "Democrats who run on this without a CBO score, a Joint Committee on Taxation table, and a named pay-for are not confused. They are counting on the annex never being read the annex. DSA puts it on the same poster as reparations and a jobs guarantee. Cato stacked that program at $71 trillion to $212 trillion in ten years. There are only ten years in the window. That is not a platform. That is a confession that the private economy is the target." },
 			{ type: "q", text: "Show the slides. Name the tax. If it will not fit on a slide with a dollar sign, it is not a plan. It is a wrecking ball." },
-			{ type: "p", text: "The Hearing’s demand does not change. Prime time. GOP, Democrats, DSA. Medicare for all names the money — Urban’s $32–34 trillion extra federal, or your number if you have one, with the table attached. Anyone who will not, agrees on camera to go home. Independent. No PAC. Not a call to violence. The country is 300 million people. It is not a slush fund for a slogan." },
+			{ type: "p", text: "The Hearing’s demand does not change. Prime time. GOP, Democrats, DSA. Medicare for all names the money — Urban’s $32–34 trillion extra federal, or another number with the table attached, with the table attached. Anyone who will not, agrees on camera to go home. Independent. No PAC. Not a call to violence. The country is 300 million people. It is not a slush fund for a slogan." },
 		],
 	},
 	{
@@ -633,27 +683,27 @@ export const posts: Post[] = [
 			{ label: "CBO — FY2026 receipts $5.6T, deficit $1.9T", href: "https://www.cbo.gov/publication/62207" },
 		],
 		body: [
-			{ type: "p", text: "It comes back every cycle for the same reason a bad check comes back: it never cleared. Reparations is the slogan you can shout in a primary without putting a CBO score on a slide. H.R. 40 has been introduced since 1989. It does not pay anyone. It studies. John Conyers ran it for thirty years. Ayanna Pressley ran it again on January 3, 2025, with ninety-six cosponsors. In thirty-seven years the bill has never become a number the Treasury has to print. That is not a failure of the activists. That is the design. A commission is a halo. A check is a tax." },
+			{ type: "p", text: "It comes back every cycle for the same reason a bad check comes back: it never cleared. Reparations is the slogan shouted in a primary without putting a CBO score on a slide. H.R. 40 has been introduced since 1989. It does not pay anyone. It studies. John Conyers ran it for thirty years. Ayanna Pressley ran it again on January 3, 2025, with ninety-six cosponsors. In thirty-seven years the bill has never become a number the Treasury has to print. That is not a failure of the activists. That is the design. A commission is a halo. A check is a tax." },
 			{ type: "q", text: "If they meant the money, they would have named the taxpayer. They named a feeling." },
 			{ type: "h", text: "Why it always returns" },
-			{ type: "p", text: "Because it is cheap as politics and impossible as math. In a Democratic primary it is a loyalty test: say the word or be called a denier of history. In a general election it is quietly dropped, because the country is not 13 percent of the electorate and does not write blank checks by race. Washington State Democrats put ‘implementation’ into a platform in June 2026 — after Juneteenth, on a weekend, in a room of delegates. That is the calendar. Not appropriations week. Not the Budget Committee. The weekend the cameras want a moral. California proved the rest. Gavin Newsom signed a task force, took the applause, and when the economists put $1.2 million per person on the table he would not write it. The 2024 budget set aside $12 million for ‘reparations legislation.’ Twelve million is a press release. It is not a program. The pattern is the product: commission, headline, no check." },
-			{ type: "p", text: "You cannot campaign against a study without being told you oppose the history. That is why they prefer H.R. 40 to a scored bill. A study has no Joint Committee on Taxation table. A study cannot be defeated on arithmetic. A study can be reintroduced forever." },
+			{ type: "p", text: "Because it is cheap as politics and impossible as math. In a Democratic primary it is a loyalty test: say the word or be called a denier of history. In a general election it is quietly dropped, because the country is not 13 percent of the electorate and does not write blank checks by race. Washington State Democrats put ‘implementation’ into a platform in June 2026 — after Juneteenth, on a weekend, in a room of delegates. That is the calendar. Not budget week. Not the Budget Committee. The weekend the cameras want a moral. California proved the rest. Gavin Newsom signed a task force, took the applause, and when the economists put $1.2 million per person on the table he would not write it. The 2024 budget set aside $12 million for ‘reparations legislation.’ Twelve million is a press release. It is not a program. The pattern is the product: commission, headline, no check." },
+			{ type: "p", text: "A study cannot be opposed without the charge of opposing history. That is why they prefer H.R. 40 to a scored bill. A study has no Joint Committee on Taxation table. A study cannot be defeated on arithmetic. A study can be reintroduced forever." },
 			{ type: "h", text: "The advocates’ own numbers" },
 			{ type: "p", text: "William Darity is the economist they cite when they want a scholar instead of a chant. Brookings, 2020: $10 to $12 trillion in federal expenditures to close the Black–White wealth gap — about $800,000 per eligible household. By 2022 the same framework, on later Survey of Consumer Finances data, was being quoted near $14 trillion. Juneteenth 2026: Darity told Forbes the floor is $16 trillion — roughly $400,000 per person times about 40 million Black Americans descended from U.S. slavery. He said do not expect a comprehensive plan this decade. Translate that: the people who want the check know the bank is closed." },
 			{ type: "ul", items: [
 				"$16 trillion is almost three years of every federal tax dollar CBO says the Treasury will collect in 2026 ($5.6T).",
 				"$16 trillion is half of one year of U.S. GDP (~$32T).",
-				"Stack it on Urban’s Medicare for All extra-federal $32–34T and you are north of $48 trillion in one decade against $56 trillion of ten years of current receipts — before interest, before a jobs guarantee, before the DSA housing line.",
+				"Stack it on Urban’s Medicare for All extra-federal $32–34T and the stack is north of $48 trillion in one decade against $56 trillion of ten years of current receipts — before interest, before a jobs guarantee, before the DSA housing line.",
 				"Cato’s read of the DSA platform puts reparations itself at $13.5 trillion to $28 trillion. High end is five years of the entire IRS.",
 				"California’s unofficial working number hit about $800 billion for one state that never had chattel slavery in its statehood. Newsom still would not sign a payment bill.",
 			] },
 			{ type: "p", text: "An honest comparison exists, and they do not use it. The Civil Liberties Act of 1988 paid about $20,000 to living Japanese Americans who had been interned — a documented class, a finite roll, a bill of roughly $1.6 billion. That is how a republic pays a specific wrong to living people. A wealth-gap formula billed to people who were not born, drawn on people who did not own slaves, administered by race, is not that. It is a new spoils system with a museum caption." },
 			{ type: "h", text: "Why it cannot be done" },
-			{ type: "p", text: "The 14th Amendment equal-protection clause is not a vibe. A Treasury payment whose only ticket is race is the fact pattern already in court in Evanston, Illinois — a $25,000 housing program the Justice Department moved to halt in 2026 as unconstitutional. You can study history. You cannot run the IRS as a racial trust without shredding the amendment that ended slavery as law. The living cannot be taxed for the dead by skin color in a country whose Constitution forbids titles of nobility and bills of attainder for a reason: punishment and reward do not travel in the blood." },
+			{ type: "p", text: "The 14th Amendment equal-protection clause is not a vibe. A Treasury payment whose only ticket is race is the fact pattern already in court in Evanston, Illinois — a $25,000 housing program the Justice Department moved to halt in 2026 as unconstitutional. History can be taught. The IRS cannot be run as a racial trust without shredding the amendment that ended slavery as law. The living cannot be taxed for the dead by skin color in a country whose Constitution forbids titles of nobility and bills of attainder for a reason: punishment and reward do not travel in the blood." },
 			{ type: "p", text: "Even if a court pretended otherwise, the money is not there. CBO: $5.6 trillion in, $7.4 trillion out, $1.9 trillion hole, debt in sight of $40 trillion. Confiscating the net worth of the 400 richest Americans — about $6.6 trillion in 2025, per Cato — does not cover Darity’s floor. It does not cover Cato’s low DSA reparations line. The check, if written, lands on payrolls, prices, and the bond market. That is every other Democrat slogan in this series. Billionaires are the caption. The middle is the account." },
 			{ type: "q", text: "A wrong in 1865 is not paid by bankrupting 2026. History is a record. It is not a blank on the Treasury." },
-			{ type: "p", text: "This journal will not deny slavery, Jim Crow, or redlining. The file is the file. The 13th, 14th, and 15th Amendments were the legal end of the slave power. The Civil Rights Act and the Voting Rights Act were the legal end of Jim Crow. A country can teach that without lighting a race line under the income tax. What it cannot do is add a $16 trillion racial outlay on top of a $34 trillion health outlay and call the sum justice. That is how you destroy the currency, the courts, and the idea that the law is the same for the man in the next pew." },
-			{ type: "p", text: "The Hearing’s demand is the same as it was for Medicare for All. Prime time. Name the pay-for. Name the eligible class without a racial test that dies in court. If you cannot, you do not get to run on the word. Independent. No PAC. Not a call to violence. Let them hear us now — including the part where the check never existed." },
+			{ type: "p", text: "This journal will not deny slavery, Jim Crow, or redlining. The record is the record. The 13th, 14th, and 15th Amendments were the legal end of the slave power. The Civil Rights Act and the Voting Rights Act were the legal end of Jim Crow. A country can teach that without lighting a race line under the income tax. What it cannot do is add a $16 trillion racial outlay on top of a $34 trillion health outlay and call the sum justice. That is how the currency is destroyed, the courts, and the idea that the law is the same for the man in the next pew." },
+			{ type: "p", text: "The Hearing’s demand is the same as it was for Medicare for All. Prime time. Name the pay-for. Name the eligible class without a racial test that dies in court. No pay-for, no slogan. Independent. No PAC. Not a call to violence. Let them hear us now — including the part where the check never existed." },
 		],
 	},
 	{
@@ -678,13 +728,13 @@ export const posts: Post[] = [
 			{ label: "POLITICO — Sept. 4, 2026: NC mail ballots going out; Democrats call the USPS rule illegal", href: "https://www.politico.com/news/2026/09/04/trump-mail-ballots-order-november-elections-01065234" },
 		],
 		body: [
-			{ type: "p", text: "Write the two sentences on the same chalkboard. August 2020: Democrats told the country Louis DeJoy was dismantling the Postal Service so your ballot would die in a bin. Letitia James said the changes ‘made a mockery of the right to vote.’ They sued. They held hearings. They said the trucks were slow, the machines were gone, the overtime was cut, the election was in danger because the mail could not be trusted. November 12, 2020: CISA, the same federal security shop, declared the contest ‘the most secure in American history.’ Those two captions cannot both be adult. Either the post office was a crime scene or it was a vault. They used both, three months apart, on the same ballots." },
+			{ type: "p", text: "Write the two sentences on the same chalkboard. August 2020: Democrats told the country Louis DeJoy was dismantling the Postal Service so a ballot would die in a bin. Letitia James said the changes ‘made a mockery of the right to vote.’ They sued. They held hearings. They said the trucks were slow, the machines were gone, the overtime was cut, the election was in danger because the mail could not be trusted. November 12, 2020: CISA, the same federal security shop, declared the contest ‘the most secure in American history.’ Those two captions cannot both be adult. Either the post office was a crime scene or it was a vault. They used both, three months apart, on the same ballots." },
 			{ type: "q", text: "A barcode tells a machine where a letter has been. It does not tell a republic who marked the oval." },
 			{ type: "h", text: "What they actually certified" },
-			{ type: "p", text: "Read Krebs on 60 Minutes, not the chyron. The sentence about ‘most secure’ was about voting systems: paper backups so a hacked tally can be checked. Ninety-five percent of 2020 ballots had a paper record. That is a claim about machines. The panel translated it into a claim about the mail. Those are different rooms. A scanner in a county warehouse is not a letter that sat in a kitchen, a porch box, a carrier bag, a plant, and a regional facility with nobody watching the flap. CISA did not audit the kitchen. It issued a press release about the tabulator." },
-			{ type: "p", text: "The Washington Post, November 5, 2020: the Postal Service processed about 150,000 ballots after Election Day. USPS later said 99.89 percent of ballots reached election officials within seven days. Both can be in the file. Neither is a chain of custody with a name on it. A percentage is not a witness." },
+			{ type: "p", text: "Read Krebs on 60 Minutes, not the caption. The sentence about ‘most secure’ was about voting systems: paper backups so a hacked tally can be checked. Ninety-five percent of 2020 ballots had a paper record. That is a claim about machines. The panel translated it into a claim about the mail. Those are different rooms. A scanner in a county warehouse is not a letter that sat in a kitchen, a porch box, a carrier bag, a plant, and a regional facility with nobody watching the flap. CISA did not audit the kitchen. It issued a press release about the tabulator." },
+			{ type: "p", text: "The Washington Post, November 5, 2020: the Postal Service processed about 150,000 ballots after Election Day. USPS later said 99.89 percent of ballots reached election officials within seven days. Both can be in the record. Neither is a chain of custody with a name on it. A percentage is not a witness." },
 			{ type: "h", text: "What a barcode is" },
-			{ type: "p", text: "The Intelligent Mail barcode — IMb — is sixty-five bars the Postal Service prints so a sorter knows which bin. It is the same family of mark that rides on a catalog and a utility bill. BallotTrax and the county software can ping you when the envelope is scanned. That is tracking. Tracking is not identity. The envelope is supposed to carry a signature. Signatures are matched by a clerk under rules that vary by state, by county, by how tired the clerk is at 9 p.m. The barcode does not watch the kitchen table. It does not watch who filled the oval. It does not watch who licked the flap. It watches a piece of paper go through a camera in a plant." },
+			{ type: "p", text: "The Intelligent Mail barcode — IMb — is sixty-five bars the Postal Service prints so a sorter knows which bin. It is the same family of mark that rides on a catalog and a utility bill. BallotTrax and the county software can ping when the envelope is scanned. That is tracking. Tracking is not identity. The envelope is supposed to carry a signature. Signatures are matched by a clerk under rules that vary by state, by county, by how tired the clerk is at 9 p.m. The barcode does not watch the kitchen table. It does not watch who filled the oval. It does not watch who licked the flap. It watches a piece of paper go through a camera in a plant." },
 			{ type: "p", text: "August 2026: USPS finalized a rule that would enroll each mail voter in a federal portal with name, address, and two unique barcodes — outbound and return. Return ballots, the rule itself says, do not get the same acceptance check as the outbound stack. Democrats called it illegal, chaotic, too close to the midterms. North Carolina started mailing today anyway. Hear the switch. In 2020 the barcode-and-mail pipeline was so sacred it made history. In 2026 the same pipeline, with more barcode, is a plot. The envelope did not change. The jersey on the White House did." },
 			{ type: "h", text: "The hypocrisy, in English" },
 			{ type: "ul", items: [
@@ -693,7 +743,7 @@ export const posts: Post[] = [
 				"If a barcode is ‘added security,’ say what it secures. It secures the sort. It does not secure the voter.",
 				"If Democrats now say USPS has no business touching a ballot except to carry it, they have conceded the 2020 caption: the post office was a truck, not a poll worker with an oath.",
 			] },
-			{ type: "p", text: "This journal will not invent a dumpster of ballots to win a paragraph. The tape is the tape. People voted by mail for decades before 2020 — mostly absentee, mostly with an excuse, mostly in numbers the plants could swallow. 2020 made the exception the system and then forbade you to ask how a letter becomes a vote. The honest design is in-person, with identification, or absentee with a reason and a chain a court can read. A sorting sticker on a pandemic envelope is not that. It is a caption that says ‘trust us’ in machine-readable ink." },
+			{ type: "p", text: "This journal will not invent a dumpster of ballots to win a paragraph. The tape is the tape. People voted by mail for decades before 2020 — mostly absentee, mostly with an excuse, mostly in numbers the plants could swallow. 2020 made the exception the system and then forbade asking how a letter becomes a vote. The honest design is in-person, with identification, or absentee with a reason and a chain a court can read. A sorting sticker on a pandemic envelope is not that. It is a caption that says ‘trust us’ in machine-readable ink." },
 			{ type: "q", text: "Secure the elections. A truck is not a precinct. A barcode is not a lock." },
 			{ type: "p", text: "Independent. No PAC. Not a call to violence. Let them hear us now — including the summer they said the mail was dying and the November they said it had never been safer." },
 		],
@@ -701,14 +751,14 @@ export const posts: Post[] = [
 	{
 		slug: "they-dont-debate-they-flag",
 		title: "They don't debate. They flag.",
-		dek: "When they cannot beat the file, they make it radioactive.",
+		dek: "When they cannot beat the tape, they smear the person holding it.",
 		date: "2026-08-26",
 		category: "Dispatch",
 		readMinutes: 3,
 		image: "/images/essay-eagle.jpg",
 		imageAlt: "Angry eagle over the Capitol in the swamp",
 		series: "The Clip",
-		part: 4,
+		part: 3,
 		body: [
 			{
 				type: "p",
@@ -720,7 +770,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "q",
-				text: "When they cannot beat the file, they try to make the file radioactive."
+				text: "When they cannot beat the tape, they smear the person holding it."
 			},
 			{
 				type: "p",
@@ -732,7 +782,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "A republic only works if people can argue in the open. The First Amendment is not a vibe. It is the rule that you answer speech with speech — not with a poison tag you hope a trust-and-safety queue will treat as gospel. Television already taught half the country that a six-second chyron is a verdict. This is the same move on a reply thread: skip the Constitution, skip the clip, skip the statute. Attach the worst word in the language to a citizen and go to bed."
+				text: "A republic only works if people can argue in the open. The [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) is not a vibe. It is the rule that speech answers speech — not a poison tag hoped a trust-and-safety queue will treat as gospel. Television already taught half the country that a six-second caption is a verdict. This is the same move on a reply thread: skip the Constitution, skip the clip, skip the statute. Attach the worst word in the language to a citizen and go to bed."
 			},
 			{
 				type: "p",
@@ -748,7 +798,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "q",
-				text: "They work for us. The networks do not. The queue does not. Play the file anyway."
+				text: "They work for us. The networks do not. The queue does not. Play the tape anyway."
 			}
 		]
 	},
@@ -763,7 +813,7 @@ export const posts: Post[] = [
 		imageAlt: "Angry eagle over the Capitol in the swamp",
 		featured: true,
 		series: "The Clip",
-		part: 1,
+		part: 2,
 		receipts: [
 			{
 				label: "92% negative TV — MRC",
@@ -789,7 +839,7 @@ export const posts: Post[] = [
 	body: [
 			{
 				type: "p",
-				text: "For a long time the arrangement felt ordinary. You went to work. You paid what they said was owed. You assumed the people with titles were doing something that corresponded to the titles. The country still opened in the morning: trucks, clinics, classrooms, harvests. That is not a small thing. A nation is a set of habits more than it is a set of speeches, and the habits were being kept by people who did not live inside the political club."
+				text: "For a long time the arrangement felt ordinary. People went to work. People paid what was said to be owed. People assumed the people with titles were doing something that corresponded to the titles. The country still opened in the morning: trucks, clinics, classrooms, harvests. That is not a small thing. A nation is a set of habits more than it is a set of speeches, and the habits were being kept by people who did not live inside the political club."
 			},
 			{
 				type: "p",
@@ -797,31 +847,31 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Part of the trick was never teaching how the machine actually runs. Most Americans can name a party. Far fewer can say how a bill becomes a statute, who writes the regulation after the vote, or where the money is authorized versus spent. That ignorance is not a personality flaw. It was convenient. A six-second clip is easier than Article I. A caption is easier than a rider. For every law they advertised as best for the nation, there was often a quiet twin — an omnibus stack, a notwithstanding clause, an agency rewrite — that took back what the camera had just celebrated. The name of the bill made the news. The catch lived in the annex."
+				text: "Part of the trick was never teaching how the machine actually runs. Most Americans can name a party. Far fewer can say how a bill becomes a statute, who writes the regulation after the vote, or where the money is authorized versus spent. That ignorance is not a personality flaw. It was convenient. A six-second clip is easier than Article I. A caption is easier than a rider. For every law they advertised as best for the nation, there was often a quiet twin — a giant unread bill, a notwithstanding clause, an agency rewrite — that took back what the camera had just celebrated. The name of the bill made the news. The catch lived in the annex."
 			},
 			{
 				type: "p",
-				text: "When people did get angry, the response was not a debate. It was a label. This journal learned that the cheap way. We published a file. A stranger walked the replies, fourteen times, and hung a child-sex smear on the work. There is no such content here. There never was. Reports were filed through the platform's own tools. The posts stayed. Support did not answer a paying customer. You do not need a conspiracy for that to work. You only need a queue that never comes, and a public too tired to check. The argument moves from what is on the recording to whether the person holding the recording deserves to be heard."
+				text: "When people did get angry, the response was not a debate. It was a label. This journal learned that the cheap way. We published a file. A stranger walked the replies, fourteen times, and hung a child-sex smear on the work. There is no such content here. There never was. Reports were filed through the platform's own tools. The posts stayed. Support did not answer a paying customer. A conspiracy is not required. A queue that never comes is enough, and a country too tired to check. The argument moves from what is on the recording to whether the person holding the recording deserves to be heard."
 			},
 			{
 				type: "p",
-				text: "That is the climate a former donor walked into. Donald Trump is not a saint, and this page will not pretend he is. Ugly lines that are on tape stay on this site: fight like hell; stand back and stand by; when the looting starts, the shooting starts. The political club loved him when he wrote the checks. They turned when he stopped being a donor and started closing the problems they lived on — then spent taxpayer money on hoax after hoax to bury him. He never wore the uniform — print that if you need to. Then print July 13, 2024, in Butler, Pennsylvania, when a rifle tried to end the argument https://www.fbi.gov/news/press-releases/fbi-releases-photographs-in-connection-with-attempted-assassination-of-former-president-trump and he got up. Another attempt on a golf course. A family that still walks through threats. He is a man who put his body where the club would not put theirs, and then went back to the jobs they had called impossible: a border that actually closed, employees who discovered they could be fired, deals the consultants said were theater."
+				text: "That is the climate a former donor walked into. Donald Trump is not a saint, and this page will not pretend he is. Ugly lines that are on tape stay on this site: fight like hell; stand back and stand by; when the looting starts, the shooting starts. The political club loved him when he wrote the checks. They turned when he stopped being a donor and started closing the problems they lived on — then spent taxpayer money on hoax after hoax to bury him. He never wore the uniform — print that if the record needs it. Then print July 13, 2024, in Butler, Pennsylvania, when a rifle tried to end the argument https://www.fbi.gov/news/press-releases/fbi-releases-photographs-in-connection-with-attempted-assassination-of-former-president-trump and he got up. Another attempt on a golf course. A family that still walks through threats. He is a man who put his body where the club would not put theirs, and then went back to the jobs they had called impossible: a border that actually closed, employees who discovered they could be fired, deals the consultants said were theater."
 			},
 			{
 				type: "p",
-				text: "None of that required you to like his manners. It required you to notice that the people attacking him were not offering a better statute. They were offering a feeling. ABC, CBS, and NBC ran evaluative coverage of his 2025 term that the Media Research Center counted as 92 percent negative in the first hundred days https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage You may discount a conservative scorekeeper. Then watch a week of those broadcasts yourself. Gallup, in the same season, found trust in mass media at 28 percent, a record low https://news.gallup.com/poll/695762/trust-media-new-low.aspx Independent researchers showed that ranking a feed by likes and shares pumps anger at the other side https://www.science.org/doi/10.1126/science.adu5584 This is not a basement plot. It is a business. Outrage is cheap to make and expensive to unwind. A law takes twenty minutes to read. A clip takes six seconds. The person on a clock loses to the person on a cut."
+				text: "None of that required liking his manners. It required noticing that the people attacking him were not offering a better statute. They were offering a feeling. ABC, CBS, and NBC ran evaluative coverage of his 2025 term that the Media Research Center counted as 92 percent negative in the first hundred days https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage A conservative scorekeeper can be discounted. Then watch a week of those broadcasts. Gallup, in the same season, found trust in mass media at 28 percent, a record low https://news.gallup.com/poll/695762/trust-media-new-low.aspx Independent researchers showed that ranking a feed by likes and shares pumps anger at the other side https://www.science.org/doi/10.1126/science.adu5584 This is not a basement plot. It is a business. Outrage is cheap to make and expensive to unwind. A law takes twenty minutes to read. A clip takes six seconds. The person on a clock loses to the person on a cut."
 			},
 			{
 				type: "p",
-				text: "Who they are, if the word is going to mean anything: news desks that need a villain every night; elected employees who cannot pass a bill so they pass a monster; platforms paid when you stay mad; consultants who write the caption; flag accounts that will not watch the file. If a name cannot be tied to a paycheck, a vote, or a share button, park it. Fog is how the real they hide. A foreign government that wants a loud, split America does not have to invent the split. It only has to boost it."
+				text: "Who they are, if the word is going to mean anything: news desks that need a villain every night; elected employees who cannot pass a bill so they pass a monster; platforms paid when the feed stays mad; consultants who write the caption; flag accounts that will not watch the tape. If a name cannot be tied to a paycheck, a vote, or a share button, park it. Fog is how the real they hide. A foreign government that wants a loud, split America does not have to invent the split. It only has to boost it."
 			},
 			{
 				type: "p",
-				text: "Hannah Arendt saw the method before the present caption. In The Origins of Totalitarianism she wrote that the ideal subject is not the convinced partisan — it is the person for whom the distinction between fact and fiction, true and false, no longer exists. They do not need you to love the shop. They need you unable to read a statute. In Eichmann in Jerusalem she named the other half: evil as thoughtlessness, a career, a man who was only doing his job. The neighbor in the other jersey is not that. The functionary who files the unread pile is. Power, she argued, is people acting in concert. Isolation is how you lose a republic. The file is how you get the concert back."
+				text: "Hannah Arendt saw the method before the present caption. In The Origins of Totalitarianism she wrote that the ideal subject is not the convinced partisan — it is the person for whom the distinction between fact and fiction, true and false, no longer exists. Love of Congress is not required. Inability to read a statute is. In Eichmann in Jerusalem she named the other half: evil as thoughtlessness, a career, a man who was only doing his job. The neighbor in the other jersey is not that. The functionary who files the unread pile is. Power, she argued, is people acting in concert. Isolation is how a republic is lost. The record is how concert comes back."
 			},
 			{
 				type: "p",
-				text: "Swamp Force exists because that arrangement is no longer tolerable, and because complaining on a feed is not the same as teaching. We are not a party and we are not a PAC. We are not calling anyone into the street. We print the statute, the table, and the tape, including the parts that cut against the man we think is standing in the gap. The country still does not run without the people who clock in. The political club knows it. The work of this journal is to make sure you know it too — and to stand with the work he is actually doing while they try to bury him under a caption. The next pages are slower on purpose."
+				text: "Swamp Force exists because that arrangement is no longer tolerable, and because complaining on a feed is not the same as teaching. We are not a party and we are not a PAC. We are not calling anyone into the street. We print the statute, the table, and the tape, including the parts that cut against the man we think is standing in the gap. The country still does not run without the people who clock in. The political club knows it. The work of this journal is to put the record in public — and to stand with the work he is actually doing while they try to bury him under a caption. The next pages are slower on purpose."
 			}
 		]
 	},
@@ -834,8 +884,8 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/chamber.jpg",
 		imageAlt: "The House chamber — where the political class writes the mess",
-		series: "The Record",
-		part: 1,
+		series: "The Clip",
+		part: 7,
 		receipts: [{
 			label: "Border — Pew",
 			href: "https://www.pewresearch.org/short-reads/2026/02/02/migrant-encounters-at-the-us-mexico-border-are-at-their-lowest-level-in-more-than-50-years/"
@@ -953,7 +1003,7 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "You are not stupid. You were given a clip instead of a class. A network needs you mad in six seconds. A teacher needs you to finish the sentence. This journal is the second thing."
+				text: "The country was given a clip instead of a class. A network needs anger in six seconds. A teacher needs the sentence finished. This journal is the second thing."
 			},
 			{
 				type: "p",
@@ -973,7 +1023,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "You just took a class. You did not need a party for it. You needed six names and one job. The boxes below are two more jobs — war, and the factories — written the same way. Last line first. That is today. Then read up. That is who opened the wound."
+				text: "That was a class. A party was not required. Six names and one job were. The boxes below are two more jobs — war, and the factories — written the same way. Last line first. That is today. Then read up. That is who opened the wound."
 			},
 			{
 				type: "p",
@@ -990,20 +1040,20 @@ export const posts: Post[] = [
 		]
 	},
 	{
-		slug: "the-republic-not-the-chyron",
-		title: "The republic, not the chyron",
+		slug: "the-republic-not-the-caption",
+		title: "The republic, not the caption",
 		dek: "We the People. Not we the panel. Not we the clip.",
 		date: "2026-08-26",
 		category: "Dispatch",
 		readMinutes: 3,
 		image: "/images/constitution.jpg",
-		imageAlt: "The written charter — not a chyron",
+		imageAlt: "The written charter — not a caption",
 		series: "The Republic",
-		part: 1,
+		part: 3,
 		body: [
 			{
 				type: "p",
-				text: "Half the country was never walked through the actual machine. They were walked through a show. So here it is without a network: the United States is a constitutional republic. The people are sovereign. The Constitution is the operating manual. Congress, the President, the courts — employees with listed powers. They do not own the country. They work here."
+				text: "Half the country was never walked through the actual machine. They were walked through a show. So here it is without a network: the United States is a constitutional republic. The people are sovereign. The [Constitution](https://constitution.congress.gov/) is the operating manual. Congress, the President, the courts — employees with listed powers in [Article I](https://constitution.congress.gov/constitution/article-1/), [Article II](https://constitution.congress.gov/constitution/article-2/), and [Article III](https://constitution.congress.gov/constitution/article-3/). They do not own the country. They work here."
 			},
 			{
 				type: "q",
@@ -1011,7 +1061,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "A republic fails in two ordinary ways. Politicians talk for an hour and say nothing — noise as a substitute for a vote. Networks talk for six seconds and call it a verdict — a cut as a substitute for a file. Lazy is the wrong word for the viewer. The edit is lazy. The edit is also the point. If you never see Article I, you will argue about a man. If you never see the rest of the sentence, you will hate a country that isn’t on the tape."
+				text: "A republic fails in two ordinary ways. Politicians talk for an hour and say nothing — noise as a substitute for a vote. Networks talk for six seconds and call it a verdict — a cut as a substitute for a file. Lazy is the wrong word for the viewer. The edit is lazy. The edit is also the point. If Article I is never seen, the argument is about a man. If the rest of the sentence is never seen, a country that is not on the tape is hated."
 			},
 			{
 				type: "h",
@@ -1019,11 +1069,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "We do not ask you to trust a vibe. We put the date, the room, and the link. If there is no tape, we say so. If the man said the ugly line, we say so. Then we put the Democratic frame on the left and the file on the right. Read across. That is the education. Not a lecture about who is ignorant. A habit: don’t share a sentence you have not heard in full."
+				text: "This journal does not ask for trust in a vibe. We put the date, the room, and the link. If there is no tape, we say so. If the man said the ugly line, we say so. Then we put the Democratic frame on the left and the file on the right. Read across. That is the education. Not a lecture about who is ignorant. A habit: do not share a sentence not heard in full."
 			},
 			{
 				type: "p",
-				text: "The next piece is the table. Bloodbath, dictator, fine people, a performed phone call, a spliced January 6 speech. After that, the employees on their own mics. You do not need a party to do this. You need the charter and the file. Independent. No party. No PAC. Not a call to violence. A demand that 300 million principals get the uncut record."
+				text: "The next piece is the table. Bloodbath, dictator, fine people, a performed phone call, a spliced January 6 speech. After that, the employees on their own mics. A party is not required. The charter and the file are. Independent. No party. No PAC. Not a call to violence. A demand that 300 million principals get the uncut record."
 			}
 		]
 	},
@@ -1037,37 +1087,43 @@ export const posts: Post[] = [
 		image: "/images/chamber.jpg",
 		imageAlt: "The House — where the record is supposed to live",
 		series: "The Clip",
-		part: 3,
+		part: 1,
 		frames: [
 			{
 				tag: "Bloodbath",
 				they: "If he loses it will be a bloodbath. He wants another January 6.",
-				tape: "Chinese car plants in Mexico. 100% tariff. “They’re not going to sell those cars.”"
+				tape: "Chinese car plants in Mexico. 100% tariff. “They’re not going to sell those cars.”",
+				href: "https://www.youtube.com/watch?v=f57dRZMS0PQ",
 			},
 			{
 				tag: "Dictator",
 				they: "He said he will be a dictator on day one.",
-				tape: "Close the border. Drill, drill, drill. “After that, I’m not a dictator.”"
+				tape: "Close the border. Drill, drill, drill. “After that, I’m not a dictator.”",
+				href: "https://www.youtube.com/watch?v=7lB3bfVg8Z8",
 			},
 			{
 				tag: "Fine people",
 				they: "He called neo-Nazis very fine people.",
-				tape: "Same remarks: neo-Nazis and white nationalists “should be condemned totally.”"
+				tape: "Same remarks: neo-Nazis and white nationalists “should be condemned totally.”",
+				href: "https://www.politico.com/story/2017/08/15/full-text-trump-comments-white-supremacists-alt-left-transcript-241662",
 			},
 			{
 				tag: "Ukraine call",
 				they: "Schiff read the shakedown: “make up dirt on my political opponent.”",
-				tape: "Those lines are not in the call memo. He later called it “part in parody.”"
+				tape: "Those lines are not in the call memo. He later called it “part in parody.”",
+				href: "https://www.c-span.org/video/?c4820134/schiffs-parody",
 			},
 			{
 				tag: "Jan 6 speech",
 				they: "Walk to the Capitol + fight like hell, as one order.",
-				tape: "“Peacefully and patriotically.” BBC stuck two lines 54 minutes apart."
+				tape: "“Peacefully and patriotically.” BBC stuck two lines 54 minutes apart.",
+				href: "https://www.npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial",
 			},
 			{
 				tag: "Bleach",
 				they: "He told Americans to inject bleach / drink disinfectant.",
-				tape: "Asked doctors if UV/disinfectant research was “interesting to check.”"
+				tape: "Asked doctors if UV/disinfectant research was “interesting to check.”",
+				href: "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-31/",
 			},
 			{
 				tag: "Animals",
@@ -1083,11 +1139,11 @@ export const posts: Post[] = [
 	body: [
 			{
 				type: "p",
-				text: "A political argument in this country is now usually a fight about a sentence that has been removed from the paragraph it lived in. The method is stable enough to teach. A phrase is cut. A caption is written as if the phrase were the whole. The caption is repeated until it is the memory. Anyone who plays the rest of the recording is treated as a partisan, or worse. You do not have to like Donald Trump to see the pattern. You only have to be willing to sit still for the next sentence."
+				text: "A political argument in this country is now usually a fight about a sentence that has been removed from the paragraph it lived in. The method is stable enough to teach. A phrase is cut. A caption is written as if the phrase were the whole. The caption is repeated until it is the memory. Anyone who plays the rest of the recording is treated as a partisan, or worse. Liking Donald Trump is not required to see the pattern. Sitting still for the next sentence is."
 			},
 			{
 				type: "p",
-				text: "The table that follows is that homework. The left column is what ran. The right column is what the recording still contains. We are not asking you to become a fan. We are asking you to hear the rest of the answer — and then, in the last rows, to hear the lines we will not wash, because a journal that only corrects in one direction is not correcting anything."
+				text: "The table that follows is that homework. The left column is what ran. The right column is what the recording still contains. This journal is not recruiting fans. Hear the rest of the answer — and then, in the last rows, to hear the lines we will not wash, because a journal that only corrects in one direction is not correcting anything."
 			},
 			{
 				type: "h",
@@ -1095,8 +1151,20 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "He said fight like hell on January 6. He said stand back and stand by to the Proud Boys. He tweeted when the looting starts, the shooting starts. Those are on tape. Play them next to the sentences they buried. The country can survive an ugly sentence. It cannot survive a fake one. Sources for the table: the Vandalia rally https://www.youtube.com/watch?v=f57dRZMS0PQ FactCheck on bloodbath https://www.factcheck.org/2024/03/trumps-bloodbath-comment/ the Hannity town hall https://www.youtube.com/watch?v=7lB3bfVg8Z8 the Charlottesville transcript https://www.politico.com/story/2017/08/15/full-text-trump-comments-white-supremacists-alt-left-transcript-241662 Schiff's parody https://www.c-span.org/video/?c4820134/schiffs-parody the January 6 speech https://www.npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial the BBC splice versus the original https://www.youtube.com/watch?v=TAV5-oun3uM the disinfectant briefing https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-31/"
-			}
+				text: "He said fight like hell on January 6. He said stand back and stand by to the Proud Boys. He tweeted when the looting starts, the shooting starts. Those are on tape. Play them next to the sentences they buried. The country can survive an ugly sentence. It cannot survive a fake one.",
+			},
+			{
+				type: "ul",
+				items: [
+					"[Vandalia rally — bloodbath, the auto plants](https://www.youtube.com/watch?v=f57dRZMS0PQ)",
+					"[Hannity town hall — dictator on day one](https://www.youtube.com/watch?v=7lB3bfVg8Z8)",
+					"[Charlottesville transcript — condemned totally](https://www.politico.com/story/2017/08/15/full-text-trump-comments-white-supremacists-alt-left-transcript-241662)",
+					"[Schiff floor parody — C-SPAN](https://www.c-span.org/video/?c4820134/schiffs-parody)",
+					"[January 6 speech — full text](https://www.npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial)",
+					"[BBC splice versus the original](https://www.youtube.com/watch?v=TAV5-oun3uM)",
+					"[Disinfectant briefing — White House archive](https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-31/)",
+				],
+			},
 		]
 	},
 	{
@@ -1109,7 +1177,7 @@ export const posts: Post[] = [
 		image: "/images/capitol.jpg",
 		imageAlt: "The Capitol at night — they work for us",
 		series: "The Republic",
-		part: 2,
+		part: 7,
 		body: [
 			{
 				type: "p",
@@ -1133,19 +1201,19 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "C-SPAN clip: https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623"
+				text: "[C-SPAN clip — Jeffries, “maximum warfare”](https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623)",
 			},
 			{
 				type: "p",
-				text: "C-SPAN full conference: https://www.c-span.org/program/news-conference/house-democrats-hold-news-conference-on-virginia-redistricting-vote/677945"
+				text: "[C-SPAN full conference — House Democrats on Virginia maps](https://www.c-span.org/program/news-conference/house-democrats-hold-news-conference-on-virginia-redistricting-vote/677945)",
 			},
 			{
 				type: "p",
-				text: "His YouTube: https://www.youtube.com/watch?v=0IVD7gE7-kg"
+				text: "[Jeffries YouTube — “Maximum Warfare Everywhere All The Time”](https://www.youtube.com/watch?v=0IVD7gE7-kg)",
 			},
 			{
 				type: "p",
-				text: "His own post: https://x.com/hakeemjeffries/status/2046754383707148505"
+				text: "[Jeffries on X](https://x.com/hakeemjeffries/status/2046754383707148505)",
 			},
 			{
 				type: "h",
@@ -1165,11 +1233,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Fox News has the video of that speech: https://www.foxnews.com/video/6396075535112"
+				text: "Fox News has the video of that speech: [Jeffries, “break them”](https://www.foxnews.com/video/6396075535112)",
 			},
 			{
 				type: "p",
-				text: "Write-up with the same quotes: https://www.foxnews.com/politics/hakeem-jeffries-shredded-disgustingly-violent-call-dems-break-spirit-maga"
+				text: "Write-up with the same quotes: [Fox News](https://www.foxnews.com/politics/hakeem-jeffries-shredded-disgustingly-violent-call-dems-break-spirit-maga)",
 			},
 			{
 				type: "p",
@@ -1181,19 +1249,19 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Chuck Schumer, March 4, 2020, steps of the Supreme Court, pointing at the building: “I want to tell you, Gorsuch; I want to tell you, Kavanaugh. You have released the whirlwind, and you will pay the price. You won’t know what hit you…” Chief Justice Roberts called it “dangerous.” Schumer later said he misspoke. The camera did not misspeak. YouTube: https://www.youtube.com/watch?v=yu-7L5W6Rew  CNN: https://www.cnn.com/videos/politics/2020/03/04/schumer-gorsuch-kavanaugh-supreme-court-abortion-lead-vpx.cnn"
+				text: "Chuck Schumer, March 4, 2020, steps of the Supreme Court, pointing at the building: “I want to tell you, Gorsuch; I want to tell you, Kavanaugh. You have released the whirlwind, and you will pay the price. You won’t know what hit you…” Chief Justice Roberts called it “dangerous.” Schumer later said he misspoke. The camera did not misspeak. [YouTube](https://www.youtube.com/watch?v=yu-7L5W6Rew) · [CNN](https://www.cnn.com/videos/politics/2020/03/04/schumer-gorsuch-kavanaugh-supreme-court-abortion-lead-vpx.cnn)",
 			},
 			{
 				type: "p",
-				text: "Maxine Waters, June 2018: if you see Trump cabinet members in a restaurant, “you get out and you create a crowd and you push back on them… they are not welcome, anymore, anywhere.” YouTube: https://www.youtube.com/watch?v=-1Fu3g1MGHY  April 2021, Minneapolis: “We’ve got to stay on the street… We’ve got to get more confrontational.” YouTube: https://www.youtube.com/watch?v=tnNBvN4ZXms"
+				text: "Maxine Waters, June 2018: if Trump cabinet members are seen in a restaurant, “you get out and you create a crowd and you push back on them… they are not welcome, anymore, anywhere.” [YouTube](https://www.youtube.com/watch?v=-1Fu3g1MGHY) April 2021, Minneapolis: “We’ve got to stay on the street… We’ve got to get more confrontational.” [YouTube](https://www.youtube.com/watch?v=tnNBvN4ZXms)",
 			},
 			{
 				type: "p",
-				text: "Kamala Harris, June 1, 2020, on X — not a speech, still her words — while cities burned: “If you’re able to, chip in now to the @MNFreedomFund to help post bail for those protesting on the ground in Minnesota.” https://x.com/KamalaHarris/status/1267555018128965643"
+				text: "Kamala Harris, June 1, 2020, on X — not a speech, still her words — while cities burned: “If you’re able to, chip in now to the @MNFreedomFund to help post bail for those protesting on the ground in Minnesota.” [The post](https://x.com/KamalaHarris/status/1267555018128965643)",
 			},
 			{
 				type: "p",
-				text: "Joe Biden, July 8, 2024, to donors — later confirmed on camera to Lester Holt: “time to put Trump in the bull’s-eye.” He called it a mistake after the fact. The admission is the tape. NBC: https://www.nbcnews.com/video/biden-says-it-was-a-mistake-to-use-bullseye-in-remarks-about-trump-214895685978"
+				text: "Joe Biden, July 8, 2024, to donors — later confirmed on camera to Lester Holt: “time to put Trump in the bull’s-eye.” He called it a mistake after the fact. The admission is the tape. [NBC](https://www.nbcnews.com/video/biden-says-it-was-a-mistake-to-use-bullseye-in-remarks-about-trump-214895685978)",
 			},
 			{
 				type: "q",
@@ -1201,7 +1269,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "This is not a call to violence. It is a demand that the people who draw a salary from 300 million citizens stop talking like an occupying force. Watch the files. If they want to walk it back, they can do it on the same cameras. Until then, the tape is the story."
+				text: "This is not a call to violence. It is a demand that the people who draw a salary from 300 million citizens stop talking like an occupying force. Watch the tapes. If they want to walk it back, they can do it on the same cameras. Until then, the tape is the story."
 			}
 		]
 	},
@@ -1213,9 +1281,9 @@ export const posts: Post[] = [
 		category: "Dispatch",
 		readMinutes: 5,
 		image: "/images/constitution.jpg",
-		imageAlt: "The written charter — not a chyron",
+		imageAlt: "The written charter — not a caption",
 		series: "The Republic",
-		part: 3,
+		part: 4,
 		receipts: [
 			{
 				label: "Article I §6 — Speech or Debate",
@@ -1230,7 +1298,7 @@ export const posts: Post[] = [
 				href: "https://www.law.cornell.edu/uscode/text/18/2383"
 			},
 			{
-				label: "Brandenburg v. Ohio",
+				label: "the Supreme Court's incitement test",
 				href: "https://www.oyez.org/cases/1968/492"
 			}
 		],
@@ -1242,17 +1310,17 @@ export const posts: Post[] = [
 			{
 				type: "ul",
 				items: [
-					"Speech or Debate (Art. I §6) is waved at a camera as if the Constitution blessed the cable rant. It blesses the floor. Hutchinson v. Proxmire already said the press release is not the chamber. They hold up the clause anyway so you think the employee is untouchable on the feed. https://www.oyez.org/cases/1978/78-680",
-					"The First Amendment is a fence they stand behind when they light the country on fire with a verb that stops just short of Brandenburg — and a statute they would write for you if you used the same heat. The amendment is not a weapon. The double standard is.",
+					"Speech or Debate (Art. I §6) is waved at a camera as if the Constitution blessed the cable rant. It blesses the floor. Hutchinson v. Proxmire already said the press release is not the chamber. They hold up the clause anyway so the employee looks untouchable on the feed. https://www.oyez.org/cases/1978/78-680",
+					"The First Amendment is a fence they stand behind when they light the country on fire with a verb that stops just short of a crime — and a statute they would write for a citizen who used the same heat. The amendment is not a weapon. The double standard is.",
 					"Insurrection is the word they ran all day. 18 U.S.C. § 2383 is the statute they did not file. A caption with a constitutional flavor is still a caption. https://www.law.cornell.edu/uscode/text/18/2383",
-					"Appropriations ‘made by law’ (Art. I §9) is the letter they hide the unread omnibus behind. The clause requires a law. It does not require them to read it. They turned a limit on the Treasury into a door for a thousand pages at 2 a.m.",
+					"Appropriations ‘made by law’ (Art. I §9) is the letter they hide the giant unread bill behind. The clause requires a law. It does not require them to read it. They turned a limit on the Treasury into a door for a thousand pages at 2 a.m.",
 					"The oath (Art. VI, 5 U.S.C. § 3331) is theater unless someone asks whether they faithfully discharged the duties. They have not passed twelve bills on time since FY1997. They still recite the words.",
-					"They divided a nation with selected clauses. Neighbor against neighbor. Jersey against jersey. Arendt's point stands: they need you unable to tell the charter from the clip. The villain is not the Constitution. The villain is the hand on the blade."
+					"They divided a nation with selected clauses. Neighbor against neighbor. Jersey against jersey. Arendt's point stands: they need a country unable to tell the charter from the clip. The villain is not the Constitution. The villain is the hand on the blade."
 				]
 			},
 			{
 				type: "p",
-				text: "A republic uses the document as a limit on the shop. A syndicate uses it as a costume. Pull it back together by reading the rest of the article — the duty, not just the shield. The file is the hilt. They do not get to keep only the edge."
+				text: "A republic uses the document as a limit on Congress. A syndicate uses it as a costume. Pull it back together by reading the rest of the article — the duty, not just the shield. The file is the hilt. They do not get to keep only the edge."
 			}
 		]
 	},
@@ -1265,14 +1333,16 @@ export const posts: Post[] = [
 		readMinutes: 8,
 		image: "/images/torn-charter.jpg",
 		imageAlt: "Torn We the People over a faded flag",
+		series: "The Republic",
+		part: 6,
 		body: [
 			{
 				type: "p",
-				text: "Look up the statutes before you chant them. 18 U.S.C. § 2384 — seditious conspiracy — is a felony for two or more people who conspire to overthrow the United States by force, levy war against it, or by force hinder federal law. Fine, twenty years, or both. 18 U.S.C. § 2385 — the Smith Act — reaches advocating overthrow by force or violence. Courts have been clear: abstract politics is not the crime. Force is the hinge."
+				text: "Look up the statutes before they are chanted. [18 U.S.C. § 2384](https://www.law.cornell.edu/uscode/text/18/2384) — seditious conspiracy — is a felony for two or more people who conspire to overthrow the United States by force, levy war against it, or by force hinder federal law. Fine, twenty years, or both. [18 U.S.C. § 2385](https://www.law.cornell.edu/uscode/text/18/2385) — the Smith Act — reaches advocating overthrow by force or violence. Courts have been clear: abstract politics is not the crime. Force is the hinge."
 			},
 			{
 				type: "p",
-				text: "That cuts both ways. You do not get to invent a conviction. They do not get to call a new constitution “just policy.”"
+				text: "That cuts both ways. No one gets to invent a conviction. They do not get to call a new constitution “just policy.”"
 			},
 			{
 				type: "h",
@@ -1280,11 +1350,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "In 2026 the Democratic Socialists of America published Workers Deserve More. Their words: “draft a new constitution, and create a democratic socialist republic.” Abolish the Senate. Replace the President and the Supreme Court with an executive and judiciary chosen by and subordinate to Congress. Public ownership of the largest corporations and essential industries. Abolish ICE. Amnesty regardless of status. Complete victory, they write, requires “building a new society from the ground up.”"
+				text: "In 2026 the Democratic Socialists of America published [Workers Deserve More](https://program.dsausa.org/). Their words: “draft a new constitution, and create a democratic socialist republic.” Abolish the Senate. Replace the President and the Supreme Court with an executive and judiciary chosen by and subordinate to Congress. Public ownership of the largest corporations and essential industries. Abolish ICE. Amnesty regardless of status. Complete victory, they write, requires “building a new society from the ground up.”"
 			},
 			{
 				type: "q",
-				text: "You do not need a bomb if you capture the institutions and throw out the charter."
+				text: "A bomb is not required if institutions are captured and throw out the charter."
 			},
 			{
 				type: "p",
@@ -1292,7 +1362,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Source the law: Cornell LII, 18 U.S.C. §§ 2384 and 2385. Source their words: program.dsausa.org. Do not outsource either to a chyron."
+				text: "Source the law: [Cornell LII, 18 U.S.C. § 2384](https://www.law.cornell.edu/uscode/text/18/2384) and [§ 2385](https://www.law.cornell.edu/uscode/text/18/2385). Source their words: [program.dsausa.org](https://program.dsausa.org/). Do not outsource either to a caption."
 			}
 		]
 	},
@@ -1305,6 +1375,8 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/blog-peoples.jpg",
 		imageAlt: "Eagle over a flooded Capitol",
+		series: "The Job",
+		part: 6,
 		body: [
 			{
 				type: "p",
@@ -1312,7 +1384,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "NLRB v. Noel Canning (2014) said a valid recess lasts at least ten consecutive days, and the Senate decides when it is in session. Armed with that, a faction invented pro forma sessions — no business, one politician, a few seconds. Fiction with a gavel. It turns off Article II, Section 2, Clause 3 on purpose so a president the country just elected cannot staff the government."
+				text: "[NLRB v. Noel Canning (2014)](https://supreme.justia.com/cases/federal/us/573/12-1281/) said a valid recess lasts at least ten consecutive days, and the Senate decides when it is in session. Armed with that, a faction invented fake sessions — no business, one politician, a few seconds. Fiction with a gavel. It turns off [Article II, Section 2, Clause 3](https://constitution.congress.gov/constitution/article-2/) on purpose so a president the country just elected cannot staff the government."
 			},
 			{
 				type: "p",
@@ -1328,7 +1400,7 @@ export const posts: Post[] = [
 		category: "Dispatch",
 		readMinutes: 7,
 		series: "The Job",
-		part: 3,
+		part: 1,
 		image: "/images/merch-defund.jpg",
 		imageAlt: "Eagle on the Capitol, Defund Congress",
 		receipts: [
@@ -1364,7 +1436,7 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "A member of Congress makes $174,500 a year. The Speaker makes $223,500. Majority and minority leaders make $193,400. CRS publishes the table https://www.congress.gov/crs-product/RL30064 That is not the bill you are paying. That number is the decoy. The bill is $7.258 billion — Public Law 119-37, FY2026 — for a part-time floor sitting on a full-time payroll. https://www.congress.gov/crs-product/R48612"
+				text: "A member of Congress makes $174,500 a year. The Speaker makes $223,500. Majority and minority leaders make $193,400. CRS publishes the table https://www.congress.gov/crs-product/RL30064 That is not the bill the country is paying. That number is the decoy. The bill is $7.258 billion — Public Law 119-37, FY2026 — for a part-time floor sitting on a full-time payroll. https://www.congress.gov/crs-product/R48612"
 			},
 			{
 				type: "h",
@@ -1376,11 +1448,11 @@ export const posts: Post[] = [
 					"House of Representatives: $2.083 billion. The Members' Representational Allowance alone ran about $1.85 million to $2.09 million per House office in 2025 — staff, travel, district rent. Eighteen full-time aides plus part-time is allowed. https://www.congress.gov/crs-product/R40962",
 					"Senate: $1.467 billion. Office budgets scale with state population. The chamber that sits fewer days than a school year still draws a year-round payroll.",
 					"U.S. Capitol Police: $852 million, plus $30 million in mutual-aid reimbursements in the same law.",
-					"Library of Congress, including CRS: $852 million (CRS itself about $136 million). The research shop that writes the tables they hope you never read.",
+					"Library of Congress, including CRS: $852 million (CRS itself about $136 million). The research shop that writes the tables they hope go unread.",
 					"Architect of the Capitol: $812 million. The buildings. The grounds. The campus that never goes home.",
 					"Government Accountability Office: $812 million. The auditor of everyone except, in practice, the people who fund it.",
 					"Government Publishing Office: $132 million. Congressional Budget Office: $75 million. Joint items: $25 million. A $522,000 line for widows and heirs of deceased members.",
-					"On top of the salary: FEHB health coverage paid in part by you; a FERS pension that can start after five years and outlive the member; House and Senate gym and parking; an outside earned-income cap they wrote themselves ($33,285 in 2025)."
+					"On top of the salary: FEHB health coverage paid in part by taxpayers; a FERS pension that can start after five years and outlive the member; House and Senate gym and parking; an outside earned-income cap they wrote themselves ($33,285 in 2025)."
 				]
 			},
 			{
@@ -1390,8 +1462,8 @@ export const posts: Post[] = [
 			{
 				type: "ul",
 				items: [
-					"They write the second law you are never shown — riders, notwithstanding clauses, omnibus stacks — then tell you the floor was too busy to read it.",
-					"Call time is the real session. Donors get the hours. The statute gets the leftover. You already paid $174,500 so they would not have to work the phones. They work the phones anyway.",
+					"They write the second law never shown — riders, notwithstanding clauses, giant unread bills — then say the floor was too busy to read it.",
+					"Call time is the real session. Donors get the hours. The statute gets the leftover. The country already paid $174,500 so they would not have to work the phones. They work the phones anyway.",
 					"They set their own pay, their own pension, their own ethics office, then investigate themselves. The STOCK Act of 2012 was a press conference. The trades continued.",
 					"District offices can sit quiet while the allowance still moves. The machine does not shrink when the member is in a hotel ballroom.",
 					"When the people notice, the caption becomes the weapon. The $7.258 billion buys the building in which the caption is written."
@@ -1419,11 +1491,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "What the Constitution actually requires of the money: Article I, Section 9 — no money shall be drawn from the Treasury but in consequence of appropriations made by law https://constitution.congress.gov/constitution/article-1/ A continuing resolution and an omnibus are still appropriations made by law. Ugly is not the same as void. The 1974 Budget Act's twelve bills by October 1 is a statute, not a clause. They can break that statute for thirty years and still have 'passed a law.' That is the letter. The spirit of Article I is a legislature that debates spending in the open. They have not done that work. That is a failure of the duty they swore to discharge."
+				text: "What the Constitution actually requires of the money: Article I, Section 9 — no money shall be drawn from the Treasury but in consequence of appropriations made by law https://constitution.congress.gov/constitution/article-1/ A continuing resolution and a giant unread bill are still appropriations made by law. Ugly is not the same as void. The 1974 Budget Act's twelve bills by October 1 is a statute, not a clause. They can break that statute for thirty years and still have 'passed a law.' That is the letter. The spirit of Article I is a legislature that debates spending in the open. They have not done that work. That is a failure of the duty they swore to discharge."
 			},
 			{
 				type: "p",
-				text: "The Framers already saw the perk problem. The 27th Amendment: no law varying the compensation of Senators and Representatives shall take effect until after an election of Representatives has intervened https://constitution.congress.gov/constitution/amendment-27/ They may still raise their own pay. They may not pocket it before the people get a vote. Self-dealing was the fear. Delay was the fence. They have learned to live inside the fence and still write their own pension, their own ethics office, and the twin law you never see."
+				text: "The Framers already saw the perk problem. The 27th Amendment: no law varying the compensation of Senators and Representatives shall take effect until after an election of Representatives has intervened https://constitution.congress.gov/constitution/amendment-27/ They may still raise their own pay. They may not pocket it before the people get a vote. Self-dealing was the fear. Delay was the fence. They have learned to live inside the fence and still write their own pension, their own ethics office, and the twin law never shown."
 			},
 			{
 				type: "p",
@@ -1440,18 +1512,20 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/blog-truth.jpg",
 		imageAlt: "The Truth Rises Here",
+		series: "The Ballot",
+		part: 2,
 		body: [
 			{
 				type: "p",
-				text: "Swamp Force exists because a uniparty that will not require proof of citizenship to vote in a federal election is not confused. It is protecting a system. The Safeguard American Voter Eligibility Act — H.R. 22, Senate companion S. 128 — is documentary proof of U.S. citizenship to register, and a purge of non-citizens from the rolls. It does not take the vote from a single citizen. Read the text on Congress.gov."
+				text: "Swamp Force exists because a uniparty that will not require proof of citizenship to vote in a federal election is not confused. It is protecting a system. The Safeguard American Voter Eligibility Act — [H.R. 22](https://www.congress.gov/bill/119th-congress/house-bill/22), Senate companion [S. 128](https://www.congress.gov/bill/119th-congress/senate-bill/128) — is documentary proof of U.S. citizenship to register, and a purge of non-citizens from the rolls. It does not take the vote from a single citizen. Read the text on Congress.gov."
 			},
 			{
 				type: "p",
-				text: "They still killed it. Over four in five Americans want that integrity. The machine does not. Until the rolls are secured, verified, and sealed, federal elections rest on a system the public cannot audit. That is the demand. Not a riot. A list, a statute, a roll."
+				text: "They still killed it. [Pew, August 2025: 83%](https://www.pewresearch.org/politics/2025/08/13/views-of-the-2024-election-and-voting/) and [Gallup, October 2024: 84%](https://news.gallup.com/poll/651905/solid-majority-supports-voter-identification-laws.aspx) wanted voter ID. The machine did not. Until the rolls are secured, verified, and sealed, federal elections rest on a system that cannot be audited. That is the demand. Not a riot. A list, a statute, a roll."
 			},
 			{
 				type: "p",
-				text: "The split in this country is not Left vs. Right. It is the Syndicate vs. You. 535 people do not outrank 300 million. They work here. They do not own it."
+				text: "The split in this country is not Left vs. Right. It is the Syndicate vs. The public. 535 people do not outrank 300 million. They work here. They do not own it."
 			}
 		]
 	},
@@ -1464,14 +1538,16 @@ export const posts: Post[] = [
 		readMinutes: 7,
 		image: "/images/blog-house.jpg",
 		imageAlt: "Citizens at the water, Get Out of Our House",
+		series: "The Parties",
+		part: 4,
 		body: [
 			{
 				type: "p",
-				text: "They need you in a jersey. Red versus blue is how a cartel keeps the floor. Behind the cameras, the votes rhyme."
+				text: "They need the country in a jersey. Red versus blue is how a cartel keeps the floor. Behind the cameras, the votes rhyme."
 			},
 			{
 				type: "p",
-				text: "Omnibus packages — thousand-page spending nobody debates as single bills — pass with enough members of both parties to keep the machine fed. Debt-ceiling increases have been a bipartisan ritual for a generation; the Fiscal Responsibility Act of 2023 was only the latest handshake. FISA Section 702, the warrantless-surveillance authority, was reauthorized April 20, 2024 as the Reforming Intelligence and Securing America Act. The Senate vote was 60–34. Both parties were in the 60. A warrant requirement for queries on Americans was rejected. The sunset is April 20, 2026 — they will try it again."
+				text: "Omnibus packages — thousand-page spending nobody debates as single bills — pass with enough members of both parties to keep the machine fed. Debt-ceiling increases have been a bipartisan ritual for a generation; the [Fiscal Responsibility Act of 2023](https://www.congress.gov/bill/118th-congress/house-bill/3746) was only the latest handshake. FISA Section 702, the warrantless-surveillance authority, was reauthorized April 20, 2024 as the [Reforming Intelligence and Securing America Act](https://www.congress.gov/bill/118th-congress/house-bill/7888). The Senate vote was 60–34. Both parties were in the 60. A warrant requirement for queries on Americans was rejected. The sunset is April 20, 2026 — they will try it again."
 			},
 			{
 				type: "p",
@@ -1488,7 +1564,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/torn-charter.jpg",
 		imageAlt: "A charter treated as a napkin",
-		series: "The Capture",
+		series: "The Parties",
 		part: 1,
 		receipts: [{
 			label: "Lobbying disclosure — Senate",
@@ -1500,7 +1576,7 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "A crime syndicate sells protection and collects dues. Washington does the legal version. You pay taxes. Donors pay access. The employee class writes the rules that the donors need, then walks out the door into the firm that asked for the rule. That is called a revolving door. It is not a theory. It is a career path."
+				text: "A protection racket sells a shield and collects dues. Washington does a legal version. Taxes. Donor access. The employee writes a rule a donor wanted, then walks into the firm that asked for it. That is a revolving door. A career path. Not a filed racketeering case."
 			},
 			{
 				type: "p",
@@ -1512,7 +1588,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Lesson two will be the money. Lesson three will be the door. Start here so you know what you are looking at: not left versus right. The people who stay versus the people who work."
+				text: "Lesson two will be the money. Lesson three will be the door. Start here. What is on the page: not left versus right. The people who stay versus the people who work."
 			}
 		]
 	},
@@ -1525,16 +1601,16 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/blog-house.jpg",
 		imageAlt: "The House — a party’s long walk",
-		series: "The Democrats",
-		part: 1,
+		series: "The Parties",
+		part: 2,
 		body: [
 			{
 				type: "p",
-				text: "This is not a hate page. It is a history class. Jefferson’s party talked limited government. Jackson’s party talked the common man and still built a spoils machine. The 20th century added unions, the New Deal, and Jim Crow in the same tent. The 1960s split it: civil-rights votes that were right, and a new class of staffers who never left campus."
+				text: "This is not a hate page. It is a history class. Jefferson’s party talked limited government. Jackson’s party talked the common man and still built a spoils machine. The 20th century added unions, the New Deal, and Jim Crow in the same tent. The 1960s split it: [civil-rights votes](https://www.congress.gov/bill/88th-congress/house-bill/7152) that were right, and a new class of staffers who never left campus."
 			},
 			{
 				type: "p",
-				text: "By the 2020s the brand was agencies, identity memos, and a newsroom that treated the party as weather. Working counties left. The clip stayed. Later lessons: the machines, the 1964–68 break, the donor shift, and what the 2024 loss actually was. We will give them the wins too — Social Security’s passage, the 1964 Act — or this is a chyron with our flag on it."
+				text: "By the 2020s the brand was agencies, identity memos, and a newsroom that treated the party as weather. Working counties left. The clip stayed. Later lessons: the machines, the 1964–68 break, the donor shift, and what the 2024 loss actually was. We will give them the wins too — Social Security’s passage, the 1964 Act — or this is a caption with our flag on it."
 			},
 			{
 				type: "q",
@@ -1551,12 +1627,12 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/capitol.jpg",
 		imageAlt: "The Capitol — another long walk",
-		series: "The Republicans",
-		part: 1,
+		series: "The Parties",
+		part: 3,
 		body: [
 			{
 				type: "p",
-				text: "Same rule. Not a hate page. A history class. Lincoln’s party ended slavery and occupied the South. Then it made a deal and left. The 20th century: tariffs, business, Nixon’s map, Reagan’s tax cuts and the debt that came with the talk. The donor class learned to say Founders and fund the same committees the other jersey funded."
+				text: "Same rule. Not a hate page. A history class. Lincoln’s party ended slavery and occupied the South. Then it made a deal and left. The 20th century: tariffs, business, Nixon’s map, Reagan’s tax cuts and the debt that came with the talk. Read [Treasury’s debt to the penny](https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/). The donor class learned to say Founders and fund the same committees the other jersey funded."
 			},
 			{
 				type: "p",
@@ -1577,8 +1653,8 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/merch-lobby.jpg",
 		imageAlt: "The second government",
-		series: "The Lobby",
-		part: 1,
+		series: "The Job",
+		part: 5,
 		receipts: [{
 			label: "Lobbying Disclosure Act",
 			href: "https://www.congress.gov/104/plaws/publ65/PLAW-104publ65.pdf"
@@ -1589,11 +1665,11 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "You may walk to the Capitol and tell an employee what you think. That is petition. A firm that is paid to live inside the political club, draft the bill, and hire last year’s staffer is not petition. It is a second government. The first one you vote on. The second one you do not."
+				text: "Citizens may walk to the Capitol and tell an employee what they think. That is petition. A firm that is paid to live inside the political club, draft the bill, and hire last year’s staffer is not petition. It is a second government. The first is on the ballot. The second is not."
 			},
 			{
 				type: "p",
-				text: "Why it is not banned: the First Amendment covers petition, and the Court has treated money as speech in campaigns. Why it still should be fenced: disclosure is not a fence. The Lobbying Disclosure Act of 1995 is a form. Forms do not stop the door from revolving. Later lessons: FARA (foreign money), the cooling-off period that is not cool, and a simple rule we will argue — if you write the law, you cannot sell it for a set number of years."
+				text: "Why it is not banned: the First Amendment covers petition, and the Court has treated money as speech in campaigns. Why it still should be fenced: disclosure is not a fence. The Lobbying Disclosure Act of 1995 is a form. Forms do not stop the door from revolving. Later lessons: FARA (foreign money), the cooling-off period that is not cool, and a simple rule we will argue — if they write the law, they cannot sell it for a set number of years."
 			},
 			{
 				type: "q",
@@ -1604,7 +1680,7 @@ export const posts: Post[] = [
 	{
 		slug: "why-he-became-the-enemy",
 		title: "Why they hate Trump",
-		dek: "They loved the donor. They turned when he stopped writing checks and started closing the problems the political club lived on. Then came the hoaxes — on your dime.",
+		dek: "They loved the donor. They turned when he stopped writing checks and started closing the problems the political club lived on. Then came the hoaxes — on the taxpayer dime.",
 		date: "2026-08-30",
 		category: "Dispatch",
 		readMinutes: 6,
@@ -1637,11 +1713,11 @@ export const posts: Post[] = [
 	body: [
 			{
 				type: "p",
-				text: "They do not hate him because he is a saint. This journal has already printed the ugly sentences that are on tape, and it will print them again when they belong. They loved him when he was a donor — a businessman writing checks to the political club. That man was useful. That man was invited. Then he stopped being a donor and became a pragmatist about to solve the problems the club had created and lived on. The invitations ended. The plots began. Taxpayer money went into hoax after hoax: a Russia file the Durham report later gutted https://www.justice.gov/storage/durhamreport.pdf two impeachments, overlapping cases that ate a campaign, a caption that never had to survive the recording. He was not supposed to get the job. Once he had it, they could not let the public conclude that the political club had never been magic."
+				text: "They do not hate him because he is a saint. This journal has already printed the ugly sentences that are on tape, and it will print them again when they belong. They loved him when he was a donor — a businessman writing checks to the political club. That man was useful. That man was invited. Then he stopped being a donor and became a pragmatist about to solve the problems the club had created and lived on. The invitations ended. The plots began. Taxpayer money went into hoax after hoax: a Russia file the Durham report later gutted https://www.justice.gov/storage/durhamreport.pdf two impeachments, overlapping cases that ate a campaign, a caption that never had to survive the recording. He was not supposed to get the job. Once he had it, they could not let the country conclude that the political club had never been magic."
 			},
 			{
 				type: "p",
-				text: "Hate, in this case, is a product. ABC, CBS, and NBC ran evaluative coverage of his 2025 term that the Media Research Center counted as 92 percent negative in the first hundred days https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage A newscast that never quite describes a statute still has a plot: he is the plot. Politicians who cannot pass a bill can always pass a monster. Platforms are paid when you stay mad. The people who cashed his checks when he was a donor did not become moralists overnight. They became a clientele whose business model was the problem he was trying to close. They are not primarily afraid of his manners. They are afraid of a public that stops needing them."
+				text: "Hate, in this case, is a product. ABC, CBS, and NBC ran evaluative coverage of his 2025 term that the Media Research Center counted as 92 percent negative in the first hundred days https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage A newscast that never quite describes a statute still has a plot: he is the plot. Politicians who cannot pass a bill can always pass a monster. Platforms are paid when the feed stays mad. The people who cashed his checks when he was a donor did not become moralists overnight. They became a clientele whose business model was the problem he was trying to close. They are not primarily afraid of his manners. They are afraid of a public that stops needing them."
 			},
 			{
 				type: "p",
@@ -1704,11 +1780,11 @@ export const posts: Post[] = [
 	body: [
 			{
 				type: "p",
-				text: "You know a caption is lying when it is not the same sentence as the recording. Bloodbath, in the full answer, was about car plants and a tariff, not a promise of civil war. Fine people, in the same remarks, included a total condemnation of neo-Nazis. Those examples are laid out in the clipped-tape lesson. The pattern is older than this presidency. Durham later described a Russia investigation that should not have been opened the way it was https://www.justice.gov/storage/durhamreport.pdf This site, for holding a camera, was tagged with a child-sex smear in fourteen replies. When they cannot beat the file, they try to make the file radioactive. That is not a theory. It is a method we have already lived."
+				text: "A caption is lying when it is not the same sentence as the recording. Bloodbath, in the full answer, was about car plants and a tariff, not a promise of civil war. Fine people, in the same remarks, included a total condemnation of neo-Nazis. Those examples are laid out in the clipped-tape lesson. The pattern is older than this presidency. Durham later described a Russia investigation that should not have been opened the way it was https://www.justice.gov/storage/durhamreport.pdf This site, for holding a camera, was tagged with a child-sex smear in fourteen replies. When they cannot beat the tape, they smear the person holding it. That is not a theory. It is a method we have already lived."
 			},
 			{
 				type: "p",
-				text: "You do not have to like his mouth. Print the ugly lines that are on tape, then print the jobs that are on paper: USMCA, three justices, the Abraham Accords, no new American war in the first term, Soleimani, Remain in Mexico, the Laken Riley Act, southwest encounters at a fifty-year low, recruiting treated as a mission. Congress passed some of that. All alone is a slogan. The roll call is the file. Standing with him, on this site, means standing with the work — not with a halo."
+				text: "Liking his mouth is not required. Print the ugly lines that are on tape, then print the jobs that are on paper: USMCA, three justices, the Abraham Accords, no new American war in the first term, Soleimani, Remain in Mexico, the Laken Riley Act, southwest encounters at a fifty-year low, recruiting treated as a mission. Congress passed some of that. All alone is a slogan. The roll call is the file. Standing with him, on this site, means standing with the work — not with a halo."
 			},
 			{
 				type: "p",
@@ -1716,7 +1792,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "If you came here for a chant, the next two lessons will bore you. They are what he told other governments in public, and what the January 6 docket actually contains versus the word that ran all day on the air. Read them slowly. The gauntlet is not proof that he is always right. It is proof that the people who wanted him gone were willing to use every instrument except a better statute."
+				text: "This is not a chant. The next two lessons are the docket. They are what he told other governments in public, and what the January 6 docket actually contains versus the word that ran all day on the air. Read them slowly. The gauntlet is not proof that he is always right. It is proof that the people who wanted him gone were willing to use every instrument except a better statute."
 			}
 		]
 	},
@@ -1741,7 +1817,7 @@ export const posts: Post[] = [
 	body: [
 			{
 				type: "p",
-				text: "At the United Nations in 2018 he said, in the hall that exists to bless global arrangements, that America rejects the ideology of globalism and embraces the doctrine of patriotism https://news.un.org/en/story/2018/09/1020472 A year later he said the future does not belong to globalists; it belongs to patriots https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-74th-session-united-nations-general-assembly/ You can dislike the tone. You cannot pretend the people in that room did not hear a claim about where sovereignty sits: in nations, not in a committee above nations. That is the agenda they have been answering ever since, often by calling the speaker names instead of answering the claim."
+				text: "At the United Nations in 2018 he said, in the hall that exists to bless global arrangements, that America rejects the ideology of globalism and embraces the doctrine of patriotism https://news.un.org/en/story/2018/09/1020472 A year later he said the future does not belong to globalists; it belongs to patriots https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-74th-session-united-nations-general-assembly/ The tone can be disliked. The people in that room still heard a claim about where sovereignty sits: in nations, not in a committee above nations. That is the agenda they have been answering ever since, often by calling the speaker names instead of answering the claim."
 			},
 			{
 				type: "p",
@@ -1749,7 +1825,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Iran is the other public conversation. In January 2020 Qasem Soleimani was killed in Baghdad by an American strike, the first time in a generation a named Iranian commander paid that price. Trump told Tehran, in public, that more would follow if they hit Americans. Later he said that if they assassinated him the response would be obliteration. That is not a staff memo. In the same years the uniformed force got Space Force, and in this term recruiting has been treated as a mission rather than a branding problem. He did not do any of it as a fairy tale of one man against the world. He did it against a leaky building, a hostile caption, and a party that wanted him housebroken. The point of putting the words here is so you can hear what the other side heard — and why they have been trying to make sure you never hear it in order."
+				text: "Iran is the other public conversation. In January 2020 Qasem Soleimani was killed in Baghdad by an American strike, the first time in a generation a named Iranian commander paid that price. Trump told Tehran, in public, that more would follow if they hit Americans. Later he said that if they assassinated him the response would be obliteration. That is not a staff memo. In the same years the uniformed force got Space Force, and in this term recruiting has been treated as a mission rather than a branding problem. He did not do any of it as a fairy tale of one man against the world. He did it against a leaky building, a hostile caption, and a party that wanted him housebroken. The point of putting the words here is so the other side can be heard — and why the caption tried to bury it."
 			}
 		]
 	},
@@ -1781,7 +1857,7 @@ export const posts: Post[] = [
 	body: [
 			{
 				type: "p",
-				text: "Search the federal docket for January 6 defendants charged under 18 U.S.C. section 2383, the Civil War-era statute titled rebellion or insurrection https://www.law.cornell.edu/uscode/text/18/2383 You will not find them. The word still ran all day, every day, on television and from the House floor, as if the indictment had already been written. A chyron does not need a grand jury. It only needs repetition. Some leaders of two groups were charged under a different statute — seditious conspiracy, section 2384 — which is a real charge with a real trial record. Print both. The swap is the trick: take the scarier word, the one that never made the paper, and teach a country a crime that was never filed."
+				text: "Search the federal docket for January 6 defendants charged under 18 U.S.C. section 2383, the Civil War-era statute titled rebellion or insurrection https://www.law.cornell.edu/uscode/text/18/2383 They are not on that docket. The word still ran all day, every day, on television and from the House floor, as if the indictment had already been written. A caption does not need a grand jury. It only needs repetition. Some leaders of two groups were charged under a different statute — seditious conspiracy, section 2384 — which is a real charge with a real trial record. Print both. The swap is the trick: take the scarier word, the one that never made the paper, and teach a country a crime that was never filed."
 			},
 			{
 				type: "p",
@@ -1789,7 +1865,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Ashli Babbitt, an Air Force veteran, was shot once while climbing through broken glass into the Speaker's Lobby. The video of that moment shows her unarmed. Lieutenant Michael Byrd fired. The Justice Department declined to charge him https://www.justice.gov/usao-dc/pr/department-justice-closes-investigation-death-ashli-babbitt Capitol Police later called the shot within policy. Byrd told NBC he thought he was defending the chamber and did not know whether she had a weapon. You can believe he was afraid. You can believe the shot was lawful. What you cannot do, if you are serious, is pretend the clip and the later testimony are the same sentence. They are not. That mismatch is why we exist."
+				text: "Ashli Babbitt, an Air Force veteran, was shot once while climbing through broken glass into the Speaker's Lobby. The video of that moment shows her unarmed. Lieutenant Michael Byrd fired. The Justice Department declined to charge him https://www.justice.gov/usao-dc/pr/department-justice-closes-investigation-death-ashli-babbitt Capitol Police later called the shot within policy. Byrd told NBC he thought he was defending the chamber and did not know whether she had a weapon. He may have been afraid. The shot may have been lawful. The clip and the later testimony are not the same sentence. They are not. That mismatch is why we exist."
 			},
 			{
 				type: "p",
@@ -1810,8 +1886,8 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/we-the-people.jpg",
 		imageAlt: "We the People — the only overseers who do not live there",
-		series: "The Amendment",
-		part: 1,
+		series: "The Correction",
+		part: 5,
 		receipts: [
 			{
 				label: "U.S. Term Limits v. Thornton",
@@ -1829,7 +1905,7 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "You do not ask a suspect to write the criminal code. Congress writes its pay, its pension, its ethics office, and the exceptions that keep the political club comfortable. Then it investigates itself. That is not oversight. That is a club with a gavel. The people who work for us have become a class that cannot be fired except in theory, every two or six years, by a map they drew and a pile of money they raised from the lobby you just read about."
+				text: "A suspect does not write the criminal code. Congress writes its pay, its pension, its ethics office, and the exceptions that keep the political club comfortable. Then it investigates itself. That is not oversight. That is a club with a gavel. The people who work for us have become a class that cannot be fired except in theory, every two or six years, by a map they drew and a pile of money they raised from the lobby named above."
 			},
 			{
 				type: "p",
@@ -1837,7 +1913,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "What the amendment should do, in plain words. One: every seat turns over on a clock — House and Senate — no career. Two: they do not set their own pay, stock rules, or ethics. Those go to a citizen oversight board. The board is term-limited too. No one on it may run for Congress later. If the watchers can become the watched, you have another club. Three: the laws they pass bind them. No special healthcare, no special exemptions, no insider trades dressed as ‘timing.’ The STOCK Act of 2012 was a press conference. The trades continued."
+				text: "What the amendment should do, in plain words. One: every seat turns over on a clock — House and Senate — no career. Two: they do not set their own pay, stock rules, or ethics. Those go to a citizen oversight board. The board is term-limited too. No one on it may run for Congress later. If the watchers can become the watched, that is another club. Three: the laws they pass bind them. No special healthcare, no special exemptions, no insider trades dressed as ‘timing.’ The STOCK Act of 2012 was a press conference. The trades continued."
 			},
 			{
 				type: "q",
@@ -1893,7 +1969,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "No part-time job in America pays $174,500 plus a pension that outlives you, FEHB, a million-dollar office allowance, a gym, and $7.258 billion of machine around the chair. It must stop — or they work full time. If you are in session, you are in the building. Call time is not the job. The years they serve are years of work. While they hold the gavel it is the only job. No board. No book tour. No hotel ballroom as the main event. You already paid them."
+				text: "No part-time job in America pays $174,500 plus a pension that outlives the seat, FEHB, a million-dollar office allowance, a gym, and $7.258 billion of machine around the chair. It must stop — or they work full time. If Congress is in session, they are in the building. Call time is not the job. The years they serve are years of work. While they hold the gavel it is the only job. No board. No book tour. No hotel ballroom as the main event. The country already paid them."
 			},
 			{
 				type: "q",
@@ -1908,14 +1984,14 @@ export const posts: Post[] = [
 	{
 		slug: "what-we-can-do",
 		title: "What we can do",
-		dek: "Politics will not fix a shop that writes its own rules. A united people, peaceful, on the record — or it does not happen.",
+		dek: "Politics will not fix a Congress that writes its own rules. A united people, peaceful, on the record — or it does not happen.",
 		date: "2026-08-30",
 		category: "Dispatch",
 		readMinutes: 5,
 		image: "/images/signs.jpg",
 		imageAlt: "The people in the street — not the political club",
 		series: "The Job",
-		part: 5,
+		part: 7,
 		receipts: [
 			{
 				label: "First Amendment — speech, press, assembly, petition",
@@ -1933,11 +2009,11 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "The file is on the table. Forty trillion. Seven billion for a part-time floor. Five billion in lobbying. Two hundred dollars if they file the trade late. Tens of millions into local prosecutors. They divided a nation so you would fight the neighbor and never look at the shop. Politics — the jersey, the panel, the clip — is not going to fix a shop that writes its own ethics. The people who would vote away their own perks will not. That is the whole problem in one sentence."
+				text: "The record is on the table. Forty trillion. Seven billion for a part-time floor. Five billion in lobbying. Two hundred dollars if they file the trade late. Tens of millions into local prosecutors. They divided a nation so the public would fight the neighbor and never look at Congress. Politics — the jersey, the panel, the clip — is not going to fix a Congress that writes its own ethics. The people who would vote away their own perks will not. That is the whole problem in one sentence."
 			},
 			{
 				type: "p",
-				text: "What is left is a united America that stops fighting itself. Arendt: power is people acting in concert. Isolation is how a republic is lost. The villain is not the other jersey. The villain is the shop. If we keep the fight they sold us, they keep the calendar."
+				text: "What is left is a united America that stops fighting itself. Arendt: power is people acting in concert. Isolation is how a republic is lost. The villain is not the other jersey. The villain is Congress. If we keep the fight they sold us, they keep the calendar."
 			},
 			{
 				type: "h",
@@ -1950,8 +2026,8 @@ export const posts: Post[] = [
 					"Demand prosecutions where the elements are actually on the paper — STOCK Act, bribery, false statements, the statutes that already exist — not a jersey hunt, not a word the Constitution reserved for war. A caption is not an indictment. We have already refused to fake treason. We will not fake a roundup either. Apply the law. In court. On the record.",
 					"The midterms are the priority. November 3, 2026. Show up. Every American. Then we remove the swamp one seat at a time, as needed — primary, ballot, expulsion where the House will do it. DSA does not need a stronger foot in Congress. Two hundred eighty-two endorsed names is already a beachhead. Not a riot. A line.",
 					"Demand the change they will not write: full-time work or the perks end; they do not set their own pay, pension, or ethics; twelve bills by October 1; an amendment with term limits and a citizen board that also goes home. Article V is the door. Article I, Section 5 is censure and expulsion.",
-					"Show up with the file, not a costume. One number. One statute. One neighbor who used to be the enemy. That is how you pull a nation back together.",
-					"This journal does not call anyone into a street to break a window. It does not call anyone to lay hands on an employee. It names the shop, prints the tape, and tells you the lawful instruments. Concert, not a mob."
+					"Show up with the file, not a costume. One number. One statute. One neighbor who used to be the enemy. That is how a nation is pulled back together.",
+					"This journal does not call anyone into a street to break a window. It does not call anyone to lay hands on an employee. It names Congress, prints the tape, and names the lawful instruments. Concert, not a mob."
 				]
 			},
 			{
@@ -1960,15 +2036,15 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "You already know the leverage. The country does not open because a committee gavels. It opens because people clock in — trucks, power, harvests, clinics, classrooms. The shop needs those people more than those people need the shop. That is why a donor who stopped writing checks and started closing problems terrified them. A week where the people who actually run it sat down would be felt in the building. It would also be felt first in your neighbor's refrigerator, in a hospital shift, in a paycheck. The syndicate has a pantry. The people who clock in do not. They would name the dark week the word they already ran without filing the statute. We would have given them the picture."
+				text: "The leverage is already known. The country does not open because a committee gavels. It opens because people clock in — trucks, power, harvests, clinics, classrooms. Congress needs those people more than those people need Congress. That is why a donor who stopped writing checks and started closing problems terrified them. A week where the people who actually run it sat down would be felt in the building. It would also be felt first in a neighbor's refrigerator, in a hospital shift, in a paycheck. The syndicate has a pantry. The people who clock in do not. They would name the dark week the word they already ran without filing the statute. We would have given them the picture."
 			},
 			{
 				type: "p",
-				text: "This journal does not call a national sit-down. It does not tell you to walk off a public job, ground an airplane, or starve a town to punish a committee. Concert is not a blackout. The fact still stands: they are trying to take a country they do not know how to run. Remind them at work by doing the work and withholding the consent — the vote, the primary, the peaceful petition, the file in a stranger's hand — not by turning out the lights on the people who never sat in the chamber. Power is acting in concert. A republic that sits down on itself is their caption. A republic that stands together and demands the prosecutions the statutes support, and the full-time job they already billed us for, is the hilt. Use that."
+				text: "This journal does not call a national sit-down. It does not tell anyone to walk off a public job, ground an airplane, or starve a town to punish a committee. Concert is not a blackout. The fact still stands: they are trying to take a country they do not know how to run. Remind them at work by doing the work and withholding the consent — the vote, the primary, the peaceful petition, the file in a stranger's hand — not by turning out the lights on the people who never sat in the chamber. Power is acting in concert. A republic that sits down on itself is their caption. A republic that stands together and demands the prosecutions the statutes support, and the full-time job they already billed us for, is the hilt. Use that."
 			},
 			{
 				type: "p",
-				text: "If politics could have done it, the calendar would already look like a job. It does not. So the people who still clock in — the ones who kept the country opening while the club got comfortable — stand together, peaceful, and demand the prosecutions the statutes support and the change the oath required. Not against each other. Against the shop. That is how this continues. That is how it stops being a clip."
+				text: "If politics could have done it, the calendar would already look like a job. It does not. So the people who still clock in — the ones who kept the country opening while the club got comfortable — stand together, peaceful, and demand the prosecutions the statutes support and the change the oath required. Not against each other. Against Congress. That is how this continues. That is how it stops being a clip."
 			}
 		]
 	},
@@ -1982,7 +2058,7 @@ export const posts: Post[] = [
 		image: "/images/merch-defund.jpg",
 		imageAlt: "The bill they will not read",
 		series: "The Job",
-		part: 1,
+		part: 2,
 		receipts: [
 			{
 				label: "Debt to the Penny — Treasury",
@@ -2000,11 +2076,11 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "The Treasury's daily table put total public debt outstanding over $40 trillion in August 2026 https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/ That is not a chyron. That is the government's own meter. It cannot keep growing like this. Interest already eats the room that used to be for the things they campaign on. The people who write the checks are the same people who will not pass a budget."
+				text: "The Treasury's daily table put total public debt outstanding over $40 trillion in August 2026 https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/ That is not a caption. That is the government's own meter. It cannot keep growing like this. Interest already eats the room that used to be for the things they campaign on. The people who write the checks are the same people who will not pass a budget."
 			},
 			{
 				type: "p",
-				text: "Under the Congressional Budget Act of 1974 they are supposed to adopt a budget resolution, then pass twelve regular appropriations bills before October 1. Pew counted the years they actually did all of it on time: four. Fiscal 1977, 1989, 1995, and 1997. The last one was FY1997, signed the day before the year started, while Clinton was still in the building https://www.pewresearch.org/short-reads/2025/10/01/congress-has-long-struggled-to-pass-spending-bills-on-time/ CRS says the same: FY1997 was the last time all regular appropriations were enacted by October 1 https://www.congress.gov/crs-product/IN12324 Since then they have never passed more than five of the twelve on time. In most recent years they passed none. They live on continuing resolutions and omnibus stacks."
+				text: "Under the Congressional Budget Act of 1974 they are supposed to adopt a budget resolution, then pass twelve regular appropriations bills before October 1. Pew counted the years they actually did all of it on time: four. Fiscal 1977, 1989, 1995, and 1997. The last one was FY1997, signed the day before the year started, while Clinton was still in the building https://www.pewresearch.org/short-reads/2025/10/01/congress-has-long-struggled-to-pass-spending-bills-on-time/ CRS says the same: FY1997 was the last time all regular appropriations were enacted by October 1 https://www.congress.gov/crs-product/IN12324 Since then they have never passed more than five of the twelve on time. In most recent years they passed none. They live on continuing resolutions and giant unread bills."
 			},
 			{
 				type: "h",
@@ -2014,15 +2090,15 @@ export const posts: Post[] = [
 				type: "ul",
 				items: [
 					"A CR copies last year's funding, plus 'anomalies' — exceptions stuffed in by the people who already failed to write a bill. Nobody outside the room can audit an anomaly at 2 a.m.",
-					"An omnibus is a thousand pages dropped hours before the vote. Members vote on a caption. The riders, the earmarks, the contractors, the quiet increases live in the annex. That is the twin law, in money.",
-					"Emergency designations and 'disaster' titles skip the caps. Some disasters are real. The designation is also how you hide a permanent program inside a one-time word.",
+					"A giant unread bill is a thousand pages dropped hours before the vote. Members vote on a caption. The riders, the earmarks, the contractors, the quiet increases live in the annex. That is the twin law, in money.",
+					"Emergency designations and 'disaster' titles skip the caps. Some disasters are real. The designation is also how a permanent program is hidden inside a one-time word.",
 					"No line-item debate means no line-item blame. Fraud does not need a mastermind when the document is designed so that no one can be shown to have read it.",
-					"The $7.258 billion legislative machine is the shop that produces those piles. They cannot police the country's books because they will not finish their own."
+					"The $7.258 billion legislative machine is Congress, which produces those piles. They cannot police the country's books because they will not finish their own."
 				]
 			},
 			{
 				type: "p",
-				text: "This is not a claim that every CR is a criminal count. Fraud, in the code, still needs a lie, a scheme, a specific hand. An omnibus is still an appropriation made by law — Article I, Section 9 is satisfied on paper. The oath is not. They swore to well and faithfully discharge the duties of the office https://www.law.cornell.edu/uscode/text/5/3331 Twelve bills by October 1 is the duty. They have not done it since FY1997. Forty trillion on the meter. A wide-open door. This is how the country has been running. It cannot continue."
+				text: "This is not a claim that every CR is a criminal count. Fraud, in the code, still needs a lie, a scheme, a specific hand. A giant unread bill is still an appropriation made by law — Article I, Section 9 is satisfied on paper. The oath is not. They swore to well and faithfully discharge the duties of the office https://www.law.cornell.edu/uscode/text/5/3331 Twelve bills by October 1 is the duty. They have not done it since FY1997. Forty trillion on the meter. A wide-open door. This is how the country has been running. It cannot continue."
 			}
 		]
 	},
@@ -2036,7 +2112,7 @@ export const posts: Post[] = [
 		image: "/images/merch-defund.jpg",
 		imageAlt: "The pipeline they will not shut",
 		series: "The Job",
-		part: 2,
+		part: 3,
 		receipts: [
 			{
 				label: "Pew — U.S. foreign aid / USAID",
@@ -2074,7 +2150,7 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "The $7.258 billion legislative machine is not the prize. It is the shop that protects the prize. Show the USAID money, the lobbyist money, and the trades they will not ban, and the oath starts to look like a costume. They are not confused. They are standing in front of a business."
+				text: "The $7.258 billion legislative machine is not the prize. It is Congress that protects the prize. Show the USAID money, the lobbyist money, and the trades they will not ban, and the oath starts to look like a costume. They are not confused. They are standing in front of a business."
 			},
 			{
 				type: "h",
@@ -2087,7 +2163,7 @@ export const posts: Post[] = [
 					"CRS's table of implementers puts Chemonics in the same neighborhood as the big faith and nonprofit shops — billions across the decade, U.S. firms on the receiving end of 'foreign' aid. https://www.congress.gov/crs-product/R48150",
 					"Federal lobbying: $4.4 billion in 2024, more than $5 billion in 2025. In 2025 the U.S. Chamber of Commerce led at $72.1 million. The National Association of Realtors had been first in 2024 at $86.4 million. Pharma and health products spent about $387 million in 2024 as an industry. OpenSecrets. https://www.opensecrets.org/news/2025/02/federal-lobbying-set-new-record-in-2024/",
 					"The revolving door is the product line. LegiStorm counted 866 members and staff who left the Hill for K Street in 2025 — up 60 percent from 2024. One hundred twenty-five lobbyists walked the other way, into Congress. That is not civic virtue. That is inventory.",
-					"The STOCK Act's $200 late fee is a cost of doing that business. Zero prosecutions. Disclosure without a bite is a receipt the shop is happy to file."
+					"The STOCK Act's $200 late fee is a cost of doing that business. Zero prosecutions. Disclosure without a bite is a receipt Congress is happy to file."
 				]
 			},
 			{
@@ -2098,9 +2174,9 @@ export const posts: Post[] = [
 				type: "ul",
 				items: [
 					"Open Society Foundations, by their own count: $1.2 billion in expenditures in 2024, $24.2 billion over three decades. That is private money. It is not USAID. Print both. https://www.opensocietyfoundations.org/",
-					"The Washington Post, December 2025: George Soros has spent tens of millions of dollars swinging dozens of district attorney races — local and state officers who decide who gets charged in your county. https://www.washingtonpost.com/politics/2025/12/03/george-soros-prosecutors-campaign-finance/",
+					"The Washington Post, December 2025: George Soros has spent tens of millions of dollars swinging dozens of district attorney races — local and state officers who decide who gets charged in a county. https://www.washingtonpost.com/politics/2025/12/03/george-soros-prosecutors-campaign-finance/",
 					"Politico documented the strategy as early as 2016: elect the prosecutor, change the justice system without passing a statute. Democracy PAC and related vehicles moved nine-figure sums into political groups around the 2022 cycle.",
-					"Taxpayer NGOs sit on the other rail. USAID's implementers — Chemonics and the rest — are paid from the unread pile. Private foundations pay for the DAs. You fund the first with taxes. You live under the second. That is paying for your own demise: the foreign-aid contractor in D.C., the prosecutor in the county, the lobbyist in the hall, the $200 trade. Same business. Different letterhead."
+					"Taxpayer NGOs sit on the other rail. USAID's implementers — Chemonics and the rest — are paid from the unread pile. Private foundations pay for the DAs. Taxes fund the first. The country lives under the second. That is a country paying for its own demise: the foreign-aid contractor in D.C., the prosecutor in the county, the lobbyist in the hall, the $200 trade. Same business. Different letterhead."
 				]
 			},
 			{
@@ -2123,7 +2199,7 @@ export const posts: Post[] = [
 				type: "ul",
 				items: [
 					"Federal lobbying hit a record $4.4 billion in 2024. OpenSecrets. https://www.opensecrets.org/news/2025/02/federal-lobbying-set-new-record-in-2024/",
-					"In 2025 it crossed $5 billion. The people who write the twin law buy the hours. You already paid the salary so those hours would belong to you. They do not.",
+					"In 2025 it crossed $5 billion. The people who write the twin law buy the hours. The salary was paid so those hours would belong to the country. They do not.",
 					"The Lobbying Disclosure Act is a filing. It is not a wall. A $5 billion industry does not pay that to lose."
 				]
 			},
@@ -2141,24 +2217,24 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Put the three next to the $7.258 billion shop, the $40 trillion meter, and the oath they recited. They protect the tap, the lobby, and the ticker. They sold you a jersey so you would not look. The villain is not the neighbor. The villain is the shop. That is not treason. That is not a caption. That is why an unread omnibus cannot continue. The file is how we pull it back together."
+				text: "Put the three next to the $7.258 billion Congress, the $40 trillion meter, and the oath they recited. They protect the tap, the lobby, and the ticker. They sold a jersey so the record would not be read. The villain is not the neighbor. The villain is Congress. That is not treason. That is not a caption. That is why a giant unread bill cannot continue. The record is how we pull it back together."
 			}
 		]
 	},
 	{
-		slug: "you-cannot-outlaw-a-caption",
-		title: "You cannot outlaw a caption",
+		slug: "a-caption-cannot-be-outlawed",
+		title: "A caption cannot be outlawed",
 		dek: "The rhetoric is the abuse. A hate law written by the same people would be the next clip.",
 		date: "2026-08-29",
 		category: "Dispatch",
 		readMinutes: 3,
 		image: "/images/merch-media.jpg",
 		imageAlt: "The mic they will not share",
-		series: "The Mic",
-		part: 1,
+		series: "The Clip",
+		part: 4,
 		receipts: [
 			{
-				label: "Brandenburg v. Ohio — incitement",
+				label: "the Supreme Court's incitement test — incitement",
 				href: "https://www.oyez.org/cases/1968/492"
 			},
 			{
@@ -2177,11 +2253,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The trap is an ‘immediate law’ against anger, hate, and division. Who writes the definitions? The same Congress. Who enforces them? The same desks that already flag a file as radioactive. The next majority will name this site ‘hate’ and your neighbor ‘division.’ We have already been called the worst word in the language for playing a tape. Hand them a statute and they will not use it on themselves."
+				text: "The trap is an ‘immediate law’ against anger, hate, and division. Who writes the definitions? The same Congress. Who enforces them? The same desks that already flag a file as radioactive. The next majority will name this site ‘hate’ and the neighbor ‘division.’ We have already been called the worst word in the language for playing a tape. Hand them a statute and they will not use it on themselves."
 			},
 			{
 				type: "p",
-				text: "What the Constitution already allows, today, without a Ministry of Truth: Brandenburg v. Ohio — speech that is meant to cause imminent lawless action and likely to cause it is not protected. The rest is ugly and still legal. Article I, Section 5 — each house may punish its members and expel them with two-thirds. Censure. Strip a committee. Primary them. Vote them out. Those are employee tools. They are not a new speech felony for the press."
+				text: "What the Constitution already allows, today, without a Ministry of Truth: the Supreme Court's incitement test — speech that is meant to cause imminent lawless action and likely to cause it is not protected. The rest is ugly and still legal. Article I, Section 5 — each house may punish its members and expel them with two-thirds. Censure. Strip a committee. Primary them. Vote them out. Those are employee tools. They are not a new speech felony for the press."
 			},
 			{
 				type: "q",
@@ -2189,7 +2265,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "What we will argue in this series, as law that does not eat the First Amendment: official House and Senate video must stay up uncut when a member quotes it. No taxpayer office may release a clip without the link to the full file. Ethics rules that treat ‘warfare against the people who pay you’ as a firing offense inside the chamber — censure and expulsion — not a DOJ beat. Media propaganda is beaten by the rest of the sentence, not by a license they would revoke. Later lessons: Waters, Schumer, Jeffries, the 2020 summer, and the lines we will not wash on our own side. Same standard. Or it is a jersey."
+				text: "What we will argue in this series, as law that does not eat the First Amendment: official House and Senate video must stay up uncut when a member quotes it. No taxpayer office may release a clip without the link to the full file. Ethics rules that treat ‘warfare against the people who pay them’ as a firing offense inside the chamber — censure and expulsion — not a DOJ beat. Media propaganda is beaten by the rest of the sentence, not by a license they would revoke. Later lessons: Waters, Schumer, Jeffries, the 2020 summer, and the lines we will not wash on our own side. Same standard. Or it is a jersey."
 			}
 		]
 	},
@@ -2202,8 +2278,8 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/merch-media.jpg",
 		imageAlt: "The mic they will not share",
-		series: "The Mic",
-		part: 2,
+		series: "The Clip",
+		part: 5,
 		receipts: [
 			{
 				label: "Article I §6 — Speech or Debate",
@@ -2218,7 +2294,7 @@ export const posts: Post[] = [
 				href: "https://www.oyez.org/cases/1971/71-1017"
 			},
 			{
-				label: "Brandenburg v. Ohio — incitement",
+				label: "the Supreme Court's incitement test — incitement",
 				href: "https://www.oyez.org/cases/1968/492"
 			}
 		],
@@ -2237,7 +2313,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The First Amendment does — the same one that covers you. Political speech, even ugly speech, even speech that divides a nation, is protected unless it is a true threat or it meets Brandenburg v. Ohio: directed to inciting imminent lawless action, and likely to produce it https://www.oyez.org/cases/1968/492 Abstract advocacy is in. ‘Go do this tonight’ that is meant to happen and likely to happen is out. That is why the rants are written the way they are. Maximum warfare. Break their spirit. Get in their face. The temperature goes up. The verb stays just far enough from ‘imminent.’ Emotion is the product. The lawyer's job is to keep it inside the First Amendment. Speech or Debate is the decoy they hold up so you think the Constitution blessed the performance. It did not."
+				text: "The First Amendment does — the same one that covers the people. Political speech, even ugly speech, even speech that divides a nation, is protected unless it is a true threat or it meets the Supreme Court's incitement test: directed to inciting imminent lawless action, and likely to produce it https://www.oyez.org/cases/1968/492 Abstract advocacy is in. ‘Go do this tonight’ that is meant to happen and likely to happen is out. That is why the rants are written the way they are. Maximum warfare. Break their spirit. Get in their face. The temperature goes up. The verb stays just far enough from ‘imminent.’ Emotion is the product. The lawyer's job is to keep it inside the First Amendment. Speech or Debate is the decoy they hold up so it looks as if the Constitution blessed the performance. It did not."
 			},
 			{
 				type: "p",
@@ -2255,7 +2331,7 @@ export const posts: Post[] = [
 		image: "/images/constitution.jpg",
 		imageAlt: "The charter they legislate around",
 		series: "The Clip",
-		part: 2,
+		part: 6,
 		receipts: [{
 			label: "How a bill becomes law — Congress.gov",
 			href: "https://www.congress.gov/help/learn-about-the-legislative-process"
@@ -2266,15 +2342,15 @@ export const posts: Post[] = [
 	body: [
 			{
 				type: "p",
-				text: "The most expensive ignorance in American life is not a missed election date. It is not knowing how a law actually becomes a thing that can hurt you. Civics class left most people with a cartoon: a bill, a debate, a signature, a parade. The real sequence is longer and less photogenic. Congress has listed powers. A measure needs both houses and a presidential signature, or a veto override. After that, agencies write rules that have the force of law without another vote. Leadership packs several fights into one stack so a member cannot vote for the popular piece without swallowing the poison. The lobby often drafts both. You were told it was Schoolhouse Rock. It is a second government in the footnotes."
+				text: "The most expensive ignorance in American life is not a missed election date. It is not knowing how a law actually becomes a thing that can hurt a citizen. Civics class left most people with a cartoon: a bill, a debate, a signature, a parade. The real sequence is longer and less photogenic. Congress has listed powers. A measure needs both houses and a presidential signature, or a veto override. After that, agencies write rules that have the force of law without another vote. Leadership packs several fights into one stack so a member cannot vote for the popular piece without swallowing the poison. The lobby often drafts both. Civics class called it Schoolhouse Rock. It is a second government in the footnotes."
 			},
 			{
 				type: "p",
-				text: "Watch the trick when it is working. They pass a statute that sounds like it is best for the nation. Then they pass, or bury, another that voids it. A thousand-page omnibus. A line that begins notwithstanding any other provision. A continuing resolution that funds the opposite of last month's speech. Exceptions written for themselves. Sunsets that never sunset. The camera covers the name of the bill. The void is in the annex nobody was going to read because they were at work, which is the point."
+				text: "Watch the trick when it is working. They pass a statute that sounds like it is best for the nation. Then they pass, or bury, another that voids it. A thousand-page unread bill. A line that begins notwithstanding any other provision. A continuing resolution that funds the opposite of last month's speech. Exceptions written for themselves. Sunsets that never sunset. The camera covers the name of the bill. The void is in the annex nobody was going to read because they were at work, which is the point."
 			},
 			{
 				type: "p",
-				text: "This is not an insult aimed at people who were busy. It is a description of an incentive. A clip is easier than Article I. A caption is easier than a rider. If half the country can name a party and almost none can name who writes the regulation after the statute, the people who live in the political club will keep winning arguments that were never had. Swamp Force exists so that gap closes — not by calling anyone stupid, but by building a habit. When they cheer a bill, ask for the twin. The rider. The rule. The exemption. If they will not show it, they have already told you who the statute was for."
+				text: "This is not an insult aimed at people who were busy. It is a description of an incentive. A clip is easier than Article I. A caption is easier than a rider. If half the country can name a party and almost none can name who writes the regulation after the statute, the people who live in the political club will keep winning arguments that were never had. Swamp Force exists so that gap closes — not by calling anyone stupid, but by building a habit. When they cheer a bill, ask for the twin. The rider. The rule. The exemption. If they will not show it, they have already named who the statute was for."
 			}
 		]
 	}
@@ -2304,7 +2380,7 @@ export const products: Product[] = [
     name: "Night Hoodie",
     price: 4800,
     tag: "Hoodie",
-    blurb: "Charcoal. Gator. The stand you wear in weather.",
+    blurb: "Charcoal. Gator. The stand, in weather.",
     image: "/images/merch-hoodie.jpg",
     sizes: ["S", "M", "L", "XL", "2XL"],
   },
@@ -2377,56 +2453,149 @@ export function getShareLead() {
 	if (pinned) return pinned;
 	return [...posts].sort((a, b) => b.date.localeCompare(a.date))[0];
 }
-/** Kitchen-table order for the front of the journal. */
+/** Kitchen-table order for the front of the journal. Four. Not a syllabus. */
 export const START_HERE = [
 	"that-is-not-why-they-are-elected",
-	"you-should-not-have-to-wait",
+	"clean-hands",
+	"they-want-a-new-constitution",
 	"they-let-them-walk",
-	"the-bill-they-sent-you",
+	"the-bill-they-sent",
 	"the-docket",
 	"call-these-first",
 ] as const;
+/** Reading order. Same on Archive, phone, and desktop. */
+export const JOURNAL = [
+	{
+		name: "The lead",
+		dek: "They forgot who they work for. Then the job they are not doing.",
+		slugs: [
+			"that-is-not-why-they-are-elected",
+			"clean-hands",
+			"they-want-a-new-constitution",
+			"they-let-them-walk",
+			"the-bill-they-sent",
+			"the-docket",
+			"call-these-first",
+		],
+	},
+	{
+		name: "The Search",
+		dek: "Find them. Who got paid. Defund ICE is the tell.",
+		slugs: ["find-them", "who-got-paid", "defund-ice-is-the-tell"],
+	},
+	{
+		name: "The Hearing",
+		dek: "The noise. The split. Full time. The whole bill. The checks that do not fit.",
+		slugs: [
+			"the-noise",
+			"they-sold-the-split",
+			"full-time-or-go-home",
+			"the-whole-bill",
+			"it-does-not-fit",
+			"the-check-they-will-not-write",
+		],
+	},
+	{
+		name: "The Ballot",
+		dek: "A barcode is not a lock.",
+		slugs: ["a-barcode-is-not-a-lock", "the-line-in-the-sand"],
+	},
+	{
+		name: "The Clip",
+		dek: "They do not debate. They clip the tape.",
+		slugs: [
+			"they-dont-debate-they-flag",
+			"division-is-the-product",
+			"the-record-not-the-rally",
+			"the-republic-not-the-caption",
+			"they-clipped-the-tape",
+			"they-hold-it-by-the-blade",
+			"a-caption-cannot-be-outlawed",
+			"the-floor-not-the-feed",
+			"the-law-they-dont-mention",
+		],
+	},
+	{
+		name: "The Job",
+		dek: "The $7 billion machine. The unread bill. What they are protecting.",
+		slugs: [
+			"the-recess-blockade",
+			"the-7-billion-machine",
+			"why-the-lobby-should-be-illegal",
+			"this-congress-cannot-police-itself",
+			"not-a-part-time-job",
+			"what-we-can-do",
+			"the-debt-they-will-not-close",
+			"what-they-are-protecting",
+		],
+	},
+	{
+		name: "The Parties",
+		dek: "How the House was captured. What each party became.",
+		slugs: [
+			"the-uniparty-mirror",
+			"how-the-house-was-captured",
+			"what-the-democratic-party-became",
+			"what-the-republican-party-became",
+		],
+	},
+	{
+		name: "The Target",
+		dek: "Why they hate Trump. The gauntlet. What he told them.",
+		slugs: [
+			"why-he-became-the-enemy",
+			"the-file-on-the-man",
+			"what-he-told-them",
+			"the-word-that-never-made-the-docket",
+		],
+	},
+] as const;
 export const COURSE = [
+	{
+		name: "The Republic",
+		dek: "They forgot who they work for. Clean hands. The charter.",
+		image: "/images/capitol.jpg"
+	},
+	{
+		name: "The Job",
+		dek: "$7.3 billion for a part-time floor. $40 trillion on the meter.",
+		image: "/images/chamber.jpg"
+	},
+	{
+		name: "The Hearing",
+		dek: "The noise. The split. Full time or go home. The whole bill.",
+		image: "/images/essay-show-the-slides.jpg"
+	},
+	{
+		name: "The Clip",
+		dek: "A caption is not the tape. Play the minutes they cut.",
+		image: "/images/essay-eagle.jpg"
+	},
 	{
 		name: "The Search",
 		dek: "Find them. Who got paid. Defund ICE is the tell.",
 		image: "/images/essay-find-them.jpg"
 	},
 	{
-		name: "The Hearing",
-		dek: "The noise. The split. Full time or go home. The whole bill. It does not fit. The check they will not write.",
-		image: "/images/essay-show-the-slides.jpg"
+		name: "The Correction",
+		dek: "Criminals walk. Taxes house illegal immigrants. The docket.",
+		image: "/images/chamber.jpg"
 	},
 	{
 		name: "The Ballot",
-		dek: "A barcode is not a lock. The same post office cannot be a crime scene and a vault.",
+		dek: "A barcode is not a lock. Citizenship to vote was the tell.",
 		image: "/images/essay-barcode.jpg"
 	},
 	{
-		name: "The Clip",
-		dek: "How a caption replaces a country.",
-		image: "/images/essay-eagle.jpg"
+		name: "The Parties",
+		dek: "How the House was captured. What each party became.",
+		image: "/images/blog-house.jpg"
 	},
 	{
 		name: "The Target",
-		dek: "When a donor became a problem.",
+		dek: "When a donor became a problem they went after the country.",
 		image: "/images/signs.jpg"
 	},
-	{
-		name: "The Republic",
-		dek: "They forgot who they work for. They want a new Constitution.",
-		image: "/images/essay-not-why.jpg"
-	},
-	{
-		name: "The Correction",
-		dek: "Criminals walk. Your taxes house illegal immigrants. Then you sue. Then you call.",
-		image: "/images/essay-not-wait.jpg"
-	},
-	{
-		name: "The Job",
-		dek: "You pay $7.258 billion for a part-time floor. $40 trillion on the meter. Follow the tap they protect.",
-		image: "/images/chamber.jpg"
-	}
 ] as const;
 export function postsInSeries(name: string) {
 	return posts.filter((p) => p.series === name).sort((a, b) => (a.part ?? 0) - (b.part ?? 0));

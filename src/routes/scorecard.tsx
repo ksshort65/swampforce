@@ -5,28 +5,26 @@ export const Route = createFileRoute("/scorecard")({
   component: ScorecardPage,
   head: () => ({
     meta: [
-      { title: "Congressional Scorecard — Swamp Force" },
+      { title: "Both parties failed — Congressional Scorecard — Swamp Force" },
       {
         name: "description",
-        content:
-          "Congress holds the purse. $40T. DSA is on the ballot. Show up Nov 3.",
+        content: "The fire is Congress. The blame game is politics. Charts with sources.",
       },
       {
         property: "og:url",
         content: "https://swampforce.grok.me/scorecard",
       },
-      { property: "og:title", content: "Congressional Scorecard — Swamp Force" },
+      { property: "og:title", content: "Both parties failed. They do not represent the American people." },
       {
         property: "og:description",
-        content:
-          "Congress holds the purse. $40T. DSA is on the ballot. Show up Nov 3.",
+        content: "The fire is Congress. The blame game is politics.",
       },
       {
         property: "og:image",
         content: "https://swampforce.grok.me/og-scorecard.jpg",
       },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Congressional Scorecard — Swamp Force" },
+      { name: "twitter:title", content: "Both parties failed. They do not represent the American people." },
       {
         name: "twitter:image",
         content: "https://swampforce.grok.me/og-scorecard.jpg",

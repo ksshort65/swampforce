@@ -15,18 +15,18 @@ function JoinPage() {
         Join Swamp Force
       </p>
       <h1 className="mt-2 font-display text-5xl font-bold tracking-wide uppercase">
-        Stand with Trump
+        Join the list
       </h1>
       <p className="mt-4 text-base leading-relaxed text-muted">
         Save the nation. Secure the elections. Congress works for us — or
         we send them home. Everyone is Swamp Force or the swamp does not
-        drain. Leave your name. Let them hear us now.
+        drain. Leave a name. Let them hear us now.
       </p>
 
       <div className="mt-10 rounded-lg bg-surface p-6">
         {sent ? (
           <p className="text-base leading-relaxed">
-            Open your mail to {SITE.email} and hit send. That is the list.
+            Open the mail to {SITE.email} and hit send. That is the list.
           </p>
         ) : (
           <form

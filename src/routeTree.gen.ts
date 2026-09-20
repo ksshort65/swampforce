@@ -11,13 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
-import { Route as BrandRouteImport } from './routes/brand'
-import { Route as CartRouteImport } from './routes/cart'
-import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ArchiveRouteImport } from './routes/archive'
 import { Route as CopyrightRouteImport } from './routes/copyright'
 import { Route as FindThemRouteImport } from './routes/find-them'
-import { Route as HowRouteImport } from './routes/how'
+import { Route as ForewordRouteImport } from './routes/foreword'
 import { Route as JoinRouteImport } from './routes/join'
+import { Route as PumpRouteImport } from './routes/pump'
 import { Route as ScorecardRouteImport } from './routes/scorecard'
 import { Route as DispatchIndexRouteImport } from './routes/dispatch.index'
 import { Route as DispatchSlugRouteImport } from './routes/dispatch.$slug'
@@ -34,19 +33,9 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BrandRoute = BrandRouteImport.update({
-  id: '/brand',
-  path: '/brand',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CartRoute = CartRouteImport.update({
-  id: '/cart',
-  path: '/cart',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const ArchiveRoute = ArchiveRouteImport.update({
+  id: '/archive',
+  path: '/archive',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CopyrightRoute = CopyrightRouteImport.update({
@@ -59,14 +48,19 @@ const FindThemRoute = FindThemRouteImport.update({
   path: '/find-them',
   getParentRoute: () => rootRouteImport,
 } as any)
-const HowRoute = HowRouteImport.update({
-  id: '/how',
-  path: '/how',
+const ForewordRoute = ForewordRouteImport.update({
+  id: '/foreword',
+  path: '/foreword',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JoinRoute = JoinRouteImport.update({
   id: '/join',
   path: '/join',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PumpRoute = PumpRouteImport.update({
+  id: '/pump',
+  path: '/pump',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ScorecardRoute = ScorecardRouteImport.update({
@@ -98,13 +92,12 @@ const ShopSlugRoute = ShopSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/brand': typeof BrandRoute
-  '/cart': typeof CartRoute
-  '/contact': typeof ContactRoute
+  '/archive': typeof ArchiveRoute
   '/copyright': typeof CopyrightRoute
   '/find-them': typeof FindThemRoute
-  '/how': typeof HowRoute
+  '/foreword': typeof ForewordRoute
   '/join': typeof JoinRoute
+  '/pump': typeof PumpRoute
   '/scorecard': typeof ScorecardRoute
   '/dispatch/$slug': typeof DispatchSlugRoute
   '/shop/$slug': typeof ShopSlugRoute
@@ -114,13 +107,12 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/brand': typeof BrandRoute
-  '/cart': typeof CartRoute
-  '/contact': typeof ContactRoute
+  '/archive': typeof ArchiveRoute
   '/copyright': typeof CopyrightRoute
   '/find-them': typeof FindThemRoute
-  '/how': typeof HowRoute
+  '/foreword': typeof ForewordRoute
   '/join': typeof JoinRoute
+  '/pump': typeof PumpRoute
   '/scorecard': typeof ScorecardRoute
   '/dispatch/$slug': typeof DispatchSlugRoute
   '/shop/$slug': typeof ShopSlugRoute
@@ -131,13 +123,12 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/brand': typeof BrandRoute
-  '/cart': typeof CartRoute
-  '/contact': typeof ContactRoute
+  '/archive': typeof ArchiveRoute
   '/copyright': typeof CopyrightRoute
   '/find-them': typeof FindThemRoute
-  '/how': typeof HowRoute
+  '/foreword': typeof ForewordRoute
   '/join': typeof JoinRoute
+  '/pump': typeof PumpRoute
   '/scorecard': typeof ScorecardRoute
   '/dispatch/$slug': typeof DispatchSlugRoute
   '/shop/$slug': typeof ShopSlugRoute
@@ -149,13 +140,12 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
-    | '/brand'
-    | '/cart'
-    | '/contact'
+    | '/archive'
     | '/copyright'
     | '/find-them'
-    | '/how'
+    | '/foreword'
     | '/join'
+    | '/pump'
     | '/scorecard'
     | '/dispatch/$slug'
     | '/shop/$slug'
@@ -165,13 +155,12 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
-    | '/brand'
-    | '/cart'
-    | '/contact'
+    | '/archive'
     | '/copyright'
     | '/find-them'
-    | '/how'
+    | '/foreword'
     | '/join'
+    | '/pump'
     | '/scorecard'
     | '/dispatch/$slug'
     | '/shop/$slug'
@@ -181,13 +170,12 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
-    | '/brand'
-    | '/cart'
-    | '/contact'
+    | '/archive'
     | '/copyright'
     | '/find-them'
-    | '/how'
+    | '/foreword'
     | '/join'
+    | '/pump'
     | '/scorecard'
     | '/dispatch/$slug'
     | '/shop/$slug'
@@ -198,13 +186,12 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  BrandRoute: typeof BrandRoute
-  CartRoute: typeof CartRoute
-  ContactRoute: typeof ContactRoute
+  ArchiveRoute: typeof ArchiveRoute
   CopyrightRoute: typeof CopyrightRoute
   FindThemRoute: typeof FindThemRoute
-  HowRoute: typeof HowRoute
+  ForewordRoute: typeof ForewordRoute
   JoinRoute: typeof JoinRoute
+  PumpRoute: typeof PumpRoute
   ScorecardRoute: typeof ScorecardRoute
   DispatchSlugRoute: typeof DispatchSlugRoute
   ShopSlugRoute: typeof ShopSlugRoute
@@ -228,25 +215,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/brand': {
-      id: '/brand'
-      path: '/brand'
-      fullPath: '/brand'
-      preLoaderRoute: typeof BrandRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cart': {
-      id: '/cart'
-      path: '/cart'
-      fullPath: '/cart'
-      preLoaderRoute: typeof CartRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+    '/archive': {
+      id: '/archive'
+      path: '/archive'
+      fullPath: '/archive'
+      preLoaderRoute: typeof ArchiveRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/copyright': {
@@ -263,11 +236,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FindThemRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/how': {
-      id: '/how'
-      path: '/how'
-      fullPath: '/how'
-      preLoaderRoute: typeof HowRouteImport
+    '/foreword': {
+      id: '/foreword'
+      path: '/foreword'
+      fullPath: '/foreword'
+      preLoaderRoute: typeof ForewordRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/join': {
@@ -275,6 +248,13 @@ declare module '@tanstack/react-router' {
       path: '/join'
       fullPath: '/join'
       preLoaderRoute: typeof JoinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pump': {
+      id: '/pump'
+      path: '/pump'
+      fullPath: '/pump'
+      preLoaderRoute: typeof PumpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/scorecard': {
@@ -318,13 +298,12 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  BrandRoute: BrandRoute,
-  CartRoute: CartRoute,
-  ContactRoute: ContactRoute,
+  ArchiveRoute: ArchiveRoute,
   CopyrightRoute: CopyrightRoute,
   FindThemRoute: FindThemRoute,
-  HowRoute: HowRoute,
+  ForewordRoute: ForewordRoute,
   JoinRoute: JoinRoute,
+  PumpRoute: PumpRoute,
   ScorecardRoute: ScorecardRoute,
   DispatchSlugRoute: DispatchSlugRoute,
   ShopSlugRoute: ShopSlugRoute,

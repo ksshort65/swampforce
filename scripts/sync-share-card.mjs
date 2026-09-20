@@ -4,32 +4,12 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const BASE = join(root, "COVER.jpg");
-const FALLBACK = join(root, "public/images/essay-not-why.jpg");
+const BASE = join(root, "public/images/hero-capitol.jpg");
 
 export function syncShareCard() {
-  const src = existsSync(BASE) ? BASE : FALLBACK;
-  if (!existsSync(src)) {
-    console.warn("[share-card] missing COVER.jpg / essay-not-why.jpg");
-    return null;
-  }
-  const ogPath = join(root, "public/og.jpg");
-  const bannerPath = join(root, "public/x-banner.jpg");
-  const py = `
-from PIL import Image
-base = Image.open(${JSON.stringify(src)}).convert("RGB")
-og = base.resize((1200, 630), Image.Resampling.LANCZOS)
-og.save(${JSON.stringify(ogPath)}, quality=88, optimize=True, subsampling=1)
-w, h = base.size
-band_h = int(w * 264 / 1200)
-top = max(0, h - band_h - 40)
-banner = base.crop((0, top, w, min(h, top + band_h))).resize((1200, 264), Image.Resampling.LANCZOS)
-banner.save(${JSON.stringify(bannerPath)}, quality=88, optimize=True, subsampling=1)
-banner.save(${JSON.stringify(join(root, "public/images/x-banner.jpg"))}, quality=88, optimize=True, subsampling=1)
-`;
-  const pr = spawnSync("python3", ["-c", py], { encoding: "utf8" });
-  if (pr.status !== 0) {
-    console.warn("[share-card] compose failed", pr.stderr?.slice(-500));
+  // Namecheap og.jpg is the cover. Do not regenerate it.
+  if (!existsSync(join(root, "public/og.jpg"))) {
+    console.warn("[share-card] missing public/og.jpg");
     return null;
   }
   writeFileSync(
@@ -40,7 +20,7 @@ banner.save(${JSON.stringify(join(root, "public/images/x-banner.jpg"))}, quality
       2,
     ) + "\n",
   );
-  console.log("[share-card] og + x-banner from chamber cover, no stamp");
+  console.log("[share-card] left Namecheap og.jpg and X banner alone.");
   return "og";
 }
 
@@ -53,10 +33,8 @@ export function shareCardPlugin() {
     configureServer(server) {
       syncShareCard();
       server.watcher.add(BASE);
-      server.watcher.add(FALLBACK);
       server.watcher.on("change", (file) => {
-        const f = String(file);
-        if (f.endsWith("COVER.jpg") || f.endsWith("essay-not-why.jpg")) syncShareCard();
+        if (String(file).endsWith("hero-capitol.jpg")) syncShareCard();
       });
     },
   };

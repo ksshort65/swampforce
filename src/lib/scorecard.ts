@@ -8,10 +8,420 @@ export type ScoreRow = {
   href?: string;
 };
 
-/** Living midterms card. Update the cells when a vote or a bill changes the file. */
-export const SCORE_UPDATED = "2026-09-02";
+/** Living midterms card. Update the cells when a vote or a Treasury table changes the file. */
+export const SCORE_UPDATED = "2026-09-19";
 
-/** Gross federal debt added by term. Treasury Debt to the Penny / OMB historical tables. Party control: Senate Historical Office; House History, Art & Archives. $40.03T as of Aug. 20, 2026. Congress — not the President — controls the purse. */
+export type Cite = { label: string; href: string };
+
+/** Kitchen-table ledger. Majority is who held the gavel — Article I, not the Oval. */
+export type LedgerRow = {
+  era: string;
+  majority: string;
+  debt: string;
+  taxes: string;
+  people: string;
+  sources: Cite[];
+};
+
+export const LEDGER: LedgerRow[] = [
+  {
+    era: "1993–95",
+    majority: "Dem both",
+    debt: "Deficit still high, then turning",
+    taxes: "Omnibus 1993 raised top rates",
+    people: "Take-home cut at the top. Recovery after a recession they did not start.",
+    sources: [
+      { label: "H.R. 2264 — Omnibus Budget Reconciliation Act of 1993", href: "https://www.congress.gov/bill/103rd-congress/house-bill/2264" },
+      { label: "Senate party division", href: "https://www.senate.gov/history/partydiv.htm" },
+    ],
+  },
+  {
+    era: "1995–01",
+    majority: "GOP both (Clinton Oval)",
+    debt: "Late-90s surplus — last time the meter ran backward",
+    taxes: "No giant new income-tax hike. 1997 cut capital-gains rate",
+    people: "Welfare reform 1996. Work requirement. Paychecks and a surplus. Split government, not a uniparty hymn.",
+    sources: [
+      { label: "H.R. 3734 — Personal Responsibility and Work Opportunity Act of 1996", href: "https://www.congress.gov/bill/104th-congress/house-bill/3734" },
+      { label: "Taxpayer Relief Act of 1997", href: "https://www.congress.gov/bill/105th-congress/house-bill/2014" },
+      { label: "Treasury — Debt to the Penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+    ],
+  },
+  {
+    era: "2001–07",
+    majority: "GOP both most years (Bush Oval)",
+    debt: "+$4.9T across the Bush years (Treasury)",
+    taxes: "EGTRRA 2001 / JGTRRA 2003 — take-home pay rose",
+    people: "A tax cut that showed up on payday. Then two wars and Medicare Part D on the card. Help on payday. Hurt on the meter and in the field.",
+    sources: [
+      { label: "H.R. 1836 — EGTRRA 2001", href: "https://www.congress.gov/bill/107th-congress/house-bill/1836" },
+      { label: "H.R. 2 — JGTRRA 2003", href: "https://www.congress.gov/bill/108th-congress/house-bill/2" },
+      { label: "P.L. 108-173 — Medicare Prescription Drug, Improvement, and Modernization Act", href: "https://www.congress.gov/bill/108th-congress/house-bill/1" },
+      { label: "Treasury — Debt to the Penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+    ],
+  },
+  {
+    era: "2007–11",
+    majority: "Dem both",
+    debt: "TARP + stimulus. Obama term later +$8–9.3T inauguration-to-inauguration",
+    taxes: "ACA taxes and mandates",
+    people: "Crash they inherited. Bailouts. ACA: coverage for some, premiums and a mandate for others. Jobs came back slow.",
+    sources: [
+      { label: "P.L. 110-343 — Emergency Economic Stabilization Act (TARP)", href: "https://www.congress.gov/bill/110th-congress/house-bill/1424" },
+      { label: "H.R. 3590 — Patient Protection and Affordable Care Act", href: "https://www.congress.gov/bill/111th-congress/house-bill/3590" },
+      { label: "Treasury — Debt to the Penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+    ],
+  },
+  {
+    era: "2017–19",
+    majority: "GOP both (Trump 1)",
+    debt: "Debt still up. Tax cut is not a surplus",
+    taxes: "TCJA 2017 — lower rates, bigger hole (~$1.5T / 10 yrs, JCT)",
+    people: "Fatter paycheck. Pre-COVID jobs and wages. Honest: they cut the tax and did not close October 1.",
+    sources: [
+      { label: "H.R. 1 — Tax Cuts and Jobs Act", href: "https://www.congress.gov/bill/115th-congress/house-bill/1" },
+      { label: "Joint Committee on Taxation", href: "https://www.jct.gov/" },
+      { label: "Treasury — Debt to the Penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+    ],
+  },
+  {
+    era: "2019–21",
+    majority: "Split (COVID)",
+    debt: "Trump 1 full term +$7.8T — a large share in the plague year, both parties voted the relief",
+    taxes: "No new peacetime rate fight. Relief checks",
+    people: "Lockdowns, closed shops, then checks. Both jerseys spent. Neither gets a pass for the $4T+ plague year.",
+    sources: [
+      { label: "P.L. 116-136 — CARES Act", href: "https://www.congress.gov/bill/116th-congress/house-bill/748" },
+      { label: "Treasury — Debt to the Penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+      { label: "CRFB — Trump and Biden debt growth", href: "https://www.crfb.org/blogs/trump-and-biden-debt-growth" },
+    ],
+  },
+  {
+    era: "2021–23",
+    majority: "Dem both (Biden Oval)",
+    debt: "Biden term +$8.4–8.5T. $27.8T to ~$36.2T",
+    taxes: "IRA 15% corporate minimum. Direction is up",
+    people: "CPI peak 9.1% June 2022. Groceries, rent, fuel. Record southwest-border encounters FY22–24. Cities paid hotels. Hurt.",
+    sources: [
+      { label: "BLS CPI — June 2022, 9.1%", href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm" },
+      { label: "H.R. 5376 — Inflation Reduction Act", href: "https://www.congress.gov/bill/117th-congress/house-bill/5376" },
+      { label: "CBP — Southwest land border encounters", href: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters" },
+      { label: "Treasury — Debt to the Penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+    ],
+  },
+  {
+    era: "2025–26",
+    majority: "GOP both (Trump 2)",
+    debt: "+$3.8T already ($36.2T Jan 2025 → $40.0T Aug 2026)",
+    taxes: "Fighting to extend TCJA. Not a surplus",
+    people: "Border encounters at a 50-year low (Pew). That is a win that can be named. The meter is still climbing. Close October 1 or it is the same failure in a different jersey.",
+    sources: [
+      { label: "Treasury — Debt to the Penny (~$40.05T Aug. 18, 2026)", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+      { label: "Pew — encounters at a 50-year low", href: "https://www.pewresearch.org/short-reads/2026/02/02/migrant-encounters-at-the-us-mexico-border-are-at-their-lowest-level-in-more-than-50-years/" },
+      { label: "CBP — Southwest land border encounters", href: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters" },
+    ],
+  },
+];
+
+export type WarRow = {
+  topic: string;
+  gop: string;
+  dem: string;
+  sources: Cite[];
+};
+
+export const WAR: WarRow[] = [
+  {
+    topic: "Warfare talk",
+    gop: "McCaul, leaving after 22 years: ‘You’re elected to fight and kill the other side.’ NYT Magazine, Sept. 16, 2026. An employee does not declare war on the people who pay him.",
+    dem: "Jeffries on C-SPAN: maximum warfare, then break them / break their spirit. Schumer: whirlwind. Waters: create a crowd. Same rule.",
+    sources: [
+      { label: "Fox News Radio — McCaul exit interview, From Washington, July 12, 2026", href: "https://radio.foxnews.com/2026/07/12/from-washington-rep-michael-mccaul-on-two-decades-of-public-service-and-the-changing-face-of-congress/" },
+      { label: "NYT Magazine — McCaul: ‘fight and kill the other side,’ Sept. 16, 2026", href: "https://www.nytimes.com/2026/09/16/magazine/congress-trump-midterms.html" },
+      { label: "Carnegie Endowment — A Conversation With Congressman Michael McCaul, May 21, 2026", href: "https://www.youtube.com/watch?v=Hy4uBHoav3Y" },
+      { label: "C-SPAN — Jeffries, ‘maximum warfare,’ Apr. 22, 2026", href: "https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623" },
+      { label: "C-SPAN — Jeffries, CAP IDEAS conference, May 19, 2026", href: "https://www.c-span.org/program/public-affairs-event/house-minority-leader-jeffries-on-democracy/679567" },
+      { label: "C-SPAN — Schumer, Supreme Court steps, Mar. 4, 2020", href: "https://www.c-span.org/clip/us-senate/user-clip-youve-released-the-whirlwind-and-you-will-pay-the-price--sen-chuck-schumer/4944670" },
+      { label: "RealClearPolitics video — Waters, June 2018, ‘create a crowd’", href: "https://www.realclearpolitics.com/video/2018/06/26/maxine_waters_pelosi_and_schumer_dont_really_say_im_out_of_line.html" },
+      { label: "C-SPAN — full House Democrat news conference (unedited)", href: "https://www.c-span.org/program/news-conference/house-democrats-hold-news-conference-on-virginia-redistricting-vote/677945" },
+    ],
+  },
+  {
+    topic: "Smears are not a statute",
+    gop: "A clip is not a budget. Ugly sentences on tape stay here — including yours. Govern or go home.",
+    dem: "When they cannot beat the file they make it radioactive. Fourteen replies. A lie. Reports filed, posts stayed. Noise does not appropriate a dollar. It has to stop.",
+    sources: [
+      { label: "Amendment I — Congress shall make no law… abridging the freedom of speech", href: "https://constitution.congress.gov/constitution/amendment-1/" },
+      { label: "Brandenburg v. Ohio, 395 U.S. 444 (1969)", href: "https://supreme.justia.com/cases/federal/us/395/444/" },
+    ],
+  },
+  {
+    topic: "Who gets to hear",
+    gop: "No state television. Ugly sentences still print. Censorship of the recording teaches a country a crime that was never filed.",
+    dem: "MRC: 92% negative on ABC/CBS/NBC, first hundred days of 2025. A caption that says mostly peaceful while a precinct burns is not journalism. It is harm.",
+    sources: [
+      { label: "MRC / NewsBusters — 92% negative, first 100 days of 2025 term", href: "https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage" },
+      { label: "Amendment I", href: "https://constitution.congress.gov/constitution/amendment-1/" },
+    ],
+  },
+  {
+    topic: "Fake recesses",
+    gop: "Used empty-room gavels on Obama. A Senate that freezes Article II is obstruction.",
+    dem: "Used it on Bush and Trump. A fake session is a fake session. Noel Canning: ten days or it is not a recess. Neither party.",
+    sources: [
+      { label: "NLRB v. Noel Canning, 573 U.S. 513 (2014)", href: "https://www.oyez.org/cases/2013/12-1281" },
+      { label: "Article II, Section 2 — Recess Appointments Clause", href: "https://constitution.congress.gov/constitution/article-2/" },
+    ],
+  },
+];
+
+/** What they voted to spend. Just Facts tabulation of roll calls, 2009–2022. */
+export const PARTY_SPEND: { who: string; amount: string; note: string }[] = [
+  { who: "House Democrats", amount: "$19.9T", note: "net voted to raise spending, 2009–2022" },
+  { who: "Senate Democrats", amount: "$14.0T", note: "net voted to raise spending, 2009–2022" },
+  { who: "Senate Republicans", amount: "$5.7T", note: "net voted to raise spending, 2009–2022" },
+  { who: "House Republicans", amount: "$1.6T", note: "net voted to raise spending, 2009–2022" },
+];
+export const PARTY_SPEND_HREF = "https://www.justfacts.com/nationaldebt.asp";
+
+/** Gross debt added while that party held the Oval, 1981–Aug 2026, from DEBT_BY_TERM. The purse is still Congress. */
+export const DEBT_BY_OVAL = [
+  { who: "Republican Oval, 1981–2026", amount: "+$21.1T", note: "Reagan + GHW Bush + GW Bush + Trump 1 + Trump 2 to Aug 2026. Congress was often the other party." },
+  { who: "Democratic Oval, 1993–2025", amount: "+$18.0T", note: "Clinton + Obama + Biden. Congress was often the other party." },
+];
+
+export const TAX_MOVES: {
+  year: string;
+  bill: string;
+  gavel: string;
+  direction: "Cut" | "Hike";
+  size: string;
+  href: string;
+}[] = [
+  {
+    year: "1993",
+    bill: "Top tax raised",
+    gavel: "Democrats ran Congress",
+    direction: "Hike",
+    size: "Raised top individual rate to 39.6%. CBO: the package cut the deficit; the tax title was a hike.",
+    href: "https://www.congress.gov/bill/103rd-congress/house-bill/2264",
+  },
+  {
+    year: "2001",
+    bill: "Tax cut",
+    gavel: "Republicans ran Congress",
+    direction: "Cut",
+    size: "JCT: on the order of $1.3T over 10 years (static).",
+    href: "https://www.congress.gov/bill/107th-congress/house-bill/1836",
+  },
+  {
+    year: "2003",
+    bill: "Tax cut",
+    gavel: "Republicans ran Congress",
+    direction: "Cut",
+    size: "Accelerated the 2001 cuts. More take-home, more hole.",
+    href: "https://www.congress.gov/bill/108th-congress/house-bill/2",
+  },
+  {
+    year: "2010 / 2013",
+    bill: "ObamaCare taxes",
+    gavel: "Democrats ran it, then they split",
+    direction: "Hike",
+    size: "ACA: new taxes and a mandate. ATRA: made most Bush cuts permanent and restored a 39.6% top rate on high earners.",
+    href: "https://www.congress.gov/bill/111th-congress/house-bill/3590",
+  },
+  {
+    year: "2017",
+    bill: "Tax cut",
+    gavel: "Republicans ran Congress",
+    direction: "Cut",
+    size: "JCT JCX-67-17: about −$1.5T over 10 years (conventional).",
+    href: "https://www.jct.gov/publications/2017/jcx-67-17/",
+  },
+  {
+    year: "2022",
+    bill: "Corporate tax raised",
+    gavel: "Democrats ran Congress",
+    direction: "Hike",
+    size: "Direction is up on the corporate side. CBO scored the Act as a net deficit reducer because of other titles. The tax title is still a hike.",
+    href: "https://www.congress.gov/bill/117th-congress/house-bill/5376",
+  },
+];
+
+export const RECORD: {
+  party: string;
+  plus: { item: string; href: string }[];
+  minus: { item: string; href: string }[];
+}[] = [
+  {
+    party: "Republicans in Congress",
+    plus: [
+      { item: "2017 — tax cut", href: "https://www.congress.gov/bill/115th-congress/house-bill/1" },
+      { item: "2001 — tax cut", href: "https://www.congress.gov/bill/107th-congress/house-bill/1836" },
+      { item: "1996 — welfare work requirement", href: "https://www.congress.gov/bill/104th-congress/house-bill/3734" },
+    ],
+    minus: [
+      { item: "2002 — Iraq authorization", href: "https://www.congress.gov/bill/107th-congress/house-joint-resolution/114" },
+      { item: "2003 — Medicare Part D, unpaid", href: "https://www.congress.gov/bill/108th-congress/house-bill/1" },
+      { item: "Every year — 12 money bills not passed on time", href: "https://www.congress.gov/bill/93rd-congress/house-bill/7130" },
+    ],
+  },
+  {
+    party: "Democrats in Congress",
+    plus: [
+      { item: "1935 — Social Security Act", href: "https://www.ssa.gov/history/35act.html" },
+      { item: "1993 — top tax raised, deficit cut", href: "https://www.congress.gov/bill/103rd-congress/house-bill/2264" },
+    ],
+    minus: [
+      { item: "2010 — ObamaCare taxes and a mandate", href: "https://www.congress.gov/bill/111th-congress/house-bill/3590" },
+      { item: "2022 — corporate tax raised", href: "https://www.congress.gov/bill/117th-congress/house-bill/5376" },
+      { item: "Every year — 12 money bills not passed on time", href: "https://www.congress.gov/bill/93rd-congress/house-bill/7130" },
+    ],
+  },
+];
+
+/** House roll call on H.R. 7152, Civil Rights Act of 1964. Not a party trophy. */
+export const ROLL_1964 = {
+  href: "https://www.congress.gov/bill/88th-congress/house-bill/7152",
+  title: "1964 civil rights law — how they voted",
+  dek: "Not a Democratic trophy. Not a Republican trophy. The roll call.",
+  rows: [
+    { who: "Republicans", line: "8 in 10 said yes  ·  138 to 34", pct: 80 },
+    { who: "Democrats", line: "6 in 10 said yes  ·  152 to 96  ·  96 Democrats voted no", pct: 61 },
+  ],
+};
+
+export const CHARTS: {
+  src: string;
+  title: string;
+  sources: { label: string; href: string }[];
+}[] = [
+  {
+    src: "/images/chart-job.jpg",
+    title: "Congress holds the money",
+    sources: [
+      { label: "Treasury — debt to the penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+      { label: "CRS R48612", href: "https://www.congress.gov/crs-product/R48612" },
+      { label: "House session dates", href: "https://history.house.gov/Institution/Session-Dates/110-Current/" },
+      { label: "CBO — last surplus FY 2001", href: "https://www.cbo.gov/data/budget-economic-data" },
+    ],
+  },
+  {
+    src: "/images/chart-blame.jpg",
+    title: "The fire is Congress. The blame game is politics.",
+    sources: [
+      { label: "Article I", href: "https://constitution.congress.gov/constitution/article-1/" },
+      { label: "5 U.S.C. § 3331", href: "https://www.law.cornell.edu/uscode/text/5/3331" },
+      { label: "2 U.S.C. § 1415", href: "https://www.law.cornell.edu/uscode/text/2/1415" },
+      { label: "CBO", href: "https://www.cbo.gov/data/budget-economic-data" },
+    ],
+  },
+  {
+    src: "/images/chart-1964.jpg",
+    title: "1964 civil rights law — the roll call",
+    sources: [
+      { label: "H.R. 7152, 88th Congress", href: "https://www.congress.gov/bill/88th-congress/house-bill/7152" },
+    ],
+  },
+];
+
+export const FILE_CHIPS: {
+  k: string;
+  v: string;
+  href: string;
+  hot?: boolean;
+}[] = [
+  {
+    k: "GAO fraud — the auditor",
+    v: "$233–521 billion a year. COVID unemployment: $100–135 billion. Hundreds of billions walked. Convictions in the thousands. Unread bills. No lock. That is the door.",
+    href: "https://www.gao.gov/products/gao-25-107746",
+    hot: true,
+  },
+  {
+    k: "Republicans ran both",
+    v: "1995–2001 · 2003–07 · 2015–19 · 2025–now",
+    href: "https://www.senate.gov/history/partydiv.htm",
+  },
+  {
+    k: "Democrats ran both",
+    v: "1993–95 · 2007–11 · 2021–23",
+    href: "https://history.house.gov/Institution/Party-Divisions/Party-Divisions/",
+  },
+  {
+    k: "9.1% prices",
+    v: "BLS · June 2022 · Democrats ran both",
+    href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm",
+  },
+];
+
+/** Who ran the House and the Senate. That is the purse. */
+export const MAJORITY: {
+  who: string;
+  when: string;
+  could: string;
+  did: string;
+  href: string;
+  extra?: { label: string; href: string }[];
+}[] = [
+  {
+    who: "Republicans ran both",
+    when: "1995–2001 · 2003–07 · 2015–19 · 2025–now",
+    could: "They could pass a spending bill without Democrats.",
+    did: "Tax cuts. Iraq. Unpaid drug benefit. Border down this term. Debt still up.",
+    href: "https://www.senate.gov/history/partydiv.htm",
+    extra: [
+      { label: "CBP border numbers", href: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters" },
+      { label: "Treasury debt", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+    ],
+  },
+  {
+    who: "Democrats ran both",
+    when: "1993–95 · 2007–11 · 2021–23",
+    could: "They could pass a spending bill without Republicans.",
+    did: "Raised taxes. Passed ObamaCare. Prices hit 9.1% in 2022. Record border crossings. The debt still went up.",
+    href: "https://history.house.gov/Institution/Party-Divisions/Party-Divisions/",
+    extra: [
+      { label: "BLS — 9.1% prices, June 2022", href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm" },
+      { label: "CBP border numbers", href: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters" },
+    ],
+  },
+  {
+    who: "They split — one house each",
+    when: "Most other years. Nixon. Bush 41. 2011–15. COVID. 2023–25.",
+    could: "Neither party could spend alone. They still spent.",
+    did: "A Republican president with a Democratic Congress is not an excuse. Nixon: Republican in the White House, Democrats ran Congress, the debt still rose. The $40 trillion is both of them.",
+    href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
+  },
+];
+
+/** The job they will not do. Government sources only. */
+export const FAILURE: {
+  value: string;
+  label: string;
+  href: string;
+}[] = [
+  {
+    value: "FY 2001",
+    label: "Last time the books balanced. Twenty-five years of red ink since. That is the fraud door.",
+    href: "https://www.cbo.gov/data/budget-economic-data",
+  },
+  {
+    value: "$17 million",
+    label: "Treasury account for workplace settlements, 1997–2017. Not all members. Not all sex. Still taxpayer funds.",
+    href: "https://www.law.cornell.edu/uscode/text/2/1415",
+  },
+  {
+    value: "$233–521 billion",
+    label: "GAO’s yearly estimate of federal fraud. An estimate, not a courtroom. No budget on time is an open door. USAID and NGO grants sit in that door. That is not a filed money-laundering case.",
+    href: "https://www.gao.gov/products/gao-26-108945",
+  },
+  {
+    value: "SS + Medicare + Medicaid + interest",
+    label: "CBO: that is what drives the debt. Congress writes those programs. Improper payments are their miss, not an accident.",
+    href: "https://www.cbo.gov/publication/61172",
+  },
+];
+
 export const DEBT_BY_TERM: {
   who: string;
   added: string;
@@ -25,12 +435,12 @@ export const DEBT_BY_TERM: {
   { who: "Carter (D) 1977–81", added: "+$295B", congress: "Dem both" },
   { who: "Reagan (R) 1981–89", added: "+$1.86T", congress: "Split most; Dem both 87–89" },
   { who: "GHW Bush (R) 1989–93", added: "+$1.49T", congress: "Dem both" },
-  { who: "Clinton (D) 1993–01", added: "+$1.46T", congress: "Dem both 93–95; GOP both 95–01" },
-  { who: "GW Bush (R) 2001–09", added: "+$6.1T", congress: "Mixed; GOP both 03–07" },
-  { who: "Obama (D) 2009–17", added: "+$8.0T", congress: "Dem both 09–11; GOP both 15–17" },
-  { who: "Trump 1 (R) 2017–21", added: "+$7.8T", congress: "GOP both 17–19; split 19–21" },
-  { who: "Biden (D) 2021–25", added: "+$8.5T", congress: "Dem both 21–23; split 23–25" },
-  { who: "Trump 2 (R) 2025–", added: "+$3.8T (to Aug 2026)", congress: "GOP both" },
+  { who: "Clinton (D) 1993–01", added: "+$1.46T", congress: "Democrats ran Congress 93–95. Republicans ran it 95–01" },
+  { who: "GW Bush (R) 2001–09", added: "+$6.1T", congress: "Republicans ran Congress 03–07. Mixed the rest" },
+  { who: "Obama (D) 2009–17", added: "+$8.0T", congress: "Democrats ran Congress 09–11. Republicans ran it 15–17" },
+  { who: "Trump 1 (R) 2017–21", added: "+$7.8T", congress: "Republicans ran Congress 17–19. Split 19–21" },
+  { who: "Biden (D) 2021–25", added: "+$8.5T", congress: "Democrats ran Congress 21–23. Split 23–25" },
+  { who: "Trump 2 (R) 2025–", added: "+$3.8T (to Aug 2026)", congress: "Republicans ran Congress" },
 ];
 
 /** FY2026 legislative branch, P.L. 119-37 / CRS R48612. $7.258B total. */
@@ -102,42 +512,77 @@ export const CAPACITY = [
 export const SCORE_ROWS: ScoreRow[] = [
   {
     topic: "On the ballot",
-    gop: "The line that cut what you pay (TCJA) and, this term, actually closed the border. Ugly sentences on tape we already print. They still owe you twelve bills by October 1.",
+    gop: "The line that cut the tax (TCJA) and, this term, actually closed the border. Ugly sentences on tape we already print. They still owe twelve bills by October 1.",
     dem: "A party with a line on every federal race. DSA-endorsed names sit on that line in dozens of districts. The D is how they get in the door.",
     dsa: "Brookings: 282 endorsed candidates this cycle. Not a think tank. Names. Primaries already won and lost. If they hold a seat, the 2026 program is not a PDF. It is a vote.",
     href: "https://www.brookings.edu/articles/democratic-socialist-candidates-show-gains-but-limited-reach-in-2026/",
   },
   {
     topic: "Show the slides",
-    gop: "Prime time. Every network that takes a public license. A deck: how you will not block the Trump agenda the country voted. Line by line. Dollar by dollar. Anyone who will not sign it agrees, on camera, to go home.",
-    dem: "Same night. Same chair. Medicare for all, or whatever you renamed it: the slide that says where the money comes from. Urban Institute already put extra federal cost near $32–34 trillion over ten years. If your number is different, show the arithmetic. Slogans are not a budget.",
-    dsa: "Your 2026 program is already a pamphlet. Put it on a slide with a pay-for. Cato’s high-end read of the stack does not fit in a $40T country. If that is unfair, bring a better table. Compassion without a ledger is a campaign, not a government.",
+    gop: "Prime time. Every network that takes a public license. A deck: how the agenda will not be blocked the Trump agenda the country voted. Line by line. Dollar by dollar. Anyone who will not sign it agrees, on camera, to go home.",
+    dem: "Same night. Same chair. Medicare for all, or whatever it was renamed: the slide that says where the money comes from. Urban Institute already put extra federal cost near $32–34 trillion over ten years. If the number is different, show the arithmetic. Slogans are not a budget.",
+    dsa: "The 2026 program is already a pamphlet. Put it on a slide with a pay-for. Cato’s high-end read of the stack does not fit in a $40T country. If that is unfair, bring a better table. Compassion without a ledger is a campaign, not a government.",
     href: "https://www.urban.org/urban-wire/dont-confuse-changes-federal-health-spending-national-health-spending",
   },
   {
     topic: "Full time or resign",
-    gop: "You took $7.258 billion for FY2026 (P.L. 119-37). The floor sits fewer days than a school year. Call time is not the job. In session means in the building. No board, no book tour as the main event. Work the hours or leave the chair.",
-    dem: "Same payroll. Same part-time gavel. You do not get to lecture the country about ‘essential workers’ from a chamber that keeps banker’s hours and a fundraiser’s calendar. Full time or resign.",
-    dsa: "You want the state to run health, housing, and the largest firms. Then you of all people do not get a part-time legislature. Show up every weekday or take your name off the ballot.",
+    gop: "Congress took $7.258 billion for FY2026 (P.L. 119-37). The floor sits fewer days than a school year. Call time is not the job. In session means in the building. No board, no book tour as the main event. Work the hours or leave the chair.",
+    dem: "Same payroll. Same part-time gavel. There is no lecture to the country about ‘essential workers’ from a chamber that keeps banker’s hours and a fundraiser’s calendar. Full time or resign.",
+    dsa: "The platform wants the state to run health, housing, and the largest firms. Then a part-time legislature is not the instrument. Show up every weekday or take the name off the ballot.",
     href: "https://www.congress.gov/crs-product/R48612",
   },
   {
     topic: "Stop the split",
     gop: "Vow, on the same broadcast: no more neighbor-as-enemy copy. Debate the statute. Ugly sentences already on tape stay on the record. The jersey is not the job.",
-    dem: "Same vow. MRC logged 92% negative coverage of the 2025 term in the first hundred days on the big three. You do not get to outsource the split to a chyron and call it journalism. Work for the country, not the clip.",
-    dsa: "Same vow. ‘Abolish ICE’ as a chant is not a hearing. If you want the program, bring it in daylight, not as a purity test that turns a neighbor into a fascist for asking who pays.",
+    dem: "Same vow. MRC logged 92% negative coverage of the 2025 term in the first hundred days on the big three. The split cannot be outsourced the split to a caption and call it journalism. Work for the country, not the clip.",
+    dsa: "Same vow. ‘Abolish ICE’ as a chant is not a hearing. If the program is the ask, bring it in daylight, not as a purity test that turns a neighbor into a fascist for asking who pays.",
+    href: "https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage",
+  },
+  {
+    topic: "Warfare talk",
+    gop: "McCaul, leaving after 22 years: the job became ‘fight and kill the other side.’ That is a Republican chairman’s obituary for the House, not a riot order. Ugly sentences already on tape stay on the record. Same rule as the other column: an employee does not declare war on the people who pay him.",
+    dem: "Jeffries, on C-SPAN: ‘maximum warfare, everywhere, all the time,’ then ‘break them’ and ‘break their spirit.’ Schumer, Court steps, 2020: ‘you have released the whirlwind and you will pay the price.’ Waters, 2018: if they are seen in a restaurant, ‘create a crowd’ and ‘push back on them.’ Those are employees. The spirit they named belongs to the electorate.",
+    dsa: "Class-enemy talk as a program. Same rule. A pamphlet is not a license to mark neighbors as the other side to be broken.",
+    href: "https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623",
+  },
+  {
+    topic: "Recess blockade",
+    gop: "No party gets this cheat. GOP Senate used empty-room gavels to freeze Obama’s fill-the-job appointments. A Senate that bangs a gavel in an empty room so a president cannot staff the government is obstruction. Article II, Section 2 is not optional when the Oval is friendly. NLRB v. Noel Canning: a real break is at least ten days. An empty room with a gavel is not a break.",
+    dem: "Same cheat, other jersey. Democratic Senate used fake sessions against Bush and against Trump. Dislike of a president is not a special rule. A fake session is a fake session. It turns off the Recess Appointments Clause on purpose. Score it as obstruction of the administration the country hired — whoever sits in the chair.",
+    dsa: "The platform wants to abolish the Senate. Recess theater is a smaller crime next to that. Still: no faction gets a secret veto by gavel. Either the Senate is in session or it is not.",
+    href: "https://www.oyez.org/cases/2013/12-1281",
+  },
+  {
+    topic: "What they got right",
+    gop: "TCJA, 2017: take-home pay rose. This term: southwest-border encounters at a 50-year low (Pew). That is the file. Print it next to the ugly sentences so this card is not a smear sheet.",
+    dem: "Social Security’s passage and the 1964 Civil Rights Act are on this party’s ledger. This journal said it would print the wins. This Congress does not get those trophies for a caption. Credit the statute that still stands. Do not pretend 2020 was peace.",
+    dsa: "They publish the program. That is more honest than a six-second caption. Honesty about wanting a new constitution is not a virtue that pays for the constitution. It is still the file.",
+    href: "https://www.pewresearch.org/short-reads/2026/02/02/migrant-encounters-at-the-us-mexico-border-are-at-their-lowest-level-in-more-than-50-years/",
+  },
+  {
+    topic: "Smears are not a statute",
+    gop: "A clip is not a budget. Flagging a citizen is not a hearing. Ugly sentences already on tape stay on this card — including yours. What has to stop is using a smear instead of a bill. Govern or go home.",
+    dem: "When they cannot beat the file they make the file radioactive. Fourteen replies. A child-sex lie. Reports filed, posts stayed. That is not opposition. That is not oversight. It is noise, and noise does not appropriate a dollar or locate a child. It has to stop. Bring a statute or leave the microphone.",
+    dsa: "A purity test is not a law. Calling a neighbor a fascist for asking who pays is not a program. The 2026 pamphlet is the file. The smear is the dodge.",
+    href: "https://constitution.congress.gov/constitution/amendment-1/",
+  },
+  {
+    topic: "Who gets to hear",
+    gop: "There is no state television. The same rule applies: play the uncut tape. If a network buries an ugly sentence, we still print it. If a network buries theirs, we print that too. Censorship of the recording is how a country is taught a crime that was never filed.",
+    dem: "MRC: 92% negative coverage of the 2025 term in the first hundred days on ABC/CBS/NBC. That is not a free press doing its job. That is a filter on what the people are allowed to hear. A caption that says ‘mostly peaceful’ while a precinct burns is not journalism. It is harm. The people own the argument. A panel does not.",
+    dsa: "Deplatform as policy. If the other ledger cannot be heard, the pamphlet wins by silence. That is not democracy. That is an editor with a government-sized thumb.",
     href: "https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage",
   },
   {
     topic: "The whole file",
-    gop: "Twelve appropriations bills, on time. Full text, CBO score, and every table posted 72 hours before a vote. No omnibus. Every reconciliation print in full — not a one-pager the whip emails at 2 a.m. Waive the layover and you failed the job.",
-    dem: "Same. You wrote the 1974 Budget Act and have not finished a budget on time since Clinton. The narrative is the clip. The file is the stack. Post the stack or leave the chair.",
+    gop: "Twelve money bills, on time. Full text, CBO score, and every table posted 72 hours before a vote. No giant unread bill. Every reconciliation print in full — not a one-pager the whip emails at 2 a.m. Waive the layover and the job failed.",
+    dem: "Same. Congress wrote the 1974 Budget Act and have not finished a budget on time since Clinton. The narrative is the clip. The file is the stack. Post the stack or leave the chair.",
     dsa: "Same. A replacement constitution does not get a secret annex. If the people cannot read the pay-for, it is not a mandate. It is a pamphlet.",
     href: "https://www.congress.gov/help/learn-about-the-legislative-process",
   },
   {
     topic: "Taxes",
-    gop: "They cut the tax. TCJA, 2017. You kept more of the check. That is the one thing a working person can feel. JCT: the cut also punched about $1.5 trillion out of ten-year revenue. Honest: lower tax, bigger hole. Still the only column that lowered the rate.",
+    gop: "They cut the tax. TCJA, 2017. Take-home pay rose. That is the one thing a working person can feel. JCT: the cut also punched about $1.5 trillion out of ten-year revenue. Honest: lower tax, bigger hole. Still the only column that lowered the rate.",
     dem: "They campaign to raise the top rates and to let pieces of TCJA die. The Inflation Reduction Act added a 15% corporate minimum. The direction is up.",
     dsa: "Workers Deserve More: public ownership of the largest firms. That is not a rate. That is taking the company.",
     href: "https://www.jct.gov/",
@@ -173,12 +618,12 @@ export const SCORE_ROWS: ScoreRow[] = [
   {
     topic: "The charter",
     gop: "No published plan to throw out Article I. They still hide the twin law in the annex.",
-    dem: "They treat the document as a costume — Speech or Debate on a Sunday show, insurrection on a chyron, no § 2383.",
+    dem: "They treat the document as a costume — Speech or Debate on a Sunday show, insurrection on a caption, no § 2383.",
     dsa: "Draft a new constitution. Abolish the Senate. Subordinate the Court. A democratic socialist republic. Their words.",
     href: "https://www.dsausa.org/",
   },
   {
-    topic: "What you will hear",
+    topic: "What the country will hear",
     gop: "A clip of an ugly sentence. We already print the ones on tape.",
     dem: "MRC: 92% negative coverage of the 2025 term in the first hundred days on ABC/CBS/NBC. Six seconds. A villain. Almost never a statute.",
     dsa: "Compassion as the caption. The program in the annex.",

@@ -1,0 +1,86 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { JOURNAL, getPost } from "@/lib/content";
+
+export const Route = createFileRoute("/archive")({
+  component: ArchivePage,
+  head: () => ({
+    meta: [
+      { title: "Archive — Swamp Force" },
+      {
+        name: "description",
+        content: "The journal, in order. Lead first. Then the rest of the file.",
+      },
+    ],
+  }),
+});
+
+function ArchivePage() {
+  return (
+    <main className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+        The journal
+      </p>
+      <h1 className="mt-2 font-display text-4xl font-bold tracking-wide uppercase sm:text-5xl">
+        Archive
+      </h1>
+      <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
+        Read in this order. The lead first. Then the rest of the file.
+      </p>
+
+      <section className="mt-12 border-t border-border pt-10">
+        <Link to="/scorecard" className="block text-fg no-underline">
+          <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+            Standalone
+          </p>
+          <p className="mt-3 font-display text-xl font-semibold tracking-wide uppercase">
+            Congressional Scorecard
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-muted">
+            Both parties failed. They do not represent the American people.
+          </p>
+        </Link>
+        <Link to="/pump" className="mt-6 block text-fg no-underline">
+          <p className="font-display text-xl font-semibold tracking-wide uppercase">
+            The pump
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-muted">
+            Gas and diesel. Four administrations. EIA.
+          </p>
+        </Link>
+      </section>
+
+      {JOURNAL.map((section) => {
+        const lessons = section.slugs.map((s) => getPost(s)).filter(Boolean);
+        if (!lessons.length) return null;
+        return (
+          <section key={section.name} className="mt-12 border-t border-border pt-10">
+            <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+              {section.name}
+            </p>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
+              {section.dek}
+            </p>
+            <ul className="mt-6 space-y-5">
+              {lessons.map((p) => (
+                <li key={p!.slug}>
+                  <Link
+                    to="/dispatch/$slug"
+                    params={{ slug: p!.slug }}
+                    className="text-fg no-underline"
+                  >
+                    <p className="font-display text-lg font-semibold tracking-wide uppercase">
+                      {p!.title}
+                    </p>
+                    <p className="mt-1 max-w-2xl text-sm leading-relaxed text-muted">
+                      {p!.dek}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        );
+      })}
+    </main>
+  );
+}

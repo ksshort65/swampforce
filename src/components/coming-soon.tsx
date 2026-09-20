@@ -12,11 +12,11 @@ export function ComingSoon({ title }: { title: string }) {
       </h1>
       <p className="mt-4 text-base leading-relaxed text-muted">
         {title === "Shop"
-          ? "The shop is parked."
+          ? "The store is not open yet. Print-on-demand merch comes next. The journal is live."
           : "The Dispatch is live. This page is still being built."}
       </p>
       <Button asChild className="mt-8">
-        <Link to="/dispatch">Read the Dispatch</Link>
+        <Link to="/">Read the Dispatch</Link>
       </Button>
     </main>
   );
