@@ -1374,6 +1374,72 @@ export const posts: Post[] = [
 		]
 	},
 	{
+		slug: "one-word",
+		title: "One word",
+		dek: "Change a single word and the country is taught the opposite crime. Kidnapped is not arrested. The warrant was six years old.",
+		date: "2026-09-21",
+		category: "Dispatch",
+		readMinutes: 5,
+		image: "/images/chart-one-word.jpg",
+		imageAlt: "Kidnapped versus arrested — one word changes the crime",
+		series: "The Clip",
+		part: 2,
+		receipts: [
+			{ label: "DOJ SDNY — Maduro charged, 26 March 2020", href: "https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-narco-terrorism-charges-against-nicolas-maduro-current" },
+			{ label: "State Department — Nicolás Maduro Moros (Captured)", href: "https://www.state.gov/nicolas-maduro-moros" },
+			{ label: "CRS LSB11401 — United States v. Maduro", href: "https://www.congress.gov/crs-product/LSB11401" },
+			{ label: "21 U.S.C. § 960a — narco-terrorism", href: "https://www.law.cornell.edu/uscode/text/21/960a" },
+			{ label: "CDC — drug overdose deaths", href: "https://www.cdc.gov/nchs/products/databriefs/db522.htm" },
+			{ label: "EIA — Venezuela oil", href: "https://www.eia.gov/international/analysis/country/VEN" },
+		],
+		frames: [
+			{
+				tag: "Kidnapped",
+				they: "The United States kidnapped the president of Venezuela.",
+				tape: "SDNY indictment, 26 March 2020. Taken into U.S. custody, 3 January 2026. Arraigned in Brooklyn. The warrant had been ignored.",
+				href: "https://www.state.gov/nicolas-maduro-moros",
+			},
+			{
+				tag: "Mostly peaceful",
+				they: "Mostly peaceful protests.",
+				tape: "A precinct burned. Insurance paid. The word peaceful did the work the tape would not.",
+			},
+			{
+				tag: "Insurrection",
+				they: "January 6 was insurrection.",
+				tape: "18 U.S.C. § 2383 is the insurrection statute. Zero charged under it. The caption did work the statute did not.",
+				href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol",
+			},
+		],
+		body: [
+			{
+				type: "img",
+				src: "/images/chart-one-word.jpg",
+				alt: "Kidnapped versus arrested — one word changes who is the criminal",
+			},
+			{
+				type: "p",
+				text: "Gaslighting is not a feeling. It is a method. A speaker replaces what happened with a word that cannot survive the file, then repeats the word until the file feels rude to mention. The listener is not argued with. The listener is trained to distrust the thing in front of their eyes. One word is enough. The rest of the sentence can stay true. The swapped word does all the work.",
+			},
+			{
+				type: "p",
+				text: "Kidnapped is the word that ran. Arrested is the file. [The Department of Justice](https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-narco-terrorism-charges-against-nicolas-maduro-current) charged Nicolás Maduro Moros on **26 March 2020** in the Southern District of New York with narco-terrorism conspiracy, cocaine importation, and weapons offenses under [21 U.S.C. § 960a](https://www.law.cornell.edu/uscode/text/21/960a). The indictment alleged that Maduro and his lieutenants intended to flood the United States with cocaine. A warrant issued. For six years the defendant did not appear. [The State Department](https://www.state.gov/nicolas-maduro-moros) records what happened next: on **3 January 2026**, Maduro was placed in U.S. custody after a military operation in Caracas, transported to the Metropolitan Detention Center in Brooklyn, and held to face those charges. [CRS LSB11401](https://www.congress.gov/crs-product/LSB11401) is the same timeline. He was arraigned. He pleaded not guilty. That is an arrest on a charging instrument that had already been public for years. Kidnapping, under [18 U.S.C. § 1201](https://www.law.cornell.edu/uscode/text/18/1201), is the unlawful seizure of a person. A defendant named in a federal indictment, taken into custody, and walked into a courtroom is not a kidnapping victim. He is a defendant. The swapped word made the United States the criminal and Maduro the victim. That is the entire trick.",
+			},
+			{
+				type: "p",
+				text: "The same word hid the rest of the file. The 2020 indictment said cocaine was deployed as a weapon against this country. [CDC](https://www.cdc.gov/nchs/products/databriefs/db522.htm) counted **105,007** drug overdose deaths in 2023. Cocaine-involved deaths had risen to **29,449**. This journal does not invent a body count the arrest has already prevented. It prints the charge the warrant was written to answer, and the deaths already on the American ledger while the warrant sat ignored. [EIA](https://www.eia.gov/international/analysis/country/VEN) records what the regime did to the oil: Venezuela holds some of the world’s largest proved reserves and ran the production into the ground. A country sitting on that oil still went hungry. That is socialism as a result, not as a speech. A defendant in Brooklyn cannot run Caracas. The caption “kidnapped” asked the public to mourn the man the grand jury had already named.",
+			},
+			{
+				type: "p",
+				text: "Watch for the one word. Mostly peaceful, with a precinct on fire. Insurrection, with [zero charges](https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol) under the insurrection statute. Kidnapped, with a six-year-old warrant and an arraignment. The method is always the same. Change the noun. Leave the rest. The country then argues about a crime that is not on the page.",
+			},
+			{
+				type: "q",
+				text: "One word is enough. Read the warrant. The caption is the gaslight.",
+			},
+		],
+	},
+	{
 		slug: "they-work-for-us",
 		title: "They work for us",
 		dek: "Employees do not threaten the people who pay them.",
@@ -2670,6 +2736,7 @@ export const JOURNAL = [
 			"the-caption-was-not-the-charge",
 			"they-dont-debate-they-flag",
 			"they-clipped-the-tape",
+			"one-word",
 			"they-work-for-us",
 		],
 	},
