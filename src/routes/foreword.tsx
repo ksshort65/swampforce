@@ -57,10 +57,10 @@ function ForewordPage() {
    <p className="mt-12 font-display text-xs font-semibold tracking-[0.16em] uppercase">
     <Link
      to="/dispatch/$slug"
-     params={{ slug: "that-is-not-why-they-are-elected" }}
+     params={{ slug: "we-the-people" }}
      className="text-sage no-underline hover:text-fg"
     >
-     That is not why they are elected →
+     We the People →
     </Link>
    </p>
   </main>

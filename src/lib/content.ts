@@ -35,12 +35,12 @@ export const SITE = {
 	name: "Swamp Force",
 	domain: "swampforce.com",
 	tagline:
-		"The midterm is a vote on the record: what they passed, what it cost, and what they broke. The receipts are in this journal.",
-	kicker: "The receipts are in this journal.",
+		"We the People own and operate this country. Congress is the employee. The first step is the record of what they did, not what they said.",
+	kicker: "We the People. The hire works here.",
 	closer:
-		"The official record is the argument. Election Day is when the country can fire the people it hired.",
+		"Compare the action to the speech. That is the first step. The official record is how a nation is taken back.",
 	masthead:
-		"This journal publishes the official record because the country is the employer.",
+		"The people are the employer. This journal prints the record because a lie a day is how a country is lost.",
 	xHandle: "SwampForce",
 	email: "editor@swampforce.com",
 	author: "Renee Stewart",
@@ -48,6 +48,39 @@ export const SITE = {
 	mark: "Swamp Force™",
 };
 export const posts: Post[] = [
+	{
+		slug: "we-the-people",
+		title: "We the People.",
+		dek: "The people own and operate this country. Congress is the employee gone rogue. The first step is the record of what they did, not what they said.",
+		date: "2026-09-21",
+		category: "Dispatch",
+		readMinutes: 4,
+		image: "/images/hero-capitol.jpg",
+		imageAlt: "The Capitol — the people are the employer",
+		featured: true,
+		series: "The Republic",
+		part: 0,
+		receipts: [
+			{ label: "The Preamble", href: "https://constitution.congress.gov/constitution/preamble/" },
+			{ label: "Article I", href: "https://constitution.congress.gov/constitution/article-1/" },
+			{ label: "5 U.S.C. § 3331 — the oath", href: "https://www.law.cornell.edu/uscode/text/5/3331" },
+			{ label: "The Declaration of Independence", href: "https://www.archives.gov/founding-docs/declaration-transcript" },
+		],
+		body: [
+			{
+				type: "p",
+				text: "We the People own and operate this country. That is not a slogan. It is the first sentence of the [Preamble](https://constitution.congress.gov/constitution/preamble/). Congress is not the owner. Congress is the hire. [Article I](https://constitution.congress.gov/constitution/article-1/) lists the job. [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331) is the oath: support and defend this Constitution, without mental reservation. An employee who lies to the employer every day, who talks about the people who pay him as a spirit to be broken, who will not pass a budget, who votes the unread pile, has gone rogue. The people did not hire a ruler. The people hired a clerk with a listed grant of power.",
+			},
+			{
+				type: "p",
+				text: "The daily product is a lie. A caption. A six-second clip. A word swapped so the country is taught the opposite crime. This journal exists because a nation that cannot tell the action from the speech cannot govern itself. It is not what they said at the microphone that defines the hire. It is what they passed, what they blocked, what they spent, what they broke. Compare the truth from the actions. That is the first step. Not a riot. Not a war of neighbors. The record, in public, on the page, and then the ballot. The [Declaration](https://www.archives.gov/founding-docs/declaration-transcript) already named the right of a people to alter a government that has become destructive of the ends it was hired to secure. The lawful instruments are still the instruments: the file, the statute, the vote. Truth is the only thing that can save the nation before the caption finishes the work.",
+			},
+			{
+				type: "q",
+				text: "The people are the employer. The hire works here. Actions, not words. That is how a country is taken back.",
+			},
+		],
+	},
 	{
 		slug: "find-them",
 		title: "Find them.",
@@ -2862,8 +2895,8 @@ export function getShareLead() {
 }
 /** Kitchen-table order for the front of the journal. Four. Not a syllabus. */
 export const START_HERE = [
+	"we-the-people",
 	"that-is-not-why-they-are-elected",
-	"the-pool",
 	"they-opened-the-border",
 	"find-them",
 ] as const;
@@ -2873,6 +2906,7 @@ export const JOURNAL = [
 		name: "The Republic",
 		dek: "They forgot who they work for.",
 		slugs: [
+			"we-the-people",
 			"that-is-not-why-they-are-elected",
 			"clean-hands",
 			"they-want-a-new-constitution",

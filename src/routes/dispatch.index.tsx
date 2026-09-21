@@ -25,12 +25,12 @@ export function DispatchIndex() {
         </div>
         <div className="relative mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-end px-6 pb-10 pt-8">
           <h1 className="max-w-xl font-display leading-[0.95] font-bold tracking-wide uppercase text-[clamp(2.2rem,7vw,4.6rem)]">
-            Save the nation.
+            We the People.
           </h1>
           <p className="mt-3 max-w-lg text-[clamp(0.95rem,2.2vw,1.25rem)] leading-snug text-fg/90">
-            The midterm is a scorecard, not a mood. Vote on what they
-            passed, what it cost, and what they broke. Both parties have
-            failed. The official record is the ballot.
+            This country is not Congress’s. They are the hire. They have
+            gone rogue. The first step is the record of what they did, not
+            what they said. Truth is how a nation is taken back.
           </p>
           <div className="mt-5 flex flex-wrap gap-3 pb-2">
             <Button asChild>
