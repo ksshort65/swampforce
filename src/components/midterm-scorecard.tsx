@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
   BORDER,
@@ -19,10 +19,56 @@ import {
   LAWS,
   PRICES,
   RECORD,
+  SCORE_FILES,
   SCORE_UPDATED,
 } from "@/lib/scorecard";
 
-type Tab = "gop" | "dem" | "split" | "oval" | "compare" | null;
+type FileId = (typeof SCORE_FILES)[number]["id"];
+type PartyId = "gop" | "dem";
+
+function FileNav({
+  file,
+  onPick,
+}: {
+  file: FileId | null;
+  onPick: (id: FileId) => void;
+}) {
+  return (
+    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+      {SCORE_FILES.map((f) => (
+        <button
+          key={f.id}
+          type="button"
+          onClick={() => onPick(f.id)}
+          className={
+            file === f.id
+              ? "min-h-16 rounded-md border-2 border-sage bg-sage px-3 py-4 text-left"
+              : "min-h-16 rounded-md border-2 border-sage bg-surface px-3 py-4 text-left hover:bg-ink"
+          }
+        >
+          <p
+            className={
+              file === f.id
+                ? "font-display text-sm font-bold tracking-wide text-black uppercase"
+                : "font-display text-sm font-bold tracking-wide text-fg uppercase"
+            }
+          >
+            {f.k}
+          </p>
+          <p
+            className={
+              file === f.id
+                ? "mt-1 text-xs leading-snug text-black/80"
+                : "mt-1 text-xs leading-snug text-muted"
+            }
+          >
+            {f.v}
+          </p>
+        </button>
+      ))}
+    </div>
+  );
+}
 
 function BillList({
   rows,
@@ -87,49 +133,6 @@ function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
         Hurt
       </p>
       <BillList rows={col.minus} tone="minus" />
-      {col.id === "dem" ? <HoaxesFile /> : null}
-      {col.id === "dem" ? <BorderFile /> : null}
-      {col.id === "dem" ? <BorderMove /> : null}
-      {col.id === "dem" ? <BorderHarm /> : null}
-      {col.id === "dem" ? (
-        <figure className="mt-5">
-          <img
-            src="/images/chart-border.jpg"
-            alt="The open border — by administration"
-            className="h-auto w-full rounded-md border border-border"
-          />
-        </figure>
-      ) : null}
-      {col.id === "dem" ? (
-        <figure className="mt-5">
-          <img
-            src="/images/chart-border-all.jpg"
-            alt="Nationwide encounters — every path CBP counts"
-            className="h-auto w-full rounded-md border border-border"
-          />
-        </figure>
-      ) : null}
-      {col.id === "dem" ? (
-        <figure className="mt-5">
-          <img
-            src="/images/chart-border-toll.jpg"
-            alt="What Americans still pay — the open border bill"
-            className="h-auto w-full rounded-md border border-border"
-          />
-        </figure>
-      ) : null}
-      {col.id === "dem" ? <BenefitsStack /> : null}
-      {col.id === "dem" ? <WorkerFile /> : null}
-      {col.id === "dem" ? <PriceLinks /> : null}
-      {col.id === "dem" ? (
-        <figure className="mt-5">
-          <img
-            src="/images/chart-inflation-party.jpg"
-            alt="Actual inflation each year"
-            className="h-auto w-full rounded-md border border-border"
-          />
-        </figure>
-      ) : null}
     </div>
   );
 }
@@ -426,10 +429,26 @@ function PriceLinks() {
 }
 
 export function MidtermScorecard() {
-  const [tab, setTab] = useState<Tab>(null);
+  const [file, setFile] = useState<FileId | null>(null);
+  const [party, setParty] = useState<PartyId | null>(null);
   const gop = RECORD.find((r) => r.id === "gop");
   const dem = RECORD.find((r) => r.id === "dem");
-  const split = DEBT_TALLY.find((t) => t.who.includes("split"));
+
+  useEffect(() => {
+    const apply = () => {
+      const id = window.location.hash.replace("#", "") as FileId;
+      if (SCORE_FILES.some((f) => f.id === id)) setFile(id);
+    };
+    apply();
+    window.addEventListener("hashchange", apply);
+    return () => window.removeEventListener("hashchange", apply);
+  }, []);
+
+  const pick = (id: FileId) => {
+    setFile(id);
+    if (id !== "policy") setParty(null);
+    window.history.replaceState(null, "", `#${id}`);
+  };
 
   return (
     <section className="border-b border-border">
@@ -440,187 +459,141 @@ export function MidtermScorecard() {
         <h2 className="mt-2 max-w-3xl font-display text-3xl font-bold tracking-wide uppercase sm:text-5xl">
           Both parties have failed the American people.
         </h2>
-        <ul className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
-          {LAWS.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                target="_blank"
-                rel="noreferrer"
-                className="block min-h-11 rounded-md border border-border bg-surface px-4 py-3 font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:border-sage hover:text-fg"
-              >
-                {l.k} →
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-8 grid grid-cols-5 gap-2">
-          {(
-            [
-              ["gop", "Republicans"],
-              ["dem", "Democrats"],
-              ["split", "Split"],
-              ["oval", "Oval"],
-              ["compare", "Compare"],
-            ] as const
-          ).map(([id, label]) => (
-            <button
-              key={id}
-              type="button"
-              onClick={() => setTab(id)}
-              className={
-                tab === id
-                  ? "flex min-h-16 min-w-0 items-center justify-center rounded-md border-2 border-sage bg-sage px-1 py-4 text-center font-display text-[12px] font-bold leading-tight tracking-wide text-black uppercase sm:text-base"
-                  : "flex min-h-16 min-w-0 items-center justify-center rounded-md border-2 border-sage bg-surface px-1 py-4 text-center font-display text-[12px] font-bold leading-tight tracking-wide text-fg uppercase hover:bg-ink sm:text-base"
-              }
-            >
-              {label}
-            </button>
-          ))}
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
+          Open one file. Not all of them at once.
+        </p>
+        <div className="mt-8">
+          <FileNav file={file} onPick={pick} />
         </div>
 
-        {tab === "gop" && gop ? (
+        {file === "policy" ? (
           <div className="mt-10">
-            <PartyFile col={gop} />
+            <div className="grid grid-cols-2 gap-2">
+              {(
+                [
+                  ["gop", "Republicans"],
+                  ["dem", "Democrats"],
+                ] as const
+              ).map(([id, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => setParty(id)}
+                  className={
+                    party === id
+                      ? "flex min-h-16 items-center justify-center rounded-md border-2 border-sage bg-sage px-2 py-4 font-display text-sm font-bold tracking-wide text-black uppercase"
+                      : "flex min-h-16 items-center justify-center rounded-md border-2 border-sage bg-surface px-2 py-4 font-display text-sm font-bold tracking-wide text-fg uppercase hover:bg-ink"
+                  }
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            {party === "gop" && gop ? (
+              <div className="mt-8">
+                <PartyFile col={gop} />
+              </div>
+            ) : null}
+            {party === "dem" && dem ? (
+              <div className="mt-8">
+                <PartyFile col={dem} />
+              </div>
+            ) : null}
           </div>
         ) : null}
 
-        {tab === "dem" && dem ? (
+        {file === "captions" ? (
           <div className="mt-10">
-            <PartyFile col={dem} />
+            <HoaxesFile />
           </div>
         ) : null}
 
-        {tab === "oval" ? (
+        {file === "border" ? (
+          <div className="mt-10">
+            <BorderFile />
+            <BorderMove />
+            <BorderHarm />
+            <figure className="mt-5">
+              <img
+                src="/images/chart-border.jpg"
+                alt="The open border — by administration"
+                className="h-auto w-full rounded-md border border-border"
+              />
+            </figure>
+            <figure className="mt-5">
+              <img
+                src="/images/chart-border-all.jpg"
+                alt="Nationwide encounters — every path CBP counts"
+                className="h-auto w-full rounded-md border border-border"
+              />
+            </figure>
+            <figure className="mt-5">
+              <img
+                src="/images/chart-border-toll.jpg"
+                alt="What Americans still pay — the open border bill"
+                className="h-auto w-full rounded-md border border-border"
+              />
+            </figure>
+            <BenefitsStack />
+            <WorkerFile />
+          </div>
+        ) : null}
+
+        {file === "oval" ? (
           <div className="mt-10">
             <OvalFile />
           </div>
         ) : null}
 
-        {tab === "compare" ? (
-          <div className="mt-10 space-y-8">
-            <div>
-              <div className="grid gap-4 md:grid-cols-3">
-                {DEBT_TALLY.map((row) => {
-                  const n = Number(row.added.replace(/[^0-9.]/g, ""));
-                  const pct = Math.round((n / 40.09) * 100);
-                  return (
-                    <div
-                      key={row.who}
-                      className="rounded-md border border-border bg-surface p-5"
-                    >
-                      <p className="font-display text-xs font-semibold leading-snug tracking-wide text-sage uppercase">
-                        {row.who}
-                      </p>
-                      <p className="mt-2 font-display text-4xl font-bold tracking-wide">
-                        {row.added}
-                      </p>
-                      <div className="mt-4 h-3 w-full rounded-sm bg-ink">
-                        <div
-                          className="h-3 rounded-sm bg-sage"
-                          style={{ width: `${pct}%` }}
-                        />
-                      </div>
-                      <p className="mt-2 font-display text-xs tracking-[0.12em] text-muted uppercase">
-                        {pct}% of the $40.09T
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-              {(() => {
-                const pie = COMPARE_CHARTS.find((c) =>
-                  c.src.includes("chart-harm-pie"),
-                );
-                if (!pie) return null;
+        {file === "debt" ? (
+          <div className="mt-10">
+            <div className="grid gap-4 md:grid-cols-3">
+              {DEBT_TALLY.map((row) => {
+                const n = Number(row.added.replace(/[^0-9.]/g, ""));
+                const pct = Math.round((n / 40.09) * 100);
                 return (
-                  <figure className="mt-4">
-                    <img
-                      src={pie.src}
-                      alt={pie.title}
-                      className="h-auto w-full rounded-md border border-border"
-                    />
-                    <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
-                      {pie.sources.map((s, i) => (
-                        <span key={s.href}>
-                          {i > 0 ? " · " : null}
-                          <a
-                            href={s.href}
-                            className="text-sage no-underline hover:underline"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            {s.label}
-                          </a>
-                        </span>
-                      ))}
-                    </figcaption>
-                  </figure>
+                  <div
+                    key={row.who}
+                    className="rounded-md border border-border bg-surface p-5"
+                  >
+                    <p className="font-display text-xs font-semibold leading-snug tracking-wide text-sage uppercase">
+                      {row.who}
+                    </p>
+                    <p className="mt-2 font-display text-4xl font-bold tracking-wide">
+                      {row.added}
+                    </p>
+                    <div className="mt-4 h-3 w-full rounded-sm bg-ink">
+                      <div
+                        className="h-3 rounded-sm bg-sage"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                    <p className="mt-2 font-display text-xs tracking-[0.12em] text-muted uppercase">
+                      {pct}% of the $40.09T
+                    </p>
+                  </div>
                 );
-              })()}
-              <p className="mt-4 text-sm leading-relaxed text-muted">
-                {DEBT_NOW.asOf}: {DEBT_NOW.total}. {DEBT_MATH}
-              </p>
+              })}
             </div>
-            <div className="grid gap-8 lg:grid-cols-2">
-              {COMPARE_CHARTS.filter(
-                (c) => !c.src.includes("chart-harm-pie"),
-              ).map((c) => (
-                <figure
-                  key={c.src}
-                  className={COMPARE_WIDE.has(c.src) ? "lg:col-span-2" : undefined}
-                >
-                  <p className="mb-3 font-display text-sm font-semibold tracking-[0.16em] text-sage uppercase">
-                    {c.title}
-                  </p>
+            {(() => {
+              const pie = COMPARE_CHARTS.find((c) =>
+                c.src.includes("chart-harm-pie"),
+              );
+              if (!pie) return null;
+              return (
+                <figure className="mt-4">
                   <img
-                    src={c.src}
-                    alt={c.title}
+                    src={pie.src}
+                    alt={pie.title}
                     className="h-auto w-full rounded-md border border-border"
                   />
-                  <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
-                    {c.sources.map((s, i) => (
-                      <span key={s.href}>
-                        {i > 0 ? " · " : null}
-                        <a
-                          href={s.href}
-                          className="text-sage no-underline hover:underline"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {s.label}
-                        </a>
-                      </span>
-                    ))}
-                  </figcaption>
                 </figure>
-              ))}
-            </div>
-          </div>
-        ) : null}
-
-        {tab === "split" ? (
-          <div className="mt-10 space-y-8">
-            <p className="font-display text-xl font-bold tracking-[0.18em] text-sage uppercase">
-              Split
-            </p>
-            {split ? (
-              <>
-                <p className="font-display text-3xl font-bold tracking-wide">
-                  {split.added}
-                </p>
-                <p className="text-sm leading-relaxed text-muted">{split.when}</p>
-              </>
-            ) : null}
-            <p className="text-sm leading-relaxed">
+              );
+            })()}
+            <p className="mt-4 text-sm leading-relaxed text-muted">
               {DEBT_NOW.asOf}: {DEBT_NOW.total}. {DEBT_MATH}
             </p>
-            <PriceLinks />
-            <p className="font-display text-xs font-semibold tracking-[0.2em] uppercase">
-              Why the meter runs — both of them
-            </p>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {DRIVERS.map((d) => (
                 <a
                   key={d.k}
@@ -636,39 +609,24 @@ export function MidtermScorecard() {
                 </a>
               ))}
             </div>
-            {CHARTS.map((c) => (
-              <figure key={c.src}>
-                <img
-                  src={c.src}
-                  alt={c.title}
-                  className="h-auto w-full rounded-md border border-border"
-                />
-                <figcaption className="mt-3 text-[12px] leading-relaxed text-muted">
-                  {c.sources.map((s, i) => (
-                    <span key={s.href}>
-                      {i > 0 ? " · " : null}
-                      <a
-                        href={s.href}
-                        className="text-sage no-underline hover:underline"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {s.label}
-                      </a>
-                    </span>
-                  ))}
-                </figcaption>
-              </figure>
-            ))}
-            <p>
-              <Link
-                to="/pump"
-                className="font-display text-sm font-semibold tracking-[0.14em] text-sage uppercase no-underline hover:text-fg"
-              >
-                Gas and diesel →
-              </Link>
-            </p>
           </div>
+        ) : null}
+
+        {file === "laws" ? (
+          <ul className="mt-10 grid grid-cols-1 gap-2 sm:grid-cols-2">
+            {LAWS.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block min-h-11 rounded-md border border-border bg-surface px-4 py-3 font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:border-sage hover:text-fg"
+                >
+                  {l.k} →
+                </a>
+              </li>
+            ))}
+          </ul>
         ) : null}
       </div>
     </section>

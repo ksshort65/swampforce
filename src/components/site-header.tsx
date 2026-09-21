@@ -1,12 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { SITE } from "@/lib/content";
-
-const LINKS = [
-  { to: "/scorecard" as const, label: "Scorecard" },
-  { to: "/pump" as const, label: "Pump" },
-  { to: "/foreword" as const, label: "Foreword" },
-  { to: "/archive" as const, label: "Archive" },
-];
+import { SCORE_FILES } from "@/lib/scorecard";
 
 export function SiteHeader() {
   return (
@@ -27,15 +21,44 @@ export function SiteHeader() {
           </span>
         </Link>
         <nav className="ml-auto flex flex-wrap items-center justify-end">
-          {LINKS.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:text-sage"
-            >
-              {l.label}
-            </Link>
-          ))}
+          <details className="relative">
+            <summary className="inline-flex min-h-11 cursor-pointer list-none items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase hover:text-sage">
+              Scorecard
+            </summary>
+            <div className="absolute right-0 top-full z-50 mt-1 w-64 rounded-md border border-border bg-bg p-2 shadow-lg">
+              {SCORE_FILES.map((f) => (
+                <Link
+                  key={f.id}
+                  to="/scorecard"
+                  hash={f.id}
+                  className="block rounded-md px-3 py-3 text-fg no-underline hover:bg-surface"
+                >
+                  <span className="font-display text-sm font-bold tracking-wide uppercase">
+                    {f.k}
+                  </span>
+                  <span className="mt-0.5 block text-xs text-muted">{f.v}</span>
+                </Link>
+              ))}
+            </div>
+          </details>
+          <Link
+            to="/pump"
+            className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:text-sage"
+          >
+            Pump
+          </Link>
+          <Link
+            to="/foreword"
+            className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:text-sage"
+          >
+            Foreword
+          </Link>
+          <Link
+            to="/archive"
+            className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:text-sage"
+          >
+            Archive
+          </Link>
         </nav>
       </div>
     </header>

@@ -30,7 +30,10 @@ header{position:sticky;top:0;background:#0b0b0b;border-bottom:1px solid var(--li
 .bar{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;max-width:72rem;margin:0 auto;padding:.5rem 1.5rem}
 .mark{font:700 16px ui-sans-serif,system-ui;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0}
 nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;margin-left:auto}
-nav a{margin:0;padding:.75rem .55rem;font:600 14px ui-sans-serif,system-ui;letter-spacing:.08em;text-transform:uppercase;color:#ddd;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0}
+nav a,details.score summary{margin:0;padding:.75rem .55rem;font:600 14px ui-sans-serif,system-ui;letter-spacing:.08em;text-transform:uppercase;color:#ddd;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0;cursor:pointer;list-style:none}
+details.score{position:relative}
+details.score .drop{position:absolute;right:0;top:100%;background:#0b0b0b;border:1px solid #2a2a2a;min-width:16rem;padding:.4rem;z-index:80}
+details.score .drop a{display:block;padding:.75rem .8rem;min-height:auto}
 select.essays{background:#0b0b0b;color:#e8e0d0;border:1px solid #e8e0d0;padding:.7rem .8rem;font:600 13px ui-sans-serif,system-ui;text-transform:uppercase;min-width:12rem;min-height:44px}
 .hero{position:relative;min-height:78vh}
 .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;max-width:none}
@@ -69,7 +72,10 @@ footer .f{max-width:72rem;margin:0 auto;display:flex;justify-content:space-betwe
  <div class="bar">
   <a class="mark" href="/">Swamp Force™</a>
   <nav>
-   <a href="/scorecard.html">Scorecard</a>
+   <details class="score">
+    <summary>Scorecard</summary>
+    <div class="drop"><a href="/scorecard.html#policy">Policy</a><a href="/scorecard.html#captions">Captions</a><a href="/scorecard.html#border">Border</a><a href="/scorecard.html#oval">Oval</a><a href="/scorecard.html#debt">Debt</a><a href="/scorecard.html#laws">Laws</a></div>
+   </details>
    <a href="/pump.html">Pump</a>
    <a href="/foreword.html">Foreword</a>
    <a href="/archive.html">Archive</a>

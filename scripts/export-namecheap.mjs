@@ -3,7 +3,7 @@ import { basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { posts, SITE, START_HERE, JOURNAL, getPost } from "../src/lib/content.ts";
-import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, HOAXES, LAWS, OVAL, OVAL_LINKS, PRICES, RECORD, SCORE_UPDATED } from "../src/lib/scorecard.ts";
+import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, HOAXES, LAWS, OVAL, OVAL_LINKS, PRICES, RECORD, SCORE_FILES, SCORE_UPDATED } from "../src/lib/scorecard.ts";
 import { ADMINS, GALLON_STACK, MARKS, OPEC_FILE, PUMP_CHARTS, PUMP_SOURCES, PUMP_UPDATED, RULES_FILE, TAX_FILE } from "../src/lib/pump.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -53,7 +53,10 @@ header{position:sticky;top:0;background:#0b0b0b;border-bottom:1px solid var(--li
 .bar{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;max-width:72rem;margin:0 auto;padding:.5rem 1.5rem}
 .mark{font:700 16px ui-sans-serif,system-ui;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0}
 nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;margin-left:auto}
-nav a{margin:0;padding:.75rem .55rem;font:600 14px ui-sans-serif,system-ui;letter-spacing:.08em;text-transform:uppercase;color:#ddd;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0}
+nav a,details.score summary{margin:0;padding:.75rem .55rem;font:600 14px ui-sans-serif,system-ui;letter-spacing:.08em;text-transform:uppercase;color:#ddd;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0;cursor:pointer;list-style:none}
+details.score{position:relative}
+details.score .drop{position:absolute;right:0;top:100%;background:#0b0b0b;border:1px solid #2a2a2a;min-width:16rem;padding:.4rem;z-index:80}
+details.score .drop a{display:block;padding:.75rem .8rem;min-height:auto}
 select.essays{background:#0b0b0b;color:#e8e0d0;border:1px solid #e8e0d0;padding:.7rem .8rem;font:600 13px ui-sans-serif,system-ui;text-transform:uppercase;min-width:12rem;min-height:44px}
 .hero{position:relative;min-height:78vh}
 .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;max-width:none}
@@ -192,7 +195,10 @@ function shell({ title, desc, image, path, body }) {
  <div class="bar">
   <a class="mark" href="/">Swamp Force™</a>
   <nav>
-   <a href="/scorecard.html">Scorecard</a>
+   <details class="score">
+    <summary>Scorecard</summary>
+    <div class="drop">${SCORE_FILES.map((f) => `<a href="/scorecard.html#${f.id}">${esc(f.k)}</a>`).join("")}</div>
+   </details>
    <a href="/pump.html">Pump</a>
    <a href="/foreword.html">Foreword</a>
    <a href="/archive.html">Archive</a>
@@ -246,11 +252,9 @@ const indexBody = `
 </section>
 <section class="pad">
  <p class="kicker">Midterms</p>
- <h2>Policy — success and failure</h2>
- <p>Judge the parties by the bills they passed, not the speeches. Helped and hurt are on the scorecard. Each line is a statute or an official table.</p>
- <a href="/scorecard.html"><img src="/images/chart-policy.jpg" alt="Policy — success and failure"/></a>
- <div class="grid" style="padding-left:0;padding-right:0">${LAWS.map((l) => `<a class="card" href="${l.href}" style="padding:1rem"><h3 style="padding:0">${esc(l.k)}</h3></a>`).join("")}</div>
- <a class="btn" href="/scorecard.html">Scorecard</a>
+ <h2>The scorecard</h2>
+ <p>Open one file. Policy, captions, border, oval, debt, the laws.</p>
+ <div class="grid" style="padding-left:0;padding-right:0">${SCORE_FILES.map((f) => `<a class="card" href="/scorecard.html#${f.id}" style="padding:1.1rem"><h3 style="padding:0">${esc(f.k)}</h3><p style="padding:0">${esc(f.v)}</p></a>`).join("")}</div>
 </section>
 <section class="band pad">
  <p class="kicker">The Search</p>
@@ -322,20 +326,22 @@ writeFileSync(
   body: `<main class="wrap" style="max-width:72rem">
 <p class="kicker">Congressional scorecard · updated ${esc(SCORE_UPDATED)}</p>
 <h1>Both parties have failed the American people.</h1>
-<div class="grid" style="padding-left:0;padding-right:0">${LAWS.map((l) => `<a class="card" href="${l.href}" style="padding:1rem"><h3 style="padding:0">${esc(l.k)}</h3></a>`).join("")}</div>
+<p>Open one file. Not all of them at once.</p>
+<div class="grid" style="padding-left:0;padding-right:0">${SCORE_FILES.map((f) => `<a class="card" href="#${f.id}" style="padding:1.1rem"><h3 style="padding:0">${esc(f.k)}</h3><p style="padding:0">${esc(f.v)}</p></a>`).join("")}</div>
+<div class="panel" id="policy">
+<h2>Policy</h2>
 <p class="btns">
  <a class="btn" href="#gop">Republicans</a>
  <a class="btn" href="#dem">Democrats</a>
- <a class="btn out" href="#split">Split</a>
- <a class="btn out" href="#oval">Oval</a>
- <a class="btn out" href="#compare">Compare</a>
 </p>
+</div>
 ${RECORD.map((col) => {
  const tally = DEBT_TALLY.find((t) =>
   col.id === "gop" ? t.who.startsWith("Republicans") : t.who.startsWith("Democrats"),
  );
  return `<div class="panel" id="${col.id}">
 <h2>${esc(col.party)}</h2>
+<p><a href="#policy">← Policy</a></p>
 ${tally ? `<p style="font-size:1.8rem;font-weight:800">${esc(tally.added)}</p>` : ""}
 <p>${esc(col.control)}</p>
 <p>${esc(col.debt)}</p>
@@ -344,52 +350,46 @@ ${tally ? `<p style="font-size:1.8rem;font-weight:800">${esc(tally.added)}</p>` 
 <ul>${col.plus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
 <p class="kicker">Hurt</p>
 <ul>${col.minus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
-${col.id === "dem" ? `<div class="card" style="padding:1.2rem;margin-top:1.5rem"><p class="kicker">The caption, then the charge sheet</p>${HOAXES.map((h) => `<p><strong>${esc(h.k)}</strong><br/>${esc(h.v)}<br/><a href="${h.href}">The file →</a></p>`).join("")}<p><a href="/dispatch/the-caption-was-not-the-charge.html">The essay →</a></p></div>` : ""}
-${col.id === "dem" ? borderHtml() : ""}
-${col.id === "dem" ? borderMoveHtml() : ""}
-${col.id === "dem" ? borderHarmHtml() : ""}
-${col.id === "dem" ? `<figure><img src="/images/chart-border.jpg" alt="The open border"/></figure>` : ""}
-${col.id === "dem" ? `<figure><img src="/images/chart-border-all.jpg" alt="Every path CBP counts"/></figure>` : ""}
-${col.id === "dem" ? `<figure><img src="/images/chart-border-toll.jpg" alt="What Americans still pay"/></figure>` : ""}
-${col.id === "dem" ? benefitsHtml() : ""}
-${col.id === "dem" ? workerHtml() : ""}
-${col.id === "dem" ? priceLinksHtml() : ""}
-${col.id === "dem" ? `<figure><img src="/images/chart-inflation-party.jpg" alt="Actual inflation"/></figure>` : ""}
 </div>`;
 }).join("")}
+<div class="panel" id="captions">
+<h2>Captions</h2>
+${HOAXES.map((h) => `<p><strong>${esc(h.k)}</strong><br/>${esc(h.v)}<br/><a href="${h.href}">The file →</a></p>`).join("")}
+<p><a href="/dispatch/the-caption-was-not-the-charge.html">The essay →</a></p>
+</div>
+<div class="panel" id="border">
+<h2>Border</h2>
+${borderHtml()}
+${borderMoveHtml()}
+${borderHarmHtml()}
+<figure><img src="/images/chart-border.jpg" alt="The open border"/></figure>
+<figure><img src="/images/chart-border-all.jpg" alt="Every path CBP counts"/></figure>
+<figure><img src="/images/chart-border-toll.jpg" alt="What Americans still pay"/></figure>
+${benefitsHtml()}
+${workerHtml()}
+</div>
 <div class="panel" id="oval">
 <h2>Oval</h2>
-<div class="grid">${OVAL.map((row) => `<div class="card" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><p>${esc(row.when)}</p><h3>${esc(row.enc)}</h3><p>nationwide encounters</p><h3>${esc(row.cpi)}</h3><p>CPI peak</p><h3>${esc(row.gas)}</h3><p>EIA regular gasoline</p></div>`).join("")}</div>
+<div class="grid">${OVAL.map((row) => `<div class="card" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><p>${esc(row.when)}</p><h3>${esc(row.enc)}</h3><p>nationwide encounters</p><h3>${esc(row.cpi)}</h3><p>CPI peak</p><h3>${esc(row.gas)}</h3><p>highest EIA weekly gasoline</p></div>`).join("")}</div>
 <figure><img src="/images/chart-oval.jpg" alt="The Oval"/></figure>
 <figure><img src="/images/chart-pump-admins.jpg" alt="The gallon"/></figure>
 <figure><img src="/images/chart-crime.jpg" alt="Murder rate"/></figure>
 <p>${OVAL_LINKS.map((l) => `<a href="${l.href}">${esc(l.label)}</a>`).join(" · ")} · <a href="/pump.html">The pump</a></p>
 </div>
-<div class="panel" id="compare">
-<h2>Compare</h2>
+<div class="panel" id="debt">
+<h2>Debt</h2>
 <div class="grid">${DEBT_TALLY.map((row) => {
   const n = Number(row.added.replace(/[^0-9.]/g, ""));
   const pct = Math.round((n / 40.09) * 100);
   return `<a class="card" href="${row.href}" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><h3>${esc(row.added)}</h3><div style="height:10px;background:#141414;margin-top:.8rem"><div style="height:10px;width:${pct}%;background:#e8e0d0"></div></div><p>${pct}% of the $40.09T</p></a>`;
 }).join("")}</div>
-<figure style="margin:.8rem 0 0"><p class="kicker">The debt they added — $40.09 trillion</p><img src="/images/chart-harm-pie.jpg" alt="The debt they added"/><figcaption style="color:#a39e93;font-size:.85rem"><a href="https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/">Treasury — debt to the penny</a> · <a href="https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/">Historical debt outstanding</a></figcaption></figure>
+<figure style="margin:.8rem 0 0"><img src="/images/chart-harm-pie.jpg" alt="The debt they added"/></figure>
 <p>${esc(DEBT_NOW.asOf)}: ${esc(DEBT_NOW.total)}. ${esc(DEBT_MATH)}</p>
-${COMPARE_CHARTS.filter((c) => !c.src.includes("chart-harm-pie")).map((c) => `<figure><p class="kicker">${esc(c.title)}</p><img src="${c.src}" alt="${esc(c.title)}"/><figcaption style="color:#a39e93;font-size:.85rem">${c.sources.map((s) => `<a href="${s.href}">${esc(s.label)}</a>`).join(" · ")}</figcaption></figure>`).join("")}
-</div>
-<div class="panel" id="split">
-<h2>Split</h2>
-${(() => {
- const s = DEBT_TALLY.find((t) => t.who.includes("split"));
- return s
-  ? `<p style="font-size:1.8rem;font-weight:800">${esc(s.added)}</p><p>${esc(s.when)}</p>`
-  : "";
-})()}
-<p>${esc(DEBT_NOW.asOf)}: ${esc(DEBT_NOW.total)}. ${esc(DEBT_MATH)}</p>
-${priceLinksHtml()}
-<p class="kicker">Why the meter runs — both of them</p>
 <div class="grid">${DRIVERS.map((d) => `<a class="card" href="${d.href}" style="padding:1.2rem"><h3>${esc(d.k)}</h3><p>${esc(d.v)}</p></a>`).join("")}</div>
-${CHARTS.map((c) => `<figure><img src="${c.src}" alt="${esc(c.title)}"/><figcaption style="color:#a39e93;font-size:.85rem">${c.sources.map((s) => `<a href="${s.href}">${esc(s.label)}</a>`).join(" · ")}</figcaption></figure>`).join("")}
-<p><a href="/pump.html">Gas and diesel →</a></p>
+</div>
+<div class="panel" id="laws">
+<h2>Laws</h2>
+<div class="grid">${LAWS.map((l) => `<a class="card" href="${l.href}" style="padding:1rem"><h3 style="padding:0">${esc(l.k)}</h3></a>`).join("")}</div>
 </div>
 </main>`,
  }),

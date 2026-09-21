@@ -11,6 +11,17 @@ export type ScoreRow = {
 /** Living midterms card. Update the cells when a vote or a Treasury table changes the file. */
 export const SCORE_UPDATED = "2026-09-20";
 
+/** Cover and Scorecard. One file each. Not a dump. */
+export const SCORE_FILES: { id: string; k: string; v: string }[] = [
+  { id: "policy", k: "Policy", v: "Helped and hurt. The bills they passed." },
+  { id: "captions", k: "Captions", v: "Durham. Parents. J6. The charge sheet." },
+  { id: "border", k: "Border", v: "Encounters, the bill still due, the benefits." },
+  { id: "oval", k: "Oval", v: "Four administrations. Encounters, prices, the gallon." },
+  { id: "debt", k: "Debt", v: "Who added the $40.09 trillion." },
+  { id: "laws", k: "Laws", v: "The statutes. Open them." },
+];
+
+
 /** Treasury Debt to the Penny. Unified Congress = House and Senate same party. Adds to the current total. */
 export const DEBT_NOW = {
   asOf: "September 17, 2026",
