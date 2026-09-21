@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { homeHead } from "@/lib/share-head";
-import { START_HERE, getPost } from "@/lib/content";
+import { getLatest } from "@/lib/content";
 import { SCORE_TABS } from "@/lib/scorecard";
 
 export const Route = createFileRoute("/dispatch/")({
@@ -10,8 +10,18 @@ export const Route = createFileRoute("/dispatch/")({
   head: () => homeHead(),
 });
 
+function published(iso: string) {
+  return new Date(`${iso}T12:00:00`).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
 export function DispatchIndex() {
-  const featured = getPost(START_HERE[0]);
+  const latest = getLatest(8);
+  const lead = latest[0];
+  const rest = latest.slice(1);
   return (
     <main>
       <section className="relative min-h-[78vh] w-full">
@@ -24,7 +34,10 @@ export function DispatchIndex() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
         </div>
         <div className="relative mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-end px-6 pb-10 pt-8">
-          <h1 className="max-w-xl font-display leading-[0.95] font-bold tracking-wide uppercase text-[clamp(2.2rem,7vw,4.6rem)]">
+          <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+            The journal · publishing
+          </p>
+          <h1 className="mt-2 max-w-xl font-display leading-[0.95] font-bold tracking-wide uppercase text-[clamp(2.2rem,7vw,4.6rem)]">
             We the People.
           </h1>
           <p className="mt-3 max-w-lg text-[clamp(0.95rem,2.2vw,1.25rem)] leading-snug text-fg/90">
@@ -35,38 +48,48 @@ export function DispatchIndex() {
             manufactured drama.
           </p>
           <div className="mt-5 flex flex-wrap gap-3 pb-2">
-            <Button asChild>
-              <Link to="/scorecard">Congressional Scorecard</Link>
+            {lead ? (
+              <Button asChild>
+                <Link to="/dispatch/$slug" params={{ slug: lead.slug }}>
+                  Latest dispatch
+                </Link>
+              </Button>
+            ) : null}
+            <Button asChild variant="outline">
+              <Link to="/scorecard">Scorecard</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {featured ? (
+      {lead ? (
         <section className="border-b border-border bg-ink">
           <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 py-14 md:grid-cols-2">
             <Link
               to="/dispatch/$slug"
-              params={{ slug: featured.slug }}
+              params={{ slug: lead.slug }}
               className="block text-fg no-underline"
             >
               <img
-                src={featured.image}
-                alt={featured.imageAlt}
+                src={lead.image}
+                alt={lead.imageAlt}
                 className="aspect-video w-full rounded-lg object-cover"
               />
             </Link>
             <div>
-              <h2 className="font-display text-3xl font-bold tracking-wide uppercase sm:text-5xl">
-                {featured.title}
+              <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+                Just published · {published(lead.date)}
+              </p>
+              <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-5xl">
+                {lead.title}
               </h2>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
-                {featured.dek}
+                {lead.dek}
               </p>
               <div className="mt-6">
                 <Button asChild>
-                  <Link to="/dispatch/$slug" params={{ slug: featured.slug }}>
-                    {featured.title}
+                  <Link to="/dispatch/$slug" params={{ slug: lead.slug }}>
+                    {lead.title}
                     <ArrowRight className="size-4" />
                   </Link>
                 </Button>
@@ -79,176 +102,13 @@ export function DispatchIndex() {
       <section className="border-b border-border bg-surface">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
-            Midterms
+            The dispatch
           </p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
-            The scorecard
+            Publishing now
           </h2>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
-            Open GOP, Dem, Split, Oval, or Compare. Charts first. Read if you want the file.
-          </p>
-          <div className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-3">
-            {SCORE_TABS.map((f) => (
-              <Link
-                key={f.id}
-                to="/scorecard"
-                hash={`${f.id}-charts`}
-                className="min-h-16 rounded-md border-2 border-sage bg-bg px-3 py-4 text-fg no-underline hover:bg-ink"
-              >
-                <p className="font-display text-sm font-bold tracking-wide uppercase">
-                  {f.k}
-                </p>
-                <p className="mt-1 text-xs leading-snug text-muted">{f.v}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-border bg-ink">
-        <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 py-14 md:grid-cols-2">
-          <Link to="/pump" className="block text-fg no-underline">
-            <img
-              src="/images/chart-pump-admins.jpg"
-              alt="Highest EIA weekly gallon — four administrations"
-              className="w-full rounded-lg border border-border"
-            />
-          </Link>
-          <div>
-            <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
-              The pump · EIA
-            </p>
-            <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
-              The gallon
-            </h2>
-            <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
-              The Energy Information Administration tracks the pump across
-              four administrations. OPEC — the governments that export most
-              of the world’s oil — decides how many barrels leave the
-              ground. Congress does not pump a gallon.
-            </p>
-            <div className="mt-6">
-              <Button asChild>
-                <Link to="/pump">
-                  The pump
-                  <ArrowRight className="size-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-border bg-surface">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
-            The Clip
-          </p>
-          <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
-            The pool.
-          </h2>
-          <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
-            On Friday they barred CNN, MS NOW, and Politico from the White
-            House. A six-second caption is still not the recording.
-          </p>
-          <div className="mt-6">
-            <Button asChild>
-              <Link to="/dispatch/$slug" params={{ slug: "the-pool" }}>
-                The pool
-                <ArrowRight className="size-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-border bg-surface">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
-            The Clip
-          </p>
-          <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
-            The caption was not the charge
-          </h2>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
-            Insurrection on television. Not on 18 U.S.C. § 2383. The Speaker
-            stacked the committee. The House held the tape. Durham already
-            wrote the Russia file. Parents were a federal problem.
-          </p>
-          <div className="mt-6">
-            <Button asChild>
-              <Link
-                to="/dispatch/$slug"
-                params={{ slug: "the-caption-was-not-the-charge" }}
-              >
-                The caption was not the charge
-                <ArrowRight className="size-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-border bg-ink">
-        <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 py-14 md:grid-cols-2">
-          <Link
-            to="/dispatch/$slug"
-            params={{ slug: "sixty-percent" }}
-            className="block text-fg no-underline"
-          >
-            <img
-              src="/images/chart-iran.jpg"
-              alt="The Iranian terrorist regime at 60 percent enrichment"
-              className="w-full rounded-lg border border-border"
-            />
-          </Link>
-          <div>
-            <h2 className="font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
-              The Iranian terrorist regime at 60 percent.
-            </h2>
-            <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
-              IAEA: 440.9 kilograms of uranium enriched up to 60 percent. The
-              only non-weapon state at that level. Forty-seven years of
-              building the option. The named dead are on the record.
-            </p>
-            <div className="mt-6">
-              <Button asChild>
-                <Link to="/dispatch/$slug" params={{ slug: "sixty-percent" }}>
-                  Read the file
-                  <ArrowRight className="size-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-border bg-surface">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <h2 className="font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
-            Find them.
-          </h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                slug: "find-them",
-                img: "/images/essay-find-them.jpg",
-                t: "Find them.",
-                d: "Hundreds of thousands of children are still a missing-persons file.",
-              },
-              {
-                slug: "who-got-paid",
-                img: "/images/essay-who-got-paid.jpg",
-                t: "Who got paid.",
-                d: "Who got paid off the open border.",
-              },
-              {
-                slug: "defund-ice-is-the-tell",
-                img: "/images/essay-defund-ice.jpg",
-                t: "Defund ICE is the tell.",
-                d: "The party that lost the children now wants the search abolished.",
-              },
-            ].map((p) => (
+          <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {rest.map((p) => (
               <Link
                 key={p.slug}
                 to="/dispatch/$slug"
@@ -256,14 +116,51 @@ export function DispatchIndex() {
                 className="block text-fg no-underline"
               >
                 <img
-                  src={p.img}
-                  alt=""
+                  src={p.image}
+                  alt={p.imageAlt}
                   className="aspect-video w-full rounded-lg object-cover"
                 />
-                <p className="mt-3 font-display text-xl font-semibold tracking-wide uppercase">
-                  {p.t}
+                <p className="mt-3 font-display text-[11px] tracking-[0.16em] text-muted uppercase">
+                  {published(p.date)}
                 </p>
-                <p className="mt-1 text-sm text-muted">{p.d}</p>
+                <p className="mt-1 font-display text-xl font-semibold tracking-wide uppercase">
+                  {p.title}
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-muted">{p.dek}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10">
+            <Button asChild>
+              <Link to="/archive">
+                The archive
+                <ArrowRight className="size-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-ink">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+          <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+            Midterms
+          </p>
+          <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
+            The scorecard
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
+            Vote the facts. Every number is a government file.
+          </p>
+          <div className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-5">
+            {SCORE_TABS.map((f) => (
+              <Link
+                key={f.id}
+                to="/scorecard"
+                hash={`${f.id}-charts`}
+                className="flex min-h-16 items-center justify-center rounded-md border-2 border-sage bg-bg px-3 py-4 text-center font-display text-sm font-bold tracking-wide text-fg uppercase no-underline hover:bg-ink"
+              >
+                {f.k}
               </Link>
             ))}
           </div>

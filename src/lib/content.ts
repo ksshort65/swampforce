@@ -2893,7 +2893,12 @@ export function getShareLead() {
 	if (pinned) return pinned;
 	return [...posts].sort((a, b) => b.date.localeCompare(a.date))[0];
 }
-/** Kitchen-table order for the front of the journal. Four. Not a syllabus. */
+/** Newest first. This is a journal that publishes, not a syllabus. */
+export function getLatest(n = 8) {
+	return [...posts]
+		.sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title))
+		.slice(0, n);
+}
 export const START_HERE = [
 	"we-the-people",
 	"that-is-not-why-they-are-elected",
