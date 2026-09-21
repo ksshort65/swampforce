@@ -366,8 +366,9 @@ ${col.id === "dem" ? `<figure><img src="/images/chart-inflation-party.jpg" alt="
   const pct = Math.round((n / 40.09) * 100);
   return `<a class="card" href="${row.href}" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><h3>${esc(row.added)}</h3><div style="height:10px;background:#141414;margin-top:.8rem"><div style="height:10px;width:${pct}%;background:#e8e0d0"></div></div><p>${pct}% of the $40.09T</p></a>`;
 }).join("")}</div>
+<figure style="margin:.8rem 0 0"><p class="kicker">The debt they added — $40.09 trillion</p><img src="/images/chart-harm-pie.jpg" alt="The debt they added"/><figcaption style="color:#a39e93;font-size:.85rem"><a href="https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/">Treasury — debt to the penny</a> · <a href="https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/">Historical debt outstanding</a></figcaption></figure>
 <p>${esc(DEBT_NOW.asOf)}: ${esc(DEBT_NOW.total)}. ${esc(DEBT_MATH)}</p>
-${COMPARE_CHARTS.map((c) => `<figure><p class="kicker">${esc(c.title)}</p><img src="${c.src}" alt="${esc(c.title)}"/><figcaption style="color:#a39e93;font-size:.85rem">${c.sources.map((s) => `<a href="${s.href}">${esc(s.label)}</a>`).join(" · ")}</figcaption></figure>`).join("")}
+${COMPARE_CHARTS.filter((c) => !c.src.includes("chart-harm-pie")).map((c) => `<figure><p class="kicker">${esc(c.title)}</p><img src="${c.src}" alt="${esc(c.title)}"/><figcaption style="color:#a39e93;font-size:.85rem">${c.sources.map((s) => `<a href="${s.href}">${esc(s.label)}</a>`).join(" · ")}</figcaption></figure>`).join("")}
 </div>
 <div class="panel" id="split">
 <h2>Split</h2>

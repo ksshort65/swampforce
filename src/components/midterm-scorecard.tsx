@@ -434,39 +434,73 @@ export function MidtermScorecard() {
 
         {tab === "compare" ? (
           <div className="mt-10 space-y-8">
-            <div className="grid gap-4 md:grid-cols-3">
-              {DEBT_TALLY.map((row) => {
-                const n = Number(row.added.replace(/[^0-9.]/g, ""));
-                const pct = Math.round((n / 40.09) * 100);
-                return (
-                  <div
-                    key={row.who}
-                    className="rounded-md border border-border bg-surface p-5"
-                  >
-                    <p className="font-display text-xs font-semibold leading-snug tracking-wide text-sage uppercase">
-                      {row.who}
-                    </p>
-                    <p className="mt-2 font-display text-4xl font-bold tracking-wide">
-                      {row.added}
-                    </p>
-                    <div className="mt-4 h-3 w-full rounded-sm bg-ink">
-                      <div
-                        className="h-3 rounded-sm bg-sage"
-                        style={{ width: `${pct}%` }}
-                      />
+            <div>
+              <div className="grid gap-4 md:grid-cols-3">
+                {DEBT_TALLY.map((row) => {
+                  const n = Number(row.added.replace(/[^0-9.]/g, ""));
+                  const pct = Math.round((n / 40.09) * 100);
+                  return (
+                    <div
+                      key={row.who}
+                      className="rounded-md border border-border bg-surface p-5"
+                    >
+                      <p className="font-display text-xs font-semibold leading-snug tracking-wide text-sage uppercase">
+                        {row.who}
+                      </p>
+                      <p className="mt-2 font-display text-4xl font-bold tracking-wide">
+                        {row.added}
+                      </p>
+                      <div className="mt-4 h-3 w-full rounded-sm bg-ink">
+                        <div
+                          className="h-3 rounded-sm bg-sage"
+                          style={{ width: `${pct}%` }}
+                        />
+                      </div>
+                      <p className="mt-2 font-display text-xs tracking-[0.12em] text-muted uppercase">
+                        {pct}% of the $40.09T
+                      </p>
                     </div>
-                    <p className="mt-2 font-display text-xs tracking-[0.12em] text-muted uppercase">
-                      {pct}% of the $40.09T
-                    </p>
-                  </div>
+                  );
+                })}
+              </div>
+              {(() => {
+                const pie = COMPARE_CHARTS.find((c) =>
+                  c.src.includes("chart-harm-pie"),
                 );
-              })}
+                if (!pie) return null;
+                return (
+                  <figure className="mt-4">
+                    <img
+                      src={pie.src}
+                      alt={pie.title}
+                      className="h-auto w-full rounded-md border border-border"
+                    />
+                    <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
+                      {pie.sources.map((s, i) => (
+                        <span key={s.href}>
+                          {i > 0 ? " · " : null}
+                          <a
+                            href={s.href}
+                            className="text-sage no-underline hover:underline"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {s.label}
+                          </a>
+                        </span>
+                      ))}
+                    </figcaption>
+                  </figure>
+                );
+              })()}
+              <p className="mt-4 text-sm leading-relaxed text-muted">
+                {DEBT_NOW.asOf}: {DEBT_NOW.total}. {DEBT_MATH}
+              </p>
             </div>
-            <p className="text-sm leading-relaxed text-muted">
-              {DEBT_NOW.asOf}: {DEBT_NOW.total}. {DEBT_MATH}
-            </p>
             <div className="grid gap-8 lg:grid-cols-2">
-              {COMPARE_CHARTS.map((c) => (
+              {COMPARE_CHARTS.filter(
+                (c) => !c.src.includes("chart-harm-pie"),
+              ).map((c) => (
                 <figure
                   key={c.src}
                   className={COMPARE_WIDE.has(c.src) ? "lg:col-span-2" : undefined}
