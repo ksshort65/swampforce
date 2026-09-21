@@ -1021,6 +1021,16 @@ export const CHARTS: {
   sources: { label: string; href: string }[];
 }[] = [
   {
+    src: "/images/chart-funnel.jpg",
+    title: "The funnel — taxpayer to agency to NGO",
+    sources: [
+      { label: "ForeignAssistance.gov", href: "https://www.foreignassistance.gov/" },
+      { label: "USASpending — USAID", href: "https://www.usaspending.gov/agency/agency-for-international-development" },
+      { label: "DHS OIG-26-04", href: "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf" },
+      { label: "22 U.S.C. § 4411 — NED", href: "https://www.law.cornell.edu/uscode/text/22/4411" },
+    ],
+  },
+  {
     src: "/images/chart-lawfare.jpg",
     title: "The hire is the country — lawfare against the vote",
     sources: [
@@ -1169,6 +1179,7 @@ export const CHARTS: {
 const COMPARE_SRC = [
   "/images/chart-helped-hurt.jpg",
   "/images/chart-lawfare.jpg",
+  "/images/chart-funnel.jpg",
   "/images/chart-oval.jpg",
   "/images/chart-debt-why.jpg",
   "/images/chart-aliens.jpg",
@@ -1184,6 +1195,7 @@ const COMPARE_SRC = [
 export const COMPARE_WIDE = new Set([
   "/images/chart-helped-hurt.jpg",
   "/images/chart-lawfare.jpg",
+  "/images/chart-funnel.jpg",
   "/images/chart-oval.jpg",
   "/images/chart-debt-why.jpg",
   "/images/chart-aliens.jpg",
@@ -1228,7 +1240,7 @@ export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<ty
     "/images/chart-aliens.jpg",
     "/images/chart-inflation-party.jpg",
   ),
-  split: chartsFor("/images/chart-debt-why.jpg", "/images/chart-blame.jpg"),
+  split: chartsFor("/images/chart-debt-why.jpg", "/images/chart-funnel.jpg", "/images/chart-blame.jpg"),
   oval: chartsFor(
     "/images/chart-oval.jpg",
     "/images/chart-pump-admins.jpg",

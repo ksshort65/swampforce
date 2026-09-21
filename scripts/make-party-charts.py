@@ -932,6 +932,27 @@ ax.text(0.4, 0.35, "Article II  ·  Durham  ·  Horowitz IG  ·  Congress.gov  �
 fig.savefig("/workspace/public/images/chart-lawfare.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
+fig, ax = plt.subplots(figsize=(16, 9), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+ax.set_xlim(0, 16)
+ax.set_ylim(0, 9)
+ax.axis("off")
+ax.text(0.4, 8.5, "THE FUNNEL", fontsize=26, fontweight="bold", color=fg, va="top")
+ax.text(0.4, 7.85, "Taxpayer  →  appropriation  →  agency  →  NGO. No line item that says DNC.", fontsize=13, color=muted, va="top")
+cols = [
+    (0.4, "USAID", "$43.8B of $71.9B\nforeign aid, FY2023", "OIG: $36M cash to 4 NGOs\n$650M humanitarian awards\n$25.9B audited", gop_c),
+    (5.6, "FEMA / NGOs", "$1.4B SSP + EFSP-H\nFY2023–24", "84 non-federal entities\nOIG: cannot ensure\nthe law was followed", dem_c),
+    (10.8, "NED / institutes", "$315M  ·  FY2024", "NDI and IRI\nParty-aligned shops\nNot the national committees", "#d8d0c0"),
+]
+for x, title, mid, bot, c in cols:
+    ax.add_patch(plt.Rectangle((x, 1.3), 4.8, 6.0, facecolor="#141414", edgecolor=c, lw=2))
+    ax.text(x + 2.4, 6.6, title, fontsize=16, fontweight="bold", color=c, ha="center")
+    ax.text(x + 2.4, 5.3, mid, fontsize=14, color=fg, ha="center")
+    ax.text(x + 2.4, 3.2, bot, fontsize=13, color=muted, ha="center")
+ax.text(0.4, 0.45, "ForeignAssistance.gov  ·  USASpending  ·  USAID OIG  ·  DHS OIG-26-04  ·  22 U.S.C. § 4411  ·  P.L. 118-47  ·  FEC", fontsize=10, color=muted)
+fig.savefig("/workspace/public/images/chart-funnel.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
 
 
 
