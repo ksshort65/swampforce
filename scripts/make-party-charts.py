@@ -190,29 +190,30 @@ fig.text(
 )
 
 gop_help = [
-    "Clinton/GOP 1996  Welfare — work or the check stops",
-    "Clinton/GOP 1997  Tax cut on savings",
-    "Bush 2001  Fatter paycheck",
-    "Bush 2003  Fatter paycheck, round two",
-    "Trump 2017  Tax cut again. Not a surplus.",
+    "1996  Welfare — work or the check stops",
+    "1997  Tax cut on savings",
+    "2001  Tax cut · H.R. 1836",
+    "2003  Tax cut · H.R. 2",
+    "2017  Tax Cuts and Jobs Act. Not a surplus.",
 ]
 gop_hurt = [
-    "Bush 2002  Iraq — they voted yes",
-    "Bush 2003  Drug benefit. Unpaid.",
-    "Trump 2020  COVID checks. Then the fraud.",
+    "2002  Iraq — they voted yes",
+    "2003  Medicare Part D unpaid",
+    "2015–19  Majority. Still no October 1.",
     "Every year  Budget never on time",
 ]
 dem_help = [
     "1993  Raised the top tax. Cut that year's deficit.",
+    "2009  CHIP reauthorized",
+    "2009  Lilly Ledbetter Fair Pay",
 ]
 dem_hurt = [
-    "Biden 2021–24  Opened the border",
-    "Biden 2022  Prices 9.1%",
-    "Bush/Obama 2008  Bank bailout",
-    "Obama 2009  Stimulus",
-    "Obama 2010  ObamaCare — taxes, a mandate",
-    "Biden 2021  More spending after COVID",
-    "Biden 2022  Corporate tax up",
+    "2008  TARP — they voted yes",
+    "2009  ARRA stimulus",
+    "2010  ACA — taxes and a mandate",
+    "2021  Rescue Plan",
+    "2021–23  Majority while the border opened",
+    "2022  CPI 9.1% — they held both chambers",
     "Every year  Budget never on time",
 ]
 
@@ -798,8 +799,8 @@ ax_d = fig.add_subplot(gs[0, 2:])
 box(
     ax_g,
     "CONGRESS  ·  REPUBLICAN MAJORITY",
-    ["Welfare 1996 — work or the check stops", "Tax cuts 2001, 2003, 2017", "CPI peak Trump 1: 2.9%"],
-    ["Iraq — they voted yes", "Medicare Part D unpaid", "Never close October 1", "CARES, then the fraud"],
+    ["Welfare 1996 — work or the check stops", "Tax cuts 2001, 2003, 2017"],
+    ["Iraq — they voted yes", "Medicare Part D unpaid", "Never close October 1"],
     gop_c,
 )
 box(

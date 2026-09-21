@@ -741,16 +741,6 @@ export const RECORD: {
         bill: "H.R. 1 · Tax Cuts and Jobs Act · 2017",
         href: "https://www.congress.gov/bill/115th-congress/house-bill/1",
       },
-      {
-        k: "Prices stayed down. CPI peak in the first Trump term: 2.9%.",
-        bill: "BLS CPI · 2017–20",
-        href: "https://www.bls.gov/cpi/",
-      },
-      {
-        k: "Southwest Border Patrol FY2025: 237,538. Lowest since 1970.",
-        bill: "CBP · FY2025",
-        href: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters",
-      },
     ],
     minus: [
       {
@@ -767,11 +757,6 @@ export const RECORD: {
         k: "Republican majority 2015–17, Obama still in the Oval. Debt still climbed. They did not close October 1.",
         bill: "Treasury · Historical Debt Outstanding",
         href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/",
-      },
-      {
-        k: "COVID checks. Both parties. Then the fraud.",
-        bill: "H.R. 748 · CARES Act · 2020",
-        href: "https://www.congress.gov/bill/116th-congress/house-bill/748",
       },
       {
         k: "They never finish the budget on time",
@@ -1204,17 +1189,19 @@ function chartsFor(...srcs: string[]) {
 }
 
 export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<typeof chartsFor>> = {
-  gop: chartsFor("/images/chart-helped-hurt.jpg", "/images/chart-policy.jpg", "/images/chart-debt-why.jpg", "/images/chart-oval.jpg"),
+  gop: chartsFor("/images/chart-policy.jpg", "/images/chart-debt-why.jpg", "/images/chart-inflation-party.jpg"),
   dem: chartsFor(
-    "/images/chart-helped-hurt.jpg",
-    "/images/chart-aliens.jpg",
-    "/images/chart-border.jpg",
-    "/images/chart-oval.jpg",
-    "/images/chart-inflation-party.jpg",
     "/images/chart-policy.jpg",
+    "/images/chart-aliens.jpg",
+    "/images/chart-inflation-party.jpg",
   ),
   split: chartsFor("/images/chart-debt-why.jpg", "/images/chart-blame.jpg"),
-  oval: chartsFor("/images/chart-oval.jpg", "/images/chart-pump-admins.jpg", "/images/chart-crime.jpg"),
+  oval: chartsFor(
+    "/images/chart-oval.jpg",
+    "/images/chart-pump-admins.jpg",
+    "/images/chart-crime.jpg",
+    "/images/chart-border.jpg",
+  ),
   compare: COMPARE_CHARTS,
 };
 
