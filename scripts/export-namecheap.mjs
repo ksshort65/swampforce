@@ -262,7 +262,7 @@ const indexBody = `
  <div class="copy">
   <p class="kicker">The journal · publishing</p>
   <h1>We the People.</h1>
-  <p>This country is not Congress’s. They are the hire. They have gone rogue. Do not vote on emotion, on manufactured hatred, or on a network’s words. Vote the facts. This journal uses documented government sources. No other opinion. No manufactured drama.</p>
+  <p>The Constitution does not open with Congress. It opens with the owner. The 535 are the hire. The hire has gone rogue. Vote the file. Not the feeling.</p>
   <div>
    ${lead ? `<a class="btn" href="/dispatch/${lead.slug}.html">The lead</a>` : ""}
    <a class="btn out" href="/scorecard.html">Scorecard</a>

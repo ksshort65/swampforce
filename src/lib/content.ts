@@ -59,10 +59,10 @@ export const posts: Post[] = [
 	{
 		slug: "we-the-people",
 		title: "We the People.",
-		dek: "The people own and operate this country. Congress is the employee gone rogue. The first step is the record of what they did, not what they said.",
+		dek: "The Constitution does not open with Congress. It opens with the owner. The 535 are the hire. The hire has gone rogue.",
 		date: "2026-09-21",
 		category: "Dispatch",
-		readMinutes: 4,
+		readMinutes: 6,
 		image: "/images/hero-capitol.jpg",
 		imageAlt: "The Capitol — the people are the employer",
 		featured: true,
@@ -73,19 +73,65 @@ export const posts: Post[] = [
 			{ label: "Article I", href: "https://constitution.congress.gov/constitution/article-1/" },
 			{ label: "5 U.S.C. § 3331 — the oath", href: "https://www.law.cornell.edu/uscode/text/5/3331" },
 			{ label: "The Declaration of Independence", href: "https://www.archives.gov/founding-docs/declaration-transcript" },
+			{ label: "CBO — last surplus, FY2001", href: "https://www.cbo.gov/data/budget-economic-data" },
+			{ label: "Treasury — Debt to the Penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny" },
 		],
 		body: [
 			{
 				type: "p",
-				text: "We the People own and operate this country. That is not a slogan. It is the first sentence of the [Preamble](https://constitution.congress.gov/constitution/preamble/). Congress is not the owner. Congress is the hire. [Article I](https://constitution.congress.gov/constitution/article-1/) lists the job. [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331) is the oath: support and defend this Constitution, without mental reservation. An employee who lies to the employer every day, who talks about the people who pay him as a spirit to be broken, who will not pass a budget, who votes the unread pile, has gone rogue. The people did not hire a ruler. The people hired a clerk with a listed grant of power.",
-			},
-			{
-				type: "p",
-				text: "The daily product is a lie. A caption. A six-second clip. A word swapped so the country is taught the opposite crime. Do not vote on emotion. Do not vote on a hatred one party and the networks manufactured. Do not vote on the words of a network or a politician. Vote on the facts. This journal comes from documented government sources. No other opinion. No manufactured drama. A nation that cannot tell the action from the speech cannot govern itself. It is not what they said at the microphone that defines the hire. It is what they passed, what they blocked, what they spent, what they broke. Compare the truth from the actions. That is the first step. Not a riot. Not a war of neighbors. The record, in public, on the page, and then the ballot. The [Declaration](https://www.archives.gov/founding-docs/declaration-transcript) already named the right of a people to alter a government that has become destructive of the ends it was hired to secure. The lawful instruments are still the instruments: the file, the statute, the vote. Truth is the only thing that can save the nation before the caption finishes the work.",
+				text: "The Constitution of the United States does not open with Congress. It does not open with a president, a party, or a panel. It opens with three words: We the People. The [Preamble](https://constitution.congress.gov/constitution/preamble/) is the country’s own sentence about who holds the power. “We the People of the United States… do ordain and establish this Constitution for the United States of America.” Ordain is not a campaign line. It is the act of a principal creating an agent. The people made the government. The government did not make the people.",
 			},
 			{
 				type: "q",
-				text: "The people are the employer. The hire works here. Actions, not words. That is how a country is taken back.",
+				text: "The people are the owner. Congress is the staff. The staff does not get to rewrite the first sentence.",
+			},
+			{
+				type: "h",
+				text: "The job is a list",
+			},
+			{
+				type: "p",
+				text: "[Article I](https://constitution.congress.gov/constitution/article-1/) is the job description. It lists what Congress may do. The power of the purse is there. The power to declare war is there. The power to make uniform rules of naturalization is there. What is not on that list stayed with the states and with the people. A member who talks as if the country is a possession, and the public a problem to be managed, is not reading the paper he swore to. He is auditioning for a job the charter never posted.",
+			},
+			{
+				type: "p",
+				text: "The oath is not a photograph. [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331) requires every member to swear, in those words, to support and defend this Constitution “without any mental reservation or purpose of evasion.” Mental reservation is the legal name for crossing your fingers. An employee who takes that oath and then treats the people who pay him as a faction to be broken has left the job while keeping the paycheck. The next essay in this series is the tape of employees talking that way, on camera.",
+			},
+			{
+				type: "h",
+				text: "How you know the hire has gone rogue",
+			},
+			{
+				type: "p",
+				text: "In ordinary English this is an employment. Three hundred million people hired 535 clerks. Those clerks work part of the year on a full-year salary. They vote on bills they have not read. They have not closed a fiscal year on time as the appropriations calendar requires. The [Congressional Budget Office’s historical tables](https://www.cbo.gov/data/budget-economic-data) still show the last surplus in fiscal year 2001. The [Treasury’s Debt to the Penny](https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny) now prints more than forty trillion dollars. That is not a mystery of markets. That is a staff that will not do the work it was hired to do, and a public trained to argue about the staff’s feelings instead of the staff’s output.",
+			},
+			{
+				type: "p",
+				text: "A nation of this size cannot be overseen on a part-time floor. Oversight is the job. When oversight is skipped, fraud is not an accident. It is the door the staff left open. Medicare, Medicaid, and Social Security are the largest lines on the card. Congress holds those lines. A chamber that will not pass twelve appropriations bills by October 1, year after year, is not struggling with a hard problem. It is refusing the calendar it wrote for itself.",
+			},
+			{
+				type: "h",
+				text: "The daily product is a caption",
+			},
+			{
+				type: "p",
+				text: "Washington’s daily product is not a statute. It is a caption. One word is swapped. Six seconds are cut from a speech. A panel tells a country what it just saw. The country then votes the feeling the panel sold. Kidnapped instead of arrested. Insurrection instead of a docket that never charged it. A six-second clip instead of the hour that contained it. This journal does not do that work. Unless a passage is marked as opinion, what is written here is the official file: the statute, the inspector general, the Treasury table, the tape played in full. Compare what they passed, what they blocked, what they spent, and what they broke. Do not compare the speech. The speech is the costume.",
+			},
+			{
+				type: "p",
+				text: "A republic cannot survive if half of it is taught to hate the other half as a substitute for a budget. Hatred is cheaper than a hearing. It does not require reading the bill. It does not require naming the fraud. It only requires a clip. Vote the facts. This journal uses documented government sources. It does not use a network as a source of fact. It does not use a politician’s sentence as a source of fact when the record contradicts the sentence. Manufactured drama is not evidence. The file is.",
+			},
+			{
+				type: "h",
+				text: "The first step",
+			},
+			{
+				type: "p",
+				text: "The [Declaration of Independence](https://www.archives.gov/founding-docs/declaration-transcript) already named the right of a people to alter or to abolish a government that has become destructive of the ends it was instituted to secure. That is not a call to the street. It is the founding paper of the country. The instruments still on the table are the ones that paper named: the record, the statute, the petition, and the vote. Put the hire back in the job. If the hire will not take the job, send the hire home. Truth is the only thing that can save a nation that has been taught to vote the feeling instead of the file. This journal exists to put the file in one place, in public, so the owner can read it before the next hire is signed.",
+			},
+			{
+				type: "q",
+				text: "We the People own and operate this country. The 535 work here. Actions, not words. That is how a country is taken back.",
 			},
 		],
 	},

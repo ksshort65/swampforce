@@ -40,17 +40,15 @@ export function DispatchIndex() {
             We the People.
           </h1>
           <p className="mt-3 max-w-lg text-[clamp(0.95rem,2.2vw,1.25rem)] leading-snug text-fg/90">
-            This country is not Congress’s. They are the hire. They have
-            gone rogue. Do not vote on emotion, on manufactured hatred, or
-            on a network’s words. Vote the facts. This journal uses
-            documented government sources. No other opinion. No
-            manufactured drama.
+            The Constitution does not open with Congress. It opens with
+            the owner. The 535 are the hire. The hire has gone rogue.
+            Vote the file. Not the feeling.
           </p>
           <div className="mt-5 flex flex-wrap gap-3 pb-2">
             {lead ? (
               <Button asChild>
                 <Link to="/dispatch/$slug" params={{ slug: lead.slug }}>
-                  Latest dispatch
+                  The lead
                 </Link>
               </Button>
             ) : null}
