@@ -245,6 +245,16 @@ export const OVAL = [
     gas: "$5.006 peak",
     note: "Nationwide encounters. CPI June 2022. EIA weekly regular: $5.006 the week of June 13, 2022.",
   },
+  {
+    who: "Trump 2",
+    when: "FY2025–",
+    enc: "0.69 million",
+    encN: 0.69,
+    cpi: "4.2%",
+    cpiN: 4.2,
+    gas: "$4.50 peak",
+    note: "FY2025 nationwide 691,906. Southwest Border Patrol 237,538 — lowest since 1970. CPI peak so far: 4.2% in May 2026 (FRED CPIAUCSL, 12-month). EIA weekly regular: highest week $4.500 (May 11, 2026). The fiscal year started under Biden; the Oval changed January 20.",
+  },
 ] as const;
 
 /** This term, not the four-Oval compare. */
@@ -269,14 +279,14 @@ export const OVAL_LINKS = [
 /** What the Oval number is. CBP’s own count. */
 export const ENCOUNTERS = {
   k: "What an encounter is",
-  v: "Customs and Border Protection counts an encounter when its officers meet a person who is not making a lawful entry. That is Border Patrol between the ports of entry, and officers at land ports, airports, and seaports. It is people stopped, turned back, expelled, or processed. It is not a visa. It is not a gotaway — those are the people CBP did not meet. Nationwide means every door CBP counts, not only the southwest river. Bush and Obama use southwest Border Patrol, the long official table. Trump 1 and Biden use CBP nationwide when that dashboard exists. Four Ovals: two Republican, two Democratic.",
+  v: "Customs and Border Protection counts an encounter when its officers meet a person who is not making a lawful entry. That is Border Patrol between the ports of entry, and officers at land ports, airports, and seaports. It is people stopped, turned back, expelled, or processed. It is not a visa. It is not a gotaway — those are the people CBP did not meet. Nationwide means every door CBP counts, not only the southwest river. Bush and Obama use southwest Border Patrol, the long official table. Trump 1, Biden, and Trump 2 use CBP nationwide when that dashboard exists.",
   href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
 };
 
 /** What CPI peak means. BLS. Not a mood. */
 export const CPI_PEAK = {
   k: "What CPI peak means",
-  v: "CPI is the Consumer Price Index. The Bureau of Labor Statistics measures a basket of what people actually buy — groceries, rent, fuel, the doctor’s office — and reports how much more that basket costs than a year earlier. CPI peak is the highest of those 12-month readings in that Oval. It is not a four-year average. Biden’s 9.1% is June 2022. Bush’s 5.6% is July 2008. Obama’s 3.9% is September 2011. Trump’s first term: 2.9%.",
+  v: "CPI is the Consumer Price Index. The Bureau of Labor Statistics measures a basket of what people actually buy — groceries, rent, fuel, the doctor’s office — and reports how much more that basket costs than a year earlier. CPI peak is the highest of those 12-month readings in that Oval. It is not a four-year average. Biden’s 9.1% is June 2022. Bush’s 5.6% is July 2008. Obama’s 3.9% is September 2011. Trump 1: 2.9%. Trump 2 so far: 4.2% in May 2026.",
   href: "https://www.bls.gov/cpi/",
 };
 

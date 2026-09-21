@@ -106,6 +106,16 @@ export const ADMINS = [
     wti: 123.64,
     wtiWhen: "March 8, 2022",
   },
+  {
+    who: "Trump 2",
+    when: "2025–",
+    gas: 4.5,
+    gasWhen: "week of May 11, 2026",
+    diesel: 5.967,
+    dieselWhen: "week of Sept. 7, 2026",
+    wti: 114.58,
+    wtiWhen: "April 7, 2026",
+  },
 ] as const;
 
 export const MARKS = [
@@ -120,13 +130,13 @@ export const MARKS = [
     href: "https://fred.stlouisfed.org/series/GASDESW",
   },
   {
-    k: "Highest diesel in the series",
-    v: "Sept. 14, 2026  ·  $6.285  ·  Trump 2",
+    k: "Highest diesel in this file so far",
+    v: "Sept. 7, 2026  ·  $5.967  ·  Trump 2  ·  FRED GASDESW",
     href: "https://fred.stlouisfed.org/series/GASDESW",
   },
   {
-    k: "Latest week",
-    v: "Sept. 14, 2026  ·  gasoline $4.319  ·  diesel $6.285",
+    k: "Latest week in the FRED file",
+    v: "Sept. 7, 2026  ·  gasoline $4.157  ·  diesel $5.967",
     href: "https://www.eia.gov/petroleum/gasdiesel/",
   },
 ];

@@ -36,7 +36,7 @@ def admins():
     d.text((64, 76), "Highest week. Not a four-year average.", font=font(36, True), fill=FG)
     d.text(
         (64, 128),
-        "EIA weekly U.S. regular gasoline and on-highway diesel. Biden’s gasoline peak is $5.006.",
+        "EIA weekly U.S. regular gasoline and on-highway diesel. Highest week in that Oval. Biden gasoline $5.006. Trump 2 gasoline $4.50.",
         font=font(22),
         fill=MUTED,
     )
@@ -45,18 +45,18 @@ def admins():
         ("Bush", "July 2008", 4.114, 4.737),
         ("Obama", "May 2011 / Feb 2013", 3.965, 4.159),
         ("Trump 1", "May 2018 / Oct 2018", 2.962, 3.394),
-        ("Biden", "June 13, 2022 / June 20, 2022", 5.006, 5.81),
+        ("Biden", "June 13 / 20, 2022", 5.006, 5.81),
+        ("Trump 2", "May 11 / Sept 7, 2026", 4.5, 5.967),
     ]
-    max_v = 6.285
+    max_v = 6.0
     base_y = 780
     max_h = 520
-    gap = 48
-    group_w = 340
-    bar_w = 128
-    left = 80
-    # axis
-    d.line([(64, base_y), (1536, base_y)], fill=LINE, width=2)
-    potus = [BUSH, OBAMA, TRUMP, BIDEN]
+    gap = 22
+    group_w = 270
+    bar_w = 108
+    left = 50
+    d.line([(48, base_y), (1552, base_y)], fill=LINE, width=2)
+    potus = [BUSH, OBAMA, TRUMP, BIDEN, TRUMP]
     for i, (who, when, gas, diesel) in enumerate(rows):
         x = left + i * (group_w + gap)
         gh = int(max_h * gas / max_v)
@@ -79,6 +79,8 @@ def admins():
     d.text((436, 198), "Trump 1", font=font(20, True), fill=FG)
     d.rectangle([600, 200, 624, 224], fill=BIDEN)
     d.text((636, 198), "Biden", font=font(20, True), fill=FG)
+    d.rectangle([780, 200, 804, 224], fill=TRUMP)
+    d.text((816, 198), "Trump 2", font=font(20, True), fill=FG)
     d.text((64, 850), "Left bar gasoline, right bar diesel. Source: EIA weekly  ·  FRED GASREGW / GASDESW  ·  highest week in that Oval", font=font(18), fill=MUTED)
     im.save(OUT / "chart-pump-admins.jpg", "JPEG", quality=90)
     print("wrote chart-pump-admins.jpg")

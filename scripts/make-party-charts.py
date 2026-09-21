@@ -269,7 +269,7 @@ ax.set_title("THE OPEN BORDER  ·  BY ADMINISTRATION", fontsize=20, fontweight="
 ax.text(
     0.0,
     1.02,
-    "CBP southwest Border Patrol. Bush FY2001–08. Obama FY2009–16. Trump FY2017–20. Biden FY2021–24.",
+    "CBP southwest Border Patrol. Bush FY2001–08. Obama FY2009–16. Trump 1 FY2017–20. Biden FY2021–24. Trump 2 FY2025: 237,538 — lowest since 1970.",
     transform=ax.transAxes,
     fontsize=11,
     color=muted,
@@ -308,27 +308,27 @@ fig.savefig("/workspace/public/images/chart-border.jpg", dpi=140, facecolor=bg, 
 plt.close()
 
 # Nationwide — every path CBP counts
-fy_n = [2021, 2022, 2023, 2024]
-nat = [1.956519, 2.766582, 3.201144, 2.901142]
-sw = [1.734680, 2.378940, 2.475670, 2.135000]
+fy_n = [2021, 2022, 2023, 2024, 2025]
+nat = [1.956519, 2.766582, 3.201144, 2.901142, 0.691906]
+sw = [1.734680, 2.378940, 2.475670, 2.135000, 0.237538]
 other = [n - s for n, s in zip(nat, sw)]
 fig, ax = plt.subplots(figsize=(16, 9), dpi=140, facecolor=bg)
 ax.set_facecolor(bg)
 x = list(range(len(fy_n)))
 w = 0.36
-ax.bar([i - w / 2 for i in x], nat, width=w, color=biden_c, label="Nationwide — every CBP door")
+ax.bar([i - w / 2 for i in x], nat, width=w, color=[biden_c, biden_c, biden_c, biden_c, trump_c], label="Nationwide — every CBP door")
 ax.bar([i + w / 2 for i in x], sw, width=w, color="#6a655c", label="Southwest land only")
 for i, (n, o) in enumerate(zip(nat, other)):
     ax.text(i - w / 2, n + 0.06, f"{n:.2f}M", ha="center", va="bottom", fontsize=10, fontweight="bold", color=fg)
     ax.text(i + w / 2, sw[i] + 0.06, f"{sw[i]:.2f}M", ha="center", va="bottom", fontsize=9, color=muted)
 ax.set_xticks(x)
-ax.set_xticklabels(["FY2021", "FY2022", "FY2023", "FY2024"])
+ax.set_xticklabels(["FY2021", "FY2022", "FY2023", "FY2024", "FY2025"])
 ax.set_ylabel("Encounters  ·  millions", fontsize=12, color=muted)
 ax.set_title("EVERY PATH CBP COUNTS", fontsize=20, fontweight="bold", color=fg, pad=16, loc="left")
 ax.text(
     0.0,
     1.02,
-    "Nationwide FY2021–24 = 10.83 million. Southwest land = 8.73 million. Northern line, airports, seaports, Miami and the rest = 2.10 million.",
+    "Nationwide FY2021–24 = 10.83 million. FY2025, after the Oval changed: 0.69 million nationwide, 237,538 southwest Border Patrol.",
     transform=ax.transAxes,
     fontsize=11,
     color=muted,
@@ -508,10 +508,10 @@ fig.savefig("/workspace/public/images/chart-debt-bars.jpg", dpi=140, facecolor=b
 plt.close()
 
 fig, axes = plt.subplots(1, 2, figsize=(16, 7), dpi=140, facecolor=bg)
-labs = ["Bush\nFY01–08", "Obama\nFY09–16", "Trump 1\nFY17–20", "Biden\nFY21–24"]
-enc = [8.02, 3.31, 3.00, 10.83]
-cpi = [5.6, 3.9, 2.9, 9.1]
-cols_o = [bush_c, obama_c, trump_c, biden_c]
+labs = ["Bush\nFY01–08", "Obama\nFY09–16", "Trump 1\nFY17–20", "Biden\nFY21–24", "Trump 2\nFY25–"]
+enc = [8.02, 3.31, 3.00, 10.83, 0.69]
+cpi = [5.6, 3.9, 2.9, 9.1, 4.2]
+cols_o = [bush_c, obama_c, trump_c, biden_c, trump_c]
 ax = axes[0]
 ax.set_facecolor(bg)
 ax.bar(labs, enc, color=cols_o, width=0.62)
@@ -539,7 +539,7 @@ fig.suptitle("THE OVAL — SAME METERS", fontsize=22, fontweight="bold", color=f
 fig.text(
     0.02,
     0.02,
-    "CPI is the Consumer Price Index: BLS’s basket of groceries, rent, fuel, the doctor. The bar is the highest 12-month reading in that Oval — not a four-year average. Bush July 2008 5.6%. Obama Sept 2011 3.9%. Trump 1: 2.9%. Biden June 2022 9.1%. Bush/Obama border: southwest Border Patrol. Trump 1/Biden: nationwide.",
+    "CPI peak is the highest 12-month reading in that Oval — not a four-year average. Bush July 2008 5.6%. Obama Sept 2011 3.9%. Trump 1: 2.9%. Biden June 2022 9.1%. Trump 2 so far: 4.2% May 2026. Encounters: Bush/Obama southwest Border Patrol. Trump 1 / Biden / Trump 2 nationwide. FY2025 started under Biden; the Oval changed January 20.",
     fontsize=9,
     color=muted,
 )
@@ -817,7 +817,7 @@ fig.text(0.02, 0.97, "HELPED AND HURT  ·  CONGRESS AND THE OVAL", fontsize=22, 
 fig.text(
     0.02,
     0.935,
-    "Majority control is the purse. The Oval spends what Congress votes. Two Republican Ovals, two Democratic Ovals. The bill, not the speech.",
+    "Majority control is the purse. The Oval spends what Congress votes. Five Ovals on the meters. The bill, not the speech.",
     fontsize=12,
     color=muted,
     va="top",
@@ -843,9 +843,9 @@ def box(ax, title, help_lines, hurt_lines, title_c):
         ax.text(0.5, y, "▸  " + line, fontsize=10, color=muted, va="top")
         y -= 0.7
 
-gs = fig.add_gridspec(2, 4, left=0.03, right=0.97, top=0.90, bottom=0.06, hspace=0.18, wspace=0.08)
+gs = fig.add_gridspec(2, 5, left=0.03, right=0.97, top=0.90, bottom=0.06, hspace=0.18, wspace=0.08)
 ax_g = fig.add_subplot(gs[0, :2])
-ax_d = fig.add_subplot(gs[0, 2:])
+ax_d = fig.add_subplot(gs[0, 3:])
 box(
     ax_g,
     "CONGRESS  ·  REPUBLICAN MAJORITY",
@@ -884,6 +884,12 @@ ovals = [
         ["IIJA 2021  ·  CHIPS 2022"],
         ["CPI peak 9.1% June 2022", "Gas $5.006  ·  June 13, 2022", "10.83 million nationwide"],
         biden_c,
+    ),
+    (
+        "TRUMP 2  ·  GOP OVAL",
+        ["SW Border Patrol FY25: 237,538", "Nationwide FY25: 0.69 million"],
+        ["CPI so far 4.2%  ·  May 2026", "Gas $4.50  ·  May 11, 2026"],
+        trump_c,
     ),
 ]
 for i, (title, h, u, c) in enumerate(ovals):
