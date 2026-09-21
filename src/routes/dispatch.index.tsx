@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { homeHead } from "@/lib/share-head";
 import { START_HERE, getPost } from "@/lib/content";
+import { LAWS } from "@/lib/scorecard";
 
 export const Route = createFileRoute("/dispatch/")({
   component: DispatchIndex,
@@ -79,8 +80,33 @@ export function DispatchIndex() {
             Midterms
           </p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
-            Congressional Scorecard
+            Policy — success and failure
           </h2>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
+            Judge the parties by the bills they passed, not the speeches.
+            Helped and hurt are on the scorecard. Each line is a statute or an official table.
+          </p>
+          <Link to="/scorecard" className="mt-6 block text-fg no-underline">
+            <img
+              src="/images/chart-policy.jpg"
+              alt="Policy — success and failure"
+              className="w-full rounded-lg border border-border"
+            />
+          </Link>
+          <ul className="mt-8 grid grid-cols-1 gap-2 sm:grid-cols-2">
+            {LAWS.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block min-h-11 rounded-md border border-border bg-bg px-4 py-3 font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:border-sage hover:text-fg"
+                >
+                  {l.k} →
+                </a>
+              </li>
+            ))}
+          </ul>
           <div className="mt-6">
             <Button asChild>
               <Link to="/scorecard">

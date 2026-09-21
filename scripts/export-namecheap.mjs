@@ -3,7 +3,7 @@ import { basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { posts, SITE, START_HERE, JOURNAL, getPost } from "../src/lib/content.ts";
-import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, OVAL, OVAL_LINKS, PRICES, RECORD, SCORE_UPDATED } from "../src/lib/scorecard.ts";
+import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, LAWS, OVAL, OVAL_LINKS, PRICES, RECORD, SCORE_UPDATED } from "../src/lib/scorecard.ts";
 import { ADMINS, GALLON_STACK, MARKS, OPEC_FILE, PUMP_CHARTS, PUMP_SOURCES, PUMP_UPDATED, RULES_FILE, TAX_FILE } from "../src/lib/pump.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -246,7 +246,10 @@ const indexBody = `
 </section>
 <section class="pad">
  <p class="kicker">Midterms</p>
- <h2>Congressional Scorecard</h2>
+ <h2>Policy — success and failure</h2>
+ <p>Judge the parties by the bills they passed, not the speeches. Helped and hurt are on the scorecard. Each line is a statute or an official table.</p>
+ <a href="/scorecard.html"><img src="/images/chart-policy.jpg" alt="Policy — success and failure"/></a>
+ <div class="grid" style="padding-left:0;padding-right:0">${LAWS.map((l) => `<a class="card" href="${l.href}" style="padding:1rem"><h3 style="padding:0">${esc(l.k)}</h3></a>`).join("")}</div>
  <a class="btn" href="/scorecard.html">Scorecard</a>
 </section>
 <section class="band pad">
@@ -319,6 +322,7 @@ writeFileSync(
   body: `<main class="wrap" style="max-width:72rem">
 <p class="kicker">Congressional scorecard · updated ${esc(SCORE_UPDATED)}</p>
 <h1>Both parties have failed the American people.</h1>
+<div class="grid" style="padding-left:0;padding-right:0">${LAWS.map((l) => `<a class="card" href="${l.href}" style="padding:1rem"><h3 style="padding:0">${esc(l.k)}</h3></a>`).join("")}</div>
 <p class="btns">
  <a class="btn" href="#gop">Republicans</a>
  <a class="btn" href="#dem">Democrats</a>
@@ -335,6 +339,11 @@ ${RECORD.map((col) => {
 ${tally ? `<p style="font-size:1.8rem;font-weight:800">${esc(tally.added)}</p>` : ""}
 <p>${esc(col.control)}</p>
 <p>${esc(col.debt)}</p>
+<figure><img src="/images/chart-policy.jpg" alt="Policy — success and failure"/></figure>
+<p class="kicker">Helped</p>
+<ul>${col.plus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
+<p class="kicker">Hurt</p>
+<ul>${col.minus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
 ${col.id === "dem" ? borderHtml() : ""}
 ${col.id === "dem" ? borderMoveHtml() : ""}
 ${col.id === "dem" ? borderHarmHtml() : ""}
@@ -345,10 +354,6 @@ ${col.id === "dem" ? benefitsHtml() : ""}
 ${col.id === "dem" ? workerHtml() : ""}
 ${col.id === "dem" ? priceLinksHtml() : ""}
 ${col.id === "dem" ? `<figure><img src="/images/chart-inflation-party.jpg" alt="Actual inflation"/></figure>` : ""}
-<p class="kicker">Helped</p>
-<ul>${col.plus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
-<p class="kicker">Hurt</p>
-<ul>${col.minus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
 </div>`;
 }).join("")}
 <div class="panel" id="oval">

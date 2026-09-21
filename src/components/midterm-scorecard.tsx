@@ -15,6 +15,7 @@ import {
   DEBT_NOW,
   DEBT_TALLY,
   DRIVERS,
+  LAWS,
   PRICES,
   RECORD,
   SCORE_UPDATED,
@@ -70,6 +71,21 @@ function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
       ) : null}
       <p className="mt-3 text-sm leading-relaxed text-muted">{col.control}</p>
       <p className="mt-2 text-sm leading-relaxed">{col.debt}</p>
+      <figure className="mt-6">
+        <img
+          src="/images/chart-policy.jpg"
+          alt="Policy — success and failure"
+          className="h-auto w-full rounded-md border border-border"
+        />
+      </figure>
+      <p className="mt-6 font-display text-xs font-semibold tracking-[0.2em] uppercase">
+        Helped
+      </p>
+      <BillList rows={col.plus} tone="plus" />
+      <p className="mt-8 font-display text-xs font-semibold tracking-[0.2em] uppercase">
+        Hurt
+      </p>
+      <BillList rows={col.minus} tone="minus" />
       {col.id === "dem" ? <BorderFile /> : null}
       {col.id === "dem" ? <BorderMove /> : null}
       {col.id === "dem" ? <BorderHarm /> : null}
@@ -112,14 +128,6 @@ function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
           />
         </figure>
       ) : null}
-      <p className="mt-6 font-display text-xs font-semibold tracking-[0.2em] uppercase">
-        Helped
-      </p>
-      <BillList rows={col.plus} tone="plus" />
-      <p className="mt-8 font-display text-xs font-semibold tracking-[0.2em] uppercase">
-        Hurt
-      </p>
-      <BillList rows={col.minus} tone="minus" />
     </div>
   );
 }
@@ -388,6 +396,20 @@ export function MidtermScorecard() {
         <h2 className="mt-2 max-w-3xl font-display text-3xl font-bold tracking-wide uppercase sm:text-5xl">
           Both parties have failed the American people.
         </h2>
+        <ul className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
+          {LAWS.map((l) => (
+            <li key={l.href}>
+              <a
+                href={l.href}
+                target="_blank"
+                rel="noreferrer"
+                className="block min-h-11 rounded-md border border-border bg-surface px-4 py-3 font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:border-sage hover:text-fg"
+              >
+                {l.k} →
+              </a>
+            </li>
+          ))}
+        </ul>
 
         <div className="mt-8 grid grid-cols-5 gap-2">
           {(

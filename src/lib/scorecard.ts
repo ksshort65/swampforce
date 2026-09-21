@@ -47,6 +47,20 @@ export const DEBT_TALLY: {
 export const DEBT_MATH =
   "$10.96 + $12.65 + $16.48 = $40.09. Before 1857 the two parties did not yet run the modern Congress. The debt then was $29 million.";
 
+/** Official statute and table. Always on the page. Not a caption. */
+export const LAWS: { k: string; href: string }[] = [
+  { k: "Article I — the purse", href: "https://constitution.congress.gov/constitution/article-1/" },
+  { k: "Article VI — supremacy", href: "https://constitution.congress.gov/constitution/article-6/" },
+  { k: "The oath — 5 U.S.C. § 3331", href: "https://www.law.cornell.edu/uscode/text/5/3331" },
+  { k: "Budget Act — twelve bills by October 1", href: "https://www.congress.gov/bill/93rd-congress/house-bill/7130" },
+  { k: "GAO — fraud $233–521B a year", href: "https://www.gao.gov/products/gao-25-107746" },
+  { k: "Treasury — debt to the penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+  { k: "8 U.S.C. § 1324 — harboring", href: "https://www.law.cornell.edu/uscode/text/8/1324" },
+  { k: "8 U.S.C. § 1373 — no gag on ICE", href: "https://www.law.cornell.edu/uscode/text/8/1373" },
+  { k: "8 U.S.C. § 1611 — federal benefits", href: "https://www.law.cornell.edu/uscode/text/8/1611" },
+  { k: "2 U.S.C. § 1415 — they billed you for their misconduct", href: "https://www.law.cornell.edu/uscode/text/2/1415" },
+];
+
 /** Oval — nationwide CBP, BLS CPI peak, EIA gallon. */
 export const OVAL = [
   {
@@ -803,14 +817,14 @@ export const CHARTS: {
 ];
 
 const COMPARE_SRC = [
+  "/images/chart-policy.jpg",
+  "/images/chart-debt-bars.jpg",
   "/images/chart-oval.jpg",
   "/images/chart-border-toll.jpg",
-  "/images/chart-debt-bars.jpg",
   "/images/chart-inflation-party.jpg",
   "/images/chart-border-all.jpg",
   "/images/chart-border.jpg",
   "/images/chart-crime.jpg",
-  "/images/chart-policy.jpg",
   "/images/chart-harm-pie.jpg",
   "/images/chart-pump-admins.jpg",
   "/images/chart-pump-years.jpg",
