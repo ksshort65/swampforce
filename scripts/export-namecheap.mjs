@@ -335,7 +335,7 @@ writeFileSync(
 ${SCORE_TABS.map((f) => `
 <div class="panel" id="${f.id}-charts">
 <p class="btns"><a class="btn" href="#${f.id}-charts">Charts</a><a class="btn out" href="#${f.id}-read">Read</a></p>
-${f.id === "oval" ? `<p class="kicker">${esc(ENCOUNTERS.k)}</p><p>${esc(ENCOUNTERS.v)}</p><p><a href="${ENCOUNTERS.href}">CBP — nationwide encounters →</a></p><p class="kicker">${esc(CPI_PEAK.k)}</p><p>${esc(CPI_PEAK.v)}</p><p><a href="${CPI_PEAK.href}">BLS — Consumer Price Index →</a></p>` : ""}
+${f.id === "oval" || f.id === "compare" ? `<p class="kicker">${esc(ENCOUNTERS.k)}</p><p>${esc(ENCOUNTERS.v)}</p><p><a href="${ENCOUNTERS.href}">CBP — nationwide encounters →</a></p><p class="kicker">${esc(CPI_PEAK.k)}</p><p>${esc(CPI_PEAK.v)}</p><p><a href="${CPI_PEAK.href}">BLS — Consumer Price Index →</a></p>` : ""}
 ${TAB_CHARTS[f.id].map((c) => `<figure><p class="kicker">${esc(c.title)}</p><img src="${c.src}" alt="${esc(c.title)}"/><figcaption style="color:#a39e93;font-size:.85rem">${c.sources.map((s) => `<a href="${s.href}">${esc(s.label)}</a>`).join(" · ")}</figcaption></figure>`).join("")}
 </div>`).join("")}
 ${RECORD.map((col) => {
@@ -383,6 +383,16 @@ ${col.id === "dem" ? borderHtml() + borderMoveHtml() + borderHarmHtml() + benefi
 <p class="kicker">${esc(PURSE.k)}</p>
 <p>${esc(PURSE.v)}</p>
 <p><a href="${PURSE.href}">Article I →</a></p>
+<p class="kicker">${esc(ENCOUNTERS.k)}</p>
+<p>${esc(ENCOUNTERS.v)}</p>
+<p class="kicker">${esc(CPI_PEAK.k)}</p>
+<p>${esc(CPI_PEAK.v)}</p>
+<div class="grid">${OVAL.map((row) => `<div class="card" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><p>${esc(row.when)}</p><h3>${esc(row.enc)}</h3><h3>${esc(row.cpi)}</h3><p>CPI peak — highest 12-month rise in prices that Oval (groceries, rent, fuel)</p><h3>${esc(row.gas)}</h3></div>`).join("")}</div>
+<h2>${esc(ALIENS.k)}</h2>
+<p>${esc(ALIENS.v)}</p>
+<figure><img src="/images/chart-aliens.jpg" alt="The invasion bill"/></figure>
+<h2>The information war</h2>
+${HOAXES.map((h) => `<a class="card" href="${h.href}" style="padding:1.2rem"><h3>${esc(h.k)}</h3><p>${esc(h.v)}</p></a>`).join("")}
 <div class="grid">${MAJORITY.map((m) => `<a class="card" href="${m.href}" style="padding:1.2rem"><h3>${esc(m.who)}</h3><p>${esc(m.when)}</p><p>${esc(m.could)}</p><p>${esc(m.did)}</p></a>`).join("")}</div>
 <div class="grid">${DEBT_TALLY.map((row) => {
   const n = Number(row.added.replace(/[^0-9.]/g, ""));

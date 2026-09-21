@@ -9,7 +9,7 @@ export type ScoreRow = {
 };
 
 /** Living midterms card. Update the cells when a vote or a Treasury table changes the file. */
-export const SCORE_UPDATED = "2026-09-20";
+export const SCORE_UPDATED = "2026-09-21";
 
 /** Cover and Scorecard. Five rooms. Charts or the file. */
 export const SCORE_TABS: { id: "gop" | "dem" | "split" | "oval" | "compare"; k: string; v: string }[] = [
@@ -17,7 +17,7 @@ export const SCORE_TABS: { id: "gop" | "dem" | "split" | "oval" | "compare"; k: 
   { id: "dem", k: "Dem", v: "Helped, hurt, the information war." },
   { id: "split", k: "Split", v: "When they split the gavel." },
   { id: "oval", k: "Oval", v: "Four administrations." },
-  { id: "compare", k: "Compare", v: "The plates, the pie, both of them." },
+  { id: "compare", k: "Compare", v: "The whole file, one room." },
 ];
 /** @deprecated use SCORE_TABS */
 export const SCORE_FILES = SCORE_TABS;
@@ -1143,21 +1143,28 @@ export const CHARTS: {
 
 const COMPARE_SRC = [
   "/images/chart-oval.jpg",
-  "/images/chart-policy.jpg",
   "/images/chart-debt-why.jpg",
   "/images/chart-aliens.jpg",
-  "/images/chart-border.jpg",
   "/images/chart-inflation-party.jpg",
+  "/images/chart-policy.jpg",
+  "/images/chart-border.jpg",
   "/images/chart-crime.jpg",
   "/images/chart-pump-admins.jpg",
+  "/images/chart-pump-years.jpg",
+  "/images/chart-pump-flow.jpg",
 ];
 
 export const COMPARE_WIDE = new Set([
   "/images/chart-oval.jpg",
-  "/images/chart-border-toll.jpg",
+  "/images/chart-debt-why.jpg",
+  "/images/chart-aliens.jpg",
   "/images/chart-inflation-party.jpg",
   "/images/chart-policy.jpg",
+  "/images/chart-border.jpg",
+  "/images/chart-crime.jpg",
+  "/images/chart-pump-admins.jpg",
   "/images/chart-pump-years.jpg",
+  "/images/chart-pump-flow.jpg",
 ]);
 
 export const COMPARE_CHARTS = COMPARE_SRC.map((src) => {
@@ -1165,9 +1172,11 @@ export const COMPARE_CHARTS = COMPARE_SRC.map((src) => {
   return (
     hit ?? {
       src,
-      title: src.includes("pump-admins")
+      title: src.includes("pump-flow")
+        ? "How a gallon is built — OPEC to the pump"
+        : src.includes("pump-admins")
         ? "The gallon — four administrations"
-        : "Regular gasoline by year",
+        : "Highest week of each year, 2001–2026",
       sources: [
         { label: "EIA", href: "https://www.eia.gov/petroleum/gasdiesel/" },
         { label: "FRED GASREGW", href: "https://fred.stlouisfed.org/series/GASREGW" },

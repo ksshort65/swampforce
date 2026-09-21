@@ -38,7 +38,7 @@ type Mode = "charts" | "read";
 function ChartStack({ tab }: { tab: TabId }) {
   return (
     <div className="space-y-8">
-      {tab === "oval" ? (
+      {tab === "oval" || tab === "compare" ? (
         <>
         <div className="rounded-md border border-border bg-surface p-5">
           <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
@@ -417,7 +417,7 @@ function WorkerFile() {
   );
 }
 
-function OvalFile() {
+function OvalFile({ cardsOnly = false }: { cardsOnly?: boolean }) {
   return (
     <div className="space-y-8">
       <div className="rounded-md border border-border bg-surface p-5">
@@ -478,6 +478,8 @@ function OvalFile() {
         <p className="mt-3 font-display text-2xl font-bold tracking-wide">{OVAL_NOW.enc}</p>
         <p className="mt-2 text-sm leading-relaxed text-muted">{OVAL_NOW.note}</p>
       </a>
+      {cardsOnly ? null : (
+        <>
       <figure>
         <img
           src="/images/chart-oval.jpg"
@@ -499,6 +501,8 @@ function OvalFile() {
           className="h-auto w-full rounded-md border border-border"
         />
       </figure>
+        </>
+      )}
       <ul className="space-y-2">
         {OVAL_LINKS.map((l) => (
           <li key={l.href}>
@@ -717,6 +721,9 @@ export function MidtermScorecard() {
                 Article I →
               </a>
             </div>
+            <OvalFile cardsOnly />
+            <AliensFile />
+            <HoaxesFile />
             <div className="grid gap-4 md:grid-cols-3">
               {MAJORITY.map((m) => (
                 <a
