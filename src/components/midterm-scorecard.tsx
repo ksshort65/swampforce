@@ -389,7 +389,7 @@ export function MidtermScorecard() {
           Both parties have failed the American people.
         </h2>
 
-        <div className="mt-8 grid grid-cols-5 gap-3">
+        <div className="mt-8 grid grid-cols-5 gap-2">
           {(
             [
               ["gop", "Republicans"],
@@ -405,8 +405,8 @@ export function MidtermScorecard() {
               onClick={() => setTab(id)}
               className={
                 tab === id
-                  ? "flex min-h-20 items-center justify-center rounded-md border-2 border-sage bg-sage px-4 py-5 font-display text-xl font-bold tracking-[0.16em] text-black uppercase"
-                  : "flex min-h-20 items-center justify-center rounded-md border-2 border-sage bg-surface px-4 py-5 font-display text-xl font-bold tracking-[0.16em] text-fg uppercase hover:bg-ink"
+                  ? "flex min-h-16 min-w-0 items-center justify-center rounded-md border-2 border-sage bg-sage px-1 py-4 text-center font-display text-[13px] font-bold tracking-wide text-black uppercase sm:text-base"
+                  : "flex min-h-16 min-w-0 items-center justify-center rounded-md border-2 border-sage bg-surface px-1 py-4 text-center font-display text-[13px] font-bold tracking-wide text-fg uppercase hover:bg-ink sm:text-base"
               }
             >
               {label}

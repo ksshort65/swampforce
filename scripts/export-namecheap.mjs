@@ -81,8 +81,8 @@ q, blockquote{display:block;font-size:1.35rem;line-height:1.55;margin:1.7rem 0;c
 .card p{padding:0 1rem 1rem;color:var(--muted)}
 footer{border-top:1px solid var(--line);padding:2rem 1rem;color:var(--muted);font-size:.9rem}
 footer .f{max-width:72rem;margin:0 auto;display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.btns{display:grid;grid-template-columns:repeat(5,1fr);gap:.75rem;margin:1.5rem 0}
-.btns .btn{margin:0;width:100%;text-align:center}
+.btns{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.5rem;margin:1.5rem 0}
+.btns .btn{margin:0;width:100%;text-align:center;font-size:13px;letter-spacing:.06em;padding:.9rem .25rem}
 `;
 
 function esc(s = "") {
