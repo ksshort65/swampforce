@@ -39,6 +39,7 @@ const needed = new Set([
  "chart-what-they-bought.jpg",
  "chart-they-dont-write.jpg",
  "chart-paying-taliban.jpg",
+ "chart-fema-two-jobs.jpg",
  "chart-oval.jpg",
  "chart-harm-pie.jpg",
  "chart-pump-admins.jpg",

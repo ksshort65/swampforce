@@ -1016,6 +1016,26 @@ ax.text(0.4, 0.28, "SIGAR 24-22  ·  SIGAR 25-16  ·  SIGAR 24-12  ·  SIGAR Aug
 fig.savefig("/workspace/public/images/chart-paying-taliban.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
+fig, ax = plt.subplots(figsize=(16, 8), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+ax.set_xlim(0, 16)
+ax.set_ylim(0, 7.6)
+ax.axis("off")
+ax.text(0.4, 7.1, "FEMA RAN TWO JOBS", fontsize=24, fontweight="bold", color=fg, va="top")
+ax.text(0.4, 6.45, "Americans on Immediate Needs Funding. Aliens on a $1.4 billion grant. $425 million questioned.", fontsize=13, color=muted, va="top")
+jobs = [
+    (0.4, "AMERICANS", "Aug. 29, 2023: DRF approaching\nexhaustion. Immediate Needs\nFunding. Recovery paused.", gop_c),
+    (5.6, "ALIENS", "CBP → FEMA: $1.45 billion.\nAwards: $1.4 billion.\nHotels, clothes, phones.", dem_c),
+    (10.8, "THE AUDITOR", "OIG-26-04: $425 million\nquestioned. FEMA could not\nshow it was humanitarian.", "#c53030"),
+]
+for x, title, body, c in jobs:
+    ax.add_patch(plt.Rectangle((x, 0.95), 4.8, 4.95, facecolor="#141414", edgecolor=c, lw=2))
+    ax.text(x + 2.4, 5.2, title, fontsize=16, fontweight="bold", color=c, ha="center")
+    ax.text(x + 2.4, 2.9, body, fontsize=14, color=fg, ha="center")
+ax.text(0.4, 0.3, "FEMA INF advisory  ·  CRS R47676  ·  DHS OIG-26-04  ·  House Homeland Oct. 11, 2024", fontsize=10, color=muted)
+fig.savefig("/workspace/public/images/chart-fema-two-jobs.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
 
 
 

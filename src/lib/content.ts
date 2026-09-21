@@ -1667,6 +1667,7 @@ export const posts: Post[] = [
 		series: "The Clip",
 		part: 4,
 		receipts: [
+			{ label: "Kamala Harris — Minnesota Freedom Fund, June 1, 2020", href: "https://x.com/KamalaHarris/status/1267555018128965643" },
 			{ label: "EO 14252 — Making the District of Columbia Safe and Beautiful", href: "https://www.federalregister.gov/documents/2025/03/31/2025-05630/making-the-district-of-columbia-safe-and-beautiful" },
 			{ label: "EO 14253 — Restoring Truth and Sanity to American History", href: "https://www.federalregister.gov/documents/2025/04/03/2025-05836/restoring-truth-and-sanity-to-american-history" },
 			{ label: "EO 13933 — Protecting American Monuments (2020)", href: "https://www.federalregister.gov/documents/2020/06/30/2020-14231/protecting-american-monuments-memorials-and-statues-and-combating-recent-criminal-violence" },
@@ -1685,7 +1686,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The [FBI](https://www.fbi.gov/news/press-releases/fbi-releases-2025-reported-crimes-in-the-nation-statistics) now puts the 2025 murder rate at **4.1** per 100,000 — tied with 1955 and 1956, the lowest since national estimates began. Murder down 18.1 percent. Violent crime down 9.3 percent, the largest year-to-year drop in that series. The 2020 bar on this chart is **6.6**, in a year they called peaceful while a precinct burned. The decline began before January 20, 2025. That sentence stays. So does this one: the Oval that spent 2020 explaining away the fire is not the Oval writing the order to restore the marble and enforce the capital. Neighbors were taught that the statues were the problem and the street was the conscience. The file is the opposite. Cleaning the capital is not a taste in architecture. It is a verdict on the caption.",
+				text: "The [FBI](https://www.fbi.gov/news/press-releases/fbi-releases-2025-reported-crimes-in-the-nation-statistics) now puts the 2025 murder rate at **4.1** per 100,000 — tied with 1955 and 1956, the lowest since national estimates began. Murder down 18.1 percent. Violent crime down 9.3 percent, the largest year-to-year drop in that series. The 2020 bar on this chart is **6.6**, in a year they called peaceful while a precinct burned. The decline began before January 20, 2025. That sentence stays. So does this one: the Oval that spent 2020 explaining away the fire is not the Oval writing the order to restore the marble and enforce the capital.",
+			},
+			{
+				type: "p",
+				text: "The bail was the return ticket. On June 1, 2020, then-Senator Kamala Harris posted: “If you’re able to, chip in now to the @MNFreedomFund to help post bail for those protesting on the ground in Minnesota.” [The post is still up.](https://x.com/KamalaHarris/status/1267555018128965643) Sixteen days later she said they should not let up. Minneapolis had already seen a precinct burn. She did not say stop the arson. She pointed donors at a fund so the people in the street could return to the street. Maxine Waters: create a crowd. Ayanna Pressley: bring the fire. Nancy Pelosi: people will do what they do. The wording, the insured bill, and the clean hands are in [They keep their hands clean](/dispatch/clean-hands). This page is why they hate the cleanup. The caption was protest. The file was a crime wave with a bail fund on top.",
 			},
 			{
 				type: "q",
@@ -2004,7 +2009,7 @@ export const posts: Post[] = [
 	{
 		slug: "paying-the-taliban",
 		title: "Paying the Taliban",
-		dek: "A Senate that will not read the bill still votes the money. SIGAR found the money benefited the Taliban. That is not leadership. It is corruption of the job.",
+		dek: "SIGAR: maybe 30 to 40 percent of donor funds reaches the population. A Senate that will not read the bill still votes the money. That is not leadership.",
 		date: "2026-09-21",
 		category: "Dispatch",
 		readMinutes: 5,
@@ -2031,7 +2036,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "[SIGAR 24-22](https://www.sigar.mil/Portals/147/Files/Reports/Audits-and-Inspections/Performance-Audits/SIGAR-24-22-AR.pdf), May 2024: thirty-eight implementing partners paid at least **$10.9 million** of U.S. taxpayer money to the Taliban-controlled government in taxes, utilities, fees, and customs. SIGAR said that figure is a fraction. The UN took about **$1.6 billion** in U.S. funding for Afghanistan in that window and did not report the taxes its subawardees paid. In August 2025 SIGAR called the delivery system [broken](https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo248012/pdf/GOVPUB-S-PURL-gpo248012.pdf). An implementing partner estimated that after taxes, fees, bribery, and extortion, maybe **30 to 40 percent** of donor funds reaches the population. Every stair is a tax. The Taliban collect it.",
+				text: "[SIGAR 24-22](https://www.sigar.mil/Portals/147/Files/Reports/Audits-and-Inspections/Performance-Audits/SIGAR-24-22-AR.pdf), May 2024: thirty-eight implementing partners paid at least **$10.9 million** of U.S. taxpayer money to the Taliban-controlled government in taxes, utilities, fees, and customs. SIGAR said that figure is a fraction. The UN took about **$1.6 billion** in U.S. funding for Afghanistan in that window and did not report the taxes its subawardees paid. In August 2025 SIGAR called the delivery system [broken](https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo248012/pdf/GOVPUB-S-PURL-gpo248012.pdf). An implementing partner estimated that after taxes, fees, bribery, and extortion, maybe **30 to 40 percent** of donor funds reaches the population. That is the humanitarian share SIGAR put on paper. The rest is the stair tax. The Taliban collect it. The caption was aid. The file is a tax on aid.",
 			},
 			{
 				type: "p",
@@ -2040,6 +2045,47 @@ export const posts: Post[] = [
 			{
 				type: "q",
 				text: "A Senate that will not read the bill is not leading. It is paying. SIGAR named who collected.",
+			},
+		],
+	},
+	{
+		slug: "fema-ran-two-jobs",
+		title: "FEMA ran two jobs",
+		dek: "The disaster fund hit Immediate Needs Funding for Americans. The same agency awarded $1.4 billion for aliens. The Inspector General could not verify $425 million of that pile was even used as humanitarian aid.",
+		date: "2026-09-21",
+		category: "Dispatch",
+		readMinutes: 5,
+		image: "/images/chart-fema-two-jobs.jpg",
+		imageAlt: "FEMA: Immediate Needs Funding for Americans. $1.4 billion for aliens. $425 million questioned.",
+		series: "The Search",
+		part: 0,
+		receipts: [
+			{ label: "FEMA — Immediate Needs Funding, Aug. 29, 2023", href: "https://content.govdelivery.com/attachments/USDHSFEMA/2023/08/29/file_attachments/2597953/FEMA%20Advisory%20FEMA%20Announces%20Implementation%20of%20Immediate%20Needs%20Funding%2020230829.pdf" },
+			{ label: "CRS — Disaster Relief Fund, R47676", href: "https://www.congress.gov/crs-product/R47676" },
+			{ label: "DHS OIG-26-04 — $425 million questioned", href: "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf" },
+			{ label: "House Homeland — letter to Mayorkas, Oct. 11, 2024", href: "https://homeland.house.gov/wp-content/uploads/2024/10/2024-10-11-Green-et-al-to-Mayorkas-DHS-re-FEMA-Funding-Priorities.pdf" },
+		],
+		body: [
+			{
+				type: "img",
+				src: "/images/chart-fema-two-jobs.jpg",
+				alt: "DRF on Immediate Needs. SSP $1.4 billion. $425 million questioned.",
+			},
+			{
+				type: "p",
+				text: "On August 29, 2023, [FEMA announced Immediate Needs Funding](https://content.govdelivery.com/attachments/USDHSFEMA/2023/08/29/file_attachments/2597953/FEMA%20Advisory%20FEMA%20Announces%20Implementation%20of%20Immediate%20Needs%20Funding%2020230829.pdf). The Disaster Relief Fund was “approaching exhaustion.” New Public Assistance that was not life-saving would pause. Hazard mitigation would pause. Americans waiting on long-term recovery after fire and hurricane would wait. [CRS](https://www.congress.gov/crs-product/R47676) later wrote that FEMA had to restrict obligations to preserve money for immediate response, and that the unobligated DRF balance that morning was **$3.4 billion**. That is the file on Americans.",
+			},
+			{
+				type: "p",
+				text: "The same agency ran a second job. [DHS OIG-26-04](https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf): Congress directed CBP to transfer **$1.45 billion** to FEMA for Shelter and Services — $800 million in fiscal 2023, $650 million in fiscal 2024. FEMA awarded nearly **$1.4 billion** in those two years for Emergency Food and Shelter-Humanitarian and SSP. Hotels. Clothing. Cell phone plans. The Inspector General could not ensure the money was used as the law required. FEMA did not review EFSP-H expenditures for allowable costs and eligible aliens — **$425 million in questioned costs**. Another **$16.5 million** questioned on SSP payment requests. The caption was humanitarian aid. The auditor could not show how much of that pile was humanitarian aid.",
+			},
+			{
+				type: "p",
+				text: "Say the wire correctly. SSP was not a check drawn on the Disaster Relief Fund. It was CBP money Congress moved to FEMA. The purse is still one purse. One cabinet. One season. Americans on Immediate Needs Funding. Aliens on a $1.4 billion grant FEMA administered. In October 2024, after Hurricane Helene, the Secretary told reporters FEMA did not have the funds to make it through the hurricane season. [House Homeland wrote him](https://homeland.house.gov/wp-content/uploads/2024/10/2024-10-11-Green-et-al-to-Mayorkas-DHS-re-FEMA-Funding-Priorities.pdf) the same week: disaster communities on one line, migrant shelter on the other. [What the taxpayer bought](/dispatch/what-the-taxpayer-bought) is the shopping list. This page is the two jobs. The disaster fund was short for Americans. The migrant grants went out. The Inspector General still cannot certify $425 million of the “aid.”",
+			},
+			{
+				type: "q",
+				text: "Americans got Immediate Needs Funding. Aliens got the grant. The auditor could not verify the humanitarian pile.",
 			},
 		],
 	},
@@ -3087,6 +3133,7 @@ export const JOURNAL = [
 		slugs: [
 			"they-opened-the-border",
 			"what-the-taxpayer-bought",
+			"fema-ran-two-jobs",
 			"the-hospital-and-the-morgue",
 			"find-them",
 			"who-got-paid",

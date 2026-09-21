@@ -1039,6 +1039,15 @@ export const CHARTS: {
     ],
   },
   {
+    src: "/images/chart-fema-two-jobs.jpg",
+    title: "FEMA ran two jobs",
+    sources: [
+      { label: "FEMA INF advisory", href: "https://content.govdelivery.com/attachments/USDHSFEMA/2023/08/29/file_attachments/2597953/FEMA%20Advisory%20FEMA%20Announces%20Implementation%20of%20Immediate%20Needs%20Funding%2020230829.pdf" },
+      { label: "DHS OIG-26-04", href: "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf" },
+      { label: "CRS R47676", href: "https://www.congress.gov/crs-product/R47676" },
+    ],
+  },
+  {
     src: "/images/chart-what-they-bought.jpg",
     title: "What the taxpayer bought",
     sources: [
@@ -1266,6 +1275,7 @@ export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<ty
   gop: chartsFor("/images/chart-policy.jpg", "/images/chart-debt-why.jpg", "/images/chart-inflation-party.jpg"),
   dem: chartsFor(
     "/images/chart-lawfare.jpg",
+    "/images/chart-fema-two-jobs.jpg",
     "/images/chart-what-they-bought.jpg",
     "/images/chart-aliens.jpg",
     "/images/chart-policy.jpg",
