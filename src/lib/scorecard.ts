@@ -157,6 +157,11 @@ export const LAWS: { k: string; href: string }[] = [
 /** The caption, then the charge sheet. Official files. */
 export const HOAXES: { k: string; v: string; href: string }[] = [
   {
+    k: "The hire is the country",
+    v: "The people hired the president. Process used as punishment against the hire is process used against the employer. Two impeachments. Four criminal dockets. A Russia caption Durham said was opened without actual evidence of collusion. That is not a spat with one man. It is a campaign against the vote.",
+    href: "https://constitution.congress.gov/constitution/article-2/",
+  },
+  {
     k: "Crossfire Hurricane",
     v: "The Durham report: the FBI opened a full investigation on raw, uncorroborated intelligence. It did not have actual evidence of collusion in its holdings when the case began. Years of a Russia caption followed. The file did not.",
     href: "https://www.justice.gov/storage/durhamreport.pdf",
@@ -1011,6 +1016,16 @@ export const CHARTS: {
   sources: { label: string; href: string }[];
 }[] = [
   {
+    src: "/images/chart-lawfare.jpg",
+    title: "The hire is the country — lawfare against the vote",
+    sources: [
+      { label: "Article II", href: "https://constitution.congress.gov/constitution/article-2/" },
+      { label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
+      { label: "Horowitz IG — FISA", href: "https://oig.justice.gov/reports/2019/o1912.pdf" },
+      { label: "USAO-DC — January 6 tally", href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol" },
+    ],
+  },
+  {
     src: "/images/chart-helped-hurt.jpg",
     title: "Helped and hurt — Congress and the Oval",
     sources: [
@@ -1148,6 +1163,7 @@ export const CHARTS: {
 
 const COMPARE_SRC = [
   "/images/chart-helped-hurt.jpg",
+  "/images/chart-lawfare.jpg",
   "/images/chart-oval.jpg",
   "/images/chart-debt-why.jpg",
   "/images/chart-aliens.jpg",
@@ -1162,6 +1178,7 @@ const COMPARE_SRC = [
 
 export const COMPARE_WIDE = new Set([
   "/images/chart-helped-hurt.jpg",
+  "/images/chart-lawfare.jpg",
   "/images/chart-oval.jpg",
   "/images/chart-debt-why.jpg",
   "/images/chart-aliens.jpg",
@@ -1201,6 +1218,7 @@ function chartsFor(...srcs: string[]) {
 export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<typeof chartsFor>> = {
   gop: chartsFor("/images/chart-policy.jpg", "/images/chart-debt-why.jpg", "/images/chart-inflation-party.jpg"),
   dem: chartsFor(
+    "/images/chart-lawfare.jpg",
     "/images/chart-policy.jpg",
     "/images/chart-aliens.jpg",
     "/images/chart-inflation-party.jpg",

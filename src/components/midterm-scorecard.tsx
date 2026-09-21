@@ -221,8 +221,9 @@ function HoaxesFile() {
         Information war
       </p>
       <p className="mt-3 text-base leading-relaxed">
-        They ran captions against the people and against a president. A
-        charge sheet is a statute and a count. Durham. FISA that was not
+        They ran captions against the people and against a president. Going
+        after the man the country hired is going after the country. A charge
+        sheet is a statute and a count. Durham. FISA that was not
         scrupulously accurate. School boards. A stacked select committee.
         Insurrection on television, not on 18 U.S.C. § 2383. A board at DHS
         to govern ‘disinformation.’ Two impeachments. Four dockets. The
@@ -249,7 +250,7 @@ function HoaxesFile() {
       <p className="mt-5">
         <Link
           to="/dispatch/$slug"
-          params={{ slug: "the-caption-was-not-the-charge" }}
+          params={{ slug: "the-hire-is-the-country" }}
           className="font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
         >
           The essay →

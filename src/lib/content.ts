@@ -1490,6 +1490,54 @@ export const posts: Post[] = [
 		],
 	},
 	{
+		slug: "the-hire-is-the-country",
+		title: "The hire is the country",
+		dek: "Going after the president the people hired is going after the people. Collusion was the caption. Lawfare was the method. The vote was the target.",
+		date: "2026-09-21",
+		category: "Dispatch",
+		readMinutes: 6,
+		image: "/images/chart-lawfare.jpg",
+		imageAlt: "Lawfare against the hire: two impeachments, four dockets, a Russia caption Durham closed",
+		series: "The Clip",
+		part: 3,
+		receipts: [
+			{ label: "Article II — the president", href: "https://constitution.congress.gov/constitution/article-2/" },
+			{ label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
+			{ label: "Horowitz IG — FISA", href: "https://oig.justice.gov/reports/2019/o1912.pdf" },
+			{ label: "H.Res. 755 — first impeachment", href: "https://www.congress.gov/bill/116th-congress/house-resolution/755" },
+			{ label: "H.Res. 24 — second impeachment", href: "https://www.congress.gov/bill/117th-congress/house-resolution/24" },
+			{ label: "USAO-DC — January 6 tally", href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol" },
+			{ label: "House Weaponization file", href: "https://judiciary.house.gov/media/press-releases/new-judiciary-committee-website-highlights-activities-and-findings-select" },
+		],
+		body: [
+			{
+				type: "img",
+				src: "/images/chart-lawfare.jpg",
+				alt: "The stack: Crossfire, FISA, two impeachments, four dockets",
+			},
+			{
+				type: "p",
+				text: "The people hire the president. That is [Article II](https://constitution.congress.gov/constitution/article-2/). The hire is not a private man the other party gets to ruin between elections. Harming the hire is harming the employer. Process used as punishment against one name is process used against the vote that put the name there. That is the file this journal keeps under Democrats, because that is who ran the captions and the dockets.",
+			},
+			{
+				type: "p",
+				text: "**Collusion** was the first caption. The [Durham report](https://www.justice.gov/storage/durhamreport.pdf) says the FBI opened a full investigation on raw, uncorroborated intelligence and did not have actual evidence of collusion in its holdings when the case began. Years of a Russia story followed. The file did not. [Inspector General Horowitz](https://oig.justice.gov/reports/2019/o1912.pdf) found seventeen inaccuracies and omissions in the Carter Page FISA applications used to surveil a U.S. person tied to a presidential campaign. A warrant on a campaign is a warrant on the people who hired the campaign. That is not a spat with one man.",
+			},
+			{
+				type: "p",
+				text: "Then the House impeached twice. [H.Res. 755](https://www.congress.gov/bill/116th-congress/house-resolution/755). [H.Res. 24](https://www.congress.gov/bill/117th-congress/house-resolution/24). Then four criminal dockets ran at once against the same hire: New York, Florida, Georgia, the District of Columbia. The public paid for the committee. Defense is not free. A presidency can be buried in process without a statute that matches the caption. [January 6](https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol) was sold as insurrection. About 1,583 federally charged. Zero under [18 U.S.C. § 2383](https://www.law.cornell.edu/uscode/text/18/2383). The caption did work the statute did not. Fifty-one former intelligence officials signed a letter treating a laptop as a Russian trick weeks before the 2020 vote. The House published that [file](https://judiciary.house.gov/media/press-releases/new-judiciary-committee-website-highlights-activities-and-findings-select).",
+			},
+			{
+				type: "p",
+				text: "Neighbors were taught that the people who hired him were a threat to the country. That is how a republic is divided without a shot. The method is in [One Word](/dispatch/one-word). The tape is in [They clipped the tape](/dispatch/they-clipped-the-tape). The charge sheet that was not the charge is [here](/dispatch/the-caption-was-not-the-charge). This page is the rest of it: going after the chosen president is going after the Americans who chose him.",
+			},
+			{
+				type: "q",
+				text: "The hire is the country. Process as punishment against the hire is process against the vote.",
+			},
+		],
+	},
+	{
 		slug: "they-work-for-us",
 		title: "They work for us",
 		dek: "Employees do not threaten the people who pay them.",
@@ -2787,6 +2835,7 @@ export const JOURNAL = [
 			"they-dont-debate-they-flag",
 			"they-clipped-the-tape",
 			"one-word",
+			"the-hire-is-the-country",
 			"they-work-for-us",
 		],
 	},

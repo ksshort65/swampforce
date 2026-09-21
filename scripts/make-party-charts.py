@@ -906,6 +906,32 @@ fig.text(
 fig.savefig("/workspace/public/images/chart-helped-hurt.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
+fig, ax = plt.subplots(figsize=(16, 10), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+ax.set_xlim(0, 16)
+ax.set_ylim(0, 11)
+ax.axis("off")
+ax.text(0.4, 10.5, "THE HIRE IS THE COUNTRY", fontsize=24, fontweight="bold", color=fg, va="top")
+ax.text(0.4, 9.85, "Going after the president the people hired is going after the people.", fontsize=14, color=muted, va="top")
+steps = [
+    ("2016–19", "Crossfire Hurricane", "Durham: opened with no actual evidence of collusion."),
+    ("2017–19", "FISA on a campaign", "Horowitz: 17 inaccuracies and omissions."),
+    ("2019", "Impeachment I", "H.Res. 755. The House. The public paid."),
+    ("2020", "51 names", "Laptop called Russian disinfo weeks before the vote."),
+    ("2021", "Impeachment II", "H.Res. 24. Then the dockets."),
+    ("2021–22", "J6 caption", "Insurrection on television. Zero under 18 U.S.C. § 2383."),
+    ("2023–24", "Four dockets", "NY, FL, GA, D.C. Process as the punishment."),
+]
+for i, (when, title, line) in enumerate(steps):
+    y = 8.9 - i * 1.1
+    ax.add_patch(plt.Rectangle((0.4, y - 0.85), 15.2, 1.0, facecolor="#141414", edgecolor="#3a3a3a"))
+    ax.text(0.7, y - 0.35, when, fontsize=12, fontweight="bold", color=gop_c, va="center")
+    ax.text(3.6, y - 0.18, title, fontsize=15, fontweight="bold", color=fg, va="center")
+    ax.text(3.6, y - 0.55, line, fontsize=12, color=muted, va="center")
+ax.text(0.4, 0.35, "Article II  ·  Durham  ·  Horowitz IG  ·  Congress.gov  ·  USAO-DC  ·  House Weaponization", fontsize=10, color=muted)
+fig.savefig("/workspace/public/images/chart-lawfare.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
 
 
 
