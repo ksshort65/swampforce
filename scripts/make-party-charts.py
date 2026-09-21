@@ -247,9 +247,8 @@ fig.savefig("/workspace/public/images/chart-policy.jpg", dpi=140, facecolor=bg, 
 plt.close()
 
 # Open border — actual encounters, not an average
-fy = list(range(2001, 2026))
+fy = list(range(2009, 2026))
 enc = [
-    1235718, 929807, 905065, 1139282, 1171428, 1071972, 858638, 705005,
     540865, 447731, 327577, 356873, 414397, 479371, 331333, 408870,
     303916, 396579, 851508, 400651, 1659206, 2206436, 2045838, 1530523, 237538,
 ]
@@ -269,7 +268,7 @@ ax.set_title("THE OPEN BORDER  ·  BY ADMINISTRATION", fontsize=20, fontweight="
 ax.text(
     0.0,
     1.02,
-    "CBP southwest Border Patrol. Bush FY2001–08. Obama FY2009–16. Trump 1 FY2017–20. Biden FY2021–24. Trump 2 FY2025: 237,538 — lowest since 1970.",
+    "CBP southwest Border Patrol. Obama FY2009–16. Trump 1 FY2017–20. Biden FY2021–24. Trump 2 FY2025: 237,538 — lowest since 1970.",
     transform=ax.transAxes,
     fontsize=11,
     color=muted,
@@ -285,7 +284,6 @@ ax.grid(axis="y", color="#2a2a2a", lw=0.7)
 ax.set_axisbelow(True)
 ax.legend(
     handles=[
-        mpatches.Patch(facecolor=bush_c, label="Bush"),
         mpatches.Patch(facecolor=obama_c, label="Obama"),
         mpatches.Patch(facecolor=trump_c, label="Trump"),
         mpatches.Patch(facecolor=biden_c, label="Biden"),
@@ -356,9 +354,9 @@ plt.close()
 
 # Crime — FBI murder rate, actual years, not an average
 # FBI UCR Summary of Reported Crimes in the Nation, 2025 (released Aug 2026)
-murder_years = list(range(2001, 2026))
+murder_years = list(range(2009, 2026))
 murder_rate = [
-    5.6, 5.6, 5.7, 5.5, 5.6, 5.7, 5.6, 5.4, 5.0, 4.8,
+    5.0, 4.8,
     4.7, 4.7, 4.5, 4.4, 4.9, 5.4, 5.3, 5.0, 5.0, 6.6,
     6.5, 6.6, 6.0, 5.1, 4.1,
 ]
@@ -375,8 +373,8 @@ for i, (y, r) in enumerate(zip(murder_years, murder_rate)):
     if y == 2020:
         ax.annotate(
             "Trump year. They called it peaceful.\nFBI: 6.6",
-            xy=(19, 6.6),
-            xytext=(8, 7.35),
+            xy=(11, 6.6),
+            xytext=(2, 7.35),
             fontsize=11,
             color=fg,
             fontweight="bold",
@@ -404,7 +402,6 @@ ax.grid(axis="y", color="#2a2a2a", lw=0.7)
 ax.set_axisbelow(True)
 ax.legend(
     handles=[
-        mpatches.Patch(facecolor=bush_c, label="Bush"),
         mpatches.Patch(facecolor=obama_c, label="Obama"),
         mpatches.Patch(facecolor=trump_c, label="Trump"),
         mpatches.Patch(facecolor=biden_c, label="Biden"),
@@ -417,7 +414,7 @@ ax.legend(
 ax.text(
     0.0,
     -0.12,
-    "Source: FBI UCR. 2001–2025. Violent crime rate 2025: 327.6 per 100,000 (down 9.3% from 2024).",
+    "Source: FBI UCR. 2009–2025. Violent crime rate 2025: 327.6 per 100,000 (down 9.3% from 2024).",
     transform=ax.transAxes,
     fontsize=9,
     color=muted,
@@ -508,10 +505,10 @@ fig.savefig("/workspace/public/images/chart-debt-bars.jpg", dpi=140, facecolor=b
 plt.close()
 
 fig, axes = plt.subplots(1, 2, figsize=(16, 7), dpi=140, facecolor=bg)
-labs = ["Bush\nFY01–08", "Obama\nFY09–16", "Trump 1\nFY17–20", "Biden\nFY21–24", "Trump 2\nFY25–"]
-enc = [8.02, 3.31, 3.00, 10.83, 0.69]
-cpi = [5.6, 3.9, 2.9, 9.1, 4.2]
-cols_o = [bush_c, obama_c, trump_c, biden_c, trump_c]
+labs = ["Obama\nFY09–16", "Trump 1\nFY17–20", "Biden\nFY21–24", "Trump 2\nFY25–"]
+enc = [3.31, 3.00, 10.83, 0.69]
+cpi = [3.9, 2.9, 9.1, 4.2]
+cols_o = [obama_c, trump_c, biden_c, trump_c]
 ax = axes[0]
 ax.set_facecolor(bg)
 ax.bar(labs, enc, color=cols_o, width=0.62)
@@ -539,7 +536,7 @@ fig.suptitle("THE OVAL — SAME METERS", fontsize=22, fontweight="bold", color=f
 fig.text(
     0.02,
     0.02,
-    "CPI peak is the highest 12-month reading in that Oval — not a four-year average. Bush July 2008 5.6%. Obama Sept 2011 3.9%. Trump 1: 2.9%. Biden June 2022 9.1%. Trump 2 so far: 4.2% May 2026. Encounters: Bush/Obama southwest Border Patrol. Trump 1 / Biden / Trump 2 nationwide. FY2025 started under Biden; the Oval changed January 20.",
+    "CPI peak is the highest 12-month reading in that Oval — not a four-year average. Obama Sept 2011 3.9%. Trump 1: 2.9%. Biden June 2022 9.1%. Trump 2 so far: 4.2% May 2026. Encounters: Obama southwest Border Patrol. Trump 1 / Biden / Trump 2 nationwide. FY2025 started under Biden; the Oval changed January 20.",
     fontsize=9,
     color=muted,
 )
@@ -817,7 +814,7 @@ fig.text(0.02, 0.97, "HELPED AND HURT  ·  CONGRESS AND THE OVAL", fontsize=22, 
 fig.text(
     0.02,
     0.935,
-    "Majority control is the purse. The Oval spends what Congress votes. Five Ovals on the meters. The bill, not the speech.",
+    "Majority control is the purse. The Oval spends what Congress votes. Four Ovals on the meters. The bill, not the speech.",
     fontsize=12,
     color=muted,
     va="top",
@@ -843,9 +840,9 @@ def box(ax, title, help_lines, hurt_lines, title_c):
         ax.text(0.5, y, "▸  " + line, fontsize=10, color=muted, va="top")
         y -= 0.7
 
-gs = fig.add_gridspec(2, 5, left=0.03, right=0.97, top=0.90, bottom=0.06, hspace=0.18, wspace=0.08)
+gs = fig.add_gridspec(2, 4, left=0.03, right=0.97, top=0.90, bottom=0.06, hspace=0.18, wspace=0.08)
 ax_g = fig.add_subplot(gs[0, :2])
-ax_d = fig.add_subplot(gs[0, 3:])
+ax_d = fig.add_subplot(gs[0, 2:])
 box(
     ax_g,
     "CONGRESS  ·  REPUBLICAN MAJORITY",
@@ -861,12 +858,6 @@ box(
     dem_c,
 )
 ovals = [
-    (
-        "BUSH  ·  GOP OVAL",
-        ["Tax cuts 2001 and 2003"],
-        ["Iraq war", "Part D unpaid", "CPI peak 5.6%  ·  July 2008", "Gas $4.114  ·  8.02M SW BP"],
-        bush_c,
-    ),
     (
         "OBAMA  ·  DEM OVAL",
         ["CHIP  ·  Ledbetter", "No 9% spike in term two"],

@@ -56,26 +56,16 @@ export const PUMP_CHARTS = [
   },
   {
     src: "/images/chart-pump-admins.jpg",
-    title: "Highest week — Bush, Obama, Trump, Biden",
+    title: "Highest week — Obama, Trump, Biden",
   },
   {
     src: "/images/chart-pump-years.jpg",
-    title: "Highest week of each year, 2001–2026",
+    title: "Highest week of each year, 2009–2026",
   },
 ];
 
 /** EIA weekly retail. The number is the highest week in that Oval, not a four-year mean. */
 export const ADMINS = [
-  {
-    who: "Bush",
-    when: "2001–08",
-    gas: 4.114,
-    gasWhen: "week of July 7, 2008",
-    diesel: 4.737,
-    dieselWhen: "week of July 14, 2008",
-    wti: 145.29,
-    wtiWhen: "July 3, 2008",
-  },
   {
     who: "Obama",
     when: "2009–16",
