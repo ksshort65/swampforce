@@ -162,6 +162,11 @@ export const HOAXES: { k: string; v: string; href: string }[] = [
     href: "https://constitution.congress.gov/constitution/article-2/",
   },
   {
+    k: "They called it protest",
+    v: "EO 14252 restores monuments, takes graffiti off the marble, and enforces the capital. FBI 2025: murder 4.1, tied with 1955–56. The 2020 caption was mostly peaceful. The 2020 bar was 6.6. The cleanup is hated because it is a verdict on that caption.",
+    href: "https://www.federalregister.gov/documents/2025/03/31/2025-05630/making-the-district-of-columbia-safe-and-beautiful",
+  },
+  {
     k: "Crossfire Hurricane",
     v: "The Durham report: the FBI opened a full investigation on raw, uncorroborated intelligence. It did not have actual evidence of collusion in its holdings when the case began. Years of a Russia caption followed. The file did not.",
     href: "https://www.justice.gov/storage/durhamreport.pdf",
@@ -258,7 +263,7 @@ export const OVAL = [
     cpi: "4.2%",
     cpiN: 4.2,
     gas: "$4.50 peak",
-    note: "FY2025 nationwide 691,906. Southwest Border Patrol 237,538 — lowest since 1970. CPI peak so far: 4.2% in May 2026 (FRED CPIAUCSL, 12-month). EIA weekly regular: highest week $4.500 (May 11, 2026). The fiscal year started under Biden; the Oval changed January 20.",
+    note: "FY2025 nationwide 691,906. Southwest Border Patrol 237,538 — lowest since 1970. FBI 2025 murder rate 4.1, tied with 1955–56. EO 14252: restore monuments, remove graffiti, enforce the capital. CPI peak so far: 4.2% in May 2026. EIA weekly regular: $4.500 the week of May 11, 2026. The fiscal year started under Biden; the Oval changed January 20.",
   },
 ] as const;
 
@@ -267,7 +272,7 @@ export const OVAL_NOW = {
   who: "This term",
   when: "FY2025",
   enc: "0.69 million nationwide",
-  note: "After the Oval changed. Southwest Border Patrol 237,538 — lowest since 1970.",
+  note: "After the Oval changed. Southwest Border Patrol 237,538 — lowest since 1970. FBI 2025: murder 4.1. EO 14252 restores monuments and the capital.",
   href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
 };
 

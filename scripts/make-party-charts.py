@@ -887,7 +887,7 @@ ovals = [
     ),
     (
         "TRUMP 2  ·  GOP OVAL",
-        ["SW Border Patrol FY25: 237,538", "Nationwide FY25: 0.69 million"],
+        ["FBI 2025 murder 4.1 — lowest since 1956", "EO 14252 — monuments, graffiti, DC"],
         ["CPI so far 4.2%  ·  May 2026", "Gas $4.50  ·  May 11, 2026"],
         trump_c,
     ),

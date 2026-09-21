@@ -1538,6 +1538,44 @@ export const posts: Post[] = [
 		],
 	},
 	{
+		slug: "they-called-it-protest",
+		title: "They called it protest",
+		dek: "They hate the cleanup because it proves 2020 was not mostly peaceful. The monuments were vandalized. The murder rate was 6.6. The capital is being made a capital again.",
+		date: "2026-09-21",
+		category: "Dispatch",
+		readMinutes: 5,
+		image: "/images/chart-crime.jpg",
+		imageAlt: "FBI murder rate by administration — 2020 spike, 2025 at 4.1",
+		series: "The Clip",
+		part: 4,
+		receipts: [
+			{ label: "EO 14252 — Making the District of Columbia Safe and Beautiful", href: "https://www.federalregister.gov/documents/2025/03/31/2025-05630/making-the-district-of-columbia-safe-and-beautiful" },
+			{ label: "EO 14253 — Restoring Truth and Sanity to American History", href: "https://www.federalregister.gov/documents/2025/04/03/2025-05836/restoring-truth-and-sanity-to-american-history" },
+			{ label: "EO 13933 — Protecting American Monuments (2020)", href: "https://www.federalregister.gov/documents/2020/06/30/2020-14231/protecting-american-monuments-memorials-and-statues-and-combating-recent-criminal-violence" },
+			{ label: "FBI — 2025 crime statistics", href: "https://www.fbi.gov/news/press-releases/fbi-releases-2025-reported-crimes-in-the-nation-statistics" },
+			{ label: "FBI — violent crime, historic drop", href: "https://www.fbi.gov/news/stories/violent-crime-falls-at-historic-rate-new-fbi-data-show" },
+		],
+		body: [
+			{
+				type: "img",
+				src: "/images/chart-crime.jpg",
+				alt: "FBI murder rate: 6.6 in 2020, 4.1 in 2025",
+			},
+			{
+				type: "p",
+				text: "They called it protest. The file is vandalism, encampments, and a murder spike. That is why the cleanup is hated. If 2020 was mostly peaceful, then restoring a statue is an insult. If 2020 was a crime wave with a caption, then [Executive Order 14252](https://www.federalregister.gov/documents/2025/03/31/2025-05630/making-the-district-of-columbia-safe-and-beautiful) is the capital doing its job: prevent crime, punish criminals, protect the monuments, take the graffiti off the marble, clear the encampments on National Park Service land. [EO 14253](https://www.federalregister.gov/documents/2025/04/03/2025-05836/restoring-truth-and-sanity-to-american-history) tells Interior to restore federal monuments that were damaged, defaced, or taken down. The 2020 order that first named that work, [EO 13933](https://www.federalregister.gov/documents/2020/06/30/2020-14231/protecting-american-monuments-memorials-and-statues-and-combating-recent-criminal-violence), was reinstated. A country that will not keep its own memorials will not keep its own law.",
+			},
+			{
+				type: "p",
+				text: "The [FBI](https://www.fbi.gov/news/press-releases/fbi-releases-2025-reported-crimes-in-the-nation-statistics) now puts the 2025 murder rate at **4.1** per 100,000 — tied with 1955 and 1956, the lowest since national estimates began. Murder down 18.1 percent. Violent crime down 9.3 percent, the largest year-to-year drop in that series. The 2020 bar on this chart is **6.6**, in a year they called peaceful while a precinct burned. The decline began before January 20, 2025. That sentence stays. So does this one: the Oval that spent 2020 explaining away the fire is not the Oval writing the order to restore the marble and enforce the capital. Neighbors were taught that the statues were the problem and the street was the conscience. The file is the opposite. Cleaning the capital is not a taste in architecture. It is a verdict on the caption.",
+			},
+			{
+				type: "q",
+				text: "They hate the cleanup because it proves the caption was the crime. The monuments were never the enemy.",
+			},
+		],
+	},
+	{
 		slug: "they-work-for-us",
 		title: "They work for us",
 		dek: "Employees do not threaten the people who pay them.",
@@ -2836,6 +2874,7 @@ export const JOURNAL = [
 			"they-clipped-the-tape",
 			"one-word",
 			"the-hire-is-the-country",
+			"they-called-it-protest",
 			"they-work-for-us",
 		],
 	},
