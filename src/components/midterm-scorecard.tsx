@@ -595,6 +595,11 @@ export function MidtermScorecard() {
         <h2 className="mt-2 max-w-3xl font-display text-3xl font-bold tracking-wide uppercase sm:text-5xl">
           Both parties have failed the American people.
         </h2>
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
+          Do not vote on emotion. Do not vote on a hatred a party or a
+          network manufactured. Vote the facts. Every number on this
+          page is a government file.
+        </p>
         <div className="mt-8 grid grid-cols-5 gap-2">
           {SCORE_TABS.map((f) => (
             <button

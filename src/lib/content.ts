@@ -35,12 +35,12 @@ export const SITE = {
 	name: "Swamp Force",
 	domain: "swampforce.com",
 	tagline:
-		"We the People own and operate this country. Congress is the employee. The first step is the record of what they did, not what they said.",
-	kicker: "We the People. The hire works here.",
+		"Vote the facts. Not emotion. Not a hatred a party or a network manufactured. This journal uses documented government sources. No other opinion. No manufactured drama.",
+	kicker: "Vote the file. Not the feeling.",
 	closer:
-		"Compare the action to the speech. That is the first step. The official record is how a nation is taken back.",
+		"Government sources only. Compare the action to the speech. That is the first step.",
 	masthead:
-		"The people are the employer. This journal prints the record because a lie a day is how a country is lost.",
+		"The people are the employer. This journal prints the official record. No network. No manufactured drama.",
 	xHandle: "SwampForce",
 	email: "editor@swampforce.com",
 	author: "Renee Stewart",
@@ -73,7 +73,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The daily product is a lie. A caption. A six-second clip. A word swapped so the country is taught the opposite crime. This journal exists because a nation that cannot tell the action from the speech cannot govern itself. It is not what they said at the microphone that defines the hire. It is what they passed, what they blocked, what they spent, what they broke. Compare the truth from the actions. That is the first step. Not a riot. Not a war of neighbors. The record, in public, on the page, and then the ballot. The [Declaration](https://www.archives.gov/founding-docs/declaration-transcript) already named the right of a people to alter a government that has become destructive of the ends it was hired to secure. The lawful instruments are still the instruments: the file, the statute, the vote. Truth is the only thing that can save the nation before the caption finishes the work.",
+				text: "The daily product is a lie. A caption. A six-second clip. A word swapped so the country is taught the opposite crime. Do not vote on emotion. Do not vote on a hatred one party and the networks manufactured. Do not vote on the words of a network or a politician. Vote on the facts. This journal comes from documented government sources. No other opinion. No manufactured drama. A nation that cannot tell the action from the speech cannot govern itself. It is not what they said at the microphone that defines the hire. It is what they passed, what they blocked, what they spent, what they broke. Compare the truth from the actions. That is the first step. Not a riot. Not a war of neighbors. The record, in public, on the page, and then the ballot. The [Declaration](https://www.archives.gov/founding-docs/declaration-transcript) already named the right of a people to alter a government that has become destructive of the ends it was hired to secure. The lawful instruments are still the instruments: the file, the statute, the vote. Truth is the only thing that can save the nation before the caption finishes the work.",
 			},
 			{
 				type: "q",

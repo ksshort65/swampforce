@@ -9,7 +9,7 @@ export const FORWARD_STEPS: {
 }[] = [
  {
   k: "The record",
-  v: "Both parties failed. They do not represent the American people. No balanced budget since Clinton. The twelve money bills do not pass. That open book is the fraud door. Vote the record, not the jersey.",
+  v: "Do not vote on emotion or a hatred a party and the networks manufactured. Do not vote on a politician’s words. Vote the facts. This journal uses documented government sources. No other opinion. No manufactured drama. Both parties failed. They do not represent the American people.",
   links: [{ label: "Congressional Scorecard", href: "/scorecard" }],
  },
  {

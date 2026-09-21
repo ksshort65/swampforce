@@ -29,6 +29,9 @@ function AboutPage() {
      {SITE.masthead}
     </p>
     <p>
+     {SITE.tagline}
+    </p>
+    <p>
      Written by {SITE.author}. If a claim cannot survive the rest of the
      sentence, it does not belong here.
     </p>

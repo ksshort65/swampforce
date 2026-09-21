@@ -29,8 +29,10 @@ export function DispatchIndex() {
           </h1>
           <p className="mt-3 max-w-lg text-[clamp(0.95rem,2.2vw,1.25rem)] leading-snug text-fg/90">
             This country is not Congress’s. They are the hire. They have
-            gone rogue. The first step is the record of what they did, not
-            what they said. Truth is how a nation is taken back.
+            gone rogue. Do not vote on emotion, on manufactured hatred, or
+            on a network’s words. Vote the facts. This journal uses
+            documented government sources. No other opinion. No
+            manufactured drama.
           </p>
           <div className="mt-5 flex flex-wrap gap-3 pb-2">
             <Button asChild>
