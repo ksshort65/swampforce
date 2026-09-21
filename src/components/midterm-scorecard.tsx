@@ -19,52 +19,43 @@ import {
   LAWS,
   PRICES,
   RECORD,
-  SCORE_FILES,
+  SCORE_TABS,
+  TAB_CHARTS,
   SCORE_UPDATED,
 } from "@/lib/scorecard";
 
-type FileId = (typeof SCORE_FILES)[number]["id"];
-type PartyId = "gop" | "dem";
+type TabId = (typeof SCORE_TABS)[number]["id"];
+type Mode = "charts" | "read";
 
-function FileNav({
-  file,
-  onPick,
-}: {
-  file: FileId | null;
-  onPick: (id: FileId) => void;
-}) {
+function ChartStack({ tab }: { tab: TabId }) {
   return (
-    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-      {SCORE_FILES.map((f) => (
-        <button
-          key={f.id}
-          type="button"
-          onClick={() => onPick(f.id)}
-          className={
-            file === f.id
-              ? "min-h-16 rounded-md border-2 border-sage bg-sage px-3 py-4 text-left"
-              : "min-h-16 rounded-md border-2 border-sage bg-surface px-3 py-4 text-left hover:bg-ink"
-          }
-        >
-          <p
-            className={
-              file === f.id
-                ? "font-display text-sm font-bold tracking-wide text-black uppercase"
-                : "font-display text-sm font-bold tracking-wide text-fg uppercase"
-            }
-          >
-            {f.k}
+    <div className="space-y-8">
+      {TAB_CHARTS[tab].map((c) => (
+        <figure key={c.src}>
+          <p className="mb-3 font-display text-sm font-semibold tracking-wide text-sage uppercase">
+            {c.title}
           </p>
-          <p
-            className={
-              file === f.id
-                ? "mt-1 text-xs leading-snug text-black/80"
-                : "mt-1 text-xs leading-snug text-muted"
-            }
-          >
-            {f.v}
-          </p>
-        </button>
+          <img
+            src={c.src}
+            alt={c.title}
+            className="h-auto w-full rounded-md border border-border"
+          />
+          <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
+            {c.sources.map((s, i) => (
+              <span key={s.href}>
+                {i > 0 ? " · " : null}
+                <a
+                  href={s.href}
+                  className="text-sage no-underline hover:underline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {s.label}
+                </a>
+              </span>
+            ))}
+          </figcaption>
+        </figure>
       ))}
     </div>
   );
@@ -133,20 +124,6 @@ function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
         Hurt
       </p>
       <BillList rows={col.minus} tone="minus" />
-      {col.id === "dem" ? (
-        <Link
-          to="/scorecard"
-          hash="captions"
-          className="mt-8 block min-h-16 rounded-md border-2 border-sage bg-surface px-4 py-5 text-fg no-underline hover:bg-ink"
-        >
-          <p className="font-display text-sm font-bold tracking-wide uppercase">
-            Information war
-          </p>
-          <p className="mt-1 text-sm text-muted">
-            Waged on the people and a president. Open that file.
-          </p>
-        </Link>
-      ) : null}
     </div>
   );
 }
@@ -446,25 +423,34 @@ function PriceLinks() {
 }
 
 export function MidtermScorecard() {
-  const [file, setFile] = useState<FileId | null>(null);
-  const [party, setParty] = useState<PartyId | null>(null);
+  const [tab, setTab] = useState<TabId | null>(null);
+  const [mode, setMode] = useState<Mode>("charts");
   const gop = RECORD.find((r) => r.id === "gop");
   const dem = RECORD.find((r) => r.id === "dem");
+  const split = DEBT_TALLY.find((t) => t.who.includes("split"));
 
   useEffect(() => {
     const apply = () => {
-      const id = window.location.hash.replace("#", "") as FileId;
-      if (SCORE_FILES.some((f) => f.id === id)) setFile(id);
+      const raw = window.location.hash.replace("#", "");
+      const [id, m] = raw.split("-") as [string, string | undefined];
+      if (SCORE_TABS.some((f) => f.id === id)) {
+        setTab(id as TabId);
+        if (m === "read" || m === "charts") setMode(m);
+      }
     };
     apply();
     window.addEventListener("hashchange", apply);
     return () => window.removeEventListener("hashchange", apply);
   }, []);
 
-  const pick = (id: FileId) => {
-    setFile(id);
-    if (id !== "policy") setParty(null);
-    window.history.replaceState(null, "", `#${id}`);
+  const pickTab = (id: TabId) => {
+    setTab(id);
+    setMode("charts");
+    window.history.replaceState(null, "", `#${id}-charts`);
+  };
+  const pickMode = (m: Mode) => {
+    setMode(m);
+    if (tab) window.history.replaceState(null, "", `#${tab}-${m}`);
   };
 
   return (
@@ -476,93 +462,117 @@ export function MidtermScorecard() {
         <h2 className="mt-2 max-w-3xl font-display text-3xl font-bold tracking-wide uppercase sm:text-5xl">
           Both parties have failed the American people.
         </h2>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
-          Open one file. Not all of them at once.
-        </p>
-        <div className="mt-8">
-          <FileNav file={file} onPick={pick} />
+        <div className="mt-8 grid grid-cols-5 gap-2">
+          {SCORE_TABS.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              onClick={() => pickTab(f.id)}
+              className={
+                tab === f.id
+                  ? "flex min-h-16 min-w-0 items-center justify-center rounded-md border-2 border-sage bg-sage px-1 py-4 text-center font-display text-[12px] font-bold leading-tight tracking-wide text-black uppercase sm:text-base"
+                  : "flex min-h-16 min-w-0 items-center justify-center rounded-md border-2 border-sage bg-surface px-1 py-4 text-center font-display text-[12px] font-bold leading-tight tracking-wide text-fg uppercase hover:bg-ink sm:text-base"
+              }
+            >
+              {f.k}
+            </button>
+          ))}
         </div>
 
-        {file === "policy" ? (
+        {tab ? (
+          <div className="mt-4 grid grid-cols-2 gap-2">
+            {(
+              [
+                ["charts", "Charts"],
+                ["read", "Read"],
+              ] as const
+            ).map(([id, label]) => (
+              <button
+                key={id}
+                type="button"
+                onClick={() => pickMode(id)}
+                className={
+                  mode === id
+                    ? "flex min-h-14 items-center justify-center rounded-md border-2 border-sage bg-sage px-2 py-3 font-display text-sm font-bold tracking-wide text-black uppercase"
+                    : "flex min-h-14 items-center justify-center rounded-md border-2 border-sage bg-surface px-2 py-3 font-display text-sm font-bold tracking-wide text-fg uppercase hover:bg-ink"
+                }
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        ) : null}
+
+        {tab && mode === "charts" ? (
           <div className="mt-10">
-            <div className="grid grid-cols-2 gap-2">
-              {(
-                [
-                  ["gop", "Republicans"],
-                  ["dem", "Democrats"],
-                ] as const
-              ).map(([id, label]) => (
-                <button
-                  key={id}
-                  type="button"
-                  onClick={() => setParty(id)}
-                  className={
-                    party === id
-                      ? "flex min-h-16 items-center justify-center rounded-md border-2 border-sage bg-sage px-2 py-4 font-display text-sm font-bold tracking-wide text-black uppercase"
-                      : "flex min-h-16 items-center justify-center rounded-md border-2 border-sage bg-surface px-2 py-4 font-display text-sm font-bold tracking-wide text-fg uppercase hover:bg-ink"
-                  }
+            <ChartStack tab={tab} />
+          </div>
+        ) : null}
+
+        {tab === "gop" && mode === "read" && gop ? (
+          <div className="mt-10">
+            <PartyFile col={gop} />
+          </div>
+        ) : null}
+
+        {tab === "dem" && mode === "read" && dem ? (
+          <div className="mt-10">
+            <PartyFile col={dem} />
+            <div className="mt-8">
+              <HoaxesFile />
+            </div>
+            <div className="mt-8">
+              <BorderFile />
+              <BorderMove />
+              <BorderHarm />
+              <BenefitsStack />
+              <WorkerFile />
+            </div>
+          </div>
+        ) : null}
+
+        {tab === "split" && mode === "read" ? (
+          <div className="mt-10 space-y-6">
+            {split ? (
+              <>
+                <p className="font-display text-xl font-bold tracking-wide uppercase">
+                  Split
+                </p>
+                <p className="font-display text-3xl font-bold tracking-wide">
+                  {split.added}
+                </p>
+                <p className="text-sm leading-relaxed text-muted">{split.when}</p>
+              </>
+            ) : null}
+            <p className="text-sm leading-relaxed">
+              {DEBT_NOW.asOf}: {DEBT_NOW.total}. {DEBT_MATH}
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {DRIVERS.map((d) => (
+                <a
+                  key={d.k}
+                  href={d.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block min-h-28 rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
                 >
-                  {label}
-                </button>
+                  <p className="font-display text-lg font-bold tracking-wide uppercase">
+                    {d.k}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{d.v}</p>
+                </a>
               ))}
             </div>
-            {party === "gop" && gop ? (
-              <div className="mt-8">
-                <PartyFile col={gop} />
-              </div>
-            ) : null}
-            {party === "dem" && dem ? (
-              <div className="mt-8">
-                <PartyFile col={dem} />
-              </div>
-            ) : null}
           </div>
         ) : null}
 
-        {file === "captions" ? (
-          <div className="mt-10">
-            <HoaxesFile />
-          </div>
-        ) : null}
-
-        {file === "border" ? (
-          <div className="mt-10">
-            <BorderFile />
-            <BorderMove />
-            <BorderHarm />
-            <figure className="mt-5">
-              <img
-                src="/images/chart-border.jpg"
-                alt="The open border — by administration"
-                className="h-auto w-full rounded-md border border-border"
-              />
-            </figure>
-            <figure className="mt-5">
-              <img
-                src="/images/chart-border-all.jpg"
-                alt="Nationwide encounters — every path CBP counts"
-                className="h-auto w-full rounded-md border border-border"
-              />
-            </figure>
-            <figure className="mt-5">
-              <img
-                src="/images/chart-border-toll.jpg"
-                alt="What Americans still pay — the open border bill"
-                className="h-auto w-full rounded-md border border-border"
-              />
-            </figure>
-            <BenefitsStack />
-            <WorkerFile />
-          </div>
-        ) : null}
-
-        {file === "oval" ? (
+        {tab === "oval" && mode === "read" ? (
           <div className="mt-10">
             <OvalFile />
           </div>
         ) : null}
 
-        {file === "debt" ? (
+        {tab === "compare" && mode === "read" ? (
           <div className="mt-10">
             <div className="grid gap-4 md:grid-cols-3">
               {DEBT_TALLY.map((row) => {
@@ -592,58 +602,24 @@ export function MidtermScorecard() {
                 );
               })}
             </div>
-            {(() => {
-              const pie = COMPARE_CHARTS.find((c) =>
-                c.src.includes("chart-harm-pie"),
-              );
-              if (!pie) return null;
-              return (
-                <figure className="mt-4">
-                  <img
-                    src={pie.src}
-                    alt={pie.title}
-                    className="h-auto w-full rounded-md border border-border"
-                  />
-                </figure>
-              );
-            })()}
             <p className="mt-4 text-sm leading-relaxed text-muted">
               {DEBT_NOW.asOf}: {DEBT_NOW.total}. {DEBT_MATH}
             </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {DRIVERS.map((d) => (
-                <a
-                  key={d.k}
-                  href={d.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block min-h-28 rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
-                >
-                  <p className="font-display text-lg font-bold tracking-wide uppercase">
-                    {d.k}
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">{d.v}</p>
-                </a>
+            <ul className="mt-8 grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {LAWS.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block min-h-11 rounded-md border border-border bg-surface px-4 py-3 font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:border-sage hover:text-fg"
+                  >
+                    {l.k} →
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-        ) : null}
-
-        {file === "laws" ? (
-          <ul className="mt-10 grid grid-cols-1 gap-2 sm:grid-cols-2">
-            {LAWS.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block min-h-11 rounded-md border border-border bg-surface px-4 py-3 font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:border-sage hover:text-fg"
-                >
-                  {l.k} →
-                </a>
-              </li>
-            ))}
-          </ul>
         ) : null}
       </div>
     </section>

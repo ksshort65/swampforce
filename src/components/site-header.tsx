@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { SITE } from "@/lib/content";
-import { SCORE_FILES } from "@/lib/scorecard";
+import { SCORE_TABS } from "@/lib/scorecard";
 
 export function SiteHeader() {
   return (
@@ -26,11 +26,11 @@ export function SiteHeader() {
               Scorecard
             </summary>
             <div className="absolute right-0 top-full z-50 mt-1 w-64 rounded-md border border-border bg-bg p-2 shadow-lg">
-              {SCORE_FILES.map((f) => (
+              {SCORE_TABS.map((f) => (
                 <Link
                   key={f.id}
                   to="/scorecard"
-                  hash={f.id}
+                  hash={`${f.id}-charts`}
                   className="block rounded-md px-3 py-3 text-fg no-underline hover:bg-surface"
                 >
                   <span className="font-display text-sm font-bold tracking-wide uppercase">

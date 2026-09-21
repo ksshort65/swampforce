@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { homeHead } from "@/lib/share-head";
 import { START_HERE, getPost } from "@/lib/content";
-import { SCORE_FILES } from "@/lib/scorecard";
+import { SCORE_TABS } from "@/lib/scorecard";
 
 export const Route = createFileRoute("/dispatch/")({
   component: DispatchIndex,
@@ -83,14 +83,14 @@ export function DispatchIndex() {
             The scorecard
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
-            Open one file. Policy, captions, border, oval, debt, the laws.
+            Open GOP, Dem, Split, Oval, or Compare. Charts first. Read if you want the file.
           </p>
           <div className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-3">
-            {SCORE_FILES.map((f) => (
+            {SCORE_TABS.map((f) => (
               <Link
                 key={f.id}
                 to="/scorecard"
-                hash={f.id}
+                hash={`${f.id}-charts`}
                 className="min-h-16 rounded-md border-2 border-sage bg-bg px-3 py-4 text-fg no-underline hover:bg-ink"
               >
                 <p className="font-display text-sm font-bold tracking-wide uppercase">

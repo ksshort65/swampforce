@@ -11,15 +11,16 @@ export type ScoreRow = {
 /** Living midterms card. Update the cells when a vote or a Treasury table changes the file. */
 export const SCORE_UPDATED = "2026-09-20";
 
-/** Cover and Scorecard. One file each. Not a dump. */
-export const SCORE_FILES: { id: string; k: string; v: string }[] = [
-  { id: "policy", k: "Policy", v: "Helped and hurt. The bills they passed." },
-  { id: "captions", k: "Information war", v: "Waged on the people and a president. The files." },
-  { id: "border", k: "Border", v: "Encounters, the bill still due, the benefits." },
-  { id: "oval", k: "Oval", v: "Four administrations. Encounters, prices, the gallon." },
-  { id: "debt", k: "Debt", v: "Who added the $40.09 trillion." },
-  { id: "laws", k: "Laws", v: "The statutes. Open them." },
+/** Cover and Scorecard. Five rooms. Charts or the file. */
+export const SCORE_TABS: { id: "gop" | "dem" | "split" | "oval" | "compare"; k: string; v: string }[] = [
+  { id: "gop", k: "GOP", v: "Helped, hurt, the bills." },
+  { id: "dem", k: "Dem", v: "Helped, hurt, the information war." },
+  { id: "split", k: "Split", v: "When they split the gavel." },
+  { id: "oval", k: "Oval", v: "Four administrations." },
+  { id: "compare", k: "Compare", v: "The plates, the pie, both of them." },
 ];
+/** @deprecated use SCORE_TABS */
+export const SCORE_FILES = SCORE_TABS;
 
 
 /** Treasury Debt to the Penny. Unified Congress = House and Senate same party. Adds to the current total. */
@@ -934,6 +935,26 @@ export const COMPARE_CHARTS = COMPARE_SRC.map((src) => {
     }
   );
 });
+
+function chartsFor(...srcs: string[]) {
+  return srcs
+    .map((src) => CHARTS.find((c) => c.src === src) ?? COMPARE_CHARTS.find((c) => c.src === src))
+    .filter((c): c is (typeof CHARTS)[number] => Boolean(c));
+}
+
+export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<typeof chartsFor>> = {
+  gop: chartsFor("/images/chart-policy.jpg", "/images/chart-debt-bars.jpg", "/images/chart-job.jpg"),
+  dem: chartsFor(
+    "/images/chart-border.jpg",
+    "/images/chart-border-all.jpg",
+    "/images/chart-border-toll.jpg",
+    "/images/chart-inflation-party.jpg",
+    "/images/chart-policy.jpg",
+  ),
+  split: chartsFor("/images/chart-harm-pie.jpg", "/images/chart-debt-bars.jpg", "/images/chart-blame.jpg"),
+  oval: chartsFor("/images/chart-oval.jpg", "/images/chart-pump-admins.jpg", "/images/chart-crime.jpg"),
+  compare: COMPARE_CHARTS,
+};
 
 export const FILE_CHIPS: {
   k: string;

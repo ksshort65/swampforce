@@ -3,7 +3,7 @@ import { basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { posts, SITE, START_HERE, JOURNAL, getPost } from "../src/lib/content.ts";
-import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, HOAXES, LAWS, OVAL, OVAL_LINKS, PRICES, RECORD, SCORE_FILES, SCORE_UPDATED } from "../src/lib/scorecard.ts";
+import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, HOAXES, LAWS, OVAL, OVAL_LINKS, PRICES, RECORD, SCORE_TABS, TAB_CHARTS, SCORE_UPDATED } from "../src/lib/scorecard.ts";
 import { ADMINS, GALLON_STACK, MARKS, OPEC_FILE, PUMP_CHARTS, PUMP_SOURCES, PUMP_UPDATED, RULES_FILE, TAX_FILE } from "../src/lib/pump.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -197,7 +197,7 @@ function shell({ title, desc, image, path, body }) {
   <nav>
    <details class="score">
     <summary>Scorecard</summary>
-    <div class="drop">${SCORE_FILES.map((f) => `<a href="/scorecard.html#${f.id}">${esc(f.k)}</a>`).join("")}</div>
+    <div class="drop">${SCORE_TABS.map((f) => `<a href="/scorecard.html#${f.id}-charts">${esc(f.k)}</a>`).join("")}</div>
    </details>
    <a href="/pump.html">Pump</a>
    <a href="/foreword.html">Foreword</a>
@@ -253,8 +253,8 @@ const indexBody = `
 <section class="pad">
  <p class="kicker">Midterms</p>
  <h2>The scorecard</h2>
- <p>Open one file. Policy, captions, border, oval, debt, the laws.</p>
- <div class="grid" style="padding-left:0;padding-right:0">${SCORE_FILES.map((f) => `<a class="card" href="/scorecard.html#${f.id}" style="padding:1.1rem"><h3 style="padding:0">${esc(f.k)}</h3><p style="padding:0">${esc(f.v)}</p></a>`).join("")}</div>
+ <p>Open GOP, Dem, Split, Oval, or Compare. Charts first. Read if you want the file.</p>
+ <div class="grid" style="padding-left:0;padding-right:0">${SCORE_TABS.map((f) => `<a class="card" href="/scorecard.html#${f.id}-charts" style="padding:1.1rem"><h3 style="padding:0">${esc(f.k)}</h3><p style="padding:0">${esc(f.v)}</p></a>`).join("")}</div>
 </section>
 <section class="band pad">
  <p class="kicker">The Search</p>
@@ -326,71 +326,54 @@ writeFileSync(
   body: `<main class="wrap" style="max-width:72rem">
 <p class="kicker">Congressional scorecard · updated ${esc(SCORE_UPDATED)}</p>
 <h1>Both parties have failed the American people.</h1>
-<p>Open one file. Not all of them at once.</p>
-<div class="grid" style="padding-left:0;padding-right:0">${SCORE_FILES.map((f) => `<a class="card" href="#${f.id}" style="padding:1.1rem"><h3 style="padding:0">${esc(f.k)}</h3><p style="padding:0">${esc(f.v)}</p></a>`).join("")}</div>
-<div class="panel" id="policy">
-<h2>Policy</h2>
 <p class="btns">
- <a class="btn" href="#gop">Republicans</a>
- <a class="btn" href="#dem">Democrats</a>
+ ${SCORE_TABS.map((f) => `<a class="btn" href="#${f.id}-charts">${esc(f.k)}</a>`).join("")}
 </p>
-</div>
+${SCORE_TABS.map((f) => `
+<div class="panel" id="${f.id}-charts">
+<p class="btns"><a class="btn" href="#${f.id}-charts">Charts</a><a class="btn out" href="#${f.id}-read">Read</a></p>
+${TAB_CHARTS[f.id].map((c) => `<figure><p class="kicker">${esc(c.title)}</p><img src="${c.src}" alt="${esc(c.title)}"/><figcaption style="color:#a39e93;font-size:.85rem">${c.sources.map((s) => `<a href="${s.href}">${esc(s.label)}</a>`).join(" · ")}</figcaption></figure>`).join("")}
+</div>`).join("")}
 ${RECORD.map((col) => {
  const tally = DEBT_TALLY.find((t) =>
   col.id === "gop" ? t.who.startsWith("Republicans") : t.who.startsWith("Democrats"),
  );
- return `<div class="panel" id="${col.id}">
+ return `<div class="panel" id="${col.id}-read">
+<p class="btns"><a class="btn out" href="#${col.id}-charts">Charts</a><a class="btn" href="#${col.id}-read">Read</a></p>
 <h2>${esc(col.party)}</h2>
-<p><a href="#policy">← Policy</a></p>
 ${tally ? `<p style="font-size:1.8rem;font-weight:800">${esc(tally.added)}</p>` : ""}
 <p>${esc(col.control)}</p>
 <p>${esc(col.debt)}</p>
-<figure><img src="/images/chart-policy.jpg" alt="Policy — success and failure"/></figure>
 <p class="kicker">Helped</p>
 <ul>${col.plus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
 <p class="kicker">Hurt</p>
 <ul>${col.minus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
-${col.id === "dem" ? `<p><a class="btn" href="#captions">Information war — the files</a></p>` : ""}
+${col.id === "dem" ? HOAXES.map((h) => `<p><strong>${esc(h.k)}</strong><br/>${esc(h.v)}<br/><a href="${h.href}">The file →</a></p>`).join("") : ""}
+${col.id === "dem" ? `<p><a href="/dispatch/the-caption-was-not-the-charge.html">The essay →</a></p>` : ""}
+${col.id === "dem" ? borderHtml() + borderMoveHtml() + borderHarmHtml() + benefitsHtml() + workerHtml() : ""}
 </div>`;
 }).join("")}
-<div class="panel" id="captions">
-<h2>Information war</h2>
-<p>Waged on the people and a president. A caption, then the charge sheet.</p>
-${HOAXES.map((h) => `<p><strong>${esc(h.k)}</strong><br/>${esc(h.v)}<br/><a href="${h.href}">The file →</a></p>`).join("")}
-<p><a href="/dispatch/the-caption-was-not-the-charge.html">The essay →</a></p>
+<div class="panel" id="split-read">
+<p class="btns"><a class="btn out" href="#split-charts">Charts</a><a class="btn" href="#split-read">Read</a></p>
+<h2>Split</h2>
+<p>${esc(DEBT_NOW.asOf)}: ${esc(DEBT_NOW.total)}. ${esc(DEBT_MATH)}</p>
+<div class="grid">${DRIVERS.map((d) => `<a class="card" href="${d.href}" style="padding:1.2rem"><h3>${esc(d.k)}</h3><p>${esc(d.v)}</p></a>`).join("")}</div>
 </div>
-<div class="panel" id="border">
-<h2>Border</h2>
-${borderHtml()}
-${borderMoveHtml()}
-${borderHarmHtml()}
-<figure><img src="/images/chart-border.jpg" alt="The open border"/></figure>
-<figure><img src="/images/chart-border-all.jpg" alt="Every path CBP counts"/></figure>
-<figure><img src="/images/chart-border-toll.jpg" alt="What Americans still pay"/></figure>
-${benefitsHtml()}
-${workerHtml()}
-</div>
-<div class="panel" id="oval">
+<div class="panel" id="oval-read">
+<p class="btns"><a class="btn out" href="#oval-charts">Charts</a><a class="btn" href="#oval-read">Read</a></p>
 <h2>Oval</h2>
 <div class="grid">${OVAL.map((row) => `<div class="card" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><p>${esc(row.when)}</p><h3>${esc(row.enc)}</h3><p>nationwide encounters</p><h3>${esc(row.cpi)}</h3><p>CPI peak</p><h3>${esc(row.gas)}</h3><p>highest EIA weekly gasoline</p></div>`).join("")}</div>
-<figure><img src="/images/chart-oval.jpg" alt="The Oval"/></figure>
-<figure><img src="/images/chart-pump-admins.jpg" alt="The gallon"/></figure>
-<figure><img src="/images/chart-crime.jpg" alt="Murder rate"/></figure>
 <p>${OVAL_LINKS.map((l) => `<a href="${l.href}">${esc(l.label)}</a>`).join(" · ")} · <a href="/pump.html">The pump</a></p>
 </div>
-<div class="panel" id="debt">
-<h2>Debt</h2>
+<div class="panel" id="compare-read">
+<p class="btns"><a class="btn out" href="#compare-charts">Charts</a><a class="btn" href="#compare-read">Read</a></p>
+<h2>Compare</h2>
 <div class="grid">${DEBT_TALLY.map((row) => {
   const n = Number(row.added.replace(/[^0-9.]/g, ""));
   const pct = Math.round((n / 40.09) * 100);
   return `<a class="card" href="${row.href}" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><h3>${esc(row.added)}</h3><div style="height:10px;background:#141414;margin-top:.8rem"><div style="height:10px;width:${pct}%;background:#e8e0d0"></div></div><p>${pct}% of the $40.09T</p></a>`;
 }).join("")}</div>
-<figure style="margin:.8rem 0 0"><img src="/images/chart-harm-pie.jpg" alt="The debt they added"/></figure>
 <p>${esc(DEBT_NOW.asOf)}: ${esc(DEBT_NOW.total)}. ${esc(DEBT_MATH)}</p>
-<div class="grid">${DRIVERS.map((d) => `<a class="card" href="${d.href}" style="padding:1.2rem"><h3>${esc(d.k)}</h3><p>${esc(d.v)}</p></a>`).join("")}</div>
-</div>
-<div class="panel" id="laws">
-<h2>Laws</h2>
 <div class="grid">${LAWS.map((l) => `<a class="card" href="${l.href}" style="padding:1rem"><h3 style="padding:0">${esc(l.k)}</h3></a>`).join("")}</div>
 </div>
 </main>`,
@@ -457,6 +440,14 @@ for (const section of JOURNAL) {
  if (!lessons.length) continue;
  archiveInner += `<p class="kicker">${esc(section.name)}</p>
 ${archiveList(lessons)}`;
+}
+{
+ const listed = new Set(JOURNAL.flatMap((s) => [...s.slugs]));
+ const rest = posts.filter((p) => !listed.has(p.slug) && !HIDDEN.has(p.slug));
+ if (rest.length) {
+  archiveInner += `<p class="kicker">More</p>
+${archiveList(rest)}`;
+ }
 }
 archiveInner += `</main>`;
 writeFileSync(

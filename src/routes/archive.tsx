@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { JOURNAL, getPost } from "@/lib/content";
+import { JOURNAL, posts, getPost } from "@/lib/content";
 
 export const Route = createFileRoute("/archive")({
   component: ArchivePage,
@@ -8,13 +8,15 @@ export const Route = createFileRoute("/archive")({
       { title: "Archive — Swamp Force" },
       {
         name: "description",
-        content: "The journal.",
+        content: "The journal. Every dispatch.",
       },
     ],
   }),
 });
 
 function ArchivePage() {
+  const listed = new Set<string>(JOURNAL.flatMap((s) => [...s.slugs]));
+  const rest = posts.filter((p) => !listed.has(p.slug));
   return (
     <main className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
       <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
@@ -30,7 +32,7 @@ function ArchivePage() {
             Congressional Scorecard
           </p>
           <p className="mt-1 text-sm leading-relaxed text-muted">
-            Both parties failed. They do not represent the American people.
+            GOP. Dem. Split. Oval. Compare. Charts or the file.
           </p>
         </Link>
         <Link to="/pump" className="mt-6 block text-fg no-underline">
@@ -72,6 +74,32 @@ function ArchivePage() {
           </section>
         );
       })}
+
+      {rest.length ? (
+        <section className="mt-12 border-t border-border pt-10">
+          <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+            More
+          </p>
+          <ul className="mt-6 space-y-5">
+            {rest.map((p) => (
+              <li key={p.slug}>
+                <Link
+                  to="/dispatch/$slug"
+                  params={{ slug: p.slug }}
+                  className="text-fg no-underline"
+                >
+                  <p className="font-display text-lg font-semibold tracking-wide uppercase">
+                    {p.title}
+                  </p>
+                  <p className="mt-1 max-w-2xl text-sm leading-relaxed text-muted">
+                    {p.dek}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
     </main>
   );
 }
