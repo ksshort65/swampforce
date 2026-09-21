@@ -62,7 +62,7 @@ export const posts: Post[] = [
 		dek: "The Constitution does not open with Congress. It opens with the owner. The 535 are the hire. The hire has gone rogue.",
 		date: "2026-09-21",
 		category: "Dispatch",
-		readMinutes: 6,
+		readMinutes: 8,
 		image: "/images/hero-capitol.jpg",
 		imageAlt: "The Capitol — the people are the employer",
 		featured: true,
@@ -71,6 +71,14 @@ export const posts: Post[] = [
 		receipts: [
 			{ label: "The Preamble", href: "https://constitution.congress.gov/constitution/preamble/" },
 			{ label: "Article I", href: "https://constitution.congress.gov/constitution/article-1/" },
+			{ label: "Article V — how the charter is altered", href: "https://constitution.congress.gov/constitution/article-5/" },
+			{ label: "First Amendment — petition", href: "https://constitution.congress.gov/constitution/amendment-1/" },
+			{ label: "Ninth Amendment", href: "https://constitution.congress.gov/constitution/amendment-9/" },
+			{ label: "Tenth Amendment", href: "https://constitution.congress.gov/constitution/amendment-10/" },
+			{ label: "Article I, Section 5 — expel", href: "https://constitution.congress.gov/constitution/article-1/#article-1-section-5" },
+			{ label: "Article II, Section 4 — impeachment", href: "https://constitution.congress.gov/constitution/article-2/#article-2-section-4" },
+			{ label: "Fourteenth Amendment, Section 3", href: "https://constitution.congress.gov/constitution/amendment-14/#amendment-14-section-3" },
+			{ label: "Article III, Section 3 — treason", href: "https://constitution.congress.gov/constitution/article-3/#article-3-section-3" },
 			{ label: "5 U.S.C. § 3331 — the oath", href: "https://www.law.cornell.edu/uscode/text/5/3331" },
 			{ label: "The Declaration of Independence", href: "https://www.archives.gov/founding-docs/declaration-transcript" },
 			{ label: "CBO — last surplus, FY2001", href: "https://www.cbo.gov/data/budget-economic-data" },
@@ -123,15 +131,71 @@ export const posts: Post[] = [
 			},
 			{
 				type: "h",
-				text: "The first step",
+				text: "Alter or abolish",
 			},
 			{
 				type: "p",
-				text: "The [Declaration of Independence](https://www.archives.gov/founding-docs/declaration-transcript) already named the right of a people to alter or to abolish a government that has become destructive of the ends it was instituted to secure. That is not a call to the street. It is the founding paper of the country. The instruments still on the table are the ones that paper named: the record, the statute, the petition, and the vote. Put the hire back in the job. If the hire will not take the job, send the hire home. Truth is the only thing that can save a nation that has been taught to vote the feeling instead of the file. This journal exists to put the file in one place, in public, so the owner can read it before the next hire is signed.",
+				text: "The [Declaration of Independence](https://www.archives.gov/founding-docs/declaration-transcript) is not a statute. It is the country’s statement of right. It names why governments exist, and what a people may do when a government stops doing that work. The National Archives prints the sentence in full:",
 			},
 			{
 				type: "q",
-				text: "We the People own and operate this country. The 535 work here. Actions, not words. That is how a country is taken back.",
+				text: "That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed, — That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as to them shall seem most likely to effect their Safety and Happiness.",
+			},
+			{
+				type: "p",
+				text: "That is the founding paper. Destructive of these ends means a government that no longer secures life, liberty, and the pursuit of happiness, and no longer draws just power from consent. The Declaration then says the method of a free people is not a mood. It is to alter the form, or to abolish the form, and to institute another. The Constitution is that other form. It is the statute the people ordained so they would not need a second revolution every time the hire failed. The right sits in the Declaration. The machinery sits in the Constitution. There is no honest reading that skips the machinery and keeps the right.",
+			},
+			{
+				type: "h",
+				text: "What the Constitution actually says",
+			},
+			{
+				type: "p",
+				text: "The Constitution does not reprint the word abolish. It does not have to. It writes the ways a people change the government they created, and the ways they remove the people they hired, without burning the charter.",
+			},
+			{
+				type: "h",
+				text: "Alter the charter — Article V",
+			},
+			{
+				type: "p",
+				text: "[Article V](https://constitution.congress.gov/constitution/article-5/) is the alter clause. Two thirds of both Houses of Congress may propose an amendment. Or the legislatures of two thirds of the states may apply, and Congress “shall call a Convention for proposing Amendments.” Shall is the word. That second path exists so the states can force the question when Congress will not. Either proposal becomes part of the Constitution when three fourths of the states ratify, by legislature or by convention. Congress has used the first path for every amendment now on the books. The state-application path has never been called. The text is still the text. A people who want term limits, a real budget rule, or a narrower grant of power do not need a street. They need thirty-four state legislatures and thirty-eight ratifications.",
+			},
+			{
+				type: "h",
+				text: "Remove the hire",
+			},
+			{
+				type: "p",
+				text: "[Article I, Section 2](https://constitution.congress.gov/constitution/article-1/#article-1-section-2) puts the whole House up every second year. That is the recall the Framers wrote for the chamber closest to the people. The [Seventeenth Amendment](https://constitution.congress.gov/constitution/amendment-17/) puts the Senate on a six-year clock, one third at a time. There is no federal recall of a sitting member between elections. The Constitution did not forget that tool. It refused it. The two-year House is the tool it chose instead. [Article I, Section 5](https://constitution.congress.gov/constitution/article-1/#article-1-section-5): each House may “punish its Members for disorderly Behaviour, and, with the Concurrence of two thirds, expel a Member.” [Article II, Section 4](https://constitution.congress.gov/constitution/article-2/#article-2-section-4): the President, Vice President, and all civil officers “shall be removed from Office on Impeachment for, and Conviction of, Treason, Bribery, or other high Crimes and Misdemeanors.” The [Fourteenth Amendment, Section 3](https://constitution.congress.gov/constitution/amendment-14/#amendment-14-section-3) bars from federal or state office any person who, having taken an oath to support the Constitution, engaged in insurrection or rebellion against it. Those are removals written in the charter. They run through a chamber, a trial, or a disqualification. They do not run through a crowd.",
+			},
+			{
+				type: "h",
+				text: "Petition",
+			},
+			{
+				type: "p",
+				text: "The [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) forbids Congress from abridging “the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.” Peaceably is in the sentence. Petition is the legal name for a demand the hire has to receive. A million signatures on a term-limits petition that a chamber then ignores is not proof that the right is empty. It is proof that the hire is ignoring the right. The next election is how that file is closed.",
+			},
+			{
+				type: "h",
+				text: "What the people kept",
+			},
+			{
+				type: "p",
+				text: "The [Ninth Amendment](https://constitution.congress.gov/constitution/amendment-9/): “The enumeration in the Constitution, of certain rights, shall not be construed to deny or disparage others retained by the people.” The [Tenth Amendment](https://constitution.congress.gov/constitution/amendment-10/): “The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people.” Those two sentences are the remainder. They do not create a street procedure. They say the list in Article I is a list, not a blank check, and that rights the paper did not name were not thereby surrendered.",
+			},
+			{
+				type: "h",
+				text: "The line the charter drew",
+			},
+			{
+				type: "p",
+				text: "The Constitution does not authorize a private war on the government it created. [Article III, Section 3](https://constitution.congress.gov/constitution/article-3/#article-3-section-3) defines treason as levying war against the United States, or adhering to their enemies. [Article IV, Section 4](https://constitution.congress.gov/constitution/article-4/#article-4-section-4) requires the United States to guarantee every state a republican form of government and, on application, to protect a state against domestic violence. The First Amendment’s assembly is peaceable assembly. This journal will not pretend those clauses are missing. The Declaration named a right of a people. The Constitution converted that right into elections, expulsion, impeachment, petition, and Article V. A second revolution is what the Framers wrote Article V to make unnecessary. Put the hire back in the job. If the hire will not take the job, send the hire home by the instruments already on the page. Truth is the first of those instruments. This journal exists to put the file in one place, in public, so the owner can read it before the next hire is signed.",
+			},
+			{
+				type: "q",
+				text: "We the People own and operate this country. The 535 work here. Actions, not words. Alter the charter by Article V. Remove the hire by the vote, the expulsion, and the oath. That is how a country is taken back.",
 			},
 		],
 	},
