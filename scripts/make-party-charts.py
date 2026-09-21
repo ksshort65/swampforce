@@ -9,14 +9,14 @@ from matplotlib.ticker import MultipleLocator, FuncFormatter
 bg = "#0b0b0b"
 fg = "#ece8dc"
 muted = "#a39e93"
-gop_c = "#6b7c94"
-dem_c = "#d4c8b4"
+gop_c = "#c53030"
+dem_c = "#2b6cb0"
 split_c = "#3d3d3d"
-clinton_c = "#9a8b74"
-bush_c = "#2c4a7c"
-obama_c = "#c4a574"
-trump_c = "#f3eee6"
-biden_c = "#7a4e4e"
+clinton_c = "#2c5282"
+bush_c = "#9b2c2c"
+obama_c = "#2c5282"
+trump_c = "#e53e3e"
+biden_c = "#3182ce"
 hurt_c = "#9a8f82"
 help_c = "#d8d0c0"
 
@@ -562,7 +562,7 @@ ax.text(
     color=muted,
     va="top",
 )
-who = [("Republican majority", 10.96, gop_c), ("Democratic majority", 12.65, biden_c), ("Split", 16.48, split_c)]
+who = [("Republican majority", 10.96, gop_c), ("Democratic majority", 12.65, dem_c), ("Split", 16.48, split_c)]
 y0 = 9.35
 for i, (lab, v, c) in enumerate(who):
     y = y0 - i * 0.72
@@ -587,7 +587,7 @@ ax.text(
     color=fg,
     va="top",
 )
-ax.text(0.2, 2.95, "DEMOCRATS", fontsize=13, fontweight="bold", color=biden_c)
+ax.text(0.2, 2.95, "DEMOCRATS", fontsize=13, fontweight="bold", color=dem_c)
 ax.text(
     0.2,
     2.5,
@@ -648,7 +648,7 @@ labels = [
     "A bomb  ·  ~90%",
 ]
 vals = [5, 3.67, 60, 90]
-colors = [help_c, gop_c, biden_c, hurt_c]
+colors = [help_c, "#8a93a3", "#d8d0c0", hurt_c]
 y = [3, 2, 1, 0]
 ax.barh(y, vals, color=colors, height=0.62)
 for yi, v, lab in zip(y, vals, labels):
@@ -808,7 +808,7 @@ box(
     "CONGRESS  ·  DEMOCRATIC MAJORITY",
     ["1993 tax raised the top rate", "CHIP reauthorized 2009", "Ledbetter Fair Pay 2009"],
     ["10.83 million encounters FY21–24", "CPI 9.1% June 2022", "Rescue Plan 2021", "Parole into benefits"],
-    biden_c,
+    dem_c,
 )
 ovals = [
     (
