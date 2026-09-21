@@ -206,6 +206,16 @@ export const HOAXES: { k: string; v: string; href: string }[] = [
 /** Oval — nationwide CBP, BLS CPI peak, EIA gallon. */
 export const OVAL = [
   {
+    who: "Bush",
+    when: "FY2001–08",
+    enc: "8.02 million",
+    encN: 8.02,
+    cpi: "5.6%",
+    cpiN: 5.6,
+    gas: "$4.114 peak",
+    note: "Southwest Border Patrol apprehensions, FY2001–08. CPI peak July 2008. EIA weekly regular: highest week $4.114 (July 7, 2008).",
+  },
+  {
     who: "Obama",
     when: "FY2009–16",
     enc: "3.31 million",
@@ -235,32 +245,31 @@ export const OVAL = [
     gas: "$5.006 peak",
     note: "Nationwide encounters. CPI June 2022. EIA weekly regular: $5.006 the week of June 13, 2022.",
   },
-  {
-    who: "Trump 2",
-    when: "FY2025",
-    enc: "0.69 million",
-    encN: 0.69,
-    cpi: "3.4%",
-    cpiN: 3.4,
-    gas: "$4.50 peak",
-    note: "Nationwide FY2025. CPI year-over-year August 2026. EIA weekly regular: highest week $4.500 (May 11, 2026).",
-  },
 ] as const;
+
+/** This term, not the four-Oval compare. */
+export const OVAL_NOW = {
+  who: "This term",
+  when: "FY2025",
+  enc: "0.69 million nationwide",
+  note: "After the Oval changed. Southwest Border Patrol 237,538 — lowest since 1970.",
+  href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
+};
 
 export const OVAL_LINKS = [
   { label: "CBP — nationwide encounters", href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters" },
   { label: "CBP — southwest Border Patrol FY1960–2019", href: "https://www.cbp.gov/document/stats/us-border-patrol-fiscal-year-southwest-border-sector-apprehensions-fy-1960-fy-2019" },
+  { label: "BLS — CPI July 2008, 5.6%", href: "https://www.bls.gov/news.release/archives/cpi_08142008.htm" },
   { label: "BLS — CPI September 2011, 3.9%", href: "https://www.bls.gov/news.release/archives/cpi_10192011.htm" },
   { label: "CBP — enforcement statistics", href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics" },
   { label: "BLS — CPI", href: "https://www.bls.gov/cpi/" },
   { label: "EIA — the gallon", href: "https://www.eia.gov/petroleum/gasdiesel/" },
-  { label: "FRED UNRATE", href: "https://fred.stlouisfed.org/series/UNRATE" },
 ];
 
 /** What the Oval number is. CBP’s own count. */
 export const ENCOUNTERS = {
   k: "What an encounter is",
-  v: "Customs and Border Protection counts an encounter when its officers meet a person who is not making a lawful entry. That is Border Patrol between the ports of entry, and officers at land ports, airports, and seaports. It is people stopped, turned back, expelled, or processed. It is not a visa. It is not a gotaway — those are the people CBP did not meet. Nationwide means every door CBP counts, not only the southwest river. Obama’s Oval uses the older official count: southwest Border Patrol apprehensions, FY2009–16, because CBP did not yet publish the nationwide combined dashboard for those years.",
+  v: "Customs and Border Protection counts an encounter when its officers meet a person who is not making a lawful entry. That is Border Patrol between the ports of entry, and officers at land ports, airports, and seaports. It is people stopped, turned back, expelled, or processed. It is not a visa. It is not a gotaway — those are the people CBP did not meet. Nationwide means every door CBP counts, not only the southwest river. Bush and Obama use southwest Border Patrol, the long official table. Trump 1 and Biden use CBP nationwide when that dashboard exists. Four Ovals: two Republican, two Democratic.",
   href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
 };
 
@@ -920,6 +929,66 @@ export const DRIVERS: { k: string; v: string; href: string }[] = [
   },
 ];
 
+/** CBO’s long-term file. One chart. Who added, and why the meter runs. */
+export const DEBT_WHY = {
+  k: "What actually drives the $40.09 trillion",
+  v: "CBO’s long-term outlook: the meter is Medicare, Medicaid, Social Security, and net interest. Wars and tax bills are real. They are not the largest line. Both parties voted the expansions. Neither locked the door. Neither passes twelve appropriations by October 1.",
+  href: "https://www.cbo.gov/topics/budget",
+  gop: "Unpaid Medicare Part D. Tax cuts without a closed budget. Iraq. CARES. Majority 2015–19: still no October 1.",
+  dem: "ARRA. ACA Medicaid expansion. Rescue Plan. Parole into benefits. Majority 2021–23: 9.1% prices and a record border while the meter ran.",
+};
+
+/** The invasion bill. Official costs. The doors Democrats opened. */
+export const ALIENS = {
+  k: "The invasion bill — who paid, who became eligible",
+  v: "10.83 million nationwide encounters, FY2021–24. Democrats held the Oval. They held majority control of the House and the Senate 2021–23. They ended Remain in Mexico. They ended Title 42. They ran parole — Cubans, Haitians, Nicaraguans, Venezuelans, and the rest — that turned a crossing into a status, a status into a Social Security number, and a number into a check. 8 U.S.C. § 1611 already barred most federal benefits for aliens who are not qualified. They built the exception. That is how an invasion becomes a welfare line.",
+  href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
+  costs: [
+    {
+      k: "Emergency Medicaid, Biden years",
+      amt: "$16.2 billion",
+      href: "https://www.cbo.gov/publication/60805",
+    },
+    {
+      k: "CBO — states and cities, 2023, net",
+      amt: "$9.2 billion",
+      href: "https://www.cbo.gov/publication/61256",
+    },
+    {
+      k: "NYC shelter actuals FY2023–25",
+      amt: "$8.13 billion",
+      href: "https://comptroller.nyc.gov/services/for-the-public/accounting-for-asylum-seeker-services/fiscal-impacts",
+    },
+    {
+      k: "SSI — noncitizens SSA lists as eligible",
+      amt: "About 310,000, Dec. 2025",
+      href: "https://www.ssa.gov/ssi/spotlights/spot-non-citizens.htm",
+    },
+  ],
+  doors: [
+    {
+      k: "Parole",
+      v: "CHNV and the rest. A memo. Not an amnesty statute they could not pass.",
+      href: "https://www.uscis.gov/CHNV",
+    },
+    {
+      k: "Asylum, then release",
+      v: "A claim at the river. Then a court date. Then a city.",
+      href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
+    },
+    {
+      k: "8 U.S.C. § 1611",
+      v: "The bar on federal benefits. Then the doors they left open.",
+      href: "https://www.law.cornell.edu/uscode/text/8/1611",
+    },
+    {
+      k: "8 U.S.C. § 1641",
+      v: "Who counts as a qualified alien — parole, asylum, refugee.",
+      href: "https://www.law.cornell.edu/uscode/text/8/1641",
+    },
+  ],
+};
+
 /** House roll call on H.R. 7152, Civil Rights Act of 1964. Not a party trophy. */
 export const ROLL_1964 = {
   href: "https://www.congress.gov/bill/88th-congress/house-bill/7152",
@@ -1033,6 +1102,25 @@ export const CHARTS: {
     ],
   },
   {
+    src: "/images/chart-debt-why.jpg",
+    title: "The debt — the driver, and what each party voted",
+    sources: [
+      { label: "CBO — budget", href: "https://www.cbo.gov/topics/budget" },
+      { label: "Treasury — Debt to the Penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+      { label: "GAO fraud", href: "https://www.gao.gov/products/gao-25-107746" },
+    ],
+  },
+  {
+    src: "/images/chart-aliens.jpg",
+    title: "The invasion bill — taxpayer cost and the eligibility doors",
+    sources: [
+      { label: "CBP nationwide", href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters" },
+      { label: "CBO 61256", href: "https://www.cbo.gov/publication/61256" },
+      { label: "CBO 60805", href: "https://www.cbo.gov/publication/60805" },
+      { label: "8 U.S.C. § 1611", href: "https://www.law.cornell.edu/uscode/text/8/1611" },
+    ],
+  },
+  {
     src: "/images/chart-oval.jpg",
     title: "The Oval — encounters and the CPI peak",
     sources: [
@@ -1044,17 +1132,14 @@ export const CHARTS: {
 ];
 
 const COMPARE_SRC = [
-  "/images/chart-policy.jpg",
-  "/images/chart-debt-bars.jpg",
   "/images/chart-oval.jpg",
-  "/images/chart-border-toll.jpg",
-  "/images/chart-inflation-party.jpg",
-  "/images/chart-border-all.jpg",
+  "/images/chart-policy.jpg",
+  "/images/chart-debt-why.jpg",
+  "/images/chart-aliens.jpg",
   "/images/chart-border.jpg",
+  "/images/chart-inflation-party.jpg",
   "/images/chart-crime.jpg",
-  "/images/chart-harm-pie.jpg",
   "/images/chart-pump-admins.jpg",
-  "/images/chart-pump-years.jpg",
 ];
 
 export const COMPARE_WIDE = new Set([
@@ -1088,15 +1173,15 @@ function chartsFor(...srcs: string[]) {
 }
 
 export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<typeof chartsFor>> = {
-  gop: chartsFor("/images/chart-policy.jpg", "/images/chart-debt-bars.jpg", "/images/chart-job.jpg"),
+  gop: chartsFor("/images/chart-policy.jpg", "/images/chart-debt-why.jpg", "/images/chart-oval.jpg"),
   dem: chartsFor(
+    "/images/chart-aliens.jpg",
     "/images/chart-border.jpg",
-    "/images/chart-border-all.jpg",
-    "/images/chart-border-toll.jpg",
+    "/images/chart-oval.jpg",
     "/images/chart-inflation-party.jpg",
     "/images/chart-policy.jpg",
   ),
-  split: chartsFor("/images/chart-harm-pie.jpg", "/images/chart-debt-bars.jpg", "/images/chart-blame.jpg"),
+  split: chartsFor("/images/chart-debt-why.jpg", "/images/chart-blame.jpg"),
   oval: chartsFor("/images/chart-oval.jpg", "/images/chart-pump-admins.jpg", "/images/chart-crime.jpg"),
   compare: COMPARE_CHARTS,
 };

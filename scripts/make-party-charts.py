@@ -233,8 +233,8 @@ def panel(ax, title, helped, hurt):
         ax.text(0.3, y, "▸  " + line, fontsize=11, color=muted, va="top")
         y -= 0.7
 
-panel(axes[0], "REPUBLICANS RAN BOTH", gop_help, gop_hurt)
-panel(axes[1], "DEMOCRATS RAN BOTH", dem_help, dem_hurt)
+panel(axes[0], "REPUBLICAN MAJORITY", gop_help, gop_hurt)
+panel(axes[1], "DEMOCRATIC MAJORITY", dem_help, dem_hurt)
 fig.text(
     0.02,
     0.03,
@@ -246,24 +246,29 @@ fig.savefig("/workspace/public/images/chart-policy.jpg", dpi=140, facecolor=bg, 
 plt.close()
 
 # Open border — actual encounters, not an average
-fy = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
-enc = [303916, 396579, 851508, 400651, 1659206, 2206436, 2045838, 1530523, 237538]
+fy = list(range(2001, 2026))
+enc = [
+    1235718, 929807, 905065, 1139282, 1171428, 1071972, 858638, 705005,
+    540865, 447731, 327577, 356873, 414397, 479371, 331333, 408870,
+    303916, 396579, 851508, 400651, 1659206, 2206436, 2045838, 1530523, 237538,
+]
 bcols = [oval_of(y)[1] for y in fy]
 fig, ax = plt.subplots(figsize=(16, 9), dpi=140, facecolor=bg)
 ax.set_facecolor(bg)
 xpos = list(range(len(fy)))
 bars = ax.bar(xpos, [e / 1e6 for e in enc], color=bcols, width=0.72)
 ax.set_xticks(xpos)
-ax.set_xticklabels([str(y) for y in fy])
+ax.set_xticklabels([str(y)[2:] for y in fy], fontsize=8)
 for i, e in enumerate(enc):
-    label = f"{e/1e6:.2f}M" if e >= 1e6 else f"{e/1000:.0f}K"
-    ax.text(i, e / 1e6 + 0.05, label, ha="center", va="bottom", fontsize=10, fontweight="bold", color=fg)
+    if e >= 1.1e6 or fy[i] in (2008, 2014, 2019, 2025):
+        label = f"{e/1e6:.2f}" if e >= 1e6 else f"{e/1000:.0f}k"
+        ax.text(i, e / 1e6 + 0.04, label, ha="center", va="bottom", fontsize=8, fontweight="bold", color=fg)
 ax.set_ylabel("Southwest Border Patrol encounters  ·  millions", fontsize=12, color=muted)
 ax.set_title("THE OPEN BORDER  ·  BY ADMINISTRATION", fontsize=20, fontweight="bold", color=fg, pad=16, loc="left")
 ax.text(
     0.0,
     1.02,
-    "CBP. FY2017–20 Trump. FY2021–24 Biden — 7.44 million. FY2025 Trump — 237,538.",
+    "CBP southwest Border Patrol. Bush FY2001–08. Obama FY2009–16. Trump FY2017–20. Biden FY2021–24.",
     transform=ax.transAxes,
     fontsize=11,
     color=muted,
@@ -279,6 +284,8 @@ ax.grid(axis="y", color="#2a2a2a", lw=0.7)
 ax.set_axisbelow(True)
 ax.legend(
     handles=[
+        mpatches.Patch(facecolor=bush_c, label="Bush"),
+        mpatches.Patch(facecolor=obama_c, label="Obama"),
         mpatches.Patch(facecolor=trump_c, label="Trump"),
         mpatches.Patch(facecolor=biden_c, label="Biden"),
     ],
@@ -348,8 +355,12 @@ plt.close()
 
 # Crime — FBI murder rate, actual years, not an average
 # FBI UCR Summary of Reported Crimes in the Nation, 2025 (released Aug 2026)
-murder_years = list(range(2015, 2026))
-murder_rate = [4.9, 5.4, 5.3, 5.0, 5.0, 6.6, 6.5, 6.6, 6.0, 5.1, 4.1]
+murder_years = list(range(2001, 2026))
+murder_rate = [
+    5.6, 5.6, 5.7, 5.5, 5.6, 5.7, 5.6, 5.4, 5.0, 4.8,
+    4.7, 4.7, 4.5, 4.4, 4.9, 5.4, 5.3, 5.0, 5.0, 6.6,
+    6.5, 6.6, 6.0, 5.1, 4.1,
+]
 mcols = [oval_of(y)[1] for y in murder_years]
 
 fig, ax = plt.subplots(figsize=(16, 9), dpi=140, facecolor=bg)
@@ -363,8 +374,8 @@ for i, (y, r) in enumerate(zip(murder_years, murder_rate)):
     if y == 2020:
         ax.annotate(
             "Trump year. They called it peaceful.\nFBI: 6.6",
-            xy=(5, 6.6),
-            xytext=(0.2, 7.35),
+            xy=(19, 6.6),
+            xytext=(8, 7.35),
             fontsize=11,
             color=fg,
             fontweight="bold",
@@ -392,6 +403,7 @@ ax.grid(axis="y", color="#2a2a2a", lw=0.7)
 ax.set_axisbelow(True)
 ax.legend(
     handles=[
+        mpatches.Patch(facecolor=bush_c, label="Bush"),
         mpatches.Patch(facecolor=obama_c, label="Obama"),
         mpatches.Patch(facecolor=trump_c, label="Trump"),
         mpatches.Patch(facecolor=biden_c, label="Biden"),
@@ -404,7 +416,7 @@ ax.legend(
 ax.text(
     0.0,
     -0.12,
-    "Source: FBI UCR Summary of Reported Crimes in the Nation, 2025. Violent crime rate 2025: 327.6 per 100,000 (down 9.3% from 2024).",
+    "Source: FBI UCR. 2001–2025. Violent crime rate 2025: 327.6 per 100,000 (down 9.3% from 2024).",
     transform=ax.transAxes,
     fontsize=9,
     color=muted,
@@ -495,10 +507,10 @@ fig.savefig("/workspace/public/images/chart-debt-bars.jpg", dpi=140, facecolor=b
 plt.close()
 
 fig, axes = plt.subplots(1, 2, figsize=(16, 7), dpi=140, facecolor=bg)
-labs = ["Obama\nFY09–16", "Trump 1\nFY17–20", "Biden\nFY21–24", "Trump 2\nFY25"]
-enc = [3.31, 3.00, 10.83, 0.69]
-cpi = [3.9, 2.9, 9.1, 3.4]
-cols_o = [biden_c, trump_c, biden_c, trump_c]
+labs = ["Bush\nFY01–08", "Obama\nFY09–16", "Trump 1\nFY17–20", "Biden\nFY21–24"]
+enc = [8.02, 3.31, 3.00, 10.83]
+cpi = [5.6, 3.9, 2.9, 9.1]
+cols_o = [bush_c, obama_c, trump_c, biden_c]
 ax = axes[0]
 ax.set_facecolor(bg)
 ax.bar(labs, enc, color=cols_o, width=0.62)
@@ -526,12 +538,61 @@ fig.suptitle("THE OVAL — SAME METERS", fontsize=22, fontweight="bold", color=f
 fig.text(
     0.02,
     0.02,
-    "Obama: southwest Border Patrol FY2009–16 (3.31M). Later ovals: CBP nationwide. BLS CPI: Obama Sept 2011 3.9%; Trump 1 in-term 2.9%; Biden June 2022 9.1%; Trump 2 Aug 2026 3.4%. Gallon is on the pump page.",
+    "Bush and Obama: southwest Border Patrol. Trump 1 and Biden: CBP nationwide. Two GOP Ovals, two Democratic Ovals. BLS CPI peaks: Bush July 2008 5.6%; Obama Sept 2011 3.9%; Trump 1 2.9%; Biden June 2022 9.1%.",
     fontsize=9,
     color=muted,
 )
 fig.tight_layout(rect=(0, 0.06, 1, 0.92))
 fig.savefig("/workspace/public/images/chart-oval.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
+# One debt chart: the driver, and what each party voted
+fig, ax = plt.subplots(figsize=(16, 10), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 10)
+ax.axis("off")
+ax.text(0.2, 9.4, "THE DEBT  ·  THE DRIVER", fontsize=26, fontweight="bold", color=fg)
+ax.text(0.2, 8.85, "CBO: Medicare, Medicaid, Social Security, and net interest. $40.09T as of Sept. 17, 2026.", fontsize=13, color=muted)
+# three who-added bars
+who = [("Republican majority", 10.96, gop_c), ("Democratic majority", 12.65, biden_c), ("Split", 16.48, split_c)]
+y0 = 7.6
+for i, (lab, v, c) in enumerate(who):
+    y = y0 - i * 0.7
+    ax.barh(y, v / 4.2, height=0.45, color=c, left=0.2)
+    ax.text(0.2 + v / 4.2 + 0.15, y, f"{lab}  +${v:.2f}T", va="center", fontsize=14, fontweight="bold", color=fg)
+ax.text(0.2, 5.3, "WHAT THEY VOTED THAT FED THE METER", fontsize=16, fontweight="bold", color=fg)
+ax.text(0.2, 4.55, "REPUBLICANS", fontsize=13, fontweight="bold", color=gop_c)
+ax.text(0.2, 4.05, "Unpaid Medicare Part D. Tax cuts without a closed budget. Iraq. CARES.\nMajority 2015–19: still no October 1.", fontsize=12, color=fg, va="top")
+ax.text(0.2, 2.85, "DEMOCRATS", fontsize=13, fontweight="bold", color=biden_c)
+ax.text(0.2, 2.35, "ARRA. ACA Medicaid expansion. Rescue Plan. Parole into benefits.\nMajority 2021–23: 9.1% prices and a record border while the meter ran.", fontsize=12, color=fg, va="top")
+ax.text(0.2, 1.15, "BOTH", fontsize=13, fontweight="bold", color=muted)
+ax.text(0.2, 0.65, "Twelve appropriations by October 1 — they pass none. GAO: $233–521B a year in fraud.\nThe last surplus was FY2001. The purse is Article I.", fontsize=12, color=fg, va="top")
+ax.text(0.2, 0.15, "Treasury Debt to the Penny  ·  CBO budget  ·  GAO  ·  Congress.gov", fontsize=10, color=muted)
+fig.savefig("/workspace/public/images/chart-debt-why.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
+# Invasion / eligibility
+fig, ax = plt.subplots(figsize=(16, 10), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 10)
+ax.axis("off")
+ax.text(0.2, 9.4, "THE INVASION BILL", fontsize=26, fontweight="bold", color=fg)
+ax.text(0.2, 8.85, "10.83 million nationwide encounters, FY2021–24. Democrats held the Oval and majority 2021–23.", fontsize=13, color=muted)
+costs = [("$16.2B", "Emergency Medicaid  ·  Biden years  ·  CBO"), ("$9.2B", "States and cities, net, 2023  ·  CBO"), ("$8.13B", "NYC shelter actuals FY2023–25"), ("310,000", "Noncitizens on SSI  ·  SSA, Dec 2025")]
+for i, (n, cap) in enumerate(costs):
+    x = 0.3 + (i % 2) * 4.8
+    y = 7.4 - (i // 2) * 1.7
+    ax.add_patch(plt.Rectangle((x, y), 4.4, 1.45, facecolor="#141414", edgecolor="#3a3a3a"))
+    ax.text(x + 0.2, y + 0.85, n, fontsize=22, fontweight="bold", color=biden_c)
+    ax.text(x + 0.2, y + 0.3, cap, fontsize=12, color=fg)
+ax.text(0.2, 3.7, "HOW THEY BECAME ELIGIBLE  ·  NOT A STATUTE THEY COULD PASS", fontsize=14, fontweight="bold", color=fg)
+doors = "1  Cross.  2  Parole or asylum (CHNV and the rest — a memo).  3  An SSN.  4  8 U.S.C. § 1611 already barred most federal benefits.\nThey left the doors: parole, asylum, refugee (§ 1641). That is how an invasion becomes a welfare line."
+ax.text(0.2, 3.15, doors, fontsize=13, color=fg, va="top")
+ax.text(0.2, 1.7, "They ended Remain in Mexico. They ended Title 42. They did not pass amnesty. They ran it through the agencies.", fontsize=13, color=fg)
+ax.text(0.2, 0.35, "CBP nationwide  ·  CBO 60805 and 61256  ·  NYC Comptroller  ·  SSA  ·  8 U.S.C. §§ 1611, 1641  ·  USCIS CHNV", fontsize=10, color=muted)
+fig.savefig("/workspace/public/images/chart-aliens.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
 fig, ax = plt.subplots(figsize=(16, 8), dpi=140, facecolor=bg)

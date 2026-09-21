@@ -3,7 +3,7 @@ import { basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { posts, SITE, START_HERE, JOURNAL, getPost } from "../src/lib/content.ts";
-import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, ENCOUNTERS, HOAXES, LAWS, MAJORITY, OBAMA_TERMS, OVAL, OVAL_LINKS, PRICES, PURSE, RECORD, SCORE_TABS, TAB_CHARTS, SCORE_UPDATED } from "../src/lib/scorecard.ts";
+import { ALIENS, BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DEBT_WHY, DRIVERS, ENCOUNTERS, HOAXES, LAWS, MAJORITY, OBAMA_TERMS, OVAL, OVAL_LINKS, OVAL_NOW, PRICES, PURSE, RECORD, SCORE_TABS, TAB_CHARTS, SCORE_UPDATED } from "../src/lib/scorecard.ts";
 import { ADMINS, GALLON_STACK, MARKS, OPEC_FILE, PUMP_CHARTS, PUMP_SOURCES, PUMP_UPDATED, RULES_FILE, TAX_FILE } from "../src/lib/pump.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -26,6 +26,8 @@ const needed = new Set([
  "chart-border-all.jpg",
  "chart-border-toll.jpg",
  "chart-debt-bars.jpg",
+ "chart-debt-why.jpg",
+ "chart-aliens.jpg",
  "chart-crime.jpg",
  "chart-iran.jpg",
  "chart-oval.jpg",
@@ -352,6 +354,7 @@ ${tally ? `<p style="font-size:1.8rem;font-weight:800">${esc(tally.added)}</p>` 
 <ul>${col.minus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
 ${col.id === "dem" ? HOAXES.map((h) => `<p><strong>${esc(h.k)}</strong><br/>${esc(h.v)}<br/><a href="${h.href}">The file →</a></p>`).join("") : ""}
 ${col.id === "dem" ? `<p><a href="/dispatch/the-caption-was-not-the-charge.html">The essay →</a></p>` : ""}
+${col.id === "dem" ? `<h2>${esc(ALIENS.k)}</h2><p>${esc(ALIENS.v)}</p><figure><img src="/images/chart-aliens.jpg" alt="The invasion bill"/></figure>` : ""}
 ${col.id === "dem" ? borderHtml() + borderMoveHtml() + borderHarmHtml() + benefitsHtml() + workerHtml() : ""}
 </div>`;
 }).join("")}
@@ -368,6 +371,7 @@ ${col.id === "dem" ? borderHtml() + borderMoveHtml() + borderHarmHtml() + benefi
 <p>${esc(ENCOUNTERS.v)}</p>
 <p><a href="${ENCOUNTERS.href}">CBP — nationwide encounters →</a></p>
 <div class="grid">${OVAL.map((row) => `<div class="card" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><p>${esc(row.when)}</p><h3>${esc(row.enc)}</h3><p>${esc(row.note)}</p><h3>${esc(row.cpi)}</h3><p>CPI peak</p><h3>${esc(row.gas)}</h3><p>highest EIA weekly gasoline</p></div>`).join("")}</div>
+<p><a href="${OVAL_NOW.href}"><strong>${esc(OVAL_NOW.who)}</strong> · ${esc(OVAL_NOW.when)} · ${esc(OVAL_NOW.enc)}. ${esc(OVAL_NOW.note)}</a></p>
 <p>${OVAL_LINKS.map((l) => `<a href="${l.href}">${esc(l.label)}</a>`).join(" · ")} · <a href="/pump.html">The pump</a></p>
 </div>
 <div class="panel" id="compare-read">

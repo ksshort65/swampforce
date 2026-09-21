@@ -38,10 +38,10 @@ def admins():
     )
 
     rows = [
+        ("Bush", "July 2008", 4.114, 4.737),
         ("Obama", "May 2011 / Feb 2013", 3.965, 4.159),
         ("Trump 1", "May 2018 / Oct 2018", 2.962, 3.394),
         ("Biden", "June 13, 2022 / June 20, 2022", 5.006, 5.81),
-        ("Trump 2", "May 11, 2026 / Sept 14, 2026", 4.5, 6.285),
     ]
     max_v = 6.285
     base_y = 780
@@ -81,6 +81,14 @@ def years():
     d.text((64, 124), "EIA weekly U.S. regular gasoline. June 13, 2022: $5.006. Not a yearly mean.", font=font(22), fill=MUTED)
 
     data = [
+        (2001, 1.737, "H"),
+        (2002, 1.861, "H"),
+        (2003, 2.084, "H"),
+        (2004, 2.203, "H"),
+        (2005, 3.157, "H"),
+        (2006, 3.075, "H"),
+        (2007, 3.271, "H"),
+        (2008, 4.114, "H"),
         (2009, 2.694, "O"),
         (2010, 3.052, "O"),
         (2011, 3.965, "O"),
@@ -100,7 +108,7 @@ def years():
         (2025, 3.243, "2"),
         (2026, 4.500, "2"),
     ]
-    fill = {"O": (110, 104, 94), "T": (232, 224, 208), "B": (150, 142, 128), "2": (245, 241, 234)}
+    fill = {"H": (90, 86, 78), "O": (110, 104, 94), "T": (232, 224, 208), "B": (150, 142, 128), "2": (245, 241, 234)}
     base_y = 760
     max_h = 500
     max_v = 5.006
@@ -114,15 +122,15 @@ def years():
         x = int(left + i * slot + (slot - bar_w) / 2)
         h = int(max_h * v / max_v)
         d.rectangle([x, base_y - h, x + bar_w, base_y], fill=fill[who])
-        if year in (2011, 2018, 2022, 2026):
+        if year in (2008, 2011, 2018, 2022):
             d.text((x + bar_w / 2, base_y - h - 10), f"${v:.2f}", font=font(16, True), fill=FG, anchor="ms")
         label = "'26*" if year == 2026 else f"'{str(year)[2:]}"
         d.text((x + bar_w / 2, base_y + 12), label, font=font(16, True), fill=MUTED, anchor="mt")
 
-    d.text((64, 170), "Obama", font=font(18, True), fill=(160, 154, 144))
-    d.text((160, 170), "Trump 1", font=font(18, True), fill=SAGE)
-    d.text((280, 170), "Biden", font=font(18, True), fill=(170, 162, 150))
-    d.text((370, 170), "Trump 2", font=font(18, True), fill=FG)
+    d.text((64, 170), "Bush", font=font(18, True), fill=(140, 134, 124))
+    d.text((140, 170), "Obama", font=font(18, True), fill=(160, 154, 144))
+    d.text((240, 170), "Trump 1", font=font(18, True), fill=SAGE)
+    d.text((360, 170), "Biden", font=font(18, True), fill=(170, 162, 150))
     d.text((64, 830), "Source: EIA weekly regular  ·  FRED GASREGW  ·  highest week of each year, including tax", font=font(18), fill=MUTED)
     im.save(OUT / "chart-pump-years.jpg", "JPEG", quality=90)
     print("wrote chart-pump-years.jpg")

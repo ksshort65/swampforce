@@ -51,21 +51,27 @@ export const PUMP_CHARTS = [
     title: "How a gallon is built — OPEC to the pump",
   },
   {
-    src: "/images/chart-pump-stack.jpg",
-    title: "What is in a gallon — EIA",
-  },
-  {
     src: "/images/chart-pump-admins.jpg",
-    title: "Highest week — last four administrations",
+    title: "Highest week — Bush, Obama, Trump, Biden",
   },
   {
     src: "/images/chart-pump-years.jpg",
-    title: "Highest week of each year, 2009–2026",
+    title: "Highest week of each year, 2001–2026",
   },
 ];
 
 /** EIA weekly retail. The number is the highest week in that Oval, not a four-year mean. */
 export const ADMINS = [
+  {
+    who: "Bush",
+    when: "2001–08",
+    gas: 4.114,
+    gasWhen: "week of July 7, 2008",
+    diesel: 4.737,
+    dieselWhen: "week of July 14, 2008",
+    wti: 145.29,
+    wtiWhen: "July 3, 2008",
+  },
   {
     who: "Obama",
     when: "2009–16",
@@ -95,16 +101,6 @@ export const ADMINS = [
     dieselWhen: "week of June 20, 2022",
     wti: 123.64,
     wtiWhen: "March 8, 2022",
-  },
-  {
-    who: "Trump 2",
-    when: "2025–26",
-    gas: 4.5,
-    gasWhen: "week of May 11, 2026",
-    diesel: 6.285,
-    dieselWhen: "week of Sept. 14, 2026",
-    wti: 114.58,
-    wtiWhen: "April 7, 2026",
   },
 ] as const;
 

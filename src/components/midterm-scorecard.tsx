@@ -8,7 +8,10 @@ import {
   WORKER,
   OVAL,
   OVAL_LINKS,
+  OVAL_NOW,
   ENCOUNTERS,
+  ALIENS,
+  DEBT_WHY,
   CHARTS,
   COMPARE_CHARTS,
   COMPARE_WIDE,
@@ -144,6 +147,52 @@ function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
         Hurt
       </p>
       <BillList rows={col.minus} tone="minus" />
+    </div>
+  );
+}
+
+function AliensFile() {
+  return (
+    <div className="space-y-6">
+      <p className="font-display text-xl font-bold tracking-wide uppercase">{ALIENS.k}</p>
+      <p className="text-base leading-relaxed">{ALIENS.v}</p>
+      <figure>
+        <img
+          src="/images/chart-aliens.jpg"
+          alt="The invasion bill — taxpayer cost and eligibility"
+          className="h-auto w-full rounded-md border border-border"
+        />
+      </figure>
+      <ul className="grid gap-3 sm:grid-cols-2">
+        {ALIENS.costs.map((c) => (
+          <li key={c.href}>
+            <a
+              href={c.href}
+              target="_blank"
+              rel="noreferrer"
+              className="block min-h-24 rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
+            >
+              <p className="font-display text-2xl font-bold tracking-wide">{c.amt}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{c.k}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <ul className="space-y-3">
+        {ALIENS.doors.map((d) => (
+          <li key={d.href}>
+            <a
+              href={d.href}
+              target="_blank"
+              rel="noreferrer"
+              className="block rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
+            >
+              <p className="font-display text-sm font-bold tracking-wide uppercase">{d.k}</p>
+              <p className="mt-2 text-sm leading-relaxed">{d.v}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -384,6 +433,18 @@ function OvalFile() {
           </div>
         ))}
       </div>
+      <a
+        href={OVAL_NOW.href}
+        target="_blank"
+        rel="noreferrer"
+        className="block rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
+      >
+        <p className="font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase">
+          {OVAL_NOW.who} · {OVAL_NOW.when}
+        </p>
+        <p className="mt-3 font-display text-2xl font-bold tracking-wide">{OVAL_NOW.enc}</p>
+        <p className="mt-2 text-sm leading-relaxed text-muted">{OVAL_NOW.note}</p>
+      </a>
       <figure>
         <img
           src="/images/chart-oval.jpg"
@@ -461,7 +522,7 @@ export function MidtermScorecard() {
   const [mode, setMode] = useState<Mode>("charts");
   const gop = RECORD.find((r) => r.id === "gop");
   const dem = RECORD.find((r) => r.id === "dem");
-  const split = DEBT_TALLY.find((t) => t.who.includes("split"));
+  const split = DEBT_TALLY.find((t) => t.who.toLowerCase().includes("split"));
 
   useEffect(() => {
     const apply = () => {
@@ -556,6 +617,7 @@ export function MidtermScorecard() {
               <HoaxesFile />
             </div>
             <div className="mt-8">
+              <AliensFile />
               <BorderFile />
               <BorderMove />
               <BorderHarm />
@@ -674,11 +736,18 @@ export function MidtermScorecard() {
             </p>
             <figure>
               <img
-                src="/images/chart-policy.jpg"
-                alt="Policy — success and failure"
+                src="/images/chart-debt-why.jpg"
+                alt="The debt — the driver, and what each party voted"
                 className="h-auto w-full rounded-md border border-border"
               />
             </figure>
+            <p className="text-base leading-relaxed">{DEBT_WHY.v}</p>
+            <p className="text-sm leading-relaxed">
+              Republicans: {DEBT_WHY.gop}
+            </p>
+            <p className="text-sm leading-relaxed">
+              Democrats: {DEBT_WHY.dem}
+            </p>
             {OBAMA_TERMS.map((term) => (
               <div key={term.who} className="rounded-md border border-border bg-surface p-5">
                 <p className="font-display text-xl font-bold tracking-wide uppercase">
