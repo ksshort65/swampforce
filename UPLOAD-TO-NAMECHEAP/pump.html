@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>The pump — four administrations — Swamp Force</title>
+<meta name="description" content="EIA weekly gasoline and diesel. Last four administrations."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://swampforce.com/pump.html"/>
+<link rel="icon" href="/favicon-32.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://swampforce.com/pump.html"/>
+<meta property="og:title" content="The pump — four administrations — Swamp Force"/>
+<meta property="og:description" content="EIA weekly gasoline and diesel. Last four administrations."/>
+<meta property="og:image" content="https://swampforce.com/images/chart-pump-admins.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="The pump — four administrations — Swamp Force"/>
+<meta name="twitter:image" content="https://swampforce.com/images/chart-pump-admins.jpg"/>
+<meta name="twitter:site" content="@SwampForce"/>
+<style>
+:root { --bg:#0b0b0b; --fg:#ece8dc; --muted:#a39e93; --sage:#e8e0d0; --line:#2a2a2a; --surface:#141414; }
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;overflow-x:hidden}
+a{color:var(--sage)}
+img{max-width:100%;height:auto;display:block}
+header{position:sticky;top:0;background:#0b0b0b;border-bottom:1px solid var(--line);z-index:50}
+.ticker{text-align:center;font:600 12px/1.4 ui-sans-serif,system-ui;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);padding:.5rem 1.5rem;border-bottom:1px solid var(--line);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar{display:flex;align-items:center;gap:.75rem;max-width:72rem;margin:0 auto;padding:.5rem 1.5rem}
+.mark{font:700 16px ui-sans-serif,system-ui;letter-spacing:.18em;text-transform:uppercase;color:var(--fg);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0}
+nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;margin-left:auto}
+nav a{margin:0;padding:.75rem .75rem;font:600 14px ui-sans-serif,system-ui;letter-spacing:.14em;text-transform:uppercase;color:#ddd;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0}
+select.essays{background:#0b0b0b;color:#e8e0d0;border:1px solid #e8e0d0;padding:.7rem .8rem;font:600 13px ui-sans-serif,system-ui;text-transform:uppercase;min-width:12rem;min-height:44px}
+.hero{position:relative;min-height:78vh}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;max-width:none}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.4),transparent)}
+.hero .copy{position:relative;max-width:72rem;margin:0 auto;min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem 1.5rem 2.5rem}
+.kicker{font:600 11px ui-sans-serif,system-ui;letter-spacing:.28em;text-transform:uppercase;color:var(--sage)}
+h1{font:700 clamp(2.2rem,7vw,4.6rem)/.95 ui-sans-serif,system-ui;letter-spacing:.04em;text-transform:uppercase;margin:.4rem 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--sage);color:#121212;text-decoration:none;padding:.85rem 1rem;font:700 12px ui-sans-serif,system-ui;letter-spacing:.14em;text-transform:uppercase;margin:.5rem .5rem 0 0;min-height:44px}
+.btn.out{background:transparent;border:1px solid #ccc;color:#fff}
+.panel{display:none;margin-top:1.6rem}
+.panel:target{display:block}
+.featured{display:grid;gap:2rem;grid-template-columns:1.15fr .85fr;align-items:center;max-width:72rem;margin:0 auto;padding:3rem 1.5rem 1rem}
+.featured img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
+.featured h2{font:700 clamp(1.8rem,4vw,3rem)/1.05 ui-sans-serif,system-ui;text-transform:uppercase;letter-spacing:.04em;margin:.4rem 0}
+.menu-row{max-width:72rem;margin:0 auto;padding:0 1rem 3rem}
+.wrap p, main.wrap p{font-size:1.2rem;line-height:2;margin:0 0 1.65em;letter-spacing:.015em;word-spacing:.04em}
+.dek{font-size:1.32rem;line-height:1.7;margin:0 0 2.2em;color:#ddd}
+.wrap ul{font-size:1.12rem;line-height:1.85;margin:0 0 2em 1.3em;padding:0}
+.wrap li{margin:0 0 1em}
+q, blockquote{display:block;font-size:1.35rem;line-height:1.55;margin:1.7rem 0;color:#eee}
+.grid{display:grid;gap:1.2rem;grid-template-columns:repeat(2,minmax(0,1fr));max-width:72rem;margin:0 auto;padding:2rem 1rem}
+@media(min-width:800px){.grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}}
+.card{background:var(--surface);text-decoration:none;color:var(--fg);border-radius:8px;overflow:hidden}
+.card h3{font:700 1.2rem ui-sans-serif,system-ui;text-transform:uppercase;padding:0 1rem}
+.card p{padding:0 1rem 1rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:2rem 1rem;color:var(--muted);font-size:.9rem}
+footer .f{max-width:72rem;margin:0 auto;display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.btns{display:grid;grid-template-columns:repeat(5,1fr);gap:.75rem;margin:1.5rem 0}
+.btns .btn{margin:0;width:100%;text-align:center}
+</style>
+</head>
+<body>
+<header>
+ <div class="ticker">The receipts are in this journal.</div>
+ <div class="bar">
+  <a class="mark" href="/">Swamp Force™</a>
+  <nav>
+   <a href="/scorecard.html">Scorecard</a>
+   <a href="/pump.html">Pump</a>
+   <a href="/foreword.html">Foreword</a>
+   <a href="/archive.html">Archive</a>
+  </nav>
+ </div>
+</header>
+<main class="wrap" style="max-width:52rem">
+<p class="kicker">The pump · EIA · updated 2026-09-20</p>
+<h1>The gallon</h1>
+<p>EIA splits the retail gallon into four parts: crude oil, refining, distribution and marketing, and taxes. WTI is West Texas Intermediate, the U.S. price of a 42-gallon barrel of crude, traded in Cushing, Oklahoma. OPEC and OPEC+ set how many barrels leave the ground. The refinery, the pipeline, the truck, the federal tax, the state tax, and in some states a unique blend, finish the number on the pump.</p>
+<figure><img src="/images/chart-pump-stack.jpg" alt="What is in a gallon — EIA"/></figure><figure><img src="/images/chart-pump-admins.jpg" alt="Highest week — last four administrations"/></figure><figure><img src="/images/chart-pump-years.jpg" alt="Highest week of each year, 2009–2026"/></figure>
+<div class="grid"><a class="card" href="https://www.eia.gov/petroleum/gasdiesel/gaspump_hist.php" style="padding:1.2rem"><p class="kicker">Crude oil</p><h3>$2.33</h3><p>51.9% of $4.479. The barrel. OPEC, OPEC+, wars, and world demand set this number. A president does not.</p></a><a class="card" href="https://www.eia.gov/petroleum/gasdiesel/gaspump_hist.php" style="padding:1.2rem"><p class="kicker">Refining</p><h3>$0.97</h3><p>21.7% of $4.479. Turning black oil into gasoline. U.S. operable capacity: 18.4 million barrels a day as of January 1, 2025.</p></a><a class="card" href="https://www.eia.gov/petroleum/gasdiesel/gaspump_hist.php" style="padding:1.2rem"><p class="kicker">Distribution and marketing</p><h3>$0.66</h3><p>14.8% of $4.479. Pipeline to a terminal, ethanol blend, truck to the station, the rent and the labor at the pump.</p></a><a class="card" href="https://www.eia.gov/petroleum/gasdiesel/gaspump_hist.php" style="padding:1.2rem"><p class="kicker">Taxes</p><h3>$0.52</h3><p>11.5% of $4.479. Federal excise plus the state average. California is higher. Alaska is lower.</p></a></div>
+<h2>OPEC and OPEC+</h2>
+<p>OPEC is the Organization of the Petroleum Exporting Countries — governments that sit on a large share of the world’s oil, including Saudi Arabia, Iraq, Iran, the United Arab Emirates, Kuwait, Venezuela, Nigeria, Algeria, Libya, and others. OPEC+ is that group plus Russia and additional producers who agreed, in 2022, to manage output together. They meet and decide how many barrels leave the ground. Fewer barrels raise the price of crude. More barrels lower it. EIA’s Short-Term Energy Outlook records OPEC+ crude production at 33.08 million barrels a day in the second quarter of 2025 and 26.22 million in the second quarter of 2026, after Middle East export routes were disrupted. That is the barrel. It is not a switch in the Oval.</p>
+<p><a href="https://www.opec.org/opec_web/en/about_us/25.htm">OPEC — who sits at the table</a> · <a href="https://www.eia.gov/outlooks/steo/">EIA STEO — OPEC+ production</a></p>
+<h2>Federal tax, state tax</h2>
+<p>The federal gasoline tax is 18.4 cents a gallon and the federal diesel tax is 24.4 cents a gallon. Both have been unchanged since October 1993. On January 1, 2026, EIA counted state gasoline taxes and fees from 9.0 cents in Alaska to 70.9 cents in California, averaging 33.5 cents. Add the federal 18.4 and the national average tax take is about 52 cents a gallon. California’s combined federal-plus-state bill is about 89 cents. Alaska’s is about 27 cents. Same oil. Different legislatures.</p>
+<table style="width:100%;border-collapse:collapse;font-size:1.05rem">
+<thead><tr><th style="text-align:left;border-bottom:1px solid var(--line);padding:.6rem 0">Tax</th><th style="text-align:left;border-bottom:1px solid var(--line)">Cents per gallon</th><th style="text-align:left;border-bottom:1px solid var(--line)">Note</th></tr></thead>
+<tbody>
+<tr><td style="border-bottom:1px solid var(--line);padding:.7rem 0">Federal gasoline</td><td style="border-bottom:1px solid var(--line)">18.4¢</td><td style="border-bottom:1px solid var(--line);color:var(--muted)">Unchanged since October 1993.</td></tr><tr><td style="border-bottom:1px solid var(--line);padding:.7rem 0">Federal diesel</td><td style="border-bottom:1px solid var(--line)">24.4¢</td><td style="border-bottom:1px solid var(--line);color:var(--muted)">Unchanged since October 1993.</td></tr><tr><td style="border-bottom:1px solid var(--line);padding:.7rem 0">State average, Jan. 1, 2026</td><td style="border-bottom:1px solid var(--line)">33.5¢</td><td style="border-bottom:1px solid var(--line);color:var(--muted)">EIA, taxes and fees on gasoline.</td></tr><tr><td style="border-bottom:1px solid var(--line);padding:.7rem 0">California</td><td style="border-bottom:1px solid var(--line)">70.9¢</td><td style="border-bottom:1px solid var(--line);color:var(--muted)">Highest state gasoline tax and fees.</td></tr><tr><td style="border-bottom:1px solid var(--line);padding:.7rem 0">Alaska</td><td style="border-bottom:1px solid var(--line)">9.0¢</td><td style="border-bottom:1px solid var(--line);color:var(--muted)">Lowest state gasoline tax and fees.</td></tr>
+</tbody>
+</table>
+<p><a href="https://www.eia.gov/todayinenergy/detail.php?id=67165">EIA — state motor-fuel taxes, January 2026</a></p>
+<h2>Refining, shipping, and the state blend</h2>
+<p>Crude becomes gasoline at a refinery. CRS, using EIA: 132 operable U.S. refineries, 18.4 million barrels a day of distillation capacity on January 1, 2025. Finished gasoline then moves by pipeline to terminals, is often blended with ethanol, and is trucked to stations. That is EIA’s “distribution and marketing.” Some states require reformulated gasoline (RFG) under the Clean Air Act. California requires its own CARB blend, which fewer refineries can make and which does not ship easily from the Gulf Coast. A unique recipe in a closed market is a higher gallon even when WTI is the same number everywhere.</p>
+<p><a href="https://www.eia.gov/energyexplained/gasoline/factors-affecting-prices.php">EIA — factors affecting gasoline prices</a> · <a href="https://www.congress.gov/crs-product/IF13251">CRS — gasoline prices</a></p>
+<table style="width:100%;border-collapse:collapse;font-size:1.05rem">
+<thead><tr><th style="text-align:left;border-bottom:1px solid var(--line);padding:.6rem 0">Administration</th><th style="text-align:left;border-bottom:1px solid var(--line)">Peak gasoline</th><th style="text-align:left;border-bottom:1px solid var(--line)">Peak diesel</th><th style="text-align:left;border-bottom:1px solid var(--line)">Peak WTI, $ per barrel</th></tr></thead>
+<tbody>
+<tr><td style="border-bottom:1px solid var(--line);padding:.7rem 0">Obama <span style="color:var(--muted)">2009–16</span></td><td style="border-bottom:1px solid var(--line)">$3.96<br/><span style="color:var(--muted);font-size:.8rem">week of May 9, 2011</span></td><td style="border-bottom:1px solid var(--line)">$4.16<br/><span style="color:var(--muted);font-size:.8rem">week of Feb. 25, 2013</span></td><td style="border-bottom:1px solid var(--line)">$113.03<br/><span style="color:var(--muted);font-size:.8rem">May 2, 2011</span></td></tr><tr><td style="border-bottom:1px solid var(--line);padding:.7rem 0">Trump 1 <span style="color:var(--muted)">2017–20</span></td><td style="border-bottom:1px solid var(--line)">$2.96<br/><span style="color:var(--muted);font-size:.8rem">week of May 28, 2018</span></td><td style="border-bottom:1px solid var(--line)">$3.39<br/><span style="color:var(--muted);font-size:.8rem">week of Oct. 15, 2018</span></td><td style="border-bottom:1px solid var(--line)">$77.41<br/><span style="color:var(--muted);font-size:.8rem">June 27, 2018</span></td></tr><tr><td style="border-bottom:1px solid var(--line);padding:.7rem 0">Biden <span style="color:var(--muted)">2021–24</span></td><td style="border-bottom:1px solid var(--line)">$5.01<br/><span style="color:var(--muted);font-size:.8rem">week of June 13, 2022</span></td><td style="border-bottom:1px solid var(--line)">$5.81<br/><span style="color:var(--muted);font-size:.8rem">week of June 20, 2022</span></td><td style="border-bottom:1px solid var(--line)">$123.64<br/><span style="color:var(--muted);font-size:.8rem">March 8, 2022</span></td></tr><tr><td style="border-bottom:1px solid var(--line);padding:.7rem 0">Trump 2 <span style="color:var(--muted)">2025–26</span></td><td style="border-bottom:1px solid var(--line)">$4.50<br/><span style="color:var(--muted);font-size:.8rem">week of May 11, 2026</span></td><td style="border-bottom:1px solid var(--line)">$6.29<br/><span style="color:var(--muted);font-size:.8rem">week of Sept. 14, 2026</span></td><td style="border-bottom:1px solid var(--line)">$114.58<br/><span style="color:var(--muted);font-size:.8rem">April 7, 2026</span></td></tr>
+</tbody>
+</table>
+<p><a href="https://fred.stlouisfed.org/series/GASREGW"><strong>Record regular gasoline</strong> — June 13, 2022  ·  $5.006  ·  Biden</a><br/><a href="https://fred.stlouisfed.org/series/GASDESW"><strong>Biden diesel high</strong> — June 20, 2022  ·  $5.810</a><br/><a href="https://fred.stlouisfed.org/series/GASDESW"><strong>Highest diesel in the series</strong> — Sept. 14, 2026  ·  $6.285  ·  Trump 2</a><br/><a href="https://www.eia.gov/petroleum/gasdiesel/"><strong>Latest week</strong> — Sept. 14, 2026  ·  gasoline $4.319  ·  diesel $6.285</a></p>
+<p style="color:var(--muted);font-size:.9rem">Sources: <a href="https://www.eia.gov/petroleum/gasdiesel/">EIA — weekly gasoline and diesel</a> · <a href="https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_a.htm">EIA — U.S. regular gasoline annual</a> · <a href="https://fred.stlouisfed.org/series/GASREGW">FRED GASREGW — EIA regular gasoline</a> · <a href="https://fred.stlouisfed.org/series/GASDESW">FRED GASDESW — EIA on-highway diesel</a> · <a href="https://fred.stlouisfed.org/series/DCOILWTICO">FRED — U.S. oil price (WTI, $ per barrel)</a> · <a href="https://www.opec.org/opec_web/en/about_us/25.htm">OPEC — who sits at the table</a> · <a href="https://www.eia.gov/energyexplained/gasoline/factors-affecting-prices.php">EIA — what is in a gallon</a> · <a href="https://www.eia.gov/petroleum/gasdiesel/gaspump_hist.php">EIA — gasoline pump components, monthly</a> · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67165">EIA — state motor-fuel taxes, January 2026</a> · <a href="https://www.eia.gov/outlooks/steo/">EIA STEO — world crude, OPEC+</a>. Calendar years sit with the Oval that held most of the year. WTI is West Texas Intermediate: dollars for one 42-gallon barrel of U.S. crude oil, before it is gasoline. Pump prices include tax.</p>
+</main>
+<footer>
+ <div class="f">
+  <div>
+   <strong>Swamp Force™</strong>
+   <p>The midterm is a vote on the record: what they passed, what it cost, and what they broke. The receipts are in this journal.</p>
+   <p>The official record is the argument. Election Day is when the country can fire the people it hired.</p>
+  </div>
+  <div>
+   <a href="/scorecard.html">Scorecard</a><br/>
+   <a href="/pump.html">Pump</a><br/>
+   <a href="/foreword.html">Foreword</a><br/>
+   <a href="/archive.html">Archive</a><br/>
+   <a href="https://x.com/SwampForce">@SwampForce</a><br/>
+   <a href="mailto:editor@swampforce.com">editor@swampforce.com</a>
+  </div>
+ </div>
+ <p style="max-width:72rem;margin:1rem auto 0">© 2026 Renee Stewart. All rights reserved. · Renee Stewart</p>
+</footer>
+</body></html>
