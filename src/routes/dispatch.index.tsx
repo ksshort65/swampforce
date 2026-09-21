@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { homeHead } from "@/lib/share-head";
-import { getLatest } from "@/lib/content";
+import { getLatest, getPost, START_HERE } from "@/lib/content";
 import { SCORE_TABS } from "@/lib/scorecard";
 
 export const Route = createFileRoute("/dispatch/")({
@@ -19,9 +19,8 @@ function published(iso: string) {
 }
 
 export function DispatchIndex() {
-  const latest = getLatest(8);
-  const lead = latest[0];
-  const rest = latest.slice(1);
+  const lead = getPost(START_HERE[0]);
+  const rest = getLatest(12).filter((p) => p.slug !== lead?.slug).slice(0, 8);
   return (
     <main>
       <section className="relative min-h-[78vh] w-full">
@@ -78,7 +77,7 @@ export function DispatchIndex() {
             </Link>
             <div>
               <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
-                Just published · {published(lead.date)}
+                The lead
               </p>
               <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-5xl">
                 {lead.title}

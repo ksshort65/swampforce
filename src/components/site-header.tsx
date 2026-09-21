@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { SITE } from "@/lib/content";
+import { SITE, JOURNAL, getPost } from "@/lib/content";
 import { SCORE_TABS } from "@/lib/scorecard";
 
 export function SiteHeader() {
@@ -53,12 +53,42 @@ export function SiteHeader() {
           >
             Foreword
           </Link>
-          <Link
-            to="/archive"
-            className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:text-sage"
-          >
-            Archive
-          </Link>
+          <details className="relative">
+            <summary className="inline-flex min-h-11 cursor-pointer list-none items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase hover:text-sage">
+              Archive
+            </summary>
+            <div className="absolute right-0 top-full z-50 mt-1 max-h-[70vh] w-80 overflow-y-auto rounded-md border border-border bg-bg p-2 shadow-lg">
+              {JOURNAL.map((section) => (
+                <div key={section.name} className="mb-2">
+                  <p className="px-3 py-2 font-display text-[11px] font-semibold tracking-[0.16em] text-sage uppercase">
+                    {section.name}
+                  </p>
+                  {section.slugs.map((slug) => {
+                    const p = getPost(slug);
+                    if (!p) return null;
+                    return (
+                      <Link
+                        key={slug}
+                        to="/dispatch/$slug"
+                        params={{ slug }}
+                        className="block rounded-md px-3 py-2.5 text-fg no-underline hover:bg-surface"
+                      >
+                        <span className="font-display text-sm font-semibold tracking-wide uppercase">
+                          {p.title}
+                        </span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              ))}
+              <Link
+                to="/archive"
+                className="mt-1 block rounded-md border-t border-border px-3 py-3 font-display text-sm font-bold tracking-wide text-sage uppercase no-underline hover:bg-surface"
+              >
+                Full archive →
+              </Link>
+            </div>
+          </details>
         </nav>
       </div>
     </header>
