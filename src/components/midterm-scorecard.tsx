@@ -10,6 +10,7 @@ import {
   OVAL_LINKS,
   OVAL_NOW,
   ENCOUNTERS,
+  CPI_PEAK,
   ALIENS,
   DEBT_WHY,
   CHARTS,
@@ -38,6 +39,7 @@ function ChartStack({ tab }: { tab: TabId }) {
   return (
     <div className="space-y-8">
       {tab === "oval" ? (
+        <>
         <div className="rounded-md border border-border bg-surface p-5">
           <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
             {ENCOUNTERS.k}
@@ -52,6 +54,21 @@ function ChartStack({ tab }: { tab: TabId }) {
             CBP — nationwide encounters →
           </a>
         </div>
+        <div className="rounded-md border border-border bg-surface p-5">
+          <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+            {CPI_PEAK.k}
+          </p>
+          <p className="mt-3 text-base leading-relaxed">{CPI_PEAK.v}</p>
+          <a
+            href={CPI_PEAK.href}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+          >
+            BLS — Consumer Price Index →
+          </a>
+        </div>
+        </>
       ) : null}
       {TAB_CHARTS[tab].map((c) => (
         <figure key={c.src}>
@@ -417,6 +434,20 @@ function OvalFile() {
           CBP — nationwide encounters →
         </a>
       </div>
+      <div className="rounded-md border border-border bg-surface p-5">
+        <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+          {CPI_PEAK.k}
+        </p>
+        <p className="mt-3 text-base leading-relaxed">{CPI_PEAK.v}</p>
+        <a
+          href={CPI_PEAK.href}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+        >
+          BLS — Consumer Price Index →
+        </a>
+      </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {OVAL.map((row) => (
           <div key={row.who} className="rounded-md border border-border bg-surface p-5">
@@ -427,7 +458,9 @@ function OvalFile() {
             <p className="mt-4 font-display text-3xl font-bold tracking-wide">{row.enc}</p>
             <p className="mt-1 text-sm text-muted">{row.note}</p>
             <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.cpi}</p>
-            <p className="mt-1 text-sm text-muted">CPI peak, year-over-year</p>
+            <p className="mt-1 text-sm text-muted">
+              CPI peak — highest 12-month rise in prices that Oval (groceries, rent, fuel)
+            </p>
             <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.gas}</p>
             <p className="mt-1 text-sm text-muted">highest EIA weekly gasoline</p>
           </div>

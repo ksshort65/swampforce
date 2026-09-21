@@ -273,6 +273,13 @@ export const ENCOUNTERS = {
   href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
 };
 
+/** What CPI peak means. BLS. Not a mood. */
+export const CPI_PEAK = {
+  k: "What CPI peak means",
+  v: "CPI is the Consumer Price Index. The Bureau of Labor Statistics measures a basket of what people actually buy — groceries, rent, fuel, the doctor’s office — and reports how much more that basket costs than a year earlier. CPI peak is the highest of those 12-month readings in that Oval. It is not a four-year average. Biden’s 9.1% is June 2022. Bush’s 5.6% is July 2008. Obama’s 3.9% is September 2011. Trump’s first term: 2.9%.",
+  href: "https://www.bls.gov/cpi/",
+};
+
 /** Open border — Democratic watch. CBO, CBP, CDC, DHS. Not a panel. */
 export const BORDER = {
   k: "They opened the border",
@@ -1122,7 +1129,7 @@ export const CHARTS: {
   },
   {
     src: "/images/chart-oval.jpg",
-    title: "The Oval — encounters and the CPI peak",
+    title: "The Oval — encounters and the highest price spike (CPI)",
     sources: [
       { label: "CBP — enforcement statistics", href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics" },
       { label: "BLS — CPI", href: "https://www.bls.gov/cpi/" },

@@ -140,7 +140,7 @@ ax.set_title("ACTUAL INFLATION  ·  WHO HELD CONGRESS", fontsize=20, fontweight=
 ax.text(
     0.0,
     1.02,
-    "Bar color = House and Senate same party that year. Names on top = Oval. 9.1% is Democrats in Congress, June 2022.",
+    "CPI is the Consumer Price Index — what it cost to live versus a year earlier. Bar color = House and Senate same party. Names on top = Oval. 9.1% is Democrats in Congress, June 2022.",
     transform=ax.transAxes,
     fontsize=11,
     color=muted,
@@ -522,8 +522,8 @@ ax.set_ylim(0, 13)
 ax = axes[1]
 ax.set_facecolor(bg)
 ax.bar(labs, cpi, color=cols_o, width=0.62)
-ax.set_title("CPI PEAK, YEAR-OVER-YEAR", fontsize=16, fontweight="bold", color=fg, loc="left")
-ax.set_ylabel("Percent", color=muted)
+ax.set_title("HIGHEST PRICE SPIKE  ·  CPI", fontsize=16, fontweight="bold", color=fg, loc="left")
+ax.set_ylabel("Percent higher than a year earlier", color=muted)
 for i, v in enumerate(cpi):
     ax.text(i, v + 0.15, f"{v:.1f}%", ha="center", fontsize=12, fontweight="bold", color=fg)
 ax.set_ylim(0, 11)
@@ -538,7 +538,7 @@ fig.suptitle("THE OVAL — SAME METERS", fontsize=22, fontweight="bold", color=f
 fig.text(
     0.02,
     0.02,
-    "Bush and Obama: southwest Border Patrol. Trump 1 and Biden: CBP nationwide. Two GOP Ovals, two Democratic Ovals. BLS CPI peaks: Bush July 2008 5.6%; Obama Sept 2011 3.9%; Trump 1 2.9%; Biden June 2022 9.1%.",
+    "CPI is the Consumer Price Index: BLS’s basket of groceries, rent, fuel, the doctor. The bar is the highest 12-month reading in that Oval — not a four-year average. Bush July 2008 5.6%. Obama Sept 2011 3.9%. Trump 1: 2.9%. Biden June 2022 9.1%. Bush/Obama border: southwest Border Patrol. Trump 1/Biden: nationwide.",
     fontsize=9,
     color=muted,
 )
