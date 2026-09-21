@@ -780,6 +780,37 @@ ax.text(0.4, 0.55, "DOJ SDNY  ·  State Department wanted poster  ·  CRS LSB114
 fig.savefig("/workspace/public/images/chart-one-word.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
+fig, ax = plt.subplots(figsize=(16, 12), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+ax.set_xlim(0, 16)
+ax.set_ylim(0, 13)
+ax.axis("off")
+ax.text(0.4, 12.5, "ONE WORD  ·  TWELVE YEARS", fontsize=24, fontweight="bold", color=fg, va="top")
+ax.text(0.4, 11.9, "The caption taught a crime. The file did not contain it.", fontsize=13, color=muted, va="top")
+ax.text(0.5, 11.25, "THE WORD THAT RAN", fontsize=11, fontweight="bold", color=gop_c)
+ax.text(8.3, 11.25, "THE FILE", fontsize=11, fontweight="bold", color=dem_c)
+rows = [
+    ("Kidnapped", "Arrested. SDNY 26 Mar 2020. Custody 3 Jan 2026."),
+    ("Collusion", "Durham: no actual evidence when the case opened."),
+    ("Insurrection", "18 U.S.C. § 2383. Zero charged."),
+    ("Mostly peaceful", "A precinct burned. Insurance paid."),
+    ("Muslim ban", "Trump v. Hawaii. A proclamation, not a religion test."),
+    ("Kids in cages", "The 2014 facilities. Flores, 1997. Not a 2018 invention."),
+    ("Domestic terrorists", "Parents at school boards. NSBA letter. Garland memo."),
+    ("Russian disinfo", "The laptop. Fifty-one names. Weeks before the vote."),
+    ("Dictator", "Border and drill. “After that, I’m not a dictator.”"),
+    ("Fine people", "Same answer: neo-Nazis “condemned totally.”"),
+]
+for i, (left, right) in enumerate(rows):
+    y = 10.55 - i * 0.95
+    ax.add_patch(plt.Rectangle((0.4, y - 0.7), 7.4, 0.85, facecolor="#141414", edgecolor="#3a3a3a"))
+    ax.add_patch(plt.Rectangle((8.1, y - 0.7), 7.5, 0.85, facecolor="#141414", edgecolor="#3a3a3a"))
+    ax.text(0.6, y - 0.28, left, fontsize=14, fontweight="bold", color=gop_c, va="center")
+    ax.text(8.3, y - 0.28, right, fontsize=13, color=fg, va="center")
+ax.text(0.4, 0.35, "DOJ  ·  Durham  ·  USAO-DC  ·  SCOTUS  ·  DHS  ·  State  ·  Congress.gov  ·  2014–2026", fontsize=10, color=muted)
+fig.savefig("/workspace/public/images/chart-one-word-ledger.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
 # Congress + Oval, helped and hurt, one page
 fig = plt.figure(figsize=(16, 14), dpi=140, facecolor=bg)
 fig.text(0.02, 0.97, "HELPED AND HURT  ·  CONGRESS AND THE OVAL", fontsize=22, fontweight="bold", color=fg, va="top")
