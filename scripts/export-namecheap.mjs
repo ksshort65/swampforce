@@ -33,6 +33,7 @@ const needed = new Set([
  "chart-pump-admins.jpg",
  "chart-pump-years.jpg",
  "chart-pump-stack.jpg",
+ "chart-pump-flow.jpg",
 ]);
 for (const name of needed) {
  const src = join(root, "public/images", name);

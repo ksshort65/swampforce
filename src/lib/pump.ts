@@ -47,6 +47,10 @@ export const PUMP_SOURCES = [
 
 export const PUMP_CHARTS = [
   {
+    src: "/images/chart-pump-flow.jpg",
+    title: "How a gallon is built — OPEC to the pump",
+  },
+  {
     src: "/images/chart-pump-stack.jpg",
     title: "What is in a gallon — EIA",
   },

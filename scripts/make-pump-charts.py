@@ -162,8 +162,57 @@ def stack():
     print("wrote chart-pump-stack.jpg")
 
 
+def flow():
+    h = 1680
+    im, d = canvas(h)
+    d.text((64, 36), "SWAMP FORCE  ·  THE PUMP", font=font(22, True), fill=SAGE)
+    d.text((64, 72), "How a gallon is built.", font=font(40, True), fill=FG)
+    d.text(
+        (64, 122),
+        "EIA May 2026 U.S. regular  ·  $4.479 at the pump. OPEC sets barrels. Congress sets the tax. A state sets the blend.",
+        font=font(20),
+        fill=MUTED,
+    )
+
+    steps = [
+        ("1  OPEC AND OPEC+", "Governments decide how many barrels leave the ground. Fewer barrels raise crude. More barrels lower it.", "Not a switch in the Oval."),
+        ("2  CRUDE OIL", "West Texas Intermediate — a 42-gallon barrel of U.S. crude, traded in Cushing, Oklahoma.", "$2.33   ·   51.9% of the gallon"),
+        ("3  SHIPPING", "Tanker, pipeline, then the terminal. Moving the barrel is not free.", "Inside EIA’s distribution line."),
+        ("4  REFINING", "Black oil becomes gasoline. 132 operable U.S. plants. 18.4 million barrels a day of capacity.", "$0.97   ·   21.7%"),
+        ("5  DISTRIBUTION", "Ethanol blend. Truck to the station. Rent and labor at the pump.", "$0.66   ·   14.8%"),
+        ("6  FEDERAL TAX", "Gasoline 18.4 cents. Diesel 24.4 cents.", "Unchanged since October 1993."),
+        ("7  STATE TAX", "EIA, January 1, 2026: 9.0 cents in Alaska to 70.9 cents in California. Average 33.5 cents.", "Same oil. Different legislatures."),
+        ("8  RULES AND BLENDS", "Clean Air Act reformulated gasoline. California’s CARB recipe. Fewer plants can make it. It does not ship easily from the Gulf.", "Not an EIA dollar line. It still raises the gallon."),
+        ("THE PUMP", "EIA Gasoline Pump Components History, May 2026.", "$4.479"),
+    ]
+    y = 180
+    box_h = 128
+    for i, (title, body, money) in enumerate(steps):
+        fill = (38, 36, 32) if i < 8 else (232, 224, 208)
+        tcol = FG if i < 8 else BG
+        mcol = SAGE if i < 8 else (40, 36, 28)
+        d.rounded_rectangle([64, y, 1536, y + box_h], radius=10, fill=fill)
+        d.text((92, y + 16), title, font=font(24, True), fill=tcol)
+        d.text((92, y + 52), body, font=font(18), fill=mcol)
+        d.text((92, y + 86), money, font=font(20, True), fill=tcol)
+        if i < len(steps) - 1:
+            cy = y + box_h
+            d.polygon([(800, cy + 4), (788, cy + 18), (812, cy + 18)], fill=SAGE)
+        y += box_h + 22
+
+    d.text(
+        (64, h - 40),
+        "Sources: EIA gaspump_hist.php  ·  EIA state motor-fuel taxes  ·  OPEC  ·  CRS IF13251 on U.S. refining",
+        font=font(18),
+        fill=MUTED,
+    )
+    im.save(OUT / "chart-pump-flow.jpg", "JPEG", quality=90)
+    print("wrote chart-pump-flow.jpg")
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     admins()
     years()
     stack()
+    flow()
