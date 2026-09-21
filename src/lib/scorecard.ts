@@ -1021,6 +1021,15 @@ export const CHARTS: {
   sources: { label: string; href: string }[];
 }[] = [
   {
+    src: "/images/chart-paying-taliban.jpg",
+    title: "Paying the Taliban",
+    sources: [
+      { label: "SIGAR 24-22", href: "https://www.sigar.mil/Portals/147/Files/Reports/Audits-and-Inspections/Performance-Audits/SIGAR-24-22-AR.pdf" },
+      { label: "SIGAR 25-16", href: "https://www.sigar.mil/Portals/147/Files/Reports/Audits-and-Inspections/Performance-Audits/SIGAR-25-16-AR.pdf" },
+      { label: "SIGAR August 2025", href: "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo248012/pdf/GOVPUB-S-PURL-gpo248012.pdf" },
+    ],
+  },
+  {
     src: "/images/chart-they-dont-write.jpg",
     title: "They don’t write the bills",
     sources: [
@@ -1262,7 +1271,7 @@ export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<ty
     "/images/chart-policy.jpg",
     "/images/chart-inflation-party.jpg",
   ),
-  split: chartsFor("/images/chart-they-dont-write.jpg", "/images/chart-debt-why.jpg", "/images/chart-funnel.jpg", "/images/chart-blame.jpg"),
+  split: chartsFor("/images/chart-they-dont-write.jpg", "/images/chart-paying-taliban.jpg", "/images/chart-debt-why.jpg", "/images/chart-funnel.jpg", "/images/chart-blame.jpg"),
   oval: chartsFor(
     "/images/chart-oval.jpg",
     "/images/chart-pump-admins.jpg",

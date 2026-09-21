@@ -996,6 +996,26 @@ ax.text(0.4, 0.3, "Article I § 1  ·  2 U.S.C. § 1601  ·  P.L. 104-65  ·  Se
 fig.savefig("/workspace/public/images/chart-they-dont-write.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
+fig, ax = plt.subplots(figsize=(16, 7.8), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+ax.set_xlim(0, 16)
+ax.set_ylim(0, 7.4)
+ax.axis("off")
+ax.text(0.4, 6.9, "PAYING THE TALIBAN", fontsize=24, fontweight="bold", color=fg, va="top")
+ax.text(0.4, 6.25, "A Senate that will not read the bill still votes the money. SIGAR named who collected.", fontsize=13, color=muted, va="top")
+boxes = [
+    (0.4, "UNREAD PILE", "Article I hired them to read it.\nSenate leadership moves the package.\nAfghanistan is inside it.", dem_c),
+    (5.6, "THE PIPE", "$3.83B after Kabul.\n$3.038B to PIOs.\n$2.9B UN cash into the country.", gop_c),
+    (10.8, "WHO COLLECTED", "SIGAR 24-22: $10.9M taxes — a fraction.\n30–40% reaches the population.\nThe rest is the stair tax.", "#c53030"),
+]
+for x, title, body, c in boxes:
+    ax.add_patch(plt.Rectangle((x, 0.9), 4.8, 4.85, facecolor="#141414", edgecolor=c, lw=2))
+    ax.text(x + 2.4, 5.05, title, fontsize=16, fontweight="bold", color=c, ha="center")
+    ax.text(x + 2.4, 2.85, body, fontsize=14, color=fg, ha="center")
+ax.text(0.4, 0.28, "SIGAR 24-22  ·  SIGAR 25-16  ·  SIGAR 24-12  ·  SIGAR August 2025  ·  Article I", fontsize=10, color=muted)
+fig.savefig("/workspace/public/images/chart-paying-taliban.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
 
 
 
