@@ -158,11 +158,19 @@ export const OVAL = [
 ] as const;
 
 export const OVAL_LINKS = [
+  { label: "CBP — nationwide encounters", href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters" },
   { label: "CBP — enforcement statistics", href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics" },
   { label: "BLS — CPI", href: "https://www.bls.gov/cpi/" },
   { label: "EIA — the gallon", href: "https://www.eia.gov/petroleum/gasdiesel/" },
   { label: "FRED UNRATE", href: "https://fred.stlouisfed.org/series/UNRATE" },
 ];
+
+/** What the Oval number is. CBP’s own count. */
+export const ENCOUNTERS = {
+  k: "What an encounter is",
+  v: "Customs and Border Protection counts an encounter when its officers meet a person who is not making a lawful entry. That is Border Patrol between the ports of entry, and officers at land ports, airports, and seaports. It is people stopped, turned back, expelled, or processed. It is not a visa. It is not a gotaway — those are the people CBP did not meet. Nationwide means every door CBP counts, not only the southwest river.",
+  href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
+};
 
 /** Open border — Democratic watch. CBO, CBP, CDC, DHS. Not a panel. */
 export const BORDER = {

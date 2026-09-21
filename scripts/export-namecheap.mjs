@@ -3,7 +3,7 @@ import { basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { posts, SITE, START_HERE, JOURNAL, getPost } from "../src/lib/content.ts";
-import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, HOAXES, LAWS, OVAL, OVAL_LINKS, PRICES, RECORD, SCORE_TABS, TAB_CHARTS, SCORE_UPDATED } from "../src/lib/scorecard.ts";
+import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, ENCOUNTERS, HOAXES, LAWS, OVAL, OVAL_LINKS, PRICES, RECORD, SCORE_TABS, TAB_CHARTS, SCORE_UPDATED } from "../src/lib/scorecard.ts";
 import { ADMINS, GALLON_STACK, MARKS, OPEC_FILE, PUMP_CHARTS, PUMP_SOURCES, PUMP_UPDATED, RULES_FILE, TAX_FILE } from "../src/lib/pump.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -332,6 +332,7 @@ writeFileSync(
 ${SCORE_TABS.map((f) => `
 <div class="panel" id="${f.id}-charts">
 <p class="btns"><a class="btn" href="#${f.id}-charts">Charts</a><a class="btn out" href="#${f.id}-read">Read</a></p>
+${f.id === "oval" ? `<p class="kicker">${esc(ENCOUNTERS.k)}</p><p>${esc(ENCOUNTERS.v)}</p><p><a href="${ENCOUNTERS.href}">CBP — nationwide encounters →</a></p>` : ""}
 ${TAB_CHARTS[f.id].map((c) => `<figure><p class="kicker">${esc(c.title)}</p><img src="${c.src}" alt="${esc(c.title)}"/><figcaption style="color:#a39e93;font-size:.85rem">${c.sources.map((s) => `<a href="${s.href}">${esc(s.label)}</a>`).join(" · ")}</figcaption></figure>`).join("")}
 </div>`).join("")}
 ${RECORD.map((col) => {
@@ -362,7 +363,10 @@ ${col.id === "dem" ? borderHtml() + borderMoveHtml() + borderHarmHtml() + benefi
 <div class="panel" id="oval-read">
 <p class="btns"><a class="btn out" href="#oval-charts">Charts</a><a class="btn" href="#oval-read">Read</a></p>
 <h2>Oval</h2>
-<div class="grid">${OVAL.map((row) => `<div class="card" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><p>${esc(row.when)}</p><h3>${esc(row.enc)}</h3><p>nationwide encounters</p><h3>${esc(row.cpi)}</h3><p>CPI peak</p><h3>${esc(row.gas)}</h3><p>highest EIA weekly gasoline</p></div>`).join("")}</div>
+<p class="kicker">${esc(ENCOUNTERS.k)}</p>
+<p>${esc(ENCOUNTERS.v)}</p>
+<p><a href="${ENCOUNTERS.href}">CBP — nationwide encounters →</a></p>
+<div class="grid">${OVAL.map((row) => `<div class="card" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><p>${esc(row.when)}</p><h3>${esc(row.enc)}</h3><p>CBP nationwide encounters — people CBP met who were not a lawful entry</p><h3>${esc(row.cpi)}</h3><p>CPI peak</p><h3>${esc(row.gas)}</h3><p>highest EIA weekly gasoline</p></div>`).join("")}</div>
 <p>${OVAL_LINKS.map((l) => `<a href="${l.href}">${esc(l.label)}</a>`).join(" · ")} · <a href="/pump.html">The pump</a></p>
 </div>
 <div class="panel" id="compare-read">

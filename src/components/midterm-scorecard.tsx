@@ -8,6 +8,7 @@ import {
   WORKER,
   OVAL,
   OVAL_LINKS,
+  ENCOUNTERS,
   CHARTS,
   COMPARE_CHARTS,
   COMPARE_WIDE,
@@ -30,6 +31,22 @@ type Mode = "charts" | "read";
 function ChartStack({ tab }: { tab: TabId }) {
   return (
     <div className="space-y-8">
+      {tab === "oval" ? (
+        <div className="rounded-md border border-border bg-surface p-5">
+          <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+            {ENCOUNTERS.k}
+          </p>
+          <p className="mt-3 text-base leading-relaxed">{ENCOUNTERS.v}</p>
+          <a
+            href={ENCOUNTERS.href}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+          >
+            CBP — nationwide encounters →
+          </a>
+        </div>
+      ) : null}
       {TAB_CHARTS[tab].map((c) => (
         <figure key={c.src}>
           <p className="mb-3 font-display text-sm font-semibold tracking-wide text-sage uppercase">
@@ -334,6 +351,20 @@ function WorkerFile() {
 function OvalFile() {
   return (
     <div className="space-y-8">
+      <div className="rounded-md border border-border bg-surface p-5">
+        <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+          {ENCOUNTERS.k}
+        </p>
+        <p className="mt-3 text-base leading-relaxed">{ENCOUNTERS.v}</p>
+        <a
+          href={ENCOUNTERS.href}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+        >
+          CBP — nationwide encounters →
+        </a>
+      </div>
       <div className="grid gap-4 md:grid-cols-3">
         {OVAL.map((row) => (
           <div key={row.who} className="rounded-md border border-border bg-surface p-5">
@@ -342,7 +373,9 @@ function OvalFile() {
             </p>
             <p className="mt-1 text-sm text-muted">{row.when}</p>
             <p className="mt-4 font-display text-3xl font-bold tracking-wide">{row.enc}</p>
-            <p className="mt-1 text-sm text-muted">nationwide encounters</p>
+            <p className="mt-1 text-sm text-muted">
+              CBP nationwide encounters — people CBP met who were not a lawful entry
+            </p>
             <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.cpi}</p>
             <p className="mt-1 text-sm text-muted">CPI peak, year-over-year</p>
             <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.gas}</p>
