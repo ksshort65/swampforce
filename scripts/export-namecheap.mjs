@@ -67,10 +67,12 @@ header{position:sticky;top:0;background:#0b0b0b;border-bottom:1px solid var(--li
 .bar{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;max-width:72rem;margin:0 auto;padding:.5rem 1.5rem}
 .mark{font:700 16px ui-sans-serif,system-ui;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0}
 nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;margin-left:auto}
-nav a,details.score summary{margin:0;padding:.75rem .55rem;font:600 14px ui-sans-serif,system-ui;letter-spacing:.08em;text-transform:uppercase;color:#ddd;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0;cursor:pointer;list-style:none}
-details.score{position:relative}
-details.score .drop{position:absolute;right:0;top:100%;background:#0b0b0b;border:1px solid #2a2a2a;min-width:16rem;padding:.4rem;z-index:80}
-details.score .drop a{display:block;padding:.75rem .8rem;min-height:auto}
+nav a,details.score summary,details.archive summary{margin:0;padding:.75rem .55rem;font:600 14px ui-sans-serif,system-ui;letter-spacing:.08em;text-transform:uppercase;color:#ddd;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0;cursor:pointer;list-style:none}
+details.score,details.archive{position:relative}
+details.score .drop,details.archive .drop{position:absolute;right:0;top:100%;background:#0b0b0b;border:1px solid #2a2a2a;min-width:16rem;padding:.4rem;z-index:80;max-height:70vh;overflow-y:auto}
+details.archive .drop{min-width:20rem}
+details.score .drop a,details.archive .drop a{display:block;padding:.75rem .8rem;min-height:auto}
+details.archive .drop .series{padding:.6rem .8rem .2rem;font:600 11px ui-sans-serif,system-ui;letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
 select.essays{background:#0b0b0b;color:#e8e0d0;border:1px solid #e8e0d0;padding:.7rem .8rem;font:600 13px ui-sans-serif,system-ui;text-transform:uppercase;min-width:12rem;min-height:44px}
 .hero{position:relative;min-height:78vh}
 .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;max-width:none}
@@ -215,7 +217,13 @@ function shell({ title, desc, image, path, body }) {
    </details>
    <a href="/pump.html">Pump</a>
    <a href="/foreword.html">Foreword</a>
-   <a href="/archive.html">Archive</a>
+   <details class="archive">
+    <summary>Archive</summary>
+    <div class="drop">${JOURNAL.map((section) => `<p class="series">${esc(section.name)}</p>${section.slugs.map((slug) => {
+      const p = getPost(slug);
+      return p ? `<a href="/dispatch/${p.slug}.html">${esc(p.title)}</a>` : "";
+    }).join("")}`).join("")}<a href="/archive.html">Full archive →</a></div>
+   </details>
   </nav>
  </div>
 </header>
@@ -241,43 +249,46 @@ ${body}
 </body></html>`;
 }
 
-const lead = getPost("that-is-not-why-they-are-elected");
-const start = START_HERE.map((s) => getPost(s)).filter(Boolean);
+const lead = getPost("we-the-people");
+const latest = [...posts]
+  .sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title))
+  .filter((p) => p.slug !== lead?.slug)
+  .slice(0, 8);
 
 const indexBody = `
 <section class="hero">
  <img class="bg" src="/images/hero-capitol.jpg" alt="Eagle on the Capitol in the swamp"/>
  <div class="shade"></div>
  <div class="copy">
-  <h1>Save the nation.</h1>
-  <p>The midterm is a scorecard, not a mood. Vote on what they passed, what it cost, and what they broke. Both parties have failed. The official record is the ballot.</p>
+  <p class="kicker">The journal · publishing</p>
+  <h1>We the People.</h1>
+  <p>This country is not Congress’s. They are the hire. They have gone rogue. Do not vote on emotion, on manufactured hatred, or on a network’s words. Vote the facts. This journal uses documented government sources. No other opinion. No manufactured drama.</p>
   <div>
-   <a class="btn" href="/scorecard.html">Congressional Scorecard</a>
+   ${lead ? `<a class="btn" href="/dispatch/${lead.slug}.html">The lead</a>` : ""}
+   <a class="btn out" href="/scorecard.html">Scorecard</a>
   </div>
  </div>
 </section>
 <section class="featured">
  ${lead ? `<a href="/dispatch/${lead.slug}.html"><img src="${esc(lead.image)}" alt="${esc(lead.imageAlt)}"/></a>
  <div>
+  <p class="kicker">The lead</p>
   <h2>${esc(lead.title)}</h2>
   <p>${esc(lead.dek)}</p>
   <a class="btn" href="/dispatch/${lead.slug}.html">${esc(lead.title)}</a>
  </div>` : ""}
 </section>
 <section class="pad">
+ <p class="kicker">The dispatch</p>
+ <h2>Publishing now</h2>
+ <div class="grid">${latest.map((p) => `<a class="card" href="/dispatch/${p.slug}.html"><img src="${esc(p.image)}" alt="${esc(p.imageAlt)}"/><h3>${esc(p.title)}</h3><p>${esc(p.dek)}</p></a>`).join("")}</div>
+ <p><a class="btn" href="/archive.html">The archive</a></p>
+</section>
+<section class="pad">
  <p class="kicker">Midterms</p>
  <h2>The scorecard</h2>
- <p>Open GOP, Dem, Split, Oval, or Compare. Charts first. Read if you want the file.</p>
+ <p>Vote the facts. Every number is a government file.</p>
  <div class="grid" style="padding-left:0;padding-right:0">${SCORE_TABS.map((f) => `<a class="card" href="/scorecard.html#${f.id}-charts" style="padding:1.1rem"><h3 style="padding:0">${esc(f.k)}</h3><p style="padding:0">${esc(f.v)}</p></a>`).join("")}</div>
-</section>
-<section class="band pad">
- <p class="kicker">The Search</p>
- <h2>Find them.</h2>
- <div class="grid">
-  <a class="card" href="/dispatch/find-them.html"><img src="/images/essay-find-them.jpg" alt=""/><h3>Find them.</h3></a>
-  <a class="card" href="/dispatch/who-got-paid.html"><img src="/images/essay-who-got-paid.jpg" alt=""/><h3>Who got paid.</h3></a>
-  <a class="card" href="/dispatch/defund-ice-is-the-tell.html"><img src="/images/essay-defund-ice.jpg" alt=""/><h3>Defund ICE is the tell.</h3></a>
- </div>
 </section>
 `;
 
