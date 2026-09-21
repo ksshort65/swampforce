@@ -1021,6 +1021,16 @@ export const CHARTS: {
   sources: { label: string; href: string }[];
 }[] = [
   {
+    src: "/images/chart-what-they-bought.jpg",
+    title: "What the taxpayer bought",
+    sources: [
+      { label: "FEMA SSP NOFO", href: "https://www.fema.gov/sites/default/files/documents/fema_gpd_ssp-a-nofo_fy24.pdf" },
+      { label: "ICE FY2024 Annual Report", href: "https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf" },
+      { label: "NYC Comptroller", href: "https://comptroller.nyc.gov/services/for-the-public/accounting-for-asylum-seeker-services/fiscal-impacts" },
+      { label: "DOJ — Laken Riley", href: "https://www.justice.gov/usao-mdga/pr/three-venezuelans-sentenced-prison-possessing-fake-green-cards" },
+    ],
+  },
+  {
     src: "/images/chart-funnel.jpg",
     title: "The funnel — taxpayer to agency to NGO",
     sources: [
@@ -1180,6 +1190,7 @@ const COMPARE_SRC = [
   "/images/chart-helped-hurt.jpg",
   "/images/chart-lawfare.jpg",
   "/images/chart-funnel.jpg",
+  "/images/chart-what-they-bought.jpg",
   "/images/chart-oval.jpg",
   "/images/chart-debt-why.jpg",
   "/images/chart-aliens.jpg",
@@ -1196,6 +1207,7 @@ export const COMPARE_WIDE = new Set([
   "/images/chart-helped-hurt.jpg",
   "/images/chart-lawfare.jpg",
   "/images/chart-funnel.jpg",
+  "/images/chart-what-they-bought.jpg",
   "/images/chart-oval.jpg",
   "/images/chart-debt-why.jpg",
   "/images/chart-aliens.jpg",
@@ -1236,8 +1248,9 @@ export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<ty
   gop: chartsFor("/images/chart-policy.jpg", "/images/chart-debt-why.jpg", "/images/chart-inflation-party.jpg"),
   dem: chartsFor(
     "/images/chart-lawfare.jpg",
-    "/images/chart-policy.jpg",
+    "/images/chart-what-they-bought.jpg",
     "/images/chart-aliens.jpg",
+    "/images/chart-policy.jpg",
     "/images/chart-inflation-party.jpg",
   ),
   split: chartsFor("/images/chart-debt-why.jpg", "/images/chart-funnel.jpg", "/images/chart-blame.jpg"),

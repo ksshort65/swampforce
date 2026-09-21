@@ -165,7 +165,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Who held the gavel when it opened: Democrats ran the White House from January 2021 to January 2025. They ran both the House and the Senate from January 2021 to January 2023. They ended Remain in Mexico. They ended the Title 42 public-health expulsion on May 11, 2023. They ran parole programs that turned a crossing into a status, a status into a Social Security number, and a number into a welfare check. [SSI is not Social Security](https://www.ssa.gov/ssi/spotlights/spot-non-citizens.htm). It is general revenue. SSA’s own spotlight lists parole, asylum, and refugee as doors into that check. [8 U.S.C. § 1611](https://www.law.cornell.edu/uscode/text/8/1611) already barred most federal benefits for aliens who are not qualified. Congress and the agencies built the exception, then called it compassion.",
+				text: "Who held the gavel when it opened: Democrats ran the White House from January 2021 to January 2025. They ran both the House and the Senate from January 2021 to January 2023. They ended Remain in Mexico. They ended the Title 42 public-health expulsion on May 11, 2023. They ran parole programs that turned a crossing into a status, a status into a Social Security number, and a number into a welfare check. [SSI is not Social Security](https://www.ssa.gov/ssi/spotlights/spot-non-citizens.htm). It is general revenue. SSA’s own spotlight lists parole, asylum, and refugee as doors into that check. [8 U.S.C. § 1611](https://www.law.cornell.edu/uscode/text/8/1611) already barred most federal benefits for aliens who are not qualified. Congress and the agencies built the exception, then called it compassion. [What the taxpayer bought](/dispatch/what-the-taxpayer-bought) is the rest of that stack: cash cards, phones, clothing, housing, property damage, and the homicide docket.",
 			},
 			{
 				type: "h",
@@ -186,6 +186,50 @@ export const posts: Post[] = [
 			{
 				type: "p",
 				text: "This disaster has a party. Democrats held the Oval and, for two years, both chambers, while the encounters ran past two million a year. Republicans who voted to keep the door shut were not the authors of the parole memos. When the Oval changed, the number fell to a fifty-year low. [CBP](https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters) counted the door. [CDC](https://www.cdc.gov/nchs/blog/posts/2026/03/most-common-drugs-in-u-s-overdose-deaths-2017-2023.html) counted the morgue. The [inspector general](https://www.oig.dhs.gov/sites/default/files/assets/2024-08/OIG-24-46-Aug24.pdf) counted the children without a Notice to Appear. That is the record of a door, and of who held it open.",
+			},
+		],
+	},
+	{
+		slug: "what-the-taxpayer-bought",
+		title: "What the taxpayer bought",
+		dek: "Cash cards. Phones. Clothing. Housing. Property smashed. Americans murdered. The federal grant listed the first four. ICE counted the last two.",
+		date: "2026-09-21",
+		category: "Dispatch",
+		readMinutes: 5,
+		image: "/images/chart-what-they-bought.jpg",
+		imageAlt: "Cash cards, phones, clothing, housing, property damage, homicide — the taxpayer stack",
+		series: "The Search",
+		part: 0,
+		receipts: [
+			{ label: "FEMA SSP-A FY2024 NOFO — allowable costs", href: "https://www.fema.gov/sites/default/files/documents/fema_gpd_ssp-a-nofo_fy24.pdf" },
+			{ label: "DHS OIG-26-04 — $1.4 billion SSP", href: "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf" },
+			{ label: "NYC Mayor — debit-card transcript, Feb. 20, 2024", href: "https://www.nyc.gov/mayors-office/news/2024/02/transcript-mayor-adams-holds-in-person-media-availability-february-20" },
+			{ label: "NYC Comptroller — asylum-seeker fiscal impacts", href: "https://comptroller.nyc.gov/services/for-the-public/accounting-for-asylum-seeker-services/fiscal-impacts" },
+			{ label: "ICE FY2024 Annual Report", href: "https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf" },
+			{ label: "CBP — criminal noncitizen statistics FY2024", href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics/criminal-noncitizen-statistics-fy2024" },
+			{ label: "DOJ — Laken Riley murder investigation", href: "https://www.justice.gov/usao-mdga/pr/three-venezuelans-sentenced-prison-possessing-fake-green-cards" },
+		],
+		body: [
+			{
+				type: "img",
+				src: "/images/chart-what-they-bought.jpg",
+				alt: "Six boxes: cash cards, phones, clothing, housing, property, homicide",
+			},
+			{
+				type: "p",
+				text: "The grant listed the shopping list. [FEMA’s FY2024 Shelter and Services Program](https://www.fema.gov/sites/default/files/documents/fema_gpd_ssp-a-nofo_fy24.pdf) told applicants what the taxpayer would reimburse for people CBP had released: **shelter**, including hotel rooms at the GSA rate. **Clothing** — shirts, pants, outerwear, underwear, socks, shoes, backpacks, belts. **Cell phone plans** and internet, billed as facility utilities, capped at $10 a person a day overnight and $5 a day otherwise. Cots. Linens. Laundry. The [Inspector General](https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf) later found FEMA could not ensure the **$1.4 billion** in SSP and EFSP-H for fiscal 2023–24 was used as the law required. The list was never a rumor. It was Appendix A.",
+			},
+			{
+				type: "p",
+				text: "Cash cards are on the city’s own tape. On [February 20, 2024](https://www.nyc.gov/mayors-office/news/2024/02/transcript-mayor-adams-holds-in-person-media-availability-february-20), the Mayor of New York described a prepaid debit-card pilot for migrant families: 500 families to start, a contract that could reach **$53 million** at scale, the balance loaded for food and baby supplies. The [Comptroller](https://comptroller.nyc.gov/services/for-the-public/accounting-for-asylum-seeker-services/fiscal-impacts) already booked the rooms: **$8.13 billion** in three fiscal years for asylum-seeker services in one city. Housing was the hotel. The card was the grocery. Both were the taxpayer.",
+			},
+			{
+				type: "p",
+				text: "Then the rap sheet. [ICE’s FY2024 Annual Report](https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf): the 81,312 criminal noncitizens ERO arrested that year carried 516,050 charges and convictions. In that pile: **5,001 damage to property**. **2,894 homicides**. **18,579** sexual assault and sex offenses. Those are not 2,894 murders committed in 2024. They are the homicide charges and convictions already on the people ICE arrested — people who should not have been on an American street. [CBP](https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics/criminal-noncitizen-statistics-fy2024) homicide and manslaughter convictions among Border Patrol criminal-alien arrests: three, three, two, three in fiscal 2017–20. Then 60, 62, 29, 29 in fiscal 2021–24. The [Department of Justice](https://www.justice.gov/usao-mdga/pr/three-venezuelans-sentenced-prison-possessing-fake-green-cards) put Laken Hope Riley on the record: kidnapped and brutally murdered February 22, 2024, in Athens, Georgia, during a morning run. Jose Antonio Ibarra, who had entered illegally, was convicted of that murder and is serving life. The names and the docket are in [The hospital. Then the morgue.](/dispatch/the-hospital-and-the-morgue). The shopping list and the rap sheet are the same open door.",
+			},
+			{
+				type: "q",
+				text: "The grant paid for the phone and the hotel. ICE counted the smashed property and the homicide. The taxpayer paid for both.",
 			},
 		],
 	},
@@ -229,7 +273,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "[ICE’s FY2024 Annual Report](https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf): the 81,312 criminal noncitizens ERO arrested that year carried 516,050 charges and convictions. In that pile: 2,894 homicides. 18,579 sexual assault and sex offenses. 2,766 kidnappings. That is not “immigrants commit crime.” That is ICE counting the people it arrested who already had those charges or convictions — people who should not have been on a street in the first place.",
+				text: "[ICE’s FY2024 Annual Report](https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf): the 81,312 criminal noncitizens ERO arrested that year carried 516,050 charges and convictions. In that pile: 2,894 homicides. 5,001 damage to property. 18,579 sexual assault and sex offenses. 2,766 kidnappings. That is not “immigrants commit crime.” That is ICE counting the people it arrested who already had those charges or convictions — people who should not have been on a street in the first place.",
 			},
 			{
 				type: "p",
@@ -2923,6 +2967,7 @@ export const JOURNAL = [
 		dek: "The Search covers the open border, the hospitals, the missing children, and who got paid.",
 		slugs: [
 			"they-opened-the-border",
+			"what-the-taxpayer-bought",
 			"the-hospital-and-the-morgue",
 			"find-them",
 			"who-got-paid",

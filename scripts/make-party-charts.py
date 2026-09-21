@@ -953,6 +953,29 @@ ax.text(0.4, 0.45, "ForeignAssistance.gov  ·  USASpending  ·  USAID OIG  ·  D
 fig.savefig("/workspace/public/images/chart-funnel.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
+fig, ax = plt.subplots(figsize=(16, 10), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+ax.set_xlim(0, 16)
+ax.set_ylim(0, 10.2)
+ax.axis("off")
+ax.text(0.4, 9.7, "WHAT THE TAXPAYER BOUGHT", fontsize=24, fontweight="bold", color=fg, va="top")
+ax.text(0.4, 9.1, "The grant listed the first four. ICE counted the last two.", fontsize=14, color=muted, va="top")
+bought = [
+    (0.4, 5.0, "CASH CARDS", "NYC Mayor, Feb. 20, 2024:\nprepaid debit-card pilot.\n$53 million contract at scale.", dem_c),
+    (5.6, 5.0, "PHONES", "FEMA SSP Appendix A:\ncell phone plans as utilities.\n$10 a person a day overnight.", gop_c),
+    (10.8, 5.0, "CLOTHING", "SSP: shirts, pants, shoes,\nunderwear, backpacks, belts.\nOn the federal reimbursement list.", dem_c),
+    (0.4, 0.7, "HOUSING", "SSP: hotel at the GSA rate.\nNYC Comptroller: $8.13 billion\nin three fiscal years.", gop_c),
+    (5.6, 0.7, "PROPERTY", "ICE FY2024 arrests:\n5,001 damage-to-property\ncharges and convictions.", "#8a5a2b"),
+    (10.8, 0.7, "HOMICIDE", "ICE FY2024: 2,894 homicide\ncharges/convictions on those arrested.\nLaken Riley: DOJ, life sentence.", "#c53030"),
+]
+for x, y, title, body, c in bought:
+    ax.add_patch(plt.Rectangle((x, y), 4.8, 3.85, facecolor="#141414", edgecolor=c, lw=2))
+    ax.text(x + 2.4, y + 3.25, title, fontsize=16, fontweight="bold", color=c, ha="center", va="center")
+    ax.text(x + 2.4, y + 1.55, body, fontsize=13, color=fg, ha="center", va="center")
+ax.text(0.4, 0.22, "FEMA SSP NOFO  ·  DHS OIG-26-04  ·  NYC Mayor transcript  ·  NYC Comptroller  ·  ICE FY2024  ·  DOJ MDGA", fontsize=10, color=muted)
+fig.savefig("/workspace/public/images/chart-what-they-bought.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
 
 
 
