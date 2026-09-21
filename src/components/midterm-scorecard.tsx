@@ -775,11 +775,40 @@ export function MidtermScorecard() {
               />
             </figure>
             <p className="text-base leading-relaxed">{DEBT_WHY.v}</p>
+            <p className="text-sm leading-relaxed">{DEBT_WHY.pay}</p>
             <p className="text-sm leading-relaxed">
               Republicans: {DEBT_WHY.gop}
             </p>
             <p className="text-sm leading-relaxed">
               Democrats: {DEBT_WHY.dem}
+            </p>
+            <p>
+              <a
+                href={DEBT_WHY.payHref}
+                target="_blank"
+                rel="noreferrer"
+                className="font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+              >
+                CRS — member pay →
+              </a>
+              {" · "}
+              <a
+                href={DEBT_WHY.ethicsHref}
+                target="_blank"
+                rel="noreferrer"
+                className="font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+              >
+                2 U.S.C. § 1415 →
+              </a>
+              {" · "}
+              <a
+                href={DEBT_WHY.href}
+                target="_blank"
+                rel="noreferrer"
+                className="font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+              >
+                GAO fraud →
+              </a>
             </p>
             {OBAMA_TERMS.map((term) => (
               <div key={term.who} className="rounded-md border border-border bg-surface p-5">

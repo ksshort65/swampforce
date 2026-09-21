@@ -938,11 +938,14 @@ export const DRIVERS: { k: string; v: string; href: string }[] = [
 
 /** CBO’s long-term file. One chart. Who added, and why the meter runs. */
 export const DEBT_WHY = {
-  k: "What actually drives the $40.09 trillion",
-  v: "CBO’s long-term outlook: the meter is Medicare, Medicaid, Social Security, and net interest. Wars and tax bills are real. They are not the largest line. Both parties voted the expansions. Neither locked the door. Neither passes twelve appropriations by October 1.",
-  href: "https://www.cbo.gov/topics/budget",
+  k: "No oversight. A $40 trillion card. Full-time pay for a part-time floor.",
+  v: "CBO’s long-term outlook: the meter is Medicare, Medicaid, Social Security, and net interest. Wars and tax bills are real. They are not the largest line. Both parties voted the expansions. Neither locked the door. Neither passes twelve appropriations by October 1. GAO: $233–521 billion a year in fraud and improper payments. That is what a part-time schedule does to a country of more than 300 million people. Lack of oversight is how fraud became a line on a $40.09 trillion card.",
+  href: "https://www.gao.gov/products/gao-25-107746",
   gop: "Unpaid Medicare Part D. Tax cuts without a closed budget. Iraq. CARES. Majority 2015–19: still no October 1.",
   dem: "ARRA. ACA Medicaid expansion. Rescue Plan. Parole into benefits. Majority 2021–23: 9.1% prices and a record border while the meter ran.",
+  pay: "A rank-and-file member is paid $174,000 a year — CRS RL30064 — plus a pension, Federal Employees Health Benefits, and a million-dollar office allowance. That is 2,080-hour, full-time pay. The House sits on the order of 150 legislative days. No part-time job in America pays like that. Self-governance of their own ethics has failed: 2 U.S.C. § 1415 billed the country for congressional misconduct. Full time, or the perks stop.",
+  payHref: "https://www.congress.gov/crs-product/RL30064",
+  ethicsHref: "https://www.law.cornell.edu/uscode/text/2/1415",
 };
 
 /** The invasion bill. Official costs. The doors Democrats opened. */
@@ -1110,7 +1113,7 @@ export const CHARTS: {
   },
   {
     src: "/images/chart-debt-why.jpg",
-    title: "The debt — the driver, and what each party voted",
+    title: "The debt — no oversight, $40 trillion, full-time pay for part-time hours",
     sources: [
       { label: "CBO — budget", href: "https://www.cbo.gov/topics/budget" },
       { label: "Treasury — Debt to the Penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },

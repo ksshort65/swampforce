@@ -546,29 +546,71 @@ fig.tight_layout(rect=(0, 0.06, 1, 0.92))
 fig.savefig("/workspace/public/images/chart-oval.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
-# One debt chart: the driver, and what each party voted
-fig, ax = plt.subplots(figsize=(16, 10), dpi=140, facecolor=bg)
+# One debt chart: the driver, fraud from no oversight, full-time pay for part-time hours
+fig, ax = plt.subplots(figsize=(16, 12), dpi=140, facecolor=bg)
 ax.set_facecolor(bg)
 ax.set_xlim(0, 10)
-ax.set_ylim(0, 10)
+ax.set_ylim(0, 12)
 ax.axis("off")
-ax.text(0.2, 9.4, "THE DEBT  ·  THE DRIVER", fontsize=26, fontweight="bold", color=fg)
-ax.text(0.2, 8.85, "CBO: Medicare, Medicaid, Social Security, and net interest. $40.09T as of Sept. 17, 2026.", fontsize=13, color=muted)
-# three who-added bars
+ax.text(0.2, 11.45, "THE DEBT  ·  NO OVERSIGHT", fontsize=26, fontweight="bold", color=fg)
+ax.text(
+    0.2,
+    10.85,
+    "A part-time floor cannot police 300 million people and trillion-dollar programs.\nGAO: $233–521 billion a year in fraud. The card is $40.09 trillion. Sept. 17, 2026.",
+    fontsize=13,
+    color=muted,
+    va="top",
+)
 who = [("Republican majority", 10.96, gop_c), ("Democratic majority", 12.65, biden_c), ("Split", 16.48, split_c)]
-y0 = 7.6
+y0 = 9.35
 for i, (lab, v, c) in enumerate(who):
-    y = y0 - i * 0.7
-    ax.barh(y, v / 4.2, height=0.45, color=c, left=0.2)
+    y = y0 - i * 0.72
+    ax.barh(y, v / 4.2, height=0.48, color=c, left=0.2)
     ax.text(0.2 + v / 4.2 + 0.15, y, f"{lab}  +${v:.2f}T", va="center", fontsize=14, fontweight="bold", color=fg)
-ax.text(0.2, 5.3, "WHAT THEY VOTED THAT FED THE METER", fontsize=16, fontweight="bold", color=fg)
-ax.text(0.2, 4.55, "REPUBLICANS", fontsize=13, fontweight="bold", color=gop_c)
-ax.text(0.2, 4.05, "Unpaid Medicare Part D. Tax cuts without a closed budget. Iraq. CARES.\nMajority 2015–19: still no October 1.", fontsize=12, color=fg, va="top")
-ax.text(0.2, 2.85, "DEMOCRATS", fontsize=13, fontweight="bold", color=biden_c)
-ax.text(0.2, 2.35, "ARRA. ACA Medicaid expansion. Rescue Plan. Parole into benefits.\nMajority 2021–23: 9.1% prices and a record border while the meter ran.", fontsize=12, color=fg, va="top")
-ax.text(0.2, 1.15, "BOTH", fontsize=13, fontweight="bold", color=muted)
-ax.text(0.2, 0.65, "Twelve appropriations by October 1 — they pass none. GAO: $233–521B a year in fraud.\nThe last surplus was FY2001. The purse is Article I.", fontsize=12, color=fg, va="top")
-ax.text(0.2, 0.15, "Treasury Debt to the Penny  ·  CBO budget  ·  GAO  ·  Congress.gov", fontsize=10, color=muted)
+ax.text(0.2, 7.0, "FULL-TIME PAY  ·  PART-TIME HOURS", fontsize=16, fontweight="bold", color=fg)
+ax.text(
+    0.2,
+    6.55,
+    "$174,000 salary  ·  pension  ·  federal health insurance  ·  a million-dollar office.\n2,080-hour pay for a body that sits about 150 days. No part-time job in America pays like that.\nSelf-governance of their own ethics failed. 2 U.S.C. § 1415 billed the country for their misconduct.",
+    fontsize=12,
+    color=fg,
+    va="top",
+)
+ax.text(0.2, 4.85, "WHAT THEY VOTED THAT FED THE METER", fontsize=16, fontweight="bold", color=fg)
+ax.text(0.2, 4.4, "REPUBLICANS", fontsize=13, fontweight="bold", color=gop_c)
+ax.text(
+    0.2,
+    3.95,
+    "Unpaid Medicare Part D. Tax cuts without a closed budget. Iraq. CARES.\nMajority 2015–19: still no October 1.",
+    fontsize=12,
+    color=fg,
+    va="top",
+)
+ax.text(0.2, 2.95, "DEMOCRATS", fontsize=13, fontweight="bold", color=biden_c)
+ax.text(
+    0.2,
+    2.5,
+    "ARRA. ACA Medicaid expansion. Rescue Plan. Parole into benefits.\nMajority 2021–23: 9.1% prices and a record border while the meter ran.",
+    fontsize=12,
+    color=fg,
+    va="top",
+)
+ax.text(0.2, 1.5, "BOTH", fontsize=13, fontweight="bold", color=muted)
+ax.text(
+    0.2,
+    1.05,
+    "Twelve appropriations by October 1 — they pass none. Last surplus: FY2001.\nLack of oversight is how fraud became a line on a $40 trillion card. The purse is Article I.",
+    fontsize=12,
+    color=fg,
+    va="top",
+)
+ax.text(
+    0.2,
+    0.2,
+    "Treasury Debt to the Penny  ·  CBO  ·  GAO  ·  CRS RL30064  ·  2 U.S.C. § 1415  ·  Budget Act 1974",
+    fontsize=10,
+    color=muted,
+)
 fig.savefig("/workspace/public/images/chart-debt-why.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
