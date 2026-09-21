@@ -350,10 +350,12 @@ ${tally ? `<p style="font-size:1.8rem;font-weight:800">${esc(tally.added)}</p>` 
 <ul>${col.plus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
 <p class="kicker">Hurt</p>
 <ul>${col.minus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
+${col.id === "dem" ? `<p><a class="btn" href="#captions">Information war — the files</a></p>` : ""}
 </div>`;
 }).join("")}
 <div class="panel" id="captions">
-<h2>Captions</h2>
+<h2>Information war</h2>
+<p>Waged on the people and a president. A caption, then the charge sheet.</p>
 ${HOAXES.map((h) => `<p><strong>${esc(h.k)}</strong><br/>${esc(h.v)}<br/><a href="${h.href}">The file →</a></p>`).join("")}
 <p><a href="/dispatch/the-caption-was-not-the-charge.html">The essay →</a></p>
 </div>

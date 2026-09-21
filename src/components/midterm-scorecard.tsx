@@ -133,6 +133,20 @@ function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
         Hurt
       </p>
       <BillList rows={col.minus} tone="minus" />
+      {col.id === "dem" ? (
+        <Link
+          to="/scorecard"
+          hash="captions"
+          className="mt-8 block min-h-16 rounded-md border-2 border-sage bg-surface px-4 py-5 text-fg no-underline hover:bg-ink"
+        >
+          <p className="font-display text-sm font-bold tracking-wide uppercase">
+            Information war
+          </p>
+          <p className="mt-1 text-sm text-muted">
+            Waged on the people and a president. Open that file.
+          </p>
+        </Link>
+      ) : null}
     </div>
   );
 }
@@ -141,12 +155,15 @@ function HoaxesFile() {
   return (
     <div className="mt-8 rounded-md border-2 border-sage bg-surface p-5">
       <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
-        The caption, then the charge sheet
+        Information war
       </p>
       <p className="mt-3 text-base leading-relaxed">
-        A caption can run for years. A charge sheet is a statute and a count.
-        Durham. School boards. A stacked select committee. Insurrection on
-        television, not on 18 U.S.C. § 2383. The House held the tape.
+        They ran captions against the people and against a president. A
+        charge sheet is a statute and a count. Durham. FISA that was not
+        scrupulously accurate. School boards. A stacked select committee.
+        Insurrection on television, not on 18 U.S.C. § 2383. A board at DHS
+        to govern ‘disinformation.’ Two impeachments. Four dockets. The
+        House held the tape.
       </p>
       <ul className="mt-5 space-y-5">
         {HOAXES.map((h) => (

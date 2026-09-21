@@ -14,7 +14,7 @@ export const SCORE_UPDATED = "2026-09-20";
 /** Cover and Scorecard. One file each. Not a dump. */
 export const SCORE_FILES: { id: string; k: string; v: string }[] = [
   { id: "policy", k: "Policy", v: "Helped and hurt. The bills they passed." },
-  { id: "captions", k: "Captions", v: "Durham. Parents. J6. The charge sheet." },
+  { id: "captions", k: "Information war", v: "Waged on the people and a president. The files." },
   { id: "border", k: "Border", v: "Encounters, the bill still due, the benefits." },
   { id: "oval", k: "Oval", v: "Four administrations. Encounters, prices, the gallon." },
   { id: "debt", k: "Debt", v: "Who added the $40.09 trillion." },
@@ -99,6 +99,26 @@ export const HOAXES: { k: string; v: string; href: string }[] = [
     k: "The tape sat in the House",
     v: "The Capitol’s cameras recorded thousands of hours. The select committee showed clips. The full archive was not put in the public’s hands while the hearings ran. Later Speakers opened more of it. A hearing that holds the tape and plays the minutes it prefers is the same method as a six-second caption.",
     href: "https://www.congress.gov/committee/house-administration/hsha00",
+  },
+  {
+    k: "A board to govern ‘disinformation’",
+    v: "DHS stood up a Disinformation Governance Board in 2022. The Secretary told Congress it would combat a threat to homeland security. The department terminated the board and rescinded its charter on August 24, 2022. A cabinet department had named a board to police the information the public would receive.",
+    href: "https://www.dhs.gov/archive/news/2022/08/24/following-hsac-recommendation-dhs-terminates-disinformation-governance-board",
+  },
+  {
+    k: "The FISA file was not scrupulously accurate",
+    v: "Inspector General Horowitz: seventeen inaccuracies and omissions across the Carter Page FISA applications used to surveil a U.S. person tied to a presidential campaign. The caption was Russia. The applications were not scrupulously accurate.",
+    href: "https://oig.justice.gov/reports/2019/o1912.pdf",
+  },
+  {
+    k: "Two impeachments. Four dockets. One method.",
+    v: "The House impeached twice. Then four criminal dockets ran at once against the same man the country had hired. The public paid for the committee. Defense is not free. A presidency can be buried in process without a statute that matches the caption.",
+    href: "https://www.congress.gov/bill/116th-congress/house-resolution/755",
+  },
+  {
+    k: "The House record on the machine",
+    v: "H.Res. 12 created the Select Subcommittee on the Weaponization of the Federal Government. The committee published that the executive had pressured platforms and that fifty-one former intelligence officials had signed a letter treating the Hunter Biden laptop as a Russian trick weeks before the 2020 vote. Read the House file. A panel is not a court. It is the other ledger.",
+    href: "https://judiciary.house.gov/media/press-releases/new-judiciary-committee-website-highlights-activities-and-findings-select",
   },
 ];
 
@@ -715,6 +735,16 @@ export const RECORD: {
         k: "The Speaker stacked the J6 committee. Jordan and Banks were rejected.",
         bill: "H.Res. 503 · 117th Congress",
         href: "https://www.congress.gov/bill/117th-congress/house-resolution/503",
+      },
+      {
+        k: "They impeached twice. Then four criminal dockets.",
+        bill: "H.Res. 755 · 116th Congress",
+        href: "https://www.congress.gov/bill/116th-congress/house-resolution/755",
+      },
+      {
+        k: "DHS named a board to govern disinformation.",
+        bill: "DHS · terminated Aug. 24, 2022",
+        href: "https://www.dhs.gov/archive/news/2022/08/24/following-hsac-recommendation-dhs-terminates-disinformation-governance-board",
       },
     ],
   },
