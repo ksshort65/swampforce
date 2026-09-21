@@ -17,7 +17,7 @@ export const SCORE_TABS: { id: "gop" | "dem" | "split" | "oval" | "compare"; k: 
   { id: "dem", k: "Dem", v: "Helped, hurt, the information war." },
   { id: "split", k: "Split", v: "When they split the gavel." },
   { id: "oval", k: "Oval", v: "Four administrations." },
-  { id: "compare", k: "Compare", v: "The whole file, one room." },
+  { id: "compare", k: "Compare", v: "Charts or Read." },
 ];
 /** @deprecated use SCORE_TABS */
 export const SCORE_FILES = SCORE_TABS;
