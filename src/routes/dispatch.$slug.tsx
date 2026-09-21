@@ -1,10 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { NarrativeFrames } from "@/components/narrative-frames";
 import { EraCompare } from "@/components/era-compare";
 import { getPost, nextInSeries, SITE } from "@/lib/content";
 import { nextChapter } from "@/lib/flow";
 import { essayHead } from "@/lib/share-head";
-import { DispatchMenu } from "@/components/dispatch-menu";
 
 export const Route = createFileRoute("/dispatch/$slug")({
   component: EssayPage,
@@ -17,26 +17,31 @@ export const Route = createFileRoute("/dispatch/$slug")({
 });
 
 function LinkedText({ text }: { text: string }) {
-  const parts = text.split(/(https?:\/\/[^\s]+)/g);
-  return (
-    <>
-      {parts.map((part, i) =>
-        part.startsWith("http") ? (
-          <a
-            key={i}
-            href={part}
-            className="break-all text-sage"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {part}
-          </a>
-        ) : (
-          <span key={i}>{part}</span>
-        ),
-      )}
-    </>
-  );
+  const nodes: ReactNode[] = [];
+  const re = /\[([^\]]+)\]\((https?:\/\/[^)]+)\)|(https?:\/\/[^\s]+)/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let i = 0;
+  while ((m = re.exec(text))) {
+    if (m.index > last) nodes.push(<span key={`t${i}`}>{text.slice(last, m.index)}</span>);
+    const href = m[2] || m[3];
+    const label = m[1] || href;
+    nodes.push(
+      <a
+        key={`a${i}`}
+        href={href}
+        className="text-sage underline-offset-2 hover:underline"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {label}
+      </a>,
+    );
+    last = m.index + m[0].length;
+    i += 1;
+  }
+  if (last < text.length) nodes.push(<span key="end">{text.slice(last)}</span>);
+  return <>{nodes}</>;
 }
 
 function EssayPage() {
@@ -50,14 +55,14 @@ function EssayPage() {
         <img
           src={post.image}
           alt={post.imageAlt}
-          className="absolute inset-0 size-full object-cover"
+          className="absolute inset-0 size-full max-w-none object-cover"
         />
         <div className="absolute inset-0 bg-linear-to-t from-bg via-bg/60 to-bg/20" />
         <div className="relative mx-auto flex min-h-[52vh] max-w-3xl flex-col justify-end px-4 pb-10 sm:px-6">
           <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
             {post.series || post.category}
           </p>
-          <h1 className="mt-3 font-display text-5xl leading-[0.92] font-bold tracking-wide uppercase sm:text-7xl">
+          <h1 className="mt-3 font-display leading-[0.92] font-bold tracking-wide uppercase text-[clamp(2rem,8vw,4.5rem)]">
             {post.title}
           </h1>
         </div>
@@ -71,7 +76,7 @@ function EssayPage() {
         {post.receipts?.length ? (
           <div className="mt-8 rounded-lg bg-surface p-4">
             <p className="font-display text-xs font-semibold tracking-[0.18em] text-sage uppercase">
-              Receipts
+              The file
             </p>
             <ul className="mt-3 space-y-2">
               {post.receipts.map((r) => (
@@ -89,7 +94,7 @@ function EssayPage() {
             </ul>
           </div>
         ) : null}
-        <div className="mt-10 space-y-6">
+        <div className="mt-10 space-y-8">
           {post.body.map((block, i) => {
             if (block.type === "h") {
               return (
@@ -105,7 +110,7 @@ function EssayPage() {
               return (
                 <ul
                   key={i}
-                  className="list-disc space-y-3 pl-6 font-serif text-lg leading-relaxed text-fg/85"
+                  className="list-disc space-y-4 pl-6 font-serif text-lg leading-8 text-fg/85"
                 >
                   {block.items.map((item) => (
                     <li key={item.slice(0, 48)}>
@@ -125,8 +130,19 @@ function EssayPage() {
                 </blockquote>
               );
             }
+            if (block.type === "img") {
+              return (
+                <figure key={i} className="sm:-mx-8">
+                  <img
+                    src={block.src}
+                    alt={block.alt}
+                    className="w-full rounded-md border border-border"
+                  />
+                </figure>
+              );
+            }
             return (
-              <p key={i} className="font-serif text-lg leading-relaxed text-fg/85">
+              <p key={i} className="font-serif text-lg leading-8 text-fg/85">
                 <LinkedText text={block.text} />
               </p>
             );
@@ -202,11 +218,16 @@ function EssayPage() {
             Another file
           </h2>
           <p className="mt-2 text-sm text-muted">
-            The rest stay closed until you open one.
+            The rest stay closed until one is opened.
           </p>
-          <div className="mt-6">
-            <DispatchMenu currentSlug={post.slug} />
-          </div>
+          <p className="mt-6">
+            <Link
+              to="/archive"
+              className="font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase no-underline hover:text-fg"
+            >
+              Open the archive →
+            </Link>
+          </p>
         </div>
       </section>
     </main>

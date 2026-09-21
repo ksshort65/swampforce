@@ -31,8 +31,7 @@ export function essayHead(post: Post, path?: string) {
 
 export function homeHead() {
   const title = "Swamp Force";
-  const desc =
-    "Save the nation. Secure the elections. Congress works for us — or we send them home.";
+  const desc = SITE.tagline;
   const image = abs("/og.jpg");
   return {
     meta: [

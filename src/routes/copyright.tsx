@@ -46,8 +46,8 @@ function CopyrightPage() {
           that sits around them is, to the extent a human put it there.
         </p>
         <p>
-          You may quote brief passages with credit to {SITE.author} and a
-          link. You may not scrape or republish the compilation as your own.
+          Brief passages may be quoted with credit to {SITE.author} and a
+          link. The compilation may not be scraped or republished as original.
         </p>
         <p>
           This journal was built with Grok, from xAI — as a tool. The file

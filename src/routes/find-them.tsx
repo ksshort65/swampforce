@@ -112,6 +112,13 @@ function FindThem() {
                 </ul>
               );
             }
+            if (block.type === "img") {
+              return (
+                <figure key={i}>
+                  <img src={block.src} alt={block.alt} className="w-full rounded-md border border-border" />
+                </figure>
+              );
+            }
             return (
               <p key={i} className="font-serif text-lg leading-relaxed text-fg/85">
                 <LinkedText text={block.text} />

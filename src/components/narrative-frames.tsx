@@ -7,7 +7,7 @@ export function NarrativeFrames({ frames }: { frames: Frame[] }) {
         Side by side
       </p>
       <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase">
-        The chyron · the file
+        The caption · the file
       </h2>
       <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
         Left is the Democratic frame. Right is the uncut record. Read across.
@@ -29,7 +29,7 @@ export function NarrativeFrames({ frames }: { frames: Frame[] }) {
           >
             <div className="border-border px-4 py-5 sm:border-r">
               <p className="font-display text-xs tracking-[0.16em] text-muted uppercase">
-                {f.tag} · chyron
+                {f.tag} · caption
               </p>
               <p className="mt-2 text-base leading-relaxed text-fg/80">{f.they}</p>
             </div>
@@ -38,6 +38,18 @@ export function NarrativeFrames({ frames }: { frames: Frame[] }) {
                 {f.tag} · file
               </p>
               <p className="mt-2 text-base leading-relaxed text-fg">{f.tape}</p>
+              {f.href ? (
+                <p className="mt-3">
+                  <a
+                    href={f.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-display text-xs tracking-[0.14em] text-sage uppercase no-underline hover:underline"
+                  >
+                    The tape →
+                  </a>
+                </p>
+              ) : null}
             </div>
           </div>
         ))}

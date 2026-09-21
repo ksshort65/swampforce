@@ -10,7 +10,7 @@ export const CHAPTERS: Chapter[] = [
   {
     n: "01",
     title: "They already had the country",
-    dek: "Long before anyone filed papers, politicians, bureaucrats, and special interests treated three hundred million people as a cash machine. The country still opened because you went to work. That is how we got here — not a campaign.",
+    dek: "Long before anyone filed papers, politicians, bureaucrats, and special interests treated three hundred million people as a cash machine. The country still opened because people went to work. That is how we got here — not a campaign.",
     slug: "division-is-the-product",
   },
   {
@@ -28,7 +28,7 @@ export const CHAPTERS: Chapter[] = [
   {
     n: "04",
     title: "Then the donor became a problem",
-    dek: "They loved him when he wrote the checks. When he stopped being a donor and looked like a pragmatist who might close the shop, they went into self-defense — hoax after hoax, on your dime — and widened the attack onto the whole country.",
+    dek: "They loved him when he wrote the checks. When he stopped being a donor and looked like a pragmatist who might close the shop, they went into self-defense — hoax after hoax, on the taxpayer dime — and widened the attack onto the whole country.",
     slug: "why-he-became-the-enemy",
   },
   {

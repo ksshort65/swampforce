@@ -9,7 +9,269 @@ export type ScoreRow = {
 };
 
 /** Living midterms card. Update the cells when a vote or a Treasury table changes the file. */
-export const SCORE_UPDATED = "2026-09-19";
+export const SCORE_UPDATED = "2026-09-20";
+
+/** Treasury Debt to the Penny. Unified Congress = House and Senate same party. Adds to the current total. */
+export const DEBT_NOW = {
+  asOf: "September 17, 2026",
+  total: "$40.09 trillion",
+  href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
+};
+
+export const DEBT_TALLY: {
+  who: string;
+  when: string;
+  added: string;
+  href: string;
+}[] = [
+  {
+    who: "Republicans ran both",
+    when: "1861–75 · 1881–83 · 1889–91 · 1895–1911 · 1919–31 · 1947–49 · 1953–55 · 1995–2001 · 2003–07 · 2015–19 · 2025–now",
+    added: "+$10.96 trillion",
+    href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/",
+  },
+  {
+    who: "Democrats ran both",
+    when: "1857–59 · 1875–81 · 1893–95 · 1913–19 · 1933–47 · 1949–53 · 1955–81 · 1987–95 · 2007–11 · 2021–23",
+    added: "+$12.65 trillion",
+    href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/",
+  },
+  {
+    who: "They split the gavel",
+    when: "Every other year since 1857 — one house each",
+    added: "+$16.48 trillion",
+    href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/",
+  },
+];
+
+export const DEBT_MATH =
+  "$10.96 + $12.65 + $16.48 = $40.09. Before 1857 the two parties did not yet run the modern Congress. The debt then was $29 million.";
+
+/** Oval — nationwide CBP, BLS CPI peak, EIA gallon. */
+export const OVAL = [
+  {
+    who: "Trump 1",
+    when: "FY2017–20",
+    enc: "3.00 million",
+    encN: 3.0,
+    cpi: "2.9%",
+    cpiN: 2.9,
+    gas: "$2.96 peak",
+    note: "Nationwide encounters. CPI peak in the term. EIA weekly regular: highest week $2.962 (May 28, 2018).",
+  },
+  {
+    who: "Biden",
+    when: "FY2021–24",
+    enc: "10.83 million",
+    encN: 10.83,
+    cpi: "9.1%",
+    cpiN: 9.1,
+    gas: "$5.006 peak",
+    note: "Nationwide encounters. CPI June 2022. EIA weekly regular: $5.006 the week of June 13, 2022.",
+  },
+  {
+    who: "Trump 2",
+    when: "FY2025",
+    enc: "0.69 million",
+    encN: 0.69,
+    cpi: "3.4%",
+    cpiN: 3.4,
+    gas: "$4.50 peak",
+    note: "Nationwide FY2025. CPI year-over-year August 2026. EIA weekly regular: highest week $4.500 (May 11, 2026).",
+  },
+] as const;
+
+export const OVAL_LINKS = [
+  { label: "CBP — enforcement statistics", href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics" },
+  { label: "BLS — CPI", href: "https://www.bls.gov/cpi/" },
+  { label: "EIA — the gallon", href: "https://www.eia.gov/petroleum/gasdiesel/" },
+  { label: "FRED UNRATE", href: "https://fred.stlouisfed.org/series/UNRATE" },
+];
+
+/** Open border — Democratic watch. CBO, CBP, CDC, DHS. Not a panel. */
+export const BORDER = {
+  k: "They opened the border",
+  v: "CBP nationwide, FY2021–24: 10.83 million encounters. That is every door CBP counts — southwest land, the northern line, airports, seaports, Miami and the other sectors. Southwest land alone: 8.73 million. The rest of the map: about 2.10 million. House Homeland: more than half a million on the northern border in those four years. FY2025 nationwide, after the Oval changed: 691,906. Southwest Border Patrol FY2025: 237,538 — lowest since 1970. CDC: fentanyl deaths peaked at 73,944 in 2022. DHS: more than 450,000 unaccompanied children in the prior file.",
+  essay: "/dispatch/they-opened-the-border",
+  links: [
+    { label: "CBP — nationwide encounters", href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters" },
+    { label: "CBP — enforcement statistics", href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics" },
+    { label: "CBP — southwest land", href: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters" },
+    { label: "House Homeland — 10.8 million", href: "https://homeland.house.gov/2024/10/24/startling-stats-factsheet-fiscal-year-2024-ends-with-nearly-3-million-inadmissible-encounters-10-8-million-total-encounters-since-fy2021/" },
+  ],
+};
+
+/** Flights, buses, hotel bills. The door did not stop at the river. */
+export const BORDER_MOVE = {
+  k: "Then a plane. Then a bus. Then a hotel.",
+  v: "After the encounter, people were moved into cities. The cities bought rooms. Schools and emergency rooms took the overflow. That is the community bill.",
+  items: [
+    {
+      k: "New York City shelter — actuals",
+      amt: "$8.13 billion",
+      note: "Comptroller: $1.41B FY2023, $3.70B FY2024, $3.02B FY2025.",
+      href: "https://comptroller.nyc.gov/services/for-the-public/accounting-for-asylum-seeker-services/fiscal-impacts",
+    },
+    {
+      k: "Chicago",
+      amt: "$434 million",
+      note: "City estimate, food and shelter, July 2022–July 2024.",
+      href: "https://www.migrationpolicy.org/article/us-cities-migrant-arrivals-new-normal",
+    },
+    {
+      k: "Denver",
+      amt: "$216–340 million",
+      note: "Food, education, housing, December 2022–May 2024.",
+      href: "https://www.migrationpolicy.org/article/us-cities-migrant-arrivals-new-normal",
+    },
+    {
+      k: "FEMA Shelter and Services",
+      amt: "$1.4 billion",
+      note: "DHS OIG: EFSP-H and SSP awards, FY2023–24. CBP money, FEMA-run.",
+      href: "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf",
+    },
+    {
+      k: "Texas buses and flights",
+      amt: "$124.6 million",
+      note: "TDEM invoices through January 10, 2024. More than 103,100 people to NYC, Chicago, Denver, D.C., Philadelphia, L.A.",
+      href: "https://abc13.com/post/souther-border-texas-gov-greg-abbott-migrant-crisis-flights/14453558/",
+    },
+    {
+      k: "CBO — one year, states and cities",
+      amt: "Net $9.2 billion",
+      note: "2023: $19.3B to serve, $10.1B back in tax. Encounters ran four years.",
+      href: "https://www.cbo.gov/publication/61256",
+    },
+    {
+      k: "Emergency Medicaid",
+      amt: "$16.2 billion",
+      note: "House Budget published the CBO run, Biden years.",
+      href: "https://budget.house.gov/press-release/cbo-medicaid-spending-on-illegal-aliens-has-cost-taxpayers-over-162-billion-under-open-border-czar-harris",
+    },
+  ],
+};
+
+/** Hospitals and homicides. CBO, EMTALA, CBP, ICE, named dead. */
+export const BORDER_HARM = {
+  k: "The hospital. Then the morgue.",
+  v: "EMTALA already said a hospital has to treat whoever walks in. Emergency Medicaid paid the bill for people the statute otherwise barred. Then some of the people CBP released killed Americans. Those names are on ICE and DHS letterhead.",
+  items: [
+    {
+      k: "Emergency Medicaid",
+      amt: "$16.2 billion",
+      note: "CBO to House Budget, Biden years. Federal plus state. Up 124% from the same span under Trump.",
+      href: "https://www.cbo.gov/publication/60805",
+    },
+    {
+      k: "The law that fills the ER",
+      amt: "42 U.S.C. § 1395dd",
+      note: "A hospital that takes Medicare has to stabilize an emergency. The wait is the American who paid the premiums.",
+      href: "https://www.law.cornell.edu/uscode/text/42/1395dd",
+    },
+    {
+      k: "Criminal aliens on the street",
+      amt: "650,000",
+      note: "House Homeland, ICE non-detained docket, July 21, 2024. Convictions or charges. Not detained.",
+      href: "https://homeland.house.gov/2024/10/24/startling-stats-factsheet-fiscal-year-2024-ends-with-nearly-3-million-inadmissible-encounters-10-8-million-total-encounters-since-fy2021/",
+    },
+    {
+      k: "Homicide on ICE’s FY2024 arrests",
+      amt: "2,894",
+      note: "ICE ERO Annual Report: homicide charges or convictions among the criminal noncitizens ERO arrested that year.",
+      href: "https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf",
+    },
+    {
+      k: "Laken Riley",
+      amt: "Georgia, 2024",
+      note: "Nursing student. DHS: killed by a Venezuelan illegal alien, Tren de Aragua, paroled in September 2022, released again after a New York arrest.",
+      href: "https://www.dhs.gov/news/2026/01/29/dhs-celebrates-one-year-laken-riley-act",
+    },
+    {
+      k: "Rachel Morin",
+      amt: "Maryland, 2023",
+      note: "Mother of five. House Homeland: illegal alien from El Salvador, entered 2023, arrested June 17, 2024.",
+      href: "https://homeland.house.gov/2024/10/24/startling-stats-factsheet-fiscal-year-2024-ends-with-nearly-3-million-inadmissible-encounters-10-8-million-total-encounters-since-fy2021/",
+    },
+  ],
+  essay: "/dispatch/the-hospital-and-the-morgue",
+};
+
+/** Same formula as a citizen. Qualified aliens (parole, asylum, refugee) can collect. Illegal aliens still illegal cannot. Averages are the program averages — SSA, USDA, MACPAC, HUD. */
+export const BENEFITS = {
+  k: "The monthly stack",
+  v: "Agencies do not print a bigger check because the person is not a citizen. They print the same check. Qualified aliens can collect it. That is the door.",
+  stack: "$2,590",
+  items: [
+    {
+      k: "SSI",
+      amt: "$715",
+      note: "Average check, December 2025. Cap for one person in 2026: $994.",
+      href: "https://www.ssa.gov/policy/docs/statcomps/ssi_asr/",
+    },
+    {
+      k: "SNAP",
+      amt: "$190",
+      note: "Average per person, FY2026. Household average: $352.",
+      href: "https://www.fns.usda.gov/pd/supplemental-nutrition-assistance-program-snap",
+    },
+    {
+      k: "Medicaid",
+      amt: "$771",
+      note: "MACPAC: $9,255 a year per full-benefit enrollee, FY2023. Emergency Medicaid for illegal aliens is extra, not this monthly line.",
+      href: "https://www.macpac.gov/publication/medicaid-benefit-spending-per-full-year-equivalent-fye-enrollee-by-state-and-eligibility-group/",
+    },
+    {
+      k: "Housing",
+      amt: "$917",
+      note: "HUD’s own run on mixed families: about $11,000 a year in housing assistance.",
+      href: "https://www.huduser.gov/portal/datasets/assthsg.html",
+    },
+  ],
+};
+
+/** The worker who paid FICA. Not the welfare stack. */
+export const WORKER = {
+  k: "What the worker gets",
+  v: "A citizen who worked is not handed SSI, SNAP, Medicaid, and a housing check in one pile. That pile is welfare. The earned check is Social Security. Medicare is insurance, not rent. The wait for a doctor is the product of what Medicare pays.",
+  items: [
+    {
+      k: "Social Security — earned",
+      amt: "$2,086",
+      note: "Average retired-worker check, July 2026. Paid with FICA. Not SSI.",
+      href: "https://www.congress.gov/crs-product/R42035",
+    },
+    {
+      k: "Medicare Part B — taken out",
+      amt: "−$202.90",
+      note: "Standard monthly premium, 2026. Deducted from the earned check. CMS.",
+      href: "https://www.cms.gov/medicare/payment/medicare-part-b",
+    },
+    {
+      k: "SSI / SNAP / HUD stack",
+      amt: "$0",
+      note: "Over the line, the worker does not get that $2,590 pile. SSI is need, not a career.",
+      href: "https://www.ssa.gov/ssi/",
+    },
+    {
+      k: "The wait",
+      amt: "Months",
+      note: "MGMA: 80% of groups say Medicare pays below the cost of the visit. Doctors leave. The patient waits.",
+      href: "https://www.mgma.com/",
+    },
+  ],
+};
+
+export const PRICES = {
+  k: "Prices — Democrats held the gavel",
+  v: "9.1 percent in June 2022. Democrats ran both chambers. That is the peak. The live table did not stop there. BLS, August 2026: 3.4 percent over the year. The grocery ticket is still their watch.",
+  links: [
+    { label: "BLS — 9.1% in June 2022", href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm" },
+    { label: "BLS — live CPI, August 2026 (3.4%)", href: "https://www.bls.gov/news.release/cpi.nr0.htm" },
+    { label: "BLS — 12-month chart, through August 2026", href: "https://www.bls.gov/charts/consumer-price-index/" },
+    { label: "FRED — 12-month CPI through August 2026", href: "https://fred.stlouisfed.org/graph/?id=CPIAUCSL&units=pc1" },
+  ],
+};
+
 
 export type Cite = { label: string; href: string };
 
@@ -249,34 +511,171 @@ export const TAX_MOVES: {
 ];
 
 export const RECORD: {
+  id: string;
   party: string;
-  plus: { item: string; href: string }[];
-  minus: { item: string; href: string }[];
+  control: string;
+  debt: string;
+  plus: { k: string; bill: string; href: string }[];
+  minus: { k: string; bill: string; href: string }[];
 }[] = [
   {
-    party: "Republicans in Congress",
+    id: "gop",
+    party: "Republicans",
+    control: "Ran both the House and the Senate: 1995–2001 · 2003–07 · 2015–19 · 2025–now",
+    debt: "Added about $10.96 trillion on those watches since 1995. Last surplus: late 1990s.",
     plus: [
-      { item: "2017 — tax cut", href: "https://www.congress.gov/bill/115th-congress/house-bill/1" },
-      { item: "2001 — tax cut", href: "https://www.congress.gov/bill/107th-congress/house-bill/1836" },
-      { item: "1996 — welfare work requirement", href: "https://www.congress.gov/bill/104th-congress/house-bill/3734" },
+      {
+        k: "Welfare — work, or the check stops",
+        bill: "H.R. 3734 · 1996",
+        href: "https://www.congress.gov/bill/104th-congress/house-bill/3734",
+      },
+      {
+        k: "Tax cut on savings",
+        bill: "H.R. 2014 · 1997",
+        href: "https://www.congress.gov/bill/105th-congress/house-bill/2014",
+      },
+      {
+        k: "Fatter paycheck",
+        bill: "H.R. 1836 · 2001",
+        href: "https://www.congress.gov/bill/107th-congress/house-bill/1836",
+      },
+      {
+        k: "Fatter paycheck, round two",
+        bill: "H.R. 2 · 2003",
+        href: "https://www.congress.gov/bill/108th-congress/house-bill/2",
+      },
+      {
+        k: "Fatter paycheck again. Not a surplus.",
+        bill: "H.R. 1 · Tax Cuts and Jobs Act · 2017",
+        href: "https://www.congress.gov/bill/115th-congress/house-bill/1",
+      },
     ],
     minus: [
-      { item: "2002 — Iraq authorization", href: "https://www.congress.gov/bill/107th-congress/house-joint-resolution/114" },
-      { item: "2003 — Medicare Part D, unpaid", href: "https://www.congress.gov/bill/108th-congress/house-bill/1" },
-      { item: "Every year — 12 money bills not passed on time", href: "https://www.congress.gov/bill/93rd-congress/house-bill/7130" },
+      {
+        k: "Iraq war — they voted yes",
+        bill: "H.J.Res. 114 · 2002",
+        href: "https://www.congress.gov/bill/107th-congress/house-joint-resolution/114",
+      },
+      {
+        k: "Drug benefit. They did not pay for it.",
+        bill: "H.R. 1 · Medicare Part D · 2003",
+        href: "https://www.congress.gov/bill/108th-congress/house-bill/1",
+      },
+      {
+        k: "COVID checks. Both parties. Then the fraud.",
+        bill: "H.R. 748 · CARES Act · 2020",
+        href: "https://www.congress.gov/bill/116th-congress/house-bill/748",
+      },
+      {
+        k: "They never finish the budget on time",
+        bill: "H.R. 7130 · Budget Act · 1974",
+        href: "https://www.congress.gov/bill/93rd-congress/house-bill/7130",
+      },
     ],
   },
   {
-    party: "Democrats in Congress",
+    id: "dem",
+    party: "Democrats",
+    control: "Ran both the House and the Senate: 1993–95 · 2007–11 · 2021–23",
+    debt: "Added about $9.59 trillion on those watches since 1993. TARP. Stimulus. 9.1% prices in 2022.",
     plus: [
-      { item: "1935 — Social Security Act", href: "https://www.ssa.gov/history/35act.html" },
-      { item: "1993 — top tax raised, deficit cut", href: "https://www.congress.gov/bill/103rd-congress/house-bill/2264" },
+      {
+        k: "Raised the top tax. Cut the deficit that year.",
+        bill: "H.R. 2264 · 1993",
+        href: "https://www.congress.gov/bill/103rd-congress/house-bill/2264",
+      },
     ],
     minus: [
-      { item: "2010 — ObamaCare taxes and a mandate", href: "https://www.congress.gov/bill/111th-congress/house-bill/3590" },
-      { item: "2022 — corporate tax raised", href: "https://www.congress.gov/bill/117th-congress/house-bill/5376" },
-      { item: "Every year — 12 money bills not passed on time", href: "https://www.congress.gov/bill/93rd-congress/house-bill/7130" },
+      {
+        k: "They opened the border. Seven million encounters. The bill is still due.",
+        bill: "CBP · CBO 2023 · FY2021–24",
+        href: "https://www.cbo.gov/publication/61256",
+      },
+      {
+        k: "SSI to qualified aliens — $715 average a month",
+        bill: "SSA · Dec 2025 · $994 cap in 2026",
+        href: "https://www.ssa.gov/policy/docs/statcomps/ssi_asr/",
+      },
+      {
+        k: "SNAP — $190 a person a month",
+        bill: "USDA FNS · FY2026",
+        href: "https://www.fns.usda.gov/pd/supplemental-nutrition-assistance-program-snap",
+      },
+      {
+        k: "Medicaid — about $771 a month per full-benefit enrollee",
+        bill: "MACPAC · FY2023",
+        href: "https://www.macpac.gov/publication/medicaid-benefit-spending-per-full-year-equivalent-fye-enrollee-by-state-and-eligibility-group/",
+      },
+      {
+        k: "Housing help — about $917 a month",
+        bill: "HUD · mixed-family HAP",
+        href: "https://www.huduser.gov/portal/datasets/assthsg.html",
+      },
+      {
+        k: "The worker waits for a doctor. Medicare pays too little. Part B still takes $202.90.",
+        bill: "CMS Part B 2026 · MGMA",
+        href: "https://www.cms.gov/medicare/payment/medicare-part-b",
+      },
+      {
+        k: "Bank bailout",
+        bill: "H.R. 1424 · TARP · 2008",
+        href: "https://www.congress.gov/bill/110th-congress/house-bill/1424",
+      },
+      {
+        k: "Stimulus after the crash",
+        bill: "H.R. 1 · 2009",
+        href: "https://www.congress.gov/bill/111th-congress/house-bill/1",
+      },
+      {
+        k: "ObamaCare — new taxes, a mandate",
+        bill: "H.R. 3590 · 2010",
+        href: "https://www.congress.gov/bill/111th-congress/house-bill/3590",
+      },
+      {
+        k: "More spending after COVID",
+        bill: "H.R. 1319 · Rescue Plan · 2021",
+        href: "https://www.congress.gov/bill/117th-congress/house-bill/1319",
+      },
+      {
+        k: "Corporate tax went up",
+        bill: "H.R. 5376 · 2022",
+        href: "https://www.congress.gov/bill/117th-congress/house-bill/5376",
+      },
+      {
+        k: "Prices hit 9.1%. Groceries. Rent. Fuel.",
+        bill: "BLS CPI · June 2022",
+        href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm",
+      },
+      {
+        k: "They never finish the budget on time either",
+        bill: "H.R. 7130 · Budget Act · 1974",
+        href: "https://www.congress.gov/bill/93rd-congress/house-bill/7130",
+      },
     ],
+  },
+];
+
+/** Why the meter runs. Both parties. They hold the purse. */
+export const DRIVERS: { k: string; v: string; href: string }[] = [
+  {
+    k: "Medicare, Medicaid, Social Security",
+    v: "These three, plus interest, are the biggest lines on the card. Social Security is not a nest egg. The 2026 raise for the average retired worker is $56 a month — $2,015 to $2,071 (SSA). SSA’s own implied return for later cohorts is about 2% real. Markets historically paid 7–8%. Congress spent the surplus. The check is a transfer. They are angry the auditor turned on the light.",
+    href: "https://www.ssa.gov/news/en/cola/factsheets/2026.html",
+  },
+  {
+    k: "SSI is the welfare check. Not Social Security.",
+    v: "SSI is paid from general revenue. Nobody ‘paid in.’ Illegal aliens cannot collect it while they are still illegal (8 U.S.C. § 1611). Congress left a door: parole, asylum, refugee. Cross, get a status, get an SSN, get SSI. SSA’s own spotlight lists those categories. About 310,000 noncitizens were on SSI in December 2025. That is the giveaway. Retirees fight over a $56 COLA on the other program.",
+    href: "https://www.ssa.gov/ssi/spotlights/spot-non-citizens.htm",
+  },
+  {
+    k: "No lock. Fraud walks.",
+    v: "GAO: $233–521 billion a year in fraud and improper payments. COVID unemployment: $100–135 billion. They hold the purse. They got loud when the auditor turned on the light.",
+    href: "https://www.gao.gov/products/gao-25-107746",
+  },
+  {
+    k: "Part-time. Unread bills. Back-room pages.",
+    v: "Twelve money bills by October 1. They do not pass them. Lobbyists write the stack. A handshake in the hallway becomes law. That is not oversight. That is how waste hides.",
+    href: "https://www.congress.gov/bill/93rd-congress/house-bill/7130",
   },
 ];
 
@@ -297,12 +696,73 @@ export const CHARTS: {
   sources: { label: string; href: string }[];
 }[] = [
   {
+    src: "/images/chart-inflation-party.jpg",
+    title: "Actual inflation — who held Congress",
+    sources: [
+      { label: "BLS CPI-U", href: "https://www.bls.gov/cpi/" },
+      { label: "9.1% — June 2022", href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm" },
+      { label: "BLS live — August 2026, 3.4%", href: "https://www.bls.gov/news.release/cpi.nr0.htm" },
+      { label: "FRED — 12-month CPI", href: "https://fred.stlouisfed.org/graph/?id=CPIAUCSL&units=pc1" },
+    ],
+  },
+  {
+    src: "/images/chart-policy.jpg",
+    title: "Policy — success and failure",
+    sources: [
+      { label: "Congress.gov", href: "https://www.congress.gov/" },
+      { label: "BLS — June 2022", href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm" },
+    ],
+  },
+  {
+    src: "/images/chart-border.jpg",
+    title: "The open border — by administration",
+    sources: [
+      { label: "CBP — southwest encounters", href: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters" },
+      { label: "CBO — 2023 state and local cost", href: "https://www.cbo.gov/publication/61256" },
+    ],
+  },
+  {
+    src: "/images/chart-border-all.jpg",
+    title: "Every path CBP counts",
+    sources: [
+      { label: "CBP — nationwide", href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters" },
+      { label: "CBP — enforcement statistics", href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics" },
+      { label: "DHS OHSS", href: "https://ohss.dhs.gov/khsm/cbp-encounters" },
+    ],
+  },
+  {
+    src: "/images/chart-border-toll.jpg",
+    title: "What Americans still pay",
+    sources: [
+      { label: "CBP nationwide", href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics" },
+      { label: "CBO emergency Medicaid", href: "https://www.cbo.gov/publication/60805" },
+      { label: "NYC Comptroller", href: "https://comptroller.nyc.gov/services/for-the-public/accounting-for-asylum-seeker-services/fiscal-impacts" },
+      { label: "CDC fentanyl", href: "https://www.cdc.gov/nchs/blog/posts/2026/03/most-common-drugs-in-u-s-overdose-deaths-2017-2023.html" },
+      { label: "ICE FY2024", href: "https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf" },
+    ],
+  },
+  {
+    src: "/images/chart-crime.jpg",
+    title: "Crime — murder rate by administration",
+    sources: [
+      { label: "FBI — violent crime 2025", href: "https://www.fbi.gov/news/stories/violent-crime-falls-at-historic-rate-new-fbi-data-show" },
+      { label: "BJS — Crime Known to Law Enforcement, 2024", href: "https://bjs.ojp.gov/document/ckle24.pdf" },
+    ],
+  },
+  {
+    src: "/images/chart-harm-pie.jpg",
+    title: "The debt they added — $40.09 trillion",
+    sources: [
+      { label: "Treasury — debt to the penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+      { label: "Historical debt outstanding", href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/" },
+    ],
+  },
+  {
     src: "/images/chart-job.jpg",
     title: "Congress holds the money",
     sources: [
       { label: "Treasury — debt to the penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
       { label: "CRS R48612", href: "https://www.congress.gov/crs-product/R48612" },
-      { label: "House session dates", href: "https://history.house.gov/Institution/Session-Dates/110-Current/" },
       { label: "CBO — last surplus FY 2001", href: "https://www.cbo.gov/data/budget-economic-data" },
     ],
   },
@@ -323,7 +783,62 @@ export const CHARTS: {
       { label: "H.R. 7152, 88th Congress", href: "https://www.congress.gov/bill/88th-congress/house-bill/7152" },
     ],
   },
+  {
+    src: "/images/chart-debt-bars.jpg",
+    title: "Who added the debt",
+    sources: [
+      { label: "Treasury — debt to the penny", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+      { label: "Historical debt outstanding", href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/" },
+    ],
+  },
+  {
+    src: "/images/chart-oval.jpg",
+    title: "The Oval — encounters and the CPI peak",
+    sources: [
+      { label: "CBP — enforcement statistics", href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics" },
+      { label: "BLS — CPI", href: "https://www.bls.gov/cpi/" },
+      { label: "EIA — the gallon", href: "https://www.eia.gov/petroleum/gasdiesel/" },
+    ],
+  },
 ];
+
+const COMPARE_SRC = [
+  "/images/chart-oval.jpg",
+  "/images/chart-border-toll.jpg",
+  "/images/chart-debt-bars.jpg",
+  "/images/chart-inflation-party.jpg",
+  "/images/chart-border-all.jpg",
+  "/images/chart-border.jpg",
+  "/images/chart-crime.jpg",
+  "/images/chart-policy.jpg",
+  "/images/chart-harm-pie.jpg",
+  "/images/chart-pump-admins.jpg",
+  "/images/chart-pump-years.jpg",
+];
+
+export const COMPARE_WIDE = new Set([
+  "/images/chart-oval.jpg",
+  "/images/chart-border-toll.jpg",
+  "/images/chart-inflation-party.jpg",
+  "/images/chart-policy.jpg",
+  "/images/chart-pump-years.jpg",
+]);
+
+export const COMPARE_CHARTS = COMPARE_SRC.map((src) => {
+  const hit = CHARTS.find((c) => c.src === src);
+  return (
+    hit ?? {
+      src,
+      title: src.includes("pump-admins")
+        ? "The gallon — four administrations"
+        : "Regular gasoline by year",
+      sources: [
+        { label: "EIA", href: "https://www.eia.gov/petroleum/gasdiesel/" },
+        { label: "FRED GASREGW", href: "https://fred.stlouisfed.org/series/GASREGW" },
+      ],
+    }
+  );
+});
 
 export const FILE_CHIPS: {
   k: string;
@@ -338,19 +853,14 @@ export const FILE_CHIPS: {
     hot: true,
   },
   {
-    k: "Republicans ran both",
-    v: "1995–2001 · 2003–07 · 2015–19 · 2025–now",
-    href: "https://www.senate.gov/history/partydiv.htm",
+    k: "Republicans",
+    v: "What they passed that helped. What they passed that hurt. Every named bill, on this page.",
+    href: "#gop",
   },
   {
-    k: "Democrats ran both",
-    v: "1993–95 · 2007–11 · 2021–23",
-    href: "https://history.house.gov/Institution/Party-Divisions/Party-Divisions/",
-  },
-  {
-    k: "9.1% prices",
-    v: "BLS · June 2022 · Democrats ran both",
-    href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm",
+    k: "Democrats",
+    v: "What they passed that helped. What they passed that hurt. Every named bill, on this page.",
+    href: "#dem",
   },
 ];
 
@@ -368,7 +878,7 @@ export const MAJORITY: {
     when: "1995–2001 · 2003–07 · 2015–19 · 2025–now",
     could: "They could pass a spending bill without Democrats.",
     did: "Tax cuts. Iraq. Unpaid drug benefit. Border down this term. Debt still up.",
-    href: "https://www.senate.gov/history/partydiv.htm",
+    href: "https://www.congress.gov/bill/115th-congress/house-bill/1",
     extra: [
       { label: "CBP border numbers", href: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters" },
       { label: "Treasury debt", href: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
@@ -379,7 +889,7 @@ export const MAJORITY: {
     when: "1993–95 · 2007–11 · 2021–23",
     could: "They could pass a spending bill without Republicans.",
     did: "Raised taxes. Passed ObamaCare. Prices hit 9.1% in 2022. Record border crossings. The debt still went up.",
-    href: "https://history.house.gov/Institution/Party-Divisions/Party-Divisions/",
+    href: "https://www.congress.gov/bill/111th-congress/house-bill/3590",
     extra: [
       { label: "BLS — 9.1% prices, June 2022", href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm" },
       { label: "CBP border numbers", href: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters" },
@@ -554,7 +1064,7 @@ export const SCORE_ROWS: ScoreRow[] = [
   },
   {
     topic: "What they got right",
-    gop: "TCJA, 2017: take-home pay rose. This term: southwest-border encounters at a 50-year low (Pew). That is the file. Print it next to the ugly sentences so this card is not a smear sheet.",
+    gop: "TCJA, 2017: take-home pay rose. This term: southwest-border encounters at a 50-year low (Pew). That is the file. The ugly sentences stay on this card too, so it is not a smear sheet.",
     dem: "Social Security’s passage and the 1964 Civil Rights Act are on this party’s ledger. This journal said it would print the wins. This Congress does not get those trophies for a caption. Credit the statute that still stands. Do not pretend 2020 was peace.",
     dsa: "They publish the program. That is more honest than a six-second caption. Honesty about wanting a new constitution is not a virtue that pays for the constitution. It is still the file.",
     href: "https://www.pewresearch.org/short-reads/2026/02/02/migrant-encounters-at-the-us-mexico-border-are-at-their-lowest-level-in-more-than-50-years/",

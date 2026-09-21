@@ -2,38 +2,38 @@ SWAMP FORCE — Namecheap Advanced DNS (from your screenshot)
 
 KEEP — do not remove
 --------------------
-CNAME  protonmail._domainkey     (Proton)
-CNAME  protonmail2._domainkey    (Proton)
-CNAME  protonmail3._domainkey    (Proton)
-TXT    @   protonmail-verification=e191278b0d9b7c1de03b3a0b4462d9a775d4698f
-TXT    @   v=spf1 include:_spf.protonmail.ch ~all
-TXT    _dmarc   v=DMARC1; p=quarantine
+CNAME protonmail._domainkey   (Proton)
+CNAME protonmail2._domainkey  (Proton)
+CNAME protonmail3._domainkey  (Proton)
+TXT  @  protonmail-verification=e191278b0d9b7c1de03b3a0b4462d9a775d4698f
+TXT  @  v=spf1 include:_spf.protonmail.ch ~all
+TXT  _dmarc  v=DMARC1; p=quarantine
 
 KEEP if Fourthwall merch still uses support.swampforce.com
 ----------------------------------------------------------
-CNAME  em-fw.support
-CNAME  s1._domainkey.support
-CNAME  s2._domainkey.support
-CNAME  zendesk3.support
-CNAME  zendesk4.support
-TXT    _dmarc.support
-TXT    support
-TXT    zendeskverification.support
+CNAME em-fw.support
+CNAME s1._domainkey.support
+CNAME s2._domainkey.support
+CNAME zendesk3.support
+CNAME zendesk4.support
+TXT  _dmarc.support
+TXT  support
+TXT  zendeskverification.support
 
 DELETE / REPLACE
 ----------------
-A  @  34.117.223.165     <- old EasyWP. This is why you got "We'll be back soon".
-CNAME  www -> swampforce.com.   <- replace after hosting is on
+A @ 34.117.223.165   <- old EasyWP. This is why you got "We'll be back soon".
+CNAME www -> swampforce.com.  <- replace after hosting is on
 
 ADD after Namecheap hosting is active
 -------------------------------------
 Namecheap email / hosting dashboard will show the new A record IP
 for public_html. Put that IP on:
 
-  A      @      (new hosting IP)     TTL 5 min
-  CNAME  www    swampforce.com.
+ A   @   (new hosting IP)   TTL 5 min
+ CNAME www  swampforce.com.
 
 Do not add Unmasked URL Redirect to grok.me. That was the SSL mess.
 
 When swampforce.com loads this journal, set the X bio website to
-https://swampforce.com  — X will then use og.jpg in this zip, not Grok's flag card.
+https://swampforce.com — X will then use og.jpg in this zip, not Grok's flag card.

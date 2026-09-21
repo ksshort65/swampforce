@@ -15,13 +15,10 @@ import { Route as ArchiveRouteImport } from './routes/archive'
 import { Route as CopyrightRouteImport } from './routes/copyright'
 import { Route as FindThemRouteImport } from './routes/find-them'
 import { Route as ForewordRouteImport } from './routes/foreword'
-import { Route as JoinRouteImport } from './routes/join'
 import { Route as PumpRouteImport } from './routes/pump'
 import { Route as ScorecardRouteImport } from './routes/scorecard'
 import { Route as DispatchIndexRouteImport } from './routes/dispatch.index'
 import { Route as DispatchSlugRouteImport } from './routes/dispatch.$slug'
-import { Route as ShopIndexRouteImport } from './routes/shop.index'
-import { Route as ShopSlugRouteImport } from './routes/shop.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -53,11 +50,6 @@ const ForewordRoute = ForewordRouteImport.update({
   path: '/foreword',
   getParentRoute: () => rootRouteImport,
 } as any)
-const JoinRoute = JoinRouteImport.update({
-  id: '/join',
-  path: '/join',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const PumpRoute = PumpRouteImport.update({
   id: '/pump',
   path: '/pump',
@@ -78,16 +70,6 @@ const DispatchSlugRoute = DispatchSlugRouteImport.update({
   path: '/dispatch/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ShopIndexRoute = ShopIndexRouteImport.update({
-  id: '/shop/',
-  path: '/shop/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ShopSlugRoute = ShopSlugRouteImport.update({
-  id: '/shop/$slug',
-  path: '/shop/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -96,13 +78,10 @@ export interface FileRoutesByFullPath {
   '/copyright': typeof CopyrightRoute
   '/find-them': typeof FindThemRoute
   '/foreword': typeof ForewordRoute
-  '/join': typeof JoinRoute
   '/pump': typeof PumpRoute
   '/scorecard': typeof ScorecardRoute
   '/dispatch/$slug': typeof DispatchSlugRoute
-  '/shop/$slug': typeof ShopSlugRoute
   '/dispatch/': typeof DispatchIndexRoute
-  '/shop/': typeof ShopIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -111,13 +90,10 @@ export interface FileRoutesByTo {
   '/copyright': typeof CopyrightRoute
   '/find-them': typeof FindThemRoute
   '/foreword': typeof ForewordRoute
-  '/join': typeof JoinRoute
   '/pump': typeof PumpRoute
   '/scorecard': typeof ScorecardRoute
   '/dispatch/$slug': typeof DispatchSlugRoute
-  '/shop/$slug': typeof ShopSlugRoute
   '/dispatch': typeof DispatchIndexRoute
-  '/shop': typeof ShopIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -127,13 +103,10 @@ export interface FileRoutesById {
   '/copyright': typeof CopyrightRoute
   '/find-them': typeof FindThemRoute
   '/foreword': typeof ForewordRoute
-  '/join': typeof JoinRoute
   '/pump': typeof PumpRoute
   '/scorecard': typeof ScorecardRoute
   '/dispatch/$slug': typeof DispatchSlugRoute
-  '/shop/$slug': typeof ShopSlugRoute
   '/dispatch/': typeof DispatchIndexRoute
-  '/shop/': typeof ShopIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -144,13 +117,10 @@ export interface FileRouteTypes {
     | '/copyright'
     | '/find-them'
     | '/foreword'
-    | '/join'
     | '/pump'
     | '/scorecard'
     | '/dispatch/$slug'
-    | '/shop/$slug'
     | '/dispatch/'
-    | '/shop/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -159,13 +129,10 @@ export interface FileRouteTypes {
     | '/copyright'
     | '/find-them'
     | '/foreword'
-    | '/join'
     | '/pump'
     | '/scorecard'
     | '/dispatch/$slug'
-    | '/shop/$slug'
     | '/dispatch'
-    | '/shop'
   id:
     | '__root__'
     | '/'
@@ -174,13 +141,10 @@ export interface FileRouteTypes {
     | '/copyright'
     | '/find-them'
     | '/foreword'
-    | '/join'
     | '/pump'
     | '/scorecard'
     | '/dispatch/$slug'
-    | '/shop/$slug'
     | '/dispatch/'
-    | '/shop/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -190,13 +154,10 @@ export interface RootRouteChildren {
   CopyrightRoute: typeof CopyrightRoute
   FindThemRoute: typeof FindThemRoute
   ForewordRoute: typeof ForewordRoute
-  JoinRoute: typeof JoinRoute
   PumpRoute: typeof PumpRoute
   ScorecardRoute: typeof ScorecardRoute
   DispatchSlugRoute: typeof DispatchSlugRoute
-  ShopSlugRoute: typeof ShopSlugRoute
   DispatchIndexRoute: typeof DispatchIndexRoute
-  ShopIndexRoute: typeof ShopIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -243,13 +204,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ForewordRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/join': {
-      id: '/join'
-      path: '/join'
-      fullPath: '/join'
-      preLoaderRoute: typeof JoinRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/pump': {
       id: '/pump'
       path: '/pump'
@@ -278,20 +232,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DispatchSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/shop/': {
-      id: '/shop/'
-      path: '/shop'
-      fullPath: '/shop/'
-      preLoaderRoute: typeof ShopIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/shop/$slug': {
-      id: '/shop/$slug'
-      path: '/shop/$slug'
-      fullPath: '/shop/$slug'
-      preLoaderRoute: typeof ShopSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -302,13 +242,10 @@ const rootRouteChildren: RootRouteChildren = {
   CopyrightRoute: CopyrightRoute,
   FindThemRoute: FindThemRoute,
   ForewordRoute: ForewordRoute,
-  JoinRoute: JoinRoute,
   PumpRoute: PumpRoute,
   ScorecardRoute: ScorecardRoute,
   DispatchSlugRoute: DispatchSlugRoute,
-  ShopSlugRoute: ShopSlugRoute,
   DispatchIndexRoute: DispatchIndexRoute,
-  ShopIndexRoute: ShopIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

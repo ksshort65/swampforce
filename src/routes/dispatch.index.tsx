@@ -13,32 +13,26 @@ export function DispatchIndex() {
   const featured = getPost(START_HERE[0]);
   return (
     <main>
-      <section className="relative min-h-[78dvh] w-full">
+      <section className="relative min-h-[78vh] w-full">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="/images/hero-capitol.jpg"
             alt="Eagle on the Capitol in the swamp"
-            className="size-full object-cover object-center"
+            className="absolute inset-0 h-full w-full max-w-none object-cover object-center"
           />
-          <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
         </div>
-        <div className="relative mx-auto flex min-h-[78dvh] max-w-6xl flex-col justify-end px-4 pb-10 pt-8 sm:px-6">
-          <p className="font-display text-[10px] font-semibold tracking-[0.28em] text-sage uppercase sm:text-xs">
-            Join Swamp Force · Let them hear us now
-          </p>
-          <h1 className="mt-2 max-w-xl font-display leading-[0.95] font-bold tracking-wide uppercase text-[clamp(2.2rem,7vw,4.6rem)]">
+        <div className="relative mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-end px-6 pb-10 pt-8">
+          <h1 className="max-w-xl font-display leading-[0.95] font-bold tracking-wide uppercase text-[clamp(2.2rem,7vw,4.6rem)]">
             Save the nation.
           </h1>
-          <p className="mt-3 max-w-md text-[clamp(0.95rem,2.2vw,1.25rem)] leading-snug text-fg/90">
-            They work for us. The midterms are how we remind them.
-            <br />
-            Congress works for us — or we send them home.
+          <p className="mt-3 max-w-lg text-[clamp(0.95rem,2.2vw,1.25rem)] leading-snug text-fg/90">
+            The midterm is a scorecard, not a mood. Vote on what they
+            passed, what it cost, and what they broke. Both parties have
+            failed. The official record is the ballot.
           </p>
           <div className="mt-5 flex flex-wrap gap-3 pb-2">
             <Button asChild>
-              <Link to="/join">Join Swamp Force</Link>
-            </Button>
-            <Button asChild variant="outline">
               <Link to="/scorecard">Congressional Scorecard</Link>
             </Button>
           </div>
@@ -47,7 +41,7 @@ export function DispatchIndex() {
 
       {featured ? (
         <section className="border-b border-border bg-ink">
-          <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-14 sm:px-6 lg:grid-cols-2">
+          <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 py-14 md:grid-cols-2">
             <Link
               to="/dispatch/$slug"
               params={{ slug: featured.slug }}
@@ -60,10 +54,7 @@ export function DispatchIndex() {
               />
             </Link>
             <div>
-              <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
-                The lead · Featured dispatch
-              </p>
-              <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-5xl">
+              <h2 className="font-display text-3xl font-bold tracking-wide uppercase sm:text-5xl">
                 {featured.title}
               </h2>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
@@ -72,7 +63,7 @@ export function DispatchIndex() {
               <div className="mt-6">
                 <Button asChild>
                   <Link to="/dispatch/$slug" params={{ slug: featured.slug }}>
-                    Read the lead
+                    {featured.title}
                     <ArrowRight className="size-4" />
                   </Link>
                 </Button>
@@ -90,13 +81,10 @@ export function DispatchIndex() {
           <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
             Congressional Scorecard
           </h2>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
-            Both parties failed. Charts. Sources. Not a speech.
-          </p>
           <div className="mt-6">
             <Button asChild>
               <Link to="/scorecard">
-                Open the scorecard
+                Scorecard
                 <ArrowRight className="size-4" />
               </Link>
             </Button>
@@ -105,20 +93,108 @@ export function DispatchIndex() {
       </section>
 
       <section className="border-b border-border bg-ink">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 py-14 md:grid-cols-2">
+          <Link to="/pump" className="block text-fg no-underline">
+            <img
+              src="/images/chart-pump-admins.jpg"
+              alt="Highest EIA weekly gallon — four administrations"
+              className="w-full rounded-lg border border-border"
+            />
+          </Link>
+          <div>
+            <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+              The pump · EIA
+            </p>
+            <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
+              The gallon
+            </h2>
+            <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
+              The Energy Information Administration tracks the pump across
+              four administrations. OPEC — the governments that export most
+              of the world’s oil — decides how many barrels leave the
+              ground. Congress does not pump a gallon.
+            </p>
+            <div className="mt-6">
+              <Button asChild>
+                <Link to="/pump">
+                  The pump
+                  <ArrowRight className="size-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-surface">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
-            The Search
+            The Clip
           </p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
+            The pool.
+          </h2>
+          <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
+            On Friday they barred CNN, MS NOW, and Politico from the White
+            House. A six-second caption is still not the recording.
+          </p>
+          <div className="mt-6">
+            <Button asChild>
+              <Link to="/dispatch/$slug" params={{ slug: "the-pool" }}>
+                The pool
+                <ArrowRight className="size-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-ink">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 py-14 md:grid-cols-2">
+          <Link
+            to="/dispatch/$slug"
+            params={{ slug: "sixty-percent" }}
+            className="block text-fg no-underline"
+          >
+            <img
+              src="/images/chart-iran.jpg"
+              alt="Enrichment: power plant, the 2015 deal, Iran at 60%, a bomb at 90%"
+              className="w-full rounded-lg border border-border"
+            />
+          </Link>
+          <div>
+            <h2 className="font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
+              Sixty percent.
+            </h2>
+            <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
+              The IAEA counted 440.9 kilograms of uranium enriched up to 60
+              percent. A civilian power plant runs at about 5 percent. A
+              weapon needs about 90. The last step is the short one.
+            </p>
+            <div className="mt-6">
+              <Button asChild>
+                <Link to="/dispatch/$slug" params={{ slug: "sixty-percent" }}>
+                  Sixty percent
+                  <ArrowRight className="size-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-surface">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+          <h2 className="font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
             Find them.
           </h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
             {[
               {
                 slug: "find-them",
                 img: "/images/essay-find-them.jpg",
                 t: "Find them.",
-                d: "The kids they lost.",
+                d: "Hundreds of thousands of children are still a missing-persons file.",
               },
               {
                 slug: "who-got-paid",
@@ -130,7 +206,7 @@ export function DispatchIndex() {
                 slug: "defund-ice-is-the-tell",
                 img: "/images/essay-defund-ice.jpg",
                 t: "Defund ICE is the tell.",
-                d: "Out of office. Off the ballot.",
+                d: "The party that lost the children now wants the search abolished.",
               },
             ].map((p) => (
               <Link

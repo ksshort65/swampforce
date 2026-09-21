@@ -37,7 +37,18 @@ export function EraCompare({ topics }: { topics: EraTopic[] }) {
                   <p
                     className={`px-4 py-3 text-[15px] leading-snug ${now ? "font-medium text-fg" : "text-fg/75"}`}
                   >
-                    {r.line}
+                    {r.href ? (
+                      <a
+                        href={r.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-inherit no-underline hover:text-sage"
+                      >
+                        {r.line}
+                      </a>
+                    ) : (
+                      r.line
+                    )}
                   </p>
                 </div>
               );

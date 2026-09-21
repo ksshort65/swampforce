@@ -15,23 +15,23 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Save the nation. Secure the elections. Congress works for us — or we send them home. Join Swamp Force. Let them hear us now.",
+          "Both parties failed. They do not represent the American people. No surplus since Clinton. Fraud door open.",
       },
       { name: "theme-color", content: "#0b0b0b" },
       { name: "author", content: "Renee Stewart" },
       { property: "og:url", content: "https://swampforce.grok.me/" },
-      { property: "og:title", content: "Stand with Trump. — Swamp Force" },
+      { property: "og:title", content: "Both parties failed. — Swamp Force" },
       {
         property: "og:description",
         content:
-          "Save the nation. Secure the elections. Congress works for us — or we send them home.",
+          "They do not represent the American people. Congress holds the money. The blame game is politics.",
       },
       {
         property: "og:image",
         content: "https://swampforce.grok.me/og.jpg",
       },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Stand with Trump. — Swamp Force" },
+      { name: "twitter:title", content: "Both parties failed. — Swamp Force" },
       { name: "twitter:site", content: "@SwampForce" },
       { name: "twitter:creator", content: "@SwampForce" },
       {

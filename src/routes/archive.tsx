@@ -8,7 +8,7 @@ export const Route = createFileRoute("/archive")({
       { title: "Archive — Swamp Force" },
       {
         name: "description",
-        content: "The journal, in order. Lead first. Then the rest of the file.",
+        content: "The journal.",
       },
     ],
   }),
@@ -23,16 +23,10 @@ function ArchivePage() {
       <h1 className="mt-2 font-display text-4xl font-bold tracking-wide uppercase sm:text-5xl">
         Archive
       </h1>
-      <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
-        Read in this order. The lead first. Then the rest of the file.
-      </p>
 
       <section className="mt-12 border-t border-border pt-10">
         <Link to="/scorecard" className="block text-fg no-underline">
-          <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
-            Standalone
-          </p>
-          <p className="mt-3 font-display text-xl font-semibold tracking-wide uppercase">
+          <p className="font-display text-xl font-semibold tracking-wide uppercase">
             Congressional Scorecard
           </p>
           <p className="mt-1 text-sm leading-relaxed text-muted">
@@ -56,9 +50,6 @@ function ArchivePage() {
           <section key={section.name} className="mt-12 border-t border-border pt-10">
             <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
               {section.name}
-            </p>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
-              {section.dek}
             </p>
             <ul className="mt-6 space-y-5">
               {lessons.map((p) => (

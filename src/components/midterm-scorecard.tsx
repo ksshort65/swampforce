@@ -1,174 +1,575 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { CHARTS, FILE_CHIPS, RECORD, SCORE_UPDATED, TAX_MOVES } from "@/lib/scorecard";
+import {
+  BORDER,
+  BORDER_MOVE,
+  BORDER_HARM,
+  BENEFITS,
+  WORKER,
+  OVAL,
+  OVAL_LINKS,
+  CHARTS,
+  COMPARE_CHARTS,
+  COMPARE_WIDE,
+  DEBT_MATH,
+  DEBT_NOW,
+  DEBT_TALLY,
+  DRIVERS,
+  PRICES,
+  RECORD,
+  SCORE_UPDATED,
+} from "@/lib/scorecard";
+
+type Tab = "gop" | "dem" | "split" | "oval" | "compare" | null;
+
+function BillList({
+  rows,
+  tone,
+}: {
+  rows: { k: string; bill: string; href: string }[];
+  tone: "plus" | "minus";
+}) {
+  return (
+    <ul className="mt-3 space-y-3">
+      {rows.map((p) => (
+        <li key={p.href + p.k}>
+          <a
+            href={p.href}
+            target="_blank"
+            rel="noreferrer"
+            className={
+              tone === "plus"
+                ? "block min-h-14 rounded-md border border-border bg-surface px-4 py-4 text-fg no-underline hover:border-sage"
+                : "block min-h-14 rounded-md border border-border px-4 py-4 text-fg no-underline hover:border-sage"
+            }
+          >
+            <p className="text-base font-medium leading-snug">{p.k}</p>
+            <p className="mt-1 font-display text-[11px] tracking-[0.12em] text-sage uppercase">
+              {p.bill} →
+            </p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
+  const tally = DEBT_TALLY.find((t) =>
+    col.id === "gop" ? t.who.startsWith("Republicans") : t.who.startsWith("Democrats"),
+  );
+  return (
+    <div>
+      <p className="font-display text-xl font-bold tracking-[0.18em] text-sage uppercase">
+        {col.party}
+      </p>
+      {tally ? (
+        <p className="mt-3 font-display text-3xl font-bold tracking-wide">
+          {tally.added}
+        </p>
+      ) : null}
+      <p className="mt-3 text-sm leading-relaxed text-muted">{col.control}</p>
+      <p className="mt-2 text-sm leading-relaxed">{col.debt}</p>
+      {col.id === "dem" ? <BorderFile /> : null}
+      {col.id === "dem" ? <BorderMove /> : null}
+      {col.id === "dem" ? <BorderHarm /> : null}
+      {col.id === "dem" ? (
+        <figure className="mt-5">
+          <img
+            src="/images/chart-border.jpg"
+            alt="The open border — by administration"
+            className="h-auto w-full rounded-md border border-border"
+          />
+        </figure>
+      ) : null}
+      {col.id === "dem" ? (
+        <figure className="mt-5">
+          <img
+            src="/images/chart-border-all.jpg"
+            alt="Nationwide encounters — every path CBP counts"
+            className="h-auto w-full rounded-md border border-border"
+          />
+        </figure>
+      ) : null}
+      {col.id === "dem" ? (
+        <figure className="mt-5">
+          <img
+            src="/images/chart-border-toll.jpg"
+            alt="What Americans still pay — the open border bill"
+            className="h-auto w-full rounded-md border border-border"
+          />
+        </figure>
+      ) : null}
+      {col.id === "dem" ? <BenefitsStack /> : null}
+      {col.id === "dem" ? <WorkerFile /> : null}
+      {col.id === "dem" ? <PriceLinks /> : null}
+      {col.id === "dem" ? (
+        <figure className="mt-5">
+          <img
+            src="/images/chart-inflation-party.jpg"
+            alt="Actual inflation each year"
+            className="h-auto w-full rounded-md border border-border"
+          />
+        </figure>
+      ) : null}
+      <p className="mt-6 font-display text-xs font-semibold tracking-[0.2em] uppercase">
+        Helped
+      </p>
+      <BillList rows={col.plus} tone="plus" />
+      <p className="mt-8 font-display text-xs font-semibold tracking-[0.2em] uppercase">
+        Hurt
+      </p>
+      <BillList rows={col.minus} tone="minus" />
+    </div>
+  );
+}
+
+function BorderFile() {
+  return (
+    <div className="mt-5 rounded-md border-2 border-sage bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {BORDER.k}
+      </p>
+      <p className="mt-3 text-base leading-relaxed">{BORDER.v}</p>
+      <ul className="mt-4 space-y-2">
+        {BORDER.links.map((l) => (
+          <li key={l.href}>
+            <a
+              href={l.href}
+              target="_blank"
+              rel="noreferrer"
+              className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+            >
+              {l.label} →
+            </a>
+          </li>
+        ))}
+        <li>
+          <Link
+            to="/dispatch/$slug"
+            params={{ slug: "they-opened-the-border" }}
+            className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+          >
+            The essay →
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function BorderMove() {
+  return (
+    <div className="mt-5 rounded-md border border-border bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {BORDER_MOVE.k}
+      </p>
+      <p className="mt-3 text-base leading-relaxed">{BORDER_MOVE.v}</p>
+      <ul className="mt-4 space-y-3">
+        {BORDER_MOVE.items.map((b) => (
+          <li key={b.k}>
+            <a
+              href={b.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-fg no-underline"
+            >
+              <p className="font-display text-sm font-semibold tracking-wide uppercase">
+                {b.k} · {b.amt}
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{b.note}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function BorderHarm() {
+  return (
+    <div className="mt-5 rounded-md border-2 border-sage bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {BORDER_HARM.k}
+      </p>
+      <p className="mt-3 text-base leading-relaxed">{BORDER_HARM.v}</p>
+      <ul className="mt-4 space-y-3">
+        {BORDER_HARM.items.map((b) => (
+          <li key={b.k}>
+            <a
+              href={b.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-fg no-underline"
+            >
+              <p className="font-display text-sm font-semibold tracking-wide uppercase">
+                {b.k} · {b.amt}
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{b.note}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-4">
+        <Link
+          to="/dispatch/$slug"
+          params={{ slug: "the-hospital-and-the-morgue" }}
+          className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+        >
+          The essay →
+        </Link>
+      </p>
+    </div>
+  );
+}
+
+function BenefitsStack() {
+  return (
+    <div className="mt-5 rounded-md border-2 border-sage bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {BENEFITS.k}
+      </p>
+      <p className="mt-2 font-display text-3xl font-bold tracking-wide">
+        {BENEFITS.stack} a month
+      </p>
+      <p className="mt-2 text-sm leading-relaxed text-muted">{BENEFITS.v}</p>
+      <ul className="mt-4 space-y-3">
+        {BENEFITS.items.map((b) => (
+          <li key={b.k}>
+            <a
+              href={b.href}
+              target="_blank"
+              rel="noreferrer"
+              className="block text-fg no-underline hover:text-sage"
+            >
+              <p className="font-display text-lg font-bold tracking-wide uppercase">
+                {b.k} · {b.amt}
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{b.note}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function WorkerFile() {
+  return (
+    <div className="mt-5 rounded-md border border-border bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {WORKER.k}
+      </p>
+      <p className="mt-2 text-sm leading-relaxed">{WORKER.v}</p>
+      <ul className="mt-4 space-y-3">
+        {WORKER.items.map((b) => (
+          <li key={b.k}>
+            <a
+              href={b.href}
+              target="_blank"
+              rel="noreferrer"
+              className="block text-fg no-underline hover:text-sage"
+            >
+              <p className="font-display text-lg font-bold tracking-wide uppercase">
+                {b.k} · {b.amt}
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{b.note}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function OvalFile() {
+  return (
+    <div className="space-y-8">
+      <div className="grid gap-4 md:grid-cols-3">
+        {OVAL.map((row) => (
+          <div key={row.who} className="rounded-md border border-border bg-surface p-5">
+            <p className="font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase">
+              {row.who}
+            </p>
+            <p className="mt-1 text-sm text-muted">{row.when}</p>
+            <p className="mt-4 font-display text-3xl font-bold tracking-wide">{row.enc}</p>
+            <p className="mt-1 text-sm text-muted">nationwide encounters</p>
+            <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.cpi}</p>
+            <p className="mt-1 text-sm text-muted">CPI peak, year-over-year</p>
+            <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.gas}</p>
+            <p className="mt-1 text-sm text-muted">EIA regular gasoline, term</p>
+          </div>
+        ))}
+      </div>
+      <figure>
+        <img
+          src="/images/chart-oval.jpg"
+          alt="The Oval — encounters and the CPI peak"
+          className="h-auto w-full rounded-md border border-border"
+        />
+      </figure>
+      <figure>
+        <img
+          src="/images/chart-pump-admins.jpg"
+          alt="The gallon — four administrations"
+          className="h-auto w-full rounded-md border border-border"
+        />
+      </figure>
+      <figure>
+        <img
+          src="/images/chart-crime.jpg"
+          alt="Murder rate by administration"
+          className="h-auto w-full rounded-md border border-border"
+        />
+      </figure>
+      <ul className="space-y-2">
+        {OVAL_LINKS.map((l) => (
+          <li key={l.href}>
+            <a
+              href={l.href}
+              target="_blank"
+              rel="noreferrer"
+              className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+            >
+              {l.label} →
+            </a>
+          </li>
+        ))}
+        <li>
+          <Link
+            to="/pump"
+            className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+          >
+            The pump →
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function PriceLinks() {
+  return (
+    <div className="mt-5 rounded-md border border-border bg-surface p-4">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {PRICES.k}
+      </p>
+      <p className="mt-2 text-sm leading-relaxed text-muted">{PRICES.v}</p>
+      <ul className="mt-3 space-y-2">
+        {PRICES.links.map((l) => (
+          <li key={l.href}>
+            <a
+              href={l.href}
+              target="_blank"
+              rel="noreferrer"
+              className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+            >
+              {l.label} →
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export function MidtermScorecard() {
+  const [tab, setTab] = useState<Tab>(null);
+  const gop = RECORD.find((r) => r.id === "gop");
+  const dem = RECORD.find((r) => r.id === "dem");
+  const split = DEBT_TALLY.find((t) => t.who.includes("split"));
+
   return (
     <section className="border-b border-border">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
-          Congressional scorecard · updated {SCORE_UPDATED}
+          Congressional scorecard · {SCORE_UPDATED}
         </p>
         <h2 className="mt-2 max-w-3xl font-display text-3xl font-bold tracking-wide uppercase sm:text-5xl">
-          <Link to="/scorecard" className="text-fg no-underline hover:text-sage">
-            Both parties failed. They do not represent the American people.
-          </Link>
+          Both parties have failed the American people.
         </h2>
-        <p className="mt-4 max-w-xl text-lg leading-relaxed">
-          No balanced budget since Clinton. The twelve money bills do not
-          pass. That open book is the fraud door. The fire is Congress.
-          Blaming the firefighter is politics, not the record. Independent. No
-          PAC.{" "}
-          <Link to="/pump" className="text-sage">
-            The pump — four administrations, EIA gallons.
-          </Link>
-        </p>
 
-        <div className="mt-12 space-y-16">
-          {CHARTS.map((c) => (
-            <figure key={c.src}>
-              <img
-                src={c.src}
-                alt={c.title}
-                className="w-full rounded-md border border-border"
-              />
-              <figcaption className="mt-3 text-[12px] leading-relaxed text-muted">
-                Sources:{" "}
-                {c.sources.map((s, i) => (
-                  <span key={s.href}>
-                    {i > 0 ? " · " : null}
-                    <a
-                      href={s.href}
-                      className="text-sage no-underline hover:underline"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {s.label}
-                    </a>
-                  </span>
-                ))}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-
-        <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {FILE_CHIPS.map((c) => (
-            <a
-              key={c.k}
-              href={c.href}
-              target="_blank"
-              rel="noreferrer"
+        <div className="mt-8 grid grid-cols-5 gap-3">
+          {(
+            [
+              ["gop", "Republicans"],
+              ["dem", "Democrats"],
+              ["split", "Split"],
+              ["oval", "Oval"],
+              ["compare", "Compare"],
+            ] as const
+          ).map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              onClick={() => setTab(id)}
               className={
-                c.hot
-                  ? "block rounded-md border-2 border-sage bg-surface p-6 no-underline sm:col-span-2 lg:col-span-4 hover:bg-ink"
-                  : "block rounded-md border border-border p-4 no-underline hover:border-sage"
+                tab === id
+                  ? "flex min-h-20 items-center justify-center rounded-md border-2 border-sage bg-sage px-4 py-5 font-display text-xl font-bold tracking-[0.16em] text-black uppercase"
+                  : "flex min-h-20 items-center justify-center rounded-md border-2 border-sage bg-surface px-4 py-5 font-display text-xl font-bold tracking-[0.16em] text-fg uppercase hover:bg-ink"
               }
             >
-              <p
-                className={
-                  c.hot
-                    ? "font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase"
-                    : "font-display text-[11px] font-semibold tracking-[0.16em] text-sage uppercase"
-                }
-              >
-                {c.k}
-              </p>
-              <p
-                className={
-                  c.hot
-                    ? "mt-3 max-w-3xl text-lg leading-relaxed sm:text-xl"
-                    : "mt-2 text-sm leading-snug"
-                }
-              >
-                {c.v}
-              </p>
-            </a>
+              {label}
+            </button>
           ))}
         </div>
 
-        <h3 className="mt-16 font-display text-2xl font-bold tracking-wide uppercase">
-          The bills
-        </h3>
-        <div className="mt-8 grid gap-10 md:grid-cols-2">
-          {RECORD.map((col) => (
-            <div key={col.party}>
-              <p className="font-display text-sm font-bold tracking-[0.18em] text-sage uppercase">
-                {col.party}
-              </p>
-              <p className="mt-5 font-display text-[11px] font-semibold tracking-[0.2em] uppercase">
-                Helped
-              </p>
-              <ul className="mt-3 space-y-3">
-                {col.plus.map((p) => (
-                  <li key={p.href}>
-                    <a
-                      href={p.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="block rounded-md border border-border bg-surface px-4 py-3 text-sm font-medium text-fg no-underline hover:border-sage"
-                    >
-                      {p.item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-8 font-display text-[11px] font-semibold tracking-[0.2em] uppercase">
-                Hurt
-              </p>
-              <ul className="mt-3 space-y-3">
-                {col.minus.map((p) => (
-                  <li key={p.href}>
-                    <a
-                      href={p.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="block rounded-md border border-border px-4 py-3 text-sm font-medium text-fg no-underline hover:border-sage"
-                    >
-                      {p.item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+        {tab === "gop" && gop ? (
+          <div className="mt-10">
+            <PartyFile col={gop} />
+          </div>
+        ) : null}
+
+        {tab === "dem" && dem ? (
+          <div className="mt-10">
+            <PartyFile col={dem} />
+          </div>
+        ) : null}
+
+        {tab === "oval" ? (
+          <div className="mt-10">
+            <OvalFile />
+          </div>
+        ) : null}
+
+        {tab === "compare" ? (
+          <div className="mt-10 space-y-8">
+            <div className="grid gap-4 md:grid-cols-3">
+              {DEBT_TALLY.map((row) => {
+                const n = Number(row.added.replace(/[^0-9.]/g, ""));
+                const pct = Math.round((n / 40.09) * 100);
+                return (
+                  <div
+                    key={row.who}
+                    className="rounded-md border border-border bg-surface p-5"
+                  >
+                    <p className="font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase">
+                      {row.who}
+                    </p>
+                    <p className="mt-2 font-display text-4xl font-bold tracking-wide">
+                      {row.added}
+                    </p>
+                    <div className="mt-4 h-3 w-full rounded-sm bg-ink">
+                      <div
+                        className="h-3 rounded-sm bg-sage"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                    <p className="mt-2 font-display text-xs tracking-[0.12em] text-muted uppercase">
+                      {pct}% of the $40.09T
+                    </p>
+                  </div>
+                );
+              })}
             </div>
-          ))}
-        </div>
+            <p className="text-sm leading-relaxed text-muted">
+              {DEBT_NOW.asOf}: {DEBT_NOW.total}. {DEBT_MATH}
+            </p>
+            <div className="grid gap-8 lg:grid-cols-2">
+              {COMPARE_CHARTS.map((c) => (
+                <figure
+                  key={c.src}
+                  className={COMPARE_WIDE.has(c.src) ? "lg:col-span-2" : undefined}
+                >
+                  <p className="mb-3 font-display text-sm font-semibold tracking-[0.16em] text-sage uppercase">
+                    {c.title}
+                  </p>
+                  <img
+                    src={c.src}
+                    alt={c.title}
+                    className="h-auto w-full rounded-md border border-border"
+                  />
+                  <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
+                    {c.sources.map((s, i) => (
+                      <span key={s.href}>
+                        {i > 0 ? " · " : null}
+                        <a
+                          href={s.href}
+                          className="text-sage no-underline hover:underline"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {s.label}
+                        </a>
+                      </span>
+                    ))}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
-        <h3 className="mt-16 font-display text-2xl font-bold tracking-wide uppercase">
-          Tax bills
-        </h3>
-        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {TAX_MOVES.map((r) => (
-            <a
-              key={r.year + r.bill}
-              href={r.href}
-              target="_blank"
-              rel="noreferrer"
-              className="block rounded-md border border-border p-4 no-underline hover:border-sage"
-            >
-              <p className="font-display text-[11px] font-semibold tracking-[0.16em] text-sage uppercase">
-                {r.year} · {r.direction} · {r.gavel}
-              </p>
-              <p className="mt-2 font-display text-lg font-bold tracking-wide uppercase">
-                {r.bill}
-              </p>
-            </a>
-          ))}
-        </div>
-
-        <div className="mt-16 border-t border-border pt-10">
-          <h3 className="font-display text-2xl font-bold tracking-wide uppercase">
-            Foreword
-          </h3>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
-            A letter from the editor. Why this journal exists.
-          </p>
-          <Link
-            to="/foreword"
-            className="mt-4 inline-block font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase no-underline hover:text-fg"
-          >
-            Read the Foreword →
-          </Link>
-        </div>
+        {tab === "split" ? (
+          <div className="mt-10 space-y-8">
+            <p className="font-display text-xl font-bold tracking-[0.18em] text-sage uppercase">
+              Split
+            </p>
+            {split ? (
+              <>
+                <p className="font-display text-3xl font-bold tracking-wide">
+                  {split.added}
+                </p>
+                <p className="text-sm leading-relaxed text-muted">{split.when}</p>
+              </>
+            ) : null}
+            <p className="text-sm leading-relaxed">
+              {DEBT_NOW.asOf}: {DEBT_NOW.total}. {DEBT_MATH}
+            </p>
+            <PriceLinks />
+            <p className="font-display text-xs font-semibold tracking-[0.2em] uppercase">
+              Why the meter runs — both of them
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {DRIVERS.map((d) => (
+                <a
+                  key={d.k}
+                  href={d.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block min-h-28 rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
+                >
+                  <p className="font-display text-lg font-bold tracking-wide uppercase">
+                    {d.k}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{d.v}</p>
+                </a>
+              ))}
+            </div>
+            {CHARTS.map((c) => (
+              <figure key={c.src}>
+                <img
+                  src={c.src}
+                  alt={c.title}
+                  className="h-auto w-full rounded-md border border-border"
+                />
+                <figcaption className="mt-3 text-[12px] leading-relaxed text-muted">
+                  {c.sources.map((s, i) => (
+                    <span key={s.href}>
+                      {i > 0 ? " · " : null}
+                      <a
+                        href={s.href}
+                        className="text-sage no-underline hover:underline"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {s.label}
+                      </a>
+                    </span>
+                  ))}
+                </figcaption>
+              </figure>
+            ))}
+            <p>
+              <Link
+                to="/pump"
+                className="font-display text-sm font-semibold tracking-[0.14em] text-sage uppercase no-underline hover:text-fg"
+              >
+                Gas and diesel →
+              </Link>
+            </p>
+          </div>
+        ) : null}
       </div>
     </section>
   );
