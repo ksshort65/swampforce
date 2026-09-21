@@ -760,6 +760,95 @@ fig.savefig("/workspace/public/images/chart-iran-dead.jpg", dpi=140, facecolor=b
 plt.close()
 print("wrote inflation, policy, border, crime, toll, debt-bars, oval, iran")
 
+# Congress + Oval, helped and hurt, one page
+fig = plt.figure(figsize=(16, 14), dpi=140, facecolor=bg)
+fig.text(0.02, 0.97, "HELPED AND HURT  ·  CONGRESS AND THE OVAL", fontsize=22, fontweight="bold", color=fg, va="top")
+fig.text(
+    0.02,
+    0.935,
+    "Majority control is the purse. The Oval spends what Congress votes. Two Republican Ovals, two Democratic Ovals. The bill, not the speech.",
+    fontsize=12,
+    color=muted,
+    va="top",
+)
+
+def box(ax, title, help_lines, hurt_lines, title_c):
+    ax.set_facecolor("#141414")
+    ax.set_xticks([])
+    ax.set_yticks([])
+    for s in ax.spines.values():
+        s.set_color("#3a3a3a")
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 10)
+    ax.text(0.4, 9.3, title, fontsize=13, fontweight="bold", color=title_c, va="top")
+    ax.text(0.4, 8.35, "HELPED", fontsize=11, fontweight="bold", color=help_c, va="top")
+    y = 7.7
+    for line in help_lines:
+        ax.text(0.5, y, "▸  " + line, fontsize=10, color=fg, va="top")
+        y -= 0.7
+    ax.text(0.4, y - 0.15, "HURT", fontsize=11, fontweight="bold", color=hurt_c, va="top")
+    y -= 0.75
+    for line in hurt_lines:
+        ax.text(0.5, y, "▸  " + line, fontsize=10, color=muted, va="top")
+        y -= 0.7
+
+gs = fig.add_gridspec(2, 4, left=0.03, right=0.97, top=0.90, bottom=0.06, hspace=0.18, wspace=0.08)
+ax_g = fig.add_subplot(gs[0, :2])
+ax_d = fig.add_subplot(gs[0, 2:])
+box(
+    ax_g,
+    "CONGRESS  ·  REPUBLICAN MAJORITY",
+    ["Welfare 1996 — work or the check stops", "Tax cuts 2001, 2003, 2017", "CPI peak Trump 1: 2.9%"],
+    ["Iraq — they voted yes", "Medicare Part D unpaid", "Never close October 1", "CARES, then the fraud"],
+    gop_c,
+)
+box(
+    ax_d,
+    "CONGRESS  ·  DEMOCRATIC MAJORITY",
+    ["1993 tax raised the top rate", "CHIP reauthorized 2009", "Ledbetter Fair Pay 2009"],
+    ["10.83 million encounters FY21–24", "CPI 9.1% June 2022", "Rescue Plan 2021", "Parole into benefits"],
+    biden_c,
+)
+ovals = [
+    (
+        "BUSH  ·  GOP OVAL",
+        ["Tax cuts 2001 and 2003"],
+        ["Iraq war", "Part D unpaid", "CPI peak 5.6%  ·  July 2008", "Gas $4.114  ·  8.02M SW BP"],
+        bush_c,
+    ),
+    (
+        "OBAMA  ·  DEM OVAL",
+        ["CHIP  ·  Ledbetter", "No 9% spike in term two"],
+        ["ARRA  ·  ACA taxes and mandate", "DACA memo, not a vote", "CPI peak 3.9%  ·  3.31M SW BP"],
+        obama_c,
+    ),
+    (
+        "TRUMP 1  ·  GOP OVAL",
+        ["CPI peak 2.9%", "Gas peak $2.962", "Tax Cuts and Jobs Act 2017"],
+        ["CARES  ·  both parties", "Murder rate 6.6 in 2020"],
+        trump_c,
+    ),
+    (
+        "BIDEN  ·  DEM OVAL",
+        ["IIJA 2021  ·  CHIPS 2022"],
+        ["CPI peak 9.1% June 2022", "Gas $5.006  ·  June 13, 2022", "10.83 million nationwide"],
+        biden_c,
+    ),
+]
+for i, (title, h, u, c) in enumerate(ovals):
+    ax = fig.add_subplot(gs[1, i])
+    box(ax, title, h, u, c)
+
+fig.text(
+    0.03,
+    0.02,
+    "Congress.gov bills  ·  BLS CPI  ·  EIA weekly gasoline  ·  CBP  ·  Treasury. Split years are not majority control.",
+    fontsize=9,
+    color=muted,
+)
+fig.savefig("/workspace/public/images/chart-helped-hurt.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
 
 
 

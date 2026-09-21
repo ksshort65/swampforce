@@ -22,6 +22,7 @@ const needed = new Set([
  "chart-inflation-party.jpg",
  "chart-inflation-avg.jpg",
  "chart-policy.jpg",
+ "chart-helped-hurt.jpg",
  "chart-border.jpg",
  "chart-border-all.jpg",
  "chart-border-toll.jpg",

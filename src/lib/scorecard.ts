@@ -1016,6 +1016,16 @@ export const CHARTS: {
   sources: { label: string; href: string }[];
 }[] = [
   {
+    src: "/images/chart-helped-hurt.jpg",
+    title: "Helped and hurt — Congress and the Oval",
+    sources: [
+      { label: "Congress.gov", href: "https://www.congress.gov/" },
+      { label: "BLS CPI", href: "https://www.bls.gov/cpi/" },
+      { label: "EIA — the gallon", href: "https://www.eia.gov/petroleum/gasdiesel/" },
+      { label: "CBP nationwide", href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters" },
+    ],
+  },
+  {
     src: "/images/chart-inflation-party.jpg",
     title: "Actual inflation — who held Congress",
     sources: [
@@ -1142,6 +1152,7 @@ export const CHARTS: {
 ];
 
 const COMPARE_SRC = [
+  "/images/chart-helped-hurt.jpg",
   "/images/chart-oval.jpg",
   "/images/chart-debt-why.jpg",
   "/images/chart-aliens.jpg",
@@ -1155,6 +1166,7 @@ const COMPARE_SRC = [
 ];
 
 export const COMPARE_WIDE = new Set([
+  "/images/chart-helped-hurt.jpg",
   "/images/chart-oval.jpg",
   "/images/chart-debt-why.jpg",
   "/images/chart-aliens.jpg",
@@ -1192,8 +1204,9 @@ function chartsFor(...srcs: string[]) {
 }
 
 export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<typeof chartsFor>> = {
-  gop: chartsFor("/images/chart-policy.jpg", "/images/chart-debt-why.jpg", "/images/chart-oval.jpg"),
+  gop: chartsFor("/images/chart-helped-hurt.jpg", "/images/chart-policy.jpg", "/images/chart-debt-why.jpg", "/images/chart-oval.jpg"),
   dem: chartsFor(
+    "/images/chart-helped-hurt.jpg",
     "/images/chart-aliens.jpg",
     "/images/chart-border.jpg",
     "/images/chart-oval.jpg",
