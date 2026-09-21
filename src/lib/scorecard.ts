@@ -59,6 +59,36 @@ export const LAWS: { k: string; href: string }[] = [
   { k: "8 U.S.C. § 1373 — no gag on ICE", href: "https://www.law.cornell.edu/uscode/text/8/1373" },
   { k: "8 U.S.C. § 1611 — federal benefits", href: "https://www.law.cornell.edu/uscode/text/8/1611" },
   { k: "2 U.S.C. § 1415 — they billed you for their misconduct", href: "https://www.law.cornell.edu/uscode/text/2/1415" },
+  { k: "18 U.S.C. § 2383 — insurrection", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
+];
+
+/** The caption, then the charge sheet. Official files. */
+export const HOAXES: { k: string; v: string; href: string }[] = [
+  {
+    k: "Crossfire Hurricane",
+    v: "The Durham report: the FBI opened a full investigation on raw, uncorroborated intelligence. It did not have actual evidence of collusion in its holdings when the case began. Years of a Russia caption followed. The file did not.",
+    href: "https://www.justice.gov/storage/durhamreport.pdf",
+  },
+  {
+    k: "Parents as a federal problem",
+    v: "The National School Boards Association, September 29, 2021, asked the White House to treat threats around school boards as possibly ‘the equivalent to a form of domestic terrorism.’ Five days later the Attorney General ordered U.S. Attorneys and the FBI to coordinate. The FBI opened an EDUOFFICIALS tag. NSBA later apologized for the language. The memo stayed.",
+    href: "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf",
+  },
+  {
+    k: "The J6 panel was stacked",
+    v: "H.Res. 503 gave the Speaker the appointments. She named Liz Cheney and Adam Kinzinger. She rejected the minority leader’s picks, Jim Jordan and Jim Banks. A select committee that chooses its own opposition is not a jury. It is a production.",
+    href: "https://www.congress.gov/bill/117th-congress/house-resolution/503",
+  },
+  {
+    k: "The charge was not insurrection",
+    v: "The country was told insurrection. 18 U.S.C. § 2383 is the insurrection statute. The U.S. Attorney for D.C. published the tally: about 1,583 federally charged. Assault, trespass, civil disorder, about 18 charged with seditious conspiracy under § 2384. Zero charged under § 2383. The caption did work the statute did not.",
+    href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol",
+  },
+  {
+    k: "The tape sat in the House",
+    v: "The Capitol’s cameras recorded thousands of hours. The select committee showed clips. The full archive was not put in the public’s hands while the hearings ran. Later Speakers opened more of it. A hearing that holds the tape and plays the minutes it prefers is the same method as a six-second caption.",
+    href: "https://www.congress.gov/committee/house-administration/hsha00",
+  },
 ];
 
 /** Oval — nationwide CBP, BLS CPI peak, EIA gallon. */
@@ -664,6 +694,16 @@ export const RECORD: {
         k: "They never finish the budget on time either",
         bill: "H.R. 7130 · Budget Act · 1974",
         href: "https://www.congress.gov/bill/93rd-congress/house-bill/7130",
+      },
+      {
+        k: "January 6 — the caption was insurrection. The charge sheet was not.",
+        bill: "18 U.S.C. § 2383 · USAO-DC tally",
+        href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol",
+      },
+      {
+        k: "The Speaker stacked the J6 committee. Jordan and Banks were rejected.",
+        bill: "H.Res. 503 · 117th Congress",
+        href: "https://www.congress.gov/bill/117th-congress/house-resolution/503",
       },
     ],
   },

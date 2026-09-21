@@ -15,6 +15,7 @@ import {
   DEBT_NOW,
   DEBT_TALLY,
   DRIVERS,
+  HOAXES,
   LAWS,
   PRICES,
   RECORD,
@@ -86,6 +87,7 @@ function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
         Hurt
       </p>
       <BillList rows={col.minus} tone="minus" />
+      {col.id === "dem" ? <HoaxesFile /> : null}
       {col.id === "dem" ? <BorderFile /> : null}
       {col.id === "dem" ? <BorderMove /> : null}
       {col.id === "dem" ? <BorderHarm /> : null}
@@ -128,6 +130,48 @@ function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
           />
         </figure>
       ) : null}
+    </div>
+  );
+}
+
+function HoaxesFile() {
+  return (
+    <div className="mt-8 rounded-md border-2 border-sage bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        The caption, then the charge sheet
+      </p>
+      <p className="mt-3 text-base leading-relaxed">
+        A caption can run for years. A charge sheet is a statute and a count.
+        Durham. School boards. A stacked select committee. Insurrection on
+        television, not on 18 U.S.C. § 2383. The House held the tape.
+      </p>
+      <ul className="mt-5 space-y-5">
+        {HOAXES.map((h) => (
+          <li key={h.href}>
+            <p className="font-display text-sm font-semibold tracking-wide uppercase">
+              {h.k}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed">{h.v}</p>
+            <a
+              href={h.href}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+            >
+              The file →
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-5">
+        <Link
+          to="/dispatch/$slug"
+          params={{ slug: "the-caption-was-not-the-charge" }}
+          className="font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+        >
+          The essay →
+        </Link>
+      </p>
     </div>
   );
 }

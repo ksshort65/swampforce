@@ -3,7 +3,7 @@ import { basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { posts, SITE, START_HERE, JOURNAL, getPost } from "../src/lib/content.ts";
-import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, LAWS, OVAL, OVAL_LINKS, PRICES, RECORD, SCORE_UPDATED } from "../src/lib/scorecard.ts";
+import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, HOAXES, LAWS, OVAL, OVAL_LINKS, PRICES, RECORD, SCORE_UPDATED } from "../src/lib/scorecard.ts";
 import { ADMINS, GALLON_STACK, MARKS, OPEC_FILE, PUMP_CHARTS, PUMP_SOURCES, PUMP_UPDATED, RULES_FILE, TAX_FILE } from "../src/lib/pump.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -344,6 +344,7 @@ ${tally ? `<p style="font-size:1.8rem;font-weight:800">${esc(tally.added)}</p>` 
 <ul>${col.plus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
 <p class="kicker">Hurt</p>
 <ul>${col.minus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>
+${col.id === "dem" ? `<div class="card" style="padding:1.2rem;margin-top:1.5rem"><p class="kicker">The caption, then the charge sheet</p>${HOAXES.map((h) => `<p><strong>${esc(h.k)}</strong><br/>${esc(h.v)}<br/><a href="${h.href}">The file →</a></p>`).join("")}<p><a href="/dispatch/the-caption-was-not-the-charge.html">The essay →</a></p></div>` : ""}
 ${col.id === "dem" ? borderHtml() : ""}
 ${col.id === "dem" ? borderMoveHtml() : ""}
 ${col.id === "dem" ? borderHarmHtml() : ""}

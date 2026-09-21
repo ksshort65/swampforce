@@ -2543,6 +2543,48 @@ export const posts: Post[] = [
 				text: "This is not an insult aimed at people who were busy. It is a description of an incentive. A clip is easier than Article I. A caption is easier than a rider. If half the country can name a party and almost none can name who writes the regulation after the statute, the people who live in the political club will keep winning arguments that were never had. Swamp Force exists so that gap closes — not by calling anyone stupid, but by building a habit. When they cheer a bill, ask for the twin. The rider. The rule. The exemption. If they will not show it, they have already named who the statute was for."
 			}
 		]
+	},
+	{
+		slug: "the-caption-was-not-the-charge",
+		title: "The caption was not the charge",
+		dek: "Insurrection on television. Not on 18 U.S.C. § 2383. A stacked committee. A tape the House held. Lawfare against parents and a former president. Durham already wrote the Russia file.",
+		date: "2026-09-21",
+		category: "Dispatch",
+		readMinutes: 6,
+		image: "/images/chamber.jpg",
+		imageAlt: "The House chamber",
+		series: "The Clip",
+		receipts: [
+			{ label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
+			{ label: "18 U.S.C. § 2383 — insurrection", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
+			{ label: "18 U.S.C. § 2384 — seditious conspiracy", href: "https://www.law.cornell.edu/uscode/text/18/2384" },
+			{ label: "USAO-DC — 48 months of January 6 cases", href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol" },
+			{ label: "H.Res. 503 — the select committee", href: "https://www.congress.gov/bill/117th-congress/house-resolution/503" },
+			{ label: "Attorney General memo — Oct. 4, 2021", href: "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf" },
+			{ label: "Capitol Breach cases", href: "https://www.justice.gov/usao-dc/capitol-breach-cases" },
+		],
+		body: [
+			{
+				type: "p",
+				text: "A caption can convict a country before a statute is ever read. Russia collusion ran for years. Special Counsel John Durham’s report is the file: the FBI opened Crossfire Hurricane on raw, unanalyzed, uncorroborated intelligence. It did not have actual evidence of collusion in its holdings when the case began. https://www.justice.gov/storage/durhamreport.pdf The caption did not wait for that sentence. It ran anyway. That is the method."
+			},
+			{
+				type: "p",
+				text: "Parents at a school-board microphone were the next caption. On September 29, 2021, the National School Boards Association asked the White House to treat threats around those meetings as possibly ‘the equivalent to a form of domestic terrorism.’ Five days later the Attorney General ordered every U.S. Attorney’s office and the FBI to coordinate. The Bureau opened an EDUOFFICIALS tag. NSBA later apologized for the language. The memo did not come off the table. A parent asking about a curriculum is not a combatant. Treating the microphone as a federal problem is lawfare against the people who hire the board."
+			},
+			{
+				type: "p",
+				text: "January 6 was sold as insurrection. 18 U.S.C. § 2383 is the insurrection statute. https://www.law.cornell.edu/uscode/text/18/2383 The U.S. Attorney for the District of Columbia published the tally after four years: about 1,583 people federally charged in connection with that day — assault, trespass, civil disorder, destruction, about eighteen charged with seditious conspiracy under a different statute, § 2384. https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol Zero charged under § 2383. Some of those cases were violent. The journal does not wash a cop being hit. It names the gap: the country was told insurrection, and the charging document did not say that word. A caption that the prosecutor will not sign is a product."
+			},
+			{
+				type: "p",
+				text: "The hearing that sold the caption was stacked. H.Res. 503 gave the Speaker the appointments. https://www.congress.gov/bill/117th-congress/house-resolution/503 Nancy Pelosi named Liz Cheney and Adam Kinzinger. She rejected the minority leader’s picks, Jim Jordan and Jim Banks. A select committee that chooses its own opposition is not an inquiry. It is a production. The Capitol cameras recorded thousands of hours. The committee showed clips. The House held the rest of the tape while the hearings ran. Later Speakers opened more of the archive. A body that holds the recording and plays the minutes it prefers is doing the same work as a six-second caption."
+			},
+			{
+				type: "p",
+				text: "The former president was put on four criminal dockets at once. The public paid for the committee. Defense is not free. Voters watched a years-long prosecution of the man they had hired, and of neighbors who had shown up at a school board, while the people who wrote the caption kept the gavel. This journal’s rule does not change: the statute, the charge sheet, the tape. If the caption and the count do not match, print the count. The harm is not a mood. It is a method — keep the temperature up, keep the file closed, keep the other ledger from being heard."
+			}
+		]
 	}
 ];
 
@@ -2609,6 +2651,7 @@ export const JOURNAL = [
 		dek: "The White House pool, the smear, and the minutes they cut from the tape.",
 		slugs: [
 			"the-pool",
+			"the-caption-was-not-the-charge",
 			"they-dont-debate-they-flag",
 			"they-clipped-the-tape",
 			"they-work-for-us",

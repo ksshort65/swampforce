@@ -175,6 +175,33 @@ export function DispatchIndex() {
         </div>
       </section>
 
+      <section className="border-b border-border bg-surface">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+          <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+            The Clip
+          </p>
+          <h2 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
+            The caption was not the charge
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
+            Insurrection on television. Not on 18 U.S.C. § 2383. The Speaker
+            stacked the committee. The House held the tape. Durham already
+            wrote the Russia file. Parents were a federal problem.
+          </p>
+          <div className="mt-6">
+            <Button asChild>
+              <Link
+                to="/dispatch/$slug"
+                params={{ slug: "the-caption-was-not-the-charge" }}
+              >
+                The caption was not the charge
+                <ArrowRight className="size-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <section className="border-b border-border bg-ink">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 py-14 md:grid-cols-2">
           <Link
