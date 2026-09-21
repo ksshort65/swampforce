@@ -1036,6 +1036,26 @@ ax.text(0.4, 0.3, "FEMA INF advisory  ·  CRS R47676  ·  DHS OIG-26-04  ·  Hou
 fig.savefig("/workspace/public/images/chart-fema-two-jobs.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
+fig, ax = plt.subplots(figsize=(16, 8), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+ax.set_xlim(0, 16)
+ax.set_ylim(0, 7.6)
+ax.axis("off")
+ax.text(0.4, 7.1, "THEY RAN IT ANYWAY", fontsize=24, fontweight="bold", color=fg, va="top")
+ax.text(0.4, 6.45, "Crossfire opened with no actual evidence of collusion. They ran it for the whole first term.", fontsize=13, color=muted, va="top")
+steps = [
+    (0.4, "2016 — OPENED", "Durham: no actual evidence\nof collusion in the holdings.\nFull FBI case anyway.", dem_c),
+    (5.6, "2017–19 — THE AIR", "“More than circumstantial.”\nNetworks. The committee.\nA presidency answering a caption.", "#c53030"),
+    (10.8, "2019 — THE FILE", "Mueller: did not establish\na conspiracy. They kept\nrunning it anyway.", gop_c),
+]
+for x, title, body, c in steps:
+    ax.add_patch(plt.Rectangle((x, 0.95), 4.8, 4.95, facecolor="#141414", edgecolor=c, lw=2))
+    ax.text(x + 2.4, 5.2, title, fontsize=16, fontweight="bold", color=c, ha="center")
+    ax.text(x + 2.4, 2.9, body, fontsize=14, color=fg, ha="center")
+ax.text(0.4, 0.3, "Durham report  ·  Horowitz FISA  ·  Barr on Mueller  ·  Congressional Record H.Res. 630", fontsize=10, color=muted)
+fig.savefig("/workspace/public/images/chart-they-ran-it.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
 
 
 

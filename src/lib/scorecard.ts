@@ -168,7 +168,7 @@ export const HOAXES: { k: string; v: string; href: string }[] = [
   },
   {
     k: "Crossfire Hurricane",
-    v: "The Durham report: the FBI opened a full investigation on raw, uncorroborated intelligence. It did not have actual evidence of collusion in its holdings when the case began. Years of a Russia caption followed. The file did not.",
+    v: "Durham: no actual evidence of collusion in the holdings when the FBI opened a full investigation. Ranking members told the country it was more than circumstantial. Networks ran that sentence for the entire first term. Mueller did not establish a conspiracy. They ran it anyway. That is how you poison a presidency and divide a nation.",
     href: "https://www.justice.gov/storage/durhamreport.pdf",
   },
   {
@@ -1068,6 +1068,15 @@ export const CHARTS: {
     ],
   },
   {
+    src: "/images/chart-they-ran-it.jpg",
+    title: "They ran it anyway — Crossfire Hurricane",
+    sources: [
+      { label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
+      { label: "Barr on Mueller", href: "https://www.justice.gov/archives/opa/speech/attorney-general-william-p-barr-delivers-remarks-release-report-investigation-russian" },
+      { label: "Congressional Record H.Res. 630", href: "https://www.congress.gov/congressional-record/volume-165/issue-163/house-section/article/H8153-5" },
+    ],
+  },
+  {
     src: "/images/chart-lawfare.jpg",
     title: "Taxpayer-funded hoaxes — caption, evidence, file",
     sources: [
@@ -1275,6 +1284,7 @@ export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<ty
   gop: chartsFor("/images/chart-policy.jpg", "/images/chart-debt-why.jpg", "/images/chart-inflation-party.jpg"),
   dem: chartsFor(
     "/images/chart-lawfare.jpg",
+    "/images/chart-they-ran-it.jpg",
     "/images/chart-fema-two-jobs.jpg",
     "/images/chart-what-they-bought.jpg",
     "/images/chart-aliens.jpg",
