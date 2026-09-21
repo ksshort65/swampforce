@@ -4,6 +4,13 @@ export type Block =
  | { type: "img"; src: string; alt: string };
 
 export type Frame = { tag: string; they: string; tape: string; href?: string };
+export type LawfareRow = {
+  caption: string;
+  evidence: string;
+  source: string;
+  file: string;
+  href: string;
+};
 
 export type EraRow = { who: string; years: string; line: string; href?: string };
 export type EraTopic = { topic: string; rows: EraRow[] };
@@ -23,6 +30,7 @@ export type Post = {
  receipts?: { label: string; href: string }[];
  frames?: Frame[];
  eras?: EraTopic[];
+ lawfare?: LawfareRow[];
  video?: string;
  /** When true, this essay owns the grok.me share TITLE. The photo never changes. */
  shareLead?: boolean;
@@ -1568,23 +1576,56 @@ export const posts: Post[] = [
 	},
 	{
 		slug: "the-hire-is-the-country",
-		title: "The hire is the country",
-		dek: "Going after the president the people hired is going after the people. Collusion was the caption. Lawfare was the method. The vote was the target.",
+		title: "Taxpayer-funded hoaxes",
+		dek: "They used process as a weapon against an elected president and the people who hired him. Each caption had evidence. The official file later showed the evidence did not hold. Insurrection was never charged. The public paid the bill.",
 		date: "2026-09-21",
 		category: "Dispatch",
-		readMinutes: 6,
+		readMinutes: 8,
 		image: "/images/chart-lawfare.jpg",
-		imageAlt: "Lawfare against the hire: two impeachments, four dockets, a Russia caption Durham closed",
+		imageAlt: "Lawfare against the hire: the caption, the evidence they used, the file that closed it",
 		series: "The Clip",
 		part: 3,
 		receipts: [
-			{ label: "Article II — the president", href: "https://constitution.congress.gov/constitution/article-2/" },
-			{ label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
-			{ label: "Horowitz IG — FISA", href: "https://oig.justice.gov/reports/2019/o1912.pdf" },
+			{ label: "July 25, 2019 call memorandum", href: "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf" },
 			{ label: "H.Res. 755 — first impeachment", href: "https://www.congress.gov/bill/116th-congress/house-resolution/755" },
 			{ label: "H.Res. 24 — second impeachment", href: "https://www.congress.gov/bill/117th-congress/house-resolution/24" },
+			{ label: "C-SPAN — January 6 speech", href: "https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc" },
 			{ label: "USAO-DC — January 6 tally", href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol" },
-			{ label: "House Weaponization file", href: "https://judiciary.house.gov/media/press-releases/new-judiciary-committee-website-highlights-activities-and-findings-select" },
+			{ label: "18 U.S.C. § 2383 — insurrection", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
+			{ label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
+			{ label: "Horowitz IG — FISA", href: "https://oig.justice.gov/reports/2019/o1912.pdf" },
+			{ label: "Barr remarks on the Mueller report", href: "https://www.justice.gov/archives/opa/speech/attorney-general-william-p-barr-delivers-remarks-release-report-investigation-russian" },
+			{ label: "Article II — the president", href: "https://constitution.congress.gov/constitution/article-2/" },
+		],
+		lawfare: [
+			{
+				caption: "Russia collusion",
+				evidence: "A full FBI investigation opened as if the campaign had coordinated with Moscow. Years of a Russia story followed.",
+				source: "Crossfire Hurricane. Steele dossier. FISA applications on Carter Page.",
+				file: "Durham: the FBI opened a full investigation on raw, uncorroborated intelligence and did not have actual evidence of collusion in its holdings when the case began. Mueller, as Barr quoted the report: the investigation did not establish that members of the Trump Campaign conspired or coordinated with the Russian government. Horowitz: seventeen inaccuracies and omissions in the FISA applications. The caption ran. The file did not.",
+				href: "https://www.justice.gov/storage/durhamreport.pdf",
+			},
+			{
+				caption: "First impeachment — abuse of power",
+				evidence: "A July 25, 2019 telephone call with Ukraine. The House said the President withheld aid to force an investigation of the Bidens. That call was treated as the crime.",
+				source: "The White House released the unclassified call memorandum. H.Res. 755. Floor speeches that did not match the memo.",
+				file: "The memo is public. The President asked about corruption involving the Bidens in a country receiving American aid. Looking into corruption in a foreign aid relationship is the job of the executive under Article II. The House called it an impeachable plot. The Senate acquitted on February 5, 2020. A party that impeaches the hire for asking about corruption in the family of a rival is using process to bury the question. That is not oversight. It is a cover.",
+				href: "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf",
+			},
+			{
+				caption: "Second impeachment — incitement of insurrection",
+				evidence: "A speech on January 6, 2021. Clips were run as if the President had ordered an attack on the Capitol. The House article named incitement of insurrection.",
+				source: "H.Res. 24. Select-committee clips. Network packages built from minutes they kept.",
+				file: "The C-SPAN recording of the speech includes the line to protest peacefully and patriotically. The U.S. Attorney for D.C. later published the tally: about 1,583 federally charged. Assault, trespass, civil disorder. About 18 charged with seditious conspiracy under 18 U.S.C. § 2384. Zero charged under 18 U.S.C. § 2383 — the insurrection statute. The Senate acquitted on February 13, 2021. They used a speech — political speech — as the article. Insurrection was the caption. Insurrection was never the charge.",
+				href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol",
+			},
+			{
+				caption: "Four criminal dockets at once",
+				evidence: "New York. Florida. Georgia. The District of Columbia. Overlapping cases against the same hire while he stood for election again.",
+				source: "State and federal prosecutors. A special counsel paid from appropriated funds. The public paid the committee. Defense is not free.",
+				file: "Process as punishment does not require a matching statute. A presidency and a campaign can be buried in dockets the taxpayer funds. Going after the man the country hired is going after the country. That is the method.",
+				href: "https://www.justice.gov/storage/durhamreport.pdf",
+			},
 		],
 		body: [
 			{
@@ -1594,23 +1635,23 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The people hire the president. That is [Article II](https://constitution.congress.gov/constitution/article-2/). The hire is not a private man the other party gets to ruin between elections. Harming the hire is harming the employer. Process used as punishment against one name is process used against the vote that put the name there. That is the file this journal keeps under Democrats, because that is who ran the captions and the dockets.",
+				text: "The people hire the president. That is [Article II](https://constitution.congress.gov/constitution/article-2/). The hire is not a private man the other party gets to ruin between elections. Harming the hire is harming the employer. Process used as punishment against one name is process used against the vote that put the name there. The table on this page is the ledger: the caption they ran, the evidence they used, where that evidence came from, and what the official file later showed. Each of those operations was paid for by the public. That is a taxpayer-funded assault on an elected president and on the Americans who hired him.",
 			},
 			{
 				type: "p",
-				text: "**Collusion** was the first caption. The [Durham report](https://www.justice.gov/storage/durhamreport.pdf) says the FBI opened a full investigation on raw, uncorroborated intelligence and did not have actual evidence of collusion in its holdings when the case began. Years of a Russia story followed. The file did not. [Inspector General Horowitz](https://oig.justice.gov/reports/2019/o1912.pdf) found seventeen inaccuracies and omissions in the Carter Page FISA applications used to surveil a U.S. person tied to a presidential campaign. A warrant on a campaign is a warrant on the people who hired the campaign. That is not a spat with one man.",
+				text: "The first impeachment was a phone call. On [July 25, 2019](https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf) the President of the United States spoke with the President of Ukraine. The White House released the unclassified memorandum. He asked about corruption involving the Bidens in a country that receives American aid. Looking into corruption in a foreign-aid relationship is the job of the executive. The House treated that call as an article of impeachment — [H.Res. 755](https://www.congress.gov/bill/116th-congress/house-resolution/755) — and used it to bury the question. The Senate acquitted on February 5, 2020. A party that impeaches the hire for asking about corruption in the family of a rival is not conducting oversight. It is covering the subject of the question.",
 			},
 			{
 				type: "p",
-				text: "Then the House impeached twice. [H.Res. 755](https://www.congress.gov/bill/116th-congress/house-resolution/755). [H.Res. 24](https://www.congress.gov/bill/117th-congress/house-resolution/24). Then four criminal dockets ran at once against the same hire: New York, Florida, Georgia, the District of Columbia. The public paid for the committee. Defense is not free. A presidency can be buried in process without a statute that matches the caption. [January 6](https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol) was sold as insurrection. About 1,583 federally charged. Zero under [18 U.S.C. § 2383](https://www.law.cornell.edu/uscode/text/18/2383). The caption did work the statute did not. Fifty-one former intelligence officials signed a letter treating a laptop as a Russian trick weeks before the 2020 vote. The House published that [file](https://judiciary.house.gov/media/press-releases/new-judiciary-committee-website-highlights-activities-and-findings-select).",
+				text: "The second impeachment was a speech. On January 6, 2021, [C-SPAN recorded](https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc) the rally. The recording includes the line to protest peacefully and patriotically. Clips were cut so the country heard an order that the tape does not contain. The House article — [H.Res. 24](https://www.congress.gov/bill/117th-congress/house-resolution/24) — named incitement of insurrection. Political speech became the charge. [18 U.S.C. § 2383](https://www.law.cornell.edu/uscode/text/18/2383) is the insurrection statute. The [U.S. Attorney for D.C.](https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol) later published the tally: about 1,583 federally charged. Zero under § 2383. The Senate acquitted on February 13, 2021. Insurrection was the caption. Insurrection was never the charge against anyone that day.",
 			},
 			{
 				type: "p",
-				text: "Neighbors were taught that the people who hired him were a threat to the country. That is how a republic is divided without a shot. The method is in [One Word](/dispatch/one-word). The tape is in [They clipped the tape](/dispatch/they-clipped-the-tape). The charge sheet that was not the charge is [here](/dispatch/the-caption-was-not-the-charge). This page is the rest of it: going after the chosen president is going after the Americans who chose him.",
+				text: "Before the impeachments: [Durham](https://www.justice.gov/storage/durhamreport.pdf) on Crossfire Hurricane, [Horowitz](https://oig.justice.gov/reports/2019/o1912.pdf) on the FISA applications, [Barr quoting Mueller](https://www.justice.gov/archives/opa/speech/attorney-general-william-p-barr-delivers-remarks-release-report-investigation-russian) that the investigation did not establish a conspiracy with the Russian government. After the impeachments: four criminal dockets at once, a special counsel on appropriated funds, a stacked select committee under [H.Res. 503](https://www.congress.gov/bill/117th-congress/house-resolution/503). Neighbors were taught that the people who hired him were a threat to the country. That is how a republic is divided without a shot. The method is in [One Word](/dispatch/one-word). The tape is in [They clipped the tape](/dispatch/they-clipped-the-tape). The charge sheet that was not the charge is [here](/dispatch/the-caption-was-not-the-charge).",
 			},
 			{
 				type: "q",
-				text: "The hire is the country. Process as punishment against the hire is process against the vote.",
+				text: "Taxpayer-funded hoaxes. The caption ran. The file closed it. The people still paid.",
 			},
 		],
 	},

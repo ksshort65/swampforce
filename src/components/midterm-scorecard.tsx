@@ -119,7 +119,7 @@ function BillList({
             className={
               tone === "plus"
                 ? "block min-h-14 rounded-md border border-border bg-surface px-4 py-4 text-fg no-underline hover:border-sage"
-                : "block min-h-14 rounded-md border border-border px-4 py-4 text-fg no-underline hover:border-sage"
+                : "block min-h-14 rounded-md border border-[#c53030]/50 bg-surface px-4 py-4 text-fg no-underline hover:border-[#c53030]"
             }
           >
             <p className="text-base font-medium leading-snug">{p.k}</p>
@@ -156,14 +156,20 @@ function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
           className="h-auto w-full rounded-md border border-border"
         />
       </figure>
-      <p className="mt-6 font-display text-xs font-semibold tracking-[0.2em] uppercase">
-        Helped
-      </p>
-      <BillList rows={col.plus} tone="plus" />
-      <p className="mt-8 font-display text-xs font-semibold tracking-[0.2em] uppercase">
-        Hurt
-      </p>
-      <BillList rows={col.minus} tone="minus" />
+      <div className="mt-8 grid gap-8 md:grid-cols-2">
+        <div>
+          <p className="font-display text-xs font-semibold tracking-[0.2em] uppercase">
+            Helped
+          </p>
+          <BillList rows={col.plus} tone="plus" />
+        </div>
+        <div>
+          <p className="font-display text-xs font-semibold tracking-[0.2em] text-[#c53030] uppercase">
+            Hurt
+          </p>
+          <BillList rows={col.minus} tone="minus" />
+        </div>
+      </div>
     </div>
   );
 }
@@ -221,13 +227,12 @@ function HoaxesFile() {
         Information war
       </p>
       <p className="mt-3 text-base leading-relaxed">
-        They ran captions against the people and against a president. Going
-        after the man the country hired is going after the country. A charge
-        sheet is a statute and a count. Durham. FISA that was not
-        scrupulously accurate. School boards. A stacked select committee.
-        Insurrection on television, not on 18 U.S.C. § 2383. A board at DHS
-        to govern ‘disinformation.’ Two impeachments. Four dockets. The
-        House held the tape.
+        They ran captions against the people and against a president they
+        did not hire. Each caption had evidence. The official file later
+        showed the evidence did not hold. The public paid for the
+        investigation, the committee, and the special counsel. That is a
+        taxpayer-funded assault on an elected president and on the
+        Americans who hired him.
       </p>
       <ul className="mt-5 space-y-5">
         {HOAXES.map((h) => (
@@ -713,6 +718,16 @@ export function MidtermScorecard() {
 
         {tab === "compare" && mode === "read" ? (
           <div className="mt-10 space-y-10">
+            <div>
+              <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+                Side by side
+              </p>
+              <h3 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase">
+                Helped · Hurt
+              </h3>
+            </div>
+            {gop ? <PartyFile col={gop} /> : null}
+            {dem ? <PartyFile col={dem} /> : null}
             <div className="rounded-md border border-border bg-surface p-5">
               <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
                 {PURSE.k}
@@ -829,18 +844,22 @@ export function MidtermScorecard() {
                   {term.who}
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{term.majority}</p>
-                <p className="mt-6 font-display text-xs font-semibold tracking-[0.2em] uppercase">
-                  Helped
-                </p>
-                <BillList rows={term.plus} tone="plus" />
-                <p className="mt-8 font-display text-xs font-semibold tracking-[0.2em] uppercase">
-                  Hurt
-                </p>
-                <BillList rows={term.minus} tone="minus" />
+                <div className="mt-6 grid gap-8 md:grid-cols-2">
+                  <div>
+                    <p className="font-display text-xs font-semibold tracking-[0.2em] uppercase">
+                      Helped
+                    </p>
+                    <BillList rows={term.plus} tone="plus" />
+                  </div>
+                  <div>
+                    <p className="font-display text-xs font-semibold tracking-[0.2em] text-[#c53030] uppercase">
+                      Hurt
+                    </p>
+                    <BillList rows={term.minus} tone="minus" />
+                  </div>
+                </div>
               </div>
             ))}
-            {gop ? <PartyFile col={gop} /> : null}
-            {dem ? <PartyFile col={dem} /> : null}
             <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               {LAWS.map((l) => (
                 <li key={l.href}>

@@ -157,9 +157,9 @@ export const LAWS: { k: string; href: string }[] = [
 /** The caption, then the charge sheet. Official files. */
 export const HOAXES: { k: string; v: string; href: string }[] = [
   {
-    k: "The hire is the country",
-    v: "The people hired the president. Process used as punishment against the hire is process used against the employer. Two impeachments. Four criminal dockets. A Russia caption Durham said was opened without actual evidence of collusion. That is not a spat with one man. It is a campaign against the vote.",
-    href: "https://constitution.congress.gov/constitution/article-2/",
+    k: "Taxpayer-funded hoaxes",
+    v: "Caption, evidence they used, where it came from, what the official file later showed. Russia: Durham said no actual evidence of collusion when the case opened. Mueller did not establish a conspiracy. First impeachment: a phone call about corruption in a country receiving aid — the executive’s job. Senate acquitted. Second impeachment: a speech they clipped. Zero charged under 18 U.S.C. § 2383. The public paid.",
+    href: "https://www.justice.gov/storage/durhamreport.pdf",
   },
   {
     k: "They called it protest",
@@ -202,9 +202,9 @@ export const HOAXES: { k: string; v: string; href: string }[] = [
     href: "https://oig.justice.gov/reports/2019/o1912.pdf",
   },
   {
-    k: "Two impeachments. Four dockets. One method.",
-    v: "The House impeached twice. Then four criminal dockets ran at once against the same man the country had hired. The public paid for the committee. Defense is not free. A presidency can be buried in process without a statute that matches the caption.",
-    href: "https://www.congress.gov/bill/116th-congress/house-resolution/755",
+    k: "Two impeachments. Four dockets. Taxpayer-funded.",
+    v: "First: a July 25, 2019 call the White House released. He asked about corruption involving the Bidens. The House called it abuse of power. The Senate acquitted February 5, 2020. Second: a January 6 speech. C-SPAN includes peacefully and patriotically. H.Res. 24 named insurrection. USAO-DC: zero under § 2383. Senate acquitted February 13, 2021. Then four criminal dockets at once, a special counsel on appropriated funds. Process as punishment against the hire is process against the people who hired him.",
+    href: "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf",
   },
   {
     k: "The House record on the machine",
@@ -1060,7 +1060,7 @@ export const CHARTS: {
   },
   {
     src: "/images/chart-lawfare.jpg",
-    title: "The hire is the country — lawfare against the vote",
+    title: "Taxpayer-funded hoaxes — caption, evidence, file",
     sources: [
       { label: "Article II", href: "https://constitution.congress.gov/constitution/article-2/" },
       { label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },

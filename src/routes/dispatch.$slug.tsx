@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { NarrativeFrames } from "@/components/narrative-frames";
 import { EraCompare } from "@/components/era-compare";
+import { LawfareLedger } from "@/components/lawfare-ledger";
 import { getPost, nextInSeries, SITE } from "@/lib/content";
 import { nextChapter } from "@/lib/flow";
 import { essayHead } from "@/lib/share-head";
@@ -68,7 +69,13 @@ function EssayPage() {
         </div>
       </div>
 
-      <article className="mx-auto max-w-2xl px-4 py-12 sm:px-6">
+      <article
+        className={
+          post.lawfare?.length
+            ? "mx-auto max-w-6xl px-4 py-12 sm:px-6"
+            : "mx-auto max-w-2xl px-4 py-12 sm:px-6"
+        }
+      >
         <p className="font-serif text-2xl leading-snug text-fg/90">{post.dek}</p>
         <p className="mt-3 font-display text-xs tracking-[0.16em] text-muted uppercase">
           {SITE.author} · {SITE.copyright}
@@ -148,6 +155,7 @@ function EssayPage() {
             );
           })}
         </div>
+        {post.lawfare?.length ? <LawfareLedger rows={post.lawfare} /> : null}
         {post.eras?.length ? (
           <div className="sm:-mx-8 lg:-mx-24">
             <EraCompare topics={post.eras} />
