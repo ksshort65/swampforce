@@ -61,16 +61,16 @@ function PumpPage() {
             ))}
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-4">
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {GALLON_STACK.items.map((row) => (
               <a
                 key={row.k}
                 href={GALLON_STACK.href}
                 target="_blank"
                 rel="noreferrer"
-                className="block rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
+                className="min-w-0 block rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
               >
-                <p className="font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase">
+                <p className="font-display text-xs font-semibold leading-snug tracking-wide text-sage uppercase">
                   {row.k} · {GALLON_STACK.asOf}
                 </p>
                 <p className="mt-2 font-display text-3xl font-bold tracking-wide">
@@ -214,7 +214,7 @@ function PumpPage() {
             </table>
           </div>
 
-          <div className="mt-10 grid gap-3 md:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {MARKS.map((m) => (
               <a
                 key={m.k}
@@ -223,7 +223,7 @@ function PumpPage() {
                 rel="noreferrer"
                 className="block rounded-md border border-border p-4 no-underline hover:border-sage"
               >
-                <p className="font-display text-[11px] font-semibold tracking-[0.16em] text-sage uppercase">
+                <p className="font-display text-[11px] font-semibold leading-snug tracking-wide text-sage uppercase">
                   {m.k}
                 </p>
                 <p className="mt-2 text-sm leading-snug">{m.v}</p>

@@ -285,9 +285,9 @@ function WorkerFile() {
 function OvalFile() {
   return (
     <div className="space-y-8">
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {OVAL.map((row) => (
-          <div key={row.who} className="rounded-md border border-border bg-surface p-5">
+          <div key={row.who} className="min-w-0 rounded-md border border-border bg-surface p-5">
             <p className="font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase">
               {row.who}
             </p>
@@ -297,7 +297,7 @@ function OvalFile() {
             <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.cpi}</p>
             <p className="mt-1 text-sm text-muted">CPI peak, year-over-year</p>
             <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.gas}</p>
-            <p className="mt-1 text-sm text-muted">EIA regular gasoline, term</p>
+            <p className="mt-1 text-sm text-muted">highest EIA weekly gasoline</p>
           </div>
         ))}
       </div>
@@ -389,7 +389,7 @@ export function MidtermScorecard() {
           Both parties have failed the American people.
         </h2>
 
-        <div className="mt-8 grid grid-cols-5 gap-2">
+        <div className="mt-8 flex flex-wrap gap-2">
           {(
             [
               ["gop", "Republicans"],
@@ -405,8 +405,8 @@ export function MidtermScorecard() {
               onClick={() => setTab(id)}
               className={
                 tab === id
-                  ? "flex min-h-16 min-w-0 items-center justify-center rounded-md border-2 border-sage bg-sage px-1 py-4 text-center font-display text-[13px] font-bold tracking-wide text-black uppercase sm:text-base"
-                  : "flex min-h-16 min-w-0 items-center justify-center rounded-md border-2 border-sage bg-surface px-1 py-4 text-center font-display text-[13px] font-bold tracking-wide text-fg uppercase hover:bg-ink sm:text-base"
+                  ? "flex min-h-16 min-w-[8.5rem] flex-1 items-center justify-center rounded-md border-2 border-sage bg-sage px-2 py-4 text-center font-display text-sm font-bold tracking-wide text-black uppercase sm:text-base"
+                  : "flex min-h-16 min-w-[8.5rem] flex-1 items-center justify-center rounded-md border-2 border-sage bg-surface px-2 py-4 text-center font-display text-sm font-bold tracking-wide text-fg uppercase hover:bg-ink sm:text-base"
               }
             >
               {label}
@@ -434,7 +434,7 @@ export function MidtermScorecard() {
 
         {tab === "compare" ? (
           <div className="mt-10 space-y-8">
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               {DEBT_TALLY.map((row) => {
                 const n = Number(row.added.replace(/[^0-9.]/g, ""));
                 const pct = Math.round((n / 40.09) * 100);
@@ -443,7 +443,7 @@ export function MidtermScorecard() {
                     key={row.who}
                     className="rounded-md border border-border bg-surface p-5"
                   >
-                    <p className="font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase">
+                    <p className="font-display text-xs font-semibold leading-snug tracking-wide text-sage uppercase">
                       {row.who}
                     </p>
                     <p className="mt-2 font-display text-4xl font-bold tracking-wide">

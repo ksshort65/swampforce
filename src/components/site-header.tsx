@@ -19,7 +19,7 @@ export function SiteHeader() {
           to="/"
           className="inline-flex min-h-11 shrink-0 items-center text-fg no-underline"
         >
-          <span className="font-display text-base font-bold tracking-[0.18em] uppercase">
+          <span className="font-display text-base font-bold tracking-wide uppercase">
             Swamp Force
           </span>
           <span className="ml-1 font-display text-[10px] font-semibold tracking-wide text-muted">
@@ -31,7 +31,7 @@ export function SiteHeader() {
             <Link
               key={l.to}
               to={l.to}
-              className="inline-flex min-h-11 shrink-0 items-center px-3 font-display text-sm font-semibold tracking-[0.14em] text-fg uppercase no-underline hover:text-sage"
+              className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:text-sage"
             >
               {l.label}
             </Link>
