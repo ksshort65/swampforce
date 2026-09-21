@@ -365,7 +365,7 @@ function OvalFile() {
           CBP — nationwide encounters →
         </a>
       </div>
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {OVAL.map((row) => (
           <div key={row.who} className="rounded-md border border-border bg-surface p-5">
             <p className="font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase">
@@ -373,9 +373,7 @@ function OvalFile() {
             </p>
             <p className="mt-1 text-sm text-muted">{row.when}</p>
             <p className="mt-4 font-display text-3xl font-bold tracking-wide">{row.enc}</p>
-            <p className="mt-1 text-sm text-muted">
-              CBP nationwide encounters — people CBP met who were not a lawful entry
-            </p>
+            <p className="mt-1 text-sm text-muted">{row.note}</p>
             <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.cpi}</p>
             <p className="mt-1 text-sm text-muted">CPI peak, year-over-year</p>
             <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.gas}</p>

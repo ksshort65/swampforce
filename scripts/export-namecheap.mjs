@@ -366,7 +366,7 @@ ${col.id === "dem" ? borderHtml() + borderMoveHtml() + borderHarmHtml() + benefi
 <p class="kicker">${esc(ENCOUNTERS.k)}</p>
 <p>${esc(ENCOUNTERS.v)}</p>
 <p><a href="${ENCOUNTERS.href}">CBP — nationwide encounters →</a></p>
-<div class="grid">${OVAL.map((row) => `<div class="card" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><p>${esc(row.when)}</p><h3>${esc(row.enc)}</h3><p>CBP nationwide encounters — people CBP met who were not a lawful entry</p><h3>${esc(row.cpi)}</h3><p>CPI peak</p><h3>${esc(row.gas)}</h3><p>highest EIA weekly gasoline</p></div>`).join("")}</div>
+<div class="grid">${OVAL.map((row) => `<div class="card" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><p>${esc(row.when)}</p><h3>${esc(row.enc)}</h3><p>${esc(row.note)}</p><h3>${esc(row.cpi)}</h3><p>CPI peak</p><h3>${esc(row.gas)}</h3><p>highest EIA weekly gasoline</p></div>`).join("")}</div>
 <p>${OVAL_LINKS.map((l) => `<a href="${l.href}">${esc(l.label)}</a>`).join(" · ")} · <a href="/pump.html">The pump</a></p>
 </div>
 <div class="panel" id="compare-read">

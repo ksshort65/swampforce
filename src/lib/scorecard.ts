@@ -126,6 +126,16 @@ export const HOAXES: { k: string; v: string; href: string }[] = [
 /** Oval — nationwide CBP, BLS CPI peak, EIA gallon. */
 export const OVAL = [
   {
+    who: "Obama",
+    when: "FY2009–16",
+    enc: "3.31 million",
+    encN: 3.31,
+    cpi: "3.9%",
+    cpiN: 3.9,
+    gas: "$3.965 peak",
+    note: "Southwest Border Patrol apprehensions, FY2009–16. CBP’s nationwide combined dashboard was not published for those years. CPI peak September 2011. EIA weekly regular: highest week $3.965 (May 9, 2011).",
+  },
+  {
     who: "Trump 1",
     when: "FY2017–20",
     enc: "3.00 million",
@@ -159,6 +169,8 @@ export const OVAL = [
 
 export const OVAL_LINKS = [
   { label: "CBP — nationwide encounters", href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters" },
+  { label: "CBP — southwest Border Patrol FY1960–2019", href: "https://www.cbp.gov/document/stats/us-border-patrol-fiscal-year-southwest-border-sector-apprehensions-fy-1960-fy-2019" },
+  { label: "BLS — CPI September 2011, 3.9%", href: "https://www.bls.gov/news.release/archives/cpi_10192011.htm" },
   { label: "CBP — enforcement statistics", href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics" },
   { label: "BLS — CPI", href: "https://www.bls.gov/cpi/" },
   { label: "EIA — the gallon", href: "https://www.eia.gov/petroleum/gasdiesel/" },
@@ -168,7 +180,7 @@ export const OVAL_LINKS = [
 /** What the Oval number is. CBP’s own count. */
 export const ENCOUNTERS = {
   k: "What an encounter is",
-  v: "Customs and Border Protection counts an encounter when its officers meet a person who is not making a lawful entry. That is Border Patrol between the ports of entry, and officers at land ports, airports, and seaports. It is people stopped, turned back, expelled, or processed. It is not a visa. It is not a gotaway — those are the people CBP did not meet. Nationwide means every door CBP counts, not only the southwest river.",
+  v: "Customs and Border Protection counts an encounter when its officers meet a person who is not making a lawful entry. That is Border Patrol between the ports of entry, and officers at land ports, airports, and seaports. It is people stopped, turned back, expelled, or processed. It is not a visa. It is not a gotaway — those are the people CBP did not meet. Nationwide means every door CBP counts, not only the southwest river. Obama’s Oval uses the older official count: southwest Border Patrol apprehensions, FY2009–16, because CBP did not yet publish the nationwide combined dashboard for those years.",
   href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
 };
 

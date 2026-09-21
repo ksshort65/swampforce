@@ -495,10 +495,10 @@ fig.savefig("/workspace/public/images/chart-debt-bars.jpg", dpi=140, facecolor=b
 plt.close()
 
 fig, axes = plt.subplots(1, 2, figsize=(16, 7), dpi=140, facecolor=bg)
-labs = ["Trump 1\nFY17–20", "Biden\nFY21–24", "Trump 2\nFY25"]
-enc = [3.00, 10.83, 0.69]
-cpi = [2.9, 9.1, 3.4]
-cols_o = [trump_c, biden_c, trump_c]
+labs = ["Obama\nFY09–16", "Trump 1\nFY17–20", "Biden\nFY21–24", "Trump 2\nFY25"]
+enc = [3.31, 3.00, 10.83, 0.69]
+cpi = [3.9, 2.9, 9.1, 3.4]
+cols_o = [biden_c, trump_c, biden_c, trump_c]
 ax = axes[0]
 ax.set_facecolor(bg)
 ax.bar(labs, enc, color=cols_o, width=0.62)
@@ -526,7 +526,7 @@ fig.suptitle("THE OVAL — SAME METERS", fontsize=22, fontweight="bold", color=f
 fig.text(
     0.02,
     0.02,
-    "CBP nationwide totals. BLS CPI: Trump 1 peak in-term; Biden June 2022 9.1%; Trump 2 Aug 2026 3.4%. Gallon is on the pump page.",
+    "Obama: southwest Border Patrol FY2009–16 (3.31M). Later ovals: CBP nationwide. BLS CPI: Obama Sept 2011 3.9%; Trump 1 in-term 2.9%; Biden June 2022 9.1%; Trump 2 Aug 2026 3.4%. Gallon is on the pump page.",
     fontsize=9,
     color=muted,
 )
