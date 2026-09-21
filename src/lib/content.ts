@@ -1923,6 +1923,44 @@ export const posts: Post[] = [
 		],
 	},
 	{
+		slug: "they-dont-write-the-bills",
+		title: "They don’t write the bills",
+		dek: "The lobbyist drafts. The activist supplies the caption. Congress votes the unread pile. America keeps the harm.",
+		date: "2026-09-21",
+		category: "Dispatch",
+		readMinutes: 4,
+		image: "/images/chart-they-dont-write.jpg",
+		imageAlt: "Lobby drafts. Congress votes. The country keeps the harm.",
+		series: "The Job",
+		part: 2,
+		receipts: [
+			{ label: "Article I, Section 1", href: "https://constitution.congress.gov/constitution/article-1/" },
+			{ label: "2 U.S.C. § 1601 — Lobbying Disclosure Act findings", href: "https://www.law.cornell.edu/uscode/text/2/1601" },
+			{ label: "Senate — LDA filings", href: "https://lda.senate.gov/system/public/" },
+			{ label: "House — lobbying disclosure", href: "https://lobbyingdisclosure.house.gov/" },
+			{ label: "P.L. 104-65 — Lobbying Disclosure Act of 1995", href: "https://www.congress.gov/104/plaws/publ65/PLAW-104publ65.pdf" },
+		],
+		body: [
+			{
+				type: "img",
+				src: "/images/chart-they-dont-write.jpg",
+				alt: "Three steps: lobby drafts, Congress votes, country keeps the harm",
+			},
+			{
+				type: "p",
+				text: "[Article I, Section 1](https://constitution.congress.gov/constitution/article-1/) vests all legislative powers herein granted in a Congress of the United States. That is the job they were hired to do: write the law. They do not. A paid lobbyist drafts the text. An activist writes the caption that makes the unread pile sound like a moral. The Member votes yes or no on a package nobody in the chamber has read, on the word of the people who wrote it and the people who will sell it on television. The country is then stuck with the harm. That is not petition. Petition is a citizen walking to the door. This is a second government that does not stand for election.",
+			},
+			{
+				type: "p",
+				text: "Congress already admitted the method. The [Lobbying Disclosure Act](https://www.law.cornell.edu/uscode/text/2/1601) — [P.L. 104-65](https://www.congress.gov/104/plaws/publ65/PLAW-104publ65.pdf) — opens with a finding: paid lobbyists influence federal officials in the conduct of government, and the public is entitled to know who they are. The [Senate](https://lda.senate.gov/system/public/) and the [House](https://lobbyingdisclosure.house.gov/) take the forms. A form is not a fence. It is a receipt for the second government. [Why the lobby should be illegal](/dispatch/why-the-lobby-should-be-illegal) is the argument. This page is the mechanism: draft, caption, vote, harm. The twelve appropriations bills that do not pass are how the unread pile is born. [The $7 billion machine](/dispatch/the-7-billion-machine) is what the hire costs while someone else writes the work. Both parties take the draft. Both parties take the vote. The people keep the statute.",
+			},
+			{
+				type: "q",
+				text: "They were hired to write the law. They vote the lobby’s draft. America is stuck with the harm.",
+			},
+		],
+	},
+	{
 		slug: "the-7-billion-machine",
 		title: "The $7 billion machine",
 		dek: "FY2026 legislative branch: $7.258 billion. Salary is the decoy. The perks are the bill.",
@@ -2185,13 +2223,11 @@ export const posts: Post[] = [
 		imageAlt: "The House chamber",
 		series: "The Job",
 		part: 5,
-		receipts: [{
-			label: "Lobbying Disclosure Act",
-			href: "https://www.congress.gov/104/plaws/publ65/PLAW-104publ65.pdf"
-		}, {
-			label: "OpenSecrets lobbying totals",
-			href: "https://www.opensecrets.org/federal-lobbying"
-		}],
+		receipts: [
+			{ label: "Lobbying Disclosure Act — P.L. 104-65", href: "https://www.congress.gov/104/plaws/publ65/PLAW-104publ65.pdf" },
+			{ label: "2 U.S.C. § 1601", href: "https://www.law.cornell.edu/uscode/text/2/1601" },
+			{ label: "Senate LDA filings", href: "https://lda.senate.gov/system/public/" },
+		],
 		body: [
 			{
 				type: "p",
@@ -3012,6 +3048,7 @@ export const JOURNAL = [
 		dek: "The $7 billion legislative branch, the lobby, and the debt they will not close.",
 		slugs: [
 			"the-7-billion-machine",
+			"they-dont-write-the-bills",
 			"the-funnel",
 			"why-the-lobby-should-be-illegal",
 			"the-debt-they-will-not-close",

@@ -976,6 +976,26 @@ ax.text(0.4, 0.22, "FEMA SSP NOFO  ·  DHS OIG-26-04  ·  NYC Mayor transcript  
 fig.savefig("/workspace/public/images/chart-what-they-bought.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
+fig, ax = plt.subplots(figsize=(16, 7.5), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+ax.set_xlim(0, 16)
+ax.set_ylim(0, 7.2)
+ax.axis("off")
+ax.text(0.4, 6.7, "THEY DON’T WRITE THE BILLS", fontsize=24, fontweight="bold", color=fg, va="top")
+ax.text(0.4, 6.05, "Hired to write the law. They vote the lobby’s draft. The country keeps the harm.", fontsize=14, color=muted, va="top")
+steps = [
+    (0.4, "1. THE LOBBY DRAFTS", "Paid firms write the text.\nActivists write the caption.\nLDA is a form, not a fence.", gop_c),
+    (5.6, "2. CONGRESS VOTES", "Article I gave them the pen.\nThey vote the unread pile.\nBoth parties take the draft.", dem_c),
+    (10.8, "3. AMERICA KEEPS IT", "The statute sticks.\nThe harm is the country.\nThe hire still has the gavel.", "#d8d0c0"),
+]
+for x, title, body, c in steps:
+    ax.add_patch(plt.Rectangle((x, 0.85), 4.8, 4.7, facecolor="#141414", edgecolor=c, lw=2))
+    ax.text(x + 2.4, 4.85, title, fontsize=15, fontweight="bold", color=c, ha="center")
+    ax.text(x + 2.4, 2.7, body, fontsize=14, color=fg, ha="center")
+ax.text(0.4, 0.3, "Article I § 1  ·  2 U.S.C. § 1601  ·  P.L. 104-65  ·  Senate LDA  ·  House lobbying disclosure", fontsize=10, color=muted)
+fig.savefig("/workspace/public/images/chart-they-dont-write.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
 
 
 

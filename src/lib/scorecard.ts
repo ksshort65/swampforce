@@ -1021,6 +1021,15 @@ export const CHARTS: {
   sources: { label: string; href: string }[];
 }[] = [
   {
+    src: "/images/chart-they-dont-write.jpg",
+    title: "They don’t write the bills",
+    sources: [
+      { label: "Article I", href: "https://constitution.congress.gov/constitution/article-1/" },
+      { label: "2 U.S.C. § 1601", href: "https://www.law.cornell.edu/uscode/text/2/1601" },
+      { label: "Senate LDA", href: "https://lda.senate.gov/system/public/" },
+    ],
+  },
+  {
     src: "/images/chart-what-they-bought.jpg",
     title: "What the taxpayer bought",
     sources: [
@@ -1253,7 +1262,7 @@ export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<ty
     "/images/chart-policy.jpg",
     "/images/chart-inflation-party.jpg",
   ),
-  split: chartsFor("/images/chart-debt-why.jpg", "/images/chart-funnel.jpg", "/images/chart-blame.jpg"),
+  split: chartsFor("/images/chart-they-dont-write.jpg", "/images/chart-debt-why.jpg", "/images/chart-funnel.jpg", "/images/chart-blame.jpg"),
   oval: chartsFor(
     "/images/chart-oval.jpg",
     "/images/chart-pump-admins.jpg",
