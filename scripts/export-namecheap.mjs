@@ -3,7 +3,7 @@ import { basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { posts, SITE, START_HERE, JOURNAL, getPost } from "../src/lib/content.ts";
-import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, ENCOUNTERS, HOAXES, LAWS, OVAL, OVAL_LINKS, PRICES, RECORD, SCORE_TABS, TAB_CHARTS, SCORE_UPDATED } from "../src/lib/scorecard.ts";
+import { BORDER, BORDER_MOVE, BORDER_HARM, BENEFITS, WORKER, CHARTS, COMPARE_CHARTS, COMPARE_WIDE, DEBT_MATH, DEBT_NOW, DEBT_TALLY, DRIVERS, ENCOUNTERS, HOAXES, LAWS, MAJORITY, OBAMA_TERMS, OVAL, OVAL_LINKS, PRICES, PURSE, RECORD, SCORE_TABS, TAB_CHARTS, SCORE_UPDATED } from "../src/lib/scorecard.ts";
 import { ADMINS, GALLON_STACK, MARKS, OPEC_FILE, PUMP_CHARTS, PUMP_SOURCES, PUMP_UPDATED, RULES_FILE, TAX_FILE } from "../src/lib/pump.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -338,7 +338,7 @@ ${TAB_CHARTS[f.id].map((c) => `<figure><p class="kicker">${esc(c.title)}</p><img
 </div>`).join("")}
 ${RECORD.map((col) => {
  const tally = DEBT_TALLY.find((t) =>
-  col.id === "gop" ? t.who.startsWith("Republicans") : t.who.startsWith("Democrats"),
+  col.id === "gop" ? t.who.startsWith("Republican") : t.who.startsWith("Democratic"),
  );
  return `<div class="panel" id="${col.id}-read">
 <p class="btns"><a class="btn out" href="#${col.id}-charts">Charts</a><a class="btn" href="#${col.id}-read">Read</a></p>
@@ -373,12 +373,18 @@ ${col.id === "dem" ? borderHtml() + borderMoveHtml() + borderHarmHtml() + benefi
 <div class="panel" id="compare-read">
 <p class="btns"><a class="btn out" href="#compare-charts">Charts</a><a class="btn" href="#compare-read">Read</a></p>
 <h2>Compare</h2>
+<p class="kicker">${esc(PURSE.k)}</p>
+<p>${esc(PURSE.v)}</p>
+<p><a href="${PURSE.href}">Article I →</a></p>
+<div class="grid">${MAJORITY.map((m) => `<a class="card" href="${m.href}" style="padding:1.2rem"><h3>${esc(m.who)}</h3><p>${esc(m.when)}</p><p>${esc(m.could)}</p><p>${esc(m.did)}</p></a>`).join("")}</div>
 <div class="grid">${DEBT_TALLY.map((row) => {
   const n = Number(row.added.replace(/[^0-9.]/g, ""));
   const pct = Math.round((n / 40.09) * 100);
-  return `<a class="card" href="${row.href}" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><h3>${esc(row.added)}</h3><div style="height:10px;background:#141414;margin-top:.8rem"><div style="height:10px;width:${pct}%;background:#e8e0d0"></div></div><p>${pct}% of the $40.09T</p></a>`;
+  return `<a class="card" href="${row.href}" style="padding:1.2rem"><p class="kicker">${esc(row.who)}</p><h3>${esc(row.added)}</h3><div style="height:10px;background:#141414;margin-top:.8rem"><div style="height:10px;width:${pct}%;background:#e8e0d0"></div></div><p>${pct}% of the $40.09T</p><p>${esc(row.when)}</p></a>`;
 }).join("")}</div>
 <p>${esc(DEBT_NOW.asOf)}: ${esc(DEBT_NOW.total)}. ${esc(DEBT_MATH)}</p>
+<figure><img src="/images/chart-policy.jpg" alt="Policy — success and failure"/></figure>
+${OBAMA_TERMS.map((term) => `<h2>${esc(term.who)}</h2><p>${esc(term.majority)}</p><p class="kicker">Helped</p><ul>${term.plus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul><p class="kicker">Hurt</p><ul>${term.minus.map((p) => `<li><a href="${p.href}"><strong>${esc(p.k)}</strong><br/>${esc(p.bill)}</a></li>`).join("")}</ul>`).join("")}
 <div class="grid">${LAWS.map((l) => `<a class="card" href="${l.href}" style="padding:1rem"><h3 style="padding:0">${esc(l.k)}</h3></a>`).join("")}</div>
 </div>
 </main>`,

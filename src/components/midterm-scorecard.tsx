@@ -18,7 +18,10 @@ import {
   DRIVERS,
   HOAXES,
   LAWS,
+  MAJORITY,
+  OBAMA_TERMS,
   PRICES,
+  PURSE,
   RECORD,
   SCORE_TABS,
   TAB_CHARTS,
@@ -112,7 +115,7 @@ function BillList({
 
 function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
   const tally = DEBT_TALLY.find((t) =>
-    col.id === "gop" ? t.who.startsWith("Republicans") : t.who.startsWith("Democrats"),
+    col.id === "gop" ? t.who.startsWith("Republican") : t.who.startsWith("Democratic"),
   );
   return (
     <div>
@@ -604,7 +607,39 @@ export function MidtermScorecard() {
         ) : null}
 
         {tab === "compare" && mode === "read" ? (
-          <div className="mt-10">
+          <div className="mt-10 space-y-10">
+            <div className="rounded-md border border-border bg-surface p-5">
+              <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+                {PURSE.k}
+              </p>
+              <p className="mt-3 text-base leading-relaxed">{PURSE.v}</p>
+              <a
+                href={PURSE.href}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+              >
+                Article I →
+              </a>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {MAJORITY.map((m) => (
+                <a
+                  key={m.who}
+                  href={m.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
+                >
+                  <p className="font-display text-sm font-bold tracking-wide uppercase">
+                    {m.who}
+                  </p>
+                  <p className="mt-2 text-xs leading-relaxed text-muted">{m.when}</p>
+                  <p className="mt-3 text-sm leading-relaxed">{m.could}</p>
+                  <p className="mt-2 text-sm leading-relaxed">{m.did}</p>
+                </a>
+              ))}
+            </div>
             <div className="grid gap-4 md:grid-cols-3">
               {DEBT_TALLY.map((row) => {
                 const n = Number(row.added.replace(/[^0-9.]/g, ""));
@@ -629,14 +664,40 @@ export function MidtermScorecard() {
                     <p className="mt-2 font-display text-xs tracking-[0.12em] text-muted uppercase">
                       {pct}% of the $40.09T
                     </p>
+                    <p className="mt-3 text-xs leading-relaxed text-muted">{row.when}</p>
                   </div>
                 );
               })}
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-muted">
+            <p className="text-sm leading-relaxed text-muted">
               {DEBT_NOW.asOf}: {DEBT_NOW.total}. {DEBT_MATH}
             </p>
-            <ul className="mt-8 grid grid-cols-1 gap-2 sm:grid-cols-2">
+            <figure>
+              <img
+                src="/images/chart-policy.jpg"
+                alt="Policy — success and failure"
+                className="h-auto w-full rounded-md border border-border"
+              />
+            </figure>
+            {OBAMA_TERMS.map((term) => (
+              <div key={term.who} className="rounded-md border border-border bg-surface p-5">
+                <p className="font-display text-xl font-bold tracking-wide uppercase">
+                  {term.who}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{term.majority}</p>
+                <p className="mt-6 font-display text-xs font-semibold tracking-[0.2em] uppercase">
+                  Helped
+                </p>
+                <BillList rows={term.plus} tone="plus" />
+                <p className="mt-8 font-display text-xs font-semibold tracking-[0.2em] uppercase">
+                  Hurt
+                </p>
+                <BillList rows={term.minus} tone="minus" />
+              </div>
+            ))}
+            {gop ? <PartyFile col={gop} /> : null}
+            {dem ? <PartyFile col={dem} /> : null}
+            <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               {LAWS.map((l) => (
                 <li key={l.href}>
                   <a

@@ -37,19 +37,19 @@ export const DEBT_TALLY: {
   href: string;
 }[] = [
   {
-    who: "Republicans ran both",
+    who: "Republican majority — House and Senate",
     when: "1861–75 · 1881–83 · 1889–91 · 1895–1911 · 1919–31 · 1947–49 · 1953–55 · 1995–2001 · 2003–07 · 2015–19 · 2025–now",
     added: "+$10.96 trillion",
     href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/",
   },
   {
-    who: "Democrats ran both",
+    who: "Democratic majority — House and Senate",
     when: "1857–59 · 1875–81 · 1893–95 · 1913–19 · 1933–47 · 1949–53 · 1955–81 · 1987–95 · 2007–11 · 2021–23",
     added: "+$12.65 trillion",
     href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/",
   },
   {
-    who: "They split the gavel",
+    who: "Split — one chamber each",
     when: "Every other year since 1857 — one house each",
     added: "+$16.48 trillion",
     href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/",
@@ -58,6 +58,86 @@ export const DEBT_TALLY: {
 
 export const DEBT_MATH =
   "$10.96 + $12.65 + $16.48 = $40.09. Before 1857 the two parties did not yet run the modern Congress. The debt then was $29 million.";
+
+/** Article I. Majority control is the purse. */
+export const PURSE = {
+  k: "Congress holds the purse. Majority control is the test.",
+  v: "Article I gives Congress the power of the purse. The Oval spends what Congress votes. Majority control means one party holds the House and the Senate at the same time. Then that party can pass a spending bill without the other. Success and failure on this page are the bills they passed and the prices, the border, and the debt that followed. A speech is not a record.",
+  href: "https://constitution.congress.gov/constitution/article-1/",
+};
+
+/** Obama’s two terms. The purse moved. The journal keeps both. */
+export const OBAMA_TERMS: {
+  who: string;
+  majority: string;
+  plus: { k: string; bill: string; href: string }[];
+  minus: { k: string; bill: string; href: string }[];
+}[] = [
+  {
+    who: "Obama, first term · 2009–13",
+    majority:
+      "Democratic majority, House and Senate, January 2009–January 2011. Then a Republican House. Split.",
+    plus: [
+      {
+        k: "Lilly Ledbetter Fair Pay Act.",
+        bill: "S. 181 · 2009",
+        href: "https://www.congress.gov/bill/111th-congress/senate-bill/181",
+      },
+      {
+        k: "CHIP reauthorized.",
+        bill: "H.R. 2 · 2009",
+        href: "https://www.congress.gov/bill/111th-congress/house-bill/2",
+      },
+    ],
+    minus: [
+      {
+        k: "Stimulus after the crash. The meter jumped.",
+        bill: "H.R. 1 · ARRA · 2009",
+        href: "https://www.congress.gov/bill/111th-congress/house-bill/1",
+      },
+      {
+        k: "ObamaCare: new taxes and a mandate, Democratic majority, 2010.",
+        bill: "H.R. 3590 · 2010",
+        href: "https://www.congress.gov/bill/111th-congress/house-bill/3590",
+      },
+      {
+        k: "CPI 3.9%, September 2011. Split Congress. Obama Oval.",
+        bill: "BLS CPI · September 2011",
+        href: "https://www.bls.gov/news.release/archives/cpi_10192011.htm",
+      },
+    ],
+  },
+  {
+    who: "Obama, second term · 2013–17",
+    majority:
+      "Split until January 2015. Republican majority, House and Senate, 2015–17. The Oval was still Obama. The purse was not.",
+    plus: [
+      {
+        k: "CPI stayed low after 2011. No 9% spike in this term.",
+        bill: "BLS CPI",
+        href: "https://www.bls.gov/cpi/",
+      },
+    ],
+    minus: [
+      {
+        k: "DACA, June 15, 2012, carried through the second term. A memo. Not a vote.",
+        bill: "DHS / USCIS",
+        href: "https://www.uscis.gov/humanitarian/consideration-of-deferred-action-for-childhood-arrivals-daca",
+      },
+      {
+        k: "Southwest Border Patrol, eight fiscal years: 3.31 million. FY2014 unaccompanied-child spike sat in this Oval.",
+        bill: "CBP · FY1960–2019",
+        href: "https://www.cbp.gov/document/stats/us-border-patrol-fiscal-year-southwest-border-sector-apprehensions-fy-1960-fy-2019",
+      },
+      {
+        k: "Republican majority 2015–17 did not close October 1. Debt still climbed on a Republican purse and a Democratic Oval.",
+        bill: "Treasury",
+        href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/",
+      },
+    ],
+  },
+];
+
 
 /** Official statute and table. Always on the page. Not a caption. */
 export const LAWS: { k: string; href: string }[] = [
@@ -359,7 +439,7 @@ export const WORKER = {
 
 export const PRICES = {
   k: "Prices — Democrats held the gavel",
-  v: "9.1 percent in June 2022. Democrats ran both chambers. That is the peak. The live table did not stop there. BLS, August 2026: 3.4 percent over the year. The grocery ticket is still their watch.",
+  v: "9.1 percent in June 2022. Democratic majority in the House and the Senate. That is the peak. The live table did not stop there. BLS, August 2026: 3.4 percent over the year. The grocery ticket is still their watch.",
   links: [
     { label: "BLS — 9.1% in June 2022", href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm" },
     { label: "BLS — live CPI, August 2026 (3.4%)", href: "https://www.bls.gov/news.release/cpi.nr0.htm" },
@@ -617,7 +697,7 @@ export const RECORD: {
   {
     id: "gop",
     party: "Republicans",
-    control: "Ran both the House and the Senate: 1995–2001 · 2003–07 · 2015–19 · 2025–now",
+    control: "Majority control of the House and the Senate: 1995–2001 · 2003–07 · 2015–19 · 2025–now. That is the purse. They could pass a spending bill without Democrats.",
     debt: "Added about $10.96 trillion on those watches since 1995. Last surplus: late 1990s.",
     plus: [
       {
@@ -645,6 +725,16 @@ export const RECORD: {
         bill: "H.R. 1 · Tax Cuts and Jobs Act · 2017",
         href: "https://www.congress.gov/bill/115th-congress/house-bill/1",
       },
+      {
+        k: "Prices stayed down. CPI peak in the first Trump term: 2.9%.",
+        bill: "BLS CPI · 2017–20",
+        href: "https://www.bls.gov/cpi/",
+      },
+      {
+        k: "Southwest Border Patrol FY2025: 237,538. Lowest since 1970.",
+        bill: "CBP · FY2025",
+        href: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters",
+      },
     ],
     minus: [
       {
@@ -656,6 +746,11 @@ export const RECORD: {
         k: "Drug benefit. They did not pay for it.",
         bill: "H.R. 1 · Medicare Part D · 2003",
         href: "https://www.congress.gov/bill/108th-congress/house-bill/1",
+      },
+      {
+        k: "Republican majority 2015–17, Obama still in the Oval. Debt still climbed. They did not close October 1.",
+        bill: "Treasury · Historical Debt Outstanding",
+        href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/",
       },
       {
         k: "COVID checks. Both parties. Then the fraud.",
@@ -672,13 +767,28 @@ export const RECORD: {
   {
     id: "dem",
     party: "Democrats",
-    control: "Ran both the House and the Senate: 1993–95 · 2007–11 · 2021–23",
+    control: "Majority control of the House and the Senate: 1993–95 · 2007–11 · 2021–23. That is the purse. They could pass a spending bill without Republicans. Obama’s first two years sit in 2007–11. His last six years were split, then a Republican majority.",
     debt: "Added about $9.59 trillion on those watches since 1993. TARP. Stimulus. 9.1% prices in 2022.",
     plus: [
       {
         k: "Raised the top tax. Cut the deficit that year.",
         bill: "H.R. 2264 · 1993",
         href: "https://www.congress.gov/bill/103rd-congress/house-bill/2264",
+      },
+      {
+        k: "Lilly Ledbetter Fair Pay Act — first bill of the 111th Congress.",
+        bill: "S. 181 · 2009",
+        href: "https://www.congress.gov/bill/111th-congress/senate-bill/181",
+      },
+      {
+        k: "CHIP — children’s coverage reauthorized.",
+        bill: "H.R. 2 · CHIPRA · 2009",
+        href: "https://www.congress.gov/bill/111th-congress/house-bill/2",
+      },
+      {
+        k: "ObamaCare: some people got a card. That is the help. The tax and the mandate sit under Hurt.",
+        bill: "H.R. 3590 · 2010",
+        href: "https://www.congress.gov/bill/111th-congress/house-bill/3590",
       },
     ],
     minus: [
@@ -726,6 +836,21 @@ export const RECORD: {
         k: "ObamaCare — new taxes, a mandate",
         bill: "H.R. 3590 · 2010",
         href: "https://www.congress.gov/bill/111th-congress/house-bill/3590",
+      },
+      {
+        k: "DACA, June 15, 2012. A memo. Not a statute. Congress did not pass it.",
+        bill: "DHS memo · 2012",
+        href: "https://www.uscis.gov/humanitarian/consideration-of-deferred-action-for-childhood-arrivals-daca",
+      },
+      {
+        k: "Obama’s two terms, southwest Border Patrol: 3.31 million apprehensions, FY2009–16.",
+        bill: "CBP · FY1960–2019 table",
+        href: "https://www.cbp.gov/document/stats/us-border-patrol-fiscal-year-southwest-border-sector-apprehensions-fy-1960-fy-2019",
+      },
+      {
+        k: "CPI 3.9%, September 2011. Obama Oval. Republican House. Split Congress. Still the grocery ticket.",
+        bill: "BLS CPI · September 2011",
+        href: "https://www.bls.gov/news.release/archives/cpi_10192011.htm",
       },
       {
         k: "More spending after COVID",
@@ -1010,7 +1135,7 @@ export const MAJORITY: {
   extra?: { label: string; href: string }[];
 }[] = [
   {
-    who: "Republicans ran both",
+    who: "Republican majority — House and Senate",
     when: "1995–2001 · 2003–07 · 2015–19 · 2025–now",
     could: "They could pass a spending bill without Democrats.",
     did: "Tax cuts. Iraq. Unpaid drug benefit. Border down this term. Debt still up.",
@@ -1021,7 +1146,7 @@ export const MAJORITY: {
     ],
   },
   {
-    who: "Democrats ran both",
+    who: "Democratic majority — House and Senate",
     when: "1993–95 · 2007–11 · 2021–23",
     could: "They could pass a spending bill without Republicans.",
     did: "Raised taxes. Passed ObamaCare. Prices hit 9.1% in 2022. Record border crossings. The debt still went up.",

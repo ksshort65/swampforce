@@ -157,8 +157,8 @@ ax.grid(axis="y", color="#2a2a2a", lw=0.7)
 ax.set_axisbelow(True)
 ax.legend(
     handles=[
-        mpatches.Patch(facecolor=gop_c, label="Republicans ran both chambers"),
-        mpatches.Patch(facecolor=dem_c, label="Democrats ran both chambers"),
+        mpatches.Patch(facecolor=gop_c, label="Republican majority, House and Senate"),
+        mpatches.Patch(facecolor=dem_c, label="Democratic majority, House and Senate"),
         mpatches.Patch(facecolor=split_c, label="Split Congress"),
     ],
     loc="upper left",
@@ -456,7 +456,7 @@ plt.close()
 # Debt bars — easier than a pie
 fig, ax = plt.subplots(figsize=(16, 7), dpi=140, facecolor=bg)
 ax.set_facecolor(bg)
-labels = ["Republicans\nran both", "Democrats\nran both", "Split\ngavel"]
+labels = ["Republican\nmajority", "Democratic\nmajority", "Split\none chamber"]
 vals = [10.96, 12.65, 16.48]
 cols_d = [gop_c, biden_c, split_c]
 y = [2, 1, 0]
