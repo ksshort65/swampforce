@@ -440,6 +440,10 @@ ${TAX_FILE.rows.map((r) => `<tr><td style="border-bottom:1px solid var(--line);p
 </tbody>
 </table>
 <p><a href="${TAX_FILE.href}">EIA — state motor-fuel taxes, January 2026</a></p>
+<p>${esc(TAX_FILE.find)}</p>
+<p><a href="${TAX_FILE.table}">EIA — Federal and State Motor Fuel Taxes (spreadsheet) →</a><br/>
+<a href="${TAX_FILE.page}">EIA — Gasoline and Diesel Fuel Update →</a><br/>
+<a href="${TAX_FILE.fhwa}">FHWA Highway Statistics — motor fuel (Table MF-121T) →</a></p>
 <h2>${esc(RULES_FILE.k)}</h2>
 <p>${esc(RULES_FILE.v)}</p>
 <p><a href="${RULES_FILE.eia}">EIA — factors affecting gasoline prices</a> · <a href="${RULES_FILE.href}">CRS — gasoline prices</a></p>

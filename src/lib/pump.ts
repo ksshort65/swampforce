@@ -36,8 +36,12 @@ export const PUMP_SOURCES = [
     href: "https://www.eia.gov/petroleum/gasdiesel/gaspump_hist.php",
   },
   {
-    label: "EIA — state motor-fuel taxes, January 2026",
-    href: "https://www.eia.gov/todayinenergy/detail.php?id=67165",
+    label: "EIA — Federal and State Motor Fuel Taxes (spreadsheet)",
+    href: "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
+  },
+  {
+    label: "FHWA Highway Statistics — motor fuel",
+    href: "https://www.fhwa.dot.gov/policyinformation/statistics/",
   },
   {
     label: "EIA STEO — world crude, OPEC+",
@@ -151,6 +155,10 @@ export const TAX_FILE = {
   k: "Federal tax, state tax",
   v: "The federal gasoline tax is 18.4 cents a gallon and the federal diesel tax is 24.4 cents a gallon. Both have been unchanged since October 1993. On January 1, 2026, EIA counted state gasoline taxes and fees from 9.0 cents in Alaska to 70.9 cents in California, averaging 33.5 cents. Add the federal 18.4 and the national average tax take is about 52 cents a gallon. California’s combined federal-plus-state bill is about 89 cents. Alaska’s is about 27 cents. Same oil. Different legislatures.",
   href: "https://www.eia.gov/todayinenergy/detail.php?id=67165",
+  find: "How to find a state’s gasoline tax: open EIA’s Federal and State Motor Fuel Taxes spreadsheet. Find the state. The gasoline column is that state’s tax and fees, in cents per gallon. Add 18.4 cents federal. The number on the pump already includes both. FHWA Highway Statistics Table MF-121T is the other official ledger if the spreadsheet is down.",
+  table: "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
+  page: "https://www.eia.gov/petroleum/gasdiesel/",
+  fhwa: "https://www.fhwa.dot.gov/policyinformation/statistics/",
   rows: [
     { k: "Federal gasoline", amt: "18.4¢", note: "Unchanged since October 1993." },
     { k: "Federal diesel", amt: "24.4¢", note: "Unchanged since October 1993." },

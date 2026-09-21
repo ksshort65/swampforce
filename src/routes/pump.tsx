@@ -133,16 +133,49 @@ function PumpPage() {
                 </tbody>
               </table>
             </div>
-            <p className="mt-4 font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase">
-              <a
-                href={TAX_FILE.href}
-                target="_blank"
-                rel="noreferrer"
-                className="text-sage no-underline hover:text-fg"
-              >
-                EIA — state motor-fuel taxes, January 2026 →
-              </a>
-            </p>
+            <p className="mt-8 max-w-3xl text-lg leading-relaxed">{TAX_FILE.find}</p>
+            <ul className="mt-6 space-y-3">
+              <li>
+                <a
+                  href={TAX_FILE.table}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center font-display text-sm font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+                >
+                  EIA — Federal and State Motor Fuel Taxes (spreadsheet) →
+                </a>
+              </li>
+              <li>
+                <a
+                  href={TAX_FILE.page}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center font-display text-sm font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+                >
+                  EIA — Gasoline and Diesel Fuel Update →
+                </a>
+              </li>
+              <li>
+                <a
+                  href={TAX_FILE.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center font-display text-sm font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+                >
+                  EIA — state motor-fuel taxes, January 2026 →
+                </a>
+              </li>
+              <li>
+                <a
+                  href={TAX_FILE.fhwa}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center font-display text-sm font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+                >
+                  FHWA Highway Statistics — motor fuel (Table MF-121T) →
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div className="mt-14 border-t border-border pt-10">
