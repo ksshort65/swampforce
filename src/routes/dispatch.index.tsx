@@ -196,23 +196,23 @@ export function DispatchIndex() {
           >
             <img
               src="/images/chart-iran.jpg"
-              alt="Enrichment: power plant, the 2015 deal, Iran at 60%, a bomb at 90%"
+              alt="The Iranian terrorist regime at 60 percent enrichment"
               className="w-full rounded-lg border border-border"
             />
           </Link>
           <div>
             <h2 className="font-display text-3xl font-bold tracking-wide uppercase sm:text-4xl">
-              Sixty percent.
+              The Iranian terrorist regime at 60 percent.
             </h2>
             <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
-              The IAEA counted 440.9 kilograms of uranium enriched up to 60
-              percent. A civilian power plant runs at about 5 percent. A
-              weapon needs about 90. The last step is the short one.
+              IAEA: 440.9 kilograms of uranium enriched up to 60 percent. The
+              only non-weapon state at that level. Forty-seven years of
+              building the option. The named dead are on the record.
             </p>
             <div className="mt-6">
               <Button asChild>
                 <Link to="/dispatch/$slug" params={{ slug: "sixty-percent" }}>
-                  Sixty percent
+                  Read the file
                   <ArrowRight className="size-4" />
                 </Link>
               </Button>

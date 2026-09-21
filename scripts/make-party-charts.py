@@ -637,12 +637,13 @@ ax.text(0.2, 0.35, "CBP nationwide  ·  CBO 60805 and 61256  ·  NYC Comptroller
 fig.savefig("/workspace/public/images/chart-aliens.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
-fig, ax = plt.subplots(figsize=(16, 8), dpi=140, facecolor=bg)
+fig, axes = plt.subplots(2, 1, figsize=(16, 14), dpi=140, facecolor=bg, gridspec_kw={"height_ratios": [1.05, 1.2]})
+ax = axes[0]
 ax.set_facecolor(bg)
 labels = [
     "Power plant fuel  ·  ~5%",
     "2015 deal cap  ·  3.67%",
-    "Iran, IAEA  ·  60%",
+    "Iranian terrorist regime  ·  IAEA 60%",
     "A bomb  ·  ~90%",
 ]
 vals = [5, 3.67, 60, 90]
@@ -653,15 +654,15 @@ for yi, v, lab in zip(y, vals, labels):
     ax.text(v + 1.5, yi, f"{v:g}%", va="center", fontsize=16, fontweight="bold", color=fg)
 ax.set_yticks(y)
 ax.set_yticklabels(labels, fontsize=13, fontweight="bold")
-ax.set_xlim(0, 110)
+ax.set_xlim(0, 118)
 ax.set_xlabel("U-235 enrichment", fontsize=12, color=muted)
-ax.set_title("60% IS NOT A POWER PLANT", fontsize=22, fontweight="bold", color=fg, pad=18, loc="left")
+ax.set_title("THE IRANIAN TERRORIST REGIME  ·  60%", fontsize=22, fontweight="bold", color=fg, pad=14, loc="left")
 ax.text(
     0.0,
-    1.06,
+    1.08,
     "IAEA, 13 June 2025: 440.9 kg of uranium enriched up to 60% U-235. The only non-weapon state at that level. A bomb is ~90%. The last step is the short one.",
     transform=ax.transAxes,
-    fontsize=12,
+    fontsize=11,
     color=muted,
 )
 for s in ax.spines.values():
@@ -670,16 +671,92 @@ ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 ax.grid(axis="x", color="#2a2a2a", lw=0.7)
 ax.set_axisbelow(True)
+ax.tick_params(colors=fg)
+ax.xaxis.label.set_color(muted)
+
+ax = axes[1]
+ax.set_facecolor(bg)
+years = [1979, 1984, 2002, 2006, 2010, 2015, 2018, 2021, 2025]
+caps = [
+    "Islamic\nRepublic",
+    "State\nsponsor",
+    "Natanz\nrevealed",
+    "UNSC\nresolution",
+    "20%\nenrichment",
+    "JCPOA\n3.67%",
+    "U.S.\nwithdraws",
+    "60%\nstarts",
+    "440.9 kg\nthen locked out",
+]
+ax.plot(years, [1] * len(years), color="#5a564c", lw=2, zorder=1)
+ax.scatter(years, [1] * len(years), s=90, color=biden_c, zorder=2)
+for x, cap in zip(years, caps):
+    ax.text(x, 1.08, cap, ha="center", va="bottom", fontsize=10, color=fg, fontweight="bold")
+    ax.text(x, 0.88, str(x), ha="center", va="top", fontsize=11, color=muted)
+ax.set_xlim(1976, 2028)
+ax.set_ylim(0.7, 1.35)
+ax.axis("off")
+ax.set_title("47 YEARS  ·  1979–2026  ·  THE OPTION ON THE TABLE", fontsize=16, fontweight="bold", color=fg, loc="left", pad=8)
 ax.text(
     0.0,
-    -0.14,
-    "Source: IAEA GOV/2026/50 and GOV/2025/50. Stockpile as of 13 June 2025, last day the Agency could still count it. After the strikes, inspectors have not seen the material.",
+    -0.08,
+    "IAEA GOV/2026/50  ·  IAEA GOV/2026/8  ·  State Department — state sponsor of terrorism, 19 Jan 1984. Inspectors have not seen the 60% stock since June 2025.",
     transform=ax.transAxes,
     fontsize=9,
     color=muted,
 )
 fig.tight_layout()
 fig.savefig("/workspace/public/images/chart-iran.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
+# Named deaths. Not a fake global total. The file that exists.
+fig, ax = plt.subplots(figsize=(16, 9), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+dead = [
+    ("Beirut barracks 1983\nHezbollah  ·  241 U.S.", 241),
+    ("AMIA, Buenos Aires 1994\nHezbollah/Iran  ·  85", 85),
+    ("Khobar Towers 1996\n19 U.S. airmen", 19),
+    ("Iraq 2003–11\nPentagon: Iran-backed  ·  603 U.S.", 603),
+    ("Oct. 7, 2023\nHamas, Iran-enabled  ·  ~1,200", 1200),
+    ("Tower 22, 2024\nIran-backed militia  ·  3 U.S.", 3),
+]
+labs = [d[0] for d in dead]
+vals = [d[1] for d in dead]
+y = list(range(len(dead) - 1, -1, -1))
+ax.barh(y, vals, color=biden_c, height=0.62)
+for yi, v in zip(y, vals):
+    ax.text(v + 18, yi, f"{v:,}", va="center", fontsize=14, fontweight="bold", color=fg)
+ax.set_yticks(y)
+ax.set_yticklabels(labs, fontsize=11)
+ax.set_xlim(0, 1450)
+ax.set_xlabel("Dead  ·  named attacks on the record", fontsize=12, color=muted)
+ax.set_title("THE REGIME AND ITS PROXIES  ·  NAMED DEATHS", fontsize=20, fontweight="bold", color=fg, pad=16, loc="left")
+ax.text(
+    0.0,
+    1.06,
+    "There is no honest single worldwide body count. These are the named files. Pentagon, State, White House, Argentine court. Oct. 7: State said Iran enabled Hamas; ODNI said no evidence of foreknowledge.",
+    transform=ax.transAxes,
+    fontsize=11,
+    color=muted,
+)
+for s in ax.spines.values():
+    s.set_color("#3a3a3a")
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.grid(axis="x", color="#2a2a2a", lw=0.7)
+ax.set_axisbelow(True)
+ax.tick_params(colors=fg)
+ax.xaxis.label.set_color(muted)
+ax.text(
+    0.0,
+    -0.14,
+    "DoD: 603 U.S. in Iraq, 2019. Beirut: 241 U.S. Marines and sailors, 1983. AMIA: 85. Khobar: 19. White House 2026: 46 Americans on Oct. 7. Tower 22: 3. State CRT 2024: leading state sponsor.",
+    transform=ax.transAxes,
+    fontsize=9,
+    color=muted,
+)
+fig.tight_layout()
+fig.savefig("/workspace/public/images/chart-iran-dead.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 print("wrote inflation, policy, border, crime, toll, debt-bars, oval, iran")
 
