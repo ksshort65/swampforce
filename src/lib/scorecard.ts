@@ -1167,6 +1167,19 @@ export const TAX_MOVES: {
   },
 ];
 
+export const HEARING_ABSENCE = {
+  k: "A hearing has no roll call",
+  v: "The Clerk prints Not Voting on a floor vote. No office prints Not Voting for a hearing. A no-show is located one hearing at a time. Open the committee page. Read the chairman’s statement and the ranking member’s statement from that day. Open the webcast. The Senate says the webcast is the whole hearing. Months later, a printed transcript names who was present, if the committee sends it to the Government Publishing Office. An empty witness chair is not an empty member chair. The minority witness rule lets the minority call a witness. A member can sit in the chair and still call none. A business meeting is not a hearing. The notice says which one it is. There is no complete list, so this page will not invent a total.",
+  href: "https://www.senate.gov/committees/committees_faq.htm",
+  rows: [
+    {
+      k: "July 15, 2026. Homeland Security. Exposing Fraud in America. Chairman Paul and Ranking Member Peters both posted opening statements. Neither statement says the Democratic chairs were empty. Posts and a witness video say they were. The written record does not yet. The webcast on the committee page is the check.",
+      bill: "Paul’s statement · Peters’s statement",
+      href: "https://www.hsgac.senate.gov/hearings/exposing-fraud-in-america/",
+    },
+  ],
+};
+
 export const RECORD: {
   id: string;
   party: string;

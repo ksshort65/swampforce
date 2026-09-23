@@ -37,6 +37,7 @@ import {
   PRICES,
   PURSE,
   RECORD,
+  HEARING_ABSENCE,
   SCORE_TABS,
   TAB_CHARTS,
   SCORE_UPDATED,
@@ -46,10 +47,179 @@ import {
   WARFARE,
   FUNNEL,
   OVAL_DESKS,
+  FARM,
 } from "@/lib/scorecard";
 
 type TabId = (typeof SCORE_TABS)[number]["id"];
 type Mode = "charts" | "read";
+
+function FarmBars() {
+  const max = Math.max(...FARM.rows.map((r) => Math.max(r.y2025, r.y2026)));
+  const fileMax = Math.max(FARM.filings.y2024, FARM.filings.y2025);
+  return (
+    <div className="mt-8 rounded-md border border-border bg-surface p-5 sm:p-7">
+      <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+        The wealth ledger · farmers first
+      </p>
+      <h3 className="mt-2 font-display text-2xl font-bold tracking-wide uppercase sm:text-3xl">
+        The farm broke. The paycheck did not.
+      </h3>
+      <p className="mt-4 max-w-3xl text-base leading-relaxed">
+        USDA’s September 3, 2026 forecast puts the cost of farming up $21.2
+        billion in 2026 and the direct government check up $19.5 billion. Net
+        farm income still falls $4.3 billion, to $158.4 billion. The check is
+        not a crop. Congress voted it. In the twelve months ending December 31,
+        2025, the courts counted 315 Chapter 12 cases. A year earlier the count
+        was 216.
+      </p>
+      <div className="mt-6 flex gap-4 font-display text-[11px] tracking-[0.14em] text-muted uppercase">
+        <span className="inline-flex items-center gap-2">
+          <span className="inline-block h-2 w-6 bg-[#3a3a3a]" /> 2025
+        </span>
+        <span className="inline-flex items-center gap-2">
+          <span className="inline-block h-2 w-6 bg-[#c53030]" /> 2026 forecast
+        </span>
+      </div>
+      <div className="mt-5 space-y-6">
+        {FARM.rows.map((r) => (
+          <div key={r.k}>
+            <p className="font-display text-sm font-bold tracking-wide uppercase">
+              {r.k}
+            </p>
+            {(
+              [
+                ["2025", r.y2025, "bg-[#3a3a3a]"],
+                ["2026", r.y2026, "bg-[#c53030]"],
+              ] as const
+            ).map(([year, n, color]) => (
+              <div key={year} className="mt-2 flex items-center gap-3">
+                <div className="h-7 flex-1 rounded-sm bg-ink">
+                  <div
+                    className={`flex h-7 items-center rounded-sm ${color}`}
+                    style={{ width: `${Math.max(8, (n / max) * 100)}%` }}
+                  >
+                    <span className="px-2 font-display text-xs font-bold text-white">
+                      ${n.toFixed(1)}B
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+            <p className="mt-2 text-sm leading-relaxed text-muted">{r.note}</p>
+          </div>
+        ))}
+      </div>
+      <p className="mt-4 text-sm leading-relaxed text-muted">
+        The 2026 bars are the dollars USDA printed. The 2025 bars are that
+        dollar plus or minus the change USDA printed in the same sentence.
+      </p>
+      <a
+        href={FARM.incomeHref}
+        target="_blank"
+        rel="noreferrer"
+        className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+      >
+        USDA — farm income forecast →
+      </a>
+
+      <div className="mt-8 border-t border-border pt-6">
+        <p className="font-display text-sm font-bold tracking-wide uppercase">
+          Chapter 12. Family farmers and fishermen.
+        </p>
+        <div className="mt-3 flex gap-4 font-display text-[11px] tracking-[0.14em] text-muted uppercase">
+          <span className="inline-flex items-center gap-2">
+            <span className="inline-block h-2 w-6 bg-[#3a3a3a]" /> 2024
+          </span>
+          <span className="inline-flex items-center gap-2">
+            <span className="inline-block h-2 w-6 bg-[#c53030]" /> 2025
+          </span>
+        </div>
+        {(
+          [
+            ["2024", FARM.filings.y2024],
+            ["2025", FARM.filings.y2025],
+          ] as const
+        ).map(([year, n]) => (
+          <div key={year} className="mt-2">
+            <div className="h-7 rounded-sm bg-ink">
+              <div
+                className={`flex h-7 items-center rounded-sm ${year === "2025" ? "bg-[#c53030]" : "bg-[#3a3a3a]"}`}
+                style={{ width: `${Math.max(12, (n / fileMax) * 100)}%` }}
+              >
+                <span className="px-2 font-display text-xs font-bold text-white">
+                  {n} filings
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+        <p className="mt-3 text-sm leading-relaxed text-muted">
+          Ninety-nine more families used the farmer bankruptcy in one year.
+          Chapter 12 is not every farm that closed. A farm that lives on an
+          off-farm job often cannot file it.
+        </p>
+        <p className="mt-2 text-sm leading-relaxed">
+          <a
+            href={FARM.filings.href2024}
+            className="text-sage no-underline hover:underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            U.S. Courts, Table F-2, 2024
+          </a>
+          {" · "}
+          <a
+            href={FARM.filings.href2025}
+            className="text-sage no-underline hover:underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Table F-2, 2025
+          </a>
+        </p>
+      </div>
+
+      <p className="mt-6 text-base leading-relaxed">{FARM.loans.k}</p>
+      <a
+        href={FARM.loans.href}
+        target="_blank"
+        rel="noreferrer"
+        className="mt-2 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+      >
+        Kansas City Fed →
+      </a>
+
+      <div className="mt-8 border-t border-border pt-6">
+        <p className="font-display text-sm font-bold tracking-wide uppercase">
+          The people who voted it
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          {FARM.hire.map((h) => (
+            <a
+              key={h.k}
+              href={h.href}
+              target="_blank"
+              rel="noreferrer"
+              className="block rounded-md border border-border bg-ink p-4 text-fg no-underline hover:border-sage"
+            >
+              <p className="font-display text-xs font-bold tracking-[0.16em] text-sage uppercase">
+                {h.k}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed">{h.v}</p>
+            </a>
+          ))}
+        </div>
+        <p className="mt-4 text-sm leading-relaxed text-muted">
+          This page does not invent a portfolio return. It prints the salary,
+          the pension formula, and the statute that left the trade legal. A
+          member who owns qualifying acres can also receive the same USDA
+          payment the chamber voted. The disclosure shows an asset range. It
+          does not stop the check.
+        </p>
+      </div>
+    </div>
+  );
+}
 
 function ChartStack({ tab }: { tab: TabId }) {
   return (
@@ -166,6 +336,23 @@ function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
       ) : null}
       <p className="mt-3 text-sm leading-relaxed text-muted">{col.control}</p>
       <p className="mt-2 text-sm leading-relaxed">{col.debt}</p>
+      {col.id === "dem" ? (
+        <div className="mt-8">
+          <p className="font-display text-xs font-semibold tracking-[0.2em] text-[#c53030] uppercase">
+            {HEARING_ABSENCE.k}
+          </p>
+          <p className="mt-3 text-sm leading-relaxed">{HEARING_ABSENCE.v}</p>
+          <a
+            href={HEARING_ABSENCE.href}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+          >
+            Senate — how to find a hearing →
+          </a>
+          <BillList rows={HEARING_ABSENCE.rows} tone="minus" />
+        </div>
+      ) : null}
       <figure className="mt-6">
         <img
           src="/images/chart-policy.jpg"
@@ -806,6 +993,7 @@ export function MidtermScorecard() {
           network manufactured. Vote the facts. Every number on this
           page is a government file.
         </p>
+        <FarmBars />
         <div className="mt-8 grid grid-cols-5 gap-2">
           {SCORE_TABS.map((f) => (
             <button
