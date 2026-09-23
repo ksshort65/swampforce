@@ -1743,6 +1743,7 @@ export const posts: Post[] = [
 				doc: "Durham report",
 				docs: [
 					{ label: "Horowitz IG — FISA", href: "https://oig.justice.gov/reports/2019/o1912.pdf" },
+					{ label: "Mueller report, volume 1", href: "https://www.justice.gov/storage/report_volume1.pdf" },
 					{ label: "Barr remarks on the Mueller report", href: "https://www.justice.gov/archives/opa/speech/attorney-general-william-p-barr-delivers-remarks-release-report-investigation-russian" },
 					{ label: "H.Res. 630 — the collusion claim", href: "https://www.congress.gov/congressional-record/volume-165/issue-163/house-section/article/H8153-5" },
 				],
@@ -1781,6 +1782,12 @@ export const posts: Post[] = [
 				file: "Florida was dismissed as to him. Georgia was abandoned. The District of Columbia was dismissed without prejudice, which is not an acquittal. Manhattan is a records conviction, still on appeal, sentenced to no jail and no fine. The country was split on four verdicts. Three of the cases never reached one.",
 				href: "https://www.courtlistener.com/docket/67656595/united-states-v-trump/",
 				doc: "District of Columbia docket",
+				docs: [
+					{ label: "District of Columbia indictment", href: "https://www.justice.gov/storage/US_v_Trump_23_cr_257.pdf" },
+					{ label: "Order dismissing it — November 25, 2024", href: "https://www.courtlistener.com/docket/67656595/283/united-states-v-trump/" },
+					{ label: "Florida — order dismissing the documents case", href: "https://www.courtlistener.com/docket/67490071/672/united-states-v-trump/" },
+					{ label: "Manhattan indictment", href: "https://www.manhattanda.org/wp-content/uploads/2023/04/Donald-J.-Trump-Indictment.pdf" },
+				],
 			},
 		],
 		body: [
@@ -3313,6 +3320,9 @@ export const posts: Post[] = [
 				file: "Who paid her lawyers: a public CrowdJustice page. By June 2018 that page had taken in more than half a million dollars. The donations were mostly small, and the donors were not named in a judgment. Her lawyer, Michael Avenatti, said the fees were hers or that page, and that he had not looked at who gave. No court finding identifies a party committee as the source. The tweet called a sketch a con. On December 11, 2018, Judge Otero ordered her to pay $293,052.33 in fees, costs, and sanctions, and closed the case. Appeals raised what was owed. At the criminal trial in May 2024 she still had not paid, and she had said she would go to jail first. In October 2024 her lawyer said the judgments were settled for $627,500 and released. This file does not contain the clerk’s satisfaction. The order that she owed him is the court record. “Still owes” was true at the trial. It is not what her lawyer said five months later. The criminal case was the People’s. She was a witness in it. She was not the plaintiff.",
 				href: "https://www.courtlistener.com/docket/7649164/stephanie-clifford-v-donald-j-trump/",
 				doc: "Clifford v. Trump — the fee order",
+				docs: [
+					{ label: "Order — she pays $293,052.33 — December 11, 2018", href: "https://www.courtlistener.com/docket/7649164/46/stephanie-clifford-v-donald-j-trump/" },
+				],
 			},
 			{
 				caption: "Carroll — she filed the day the window opened",
@@ -3336,6 +3346,9 @@ export const posts: Post[] = [
 				file: "This is the Letitia James case. It is not the 34 counts. The statements of financial condition priced Mar-a-Lago between $347 million and $739 million. The figure placed next to that was Palm Beach County’s tax valuation, about $18 million to $27 million. The appeals court said neither the Attorney General nor the trial judge appraised the club at $18 million. They used the tax office’s number, a number the owner had accepted for a tax bill. A tax assessment is what the county uses to send the bill. It is not the price a buyer pays. Deutsche Bank made three of the loans. The loans were never put in default. Nicholas Haigh of the bank testified that getting the principal back does not answer whether the bank was paid for the risk. David Williams of the bank testified that the reported net worth was well above the bank’s minimum. The trial penalty was $363,894,816, plus interest, $464,576,230.62 in all. On August 21, 2025, the Appellate Division vacated every dollar of that disgorgement. One opinion in the case said there was no causal connection between the valuations and the money the judgment tried to take. The liability finding was left standing. It was never a criminal charge.",
 				href: "https://www.nycourts.gov/reporter/3dseries/2025/2025_04756.htm",
 				doc: "Appellate Division — August 21, 2025",
+				docs: [
+					{ label: "The opinion — 2025 NY Slip Op 04756", href: "https://www.nycourts.gov/reporter/3dseries/2025/2025_04756.htm" },
+				],
 			},
 			{
 				caption: "Florida — the documents case",
@@ -3345,6 +3358,9 @@ export const posts: Post[] = [
 				file: "She dismissed the case against him on July 15, 2024. The special counsel dropped the appeal as to him after the election. There is no jury verdict. The caption outlived the docket.",
 				href: "https://www.courtlistener.com/docket/67490071/united-states-v-trump/",
 				doc: "Florida docket — 9:23-cr-80101",
+				docs: [
+					{ label: "Order dismissing the indictment — July 15, 2024", href: "https://www.courtlistener.com/docket/67490071/672/united-states-v-trump/" },
+				],
 			},
 			{
 				caption: "The District of Columbia",
@@ -3354,6 +3370,10 @@ export const posts: Post[] = [
 				file: "The counts were conspiracy to defraud the United States, obstruction of an official proceeding, and conspiracy against rights. Not 18 U.S.C. § 2383. Dismissed without prejudice on November 25, 2024, because a sitting president is not prosecuted. Without prejudice is not a verdict of innocence. It is also not the conviction the country had already been told was a fact.",
 				href: "https://www.courtlistener.com/docket/67656595/united-states-v-trump/",
 				doc: "District of Columbia docket — 1:23-cr-00257",
+				docs: [
+					{ label: "Indictment", href: "https://www.justice.gov/storage/US_v_Trump_23_cr_257.pdf" },
+					{ label: "Order dismissing it without prejudice — November 25, 2024", href: "https://www.courtlistener.com/docket/67656595/283/united-states-v-trump/" },
+				],
 			},
 			{
 				caption: "Georgia — the case was abandoned",
@@ -3362,6 +3382,13 @@ export const posts: Post[] = [
 				source: "Fulton County Superior Court No. 23SC188947, Judge Scott McAfee.",
 				file: "The Georgia Court of Appeals disqualified District Attorney Fani Willis and her office. Prosecutor Peter Skandalakis then moved to abandon the case. On November 26, 2025 the judge entered a nolle prosequi. He wrote there was no realistic prospect of trying a sitting president before January 20, 2029. The split was made at the announcement. The file ends with the case dropped.",
 				href: "https://www.fultonclerk.org/",
+				doc: "Fulton County — 23SC188947",
+				docs: [
+					{
+						label: "Georgia Supreme Court — the disqualification, September 16, 2025",
+						href: "https://www.gasupreme.us/wp-content/uploads/2025/09/s25c0587.pdf",
+					},
+				],
 			},
 			{
 				caption: "The White House briefing — August 3, 2016",
@@ -3380,6 +3407,9 @@ export const posts: Post[] = [
 				file: "Obama said he was not asking about, initiating, or instructing anything from a law-enforcement perspective, and that it should be handled by the book. Comey said he was proceeding by the book, and then said he had concerns about Michael Flynn’s talks with the Russian ambassador and that sensitive Russia information might not be passed to Flynn. Comey said he had no indication Flynn had passed classified information. The White House, the FBI, and the Justice Department were in one room, on the incoming hire, fifteen days before the inauguration. The email is the file. It is not a transcript of a plot, and it is not a wall.",
 				href: "https://en.wikisource.org/wiki/Susan_Rice_January_20%2C_2017_E-mail_to_Self",
 				doc: "Rice email to herself — January 20, 2017",
+				docs: [
+					{ label: "Durham report — the January 5 meeting", href: "https://www.justice.gov/storage/durhamreport.pdf" },
+				],
 			},
 			{
 				caption: "One lawyer, three offices",
@@ -3407,6 +3437,9 @@ export const posts: Post[] = [
 				file: "The order is the Attorney General’s. It does not recite a White House directive. Garland named the political calendar as the reason a special counsel was required. Judge Cannon later dismissed the documents case against Trump because the appointment was unlawful. The District of Columbia case was dismissed without prejudice after the election, on the government’s motion. Two federal cases, one prosecutor, appointed because both candidates were running. That is the paper. An order from the President is not on it.",
 				href: "https://www.justice.gov/archives/opa/speech/attorney-general-merrick-b-garland-delivers-remarks-appointment-special-counsel",
 				doc: "Garland — appointment of the special counsel",
+				docs: [
+					{ label: "Order No. 5559-2022", href: "https://www.justice.gov/d9/press-releases/attachments/2022/11/18/2022.11.18_order_5559-2022.pdf" },
+				],
 			},
 		],
 		body: [
