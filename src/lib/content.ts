@@ -3330,12 +3330,12 @@ export const posts: Post[] = [
 			},
 			{
 				caption: "Letitia James · civil fraud",
-				sold: "Sold as a finding: fraud, about $464 million, barred from business in New York, done. A trial judgment was reported in the grammar of a final fact. It was a civil case. It was not finished.",
-				evidence: "A fraud lawsuit, not a criminal charge. A trial judgment and a penalty of about $464 million.",
-				source: "People v. Trump, Index No. 452564/2022, Justice Arthur Engoron. The appeal in the Appellate Division, First Department.",
-				file: "The intermediate court threw out the money as an excessive fine. The finding of liability is in the New York Court of Appeals. It was never a criminal charge. Neighbors argued a number the appeals court had not finished with.",
-				href: "https://iapps.courts.state.ny.us/webcivil/FCASSearch",
-				doc: "New York civil — Index 452564/2022",
+				sold: "Sold as a finding: he inflated Mar-a-Lago, the banks were cheated, and he owed about $464 million. It was a civil case. The money was thrown out.",
+				evidence: "Letitia James. Civil fraud. Not a criminal charge. The statements priced Mar-a-Lago from $347 million to $739 million. The number set beside it was the county tax bill.",
+				source: "People v. Trump, Index No. 452564/2022, Justice Arthur Engoron. People v. Trump, 2025 NY Slip Op 04756, Appellate Division, First Department, August 21, 2025.",
+				file: "This is the Letitia James case. It is not the 34 counts. The statements of financial condition priced Mar-a-Lago between $347 million and $739 million. The figure placed next to that was Palm Beach County’s tax valuation, about $18 million to $27 million. The appeals court said neither the Attorney General nor the trial judge appraised the club at $18 million. They used the tax office’s number, a number the owner had accepted for a tax bill. A tax assessment is what the county uses to send the bill. It is not the price a buyer pays. Deutsche Bank made three of the loans. The loans were never put in default. Nicholas Haigh of the bank testified that getting the principal back does not answer whether the bank was paid for the risk. David Williams of the bank testified that the reported net worth was well above the bank’s minimum. The trial penalty was $363,894,816, plus interest, $464,576,230.62 in all. On August 21, 2025, the Appellate Division vacated every dollar of that disgorgement. One opinion in the case said there was no causal connection between the valuations and the money the judgment tried to take. The liability finding was left standing. It was never a criminal charge.",
+				href: "https://www.nycourts.gov/reporter/3dseries/2025/2025_04756.htm",
+				doc: "Appellate Division — August 21, 2025",
 			},
 			{
 				caption: "Florida — the documents case",

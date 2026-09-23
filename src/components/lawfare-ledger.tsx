@@ -11,7 +11,7 @@ const LINE: Record<string, string> = {
   "Carroll — she filed the day the window opened":
     "She filed the sexual-abuse case the day the one-year window opened. The verdict form said sexual abuse, not rape. The $83 million case is defamation, and that appeal is the one still open.",
   "Letitia James · civil fraud":
-    "This is Letitia James. It is a civil fraud case. It is not the 34 counts. The appeals court threw out the penalty as an excessive fine. It was never a criminal charge.",
+    "This is Letitia James. Civil, not the 34 counts. Mar-a-Lago on the statements was $347 million to $739 million. The comparison was the county tax bill, about $18 million to $27 million. A tax assessment is not a sale. The Deutsche Bank loans were never in default. The bank’s witness said getting the principal back is not the same as being paid for the risk. The $464 million penalty was vacated on August 21, 2025.",
   "Florida — the documents case":
     "No trial and no conviction. Judge Cannon dismissed the documents case. The government dropped what remained.",
   "The District of Columbia":
