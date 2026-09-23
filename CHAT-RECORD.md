@@ -37,6 +37,12 @@ These are not on the live page. They are not deleted from git if a copy was save
 6. The pump page from before the collapse was only partly recovered. The cut-off copy is `recovered-pre-collapse/pump.partial.pre-collapse.tsx`. The live pump is the complete earlier page plus the short-version button.
 7. This file is the chat record that could be written into the repo. The week of messages was not a file on disk, so it cannot be pasted back word for word.
 
+## Snapshot
+
+2:09 PM MDT, September 23, 2026. `main` matched GitHub before this note. No page was changed for this commit. The gap list above was still the gap list.
+
+
 ## Standing rule
 
 Nothing on the site is erased unless the owner says the specific word. Every change is pushed to `main`.
+
