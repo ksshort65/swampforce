@@ -135,12 +135,12 @@ for y, v, b in zip(years, vals, bars):
     if v >= 3.4 or y in (2021, 2022, 2023):
         ax.text(y, v + 0.18, f"{v:.1f}", ha="center", va="bottom", fontsize=8, color=fg, fontweight="bold")
 ax.axhline(0, color="#5a564c", lw=0.8)
-ax.set_ylabel("Actual CPI-U that year  ·  percent", fontsize=12, color=muted)
+ax.set_ylabel("Actual Consumer Price Index that year  ·  percent", fontsize=12, color=muted)
 ax.set_title("ACTUAL INFLATION  ·  WHO HELD CONGRESS", fontsize=20, fontweight="bold", color=fg, pad=16, loc="left")
 ax.text(
     0.0,
     1.02,
-    "CPI is the Consumer Price Index — what it cost to live versus a year earlier. Bar color = House and Senate same party. Names on top = Oval. 9.1% is Democrats in Congress, June 2022.",
+    "The Consumer Price Index is what it cost to live versus a year earlier. Bar color = who ran the House and the Senate.",
     transform=ax.transAxes,
     fontsize=11,
     color=muted,
@@ -169,81 +169,13 @@ ax.legend(
 ax.text(
     0.0,
     -0.12,
-    "Source: BLS CPI-U annual. Peak month 9.1% June 2022 — Democrats held both chambers (2021–23). Live table: August 2026 is 3.4%.",
+    "BLS Consumer Price Index, annual. Peak month 9.1 percent June 2022 — Democrats held both chambers. August 2026: 3.4 percent.",
     transform=ax.transAxes,
     fontsize=9,
     color=muted,
 )
 fig.tight_layout()
 fig.savefig("/workspace/public/images/chart-inflation-party.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
-plt.close()
-
-# Policy success / failure — two columns, the bills
-fig, axes = plt.subplots(1, 2, figsize=(16, 10), dpi=140, facecolor=bg)
-fig.suptitle("POLICY  ·  SUCCESS AND FAILURE", fontsize=22, fontweight="bold", color=fg, x=0.02, ha="left")
-fig.text(
-    0.02,
-    0.93,
-    "The bill. Not the speech. Republicans left, Democrats right. Helped is the paycheck. Hurt is the tab.",
-    fontsize=11,
-    color=muted,
-)
-
-gop_help = [
-    "1996  Welfare — work or the check stops",
-    "1997  Tax cut on savings",
-    "2001  Tax cut · H.R. 1836",
-    "2003  Tax cut · H.R. 2",
-    "2017  Tax Cuts and Jobs Act. Not a surplus.",
-]
-gop_hurt = [
-    "2002  Iraq — they voted yes",
-    "2003  Medicare Part D unpaid",
-    "2015–19  Majority. Still no October 1.",
-    "Every year  Budget never on time",
-]
-dem_help = [
-    "1993  Raised the top tax. Cut that year's deficit.",
-    "2009  CHIP reauthorized",
-    "2009  Lilly Ledbetter Fair Pay",
-]
-dem_hurt = [
-    "2008  TARP — they voted yes",
-    "2009  ARRA stimulus",
-    "2010  ACA — taxes and a mandate",
-    "2021  Rescue Plan",
-    "2021–23  Majority while the border opened",
-    "2022  CPI 9.1% — they held both chambers",
-    "Every year  Budget never on time",
-]
-
-def panel(ax, title, helped, hurt):
-    ax.set_facecolor(bg)
-    ax.set_xlim(0, 10)
-    ax.set_ylim(0, 14)
-    ax.axis("off")
-    ax.set_title(title, fontsize=16, fontweight="bold", color=fg, loc="left", pad=8)
-    ax.text(0.2, 12.6, "HELPED", fontsize=12, fontweight="bold", color=help_c)
-    y = 12.0
-    for line in helped:
-        ax.text(0.3, y, "▸  " + line, fontsize=11, color=fg, va="top")
-        y -= 0.7
-    ax.text(0.2, y - 0.2, "HURT", fontsize=12, fontweight="bold", color=hurt_c)
-    y -= 0.9
-    for line in hurt:
-        ax.text(0.3, y, "▸  " + line, fontsize=11, color=muted, va="top")
-        y -= 0.7
-
-panel(axes[0], "REPUBLICAN MAJORITY", gop_help, gop_hurt)
-panel(axes[1], "DEMOCRATIC MAJORITY", dem_help, dem_hurt)
-fig.text(
-    0.02,
-    0.03,
-    "Congress.gov bills. BLS June 2022. CBP encounters FY2021–24. Split years are not in this chart — tap Split.",
-    fontsize=9,
-    color=muted,
-)
-fig.savefig("/workspace/public/images/chart-policy.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
 # Open border — actual encounters, not an average
@@ -504,44 +436,61 @@ fig.tight_layout()
 fig.savefig("/workspace/public/images/chart-debt-bars.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
-fig, axes = plt.subplots(1, 2, figsize=(16, 7), dpi=140, facecolor=bg)
 labs = ["Obama\nFY09–16", "Trump 1\nFY17–20", "Biden\nFY21–24", "Trump 2\nFY25–"]
 enc = [3.31, 3.00, 10.83, 0.69]
 cpi = [3.9, 2.9, 9.1, 4.2]
 cols_o = [obama_c, trump_c, biden_c, trump_c]
-ax = axes[0]
+
+fig, ax = plt.subplots(figsize=(16, 7.6), dpi=140, facecolor=bg)
 ax.set_facecolor(bg)
 ax.bar(labs, enc, color=cols_o, width=0.62)
-ax.set_title("NATIONWIDE ENCOUNTERS", fontsize=16, fontweight="bold", color=fg, loc="left")
-ax.set_ylabel("Millions", color=muted)
+ax.set_title("THE OVAL  ·  BORDER ENCOUNTERS", fontsize=20, fontweight="bold", color=fg, loc="left", pad=16)
+ax.set_ylabel("Millions", color=muted, fontsize=12)
 for i, v in enumerate(enc):
-    ax.text(i, v + 0.15, f"{v:.2f}M", ha="center", fontsize=12, fontweight="bold", color=fg)
+    ax.text(i, v + 0.15, f"{v:.2f}M", ha="center", fontsize=14, fontweight="bold", color=fg)
 ax.set_ylim(0, 13)
-ax = axes[1]
-ax.set_facecolor(bg)
-ax.bar(labs, cpi, color=cols_o, width=0.62)
-ax.set_title("HIGHEST PRICE SPIKE  ·  CPI", fontsize=16, fontweight="bold", color=fg, loc="left")
-ax.set_ylabel("Percent higher than a year earlier", color=muted)
-for i, v in enumerate(cpi):
-    ax.text(i, v + 0.15, f"{v:.1f}%", ha="center", fontsize=12, fontweight="bold", color=fg)
-ax.set_ylim(0, 11)
-for ax in axes:
-    for s in ax.spines.values():
-        s.set_color("#3a3a3a")
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    ax.tick_params(colors=fg)
-    ax.yaxis.label.set_color(muted)
-fig.suptitle("THE OVAL — SAME METERS", fontsize=22, fontweight="bold", color=fg, x=0.02, ha="left")
-fig.text(
-    0.02,
-    0.02,
-    "CPI peak is the highest 12-month reading in that Oval — not a four-year average. Obama Sept 2011 3.9%. Trump 1: 2.9%. Biden June 2022 9.1%. Trump 2 so far: 4.2% May 2026. Encounters: Obama southwest Border Patrol. Trump 1 / Biden / Trump 2 nationwide. FY2025 started under Biden; the Oval changed January 20.",
-    fontsize=9,
+for s in ax.spines.values():
+    s.set_color("#3a3a3a")
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.tick_params(colors=fg)
+ax.yaxis.label.set_color(muted)
+ax.text(
+    0.0,
+    -0.14,
+    "An encounter is a person Customs and Border Protection met who was not making a lawful entry. Obama: southwest Border Patrol. Trump 1, Biden, Trump 2: nationwide.",
+    transform=ax.transAxes,
+    fontsize=10,
     color=muted,
 )
-fig.tight_layout(rect=(0, 0.06, 1, 0.92))
-fig.savefig("/workspace/public/images/chart-oval.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+fig.tight_layout()
+fig.savefig("/workspace/public/images/chart-oval-encounters.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
+plt.close()
+
+fig, ax = plt.subplots(figsize=(16, 7.6), dpi=140, facecolor=bg)
+ax.set_facecolor(bg)
+ax.bar(labs, cpi, color=cols_o, width=0.62)
+ax.set_title("THE OVAL  ·  HIGHEST PRICE SPIKE", fontsize=20, fontweight="bold", color=fg, loc="left", pad=16)
+ax.set_ylabel("Percent higher than a year earlier", color=muted, fontsize=12)
+for i, v in enumerate(cpi):
+    ax.text(i, v + 0.15, f"{v:.1f}%", ha="center", fontsize=14, fontweight="bold", color=fg)
+ax.set_ylim(0, 11)
+for s in ax.spines.values():
+    s.set_color("#3a3a3a")
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.tick_params(colors=fg)
+ax.yaxis.label.set_color(muted)
+ax.text(
+    0.0,
+    -0.14,
+    "Consumer Price Index — highest 12-month rise in that Oval. The higher grocery ticket does not reset. The next Oval inherits the floor.",
+    transform=ax.transAxes,
+    fontsize=10,
+    color=muted,
+)
+fig.tight_layout()
+fig.savefig("/workspace/public/images/chart-oval-prices.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
 # One debt chart: the driver, fraud from no oversight, full-time pay for part-time hours
@@ -597,7 +546,7 @@ ax.text(0.2, 1.5, "BOTH", fontsize=13, fontweight="bold", color=muted)
 ax.text(
     0.2,
     1.05,
-    "Twelve appropriations by October 1 — they pass none. Last surplus: FY2001.\nLack of oversight is how fraud became a line on a $40 trillion card. The purse is Article I.",
+    "Twelve appropriations by October 1 — they pass none. Last surplus: FY2001.\nLack of oversight is how fraud became a line on a $40 trillion card — and how grants leave without the names on the 990.",
     fontsize=12,
     color=fg,
     va="top",
@@ -605,7 +554,7 @@ ax.text(
 ax.text(
     0.2,
     0.2,
-    "Treasury Debt to the Penny  ·  CBO  ·  GAO  ·  CRS RL30064  ·  2 U.S.C. § 1415  ·  Budget Act 1974",
+    "Treasury Debt to the Penny  ·  CBO  ·  GAO  ·  CRS RL30064  ·  2 U.S.C. § 1415  ·  26 U.S.C. § 6104",
     fontsize=10,
     color=muted,
 )
@@ -618,15 +567,22 @@ ax.set_facecolor(bg)
 ax.set_xlim(0, 10)
 ax.set_ylim(0, 10)
 ax.axis("off")
-ax.text(0.2, 9.4, "THE INVASION BILL", fontsize=26, fontweight="bold", color=fg)
-ax.text(0.2, 8.85, "10.83 million nationwide encounters, FY2021–24. Democrats held the Oval and majority 2021–23.", fontsize=13, color=muted)
+ax.text(0.2, 9.55, "THE INVASION BILL", fontsize=26, fontweight="bold", color=fg, va="top")
+ax.text(
+    0.2,
+    8.95,
+    "10.83 million nationwide encounters, FY2021–24. Democrats held the Oval and majority 2021–23.",
+    fontsize=13,
+    color=muted,
+    va="top",
+)
 costs = [("$16.2B", "Emergency Medicaid  ·  Biden years  ·  CBO"), ("$9.2B", "States and cities, net, 2023  ·  CBO"), ("$8.13B", "NYC shelter actuals FY2023–25"), ("310,000", "Noncitizens on SSI  ·  SSA, Dec 2025")]
 for i, (n, cap) in enumerate(costs):
     x = 0.3 + (i % 2) * 4.8
-    y = 7.4 - (i // 2) * 1.7
-    ax.add_patch(plt.Rectangle((x, y), 4.4, 1.45, facecolor="#141414", edgecolor="#3a3a3a"))
-    ax.text(x + 0.2, y + 0.85, n, fontsize=22, fontweight="bold", color=biden_c)
-    ax.text(x + 0.2, y + 0.3, cap, fontsize=12, color=fg)
+    y = 6.55 - (i // 2) * 1.85
+    ax.add_patch(plt.Rectangle((x, y), 4.4, 1.6, facecolor="#141414", edgecolor="#3a3a3a"))
+    ax.text(x + 0.25, y + 1.05, n, fontsize=22, fontweight="bold", color=biden_c, va="center")
+    ax.text(x + 0.25, y + 0.42, cap, fontsize=12, color=fg, va="center")
 ax.text(0.2, 3.7, "HOW THEY BECAME ELIGIBLE  ·  NOT A STATUTE THEY COULD PASS", fontsize=14, fontweight="bold", color=fg)
 doors = "1  Cross.  2  Parole or asylum (CHNV and the rest — a memo).  3  An SSN.  4  8 U.S.C. § 1611 already barred most federal benefits.\nThey left the doors: parole, asylum, refugee (§ 1641). That is how an invasion becomes a welfare line."
 ax.text(0.2, 3.15, doors, fontsize=13, color=fg, va="top")
@@ -756,7 +712,7 @@ ax.text(
 fig.tight_layout()
 fig.savefig("/workspace/public/images/chart-iran-dead.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
-print("wrote inflation, policy, border, crime, toll, debt-bars, oval, iran")
+print("wrote inflation, helped-hurt, border, crime, toll, debt-bars, oval, iran")
 
 fig, ax = plt.subplots(figsize=(16, 9), dpi=140, facecolor=bg)
 ax.set_facecolor(bg)
@@ -810,11 +766,11 @@ plt.close()
 
 # Congress + Oval, helped and hurt, one page
 fig = plt.figure(figsize=(16, 14), dpi=140, facecolor=bg)
-fig.text(0.02, 0.97, "HELPED AND HURT  ·  CONGRESS AND THE OVAL", fontsize=22, fontweight="bold", color=fg, va="top")
+fig.text(0.02, 0.97, "HELPED AND HURT", fontsize=22, fontweight="bold", color=fg, va="top")
 fig.text(
     0.02,
     0.935,
-    "Majority control is the purse. The Oval spends what Congress votes. Four Ovals on the meters. The bill, not the speech.",
+    "The bill, not the speech. Majority control is the purse. The Oval spends what Congress votes. Four Ovals on the meters.",
     fontsize=12,
     color=muted,
     va="top",
@@ -846,7 +802,7 @@ ax_d = fig.add_subplot(gs[0, 2:])
 box(
     ax_g,
     "CONGRESS  ·  REPUBLICAN MAJORITY",
-    ["Welfare 1996 — work or the check stops", "Tax cuts 2001, 2003, 2017"],
+    ["Welfare 1996 — work or the check stops", "Tax cut on savings 1997", "Tax cuts 2001, 2003, 2017"],
     ["Iraq — they voted yes", "Medicare Part D unpaid", "Never close October 1"],
     gop_c,
 )
@@ -854,32 +810,32 @@ box(
     ax_d,
     "CONGRESS  ·  DEMOCRATIC MAJORITY",
     ["1993 tax raised the top rate", "CHIP reauthorized 2009", "Ledbetter Fair Pay 2009"],
-    ["10.83 million encounters FY21–24", "CPI 9.1% June 2022", "Rescue Plan 2021", "Parole into benefits"],
+    ["10.83M encounters FY21–24", "Helene and Maui waited; aliens got the grant", "OASI empty 2032 — 78% of the check", "Prices 9.1% June 2022"],
     dem_c,
 )
 ovals = [
     (
         "OBAMA  ·  DEM OVAL",
         ["CHIP  ·  Ledbetter", "No 9% spike in term two"],
-        ["ARRA  ·  ACA taxes and mandate", "DACA memo, not a vote", "CPI peak 3.9%  ·  3.31M SW BP"],
+        ["ARRA  ·  ACA taxes and mandate", "DACA memo, not a vote", "Prices peaked 3.9%  ·  3.31M SW BP"],
         obama_c,
     ),
     (
         "TRUMP 1  ·  GOP OVAL",
-        ["CPI peak 2.9%", "Gas peak $2.962", "Tax Cuts and Jobs Act 2017"],
+        ["Prices peaked 2.9%", "Gas peak $2.962", "Tax Cuts and Jobs Act 2017"],
         ["CARES  ·  both parties", "Murder rate 6.6 in 2020"],
         trump_c,
     ),
     (
         "BIDEN  ·  DEM OVAL",
         ["IIJA 2021  ·  CHIPS 2022"],
-        ["CPI peak 9.1% June 2022", "Gas $5.006  ·  June 13, 2022", "10.83 million nationwide"],
+        ["Prices peaked 9.1% June 2022", "Gas $5.006  ·  June 13, 2022", "10.83 million nationwide"],
         biden_c,
     ),
     (
         "TRUMP 2  ·  GOP OVAL",
         ["FBI 2025 murder 4.1 — lowest since 1956", "EO 14252 — monuments, graffiti, DC"],
-        ["CPI so far 4.2%  ·  May 2026", "Gas $4.50  ·  May 11, 2026"],
+        ["Prices so far 4.2%  ·  May 2026", "Gas $4.50  ·  May 11, 2026"],
         trump_c,
     ),
 ]
@@ -923,24 +879,24 @@ ax.text(0.4, 0.35, "Article II  ·  Durham  ·  Horowitz IG  ·  Congress.gov  �
 fig.savefig("/workspace/public/images/chart-lawfare.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
-fig, ax = plt.subplots(figsize=(16, 9), dpi=140, facecolor=bg)
+fig, ax = plt.subplots(figsize=(16, 11.2), dpi=140, facecolor=bg)
 ax.set_facecolor(bg)
 ax.set_xlim(0, 16)
-ax.set_ylim(0, 9)
+ax.set_ylim(0, 11.2)
 ax.axis("off")
-ax.text(0.4, 8.5, "THE FUNNEL", fontsize=26, fontweight="bold", color=fg, va="top")
-ax.text(0.4, 7.85, "Taxpayer  →  appropriation  →  agency  →  NGO. No line item that says DNC.", fontsize=13, color=muted, va="top")
-cols = [
-    (0.4, "USAID", "$43.8B of $71.9B\nforeign aid, FY2023", "OIG: $36M cash to 4 NGOs\n$650M humanitarian awards\n$25.9B audited", gop_c),
-    (5.6, "FEMA / NGOs", "$1.4B SSP + EFSP-H\nFY2023–24", "84 non-federal entities\nOIG: cannot ensure\nthe law was followed", dem_c),
-    (10.8, "NED / institutes", "$315M  ·  FY2024", "NDI and IRI\nParty-aligned shops\nNot the national committees", "#d8d0c0"),
+ax.text(0.4, 10.85, "THE FUNNEL", fontsize=26, fontweight="bold", color=fg, va="top")
+ax.text(0.4, 10.15, "Taxpayer grant. Private nonprofit. Public 990 with the names cut out.\nAmerica funds a pipe it cannot see. That is a failure of oversight.", fontsize=13, color=muted, va="top")
+cells = [
+    (0.4, 4.85, "TAXPAYER GRANTS", "USAID $43.8B of $71.9B.\nFEMA shelter $1.4B.\nNED $315M to party-aligned shops.\nUSASpending is the ledger.", gop_c),
+    (8.2, 4.85, "DONOR NAMES REDACTED", "26 U.S.C. § 6104.\nMost 501(c) public 990s hide\nSchedule B names. The IRS has them.\nThe country does not. That is the dark.", dem_c),
+    (0.4, 0.7, "PROSECUTOR MONEY", "527s and FEC committees list\nlarge donors, including George Soros,\nto district-attorney races.\nThe 501(c)(4) feeder does not.", gop_c),
+    (8.2, 0.7, "VOTER ROLLS", "52 U.S.C. § 20507 already requires\na reasonable purge of the dead\nand the moved. HAVA § 21083.\nCongress never tied the grant to it.", dem_c),
 ]
-for x, title, mid, bot, c in cols:
-    ax.add_patch(plt.Rectangle((x, 1.3), 4.8, 6.0, facecolor="#141414", edgecolor=c, lw=2))
-    ax.text(x + 2.4, 6.6, title, fontsize=16, fontweight="bold", color=c, ha="center")
-    ax.text(x + 2.4, 5.3, mid, fontsize=14, color=fg, ha="center")
-    ax.text(x + 2.4, 3.2, bot, fontsize=13, color=muted, ha="center")
-ax.text(0.4, 0.45, "ForeignAssistance.gov  ·  USASpending  ·  USAID OIG  ·  DHS OIG-26-04  ·  22 U.S.C. § 4411  ·  P.L. 118-47  ·  FEC", fontsize=10, color=muted)
+for x, y, title, body, c in cells:
+    ax.add_patch(plt.Rectangle((x, y), 7.4, 3.7, facecolor="#141414", edgecolor=c, lw=2))
+    ax.text(x + 3.7, y + 3.05, title, fontsize=16, fontweight="bold", color=c, ha="center", va="center")
+    ax.text(x + 3.7, y + 1.4, body, fontsize=13, color=fg, ha="center", va="center")
+ax.text(0.4, 0.18, "USASpending  ·  26 U.S.C. § 6104  ·  FEC  ·  IRS 527  ·  52 U.S.C. § 20507  ·  52 U.S.C. § 21083  ·  22 U.S.C. § 4411", fontsize=10, color=muted)
 fig.savefig("/workspace/public/images/chart-funnel.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
@@ -1007,23 +963,23 @@ ax.text(0.4, 0.28, "SIGAR 24-22  ·  SIGAR 25-16  ·  SIGAR 24-12  ·  SIGAR Aug
 fig.savefig("/workspace/public/images/chart-paying-taliban.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
-fig, ax = plt.subplots(figsize=(16, 8), dpi=140, facecolor=bg)
+fig, ax = plt.subplots(figsize=(16, 8.4), dpi=140, facecolor=bg)
 ax.set_facecolor(bg)
 ax.set_xlim(0, 16)
-ax.set_ylim(0, 7.6)
+ax.set_ylim(0, 8.2)
 ax.axis("off")
-ax.text(0.4, 7.1, "FEMA RAN TWO JOBS", fontsize=24, fontweight="bold", color=fg, va="top")
-ax.text(0.4, 6.45, "Americans on Immediate Needs Funding. Aliens on a $1.4 billion grant. $425 million questioned.", fontsize=13, color=muted, va="top")
+ax.text(0.4, 6.55, "FEMA RAN TWO JOBS", fontsize=24, fontweight="bold", color=fg, va="top")
+ax.text(0.4, 5.9, "North Carolina flood. Maui fire. Americans who paid the tax waited. Aliens got the $1.4 billion grant.", fontsize=13, color=muted, va="top")
 jobs = [
-    (0.4, "AMERICANS", "Aug. 29, 2023: DRF approaching\nexhaustion. Immediate Needs\nFunding. Recovery paused.", gop_c),
-    (5.6, "ALIENS", "CBP → FEMA: $1.45 billion.\nAwards: $1.4 billion.\nHotels, clothes, phones.", dem_c),
+    (0.4, "AMERICANS", "Helene: the Secretary said FEMA\ndid not have funds for the season.\nMaui: $56.1 million to 7,141 people.\nTemporary housing into 2027.", gop_c),
+    (5.6, "ALIENS", "CBP to FEMA: $1.45 billion.\nAwards: $1.4 billion.\nHotels, clothes, phones.", dem_c),
     (10.8, "THE AUDITOR", "OIG-26-04: $425 million\nquestioned. FEMA could not\nshow it was humanitarian.", "#c53030"),
 ]
 for x, title, body, c in jobs:
-    ax.add_patch(plt.Rectangle((x, 0.95), 4.8, 4.95, facecolor="#141414", edgecolor=c, lw=2))
-    ax.text(x + 2.4, 5.2, title, fontsize=16, fontweight="bold", color=c, ha="center")
-    ax.text(x + 2.4, 2.9, body, fontsize=14, color=fg, ha="center")
-ax.text(0.4, 0.3, "FEMA INF advisory  ·  CRS R47676  ·  DHS OIG-26-04  ·  House Homeland Oct. 11, 2024", fontsize=10, color=muted)
+    ax.add_patch(plt.Rectangle((x, 0.7), 4.8, 4.55, facecolor="#141414", edgecolor=c, lw=2))
+    ax.text(x + 2.4, 4.55, title, fontsize=16, fontweight="bold", color=c, ha="center")
+    ax.text(x + 2.4, 2.5, body, fontsize=14, color=fg, ha="center")
+ax.text(0.4, 0.3, "House Homeland Oct. 11, 2024  ·  GAO-26-108154  ·  GAO-25-106862  ·  FEMA Maui fact sheet  ·  DHS OIG-26-04", fontsize=10, color=muted)
 fig.savefig("/workspace/public/images/chart-fema-two-jobs.jpg", dpi=140, facecolor=bg, bbox_inches="tight")
 plt.close()
 
