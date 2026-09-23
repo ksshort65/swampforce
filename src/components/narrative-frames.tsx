@@ -1,5 +1,5 @@
 import type { Frame } from "@/lib/content";
-import { InteractiveChart, ShortRead } from "@/components/interactive-chart";
+import { InteractiveChart, KeptRead } from "@/components/interactive-chart";
 
 export function NarrativeFrames({
   frames,
@@ -49,7 +49,7 @@ export function NarrativeFrames({
           href: f.href,
           proof: "The record",
           read: (
-            <ShortRead
+            <KeptRead
               said={f.they}
               note={f.ran ? `How long it ran: ${f.ran}` : undefined}
               record={f.tape}

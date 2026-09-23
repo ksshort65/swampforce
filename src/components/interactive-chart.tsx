@@ -53,25 +53,11 @@ export function ShortRead({
       <div>
         <p className="text-[13px] font-semibold text-blue-900">The short version</p>
         <ul className="mt-2 space-y-2">
-          {bits.map((bit) => {
-            const link = links[0];
-            return (
-              <li key={bit}>
-                {link ? (
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[15px] leading-relaxed text-blue-950 underline decoration-blue-200 underline-offset-2"
-                  >
-                    {bit}
-                  </a>
-                ) : (
-                  <span className="text-[15px] leading-relaxed text-blue-950">{bit}</span>
-                )}
-              </li>
-            );
-          })}
+          {bits.map((bit) => (
+            <li key={bit} className="text-[15px] leading-relaxed text-blue-950">
+              {bit}
+            </li>
+          ))}
           {links.map((link) => (
             <li key={link.href + link.label}>
               <a
@@ -122,9 +108,11 @@ export function InteractiveChart({
           <p className="font-display text-2xl font-bold tracking-wide sm:text-3xl">{title}</p>
           {subtitle ? <p className="mt-2 max-w-xl text-sm leading-relaxed text-neutral-600">{subtitle}</p> : null}
         </div>
-        <div className="grid grid-cols-2 border-y border-neutral-300 bg-neutral-50">
+        <div className="grid grid-cols-1 border-y border-neutral-300 bg-neutral-50 sm:grid-cols-[1.3fr_auto]">
           <p className="px-4 py-2 text-[13px] font-semibold text-red-800">The claim</p>
-          <p className="border-l border-neutral-300 px-4 py-2 text-[13px] font-semibold text-blue-900">The record</p>
+          <p className="border-t border-neutral-300 px-4 py-2 text-[13px] font-semibold text-blue-900 sm:border-t-0 sm:border-l">
+            The record
+          </p>
         </div>
         {rows.map((r) => (
           <div
@@ -134,11 +122,11 @@ export function InteractiveChart({
             <button
               type="button"
               onClick={() => choose(r.id)}
-              className="px-4 py-3 text-left text-[15px] font-semibold text-neutral-900 hover:bg-neutral-50"
+              className="px-4 py-3 text-left text-[15px] font-semibold break-words text-neutral-900 hover:bg-neutral-50"
             >
               {r.name}
             </button>
-            <div className="flex items-center gap-4 border-t border-neutral-200 px-4 py-3 sm:border-t-0 sm:border-l">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-neutral-200 px-4 py-3 sm:border-t-0 sm:border-l">
               <button
                 type="button"
                 onClick={() => choose(r.id)}

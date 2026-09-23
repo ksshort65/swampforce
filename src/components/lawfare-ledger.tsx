@@ -1,5 +1,5 @@
 import type { LawfareRow } from "@/lib/content";
-import { InteractiveChart, ShortRead } from "@/components/interactive-chart";
+import { InteractiveChart, KeptRead } from "@/components/interactive-chart";
 
 const LINE: Record<string, string> = {
   "The judge stayed on the case":
@@ -155,7 +155,7 @@ export function LawfareLedger({ rows }: { rows: LawfareRow[] }) {
         href: r.href,
         proof: "The record",
         read: (
-          <ShortRead
+          <KeptRead
             said={r.sold}
             note={COVER[r.caption]}
             record={LINE[r.caption] ?? r.file}
@@ -232,7 +232,7 @@ export function SloganChart() {
         href: r.href,
         proof: "The record",
         read: (
-          <ShortRead
+          <KeptRead
             said={r.ran}
             record={r.file}
             links={[
