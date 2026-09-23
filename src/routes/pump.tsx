@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { OpenChart } from "@/components/open-chart";
 import {
   ADMINS,
   GALLON_STACK,
@@ -51,13 +52,11 @@ function PumpPage() {
 
           <div className="mt-12 space-y-16">
             {PUMP_CHARTS.map((c) => (
-              <figure key={c.src}>
-                <img
-                  src={c.src}
-                  alt={c.title}
-                  className="w-full rounded-md border border-border"
-                />
-              </figure>
+              <OpenChart key={c.src} title={c.title} src={c.src}>
+                <p>
+                  {c.title}. The record is the EIA weekly series, not a network caption. OPEC and OPEC+ set the crude price. Refining, shipping, the federal tax, and the state tax are the rest of the gallon.
+                </p>
+              </OpenChart>
             ))}
           </div>
 

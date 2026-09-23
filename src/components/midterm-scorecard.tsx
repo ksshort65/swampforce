@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { named } from "@/components/interactive-chart";
 import { Link } from "@tanstack/react-router";
 import {
   BORDER,
@@ -122,9 +123,10 @@ function BillList({
                 : "block min-h-14 rounded-md border border-[#c53030]/50 bg-surface px-4 py-4 text-fg no-underline hover:border-[#c53030]"
             }
           >
-            <p className="text-base font-medium leading-snug">{p.k}</p>
-            <p className="mt-1 font-display text-[11px] tracking-[0.12em] text-sage uppercase">
-              {p.bill} →
+            <p className="text-base font-medium leading-snug">{named(p.k)}</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">{named(p.bill)}</p>
+            <p className="mt-2 font-display text-[11px] tracking-[0.12em] text-sage uppercase">
+              The record →
             </p>
           </a>
         </li>

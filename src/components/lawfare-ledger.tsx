@@ -1,4 +1,5 @@
 import type { LawfareRow } from "@/lib/content";
+import { InteractiveChart, ShortRead } from "@/components/interactive-chart";
 
 const LINE: Record<string, string> = {
   "The judge stayed on the case":
@@ -145,24 +146,27 @@ function Head({ title }: { title: string }) {
 
 export function LawfareLedger({ rows }: { rows: LawfareRow[] }) {
   return (
-    <section>
-      <Head title="Lawfare" />
-      <div className="mt-2 overflow-hidden rounded-md border border-border">
-        {rows.map((r) => (
-          <Split
-            key={r.caption}
-            name={r.caption}
+    <InteractiveChart
+      title="Lawfare"
+      subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+      rows={rows.map((r) => ({
+        id: r.caption,
+        name: r.caption,
+        href: r.href,
+        proof: "The record",
+        read: (
+          <ShortRead
+            said={r.sold}
             note={COVER[r.caption]}
-            ran={r.sold}
-            file={LINE[r.caption] ?? r.file}
+            record={LINE[r.caption] ?? r.file}
             links={[
               { label: r.doc ?? "Open the court record", href: r.href },
               ...(r.docs ?? []),
             ]}
           />
-        ))}
-      </div>
-    </section>
+        ),
+      }))}
+    />
   );
 }
 
@@ -219,22 +223,25 @@ const SLOGAN = [
 
 export function SloganChart() {
   return (
-    <section>
-      <Head title="The slogan versus the document" />
-      <div className="mt-2 overflow-hidden rounded-md border border-border">
-        {SLOGAN.map((r) => (
-          <Split
-            key={r.name}
-            name={r.name}
-            ran={r.ran}
-            file={r.file}
+    <InteractiveChart
+      title="The slogan versus the document"
+      subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+      rows={SLOGAN.map((r) => ({
+        id: r.name,
+        name: r.name,
+        href: r.href,
+        proof: "The record",
+        read: (
+          <ShortRead
+            said={r.ran}
+            record={r.file}
             links={[
               { label: r.doc, href: r.href },
               ...("more" in r && r.more ? r.more : []),
             ]}
           />
-        ))}
-      </div>
-    </section>
+        ),
+      }))}
+    />
   );
 }

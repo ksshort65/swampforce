@@ -93,7 +93,7 @@ export function ShortRead({
 export type ChartRow = {
   id: string;
   name: string;
-  line: string;
+  line?: string;
   href?: string;
   proof?: string;
   read: ReactNode;
@@ -124,7 +124,7 @@ export function InteractiveChart({
         </div>
         <div className="grid grid-cols-2 border-y border-neutral-300 bg-neutral-50">
           <p className="px-4 py-2 text-[13px] font-semibold text-red-800">The claim</p>
-          <p className="border-l border-neutral-300 px-4 py-2 text-[13px] font-semibold text-blue-900">Open it</p>
+          <p className="border-l border-neutral-300 px-4 py-2 text-[13px] font-semibold text-blue-900">The record</p>
         </div>
         {rows.map((r) => (
           <div
@@ -144,7 +144,7 @@ export function InteractiveChart({
                 onClick={() => choose(r.id)}
                 className="text-[13px] font-semibold text-red-800 underline-offset-2 hover:underline"
               >
-                {open === r.id ? "Close" : "Short version"}
+                {open === r.id ? "Close" : "The short version"}
               </button>
               {r.href ? (
                 <a
