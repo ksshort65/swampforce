@@ -9,7 +9,7 @@ export type ScoreRow = {
 };
 
 /** Living midterms card. Update the cells when a vote or a Treasury table changes the file. */
-export const SCORE_UPDATED = "2026-09-22";
+export const SCORE_UPDATED = "2026-09-23";
 
 /** Cover and Scorecard. Five rooms of the Congressional Scorecard. */
 export type ScoreRoom = "gop" | "dem" | "split" | "oval" | "compare";
@@ -22,6 +22,65 @@ export const SCORE_TABS: { id: ScoreRoom; k: string; v: string }[] = [
 ];
 /** @deprecated use SCORE_TABS */
 export const SCORE_FILES = SCORE_TABS;
+
+/**
+ * Farmers. First file in the wealth ledger.
+ * 2026 dollars are the figures USDA printed on September 3, 2026.
+ * 2025 dollars are that figure plus or minus the change USDA printed in the same sentence.
+ * Chapter 12 counts are U.S. Courts Table F-2, 12 months ending December 31.
+ */
+export const FARM = {
+  asOf: "September 3, 2026",
+  incomeHref:
+    "https://www.ers.usda.gov/topics/farm-economy/farm-sector-income-finances/farm-sector-income-forecast",
+  rows: [
+    {
+      k: "What it cost to farm",
+      y2025: 471.6,
+      y2026: 492.8,
+      note: "Production expenses, including the operator’s dwelling. Fertilizer, fuel, and livestock purchases are the increase.",
+    },
+    {
+      k: "The government check",
+      y2025: 27.9,
+      y2026: 47.4,
+      note: "Direct farm payments. USDA says the increase is commodity payments plus supplemental and ad hoc aid Congress authorized. Crop insurance indemnities are not in this number.",
+    },
+    {
+      k: "What was left",
+      y2025: 162.7,
+      y2026: 158.4,
+      note: "Net farm income. The check got $19.5 billion bigger. The bill got $21.2 billion bigger. Income still fell $4.3 billion.",
+    },
+  ],
+  filings: {
+    y2024: 216,
+    y2025: 315,
+    href2024: "https://www.uscourts.gov/sites/default/files/2025-01/bf_f2_1231.2024.pdf",
+    href2025: "https://www.uscourts.gov/sites/default/files/document/bf_f2_1231.2025.pdf",
+  },
+  loans: {
+    k: "The operating loan got 30 percent larger in 2025, after inflation. The fourth-quarter volume of new operating loans was up nearly 40 percent. Kansas City Fed, from the National Survey of Terms of Lending to Farmers.",
+    href: "https://www.kansascityfed.org/agriculture/agfinance-updates/larger-operating-loans-boost-farm-lending-activity-in-2025/",
+  },
+  hire: [
+    {
+      k: "The salary",
+      v: "Most members are paid $174,000. The Speaker is paid $223,500. The leaders are paid $193,400. Those rates have not moved since 2009. They are paid out of the Treasury, under a statute Congress passes.",
+      href: "https://www.congress.gov/crs-product/RL30064",
+    },
+    {
+      k: "The pension",
+      v: "A member on the older congressional formula, twenty years at $174,000, draws about $59,160 a year. Members who entered after 2012 accrue less. As of October 1, 2022, 619 retired members were still drawing a pension tied to that service.",
+      href: "https://www.congress.gov/crs-product/RL30631",
+    },
+    {
+      k: "The trade",
+      v: "The STOCK Act did not ban a member from trading stocks. It ordered the member to disclose the trade. The report is public. The gain is the member’s.",
+      href: "https://www.congress.gov/112/plaws/publ105/PLAW-112publ105.pdf",
+    },
+  ],
+};
 
 export type OvalDesk = "four" | "trump1" | "trump2";
 export const OVAL_DESKS: { id: OvalDesk; k: string; v: string }[] = [
@@ -1199,6 +1258,16 @@ export const RECORD: {
       },
     ],
     minus: [
+      {
+        k: "September 23, 2026. Senate Judiciary hearing, Standing Up for Women in Sports. The minority called no witnesses. Chairman Grassley said the two Democratic witness seats were empty. Ranking Member Durbin gave an opening statement, then said he would not ask questions and would not treat the hearing as a responsible use of the committee. The committee page does not publish a roll of which other Democrats sat in the room, so a headcount from a post is not the record. A paycheck is not stopped for leaving a hearing. The hearing: https://www.judiciary.senate.gov/committee-activity/hearings/standing-up-for-women-in-sports-ensuring-opportunity-fairness-and-safety-for-female-athletes. Grassley’s opening: https://www.judiciary.senate.gov/press/rep/releases/grassley-opens-senate-judiciary-hearing-on-ensuring-safety-and-fairness-for-female-athletes.",
+        bill: "Durbin’s statement · September 23, 2026",
+        href: "https://www.durbin.senate.gov/newsroom/press-releases/durbin-denounces-judiciary-committee-republicans-hearing-on-transgender-athletes",
+      },
+      {
+        k: "Same morning, different room. Homeland Security’s own notice called the 10 a.m. meeting a business meeting, not a hearing. Calling that one a skipped hearing uses the wrong word.",
+        bill: "HSGAC business meeting · September 23, 2026",
+        href: "https://www.hsgac.senate.gov/hearings/business-meeting-45/",
+      },
       {
         k: "February 24, 2026. Joint session. The President asked the chamber to stand if they agreed: the first duty of the American government is to protect American citizens, not illegal aliens. Republicans stood. Democrats stayed seated.",
         bill: "C-SPAN · 2026 State of the Union",
