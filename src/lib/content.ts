@@ -1,15 +1,23 @@
+import { LEDGER_POSTS } from "./ledgers";
+
 export type Block =
  | { type: "p" | "h" | "q"; text: string }
  | { type: "ul"; items: string[] }
  | { type: "img"; src: string; alt: string };
 
-export type Frame = { tag: string; they: string; tape: string; href?: string };
+export type Frame = { tag: string; they: string; tape: string; href?: string; ran?: string };
 export type LawfareRow = {
   caption: string;
+  /** The sentence sold to the public as a finding, not as an allegation. */
+  sold: string;
   evidence: string;
   source: string;
   file: string;
   href: string;
+  /** Name of the document the row opens. */
+  doc?: string;
+  /** Other records that belong on this case, not in a separate list. */
+  docs?: { label: string; href: string }[];
 };
 
 export type EraRow = { who: string; years: string; line: string; href?: string };
@@ -29,6 +37,10 @@ export type Post = {
  part?: number;
  receipts?: { label: string; href: string }[];
  frames?: Frame[];
+ /** Overrides the side-by-side intro when this ledger is not a Democratic frame. */
+ frameDek?: string;
+ frameLeft?: string;
+ frameRight?: string;
  eras?: EraTopic[];
  lawfare?: LawfareRow[];
  video?: string;
@@ -107,11 +119,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "h",
-				text: "How you know the hire has gone rogue",
+				text: "How the hire goes rogue",
 			},
 			{
 				type: "p",
-				text: "In ordinary English this is an employment. Three hundred million people hired 535 clerks. Those clerks work part of the year on a full-year salary. They vote on bills they have not read. They have not closed a fiscal year on time as the appropriations calendar requires. The [Congressional Budget Office’s historical tables](https://www.cbo.gov/data/budget-economic-data) still show the last surplus in fiscal year 2001. The [Treasury’s Debt to the Penny](https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny) now prints more than forty trillion dollars. That is not a mystery of markets. That is a staff that will not do the work it was hired to do, and a public trained to argue about the staff’s feelings instead of the staff’s output.",
+				text: "In ordinary English, this is a job. Three hundred million people hired 535 clerks. Those clerks work part of the year on a full-year salary. They vote on bills they have not read. They have not closed a fiscal year on time as the appropriations calendar requires. The [Congressional Budget Office’s historical tables](https://www.cbo.gov/data/budget-economic-data) still show the last surplus in fiscal year 2001. The [Treasury’s Debt to the Penny](https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny) now prints more than forty trillion dollars. That is not a mystery of markets. That is a staff that will not do the work it was hired to do, and a public trained to argue about the staff’s feelings instead of the staff’s output.",
 			},
 			{
 				type: "p",
@@ -123,7 +135,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Washington’s daily product is not a statute. It is a caption. One word is swapped. Six seconds are cut from a speech. A panel tells a country what it just saw. The country then votes the feeling the panel sold. Kidnapped instead of arrested. Insurrection instead of a docket that never charged it. A six-second clip instead of the hour that contained it. This journal does not do that work. Unless a passage is marked as opinion, what is written here is the official file: the statute, the inspector general, the Treasury table, the tape played in full. Compare what they passed, what they blocked, what they spent, and what they broke. Do not compare the speech. The speech is the costume.",
+				text: "Washington’s daily product is not a statute. It is a caption. One word is swapped. Six seconds are cut from a speech. A panel tells a country what it just saw. The country then votes the feeling the panel sold. Kidnapped instead of arrested. Insurrection instead of a docket that never charged it. A six-second clip instead of the hour that contained it. This journal does not do that work. Unless a passage is marked as opinion, what is written here is the official file: the statute, the inspector general, the Treasury table, the tape played in full. Compare what they passed, what they blocked, what they spent, and what they broke. The speech is the costume.",
 			},
 			{
 				type: "p",
@@ -208,7 +220,7 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/essay-find-them.jpg",
 		imageAlt: "Child silhouettes behind a chain-link cage. They hid the children.",
-		series: "The Search",
+		series: "The Border",
 		part: 1,
 		receipts: [],
 		body: [
@@ -256,7 +268,7 @@ export const posts: Post[] = [
 		image: "/images/essay-defund-ice.jpg",
 		imageAlt: "The border was a policy. The policy had a party.",
 		featured: true,
-		series: "The Search",
+		series: "The Border",
 		part: 0,
 		receipts: [],
 		body: [
@@ -284,6 +296,14 @@ export const posts: Post[] = [
 			{
 				type: "p",
 				text: "Who held the gavel when it opened: Democrats ran the White House from January 2021 to January 2025. They ran both the House and the Senate from January 2021 to January 2023. They ended Remain in Mexico. They ended the Title 42 public-health expulsion on May 11, 2023. They ran parole programs that turned a crossing into a status, a status into a Social Security number, and a number into a welfare check. [SSI is not Social Security](https://www.ssa.gov/ssi/spotlights/spot-non-citizens.htm). It is general revenue. SSA’s own spotlight lists parole, asylum, and refugee as doors into that check. [8 U.S.C. § 1611](https://www.law.cornell.edu/uscode/text/8/1611) already barred most federal benefits for aliens who are not qualified. Congress and the agencies built the exception, then called it compassion. [What the taxpayer bought](/dispatch/what-the-taxpayer-bought) is the rest of that stack: cash cards, phones, clothing, housing, property damage, and the homicide docket.",
+			},
+			{
+				type: "p",
+				text: "February 24, 2026. Joint session. The President asked every legislator to stand if they agreed with this sentence: the first duty of the American government is to protect American citizens, not illegal aliens. [C-SPAN recorded the ask](https://www.c-span.org/clip/joint-session-of-congress/user-clip-the-first-duty-of-the-american-government/5194380). Republicans stood. Democrats stayed seated. The [full address](https://www.c-span.org/program/joint-session-of-congress/2026-state-of-the-union-address/673636) is on the same tape. That is the party that opened the door, on camera, declining to say the people they work for come first.",
+			},
+			{
+				type: "p",
+				text: "The First Amendment protects [peaceable](https://constitution.congress.gov/constitution/amendment-1/) assembly. It does not protect doxxing an ICE officer, assaulting him, or smashing the building. [18 U.S.C. § 111](https://www.law.cornell.edu/uscode/text/18/111) is assault on a federal officer. [18 U.S.C. § 119](https://www.law.cornell.edu/uscode/text/18/119) is publishing his home address to threaten him. [18 U.S.C. § 1361](https://www.law.cornell.edu/uscode/text/18/1361) is government property. [DHS](https://www.dhs.gov/news/2026/01/08/radical-rhetoric-sanctuary-politicians-leads-unprecedented-1300-increase-assaults): 275 assaults on ICE officers from January 20 through December 31, 2025, against 19 in the same stretch of 2024. 66 vehicular attacks against 2. [DOJ](https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice): Prairieland Detention Center, July 4, 2025 — an Antifa cell sentenced for attacking the facility. [Minnesota](https://www.justice.gov/usao-mn/pr/15-members-direct-action-minnesota-minneapolis-based-direct-action-group-antifa-ties): 15 indicted for assaulting federal officers and destroying government property. Sanctuary rhetoric is in the DHS file. That is unrest. It is not a rally.",
 			},
 			{
 				type: "h",
@@ -316,7 +336,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/chart-what-they-bought.jpg",
 		imageAlt: "Cash cards, phones, clothing, housing, property damage, homicide — the taxpayer stack",
-		series: "The Search",
+		series: "The Border",
 		part: 0,
 		receipts: [
 			{ label: "FEMA SSP-A FY2024 NOFO — allowable costs", href: "https://www.fema.gov/sites/default/files/documents/fema_gpd_ssp-a-nofo_fy24.pdf" },
@@ -361,7 +381,7 @@ export const posts: Post[] = [
 		image: "/images/essay-defund-ice.jpg",
 		imageAlt: "The hospital filled. Then the morgue.",
 		featured: true,
-		series: "The Search",
+		series: "The Border",
 		part: 0,
 		receipts: [],
 		body: [
@@ -551,7 +571,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Every Member swears, under [Article VI](https://constitution.congress.gov/constitution/article-6/) and [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331), to support this Constitution, without mental reservation. A faction that writes “new constitution” has announced a reservation. Federal law already bars a person from holding a federal position if that person advocates the overthrow of our constitutional form of government. See [5 U.S.C. § 7311](https://www.law.cornell.edu/uscode/text/5/7311). The [Communist Control Act, 50 U.S.C. § 841](https://www.law.cornell.edu/uscode/text/50/841), is still on the books. Pamphlets are not treason. Treason is [Article III, Section 3](https://constitution.congress.gov/constitution/article-3/) and [18 U.S.C. § 2381](https://www.law.cornell.edu/uscode/text/18/2381): levying war or adhering to enemies. Do not empty that word. Do not ignore the oath either.",
+				text: "Every Member swears, under [Article VI](https://constitution.congress.gov/constitution/article-6/) and [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331), to support this Constitution, without mental reservation. A faction that writes “new constitution” has announced a reservation. Federal law already bars a person from holding a federal position if that person advocates the overthrow of our constitutional form of government. See [5 U.S.C. § 7311](https://www.law.cornell.edu/uscode/text/5/7311). The [Communist Control Act, 50 U.S.C. § 841](https://www.law.cornell.edu/uscode/text/50/841), is still on the books. Pamphlets are not treason. Treason is [Article III, Section 3](https://constitution.congress.gov/constitution/article-3/) and [18 U.S.C. § 2381](https://www.law.cornell.edu/uscode/text/18/2381): levying war or adhering to enemies. That word stays intact. The oath stays on the page.",
 			},
 			{
 				type: "p",
@@ -573,7 +593,7 @@ export const posts: Post[] = [
 		image: "/images/chamber.jpg",
 		imageAlt: "Empty House. The docket is the other election.",
 		featured: true,
-		series: "The Correction",
+		series: "The Remedy",
 		part: 3,
 		receipts: [],
 		body: [
@@ -602,14 +622,14 @@ export const posts: Post[] = [
 	{
 		slug: "call-these-first",
 		title: "Who to call.",
-		dek: "Real groups. Real addresses. Not a stranger on a video asking for a money.",
+		dek: "Real groups. Real addresses. Not a stranger on a video asking for money.",
 		date: "2026-09-22",
 		category: "Dispatch",
 		readMinutes: 3,
 		image: "/images/chamber.jpg",
 		imageAlt: "The House. Call counsel. The docket is open.",
 		featured: true,
-		series: "The Correction",
+		series: "The Remedy",
 		part: 4,
 		receipts: [],
 		body: [
@@ -619,7 +639,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "q",
-				text: "Call the groups that already sue. Do not invent a lawsuit from a clip.",
+				text: "The groups that already sue are the path. A clip is not a lawsuit.",
 			},
 			{
 				type: "p",
@@ -645,7 +665,7 @@ export const posts: Post[] = [
 		image: "/images/essay-who-got-paid.jpg",
 		imageAlt: "The bill. Taxpayers covering what the statute already barred.",
 		featured: true,
-		series: "The Correction",
+		series: "The Remedy",
 		part: 2,
 		receipts: [],
 		body: [
@@ -663,7 +683,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The [Department of Justice has filed complaints](https://www.justice.gov/opa/pr/department-justice-files-complaints-against-hawaii-dc-arkansas-and-utah-over-preferential) against jurisdictions that give illegal aliens in-state tuition. [HHS restored the 1996 welfare restrictions](https://www.hhs.gov/press-room/prwora-hhs-bans-illegal-aliens-accessing-taxpayer-funded-programs.html) on its own programs. Those dockets are the file. Do not invent a prison date the statute does not give. Send the ordinance and the contract. Let the United States Attorney decide whether harboring is in the record.",
+				text: "The [Department of Justice has filed complaints](https://www.justice.gov/opa/pr/department-justice-files-complaints-against-hawaii-dc-arkansas-and-utah-over-preferential) against jurisdictions that give illegal aliens in-state tuition. [HHS restored the 1996 welfare restrictions](https://www.hhs.gov/press-room/prwora-hhs-bans-illegal-aliens-accessing-taxpayer-funded-programs.html) on its own programs. Those dockets are the file. The statute does not supply a prison date. The ordinance and the contract go to the United States Attorney, who decides whether harboring is in the record.",
 			},
 			{
 				type: "p",
@@ -681,7 +701,7 @@ export const posts: Post[] = [
 		image: "/images/chamber.jpg",
 		imageAlt: "The chamber. They let them walk.",
 		featured: true,
-		series: "The Correction",
+		series: "The Remedy",
 		part: 1,
 		receipts: [],
 		body: [
@@ -699,7 +719,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The [United States Attorney for the District of Minnesota](https://www.justice.gov/usao-mn/pr/minneapolis-man-sentenced-more-28-years-prison-role-feeding-our-future-fraud-scheme) obtained a twenty-eight-year sentence in the Feeding Our Future fraud. That is a federal judgment. State sentencing grids are a different file. Keep them separate. Do not mix them.",
+				text: "The [United States Attorney for the District of Minnesota](https://www.justice.gov/usao-mn/pr/minneapolis-man-sentenced-more-28-years-prison-role-feeding-our-future-fraud-scheme) obtained a twenty-eight-year sentence in the Feeding Our Future fraud. That is a federal judgment. State sentencing grids are a different file. They stay on separate ledgers.",
 			},
 			{
 				type: "p",
@@ -716,7 +736,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/essay-who-got-paid.jpg",
 		imageAlt: "Cash on a table. An unaccounted file. Who got paid.",
-		series: "The Search",
+		series: "The Border",
 		part: 2,
 		receipts: [
 			{ label: "DHS / House Homeland — smuggling up to $13B in 2021", href: "https://homeland.house.gov/2023/12/14/now-nobody-crosses-without-paying-senior-border-patrol-agents-describe-unprecedented-cartel-control-at-southwest-border/" },
@@ -728,7 +748,7 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "Somebody collected. That is the whole second file. A child does not walk a thousand miles on a vibe. A fee is paid, a route is sold, a sponsor is a customer, and a government that opens the door is the marketing department. DHS's own estimate, cited by House Homeland Security and by InSight Crime: human smuggling into the United States was generating as much as $13 billion a year by 2021 — Biden's first year. The Washington Post, November 2024: $4 billion to $12 billion a year as a top income stream. ILO's global trafficking number — about $150 billion worldwide — is a different ledger. Do not mix them. The border product is the fee and the child as inventory."
+				text: "Somebody collected. That is the whole second file. A child does not walk a thousand miles on a vibe. A fee is paid, a route is sold, a sponsor is a customer, and a government that opens the door is the marketing department. DHS's own estimate, cited by House Homeland Security and by InSight Crime: human smuggling into the United States was generating as much as $13 billion a year by 2021 — Biden's first year. The Washington Post, November 2024: $4 billion to $12 billion a year as a top income stream. ILO's global trafficking number — about $150 billion worldwide — is a different ledger. Those numbers stay on different ledgers. The border product is the fee and the child as inventory."
 			},
 			{
 				type: "q",
@@ -748,7 +768,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The political tie that does not need a secret meeting is the term in office. The Democratic Party ran the border from 2021 to 2025. Encounters exploded. Cartel revenue exploded. 65,000 child-welfare reports sat in a drawer. Then the same party told the country to defund the only force that knocks on the sponsor's door. Who got paid: the cartel, the bought lane, the bank that needed a congressman, the contractor who processed the child like freight. Who got the child: too often, nobody who will say where she is. Part three is the tell — the vote to abolish the search. Part one is still the child. Do not skip her to enjoy the math."
+				text: "The political tie that does not need a secret meeting is the term in office. The Democratic Party ran the border from 2021 to 2025. Encounters exploded. Cartel revenue exploded. 65,000 child-welfare reports sat in a drawer. Then the same party told the country to defund the only force that knocks on the sponsor's door. Who got paid: the cartel, the bought lane, the bank that needed a congressman, the contractor who processed the child like freight. Who got the child: too often, nobody who will say where she is. Part three is the tell — the vote to abolish the search. Part one is still the child. The child stays first. The math is the second file."
 			},
 			{
 				type: "p",
@@ -765,7 +785,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/essay-defund-ice.jpg",
 		imageAlt: "A blocked ICE doorway. Defund ICE is the tell.",
-		series: "The Search",
+		series: "The Border",
 		part: 3,
 		receipts: [
 			{ label: "Grassley — Democrats refused the whistleblower roundtable; opposed contractor and rule bills", href: "https://www.judiciary.senate.gov/press/rep/releases/new-hhs-data-confirms-biden-harris-admin-placed-tens-of-thousands-of-migrant-children-with-unvetted-sponsors-declined-recommended-home-studies" },
@@ -812,7 +832,7 @@ export const posts: Post[] = [
 		featured: true,
 		shareLead: true,
 		shareTitle: "THE NOISE.",
-		series: "The Hearing",
+		series: "Congress",
 		part: 1,
 		receipts: [
 			{ label: "Gallup — 10% approve Congress, 86% disapprove, April 2026", href: "https://news.gallup.com/poll/708722/disapproval-congress-ties-record-high.aspx" },
@@ -835,7 +855,7 @@ export const posts: Post[] = [
 		readMinutes: 4,
 		image: "/images/essay-they-sold-the-split.jpg",
 		imageAlt: "Television wall versus a kitchen table. They sold the split.",
-		series: "The Hearing",
+		series: "Congress",
 		part: 2,
 		receipts: [
 			{ label: "MRC — 92% negative coverage, first 100 days of the 2025 term", href: "https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage" },
@@ -857,7 +877,7 @@ export const posts: Post[] = [
 		readMinutes: 4,
 		image: "/images/essay-full-time.jpg",
 		imageAlt: "Capitol at dusk. Full time or go home.",
-		series: "The Hearing",
+		series: "Congress",
 		part: 3,
 		receipts: [
 			{ label: "FY2026 legislative branch — $7.258 billion — CRS / P.L. 119-37", href: "https://www.congress.gov/crs-product/R48612" },
@@ -880,7 +900,7 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/essay-show-the-slides.jpg",
 		imageAlt: "Empty studio. A screen that says Show the slides.",
-		series: "The Hearing",
+		series: "Congress",
 		part: 4,
 		receipts: [
 			{ label: "How a bill becomes law — Congress.gov", href: "https://www.congress.gov/help/learn-about-the-legislative-process" },
@@ -908,7 +928,7 @@ export const posts: Post[] = [
 				"A constitutional amendment is required only for a national referendum on the budget itself. Until then, approval is removing the employee who hid the stack.",
 			] },
 			{ type: "q", text: "Post the stack. Show the slides. Full time or resign. That is the hearing." },
-			{ type: "p", text: "This is not a street. It is not a new speech crime. It is the job they swore: well and faithfully discharge the duties of the office. They have been discharging a narrative. The country is 300 million people, not a panel. Let them hear us now." },
+			{ type: "p", text: "This is not a street. It is not a new speech crime. It is the job they swore: well and faithfully discharge the duties of the office. They have been discharging a narrative. The country is 300 million people, not a panel." },
 		],
 	},
 	{
@@ -921,7 +941,7 @@ export const posts: Post[] = [
 		image: "/images/essay-it-does-not-fit.jpg",
 		imageAlt: "Empty budget room. A slide that reads $34T. It does not fit.",
 		featured: true,
-		series: "The Hearing",
+		series: "Congress",
 		part: 5,
 		receipts: [
 			{ label: "CBO — FY2026: receipts $5.6T, outlays $7.4T, deficit $1.9T", href: "https://www.cbo.gov/publication/62207" },
@@ -973,7 +993,7 @@ export const posts: Post[] = [
 		image: "/images/essay-the-check.jpg",
 		imageAlt: "A blank Treasury check. The check they will not write.",
 		featured: true,
-		series: "The Hearing",
+		series: "Congress",
 		part: 6,
 		receipts: [
 			{ label: "Darity / Brookings — $10–12 trillion to close the wealth gap (2020)", href: "https://www.brookings.edu/articles/black-reparations-and-the-racial-wealth-gap/" },
@@ -1006,7 +1026,7 @@ export const posts: Post[] = [
 			{ type: "p", text: "Even if a court pretended otherwise, the money is not there. CBO: $5.6 trillion in, $7.4 trillion out, $1.9 trillion hole, debt in sight of $40 trillion. Confiscating the net worth of the 400 richest Americans — about $6.6 trillion in 2025, per Cato — does not cover Darity’s floor. It does not cover Cato’s low DSA reparations line. The check, if written, lands on payrolls, prices, and the bond market. That is every other Democrat slogan in this series. Billionaires are the caption. The middle is the account." },
 			{ type: "q", text: "A wrong in 1865 is not paid by bankrupting 2026. History is a record. It is not a blank on the Treasury." },
 			{ type: "p", text: "This journal will not deny slavery, Jim Crow, or redlining. The record is the record. The 13th, 14th, and 15th Amendments were the legal end of the slave power. The Civil Rights Act and the Voting Rights Act were the legal end of Jim Crow. A country can teach that without lighting a race line under the income tax. What it cannot do is add a $16 trillion racial outlay on top of a $34 trillion health outlay and call the sum justice. That is how the currency is destroyed, the courts, and the idea that the law is the same for the man in the next pew." },
-			{ type: "p", text: "The Hearing’s demand is the same as it was for Medicare for All. Prime time. Name the pay-for. Name the eligible class without a racial test that dies in court. No pay-for, no slogan. Let them hear us now — including the part where the check never existed." },
+			{ type: "p", text: "The Hearing’s demand is the same as it was for Medicare for All. Prime time. Name the pay-for. Name the eligible class without a racial test that dies in court. No pay-for, no slogan. The check was never on the table." },
 		],
 	},
 	{
@@ -1019,7 +1039,7 @@ export const posts: Post[] = [
 		image: "/images/essay-barcode.jpg",
 		imageAlt: "A mail ballot on a USPS box. A barcode is not a lock.",
 		featured: true,
-		series: "The Ballot",
+		series: "Congress",
 		part: 1,
 		receipts: [
 			{ label: "CISA — Nov. 12, 2020: ‘the most secure in American history’", href: "https://www.securitymagazine.com/articles/93927-cisa-says-theres-no-evidence-of-election-fraud-2020-election-was-the-most-secure-in-american-history" },
@@ -1048,7 +1068,7 @@ export const posts: Post[] = [
 			] },
 			{ type: "p", text: "This journal will not invent a dumpster of ballots to win a paragraph. The tape is the tape. People voted by mail for decades before 2020 — mostly absentee, mostly with an excuse, mostly in numbers the plants could swallow. 2020 made the exception the system and then forbade asking how a letter becomes a vote. The honest design is in-person, with identification, or absentee with a reason and a chain a court can read. A sorting sticker on a pandemic envelope is not that. It is a caption that says ‘trust us’ in machine-readable ink." },
 			{ type: "q", text: "A barcode tells a machine where a letter has been. It does not tell a republic who marked the oval." },
-			{ type: "p", text: "Let them hear us now — including the summer they said the mail was dying and the November they said it had never been safer." },
+			{ type: "p", text: "The summer they said the mail was dying, and the November they said it had never been safer, are the same record." },
 		],
 	},
 	{
@@ -1060,14 +1080,14 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/essay-eagle.jpg",
 		imageAlt: "Eagle over the Capitol",
-		series: "The Clip",
+		series: "The Tape",
 		part: 1,
 		receipts: [
 			{ label: "CNN — pool assignment pulled, Sept. 20, 2026", href: "https://www.cnn.com/2026/09/20/media/cnn-trump-white-house-pool-ban" },
 			{ label: "PBS / AP — badges deactivated, Sept. 19", href: "https://www.pbs.org/newshour/politics/ms-now-cnn-and-politico-say-their-journalists-were-denied-access-to-the-white-house-after-trump-ban" },
 			{ label: "CNN v. Trump, 2018 — Acosta credentials", href: "https://www.courtlistener.com/docket/16116680/cable-news-network-inc-v-trump/" },
 			{ label: "First Amendment", href: "https://constitution.congress.gov/constitution/amendment-1/" },
-			{ label: "The unclipped tape", href: "/dispatch/they-clipped-the-tape" },
+			{ label: "Manufactured outrage", href: "/dispatch/the-media-ledger" },
 		],
 		body: [
 			{
@@ -1080,7 +1100,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The other ledger is the tape this journal already printed. A six-second caption is how they steal an argument. “Mostly peaceful” with a precinct on fire. “Bloodbath” stripped of auto plants. “Fine people” stripped of the condemnation of Nazis in the same answer. [They clipped the tape.](/dispatch/they-clipped-the-tape) A press corps that sells the clip, then demands the pool as a birthright, is asking the country to fund the caption.",
+				text: "The other ledger is the tape. A six-second caption is how they steal an argument. “Mostly peaceful” with a precinct on fire. “Bloodbath” stripped of auto plants. “Fine people” stripped of the condemnation of Nazis in the same answer. [The media ledger](/dispatch/the-media-ledger) is that file. A press corps that sells the clip, then demands the pool as a birthright, is asking the country to fund the caption.",
 			},
 			{
 				type: "q",
@@ -1101,7 +1121,7 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/chart-iran.jpg",
 		imageAlt: "The Iranian terrorist regime at 60 percent enrichment, 1979–2026",
-		series: "The File",
+		series: "The Tape",
 		part: 1,
 		receipts: [
 			{ label: "IAEA GOV/2026/50 — 440.9 kg up to 60%, as of 13 June 2025", href: "https://www.iaea.org/sites/default/files/gov2026-50.pdf" },
@@ -1125,6 +1145,10 @@ export const posts: Post[] = [
 			{
 				type: "p",
 				text: "Director General Grossi, [3 March 2025](https://www.iaea.org/newscenter/statements/iaea-director-general-grossis-introductory-statement-to-the-board-of-governors-3-march-2025): Iran is the only non-nuclear-weapon state enriching to that level. [GOV/2026/8](https://www.iaea.org/sites/default/files/gov2026-8.pdf) said the same, and added that the Agency has not had access to verify the previously declared highly enriched uranium for months. After the June 2025 strikes the inspectors have not seen the material. That is a different sentence from the 440.9 kilograms. The 440.9 kilograms is the last verified count, on the page, before the door closed. Denying the 60 percent is denying the inspection that already happened.",
+			},
+			{
+				type: "p",
+				text: "House Democrats are posting the other sentence and leaving the number out. Hakeem Jeffries called it a reckless war of choice. On [March 4, 2026](https://www.congress.gov/119/crec/2026/03/04/172/41/CREC-2026-03-04-house.pdf), members said war of choice on the House floor. Chuck Schumer posted “100 days of Trump’s illegal war.” Ro Khanna called it immoral, illegal, and unstrategic. Whether Congress authorized the force is a real question under Article I. It is not a finding that the uranium was not there. The slogan works by omission. That half-truth is posted for power.",
 			},
 			{
 				type: "p",
@@ -1158,7 +1182,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/essay-eagle.jpg",
 		imageAlt: "Angry eagle over the Capitol in the swamp",
-		series: "The Clip",
+		series: "The Tape",
 		part: 3,
 		body: [
 			{
@@ -1213,7 +1237,7 @@ export const posts: Post[] = [
 		image: "/images/essay-eagle.jpg",
 		imageAlt: "Angry eagle over the Capitol in the swamp",
 		featured: true,
-		series: "The Clip",
+		series: "The Tape",
 		part: 2,
 		receipts: [
 			{
@@ -1285,7 +1309,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/chamber.jpg",
 		imageAlt: "The House chamber — where the political class writes the mess",
-		series: "The Clip",
+		series: "The Tape",
 		part: 7,
 		receipts: [{
 			label: "Border — Pew",
@@ -1487,7 +1511,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/chamber.jpg",
 		imageAlt: "The House — where the record is supposed to live",
-		series: "The Clip",
+		series: "The Tape",
 		part: 1,
 		frames: [
 			{
@@ -1577,7 +1601,7 @@ export const posts: Post[] = [
 		readMinutes: 7,
 		image: "/images/chart-one-word-ledger.jpg",
 		imageAlt: "Twelve years of one-word swaps: the caption versus the file",
-		series: "The Clip",
+		series: "The Tape",
 		part: 2,
 		receipts: [
 			{ label: "DOJ SDNY — Maduro charged, 26 March 2020", href: "https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-narco-terrorism-charges-against-nicolas-maduro-current" },
@@ -1693,7 +1717,7 @@ export const posts: Post[] = [
 		readMinutes: 8,
 		image: "/images/chart-lawfare.jpg",
 		imageAlt: "Lawfare against the hire: the caption, the evidence they used, the file that closed it",
-		series: "The Clip",
+		series: "The Tape",
 		part: 3,
 		receipts: [
 			{ label: "July 25, 2019 call memorandum", href: "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf" },
@@ -1711,71 +1735,71 @@ export const posts: Post[] = [
 		lawfare: [
 			{
 				caption: "Russia collusion — Crossfire Hurricane",
+				sold: "Sold as a finding: the campaign had coordinated with Moscow. “More than circumstantial” was said in the voice of a person who had seen the file. It ran for years as the fact of the presidency, not as an investigation.",
 				evidence: "A full FBI investigation opened as if the campaign had coordinated with Moscow. Ranking members told the country there was more than circumstantial evidence. Networks ran that sentence for the entire first term.",
 				source: "Crossfire Hurricane, July 2016. Steele dossier. FISA on Carter Page. Floor and camera claims that outran the file.",
-				file: "Durham: neither law enforcement nor the Intelligence Community possessed any actual evidence of collusion in their holdings when Crossfire Hurricane opened. Mueller: the investigation did not establish a conspiracy. Horowitz: seventeen FISA inaccuracies and omissions. They ran it anyway. That is how you poison a presidency and divide a nation.",
+				file: "Durham: neither law enforcement nor the Intelligence Community possessed any actual evidence of collusion in their holdings when Crossfire Hurricane opened. Mueller: the investigation did not establish a conspiracy. Horowitz: seventeen FISA inaccuracies and omissions. They ran it anyway. A neighbor was taught the other neighbor had hired a foreign asset. That is the split.",
 				href: "https://www.justice.gov/storage/durhamreport.pdf",
+				doc: "Durham report",
+				docs: [
+					{ label: "Horowitz IG — FISA", href: "https://oig.justice.gov/reports/2019/o1912.pdf" },
+					{ label: "Barr remarks on the Mueller report", href: "https://www.justice.gov/archives/opa/speech/attorney-general-william-p-barr-delivers-remarks-release-report-investigation-russian" },
+					{ label: "H.Res. 630 — the collusion claim", href: "https://www.congress.gov/congressional-record/volume-165/issue-163/house-section/article/H8153-5" },
+				],
 			},
 			{
 				caption: "First impeachment — abuse of power",
+				sold: "Sold as a finding: he committed a crime on the call. The article was reported as the fact. An impeachment article is a charge. It was not sold as a charge.",
 				evidence: "A July 25, 2019 telephone call with Ukraine. The House said the President withheld aid to force an investigation of the Bidens. That call was treated as the crime.",
 				source: "The White House released the unclassified call memorandum. H.Res. 755. Floor speeches that did not match the memo.",
-				file: "The memo is public. The President asked about corruption involving the Bidens in a country receiving American aid. Looking into corruption in a foreign aid relationship is the job of the executive under Article II. The House called it an impeachable plot. The Senate acquitted on February 5, 2020. A party that impeaches the hire for asking about corruption in the family of a rival is using process to bury the question. That is not oversight. It is a cover.",
+				file: "The memo is public. The President asked about corruption involving the Bidens in a country receiving American aid. Looking into corruption in a foreign aid relationship is the job of the executive under Article II. The House called it an impeachable plot. The Senate acquitted on February 5, 2020. The country had already been split on a verdict the Senate did not return.",
 				href: "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf",
+				doc: "July 25, 2019 call memorandum",
+				docs: [
+					{ label: "H.Res. 755 — first impeachment", href: "https://www.congress.gov/bill/116th-congress/house-resolution/755" },
+				],
 			},
 			{
 				caption: "Second impeachment — incitement of insurrection",
+				sold: "Sold as a finding: he ordered an attack, and the day was an insurrection. The clip was the exhibit. The statute was not.",
 				evidence: "A speech on January 6, 2021. Clips were run as if the President had ordered an attack on the Capitol. The House article named incitement of insurrection.",
 				source: "H.Res. 24. Select-committee clips. Network packages built from minutes they kept.",
-				file: "The C-SPAN recording of the speech includes the line to protest peacefully and patriotically. The U.S. Attorney for D.C. later published the tally: about 1,583 federally charged. Assault, trespass, civil disorder. About 18 charged with seditious conspiracy under 18 U.S.C. § 2384. Zero charged under 18 U.S.C. § 2383 — the insurrection statute. The Senate acquitted on February 13, 2021. They used a speech — political speech — as the article. Insurrection was the caption. Insurrection was never the charge.",
+				file: "The C-SPAN recording of the speech includes the line to protest peacefully and patriotically. The U.S. Attorney for D.C. later published the tally: about 1,583 federally charged. Assault, trespass, civil disorder. About 18 charged with seditious conspiracy under 18 U.S.C. § 2384. Zero charged under 18 U.S.C. § 2383 — the insurrection statute. The Senate acquitted on February 13, 2021. Insurrection was sold as the fact. Insurrection was never the charge.",
 				href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol",
+				doc: "USAO-DC — January 6 tally",
+				docs: [
+					{ label: "H.Res. 24 — second impeachment", href: "https://www.congress.gov/bill/117th-congress/house-resolution/24" },
+					{ label: "C-SPAN — January 6 speech", href: "https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc" },
+					{ label: "18 U.S.C. § 2383 — insurrection", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
+				],
 			},
 			{
 				caption: "Four criminal dockets at once",
+				sold: "Sold as four findings at once, in an election year: documents, racketeering, election crime, and business-record felonies, each spoken as if the jury had already sat. A charge is not a verdict. It was not sold as a charge.",
 				evidence: "New York. Florida. Georgia. The District of Columbia. Overlapping cases against the same hire while he stood for election again.",
 				source: "State and federal prosecutors. A special counsel paid from appropriated funds. The public paid the committee. Defense is not free.",
-				file: "Process as punishment does not require a matching statute. A presidency and a campaign can be buried in dockets the taxpayer funds. Going after the man the country hired is going after the country. That is the method.",
-				href: "https://www.justice.gov/storage/durhamreport.pdf",
+				file: "Florida was dismissed as to him. Georgia was abandoned. The District of Columbia was dismissed without prejudice, which is not an acquittal. Manhattan is a records conviction, still on appeal, sentenced to no jail and no fine. The country was split on four verdicts. Three of the cases never reached one.",
+				href: "https://www.courtlistener.com/docket/67656595/united-states-v-trump/",
+				doc: "District of Columbia docket",
 			},
 		],
 		body: [
 			{
-				type: "img",
-				src: "/images/chart-lawfare.jpg",
-				alt: "The stack: Crossfire, FISA, two impeachments, four dockets",
-			},
-			{
 				type: "p",
-				text: "The people hire the president. That is [Article II](https://constitution.congress.gov/constitution/article-2/). The hire is not a private man the other party gets to ruin between elections. Harming the hire is harming the employer. Process used as punishment against one name is process used against the vote that put the name there. The table on this page is the ledger: the caption they ran, the evidence they used, where that evidence came from, and what the official file later showed. Each of those operations was paid for by the public. That is a taxpayer-funded assault on an elected president and on the Americans who hired him.",
-			},
-			{
-				type: "p",
-				text: "The first impeachment was a phone call. On [July 25, 2019](https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf) the President of the United States spoke with the President of Ukraine. The White House released the unclassified memorandum. He asked about corruption involving the Bidens in a country that receives American aid. Looking into corruption in a foreign-aid relationship is the job of the executive. The House treated that call as an article of impeachment — [H.Res. 755](https://www.congress.gov/bill/116th-congress/house-resolution/755) — and used it to bury the question. The Senate acquitted on February 5, 2020. A party that impeaches the hire for asking about corruption in the family of a rival is not conducting oversight. It is covering the subject of the question.",
-			},
-			{
-				type: "p",
-				text: "The second impeachment was a speech. On January 6, 2021, [C-SPAN recorded](https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc) the rally. The recording includes the line to protest peacefully and patriotically. Clips were cut so the country heard an order that the tape does not contain. The House article — [H.Res. 24](https://www.congress.gov/bill/117th-congress/house-resolution/24) — named incitement of insurrection. Political speech became the charge. [18 U.S.C. § 2383](https://www.law.cornell.edu/uscode/text/18/2383) is the insurrection statute. The [U.S. Attorney for D.C.](https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol) later published the tally: about 1,583 federally charged. Zero under § 2383. The Senate acquitted on February 13, 2021. Insurrection was the caption. Insurrection was never the charge against anyone that day.",
-			},
-			{
-				type: "p",
-				text: "Crossfire Hurricane was not a footnote. It was the air of the first term. [Durham](https://www.justice.gov/storage/durhamreport.pdf) later wrote that neither U.S. law enforcement nor the Intelligence Community possessed any actual evidence of collusion in their holdings when the FBI opened a full investigation. That is the file. The caption was the opposite. On March 20, 2017, the ranking member of House Intelligence told the country the evidence of collusion was more than circumstantial. The [Congressional Record](https://www.congress.gov/congressional-record/volume-165/issue-163/house-section/article/H8153-5) later put that sentence in a censure resolution as a false accusation spread for more than two years. Networks ran it. Politicians who had the committee ran it. After [Mueller](https://www.justice.gov/archives/opa/speech/attorney-general-william-p-barr-delivers-remarks-release-report-investigation-russian) did not establish a conspiracy they kept running it. A presidency can be poisoned without a statute. Neighbors can be taught their neighbors hired a Kremlin asset. That is how you divide a nation with a caption the file never held. The rest of that ledger is [They ran it anyway](/dispatch/they-ran-it-anyway).",
-			},
-			{
-				type: "q",
-				text: "Taxpayer-funded hoaxes. The caption ran. The file closed it. The people still paid.",
+				text: "The people hire the president. Process used as punishment against that hire is process used against the vote. The cases are on the chart. Each row opens the record.",
 			},
 		],
 	},
 	{
 		slug: "they-ran-it-anyway",
 		title: "They ran it anyway",
-		dek: "Crossfire Hurricane had no actual evidence of collusion when it opened. Politicians and networks ran it for the entire first term. That is how you poison a president and divide a nation.",
+		dek: "Crossfire Hurricane had no actual evidence of collusion when it opened. Politicians and networks ran it for the entire first term. That is how a president is poisoned and a nation is divided.",
 		date: "2026-09-21",
 		category: "Dispatch",
 		readMinutes: 5,
 		image: "/images/chart-they-ran-it.jpg",
 		imageAlt: "Crossfire opened empty. Schiff ran more than circumstantial. Mueller did not establish. They kept running it.",
-		series: "The Clip",
+		series: "The Tape",
 		part: 3,
 		receipts: [
 			{ label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
@@ -1799,7 +1823,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "q",
-				text: "The file was empty at the opening. They ran it for the whole first term. That is how you poison a presidency.",
+				text: "The file was empty at the opening. They ran it for the whole first term. That is how a presidency is poisoned.",
 			},
 		],
 	},
@@ -1812,7 +1836,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/chart-crime.jpg",
 		imageAlt: "FBI murder rate by administration — 2020 spike, 2025 at 4.1",
-		series: "The Clip",
+		series: "The Tape",
 		part: 4,
 		receipts: [
 			{ label: "Kamala Harris — Minnesota Freedom Fund, June 1, 2020", href: "https://x.com/KamalaHarris/status/1267555018128965643" },
@@ -2037,11 +2061,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "A prosecutor still has to prove an agreement to use force. Their paper program does not recite rifles. Do not fake a felony. Do not yawn at a rewrite of the Senate, the presidency, the Court, property, and citizenship. Article V is how Americans change the Constitution. A faction drafting a socialist republic is not Article V. It is a hostile swap sold as compassion."
+				text: "A prosecutor still has to prove an agreement to use force. Their paper program does not recite rifles. A felony is not invented here. A rewrite of the Senate, the presidency, the Court, property, and citizenship is not shrugged off. Article V is how Americans change the Constitution. A faction drafting a socialist republic is not Article V. It is a hostile swap sold as compassion."
 			},
 			{
 				type: "p",
-				text: "Source the law: [Cornell LII, 18 U.S.C. § 2384](https://www.law.cornell.edu/uscode/text/18/2384) and [§ 2385](https://www.law.cornell.edu/uscode/text/18/2385). Source their words: [program.dsausa.org](https://program.dsausa.org/). Do not outsource either to a caption."
+				text: "Source the law: [Cornell LII, 18 U.S.C. § 2384](https://www.law.cornell.edu/uscode/text/18/2384) and [§ 2385](https://www.law.cornell.edu/uscode/text/18/2385). Source their words: [program.dsausa.org](https://program.dsausa.org/). Neither one is handed to a caption."
 			}
 		]
 	},
@@ -2054,7 +2078,7 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/blog-peoples.jpg",
 		imageAlt: "Eagle over a flooded Capitol",
-		series: "The Job",
+		series: "Congress",
 		part: 6,
 		body: [
 			{
@@ -2080,7 +2104,7 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/chart-funnel.jpg",
 		imageAlt: "The funnel: taxpayer to agency to NGO — USAID, FEMA, NED",
-		series: "The Job",
+		series: "Congress",
 		part: 4,
 		receipts: [
 			{ label: "ForeignAssistance.gov", href: "https://www.foreignassistance.gov/" },
@@ -2125,7 +2149,7 @@ export const posts: Post[] = [
 		readMinutes: 4,
 		image: "/images/chart-they-dont-write.jpg",
 		imageAlt: "Lobby drafts. Congress votes. The country keeps the harm.",
-		series: "The Job",
+		series: "Congress",
 		part: 2,
 		receipts: [
 			{ label: "Article I, Section 1", href: "https://constitution.congress.gov/constitution/article-1/" },
@@ -2163,7 +2187,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/chart-paying-taliban.jpg",
 		imageAlt: "SIGAR: U.S. aid after Kabul benefited the Taliban. Congress voted the unread pile.",
-		series: "The Job",
+		series: "Congress",
 		part: 3,
 		receipts: [
 			{ label: "SIGAR 24-22 — funds benefitting the Taliban", href: "https://www.sigar.mil/Portals/147/Files/Reports/Audits-and-Inspections/Performance-Audits/SIGAR-24-22-AR.pdf" },
@@ -2199,26 +2223,24 @@ export const posts: Post[] = [
 	{
 		slug: "fema-ran-two-jobs",
 		title: "FEMA ran two jobs",
-		dek: "The disaster fund hit Immediate Needs Funding for Americans. The same agency awarded $1.4 billion for aliens. The Inspector General could not verify $425 million of that pile was even used as humanitarian aid.",
+		dek: "North Carolina flood. Maui fire. Americans who paid the tax waited. The same agency awarded $1.4 billion for aliens.",
 		date: "2026-09-21",
 		category: "Dispatch",
 		readMinutes: 5,
 		image: "/images/chart-fema-two-jobs.jpg",
 		imageAlt: "FEMA: Immediate Needs Funding for Americans. $1.4 billion for aliens. $425 million questioned.",
-		series: "The Search",
+		series: "The Border",
 		part: 0,
 		receipts: [
 			{ label: "FEMA — Immediate Needs Funding, Aug. 29, 2023", href: "https://content.govdelivery.com/attachments/USDHSFEMA/2023/08/29/file_attachments/2597953/FEMA%20Advisory%20FEMA%20Announces%20Implementation%20of%20Immediate%20Needs%20Funding%2020230829.pdf" },
 			{ label: "CRS — Disaster Relief Fund, R47676", href: "https://www.congress.gov/crs-product/R47676" },
 			{ label: "DHS OIG-26-04 — $425 million questioned", href: "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf" },
 			{ label: "House Homeland — letter to Mayorkas, Oct. 11, 2024", href: "https://homeland.house.gov/wp-content/uploads/2024/10/2024-10-11-Green-et-al-to-Mayorkas-DHS-re-FEMA-Funding-Priorities.pdf" },
+			{ label: "GAO-26-108154 — Helene survivors, the helpline", href: "https://www.gao.gov/products/gao-26-108154" },
+			{ label: "GAO-25-106862 — Maui wildfire, FEMA assistance", href: "https://www.gao.gov/products/gao-25-106862" },
+			{ label: "FEMA — Maui, one year later", href: "https://www.fema.gov/fact-sheet/one-year-later-maui-wildfire-recovery-continues-nearly-3-billion-federal-support" },
 		],
 		body: [
-			{
-				type: "img",
-				src: "/images/chart-fema-two-jobs.jpg",
-				alt: "DRF on Immediate Needs. SSP $1.4 billion. $425 million questioned.",
-			},
 			{
 				type: "p",
 				text: "On August 29, 2023, [FEMA announced Immediate Needs Funding](https://content.govdelivery.com/attachments/USDHSFEMA/2023/08/29/file_attachments/2597953/FEMA%20Advisory%20FEMA%20Announces%20Implementation%20of%20Immediate%20Needs%20Funding%2020230829.pdf). The Disaster Relief Fund was “approaching exhaustion.” New Public Assistance that was not life-saving would pause. Hazard mitigation would pause. Americans waiting on long-term recovery after fire and hurricane would wait. [CRS](https://www.congress.gov/crs-product/R47676) later wrote that FEMA had to restrict obligations to preserve money for immediate response, and that the unobligated DRF balance that morning was **$3.4 billion**. That is the file on Americans.",
@@ -2229,11 +2251,19 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Say the wire correctly. SSP was not a check drawn on the Disaster Relief Fund. It was CBP money Congress moved to FEMA. The purse is still one purse. One cabinet. One season. Americans on Immediate Needs Funding. Aliens on a $1.4 billion grant FEMA administered. In October 2024, after Hurricane Helene, the Secretary told reporters FEMA did not have the funds to make it through the hurricane season. [House Homeland wrote him](https://homeland.house.gov/wp-content/uploads/2024/10/2024-10-11-Green-et-al-to-Mayorkas-DHS-re-FEMA-Funding-Priorities.pdf) the same week: disaster communities on one line, migrant shelter on the other. [What the taxpayer bought](/dispatch/what-the-taxpayer-bought) is the shopping list. This page is the two jobs. The disaster fund was short for Americans. The migrant grants went out. The Inspector General still cannot certify $425 million of the “aid.”",
+				text: "Western North Carolina, Hurricane Helene, late September 2024. The Secretary of Homeland Security told reporters FEMA did not have the funds to make it through the hurricane season. [House Homeland wrote him](https://homeland.house.gov/wp-content/uploads/2024/10/2024-10-11-Green-et-al-to-Mayorkas-DHS-re-FEMA-Funding-Priorities.pdf) on October 11: Americans in those mountains on one line, migrant shelter on the other. The Committee said it understood the Disaster Relief Fund and the Shelter and Services Program were not the same account. It asked why the Department requested large sums for the migrant grants while the disaster fund was short. [GAO](https://www.gao.gov/products/gao-26-108154) later: Helene survivors faced long wait times. Many could not reach a representative on the helpline. That is not a rumor. That is the auditor.",
+			},
+			{
+				type: "p",
+				text: "Maui, August 8, 2023. [GAO](https://www.gao.gov/products/gao-25-106862): more than 100 dead, nearly 10,000 displaced, more than 2,000 structures damaged or destroyed. FEMA’s own [one-year fact sheet](https://www.fema.gov/fact-sheet/one-year-later-maui-wildfire-recovery-continues-nearly-3-billion-federal-support): **$56.1 million** in Individual Assistance to **7,141 people**. Temporary housing was still being [extended into 2027](https://www.fema.gov/press-release/20260128/fema-extends-temporary-housing-assistance-maui-wildfire-survivors-february). The people who paid the tax waited in trailers and hotels. The same agency, those same two fiscal years, awarded nearly **$1.4 billion** for aliens — hotels, clothes, phones. The Inspector General still cannot certify $425 million of that pile.",
+			},
+			{
+				type: "p",
+				text: "Say the wire correctly. The Shelter and Services Program was not a check drawn on the Disaster Relief Fund. It was Customs and Border Protection money Congress moved to FEMA. The purse is still one purse. One cabinet. One season. North Carolina after the flood. Maui after the fire. Americans who paid the tax waited on a helpline. Aliens got hotels, clothes, and phones. The Inspector General still cannot certify $425 million of that pile. [What the taxpayer bought](/dispatch/what-the-taxpayer-bought) is the shopping list.",
 			},
 			{
 				type: "q",
-				text: "Americans got Immediate Needs Funding. Aliens got the grant. The auditor could not verify the humanitarian pile.",
+				text: "The flood and the fire waited. The migrant grant went out.",
 			},
 		],
 	},
@@ -2244,7 +2274,7 @@ export const posts: Post[] = [
 		date: "2026-08-22",
 		category: "Dispatch",
 		readMinutes: 7,
-		series: "The Job",
+		series: "Congress",
 		part: 1,
 		image: "/images/capitol.jpg",
 		imageAlt: "The Capitol — the $7 billion machine",
@@ -2357,7 +2387,7 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/blog-truth.jpg",
 		imageAlt: "The Truth Rises Here",
-		series: "The Ballot",
+		series: "Congress",
 		part: 2,
 		body: [
 			{
@@ -2498,7 +2528,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/chamber.jpg",
 		imageAlt: "The House chamber",
-		series: "The Job",
+		series: "Congress",
 		part: 5,
 		receipts: [
 			{ label: "Lobbying Disclosure Act — P.L. 104-65", href: "https://www.congress.gov/104/plaws/publ65/PLAW-104publ65.pdf" },
@@ -2529,7 +2559,7 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/signs.jpg",
 		imageAlt: "The people in the street — not the political club",
-		series: "The Target",
+		series: "The Parties",
 		part: 1,
 		receipts: [
 			{
@@ -2604,7 +2634,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/signs.jpg",
 		imageAlt: "The people who still show up",
-		series: "The Target",
+		series: "The Parties",
 		part: 2,
 		receipts: [
 			{
@@ -2648,7 +2678,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/capitol.jpg",
 		imageAlt: "The building that leaks",
-		series: "The Target",
+		series: "The Parties",
 		part: 3,
 		receipts: [{
 			label: "UN 2018 — reject globalism",
@@ -2681,7 +2711,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/chamber.jpg",
 		imageAlt: "The steps they captioned",
-		series: "The Target",
+		series: "The Parties",
 		part: 4,
 		receipts: [
 			{
@@ -2729,7 +2759,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/we-the-people.jpg",
 		imageAlt: "We the People — the only overseers who do not live there",
-		series: "The Correction",
+		series: "The Remedy",
 		part: 5,
 		receipts: [
 			{
@@ -2777,7 +2807,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/chamber.jpg",
 		imageAlt: "The chamber they are not in",
-		series: "The Job",
+		series: "Congress",
 		part: 4,
 		receipts: [{
 			label: "FY2026 legislative branch — $7.258 billion — CRS / P.L. 119-37",
@@ -2833,7 +2863,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/signs.jpg",
 		imageAlt: "The people in the street — not the political club",
-		series: "The Job",
+		series: "Congress",
 		part: 7,
 		receipts: [
 			{
@@ -2900,7 +2930,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/capitol.jpg",
 		imageAlt: "The bill they will not read",
-		series: "The Job",
+		series: "Congress",
 		part: 2,
 		receipts: [
 			{
@@ -2919,11 +2949,11 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "The Treasury's daily table put total public debt outstanding over $40 trillion in August 2026 https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/ That is not a caption. That is the government's own meter. It cannot keep growing like this. Interest already eats the room that used to be for the things they campaign on. The people who write the checks are the same people who will not pass a budget."
+				text: "The Treasury's daily table put total public debt outstanding over $40 trillion in August 2026. [Debt to the Penny](https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/) is the government's own meter. It cannot keep growing like this. Interest already eats the room that used to be for the things they campaign on. The people who write the checks are the same people who will not pass a budget."
 			},
 			{
 				type: "p",
-				text: "Under the Congressional Budget Act of 1974 they are supposed to adopt a budget resolution, then pass twelve regular appropriations bills before October 1. Pew counted the years they actually did all of it on time: four. Fiscal 1977, 1989, 1995, and 1997. The last one was FY1997, signed the day before the year started, while Clinton was still in the building https://www.pewresearch.org/short-reads/2025/10/01/congress-has-long-struggled-to-pass-spending-bills-on-time/ CRS says the same: FY1997 was the last time all regular appropriations were enacted by October 1 https://www.congress.gov/crs-product/IN12324 Since then they have never passed more than five of the twelve on time. In most recent years they passed none. They live on continuing resolutions and giant unread bills."
+				text: "Under the Congressional Budget Act of 1974 they are supposed to adopt a budget resolution, then pass twelve regular appropriations bills before October 1. [Pew counted the years they actually did all of it on time: four.](https://www.pewresearch.org/short-reads/2025/10/01/congress-has-long-struggled-to-pass-spending-bills-on-time/) Fiscal 1977, 1989, 1995, and 1997. The last one was FY1997, signed the day before the year started, while Clinton was still in the building. [CRS says the same: FY1997 was the last time all regular appropriations were enacted by October 1.](https://www.congress.gov/crs-product/IN12324) Since then they have never passed more than five of the twelve on time. In most recent years they passed none. They live on continuing resolutions and giant unread bills."
 			},
 			{
 				type: "h",
@@ -2932,8 +2962,8 @@ export const posts: Post[] = [
 			{
 				type: "ul",
 				items: [
-					"A CR copies last year's funding, plus 'anomalies' — exceptions stuffed in by the people who already failed to write a bill. Nobody outside the room can audit an anomaly at 2 a.m.",
-					"A giant unread bill is a thousand pages dropped hours before the vote. Members vote on a caption. The riders, the earmarks, the contractors, the quiet increases live in the annex. That is the twin law, in money.",
+					"A continuing resolution copies last year's funding, plus 'anomalies' — exceptions stuffed in by the people who already failed to write a bill. Nobody outside the room can audit an anomaly at 2 a.m.",
+					"A giant unread bill is a thousand pages dropped hours before the vote. Members vote on a caption. The riders, the earmarks, the contractors, and the quiet increases live in the annex. That is the same trick, done with money.",
 					"Emergency designations and 'disaster' titles skip the caps. Some disasters are real. The designation is also how a permanent program is hidden inside a one-time word.",
 					"No line-item debate means no line-item blame. Fraud does not need a mastermind when the document is designed so that no one can be shown to have read it.",
 					"The $7.258 billion legislative machine is Congress, which produces those piles. They cannot police the country's books because they will not finish their own."
@@ -2941,7 +2971,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "This is not a claim that every CR is a criminal count. Fraud, in the code, still needs a lie, a scheme, a specific hand. A giant unread bill is still an appropriation made by law — Article I, Section 9 is satisfied on paper. The oath is not. They swore to well and faithfully discharge the duties of the office https://www.law.cornell.edu/uscode/text/5/3331 Twelve bills by October 1 is the duty. They have not done it since FY1997. Forty trillion on the meter. A wide-open door. This is how the country has been running. It cannot continue."
+				text: "This is not a claim that every continuing resolution is a criminal count. Fraud, in the code, still needs a lie, a scheme, and a specific hand. A giant unread bill is still an appropriation made by law. Article I, Section 9 is satisfied on paper. The oath is not. They swore to well and faithfully discharge the duties of the office. [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331) is that oath. Twelve bills by October 1 is the duty. They have not done it since fiscal year 1997. Forty trillion is on the meter. The unread pile is the door. This is how the country has been running. It cannot continue."
 			}
 		]
 	},
@@ -2954,7 +2984,7 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/capitol.jpg",
 		imageAlt: "The pipeline they will not shut",
-		series: "The Job",
+		series: "Congress",
 		part: 3,
 		receipts: [
 			{
@@ -3073,7 +3103,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/chamber.jpg",
 		imageAlt: "The mic they will not share",
-		series: "The Clip",
+		series: "The Tape",
 		part: 4,
 		receipts: [
 			{
@@ -3104,7 +3134,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "q",
-				text: "Hold the mic to the tape. Do not hand them the mute button."
+				text: "The mic stays on the tape. The mute button stays off."
 			},
 			{
 				type: "p",
@@ -3121,7 +3151,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/chamber.jpg",
 		imageAlt: "The mic they will not share",
-		series: "The Clip",
+		series: "The Tape",
 		part: 5,
 		receipts: [
 			{
@@ -3173,7 +3203,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/constitution.jpg",
 		imageAlt: "The charter they legislate around",
-		series: "The Clip",
+		series: "The Tape",
 		part: 6,
 		receipts: [{
 			label: "How a bill becomes law — Congress.gov",
@@ -3206,7 +3236,7 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/chamber.jpg",
 		imageAlt: "The House chamber",
-		series: "The Clip",
+		series: "The Tape",
 		receipts: [
 			{ label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
 			{ label: "18 U.S.C. § 2383 — insurrection", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
@@ -3238,9 +3268,206 @@ export const posts: Post[] = [
 				text: "The former president was put on four criminal dockets at once. The House had already impeached twice. https://www.congress.gov/bill/116th-congress/house-resolution/755 The public paid for the committee. Defense is not free. Voters watched a years-long prosecution of the man they had hired, and of neighbors who had shown up at a school board, while the people who wrote the caption kept the gavel. DHS stood up a Disinformation Governance Board in 2022 and told Congress it would combat a threat to the homeland. The department terminated the board and rescinded the charter on August 24, 2022. https://www.dhs.gov/archive/news/2022/08/24/following-hsac-recommendation-dhs-terminates-disinformation-governance-board A cabinet had named a board to police the information the public would receive. Inspector General Horowitz had already found seventeen inaccuracies and omissions in the FISA applications used to surveil a campaign adviser. https://oig.justice.gov/reports/2019/o1912.pdf This journal’s rule does not change: the statute, the charge sheet, the tape. If the caption and the count do not match, print the count. The information war is not a mood. It is a method — keep the temperature up, keep the file closed, keep the other ledger from being heard."
 			}
 		]
-	}
+	},
+	{
+		slug: "a-war-on-americans",
+		title: "A war was waged on Americans",
+		dek: "Lawfare and lies were used to replace the American argument. The people own this country. That is not allowed.",
+		date: "2026-09-22",
+		category: "Dispatch",
+		readMinutes: 4,
+		featured: true,
+		image: "/images/chart-oval-slogan.jpg",
+		imageAlt: "The slogan versus the document — lawfare is not a debate",
+		series: "The Tape",
+		receipts: [],
+		lawfare: [
+			{
+				caption: "The judge stayed on the case",
+				sold: "Sold two ways, both as fact. One side: the judge was compromised and the verdict was fixed, because of his daughter’s firm. The other side: the conviction closed the question, a felon, full stop. Neither sentence was sold as an argument.",
+				evidence: "The defense said Justice Juan M. Merchan had a conflict and had to step aside. His daughter worked at Authentic Campaigns, a Democratic consulting firm. He had made small political contributions in 2020.",
+				source: "Recusal motions in People v. Trump, Indictment 71543-23. His own inquiry to the Advisory Committee on Judicial Ethics.",
+				file: "Opinion 23-54, May 4, 2023, said his impartiality could not reasonably be questioned, and that he did not have to step aside or disclose the facts. The opinion assumed his daughter had no interest the case could substantially affect. The defense said that premise was wrong, because clients of the firm raised money off the prosecution. He denied recusal three times. Authentic told the House Judiciary Committee it had no Biden contract after 2020, none with Harris after 2019, and that its employees had not discussed the case with him. A 2026 grand jury subpoena to the firm is an examination. It is not a finding, and it is not a charge.",
+				href: "https://www.nycourts.gov/ipjudicialethicsopinions/23-54.htm",
+				doc: "Opinion 23-54 — the judge",
+			},
+			{
+				caption: "Bragg · 34 counts",
+				sold: "Sold as a finding: thirty-four felonies, election fraud, proved. After the verdict a second caption ran, also as fact: the judge told the jury the verdict did not have to be unanimous. The written charge does not say that.",
+				evidence: "Thirty-four counts of falsifying business records in the first degree. A false entry is a misdemeanor unless the person also intended to commit another crime, or to hide one. The counts say “another crime.” They do not name it.",
+				source: "Penal Law § 175.05 and § 175.10. The indictment. The May 12, 2023 answer to the bill of particulars. Justice Merchan’s written jury instructions, May 29, 2024, posted by the New York courts.",
+				file: "The charge says the verdict on each count, guilty or not guilty, must be unanimous. It also says the People need not prove the other crime was in fact committed, only an intent to commit it or to hide it. The other crime he named for the jury was Election Law § 17-152. Then this sentence: although the jury must unanimously conclude he conspired to promote or prevent an election by unlawful means, “you need not be unanimous as to what those unlawful means were.” The three means he listed were a federal campaign-finance violation, falsifying other business records, or a tax violation, including a false return even if no tax was underpaid. He also told them they need not be unanimous on whether he did it himself or by acting in concert. One of the three means is another false business record. That is the same kind of entry, used as the means inside the conspiracy that turns the charged entries into felonies. The indictment counts still do not name the other crime. The court refused to dismiss. The appeal is not over. The sentence was an unconditional discharge: no jail, no fine.",
+				href: "https://www.nycourts.gov/LegacyPDFS/press/PDFs/People%20v.%20DJT%20Jury%20Instructions%20and%20Charges%20FINAL%205-23-24.pdf",
+				doc: "Jury instructions — pages 26, 28, 29, 31, and 49",
+				docs: [
+					{ label: "Indictment — pages 1–14 do not name the other crime", href: "https://www.manhattanda.org/wp-content/uploads/2023/04/Donald-J.-Trump-Indictment.pdf" },
+					{ label: "Verdict sheet — May 30, 2024", href: "https://www.nycourts.gov/LegacyPDFS/press/PDFs/Trump-Verdict-Sheet.pdf" },
+					{ label: "The court’s opinion on the other crime", href: "https://scholar.google.com/scholar_case?case=11345944588759050005" },
+				],
+			},
+			{
+				caption: "She was ordered to pay him",
+				sold: "Sold as a finding: she beat him in court, and the only money in the story is the one he paid her to stay quiet. The fee order ran the other way, and then dropped out of the telling.",
+				evidence: "Stephanie Clifford sued him for defamation over a tweet. A judge threw the case out and ordered her to pay his lawyers.",
+				source: "Clifford v. Trump, Central District of California, Judge S. James Otero. The fee order is December 11, 2018. She was a witness in the later criminal case. She was not the plaintiff in it.",
+				file: "Who paid her lawyers: a public CrowdJustice page. By June 2018 that page had taken in more than half a million dollars. The donations were mostly small, and the donors were not named in a judgment. Her lawyer, Michael Avenatti, said the fees were hers or that page, and that he had not looked at who gave. No court finding identifies a party committee as the source. The tweet called a sketch a con. On December 11, 2018, Judge Otero ordered her to pay $293,052.33 in fees, costs, and sanctions, and closed the case. Appeals raised what was owed. At the criminal trial in May 2024 she still had not paid, and she had said she would go to jail first. In October 2024 her lawyer said the judgments were settled for $627,500 and released. This file does not contain the clerk’s satisfaction. The order that she owed him is the court record. “Still owes” was true at the trial. It is not what her lawyer said five months later. The criminal case was the People’s. She was a witness in it. She was not the plaintiff.",
+				href: "https://www.courtlistener.com/docket/7649164/stephanie-clifford-v-donald-j-trump/",
+				doc: "Clifford v. Trump — the fee order",
+			},
+			{
+				caption: "Carroll — she filed the day the window opened",
+				sold: "Sold as a finding: a rape conviction, a credible case with the evidence a criminal trial would require, and a governor who rewrote the clock by herself so this one plaintiff could sue. Also sold as a finished fact on both dollar amounts.",
+				evidence: "The one-year window opened November 24, 2022. She filed the sexual-abuse case that day. A jury in 2023 awarded $5 million. A jury in 2024 awarded $83.3 million for the 2019 defamation. Neither is a criminal conviction.",
+				source: "Carroll v. Trump. First complaint: New York County, Index No. 160694/2019, filed November 4, 2019, at 9:59 a.m. Second complaint: Southern District of New York, 1:22-cv-10016, filed November 24, 2022. Adult Survivors Act, S.66A, signed May 24, 2022. The lookback window ran from November 24, 2022, through November 24, 2023.",
+				file: "The window opened November 24, 2022. She filed that day. It closed November 24, 2023. November 4, 2019, was a different suit, defamation over his 2019 denial, and that one did not need the new statute. Who paid the later case: Reid Hoffman, a major Democratic donor, has said he supported it. American Future Republic, a nonprofit he backs, helped pay the legal bills. A 2023 tax filing for that nonprofit has been described as about $7 million to her lawyers. That figure is the filing as reported. It is not a line in the verdict. In an October 2022 deposition she was asked if anyone else was paying her legal fees. She said no. Before the April 2023 trial, the defense said it had just learned of Hoffman. Her lawyer, Roberta Kaplan, told the judge that Carroll had only just remembered the nonprofit, and that Carroll had never met or communicated with anyone there. Hoffman’s adviser said the original grant to the firm was for a different case, and that in 2020 the firm asked to use it for this one. The Second Circuit rejected the claim that the deposition answer required a new trial. A 2026 bar complaint against Kaplan was rejected. A reported Justice Department look at the nonprofit is not a charge in this file. Kaplan’s wife, Rachel Lavine, is the Democratic State Committeewoman for Manhattan’s 66th Assembly District and a founder of the state party’s Progressive Caucus. Lavine’s own campaign materials list endorsements from Representative Jerry Nadler, then-Representative Carolyn Maloney, and State Senator Brad Hoylman. Hoylman, with Assemblymember Linda Rosenthal, sponsored the Adult Survivors Act. Governor Kathy Hochul signed it. On the day of the signature, May 24, 2022, Carroll publicly thanked Hochul. Joshua Matz, a lawyer on the Carroll filing, had been counsel to House Democrats on both impeachments of Trump. None of that is a court finding that a member of Congress wrote the bill for her. The bill does not name her. The overlap is the Manhattan Democratic circle around the lawyer, the sponsor, and the donor. The account is a dressing room at Bergdorf Goodman. There was no eyewitness in the room, no police report, and no physical evidence from the day. On the stand she could not fix the date. She said she believed a Thursday evening in the spring of 1996, and that the date was something she was constantly trying to pin down. She testified she did not scream, because she was in a panic. She testified that she called a friend, Lisa Birnbach, while still laughing, to ask if it was funny. Birnbach told her to go to the police. She did not. A second friend, Carol Martin, testified that Carroll told her a day or two later, and placed that talk somewhere between 1994 and 1996. Those two women were not in the room. They repeated what she told them. Other women’s accounts and the Access Hollywood tape were let in. The jury believed her on sexual abuse and on defamation. It did not find rape on the verdict form. “The testimony made no sense” is not what the jury found. The gaps are what the record contains. The Adult Survivors Act opened one year, for every expired adult claim in the state, not for one plaintiff. The legislature voted. The governor signed. She did not amend the statute alone, and the bill does not name Carroll. The $5 million judgment was affirmed, and on June 29, 2026 the Supreme Court declined to hear it. That appeal is over. The $83.3 million judgment was affirmed by the Second Circuit. As of that same day, a further petition in that case had not been decided. That is the case still open.",
+				href: "https://www.courtlistener.com/docket/65895581/carroll-v-trump/",
+				doc: "Carroll — filed November 24, 2022",
+				docs: [
+					{ label: "Adult Survivors Act — signed May 24, 2022", href: "https://www.governor.ny.gov/news/governor-hochul-signs-adult-survivors-act" },
+					{ label: "S.66A — the bill the legislature passed", href: "https://www.nysenate.gov/legislation/bills/2021/S66A" },
+					{ label: "Supreme Court — the $5 million petition", href: "https://www.scotusblog.com/2026/06/supreme-court-will-not-consider-5-million-verdict-against-trump/" },
+				],
+			},
+			{
+				caption: "Letitia James · civil fraud",
+				sold: "Sold as a finding: fraud, about $464 million, barred from business in New York, done. A trial judgment was reported in the grammar of a final fact. It was a civil case. It was not finished.",
+				evidence: "A fraud lawsuit, not a criminal charge. A trial judgment and a penalty of about $464 million.",
+				source: "People v. Trump, Index No. 452564/2022, Justice Arthur Engoron. The appeal in the Appellate Division, First Department.",
+				file: "The intermediate court threw out the money as an excessive fine. The finding of liability is in the New York Court of Appeals. It was never a criminal charge. Neighbors argued a number the appeals court had not finished with.",
+				href: "https://iapps.courts.state.ny.us/webcivil/FCASSearch",
+				doc: "New York civil — Index 452564/2022",
+			},
+			{
+				caption: "Florida — the documents case",
+				sold: "Sold as a finding before a trial: he stole the country’s secrets. The indictment was the exhibit. A charge was spoken as the crime.",
+				evidence: "A federal indictment over classified documents at Mar-a-Lago.",
+				source: "United States v. Trump, No. 9:23-cr-80101, Southern District of Florida, Judge Aileen Cannon.",
+				file: "She dismissed the case against him on July 15, 2024. The special counsel dropped the appeal as to him after the election. There is no jury verdict. The caption outlived the docket.",
+				href: "https://www.courtlistener.com/docket/67490071/united-states-v-trump/",
+				doc: "Florida docket — 9:23-cr-80101",
+			},
+			{
+				caption: "The District of Columbia",
+				sold: "Sold as a finding: insurrection, and a proved attempt to overturn an election. The word insurrection was not the statute on the indictment.",
+				evidence: "Four federal counts over the 2020 election and January 6.",
+				source: "United States v. Trump, No. 1:23-cr-00257, Judge Tanya Chutkan.",
+				file: "The counts were conspiracy to defraud the United States, obstruction of an official proceeding, and conspiracy against rights. Not 18 U.S.C. § 2383. Dismissed without prejudice on November 25, 2024, because a sitting president is not prosecuted. Without prejudice is not a verdict of innocence. It is also not the conviction the country had already been told was a fact.",
+				href: "https://www.courtlistener.com/docket/67656595/united-states-v-trump/",
+				doc: "District of Columbia docket — 1:23-cr-00257",
+			},
+			{
+				caption: "Georgia — the case was abandoned",
+				sold: "Sold as a finding: a criminal enterprise, racketeering, proved by the press conference. The indictment was treated as the conviction.",
+				evidence: "A state racketeering indictment over the 2020 election.",
+				source: "Fulton County Superior Court No. 23SC188947, Judge Scott McAfee.",
+				file: "The Georgia Court of Appeals disqualified District Attorney Fani Willis and her office. Prosecutor Peter Skandalakis then moved to abandon the case. On November 26, 2025 the judge entered a nolle prosequi. He wrote there was no realistic prospect of trying a sitting president before January 20, 2029. The split was made at the announcement. The file ends with the case dropped.",
+				href: "https://www.fultonclerk.org/",
+			},
+			{
+				caption: "The White House briefing — August 3, 2016",
+				sold: "Sold as a finding, in both directions. One side: the FBI caught a Russian agent and the White House was only told. The other side: the White House ordered the frame. The paper is a briefing, not an order, and not a clean hands story.",
+				evidence: "CIA Director John Brennan briefed President Obama, Vice President Biden, Director of National Intelligence Clapper, and FBI Director Comey, in the White House, on Russian election interference and on intelligence that the Clinton campaign had approved a plan to tie Trump to Russia.",
+				source: "John Durham’s report. The CIA then sent a written referral to Comey and to Peter Strzok in September 2016.",
+				file: "Durham records the August 3 briefing and the referral. The FBI had already opened Crossfire Hurricane as a full investigation. It did not open on the Clinton-plan intelligence the way it opened on the campaign. The same director who sat in that briefing later signed applications to the secret court. Horowitz found seventeen errors and omissions in the Carter Page warrants. One FBI lawyer, Kevin Clinesmith, altered a CIA email and pleaded guilty. A briefing is not a written order to indict. A briefing the warrant leaves out is not an independent investigation.",
+				href: "https://www.justice.gov/storage/durhamreport.pdf",
+				doc: "Durham report — the August 3 briefing",
+			},
+			{
+				caption: "The Oval Office — January 5, 2017",
+				sold: "Sold as a finding: the investigation of the incoming administration was walled off from the White House, done by the book, and about Russia. The memo of the meeting is about the incoming national security advisor.",
+				evidence: "President Obama, Vice President Biden, FBI Director Comey, Deputy Attorney General Yates, and National Security Advisor Susan Rice, in the Oval Office, after an intelligence briefing.",
+				source: "Rice’s email to herself on January 20, 2017, the morning the administration ended. She wrote it to the file.",
+				file: "Obama said he was not asking about, initiating, or instructing anything from a law-enforcement perspective, and that it should be handled by the book. Comey said he was proceeding by the book, and then said he had concerns about Michael Flynn’s talks with the Russian ambassador and that sensitive Russia information might not be passed to Flynn. Comey said he had no indication Flynn had passed classified information. The White House, the FBI, and the Justice Department were in one room, on the incoming hire, fifteen days before the inauguration. The email is the file. It is not a transcript of a plot, and it is not a wall.",
+				href: "https://en.wikisource.org/wiki/Susan_Rice_January_20%2C_2017_E-mail_to_Self",
+				doc: "Rice email to herself — January 20, 2017",
+			},
+			{
+				caption: "One lawyer, three offices",
+				sold: "Sold as a finding: the Justice Department dispatched a prosecutor to the Manhattan district attorney to bring the state case, on White House orders. Also sold the other way: the state case had nothing to do with Washington.",
+				evidence: "Matthew Colangelo worked the Trump civil investigation at the New York attorney general’s office, then held the third-ranking post at the Department of Justice, then joined District Attorney Alvin Bragg’s office in December 2022, before the indictment.",
+				source: "The public sequence of the jobs. He sat at the prosecution table in People v. Trump.",
+				file: "The path connects the civil case, the Department, and the criminal case in one résumé. No judgment in the criminal case finds that the White House or the Department ordered him there. A job is not a dispatch order. It is also not a coincidence the paper has explained. The New York case is the state case. The lawyer who helped try it had just left the Department that was investigating the same man.",
+				href: "https://www.nycourts.gov/LegacyPDFS/press/PDFs/People%20v.%20DJT%20Jury%20Instructions%20and%20Charges%20FINAL%205-23-24.pdf",
+				doc: "The trial he sat — jury instructions",
+			},
+			{
+				caption: "The Georgia invoices",
+				sold: "Sold as a finding: the Biden White House ran the Fulton County case. Also sold as a finding: the state case was sealed off from Washington.",
+				evidence: "Special prosecutor Nathan Wade billed Fulton County for a May 23, 2022 conference with White House counsel, and for a November 18, 2022 interview in Washington with the White House. The same invoices bill meetings with the January 6 committee.",
+				source: "A House Judiciary Committee letter to Wade that recites those invoice lines from the prosecution’s billing.",
+				file: "The invoices are a billing entry, not a transcript. They do not record what was said. They do record that the special prosecutor on the state election case charged the county for time with the White House and with the congressional committee, before the indictment. The case was later abandoned after the Georgia Court of Appeals disqualified Willis and her office over the relationship and the money, not over these meetings. A meeting on an invoice is not an order. A sealed-off state case does not bill the White House.",
+				href: "https://www.congress.gov/118/meeting/house/117301/documents/HHRG-118-FD00-20240515-SD027-U27.pdf",
+				doc: "House letter reciting the Wade invoices",
+			},
+			{
+				caption: "One special counsel, both federal cases",
+				sold: "Sold as a finding: the White House appointed Jack Smith. Also sold as a finding: the appointment put the cases outside politics.",
+				evidence: "On November 18, 2022, Attorney General Merrick Garland appointed one special counsel for both investigations: the documents case and the election case. He said he did it because Trump had announced another campaign and the sitting president intended to be a candidate.",
+				source: "Garland’s remarks and the appointment, Department of Justice, November 18, 2022.",
+				file: "The order is the Attorney General’s. It does not recite a White House directive. Garland named the political calendar as the reason a special counsel was required. Judge Cannon later dismissed the documents case against Trump because the appointment was unlawful. The District of Columbia case was dismissed without prejudice after the election, on the government’s motion. Two federal cases, one prosecutor, appointed because both candidates were running. That is the paper. An order from the President is not on it.",
+				href: "https://www.justice.gov/archives/opa/speech/attorney-general-merrick-b-garland-delivers-remarks-appointment-special-counsel",
+				doc: "Garland — appointment of the special counsel",
+			},
+		],
+		body: [
+			{
+				type: "p",
+				text: "The chart is the file. Each row is one case. The name is the case. The two lines are the part that does not match the caption. The link opens the court record: the jury instructions, the docket, or the opinion. The 34 counts are Alvin Bragg. They are not Letitia James. Her case is the civil fraud row.",
+			},
+		],
+	},
+	{
+		slug: "the-statute-is-the-end",
+		title: "The statute is how it ends",
+		dek: "Assault, a published address, and a threat to a juror are already crimes. The funding file does not name a donor. The charge sheet names the people who did the act.",
+		date: "2026-09-22",
+		category: "Dispatch",
+		readMinutes: 4,
+		image: "/images/chart-lawfare.jpg",
+		imageAlt: "The charge sheet, not the slogan",
+		series: "The Remedy",
+		receipts: [
+			{ label: "DHS — assaults on ICE, 2025", href: "https://www.dhs.gov/news/2026/01/08/radical-rhetoric-sanctuary-politicians-leads-unprecedented-1300-increase-assaults" },
+			{ label: "DOJ — Prairieland sentences", href: "https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice" },
+			{ label: "18 U.S.C. § 111 — assault on a federal officer", href: "https://www.law.cornell.edu/uscode/text/18/111" },
+			{ label: "18 U.S.C. § 119 — a federal officer’s address", href: "https://www.law.cornell.edu/uscode/text/18/119" },
+			{ label: "18 U.S.C. § 1361 — government property", href: "https://www.law.cornell.edu/uscode/text/18/1361" },
+			{ label: "18 U.S.C. § 1503 — a juror", href: "https://www.law.cornell.edu/uscode/text/18/1503" },
+			{ label: "26 U.S.C. § 6104 — donor names", href: "https://www.law.cornell.edu/uscode/text/26/6104" },
+		],
+		body: [
+			{
+				type: "p",
+				text: "Peaceable assembly is a right. The [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) says so. A bottle, a published home address, a vehicle used as a weapon, and a threat to a juror are not assembly. They are already crimes. Ending them is a charge, not a second mob.",
+			},
+			{
+				type: "p",
+				text: "[DHS, January 8, 2026](https://www.dhs.gov/news/2026/01/08/radical-rhetoric-sanctuary-politicians-leads-unprecedented-1300-increase-assaults): from January 20 through December 31, 2025, the department recorded 275 assaults on ICE officers, against 19 in the same stretch of 2024. Vehicular attacks in a nearly identical window: 66, against 2. The department’s line for doxxing and harassment of those officers is 866-347-2423.",
+			},
+			{
+				type: "p",
+				text: "The statutes do not need a new slogan. [18 U.S.C. § 111](https://www.law.cornell.edu/uscode/text/18/111) is assault on a federal officer. [18 U.S.C. § 119](https://www.law.cornell.edu/uscode/text/18/119) is publishing a covered person’s home address so that another person can threaten or harm him. [18 U.S.C. § 1361](https://www.law.cornell.edu/uscode/text/18/1361) is government property. [18 U.S.C. § 1503](https://www.law.cornell.edu/uscode/text/18/1503) is influencing, intimidating, or impeding a juror. The ordinary maximum is 10 years. If the trial is a criminal case, the juror is a petit juror, and a class A or B felony was charged, the maximum is 20 years.",
+			},
+			{
+				type: "p",
+				text: "Prairieland is what the charge looks like when it is brought. On July 4, 2025, an attack at the Prairieland Detention Center in Texas wounded a local police officer. [The Justice Department, June 23, 2026](https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice): eight people sentenced for rioting, weapons, explosives, material support to terrorists, obstruction, and the attempted murder. Benjamin Hanil Song, convicted of the attempted murder, received 100 years. The eight sentences together were 450 years. The department called them an Antifa cell, and called the case the first such sentencing after a September 2025 executive order that designated the movement a domestic terrorist organization. The label is the government’s. The years are for the attack. An idea does not carry a rifle. A person does.",
+			},
+			{
+				type: "p",
+				text: "A juror is not a target, from either side. Section 1503 does not ask which party is angry. After the Fulton County indictment of Donald Trump in August 2023, the sheriff’s office said it was investigating threats and the posting of jurors’ personal information. This journal will not assign that file to a party without the charging document. New York sealed juror addresses in People v. Trump and in People v. Penny because the court found a risk of harassment. “They dox jurors” as a party caption, with no charge sheet, is the same alteration this journal refuses everywhere else.",
+			},
+			{
+				type: "p",
+				text: "Who paid for it. The Prairieland release does not name a donor who bought the weapons. [26 U.S.C. § 6104](https://www.law.cornell.edu/uscode/text/26/6104) keeps most contributor names off the public Form 990. Congress appropriates. An agency writes a grant. A nonprofit cashes it. The country often cannot see the name on the check. That darkness is not proof that a named person purchased the attack. It is proof the ledger is closed. A rumor treated as a conviction is a caption.",
+			},
+			{
+				type: "p",
+				text: "How it ends. Charge the person who did the act. Prairieland is the example. Use the statutes already in the code: § 111, § 119, § 1361, and § 1503. Report an officer’s published address to the department, not to a crowd. Congress holds the purse under Article I, Section 9. A grant with no public itemized ledger is a door. Close the grant, or open the ledger. The form does not name the donor. The donor is not invented. Then the ballot. A member who tells the country that the enforcement agency is the enemy, while assaults on its officers rise from 19 to 275 in a year, is not doing the oath in 5 U.S.C. § 3331. The answer to a mob is not a second mob.",
+			},
+		],
+	},
+	...LEDGER_POSTS,
 ];
-
 export function getPost(slug: string) {
 	return posts.find((p) => p.slug === slug);
 }
@@ -3258,11 +3485,51 @@ export function getLatest(n = 8) {
 }
 export const START_HERE = [
 	"we-the-people",
-	"that-is-not-why-they-are-elected",
+	"a-war-on-americans",
 	"they-opened-the-border",
 	"find-them",
 ] as const;
-/** Reading order. Same on Archive, phone, and desktop. */
+export const LEAD_SERIES = "The Republic";
+/** Duplicates and drafts. URLs still resolve. Not in the nav. */
+export const HIDDEN = new Set([
+	"they-work-for-us",
+	"they-called-it-protest",
+	"the-caption-was-not-the-charge",
+	"the-word-that-never-made-the-docket",
+	"not-a-part-time-job",
+	"they-sold-the-split",
+	"division-is-the-product",
+	"the-republic-not-the-caption",
+	"the-file-on-the-man",
+	"what-he-told-them",
+	"they-published-the-replacement",
+	"the-uniparty-mirror",
+	"a-caption-cannot-be-outlawed",
+	"the-floor-not-the-feed",
+	"the-law-they-dont-mention",
+	"they-hold-it-by-the-blade",
+	"the-record-not-the-rally",
+	"what-they-are-protecting",
+	"the-pool",
+	"they-dont-debate-they-flag",
+	"what-the-democratic-party-became",
+	"what-the-republican-party-became",
+	"how-the-house-was-captured",
+	"why-he-became-the-enemy",
+	"the-7-billion-machine",
+	"why-the-lobby-should-be-illegal",
+	"the-whole-bill",
+	"the-funnel",
+	"it-does-not-fit",
+	"the-check-they-will-not-write",
+	"what-we-can-do",
+	"the-hospital-and-the-morgue",
+	"who-got-paid",
+	"the-docket",
+	"call-these-first",
+	"this-congress-cannot-police-itself",
+]);
+/** Reading order. Same on the header, Archive, and the home map. */
 export const JOURNAL = [
 	{
 		name: "The Republic",
@@ -3272,136 +3539,87 @@ export const JOURNAL = [
 			"that-is-not-why-they-are-elected",
 			"clean-hands",
 			"they-want-a-new-constitution",
-			"they-let-them-walk",
 		],
 	},
 	{
-		name: "The Search",
-		dek: "The Search covers the open border, the hospitals, the missing children, and who got paid.",
+		name: "The Tape",
+		dek: "The cut sentence, the one word, and the file that does not match.",
+		slugs: [
+			"they-clipped-the-tape",
+			"one-word",
+			"they-ran-it-anyway",
+			"the-hire-is-the-country",
+			"a-war-on-americans",
+			"sixty-percent",
+		],
+	},
+	{
+		name: "The Media",
+		dek: "The caption they sold. The file that did not match.",
+		slugs: ["the-media-ledger"],
+	},
+	{
+		name: "Democrats",
+		dek: "The lie, the gaslight, and the voter they named the enemy.",
+		slugs: ["the-democrat-ledger"],
+	},
+	{
+		name: "Republicans",
+		dek: "The promise, the chant, and the statute that did not follow.",
+		slugs: ["the-republican-ledger"],
+	},
+	{
+		name: "Congress",
+		dek: "The hire talks. The country does not get a budget, a bill they wrote, or a clean roll.",
+		slugs: [
+			"the-noise",
+			"full-time-or-go-home",
+			"they-dont-write-the-bills",
+			"the-line-in-the-sand",
+			"paying-the-taliban",
+			"the-debt-they-will-not-close",
+			"the-recess-blockade",
+			"a-barcode-is-not-a-lock",
+		],
+	},
+	{
+		name: "The Border",
+		dek: "The open door, the bill, and the missing children.",
 		slugs: [
 			"they-opened-the-border",
 			"what-the-taxpayer-bought",
 			"fema-ran-two-jobs",
-			"the-hospital-and-the-morgue",
 			"find-them",
-			"who-got-paid",
 			"defund-ice-is-the-tell",
 		],
 	},
 	{
-		name: "The Hearing",
-		dek: "Congress talks for a living while the country still does not get a budget.",
-		slugs: [
-			"the-noise",
-			"full-time-or-go-home",
-			"it-does-not-fit",
-		],
-	},
-	{
-		name: "The Ballot",
-		dek: "A barcode tells a machine where a letter has been. It does not tell a republic who marked the oval.",
-		slugs: ["a-barcode-is-not-a-lock"],
-	},
-	{
-		name: "The Iranian terrorist regime at 60 percent",
-		dek: "",
-		slugs: ["sixty-percent"],
-	},
-	{
-		name: "The Clip",
-		dek: "The White House pool, the smear, and the minutes they cut from the tape.",
-		slugs: [
-			"the-pool",
-			"the-caption-was-not-the-charge",
-			"they-dont-debate-they-flag",
-			"they-clipped-the-tape",
-			"one-word",
-			"the-hire-is-the-country",
-			"they-ran-it-anyway",
-			"they-called-it-protest",
-			"they-work-for-us",
-		],
-	},
-	{
-		name: "The Job",
-		dek: "The $7 billion legislative branch, the lobby, and the debt they will not close.",
-		slugs: [
-			"the-7-billion-machine",
-			"they-dont-write-the-bills",
-			"paying-the-taliban",
-			"the-funnel",
-			"why-the-lobby-should-be-illegal",
-			"the-debt-they-will-not-close",
-		],
-	},
-	{
-		name: "The Parties",
-		dek: "What each party became.",
-		slugs: [
-			"what-the-democratic-party-became",
-			"what-the-republican-party-became",
-		],
-	},
-	{
-		name: "The Target",
-		dek: "When a donor became a problem.",
-		slugs: ["why-he-became-the-enemy"],
+		name: "The Remedy",
+		dek: "The judges, and the tax money the governors spent.",
+		slugs: ["they-let-them-walk", "the-bill-they-sent", "the-statute-is-the-end"],
 	},
 ] as const;
-export const COURSE = [
-	{
-		name: "The Republic",
-		dek: "They forgot who they work for. Clean hands. The charter.",
-		image: "/images/capitol.jpg"
-	},
-	{
-		name: "The Job",
-		dek: "$7.3 billion for a part-time floor. $40 trillion on the meter.",
-		image: "/images/chamber.jpg"
-	},
-	{
-		name: "The Hearing",
-		dek: "The noise. The split. Full time or go home. The whole bill.",
-		image: "/images/essay-show-the-slides.jpg"
-	},
-	{
-		name: "The Clip",
-		dek: "A caption is not the tape. Play the minutes they cut.",
-		image: "/images/essay-eagle.jpg"
-	},
-	{
-		name: "The Search",
-		dek: "Find them. Who got paid. Defund ICE is the tell.",
-		image: "/images/essay-find-them.jpg"
-	},
-	{
-		name: "The Correction",
-		dek: "Criminals walk. Taxes house illegal immigrants. The docket.",
-		image: "/images/chamber.jpg"
-	},
-	{
-		name: "The Ballot",
-		dek: "A barcode is not a lock. Citizenship to vote was the tell.",
-		image: "/images/essay-barcode.jpg"
-	},
-	{
-		name: "The Parties",
-		dek: "How the House was captured. What each party became.",
-		image: "/images/blog-house.jpg"
-	},
-	{
-		name: "The Target",
-		dek: "When a donor became a problem they went after the country.",
-		image: "/images/signs.jpg"
-	},
-] as const;
+export function leadSection() {
+	return JOURNAL.find((s) => s.name === LEAD_SERIES) ?? JOURNAL[0];
+}
+export function journalSections() {
+	return JOURNAL.filter((s) => s.name !== LEAD_SERIES);
+}
 export function postsInSeries(name: string) {
+	const section = JOURNAL.find((s) => s.name === name);
+	if (section) {
+		return section.slugs.map((s) => getPost(s)).filter(Boolean) as typeof posts;
+	}
 	return posts.filter((p) => p.series === name).sort((a, b) => (a.part ?? 0) - (b.part ?? 0));
 }
 export function nextInSeries(slug: string) {
-	const p = getPost(slug);
-	if (!p?.series) return undefined;
-	return postsInSeries(p.series).find((x) => (x.part ?? 0) === (p.part ?? 0) + 1);
+	for (const section of JOURNAL) {
+		const i = (section.slugs as readonly string[]).indexOf(slug);
+		if (i >= 0 && i < section.slugs.length - 1) {
+			return getPost(section.slugs[i + 1]);
+		}
+	}
+	return undefined;
 }
 export function relatedPosts(slug: string, n = 3) {
 	const p = getPost(slug);
