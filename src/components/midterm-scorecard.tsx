@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
 import { named, InteractiveChart, KeptRead } from "@/components/interactive-chart";
+import {
+  AT_HOME,
+  COVID_CELL,
+  DEALS,
+  OTHER_OVALS,
+  RAIL_FILE,
+  SUITS,
+  TERM_COMPARE,
+} from "@/lib/restored-files";
 import { Link } from "@tanstack/react-router";
 import {
   BORDER,
@@ -662,6 +671,91 @@ function RestoredFiles() {
             ),
           })),
         ]}
+      />
+      <InteractiveChart
+        title={RAIL_FILE.k}
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={RAIL_FILE.rows.map((row) => ({
+          id: row.k,
+          name: row.k,
+          href: row.href,
+          proof: "The record",
+          read: <KeptRead said={row.said} record={row.record} links={row.links} />,
+        }))}
+      />
+      <InteractiveChart
+        title={COVID_CELL.k}
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={COVID_CELL.rows.map((row) => ({
+          id: row.k,
+          name: row.k,
+          href: row.href,
+          proof: "The record",
+          read: <KeptRead said={row.said} record={row.record} links={row.links} />,
+        }))}
+      />
+      <InteractiveChart
+        title="The lawsuits"
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={SUITS.map((row) => ({
+          id: row.k,
+          name: row.k,
+          href: row.href,
+          proof: "The record",
+          read: <KeptRead said={row.said} record={row.record} links={row.links} />,
+        }))}
+      />
+      <InteractiveChart
+        title="The signed deals"
+        subtitle="Only agreements with a statute or a State Department text. A pledge is not a deal."
+        rows={DEALS.map((row) => ({
+          id: row.k,
+          name: row.k,
+          href: row.href,
+          proof: "The record",
+          read: (
+            <KeptRead
+              said={row.said}
+              note={row.when}
+              record={row.record}
+              links={[{ label: "The record", href: row.href }]}
+            />
+          ),
+        }))}
+      />
+      <InteractiveChart
+        title="What reached the house — the statutes"
+        subtitle="Only public laws. A press-conference total is not on this chart."
+        rows={[...AT_HOME, ...OTHER_OVALS].map((row) => ({
+          id: row.k,
+          name: row.k,
+          href: row.href,
+          proof: "The record",
+          read: (
+            <KeptRead
+              said={row.said}
+              record={row.record}
+              links={[{ label: "The record", href: row.href }]}
+            />
+          ),
+        }))}
+      />
+      <InteractiveChart
+        title="Four Ovals, three measures"
+        subtitle="The peak, not the average. Each line opens the agency table."
+        rows={TERM_COMPARE.map((row) => ({
+          id: row.k,
+          name: row.k,
+          href: row.href,
+          proof: "The record",
+          read: (
+            <KeptRead
+              said={row.said}
+              record={row.record}
+              links={[{ label: "The record", href: row.href }]}
+            />
+          ),
+        }))}
       />
     </div>
   );
