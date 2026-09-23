@@ -170,6 +170,28 @@ export function InteractiveChart({
   );
 }
 
+export function KeptRead({
+  said,
+  record,
+  links,
+  note,
+}: {
+  said: string;
+  record: string;
+  links: { label: string; href: string }[];
+  note?: string;
+}) {
+  return (
+    <div className="space-y-5">
+      <ShortRead said={said} record={record} links={links} note={note} />
+      <div>
+        <p className="text-[13px] font-semibold text-blue-900">The file</p>
+        <p className="mt-1 text-[15px] leading-relaxed text-neutral-900">{named(record)}</p>
+      </div>
+    </div>
+  );
+}
+
 export function firstLine(text: string) {
   const cut = text.split(/(?<=\.)\s/)[0] ?? text;
   return cut.length > 120 ? `${cut.slice(0, 117)}…` : cut;

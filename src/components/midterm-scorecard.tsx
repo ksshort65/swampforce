@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { named } from "@/components/interactive-chart";
+import { named, InteractiveChart, KeptRead } from "@/components/interactive-chart";
 import { Link } from "@tanstack/react-router";
 import {
   BORDER,
@@ -31,6 +31,12 @@ import {
   SCORE_TABS,
   TAB_CHARTS,
   SCORE_UPDATED,
+  PAPERS,
+  FAKE_NEWS,
+  FRAMES,
+  WARFARE,
+  FUNNEL,
+  OVAL_DESKS,
 } from "@/lib/scorecard";
 
 type TabId = (typeof SCORE_TABS)[number]["id"];
@@ -562,6 +568,105 @@ function PriceLinks() {
   );
 }
 
+function RestoredFiles() {
+  return (
+    <div className="mt-16 space-y-4">
+      <InteractiveChart
+        title="The Oval desks"
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={OVAL_DESKS.map((d) => ({
+          id: d.id,
+          name: d.k,
+          read: <KeptRead said={d.k} record={d.v} links={[]} />,
+        }))}
+      />
+      <InteractiveChart
+        title="The papers"
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={PAPERS.map((p) => ({
+          id: p.k,
+          name: p.k,
+          href: p.href,
+          proof: "The record",
+          read: (
+            <KeptRead
+              said={p.caption}
+              record={p.paper}
+              links={[
+                { label: "The record", href: p.href },
+                ...(p.extra ?? []),
+              ]}
+            />
+          ),
+        }))}
+      />
+      <InteractiveChart
+        title="The caption versus the file"
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={[...FAKE_NEWS, ...FRAMES].map((f) => ({
+          id: f.tag,
+          name: f.tag,
+          href: f.href,
+          proof: "The record",
+          read: (
+            <KeptRead
+              said={f.they}
+              record={f.tape}
+              links={f.href ? [{ label: "The record", href: f.href }] : []}
+            />
+          ),
+        }))}
+      />
+      <InteractiveChart
+        title={WARFARE.k}
+        subtitle="The claim is the row. The short version is a few lines. The file keeps every sentence."
+        rows={[
+          { id: "war", name: "Psychological warfare", record: WARFARE.war },
+          { id: "gas", name: "Gaslighting", record: WARFARE.gas },
+          { id: "clip", name: "The cut tape", record: WARFARE.clip },
+          { id: "frame", name: "The one-word swap", record: WARFARE.frame },
+        ].map((row) => ({
+          id: row.id,
+          name: row.name,
+          read: <KeptRead said={row.name} record={row.record} links={[]} />,
+        }))}
+      />
+      <InteractiveChart
+        title={FUNNEL.k}
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={[
+          {
+            id: "funnel",
+            name: FUNNEL.k,
+            href: FUNNEL.href,
+            proof: "The record",
+            read: (
+              <KeptRead
+                said={FUNNEL.line}
+                record={FUNNEL.v}
+                links={[{ label: "The record", href: FUNNEL.href }]}
+              />
+            ),
+          },
+          ...FUNNEL.pipes.map((pipe) => ({
+            id: pipe.k,
+            name: `${pipe.k} — ${pipe.amt}`,
+            href: pipe.href,
+            proof: "The record",
+            read: (
+              <KeptRead
+                said={pipe.note}
+                record={`${pipe.k}. ${pipe.amt}. ${pipe.note}`}
+                links={[{ label: "The record", href: pipe.href }]}
+              />
+            ),
+          })),
+        ]}
+      />
+    </div>
+  );
+}
+
 export function MidtermScorecard() {
   const [tab, setTab] = useState<TabId | null>(null);
   const [mode, setMode] = useState<Mode>("charts");
@@ -878,6 +983,7 @@ export function MidtermScorecard() {
             </ul>
           </div>
         ) : null}
+        <RestoredFiles />
       </div>
     </section>
   );
