@@ -13,6 +13,11 @@ export function NarrativeFrames({
   heading?: string;
 }) {
   const iran = frames.find((f) => f.tag === "War of choice");
+  const first = ["They made it necessary", "Just a ballroom"];
+  const ordered = [
+    ...first.map((tag) => frames.find((f) => f.tag === tag)).filter((f): f is Frame => Boolean(f)),
+    ...frames.filter((f) => !first.includes(f.tag)),
+  ];
   return (
     <>
       {iran ? (
@@ -38,7 +43,7 @@ export function NarrativeFrames({
       <InteractiveChart
         title={heading}
         subtitle={dek}
-        rows={frames.map((f) => ({
+        rows={ordered.map((f) => ({
           id: f.tag,
           name: f.tag,
           href: f.href,
