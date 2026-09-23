@@ -9,18 +9,26 @@ export type ScoreRow = {
 };
 
 /** Living midterms card. Update the cells when a vote or a Treasury table changes the file. */
-export const SCORE_UPDATED = "2026-09-21";
+export const SCORE_UPDATED = "2026-09-22";
 
-/** Cover and Scorecard. Five rooms. Charts or the file. */
-export const SCORE_TABS: { id: "gop" | "dem" | "split" | "oval" | "compare"; k: string; v: string }[] = [
-  { id: "gop", k: "GOP", v: "Helped, hurt, the bills." },
-  { id: "dem", k: "Dem", v: "Helped, hurt, the information war." },
-  { id: "split", k: "Split", v: "When they split the gavel." },
-  { id: "oval", k: "Oval", v: "Four administrations." },
-  { id: "compare", k: "Compare", v: "Charts or Read." },
+/** Cover and Scorecard. Five rooms of the Congressional Scorecard. */
+export type ScoreRoom = "gop" | "dem" | "split" | "oval" | "compare";
+export const SCORE_TABS: { id: ScoreRoom; k: string; v: string }[] = [
+  { id: "gop", k: "Republicans", v: "Bills they passed. Debt they added." },
+  { id: "dem", k: "Democrats", v: "Bills they passed. The border they opened." },
+  { id: "split", k: "Split", v: "One chamber each. Largest slice of the debt." },
+  { id: "oval", k: "The Oval", v: "Four presidents. Trump 1 and Trump 2." },
+  { id: "compare", k: "Side by side", v: "Helped and hurt on one page." },
 ];
 /** @deprecated use SCORE_TABS */
 export const SCORE_FILES = SCORE_TABS;
+
+export type OvalDesk = "four" | "trump1" | "trump2";
+export const OVAL_DESKS: { id: OvalDesk; k: string; v: string }[] = [
+  { id: "four", k: "Four Ovals", v: "Encounters and prices by president." },
+  { id: "trump1", k: "Trump 1", v: "FY2017–20. Caption versus tape." },
+  { id: "trump2", k: "Trump 2", v: "FY2025–. The door. The slogan." },
+];
 
 
 /** Treasury Debt to the Penny. Unified Congress = House and Senate same party. Adds to the current total. */
@@ -62,7 +70,7 @@ export const DEBT_MATH =
 /** Article I. Majority control is the purse. */
 export const PURSE = {
   k: "Congress holds the purse. Majority control is the test.",
-  v: "Article I gives Congress the power of the purse. The Oval spends what Congress votes. Majority control means one party holds the House and the Senate at the same time. Then that party can pass a spending bill without the other. Success and failure on this page are the bills they passed and the prices, the border, and the debt that followed. A speech is not a record.",
+  v: "Article I gives Congress the power of the purse. The Oval spends what Congress votes. Majority control means one party holds the House and the Senate at the same time. Then that party can pass a spending bill without the other. Helped and hurt on this page are the bills they passed and the prices, the border, and the debt that followed. A speech is not a record.",
   href: "https://constitution.congress.gov/constitution/article-1/",
 };
 
@@ -141,7 +149,7 @@ export const OBAMA_TERMS: {
 
 /** Official statute and table. Always on the page. Not a caption. */
 export const LAWS: { k: string; href: string }[] = [
-  { k: "Article I — the purse", href: "https://constitution.congress.gov/constitution/article-1/" },
+  { k: "Article IV — republican form of government", href: "https://constitution.congress.gov/constitution/article-4/" },
   { k: "Article VI — supremacy", href: "https://constitution.congress.gov/constitution/article-6/" },
   { k: "The oath — 5 U.S.C. § 3331", href: "https://www.law.cornell.edu/uscode/text/5/3331" },
   { k: "Budget Act — twelve bills by October 1", href: "https://www.congress.gov/bill/93rd-congress/house-bill/7130" },
@@ -203,12 +211,196 @@ export const HOAXES: { k: string; v: string; href: string }[] = [
   },
   {
     k: "Two impeachments. Four dockets. Taxpayer-funded.",
-    v: "First: a July 25, 2019 call the White House released. He asked about corruption involving the Bidens. The House called it abuse of power. The Senate acquitted February 5, 2020. Second: a January 6 speech. C-SPAN includes peacefully and patriotically. H.Res. 24 named insurrection. USAO-DC: zero under § 2383. Senate acquitted February 13, 2021. Then four criminal dockets at once, a special counsel on appropriated funds. Process as punishment against the hire is process against the people who hired him.",
+    v: "First: a July 25, 2019 call the White House released. He asked about corruption involving the Bidens. The House called it abuse of power. The Senate acquitted February 5, 2020. Second: a January 6 speech. C-SPAN recorded peacefully and patriotically on the same tape as fight like hell. The House put a clipped version on the floor. H.Res. 24 named insurrection. USAO-DC: zero under § 2383. Senate acquitted February 13, 2021. Then four criminal dockets at once, a special counsel on appropriated funds. Process as punishment against the hire is process against the people who hired him.",
     href: "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf",
   },
   {
     k: "The House record on the machine",
     v: "H.Res. 12 created the Select Subcommittee on the Weaponization of the Federal Government. The committee published that the executive had pressured platforms and that fifty-one former intelligence officials had signed a letter treating the Hunter Biden laptop as a Russian trick weeks before the 2020 vote. Read the House file. A panel is not a court. It is the other ledger.",
+    href: "https://judiciary.house.gov/media/press-releases/new-judiciary-committee-website-highlights-activities-and-findings-select",
+  },
+];
+
+/** The paper, not the caption. What each docket charged. What it did not. */
+export const PAPERS: {
+  k: string;
+  caption: string;
+  paper: string;
+  href: string;
+  extra?: { label: string; href: string }[];
+}[] = [
+  {
+    k: "Mueller — no conspiracy",
+    caption: "The campaign colluded with Russia.",
+    paper: "The Special Counsel’s report: the investigation did not establish that members of the Trump Campaign conspired or coordinated with the Russian government. No indictment of Donald J. Trump. Volume I, charging decisions: the evidence was not sufficient to charge a broader conspiracy.",
+    href: "https://www.justice.gov/archives/sco-mueller",
+    extra: [
+      { label: "Barr remarks on the report — April 18, 2019", href: "https://www.justice.gov/archives/opa/speech/attorney-general-william-p-barr-delivers-remarks-release-report-investigation-russian" },
+      { label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
+    ],
+  },
+  {
+    k: "D.C. 23-cr-257 — four counts. Not insurrection.",
+    caption: "January 6 was insurrection. He should be charged under 18 U.S.C. § 2383.",
+    paper: "Superseding indictment, United States District Court for the District of Columbia, United States v. Donald J. Trump, 23-cr-257 (TSC). Count 1: 18 U.S.C. § 371, conspiracy to defraud the United States. Count 2: § 1512(k), conspiracy to obstruct an official proceeding. Count 3: §§ 1512(c)(2), 2, obstruction. Count 4: § 241, conspiracy against rights. Section 2383 is not on the paper. Special Counsel Smith’s Volume I, January 7, 2025, explains the charging decision not to use the insurrection statute. Judge Chutkan dismissed the indictment without prejudice after the 2024 election, on the government’s motion.",
+    href: "https://www.justice.gov/sco-smith/media/1366521/dl",
+    extra: [
+      { label: "18 U.S.C. § 2383 — the statute that is not on the indictment", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
+      { label: "Smith Volume I — January 7, 2025", href: "https://www.justice.gov/storage/Report-of-Special-Counsel-Smith-Volume-1-January-2025.pdf" },
+    ],
+  },
+  {
+    k: "USAO-DC — 1,583 people. Zero under § 2383.",
+    caption: "The country was told insurrection. The hearings used the word.",
+    paper: "U.S. Attorney for the District of Columbia, 48-month tally: approximately 1,583 federally charged. Assault, trespass, civil disorder, destruction of property. About 18 charged with seditious conspiracy under 18 U.S.C. § 2384. Zero charged under the insurrection statute, § 2383. The charging documents are on the Capitol Breach resource page.",
+    href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol",
+    extra: [
+      { label: "Capitol breach cases — the public papers", href: "https://www.justice.gov/usao-dc/capitol-breach-cases" },
+    ],
+  },
+  {
+    k: "Florida 23-cr-80101 — documents. Dismissed.",
+    caption: "He stole nuclear secrets. Espionage.",
+    paper: "Southern District of Florida, United States v. Trump, Nauta, and De Oliveira, 9:23-cr-80101. The indictment charged retention of national-defense information and obstruction related to boxes at Mar-a-Lago. It did not charge insurrection. Judge Aileen Cannon dismissed the indictment on July 15, 2024, holding the special counsel’s appointment unlawful. The government later dropped the remainder.",
+    href: "https://www.justice.gov/storage/US_v_Trump-Nauta_23-80101.pdf",
+    extra: [
+      { label: "Cannon order — CourtListener docket", href: "https://www.courtlistener.com/docket/67490070/united-states-v-trump/" },
+    ],
+  },
+  {
+    k: "New York 71543-23 — thirty-four records counts",
+    caption: "The most serious crimes. Election interference as a felony theory.",
+    paper: "Supreme Court of the State of New York, County of New York, The People of the State of New York v. Donald J. Trump, Indictment No. 71543-23. Thirty-four counts of falsifying business records in the first degree, New York Penal Law § 175.10. Invoices, vouchers, and checks. Not 18 U.S.C. § 2383. Not a federal conspiracy with Russia. The verdict sheet names each count as falsifying business records.",
+    href: "https://www.documentcloud.org/documents/23741570-new-york-v-trump-indictment/",
+    extra: [
+      { label: "Statement of facts — IND-71543-23", href: "https://www.documentcloud.org/documents/23741594-donald-j-trump-sof/" },
+    ],
+  },
+  {
+    k: "Fulton County — Georgia RICO. Not federal insurrection.",
+    caption: "He stole Georgia. RICO as if it were January 6.",
+    paper: "Fulton County Superior Court, The State of Georgia v. Donald John Trump et al., indictment filed August 14, 2023. Trump is named on thirteen counts including O.C.G.A. § 16-14-4(c), Georgia RICO, solicitation of a public officer to violate an oath, conspiracy to commit forgery and false statements. It is a state paper. It does not charge 18 U.S.C. § 2383. The court dismissed the case November 26, 2025.",
+    href: "https://storage.courtlistener.com/recap/gov.uscourts.gand.319434/gov.uscourts.gand.319434.1.1.pdf",
+  },
+  {
+    k: "Two impeachments — articles, not a criminal indictment",
+    caption: "Impeached for insurrection. Removed.",
+    paper: "H.Res. 755, 116th Congress: abuse of power and obstruction of Congress, the July 25, 2019 call. Senate acquitted February 5, 2020. H.Res. 24, 117th Congress: incitement of insurrection. That is a House article. It is not a grand-jury indictment under § 2383. Senate acquitted February 13, 2021. The criminal docket that followed still did not charge § 2383.",
+    href: "https://www.congress.gov/bill/117th-congress/house-resolution/24",
+    extra: [
+      { label: "H.Res. 755 — first impeachment", href: "https://www.congress.gov/bill/116th-congress/house-resolution/755" },
+      { label: "July 25, 2019 call memorandum", href: "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf" },
+    ],
+  },
+];
+
+/** Read — method, not a mood. Caption versus the rest of the sentence. */
+export const WARFARE = {
+  k: "Psychological warfare and gaslighting",
+  war: "Psychological warfare here is not a battlefield. It is an information operation run on a country. A caption is written. Six seconds are cut from a speech. One word is swapped. The country is then taught to hate the neighbor and to distrust the thing in front of its own eyes. The file is still there. The method is to make the file feel rude to mention. The target is the American argument.",
+  gas: "Gaslighting is the method inside that operation. A speaker replaces what happened with a word that cannot survive the file, then repeats the word until the listener treats the file as the lie. The rest of the sentence can stay true. The swapped word does all the work. Kidnapped instead of arrested. Insurrection instead of a docket that never charged it. Mostly peaceful under a precinct on fire. The listener is not argued with. The listener is trained.",
+  clip: "They stop the statement short. They play six seconds. They do not play the rest of the answer. A hearing that holds thousands of hours and plays the minutes it prefers is the same method as a six-second package. BBC stuck two January 6 lines fifty-four minutes apart. Bloodbath was auto plants in Mexico and a tariff. Dictator was close the border, drill, then “after that, I’m not a dictator.” Fine people condemned neo-Nazis in the same remarks. Play the whole tape or it is not journalism. It is a frame.",
+  frame: "Narrative framing is the one-word swap. Change the noun, teach the opposite crime. The United States becomes the kidnapper. A campaign becomes a Russian agent. A riot becomes a protest. A warrant becomes a snatch. Read across: left is what ran. Right is what the recording and the statute still contain.",
+};
+
+export const FAKE_NEWS: {
+  tag: string;
+  they: string;
+  tape: string;
+  href?: string;
+}[] = [
+  {
+    tag: "Bloodbath",
+    they: "If he loses it will be a bloodbath. He wants another January 6.",
+    tape: "Chinese car plants in Mexico. A 100 percent tariff. “They’re not going to sell those cars.”",
+    href: "https://www.youtube.com/watch?v=f57dRZMS0PQ",
+  },
+  {
+    tag: "Dictator",
+    they: "He said he will be a dictator on day one.",
+    tape: "Close the border. Drill, drill, drill. “After that, I’m not a dictator.”",
+    href: "https://www.youtube.com/watch?v=7lB3bfVg8Z8",
+  },
+  {
+    tag: "Fine people",
+    they: "He called neo-Nazis very fine people.",
+    tape: "Same remarks: neo-Nazis and white nationalists “should be condemned totally.”",
+    href: "https://www.politico.com/story/2017/08/15/full-text-trump-comments-white-supremacists-alt-left-transcript-241662",
+  },
+  {
+    tag: "January 6 speech",
+    they: "Walk to the Capitol and fight like hell, as one order.",
+    tape: "“Peacefully and patriotically.” The BBC splice stuck two lines fifty-four minutes apart.",
+    href: "https://www.npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial",
+  },
+  {
+    tag: "Bleach",
+    they: "He told Americans to inject bleach.",
+    tape: "He asked doctors if ultraviolet light and disinfectant research was “interesting to check.”",
+    href: "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-31/",
+  },
+  {
+    tag: "Animals",
+    they: "He called immigrants animals.",
+    tape: "The roundtable was MS-13. Outlets that widened it had to walk it back.",
+  },
+  {
+    tag: "Suckers / losers",
+    they: "He called veterans suckers and losers.",
+    tape: "No recording. The Atlantic, anonymous. This journal does not invent audio.",
+  },
+];
+
+export const FRAMES: {
+  tag: string;
+  they: string;
+  tape: string;
+  href?: string;
+}[] = [
+  {
+    tag: "Kidnapped",
+    they: "The United States kidnapped the president of Venezuela.",
+    tape: "Southern District of New York indictment, March 26, 2020. Custody January 3, 2026. Arraigned in Brooklyn. A warrant executed is not a kidnapping.",
+    href: "https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-narco-terrorism-charges-against-nicolas-maduro-current",
+  },
+  {
+    tag: "Collusion",
+    they: "The campaign colluded with Russia.",
+    tape: "Durham: the FBI opened a full investigation on raw, uncorroborated intelligence. It did not have actual evidence of collusion in its holdings when the case began.",
+    href: "https://www.justice.gov/storage/durhamreport.pdf",
+  },
+  {
+    tag: "Insurrection",
+    they: "January 6 was insurrection.",
+    tape: "18 U.S.C. § 2383. About 1,583 federally charged. Zero under the insurrection statute.",
+    href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol",
+  },
+  {
+    tag: "Mostly peaceful",
+    they: "Mostly peaceful protests.",
+    tape: "A precinct burned. The word peaceful did the work the picture would not.",
+  },
+  {
+    tag: "Muslim ban",
+    they: "He banned Muslims.",
+    tape: "Proclamation 9645. The Supreme Court upheld it in Trump v. Hawaii. Countries, not a faith test.",
+    href: "https://www.supremecourt.gov/opinions/17pdf/17-965_h315.pdf",
+  },
+  {
+    tag: "Kids in cages",
+    they: "He put children in cages.",
+    tape: "The chain-link rooms were photographed in 2014. The Flores settlement is 1997. The pictures were not a 2018 invention.",
+  },
+  {
+    tag: "Domestic terrorists",
+    they: "Parents at school boards are a domestic-terror problem.",
+    tape: "The National School Boards Association asked the White House. Five days later the Attorney General ordered U.S. Attorneys and the FBI to coordinate.",
+    href: "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf",
+  },
+  {
+    tag: "Russian disinfo",
+    they: "The laptop is a Russian trick.",
+    tape: "Fifty-one former intelligence officials signed a letter weeks before the 2020 vote. The House published the file.",
     href: "https://judiciary.house.gov/media/press-releases/new-judiciary-committee-website-highlights-activities-and-findings-select",
   },
 ];
@@ -276,17 +468,221 @@ export const OVAL_LINKS = [
   { label: "EIA — the gallon", href: "https://www.eia.gov/petroleum/gasdiesel/" },
 ];
 
+/** The Oval file versus the caption. Tape, statute, charging document. Not a panel. */
+export const OVAL_RECORD: {
+  k: string;
+  v: string;
+  href: string;
+  desks: OvalDesk[];
+}[] = [
+  {
+    k: "The method",
+    v: "The narrative is a caption. The record is a tape, a statute, a charging document, and a table from CBP, BLS, EIA, and Treasury. If those two disagree, the caption is the lie. If they agree, the caption was unnecessary. A six-second clip is how a republic’s argument gets stolen.",
+    href: "https://www.justice.gov/archives/sco/file/1373816/dl",
+    desks: ["four", "trump1", "trump2"],
+  },
+  {
+    k: "Collusion",
+    v: "Mueller, Volume I: the investigation did not establish that members of the Trump campaign conspired or coordinated with the Russian government in its election interference. Russia ran two operations. The campaign expected to benefit from stolen material. That is not a conspiracy charge. No American was indicted for conspiring with the Kremlin on the election. Networks treated collusion as settled fact for three years. The special counsel’s own sentence is the record.",
+    href: "https://www.justice.gov/archives/sco/file/1373816/dl",
+    desks: ["four", "trump1"],
+  },
+  {
+    k: "Insurrection",
+    v: "Jack Smith charged United States v. Trump, 23-cr-257, with four counts: 18 U.S.C. § 371, § 1512(k), § 1512(c)(2), and § 241. He did not charge 18 U.S.C. § 2383. His report said the office found no case charging insurrection for acting inside the government to keep power, and did not develop direct evidence of intent to cause the full scope of the violence. The U.S. Attorney for the District of Columbia charged more than a thousand rioters. Zero under § 2383. The House impeached. The Senate did not convict. The word did the political work the statute was not asked to do.",
+    href: "https://www.justice.gov/storage/US_v_Trump_23_cr_257.pdf",
+    desks: ["four", "trump1"],
+  },
+  {
+    k: "The clips",
+    v: "Bloodbath was auto plants, Mexico, a 100 percent tariff — the car industry. Dictator on day one was border and drill: after that, I’m not a dictator. Fine people: neo-Nazis and white nationalists condemned totally, in the same answer. Ukraine: the call memo is the phone; Schiff’s floor reading was parody and is not in the memo. The Ellipse: peacefully and patriotically sits on the same C-SPAN tape as fight like hell. Impeachment Two put the fighting words on the House floor and left the peaceably clause off the clip. Bleach: a question to doctors about a line of research, not an instruction to drink Clorox. Animals: an MS-13 roundtable. Suckers and losers: no tape, anonymous sourcing, denied on the record by people present.",
+    href: "https://www.whitehouse.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf",
+    desks: ["four", "trump1", "trump2"],
+  },
+  {
+    k: "Impeachment Two — the cut tape",
+    v: "January 6, 2021. C-SPAN recorded the Ellipse in full. The speech includes the line to protest peacefully and patriotically. It also includes fight like hell. Both are on the same recording. The House article — H.Res. 24, incitement of insurrection — put a clipped version of that speech on the floor. The country was shown the fighting words. The peaceably clause was not on the clip they ran. 18 U.S.C. § 2383 is the insurrection statute. The U.S. Attorney for D.C. later charged more than a thousand people. Zero under § 2383. Jack Smith did not charge Trump under § 2383 either. The Senate acquitted February 13, 2021. Insurrection was the caption. The uncut tape was never the exhibit they wanted the country to sit through.",
+    href: "https://www.c-span.org/video/?507744-1/president-trump-speaks-save-america-rally",
+    desks: ["four", "trump1"],
+  },
+  {
+    k: "The cases",
+    v: "Florida documents, 23-cr-80101: Judge Cannon dismissed on the Appointments Clause; the government later dropped the rest. Georgia RICO: dismissed. Impeachment One was a phone about investigating Biden-family influence in Ukraine. Impeachment Two was a clipped Ellipse speech, not § 2383. Manhattan: a jury convicted on 34 counts of falsifying business records tied to a hush payment. That conviction is real. The novel “other crime” predicate is why it is on appeal. Caption versus count. Always.",
+    href: "https://www.justice.gov/storage/US_v_Trump_23_cr_257.pdf",
+    desks: ["four", "trump1", "trump2"],
+  },
+  {
+    k: "The numbers they memory-holed",
+    v: "Unemployment 3.5 percent in February 2020, before the virus — lowest since 1969. Abraham Accords. Operation Warp Speed. Remain in Mexico. 2017 tax cuts. No new war. EIA weekly regular gasoline peaked at $5.006 the week of June 13, 2022. BLS: Consumer Price Index 9.1 percent year-over-year, June 2022. That peak sits on Biden’s watch. Inflation does not reset when the Oval changes. The next president inherits the price level. CBP nationwide encounters: 10.83 million in FY2021–24. FY2025, after the Oval changed: 691,906. A door that falls that far in a year was a policy, not weather.",
+    href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics",
+    desks: ["four", "trump1", "trump2"],
+  },
+  {
+    k: "What the tape still carries",
+    v: "Fight like hell — Ellipse, January 6. Stand back and stand by — to the Proud Boys, debate stage, 2020. When the looting starts, the shooting starts. No context restores those three. He said them. The Ellipse speech also said peacefully and patriotically. Both are on the tape. The House ran one and not the other. People died on January 6. Officers were assaulted. The building was breached. Hours passed before he told them to leave. That is not a tourist visit. It is also not § 2383 as charged. The national debt rose on his first watch. A New York jury found 34 false records. A journal that only corrects in one direction is doing the same clipping.",
+    href: "https://www.c-span.org/video/?507744-1/president-trump-speaks-save-america-rally",
+    desks: ["four", "trump1"],
+  },
+  {
+    k: "Clear and present danger",
+    v: "The phrase was used as permission: he is the danger, so the law may be broken to stop him. That is not what it means. Holmes wrote it in Schenck v. United States (1919). Brandenburg v. Ohio (1969) replaced it: the government may punish speech only if it is intended to produce imminent lawless action and likely to produce it. It is a limit on the state. It is not a finding that a president may be FISA’d sloppily, impeached on a clipped tape, or indicted on a theory timed to an election. Repeating the words on television does not suspend the Constitution.",
+    href: "https://supreme.justia.com/cases/federal/us/395/444/",
+    desks: ["four", "trump1", "trump2"],
+  },
+  {
+    k: "Threat to democracy",
+    v: "No charging document found that. Mueller did not establish a Russia conspiracy. Jack Smith did not charge 18 U.S.C. § 2383. The U.S. Attorney for D.C. charged more than a thousand people for January 6 and charged zero under the insurrection statute. Two impeachments: House yes, Senate no. The caption did political work the statutes would not. A threat to a party’s hold on the administrative state is not the same thing as a threat to the country.",
+    href: "https://www.justice.gov/storage/US_v_Trump_23_cr_257.pdf",
+    desks: ["four", "trump1", "trump2"],
+  },
+  {
+    k: "The United States is a republic",
+    v: "Article IV, Section 4: the United States shall guarantee to every State a Republican Form of Government. Madison, Federalist 10: they built a republic, not a pure democracy, because a pure democracy has no cure for faction. Enumerated powers. Elections. Courts. A Bill of Rights that binds the majority. Our democracy as a slogan is how you skip the parts of the document that slow you down. A republic is supposed to slow you down.",
+    href: "https://constitution.congress.gov/constitution/article-4/",
+    desks: ["four", "trump1", "trump2"],
+  },
+  {
+    k: "False accusation, repeated 12 years",
+    v: "The row is the accusation: Russia, insurrection, threat to democracy, pedophile, Nazi, pays no taxes, most corrupt president ever — said for twelve years as if it were a finding. The blue cell is the proof they were smearing only. Mueller Volume I: the investigation did not establish a conspiracy. Durham: neither the FBI nor the Intelligence Community had actual evidence of collusion in their holdings when Crossfire Hurricane opened. Jack Smith did not charge 18 U.S.C. § 2383. USAO-DC charged zero under that statute. The tax returns were stolen. Charles Littlejohn pleaded guilty under 26 U.S.C. § 7213 and was sentenced to five years. The forms show income tax paid. A smear repeated is still a smear.",
+    href: "https://www.justice.gov/storage/durhamreport.pdf",
+    desks: ["four", "trump1", "trump2"],
+  },
+  {
+    k: "The slogan did not legalize the shortcut",
+    v: "If the opponent is an extinction event, then ordinary process is called too slow, the warrant’s footnotes do not matter, the uncut tape is called context, and a novel felony predicate is called accountability. That is the state of exception: violate the rules to save the rules. The Constitution does not contain that clause. The oath is to the Constitution, not to democracy as a feeling. Horowitz’s seventeen FISA inaccuracies, Durham’s opening predicate, Schiff’s parody that is not in the call memo, H.Res. 24 built on a cut of the Ellipse, fifty-one names on a laptop letter weeks before a vote — those are the file of what the slogan bought. Not one of those acts becomes lawful because a senator said threat to democracy on a Sunday show.",
+    href: "https://oig.justice.gov/reports/2019/o1912.pdf",
+    desks: ["four", "trump1", "trump2"],
+  },
+  {
+    k: "Most corrupt president",
+    v: "The caption was that Donald Trump is the most corrupt president in American history. It was repeated as a finding. It is not a statute, and it is not a verdict. His criminal conviction is 34 New York counts of falsifying business records. Two impeachments ended in acquittal. The tax returns the country was shown in 2020 were stolen by an IRS contractor who was sentenced to five years under 26 U.S.C. § 7213. Those forms show federal income tax paid in 2015 through 2019. The comparison the caption would not sit next to: House Oversight bank records of millions from foreign sources to Biden family members and associates; Hunter Biden on the Burisma board while his father was vice president; a May 13, 2017 message, “10 percent for the big guy”; a denial that he discussed the business, which the messages do not match. Hunter was convicted on a gun count, pleaded guilty to tax counts, and was pardoned December 1, 2024. Joe Biden was not convicted of bribery. One FBI source who later alleged a cash bribe was charged with lying. That charge does not erase the bank records. Republicans opened an impeachment inquiry and did not make the country sit with this file the way the other side made the country sit with a caption. A party that will not read the exhibits is not a defense.",
+    href: "https://oversight.house.gov/",
+    desks: ["four", "trump1", "trump2"],
+  },
+  {
+    k: "A war was waged on Americans",
+    v: "The people own this country. Lawfare is not a debate. Paid Steele into a FISA. Fifty-one names on a laptop letter. Four dockets in an election year. Fifth Amendment due process is a fair machine, not a campaign. 18 U.S.C. § 2383 was not charged. CPI-U +21.4 percent. That effort was to undermine how Americans think.",
+    href: "/dispatch/a-war-on-americans",
+    desks: ["four", "trump1", "trump2"],
+  },
+];
+
+export function ovalRecordFor(desk: OvalDesk) {
+  return OVAL_RECORD.filter((row) => row.desks.includes(desk));
+}
+
+export const TRUMP_TERMS: {
+  id: OvalDesk;
+  who: string;
+  majority: string;
+  plus: { k: string; bill: string; href: string }[];
+  minus: { k: string; bill: string; href: string }[];
+}[] = [
+  {
+    id: "trump1",
+    who: "Trump, first term · 2017–21",
+    majority:
+      "Republican majority, House and Senate, 2017–19. Then a Democratic House. Split. The Oval does not hold the purse.",
+    plus: [
+      {
+        k: "Tax Cuts and Jobs Act.",
+        bill: "H.R. 1 · 2017",
+        href: "https://www.congress.gov/bill/115th-congress/house-bill/1",
+      },
+      {
+        k: "Unemployment 3.5 percent, February 2020, before the virus. Lowest since 1969.",
+        bill: "BLS",
+        href: "https://www.bls.gov/charts/employment-situation/civilian-unemployment-rate.htm",
+      },
+      {
+        k: "CPI peak in the term: 2.9 percent. EIA weekly regular peak: $2.962, May 28, 2018.",
+        bill: "BLS · EIA",
+        href: "https://www.eia.gov/petroleum/gasdiesel/",
+      },
+      {
+        k: "Abraham Accords. Remain in Mexico. Operation Warp Speed. No new war.",
+        bill: "State · CBP MPP · HHS",
+        href: "https://www.state.gov/the-abraham-accords/",
+      },
+    ],
+    minus: [
+      {
+        k: "CARES. Both parties. The meter jumped.",
+        bill: "H.R. 748 · 2020",
+        href: "https://www.congress.gov/bill/116th-congress/house-bill/748",
+      },
+      {
+        k: "Debt still rose on this watch. Congress holds the purse. The Oval signed the bills.",
+        bill: "Treasury",
+        href: "https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/",
+      },
+      {
+        k: "January 6. Fight like hell is on the tape. Peacefully and patriotically is on the same tape. The building was breached. Zero charged under 18 U.S.C. § 2383.",
+        bill: "C-SPAN · USAO-DC",
+        href: "https://www.c-span.org/video/?507744-1/president-trump-speaks-save-america-rally",
+      },
+    ],
+  },
+  {
+    id: "trump2",
+    who: "Trump, second term · 2025–",
+    majority:
+      "Republican majority, House and Senate, 2025–now. The door is a policy. The slogan that named him a threat to democracy did not stop the term.",
+    plus: [
+      {
+        k: "FY2025 nationwide encounters: 691,906. Southwest Border Patrol: 237,538 — lowest since 1970.",
+        bill: "CBP",
+        href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics",
+      },
+      {
+        k: "FBI 2025 murder rate 4.1, tied with 1955–56.",
+        bill: "FBI UCR",
+        href: "https://cde.ucr.cjis.gov/",
+      },
+      {
+        k: "EO 14252: restore monuments, remove graffiti, enforce the capital.",
+        bill: "White House",
+        href: "https://www.whitehouse.gov/",
+      },
+      {
+        k: "Florida documents dismissed. Georgia RICO dismissed. The government dropped the rest.",
+        bill: "S.D. Fla. 23-cr-80101",
+        href: "https://storage.courtlistener.com/recap/gov.uscourts.flsd.651411/gov.uscourts.flsd.651411.672.0.pdf",
+      },
+    ],
+    minus: [
+      {
+        k: "CPI peak so far: 4.2 percent, May 2026. The 9.1 percent floor from June 2022 did not reset.",
+        bill: "BLS CPI",
+        href: "https://www.bls.gov/cpi/",
+      },
+      {
+        k: "EIA weekly regular: $4.500 the week of May 11, 2026. OPEC, tax, refining, shipping.",
+        bill: "EIA",
+        href: "https://www.eia.gov/petroleum/gasdiesel/",
+      },
+      {
+        k: "Manhattan 34 counts: a jury convicted. On appeal. Falsifying records. Not § 2383.",
+        bill: "N.Y. 71543-23",
+        href: "https://www.nycourts.gov/",
+      },
+    ],
+  },
+];
+
 /** What the Oval number is. CBP’s own count. */
 export const ENCOUNTERS = {
   k: "What an encounter is",
+  line: "An encounter is a person CBP met who was not making a lawful entry.",
   v: "Customs and Border Protection counts an encounter when its officers meet a person who is not making a lawful entry. That is Border Patrol between the ports of entry, and officers at land ports, airports, and seaports. It is people stopped, turned back, expelled, or processed. It is not a visa. It is not a gotaway — those are the people CBP did not meet. Nationwide means every door CBP counts, not only the southwest river. Obama uses southwest Border Patrol, the long official table. Trump 1, Biden, and Trump 2 use CBP nationwide when that dashboard exists.",
   href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
 };
 
 /** What CPI peak means. BLS. Not a mood. */
 export const CPI_PEAK = {
-  k: "What CPI peak means",
-  v: "CPI is the Consumer Price Index. The Bureau of Labor Statistics measures a basket of what people actually buy — groceries, rent, fuel, the doctor’s office — and reports how much more that basket costs than a year earlier. CPI peak is the highest of those 12-month readings in that Oval. It is not a four-year average. Biden’s 9.1% is June 2022. Obama’s 3.9% is September 2011. Trump 1: 2.9%. Trump 2 so far: 4.2% in May 2026.",
+  k: "Consumer Price Index",
+  line: "The Consumer Price Index is how much more groceries, rent, and fuel cost than a year earlier. That higher bill does not reset. The next Oval inherits it.",
+  v: "The Consumer Price Index is the Bureau of Labor Statistics measure of a basket of what people actually buy — groceries, rent, fuel, the doctor’s office — and how much more that basket costs than a year earlier. The peak is the highest of those 12-month readings in that Oval. It is not a four-year average. Biden’s 9.1 percent is June 2022. Obama’s 3.9 percent is September 2011. Trump 1: 2.9 percent. Trump 2 so far: 4.2 percent in May 2026. A 9.1 percent year is not a one-year tax that expires. Groceries, rent, and fuel stay at the new price. When a later reading is 3 percent, the cart is still 9 percent more expensive than it was two years earlier, plus 3 percent more on top of that. Inflation does not reset when the Oval changes. The next president inherits the higher floor. Biden’s 9.1 percent in June 2022 is still in the ticket when a later Oval prints 4.2 percent.",
   href: "https://www.bls.gov/cpi/",
 };
 
@@ -804,9 +1200,69 @@ export const RECORD: {
     ],
     minus: [
       {
-        k: "They opened the border. Seven million encounters. The bill is still due.",
-        bill: "CBP · CBO 2023 · FY2021–24",
-        href: "https://www.cbo.gov/publication/61256",
+        k: "February 24, 2026. Joint session. The President asked the chamber to stand if they agreed: the first duty of the American government is to protect American citizens, not illegal aliens. Republicans stood. Democrats stayed seated.",
+        bill: "C-SPAN · 2026 State of the Union",
+        href: "https://www.c-span.org/clip/joint-session-of-congress/user-clip-the-first-duty-of-the-american-government/5194380",
+      },
+      {
+        k: "They named the voter Nazi, pedophile, deplorable, garbage — then ran a Senate nominee with a Totenkopf on his chest and a House nominee who testified for Omar Abdel Rahman, 93 Cr. 181 (S.D.N.Y.). They did not police their own.",
+        bill: "TIME · Clinton, Sept. 9, 2016 · United States v. Rahman",
+        href: "https://time.com/4486502/hillary-clinton-basket-of-deplorables-transcript/",
+      },
+      {
+        k: "Minnesota. Democratic governor. DOJ charged 98 in Feeding Our Future and related Medicaid and housing fraud. 85 of Somali descent. 64 convicted. The auditor was not the party.",
+        bill: "DOJ National Fraud Enforcement · White House fact sheet, Jan. 8, 2026",
+        href: "https://www.whitehouse.gov/fact-sheets/2026/01/fact-sheet-president-donald-j-trump-establishes-new-department-of-justice-division-for-national-fraud-enforcement/",
+      },
+      {
+        k: "Peaceable assembly is the right. Doxxing an ICE officer, assaulting him, and smashing the building is not. 18 U.S.C. § 111, § 119, § 1361. DHS: 275 assaults on ICE officers Jan. 20–Dec. 31, 2025, against 19 in the same stretch of 2024. 66 vehicular attacks against 2. Prairieland Detention Center, July 4, 2025: DOJ sentenced an Antifa cell for attacking the facility. Minnesota: 15 indicted for assaulting federal officers and destroying government property. Sanctuary rhetoric is not a defense.",
+        bill: "DHS · Jan. 8, 2026 · 18 U.S.C. § 111",
+        href: "https://www.dhs.gov/news/2026/01/08/radical-rhetoric-sanctuary-politicians-leads-unprecedented-1300-increase-assaults",
+      },
+      {
+        k: "They opened the border. 10.83 million nationwide encounters, FY2021–24. Americans paid the hotels, the ER wait, and the morgue.",
+        bill: "CBP nationwide · CBO 61256",
+        href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
+      },
+      {
+        k: "Fentanyl deaths peaked at 73,944 in 2022. The poison used a door they held open.",
+        bill: "CDC NCHS · 2017–2023",
+        href: "https://www.cdc.gov/nchs/blog/posts/2026/03/most-common-drugs-in-u-s-overdose-deaths-2017-2023.html",
+      },
+      {
+        k: "ICE FY2024: 2,894 homicide charges or convictions on the criminal noncitizens ERO arrested. Sexual assault and sex offenses: 18,579. Damage to property: 5,001. Those people were on American streets.",
+        bill: "ICE ERO Annual Report FY2024",
+        href: "https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf",
+      },
+      {
+        k: "Hospitals. EMTALA forces the ER. Emergency Medicaid: $16.2 billion in the Biden years. The American who paid the premiums waits.",
+        bill: "CBO 60805 · 42 U.S.C. § 1395dd",
+        href: "https://www.cbo.gov/publication/60805",
+      },
+      {
+        k: "FEMA put Americans on Immediate Needs Funding. The same agency awarded $1.4 billion for aliens. The Inspector General questioned $425 million of that pile.",
+        bill: "DHS OIG-26-04",
+        href: "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf",
+      },
+      {
+        k: "Hurricane Helene. Western North Carolina. The Secretary said FEMA did not have the funds to make it through the season. House Homeland: Americans in the mountains while FEMA ran migrant shelter grants. GAO: survivors could not get through on the helpline.",
+        bill: "House Homeland · Oct. 11, 2024 · GAO-26-108154",
+        href: "https://homeland.house.gov/wp-content/uploads/2024/10/2024-10-11-Green-et-al-to-Mayorkas-DHS-re-FEMA-Funding-Priorities.pdf",
+      },
+      {
+        k: "Maui fire. More than 100 dead. Nearly 10,000 displaced. FEMA Individual Assistance after a year: $56.1 million to 7,141 people. Temporary housing still running into 2027. The same agency awarded $1.4 billion for aliens — hotels, clothes, phones. The people who paid the tax waited.",
+        bill: "GAO-25-106862 · FEMA Maui fact sheet",
+        href: "https://www.gao.gov/products/gao-25-106862",
+      },
+      {
+        k: "DHS: more than 450,000 unaccompanied children in the prior file. A later search found 145,000. The rest is a missing-persons file.",
+        bill: "DHS · OIG-24-46",
+        href: "https://www.dhs.gov/news/2026/02/24/making-america-safe-again-state-dhs-under-president-trump-and-secretary-noem",
+      },
+      {
+        k: "Social Security is overstrained. The 2026 Trustees Report: the retirement fund (OASI) is depleted in the fourth quarter of 2032. After that, 78 percent of the scheduled check. Combined OASDI: third quarter of 2034, then 83 percent. People who paid in their whole lives do not get the benefit they were promised. Congress spent the surplus. Parole into a Social Security number put extra load on a fund already going dry.",
+        bill: "2026 OASDI Trustees Report",
+        href: "https://www.ssa.gov/oact/trsum/",
       },
       {
         k: "SSI to qualified aliens — $715 average a month",
@@ -827,6 +1283,21 @@ export const RECORD: {
         k: "Housing help — about $917 a month",
         bill: "HUD · mixed-family HAP",
         href: "https://www.huduser.gov/portal/datasets/assthsg.html",
+      },
+      {
+        k: "Congress funds the nonprofit pipe and does not require the names. 26 U.S.C. § 6104: for most 501(c) groups, donor names are redacted from the public Form 990. Taxpayer grants still go out on USASpending. America pays for its own opposition and cannot see who else paid.",
+        bill: "26 U.S.C. § 6104 · USASpending",
+        href: "https://www.law.cornell.edu/uscode/text/26/6104",
+      },
+      {
+        k: "Prosecutor races. Independent-expenditure and 527 filings name large donors, including George Soros, to committees that back district attorneys who then publish non-prosecution policies. The PAC is public. The 501(c)(4) that feeds it is not. Crime is the American who lives in that county.",
+        bill: "FEC receipts · IRS 527 disclosure",
+        href: "https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=SOROS%2C%20GEORGE",
+      },
+      {
+        k: "Secretaries of state. 52 U.S.C. § 20507 and HAVA § 21083 already require a reasonable effort to take the dead and the moved off the roll. Congress never tied election grants to a clean list. A refusal to purge is a refusal of the statute they swore.",
+        bill: "52 U.S.C. § 20507 · 52 U.S.C. § 21083",
+        href: "https://www.law.cornell.edu/uscode/text/52/20507",
       },
       {
         k: "The worker waits for a doctor. Medicare pays too little. Part B still takes $202.90.",
@@ -911,8 +1382,8 @@ export const RECORD: {
 export const DRIVERS: { k: string; v: string; href: string }[] = [
   {
     k: "Medicare, Medicaid, Social Security",
-    v: "These three, plus interest, are the biggest lines on the card. Social Security is not a nest egg. The 2026 raise for the average retired worker is $56 a month — $2,015 to $2,071 (SSA). SSA’s own implied return for later cohorts is about 2% real. Markets historically paid 7–8%. Congress spent the surplus. The check is a transfer. They are angry the auditor turned on the light.",
-    href: "https://www.ssa.gov/news/en/cola/factsheets/2026.html",
+    v: "These three, plus interest, are the biggest lines on the card. Social Security is not a nest egg. The 2026 Trustees Report: the retirement fund (OASI) is depleted in the fourth quarter of 2032. After that, 78 percent of the scheduled check. Combined OASDI: third quarter of 2034, then 83 percent. People who paid in their whole working lives may not get the benefit they were promised. The 2026 raise for the average retired worker is $56 a month — $2,015 to $2,071. SSA’s implied return for later cohorts is about 2% real. Markets historically paid 7–8%. Congress spent the surplus. The check is a transfer.",
+    href: "https://www.ssa.gov/oact/trsum/",
   },
   {
     k: "SSI is the welfare check. Not Social Security.",
@@ -929,15 +1400,20 @@ export const DRIVERS: { k: string; v: string; href: string }[] = [
     v: "Twelve money bills by October 1. They do not pass them. Lobbyists write the stack. A handshake in the hallway becomes law. That is not oversight. That is how waste hides.",
     href: "https://www.congress.gov/bill/93rd-congress/house-bill/7130",
   },
+  {
+    k: "The nonprofit pipe. Dark on the 990. Named on the PAC.",
+    v: "Taxpayer money leaves as a grant. A private nonprofit cashes it. 26 U.S.C. § 6104 lets most 501(c) groups keep donor names off the public Form 990. 527s and FEC committees do list large donors — including George Soros on prosecutor-race filings. The 501(c)(4) feeder does not. No charging document says a named donor paid a rioter to set a fire. The cities still burned in 2020. Tax-exempt groups still ran bail and protest infrastructure. Congress still does not require the names or an itemized street ledger. Secretaries of state still sit on dirty rolls while 52 U.S.C. § 20507 already requires a reasonable purge. America is funding a pipe it cannot see.",
+    href: "https://www.law.cornell.edu/uscode/text/26/6104",
+  },
 ];
 
 /** CBO’s long-term file. One chart. Who added, and why the meter runs. */
 export const DEBT_WHY = {
   k: "No oversight. A $40 trillion card. Full-time pay for a part-time floor.",
-  v: "CBO’s long-term outlook: the meter is Medicare, Medicaid, Social Security, and net interest. Wars and tax bills are real. They are not the largest line. Both parties voted the expansions. Neither locked the door. Neither passes twelve appropriations by October 1. GAO: $233–521 billion a year in fraud and improper payments. That is what a part-time schedule does to a country of more than 300 million people. Lack of oversight is how fraud became a line on a $40.09 trillion card.",
+  v: "CBO’s long-term outlook: the meter is Medicare, Medicaid, Social Security, and net interest. Wars and tax bills are real. They are not the largest line. Both parties voted the expansions. Neither locked the door. Neither passes twelve appropriations by October 1. GAO: $233–521 billion a year in fraud and improper payments. The same Congress votes grants to private nonprofits and does not require the public 990 to name the donors. That is what a part-time schedule does to a country of more than 300 million people. Lack of oversight is how fraud became a line on a $40.09 trillion card, and how America funds a political pipe it cannot see.",
   href: "https://www.gao.gov/products/gao-25-107746",
   gop: "Unpaid Medicare Part D. Tax cuts without a closed budget. Iraq. CARES. Majority 2015–19: still no October 1.",
-  dem: "ARRA. ACA Medicaid expansion. Rescue Plan. Parole into benefits. Majority 2021–23: 9.1% prices and a record border while the meter ran.",
+  dem: "ARRA. ACA Medicaid expansion. Rescue Plan. Parole into benefits. Majority 2021–23: 9.1% prices and a record border while the meter ran. The 2026 Trustees Report: OASI empty Q4 2032, then 78% of the scheduled Social Security check.",
   pay: "A rank-and-file member is paid $174,000 a year — CRS RL30064 — plus a pension, Federal Employees Health Benefits, and a million-dollar office allowance. That is 2,080-hour, full-time pay. The House sits on the order of 150 legislative days. No part-time job in America pays like that. Self-governance of their own ethics has failed: 2 U.S.C. § 1415 billed the country for congressional misconduct. Full time, or the perks stop.",
   payHref: "https://www.congress.gov/crs-product/RL30064",
   ethicsHref: "https://www.law.cornell.edu/uscode/text/2/1415",
@@ -994,6 +1470,52 @@ export const ALIENS = {
   ],
 };
 
+/** Tax money to an agency to a private nonprofit. Congress votes the water. */
+export const FUNNEL = {
+  k: "The funnel",
+  line: "Tax money leaves as an appropriation. An agency writes a grant. A private nonprofit cashes it. The public 990 does not have to name the other donors.",
+  v: "The money does not leave the Treasury as a check to a party. It leaves as an appropriation. Congress votes it. An agency writes a grant. A private nonprofit cashes it. In fiscal 2023 the United States disbursed about $71.9 billion in foreign aid. The U.S. Agency for International Development moved about $43.8 billion of that. The Federal Emergency Management Agency awarded nearly $1.4 billion in fiscal 2023–24 through shelter programs to states, cities, and nonprofits. The Inspector General could not ensure the money was used as the law required. Congress funds the National Endowment for Democracy at $315 million. That is taxpayer money into party-aligned shops. Federal grant money is not supposed to buy a campaign (2 CFR 200.450). Separate from the grant is the 501(c)(4). 26 U.S.C. § 6104: for most tax-exempt groups, contributor names are redacted from the public Form 990. The IRS has the names. The country does not. 527s and FEC committees do list large donors — including George Soros on prosecutor-race filings. The PAC is public. The 501(c)(4) feeder is not. No charging document says a named donor paid a rioter to set a fire. 2020 still burned. Tax-exempt groups still ran bail and protest infrastructure. Congress still does not require the names or an itemized street ledger. Secretaries of state still sit on dirty rolls while 52 U.S.C. § 20507 already requires a reasonable effort to take the dead and the moved off the list. America is funding a pipe it cannot see. That is a failure of oversight.",
+  href: "https://www.foreignassistance.gov/",
+  pipes: [
+    {
+      k: "U.S. Agency for International Development",
+      amt: "$43.8 billion of $71.9 billion",
+      note: "Foreign aid, fiscal 2023. The Inspector General audited $25.9 billion.",
+      href: "https://www.usaspending.gov/agency/agency-for-international-development",
+    },
+    {
+      k: "Federal Emergency Management Agency",
+      amt: "$1.4 billion",
+      note: "Shelter programs, fiscal 2023–24. Inspector General: cannot ensure the law was followed.",
+      href: "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf",
+    },
+    {
+      k: "National Endowment for Democracy",
+      amt: "$315 million",
+      note: "Fiscal 2024. Grants to the National Democratic Institute and the International Republican Institute.",
+      href: "https://www.law.cornell.edu/uscode/text/22/4411",
+    },
+    {
+      k: "Public 990 — donor names redacted",
+      amt: "26 U.S.C. § 6104",
+      note: "Most 501(c) groups. The IRS has the Schedule B. The public copy does not. That is the dark.",
+      href: "https://www.law.cornell.edu/uscode/text/26/6104",
+    },
+    {
+      k: "Prosecutor races — the PAC is named",
+      amt: "FEC · IRS 527",
+      note: "Large donors, including George Soros, appear on disclosed committees that back district attorneys. The 501(c)(4) feeder does not have to name them.",
+      href: "https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=SOROS%2C%20GEORGE",
+    },
+    {
+      k: "Voter rolls — the statute already exists",
+      amt: "52 U.S.C. § 20507",
+      note: "A reasonable effort to remove the dead and the moved. HAVA § 21083. Congress never tied the election grant to a clean list.",
+      href: "https://www.law.cornell.edu/uscode/text/52/20507",
+    },
+  ],
+};
+
 /** House roll call on H.R. 7152, Civil Rights Act of 1964. Not a party trophy. */
 export const ROLL_1964 = {
   href: "https://www.congress.gov/bill/88th-congress/house-bill/7152",
@@ -1034,7 +1556,9 @@ export const CHARTS: {
     sources: [
       { label: "FEMA INF advisory", href: "https://content.govdelivery.com/attachments/USDHSFEMA/2023/08/29/file_attachments/2597953/FEMA%20Advisory%20FEMA%20Announces%20Implementation%20of%20Immediate%20Needs%20Funding%2020230829.pdf" },
       { label: "DHS OIG-26-04", href: "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf" },
-      { label: "CRS R47676", href: "https://www.congress.gov/crs-product/R47676" },
+      { label: "House Homeland — Oct. 11, 2024", href: "https://homeland.house.gov/wp-content/uploads/2024/10/2024-10-11-Green-et-al-to-Mayorkas-DHS-re-FEMA-Funding-Priorities.pdf" },
+      { label: "GAO — Helene helpline", href: "https://www.gao.gov/products/gao-26-108154" },
+      { label: "GAO — Maui wildfire", href: "https://www.gao.gov/products/gao-25-106862" },
     ],
   },
   {
@@ -1049,12 +1573,14 @@ export const CHARTS: {
   },
   {
     src: "/images/chart-funnel.jpg",
-    title: "The funnel — taxpayer to agency to NGO",
+    title: "The funnel — taxpayer to nonprofit, donor names redacted, prosecutor money, voter rolls",
     sources: [
       { label: "ForeignAssistance.gov", href: "https://www.foreignassistance.gov/" },
-      { label: "USASpending — USAID", href: "https://www.usaspending.gov/agency/agency-for-international-development" },
-      { label: "DHS OIG-26-04", href: "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf" },
-      { label: "22 U.S.C. § 4411 — NED", href: "https://www.law.cornell.edu/uscode/text/22/4411" },
+      { label: "USASpending — U.S. Agency for International Development", href: "https://www.usaspending.gov/agency/agency-for-international-development" },
+      { label: "26 U.S.C. § 6104 — public 990, donor names redacted", href: "https://www.law.cornell.edu/uscode/text/26/6104" },
+      { label: "FEC — Soros individual receipts", href: "https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=SOROS%2C%20GEORGE" },
+      { label: "52 U.S.C. § 20507 — voter list maintenance", href: "https://www.law.cornell.edu/uscode/text/52/20507" },
+      { label: "22 U.S.C. § 4411 — National Endowment for Democracy", href: "https://www.law.cornell.edu/uscode/text/22/4411" },
     ],
   },
   {
@@ -1077,31 +1603,42 @@ export const CHARTS: {
     ],
   },
   {
+    src: "/images/chart-one-word-ledger.jpg",
+    title: "The fake news list — caption versus the file",
+    sources: [
+      { label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
+      { label: "USAO-DC — January 6 tally", href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol" },
+      { label: "DOJ SDNY — Maduro charged", href: "https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-narco-terrorism-charges-against-nicolas-maduro-current" },
+      { label: "Trump v. Hawaii", href: "https://www.supremecourt.gov/opinions/17pdf/17-965_h315.pdf" },
+    ],
+  },
+  {
+    src: "/images/chart-one-word.jpg",
+    title: "One word — kidnapped versus arrested",
+    sources: [
+      { label: "DOJ SDNY — Maduro charged, 26 March 2020", href: "https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-narco-terrorism-charges-against-nicolas-maduro-current" },
+      { label: "State Department — Maduro captured", href: "https://www.state.gov/nicolas-maduro-moros" },
+      { label: "18 U.S.C. § 1201", href: "https://www.law.cornell.edu/uscode/text/18/1201" },
+    ],
+  },
+  {
     src: "/images/chart-helped-hurt.jpg",
-    title: "Helped and hurt — Congress and the Oval",
+    title: "Helped and hurt",
     sources: [
       { label: "Congress.gov", href: "https://www.congress.gov/" },
-      { label: "BLS CPI", href: "https://www.bls.gov/cpi/" },
+      { label: "BLS — Consumer Price Index", href: "https://www.bls.gov/cpi/" },
       { label: "EIA — the gallon", href: "https://www.eia.gov/petroleum/gasdiesel/" },
       { label: "CBP nationwide", href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters" },
     ],
   },
   {
     src: "/images/chart-inflation-party.jpg",
-    title: "Actual inflation — who held Congress",
+    title: "Actual inflation — Consumer Price Index, who held Congress",
     sources: [
-      { label: "BLS CPI-U", href: "https://www.bls.gov/cpi/" },
+      { label: "BLS — Consumer Price Index", href: "https://www.bls.gov/cpi/" },
       { label: "9.1% — June 2022", href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm" },
       { label: "BLS live — August 2026, 3.4%", href: "https://www.bls.gov/news.release/cpi.nr0.htm" },
       { label: "FRED — 12-month CPI", href: "https://fred.stlouisfed.org/graph/?id=CPIAUCSL&units=pc1" },
-    ],
-  },
-  {
-    src: "/images/chart-policy.jpg",
-    title: "Policy — success and failure",
-    sources: [
-      { label: "Congress.gov", href: "https://www.congress.gov/" },
-      { label: "BLS — June 2022", href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm" },
     ],
   },
   {
@@ -1202,29 +1739,84 @@ export const CHARTS: {
     ],
   },
   {
-    src: "/images/chart-oval.jpg",
-    title: "The Oval — encounters and the highest price spike (CPI)",
+    src: "/images/chart-oval-encounters.jpg",
+    title: "The Oval — border encounters",
     sources: [
+      { label: "CBP — nationwide encounters", href: "https://www.cbp.gov/newsroom/stats/nationwide-encounters" },
       { label: "CBP — enforcement statistics", href: "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics" },
-      { label: "BLS — CPI", href: "https://www.bls.gov/cpi/" },
-      { label: "EIA — the gallon", href: "https://www.eia.gov/petroleum/gasdiesel/" },
+    ],
+  },
+  {
+    src: "/images/chart-oval-prices.jpg",
+    title: "The Oval — highest price spike",
+    sources: [
+      { label: "BLS — Consumer Price Index", href: "https://www.bls.gov/cpi/" },
+      { label: "9.1 percent — June 2022", href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm" },
+    ],
+  },
+  {
+    src: "/images/chart-oval-caption.jpg",
+    title: "The Oval — caption versus tape",
+    sources: [
+      { label: "Mueller report", href: "https://www.justice.gov/archives/sco/file/1373816/dl" },
+      { label: "23-cr-257", href: "https://www.justice.gov/storage/US_v_Trump_23_cr_257.pdf" },
+      { label: "Call memo", href: "https://www.whitehouse.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf" },
+      { label: "C-SPAN — Ellipse", href: "https://www.c-span.org/video/?507744-1/president-trump-speaks-save-america-rally" },
+      { label: "H.Res. 24", href: "https://www.congress.gov/bill/117th-congress/house-resolution/24" },
+    ],
+  },
+  {
+    src: "/images/chart-oval-cases.jpg",
+    title: "The Oval — the cases",
+    sources: [
+      { label: "Mueller report", href: "https://www.justice.gov/archives/sco/file/1373816/dl" },
+      { label: "23-cr-257", href: "https://www.justice.gov/storage/US_v_Trump_23_cr_257.pdf" },
+      { label: "H.Res. 755", href: "https://www.congress.gov/bill/116th-congress/house-resolution/755" },
+      { label: "H.Res. 24", href: "https://www.congress.gov/bill/117th-congress/house-resolution/24" },
+    ],
+  },
+  {
+    src: "/images/chart-oval-gallon.jpg",
+    title: "The Oval — highest weekly gasoline",
+    sources: [
+      { label: "EIA — weekly regular", href: "https://www.eia.gov/petroleum/gasdiesel/" },
+    ],
+  },
+  {
+    src: "/images/chart-oval-slogan.jpg",
+    title: "The Oval — the slogan versus the document",
+    sources: [
+      { label: "Brandenburg v. Ohio", href: "https://supreme.justia.com/cases/federal/us/395/444/" },
+      { label: "Article IV, Section 4", href: "https://constitution.congress.gov/constitution/article-4/" },
+      { label: "Federalist 10", href: "https://guides.loc.gov/federalist-papers/text-10-17#s-lg-box-wrapper-25493273" },
+      { label: "18 U.S.C. § 2383", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
     ],
   },
 ];
 
 const COMPARE_SRC = [
   "/images/chart-helped-hurt.jpg",
-  "/images/chart-lawfare.jpg",
-  "/images/chart-funnel.jpg",
-  "/images/chart-what-they-bought.jpg",
-  "/images/chart-oval.jpg",
-  "/images/chart-debt-why.jpg",
-  "/images/chart-aliens.jpg",
   "/images/chart-inflation-party.jpg",
-  "/images/chart-policy.jpg",
-  "/images/chart-border.jpg",
-  "/images/chart-crime.jpg",
+  "/images/chart-debt-why.jpg",
+  "/images/chart-oval-encounters.jpg",
+  "/images/chart-oval-prices.jpg",
+  "/images/chart-oval-gallon.jpg",
+  "/images/chart-oval-caption.jpg",
+  "/images/chart-oval-cases.jpg",
   "/images/chart-pump-admins.jpg",
+  "/images/chart-crime.jpg",
+  "/images/chart-border.jpg",
+  "/images/chart-aliens.jpg",
+  "/images/chart-what-they-bought.jpg",
+  "/images/chart-fema-two-jobs.jpg",
+  "/images/chart-funnel.jpg",
+  "/images/chart-they-dont-write.jpg",
+  "/images/chart-paying-taliban.jpg",
+  "/images/chart-lawfare.jpg",
+  "/images/chart-they-ran-it.jpg",
+  "/images/chart-one-word-ledger.jpg",
+  "/images/chart-one-word.jpg",
+  "/images/chart-blame.jpg",
   "/images/chart-pump-years.jpg",
   "/images/chart-pump-flow.jpg",
 ];
@@ -1232,13 +1824,18 @@ const COMPARE_SRC = [
 export const COMPARE_WIDE = new Set([
   "/images/chart-helped-hurt.jpg",
   "/images/chart-lawfare.jpg",
+  "/images/chart-one-word-ledger.jpg",
+  "/images/chart-one-word.jpg",
   "/images/chart-funnel.jpg",
   "/images/chart-what-they-bought.jpg",
-  "/images/chart-oval.jpg",
+  "/images/chart-oval-encounters.jpg",
+  "/images/chart-oval-prices.jpg",
+  "/images/chart-oval-gallon.jpg",
+  "/images/chart-oval-caption.jpg",
+  "/images/chart-oval-cases.jpg",
   "/images/chart-debt-why.jpg",
   "/images/chart-aliens.jpg",
   "/images/chart-inflation-party.jpg",
-  "/images/chart-policy.jpg",
   "/images/chart-border.jpg",
   "/images/chart-crime.jpg",
   "/images/chart-pump-admins.jpg",
@@ -1270,25 +1867,69 @@ function chartsFor(...srcs: string[]) {
     .filter((c): c is (typeof CHARTS)[number] => Boolean(c));
 }
 
-export const TAB_CHARTS: Record<(typeof SCORE_TABS)[number]["id"], ReturnType<typeof chartsFor>> = {
-  gop: chartsFor("/images/chart-policy.jpg", "/images/chart-debt-why.jpg", "/images/chart-inflation-party.jpg"),
+export const TAB_CHARTS: Record<ScoreRoom, ReturnType<typeof chartsFor>> = {
+  gop: chartsFor(
+    "/images/chart-debt-bars.jpg",
+    "/images/chart-1964.jpg",
+    "/images/chart-inflation-party.jpg",
+    "/images/chart-they-dont-write.jpg",
+    "/images/chart-blame.jpg",
+  ),
   dem: chartsFor(
+    "/images/chart-border.jpg",
+    "/images/chart-aliens.jpg",
+    "/images/chart-what-they-bought.jpg",
+    "/images/chart-fema-two-jobs.jpg",
+    "/images/chart-funnel.jpg",
+    "/images/chart-paying-taliban.jpg",
     "/images/chart-lawfare.jpg",
     "/images/chart-they-ran-it.jpg",
-    "/images/chart-fema-two-jobs.jpg",
-    "/images/chart-what-they-bought.jpg",
-    "/images/chart-aliens.jpg",
-    "/images/chart-policy.jpg",
-    "/images/chart-inflation-party.jpg",
   ),
-  split: chartsFor("/images/chart-they-dont-write.jpg", "/images/chart-paying-taliban.jpg", "/images/chart-debt-why.jpg", "/images/chart-funnel.jpg", "/images/chart-blame.jpg"),
+  split: chartsFor(
+    "/images/chart-harm-pie.jpg",
+    "/images/chart-job.jpg",
+    "/images/chart-debt-why.jpg",
+    "/images/chart-blame.jpg",
+  ),
   oval: chartsFor(
-    "/images/chart-oval.jpg",
+    "/images/chart-oval-encounters.jpg",
+    "/images/chart-oval-prices.jpg",
+    "/images/chart-oval-gallon.jpg",
+    "/images/chart-oval-caption.jpg",
+    "/images/chart-oval-cases.jpg",
+    "/images/chart-oval-slogan.jpg",
     "/images/chart-pump-admins.jpg",
     "/images/chart-crime.jpg",
+  ),
+  compare: chartsFor(
+    "/images/chart-helped-hurt.jpg",
+    "/images/chart-inflation-party.jpg",
+    "/images/chart-debt-bars.jpg",
+    "/images/chart-oval-encounters.jpg",
+    "/images/chart-oval-prices.jpg",
     "/images/chart-border.jpg",
   ),
-  compare: COMPARE_CHARTS,
+};
+
+export const OVAL_DESK_CHARTS: Record<OvalDesk, ReturnType<typeof chartsFor>> = {
+  four: TAB_CHARTS.oval,
+  trump1: chartsFor(
+    "/images/chart-oval-caption.jpg",
+    "/images/chart-oval-cases.jpg",
+    "/images/chart-oval-slogan.jpg",
+    "/images/chart-oval-encounters.jpg",
+    "/images/chart-oval-prices.jpg",
+    "/images/chart-oval-gallon.jpg",
+    "/images/chart-lawfare.jpg",
+  ),
+  trump2: chartsFor(
+    "/images/chart-oval-encounters.jpg",
+    "/images/chart-oval-prices.jpg",
+    "/images/chart-oval-gallon.jpg",
+    "/images/chart-crime.jpg",
+    "/images/chart-oval-slogan.jpg",
+    "/images/chart-oval-cases.jpg",
+  ),
 };
 
 export const FILE_CHIPS: {
@@ -1304,14 +1945,20 @@ export const FILE_CHIPS: {
     hot: true,
   },
   {
+    k: "Lawfare — not allowed",
+    v: "The people own this country. A caption, a warrant, and a stacked docket were used to replace the American argument. That effort is on the record. It is not a debate.",
+    href: "/dispatch/a-war-on-americans",
+    hot: true,
+  },
+  {
     k: "Republicans",
     v: "What they passed that helped. What they passed that hurt. Every named bill, on this page.",
-    href: "#gop",
+    href: "#gop-file",
   },
   {
     k: "Democrats",
     v: "What they passed that helped. What they passed that hurt. Every named bill, on this page.",
-    href: "#dem",
+    href: "#dem-file",
   },
 ];
 
@@ -1339,11 +1986,15 @@ export const MAJORITY: {
     who: "Democratic majority — House and Senate",
     when: "1993–95 · 2007–11 · 2021–23",
     could: "They could pass a spending bill without Republicans.",
-    did: "Raised taxes. Passed ObamaCare. Prices hit 9.1% in 2022. Record border crossings. The debt still went up.",
+    did: "Raised taxes. Passed ObamaCare. Prices hit 9.1% in 2022. Record border: 10.83 million nationwide encounters FY2021–24. Fentanyl, ER waits, hotels, homicides. Social Security retirement fund depletes Q4 2032 — then 78% of the check. The debt still went up. February 24, 2026: asked to stand if the first duty is American citizens, not illegal aliens, they stayed seated.",
     href: "https://www.congress.gov/bill/111th-congress/house-bill/3590",
     extra: [
       { label: "BLS — 9.1% prices, June 2022", href: "https://www.bls.gov/news.release/archives/cpi_07132022.htm" },
       { label: "CBP border numbers", href: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters" },
+      { label: "Clinton — basket of deplorables", href: "https://time.com/4486502/hillary-clinton-basket-of-deplorables-transcript/" },
+      { label: "DOJ — Minnesota fraud pile", href: "https://www.whitehouse.gov/fact-sheets/2026/01/fact-sheet-president-donald-j-trump-establishes-new-department-of-justice-division-for-national-fraud-enforcement/" },
+      { label: "DHS — ICE assaults 2025", href: "https://www.dhs.gov/news/2026/01/08/radical-rhetoric-sanctuary-politicians-leads-unprecedented-1300-increase-assaults" },
+      { label: "DOJ — Prairieland ICE attack", href: "https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice" },
     ],
   },
   {
@@ -1370,6 +2021,21 @@ export const FAILURE: {
     value: "$17 million",
     label: "Treasury account for workplace settlements, 1997–2017. Not all members. Not all sex. Still taxpayer funds.",
     href: "https://www.law.cornell.edu/uscode/text/2/1415",
+  },
+  {
+    value: "Deplorables · garbage",
+    label: "Clinton, Sept. 9, 2016: half of Trump’s supporters a “basket of deplorables,” some “irredeemable.” Biden, Oct. 29, 2024: White House stenographers wrote “his supporters” as the garbage. The press office inserted an apostrophe. Nazis. Pedophiles. The smear is the method. The voter is the target.",
+    href: "https://time.com/4486502/hillary-clinton-basket-of-deplorables-transcript/",
+  },
+  {
+    value: "They did not police their own",
+    label: "Maine Senate, 2026: Graham Platner, Democratic nominee, a Totenkopf — SS death’s-head — on his chest. He covered it after it became public. New Jersey-12: Adam Hamawy, Democratic nominee, took the stand as a defense witness for Omar Abdel Rahman, the Blind Sheikh, United States v. Rahman, 93 Cr. 181 (S.D.N.Y.), the 1993 World Trade Center bombing case. Minnesota: DOJ charged 98 in Feeding Our Future and related Medicaid and housing fraud; 85 of Somali descent; 64 convicted. The labels went to the American. The file went to the party.",
+    href: "https://www.whitehouse.gov/fact-sheets/2026/01/fact-sheet-president-donald-j-trump-establishes-new-department-of-justice-division-for-national-fraud-enforcement/",
+  },
+  {
+    value: "Not peaceable assembly",
+    label: "The First Amendment protects peaceable assembly. It does not protect doxxing an ICE officer, assaulting him, or smashing the building. 18 U.S.C. § 111 is assault on a federal officer. 18 U.S.C. § 119 is publishing his home address to threaten him. 18 U.S.C. § 1361 is government property. DHS: 275 ICE assaults Jan. 20–Dec. 31, 2025, against 19 in 2024. 66 vehicular attacks against 2. DOJ: Prairieland Detention Center, July 4, 2025 — Antifa cell sentenced for attacking the facility. Direct Action Minnesota: 15 indicted for assaulting federal officers and destroying government property. Sanctuary politicians’ rhetoric is in the DHS file. That is unrest. It is not a rally.",
+    href: "https://www.dhs.gov/news/2026/01/08/radical-rhetoric-sanctuary-politicians-leads-unprecedented-1300-increase-assaults",
   },
   {
     value: "$233–521 billion",

@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { NarrativeFrames } from "@/components/narrative-frames";
 import { EraCompare } from "@/components/era-compare";
-import { LawfareLedger } from "@/components/lawfare-ledger";
+import { LawfareLedger, SloganChart } from "@/components/lawfare-ledger";
 import { getPost, nextInSeries, SITE } from "@/lib/content";
 import { nextChapter } from "@/lib/flow";
 import { essayHead } from "@/lib/share-head";
@@ -155,6 +155,7 @@ function EssayPage() {
             );
           })}
         </div>
+        {post.slug === "one-word" ? <SloganChart /> : null}
         {post.lawfare?.length ? <LawfareLedger rows={post.lawfare} /> : null}
         {post.eras?.length ? (
           <div className="sm:-mx-8 lg:-mx-24">
