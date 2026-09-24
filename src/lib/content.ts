@@ -1588,7 +1588,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The captions are on [Fake News](/dispatch/the-media-ledger). Kidnapped, collusion, insurrection, mostly peaceful, the Muslim ban, kids in cages, domestic terrorists, the laptop, dictator, and fine people are rows. Open a row for the file."
+				text: "The captions are on [Fake News](/dispatch/the-media-ledger). Kidnapped, collusion, insurrection, mostly peaceful, the Muslim ban, kids in cages, domestic terrorists, the laptop, dictator, and fine people are rows. The truth on a row opens the official record, outside this journal."
 			},
 			{
 				type: "p",

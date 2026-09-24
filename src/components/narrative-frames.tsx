@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { Frame } from "@/lib/content";
 import { InteractiveChart, KeptRead } from "@/components/interactive-chart";
 
@@ -107,7 +106,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
   return (
     <section className="mt-8">
       <p className="mb-3 text-base leading-relaxed text-fg">
-        One chart. Choose a block in the truth column and it opens the proof.
+        One chart. The truth opens the official record, outside this journal.
       </p>
       <div className="overflow-x-auto rounded-md border border-neutral-800">
         <table className="w-full min-w-[64rem] border-collapse text-left">
@@ -140,42 +139,26 @@ function TapeTable({ frames }: { frames: Frame[] }) {
 }
 
 function ChartRow({ f }: { f: Frame }) {
-  const [open, setOpen] = useState(false);
   const who = firstLine(f.ran || f.tag);
   const claim = firstLine(f.they);
-  const truth = fileLine(f.tape);
+  const truth = f.href ? (
+    <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+      {fileLine(f.tape)}
+    </a>
+  ) : (
+    fileLine(f.tape)
+  );
   return (
-    <>
-      <tr className="border-t border-white/10">
-        <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
-          <button type="button" onClick={() => setOpen((v) => !v)} className="text-left">
-            <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">{f.tag}</span>
-            {who}
-          </button>
-        </td>
-        <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
-          <button type="button" onClick={() => setOpen((v) => !v)} className="text-left">{claim}</button>
-        </td>
-        <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
-          <button type="button" onClick={() => setOpen((v) => !v)} className="text-left">{truth}</button>
-        </td>
-      </tr>
-      {open ? (
-        <tr className="border-t border-white/10 bg-white text-neutral-900">
-          <td colSpan={3} className="px-4 py-4 text-sm leading-relaxed">
-            <p className="font-semibold text-red-800">The claim</p>
-            <p className="mt-1">{f.they}</p>
-            <p className="mt-3 font-semibold text-blue-900">The truth</p>
-            <p className="mt-1">{f.tape}</p>
-            {f.href ? (
-              <a href={f.href} target="_blank" rel="noreferrer" className="mt-3 inline-block text-blue-800 underline">
-                The record
-              </a>
-            ) : null}
-          </td>
-        </tr>
-      ) : null}
-    </>
+    <tr className="border-t border-white/10">
+      <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
+        <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">{f.tag}</span>
+        {who}
+      </td>
+      <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
+        {claim}
+      </td>
+      <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">{truth}</td>
+    </tr>
   );
 }
 function GroupRows({ title, frames }: { title: string; frames: Frame[] }) {
