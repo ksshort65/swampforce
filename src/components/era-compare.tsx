@@ -42,7 +42,7 @@ export function EraCompare({ topics }: { topics: EraTopic[] }) {
                         href={r.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-inherit no-underline hover:text-sage"
+                        className="text-sage underline decoration-sage underline-offset-2"
                       >
                         {r.line}
                       </a>
