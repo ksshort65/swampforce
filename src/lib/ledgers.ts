@@ -375,6 +375,10 @@ export const MEDIA_TALLY = {
 export const MEDIA_LEAD =
   "This file holds 108 captions. 21 are a cut tape or the wrong picture. 78 are a word that was added, widened, or swapped until the sentence became a crime, a finding, or an order the recording does not contain. 9 are the unequal standard in plain sight: one party’s scandal cut from logs that show both, one set of children used as a slogan while another count of children was treated as politics, a faith named when the order named countries, and one candidate called a danger so the law could be broken to stop him. A network is not a trustee under the United States Code. It asked the country to trust it with the record. An accurate report was the job it sold. These 108 lines are the breach of that job. Five of them were said in September 2026, including September 23. The nation was divided along the caption. These 108 are the captions in this file. They are not every line that aired.";
 
+export function frameId(tag: string) {
+  return tag.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
 const demFrames: Post["frames"] = [
   { tag: "I never spoke to him", they: "The president never discussed his son’s business.", tape: "The messages and the later testimony do not match the denial." },
   { tag: "No pardon", they: "I will not pardon my son.", tape: "He pardoned him." },

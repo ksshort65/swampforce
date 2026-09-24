@@ -1,4 +1,5 @@
 import { Fragment, useState, type ReactNode } from "react";
+import { frameId } from "@/lib/ledgers";
 import type { Frame } from "@/lib/content";
 import { InteractiveChart, KeptRead } from "@/components/interactive-chart";
 
@@ -712,7 +713,7 @@ export function NarrativeFrames({
         subtitle={dek}
         rightLabel={showClaim ? "The truth" : "The file"}
         rows={ordered.map((f) => ({
-          id: f.tag,
+          id: frameId(f.tag),
           kicker: f.they.includes("||") || showClaim ? f.tag : undefined,
           name: f.they.includes("||")
             ? f.they.split("||").map((s) => s.trim()).join(" · ")

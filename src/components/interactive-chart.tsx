@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 const NAMES: [RegExp, string][] = [
   [/18 U\.S\.C\. § 2383/g, "the insurrection law (18 U.S.C. § 2383)"],
@@ -106,6 +106,13 @@ export function InteractiveChart({
     setOpen((current) => (current === id ? null : id));
   }
 
+  useEffect(() => {
+    const id = window.location.hash.replace("#", "");
+    if (!id || !rows.some((row) => row.id === id)) return;
+    setOpen(id);
+    document.getElementById(id)?.scrollIntoView({ block: "start" });
+  }, [rows]);
+
   return (
     <section className="mt-8">
       <div className="overflow-hidden rounded-md border border-neutral-800 bg-[#140e0c] text-white">
@@ -124,7 +131,7 @@ export function InteractiveChart({
         {rows.map((r) => {
           const on = open === r.id;
           return (
-            <div key={r.id} className="border-t border-white/10">
+            <div key={r.id} id={r.id} className="scroll-mt-28 border-t border-white/10">
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 <button
                   type="button"

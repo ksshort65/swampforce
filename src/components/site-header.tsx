@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { SITE, NAV_MENUS, getPost } from "@/lib/content";
+import { frameId } from "@/lib/ledgers";
 
 function NavMenu({ label, slugs }: { label: string; slugs: readonly string[] }) {
   const ref = useRef<HTMLDetailsElement>(null);
@@ -35,7 +36,7 @@ function NavMenu({ label, slugs }: { label: string; slugs: readonly string[] }) 
     };
   }, []);
 
-  if ((label === "J6" || label === "Democrats") && slugs[0]) {
+  if (label === "J6" && slugs[0]) {
     const slug = slugs[0];
     return (
       <Link
@@ -47,6 +48,33 @@ function NavMenu({ label, slugs }: { label: string; slugs: readonly string[] }) 
       </Link>
     );
   }
+  if (label === "Democrats") {
+    const frames = getPost("the-democrat-ledger")?.frames ?? [];
+    return (
+      <details ref={ref} className="relative">
+        <summary className="inline-flex min-h-11 cursor-pointer list-none items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase hover:text-sage [&::-webkit-details-marker]:hidden">
+          {label}
+        </summary>
+        <div
+          className="absolute top-full left-0 z-50 mt-1 max-h-[70vh] w-72 overflow-y-auto rounded-md border border-border bg-bg p-1.5 shadow-lg"
+          onClick={close}
+        >
+          {frames.map((frame) => (
+            <Link
+              key={frame.tag}
+              to="/dispatch/$slug"
+              params={{ slug: "the-democrat-ledger" }}
+              hash={frameId(frame.tag)}
+              className="block rounded-md px-3 py-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:bg-surface"
+            >
+              {frame.tag}
+            </Link>
+          ))}
+        </div>
+      </details>
+    );
+  }
+
   if (!slugs.length) {
     return (
       <span className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase">
