@@ -174,6 +174,29 @@ function TapeTable({ frames }: { frames: Frame[] }) {
 }
 
 function ChartRow({ f }: { f: Frame }) {
+  if (f.tag === "Fourteen days") {
+    return (
+      <tr className="border-t border-white/10">
+        <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
+          <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">Fourteen days</span>
+          <span className="block">September 19–24, 2026. Six named statements.</span>
+        </td>
+        <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
+          <a href="https://variety.com/wp-content/uploads/2026/09/CNN-MS-NOW-Politico-vs.-Trump-et-al.pdf" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            A lost badge is an assault on free speech, and it has never happened.
+          </a>
+        </td>
+        <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
+          <a href="https://variety.com/wp-content/uploads/2026/09/CNN-MS-NOW-Politico-vs.-Trump-et-al.pdf" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            Said six times on the record: the complaint, Boutrous, CNN, MS NOW, Heinrich, and Obama. No larger count was located.
+          </a>
+          <a href="https://www.courtlistener.com/docket/74823502/24/cable-news-network-inc-v-trump/" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+            September 24. The judge gave the badges back for 14 days, for lack of notice. Not a right to be inside.
+          </a>
+        </td>
+      </tr>
+    );
+  }
   if (f.tag === "Only under Trump") {
     return (
       <tr className="border-t border-white/10">
