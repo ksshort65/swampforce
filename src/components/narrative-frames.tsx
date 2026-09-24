@@ -55,8 +55,6 @@ function fileLine(text: string) {
 }
 
 const POLITICIANS = new Set([
-  "War of choice",
-  "Illegal war",
   "Russia collusion",
   "Schiff’s transcript",
   "Whips",
@@ -64,8 +62,8 @@ const POLITICIANS = new Set([
   "Laziest Congress",
   "ICE is terror",
   "The war raised the gallon",
-  "Just a ballroom",
-  "They made it necessary",
+  "The ballroom",
+  "The Iran war",
   "Sharp as a tack",
   "Seventeen agencies",
   "Shoot them in the legs",
@@ -311,8 +309,8 @@ function ChartRow({ f }: { f: Frame }) {
     );
   }
   const who = oneLine(f.ran || f.tag, 120);
-  const claim = oneLine(f.they, 140);
-  const truthText = oneLine(f.tape, 140);
+  const claims = f.they.split("||").map((s) => s.trim()).filter(Boolean);
+  const truthText = oneLine(f.tape, 220);
   return (
     <tr className="border-t border-white/10">
       <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
@@ -326,7 +324,11 @@ function ChartRow({ f }: { f: Frame }) {
         )}
       </td>
       <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
-        {claim}
+        {claims.map((claim) => (
+          <span key={claim} className="mb-2 block last:mb-0">
+            {claim}
+          </span>
+        ))}
       </td>
       <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
         {f.href ? (
@@ -370,8 +372,8 @@ export function NarrativeFrames({
   tapeTable?: boolean;
   showClaim?: boolean;
 }) {
-  const iran = frames.find((f) => f.tag === "War of choice");
-  const first = ["They made it necessary", "Just a ballroom"];
+  const iran = frames.find((f) => f.tag === "The Iran war");
+  const first = ["The ballroom", "The press pass", "The Iran war"];
   const ordered = [
     ...first.map((tag) => frames.find((f) => f.tag === tag)).filter((f): f is Frame => Boolean(f)),
     ...frames.filter((f) => !first.includes(f.tag)),
@@ -408,8 +410,12 @@ export function NarrativeFrames({
         rightLabel={showClaim ? "The truth" : "The file"}
         rows={ordered.map((f) => ({
           id: f.tag,
-          kicker: showClaim ? f.tag : undefined,
-          name: showClaim ? f.they : f.tag,
+          kicker: f.they.includes("||") || showClaim ? f.tag : undefined,
+          name: f.they.includes("||")
+            ? f.they.split("||").map((s) => s.trim()).join(" · ")
+            : showClaim
+              ? f.they
+              : f.tag,
           line: showClaim ? f.tape : fileLine(f.tape),
           href: showClaim ? undefined : f.href,
           proof: "The record",
