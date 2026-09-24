@@ -174,6 +174,38 @@ function TapeTable({ frames }: { frames: Frame[] }) {
 }
 
 function ChartRow({ f }: { f: Frame }) {
+  if (f.tag === "Only under Trump") {
+    return (
+      <tr className="border-t border-white/10">
+        <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
+          <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">Only under Trump</span>
+          <span className="block">2018, 2009, 2013, 2023, and this month. The networks.</span>
+        </td>
+        <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
+          <a href="https://www.cnn.com/2018/11/19/media/cnn-acosta-emergency-hearing" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            A revoked pass is an attack on a free press, and it only happens under Trump.
+          </a>
+        </td>
+        <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
+          <a href="https://www.cnn.com/2018/11/19/media/cnn-acosta-emergency-hearing" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            November 7, 2018. Acosta’s pass was pulled, then returned on November 19 after CNN sued.
+          </a>
+          <a href="https://www.judicialwatch.org/documents-show-obama-white-house-attacked-excluded-fox-news-channel/" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+            October 2009. Obama’s staff wrote “skip Fox.” The other networks refused to film until Fox was in.
+          </a>
+          <a href="https://www.latimes.com/nation/politics/politicsnow/la-pn-justice-department-journalist-investigations-20130712-story.html" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+            May 2013. Obama’s Justice Department called a Fox reporter a possible co-conspirator to read his email.
+          </a>
+          <a href="https://www.politico.com/newsletters/west-wing-playbook/2023/08/02/simons-no-longer-got-a-hard-pass-00109526" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+            2023. Under Biden, hard passes fell from 1,417 to 975. Day passes stayed. One applicant was denied.
+          </a>
+          <a href="https://www.nytimes.com/2026/09/23/business/media/fox-trump-press-pool-ban.html" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+            This month. CNN, Politico, and MS NOW were barred. Fox refused to film until CNN was back.
+          </a>
+        </td>
+      </tr>
+    );
+  }
   if (f.tag === "Check your rolls") {
     return (
       <tr className="border-t border-white/10">
