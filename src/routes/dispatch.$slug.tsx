@@ -197,34 +197,8 @@ function EssayPage() {
           </div>
         ) : null}
         {post.slug === "the-media-ledger" ? (
-          <div className="mt-10 space-y-6">
-            <div className="grid gap-6 lg:grid-cols-2">
-              <figure>
-                <iframe
-                  className="aspect-video w-full rounded-lg bg-black"
-                  src="https://www.youtube-nocookie.com/embed/KSXenq5RNwo"
-                  title="Local anchors reading the same script, word for word"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-                <figcaption className="mt-2 font-serif text-sm leading-6 text-fg/70">
-                  April 2018. Dozens of anchors, on stations across the country, reading one script. The line they share is “this is extremely dangerous to our democracy.”
-                </figcaption>
-              </figure>
-              <figure>
-                <iframe
-                  className="aspect-video w-full rounded-lg bg-black"
-                  src="https://www.youtube-nocookie.com/embed/EsjwtaIocUw"
-                  title="Senators reading the same script, word for word"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-                <figcaption className="mt-2 font-serif text-sm leading-6 text-fg/70">
-                  March 2025. Twenty-two Democratic senators posted the same script, the same week, down to the same sentences.
-                </figcaption>
-              </figure>
-            </div>
-            <div className="max-w-2xl space-y-6 font-serif text-lg leading-8 text-fg/85">
+          <div className="mt-2 max-w-2xl space-y-8">
+            <div className="space-y-6 font-serif text-lg leading-8 text-fg/85">
               <p>
                 A caption does not become the truth because it is loud. It becomes the truth by a method. The buttons sort this file by which method was used.
               </p>
@@ -238,6 +212,32 @@ function EssayPage() {
                 <a className="text-blue-800" href="https://www.nature.com/articles/s41467-026-70041-x" target="_blank" rel="noreferrer">illusory truth effect</a>.
                 {" "}Twelve years of one script is not an accident. It is what gets run when the exposure would end the people who ordered it.
               </p>
+            </div>
+            <div className="grid max-w-md grid-cols-2 gap-3">
+              <figure>
+                <iframe
+                  className="aspect-video w-full rounded-md bg-black"
+                  src="https://www.youtube-nocookie.com/embed/KSXenq5RNwo"
+                  title="Local anchors reading the same script, word for word"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+                <figcaption className="mt-1 font-serif text-xs leading-5 text-fg/60">
+                  April 2018. Anchors. One script.
+                </figcaption>
+              </figure>
+              <figure>
+                <iframe
+                  className="aspect-video w-full rounded-md bg-black"
+                  src="https://www.youtube-nocookie.com/embed/EsjwtaIocUw"
+                  title="Senators reading the same script, word for word"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+                <figcaption className="mt-1 font-serif text-xs leading-5 text-fg/60">
+                  March 2025. Twenty-two senators. One script.
+                </figcaption>
+              </figure>
             </div>
           </div>
         ) : null}
