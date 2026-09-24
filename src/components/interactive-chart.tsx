@@ -89,10 +89,12 @@ export function InteractiveChart({
   title,
   subtitle,
   rows,
+  large = false,
 }: {
   title: string;
   subtitle?: string;
   rows: ChartRow[];
+  large?: boolean;
 }) {
   const [open, setOpen] = useState<string | null>(null);
   const note = subtitle?.startsWith("The claim is the row") ? null : subtitle;
@@ -104,15 +106,15 @@ export function InteractiveChart({
   return (
     <section className="mt-8">
       <div className="overflow-hidden rounded-md border border-neutral-800 bg-[#140e0c] text-white">
-        <div className="px-5 py-5">
-          <p className="font-display text-2xl font-bold tracking-wide uppercase sm:text-3xl">{title}</p>
-          {note ? <p className="mt-2 max-w-xl text-sm leading-relaxed text-neutral-300">{note}</p> : null}
+        <div className="px-5 py-5 sm:px-6 sm:py-6">
+          <p className={`font-display font-bold tracking-wide uppercase ${large ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl"}`}>{title}</p>
+          {note ? <p className={`mt-2 max-w-3xl leading-relaxed text-neutral-300 ${large ? "text-base" : "text-sm"}`}>{note}</p> : null}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2">
-          <p className="bg-[#3a1214] px-4 py-3 font-display text-[11px] font-bold tracking-[0.18em] text-red-100 uppercase">
+          <p className={`bg-[#3a1214] px-4 py-3 font-display font-bold tracking-[0.18em] text-red-100 uppercase ${large ? "text-sm" : "text-[11px]"}`}>
             The claim
           </p>
-          <p className="bg-[#10233f] px-4 py-3 font-display text-[11px] font-bold tracking-[0.18em] text-blue-100 uppercase">
+          <p className={`bg-[#10233f] px-4 py-3 font-display font-bold tracking-[0.18em] text-blue-100 uppercase ${large ? "text-sm" : "text-[11px]"}`}>
             The file
           </p>
         </div>
@@ -124,14 +126,14 @@ export function InteractiveChart({
                 <button
                   type="button"
                   onClick={() => choose(r.id)}
-                  className={`px-4 py-3 text-left text-[15px] font-semibold break-words text-red-50 ${on ? "bg-[#4a181c]" : "bg-[#2a1214]"}`}
+                  className={`px-4 py-4 text-left font-semibold break-words text-red-50 ${large ? "text-lg leading-snug" : "text-[15px]"} ${on ? "bg-[#4a181c]" : "bg-[#2a1214]"}`}
                 >
                   {r.name}
                 </button>
                 <button
                   type="button"
                   onClick={() => choose(r.id)}
-                  className={`border-t border-white/10 px-4 py-3 text-left text-[14px] leading-relaxed break-words text-blue-50 sm:border-t-0 sm:border-l ${on ? "bg-[#163056]" : "bg-[#0e1c33]"}`}
+                  className={`border-t border-white/10 px-4 py-4 text-left leading-relaxed break-words text-blue-50 sm:border-t-0 sm:border-l ${large ? "text-base" : "text-[14px]"} ${on ? "bg-[#163056]" : "bg-[#0e1c33]"}`}
                 >
                   {r.line ?? r.proof ?? "The record"}
                 </button>

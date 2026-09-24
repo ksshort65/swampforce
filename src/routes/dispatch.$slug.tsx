@@ -71,7 +71,7 @@ function EssayPage() {
 
       <article
         className={
-          post.lawfare?.length
+          post.lawfare?.length || post.frames?.length
             ? "mx-auto max-w-6xl px-4 py-12 sm:px-6"
             : "mx-auto max-w-2xl px-4 py-12 sm:px-6"
         }
@@ -162,11 +162,7 @@ function EssayPage() {
             <EraCompare topics={post.eras} />
           </div>
         ) : null}
-        {post.frames?.length ? (
-          <div className="sm:-mx-8 lg:-mx-24">
-            <NarrativeFrames frames={post.frames} />
-          </div>
-        ) : null}
+        {post.frames?.length ? <NarrativeFrames frames={post.frames} /> : null}
         {post.video ? (
           <video
             className="mt-8 w-full rounded-lg bg-black"

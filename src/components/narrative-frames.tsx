@@ -1,5 +1,10 @@
 import type { Frame } from "@/lib/content";
-import { InteractiveChart, KeptRead, firstLine } from "@/components/interactive-chart";
+import { InteractiveChart, KeptRead } from "@/components/interactive-chart";
+
+function fileLine(text: string) {
+  const two = text.split(/(?<=\.)\s+/).slice(0, 2).join(" ");
+  return two.length > 320 ? `${two.slice(0, 317)}…` : two;
+}
 
 export function NarrativeFrames({
   frames,
@@ -41,12 +46,13 @@ export function NarrativeFrames({
         </figure>
       ) : null}
       <InteractiveChart
+        large
         title={heading}
         subtitle={dek}
         rows={ordered.map((f) => ({
           id: f.tag,
           name: f.tag,
-          line: firstLine(f.tape),
+          line: fileLine(f.tape),
           href: f.href,
           proof: "The record",
           read: (
