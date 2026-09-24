@@ -367,6 +367,10 @@ export const LEDGER_POSTS: Post[] = [
     body: [
       {
         type: "p",
+        text: "Deception here is a lie, gaslighting, one word that changes the story, or the same line repeated until the caption hardens into the truth. Lawfare is that method in a courtroom. It stays on its own chart.",
+      },
+      {
+        type: "p",
         text: "The failure is not the viewer's. The truth was withheld. What ran was a coordinated attack. The tapes are the proof. The studies are the method.",
       },
       {
