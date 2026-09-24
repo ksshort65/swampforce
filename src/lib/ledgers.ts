@@ -376,14 +376,17 @@ export const LEDGER_POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "A short false sentence is easier to keep than a transcript. After enough days of the same word, a country will argue for a fact it never checked, and it will sort a neighbor into an enemy. The word did not die that week. Joe Biden and Kamala Harris brought the same lie back and repeated it through election day. Harris said it again at the debate on September 10, 2024. [That repetition is on the record](https://link.springer.com/chapter/10.1007/978-3-031-95345-3_5). That is not an accident. It is a coordinated attack on the nation. They do it because a public trained on the wrong fact will vote, give money, and hate without anyone having to pass a law. The person who sold the word stays clean. The country is left holding the lie.",
+        text: "A short false sentence is easier to keep than a transcript. After enough days of the same word, a country will argue for a fact it never checked, and it will sort a neighbor into an enemy. They do it because a public trained on the wrong fact will vote, give money, and hate without anyone having to pass a law. The person who sold the word stays clean. The country is left holding the lie.",
       },
       {
         type: "ul",
         items: [
           "The networks, the same word. On March 16, 2024, Donald Trump said “bloodbath” about Chinese car plants in Mexico and a 100 percent tariff. By the next morning the plants were gone and the word was the story. [CNN’s own story that night](https://www.cnn.com/2024/03/16/politics/trump-bloodbath-auto-industry-election). Politico, NBC, and CBS ran the same kind of headline. [MSNBC and ABC defending the word](https://www.foxnews.com/media/msnbc-abc-vigorously-defend-trump-bloodbath-coverage-did-not-miss-full-context) is a compilation of them saying it.",
-          "The politicians, the same script. On March 4, 2025, about twenty-two Democratic senators, including Chuck Schumer, Elizabeth Warren, and Cory Booker, posted one speech, word for word. [The tape of them reading it](https://www.youtube.com/watch?v=EsjwtaIocUw).",
         ],
+      },
+      {
+        type: "p",
+        text: "A year after March 16, 2024, on March 4, 2025, politicians were still on one script. Chuck Schumer, Elizabeth Warren, Cory Booker, and about twenty other Democratic senators posted the same speech, word for word. The speech was about prices, not the car plants. The method was the same. [The tape of them reading it](https://www.youtube.com/watch?v=EsjwtaIocUw). That is not an accident. It is a coordinated attack on the nation.",
       },
     ],
   },
