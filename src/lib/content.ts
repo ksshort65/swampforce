@@ -1105,7 +1105,7 @@ export const posts: Post[] = [
 			{ label: "PBS / AP — badges deactivated, Sept. 19", href: "https://www.pbs.org/newshour/politics/ms-now-cnn-and-politico-say-their-journalists-were-denied-access-to-the-white-house-after-trump-ban" },
 			{ label: "CNN v. Trump, 2018 — Acosta credentials", href: "https://www.courtlistener.com/docket/16116680/cable-news-network-inc-v-trump/" },
 			{ label: "First Amendment", href: "https://constitution.congress.gov/constitution/amendment-1/" },
-			{ label: "Manufactured outrage", href: "/dispatch/the-media-ledger" },
+			{ label: "Fake News", href: "/dispatch/the-media-ledger" },
 		],
 		body: [
 			{
@@ -1528,7 +1528,7 @@ export const posts: Post[] = [
 	body: [
 			{
 				type: "p",
-				text: "The chart is in one place, so it is not printed twice. [Manufactured outrage](/dispatch/the-media-ledger) holds it in three sections: politicians, networks, and journalists. The rows are the gaslighting, the lies, and the tape cut short."
+				text: "The chart is in one place, so it is not printed twice. [Fake News](/dispatch/the-media-ledger) holds it in three sections: politicians, networks, and journalists. The rows are the gaslighting, the lies, and the tape cut short."
 			},
 			{
 				type: "p",
@@ -1579,96 +1579,20 @@ export const posts: Post[] = [
 			{ label: "USAO-DC — January 6 charge tally", href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol" },
 			{ label: "Trump v. Hawaii", href: "https://www.supremecourt.gov/opinions/17pdf/17-965_h315.pdf" },
 			{ label: "Garland — school boards memo", href: "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf" },
-			{ label: "They clipped the tape", href: "/dispatch/they-clipped-the-tape" },
-		],
-		frames: [
-			{
-				tag: "Kidnapped",
-				they: "The United States kidnapped the president of Venezuela.",
-				tape: "SDNY indictment, 26 March 2020. Custody, 3 January 2026. Arraigned in Brooklyn.",
-				href: "https://www.state.gov/nicolas-maduro-moros",
-			},
-			{
-				tag: "Collusion",
-				they: "The campaign colluded with Russia.",
-				tape: "Durham: the FBI opened a full investigation on raw, uncorroborated intelligence. It did not have actual evidence of collusion in its holdings when the case began.",
-				href: "https://www.justice.gov/storage/durhamreport.pdf",
-			},
-			{
-				tag: "Insurrection",
-				they: "January 6 was insurrection.",
-				tape: "18 U.S.C. § 2383. About 1,583 federally charged. Zero under the insurrection statute.",
-				href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol",
-			},
-			{
-				tag: "Mostly peaceful",
-				they: "Mostly peaceful protests.",
-				tape: "A precinct burned. The word peaceful did the work the tape would not.",
-			},
-			{
-				tag: "Muslim ban",
-				they: "He banned Muslims.",
-				tape: "Proclamation 9645. The Supreme Court upheld it in Trump v. Hawaii. Countries, not a faith test.",
-				href: "https://www.supremecourt.gov/opinions/17pdf/17-965_h315.pdf",
-			},
-			{
-				tag: "Kids in cages",
-				they: "He put children in cages.",
-				tape: "The chain-link facilities were photographed in 2014. The Flores settlement is 1997. The pictures were not a 2018 invention.",
-			},
-			{
-				tag: "Domestic terrorists",
-				they: "Parents at school boards are a domestic-terror problem.",
-				tape: "NSBA asked the White House. Five days later the Attorney General ordered U.S. Attorneys and the FBI to coordinate.",
-				href: "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf",
-			},
-			{
-				tag: "Russian disinfo",
-				they: "The laptop is a Russian trick.",
-				tape: "Fifty-one former intelligence officials signed a letter weeks before the 2020 vote. The House published the file.",
-				href: "https://judiciary.house.gov/media/press-releases/new-judiciary-committee-website-highlights-activities-and-findings-select",
-			},
-			{
-				tag: "Dictator",
-				they: "He said he will be a dictator on day one.",
-				tape: "Close the border. Drill. “After that, I’m not a dictator.”",
-			},
-			{
-				tag: "Fine people",
-				they: "He called neo-Nazis very fine people.",
-				tape: "Same remarks: neo-Nazis and white nationalists “should be condemned totally.”",
-			},
+			{ label: "Fake News", href: "/dispatch/the-media-ledger" },
 		],
 		body: [
 			{
-				type: "img",
-				src: "/images/chart-one-word-ledger.jpg",
-				alt: "Twelve years of one-word swaps",
+				type: "p",
+				text: "Gaslighting is not a feeling. It is a method. A speaker replaces what happened with a word that cannot survive the file, then repeats the word until the file feels rude to mention. One word is enough. The rest of the sentence can stay true. The swapped word does all the work."
 			},
 			{
 				type: "p",
-				text: "Gaslighting is not a feeling. It is a method. A speaker replaces what happened with a word that cannot survive the file, then repeats the word until the file feels rude to mention. The listener is not argued with. The listener is trained to distrust the thing in front of their eyes. One word is enough. The rest of the sentence can stay true. The swapped word does all the work. For twelve years that method was used on a country and on a president. Maduro is the latest noun. It is not the first.",
-			},
-			{
-				type: "img",
-				src: "/images/chart-one-word.jpg",
-				alt: "Kidnapped versus arrested",
+				text: "The captions are on [Fake News](/dispatch/the-media-ledger). Kidnapped, collusion, insurrection, mostly peaceful, the Muslim ban, kids in cages, domestic terrorists, the laptop, dictator, and fine people are rows. Open a row for the file."
 			},
 			{
 				type: "p",
-				text: "Kidnapped is the word that ran. Arrested is the file. [The Department of Justice](https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-narco-terrorism-charges-against-nicolas-maduro-current) charged Nicolás Maduro Moros on **26 March 2020** in the Southern District of New York with narco-terrorism conspiracy under [21 U.S.C. § 960a](https://www.law.cornell.edu/uscode/text/21/960a). The indictment alleged an intent to flood the United States with cocaine. A warrant issued. For six years the defendant did not appear. [The State Department](https://www.state.gov/nicolas-maduro-moros): on **3 January 2026** he was placed in U.S. custody, taken to Brooklyn, and held to face those charges. He was arraigned. He pleaded not guilty. Kidnapping under [18 U.S.C. § 1201](https://www.law.cornell.edu/uscode/text/18/1201) is the unlawful seizure of a person. A named defendant walked into a courtroom is not a kidnapping victim. The swapped word made the United States the criminal and Maduro the victim. That is the entire trick.",
-			},
-			{
-				type: "p",
-				text: "The same trick ran for twelve years against the man the country hired, and against the people who hired him. **Collusion.** The [Durham report](https://www.justice.gov/storage/durhamreport.pdf) says the FBI opened a full investigation on raw, uncorroborated intelligence and did not have actual evidence of collusion in its holdings when the case began. Years of a Russia caption followed. The file did not. [Inspector General Horowitz](https://oig.justice.gov/reports/2019/o1912.pdf) found seventeen inaccuracies and omissions in the Carter Page FISA applications used to surveil a U.S. person tied to a presidential campaign. The caption was Russia. The applications were not scrupulously accurate.",
-			},
-			{
-				type: "p",
-				text: "**Muslim ban.** The instrument was Proclamation 9645. The Supreme Court upheld it in [Trump v. Hawaii](https://www.supremecourt.gov/opinions/17pdf/17-965_h315.pdf). Countries. Not a faith test. **Kids in cages.** The chain-link rooms were photographed in 2014. The Flores settlement is 1997. The pictures were not a 2018 invention. **Mostly peaceful.** A precinct burned. **Insurrection.** [USAO-DC](https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol): about 1,583 federally charged. Assault, trespass, civil disorder. About 18 under seditious conspiracy, [18 U.S.C. § 2384](https://www.law.cornell.edu/uscode/text/18/2384). Zero under the insurrection statute, [§ 2383](https://www.law.cornell.edu/uscode/text/18/2383). **Domestic terrorists.** Parents at school boards. The National School Boards Association asked the White House. Five days later the Attorney General [ordered](https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf) U.S. Attorneys and the FBI to coordinate. **Russian disinfo.** Fifty-one former intelligence officials signed a letter treating a laptop as a Russian trick weeks before the 2020 vote. The House published that file. [They clipped the tape](/dispatch/they-clipped-the-tape) on bloodbath, dictator, and fine people. Each time the swapped word taught a crime the recording did not contain.",
-			},
-			{
-				type: "p",
-				text: "Once the word sticks, process is the punishment. The House impeached twice. Then four criminal dockets ran at once against the same man. The public paid for the committee. Defense is not free. A presidency can be buried in process without a statute that matches the caption. Neighbors were taught that the people who hired him were a threat to the country. That is how a republic is divided without a shot: one word, repeated, until the person across the street is the enemy and the employee who ran the caption still has the gavel.",
+				text: "Once the word sticks, process is the punishment. The House impeached twice. Then four criminal dockets ran at once against the same man. The cases are on [Taxpayer-funded hoaxes](/dispatch/the-hire-is-the-country). Neighbors were taught that the people who hired him were a threat to the country."
 			},
 			{
 				type: "q",
@@ -1790,11 +1714,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The [Durham report](https://www.justice.gov/storage/durhamreport.pdf) is the file. Crossfire Hurricane opened as a full FBI investigation of a presidential campaign. Durham: neither U.S. law enforcement nor the Intelligence Community appears to have possessed any actual evidence of collusion in their holdings at the commencement of that investigation. Raw. Uncorroborated. A different standard than the one used when the other campaign was the subject. The Steele reporting was later used on a FISA targeting a U.S. person tied to the campaign. Durham: the investigators did not and could not corroborate the substantive allegations in that reporting. [Horowitz](https://oig.justice.gov/reports/2019/o1912.pdf): seventeen inaccuracies and omissions in those applications. That is what the government had. That is what the government did not have.",
-			},
-			{
-				type: "p",
-				text: "The country was told the opposite. On March 20, 2017 — months into the first term — the ranking Democrat on House Intelligence told the public the evidence of collusion was more than circumstantial. Networks put that sentence on a loop. Politicians who sat on the committee put it on the floor. The [Congressional Record](https://www.congress.gov/congressional-record/volume-165/issue-163/house-section/article/H8153-5), in H.Res. 630, later named those years: false accusations of collusion spread for more than two years; a March 2017 claim of more than circumstantial evidence. In April 2019 the Attorney General quoted Mueller: the investigation did not establish that members of the Trump Campaign conspired or coordinated with the Russian government. They ran it anyway. After the report. Through the first term. A hired president spent those years answering a caption the FBI did not have in the file when it opened the case. Neighbors were taught the people who hired him had hired a Kremlin asset. That is not journalism. That is not oversight. That is an information war run against an elected president and against the Americans who hired him. The ledger is [Taxpayer-funded hoaxes](/dispatch/the-hire-is-the-country).",
+				text: "The file is on [Fake News](/dispatch/the-media-ledger), in the Russia collusion row. Crossfire Hurricane opened with no actual evidence of collusion in the holdings. Schiff said the evidence was more than circumstantial on March 20, 2017. Mueller did not establish a conspiracy. They ran the caption for the whole first term anyway."
 			},
 			{
 				type: "q",
@@ -3543,8 +3463,8 @@ export const JOURNAL = [
 		],
 	},
 	{
-		name: "The Media",
-		dek: "The caption they sold. The file that did not match.",
+		name: "Fake News",
+		dek: "Politicians, networks, and journalists. Gaslighting, lies, and a tape cut short.",
 		slugs: ["the-media-ledger"],
 	},
 	{
