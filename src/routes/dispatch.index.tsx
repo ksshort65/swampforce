@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { homeHead } from "@/lib/share-head";
 
@@ -33,7 +33,11 @@ export function DispatchIndex() {
             sources.
           </p>
           <div className="mt-5 flex flex-wrap gap-3 pb-2">
-            <Button type="button">Lawfare</Button>
+            <Button asChild>
+              <Link to="/dispatch/$slug" params={{ slug: "a-war-on-americans" }}>
+                Lawfare
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

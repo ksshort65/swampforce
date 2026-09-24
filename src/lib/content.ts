@@ -1725,7 +1725,7 @@ export const posts: Post[] = [
 	{
 		slug: "they-called-it-protest",
 		title: "They called it protest",
-		dek: "They hate the cleanup because it proves 2020 was not mostly peaceful. The monuments were vandalized. The murder rate was 6.6. The capital is being made a capital again.",
+		dek: "They hate the cleanup because it proves 2020 was not mostly peaceful. The monuments were vandalized. The murder rate was 6.6. The capital is being put back in order.",
 		date: "2026-09-21",
 		category: "Dispatch",
 		readMinutes: 5,
@@ -1753,11 +1753,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The [FBI](https://www.fbi.gov/news/press-releases/fbi-releases-2025-reported-crimes-in-the-nation-statistics) now puts the 2025 murder rate at **4.1** per 100,000 — tied with 1955 and 1956, the lowest since national estimates began. Murder down 18.1 percent. Violent crime down 9.3 percent, the largest year-to-year drop in that series. The 2020 bar on this chart is **6.6**, in a year they called peaceful while a precinct burned. The decline began before January 20, 2025. That sentence stays. So does this one: the Oval that spent 2020 explaining away the fire is not the Oval writing the order to restore the marble and enforce the capital.",
+				text: "The [FBI](https://www.fbi.gov/news/press-releases/fbi-releases-2025-reported-crimes-in-the-nation-statistics) now puts the 2025 murder rate at **4.1** per 100,000 — tied with 1955 and 1956, the lowest since national estimates began. Murder down 18.1 percent. Violent crime down 9.3 percent, the largest year-to-year drop in that series. The 2020 bar on this chart is **6.6**, in a year they called peaceful while a precinct burned. The decline began before January 20, 2025. That sentence stays. So does this one: the Oval that spent 2020 explaining away the fire is not the Oval writing the order to restore the marble and enforce the law in the capital.",
 			},
 			{
 				type: "p",
-				text: "The bail was the return ticket. On June 1, 2020, then-Senator Kamala Harris posted: “If you’re able to, chip in now to the @MNFreedomFund to help post bail for those protesting on the ground in Minnesota.” [The post is still up.](https://x.com/KamalaHarris/status/1267555018128965643) Sixteen days later she said they should not let up. Minneapolis had already seen a precinct burn. She did not say stop the arson. She pointed donors at a fund so the people in the street could return to the street. Maxine Waters: create a crowd. Ayanna Pressley: bring the fire. Nancy Pelosi: people will do what they do. The wording, the insured bill, and the clean hands are in [They keep their hands clean](/dispatch/clean-hands). This page is why they hate the cleanup. The caption was protest. The file was a crime wave with a bail fund on top.",
+				text: "The bail was the return ticket. On June 1, 2020, then-Senator Kamala Harris posted: “If you’re able to, chip in now to the @MNFreedomFund to help post bail for those protesting on the ground in Minnesota.” [The post is still up.](https://x.com/KamalaHarris/status/1267555018128965643) Sixteen days later she said they should not let up. Minneapolis had already seen a precinct burn. She did not say stop the arson. She pointed donors at a fund so the people in the street could return to the street. Maxine Waters: create a crowd. Ayanna Pressley: bring the fire. Nancy Pelosi: people will do what they do. The wording, the insured bill, and the clean hands are named above. This page is why they hate the cleanup. The caption was protest. The file was a crime wave with a bail fund on top.",
 			},
 			{
 				type: "q",
