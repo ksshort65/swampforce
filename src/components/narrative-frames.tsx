@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { Frame } from "@/lib/content";
 import { InteractiveChart, KeptRead } from "@/components/interactive-chart";
 
@@ -50,39 +49,6 @@ function BloodbathDetail() {
     </>
   );
 }
-function BloodbathRow() {
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <tr className="border-t border-white/10">
-        <td className="border-r border-white/10 bg-[#2a1214] px-4 py-4 align-top text-base font-semibold leading-snug text-red-50">
-          <button type="button" onClick={() => setOpen((v) => !v)} className="text-left">
-            <span className="mb-2 block font-display text-[11px] font-bold tracking-[0.14em] text-red-200 uppercase">
-              Bloodbath
-            </span>
-            First incorrect report: CNN, March 16, 2024, 6:52 p.m. Eastern. Kit Maher and Alayna Treene wrote that it would be a bloodbath if he loses the election. The cars were left out.
-          </button>
-        </td>
-        <td className="bg-[#0e1c33] px-4 py-4 align-top text-base leading-relaxed text-blue-50">
-          <button type="button" onClick={() => setOpen((v) => !v)} className="text-left">
-            <span className="mb-2 block font-display text-[11px] font-bold tracking-[0.14em] text-blue-200 uppercase">
-              The truth
-            </span>
-            He said the word twice, in one stretch, starting at 29:45. Open this row for the recordings.
-          </button>
-        </td>
-      </tr>
-      {open ? (
-        <tr className="border-t border-white/10 bg-white text-neutral-900">
-          <td colSpan={2} className="px-5 py-5">
-            <BloodbathDetail />
-          </td>
-        </tr>
-      ) : null}
-    </>
-  );
-}
-
 function fileLine(text: string) {
   const two = text.split(/(?<=\.)\s+/).slice(0, 2).join(" ");
   return two.length > 320 ? `${two.slice(0, 317)}…` : two;
@@ -148,90 +114,84 @@ function bucket(tag: string) {
   return "lie";
 }
 
-function FrameRows({ frames }: { frames: Frame[] }) {
-  return (
-    <>
-      {frames.map((f) => {
-        if (f.tag === "Bloodbath") return <BloodbathRow key={f.tag} />;
-        const proof = f.href ? (
-          <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            {f.they}
-          </a>
-        ) : (
-          f.they
-        );
-        const tape = f.href ? (
-          <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            {f.tape}
-          </a>
-        ) : (
-          f.tape
-        );
-        return (
-          <tr key={f.tag} className="border-t border-white/10">
-            <td className="border-r border-white/10 bg-[#2a1214] px-4 py-4 align-top text-base font-semibold leading-snug text-red-50">
-              <span className="mb-2 block font-display text-[11px] font-bold tracking-[0.14em] text-red-200 uppercase">{f.tag}</span>
-              {proof}
-            </td>
-            <td className="bg-[#0e1c33] px-4 py-4 align-top text-base leading-relaxed text-blue-50">{tape}</td>
-          </tr>
-        );
-      })}
-    </>
-  );
+function firstLine(text: string) {
+  const one = text.split(/(?<=\.)\s+/)[0] ?? text;
+  return one.length > 220 ? `${one.slice(0, 217)}…` : one;
 }
 
 function TapeTable({ frames }: { frames: Frame[] }) {
   const groups = [
-    {
-      key: "clip",
-      title: "Clipping a tape short",
-      note: "The recording exists. The rest of the sentence was not played.",
-    },
-    {
-      key: "changed",
-      title: "Changing his words",
-      note: "A word was swapped, or a sentence was put in his mouth.",
-    },
-    {
-      key: "lie",
-      title: "Outright lies",
-      note: "There is no recording of it, or the event did not happen.",
-    },
+    { key: "clip", title: "Clipping a tape short" },
+    { key: "changed", title: "Changing his words" },
+    { key: "lie", title: "Outright lies" },
   ] as const;
   return (
-    <section className="mt-8 space-y-10">
-      <p className="text-base leading-relaxed text-fg">
-        One file. Three parts. This table is interactive. Choose a block and it opens the proof.
+    <section className="mt-8">
+      <p className="mb-3 text-base leading-relaxed text-fg">
+        One chart. Choose a block in the truth column and it opens the proof.
       </p>
-      {groups.map((group) => {
-        const rows = frames.filter((f) => bucket(f.tag) === group.key);
-        if (!rows.length) return null;
+      <div className="overflow-x-auto rounded-md border border-neutral-800">
+        <table className="w-full min-w-[64rem] border-collapse text-left">
+          <thead>
+            <tr>
+              <th className="w-[28%] border-r border-white/10 bg-[#1c1917] px-3 py-3 font-display text-sm font-bold tracking-[0.12em] text-neutral-100 uppercase">
+                Date and who
+              </th>
+              <th className="w-[32%] border-r border-white/10 bg-[#3a1214] px-3 py-3 font-display text-sm font-bold tracking-[0.12em] text-red-100 uppercase">
+                The claim
+              </th>
+              <th className="bg-[#10233f] px-3 py-3 font-display text-sm font-bold tracking-[0.12em] text-blue-100 uppercase">
+                The truth
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {groups.map((group) => {
+              const rows = frames.filter((f) => bucket(f.tag) === group.key);
+              if (!rows.length) return null;
+              return (
+                <GroupRows key={group.key} title={group.title} frames={rows} />
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
+function GroupRows({ title, frames }: { title: string; frames: Frame[] }) {
+  return (
+    <>
+      <tr className="border-t border-white/10">
+        <td colSpan={3} className="bg-black px-3 py-2 font-display text-sm font-bold tracking-[0.14em] text-white uppercase">
+          {title}
+        </td>
+      </tr>
+      {frames.map((f) => {
+        const who = firstLine(f.ran || f.tag);
+        const claim = firstLine(f.they);
+        const truth = f.href ? (
+          <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            {fileLine(f.tape)}
+          </a>
+        ) : (
+          fileLine(f.tape)
+        );
         return (
-          <div key={group.key}>
-            <h2 className="font-display text-2xl font-bold tracking-wide text-fg uppercase">{group.title}</h2>
-            <p className="mt-2 mb-3 text-base leading-relaxed text-fg">{group.note}</p>
-            <div className="overflow-x-auto rounded-md border border-neutral-800">
-              <table className="w-full min-w-[48rem] border-collapse text-left">
-                <thead>
-                  <tr>
-                    <th className="w-[34%] border-r border-white/10 bg-[#3a1214] px-4 py-3 font-display text-sm font-bold tracking-[0.14em] text-red-100 uppercase">
-                      The claim
-                    </th>
-                    <th className="bg-[#10233f] px-4 py-3 font-display text-sm font-bold tracking-[0.14em] text-blue-100 uppercase">
-                      The truth
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <FrameRows frames={rows} />
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <tr key={f.tag} className="border-t border-white/10">
+            <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
+              <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">{f.tag}</span>
+              {who}
+            </td>
+            <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
+              {claim}
+            </td>
+            <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">{truth}</td>
+          </tr>
         );
       })}
-    </section>
+    </>
   );
 }
 
