@@ -411,7 +411,7 @@ export const LEDGER_POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "The failure is not the viewer's. The truth was withheld. What ran was a coordinated attack. The same words play on the [Manufactured Outrage](/dispatch/the-media-ledger) page. Anchors first. Senators second. [The uncut recording](https://www.c-span.org/clip/public-affairs-event/user-clip-trump-says-bloodbath/5110570) is a source that does not lie. The studies are the method.",
+        text: "The failure is not the viewer's. The truth was withheld. What ran was a coordinated attack. The same words play on the [Fake News](/dispatch/the-media-ledger) page. Anchors first. Senators second. [The uncut recording](https://www.c-span.org/clip/public-affairs-event/user-clip-trump-says-bloodbath/5110570) is a source that does not lie. The studies are the method.",
       },
       {
         type: "p",
@@ -433,14 +433,14 @@ export const LEDGER_POSTS: Post[] = [
   },
   {
     slug: "the-media-ledger",
-    title: "Manufactured Outrage",
-    dek: "The claim is one column. The proof it is a lie is the other. Push a row. The bullets are the official file, and the recording when one exists.",
+    title: "Fake News",
+    dek: "The buttons are the methods. One word. A clipped tape. A fact cut out. A claim the file does not show. And the line that was actually said.",
     date: "2026-09-22",
     category: "Dispatch",
     readMinutes: 4,
     image: "/images/manufactured-outrage.jpg",
     imageAlt: "The file in front of the screens",
-    series: "Manufactured Outrage",
+    series: "Fake News",
     frameDek: "One file. Open a row. The name is who said it. The link is the official record.",
     frameLeft: "What ran",
     frameRight: "The file",
@@ -450,7 +450,7 @@ export const LEDGER_POSTS: Post[] = [
   {
     slug: "the-democrat-ledger",
     title: "The Democrat ledger",
-    dek: "The harm. Threats and labels this party aimed at Americans. Networks aired them until the neighbor was the enemy. The lies are on the Manufactured Outrage table.",
+    dek: "The harm. Threats and labels this party aimed at Americans. Networks aired them until the neighbor was the enemy. The lies are on the Fake News table.",
     date: "2026-09-22",
     category: "Dispatch",
     readMinutes: 4,
@@ -461,14 +461,14 @@ export const LEDGER_POSTS: Post[] = [
     frameLeft: "What they said",
     frameRight: "The harm",
     body: [
-      { type: "p", text: "These lines were said. Networks aired them until a neighbor sounded like an enemy. A threat is not a false caption, so it stays with the party that said it. The lies that party told, and that networks carried, are on the Manufactured Outrage table." },
+      { type: "p", text: "These lines were said. Networks aired them until a neighbor sounded like an enemy. A threat is not a false caption, so it stays with the party that said it. The lies that party told, and that networks carried, are on the Fake News table." },
     ],
     frames: demFrames,
   },
   {
     slug: "the-republican-ledger",
     title: "The Republican ledger",
-    dek: "The harm. Chants and labels this party aimed at Americans, and the protection that never reached the record. The lies are on the Manufactured Outrage table.",
+    dek: "The harm. Chants and labels this party aimed at Americans, and the protection that never reached the record. The lies are on the Fake News table.",
     date: "2026-09-22",
     category: "Dispatch",
     readMinutes: 4,
@@ -479,7 +479,7 @@ export const LEDGER_POSTS: Post[] = [
     frameLeft: "What they said",
     frameRight: "The harm",
     body: [
-      { type: "p", text: "These lines were said. A chant with no charge, and a party that would not put its own exhibits on the table, still divide the country when networks air them. A threat is not a false caption, so it stays with the party that said it. The lies that party told, and that networks carried, are on the Manufactured Outrage table." },
+      { type: "p", text: "These lines were said. A chant with no charge, and a party that would not put its own exhibits on the table, still divide the country when networks air them. A threat is not a false caption, so it stays with the party that said it. The lies that party told, and that networks carried, are on the Fake News table." },
     ],
     frames: gopFrames,
   },

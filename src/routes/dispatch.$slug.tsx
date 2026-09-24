@@ -87,10 +87,10 @@ function EssayPage() {
                 A caption to check, or a caption to add to the table.
               </p>
               <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[0.95] font-bold tracking-wide uppercase sm:text-6xl">
-                Manufactured Outrage
+                Fake News
               </h1>
               <p className="mt-3 max-w-2xl font-serif text-xl leading-snug text-fg/90">
-                Who made the decision to divide this nation with manufactured outrage, and why?
+                Who made this decision twelve years ago, and why? The war was opened on a businessman, a former donor, and every American citizen. The tools were lies, hate, and violence. Who is terrified of the exposure?
               </p>
             </>
           ) : (
@@ -198,9 +198,6 @@ function EssayPage() {
         ) : null}
         {post.slug === "the-media-ledger" ? (
           <div className="mt-10 space-y-6">
-            <p className="max-w-2xl font-serif text-lg leading-8 text-fg/85">
-              The essays are not on this page. The claim is the left column. The proof it is a lie is the right. Push either one. The bullets are a court record, a statute, a GAO report, an inspector general report, a Treasury table, a Bureau of Labor Statistics table, a fuel table, an IAEA report, or the recording of the speech they cut. The table is growing.
-            </p>
             <div className="grid gap-6 lg:grid-cols-2">
               <figure>
                 <iframe
@@ -226,6 +223,20 @@ function EssayPage() {
                   March 2025. Twenty-two Democratic senators posted the same script, the same week, down to the same sentences.
                 </figcaption>
               </figure>
+            </div>
+            <div className="max-w-2xl space-y-6 font-serif text-lg leading-8 text-fg/85">
+              <p>
+                The buttons under this line are the methods. One word is the framing effect. The same facts, a different word, and the choice reverses.{" "}
+                <a className="text-blue-800" href="https://gwern.net/doc/psychology/1981-tversky.pdf" target="_blank" rel="noreferrer">Tversky and Kahneman, 1981</a>.
+              </p>
+              <p>
+                Clipped the tape is the sentence with the minutes cut out. Cut the fact out is the omission. A fact the file does not show is the claim with no document behind it. He said it is the line that is on the recording, and does not get washed.
+              </p>
+              <p>
+                Any of them works because the line is said again. A review of 182 studies found that hearing a statement again makes people rate it as more true.{" "}
+                <a className="text-blue-800" href="https://www.nature.com/articles/s41467-026-70041-x" target="_blank" rel="noreferrer">The illusory truth effect</a>.
+                {" "}That is why the same script ran for twelve years. The file getting this close is what the operation cannot survive.
+              </p>
             </div>
           </div>
         ) : null}

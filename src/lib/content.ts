@@ -1105,7 +1105,7 @@ export const posts: Post[] = [
 			{ label: "PBS / AP — badges deactivated, Sept. 19", href: "https://www.pbs.org/newshour/politics/ms-now-cnn-and-politico-say-their-journalists-were-denied-access-to-the-white-house-after-trump-ban" },
 			{ label: "CNN v. Trump, 2018 — Acosta credentials", href: "https://www.courtlistener.com/docket/16116680/cable-news-network-inc-v-trump/" },
 			{ label: "First Amendment", href: "https://constitution.congress.gov/constitution/amendment-1/" },
-			{ label: "Manufactured Outrage", href: "/dispatch/the-media-ledger" },
+			{ label: "Fake News", href: "/dispatch/the-media-ledger" },
 		],
 		body: [
 			{
@@ -1579,7 +1579,7 @@ export const posts: Post[] = [
 			{ label: "USAO-DC — January 6 charge tally", href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol" },
 			{ label: "Trump v. Hawaii", href: "https://www.supremecourt.gov/opinions/17pdf/17-965_h315.pdf" },
 			{ label: "Garland — school boards memo", href: "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf" },
-			{ label: "Manufactured Outrage", href: "/dispatch/the-media-ledger" },
+			{ label: "Fake News", href: "/dispatch/the-media-ledger" },
 		],
 		body: [
 			{
