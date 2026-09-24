@@ -391,7 +391,7 @@ export const LEDGER_POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "I have uncovered enough evidence to prove a coordinated attack. [editor@swampforce.com](mailto:editor@swampforce.com). Does the [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) cover an abandoned [oath](https://www.law.cornell.edu/uscode/text/5/3331) and a coordinated attack on this nation for absolute power? Twelve years of the same script is not a coincidence. Why has no one stopped it? Is coordination, on that scale, not a conspiracy?",
+        text: "This is my opinion, based on the evidence I have located: the pattern is a coordinated attack. [editor@swampforce.com](mailto:editor@swampforce.com). Does the [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) cover an abandoned [oath](https://www.law.cornell.edu/uscode/text/5/3331) and a coordinated attack on this nation for absolute power? Twelve years of the same script is not a coincidence. Why has no one stopped it? Is coordination, on that scale, not a conspiracy?",
       },
     ],
   },
