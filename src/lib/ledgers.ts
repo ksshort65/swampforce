@@ -461,7 +461,7 @@ export const LEDGER_POSTS: Post[] = [
     frameLeft: "What they said",
     frameRight: "The harm",
     body: [
-      { type: "p", text: "These lines were said. Networks aired them until a neighbor sounded like an enemy. A threat is not a false caption, so it stays with the party that said it. The lies that party told, and that networks carried, are on the Fake News table." },
+      { type: "p", text: "These lines were said. Networks aired them until a neighbor sounded like an enemy. A threat is not a false caption, so it stays with the party that said it. The lies that party told, and that networks carried, are on the Manufactured Outrage table." },
     ],
     frames: demFrames,
   },
@@ -479,7 +479,7 @@ export const LEDGER_POSTS: Post[] = [
     frameLeft: "What they said",
     frameRight: "The harm",
     body: [
-      { type: "p", text: "These lines were said. A chant with no charge, and a party that would not put its own exhibits on the table, still divide the country when networks air them. A threat is not a false caption, so it stays with the party that said it. The lies that party told, and that networks carried, are on the Fake News table." },
+      { type: "p", text: "These lines were said. A chant with no charge, and a party that would not put its own exhibits on the table, still divide the country when networks air them. A threat is not a false caption, so it stays with the party that said it. The lies that party told, and that networks carried, are on the Manufactured Outrage table." },
     ],
     frames: gopFrames,
   },
