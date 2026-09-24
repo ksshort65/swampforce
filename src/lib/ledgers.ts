@@ -411,7 +411,7 @@ export const LEDGER_POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "The failure is not the viewer's. The truth was withheld. What ran was a coordinated attack. The same words play on the [Fake News](/dispatch/the-media-ledger) page. Anchors first. Senators second. [The uncut recording](https://www.c-span.org/clip/public-affairs-event/user-clip-trump-says-bloodbath/5110570) is a source that does not lie. The studies are the method.",
+        text: "The failure is not the viewer's. The truth was withheld. What ran was a coordinated attack. The same words play on the [Manufactured Outrage](/dispatch/the-media-ledger) page. Anchors first. Senators second. [The uncut recording](https://www.c-span.org/clip/public-affairs-event/user-clip-trump-says-bloodbath/5110570) is a source that does not lie. The studies are the method.",
       },
       {
         type: "p",
@@ -433,14 +433,14 @@ export const LEDGER_POSTS: Post[] = [
   },
   {
     slug: "the-media-ledger",
-    title: "Fake News",
-    dek: "Why has a nation been turned upside down by networks and politicians to obstruct one man, at all costs, from improving the lives of Americans and the stability of the nation? That is what has to be uncovered and stopped. We are at war with something that does not want to be exposed. What is it?",
+    title: "Manufactured Outrage",
+    dek: "The claim is one column. The proof it is a lie is the other. Push a row. The bullets are the official file, and the recording when one exists.",
     date: "2026-09-22",
     category: "Dispatch",
-    readMinutes: 22,
-    image: "/images/chart-one-word-ledger.jpg",
-    imageAlt: "Caption versus the file",
-    series: "Fake News Exposed",
+    readMinutes: 4,
+    image: "/images/manufactured-outrage.jpg",
+    imageAlt: "The file in front of the screens",
+    series: "Manufactured Outrage",
     frameDek: "One file. Open a row. The name is who said it. The link is the official record.",
     frameLeft: "What ran",
     frameRight: "The file",
@@ -450,7 +450,7 @@ export const LEDGER_POSTS: Post[] = [
   {
     slug: "the-democrat-ledger",
     title: "The Democrat ledger",
-    dek: "The harm. Threats and labels this party aimed at Americans. Networks aired them until the neighbor was the enemy. The lies are on the Fake News table.",
+    dek: "The harm. Threats and labels this party aimed at Americans. Networks aired them until the neighbor was the enemy. The lies are on the Manufactured Outrage table.",
     date: "2026-09-22",
     category: "Dispatch",
     readMinutes: 4,
@@ -468,7 +468,7 @@ export const LEDGER_POSTS: Post[] = [
   {
     slug: "the-republican-ledger",
     title: "The Republican ledger",
-    dek: "The harm. Chants and labels this party aimed at Americans, and the protection that never reached the record. The lies are on the Fake News table.",
+    dek: "The harm. Chants and labels this party aimed at Americans, and the protection that never reached the record. The lies are on the Manufactured Outrage table.",
     date: "2026-09-22",
     category: "Dispatch",
     readMinutes: 4,

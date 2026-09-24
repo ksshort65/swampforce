@@ -119,6 +119,11 @@ const EXTRA: Record<string, { label: string; href: string }[]> = {
   Bloodbath: [
     { label: "The uncut recording", href: "https://www.c-span.org/clip/public-affairs-event/user-clip-trump-says-bloodbath/5110570" },
     { label: "The rally, at 29:45", href: "https://www.youtube.com/watch?v=f57dRZMS0PQ&t=1785s" },
+    { label: "CNN, March 16, 2024, the first headline", href: "https://www.cnn.com/politics/live-news/2024-election-news-03-16-24" },
+    { label: "NBC News, March 16, 2024", href: "https://www.nbcnews.com/politics/donald-trump/trump-bloodbath-loses-election-2024-rcna143746" },
+    { label: "The New York Times, March 16, 2024", href: "https://www.nytimes.com/2024/03/16/us/politics/trump-speech-ohio.html" },
+    { label: "Joe Biden, March 17, 2024", href: "https://x.com/JoeBiden/status/1769454648946049261" },
+    { label: "Joe Biden, July 15, 2024", href: "https://x.com/HQNewsNow/status/1812964082430980276" },
   ],
   "Schiff’s transcript": [
     { label: "The floor parody", href: "https://www.c-span.org/video/?c4820134/schiffs-parody" },
@@ -358,6 +363,37 @@ function claimTime(f: Frame) {
   return latestDate(`${f.they}\n${f.tape}`);
 }
 
+function proofName(href: string) {
+  const h = href.toLowerCase();
+  if (h.includes("youtube.com") || h.includes("youtu.be") || h.includes("c-span.org") || h.includes("rumble.com")) return "The recording";
+  if (h.includes("law.cornell.edu") || h.includes("/uscode/")) return "United States Code";
+  if (h.includes("congress.gov")) return "The bill";
+  if (h.includes("supremecourt.gov") || h.includes("courtlistener.com")) return "The court record";
+  if (h.includes("gao.gov")) return "GAO";
+  if (h.includes("oig.") || h.includes("doioig") || h.includes("inspector")) return "Inspector general";
+  if (h.includes("treasury") || h.includes("fiscaldata")) return "Treasury";
+  if (h.includes("bls.gov")) return "Bureau of Labor Statistics";
+  if (h.includes("eia.gov")) return "The fuel table";
+  if (h.includes("iaea.org")) return "IAEA";
+  if (h.includes("cbo.gov")) return "Congressional Budget Office";
+  if (h.includes("justice.gov")) return "Justice Department";
+  if (h.includes("whitehouse")) return "The White House record";
+  if (h.includes("cbp.gov")) return "Customs and Border Protection";
+  if (h.includes("dhs.gov")) return "Homeland Security";
+  return "The official file";
+}
+
+function youtubeId(href: string) {
+  try {
+    const url = new URL(href);
+    if (url.hostname.includes("youtu.be")) return url.pathname.replace(/^\//, "").split("/")[0] || null;
+    if (url.hostname.includes("youtube.com")) return url.searchParams.get("v");
+  } catch {
+    return null;
+  }
+  return null;
+}
+
 function TapeTable({ frames }: { frames: Frame[] }) {
   const [open, setOpen] = useState<string | null>(null);
   const [method, setMethod] = useState("All");
@@ -468,34 +504,30 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                       </td>
                     </tr>
                   ) : null}
-                  {!pick && col === "claim" ? (
+                  {!pick && col ? (
                     <tr className="border-t border-white/10">
                       <td colSpan={2} className="bg-white px-4 py-4 text-neutral-900">
-                        <p className="text-base leading-relaxed">{who}</p>
-                        <ul className="mt-3 list-disc space-y-2 pl-5">
-                          {claims.map((claim) => (
-                            <li key={claim} className="text-base leading-relaxed">{claim}</li>
-                          ))}
+                        <ul className="list-disc space-y-2 pl-5">
+                          {links.length ? links.map((link) => (
+                            <li key={link.href + link.label}>
+                              <a href={link.href} target="_blank" rel="noreferrer" className="text-base text-blue-700">
+                                {link.label === "The record" ? proofName(link.href) : link.label}
+                              </a>
+                            </li>
+                          )) : (
+                            <li className="text-base leading-relaxed">{oneLine(f.tape, 220)}</li>
+                          )}
                         </ul>
-                      </td>
-                    </tr>
-                  ) : null}
-                  {!pick && col === "truth" ? (
-                    <tr className="border-t border-white/10">
-                      <td colSpan={2} className="bg-white px-4 py-4 text-neutral-900">
-                        <p className="text-base leading-relaxed">{linkify(f.tape)}</p>
-                        {f.tag === "Bloodbath" ? <div className="mt-4"><BloodbathDetail /></div> : null}
-                        {links.length ? (
-                          <ul className="mt-3 space-y-2">
-                            {links.map((link) => (
-                              <li key={link.href + link.label}>
-                                <a href={link.href} target="_blank" rel="noreferrer" className="text-base text-blue-700">
-                                  {link.label}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        ) : null}
+                        {links.map((link) => youtubeId(link.href)).filter((id): id is string => Boolean(id)).slice(0, 1).map((id) => (
+                          <iframe
+                            key={id}
+                            className="mt-4 aspect-video w-full rounded-md bg-black"
+                            src={`https://www.youtube-nocookie.com/embed/${id}`}
+                            title="The recording"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                          />
+                        ))}
                       </td>
                     </tr>
                   ) : null}
