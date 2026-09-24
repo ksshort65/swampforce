@@ -74,7 +74,7 @@ export const posts: Post[] = [
 		dek: "The Constitution does not open with Congress. It opens with the owner. The 535 are the hire. The hire has gone rogue.",
 		date: "2026-09-21",
 		category: "Dispatch",
-		readMinutes: 8,
+		readMinutes: 6,
 		image: "/images/hero-capitol.jpg",
 		imageAlt: "The Capitol — the people are the employer",
 		featured: true,
@@ -99,7 +99,7 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "The Constitution of the United States does not open with Congress. It does not open with a president, a party, or a panel. It opens with three words: We the People. The [Preamble](https://constitution.congress.gov/constitution/preamble/) is the country’s own sentence about who holds the power. “We the People of the United States… do ordain and establish this Constitution for the United States of America.” Ordain is not a campaign line. It is the act of a principal creating an agent. The people made the government. The government did not make the people.",
+				text: "The Constitution of the United States does not open with Congress, a president, a party, or a panel. It opens with three words. The [Preamble](https://constitution.congress.gov/constitution/preamble/): “We the People of the United States… do ordain and establish this Constitution for the United States of America.” The people made the government. The government did not make the people.",
 			},
 			{
 				type: "q",
@@ -111,11 +111,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "[Article I](https://constitution.congress.gov/constitution/article-1/) is the job description. It lists what Congress may do. The power of the purse is there. The power to declare war is there. The power to make uniform rules of naturalization is there. What is not on that list stayed with the states and with the people. A member who talks as if the country is a possession, and the public a problem to be managed, is not reading the paper he swore to. He is auditioning for a job the charter never posted.",
+				text: "[Article I](https://constitution.congress.gov/constitution/article-1/) is the job description. It lists what Congress may do. The purse, a declaration of war, and uniform rules of naturalization are on that list. What is not on the list stayed with the states and with the people. A member who talks as if the country is a possession is not reading the paper he swore to.",
 			},
 			{
 				type: "p",
-				text: "The oath is not a photograph. [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331) requires every member to swear, in those words, to support and defend this Constitution “without any mental reservation or purpose of evasion.” Mental reservation is the legal name for crossing your fingers. An employee who takes that oath and then treats the people who pay him as a faction to be broken has left the job while keeping the paycheck. The next essay in this series is the tape of employees talking that way, on camera.",
+				text: "The oath is not a photograph. [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331) requires every member to swear to support and defend this Constitution “without any mental reservation or purpose of evasion.” Mental reservation is the legal name for crossing your fingers. An employee who takes that oath and then treats the people who pay him as a faction to be broken has left the job while keeping the paycheck.",
 			},
 			{
 				type: "h",
@@ -123,11 +123,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "In ordinary English, this is a job. Three hundred million people hired 535 clerks. Those clerks work part of the year on a full-year salary. They vote on bills they have not read. They have not closed a fiscal year on time as the appropriations calendar requires. The [Congressional Budget Office’s historical tables](https://www.cbo.gov/data/budget-economic-data) still show the last surplus in fiscal year 2001. The [Treasury’s Debt to the Penny](https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny) now prints more than forty trillion dollars. That is not a mystery of markets. That is a staff that will not do the work it was hired to do, and a public trained to argue about the staff’s feelings instead of the staff’s output.",
+				text: "Three hundred million people hired 535 clerks. Those clerks work part of the year on a full-year salary. They vote on bills they have not read. They have not closed a fiscal year on time as the appropriations calendar requires. The [Congressional Budget Office’s historical tables](https://www.cbo.gov/data/budget-economic-data) still show the last surplus in fiscal year 2001. The [Treasury’s Debt to the Penny](https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny) now prints more than forty trillion dollars. That is a staff that will not do the work it was hired to do.",
 			},
 			{
 				type: "p",
-				text: "A nation of this size cannot be overseen on a part-time floor. Oversight is the job. When oversight is skipped, fraud is not an accident. It is the door the staff left open. Medicare, Medicaid, and Social Security are the largest lines on the card. Congress holds those lines. A chamber that will not pass twelve appropriations bills by October 1, year after year, is not struggling with a hard problem. It is refusing the calendar it wrote for itself.",
+				text: "A nation of this size cannot be overseen on a part-time floor. Oversight is the job. When oversight is skipped, fraud is the door the staff left open. Medicare, Medicaid, and Social Security are the largest lines on the card. Congress holds those lines. A chamber that will not pass twelve appropriations bills by October 1, year after year, is refusing the calendar it wrote for itself.",
 			},
 			{
 				type: "h",
@@ -135,11 +135,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Washington’s daily product is not a statute. It is a caption. One word is swapped. Six seconds are cut from a speech. A panel tells a country what it just saw. The country then votes the feeling the panel sold. Kidnapped instead of arrested. Insurrection instead of a docket that never charged it. A six-second clip instead of the hour that contained it. This journal does not do that work. Unless a passage is marked as opinion, what is written here is the official file: the statute, the inspector general, the Treasury table, the tape played in full. Compare what they passed, what they blocked, what they spent, and what they broke. The speech is the costume.",
-			},
-			{
-				type: "p",
-				text: "A republic cannot survive if half of it is taught to hate the other half as a substitute for a budget. Hatred is cheaper than a hearing. It does not require reading the bill. It does not require naming the fraud. It only requires a clip. Vote the facts. This journal uses documented government sources. It does not use a network as a source of fact. It does not use a politician’s sentence as a source of fact when the record contradicts the sentence. Manufactured drama is not evidence. The file is.",
+				text: "Washington’s daily product is a caption. One word is swapped. Six seconds are cut from a speech. Kidnapped instead of arrested. Insurrection instead of a docket that never charged it. A republic cannot survive if half of it is taught to hate the other half as a substitute for a budget. Hatred does not require reading the bill. The file does: the statute, the inspector general, the Treasury table, the tape in full.",
 			},
 			{
 				type: "h",
@@ -155,15 +151,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "That is the founding paper. Destructive of these ends means a government that no longer secures life, liberty, and the pursuit of happiness, and no longer draws just power from consent. The Declaration then says the method of a free people is not a mood. It is to alter the form, or to abolish the form, and to institute another. The Constitution is that other form. It is the statute the people ordained so they would not need a second revolution every time the hire failed. The right sits in the Declaration. The machinery sits in the Constitution. There is no honest reading that skips the machinery and keeps the right.",
-			},
-			{
-				type: "h",
-				text: "What the Constitution actually says",
-			},
-			{
-				type: "p",
-				text: "The Constitution does not reprint the word abolish. It does not have to. It writes the ways a people change the government they created, and the ways they remove the people they hired, without burning the charter.",
+				text: "Destructive of these ends means a government that no longer secures life, liberty, and the pursuit of happiness, and no longer draws just power from consent. The Constitution is the form the people ordained so they would not need a second revolution every time the hire failed. The right sits in the Declaration. The machinery sits in the Constitution.",
 			},
 			{
 				type: "h",
@@ -171,7 +159,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "[Article V](https://constitution.congress.gov/constitution/article-5/) is the alter clause. Two thirds of both Houses of Congress may propose an amendment. Or the legislatures of two thirds of the states may apply, and Congress “shall call a Convention for proposing Amendments.” Shall is the word. That second path exists so the states can force the question when Congress will not. Either proposal becomes part of the Constitution when three fourths of the states ratify, by legislature or by convention. Congress has used the first path for every amendment now on the books. The state-application path has never been called. The text is still the text. A people who want term limits, a real budget rule, or a narrower grant of power do not need a street. They need thirty-four state legislatures and thirty-eight ratifications.",
+				text: "[Article V](https://constitution.congress.gov/constitution/article-5/) is how the charter is altered. Two thirds of both Houses may propose an amendment. Or the legislatures of two thirds of the states may apply, and Congress “shall call a Convention for proposing Amendments.” Either proposal becomes part of the Constitution when three fourths of the states ratify. A term limit, a budget rule, or a narrower grant of power takes thirty-four state applications and thirty-eight ratifications. It does not take a street.",
 			},
 			{
 				type: "h",
@@ -203,7 +191,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The Constitution does not authorize a private war on the government it created. [Article III, Section 3](https://constitution.congress.gov/constitution/article-3/#article-3-section-3) defines treason as levying war against the United States, or adhering to their enemies. [Article IV, Section 4](https://constitution.congress.gov/constitution/article-4/#article-4-section-4) requires the United States to guarantee every state a republican form of government and, on application, to protect a state against domestic violence. The First Amendment’s assembly is peaceable assembly. This journal will not pretend those clauses are missing. The Declaration named a right of a people. The Constitution converted that right into elections, expulsion, impeachment, petition, and Article V. A second revolution is what the Framers wrote Article V to make unnecessary. Put the hire back in the job. If the hire will not take the job, send the hire home by the instruments already on the page. Truth is the first of those instruments. This journal exists to put the file in one place, in public, so the owner can read it before the next hire is signed.",
+				text: "The Constitution does not authorize a private war on the government it created. [Article III, Section 3](https://constitution.congress.gov/constitution/article-3/#article-3-section-3) defines treason as levying war against the United States, or adhering to their enemies. [Article IV, Section 4](https://constitution.congress.gov/constitution/article-4/#article-4-section-4) requires the United States to guarantee every state a republican form of government and, on application, to protect a state against domestic violence. Assembly in the First Amendment is peaceable assembly. The Declaration named a right of a people. The Constitution turned that right into elections, expulsion, impeachment, petition, and Article V.",
 			},
 			{
 				type: "q",
