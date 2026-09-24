@@ -75,6 +75,7 @@ const POLITICIANS = new Set([
   "They should not let up",
   "Soldiers of Christ",
   "Most secure election",
+  "Check your rolls",
 ]);
 
 const JOURNALISTS = new Set([
@@ -173,6 +174,32 @@ function TapeTable({ frames }: { frames: Frame[] }) {
 }
 
 function ChartRow({ f }: { f: Frame }) {
+  if (f.tag === "Check your rolls") {
+    return (
+      <tr className="border-t border-white/10">
+        <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
+          <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">Check your rolls</span>
+          <span className="block">September 22, 2026. Kamala Harris. Detroit NAACP.</span>
+        </td>
+        <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
+          <a href="https://townhall.com/news/amy-curtis/2026/09/23/kamala-harris-removing-ineligible-voters-is-cheating-n2683440" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            They are cheating by purging voter rolls. Check that you have not been purged.
+          </a>
+        </td>
+        <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
+          <a href="https://www.law.cornell.edu/uscode/text/52/20507" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            Federal law requires the rolls to drop ineligible voters.
+          </a>
+          <a href="https://www.nj.gov/governor/news/2026/20260721a.shtml" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+            New Jersey added about 6,600 people who had said they were not citizens.
+          </a>
+          <a href="https://thedailyrecord.com/2026/09/23/states-mistakenly-added-noncitizens-to-voter-rolls-errors/" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+            A tally published this day put those mistaken additions above 30,000 since 2000. Not 30,000 added today.
+          </a>
+        </td>
+      </tr>
+    );
+  }
   if (f.tag === "Lynching") {
     return (
       <tr className="border-t border-white/10">
