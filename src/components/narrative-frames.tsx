@@ -200,7 +200,13 @@ function ChartRow({ f }: { f: Frame }) {
             2023. Under Biden, hard passes fell from 1,417 to 975. Day passes stayed. One applicant was denied.
           </a>
           <a href="https://www.nytimes.com/2026/09/23/business/media/fox-trump-press-pool-ban.html" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            This month. CNN, Politico, and MS NOW were barred. Fox refused to film until CNN was back.
+            This month. CNN, Politico, and MS NOW were barred. They sued on Monday. They did not sue in 2009.
+          </a>
+          <a href="https://www.independent.co.uk/news/world/americas/us-politics/obama-criticize-trump-media-ban-b3052936.html" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+            September 19, 2026. Obama said if he had told Fox, “you’re out of here,” it would be unimaginable.
+          </a>
+          <a href="https://variety.com/wp-content/uploads/2026/09/CNN-MS-NOW-Politico-vs.-Trump-et-al.pdf" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+            Their lawyer called this ban unprecedented. The 2009 attempt is the sentence they left out.
           </a>
         </td>
       </tr>
