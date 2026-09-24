@@ -66,7 +66,8 @@ function EssayPage() {
         <div className="absolute inset-0 bg-linear-to-t from-bg via-bg/60 to-bg/20" />
         <div className="relative mx-auto flex min-h-[52vh] max-w-3xl flex-col justify-end px-4 pb-10 sm:px-6">
           {(FAKE_NEWS_SLUGS as readonly string[]).includes(post.slug) &&
-          post.slug !== "understanding-mechanics" ? (
+          post.slug !== "understanding-mechanics" &&
+          post.slug !== "the-media-ledger" ? (
             <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
               Under construction
             </p>
@@ -74,11 +75,29 @@ function EssayPage() {
           <p className="mt-2 font-display text-xs font-semibold tracking-[0.16em] text-fg/80 uppercase">
             {post.series || post.category}
           </p>
-          <h1 className={post.slug === "the-media-ledger"
-            ? "mt-3 max-w-3xl font-serif text-2xl leading-snug font-semibold tracking-normal normal-case sm:text-3xl"
-            : "mt-3 font-display leading-[0.92] font-bold tracking-wide uppercase text-[clamp(2rem,8vw,4.5rem)]"}>
-            {post.slug === "the-media-ledger" ? post.dek : post.title}
-          </h1>
+          {post.slug === "the-media-ledger" ? (
+            <>
+              <a
+                href={`mailto:${SITE.email}`}
+                className="mt-3 font-display text-sm tracking-wide text-fg underline decoration-fg/40 underline-offset-4"
+              >
+                {SITE.email}
+              </a>
+              <p className="mt-1 max-w-xl font-serif text-sm text-fg/80">
+                A caption to check, or a caption to add to the table.
+              </p>
+              <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[0.95] font-bold tracking-wide uppercase sm:text-6xl">
+                One script
+              </h1>
+              <p className="mt-3 max-w-2xl font-serif text-xl leading-snug text-fg/90">
+                Who made the decision to divide this nation with manufactured outrage, and why?
+              </p>
+            </>
+          ) : (
+            <h1 className="mt-3 font-display leading-[0.92] font-bold tracking-wide uppercase text-[clamp(2rem,8vw,4.5rem)]">
+              {post.title}
+            </h1>
+          )}
         </div>
       </div>
 
@@ -175,6 +194,39 @@ function EssayPage() {
         {post.eras?.length ? (
           <div className="sm:-mx-8 lg:-mx-24">
             <EraCompare topics={post.eras} />
+          </div>
+        ) : null}
+        {post.slug === "the-media-ledger" ? (
+          <div className="mt-10 space-y-6">
+            <p className="max-w-2xl font-serif text-lg leading-8 text-fg/85">
+              The mechanics are on the page before this one. Here the same words are on the tape. Open the table. The link is the proof. The table is growing. It is not shrinking.
+            </p>
+            <div className="grid gap-6 lg:grid-cols-2">
+              <figure>
+                <iframe
+                  className="aspect-video w-full rounded-lg bg-black"
+                  src="https://www.youtube-nocookie.com/embed/KSXenq5RNwo"
+                  title="Local anchors reading the same script, word for word"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+                <figcaption className="mt-2 font-serif text-sm leading-6 text-fg/70">
+                  April 2018. Dozens of anchors, on stations across the country, reading one script. The line they share is “this is extremely dangerous to our democracy.”
+                </figcaption>
+              </figure>
+              <figure>
+                <iframe
+                  className="aspect-video w-full rounded-lg bg-black"
+                  src="https://www.youtube-nocookie.com/embed/EsjwtaIocUw"
+                  title="Senators reading the same script, word for word"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+                <figcaption className="mt-2 font-serif text-sm leading-6 text-fg/70">
+                  March 2025. Twenty-two Democratic senators posted the same script, the same week, down to the same sentences.
+                </figcaption>
+              </figure>
+            </div>
           </div>
         ) : null}
         {post.frames?.length ? (
