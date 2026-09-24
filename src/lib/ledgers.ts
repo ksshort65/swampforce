@@ -379,19 +379,15 @@ export const LEDGER_POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "The word is then said on every network, and politicians read it back. Researchers call the repetition the [illusory truth effect](https://www.nature.com/articles/s41467-026-70041-x). A 2026 review of 182 studies found that hearing a statement again makes people rate it as more true. A public that keeps the caption will vote, pay, and hate. The seller of the word stays clean.",
+        text: "The word is then said on every network, and politicians read it back. Researchers call the repetition the [illusory truth effect](https://www.nature.com/articles/s41467-026-70041-x). A 2026 review of 182 studies found that hearing a statement again makes people rate it as more true.",
       },
       {
         type: "p",
-        text: "On March 16, 2024, Donald Trump said “bloodbath” about Chinese car plants and a 100 percent tariff. By morning the plants were gone. [CNN that night](https://www.cnn.com/2024/03/16/politics/trump-bloodbath-auto-industry-election). Politico, NBC, and CBS ran the headline. [MSNBC and ABC](https://www.foxnews.com/media/msnbc-abc-vigorously-defend-trump-bloodbath-coverage-did-not-miss-full-context) defended the word.",
+        text: "The [interactive table](/dispatch/the-media-ledger) holds the indisputable evidence located so far of the coordinated attack on this nation. The list is growing. Send the next caption to [editor@swampforce.com](mailto:editor@swampforce.com).",
       },
       {
         type: "p",
-        text: "A year later, on March 4, 2025, Chuck Schumer, Elizabeth Warren, Cory Booker, and about twenty other Democratic senators posted one speech, word for word, about prices, not the plants. [The network archive](https://www.youtube.com/watch?v=EsjwtaIocUw). That is not an accident. It is a coordinated attack on the nation.",
-      },
-      {
-        type: "p",
-        text: "This is my opinion, based on the evidence I have located: the pattern is a coordinated attack. [editor@swampforce.com](mailto:editor@swampforce.com). Does the [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) cover an abandoned [oath](https://www.law.cornell.edu/uscode/text/5/3331) and a coordinated attack on this nation for absolute power? Twelve years of the same script is not a coincidence. Why has no one stopped it? Is coordination, on that scale, not a conspiracy?",
+        text: "This is my opinion, based on the evidence I have located. Does the [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) cover an abandoned [oath](https://www.law.cornell.edu/uscode/text/5/3331) and a coordinated attack on this nation for absolute power? Twelve years of the same script is not a coincidence. Why has no one stopped it? The aim is a record long enough to show a conspiracy, not speech the First Amendment covers.",
       },
     ],
   },

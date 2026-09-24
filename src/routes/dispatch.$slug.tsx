@@ -23,7 +23,7 @@ export const Route = createFileRoute("/dispatch/$slug")({
 
 function LinkedText({ text }: { text: string }) {
   const nodes: ReactNode[] = [];
-  const re = /\[([^\]]+)\]\((https?:\/\/[^)]+)\)|(https?:\/\/[^\s]+)/g;
+  const re = /\[([^\]]+)\]\(((?:https?:\/\/|mailto:|\/)[^)]+)\)|(https?:\/\/[^\s]+)/g;
   let last = 0;
   let m: RegExpExecArray | null;
   let i = 0;
@@ -31,13 +31,14 @@ function LinkedText({ text }: { text: string }) {
     if (m.index > last) nodes.push(<span key={`t${i}`}>{text.slice(last, m.index)}</span>);
     const href = m[2] || m[3];
     const label = m[1] || href;
+    const external = href.startsWith("http");
     nodes.push(
       <a
         key={`a${i}`}
         href={href}
         className="text-sage underline decoration-sage underline-offset-2"
-        target="_blank"
-        rel="noreferrer"
+        target={external ? "_blank" : undefined}
+        rel={external ? "noreferrer" : undefined}
       >
         {label}
       </a>,
