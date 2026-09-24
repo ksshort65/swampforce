@@ -158,6 +158,14 @@ const EXTRA: Record<string, { label: string; href: string }[]> = {
     { label: "Florida, dismissed", href: "https://www.courtlistener.com/docket/67490071/672/united-states-v-trump/" },
     { label: "Manhattan indictment", href: "https://www.manhattanda.org/wp-content/uploads/2023/04/Donald-J.-Trump-Indictment.pdf" },
   ],
+  "The ballroom": [
+    { label: "Schumer, May 11, 2026 — Americans do not need a ballroom", href: "https://www.nydailynews.com/2026/05/11/schumer-battle-trump-white-house-ballroom/" },
+    { label: "Schumer, May 12, 2026 — we do not need a damn ballroom", href: "https://www.nbcnews.com/politics/congress/republicans-1-billion-price-tag-trump-white-house-ballroom-project-rcna344721" },
+    { label: "Murray, May 6, 2026 — not a golden ballroom", href: "https://www.nydailynews.com/2026/05/06/schumer-democrats-protest-billion-proposal-ballroom-security/" },
+    { label: "Jeffries, October 23, 2025 — the ballroom is the priority", href: "https://www.politifact.com/factchecks/2025/oct/24/hakeem-jeffries/democrats-leavitt-priority-ballroom-white-house/" },
+    { label: "CNN, July 31, 2025 — a gilded entertaining room", href: "https://www.cnn.com/2025/07/31/politics/white-house-ballroom-construction" },
+    { label: "New York Magazine, June 1, 2026 — a fancy party venue", href: "https://nymag.com/intelligencer/article/trump-drone-port-white-house-ballroom-villain-lair.html" },
+  ],
 };
 
 type Cell = "who" | "claim" | "truth";
@@ -185,7 +193,12 @@ const BALLROOM: Record<Cell, { head: string; items: Bullet[] }> = {
   claim: {
     head: "Fourteen months, from the July 31, 2025 announcement through September 23, 2026. Still running. No official page counts every network.",
     items: [
-      { group: "They cut the fact out.", text: "A vanity ballroom. Let them eat cake. Americans do not need one. The security is not in the sentence. — Schumer, May 11, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/in-dear-colleague-letter-leader-schumer-vows-senate-democrats-will-fight-ballroom-republicans-pushing-for-trumps-vanity-projects-and-rogue-ice-operation-instead-of-helping-families-facing-gop-affordability-crisis" },
+      { group: "They called it a party.", text: "Americans do not need a ballroom. They need relief. Let them eat cake. — Chuck Schumer, letter to Senate Democrats, May 11, 2026. The words “party room” are not in this letter. The ballroom is the thing he said they do not need.", href: "https://www.nydailynews.com/2026/05/11/schumer-battle-trump-white-house-ballroom/" },
+      { group: "They called it a party.", text: "We do not need a damn ballroom. — Chuck Schumer, to reporters, May 12, 2026.", href: "https://www.nbcnews.com/politics/congress/republicans-1-billion-price-tag-trump-white-house-ballroom-project-rcna344721" },
+      { group: "They called it a party.", text: "Hardworking families want lower costs, not a golden ballroom. — Patty Murray, May 6, 2026.", href: "https://www.nydailynews.com/2026/05/06/schumer-democrats-protest-billion-proposal-ballroom-security/" },
+      { group: "They called it a party.", text: "The ballroom is the president’s main priority. — Hakeem Jeffries, October 23, 2025, on a five-second clip. PolitiFact said the question was about White House construction, not the country’s priorities.", href: "https://www.politifact.com/factchecks/2025/oct/24/hakeem-jeffries/democrats-leavitt-priority-ballroom-white-house/" },
+      { group: "They called it a party.", text: "An event space that expands the entertaining capacity and resembles the gilded rooms of his private clubs. — CNN, July 31, 2025.", href: "https://www.cnn.com/2025/07/31/politics/white-house-ballroom-construction" },
+      { group: "They called it a party.", text: "A fancy party venue, with people partying under a military base. — New York Magazine, June 1, 2026. “Party venue” is the phrase in the piece. “Party room” is the same cut.", href: "https://nymag.com/intelligencer/article/trump-drone-port-white-house-ballroom-villain-lair.html" },
       { group: "They cut the fact out.", text: "A gilded palace. Americans do not want it and should not pay. The donor announcement is not in the sentence. — Schumer, May 16, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-and-senate-democrats-blow-up-gops-first-attempt-to-make-taxpayers-fund-trumps-billion-dollar-ballroom" },
       { group: "They cut the fact out.", text: "The construction is unlawful and should be stopped. The complaint leaves out the later order. The Court did not rule the project illegal. — National Trust, December 12, 2025.", href: "https://storage.courtlistener.com/recap/gov.uscourts.dcd.287645/gov.uscourts.dcd.287645.1.0_4.pdf" },
       { group: "They denied the file.", text: "It has nothing to do with security. It is ego. — Schumer, Senate floor, May 11, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-floor-remarks-denouncing-senate-republicans-reconciliation-bill-that-spends-1-billion-of-taxpayer-money-on-trumps-gilded-ballroom-without-addressing-the-rising-cost-of-living" },
@@ -468,7 +481,7 @@ function youtubeId(href: string) {
 
 function speakerNames(f: Frame) {
   const blob = `${f.ran ?? ""}\n${f.they}\n${(EXTRA[f.tag] ?? []).map((item) => item.label).join("\n")}`;
-  const found = blob.match(/\b(CNN|NBC|MSNBC|MS NOW|ABC|CBS|Fox News|BBC|New York Times|Washington Post|Politico|The Atlantic|Associated Press|Schumer|Pelosi|Biden|Harris|Jeffries|Merkley|Murray|Murphy|Pressley|Waters|Obama|Schiff|Khanna|Garcia|Raskin|Warren|Booker|Sanders|McGovern|Mullin|Johnson|Bush|Cheney|Yellen|Palin)\b/gi) ?? [];
+  const found = blob.match(/\b(CNN|NBC|MSNBC|MS NOW|ABC|CBS|Fox News|BBC|New York Times|New York Magazine|Washington Post|Politico|The Atlantic|Associated Press|Schumer|Pelosi|Biden|Harris|Jeffries|Merkley|Murray|Murphy|Pressley|Waters|Obama|Schiff|Khanna|Garcia|Raskin|Warren|Booker|Sanders|McGovern|Mullin|Johnson|Bush|Cheney|Yellen|Palin)\b/gi) ?? [];
   const seen = new Set<string>();
   const names: string[] = [];
   for (const raw of found) {
