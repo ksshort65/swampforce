@@ -55,11 +55,6 @@ function fileLine(text: string) {
   return two.length > 320 ? `${two.slice(0, 317)}…` : two;
 }
 
-function oneLine(text: string, max = 140) {
-  const one = text.split(/(?<=\.)\s+/)[0] ?? text;
-  return one.length > max ? `${one.slice(0, max - 1)}…` : one;
-}
-
 function urlsIn(text: string) {
   const found = text.match(/https?:\/\/[^\s)]+/g) ?? [];
   return [...new Set(found.map((u) => u.replace(/[.,;]+$/, "")))];
@@ -426,10 +421,20 @@ function claimTime(f: Frame) {
 
 function proofName(href: string) {
   const h = href.toLowerCase();
+  if (h.includes("cnn.com")) return "CNN";
+  if (h.includes("nbcnews.com")) return "NBC News";
+  if (h.includes("nytimes.com")) return "New York Times";
+  if (h.includes("washingtonpost.com")) return "Washington Post";
+  if (h.includes("politico.com")) return "Politico";
+  if (h.includes("bbc.com") || h.includes("bbc.co.uk")) return "BBC";
+  if (h.includes("npr.org")) return "NPR";
+  if (h.includes("apnews.com")) return "Associated Press";
+  if (h.includes("reuters.com")) return "Reuters";
+  if (h.includes("x.com") || h.includes("twitter.com")) return "The post";
   if (h.includes("youtube.com") || h.includes("youtu.be") || h.includes("c-span.org") || h.includes("rumble.com")) return "The recording";
   if (h.includes("law.cornell.edu") || h.includes("/uscode/")) return "United States Code";
   if (h.includes("congress.gov")) return "The bill";
-  if (h.includes("supremecourt.gov") || h.includes("courtlistener.com")) return "The court record";
+  if (h.includes("supremecourt.gov") || h.includes("courtlistener.com") || h.includes("scotusblog.com")) return "The court record";
   if (h.includes("gao.gov")) return "GAO";
   if (h.includes("oig.") || h.includes("doioig") || h.includes("inspector")) return "Inspector general";
   if (h.includes("treasury") || h.includes("fiscaldata")) return "Treasury";
@@ -438,9 +443,15 @@ function proofName(href: string) {
   if (h.includes("iaea.org")) return "IAEA";
   if (h.includes("cbo.gov")) return "Congressional Budget Office";
   if (h.includes("justice.gov")) return "Justice Department";
+  if (h.includes("fbi.gov")) return "FBI";
+  if (h.includes("cisa.gov")) return "CISA";
+  if (h.includes("whitehousehistory.org")) return "White House Historical Association";
+  if (h.includes("documentcloud.org")) return "The memorandum";
   if (h.includes("whitehouse")) return "The White House record";
   if (h.includes("cbp.gov")) return "Customs and Border Protection";
   if (h.includes("dhs.gov")) return "Homeland Security";
+  if (h.includes("state.gov")) return "State Department";
+  if (h.includes("federalregister.gov")) return "The Federal Register";
   return "The official file";
 }
 
@@ -455,6 +466,67 @@ function youtubeId(href: string) {
   return null;
 }
 
+const METHOD_PLAIN: Record<string, string> = {
+  "One word": "One word was changed",
+  "Clipped the tape": "The tape was cut",
+  "Cut the fact out": "A fact was cut out",
+  "A fact the file does not show": "A fact was added",
+  "He said it": "The words were said",
+};
+
+function whoMade(f: Frame) {
+  const blob = `${f.ran ?? ""}\n${f.they}\n${(EXTRA[f.tag] ?? []).map((item) => item.label).join("\n")}`;
+  const nets = new Set((blob.match(/\b(CNN|NBC|MSNBC|MS NOW|ABC|CBS|Fox News|BBC|New York Times|Washington Post|Politico|The Atlantic)\b/gi) ?? []).map((name) => name.toLowerCase()));
+  const manyNets = nets.size > 1 || /\b(networks|anchors|every network)\b/i.test(blob);
+  const pols = new Set(blob.match(/\b(Schumer|Pelosi|Biden|Harris|Jeffries|Merkley|Murray|Murphy|Pressley|Waters|Obama|Schiff|Khanna|Garcia|Raskin|Warren|Booker|Sanders)\b/g) ?? []);
+  const manyPols = pols.size > 1 || /\b(members|senators|lawmakers|colleagues)\b/i.test(blob);
+  const onePol = pols.size === 1 || /\b(senator|representative|president|spokesman)\b/i.test(blob);
+  if (manyNets && (manyPols || onePol)) return "Multiple networks and politicians";
+  if (manyNets) return "Multiple networks";
+  if (nets.size === 1 && manyPols) return "One network and multiple politicians";
+  if (nets.size === 1 && onePol) return "One network and one politician";
+  if (manyPols) return "Multiple politicians";
+  if (nets.size === 1) return "One network";
+  if (onePol) return "One politician";
+  return "One source";
+}
+
+function durationLine(ran?: string) {
+  if (!ran?.trim()) return "How long it ran is inside";
+  const first = ran.split(/(?<=\.)\s+/)[0]?.trim() ?? ran.trim();
+  return first.length > 160 ? `${first.slice(0, 157)}…` : first;
+}
+
+function claimCover(f: Frame) {
+  const method = METHOD_PLAIN[methodOf(f.tag)] ?? "The method is inside";
+  return `${whoMade(f)} made this claim. ${method}. ${durationLine(f.ran)}`;
+}
+
+function cleanBits(text: string) {
+  return text.replace(/https?:\/\/[^\s)]+/g, "").replace(/\s{2,}/g, " ").replace(/\s+([.,])/g, "$1").trim();
+}
+
+function claimStatements(they: string) {
+  return they.split("||").flatMap((part) => cleanBits(part).split(/(?<=\.)\s+/)).map((line) => line.trim()).filter((line) => line.length > 2);
+}
+
+function truthStatements(tape: string) {
+  return cleanBits(tape).split(/(?<=\.)\s+/).map((line) => line.trim()).filter((line) => line.length > 2);
+}
+
+function isOfficial(href: string) {
+  return /gov\/|cornell\.edu|iaea\.org|congress\.gov|courtlistener|supremecourt|justia\.com|documentcloud|whitehouse|c-span\.org|youtube\.com|youtu\.be|rumble\.com|federalregister|loc\.gov|oig\.|gao\.gov|bls\.gov|eia\.gov|cbo\.gov|whitehousehistory\.org/i.test(href);
+}
+
+function rowLinks(f: Frame) {
+  const named = EXTRA[f.tag] ?? [];
+  const seen = new Set(named.map((item) => item.href));
+  const more = urlsIn(`${f.they}\n${f.tape}\n${f.href ?? ""}`)
+    .filter((href) => !seen.has(href))
+    .map((href) => ({ label: proofName(href), href }));
+  return [...named, ...more];
+}
+
 function TapeTable({ frames }: { frames: Frame[] }) {
   const [open, setOpen] = useState<string | null>(null);
   const [method, setMethod] = useState("All");
@@ -466,7 +538,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
   return (
     <section className="mt-8">
       <p className="mb-3 text-base leading-relaxed text-fg">
-        Newest claim first. The method is the button. The claim names who said it, when, and how long it ran. The truth is the file.
+        The left names who made the claim, the method, and how long it ran. Open it for each statement and the link that shows they said it. The right says Truth (Proof). Open it for the facts and the named source.
       </p>
       <div className="mb-4 flex flex-wrap gap-2">
         {METHODS.map((name) => (
@@ -497,92 +569,102 @@ function TapeTable({ frames }: { frames: Frame[] }) {
           <tbody>
             {shown.map((f) => {
               const ballroom = f.tag === "The ballroom";
+              const bloodbath = f.tag === "Bloodbath";
               const cell = (name: Cell) => `${f.tag}:${name}`;
               const on = (name: Cell) => open === cell(name);
               const col = open?.startsWith(`${f.tag}:`) ? (open.slice(f.tag.length + 1) as Cell) : null;
-              const claims = f.they.split("||").map((s) => s.trim()).filter(Boolean);
-              const who = ballroom ? "Schumer, Merkley, Murray, Murphy. May 11 to September 23, 2026. Open for each date." : f.ran?.trim() || "The date and the name are in the file. They have not been pulled onto this line yet.";
-              const links = [
-                ...(EXTRA[f.tag] ?? []),
-                ...urlsIn(`${f.tape}\n${f.href ?? ""}`)
-                  .filter((href) => !(EXTRA[f.tag] ?? []).some((item) => item.href === href))
-                  .map((href) => ({ label: "The record", href })),
-              ];
-              const pick = ballroom && col ? BALLROOM[col] : null;
+              const links = rowLinks(f);
+              const said = links.filter((link) => !isOfficial(link.href));
+              const proof = links.filter((link) => isOfficial(link.href));
+              const claimItems = ballroom
+                ? [...BALLROOM.claim.items, ...BALLROOM.who.items]
+                : null;
+              const truthItems = ballroom ? BALLROOM.truth.items : null;
               return (
                 <Fragment key={f.tag}>
                   <tr className="border-t border-white/10">
                     <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm leading-snug text-red-50">
-                      <button type="button" onClick={() => setOpen(on("claim") ? null : cell("claim"))} className="text-left text-blue-200">
+                      <button type="button" onClick={() => setOpen(on("claim") ? null : cell("claim"))} className="text-left">
                         <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-300 uppercase">{f.tag}</span>
-                        <span className="mb-2 block text-blue-200">{who}</span>
-                        {(ballroom ? ["Vanity. Cake. A palace. Taxpayers. A boondoggle. The design is the threat. The lawsuit."] : claims).map((claim) => (
-                          <span key={claim} className="mb-2 block font-semibold last:mb-0">{claim}</span>
-                        ))}
+                        <span className="block text-blue-200">{claimCover(f)}</span>
                       </button>
                     </td>
-                    <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
-                      <button type="button" onClick={() => setOpen(on("truth") ? null : cell("truth"))} className="text-left text-blue-200">
-                        {ballroom ? "Privately paid. Built for security after two attempts to kill him. Open the list." : oneLine(f.tape, 180)}
+                    <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug">
+                      <button type="button" onClick={() => setOpen(on("truth") ? null : cell("truth"))} className="text-left font-semibold text-blue-200">
+                        Truth (Proof)
                       </button>
                     </td>
                   </tr>
-                  {pick && col === "claim" ? (
+                  {col === "claim" ? (
                     <tr className="border-t border-white/10">
                       <td colSpan={2} className="bg-white px-4 py-4 text-neutral-900">
-                        <ul className="list-disc space-y-2 pl-5">
-                          {BALLROOM.who.items.map((item) => (
-                            <li key={item.href + item.text}>
-                              <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-700">{item.text}</a>
-                            </li>
-                          ))}
-                        </ul>
-                        {pick.head ? <p className="mt-4 text-base font-semibold leading-relaxed">{pick.head}</p> : null}
-                        <ul className="mt-3 list-disc space-y-2 pl-5">
-                          {pick.items.map((item, i) => {
-                            const showGroup = item.group && item.group !== pick.items[i - 1]?.group;
+                        <ul className="list-disc space-y-2 pl-5 text-base leading-relaxed">
+                          {bloodbath ? (
+                            <>
+                              <li>CNN, Kit Maher and Alayna Treene, March 16, 2024, 6:52 p.m. Eastern. The first timed headline said the bloodbath was if he loses the election. <a className="text-blue-700" href="https://www.cnn.com/politics/live-news/2024-election-news-03-16-24" target="_blank" rel="noreferrer">CNN</a></li>
+                              <li>NBC News, Emma Barnett and Jillian Frankel, March 16, 2024, 9:37 p.m. Eastern. The headline is still that he said there will be a bloodbath if he loses. <a className="text-blue-700" href="https://www.nbcnews.com/politics/donald-trump/trump-bloodbath-loses-election-2024-rcna143746" target="_blank" rel="noreferrer">NBC News</a></li>
+                              <li>The New York Times, March 16, 2024. The headline said he predicts a blood bath if he loses. The cars are not in the headline. <a className="text-blue-700" href="https://www.nytimes.com/2024/03/16/us/politics/trump-speech-ohio.html" target="_blank" rel="noreferrer">New York Times</a></li>
+                              <li>James Singer, Biden-Harris campaign, the night of March 16, 2024. He called it a threat of political violence. That statement is in the NBC story above.</li>
+                              <li>Joe Biden, March 17, 2024. “It’s clear this guy wants another January 6.” <a className="text-blue-700" href="https://x.com/JoeBiden/status/1769454648946049261" target="_blank" rel="noreferrer">Joe Biden, March 17, 2024</a></li>
+                              <li>Joe Biden, July 15, 2024, 121 days later. “He talks about, there’ll be a bloodbath if he loses.” <a className="text-blue-700" href="https://x.com/HQNewsNow/status/1812964082430980276" target="_blank" rel="noreferrer">Joe Biden, July 15, 2024</a></li>
+                            </>
+                          ) : claimItems ? claimItems.map((item, i) => {
+                            const showGroup = item.group && item.group !== claimItems[i - 1]?.group;
                             return (
-                              <li key={item.href + item.text} className={showGroup ? "mt-4 list-none" : undefined}>
-                                {showGroup ? <p className="mb-1 font-semibold text-neutral-900">{item.group}</p> : null}
-                                <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-700">{item.text}</a>
+                              <li key={item.href + item.text}>
+                                {showGroup ? <span className="mb-1 block font-semibold">{item.group}</span> : null}
+                                {item.text}{" "}
+                                <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-700">{proofName(item.href)}</a>
                               </li>
                             );
-                          })}
-                        </ul>
-                      </td>
-                    </tr>
-                  ) : null}
-                  {pick && col === "truth" ? (
-                    <tr className="border-t border-white/10">
-                      <td colSpan={2} className="bg-white px-4 py-4 text-neutral-900">
-                        <ul className="list-disc space-y-2 pl-5">
-                          {pick.items.map((item) => (
-                            <li key={item.href + item.text}>
-                              <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-700">{item.text}</a>
-                            </li>
-                          ))}
-                        </ul>
-                      </td>
-                    </tr>
-                  ) : null}
-                  {!pick && col ? (
-                    <tr className="border-t border-white/10">
-                      <td colSpan={2} className="bg-white px-4 py-4 text-neutral-900">
-                        <ul className="list-disc space-y-2 pl-5">
-                          {links.length ? links.map((link) => (
-                            <li key={link.href + link.label}>
-                              <a href={link.href} target="_blank" rel="noreferrer" className="text-base text-blue-700">
-                                {link.label === "The record" ? proofName(link.href) : link.label}
-                              </a>
-                            </li>
-                          )) : (
-                            <li className="text-base leading-relaxed">{oneLine(f.tape, 220)}</li>
+                          }) : (
+                            <>
+                              {claimStatements(f.they).map((line) => <li key={line}>{line}</li>)}
+                              {f.ran ? <li>How long it ran: {f.ran}</li> : null}
+                              {said.map((link) => (
+                                <li key={link.href + link.label}>
+                                  <a href={link.href} target="_blank" rel="noreferrer" className="text-blue-700">{link.label}</a>
+                                </li>
+                              ))}
+                            </>
                           )}
                         </ul>
-                        {links.map((link) => youtubeId(link.href)).filter((id): id is string => Boolean(id)).slice(0, 1).map((id) => (
+                      </td>
+                    </tr>
+                  ) : null}
+                  {col === "truth" ? (
+                    <tr className="border-t border-white/10">
+                      <td colSpan={2} className="bg-white px-4 py-4 text-neutral-900">
+                        <ul className="list-disc space-y-2 pl-5 text-base leading-relaxed">
+                          {bloodbath ? (
+                            <>
+                              <li>He said the word twice, in the same stretch, on March 16, 2024, in Vandalia, Ohio. No second occasion was located.</li>
+                              <li>At 29:45: “Now, if I don’t get elected, it’s going to be a bloodbath for the whole — that’s going to be the least of it. It’s going to be a bloodbath for the country. That’ll be the least of it. But they’re not going to sell those cars.”</li>
+                              <li>The sentence before it is a 100 percent tariff on Chinese cars built in Mexico.</li>
+                              <li><a className="text-blue-700" href="https://www.youtube.com/watch?v=f57dRZMS0PQ&t=1785s" target="_blank" rel="noreferrer">Roll Call recording — he starts at 29:45</a></li>
+                              <li><a className="text-blue-700" href="https://www.c-span.org/clip/public-affairs-event/user-clip-trump-says-bloodbath/5110570" target="_blank" rel="noreferrer">C-SPAN clip — opens on the line</a></li>
+                              <li><a className="text-blue-700" href="https://www.c-span.org/program/public-affairs-event/former-president-trump-campaigns-for-bernie-moreno/639757" target="_blank" rel="noreferrer">C-SPAN full program, March 16, 2024</a></li>
+                            </>
+                          ) : truthItems ? truthItems.map((item) => (
+                            <li key={item.href + item.text}>
+                              {item.text}{" "}
+                              <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-700">{proofName(item.href)}</a>
+                            </li>
+                          )) : (
+                            <>
+                              {truthStatements(f.tape).map((line) => <li key={line}>{line}</li>)}
+                              {proof.map((link) => (
+                                <li key={link.href + link.label}>
+                                  <a href={link.href} target="_blank" rel="noreferrer" className="text-blue-700">{link.label}</a>
+                                </li>
+                              ))}
+                            </>
+                          )}
+                        </ul>
+                        {(bloodbath ? ["f57dRZMS0PQ"] : proof.map((link) => youtubeId(link.href)).filter((id): id is string => Boolean(id)).slice(0, 1)).map((id) => (
                           <iframe
                             key={id}
-                            className="mt-4 aspect-video w-full rounded-md bg-black"
+                            className="mt-4 aspect-video w-full max-w-xl rounded-md bg-black"
                             src={`https://www.youtube-nocookie.com/embed/${id}`}
                             title="The recording"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
