@@ -257,33 +257,72 @@ function ChartStack({ tab }: { tab: TabId }) {
         </div>
         </>
       ) : null}
-      {TAB_CHARTS[tab].map((c) => (
-        <figure key={c.src}>
-          <p className="mb-3 font-display text-sm font-semibold tracking-wide text-sage uppercase">
-            {c.title}
-          </p>
-          <img
-            src={c.src}
-            alt={c.title}
-            className="h-auto w-full rounded-md border border-border"
-          />
-          <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
-            {c.sources.map((s, i) => (
-              <span key={s.href}>
-                {i > 0 ? " · " : null}
-                <a
-                  href={s.href}
-                  className="text-sage underline decoration-sage underline-offset-2"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {s.label}
-                </a>
-              </span>
-            ))}
-          </figcaption>
-        </figure>
-      ))}
+      {TAB_CHARTS[tab].map((c) =>
+        c.src === "/images/chart-debt-bars.jpg" ? (
+          <figure key={c.src}>
+            <p className="mb-3 text-base leading-relaxed">
+              This chart is interactive. Choose a block and it opens the proof.
+            </p>
+            <p className="mb-3 font-display text-sm font-semibold tracking-wide text-sage uppercase">
+              {c.title}
+            </p>
+            <a
+              href="https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/"
+              target="_blank"
+              rel="noreferrer"
+              title="Treasury — historical debt outstanding"
+              className="block"
+            >
+              <img
+                src={c.src}
+                alt={c.title}
+                className="h-auto w-full rounded-md border border-border hover:opacity-90"
+              />
+            </a>
+            <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
+              {c.sources.map((s, i) => (
+                <span key={s.href}>
+                  {i > 0 ? " · " : null}
+                  <a
+                    href={s.href}
+                    className="text-sage underline decoration-sage underline-offset-2"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {s.label}
+                  </a>
+                </span>
+              ))}
+            </figcaption>
+          </figure>
+        ) : (
+          <figure key={c.src}>
+            <p className="mb-3 font-display text-sm font-semibold tracking-wide text-sage uppercase">
+              {c.title}
+            </p>
+            <img
+              src={c.src}
+              alt={c.title}
+              className="h-auto w-full rounded-md border border-border"
+            />
+            <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
+              {c.sources.map((s, i) => (
+                <span key={s.href}>
+                  {i > 0 ? " · " : null}
+                  <a
+                    href={s.href}
+                    className="text-sage underline decoration-sage underline-offset-2"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {s.label}
+                  </a>
+                </span>
+              ))}
+            </figcaption>
+          </figure>
+        ),
+      )}
     </div>
   );
 }
