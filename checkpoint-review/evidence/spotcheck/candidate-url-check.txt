@@ -1,0 +1,8 @@
+200	https://www.cbp.gov/newsroom/national-media-release/cbp-releases-findings-investigation-horse-patrol-activity-del-rio	https://www.cbp.gov/newsroom/national-media-release/cbp-releases-findings-investigation-horse-patrol-activity-del-rio
+200	https://apnews.com/article/a98f26f7c9424b44b7fa927ea1acd4d4	https://apnews.com/article/a98f26f7c9424b44b7fa927ea1acd4d4
+ERR	https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol	HTTP Error 401: Unauthorized
+ERR	https://web.archive.org/web/0/https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol	<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>
+200	https://oig.justice.gov/node/1100	https://oig.justice.gov/node/1100
+ERR	https://www.justice.gov/opa/media/1422326/dl	HTTP Error 401: Unauthorized
+200	https://media.washtimes.com/media/misc/2026/01/03/maduro_indictment.pdf	https://media.washtimes.com/media/misc/2026/01/03/maduro_indictment.pdf
+ERR	https://www.nytimes.com/2019/08/16/nyregion/jeffrey-epstein-autopsy.html	HTTP Error 403: Forbidden

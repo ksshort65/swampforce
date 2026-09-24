@@ -1,0 +1,38 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Member salary corrected to $174,000 (CRS RL30064), twice; Speaker $223,500 and leaders $193,400 confirmed",
+  "Outside earned-income cap corrected to $33,855 (2026); $33,285 was the 2024 limit",
+  "Staff rule stated: 18 permanent plus 4 additional aides per House office"
+ ],
+ "edits": [
+  [
+   "A member of Congress makes $174,500 a year.",
+   "A member of Congress makes $174,000 a year."
+  ],
+  [
+   "The country already paid $174,500 so they would not have to work the phones.",
+   "The country already paid $174,000 so they would not have to work the phones."
+  ],
+  [
+   "an outside earned-income cap they wrote themselves ($33,285 in 2025).",
+   "an outside earned-income cap they wrote themselves ($33,855 in 2026)."
+  ],
+  [
+   "Eighteen full-time aides plus part-time is allowed.",
+   "Eighteen permanent aides plus four additional aides are allowed."
+  ]
+ ],
+ "ourview": [
+  "- They write the second law",
+  "- Call time is the real session",
+  "- They set their own pay",
+  "- District offices",
+  "- When the people notice",
+  "Self-dealing is not levying war"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

@@ -1,0 +1,30 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Gallup 10%/86% approval figures cut (private poll, not a primary record)",
+  "'Least productive' claim cut (GovTrack is not a primary record; no congress.gov count linked)",
+  "Budget-deadline claim tied to CRS: FY1997 was the last year all regular appropriations were enacted on time"
+ ],
+ "edits": [
+  [
+   " Gallup, April 2026: ten percent approve of Congress. Eighty-six percent disapprove. That is not a branding problem. That is a shop",
+   " That is a shop"
+  ],
+  [
+   "The 118th Congress sat among the least productive modern sessions. The 119th still owes twelve money bills by October 1 — a deadline they have not met on time since the Clinton years.",
+   "The 119th still owes twelve money bills by October 1 — a deadline Congress has not met on time for every bill since fiscal 1997, per the [Congressional Research Service](https://www.congress.gov/crs-product/IN12324)."
+  ],
+  [
+   "- GovTrack — 118th among the least productive modern Congresses — https://www.govtrack.us/congress/bills/statistics\n",
+   ""
+  ]
+ ],
+ "ourview": [
+  "They do not fail at talking",
+  "They will say the other jersey"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

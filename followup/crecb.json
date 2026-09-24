@@ -1,0 +1,90 @@
+{
+    "imgurl": [],
+    "download": {
+        "pdfSize": "D552.8 MB",
+        "pdflink": "//www.govinfo.gov/content/pkg/GPO-CRECB-1964-pt2/pdf/GPO-CRECB-1964-pt2.pdf",
+        "premislink": "//www.govinfo.gov/metadata/pkg/GPO-CRECB-1964-pt2/premis.xml",
+        "modslink": "//www.govinfo.gov/metadata/pkg/GPO-CRECB-1964-pt2/mods.xml",
+        "ziplink": "//www.govinfo.gov/content/pkg/GPO-CRECB-1964-pt2.zip"
+    },
+    "metadata": {"columnnamevalueset": [
+        {
+            "colname": "Publication Title",
+            "colvalue": "Volume 110, Part 2 (January 30, 1964 to February 10, 1964)"
+        },
+        {
+            "colname": "Category",
+            "colvalue": "Proceedings of Congress and General Congressional Publications"
+        },
+        {
+            "colname": "Collection",
+            "colvalue": "Additional Government Publications<br />Congressional Record (Bound Edition)<br />"
+        },
+        {
+            "colname": "Publication Name",
+            "colvalue": "Congressional Record (Bound Edition)"
+        },
+        {
+            "colname": "SuDoc Class Number",
+            "colvalue": "X 1.1:"
+        },
+        {
+            "colname": "Date Issued",
+            "colvalue": "February 10, 1964"
+        },
+        {
+            "colname": "Volume",
+            "colvalue": "110"
+        },
+        {
+            "colname": "PartNumber",
+            "colvalue": "2"
+        },
+        {
+            "colname": "SessionYear",
+            "colvalue": "1964"
+        },
+        {
+            "colname": "Congress",
+            "colvalue": "88th Congress, 2nd Session"
+        },
+        {
+            "colname": "Agencies",
+            "colvalue": "Congress"
+        },
+        {
+            "colname": "Page Range",
+            "colvalue": "1391-2840"
+        }
+    ]},
+    "quicklinks": {
+        "browsecolurl": "//www.govinfo.gov/app/collection/crecb",
+        "cgprecordurl": "http://catalog.gpo.gov/F?func=find-b&find_code=sys&request=000632028",
+        "browseactiondisplayvalue": "",
+        "helplinkurl": "//www.govinfo.gov/help/other",
+        "collection": "Government Publications",
+        "buyurl": "//bookstore.gpo.gov"
+    },
+    "dcMD": {
+        "dateIssued": "(10 Feb. 1964)",
+        "origDateIssued": "1964-02-10",
+        "governmentAuthors": [
+            "Congress",
+            ""
+        ],
+        "publisher": "U.S. Government Publishing Office",
+        "language": "eng"
+    },
+    "documentincontext": {
+        "granuleId": [""],
+        "showDicTab": "true",
+        "packageId": "GPO-CRECB-1964-pt2"
+    },
+    "bbMD": [
+        "Congress,&nbsp;<u>Volume 110, Part 2 (January 30, 1964 to February 10, 1964)<\/u>,&nbsp;GovInfo,&nbsp;(February 10, 1964)",
+        ""
+    ],
+    "collection": "GPO",
+    "text": [],
+    "title": "110 Cong. Rec. (Bound) - Volume 110, Part 2 (January 30, 1964 to February 10, 1964)"
+}

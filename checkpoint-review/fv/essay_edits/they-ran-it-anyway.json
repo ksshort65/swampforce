@@ -1,0 +1,25 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Schiff dates separated: on March 20, 2017 he read Steele-dossier allegations at a public hearing; the 'more than circumstantial evidence' line was a separate March 2017 TV interview (as H.Res. 630 itself records)",
+  "H.Res. 630 described accurately: a censure resolution House Republicans introduced in October 2019, which the House tabled; it is quoted as their claim, not as a finding",
+  "Horowitz report link corrected to the OIG's live PDF"
+ ],
+ "edits": [
+  [
+   "On March 20, 2017 — months into the first term — the ranking Democrat on House Intelligence told the public the evidence of collusion was more than circumstantial.",
+   "On March 20, 2017 — two months into the first term — the ranking Democrat on House Intelligence read Steele-dossier allegations into a public hearing, and that same month he said in a television interview that he had “more than circumstantial evidence” of collusion."
+  ],
+  [
+   "The [Congressional Record](https://www.congress.gov/congressional-record/volume-165/issue-163/house-section/article/H8153-5), in H.Res. 630, later named those years: false accusations of collusion spread for more than two years; a March 2017 claim of more than circumstantial evidence.",
+   "House Republicans’ censure resolution, H.Res. 630 (October 2019, tabled by the House), put their charge in the [Congressional Record](https://www.congress.gov/congressional-record/volume-165/issue-163/house-section/article/H8153-5): false accusations of collusion spread for more than two years, including that March 2017 claim."
+  ]
+ ],
+ "ourview": [
+  "The country was told the opposite"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

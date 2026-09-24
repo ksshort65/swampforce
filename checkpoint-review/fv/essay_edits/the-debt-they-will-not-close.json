@@ -1,0 +1,28 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Pew count of on-time years (four) and 'never more than five of twelve on time since' cut; the FY1997 fact is sourced to CRS only"
+ ],
+ "edits": [
+  [
+   "[Pew counted the years they actually did all of it on time: four.](https://www.pewresearch.org/short-reads/2025/10/01/congress-has-long-struggled-to-pass-spending-bills-on-time/) Fiscal 1977, 1989, 1995, and 1997. The last one was FY1997, signed the day before the year started, while Clinton was still in the building. [CRS says the same: FY1997 was the last time all regular appropriations were enacted by October 1.](https://www.congress.gov/crs-product/IN12324) Since then they have never passed more than five of the twelve on time. In most recent years they passed none.",
+   "[CRS: FY1997 was the last time all regular appropriations were enacted by October 1](https://www.congress.gov/crs-product/IN12324), while Clinton was still in the building."
+  ],
+  [
+   "- Pew — appropriations on time only four times — https://www.pewresearch.org/short-reads/2025/10/01/congress-has-long-struggled-to-pass-spending-bills-on-time/\n",
+   ""
+  ]
+ ],
+ "ourview": [
+  "- A continuing resolution",
+  "- A giant unread bill",
+  "- Emergency designations",
+  "- No line-item debate",
+  "- The $7.258 billion",
+  "It cannot keep growing"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

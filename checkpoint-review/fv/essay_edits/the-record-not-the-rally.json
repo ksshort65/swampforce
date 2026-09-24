@@ -1,0 +1,34 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Clinton-era figure corrected: roughly 1 million to 1.6 million Border Patrol southwest apprehensions a year (FY1993–2000), not 'about 1.6 million a year'",
+  "Biden-era figure corrected: more than two million in fiscal 2022 and 2023 (1.66 million in 2021, 1.53 million in 2024), not 'more than two million a year'",
+  "Pew links replaced with CBP's own tables"
+ ],
+ "edits": [
+  [
+   "still saw about 1.6 million crossings a year.",
+   "still saw roughly 1 million to 1.6 million Border Patrol apprehensions a year at the southwest border."
+  ],
+  [
+   "Biden’s years: more than two million a year, and many were released into the country.",
+   "Biden’s years: more than two million in fiscal 2022 and again in 2023, and many were released into the country."
+  ],
+  [
+   "Check the border numbers here: https://www.pewresearch.org/short-reads/2026/02/02/migrant-encounters-at-the-us-mexico-border-are-at-their-lowest-level-in-more-than-50-years/ The new detention law:",
+   "Check the border numbers here: https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters and, for 1960–2019, https://www.cbp.gov/document/stats/us-border-patrol-fiscal-year-southwest-border-sector-apprehensions-fy-1960-fy-2019 The new detention law:"
+  ],
+  [
+   "- Border — Pew — https://www.pewresearch.org/short-reads/2026/02/02/migrant-encounters-at-the-us-mexico-border-are-at-their-lowest-level-in-more-than-50-years/",
+   "- Border — CBP — https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters\n- Border, FY1960–2019 — CBP — https://www.cbp.gov/document/stats/us-border-patrol-fiscal-year-southwest-border-sector-apprehensions-fy-1960-fy-2019"
+  ]
+ ],
+ "ourview": [
+  "If a friend only has six seconds",
+  "That was a class."
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

@@ -1,0 +1,9 @@
+{
+ "1": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/opa/media/1407001/dl",
+  "Source_Type": "official_record (DOJ/FBI memorandum, July 2025)",
+  "Fix_Needed": "Link the DOJ copy of the memo (justice.gov/opa/media/1407001/dl), not DocumentCloud. Keep: no incriminating \"client list\", no credible evidence of blackmail, no basis to investigate uncharged third parties, more than one thousand victims; 2008 Florida plea; 2019 SDNY charge; Maxwell 20 years (DOJ SDNY, June 28, 2022). Attribute the Feb. 2025 \"on my desk\" remark to where it was said (Fox News interview, Feb. 21, 2025) and link the AG\u2019s own later clarification, or cut both sentences. Label the last sentence Our view. Check for later DOJ releases before republishing.",
+  "Notes": "Memo text confirmed via search snapshot of the justice.gov PDF (justice.gov blocks automated fetch). Maxwell sentence: https://www.justice.gov/usao-sdny/pr/ghislaine-maxwell-sentenced-20-years-prison-conspiring-jeffrey-epstein-sexually-abuse"
+ }
+}

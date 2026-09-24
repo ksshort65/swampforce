@@ -1,0 +1,576 @@
+
+## #5 [200] tl=67982 https://apnews.com/article/b38b7c50ea64423f96c40cca24221b15
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 2
+     CNN accepts resignations of 3 involved in retracted story NEW YORK (AP) - CNN accepted the resignations Monday of three journalists involved in a retracted story about a supposed investigation into a pre-inaugural meeting between an associate of Pre
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #6 [503] tl=113 https://money.cnn.com/2017/12/08/media/cnn-correction-email-story/index.html
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #7 [000] tl=20 https://www.washingtonpost.com/blogs/erik-wemple/wp/2017/06/07/cnn-corrects-comey-testimony-prediction-story/
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #8 [200] tl=70171 https://apnews.com/article/78440c185b7c49b39573257ad3353295
+  <<correction>> 2
+     e said, Trump had asked Flynn to contact the Russians about issues including working together to fight ISIS. ABC was widely criticized for merely clarifying and not correcting the report. It issued a correction later in the evening. "We deeply regret and apologize for the serious error we made yesterday," the network said in a statement Saturday. "The reporting conveyed by Brian Ross during the special repo
+  <<Correction>> 2
+     e said, Trump had asked Flynn to contact the Russians about issues including working together to fight ISIS. ABC was widely criticized for merely clarifying and not correcting the report. It issued a correction later in the evening. "We deeply regret and apologize for the serious error we made yesterday," the network said in a statement Saturday. "The reporting conveyed by Brian Ross during the special repo
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 2
+      with the Russians. That would have been an explosive development in the ongoing investigation into whether the Trump campaign colluded with Russia to interfere in the election. But hours later, Ross clarified his report on the evening news, saying that his source now said Trump had done so not as a candidate, but as president-elect. At that point, he said, Trump had asked Flynn to contact the Russians 
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     e said, Trump had asked Flynn to contact the Russians about issues including working together to fight ISIS. ABC was widely criticized for merely clarifying and not correcting the report. It issued a correction later in the evening. "We deeply regret and apologize for the serious error we made yesterday," the network said in a statement Saturday. "The reporting conveyed by Brian Ross during the special repo
+
+## #30 [000] tl=20 https://www.washingtonpost.com/nation/2019/03/01/editors-note-related-lincoln-memorial-incident/
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #34 [200] tl=69258 https://apnews.com/article/5f32c14a803e43359dff5e8151dade4c
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 2
+     MSNBC's O'Donnell retracts Trump story NEW YORK (AP) - MSNBC's Lawrence O'Donnell on Wednesday retracted his story about supposed Russian ties to President Donald Trump's finances and apologized for reporting it - just as Tru
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #40 [403] tl=118 https://www.nytimes.com/2019/01/08/us/politics/manafort-trump-campaign-data-kilimnik.html
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #41 [200] tl=8113 https://www.politico.com/news/2020/04/27/politicos-reporting-on-president-trump-and-the-bank-of-china-214107
+  <<correction>> 1
+     cy and Terms of Service apply. Sign Up * All fields must be completed to subscribe About Us Advertising Breaking News Alerts Careers Credit Card Payments FAQ Feedback Headlines Photos Press Request A Correction Write For Us RSS Site Map Terms of Service Privacy Policy Do Not Sell or Share My Personal Information and Opt Out of Targeted Advertising © 2026 POLITICO LLC
+  <<Correction>> 1
+     cy and Terms of Service apply. Sign Up * All fields must be completed to subscribe About Us Advertising Breaking News Alerts Careers Credit Card Payments FAQ Feedback Headlines Photos Press Request A Correction Write For Us RSS Site Map Terms of Service Privacy Policy Do Not Sell or Share My Personal Information and Opt Out of Targeted Advertising © 2026 POLITICO LLC
+  <<editor's note>> 1
+      Video 5th item Matt Wuerker Cartoons 6th item Cartoon Carousel 7th item The POLITICO Poll POLITICO Live POLITICO Live 1 item 1st item Events Follow us X Instagram Facebook LinkedIn My Account Log In editor's note POLITICO's reporting on President Trump and the Bank of China Why Friday's article on Trump's business dealings with China was updated and corrected. By POLITICO 04/27/2020 11:53 PM EDT Add POLITICO 
+  <<Editor's Note>> 1
+      Video 5th item Matt Wuerker Cartoons 6th item Cartoon Carousel 7th item The POLITICO Poll POLITICO Live POLITICO Live 1 item 1st item Events Follow us X Instagram Facebook LinkedIn My Account Log In editor's note POLITICO's reporting on President Trump and the Bank of China Why Friday's article on Trump's business dealings with China was updated and corrected. By POLITICO 04/27/2020 11:53 PM EDT Add POLITICO 
+  <<Editor’s note>> 1
+      Video 5th item Matt Wuerker Cartoons 6th item Cartoon Carousel 7th item The POLITICO Poll POLITICO Live POLITICO Live 1 item 1st item Events Follow us X Instagram Facebook LinkedIn My Account Log In editor's note POLITICO's reporting on President Trump and the Bank of China Why Friday's article on Trump's business dealings with China was updated and corrected. By POLITICO 04/27/2020 11:53 PM EDT Add POLITICO 
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 2
+     POLITICO's reporting on President Trump and the Bank of China Why Friday's article on Trump's business dealings with China was updated and corrected. 04/27/2020 11:53 PM EDT POLITICO published an article Friday morning on President Donald Trump's business dealings with China. ("Trump owes tens of millions to the Bank of China - and
+  <<we regret>> 2
+     equently, the story was updated a second time on Monday evening to take account of the apparent mistake in the public record. Our commitment at POLITICO is to journalism that gets its facts straight. We regret we fell short in this case. =====FULLTEXT===== POLITICO's reporting on President Trump and the Bank of China - POLITICO Skip to Main Content Toggle menu Politico Logo More from Politico Europe Pro Ag
+  <<CORRECTION>> 1
+     cy and Terms of Service apply. Sign Up * All fields must be completed to subscribe About Us Advertising Breaking News Alerts Careers Credit Card Payments FAQ Feedback Headlines Photos Press Request A Correction Write For Us RSS Site Map Terms of Service Privacy Policy Do Not Sell or Share My Personal Information and Opt Out of Targeted Advertising © 2026 POLITICO LLC
+
+## #49 [200] tl=65842 https://apnews.com/general-news-television-02654755a4464a05b7fe68cc507a45d0
+  <<correction>> 2
+     d placed a wiretap on the phone lines of President Trump's attorney, Michael Cohen, saying it subsequently learned that the feds were only monitoring the source of calls and weren't listening in. The correction gives ammunition to the nation's highest-ranked media critic. Trump has frequently criticized the media for "fake news" involving stories he doesn't like. NBC moved its original story online shortly 
+  <<Correction>> 2
+     d placed a wiretap on the phone lines of President Trump's attorney, Michael Cohen, saying it subsequently learned that the feds were only monitoring the source of calls and weren't listening in. The correction gives ammunition to the nation's highest-ranked media critic. Trump has frequently criticized the media for "fake news" involving stories he doesn't like. NBC moved its original story online shortly 
+  <<editor's note>> 2
+     n't like. NBC moved its original story online shortly after 1 p.m. on Thursday, and it became immediate fodder on MSNBC and other cable networks. The correction was issued online at 5:27 p.m. with an editor's note to the rewritten story, and was discussed on MSNBC's "Meet the Press Daily." The network had attributed its original story to two anonymous sources with knowledge of the legal proceedings against Coh
+  <<Editor's Note>> 2
+     n't like. NBC moved its original story online shortly after 1 p.m. on Thursday, and it became immediate fodder on MSNBC and other cable networks. The correction was issued online at 5:27 p.m. with an editor's note to the rewritten story, and was discussed on MSNBC's "Meet the Press Daily." The network had attributed its original story to two anonymous sources with knowledge of the legal proceedings against Coh
+  <<Editor’s note>> 2
+     n't like. NBC moved its original story online shortly after 1 p.m. on Thursday, and it became immediate fodder on MSNBC and other cable networks. The correction was issued online at 5:27 p.m. with an editor's note to the rewritten story, and was discussed on MSNBC's "Meet the Press Daily." The network had attributed its original story to two anonymous sources with knowledge of the legal proceedings against Coh
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     d placed a wiretap on the phone lines of President Trump's attorney, Michael Cohen, saying it subsequently learned that the feds were only monitoring the source of calls and weren't listening in. The correction gives ammunition to the nation's highest-ranked media critic. Trump has frequently criticized the media for "fake news" involving stories he doesn't like. NBC moved its original story online shortly 
+
+## #50 [200] tl=13084 https://abcnews.com/Politics/trump-turkey-syria-problem/story?id=66319063
+  <<correction>> 2
+     Trump on Turkey going into Syria: 'It's not our border' He called his decision to move U.S. troops aside "strategically brilliant." Correction: This story has been updated to reflect that President Trump, when asked whether he was OK with Turkey's president refusing a ceasefire, responded, "It's not our border." President Donald Trump on We
+  <<Correction>> 2
+     Trump on Turkey going into Syria: 'It's not our border' He called his decision to move U.S. troops aside "strategically brilliant." Correction: This story has been updated to reflect that President Trump, when asked whether he was OK with Turkey's president refusing a ceasefire, responded, "It's not our border." President Donald Trump on We
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 2
+     Trump on Turkey going into Syria: 'It's not our border' He called his decision to move U.S. troops aside "strategically brilliant." Correction: This story has been updated to reflect that President Trump, when asked whether he was OK with Turkey's president refusing a ceasefire, responded, "It's not our border." President Donald Trump on Wednesday again tried to dista
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     Trump on Turkey going into Syria: 'It's not our border' He called his decision to move U.S. troops aside "strategically brilliant." Correction: This story has been updated to reflect that President Trump, when asked whether he was OK with Turkey's president refusing a ceasefire, responded, "It's not our border." President Donald Trump on We
+
+## #51 [200] tl=63995 https://apnews.com/arts-and-entertainment-general-news-television-programs-a2685a2439e6425d8d46db2bb1aa3f7a
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #60 [000] tl=20 https://www.washingtonpost.com/opinions/2021/03/16/washington-post-correction-trump-call-georgia-investigator/
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #61 [200] tl=66007 https://apnews.com/article/europe-carter-page-cia-925492c0b3dce9c347bdcd46658d1543
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #63 [200] tl=68607 https://apnews.com/article/731c44e0e4e5492ce4d52c717609b7f4
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 2
+     d inaccurately cut short a video clip of an interview with AG Barr before offering commentary and analysis. The remaining clip included important remarks from the attorney general that we missed, and we regret the error.said that "the remaining clip included important remarks from the attorney general that we missed, and we regret the error," the tweet said. NBC offered no comment on the president's tweets
+  <<CORRECTION>> 0
+
+## #64 [200] tl=64834 https://apnews.com/united-states-government-national-ec42044634284abc8942d93f4a1299e4
+  <<correction>> 2
+      tweeted. Weigel said he deleted the photo after another reporter "told me I'd gotten it wrong." Trump said in a follow-up tweet that Weigel should be fired. At Friday's rally, Trump pointed to a CNN correction and other corrections and clarifications by news organizations in the past week on stories that initially had been damaging to the president but didn't live up to the scrutiny. =====FULLTEXT===== Tru
+  <<Correction>> 2
+      tweeted. Weigel said he deleted the photo after another reporter "told me I'd gotten it wrong." Trump said in a follow-up tweet that Weigel should be fired. At Friday's rally, Trump pointed to a CNN correction and other corrections and clarifications by news organizations in the past week on stories that initially had been damaging to the president but didn't live up to the scrutiny. =====FULLTEXT===== Tru
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 2
+     photo after another reporter "told me I'd gotten it wrong." Trump said in a follow-up tweet that Weigel should be fired. At Friday's rally, Trump pointed to a CNN correction and other corrections and clarifications by news organizations in the past week on stories that initially had been damaging to the president but didn't live up to the scrutiny. =====FULLTEXT===== Trump demands, gets apology from Was
+  <<retract>> 2
+      I arrived @ the venue, w/ thousands of people outside, on their way in." The post included photos of the Pensacola venue as Trump spoke. "Packed house, many people unable to get in. Demand apology & retraction from FAKE NEWS WaPo!" Trump tweeted from his Florida estate, where he was spending the weekend. Weigel apologized within minutes. "Sure thing: I apologize," Weigel tweeted. Weigel said he deleted 
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 2
+      tweeted. Weigel said he deleted the photo after another reporter "told me I'd gotten it wrong." Trump said in a follow-up tweet that Weigel should be fired. At Friday's rally, Trump pointed to a CNN correction and other corrections and clarifications by news organizations in the past week on stories that initially had been damaging to the president but didn't live up to the scrutiny. =====FULLTEXT===== Tru
+
+## #67 [401] tl=118 https://www.reuters.com/article/world/trump-lawyer-denies-deutsche-bank-got-subpoena-on-trump-accounts-idUSKBN1DZ0XH/
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #68 [200] tl=68817 https://apnews.com/article/685ff48c1b814f1fb8c32f62ea6dcb91
+  <<correction>> 2
+     s said Friday that a girl who is pictured on the cover of this week's Time magazine was not separated from her mother, despite the poignant image of the child standing alone, weeping. Time attached a correction to the story, saying "The original version of this story misstated what happened to the girl in the photo after she (was) taken from the scene. The girl was not carried away screaming by U.S. Border 
+  <<Correction>> 2
+     s said Friday that a girl who is pictured on the cover of this week's Time magazine was not separated from her mother, despite the poignant image of the child standing alone, weeping. Time attached a correction to the story, saying "The original version of this story misstated what happened to the girl in the photo after she (was) taken from the scene. The girl was not carried away screaming by U.S. Border 
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     s said Friday that a girl who is pictured on the cover of this week's Time magazine was not separated from her mother, despite the poignant image of the child standing alone, weeping. Time attached a correction to the story, saying "The original version of this story misstated what happened to the girl in the photo after she (was) taken from the scene. The girl was not carried away screaming by U.S. Border 
+
+## #70 [200] tl=65419 https://apnews.com/arts-and-entertainment-general-news-8abb428b94c45a621c80a82eba8e3ea7
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #72 [000] tl=20 https://www.washingtonpost.com/politics/2020/02/16/tom-cotton-coronavirus-conspiracy/
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #74 [200] tl=10305 https://www.huffpost.com/entry/nbc-news-trump-robert-e-lee_n_5bc3813de4b0bd9ed55b2eda
+  <<correction>> 2
+     NBC News has issued a correction to its coverage of President Donald Trump's speech at a rally in Ohio on Friday, in which the president discussed Ulysses S. Grant's victory over Confederate Gen. Robert E. Lee during the Civil War. 
+  <<Correction>> 2
+     NBC News has issued a correction to its coverage of President Donald Trump's speech at a rally in Ohio on Friday, in which the president discussed Ulysses S. Grant's victory over Confederate Gen. Robert E. Lee during the Civil War. 
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     NBC News has issued a correction to its coverage of President Donald Trump's speech at a rally in Ohio on Friday, in which the president discussed Ulysses S. Grant's victory over Confederate Gen. Robert E. Lee during the Civil War. 
+
+## #81 [200] tl=25469 https://www.cnn.com/2017/01/30/politics/donald-trump-supreme-court-choice-announcement-coming-tuesday-8-p-m-
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 1
+     N Leadership CNN Newsletters Advertise With Us Work for CNN Download the CNN App Politics 2 min read Donald Trump Supreme Court choice announcement coming Tuesday 8 p.m. By Sophie Tatum , Jeff Zeleny Updated Jan 30, 2017, 2:43 PM ET PUBLISHED Jan 30, 2017, 8:51 AM ET Video Ad Feedback Trump: Pretty much decided on court pick 0:48 • Source: CNN Trump: Pretty much decided on court pick 0:48 Facebook Tweet
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #87 [200] tl=10873 https://www.businessinsider.com/new-york-times-nikki-haley-curtains-story-correction-2018-9
+  <<correction>> 2
+     as taken frequent aim at the Times, accusing it of bias toward him and his administration. The president's son Donald Trump Jr. was particularly critical of the Haley story and on Friday called for a correction in a tweet. "Except it was Obama's State Dept. Will you print a correction or just leave it as is because you want it to be true???" he wrote. Haley, for her part, didn't comment on the episode. But 
+  <<Correction>> 2
+     as taken frequent aim at the Times, accusing it of bias toward him and his administration. The president's son Donald Trump Jr. was particularly critical of the Haley story and on Friday called for a correction in a tweet. "Except it was Obama's State Dept. Will you print a correction or just leave it as is because you want it to be true???" he wrote. Haley, for her part, didn't comment on the episode. But 
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 2
+     ay afternoon, and the title was changed to "State Department Spent $52,701 on Curtains for Residence of U.N. Envoy." The editors' note also apologized for using an image of Haley for the article. "An earlier version of this article and headline created an unfair impression about who was responsible for the purchase in question," the note read. "While Nikki R. Haley is the current ambassador to the United Nations
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     as taken frequent aim at the Times, accusing it of bias toward him and his administration. The president's son Donald Trump Jr. was particularly critical of the Haley story and on Friday called for a correction in a tweet. "Except it was Obama's State Dept. Will you print a correction or just leave it as is because you want it to be true???" he wrote. Haley, for her part, didn't comment on the episode. But 
+
+## #106 [200] tl=10663 https://freebeacon.com/politics/reuters-afp-retract-migrant-children-articles-that-were-based-on-obama-era-figures/
+  <<correction>> 2
+     tion -U.N. study' is withdrawn. The United Nations issued a statement on Nov. 19 saying the number was not current but was for the year 2015. No replacement story will be issued." Assuming the U.N.'s correction will not be further corrected, the 100,000 figure would be the responsibility of Barack Obama, who was president in 2015, rather than President Donald Trump. In a case of unfortunate timing, Reuters'
+  <<Correction>> 2
+     tion -U.N. study' is withdrawn. The United Nations issued a statement on Nov. 19 saying the number was not current but was for the year 2015. No replacement story will be issued." Assuming the U.N.'s correction will not be further corrected, the 100,000 figure would be the responsibility of Barack Obama, who was president in 2015, rather than President Donald Trump. In a case of unfortunate timing, Reuters'
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 2
+     d] 5,000 kids in [Office of Refugee Resettlement] shelters... I am baffled at this claim." In a retraction issued Wednesday, AFP announced that it was pulling its story. "The author of the report has clarified that his figures do not represent the number of children currently in migration-related US detention, but the total number of children in migration-related US detention in 2015," the wire service 
+  <<retract>> 2
+     On Wednesday several news outlets were forced to retract stories lamenting the number of migrant children detained by U.S. authorities after it emerged the pieces were based on Obama-era figures. In a Tuesday press conference ahead of the release of the Un
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     tion -U.N. study' is withdrawn. The United Nations issued a statement on Nov. 19 saying the number was not current but was for the year 2015. No replacement story will be issued." Assuming the U.N.'s correction will not be further corrected, the 100,000 figure would be the responsibility of Barack Obama, who was president in 2015, rather than President Donald Trump. In a case of unfortunate timing, Reuters'
+
+## #226 [200] tl=9359 https://www.cnbc.com/2018/05/06/how-michael-cohen-became-trumps-personal-lawyer.html
+  <<correction>> 2
+     than $60 million offshore to avoid paying debts and is awaiting trial on charges of failing to pay millions in taxes, the Times reported. Read the full story on Michael Cohen from The New York Times. CORRECTION: This story was updated to delete incorrect references that Cohen paid nearly $1 million in fines after Chicago authorities found that more than 180 cars used in his taxi businesses were unauthorized
+  <<Correction>> 2
+     than $60 million offshore to avoid paying debts and is awaiting trial on charges of failing to pay millions in taxes, the Times reported. Read the full story on Michael Cohen from The New York Times. CORRECTION: This story was updated to delete incorrect references that Cohen paid nearly $1 million in fines after Chicago authorities found that more than 180 cars used in his taxi businesses were unauthorized
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 2
+     tory also incorrectly said Cohen was barred from managing taxi medallions in New York City last April. The newspaper said those cases involved one of Cohen's former business partners. In addition, an earlier version also incorrectly reported that the Times said Cohen has been on authorities' radar for transferring more than $60 million offshore to avoid paying debts and is awaiting trial on charges of failing to
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 2
+     o avoid paying debts and is awaiting trial on charges of failing to pay millions in taxes, the Times reported. Read the full story on Michael Cohen from The New York Times. CORRECTION: This story was updated to delete incorrect references that Cohen paid nearly $1 million in fines after Chicago authorities found that more than 180 cars used in his taxi businesses were unauthorized. The story also incorr
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     than $60 million offshore to avoid paying debts and is awaiting trial on charges of failing to pay millions in taxes, the Times reported. Read the full story on Michael Cohen from The New York Times. CORRECTION: This story was updated to delete incorrect references that Cohen paid nearly $1 million in fines after Chicago authorities found that more than 180 cars used in his taxi businesses were unauthorized
+
+## #229 [200] tl=75758 https://apnews.com/article/589aa9c8ab1b48f0b8d7fa171e6cb74c
+  <<correction>> 2
+     Correction: Trump-Skilled Immigration story In a story April 1 about the Trump administration's treatment of skilled immigrants, The Associated Press reported erroneously that the administration ended a program
+  <<Correction>> 2
+     Correction: Trump-Skilled Immigration story In a story April 1 about the Trump administration's treatment of skilled immigrants, The Associated Press reported erroneously that the administration ended a program
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     Correction: Trump-Skilled Immigration story In a story April 1 about the Trump administration's treatment of skilled immigrants, The Associated Press reported erroneously that the administration ended a program
+
+## #58 [200] tl=78412 https://apnews.com/article/britain-bbc-crisis-trump-panorama-a392fb275af25216ea23537c6f4347e4
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 2
+     lly. Shah said the broadcaster accepted "that the way the speech was edited did give the impression of a direct call for violent action." A letter from Trump attorney Alejandro Brito demands the BBC "retract the false, defamatory, disparaging, and inflammatory statements," apologize and "appropriately compensate President Trump for the harm caused," or face legal action for $1 billion in damages. The BBC
+  <<Update>> 2
+     Trump threatens to sue BBC over edited speech that sparked resignations by news bosses ▶ Follow live updates on President Donald Trump and his administration LONDON (AP) - U.S. President Donald Trump has threatened legal action against the BBC over the way a speech he made was edited in a documentary aired
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #120 [200] tl=14459 https://nypost.com/2025/09/15/us-news/daily-beast-apologizes-to-melania-trump-over-retracted-article-alleging-an-epstein-link/
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 2
+     husband, President Trump. The article, headlined, "Melania Trump 'Very Involved' in Epstein Scandal: Author," was retracted in July after the lefty outlet was contacted by Melania's lawyers - but the editor's note affixed to the story at the time did not directly apologize to the first lady or address the dubious claims made by author Michael Wolff on a Daily Beast podcast, which the article was based on. "Upo
+  <<Editor's Note>> 2
+     husband, President Trump. The article, headlined, "Melania Trump 'Very Involved' in Epstein Scandal: Author," was retracted in July after the lefty outlet was contacted by Melania's lawyers - but the editor's note affixed to the story at the time did not directly apologize to the first lady or address the dubious claims made by author Michael Wolff on a Daily Beast podcast, which the article was based on. "Upo
+  <<Editor’s note>> 2
+     husband, President Trump. The article, headlined, "Melania Trump 'Very Involved' in Epstein Scandal: Author," was retracted in July after the lefty outlet was contacted by Melania's lawyers - but the editor's note affixed to the story at the time did not directly apologize to the first lady or address the dubious claims made by author Michael Wolff on a Daily Beast podcast, which the article was based on. "Upo
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 2
+     Daily Beast apologizes to Melania Trump over retracted article alleging an Epstein link See more of our coverage in your search results. Add The New York Post on Google The Daily Beast publicly apologized to first lady Melania Trump last week for publi
+  <<Update>> 2
+     on a Daily Beast podcast, which the article was based on. "Upon reflection, we have determined that the article did not meet our standards and has therefore been removed from our platforms," read the updated editor's note. "In response to a letter from the First Lady's attorneys, The Daily Beast has also removed a portion of an episode of The Daily Beast Podcast titled 'Trump's Epstein Scandal Can't Sto
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #121 [200] tl=13136 https://nypost.com/2025/08/08/us-news/james-carville-apologizes-and-pulls-video-suggesting-a-melania-trump-epstein-connection/
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 2
+     tlet was contacted by her lawyers. "After this story was published, The Beast received a letter from First Lady Melania Trump's attorney challenging the headline and framing of the article," read the editor's note that replaced the article's text. "After reviewing the matter, the Beast has taken down the article and apologizes for any confusion or misunderstanding," the note continued. The retracted article hi
+  <<Editor's Note>> 2
+     tlet was contacted by her lawyers. "After this story was published, The Beast received a letter from First Lady Melania Trump's attorney challenging the headline and framing of the article," read the editor's note that replaced the article's text. "After reviewing the matter, the Beast has taken down the article and apologizes for any confusion or misunderstanding," the note continued. The retracted article hi
+  <<Editor’s note>> 2
+     tlet was contacted by her lawyers. "After this story was published, The Beast received a letter from First Lady Melania Trump's attorney challenging the headline and framing of the article," read the editor's note that replaced the article's text. "After reviewing the matter, the Beast has taken down the article and apologizes for any confusion or misunderstanding," the note continued. The retracted article hi
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 2
+     n - Trump & Melania." It's unclear what specific claims made by the former Bill Clinton campaign manager peeved the first lady's legal team since the offending comments have been scrubbed. Carville's retraction and apology follows lefty news website Daily Beast taking down a Melania story last week after the outlet was contacted by her lawyers. "After this story was published, The Beast received a letter
+  <<Update>> 2
+     for... Ole Miss students found dead identified as freshman, 18, and... Chilling details emerge after California father of 3 jumped off... Brian Laundrie's family shunned 5 years after Gabby... Tragic update after California father of three jumped off cruise... Netanyahu tears into Mamdani in scathing remarks during highly... Politics Pundit James Carville apologizes and pulls video suggesting a Melania 
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #122 [200] tl=5378 https://thenationaldesk.com/news/americas-news-now/leavitt-demands-retraction-after-cnn-claims-dems-not-informed-of-iran-strike
+  <<correction>> 2
+     avitt's claims in the piece and acknowledged "a source conceded that Schumer had been called around 6 p.m. - a little less than an hour before the strikes began - with little detail." It also added a correction reading "this story has been updated to make clear Senate Minority Leader Chuck Schumer was called before the strike, not after as initially reported." The publication added that top intelligence com
+  <<Correction>> 2
+     avitt's claims in the piece and acknowledged "a source conceded that Schumer had been called around 6 p.m. - a little less than an hour before the strikes began - with little detail." It also added a correction reading "this story has been updated to make clear Senate Minority Leader Chuck Schumer was called before the strike, not after as initially reported." The publication added that top intelligence com
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 2
+     ationaldesk) 6e05f4980033bad14101cc870f2f624db5ed1b1b Fallback Presentation. Using deprecated PresentationRouter. WASHINGTON (TNND) - White House Press Secretary Karoline Leavitt on Sunday demanded a retraction from CNN after it reported several Democratic Party leaders were not informed in advance of President Donald Trump's decision to strike multiple nuclear sites in Iran. The outlet reported House Sp
+  <<Update>> 2
+     dged "a source conceded that Schumer had been called around 6 p.m. - a little less than an hour before the strikes began - with little detail." It also added a correction reading "this story has been updated to make clear Senate Minority Leader Chuck Schumer was called before the strike, not after as initially reported." The publication added that top intelligence committee Democrats Sen. Mark Warner, D
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     avitt's claims in the piece and acknowledged "a source conceded that Schumer had been called around 6 p.m. - a little less than an hour before the strikes began - with little detail." It also added a correction reading "this story has been updated to make clear Senate Minority Leader Chuck Schumer was called before the strike, not after as initially reported." The publication added that top intelligence com
+
+## #122b [200] tl=7051 https://kpic.com/news/nation-world/leavitt-demands-retraction-after-cnn-claims-dems-not-informed-of-iran-strike
+  <<correction>> 2
+     avitt's claims in the piece and acknowledged "a source conceded that Schumer had been called around 6 p.m. - a little less than an hour before the strikes began - with little detail." It also added a correction reading "this story has been updated to make clear Senate Minority Leader Chuck Schumer was called before the strike, not after as initially reported." The publication added that top intelligence com
+  <<Correction>> 2
+     avitt's claims in the piece and acknowledged "a source conceded that Schumer had been called around 6 p.m. - a little less than an hour before the strikes began - with little detail." It also added a correction reading "this story has been updated to make clear Senate Minority Leader Chuck Schumer was called before the strike, not after as initially reported." The publication added that top intelligence com
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 2
+     Leavitt demands retraction after CNN claims Dems not informed of Iran strike WASHINGTON (TNND) - White House Press Secretary Karoline Leavitt on Sunday demanded a retraction from CNN after it reported several Democratic Par
+  <<Update>> 2
+     dged "a source conceded that Schumer had been called around 6 p.m. - a little less than an hour before the strikes began - with little detail." It also added a correction reading "this story has been updated to make clear Senate Minority Leader Chuck Schumer was called before the strike, not after as initially reported." The publication added that top intelligence committee Democrats Sen. Mark Warner, D
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     avitt's claims in the piece and acknowledged "a source conceded that Schumer had been called around 6 p.m. - a little less than an hour before the strikes began - with little detail." It also added a correction reading "this story has been updated to make clear Senate Minority Leader Chuck Schumer was called before the strike, not after as initially reported." The publication added that top intelligence com
+
+## #129 [000] tl=20 https://www.washingtonpost.com/national-security/2026/07/02/us-warned-iran-about-israels-aims-assassinate-leaders/
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #178 [200] tl=36186 https://www.cnn.com/2021/05/01/media/washington-post-new-york-times-retraction-giuliani
+  <<correction>> 2
+     The Washington Post, The New York Times, and NBC News on Saturday issued significant corrections, retracting earlier reporting that said Rudy Giuliani had been directly warned by the FBI that he was the target of a Russian disinformation campaign. The stories came out after Giuliani's office an
+  <<Correction>> 2
+     The Washington Post, The New York Times, and NBC News on Saturday issued significant corrections, retracting earlier reporting that said Rudy Giuliani had been directly warned by the FBI that he was the target of a Russian disinformation campaign. The stories came out after Giuliani's office an
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 2
+      were raided by the FBI on Thursday. The searches were linked to a criminal probe of the former mayor's business dealings in Ukraine and resulted in the seizure of several communications devices. "An earlier version of this story, published Thursday, incorrectly reported that One America News was warned by the FBI that it was the target of a Russian influence operation," read the correction by The Post, which fi
+  <<clarif>> 0
+  <<retract>> 2
+     The Washington Post, The New York Times, and NBC News on Saturday issued significant corrections, retracting earlier reporting that said Rudy Giuliani had been directly warned by the FBI that he was the target of a Russian disinformation campaign. The stories came out after Giuliani's office and residenc
+  <<Update>> 1
+     US market Something isn't loading properly. Please check back later. Business Media 2 min read Washington Post, New York Times, and NBC News retract reports on Giuliani By Oliver Darcy , CNN Business Updated May 2, 2021, 12:30 PM ET PUBLISHED May 1, 2021, 5:27 PM ET Video Ad Feedback Media outlets retract story about Rudy Giuliani being warned by FBI 3:33 • Source: CNN Media outlets retract story about 
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     The Washington Post, The New York Times, and NBC News on Saturday issued significant corrections, retracting earlier reporting that said Rudy Giuliani had been directly warned by the FBI that he was the target of a Russian disinformation campaign. The stories came out after Giuliani's office an
+
+## #179 [200] tl=8958 https://dailycallernewsfoundation.org/2026/02/11/wapo-eats-crow-for-reporting-white-house-didnt-announce-something-trump-literally-put-on-tr
+  <<correction>> 2
+     (Wikimedia Commons/Public/Michael Fleischhacker) The Washington Post issued a public correction Wednesday after claiming National Guard troops withdrew from three major cities without any public notice, only to concede that President Donald Trump had, in fact, announced the move weeks earlier. 
+  <<Correction>> 2
+     (Wikimedia Commons/Public/Michael Fleischhacker) The Washington Post issued a public correction Wednesday after claiming National Guard troops withdrew from three major cities without any public notice, only to concede that President Donald Trump had, in fact, announced the move weeks earlier. 
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     (Wikimedia Commons/Public/Michael Fleischhacker) The Washington Post issued a public correction Wednesday after claiming National Guard troops withdrew from three major cities without any public notice, only to concede that President Donald Trump had, in fact, announced the move weeks earlier. 
+
+## #182 [200] tl=24934 https://www.foxnews.com/media/trump-admin-official-shreds-ny-times-multiple-corrections-report-silicon-valley-initiative
+  <<correction>> 2
+     acob Helberg hammered The New York Times on Sunday over its coverage of the Trump administration's newly announced formation of the "Pax Silica" investor consortium after the report required multiple corrections. "The @NYTimes completely FABRICATED quotes that never happened. We submitted corrections (multiple times). They ignored them," Helberg alleged in a post on X. "So for posterity, sharing my full rem
+  <<Correction>> 2
+     acob Helberg hammered The New York Times on Sunday over its coverage of the Trump administration's newly announced formation of the "Pax Silica" investor consortium after the report required multiple corrections. "The @NYTimes completely FABRICATED quotes that never happened. We submitted corrections (multiple times). They ignored them," Helberg alleged in a post on X. "So for posterity, sharing my full rem
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 2
+     initiative. TRUMP'S SCIENCE AND TECH MAN LAYS OUT WHITE HOUSE'S GLOBAL AI STRATEGY The Times replied to the post, acknowledging that it issued multiple corrections to its reporting on the initiative, clarifying both the scale of the consortium and Helberg's remarks. "We corrected the errors as soon as we became aware of them," the paper's communications account posted. The article originally misreported
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 2
+     acob Helberg hammered The New York Times on Sunday over its coverage of the Trump administration's newly announced formation of the "Pax Silica" investor consortium after the report required multiple corrections. "The @NYTimes completely FABRICATED quotes that never happened. We submitted corrections (multiple times). They ignored them," Helberg alleged in a post on X. "So for posterity, sharing my full rem
+
+## #184 [200] tl=8048 https://www.nbcnews.com/news/us-news/ice-held-5-year-old-autistic-girl-massachusetts-pressure-father-surren-rcna233146
+  <<correction>> 2
+      Mejia, his wife said. He is being held at an ICE detention center in Plymouth, she said. "Officers came out behind my house, arrested him, took him away," she told Telemundo. "We are not criminals." CORRECTION (Sept. 23, 2025): An earlier version of this article mischaracterized the activities of ICE agents in the video. The article has been updated. =====FULLTEXT===== Video shows ICE with 5-year-old girl 
+  <<Correction>> 2
+      Mejia, his wife said. He is being held at an ICE detention center in Plymouth, she said. "Officers came out behind my house, arrested him, took him away," she told Telemundo. "We are not criminals." CORRECTION (Sept. 23, 2025): An earlier version of this article mischaracterized the activities of ICE agents in the video. The article has been updated. =====FULLTEXT===== Video shows ICE with 5-year-old girl 
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 2
+     ng held at an ICE detention center in Plymouth, she said. "Officers came out behind my house, arrested him, took him away," she told Telemundo. "We are not criminals." CORRECTION (Sept. 23, 2025): An earlier version of this article mischaracterized the activities of ICE agents in the video. The article has been updated. =====FULLTEXT===== Video shows ICE with 5-year-old girl while agents attempt to arrest her fa
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 2
+     him away," she told Telemundo. "We are not criminals." CORRECTION (Sept. 23, 2025): An earlier version of this article mischaracterized the activities of ICE agents in the video. The article has been updated. =====FULLTEXT===== Video shows ICE with 5-year-old girl while agents attempt to arrest her father IE 11 is not supported. For an optimal experience visit our site on another browser. Skip to Conten
+  <<we regret>> 0
+  <<CORRECTION>> 2
+      Mejia, his wife said. He is being held at an ICE detention center in Plymouth, she said. "Officers came out behind my house, arrested him, took him away," she told Telemundo. "We are not criminals." CORRECTION (Sept. 23, 2025): An earlier version of this article mischaracterized the activities of ICE agents in the video. The article has been updated. =====FULLTEXT===== Video shows ICE with 5-year-old girl 
+
+## #251 [403] tl=274 https://thehill.com/homenews/administration/5544768-harpercollins-apologizes-melania-trump-epstein-claims/
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 0
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0
+
+## #251b [200] tl=17994 https://www.bbc.com/news/articles/c3ex07l1qvpo
+  <<correction>> 0
+  <<Correction>> 0
+  <<editor's note>> 0
+  <<Editor's Note>> 0
+  <<Editor’s note>> 0
+  <<earlier version>> 0
+  <<clarif>> 0
+  <<retract>> 2
+     d all of the investigative files related to Epstein. The relationship between the first lady and Epstein has already led to legal battles. In October 2025, for example, HarperCollins UK said it would retract passages from a book that included "unverified" claims that Donald Trump and his wife met through Epstein. Similarly, the Daily Beast retracted and apologised for an article the publication later sai
+  <<Update>> 0
+  <<we regret>> 0
+  <<CORRECTION>> 0

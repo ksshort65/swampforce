@@ -1,0 +1,2925 @@
+                United States Government Accountability Office
+                Report to Congressional Committees
+
+
+
+
+                WILDFIRES
+December 2024
+
+
+
+
+                Additional Actions
+                Needed to Address
+                FEMA Assistance
+                Challenges
+
+
+
+
+GAO-25-106862
+                                            December 2024
+
+                                            WILDFIRES
+                                            Additional Actions Needed to Address FEMA
+                                            Assistance Challenges
+Highlights of GAO-25-106862, a report to
+congressional committees
+
+
+
+
+Why GAO Did This Study                      What GAO Found
+In recent decades, much of the nation       The Federal Emergency Management Agency (FEMA), within the Department of
+has witnessed an increase in the size       Homeland Security (DHS), provided over $3.8 billion in wildfire-related
+and severity of wildfires. At the same      assistance from fiscal years 2019 through 2023. The agency obligated about
+time, development in and around             $3.2 billion in Public Assistance grants for emergency work (such as debris
+wildland areas has increased. Demand        removal and emergency protective measures), and permanent recovery work
+for federal resources to mitigate           (repairing or replacing roads, utilities, and buildings).
+against, respond to, and recover from
+these wildfires has increased.              Example of How Wildfires Can Affect Landscapes
+The FEMA Improvement, Reform, and
+Efficiency Act of 2022 includes a
+provision for GAO to examine FEMA
+wildfire assistance programs. This
+report examines (1) FEMA assistance
+to wildfire-affected communities from
+fiscal years 2019 through 2023, and (2)
+challenges communities face with this
+assistance and to what extent FEMA
+has taken steps to address them.
+GAO analyzed data from FEMA
+assistance programs from fiscal years
+2019 through 2023 and reviewed
+agency policies, guidance, and
+assessments of FEMA’s wildfire
+assistance. GAO interviewed officials       GAO interviewed officials from 22 state, local, and tribal governments about their
+from FEMA and a non-generalizable           experiences obtaining FEMA assistance for wildfires. Examples of challenges
+sample of seven state, 11 local, and        officials cited included:
+four tribal governments that obtained
+                                            •   Post-wildfire Mitigation. Wildfires destroy vegetation and damage soil,
+FEMA assistance for wildfires during
+                                                creating conditions that can increase immediate risks of flooding, erosion,
+this period. GAO conducted site visits
+to Hawaii, Washington, and the Nez
+                                                and debris flows—fast-moving, destructive landslides that often strike without
+Perce Tribe.                                    warning. GAO found that communities continue to face challenges
+                                                addressing post-wildfire risks, in part because FEMA’s assistance programs
+What GAO Recommends                             are too slow to support more timely post-wildfire mitigation. Taking steps to
+                                                provide immediate post-wildfire mitigation assistance could help foster more
+GAO is making six recommendations,
+                                                resilient communities and reduce future demand on federal resources.
+including for FEMA to provide
+immediate post-wildfire mitigation
+assistance and to establish a process       •   Fire Management and Assistance Grants (FMAG) management. State,
+to collect, assess, and incorporate             local, and tribal officials GAO interviewed said they faced challenges
+ongoing feedback from FMAG                      associated with the FMAG program, including the quantity and complexity of
+recipients. DHS concurred with five             required paperwork, and confusion over eligibility requirements. However,
+recommendations and did not concur              FEMA does not collect ongoing, nationwide feedback from state, local, and
+with one recommendation. GAO                    tribal FMAG recipients, as it does for other grant programs. Collecting,
+continues to believe all six                    assessing, and incorporating such feedback into program policy, as
+recommendations are warranted.                  appropriate, would help FEMA address challenges.
+View GAO-25-106862. For more information,
+contact Chris Currie at (404) 679-1875 or
+curriec@gao.gov.
+
+
+                                                                                       United States Government Accountability Office
+Contents
+
+
+Letter                                                                                   1
+               Background                                                                4
+               FEMA Provided Over $3.8 Billion in Wildfire Assistance from
+                 Fiscal Years 2019 through 2023                                        11
+               FEMA Has Not Fully Addressed the Challenges Communities
+                 Face in Obtaining Wildfire Assistance                                 25
+               Conclusions                                                             50
+               Recommendations for Executive Action                                    51
+               Agency Comments and Our Evaluation                                      52
+
+Appendix I     Objectives, Scope, and Methodology                                      57
+
+
+
+Appendix II    Comments from the Department of Homeland Security                       61
+
+
+
+Appendix III   GAO Contact and Staff Acknowledgments                                   66
+
+
+Tables
+               Table 1: Federal Emergency Management Agency (FEMA)
+                       Assistance Available under Major Disaster Declarations            7
+               Table 2: Number of Fire Management Assistance Grant (FMAG)
+                       Declarations and Amounts Obligated by Declaration
+                       Fiscal Year                                                     17
+               Table 3: FEMA Individual Assistance Component Program
+                       Expenditures for Wildfire Disasters Declared Fiscal Years
+                       2019-2023                                                       19
+               Table 4: FEMA Individual Assistance Component Program
+                       Obligations for Wildfire Disasters Declared Fiscal Years
+                       2019-2023                                                       20
+               Table 5: Hazard Mitigation Grant Program (HMGP) and HMGP
+                       Post-Fire Wildfire-related Projects and Obligations, by
+                       Declaration Fiscal Year                                         22
+               Table 6: Number of Projects and Amounts Obligated to Wildfire-
+                       related Building Resilient Infrastructure and Communities
+                       Projects, by Funding Cycle Fiscal Year                          24
+
+
+
+
+               Page i                                               GAO-25-106862 Wildfires
+Figures
+          Figure 1: Characteristics of Federal Emergency Management
+                   Agency (FEMA) Wildfire Declaration Types                                          5
+          Figure 2: Example of Federal Emergency Management Agency
+                   (FEMA) Assistance for Wildfires Life Cycle                                        9
+          Figure 3: Federal Emergency Management Agency (FEMA)
+                   Financial Assistance for Wildfires, Fiscal Years 2019-
+                   2023                                                                             13
+          Figure 4: Public Assistance Obligations by Project Category for
+                   Wildfire Major Disasters, Fiscal Years 2019-2023                                 15
+          Figure 5: Town of Malden, WA used Public Assistance Grants for
+                   Town Facilities, September 2023                                                  16
+          Figure 6: Number of Fire Management Assistance Grant
+                   Declarations by State, Fiscal Years 2019-2023                                    18
+          Figure 7: Wildfire Mitigation in Action: Four Counties Map Coal
+                   Seam Fires in Eastern Montana                                                    23
+          Figure 8: Wildfire Debris Removal in Lahaina, Hawaii                                      31
+          Figure 9: Example of How Wildfires Can Affect Landscapes                                  35
+          Figure 10: Process for Implementing the National Environmental
+                   Policy Act’s (NEPA) Requirements                                                 39
+
+
+
+
+          Abbreviations
+
+          DHS                     Department of Homeland Security
+          FEMA                    Federal Emergency Management Agency
+          FMAG                    Fire Management Assistance Grant
+          HMGP                    Hazard Mitigation Grant Program
+          NEPA                    National Environmental Policy Act
+
+
+
+          This is a work of the U.S. government and is not subject to copyright protection in the
+          United States. The published product may be reproduced and distributed in its entirety
+          without further permission from GAO. However, because this work may contain
+          copyrighted images or other material, permission from the copyright holder may be
+          necessary if you wish to reproduce this material separately.
+
+
+
+
+          Page ii                                                           GAO-25-106862 Wildfires
+                       Letter
+
+
+
+
+441 G St. N.W.
+Washington, DC 20548
+
+
+
+
+                       December 18, 2024
+
+                       Congressional Committees
+
+                       In August 2023, the U.S. experienced the deadliest wildfire in over a
+                       century on the island of Maui in Hawaii. Multiple fast-moving fires spread
+                       across Maui, devastating the town of Lahaina, claiming over 100 lives,
+                       displacing nearly 10,000 survivors, and damaging or destroying more
+                       than 2,000 structures. In recent decades, much of the nation has
+                       witnessed an increase in the size and severity of wildfires, as well as
+                       longer wildfire seasons. At the same time, development occurring in and
+                       around wildland areas has increased, placing more people, businesses,
+                       and infrastructure at risk. Further, in some states, insurers have increased
+                       premiums or stopped issuing new policies altogether, due in part to
+                       increasing wildfire risk and associated costs. Because of these trends,
+                       demand for federal resources to mitigate against, respond to, and recover
+                       from these wildfires has increased.
+
+                       Numerous federal departments and agencies have roles in wildfire
+                       mitigation, response, and recovery. Among them, within the Department
+                       of Homeland Security (DHS), the Federal Emergency Management
+                       Agency (FEMA) leads the nation’s efforts to mitigate against, respond to,
+                       and recover from natural disasters, including wildfires. FEMA provides
+                       direct assistance and administers grant programs to state, local,
+                       territorial, and tribal governments, as well as aid to individual survivors.
+                       FEMA also coordinates across federal agencies to help state, local,
+                       territorial, and tribal governments following wildfire disasters.
+
+                       In response to the challenges that wildfires pose for the nation, the
+                       Infrastructure Investment and Jobs Act required the establishment of the
+                       Wildland Fire Mitigation and Management Commission in 2021.1 This
+                       Commission—comprised of 56 members, including five FEMA
+                       representatives—was tasked with creating policy recommendations to
+                       address wildfire mitigation and management, and post-fire rehabilitation
+                       and recovery. In its September 2023 report (the Commission report), the
+                       Commission issued a set of policy priorities and recommendations calling
+
+
+
+
+                       1Pub. L. No. 117-58, §§ 70201-07, 135 Stat. 429, 1250-58 (2021).
+
+
+
+
+                       Page 1                                                             GAO-25-106862 Wildfires
+for greater coordination, interoperability, collaboration, and simplification
+within the wildfire system.2
+
+Our prior work has identified opportunities for the federal government to
+improve wildfire disaster mitigation, response, and recovery efforts. For
+example, in 2019, we reported on challenges that communities faced that
+were specific to and further complicated by the nature of wildfire
+disasters.3 Given that land use practices and climate trends would
+continue to increase the likelihood that severe and intense wildfires would
+affect people and communities, we recommended that FEMA
+comprehensively assess how its policies and procedures work for
+addressing large-scale fires. In response, FEMA conducted such an
+assessment in July 2021. It has also taken some actions to better align its
+operations to address wildfires.
+
+The FEMA Improvement, Reform, and Efficiency Act of 2022 includes a
+provision that we examine FEMA’s policies and procedures and identify
+ways to improve its ability to assist state, local, and tribal governments in
+recovering from wildfires, among other things.4 This report examines:
+
+1. the assistance FEMA provided to wildfire-affected communities from
+   fiscal years 2019 through 2023; and
+2. any challenges affected communities face with FEMA wildfire
+   assistance and the extent to which FEMA has taken steps to address
+   them.
+Our review examined wildfire declarations approved in fiscal years 2019
+through 2023 and assistance FEMA provided to wildfire-affected
+communities during that time.5 To answer our research questions, we
+analyzed data from fiscal years 2019 through 2023 for five major FEMA
+assistance programs: (1) Public Assistance, (2) Fire Management
+Assistance Grant (FMAG), (3) Individual Assistance, (4) Hazard Mitigation
+
+2Wildland Fire Mitigation and Management Commission, On Fire: The Report of the
+Wildland Fire Mitigation and Management Commission, (Sept. 2023).
+3GAO, Wildfire Disasters: FEMA Could Take Additional Actions to Address Unique
+Response and Recovery Challenges, GAO-20-5 (Washington, D.C.: Oct. 9, 2019).
+4Pub. L. No. 117-251, § 6, 136 Stat. 2354, 2356-57.
+
+5We use the term “wildfire declarations” to refer to Fire Management Assistance Grant,
+major disaster, or emergency declarations for wildfire incidents. For the purposes of our
+report, affected communities include state, local, and tribal governments as well as
+individual survivors.
+
+
+
+
+Page 2                                                             GAO-25-106862 Wildfires
+Grant Program (HMGP) and HMGP Post-Fire, and (5) Building Resilient
+Infrastructure and Communities. These programs represent the bulk of
+FEMA’s assistance for wildfires from fiscal years 2019 through 2023.6 To
+assess the reliability of these data, we conducted electronic data testing,
+reviewed database documentation, and interviewed knowledgeable
+agency officials about the processes for collecting and maintaining these
+data. Based on these steps, we determined the data to be sufficiently
+reliable for our purposes.
+
+We interviewed FEMA officials and officials from a non-generalizable
+sample of 22 state, local, and tribal governments that obtained FEMA
+assistance for wildfires during this period. We selected these entities to
+obtain a variety of perspectives based on factors such as geographic
+location, number and type of wildfire declarations, and—for local
+governments—socio-economic status. Information from the interviews is
+not generalizable, however.
+
+We also conducted site visits to Hawaii, Washington, and the Nez Perce
+Tribe in Idaho to obtain state, local, and tribal perspectives on FEMA
+assistance for wildfires. In September 2023, we visited five Washington
+counties and the Nez Perce Tribe, all of which received one or more
+FMAG and/or wildfire major disaster declarations from fiscal years 2019
+through 2022. We also visited Hawaii in September 2023 to observe
+response and initial recovery efforts after the August 2023 wildfire major
+disaster. We conducted these visits to obtain state, local, and tribal
+perspectives on obtaining FEMA assistance; however, information from
+the visits is not generalizable. Lastly, we reviewed agency guidance, as
+well as assessments of FEMA’s wildfire assistance and relevant laws.
+See appendix I for additional details about our scope and methodology.
+
+We conducted this performance audit from May 2023 to December 2024
+in accordance with generally accepted government auditing standards.
+Those standards require that we plan and perform the audit to obtain
+sufficient, appropriate evidence to provide a reasonable basis for our
+findings and conclusions based on our audit objectives. We believe that
+
+
+
+
+6Public Assistance obligation amounts are as of September 2023; FMAG obligations
+amounts are as of September 2023; Individual Assistance expenditure and obligation
+amounts are as of October or November 2023 depending on the program; HMGP and
+HMGP Post-Fire obligation amounts are as of October 2023; and Building Resilient
+Infrastructure and Communities obligation amounts are as of September 2023.
+
+
+
+
+Page 3                                                         GAO-25-106862 Wildfires
+                           the evidence obtained provides a reasonable basis for our findings and
+                           conclusions based on our audit objectives.
+
+
+Background
+FEMA Assistance for        FEMA assists state, local, and tribal governments in addressing wildfire
+Wildfires                  threats as the lead federal agency for disaster mitigation, response, and
+                           recovery. While state and local entities have the primary responsibility for
+                           managing wildfires on non-federal land, these entities can seek FEMA
+                           assistance if a wildfire exceeds, or threatens to exceed, their ability to
+                           effectively respond. Additionally, FEMA may provide technical assistance
+                           and training and technological support to eligible state, local, and tribal
+                           governments.
+
+Federal Declarations for   As shown in figure 1, FEMA provides most assistance for wildfires
+Wildfires                  through three types of declarations: 1) Fire Management Assistance
+                           Grant (FMAG) declarations, 2) major disaster declarations, and 3)
+                           emergency declarations.7
+
+
+
+
+                           7These three types of declarations are authorized under the Robert T. Stafford Disaster
+                           Relief and Emergency Assistance Act (Stafford Act). See 42 U.S.C. §§ 5170, 5187, 5191.
+
+
+
+
+                           Page 4                                                           GAO-25-106862 Wildfires
+Figure 1: Characteristics of Federal Emergency Management Agency (FEMA) Wildfire Declaration Types
+
+
+
+
+                                       Notes: FEMA may approve Fire Management Assistance Grant declarations for wildfire events only,
+                                       whereas emergency and major disaster declarations may be approved for all eligible hazards.
+                                       a
+                                        While emergency declarations can authorize some Individual Assistance programs, it is rare.
+                                       FEMA’s Individual Assistance program consists of multiple component programs, including the
+                                       Individuals and Households Program, which provides assistance to eligible uninsured or underinsured
+                                       individuals and households with necessary expenses and serious needs due to the disaster.
+
+
+                                           FMAG declarations. When a wildfire burns on public or private land
+                                           and threatens to become a major disaster, a state may request an
+                                           FMAG declaration.8 While the fire is burning uncontrolled, a state can
+                                           submit a verbal request for an FMAG declaration to the designated
+                                           FEMA regional office, followed within 14 days by a formal written
+
+                                       842 U.S.C. § 5187(a). A state’s governor or governor’s authorized representative submits
+                                       FMAG declaration requests on behalf of the state and/or jurisdictions within the state.
+                                       While no territories received FMAG declarations in our time period, territories can also
+                                       request FMAG declarations from FEMA directly.
+
+
+
+
+                                       Page 5                                                                  GAO-25-106862 Wildfires
+    request.9 The FEMA regional administrator then either approves or
+    denies the request based on FMAG declaration criteria and after
+    consulting with relevant officials from the U.S. Forest Service or
+    bureaus within the U.S. Department of the Interior about technical
+    aspects of the fire.10
+    A state approved for an FMAG declaration may then apply for grant
+    funding to reimburse eligible expenses. The state must demonstrate
+    that the wildfire meets pre-established cost thresholds when
+    submitting the grant application.11 Eligible FMAG costs include
+    equipment and supplies, labor costs, temporary repairs of damage
+    caused by firefighting activities, mobilization and demobilization of
+    resources, and limited costs of pre-positioning fire prevention or
+    suppression resources.12 Additionally, FEMA authorizes Hazard
+    Mitigation Grant Program (HMGP) Post-Fire for affected communities,
+    which funds post-disaster mitigation projects. HMGP and HMGP Post-
+    Fire provide grants to rebuild while mitigating future natural disaster
+    losses.
+    Major disaster declarations. A state or tribal government can
+    request that the President declare a major disaster when a wildfire is
+    of such severity and magnitude that an effective response is beyond
+    state, local, and/or tribal capabilities and federal assistance is
+    therefore necessary.13 According to FEMA guidance, the agency will
+    generally not recommend a major disaster declaration for a wildfire
+    unless the fire causes significant impacts and costs that cannot be
+
+
+
+9Each of FEMA’s 10 regions is led by a regional administrator.
+
+10The regional administrator is to consider four criteria when evaluating a request for an
+FMAG declaration: (1) threat to lives and improved property, including threats to critical
+facilities and infrastructure and critical watershed areas; (2) availability of state and local
+firefighting resources; (3) high fire danger conditions, and (4) potential major economic
+impact. 44 C.F.R. § 204.21(b).
+11To apply for grants under an approved FMAG declaration, the state must demonstrate
+that it has met either the individual or cumulative fire cost threshold. The individual fire
+cost is based on total eligible costs for the declared fire and the cumulative fire cost is
+based on total eligible costs incurred during the calendar year for all declared fires and
+total costs incurred on non-declared wildfires. 44 C.F.R. § 204.51(b). See FEMA, Fire
+Management Assistance Grant Program and Policy Guide, (Washington, D.C.: 2021) for
+more information.
+1244 C.F.R. § 204.42.
+
+13See 42 U.S.C. § 5170. While no territories received major disaster declarations for
+wildfires during our time period, territories can also request major disaster declarations.
+
+
+
+
+Page 6                                                                 GAO-25-106862 Wildfires
+                                                                 addressed by the FMAG program.14 A major disaster declaration may
+                                                                 provide a wide range of federal support through three key grant
+                                                                 programs—Public Assistance, Individual Assistance, and HMGP.
+                                                                 Table 1 describes the types of assistance available under these
+                                                                 programs.
+
+Table 1: Federal Emergency Management Agency (FEMA) Assistance Available under Major Disaster Declarations
+
+FEMA Program                           Who may apply directly                    Assistance provided
+Public Assistance                      Eligible state, local, territorial,       •     Emergency work, such as debris removal and emergency
+                                       and tribal governments, and                     protective measures.
+                                       certain nonprofit organizations           •     Permanent work, such as repairing or replacing roads and
+                                                                                       bridges, water control facilities, buildings and equipment, utilities,
+                                                                                       and parks or other recreational facilities.
+Individual Assistance                  Eligible disaster survivors and           •     Housing assistance, such as rental assistance and/or home
+                                       households                                      rebuilding assistance.
+                                                                                 •     Other needs assistance, such as funeral expenses or medical
+                                                                                       costs.
+                                                                                 •     Transitional sheltering assistance for temporary sheltering via
+                                                                                       hotels.
+                                                                                 •     Disaster legal services, unemployment assistance, case
+                                                                                       management, and crisis counseling services.
+Hazard Mitigation Grant                State, territorial, and tribal            •     Mitigation projects designed to reduce risk and the potential
+Program                                governmentsa                                    impacts of future disasters.
+                                                                                 •     Examples of possible project types include property acquisition,
+                                                                                       flood risk reduction, wildfire mitigation, retrofits, secondary power
+                                                                                       sources (e.g., generators), and warning systems.
+Source: GAO summary of FEMA documentation and federal law. | GAO-25-106862
+
+                                                           Note: A state, territorial, or tribal government can request that the President declare a major disaster
+                                                           when a wildfire is of such severity and magnitude that an effective response is beyond state, local,
+                                                           and/or tribal capabilities and federal assistance is therefore necessary. Not all major disaster
+                                                           declarations authorize all three of these assistance programs.
+                                                           a
+                                                            A governor, tribal chief executive, or equivalent, may request that Hazard Mitigation Grant Program
+                                                           assistance be available throughout the state, local, territorial, or tribal area or only in specific
+                                                           jurisdictions. Local governments can apply for Hazard Mitigation Grant Program assistance as sub-
+                                                           applicants. Depending on the declaration, jurisdictions not affected directly by the disaster may qualify
+                                                           for assistance.
+
+
+                                                                 FEMA can also provide direct federal assistance under major disaster
+                                                                 and emergency declarations. For example, FEMA can mobilize mass
+                                                                 care resources, including providing meals and water. In some cases
+                                                                 where a declaration authorizes Individual Assistance, FEMA may
+                                                                 provide direct temporary housing, such as manufactured housing
+                                                                 units. FEMA can also “mission assign” tasks to other federal
+
+
+                                                           14FEMA, Wildfires and Declarations: an Overview, (Washington, D.C.: Apr. 2024).
+
+
+
+
+                                                           Page 7                                                                       GAO-25-106862 Wildfires
+    agencies.15 These tasks can include debris removal, hazardous waste
+    disposal, mortuary and forensic services, search and rescue, and
+    more.
+    The President declared 13 major disasters for wildfires from fiscal
+    years 2019 through 2023. California received five such declarations,
+    Colorado two, and Hawaii, Montana, New Mexico, Oregon,
+    Washington, and the Confederated Tribes of the Colville Reservation
+    one each.
+    Emergency declarations. A state or tribal government may request
+    an emergency declaration, which is issued by the President.16
+    According to FEMA, emergency declarations are most often declared
+    for wildfires when multiple fires are burning in a state simultaneously
+    and the state needs direct federal support. Such a declaration makes
+    limited federal financial and direct assistance available, such as for
+    emergency response work under Public Assistance.17 In some cases,
+    emergency declarations may authorize some Individual Assistance
+    programs for survivors. The President declared three emergency
+    declarations for wildfires during fiscal years 2019 through 2023, with
+    California receiving two and Oregon one. Each of these incidents later
+    received major disaster declarations.
+The type of declaration and nature of the wildfire determine the categories
+of assistance FEMA provides. For example, a state may initially request
+an FMAG declaration to obtain reimbursement for fire suppression
+activities for a wildfire threatening significant destruction if not contained.
+If the wildfire cannot be contained and causes significant damage, a state
+may request a major disaster declaration to receive additional types of
+assistance. Figure 2 demonstrates key decision points in FEMA’s
+provision of assistance for wildfires.
+
+
+
+
+1542 U.S.C. §§ 5170a(1), 5192(a)(1). The Stafford Act authorizes the President to direct
+any federal agency, with or without reimbursement, to utilize its authorities and the
+resources granted to it under federal law in support of state and local response efforts for
+emergencies. This tasking authority, delegated to the FEMA Administrator, is carried out
+through a mission assignment.
+1642 U.S.C. § 5191. While no territories received emergency declarations for wildfire in our
+time period, territories can also request emergency declarations.
+17Per statute, total assistance under a single emergency declaration may not exceed $5
+million unless continued emergency assistance is immediately required, there is a
+continued and immediate risk to lives, property, public health, or safety; and necessary
+assistance will not otherwise be provided on a timely basis. 42 U.S.C. § 5193.
+
+
+
+
+Page 8                                                              GAO-25-106862 Wildfires
+Figure 2: Example of Federal Emergency Management Agency (FEMA) Assistance for Wildfires Life Cycle
+
+
+
+
+                                       Notes: This figure represents one example of a wildfire and the different declarations and assistance
+                                       paths that it could take. The timelines are not necessarily linear as several types of assistance could
+                                       occur simultaneously and each wildfire has unique needs. Initial response efforts start at the local
+                                       level and involve state and federal assistance when necessary. Eligibility for state, local, territorial,
+                                       and tribal governments to apply directly for funding varies by program. Additionally, while assistance
+                                       to individuals may be authorized under an emergency declaration, it is rare.
+
+
+
+
+                                       Page 9                                                                       GAO-25-106862 Wildfires
+Competitive Grants and Non-   FEMA also provides financial assistance to wildfire-affected communities
+financial Assistance          through competitive grant programs for mitigation and preparedness.18
+                              These programs are not activated in response to any type of declaration,
+                              but instead operate on an annual fiscal year funding cycle. For example,
+                              Building Resilient Infrastructure and Communities is an annual hazard
+                              mitigation grant program designed to reduce risks from disasters and
+                              natural hazards.19 State, tribal, and territorial applicants can apply for
+                              grants for mitigation projects, capability and capacity building activities,
+                              and management costs.20 Mitigation projects are construction projects
+                              designed to increase resilience and protect life and property from natural
+                              hazards. Capability and capacity building activities are designed to
+                              enhance knowledge and skills of the current workforce or improve the
+                              administration of mitigation assistance (e.g., establishing partnerships,
+                              project scoping, hazard mitigation planning).21
+
+                              In addition to financial assistance, FEMA provides other forms of
+                              assistance to wildfire-affected communities, such as technical assistance,
+                              and training and technological support. FEMA’s technical assistance
+                              includes educating potential applicants about programs they may be
+                              eligible for, assisting applicants through the application process, and
+                              creating guidance documents for applicants and recipients. Additionally,
+                              FEMA’s U.S. Fire Administration provides training and technological
+                              support to help communities address structural and wildfire needs. For
+                              example, its National Fire Academy provides fire and emergency
+                              response training, and its National Fire Data and Research Center
+                              conducts research into firefighting methods and technologies.
+
+
+                              18FEMA administers the Emergency Management Performance Grant and Fire Grants
+                              programs (Assistance to Firefighters, Staffing for Adequate Fire and Emergency
+                              Response, and Fire Prevention and Safety). We did not include these programs in our
+                              scope because the programs are designed in a way that makes it difficult to isolate
+                              spending for wildfires, specifically. For example, Fire Grants fund emergency response
+                              capabilities for both structural fires and wildfires.
+                              19After each major disaster is declared, FEMA may set aside 6 percent of the estimate
+                              aggregate amounts of grants to be made for the disaster for the Building Resilient
+                              Infrastructure and Communities program. See 42 U.S.C. § 5133(i). On an annual basis,
+                              FEMA assesses the amount of funding set aside for the program and determines how
+                              much will be available for the next application period.
+                              20States and territories may submit applications on behalf of sub-applicants, which can
+                              include local governments. Tribes may submit applications directly to FEMA as an
+                              applicant or submit as a sub-applicant to a state.
+                              21GAO initiated a review of the Building Resilient Infrastructure and Communities program
+                              in summer 2024 that will assess program processes and applicants’ access to grants.
+
+
+
+
+                              Page 10                                                           GAO-25-106862 Wildfires
+Other Federal Agencies’    In addition to FEMA, multiple other federal entities have responsibilities
+Responsibilities for       for federal wildfire mitigation, response, and recovery efforts. For
+                           example, the U.S. Forest Service within the Department of Agriculture
+Wildfires
+                           and the Bureau of Indian Affairs, Bureau of Land Management, U.S. Fish
+                           and Wildlife Service, and National Park Service within the Department of
+                           the Interior, are responsible for managing wildfires on federal lands they
+                           oversee. The U.S. Forest Service is the lead agency for wildfire response
+                           under the National Response Framework, while the Bureau of Indian
+                           Affairs provides wildfire protection for approximately 55 million acres of
+                           lands held in trust by the U.S. for Tribes, individuals, and Alaska
+                           Natives.22 This protection includes wildfire prevention, fuels management,
+                           response, and post-wildfire recovery activities.
+
+                           Some of these agencies or departments administer programs that state,
+                           local, and/or tribal governments could access to address wildfire
+                           hazards.23 Additionally, state, local and tribal governments can enter into
+                           mutual aid agreements with federal agencies to enable coordinated
+                           responses. Mutual aid agreements may authorize mutual aid between two
+                           or more neighboring communities, among jurisdictions within a state,
+                           between states, federal agencies, or internationally. Under these
+                           agreements, federal firefighters may respond to wildfires burning on state
+                           or private land and vice versa.
+
+                           FEMA provided billions of dollars in wildfire-related financial assistance
+FEMA Provided Over         through five primary assistance programs from fiscal years 2019 through
+$3.8 Billion in Wildfire   2023.24 Specifically, FEMA obligated $3.6 billion across four programs—
+                           (1) Public Assistance, (2) Fire Management Assistance Grant, (3) Hazard
+Assistance from            Mitigation Grant Program (HMGP) and HMGP Post-Fire, and (4) Building
+Fiscal Years 2019          Resilient Infrastructure and Communities—and selected components of
+through 2023
+                           22FEMA, National Response Framework, Fourth Edition, (Washington D.C.: Oct. 2019).
+
+                           23For example, in 2021, the Infrastructure Improvement and Jobs Act required the Forest
+                           Service to establish and administer the Community Wildfire Defense Grant Program. 16
+                           U.S.C. § 6592(f). The program aims to help at-risk local communities and Tribes plan for
+                           and reduce wildfire risk.
+                           24In addition to the assistance described in this section, the Hermit’s Peak/Calf Canyon
+                           Fire Assistance Act directed FEMA to create the Hermit’s Peak/Calf Canyon Claims Office
+                           to disburse compensation to claimants affected by the Hermit’s Peak/Calf Canyon Fire.
+                           Pub. L. No 117-180, 136 Stat. 2114, 2168 (2022). A total of $3.95 billion has been
+                           appropriated to carry out the Act. Pub. L. No. 117-180, § 136, 136 Stat. 2114, 2122
+                           (2022); Pub. L. No. 117-328, 136 Stat. 5214 (2022). This compensation is separate and
+                           different from the assistance FEMA provides in the immediate aftermath of a fire.
+
+
+
+
+                           Page 11                                                           GAO-25-106862 Wildfires
+its Individual Assistance program, as seen in figure 3.25 Additionally,
+FEMA expended about $197 million for the Individuals and Households
+and Transitional Sheltering Assistance programs—two of its Individual
+Assistance component programs for which the agency tracks
+expenditures rather than obligations.26 Of the total amount FEMA
+obligated, about 89 percent, or $3.2 billion, was for emergency and
+permanent recovery work through Public Assistance. For Building
+Resilient Infrastructure and Communities, we identified $12 million in
+wildfire-related obligations during the program’s fiscal year 2020 through
+2022 funding cycles. FEMA obligated an additional $386 million in
+assistance under the Fire Management Assistance Grant program and
+HMGP and HMGP Post-Fire.
+
+
+
+
+25For Public Assistance, FMAG, and Individual Assistance we analyzed assistance
+provided through wildfire declarations approved in fiscal years 2019 through 2023. For
+HMGP and HMGP Post-Fire, we analyzed wildfire-related projects for all declarations
+approved from fiscal years 2019 through 2023. For Building Resilient Infrastructure and
+Communities, we analyzed assistance for wildfire-related projects provided through its
+fiscal year 2020 through 2022 funding cycles.
+26According to FEMA officials, FEMA tracks expenditures rather than obligations for these
+programs and noted the obligations reported for these programs are estimates. When a
+disaster starts, FEMA obligates a pool of money that the Individuals and Household
+Program and Transitional Sheltering Assistance programs then draws down by making
+payments to individuals. FEMA reconciles the obligations and expenditures during the
+disaster closeout process.
+
+
+
+
+Page 12                                                          GAO-25-106862 Wildfires
+Figure 3: Federal Emergency Management Agency (FEMA) Financial Assistance for Wildfires, Fiscal Years 2019-2023
+
+
+
+
+                                        Notes: Figures are rounded and include obligations or expenditures for declarations approved in fiscal
+                                        years 2019-2023, except for Building Resilient Infrastructure and Communities, which is an annual
+                                        grant program. The program’s first funding cycle was in 2020 and as of the time of our data request in
+                                        October 2023, FEMA had not yet closed the application period for the fiscal year 2023 funding cycle.
+                                        During this period, FEMA was in the process of making obligations and expenditures for declarations
+                                        approved in fiscal years 2019 through 2023 and FEMA may continue to obligate and expend funds in
+                                        future years for those declarations. Additionally, FEMA was in the process of making obligations for
+                                        Building Resilient Infrastructure and Communities projects selected in fiscal years 2020 through 2022.
+                                        FEMA may also de-obligate funds, especially at the end of the process. As a result, obligated and
+                                        expended amounts for these programs will change over time.
+                                        a
+                                         FEMA’s Public Assistance assists communities through emergency assistance to save lives and
+                                        protect property and/or assistance to permanently restore community infrastructure.
+                                        b
+                                         FEMA tracks obligations for the following Individual Assistance component programs: Disaster Case
+                                        Management, Disaster Unemployment Assistance, Crisis Counseling Assistance and Training
+                                        Program, and Disaster Legal Services.
+                                        c
+                                          Applicants can use Hazard Mitigation Grant Program and Hazard Mitigation Grant Program Post-Fire
+                                        to address any type of natural disaster, and many projects are multi-hazard in nature. We considered
+                                        a project wildfire-related if applicants chose a project type containing the word “wildfire” and/or if they
+                                        indicated the primary hazard type for the project was fire.
+                                        d
+                                         In our analysis, wildfire-related projects are those for which the applicant selected “fire” as a primary,
+                                        secondary, or tertiary hazard. Some of these projects are multi-hazard planning projects, including
+                                        developing hazard mitigation plans.
+
+
+
+
+                                        Page 13                                                                       GAO-25-106862 Wildfires
+e
+ FEMA reported obligating about $212 million for the Individuals and Households Program and about
+$69 million for Transitional Sheltering Assistance for disasters declared in fiscal years 2019 through
+2023. According to FEMA officials, FEMA tracks expenditures, rather than obligations, for these
+programs and noted the obligations reported for these programs are estimates. When a disaster
+starts, FEMA obligates a pool of money that the Individuals and Household Program and Transitional
+Sheltering Assistance programs then draws down by making payments to individuals and to hotels,
+respectively. FEMA reconciles the obligations and expenditures during the disaster closeout process.
+
+
+Public Assistance. FEMA obligated about $3.2 billion for Public
+Assistance projects for 12 wildfire major disaster declarations approved
+from fiscal years 2019 through 2023 across six states and one Tribe, as
+of September 2023.27 FEMA obligated over $2.5 billion for emergency
+work, such as debris removal and protective measures; about $416
+million for permanent work, such as projects to rebuild or repair bridges,
+roads, and public utilities; and about $237,000 for state administrative
+costs, as shown in figure 4.
+
+
+
+
+27Obligations data are as of September 2023. FEMA was in the process of making
+obligations for declarations approved in fiscal years 2019 through 2023 and may continue
+to make obligations in future years for those declarations. Additionally, FEMA may de-
+obligate funds, especially at the end of the process. As a result, obligated amounts will
+change over time. The six states are California, Colorado, Washington, Hawaii, New
+Mexico, and Oregon. Montana also received a major disaster declaration in 2021 (DR-
+4623) under which the President authorized Public Assistance. FEMA Public Assistance
+project data did not include any Public Assistance projects for that disaster. FEMA also
+obligated Public Assistance funds to the Confederated Tribes of the Colville Reservation
+under the Tribe’s own major disaster declaration. Tribes may also have received Public
+Assistance under a state’s major disaster declaration, but the data we obtained did not
+allow us to identify these cases. Because the wildfire incidents that received emergency
+declarations in our time period also later received major disaster declarations, all
+obligations for those wildfires are under the corresponding major disaster declarations, per
+FEMA officials.
+
+
+
+
+Page 14                                                                    GAO-25-106862 Wildfires
+Figure 4: Public Assistance Obligations by Project Category for Wildfire Major
+Disasters, Fiscal Years 2019-2023
+
+
+
+
+Notes: The Federal Emergency Management Agency (FEMA)’s Public Assistance grant program
+assists communities through emergency assistance to save lives and protect property and/or
+assistance to permanently restore community infrastructure. FEMA obligated about $3.2 billion
+through the Public Assistance program for wildfire major disaster declarations approved in fiscal
+years 2019 through 2023, as of September 2023. A state, territorial, or tribal government can request
+that the President declare a major disaster when a wildfire is of such severity and magnitude that
+effective response is beyond the state, local, territorial, and/or tribal capabilities and federal
+assistance is necessary.
+
+
+Debris removal comprised a higher proportion of Public Assistance
+obligations for wildfire disasters (51 percent) compared to non-wildfire
+disasters during the same time period (24 percent). Wildfires create
+unique debris removal challenges because they typically leave no
+remaining structures. Additionally, the resulting ash contains
+contaminants that must be carefully removed and disposed of before
+survivors can return to their properties. Therefore, the wildfire debris
+
+
+
+
+Page 15                                                                   GAO-25-106862 Wildfires
+                                        removal process can be costlier and more complicated than for other
+                                        types of disaster debris, as we have previously reported.28
+
+                                        In addition to debris removal, local and tribal officials we interviewed used
+                                        Public Assistance grants for a variety of purposes, such as replacing
+                                        guardrails and fencing, personnel costs, repairing electrical poles and
+                                        lines, and rebuilding public facilities. For example, the town of Malden in
+                                        Whitman County, Washington, received Public Assistance to rebuild
+                                        public infrastructure and to provide temporary structures for key
+                                        government services following a 2020 wildfire major disaster. The town
+                                        used Public Assistance grants for building a temporary fire station and
+                                        rebuilding a new multi-purpose town hall building, among other projects,
+                                        as shown in figure 5.
+
+Figure 5: Town of Malden, WA used Public Assistance Grants for Town Facilities, September 2023
+
+
+
+
+                                        Fire Management Assistance Grants. As of September 30, 2023,
+                                        FEMA obligated about $275 million through 89 of the 209 FMAG
+                                        declarations approved in fiscal years 2019 through 2023, as shown in
+
+
+
+                                        28GAO-20-5.
+
+
+
+
+                                        Page 16                                                  GAO-25-106862 Wildfires
+table 2.29 For FMAG declarations with associated grants, the median
+amount obligated by declaration was about $417,000. We also found
+about 41 percent of FMAG declarations and more than half of the fire
+mitigation assistance grant funding, were for wildfires approved in fiscal
+year 2020.
+
+Table 2: Number of Fire Management Assistance Grant (FMAG) Declarations and
+Amounts Obligated by Declaration Fiscal Year
+
+                                                                Number of FMAG
+Declaration                     Number of FMAG                  Declarations with             Total Amount
+Fiscal Year                        Declarations                      Obligations                 Obligateda
+2019                                                 15                              11         $32,600,000
+2020                                                 85                              44        $149,900,000
+2021                                                 40                              18         $80,800,000
+2022                                                 38                              16         $11,900,000
+2023                                                 31                                0                 $0
+Total                                              209                               89        $275,200,000
+Source: GAO analysis of Federal Emergency Management Agency (FEMA) data. | GAO-25-106862
+
+Note: A state or territory may request an FMAG declaration when a wildfire burns on public or private
+land and threatens to become a major disaster. The FMAG program assists in reimbursement for
+equipment, supplies, and personnel.
+a
+ Amounts obligated are rounded to the nearest hundred thousand, by the fiscal year the FMAG
+declaration was approved, and are as of the end of fiscal year 2023. FEMA was in the process of
+making obligations for declarations approved in fiscal years 2019 through 2023 and may continue to
+make obligations in future years for those declarations. Additionally, FEMA may de-obligate funds,
+especially at the end of the process. As a result, obligated amounts will change over time. FEMA
+officials provided several reasons FMAG declarations may not have obligations, such as applications
+being in process, declarations being rolled up into major disaster declarations, or applicants not
+meeting cost thresholds to receive FMAG grants under an approved declaration.
+
+
+The majority of FMAG declarations were in western states, as shown in
+figure 6. Four states—California, Oregon, Alaska, and Arizona—
+represented about 43 percent of the FMAG declarations (90 of 209) and
+received about 94 percent of grant obligations (about $258 million).
+Counties we spoke with reported using FMAG funding for purposes such
+
+
+29FEMA was in the process of making obligations for FMAG declarations approved in
+fiscal years 2019 through 2023 and may continue to make obligations in future years for
+those declarations. Additionally, FEMA may de-obligate funds, especially at the end of the
+process. As a result, obligated amounts will change over time. FEMA officials provided
+several reasons FMAG declarations may not have obligations, including applications
+being in process or declarations later being rolled up into major disaster declarations. In
+such cases, FEMA typically makes any obligations under the major disaster declaration.
+Additionally, applicants must meet cost thresholds to receive FMAG grants under an
+approved declaration.
+
+
+
+
+Page 17                                                                               GAO-25-106862 Wildfires
+                                        as overtime pay, roadblocks, temporary firefighter pay, or replacing or
+                                        purchasing equipment such as firetrucks.
+
+Figure 6: Number of Fire Management Assistance Grant Declarations by State, Fiscal Years 2019-2023
+
+
+
+
+                                        Note: A state or territory may request a Fire Management Assistance Grant declaration when a
+                                        wildfire burns on public or private land and threatens to become a major disaster.
+
+
+                                        Individual Assistance. FEMA authorized Individual Assistance for eight
+                                        of the 13 wildfire major disasters declared in fiscal years 2019 through
+                                        2023. FEMA tracks expenditures for two of its Individual Assistance
+                                        component programs—Individuals and Households Program and
+                                        Transitional Sheltering Assistance—and obligations for the other
+                                        programs. As shown in table 3, the Individuals and Households Program
+                                        accounted for 97 percent ($191 million) of FEMA’s expenditures for these
+
+
+
+
+                                        Page 18                                                                 GAO-25-106862 Wildfires
+two programs for wildfire disasters during this time.30 FEMA’s Individuals
+and Households Program provides financial assistance and direct
+services to eligible individuals and households who have uninsured or
+underinsured necessary expenses and serious needs due to the disaster.
+
+Table 3: FEMA Individual Assistance Component Program Expenditures for Wildfire
+Disasters Declared Fiscal Years 2019-2023
+
+Individual Assistance Component                                Number of disasters
+Program Name                                                     with expenditures             Expenditures
+Individuals and Households Program-                                                        8    $138 million
+Housing Assistance
+Individuals and Households Program- Other                                                  8      $53 million
+Needs Assistance
+Transitional Sheltering Assistance                                                         3       $6 million
+Source: GAO analysis of Federal Emergency Management Agency (FEMA) data. | GAO-25-106862
+
+Notes: FEMA’s Individuals and Households Program provides financial assistance and direct services
+to eligible individuals and households who have uninsured or underinsured necessary expenses and
+serious needs due to the disaster. The Transitional Sheltering Assistance program provides
+temporary sheltering in hotels for survivors. Expenditure data for the Individuals and Households
+Program are as of October 2023. Transitional sheltering assistance expenditures are as of November
+2023. FEMA was in the process of making expenditures for declarations approved in fiscal years
+2019 through 2023 and may continue to make expenditures in future years for those declarations. As
+a result, expended amounts will change over time.
+
+
+FEMA also obligated about $63 million through its other Individual
+Assistance programs, which provide assistance for services such as
+counseling, legal advice, and case management, as shown in table 4.31
+
+
+
+
+30Expenditure data for the Individuals and Households Program component of Individual
+Assistance are as of October 2023. Transitional sheltering assistance expenditures are as
+of November 2023. FEMA was in the process of making expenditures for declarations
+approved in fiscal years 2019 through 2023 and may continue to make expenditures in
+future years for those declarations. As a result, expended amounts will change over time.
+31Obligations for these Individual Assistance programs are as of November 2023. FEMA
+was in the process of making obligations for declarations approved in fiscal years 2019
+through 2023 and may continue to make obligations in future years for those declarations.
+Additionally, FEMA may de-obligate funds, especially at the end of the process. As a
+result, obligated amounts will change over time. For more information about Individual
+Assistance component programs, see GAO-20-5, Appendix I.
+
+
+
+
+Page 19                                                                               GAO-25-106862 Wildfires
+Table 4: FEMA Individual Assistance Component Program Obligations for Wildfire Disasters Declared Fiscal Years 2019-2023
+
+                                                                                                                Number of disasters
+Individual Assistance Component Program Name                                                                       with obligations               Obligations
+Disaster Case Management                                                                                                                7           $33 million
+    Provides financial assistance to state, local, territorial, and tribal government
+    agencies, or qualified private organizations to provide case management services to
+    survivors.
+Crisis Counseling Assistance and Training Program                                                                                       8           $23 million
+     Provides financial assistance to eligible state, local, territorial, and tribal governments
+     and non-governmental organizations to provide survivors with supportive crisis
+     counseling, development of coping skills, and connections to appropriate resources,
+     among other things.
+Disaster Unemployment Assistance                                                                                                        8             $7 million
+    Provides unemployment benefits and re-employment assistance to survivors who are
+    not eligible for regular state unemployment insurance.
+Disaster Legal Services                                                                                                                 8         $0.03 million
+    Provides legal aid to low-income survivors through an agreement with the Young
+    Lawyers Division of the American Bar Association.
+Source: GAO analysis of Federal Emergency Management Agency (FEMA) data. | GAO-25-106862
+
+                                                           Notes: Obligations for these Individual Assistance component programs are as of November 2023.
+                                                           FEMA was in the process of making obligations for declarations approved in fiscal years 2019
+                                                           through 2023 and may continue to make obligations in future years for those declarations.
+                                                           Additionally, FEMA may de-obligate funds, especially at the end of the process. As a result, obligated
+                                                           amounts will change over time.
+
+
+                                                           For FEMA’s largest Individual Assistance component program—the
+                                                           Individuals and Households Program—we previously reported that from
+                                                           2010 through 2019, the median amount provided to individual survivors
+                                                           for all hazards was relatively small compared to the maximum allowable
+                                                           amount.32 According to FEMA analysis of program data from 2013
+                                                           through 2023, the median award was $1,000 for non-wildfire disasters
+                                                           and $3,150 for wildfire disasters, which tend to completely destroy
+                                                           homes. FEMA officials explained that most individuals received relatively
+                                                           small awards compared to the maximum amounts because most
+                                                           individuals have homeowner’s insurance. Until recent regulatory changes,
+                                                           FEMA did not award any housing assistance to individuals who received
+                                                           at least the maximum FEMA award for housing repairs from their
+
+                                                           32The maximum amounts individuals may receive for housing and other needs assistance
+                                                           are capped by statute. 42 U.S.C. § 5174(h). FEMA adjusts the maximum amounts for
+                                                           housing assistance and other needs assistance for inflation annually. See 44 C.F.R.
+                                                           § 206.110(b). In fiscal year 2024, for example, the maximum amount was $42,500 each
+                                                           for housing assistance and other needs assistance. 88 Fed. Reg. 72,520 (Oct. 20, 2023).
+                                                           GAO, Disaster Assistance: Additional Actions Needed to Strengthen FEMA’s Individuals
+                                                           and Households Program, GAO-20-503 (Washington, D.C.: Sept. 30, 2020).
+
+
+
+
+                                                           Page 20                                                                   GAO-25-106862 Wildfires
+insurance company, even if there was a gap between their insurance
+coverage and their losses. For disasters with Individual Assistance
+declared on or after March 22, 2024, FEMA will now award housing
+assistance to those who receive insurance payouts that exceed the
+FEMA maximum award for their losses, up to the statutory maximums, if
+they have eligible unmet needs or uncovered losses.33 FEMA officials
+said they expect the amounts of Individual Assistance the agency awards
+to increase due to this change.
+
+HMGP and HMGP Post-Fire. Relatively few of the HMGP and HMGP
+Post-Fire projects (about 6 percent, or 393 of 6,798) submitted under
+declarations approved in fiscal years 2019 through 2023 were wildfire-
+related.34 For wildfire-specific declarations, this increased to 35 percent
+(311 of 893) of HMGP and HMGP Post-Fire projects that were wildfire-
+related. FEMA obligated about $111 million for these wildfire mitigation
+projects as of October 2023, as shown in table 5.35 Applicants may submit
+HMGP and HMGP Post-Fire projects relating to any type of eligible
+hazard, not only the type of hazard that led to the declaration. For
+example, if a state receives a major disaster or FMAG declaration for a
+wildfire, communities can apply for HMGP or HMGP Post-Fire funding to
+mitigate against other specific hazards, such as earthquakes, or for multi-
+hazard projects, such as updating hazard mitigation plans.
+
+
+
+
+33See 44 C.F.R. § 206.113(a)(5). FEMA has also made other regulatory changes to the
+Individual Assistance program intended to improve access to assistance for survivors. 89
+Fed. Reg. 3990 (Jan 22, 2024). See also FEMA, Biden-Harris Administration Reforms
+Disaster Assistance Program to Help Survivors Recover Faster, (Washington, D.C.: 2024)
+for more information.
+34We identified 393 of 6,798 total HMGP and HMGP Post-Fire projects that were related
+to wildfire mitigation. We considered a project wildfire-related if applicants chose a project
+type containing the word “wildfire” and/or if they indicated the primary hazard type for the
+project was fire.
+35FEMA was in the process of making obligations for declarations approved in fiscal years
+2019 through 2023 and may continue to make obligations in future years for those
+declarations. Additionally, FEMA may de-obligate funds, especially at the end of the
+process. As a result, obligated amounts will change over time.
+
+
+
+
+Page 21                                                              GAO-25-106862 Wildfires
+Table 5: Hazard Mitigation Grant Program (HMGP) and HMGP Post-Fire Wildfire-
+related Projects and Obligations, by Declaration Fiscal Year
+
+Declaration                       Number of Wildfire-related
+Fiscal Year                                        Projectsa                      Total Amount Obligatedb
+2019                                                                88                          $41,200,000
+2020                                                              159                           $54,900,000
+2021                                                              106                           $14,200,000
+2022                                                                39                             $300,000
+2023                                                                  1                                  $0
+Total                                                             393                          $110,600,000
+Source: GAO analysis of Federal Emergency Management Agency (FEMA) data. | GAO-25-106862
+
+Note: HMGP and HMGP Post-Fire provide grants to rebuild in a way that mitigates future natural
+disaster losses.
+a
+ We considered a project wildfire-related if applicants chose a project type containing the word
+“wildfire” and/or if they indicated the primary hazard type for the project was fire.
+b
+ Amounts obligated are rounded to the nearest hundred thousandth, by the fiscal year the FMAG or
+major disaster declaration was approved, and as of the end of October 2023. FEMA was in the
+process of making obligations for declarations approved in fiscal years 2019 through 2023 and may
+continue to make obligations in future years for those declarations. Additionally, FEMA may de-
+obligate funds, especially at the end of the process. As a result, obligated amounts will change over
+time.
+
+
+According to our data analysis and interviews with county and tribal
+officials, applicants used HMGP and HMGP Post-Fire for wildfire
+mitigation projects such as: purchasing generators, updating multi-hazard
+mitigation plans, conducting vegetation management, protecting public
+utilities, establishing warning systems, and replacing or repairing culverts
+and cisterns. One county we interviewed in Montana joined a multi-county
+effort to map coal seam fires—a growing wildfire threat—using their
+state’s HMGP award under the state’s COVID-19 major disaster
+declaration, as described in figure 7.
+
+
+
+
+Page 22                                                                               GAO-25-106862 Wildfires
+Figure 7: Wildfire Mitigation in Action: Four Counties Map Coal Seam Fires in Eastern Montana
+
+
+
+
+                                         Page 23                                                GAO-25-106862 Wildfires
+                                                           Building Resilient Infrastructure and Communities. FEMA obligated
+                                                           over $12 million for wildfire-related projects through the Building Resilient
+                                                           Infrastructure and Communities program’s fiscal year 2020 through 2022
+                                                           funding cycles.36 FEMA obligated more than half of these funds (about
+                                                           $6.4 million) for 50 wildfire-related capability and capacity building
+                                                           projects, such as updating hazard mitigation plans and developing
+                                                           building codes and standards to improve community resilience. As of the
+                                                           end of fiscal year 2023, FEMA had obligated about $5.8 million for two
+                                                           wildfire mitigations projects selected during the fiscal year 2020
+                                                           application cycle, as shown in table 6.
+
+Table 6: Number of Projects and Amounts Obligated to Wildfire-related Building Resilient Infrastructure and Communities
+Projects, by Funding Cycle Fiscal Year
+
+                                     Capability and capacity building projects                                        Mitigation projects
+Funding cycle                     Number of projects                                                       Number of projects
+fiscal year                      with obligated funds                       Amount obligated              with obligated funds             Amount obligated
+2020                                                       32                          $2,920,000                                 2                 $5,790,000
+2021                                                       16                          $2,800,000                                 0                           $0
+2022                                                        2                              $630,000                               0                           $0
+Total                                                      50                          $6,350,000                                 2                 $5,790,000
+Source: GAO analysis of Federal Emergency Management Agency (FEMA) data. | GAO-25-106862
+
+                                                           Notes: Building Resilient Infrastructure and Communities is an annual hazard mitigation grant
+                                                           program designed to reduce risks from disasters and natural hazards. Obligations data are as of the
+                                                           end of fiscal year 2023 and are rounded to the nearest ten thousand. FEMA was in the process of
+                                                           making obligations for projects approved in the fiscal year 2020 through 2022 funding cycles and may
+                                                           continue to make obligations in future years for those projects. Additionally, FEMA may de-obligate
+                                                           funds, especially at the end of the process. As a result, obligated amounts will change over time. In
+                                                           our analysis, wildfire-related projects are those for which the applicant selected “fire” as a primary,
+                                                           secondary, or tertiary hazard type.
+
+
+
+
+                                                           36FEMA reported obligating about $307 million for all Building Resilient Infrastructure and
+                                                           Communities projects during these funding cycles, as of September 2023. FEMA’s first
+                                                           funding cycle for Building Resilient Infrastructure and Communities was for fiscal year
+                                                           2020. As of the time of our data request in October 2023, FEMA had not yet closed the
+                                                           application period for fiscal year 2023 projects. Obligations data are as of September 30,
+                                                           2023. FEMA was in the process of making obligations for projects approved in the fiscal
+                                                           year 2020 through 2022 funding cycles and may continue to make obligations in future
+                                                           years for those projects. Additionally, FEMA may de-obligate funds, especially at the end
+                                                           of the process. As a result, obligated amounts will change over time. Wildfire-related
+                                                           projects are those for which the applicant selected “fire” as a primary, secondary, or
+                                                           tertiary hazard type.
+
+
+
+
+                                                           Page 24                                                                    GAO-25-106862 Wildfires
+Selected Wildfire Mitigation Techniques                 The two wildfire mitigation projects focus on altering the built
+•    Ignition-resistant construction: using non-        environment, such as protective measures for homes and other
+     combustible or ignition-resistant materials,       infrastructure:
+     technologies, and techniques on new and
+     existing buildings and structures. This is
+     also called home hardening when used               •   FEMA obligated over $5.7 million to a wildfire mitigation project in
+     for residential structures.                            Sonoma County, California. According to the project description, the
+•    Defensible space: creating a perimeter                 project is intended to increase community resilience to wildfires
+     around a building or structure by
+     removing or reducing the amount of                     through implementing home hardening with ignition-resistant
+     flammable vegetation.                                  construction, defensible space, and hazardous fuels reduction
+•    Fuels reduction: removing or modifying                 techniques. See sidebar for descriptions of selected wildfire mitigation
+     vegetative fuels near structures, such as
+     by thinning vegetation or replacing
+                                                            techniques.
+     flammable vegetation with fire-resistant
+     vegetation.
+                                                        •   FEMA obligated about $65,000 for a project that will apply fire
+•    Post-wildfire flooding prevention:
+                                                            retardant mesh to over 1,000 electric poles in Butte and South Custer
+     measures to protect property from                      counties, Idaho, to mitigate wildfire threats to the electrical distribution
+     flooding, debris flows, and mudslides due              system.
+     to soil damage from wildfires. Examples
+     include soil stabilization, reforestation,
+     seeding, erosion control, and debris traps
+     and drainage systems.
+Source: Federal Emergency Management Agency and
+California Department of Forestry and Fire Prevention
+documentation. | GAO-25-106862
+
+
+
+
+                                                        FEMA has begun some efforts to address long-standing wildfire
+FEMA Has Not Fully                                      assistance challenges, but it is too soon to assess their impact.
+Addressed the                                           Additionally, the agency does not have an assistance program that
+                                                        enables communities to conduct immediate post-wildfire mitigation and
+Challenges                                              has not fully pursued opportunities to facilitate more timely environmental
+Communities Face in                                     reviews for post-wildfire mitigation. FEMA could also do more to identify
+                                                        and address FMAG program-related challenges. For example, state,
+Obtaining Wildfire                                      county, and tribal officials we interviewed described challenges
+Assistance                                              associated with the FMAG program, but FEMA headquarters does not
+                                                        collect ongoing, nationwide feedback from all FMAG recipients.37 FEMA
+                                                        also has not clarified FMAG guidance on (1) requesting FMAG
+                                                        declarations for fires burning on federal land but threatening nearby
+                                                        communities or (2) receiving reimbursement for costs associated with
+                                                        pre-positioning of in-state resources. Lastly, officials that we spoke to said
+
+
+
+
+                                                        37States and tribal governments can apply for fire management assistance grants as
+                                                        recipients, while local governments can apply as sub-recipients. A sub-recipient is
+                                                        awarded a subgrant and is accountable to the recipient for grant usage. For our purposes,
+                                                        the term “FMAG recipient” includes both recipients and sub-recipients.
+
+
+
+
+                                                        Page 25                                                          GAO-25-106862 Wildfires
+                                Tribes’ access to FMAG assistance is limited because tribal governments
+                                can only request FMAG declarations through a state.
+
+FEMA Has Taken Some
+Steps to Address Long-
+Standing Challenges
+Providing Wildfire
+Assistance
+Timeliness and Administrative   State, county, and tribal officials that we interviewed described challenges
+Burdens                         with timeliness—including in FEMA’s application decisions and
+                                reimbursements—and administrative burdens when obtaining FEMA
+                                assistance. Officials from nine out of 11 counties, all four Tribes, and all
+                                seven states we spoke to described timeliness as a challenge in one or
+                                more of FEMA’s assistance programs. These challenges related to the
+                                timeliness of FEMA application decisions and reimbursements.
+
+                                    Application Decisions. The time it takes for FEMA to review and
+                                    either approve or deny projects may discourage some communities
+                                    from applying for FEMA assistance. Per regulation, applicants are not
+                                    allowed to begin HMGP or HMGP Post-Fire projects until FEMA
+                                    approves them.38 One county official said he had applied for seven
+                                    HMGP Post-Fire grants since 2019 totaling about $4.6 million. The
+                                    proposed projects involved reducing hazardous fuels, thinning
+                                    vegetation, and creating defensible spaces. The official said that as of
+                                    January 2024, FEMA had not made a determination for any of these
+                                    projects, preventing the county from starting them. The official added
+                                    that the county is reluctant to apply for additional projects because it
+                                    could not implement all the projects if they are approved at the same
+                                    time. Officials from another county said that they were awaiting FEMA
+                                    approval to replace generators under the HMGP Post-Fire program
+                                    more than 3 years after a 2020 wildfire. Our data analysis found that
+                                    about 44 percent (108 of 247) of wildfire-related HMGP and HMGP
+                                    Post-Fire project applications from declarations approved in fiscal
+                                    years 2019 or 2020 were in a pending status—meaning the projects
+                                    were in various stages of review—as of October 2023.
+                                    Reimbursements. Officials also brought up concerns about
+                                    timeliness of reimbursements with multiple FEMA assistance
+                                    programs, such as Public Assistance. For example, officials in one
+
+                                3844 C.F.R. § 206.434(d)(2).
+
+
+
+
+                                Page 26                                                GAO-25-106862 Wildfires
+    county stated that as of September 2023, they had not received
+    reimbursements for a project they applied for after a 2020 wildfire.
+    Additionally, we found that FEMA had made obligations for two of the
+    27 wildfire mitigation projects initially selected in the fiscal year 2020
+    through 2022 Building Resilient Infrastructure and Communities
+    funding cycles as of the end of fiscal year 2023.39 Both projects were
+    selected in the fiscal year 2020 funding cycle. As of the end of fiscal
+    year 2023, FEMA had not made obligations for any mitigation projects
+    selected in the fiscal year 2021 or 2022 funding cycles. The Wildfire
+    Mitigation and Management Commission’s 2023 report (Commission
+    report) also noted that delays in reimbursements can deter local
+    entities and Tribes from deploying resources to assist in response, as
+    doing so risks straining their budgets and going into deficit for months
+    or years until receiving reimbursement.40
+Some officials noted the connection between timeliness and
+administrative burdens, stating that issues with FEMA’s timeliness in
+providing assistance resulted in further administrative burdens and costs.
+Officials from eight out of 11 counties, three out of four Tribes, and all
+seven states we spoke to described one or more of the previously
+described FEMA assistance programs as administratively burdensome.41
+In particular, they noted repeated requests for information and having to
+redo required assessments. For example, a county official said FEMA
+submitted requests for information multiple times over a 2-year period for
+the county’s HMGP Post-Fire project, creating additional and duplicative
+work. Officials from one FEMA region said that continuous requests for
+information can be challenging for applicants and that it is important to
+reach understanding on the project needs at the start of the process.
+
+Additionally, officials from three counties we spoke with said the length of
+FEMA’s review for proposed HMGP project applications required them to
+redo and resubmit all or parts of their application as circumstances or
+
+
+39FEMA’s Building Resilience Infrastructure and Communities program data do not
+indicate whether a project received final approval. Headquarters program officials initially
+select projects and then send the application to the appropriate FEMA region for further
+review and processing. FEMA officials stated that the agency may not ultimately select all
+these projects for awards during this review stage.
+40On Fire: The Report of the Wildland Fire Mitigation and Management Commission.
+
+41We asked open-ended questions in our interviews with state, local, and tribal officials to
+identify their specific challenges in accessing FEMA assistance for wildfires. We did not
+ask every official in every interview about each of the specific challenges discussed in this
+report.
+
+
+
+
+Page 27                                                             GAO-25-106862 Wildfires
+requirements changed.42 The Commission report also stated that the
+time-intensive and burdensome processes involved with FEMA disaster
+relief and hazard mitigation can contribute to protracted timelines in
+deploying important recovery funding to communities in need.43
+
+We have previously reported on challenges communities faced using
+FEMA programs for hazard mitigation, including for wildfires.44 For
+example, in February 2021, we reported on challenges state and local
+officials faced when applying for FEMA hazard mitigation grants, including
+complexity and length of the applications.45 We recommended that FEMA
+take steps to reduce the complexity of its hazard mitigation grant
+programs. In response to this recommendation, FEMA reported taking
+actions to allow applicants to apply for funding more easily and reduce
+award time frames. As a result of these actions, this recommendation was
+closed as implemented.
+
+FEMA officials described recent actions and ongoing initiatives to provide
+assistance more quickly and reduce administrative burdens for some of
+its assistance programs.
+
+•   FEMA made more projects eligible to follow a streamlined process
+    and began providing additional technical assistance to reduce
+    administrative burdens and time frames for its Public Assistance
+    program. In August 2022, FEMA increased the threshold of small
+    projects—which have fewer requirements than large projects—from
+
+
+
+42In one of these cases, an applicant said they had to redo the required environmental
+assessment, because it was determined to no longer be valid before the application
+process was complete. According to DHS policy, DHS components must decide whether
+an environmental assessment is still valid for the proposed action if the action has not
+been implemented within one budget cycle, and no more than three years from the date of
+the environmental assessment when there is a finding of no significant impact. DHS,
+Instruction Manual 023-01-001-01, Revision 01, Implementation of the National
+Environmental Policy Act (NEPA), (Washington, D.C.: Nov. 2014).
+43On Fire: The Report of the Wildland Fire Mitigation and Management Commission.
+
+44See GAO, Hurricane Sandy: An Investment Strategy Could Help the Federal
+Government Enhance National Resilience for Future Disasters, GAO-15-515
+(Washington, D.C.: July 30, 2015).
+45GAO, Disaster Resilience: FEMA Should Take Additional Steps to Streamline Hazard
+Mitigation Grants and Assess Program Effects, GAO-21-140 (Washington, D.C.: Feb. 2,
+2021). See also, GAO, Disaster Recovery: Actions Needed to Improve the Federal
+Approach, GAO-23-104956 (Washington, D.C.: Nov. 15, 2022).
+
+
+
+
+Page 28                                                         GAO-25-106862 Wildfires
+    about $140,000 to $1 million.46 FEMA also aimed to reduce the
+    administrative burden for small projects by streamlining requirements.
+    For example, FEMA now accepts the applicant’s certifications for
+    estimates of damages and work, instead of requiring full or detailed
+    documentation. Additionally, FEMA hired a research firm to study
+    opportunities for streamlining Public Assistance. In response to this
+    study, in March 2024 FEMA officials stated they initiated a pilot
+    program to provide additional technical assistance for projects that
+    FEMA identifies as more complicated or that impact underserved
+    communities.
+•   FEMA officials stated that they conducted analyses of HMGP and the
+    Building Resilient Infrastructure and Communities programs to identify
+    and address timeliness concerns. As of July 2024, the agency was in
+    the process of reviewing those analyses and developing plans to
+    address their findings, according to officials. Officials said FEMA also
+    has working groups focused on improving its delivery of assistance for
+    wildfires, including one tasked with evaluating recommendations from
+    recent assessments of FEMA’s wildfire assistance, such as the
+    Commission report. As of November 2024, officials stated they are
+    using these recommendations to inform ongoing policy updates
+    across FEMA’s hazard mitigation assistance programs.
+•   FEMA has solicited and incorporated feedback from applicants and
+    recipients of Public Assistance and Individual Assistance to improve
+    program delivery. For example, under FEMA’s strategic plan, the
+    agency tracks the percentage of applicants satisfied with the simplicity
+    of Public Assistance and the Individuals and Households Program, a
+    major component of Individual Assistance.47 Officials said these
+    surveys inform FEMA’s policies and strategies. For example, a FEMA
+    press release stated that it made the March 2024 Individual
+    Assistance program changes in response to decades of survivor
+    feedback, and requests from state partners and members of
+    Congress for simpler programs for disaster survivors. Among these
+    changes, FEMA removed a requirement that survivors apply for a
+    U.S. Small Business Administration disaster loan before being
+
+
+
+
+4687 Fed. Reg. 47,359 (Aug. 3, 2022).
+
+472022-2026 FEMA Strategic Plan: Building the FEMA our Nation Needs and Deserves.
+
+
+
+
+Page 29                                                     GAO-25-106862 Wildfires
+                     considered for certain types of financial assistance from FEMA.48
+                     Previously, FEMA required that survivors apply for these loans and
+                     either be denied or continue to have unmet needs before receiving
+                     assistance for personal property and other non-housing losses. We
+                     have reported that survivors experienced significant confusion over
+                     this prior requirement.49
+                 These recent and ongoing efforts demonstrate that FEMA is aware of
+                 timeliness issues and administrative burdens in these assistance
+                 programs and is working to address them. While these recent efforts are
+                 positive steps, it is too early to assess their impact on reducing
+                 administrative burdens and increasing timeliness of reimbursements for
+                 wildfire-affected communities.
+
+Debris Removal   As we have previously reported, wildfires create significant debris
+                 removal challenges for state and local jurisdictions, and the process is
+                 often more costly and complicated than for other types of disasters.50 As
+                 our data analysis indicates, FEMA obligated a higher proportion of Public
+                 Assistance funds for debris removal for wildfires than non-wildfires during
+                 fiscal years 2019 through 2023. Wildfire debris, including hazardous
+                 waste removal and private property debris, continues to pose challenges
+                 for federal, state, and local officials. For example, figure 8 describes the
+                 complicated nature of debris removal state and federal officials reported
+                 after the August 2023 Lahaina wildfire on the island of Maui, Hawaii, due
+                 to the volume of debris and presence of hazardous materials.
+
+
+
+
+                 48See 89 Fed. Reg. 3990 (Jan 22, 2024). For more information, see GAO, Disaster
+                 Recovery: Additional Actions Needed to Identify and Address Potential Recovery Barriers,
+                 GAO-22-104039, (Washington, D.C: Dec. 15, 2021) and Disaster Loan Program: SBA
+                 Should Include Key Issues in Its Review of How Program Affects Underserved
+                 Communities, GAO-24-106682, (Washington, D.C.: Nov. 30, 2023).
+                 49See Disaster Assistance: Additional Actions Needed to Strengthen FEMA’s Individuals
+                 and Households Program, GAO-20-503 (Washington, D.C.: Sept. 30, 2020). In September
+                 2020, we recommended that FEMA work with the U.S. Small Business Administration to
+                 identify options to simplify and streamline the disaster assistance application process for
+                 survivors. FEMA addressed our recommendation by removing the requirement that
+                 applicants must apply for a U.S. Small Business Administration loan before being
+                 considered for FEMA assistance.
+                 50GAO-20-5.
+
+
+
+
+                 Page 30                                                           GAO-25-106862 Wildfires
+Figure 8: Wildfire Debris Removal in Lahaina, Hawaii
+
+
+
+
+                                         a
+                                          Per FEMA policy, private property debris removal may be eligible for Public Assistance if the debris
+                                         on private property is of such magnitude that it poses a threat to public health and safety. The U.S.
+                                         Army Corps of Engineers is the lead agency for the emergency support function for public works and
+                                         engineering, which includes debris removal.
+                                         b
+                                          See GAO, Household Hazardous Waste Removal: EPA Should Develop a Formal Lessons Learned
+                                         Process for Its Disaster Response, GAO-22-104276 (Washington, D.C.: Mar. 17, 2022).
+
+
+
+
+                                         Page 31                                                                   GAO-25-106862 Wildfires
+                        FEMA issued two guidance memos in 2022 to address debris removal
+                        issues, which may help wildfire-affected communities recover more
+                        quickly. In September 2022, FEMA issued a memo simplifying Public
+                        Assistance policies on debris removal and utility restoration.51 The
+                        changes were aimed at providing additional flexibility in how localities can
+                        carry out that work. Additionally, in October 2022, FEMA issued the
+                        Public Assistance Wildfire Policy Guidance Memorandum, which
+                        addressed issues related to debris and hazardous tree removal, among
+                        other things.52 One provision of this memo established that entities do not
+                        need permission from FEMA to start private property debris removal;
+                        however, FEMA must determine the work is eligible for Public Assistance.
+                        While FEMA made these changes in response to wildfire debris
+                        challenges, the provisions are applicable to all hazards.
+
+                        FEMA officials told us in November 2024 that they plan to continue
+                        working on debris removal issues over the next year. For example,
+                        officials said they plan to devise formulas that applicants can use to
+                        estimate debris removal volume, which may enable applicants to provide
+                        required information to FEMA more easily. While FEMA’s ongoing efforts
+                        are positive steps, it is too soon to assess how effective these changes
+                        will be at addressing existing wildfire debris removal challenges.
+
+Post-Wildfire Housing   Providing effective and affordable temporary and interim housing for
+                        disaster survivors is a long-standing challenge, particularly following
+                        wildfires. Wildfires tend to totally destroy structures and leave behind
+                        contaminated ground, limiting short-term and interim housing options and
+                        requiring a longer rebuilding period. Until the land is safe for habitation,
+                        FEMA, state, and local officials must find space for temporary housing
+                        units outside the burn zone, where there is access to non-contaminated
+                        utilities.
+
+                        FEMA officials also said they face limitations to their authorities regarding
+                        housing. Under the Robert T. Stafford Disaster Relief and Emergency
+                        Assistance Act (Stafford Act), FEMA may provide temporary housing for
+                        up to 18 months, unless an extension would be in the public interest due
+
+
+
+
+                        51FEMA, Simplifying the Public Assistance Program, Part 2, (Washington D.C.:
+                        September 2022).
+                        52FEMA, Public Assistance Wildfire Policy Guidance, (Washington D.C.: October 2022).
+
+
+
+
+                        Page 32                                                        GAO-25-106862 Wildfires
+Post-Wildfire Housing in Maui, Hawaii                to extraordinary circumstances.53 FEMA officials said 18 months is not
+Federal Emergency Management Agency                  feasible for acute wildfires because of the total destruction and levels of
+(FEMA) officials said finding housing for Maui       trauma caused. Additionally, disasters exacerbate pre-disaster shortages
+wildfire survivors would be a top priority and a
+major challenge during recovery. The August          of affordable housing, which is particularly challenging for communities
+2023 wildfires damaged or destroyed nearly           lacking ample rental properties outside the footprint of the wildfire.54 The
+2,000 housing structures in the town of
+Lahaina. The state of Hawaii had declared a          2023 wildfires in Maui exemplify these challenges; see sidebar.
+housing emergency in July 2023 to help
+address the housing crisis across the state.
+Additionally, Hawaii had the highest cost of
+                                                     FEMA has taken some initial steps to improve its assistance to survivors
+living of any state in 2022, according to data       and address post-disaster housing challenges for all hazards, including
+from the Council for Community and                   wildfires.
+Economic Research. Maui also has a large
+short-term vacation rental market, which has
+limited available housing options for survivors.     •   Direct Housing Implementation Teams. In October 2023, FEMA
+Further, FEMA Region 9 officials told us that
+Maui County prohibits housing units with
+                                                         officials told us they were developing full-time Direct Housing
+wheels. This prevented FEMA from using                   Implementation Teams that will be dedicated to planning, permitting,
+mobile homes or trailers, its usual temporary            and mobilizing temporary housing units for disaster declarations. Prior
+housing units.
+                                                         to establishing permanent teams focused on housing, FEMA generally
+In May 2024, FEMA Region 9 officials said
+they considered factors such as speed of                 deployed FEMA reservists, or on-call staff members, to perform these
+housing availability, cost, and the effect on            tasks for a given disaster. As of November 2024, FEMA was in the
+longer-term housing when identifying interim             process of hiring staff to fill two national-level teams and teams in
+housing options. FEMA has primarily used
+Direct Leasing to house eligible survivors in            Regions 4 and 9. Some staff had onboarded and started training or
+Maui, according to these officials. Officials            pre-planning activities. According to FEMA, staff already hired for this
+said Direct Lease is faster than other options
+and can help keep eligible survivors closer to
+                                                         effort for the national-level teams and Region 4 team were supporting
+their communities. Officials said it was initially       disaster housing efforts in response to Hurricanes Helene and Milton.
+difficult to obtain enough Direct Lease                  Additionally, FEMA was working to finalize updates to its Direct
+properties to meet demand, so Hawaii offered
+tax breaks to incentivize landlords to convert           Housing Guide and develop standard operating procedures for the
+their vacation rentals into longer-term rentals          Direct Housing Implementation Teams.
+for eligible survivors. Additionally, FEMA
+coordinated with other federal, state, and local     •   Pre-Disaster Housing Initiative. In November 2023, FEMA and the
+authorities to evaluate potential sites for              U.S. Department of Housing and Urban Development completed a
+constructing Alternative Temporary
+Transportable Housing Units, or modular                  Pre-Disaster Housing Initiative pilot with four states that emphasized
+units. Officials stated that these alternative           advanced planning for post-disaster sheltering and housing needs.
+units do not have much precedence, as FEMA
+usually relies on trailers and manufactured
+                                                         Over the 6-month pilot, FEMA, the Department of Housing and Urban
+homes. As of July 1, 2024, FEMA had                      Development, and state partners met regularly, according to a FEMA
+obligated $301.3 million and expended $125.6             bulletin. The bulletin stated that the pilot improved coordination and
+million in Individual Assistance for this
+disaster, according to FEMA officials.                   collaboration across interstate organizations on the critical issues
+Source: GAO interviews with FEMA and Maui County         facing emergency management and housing. FEMA and the
+documentation. | GAO-25-106862
+                                                         Department of Housing and Urban Development publicly released a
+
+
+
+                                                     5342 U.S.C. § 5174(c)(1)(B)(iii).
+
+                                                     54GAO-20-5. The National Disaster Housing Strategy defines interim housing as that
+                                                     which covers the gap between immediate, short-term sheltering and the return of disaster
+                                                     survivors to permanent homes.
+
+
+
+
+                                                     Page 33                                                          GAO-25-106862 Wildfires
+                                  joint report and additional guidance based on this pilot in July 2024.55
+                                  FEMA stated that a second cohort of states will engage with FEMA
+                                  and the Department of Housing and Urban Development to boost their
+                                  housing recovery capabilities. FEMA officials said that state capacity
+                                  may limit the number of states able to participate in the initiative
+                                  because states face competing priorities and may not have enough
+                                  resources to participate.
+                              •   Updates to Individual Assistance. FEMA updated its Individual
+                                  Assistance program for disasters declared on or after March 22, 2024.
+                                  These updates aim to provide quicker access to needed funds,
+                                  expanded eligibility for property and home repairs, and an easier
+                                  application process for survivors.56
+                              While FEMA’s ongoing efforts are positive steps, it is too early to assess
+                              to what extent they will improve FEMA’s delivery of post-wildfire housing.
+                              FEMA officials also emphasized that state and local governments have a
+                              responsibility to better plan how they will house wildfire survivors before a
+                              disaster. Further, FEMA officials recognized that state capacity varies,
+                              with some having limited ability to participate in pre-disaster planning
+                              initiatives, such as the pre-disaster housing pilot program. The
+                              Commission report also made recommendations and, over the last few
+                              years, members of Congress have introduced legislation to address post-
+                              wildfire housing issues.
+
+Some of FEMA’s Current
+Processes Hinder Post-
+Wildfire Mitigation Efforts
+FEMA Does Not Have a          FEMA does not have an assistance program that enables communities to
+Program for Immediate Post-   conduct more timely post-wildfire mitigation, which could help prevent
+Wildfire Mitigation           future disasters by addressing wildfire impacts on vegetation and soil
+
+
+
+                              55FEMA and Department of Housing and Urban Development, Pre-Disaster Housing
+                              Planning Initiative, (Washington D.C.: July 2024). FEMA and the Department of Housing
+                              and Urban Development also released a Pre-Disaster Housing Planning Guide, planning
+                              checklist, and resource timeline and compendium.
+                              56See 89 Fed. Reg. 3990 (Jan. 22, 2024). As part of these changes, Serious Needs
+                              Assistance replaced the Critical Needs Assistance Program, which was provided based
+                              on a disaster-by-disaster evaluation. Serious Needs Assistance will be available in all
+                              disasters receiving Individual Assistance, which provides assistance to eligible individuals
+                              and households who have uninsured or underinsured necessary expenses and serious
+                              needs as a direct result of a declared disaster.
+
+
+
+
+                              Page 34                                                            GAO-25-106862 Wildfires
+                                       conditions.57 Wildfires destroy vegetation and damage soil, and fires that
+                                       burn at high severity can also produce water repellant soils. If not
+                                       addressed quickly, this can make landscapes susceptible to flooding,
+                                       erosion, and debris flows—fast-moving landslides that destroy objects in
+                                       their paths and often strike without warning, as shown in figure 9. These
+                                       issues can negatively affect life and property on land downstream by
+                                       reducing water quality, damaging roads, and threatening homes and
+                                       other structures. Proactively engaging in mitigation activities such as soil
+                                       stabilization and erosion control measures, including reseeding and
+                                       planting, can help communities reduce downstream risks that could lead
+                                       to another disaster.
+
+Figure 9: Example of How Wildfires Can Affect Landscapes
+
+
+
+
+                                       57In some cases, another federal program—the Emergency Watershed Protection
+                                       Program administered by the U.S. Department of Agriculture’s Natural Resources
+                                       Conservation Service—may assist communities with conducting immediate post-fire
+                                       mitigation. See Emergency Watershed Protection: Assistance Program Helps Meet Post-
+                                       Disaster Needs and Could Be Improved with Additional Guidance, GAO-22-104326
+                                       (Washington, D.C.: Oct. 28, 2021).
+
+
+
+
+                                       Page 35                                                      GAO-25-106862 Wildfires
+FEMA Hazard Mitigation Assistance
+                                                     FEMA officials said that its existing mitigation programs as currently
+Eligible Soil Stabilization and Erosion              designed; including HMGP, HMGP Post-Fire, and the Building Resilient
+Control Activities                                   Infrastructure and Communities program; are not the right tools for
+Post-wildfire flooding prevention and sediment       immediate post-fire mitigation. These programs allow for post-fire
+reduction measures:
+                                                     mitigation activities (see sidebar), but they have established lifecycles and
+•   Reforestation, restoration, and/or soil
+    stabilization                                    time frames associated with pre-award, award, and post-award
+•   Ground cover vegetation re-                      requirements. These timelines are not conducive to supporting mitigation
+    reestablishment (e.g., seeding and               efforts after wildfires, which are uniquely time-sensitive and have a high
+    mulching)
+                                                     annual probability of recurrence in certain places, according to FEMA
+•   Erosion prevention measures on slopes
+                                                     officials. As discussed previously, our data analysis for the HMGP and
+•   Prevention measures for flash flooding
+    resulting from runoff (e.g., drainage dips       Building Resilient Infrastructure and Communities programs indicated that
+    and debris traps)                                it can take years for projects to move from application to reimbursement.
+These activities are eligible for Hazard
+Mitigation Grant Program (HMGP), HMGP
+Post-Fire, and Building Resilient Infrastructure     Additionally, 35 percent of HMGP and HMGP Post-Fire projects
+and Communities assistance, subject to               associated with wildfire declarations were for wildfire-related mitigation
+meeting other grant requirements.
+                                                     activities. Officials from two states and National Emergency Management
+Source: Federal Emergency Management Agency (FEMA)
+documentation. | GAO-25-106862                       Association members that we spoke to stated that it is difficult to use
+                                                     HMGP and HMGP Post-Fire assistance for post-wildfire mitigation, such
+                                                     as reseeding, because the program does not provide assistance in time.
+                                                     Officials from one of these states said that jurisdictions within their state
+                                                     therefore frequently use HMGP Post-Fire funds for projects unrelated to
+                                                     wildfires. An official from the other state said funding for wildfire mitigation
+                                                     is needed but participation in HMGP for wildfire-related projects will
+                                                     continue to be low unless FEMA provides assistance more quickly.
+
+                                                     To address this gap, FEMA could evaluate various options, such as
+                                                     changing one of its existing mitigation assistance programs or
+                                                     establishing a new program. For example, the Commission report and
+                                                     FEMA’s National Advisory Council recommended expanding the support
+                                                     available through the FMAG program to allow for post-wildfire mitigation.
+                                                     According to FEMA officials, doing so would require statutory and
+                                                     regulatory changes to reimburse most soil stabilization activities.
+
+                                                     FMAG authorities for providing post-wildfire mitigation are limited under
+                                                     statute and regulation, according to FEMA officials. The Stafford Act
+                                                     authorizes FEMA to provide assistance for the “mitigation, management,
+                                                     and control” of wildfires that may become major disasters.58 FEMA
+                                                     regulations define “mitigation, management, and control” to mean
+                                                     activities undertaken, generally during the incident period of a declared
+                                                     fire, to minimize immediate adverse effects and to manage and control
+
+                                                     5842 U.S.C. § 5187(a).
+
+
+
+
+                                                     Page 36                                                   GAO-25-106862 Wildfires
+the fire.59 Further, FEMA regulations state that costs related to recovery
+activities—such as seeding, planting operations, and erosion control—are
+ineligible for reimbursement.60 However, soil stabilization and erosion
+control measures to prevent flooding, erosion, and debris flows are often
+needed after a fire no longer poses a threat.
+
+The Commission report suggested that expanding FMAG authorities
+beyond the current focus on fire management and control would help
+address the significant need for post-fire mitigation and recovery funding.
+Proactively conducting post-wildfire mitigation activities can help
+communities reduce downstream risks that could lead to another disaster.
+
+The National Disaster Recovery Framework states that successful
+recovery upholds the values of timeliness and flexibility in coordinating
+and efficiently conducting recovery activities and delivering assistance.61
+It also minimizes delays and lost opportunities. Further, it ensures
+recovery plans, programs, policies, and practices are adaptable to meet
+unforeseen, unmet, and evolving recovery needs. Additionally, the
+National Mitigation Framework calls for reducing long-term vulnerability.62
+This consists of building and sustaining resilient systems, communities,
+and critical infrastructure and key resource lifelines to reduce their
+vulnerability to threats and hazards by lessening the likelihood, severity,
+and duration of the adverse consequences. It also includes initiatives and
+investments that reduce response and recovery resource requirements in
+the wake of a disaster or incident.
+
+FEMA officials stated that they have considered some options for how
+current programs could be used for this purpose, but regulatory and/or
+statutory barriers have prevented the agency from taking further action.
+As the lead federal agency for disaster recovery, FEMA is best positioned
+to identify ways to address this gap, which may include modifying an
+existing program or establishing a new program. Such changes may
+necessitate amending FEMA regulations and/or developing a legislative
+proposal for any necessary statutory changes, depending on which option
+FEMA pursues. Taking steps to provide immediate post-wildfire mitigation
+
+5944 C.F.R. § 204.3. The FMAG incident period is defined as the time interval during
+which the declared fire occurs.
+6044 C.F.R. § 204.43(b).
+
+61National Disaster Recovery Framework.
+
+62DHS, National Mitigation Framework, (Washington D.C.: June 2016).
+
+
+
+
+Page 37                                                          GAO-25-106862 Wildfires
+                                    assistance could better position FEMA to help foster more resilient
+                                    communities and reduce the future demand on federal resources by
+                                    mitigating post-wildfire flooding, erosion, and debris flows.
+
+Opportunities Exist to Facilitate   FEMA has pursued some, but not all, opportunities to facilitate more
+More Timely Environmental           timely environmental reviews—required by the National Environmental
+Reviews for Post-Wildfire           Policy Act (NEPA)—for mitigation projects that could reduce post-wildfire
+Mitigation                          risks.63 Officials from two counties and two states, and our prior work
+                                    identified delays associated with the NEPA environmental review
+                                    process.64 The 2022 FEMA National Advisory Council Annual Report
+                                    stated that environmental reviews have become lengthy for hazard
+                                    mitigation assistance projects, especially for pre- and post- wildfire
+                                    mitigation.65 Improving the efficiency of the environmental review process
+                                    for post-wildfire mitigation projects is also important in facilitating more
+                                    timely post-wildfire mitigation assistance.
+
+                                    Assistance provided via FEMA’s hazard mitigation assistance programs is
+                                    subject to NEPA, which requires federal agencies to assess the
+                                    environmental effects of proposed major federal actions prior to making
+                                    decisions.66 Those effects include impacts on social, cultural, economic,
+                                    and natural resources.67 Agencies must determine whether an
+                                    environmental assessment or environmental impact statement is required
+                                    to assess the project’s effects on the quality of the human environment.68
+                                    Agencies are also to establish categorical exclusions in their NEPA
+                                    implementing procedures.69 These are categories of actions that normally
+                                    do not have significant effect on the human environment, individually or in
+                                    the aggregate. If a proposed action is covered by an agency’s categorical
+                                    exclusion, it generally does not require preparing an environmental
+                                    assessment or environmental impact statement. Agencies are still
+                                    63Pub. L. No. 91-190, 83 Stat. 852 (1970) (codified as amended at 42 U.S.C. §§ 4321-47).
+
+                                    64GAO-21-140, GAO-15-515.
+
+                                    65FEMA National Advisory Council, FEMA National Advisory Council Annual Report,
+                                    (Washington, D.C.: Nov. 2022).
+                                    66See 42 U.S.C. § 4336.
+
+                                    67See 40 C.F.R. § 1508.1(i).
+
+                                    68Agencies are to determine whether the proposed action is not likely to have significant
+                                    effects or the significance of the effects is unknown, in which case they must conduct an
+                                    environmental assessment, or whether it is likely to have significant effects, in which case
+                                    they must conduct an environmental impact statement. See 40 C.F.R. § 1501.3(c).
+                                    6940 C.F.R. § 1501.4.
+
+
+
+
+                                    Page 38                                                            GAO-25-106862 Wildfires
+                                        required to assess whether there are extraordinary circumstances that
+                                        may cause a proposed action to have a significant effect and warrant
+                                        further environmental review, as shown in figure 10.70
+
+Figure 10: Process for Implementing the National Environmental Policy Act’s (NEPA) Requirements
+
+
+
+
+                                        Notes: Categorical exclusions are categories of actions that normally do not have significant effect on
+                                        the human environment and are incorporated into agencies’ NEPA implementing regulations and
+                                        procedures. Agencies are still required to assess whether there are extraordinary circumstances that
+                                        may cause a proposed action to have a significant effect and warrant further environmental review.
+                                        40 C.F.R. § 1501.4. For example, extraordinary circumstances could be related to the presence of
+                                        threatened or endangered species. Environmental assessments are prepared for actions not likely to
+                                        have a significant effect or for which the significance of the effects is unknown and are used to
+                                        support an agency’s determination of whether to prepare an environmental impact statement or a
+                                        finding of no significant impact. Environmental impact statements are prepared for actions likely to
+                                        have significant effects and contain detailed analyses and evaluations of the impacts of a proposed
+                                        project and reasonable alternatives to the proposed action. 44 C.F.R. part 1501.
+
+
+                                        To establish categorical exclusions, agencies submit substantiation
+                                        packages with proposed or revised categorical exclusions to the Council
+                                        on Environmental Quality, which oversees agencies’ NEPA
+                                        implementation.71 In their proposal, agencies must demonstrate that the
+                                        set of actions under consideration do not individually or cumulatively have
+                                        a significant effect on the human environment. For example, agencies
+                                        may assess the environmental effects of previously implemented or
+                                        ongoing actions, such as through prior environmental assessments that
+                                        consistently found no significant impacts. Agencies may also substantiate
+                                        a categorical exclusion based on another agency’s experience with a
+
+                                        70If there are no extraordinary circumstances or the agency modifies the proposed action
+                                        to avoid the potential to result in significant effects, the agency may apply the categorical
+                                        exclusion. Id.
+                                        71NEPA created the Council on Environmental Quality within the Executive Office of the
+                                        President. 42 U.S.C. §§ 4342-47. The Council on Environmental Quality oversees NEPA
+                                        implementation.
+
+
+
+
+                                        Page 39                                                                    GAO-25-106862 Wildfires
+comparable categorical exclusion and the record developed by the other
+agency when establishing the categorical exclusion.72 In consultation with
+the Council on Environmental Quality, agencies publish their proposed
+categorical exclusions for public comment and then incorporate them into
+their NEPA procedures.
+
+Other assessments of FEMA’s programs and processes have identified
+categorical exclusions as a potential method to increase the timeliness
+and efficiency of environmental reviews for wildfire mitigation actions. For
+example, the 2022 National Advisory Council report attributed lengthy
+time frames for environmental reviews, particularly for wildfire mitigation,
+as often due to the lack of applicable categorical exclusions, requiring
+environmental assessments that can take years to complete.73
+Additionally, the Commission report recommended that FEMA expand an
+existing categorical exclusion or establish a new one that would cover
+post-wildfire mitigation activities such as soil stabilization and erosion
+control.74 Lastly, three of the seven states we interviewed told us it would
+be helpful for FEMA to have a categorical exclusion for more wildfire
+mitigation projects.
+
+DHS establishes categorical exclusions that apply to FEMA and other
+DHS components. There are several paths DHS could take to pursue a
+categorical exclusion for post-wildfire soil stabilization activities, including
+following the process to establish a new categorical exclusion, expand an
+existing one, or adopt one from another agency:
+
+    Establishing a new categorical exclusion. DHS could pursue
+    establishing a new categorical exclusion to cover post-wildfire
+    mitigation activities based on the findings of past environmental
+    assessments. For example, since late 2019, FEMA has developed at
+    least four programmatic environmental assessments that found no
+    significant environmental impacts for a range of post-wildfire soil
+
+
+
+
+72See Council on Environmental Policy, Guidance on Establishing, Applying, and Revising
+Categorical Exclusions, 75 Fed. Reg. 75,628, 75,634 (Dec. 6, 2010).
+73FEMA National Advisory Council Annual Report.
+
+74On Fire: The Report of the Wildland Fire Mitigation and Management Commission.
+
+
+
+
+Page 40                                                        GAO-25-106862 Wildfires
+    stabilization mitigation actions eligible for FEMA assistance.75 The
+    findings in these assessments, as well as project specific
+    assessments for past soil stabilization and erosion control projects,
+    may help support a new categorical exclusion.
+    Expanding an existing categorical exclusion. DHS could pursue
+    expanding an existing categorical exclusion to include these post-
+    wildfire mitigation activities. For example, the Commission report
+    recommended that DHS could expand its categorical exclusion for
+    “federal assistance for planting of indigenous vegetation” to include
+    post-wildfire soil stabilization and erosion control activities.
+    Adopting another agency’s categorical exclusion. Other federal
+    agencies, such as the U.S. Forest Service, the Department of the
+    Interior, and the Bureau of Land Management, have categorical
+    exclusions that cover certain soil stabilization activities after a wildfire.
+    The Council on Environmental Quality’s NEPA regulations, amended
+    in May 2024, provide the option for agencies to adopt and apply
+    another agency’s categorical exclusion to a proposed action or a
+    category of actions.76 Therefore, DHS could pursue adopting the
+    categorical exclusion of one of these other agencies.
+    FEMA officials agree that a categorical exclusion for post-wildfire soil
+    stabilization and erosion control activities would be beneficial, and the
+    agency has begun to assess its options for adopting a categorical
+    exclusion from another agency to cover such activities. FEMA officials
+    said they have identified several categorical exclusions related to
+    post-wildfire soil stabilization at other agencies, and the agency is
+    currently evaluating the feasibility of adopting them. To do so, as
+    stated in regulation, DHS will need to work with the agency that
+    established the categorical exclusion and follow the process to adopt
+
+75Programmatic NEPA reviews help an agency identify environmental impacts of
+proposed policies, plans, programs, or projects for which subsequent actions will be
+implemented. See FEMA: Programmatic Environmental Assessment for the State of New
+Mexico Watershed Resiliency and Post-Wildfire Treatment Projects, (Denton, TX: Oct.
+2022); Final Programmatic Environmental Assessment: Wildfire Hazard Mitigation
+Projects in the State of Montana, (Denver, CO: Sept. 2019); Final Programmatic
+Environmental Assessment: Wildfire Hazard Mitigation Projects in the State of Wyoming,
+(Denver, CO: Sept. 2019); Final Programmatic Environmental Assessment: Wildfire
+Hazard Mitigation Projects in the State of Utah, (Denver, CO: Sept. 2019).
+7640 C.F.R. § 1501.4(e). In May 2024, the Council on Environmental Quality issued new
+regulations implementing NEPA, including section 109, which was enacted as part of the
+Fiscal Responsibility Act of 2023. 89 Fed. Reg. 35,442 (May 1, 2024). Section 109 of
+NEPA allows an agency to adopt a categorical exclusion listed in another agency’s NEPA
+procedures in certain circumstances and describes procedural requirements for such
+adoption. 42 U.S.C. § 4336c.
+
+
+
+
+Page 41                                                        GAO-25-106862 Wildfires
+    and apply the categorical exclusion to a proposed action or category
+    of actions.77 DHS officials said that the department is pursuing the
+    option to adopt another federal agency’s categorical exclusion
+    because the process is the most streamlined method for expanding
+    the department’s available categorical exclusions.
+    The Council on Environmental Quality recommends that agencies
+    anticipating long-term use of an adopted categorical exclusion
+    establish the categorical exclusion in their own NEPA procedures. As
+    such, adopting and applying another agency’s categorical exclusion to
+    a category of actions could be a good interim solution until an agency
+    establishes a new categorical exclusion or modifies an existing one.78
+The Stafford Act directs using the shortest existing applicable process
+under NEPA when providing assistance under HMGP.79 According to
+Council on Environmental Quality guidance, categorical exclusions
+provide an efficient tool to complete the environmental review process
+and can reduce paperwork and delay. The guidance further states that
+categorical exclusions are the most frequently employed method for
+NEPA compliance and appropriate reliance on categorical exclusions
+provides reasonable and effective analysis for many proposed actions.80
+Following the process to expand, establish, or adopt a categorical
+exclusion for wildfire mitigation activities that includes post-wildfire soil
+stabilization and erosion control measures would better position DHS to
+help FEMA provide more timely post-wildfire mitigation assistance.
+Establishing such a categorical exclusion could improve the agency’s
+ability to assist communities in mitigating risks from post-wildfire impacts,
+such as flooding and landslides, that threaten lives and property.
+
+
+
+
+77To adopt and apply a categorical exclusion listed in another agency’s NEPA procedures
+to a proposed action or a category of proposed action, agencies must: (1) Identify the
+categorical exclusion listed in another agency’s NEPA procedures that covers its
+proposed action or a category of proposed actions; (2) Consult with the agency that
+established the categorical exclusion; (3) Provide public notification of the categorical
+exclusion that the agency is adopting; (4) In applying the adopted categorical exclusion to
+a proposed action, evaluate the proposed action for extraordinary circumstances, and (5)
+Publish the documentation of the application of the adopted categorical exclusion. 44
+C.F.R. § 1501.4(e).
+7889 Fed. Reg. 35,442, 35,475 (May 1, 2024).
+
+7942 U.S.C. § 5170c(d)(1)(B).
+
+80Guidance on Establishing, Applying, and Revising Categorical Exclusions.
+
+
+
+
+Page 42                                                           GAO-25-106862 Wildfires
+Opportunities Exist to
+Further Enhance FEMA’s
+Management of the FMAG
+Program
+
+FEMA Has Not Collected   State, local, and tribal officials described a range of challenges
+Feedback on the FMAG     associated with the FMAG program, including administrative burdens and
+Program                  difficulty meeting cost threshold requirements for grant eligibility.
+                         However, unlike for some other assistance programs, FEMA does not
+                         collect ongoing, nationwide feedback from FMAG recipients that can be
+                         incorporated into FMAG policy, as applicable.
+
+                         Officials from five of seven states, six of 11 counties, and two of four
+                         Tribes we spoke to described the FMAG program as administratively
+                         burdensome. For example, county officials cited challenges related to
+                         compiling the required information to request the declaration, the amount
+                         of work required to seek reimbursements from associated grants, and a
+                         lack of understanding the eligibility requirements for FMAG declarations.
+                         Officials from one county said that their all-volunteer fire fighting staff do
+                         not have the resources to help the county complete the paperwork while
+                         responding to an active fire. Additionally, an official from another county
+                         said that the FMAG process would be difficult to navigate for applicants
+                         with less experience.
+
+                         Officials from two states and two counties said it was a challenge meeting
+                         the FMAG cost thresholds, which are required for fire management
+                         assistance grant eligibility.81 A state must demonstrate that the wildfire
+                         meets pre-established cost thresholds for FEMA to approve the initial
+                         grant award. For example, one state and one county described the impact
+                         these thresholds have on rural communities. Specifically, the state
+                         officials noted that FEMA develops cost thresholds based on a state’s
+                         population, making it difficult for rural, sparsely populated areas to meet
+
+
+
+
+                         81To apply for grants under an approved FMAG declaration, the state must demonstrate
+                         that it has met either the individual or cumulative fire cost threshold. The individual fire
+                         cost is based on total eligible costs for the declared fire and the cumulative fire cost is
+                         based on total eligible costs incurred during the calendar year for all declared fires and
+                         total costs incurred on non-declared wildfires. 44 C.F.R. § 204.51(b)(1). See FEMA, Fire
+                         Management Assistance Grant Program and Policy Guide, (Washington, D.C.: 2021) for
+                         more information.
+
+
+
+
+                         Page 43                                                             GAO-25-106862 Wildfires
+them, even after losing multiple homes.82 The county official said
+expenses of a few thousand dollars may not meet cost thresholds, but
+these costs can be significant in rural communities. Additionally, an
+official from another state said it is difficult when a wildfire does not meet
+cost thresholds because state and local officials expend time and
+resources to get the declaration and submit information to FEMA, but
+their application is ultimately not approved.
+
+One of FEMA’s Learning Agenda principles in its 2022-2026 Strategic
+Plan is to guide evidence building through evaluation. The principle states
+that evaluation and evidence-building findings inform and are integrated
+into the agency’s activities, such as budgeting, program improvement,
+management, accountability, and the development of programs, policies,
+and regulatory actions.83 Further, FEMA’s strategic plan states that FEMA
+recognizes the need to ensure programs continually review and respond
+to feedback through feedback loops that integrate input from
+communities. Additionally, Standards for Internal Control in the Federal
+Government states that management should use quality information,
+including obtaining relevant data from internal and external sources, and
+process it into information that management can use to make informed
+decisions and evaluate the entity’s performance in achieving key
+objectives and addressing risks.84
+
+FEMA headquarters officials said they have not collected nationwide,
+ongoing feedback because the FMAG program is regionally administered,
+and the regions conduct working groups to obtain feedback from state
+officials. However, FEMA headquarters officials also stated that, although
+FEMA regions administer the FMAG program, FEMA headquarters has
+responsibility for setting nationwide FMAG policy and program direction.
+Additionally, neither FEMA headquarters nor the regions have a process
+to solicit regular feedback from local and tribal governments. Not
+engaging with local and tribal governments, which make up a significant
+percentage of FMAG recipients, could be a missed opportunity to gather
+information that could improve program policy. Our data analysis showed
+
+82The individual fire cost threshold for a state is the greater of the following: $100,000 or
+five percent times $1.07 (adjusted annually for inflation) times the state population. The
+cumulative fire cost threshold for a State is the greater of the following: $500,000; or three
+times five percent times $1.07 (adjusted annually for inflation) times the State population.
+44 C.F.R. § 204.51(b)(2), (3).
+832022-2026 FEMA Strategic Plan: Building the FEMA our Nation Needs and Deserves.
+
+84GAO-14-704G.
+
+
+
+
+Page 44                                                              GAO-25-106862 Wildfires
+                                that about 41 percent of FMAG grant applicants between fiscal years
+                                2019 and 2023 were local or tribal governments, versus state agencies
+                                (59 percent).
+
+                                Officials from four counties, two Tribes, and the National Tribal
+                                Emergency Management Council said that FEMA could do more direct
+                                outreach to local or tribal governments. For example, one county official
+                                said there are not many opportunities to provide feedback directly to
+                                FEMA to support program policy changes. Another county official
+                                suggested that additional outreach to local governments may help build
+                                relationships and trust, as well as reassure local governments that their
+                                state emergency management departments have the right information.
+                                Officials from one Tribe said communication processes would be
+                                improved if FEMA communicated directly with tribal leaders.
+
+                                Additionally, not soliciting feedback from FMAG recipients—including
+                                state, local, and tribal governments—is inconsistent with FEMA’s efforts
+                                to gather feedback on other programs, such as the Public Assistance
+                                program that is managed by the same program office. Under FEMA’s
+                                strategic plan, FEMA tracks the percent of applicants satisfied with the
+                                simplicity of the Public Assistance program. FEMA officials also said they
+                                survey all levels of Public Assistance applicants to gather feedback and
+                                measure customer satisfaction. They review these survey responses on
+                                an ongoing basis and have made changes in response to them, including
+                                improving FEMA’s online portal for Public Assistance, according to
+                                officials.
+
+                                As FEMA’s only wildfire-specific assistance program and a first line of
+                                defense in preventing wildfire major disasters, it is important that FEMA
+                                take steps to identify and act on any challenges applicants face.
+                                Establishing a formal process to regularly collect and assess nationwide
+                                feedback from state, local, and tribal FMAG recipients and incorporating
+                                such feedback into program policy, as applicable, would help FEMA
+                                address challenges moving forward. Formal mechanisms to collect
+                                feedback could include surveys; discussion or focus groups; meetings
+                                with a sample of state, local, and tribal governments; and an anonymous
+                                online mailbox.
+
+FMAG Guidance Does Not          Local officials that we spoke to described challenges related to FMAG
+Fully Clarify Some Procedures   procedures. For example, officials stated that FEMA’s guidance related to
+                                FMAG eligibility for fires burning on federal land but threatening nearby
+                                communities was not clear. This has led to confusion among affected
+                                communities and different interpretations among FEMA officials.
+
+
+                                Page 45                                                GAO-25-106862 Wildfires
+Additionally, state officials described challenges related to eligibility of
+costs associated with in-state resources.
+
+FEMA’s FMAG guidance states that FEMA cannot fund wildfire response
+efforts on federal land.85 However, it does not clearly state whether the
+agency will approve declarations for fires burning only on federal land but
+threatening nearby state and local communities. Fires may burn on
+federal land but, due to weather conditions and increased development
+around federally owned land, may threaten neighboring communities.
+These communities may incur expenses before the fire burned beyond
+federal boundaries for emergency protective measures like evacuating
+neighboring communities. For example, in 2022, Oregon requested an
+FMAG declaration for the Cedar Creek Fire while the fire was burning
+entirely on federal land near a residential community. FEMA initially
+denied this request. On appeal, FEMA approved the FMAG declaration,
+in part because Lane County, Oregon incurred significant expenses for
+evacuating residents, according to state officials. According to Oregon
+state officials, the following year the state experienced a similar fire and
+FEMA regional officials told them an FMAG declaration request would
+likely be denied but that the state could appeal.
+
+As a result of the unclear guidance, FEMA officials have inconsistently
+interpreted FMAG eligibility for fires burning on federal land but
+threatening nearby communities. For example, officials from one region
+said FEMA’s policy was unclear, but officials from two other regions said
+they would declare an FMAG in such a situation. Officials from one of
+those two regions said they thought that when evaluating an FMAG
+request, regions are to look at the area threatened rather than where a
+fire is currently burning. Since the FMAG program is regionally
+administered, differing understandings of eligibility under such scenarios
+could lead to disparate outcomes for communities seeking FMAG
+declarations in different regions.
+
+Additionally, FEMA headquarters officials said the agency would approve
+an FMAG declaration if the threat of the fire to non-federal land met the
+declaration criteria, which include high fire danger conditions, as well as
+threats to lives, critical facilities, and infrastructure. The FMAG declaration
+would provide assistance related to eligible activities and costs, such as
+emergency protective measures. However, FEMA has not previously
+
+
+85FEMA regulations provide that fires fought on federal land are generally the
+responsibility of the federal agency that owns or manages the land. 44 C.F.R. § 204.43(e).
+
+
+
+
+Page 46                                                          GAO-25-106862 Wildfires
+clarified its policy in written guidance because an increase in fire activity
+in recent years has drawn more attention to the issue of fires burning on
+federal land but threatening nearby communities.
+
+Officials from three counties and two states that we spoke to said FEMA
+could do more to help communities pre-position resources to respond to
+wildfires. For example, officials from two states described the lack of
+funding for in-state pre-positioning as a gap in FEMA assistance for
+wildfires. Under FEMA’s current FMAG Program and Policy Guide (FMAG
+guide), state or local government-owned resources pre-positioned within
+the same state are not eligible for reimbursement. However, out-of-state,
+federal, and international resources may be eligible when those resources
+are used in response to a declared fire.86 This policy does not account for
+the size and difficulty of moving resources across large western states.
+For example, Idaho state officials described challenges associated with
+state resources located up to 7 hours away being considered local and
+thus ineligible for reimbursement. The Commission report also stated the
+importance of reimbursement for pre-positioning fire responders.
+
+FEMA officials stated that the issue of reimbursing eligible in-state pre-
+positioning costs came up after FEMA issued its last FMAG guide update.
+Additionally, officials agreed that reimbursing for eligible in-state pre-
+positioning costs would be beneficial, but added that FEMA had
+previously interpreted its authority as barring reimbursement for in-state
+pre-positioning costs. Officials thought providing reimbursement for these
+costs required a regulatory change and had begun the process of
+requesting new rulemaking. However, FEMA’s Office of Chief Counsel
+later determined that FEMA did have the flexibility to adjust its policy
+without updating the regulation.
+
+FEMA program officials said they plan to 1) document how regions should
+handle FMAG requests for fires burning on federal land but threatening
+nearby communities, and 2) provide written guidance on pre-positioning
+of in-state resources in the next FMAG guide update, which is expected
+to be published by November 2025. According to headquarters officials,
+they told the regions they would approve in-state pre-positioning costs on
+an ad hoc basis until they address this issue in the update. Additionally,
+headquarters officials stated they verbally informed regional FMAG points
+
+
+86Pre-positioning is moving existing fire prevention or suppression resources from an area
+of lower fire danger to one of higher fire danger in anticipation of an increase in fire activity
+likely to constitute the threat of a major disaster.
+
+
+
+
+Page 47                                                                GAO-25-106862 Wildfires
+                               of contact about the agency’s position on approving FMAG declarations
+                               for wildfires burning on federal land that threaten nearby communities.
+
+                               The FMAG guide states that to ensure proper implementation of the
+                               program, it is vital that those involved at any level share a common
+                               understanding of the program’s policies and procedures.87 Until FEMA
+                               updates program guidance with these changes, the agency lacks
+                               reasonable assurance that the policies will be carried out consistently.
+
+Enabling Tribal Governments    FEMA’s current regulations require tribal governments to request FMAG
+to Request FMAG Declarations   declarations through a state, rather than from FEMA directly, creating
+                               challenges for Tribes.88 According to the Bureau of Indian Affairs, there
+                               were over 2,600 wildfires that originated on or near trust land in 2023.
+                               Through an FMAG declaration, FEMA can help Tribes respond to
+                               wildfires by reimbursing eligible expenses such as equipment use, repair
+                               and replacement; mobilization and demobilization activities; and tools,
+                               materials, and supplies. Officials we spoke to from two Tribes and one
+                               state said that it is important for Tribes to have the flexibility to either
+                               request an FMAG declaration directly or through the state.
+
+                               There are several challenges that tribal governments may face in
+                               requesting FMAG declarations through a state. Officials from one FEMA
+                               region said this requirement adds an additional administrative layer,
+                               potentially resulting in delays and causing a tribal government to miss the
+                               application window. Additionally, a Tribe we spoke to said it was
+                               challenging to wait for disaster assistance grants to pass through the
+                               state, rather than receiving the grants directly from FEMA. Officials from
+                               the National Tribal Emergency Management Council stated that the
+                               success of the FMAG program for Tribes is dependent on the Tribe’s
+                               relationship with the state. FEMA regional officials also indicated that not
+                               all Tribes and states have positive relationships, which could complicate
+                               this process. Further, prior GAO work reported that Tribes face
+                               challenges with state administration of federal programs.89 For example,
+                               tribal stakeholders said that, in their view, some states do not respect
+                               tribal governments as sovereign nations and treat them like small non-
+
+                               87Fire Management Assistance Grant Program and Policy Guide.
+
+                               88See 44 C.F.R. § 204.22 (providing that the Governor of a state or the Governor’s
+                               Authorized Representative may submit a request for an FMAG declaration); 44 C.F.R.
+                               § 204.3.
+                               89GAO, Tribal Food Security: Opportunities Exist to Address Challenges in Federal
+                               Nutrition Programs, GAO-24-106218 (Washington, D.C.: July 29, 2024).
+
+
+
+
+                               Page 48                                                          GAO-25-106862 Wildfires
+profit organizations. According to tribal stakeholders, this view has
+discouraged Tribes from participating in these federal programs.
+
+Further, FEMA’s regulation requiring tribal governments to request an
+FMAG through a state is inconsistent with the process of requesting
+emergency and major disaster declarations, which allows for more
+flexibility. As of 2013, the Chief Executive of a tribal government may
+request an emergency or major disaster declaration directly, or a tribal
+government can be included in a state’s request.90 Officials from the
+National Tribal Emergency Management Council said the flexibility to
+request emergency or major disasters directly or through a state has
+been beneficial for Tribes.
+
+FEMA’s Tribal Policy states that FEMA acknowledges the inherent
+sovereignty of tribal governments, the trust responsibility of the federal
+government, and the nation-to-nation relationship between the U.S.
+Government and tribal governments.91 Further, the policy requires FEMA
+to maintain nation-to-nation relationships, recognizing that the tribal right
+to self-governance stems from the inherent sovereignty of Tribes as
+nations. It also says that tribal governments have a unique and direct
+relationship with the federal government and tribal governments are not
+political subdivisions of states but are recognized by the U.S. as distinct
+sovereign entities.
+
+FEMA’s 2022-2026 National Tribal Strategy says FEMA will support
+equitable opportunities for Tribes to access FEMA programs and
+resources.92 To do so, it states that FEMA will conduct an internal review
+of programs and policies that may inhibit equitable Tribal Nation access to
+FEMA programs and resources. It also says FEMA will commit to
+affecting legislative, regulatory, and policy changes that will enhance
+tribal access. Further, the strategy states that FEMA will develop,
+approve, and/or revise tribal-specific legislative, regulatory, and policy
+priorities designed to enhance equitable access.
+
+
+
+90The Sandy Recovery Improvement Act of 2013 amended the Stafford Act to allow Tribes
+the option to request emergency and major disaster declarations directly. 42 U.S.C.
+§§ 5170(b), 5191(c).
+91FEMA, FEMA Policy: FEMA Tribal Policy, FEMA Policy #305-111-1, (Washington, D.C.:
+Dec. 2016).
+92FEMA, 2022-2026 FEMA National Tribal Strategy, (Washington, D.C.: Aug. 2022).
+
+
+
+
+Page 49                                                       GAO-25-106862 Wildfires
+              FEMA Public Assistance program officials told us they recognize the
+              importance of this issue and had submitted a request for new rulemaking
+              to amend the regulation in late 2022.93 At that time, the agency put the
+              review on hold while it worked to update its tribal declarations guidance
+              for emergency and major disaster declarations.94 In March 2024, officials
+              from FEMA’s Recovery Office’s Policy Section asked officials in the
+              Public Assistance program to resubmit the request for review. In July
+              2024, Public Assistance program officials said that they were working to
+              identify other areas of the FMAG regulations that may require
+              amendments to accommodate a new allowance for tribal governments to
+              directly request an FMAG declaration. For example, FEMA would need to
+              determine a comparable fire cost threshold for tribal governments and
+              amend that requirement as appropriate, according to FEMA officials.
+
+              Amending its regulation to provide tribal governments the option to
+              request FMAG declarations directly from FEMA would provide Tribes with
+              more flexibility and would better enable FEMA to work with Tribes to
+              ensure they have the capacity to respond to wildfires. Additionally, it
+              would bring FMAG declaration procedures in line with procedures for
+              emergency and major disaster declarations and would be consistent with
+              FEMA’s commitment to enhance its nation-to-nation relationships with
+              federally recognized tribal governments.
+
+              As the incidence and severity of massive wildfires increases, taking
+Conclusions   additional opportunities to ensure its programs are effective would better
+              position FEMA to help meet this threat. FEMA is aware of some long-
+              standing challenges with wildfire assistance, such as administrative
+              burdens for program applicants, timeliness of reimbursements, debris
+              removal, and post-wildfire housing. The agency has begun initial efforts
+              intended to lessen the impacts of these complex issues, such as
+              streamlining its debris removal policies, though it is too early to fully
+              evaluate their effectiveness. However, FEMA has not fully assessed the
+              need for further action in other areas of wildfire assistance.
+
+              Timely provision of resources to wildfire affected communities is key not
+              only to recovery efforts but in the prevention of further devastation and
+
+              93Within FEMA headquarters, the Public Assistance program office administers the FMAG
+              program.
+              94FEMA released this guidance on December 4, 2024. The guidance updates FEMA’s
+              2017 Tribal Declarations Pilot Guidance and provides information for tribal governments
+              seeking emergency or major disaster declarations. See FEMA, Tribal Declarations Interim
+              Guidance, FP-104-009025-001, (Washington, D.C.: Dec. 2024).
+
+
+
+
+              Page 50                                                        GAO-25-106862 Wildfires
+                      compounding disasters. Wildfires destroy vegetation and soil, creating
+                      unique and urgent mitigation needs to prevent subsequent disasters,
+                      such as flooding and debris flows. Taking steps to provide immediate
+                      post-wildfire mitigation assistance, including establishing or adopting a
+                      categorical exclusion for post-wildfire soil stabilization and erosion control
+                      measures, could help foster more resilient communities and reduce the
+                      future demand on federal resources to address these hazards. The
+                      FMAG program—FEMA’s only wildfire-specific assistance program—is
+                      designed to support communities in preventing wildfires from becoming
+                      major disasters. State, local, and tribal communities are key partners in
+                      this effort. However, FEMA may be missing opportunities to engage with
+                      and seek feedback from these communities. Collecting, assessing, and
+                      incorporating feedback from state, local, and tribal communities into
+                      program policy would help FEMA address access challenges.
+
+                      FEMA program officials have proposed other changes to improve the
+                      FMAG program. For example, FMAG program officials have proposed
+                      two updates to FMAG guidance to clarify FEMA’s position on approving
+                      FMAG declarations for fires that originate on federal land but threaten
+                      communities and provide written guidance on pre-positioning of in-state
+                      resources. However, until FEMA updates program guidance with these
+                      changes, the agency cannot ensure the policies will be carried out
+                      consistently. FEMA officials have also discussed amending FMAG
+                      regulation to allow tribal governments to request FMAG declarations
+                      directly. Doing so could help improve Tribes’ access to assistance and
+                      respect tribal sovereignty.
+
+                      We are making a total of six recommendations to DHS and to FEMA.
+Recommendations for   Specifically:
+Executive Action
+                      The FEMA Administrator should assess ways to provide assistance for
+                      immediate post-wildfire mitigation and take steps to provide such
+                      assistance. If FEMA determines it needs additional authorities, it should
+                      develop a legislative proposal for implementing the proposed change(s).
+                      (Recommendation 1)
+
+                      The Secretary of Homeland Security should follow the process to expand,
+                      establish, or adopt a categorical exclusion for wildfire mitigation activities
+                      that includes post-wildfire soil stabilization and erosion control measures.
+                      (Recommendation 2)
+
+                      The FEMA Administrator should establish a formal process to regularly
+                      collect and assess nationwide feedback from state, local, and tribal
+
+
+                      Page 51                                                  GAO-25-106862 Wildfires
+                     FMAG recipients and incorporate such feedback into program policy, as
+                     appropriate. (Recommendation 3)
+
+                     The FEMA Administrator should document its position on approving
+                     FMAG declarations for fires burning on federal land but threatening
+                     nearby communities in the FMAG Program and Policy Guide.
+                     (Recommendation 4)
+
+                     The FEMA Administrator should clarify eligible pre-positioning costs,
+                     including use of in-state resources, in the FMAG Program and Policy
+                     Guide. (Recommendation 5)
+
+                     The FEMA Administrator should amend the FMAG regulations to provide
+                     tribal governments the option to request FMAG declarations directly from
+                     FEMA. (Recommendation 6)
+
+                     We provided a draft of this report to DHS for review and comment. DHS
+Agency Comments      provided written comments, which are reproduced in appendix II. DHS
+and Our Evaluation   concurred with five of the six recommendations and provided steps it
+                     plans to address them. Generally, these steps could address the intent of
+                     the recommendations, if implemented. DHS did not concur with the sixth
+                     recommendation to amend FMAG regulations to allow tribal governments
+                     to request FMAG declarations directly from FEMA, as discussed below.
+                     Additionally, DHS provided technical comments, which we incorporated
+                     as appropriate.
+
+                     DHS concurred with the first recommendation that FEMA assess ways to
+                     provide assistance for immediate post-wildfire mitigation and take steps to
+                     provide such assistance. Specifically, DHS said FEMA will explore
+                     options within the agency’s authority to expedite mitigation efforts, as well
+                     as identify gaps. After this assessment, FEMA plans to determine
+                     additional steps on how best to provide this assistance, as appropriate.
+                     These actions, if implemented, may address this recommendation.
+                     However, to the extent FEMA identifies statutory gaps to providing
+                     immediate post-wildfire mitigation assistance, it may need to develop a
+                     legislative proposal. Agencies routinely share their views on whether
+                     additional statutory authorities are needed to address issues we identify
+                     and how they plan to respond accordingly.
+
+                     In response to the third recommendation, that FEMA establish a formal
+                     process to collect nationwide feedback from FMAG recipients (including
+                     sub-recipients), FEMA described ongoing and planned steps to collect
+                     such feedback. However, in our report, we discuss why FEMA’s current
+
+
+                     Page 52                                                 GAO-25-106862 Wildfires
+methods of soliciting feedback are insufficient. Specifically, we reported
+that FEMA does not collect nationwide ongoing feedback and does not
+have a process to regularly solicit feedback from local and tribal
+governments.
+
+FEMA plans to add a session on FMAG program updates to its annual
+Public Assistance Working Session in Maryland to implement the
+recommendation. FEMA says it will solicit feedback from FMAG recipients
+and sub-recipients during this session and use the feedback to inform
+FMAG program policy. While we agree this is a helpful step, we are
+concerned this will not fully address all the concerns raised in our report.
+Specifically, these sessions are intended to discuss public assistance
+initiatives related to emergencies and major disasters. As such, FEMA
+may not receive feedback from FMAG recipients and sub-recipients who
+have never received or do not often receive Public Assistance—which
+can only be authorized under emergency and major disaster
+declarations—and therefore would not plan to attend the Public
+Assistance Working Session.
+
+Our analysis found that FEMA approved 209 FMAG declarations in fiscal
+years 2019 through 2023, compared to 13 major disaster and three
+emergency declarations. Additionally, the majority of these 225
+declarations were in Western states. It may be particularly difficult for
+local and tribal governments with fewer emergency management
+resources to attend an event located across the country from their
+jurisdictions. We continue to believe it is important for FEMA to establish
+a formal process to regularly collect and assess nationwide feedback
+from state, local, and tribal FMAG recipients and incorporate such
+feedback into program policy, as applicable. FEMA estimates that it will
+implement this recommendation by May 2025, and we will continue to
+monitor FEMA’s planned efforts through our recommendation follow-up
+process.
+
+DHS did not concur with the sixth recommendation that FEMA amend
+FMAG regulations to provide tribal governments the option to request
+FMAG declarations directly. DHS stated that providing this option is
+desirable but amending the regulations would first require an amendment
+to section 420 of the Stafford Act. We do not agree that a statutory
+change is necessary for FEMA to implement the recommendation.
+Section 420 of the Stafford Act provides that FEMA may provide
+assistance to state and local governments for the mitigation,
+
+
+
+
+Page 53                                                 GAO-25-106862 Wildfires
+management, and control of certain wildfires.95 It does not prescribe a
+process by which these entities may request or receive this assistance.
+Pursuant to section 420, FEMA issued regulations that establish a
+declaration process for FMAG similar to that for major disaster and
+emergency declarations.96 To the extent that FEMA has the authority to
+establish in regulation a declaration process for the FMAG program, it
+should also have the authority to change that declaration process to allow
+tribal governments to request FMAG declarations.
+
+Our position is consistent with what we heard from FEMA officials
+throughout our review. Public Assistance program officials told us they
+had submitted a request for new rulemaking to provide tribal governments
+this option in late 2022. As of July 2024, program officials told us they
+were working to revise the request to ensure it covered all areas of the
+regulations that would need to be updated to allow tribal governments to
+request FMAG declarations directly. We continue to believe that
+amending its regulation to allow tribal governments the option to request
+FMAG declarations directly from FEMA would better enable FEMA to
+work with Tribes to ensure they have the capacity to respond to wildfires
+and would be consistent with FEMA’s commitment to enhance its nation-
+to-nation relationships with federally recognized tribal governments.
+
+We are sending copies of this report to the Secretary of Homeland
+Security, the FEMA Administrator, and the appropriate congressional
+committees. In addition, the report is available at no charge on the GAO
+website at https://www.gao.gov.
+
+If you or your staff have any questions about this report, please contact
+me at (404) 679-1875 or curriec@gao.gov. Contact points for our Offices
+of Congressional Relations and Public Affairs may be found on the last
+
+
+
+
+9542 U.S.C. § 5187(a). The Sandy Recovery Improvement Act of 2013 provided that any
+reference to state and local governments in the Stafford Act is deemed to refer also to
+tribal governments. 42 U.S.C. § 5123.
+9644 C.F.R. § 204.22. The FEMA Administrator may issue an FMAG declaration, whereas
+only the President may issue major disaster and emergency declarations.
+
+
+
+
+Page 54                                                           GAO-25-106862 Wildfires
+page of this report. GAO staff who made key contributions to this report
+are listed in appendix III.
+
+
+
+
+Chris P. Currie
+Director, Homeland Security and Justice
+
+
+
+
+Page 55                                               GAO-25-106862 Wildfires
+List of Committees
+
+The Honorable Gary C. Peters
+Chairman
+The Honorable Rand Paul, M.D.
+Ranking Member
+Committee on Homeland Security and Governmental Affairs
+United States Senate
+
+The Honorable Chris Murphy
+Chair
+The Honorable Katie B. Britt
+Ranking Member
+Subcommittee on Homeland Security
+Committee on Appropriations
+United States Senate
+
+The Honorable Sam Graves
+Chairman
+The Honorable Rick Larsen
+Ranking Member
+Committee on Transportation and Infrastructure
+House of Representatives
+
+The Honorable Mark Amodei
+Chairman
+The Honorable Lauren Underwood
+Acting Ranking Member
+Subcommittee on Homeland Security
+Committee on Appropriations
+House of Representatives
+
+
+
+
+Page 56                                          GAO-25-106862 Wildfires
+Appendix I: Objectives, Scope, and
+              Appendix I: Objectives, Scope, and
+              Methodology
+
+
+Methodology
+
+              This report examines 1) the assistance the Federal Emergency
+              Management Agency (FEMA) provided to wildfire-affected communities
+              from fiscal years 2019 through 2023 and 2) any challenges affected
+              communities face with FEMA wildfire assistance and the extent to which
+              FEMA has taken steps to address them.
+
+              Our review examined wildfire declarations approved in fiscal years 2019
+              through 2023 and assistance FEMA provided to wildfire-affected
+              communities during that time.1 We selected this time period based on our
+              prior work on FEMA wildfires, which covered wildfire disasters through
+              November 2018, and the availability of data at the time of our audit. There
+              were no wildfire declarations for territories during this time, so we did not
+              include territories in the scope of our audit.
+
+              To describe FEMA’s wildfire assistance, we analyzed data from five
+              FEMA assistance programs: (1) Public Assistance, (2) Fire Management
+              Assistance Grant (FMAG), (3) Individual Assistance, (4) Hazard Mitigation
+              Grant Program (HMGP) and HMGP Post-Fire, and (5) Building Resilient
+              Infrastructure and Communities. These programs represent the bulk of
+              FEMA’s assistance for wildfires from fiscal years 2019 through 2023.2 For
+              Public Assistance, FMAG, and Individual Assistance, we analyzed
+              obligation and/or expenditure data for wildfire declarations approved in
+              fiscal years 2019 through 2023.3 For HMGP and HMGP Post-Fire, we
+              analyzed wildfire-related projects for all declarations approved from fiscal
+              years 2019 through 2023.4 Building Resilient Infrastructure and
+              Communities is an annual grant program, and fiscal year 2020 marked its
+              first funding cycle. At the time of our data request in October 2023, the
+
+              1We use the term “wildfire declarations” to refer to Fire Management Assistance Grant,
+              major disaster, or emergency declarations for wildfire incidents. For the purposes of our
+              report, affected communities include state, local, and tribal governments as well as
+              individual survivors.
+              2Public Assistance obligation amounts are as of September 2023; FMAG obligation
+              amounts are as of September 2023; Individual Assistance expenditure and obligation
+              amounts are as of October or November 2023 depending on the program; HMGP and
+              HMGP Post-Fire obligation amounts are as of October 2023; and Building Resilient
+              Infrastructure and Communities obligation amounts are as of September 2023.
+              3For the majority of programs we analyzed, FEMA tracks and reports obligations data. For
+              some Individual Assistance programs, FEMA instead tracks expenditures, such as the
+              amounts paid to individual survivors for housing and other assistance.
+              4HMGP and HMGP Post-Fire grants can be used for any type of eligible hazard, not just
+              the type of hazard covered by the declaration. For this report, we considered a project
+              wildfire-related if applicants chose a project type containing the word “wildfire” and/or if
+              they indicated the primary hazard type for the project was fire.
+
+
+
+
+              Page 57                                                               GAO-25-106862 Wildfires
+Appendix I: Objectives, Scope, and
+Methodology
+
+
+
+
+fiscal year 2023 funding cycle for this program was in process. Therefore,
+we analyzed Building Resilient Infrastructure and Communities obligation
+data for wildfire-related projects for the fiscal year 2020, 2021, and 2022
+funding cycles. Additionally, we interviewed and obtained written
+responses from FEMA headquarters and selected regional officials about
+non-financial assistance the agency provides for wildfires, such as
+training and technical assistance.5
+
+To assess the reliability of the data described above, we conducted
+electronic data testing, reviewed database documentation, and
+interviewed knowledgeable agency officials about the processes for
+collecting and maintaining these data. Based on these steps, we
+determined the data to be sufficiently reliable for the purposes of
+describing the amounts obligated or expended for these programs and
+the number of funded hazard mitigation projects and their status, as
+applicable. Final obligations and expenditures for these programs may
+vary, as some declarations and applications for assistance were in
+process at the time of our data request.
+
+To identify communities’ challenges obtaining FEMA wildfire assistance,
+we reviewed assessments of FEMA’s wildfire assistance programs,
+including the Wildland Fire Mitigation and Management Commission’s
+September 2023 report, FEMA’s National Advisory Council reports, DHS
+performance reports, and after-action reports.6 Additionally, we reviewed
+relevant laws and agency guidance documents, such as the program and
+policy guides for the programs we reviewed.
+
+To inform both research questions, we interviewed officials about their
+experiences obtaining FEMA assistance for wildfires and conducted in
+person site visits. We selected a non-generalizable sample of 22 state,
+local, and tribal governments that had received FEMA wildfire assistance
+during fiscal years 2019 through 2022.7 This included seven states, 11
+
+
+
+
+5We selected FEMA Regions 6, 8, 9, and 10 because states in these regions received the
+majority of wildfire declarations from fiscal years 2019 through 2023. FEMA is divided into
+ten geographic regions across the United States and its territories.
+6Wildland Fire Mitigation and Management Commission, On Fire: The Report of the
+Wildland Fire Mitigation and Management Commission, (Sept. 2023).
+7We decided not to include declarations from fiscal year 2023 because, at the time we
+obtained data to select locations (June 2023), fiscal year 2023 had not concluded.
+
+
+
+
+Page 58                                                            GAO-25-106862 Wildfires
+Appendix I: Objectives, Scope, and
+Methodology
+
+
+
+
+counties, and four Tribes.8 We selected these entities to obtain a variety
+of perspectives based on factors such as geographic location, number
+and type of wildfire declarations, and—for local governments—socio-
+economic status. As part of this effort, in September 2023, we visited five
+Washington counties that received one or more FMAG and/or wildfire
+major disaster declarations from fiscal years 2019 through 2022.
+Additionally, we visited the Nez Perce Tribe in Idaho. We conducted
+these site visits to obtain local and tribal perspectives on obtaining FEMA
+assistance; however, information from the visits is not generalizable.
+
+We also visited Hawaii in September 2023 to observe response and initial
+recovery efforts after the August 2023 wildfire major disaster (disaster
+number 4724). We interviewed federal officials—including those from
+FEMA Region 9, which includes Hawaii—state officials, and local non-
+governmental organizations to obtain information about FEMA’s response
+and initial recovery efforts. We interviewed FEMA Region 9 officials again
+in May 2024 to receive updated information on recovery efforts.
+
+We also interviewed external stakeholders such as the National
+Emergency Management Association and the National Tribal Emergency
+Management Council for additional information about challenges with
+FEMA wildfire assistance.9 We interviewed FEMA headquarters and
+regional officials to obtain the agency’s perspective on challenges
+applicants and recipients face obtaining FEMA assistance for wildfires
+and the extent to which FEMA has taken steps to address those
+
+8Selected states were: California, Idaho, Oregon, Florida, Nevada, Montana, and
+Washington. Selected local governments were: Los Angeles County (CA), Valley County
+(ID), Lane County (OR), Bay County (FL), Washoe County (NV), Rosebud County (MT),
+Yakima County (WA), Okanogan County (WA), Kittitas County (WA), Chelan County
+(WA), and Whitman County (WA). Additionally, we visited the town of Malden, in Whitman
+County, to observe rebuilding efforts after a 2020 wildfire major disaster (DR-4584). We
+also received information from Custer County, MT, about a joint wildfire mitigation project
+with Rosebud County. Selected tribes were: the Nez Perce Tribe, the Morongo Band of
+Mission Indians, the Confederated Tribes of Warm Springs, and the Northern Cheyenne
+Tribe. We asked open-ended questions in our interviews with state, local, and tribal
+officials to identify their specific challenges in accessing FEMA assistance for wildfires.
+We did not ask every official in every interview about each of the specific challenges
+discussed in this report.
+9The National Emergency Management Association is the professional association for
+emergency management directors from all 50 states, eight U.S. territories, and the District
+of Columbia. The association aims to enhance public safety by improving the nation’s
+ability to prepare for, respond to, and recover from emergencies, disasters, and threats to
+national security. The National Tribal Emergency Management Council is an organization
+of tribal members focused on building emergency management, public health, and
+homeland security infrastructure and capacity within Tribal Nations.
+
+
+
+
+Page 59                                                            GAO-25-106862 Wildfires
+Appendix I: Objectives, Scope, and
+Methodology
+
+
+
+
+challenges. We interviewed headquarters officials from various program
+offices, such as Hazard Mitigation Assistance Division, Office of
+Response and Recovery, Tribal Liaison Office, and Office of
+Environmental Planning and Historic Preservation.
+
+We compared FEMA’s efforts to address identified challenges with
+wildfire assistance with FEMA’s 2022-2026 Strategic Plan, the National
+Disaster Recovery Framework, and Standards for Internal Controls in the
+Federal Government, among other documents.10 We determined that the
+information and communication component of internal controls was
+significant to the second objective of this work, along with the underlying
+principle that management should use quality information to achieve the
+entity’s objectives. We assessed FEMA’s processes for collecting and
+using quality information to administer relevant assistance programs to
+determine whether the agency could achieve the programs’ objectives.
+
+We conducted this performance audit from May 2023 to December 2024
+in accordance with generally accepted government auditing standards.
+Those standards require that we plan and perform the audit to obtain
+sufficient, appropriate evidence to provide a reasonable basis for our
+findings and conclusions based on our audit objectives. We believe that
+the evidence obtained provides a reasonable basis for our findings and
+conclusions based on our audit objectives.
+
+
+
+
+10FEMA, 2022-2026 FEMA Strategic Plan: Building the FEMA our Nation Needs and
+Deserves, (Washington, D.C.: Dec. 9, 2021); DHS, National Disaster Recovery
+Framework, Second Edition, (Washington D.C.: June 2016); and GAO, Standards for
+Internal Control in the Federal Government, GAO-14-704G (Washington, D.C.: Sept. 10,
+2014).
+
+
+
+
+Page 60                                                       GAO-25-106862 Wildfires
+Appendix II: Comments from the Department
+             Appendix II: Comments from the Department
+             of Homeland Security
+
+
+of Homeland Security
+
+
+
+
+             Page 61                                     GAO-25-106862 Wildfires
+Appendix II: Comments from the Department
+of Homeland Security
+
+
+
+
+Page 62                                     GAO-25-106862 Wildfires
+Appendix II: Comments from the Department
+of Homeland Security
+
+
+
+
+Page 63                                     GAO-25-106862 Wildfires
+Appendix II: Comments from the Department
+of Homeland Security
+
+
+
+
+Page 64                                     GAO-25-106862 Wildfires
+Appendix II: Comments from the Department
+of Homeland Security
+
+
+
+
+Page 65                                     GAO-25-106862 Wildfires
+Appendix III: GAO Contact and Staff
+                  Appendix III: GAO Contact and Staff
+                  Acknowledgments
+
+
+Acknowledgments
+
+                  Christopher Currie, (404) 679-1875 or curriec@gao.gov.
+GAO Contact
+                  In addition to the contact named above, Caryn Kuebler (Assistant
+Staff             Director), Haley Dunn (Analyst-in-Charge), Hannah Weigle, Michael del
+Acknowledgments   Campo, Natalie Anderson, Benjamin Crossley, Elizabeth Dretsch, Tracey
+                  King, and Kevin Reeves made key contributions to this report.
+
+
+
+
+                  Page 66                                            GAO-25-106862 Wildfires
+                         The Government Accountability Office, the audit, evaluation, and investigative
+GAO’s Mission            arm of Congress, exists to support Congress in meeting its constitutional
+                         responsibilities and to help improve the performance and accountability of the
+                         federal government for the American people. GAO examines the use of public
+                         funds; evaluates federal programs and policies; and provides analyses,
+                         recommendations, and other assistance to help Congress make informed
+                         oversight, policy, and funding decisions. GAO’s commitment to good government
+                         is reflected in its core values of accountability, integrity, and reliability.
+
+                         The fastest and easiest way to obtain copies of GAO documents at no cost is
+Obtaining Copies of      through our website. Each weekday afternoon, GAO posts on its website newly
+GAO Reports and          released reports, testimony, and correspondence. You can also subscribe to
+                         GAO’s email updates to receive notification of newly posted products.
+Testimony
+Order by Phone           The price of each GAO publication reflects GAO’s actual cost of production and
+                         distribution and depends on the number of pages in the publication and whether
+                         the publication is printed in color or black and white. Pricing and ordering
+                         information is posted on GAO’s website, https://www.gao.gov/ordering.htm.
+                         Place orders by calling (202) 512-6000, toll free (866) 801-7077, or
+                         TDD (202) 512-2537.
+                         Orders may be paid for using American Express, Discover Card, MasterCard,
+                         Visa, check, or money order. Call for additional information.
+
+                         Connect with GAO on Facebook, Flickr, X, and YouTube.
+Connect with GAO         Subscribe to our RSS Feeds or Email Updates. Listen to our Podcasts.
+                         Visit GAO on the web at https://www.gao.gov.
+
+                         Contact FraudNet:
+To Report Fraud,
+                         Website: https://www.gao.gov/about/what-gao-does/fraudnet
+Waste, and Abuse in
+                         Automated answering system: (800) 424-5454 or (202) 512-7700
+Federal Programs
+                         A. Nicole Clowers, Managing Director, ClowersA@gao.gov, (202) 512-4400, U.S.
+Congressional            Government Accountability Office, 441 G Street NW, Room 7125, Washington,
+Relations                DC 20548
+
+                         Sarah Kaczmarek, Managing Director, KaczmarekS@gao.gov, (202) 512-4800,
+Public Affairs           U.S. Government Accountability Office, 441 G Street NW, Room 7149
+                         Washington, DC 20548
+
+                         Stephen J. Sanford, Managing Director, spel@gao.gov, (202) 512-4707
+Strategic Planning and   U.S. Government Accountability Office, 441 G Street NW, Room 7814,
+External Liaison         Washington, DC 20548
+
+
+
+
+                            Please Print on Recycled Paper.
+

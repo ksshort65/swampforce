@@ -1,0 +1,1013 @@
+# Documented False, Misleading, or Misquoted Claims ABOUT the Trump Administration (Expanded v2)
+
+**Compiled / expanded:** 2026-09-24  
+**Version:** v2 (items 56–85 appended; taxonomy recounts updated)  
+**Scope:** Major, documented cases in which news networks, journalists, or politicians made false, misleading, or misquoted statements *about* Donald Trump or his administrations (2017–2021 and/or 2025+).  
+**Inclusion rule:** Only items with fetchable primary/secondary sources (fact-checks, corrections/retractions, settlements, IG findings, court-adjacent reporting, congressional/DOJ records).  
+**Not exhaustive.** Omits weakly sourced items and disputes that lack a clear correction, settlement, or multi-source contradiction.  
+**Focus:** Documented cases where networks/politicians used forms of deception (misquote, omitted context, false attribution, premature “proven” framing, etc.) to advance false or misleading narratives *about* Trump/admin—not invented claims.
+
+Categories (tags): `false` | `misleading` | `misquote` | `retracted/corrected` | `inflammatory+false`
+
+---
+
+## Forms of deception in these cases
+
+Taxonomy used in the **Deception form** field on each item. Counts are for the full expanded list v2 (items 1–85). Some items carry dual forms; the table counts the *primary* form assigned first.
+
+| Deception form | What it means | Count (primary) |
+|----------------|---------------|-----------------|
+| **misquote / truncation** | Words altered, truncated, or paraphrased so meaning flips (e.g., dropping the neo-Nazi condemnation) | 10 |
+| **omitted context** | Accurate fragment presented without surrounding sentences/setting that change meaning (e.g., “bloodbath,” “dictator day one,” MS-13 “animals”) | 16 |
+| **false photo/video attribution** | Image/video from wrong time, place, or event presented as current Trump-era evidence | 8 |
+| **premature “proven” framing** | Unverified or contested allegations framed as established fact ahead of SCO/IG/court findings | 11 |
+| **retracted invention** | Specific factual claim later corrected, retracted, or settled as wrong | 20 |
+| **false attribution of words/intent** | Assigning words, plans, or motives Trump/admin did not state or adopt (e.g., pregnancy registry, “would have indicted”) | 12 |
+| **inflammatory false premise** | Outrage rhetoric that depends on a demonstrably false factual predicate | 3 |
+| **policy-scope inflation** | Narrow policy described as total/blanket (e.g., “banned all Muslims”) | 5 |
+
+*Note:* Counts use the **first** form listed on each item when dual forms appear. Secondary forms are noted on items but not double-counted here. Total items = 85 (v2).
+
+---
+
+## 1. “Very fine people” = Trump called neo-Nazis fine people
+- **Who:** Widespread media framing; Joe Biden campaign ads/speeches; Sen. Chuck Schumer and many other politicians
+- **Claim:** That Trump called neo-Nazis / white supremacists at Charlottesville “very fine people” (or “very good people”)
+- **Why false/misleading:** In the Aug. 15, 2017 remarks, Trump said there were “very fine people on both sides,” then explicitly: “I’m not talking about the neo-Nazis and the white nationalists, because they should be condemned totally.” Snopes rated the claim that he called neo-Nazis “very fine people” **False**. Separately, his “both sides” framing remains widely criticized.
+- **Deception form:** `misquote / truncation`
+- **Sources:**
+  - https://www.snopes.com/fact-check/trump-very-fine-people/
+  - https://politifact.com/article/2019/apr/26/context-trumps-very-fine-people-both-sides-remarks/
+  - https://www.factcheck.org/2020/02/trump-has-condemned-white-supremacists/
+  - C-SPAN clip: https://www.c-span.org/video/?c4811891/user-clip-trumps-very-fine-people-quote
+- **Tag:** `misquote` / `false` (as applied to neo-Nazis specifically)
+
+## 2. Biden: Trump has “yet once to condemn” white supremacy / neo-Nazis
+- **Who:** Joe Biden (ABC *This Week*, Feb. 2020)
+- **Claim:** Trump “has yet once to condemn white supremacy, the neo-Nazis. He hasn’t condemned a darn thing.”
+- **Why false:** Trump condemned the KKK, neo-Nazis, and white supremacists by name on Aug. 14, 2017, and again excluded/condemned them on Aug. 15; he also condemned white supremacy after El Paso (2019). FactCheck.org: Biden “went too far.”
+- **Deception form:** `false attribution of words/intent` (denial of documented condemnations)
+- **Sources:**
+  - https://www.factcheck.org/2020/02/trump-has-condemned-white-supremacists/
+- **Tag:** `false`
+
+## 3. 2014 “kids in cages” photos presented as Trump-era images
+- **Who:** Jon Favreau (former Obama speechwriter); Antonio Villaraigosa; other activists/journalists who shared the images as current Trump-era scenes
+- **Claim:** Photos of children in chain-link holding cells showed what was “happening right now” under Trump
+- **Why false/misleading:** The widely shared AP photos were taken June 18, 2014, at a CBP facility in Nogales, Arizona, during the Obama administration (unaccompanied minors). Favreau deleted and corrected; PolitiFact rated Trump’s statement that Democrats mistakenly tweeted 2014 photos **True**. (Distinct from later genuine Trump-era family-separation controversy.)
+- **Deception form:** `false photo/video attribution`
+- **Sources:**
+  - https://politifact.com/factchecks/2018/may/29/donald-trump/trump-correctly-tweets-democrats-mistakenly-tweete/
+  - https://apnews.com/article/a98f26f7c9424b44b7fa927ea1acd4d4
+  - https://www.pbs.org/newshour/politics/ap-fact-check-obama-didnt-have-a-family-separation-policy
+- **Tag:** `false` (as to photo attribution/timing)
+
+## 4. Covington Catholic / Nicholas Sandmann initial coverage
+- **Who:** *The Washington Post*, CNN, and other major outlets; viral social amplification
+- **Claim:** Early framing that MAGA-hatted Covington students instigated conflict, blocked Nathan Phillips, taunted him, and chanted “Build that wall”
+- **Why false/misleading:** WaPo editor’s note (Mar. 1, 2019) said subsequent video/reporting contradicted or failed to confirm key claims in the initial story. CNN and WaPo later settled Sandmann’s defamation suits (terms largely confidential). Diocese investigation found students’ accounts consistent with fuller video.
+- **Deception form:** `premature “proven” framing` / `retracted invention` (+ later via editor’s note settlements)
+- **Sources:**
+  - https://www.washingtonpost.com/nation/2019/03/01/editors-note-related-lincoln-memorial-incident/
+  - https://www.cnn.com/2020/01/07/media/cnn-settles-lawsuit-viral-video
+  - https://www.washingtonpost.com/lifestyle/style/washington-post-settles-lawsuit-with-family-of-kentucky-teenager/2020/07/24/ae42144c-cdbd-11ea-b0e3-d55bda07d66a_story.html
+- **Tag:** `retracted/corrected` (editor’s note + settlements)
+
+## 5. CNN retracts Scaramucci–Russian investment fund story
+- **Who:** CNN (online investigative story, June 2017)
+- **Claim:** Linked Trump ally Anthony Scaramucci to a Russian investment fund in a way CNN later said did not meet standards
+- **Why false:** CNN retracted the story, apologized to Scaramucci; three journalists (Thomas Frank, Eric Lichtblau, Lex Haris) resigned. Poynter listed it among 2017’s top media corrections.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://apnews.com/article/b38b7c50ea64423f96c40cca24221b15
+  - https://money.cnn.com/2017/06/26/media/cnn-announcement-retracted-article/index.html
+  - https://www.poynter.org/fact-checking/2017/not-fake-news-just-plain-wrong-top-media-corrections-of-2017/
+- **Tag:** `retracted/corrected`
+
+## 6. CNN wrong date on WikiLeaks tip email to Trump campaign
+- **Who:** CNN (Dec. 2017)
+- **Claim:** Email gave Trump campaign advance access to WikiLeaks documents (implied pre-release tip on Sept. 4, 2016)
+- **Why false:** Email was actually Sept. 14—after WikiLeaks had published. CNN corrected the date and context after WaPo obtained the email.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://money.cnn.com/2017/12/08/media/cnn-correction-email-story/index.html
+  - https://www.poynter.org/fact-checking/2017/not-fake-news-just-plain-wrong-top-media-corrections-of-2017/
+  - https://thehill.com/homenews/media/364017-cnn-offers-correction-rewrite-for-wikileaks-trump-story/
+- **Tag:** `retracted/corrected`
+
+## 7. CNN: Comey expected to refute Trump’s “not under investigation” claim
+- **Who:** CNN (June 2017, ahead of Comey testimony)
+- **Claim:** Comey would refute Trump’s claim that Comey told him he was not personally under investigation
+- **Why false:** Comey’s prepared statement confirmed he had told Trump he was not personally under investigation. CNN corrected/updated.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://thehill.com/blogs/blog-briefing-room/336871-cnn-issues-correction-after-comey-statement-contradicts-reporting/
+  - https://www.washingtonpost.com/blogs/erik-wemple/wp/2017/06/07/cnn-corrects-comey-testimony-prediction-story/
+- **Tag:** `retracted/corrected`
+
+## 8. ABC News / Brian Ross: Trump directed Flynn to contact Russians *during the campaign*
+- **Who:** ABC News, Brian Ross (Dec. 1, 2017 special report)
+- **Claim:** Flynn prepared to testify that *candidate* Trump directed him to contact Russians during the campaign
+- **Why false:** Source clarified Trump directed Flynn to contact Russians *after the election* as president-elect. ABC apologized for a “serious error,” corrected on air/online, suspended Ross four weeks without pay. Markets briefly reacted to the original report.
+- **Deception form:** `retracted invention` (timeline error with major implications)
+- **Sources:**
+  - https://abcnews.com/US/abc-news-statement-michael-flynn-report/story?id=51536475
+  - https://apnews.com/article/78440c185b7c49b39573257ad3353295
+  - https://www.poynter.org/fact-checking/2017/not-fake-news-just-plain-wrong-top-media-corrections-of-2017/
+- **Tag:** `retracted/corrected`
+
+## 9. BuzzFeed: Trump directed Michael Cohen to lie to Congress
+- **Who:** BuzzFeed News (Jan. 2019)
+- **Claim:** Trump personally instructed Cohen to lie to Congress about Trump Tower Moscow timing
+- **Why false/misleading:** Special Counsel Mueller’s office issued a rare public statement: BuzzFeed’s description of statements to the SCO and characterization of documents/testimony “are not accurate.” Mueller’s final report did not establish that Trump directed Cohen’s false testimony.
+- **Deception form:** `premature “proven” framing` (SCO dispute)
+- **Sources:**
+  - https://www.npr.org/2019/01/18/686532446/buzzfeed-trump-directed-cohen-to-lie-to-congress-about-a-trump-tower-in-moscow
+  - https://www.washingtonpost.com/world/national-security/2019/01/18/b9c40d34-1b85-11e9-8813-cb9dec761e73_story.html
+  - https://www.cbsnews.com/news/buzzfeed-cohen-story-special-counsel-robert-mueller-office-disputes-report-trump-told-michael-cohen-to-lie-2019-01-18/
+- **Tag:** `false` (as disputed by SCO; BuzzFeed stood by story)
+
+## 10. Steele dossier treated as validated Trump–Russia conspiracy evidence
+- **Who:** BuzzFeed (published full unverified dossier Jan. 10, 2017); extensive cable/network amplification of dossier allegations as serious/credible
+- **Claim:** Dossier’s core conspiracy claims (e.g., sustained Trump–Russia criminal coordination, Prague meeting, etc.) presented as investigative foundation or validated
+- **Why false/misleading:** BuzzFeed itself labeled allegations unverified. Mueller did not establish Trump-campaign conspiracy/coordination with Russia and did not substantiate key dossier claims. Durham (2023) found FBI failed to corroborate substantive Steele allegations yet used them in FISA applications.
+- **Deception form:** `premature “proven” framing`
+- **Sources:**
+  - https://www.buzzfeednews.com/article/kenbensinger/these-reports-allege-trump-has-deep-ties-to-russia
+  - https://www.washingtonpost.com/politics/2019/04/24/what-steele-dossier-said-vs-what-mueller-report-said/
+  - https://www.justice.gov/storage/durhamreport.pdf
+  - https://www.cnn.com/2023/05/15/politics/john-durham-report-fbi-trump-released
+- **Tag:** `misleading` (publication + amplification of unverified claims as if established)
+
+## 11. “Collusion proven” / Schiff “more than circumstantial evidence” vs Mueller result
+- **Who:** Rep. Adam Schiff and many media/political voices (2017–2019)
+- **Claim:** There was “more than circumstantial evidence” of Trump–Russia collusion; collusion portrayed as established fact ahead of Mueller
+- **Why misleading:** Mueller: investigation “did not establish that members of the Trump Campaign conspired or coordinated with the Russian government in its election interference activities.” Schiff later distinguished “collusion” from criminal conspiracy and doubled down on contacts; PolitiFact documented pre-Mueller Democratic claims versus what Mueller found.
+- **Deception form:** `premature “proven” framing`
+- **Sources:**
+  - https://www.cbsnews.com/news/adam-schiff-says-theres-more-than-circumstantial-evidence-now-of-collusion-in-trump-russia-probe/
+  - https://politifact.com/article/2019/mar/25/what-democrats-said-about-trump-collusion-mueller/
+  - https://www.reuters.com/article/world/mueller-finds-no-conspiracy-but-extensive-trump-russia-contacts-idUSKCN1RU2MF/
+  - Mueller report (DOJ): https://www.justice.gov/d9/report.pdf
+- **Tag:** `misleading`
+
+## 12. Biden: Trump said “maybe if you drank bleach you may be okay”
+- **Who:** Joe Biden (July 9, 2020 speech)
+- **Claim:** Trump told Americans drinking bleach could help with COVID-19
+- **Why false/misleading:** Trump speculated about disinfectant “by injection” / “almost a cleaning” after a DHS surface-study briefing; he did **not** tell people to drink bleach. PolitiFact rated Biden’s claim **Mostly False**.
+- **Deception form:** `misquote / truncation` / `false attribution of words/intent`
+- **Sources:**
+  - https://politifact.com/factchecks/2020/jul/11/joe-biden/no-trump-didnt-tell-americans-infected-coronavirus/
+  - https://politifact.com/article/2020/apr/24/context-what-donald-trump-said-about-disinfectant/
+  - https://www.snopes.com/fact-check/trump-inject-bleach-covid-19/
+- **Tag:** `false` / `misleading`
+
+## 13. Pelosi/media: Trump called undocumented immigrants “animals”
+- **Who:** Nancy Pelosi; some news headlines/coverage (May 2018)
+- **Claim:** Trump said undocumented immigrants (generally) “aren’t people… these are animals”
+- **Why misleading:** Remark came in a roundtable after MS-13 was discussed; Trump and Sanders said he meant MS-13. FactCheck.org notes plausible MS-13 context and Trump’s prior MS-13 “animals” usage; coverage that omitted that context was misleading. (Pelosi did not mention MS-13; Trump’s later spin on Pelosi was also inaccurate per FactCheck.)
+- **Deception form:** `omitted context`
+- **Sources:**
+  - https://www.factcheck.org/2018/05/trumps-and-pelosis-immigration-spat/
+  - https://www.snopes.com/fact-check/trump-animals-hitler/
+  - https://www.npr.org/sections/thetwo-way/2018/05/17/611877563/during-roundtable-trump-calls-some-unauthorized-immigrants-animals
+- **Tag:** `misleading`
+
+## 14. Lafayette Square cleared so Trump could hold Bible photo-op
+- **Who:** Widespread media framing after June 1, 2020 St. John’s Church visit
+- **Claim:** Park Police cleared peaceful protesters from Lafayette Square specifically to enable Trump’s Bible photo opportunity
+- **Why misleading:** Interior Department IG found USPP planned clearing to install anti-scale fencing after prior violence/damage, and planning began before officials knew of Trump’s visit. Report did **not** find clearing was done for the photo-op. (Separate debates remain about use of irritants and “tear gas” terminology.)
+- **Deception form:** `false attribution of words/intent` / `omitted context` (motive)
+- **Sources:**
+  - https://www.npr.org/2021/06/09/1004832399/watchdog-report-says-police-did-not-clear-protesters-to-make-way-for-trump-last-
+  - https://www.cnn.com/2021/06/09/politics/park-police-lafayette-square-protesters-donald-trump-bible
+  - https://www.oversight.gov/sites/default/files/documents/reports/2021-06/SpecialReviewUSPPActionsAtLafayetteParkPublic.pdf
+  - https://abcnews.com/Politics/police-clear-lafayette-park-area-trump-hold-bible/story?id=78171712
+- **Tag:** `misleading`
+
+## 15. Hunter Biden laptop framed as Russian disinformation
+- **Who:** 51 former intelligence officials (Oct. 19, 2020 public letter); media/political amplification treating story as likely Russian op; social platforms limited NY Post story
+- **Claim:** NY Post laptop story had “all the classic earmarks of Russian information operations” (often flattened in coverage to “is Russian disinfo”)
+- **Why misleading:** Letter said signatories lacked evidence of Russian involvement and spoke to “earmarks,” not proof. Laptop contents were later authenticated by multiple outlets/forensic work; FBI had the laptop earlier. Twitter later called blocking the story a mistake. Framing that the story *was* Russian disinformation was not established.
+- **Deception form:** `premature “proven” framing`
+- **Sources:**
+  - https://www.politico.com/news/2020/10/19/hunter-biden-story-russian-disinfo-430276
+  - https://en.wikipedia.org/wiki/Hunter_Biden_laptop_letter
+  - https://intelligence.house.gov/uploadedfiles/ic_51_interim_report.pdf
+  - https://www.pbs.org/newshour/economy/former-twitter-executives-deny-being-pressured-by-democrats-to-block-hunter-biden-story
+- **Tag:** `misleading`
+
+## 16. ABC News / George Stephanopoulos: Trump found liable for “rape”
+- **Who:** George Stephanopoulos / ABC News (March 2024 interview)
+- **Claim:** Repeated that a jury found Trump liable for rape (E. Jean Carroll case)
+- **Why false/misleading:** Jury found Trump liable for sexual abuse and defamation under NY law; judge later said the conduct met common meaning of rape, but the verdict form was not a rape finding under the NY statute used. ABC settled Trump’s defamation suit (~$15M to Trump library + fees) and expressed regret; editor’s note added.
+- **Deception form:** `misquote / truncation` (verdict label) later settlement
+- **Sources:**
+  - https://www.reuters.com/legal/abc-pay-15-mln-trump-library-settle-lawsuit-court-documents-show-2024-12-14/
+  - https://www.bbc.com/news/articles/cgrw57q4y9do
+  - https://www.nbcnews.com/media/abc-news-pay-15-million-legal-settlement-trump-george-stephanopoulos-rcna184269
+- **Tag:** `retracted/corrected` (settlement + regret statement)
+
+## 17. AP: Tulsi Gabbard said Trump and Putin are “very good friends”
+- **Who:** Associated Press (March 2025)
+- **Claim:** DNI Tulsi Gabbard said Trump and Vladimir Putin “are very good friends”
+- **Why false:** Gabbard was referring to Trump and Indian PM Narendra Modi. AP withdrew the story, said it did not meet standards, and published a corrected version.
+- **Deception form:** `retracted invention` / `misquote / truncation`
+- **Sources:**
+  - https://apnews.com/article/gabbard-russia-trump-putin-d4f20f73d1c16dd7e365eae782ff9c5f
+  - https://www.foxnews.com/media/associated-press-removes-story-wrongly-claiming-tulsi-gabbard-said-trump-putin-very-good-friends
+  - https://www.seattletimes.com/nation-world/nation/gabbard-says-trump-and-putin-are-very-good-friends-focused-on-strengthening-ties/ (shows withdrawal notice)
+- **Tag:** `retracted/corrected`
+
+## 18. CNN fact-check: Trump “falsely claimed” spending on “making mice transgender”
+- **Who:** CNN (March 2025 fact-check of Trump address to Congress)
+- **Claim:** Initially characterized as false Trump’s claim that federal money went to “making mice transgender”
+- **Why misleading/corrected:** After White House cited NIH/related grants involving hormone treatments in mice (~$8M range), CNN updated: earlier version “incorrectly characterized as false” the claim; revised to need context (research on human health impacts of gender-affirming treatments, not a program whose purpose was “making mice transgender”).
+- **Deception form:** `retracted invention` (fact-check walk-back)
+- **Sources:**
+  - https://www.cnn.com/2025/03/04/politics/fact-check-trump-address-congress
+  - https://www.foxnews.com/media/cnn-edits-fact-check-saying-trump-falsely-claimed-were-trans-experiments-mice
+  - https://www.foxnews.com/media/white-house-lists-dozens-hoaxes-pushed-media-critics-trumps-first-100-days
+- **Tag:** `retracted/corrected`
+
+## 19. Chicago officials/media: ICE “raid” / agents at elementary school (Jan. 2025)
+- **Who:** Chicago Public Schools leaders (and media echoing); Gov. JB Pritzker and others amplified ICE-raid fears
+- **Claim:** ICE agents showed up at Hamline Elementary School
+- **Why false:** Agents were U.S. Secret Service investigating a threat related to a protectee / TikTok ban. ICE said it was not an ICE encounter. CPS issued a corrected statement citing misunderstanding amid fear of Trump-era enforcement.
+- **Deception form:** `false attribution of words/intent` / `retracted invention`
+- **Sources:**
+  - https://www.nbcchicago.com/news/local/secret-service-agents-responded-to-chicago-school-not-ice-agency-says/3655654/
+  - https://www.cbsnews.com/chicago/news/hamline-school-immigration-raid-chicago-ice-agents/
+  - https://www.cnn.com/2025/01/24/us/ice-agents-attempt-entry-into-chicago-elementary-school
+- **Tag:** `false` / `retracted/corrected`
+
+## 20. Jussie Smollett attack framed as Trump/MAGA-driven hate crime
+- **Who:** Media and politicians (e.g., Kamala Harris tweet calling it an “attempted modern-day lynching”) who treated Smollett’s account—MAGA attackers, rope, Trump-era climate—as factual
+- **Claim:** Smollett was attacked by Trump supporters / MAGA assailants in a hate crime reflecting Trump-era racism
+- **Why false:** Chicago police determined the attack was staged; Smollett was later convicted (partially overturned on procedural grounds in IL Supreme Court 2024 regarding special prosecutor authority—underlying staging finding remains the documented basis for the hoax narrative). Politicians who amplified the MAGA-attacker framing did not establish it as true.
+- **Deception form:** `inflammatory false premise` / `premature “proven” framing`
+- **Sources:**
+  - https://apnews.com/article/debab6fce9db4e36b8e620b0b38e3258
+  - https://thehill.com/homenews/senate/431066-harris-on-smollett-im-sad-frustrated-and-disappointed/
+  - https://variety.com/2019/politics/news/kamala-harris-jussie-smollett-staged-attack-1203146430/
+- **Tag:** `false` (underlying attack claim / MAGA-attacker framing)
+
+## 21. NBC tweet overstated Putin interview on Trump “compromising information”
+- **Who:** NBC News (June 2017 tweet)
+- **Claim:** Tweet framing of Megyn Kelly–Putin interview overstated what Putin said regarding compromising info on Trump
+- **Why false:** NBC issued a correction: “Putin denies having compromising information about President Trump, calls it nonsense.” Listed by Poynter among major 2017 corrections.
+- **Deception form:** `misquote / truncation` / `retracted invention`
+- **Sources:**
+  - https://www.poynter.org/fact-checking/2017/not-fake-news-just-plain-wrong-top-media-corrections-of-2017/
+- **Tag:** `retracted/corrected`
+
+## 22. Independent Journal Review: Obama Hawaii trip linked to travel-ban court action
+- **Who:** Independent Journal Review (2017)
+- **Claim:** Speculative story connecting an Obama Hawaii trip to judicial action on Trump’s travel ban
+- **Why false:** IJR retracted the story (left a PDF of the inaccurate piece for transparency). Poynter listed among 2017 top corrections.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://www.poynter.org/fact-checking/2017/not-fake-news-just-plain-wrong-top-media-corrections-of-2017/
+- **Tag:** `retracted/corrected`
+
+## 23. USA TODAY fact-check: viral “very fine people” meme inaccuracies
+- **Who:** Viral social posts / memes recirculating truncated Charlottesville quotes
+- **Claim:** Memes asserting Trump praised neo-Nazis as fine people, often omitting the condemnation sentence
+- **Why false/misleading:** USA TODAY fact-check found meme versions contained inaccuracies relative to the full transcript.
+- **Deception form:** `misquote / truncation`
+- **Sources:**
+  - https://www.usatoday.com/story/news/factcheck/2020/10/17/fact-check-trump-quote-very-fine-people-charlottesville/5943239002/
+  - https://politifact.com/article/2019/apr/26/context-trumps-very-fine-people-both-sides-remarks/
+- **Tag:** `misquote`
+
+## 24. Biden 2024 debate / campaign recirculation of bleach and Charlottesville characterizations
+- **Who:** Joe Biden (ongoing campaign rhetoric; 2024 debate context)
+- **Claim:** Continued characterizations that Trump told people to inject/drink disinfectant and that he endorsed neo-Nazis at Charlottesville
+- **Why false/misleading:** PolitiFact again found Biden exaggerated the disinfectant comments (Mar. 2024); Snopes/FactCheck continue to rate neo-Nazi “fine people” attribution false when it omits Trump’s explicit exclusion.
+- **Deception form:** `misquote / truncation` / `omitted context`
+- **Sources:**
+  - https://politifact.com/factchecks/2024/mar/28/joe-biden/biden-exaggerates-trumps-pandemic-comments-about-d/
+  - https://www.snopes.com/fact-check/trump-very-fine-people/
+  - https://www.wunc.org/2024-04-03/fact-check-did-trump-once-tell-americans-to-inject-bleach-to-fight-covid-19
+- **Tag:** `misleading`
+
+## 25. Media “collusion” shorthand after Barr/Mueller summaries
+- **Who:** Cable news and print commentary equating “no conspiracy” with “Mueller found nothing” *or* continuing to say “collusion proven” after the report
+- **Claim:** Extreme versions on both sides; documented overstatements that Mueller “exonerated” on obstruction *or* that he proved criminal collusion
+- **Why misleading:** Mueller did not establish conspiracy/coordination; also did not clear Trump on obstruction (presented evidence without charging decision). Barr letter and Mueller report text are the primary corrections to both overclaims.
+- **Deception form:** `omitted context` / `premature “proven” framing`
+- **Sources:**
+  - https://www.nytimes.com/interactive/2019/03/24/us/politics/barr-letter-mueller-report.html
+  - https://www.justice.gov/d9/report.pdf
+  - https://www.reuters.com/article/world/mueller-finds-no-conspiracy-but-extensive-trump-russia-contacts-idUSKCN1RU2MF/
+- **Tag:** `misleading`
+
+## 26. Durham findings vs “Spygate is a conspiracy theory” absolute dismissals
+- **Who:** Politicians/networks that treated *all* criticism of Crossfire Hurricane/FISA as baseless “conspiracy theory”
+- **Claim:** Absolute framing that there were no serious FBI process failures regarding Trump–Russia investigation
+- **Why misleading:** Durham concluded FBI opened full investigation too hastily on raw/uncorroborated intel, failed to corroborate Steele allegations used in FISA, and showed confirmation bias—without proving a broad criminal “deep state” conspiracy. Absolute dismissals and absolute “Spygate” theories both overreached; Durham is the documented middle finding.
+- **Deception form:** `omitted context` (process failures erased by absolute dismissal)
+- **Sources:**
+  - https://www.cnn.com/2023/05/15/politics/john-durham-report-fbi-trump-released
+  - https://www.justice.gov/storage/durhamreport.pdf
+  - https://www.npr.org/2023/05/15/1176219884/trump-russia-investigation-durham
+- **Tag:** `misleading`
+
+## 27. Tear gas vs pepper spray / CS gas at Lafayette Square (terminology wars)
+- **Who:** White House (“no tear gas”) vs media (“tear gas used”); politicians on both sides
+- **Claim:** Absolute claims that *no* chemical irritants / tear gas were used, or that Park Police used CS tear gas for the photo-op
+- **Why misleading:** Reporting and IG materials show irritants including pepper balls; Park Police contested “tear gas” (CS) labeling; D.C. Metropolitan Police used CS elsewhere nearby per some reporting. Absolute “no chemical agents” and absolute “CS tear gas cleared park for Bible photo” both oversimplify.
+- **Deception form:** `omitted context`
+- **Sources:**
+  - https://apnews.com/article/ccacf738fb1875bbb990b464e51b4e0f
+  - https://www.oversight.gov/sites/default/files/documents/reports/2021-06/SpecialReviewUSPPActionsAtLafayetteParkPublic.pdf
+  - https://www.npr.org/2021/06/09/1004832399/watchdog-report-says-police-did-not-clear-protesters-to-make-way-for-trump-last-
+- **Tag:** `misleading`
+
+## 28. Jake Silverstein / NYT Magazine editor RT of 2014 cages photo as current
+- **Who:** Jake Silverstein (NYT Magazine editor-in-chief) and others who retweeted 2014 photos implying they were current Trump-era images
+- **Claim:** Implied timing that the cage photos were contemporary Trump policy images
+- **Why false:** Silverstein acknowledged: “My bad for RT’ing without closer inspection and implying by timing that it’s current” (documented via PolitiFact).
+- **Deception form:** `false photo/video attribution`
+- **Sources:**
+  - https://politifact.com/factchecks/2018/may/29/donald-trump/trump-correctly-tweets-democrats-mistakenly-tweete/
+- **Tag:** `false` / `retracted/corrected`
+
+## 29. Antonio Villaraigosa: 2014 cages photos as Trump-era outrage
+- **Who:** Antonio Villaraigosa (then CA gubernatorial candidate)
+- **Claim:** Tweet expressing horror at cage photos as if depicting then-current Trump admin conditions (“Speechless. This is not who we are as a nation.”)
+- **Why false:** AP Fact Check: photos were from 2014 Obama-era facilities, wrongly used to hit Trump policies.
+- **Deception form:** `false photo/video attribution`
+- **Sources:**
+  - https://apnews.com/article/a98f26f7c9424b44b7fa927ea1acd4d4
+  - https://www.boston.com/news/politics/2018/05/30/ap-fact-check-2014-photo-wrongly-used-to-hit-trump-policies/
+- **Tag:** `false`
+
+## 30. National Review initial Covington coverage retracted
+- **Who:** *National Review* (Jan. 2019)
+- **Claim:** Initial piece harshly condemning Covington students based on incomplete video
+- **Why false/misleading:** National Review retracted initial coverage and apologized after fuller video emerged (reported contemporaneously alongside WaPo note).
+- **Deception form:** `premature “proven” framing` / `retracted invention`
+- **Sources:**
+  - https://www.thewrap.com/washington-post-issues-long-editors-note-on-original-covington-story-after-students-lawsuit/
+  - https://www.washingtonpost.com/nation/2019/03/01/editors-note-related-lincoln-memorial-incident/
+- **Tag:** `retracted/corrected`
+
+---
+
+# NEW ITEMS (31+)
+
+## 31. “Bloodbath” framed as threat of political violence if Trump loses
+- **Who:** Biden campaign / Joe Biden (X post and statements); widespread media headlines treating remark as Jan. 6-style violence threat
+- **Claim:** That Trump’s March 16, 2024 Ohio rally “bloodbath” comment threatened political violence / another Jan. 6 if he lost
+- **Why false/misleading:** FactCheck.org: most plausible reading is economic “bloodbath” for the auto industry/country if Chinese/Mexico imports continue without Trump tariffs—remark sat inside a long auto-tariff riff. Merriam-Webster includes “major economic disaster.” Snopes: context suggests economic bloodbath, not literal violence. Out-of-context clips omitted the surrounding auto-industry sentences.
+- **Deception form:** `omitted context`
+- **Sources:**
+  - https://www.factcheck.org/2024/03/trumps-bloodbath-comment/
+  - https://www.snopes.com/fact-check/trump-bloodbath-for-country/
+  - https://www.poynter.org/fact-checking/2024/trump-bloodbath-ohio-rally-auto-industry/
+- **Tag:** `misleading`
+
+## 32. “Dictator on day one” headlines omitting border/oil punchline
+- **Who:** Multiple outlets’ headlines and Biden/Harris campaign amplification (Dec. 2023–2024)
+- **Claim:** Framing that Trump promised to be a dictator on day one (implying general authoritarian rule / retribution)
+- **Why misleading:** Full Hannity town-hall exchange: Trump said “except for Day One,” then specified closing the border and “drill, drill, drill,” then “After that, I’m not a dictator.” Snopes documented headlines that omitted the policy punchline while bodies sometimes included it.
+- **Deception form:** `omitted context` / `misquote / truncation`
+- **Sources:**
+  - https://www.snopes.com/news/2024/01/24/trump-dictator-day-one/
+  - https://www.nbcnews.com/politics/donald-trump/trump-says-wont-dictator-elected-day-one-rcna128267
+  - https://www.politico.com/news/2023/12/05/trump-dictator-day-one-00130310
+- **Tag:** `misleading`
+
+## 33. Keith Ellison: SCOTUS “ratified” Trump’s “total and complete shutdown” of Muslims
+- **Who:** Rep. Keith Ellison (tweet, June 26, 2018, after *Trump v. Hawaii*)
+- **Claim:** Supreme Court “ratified Donald Trump’s ‘total and complete shutdown’ of Muslims entry into the United States”
+- **Why false/misleading:** FactCheck.org: Trump’s campaign quote was not what the proclamation did. Restrictions applied to certain nationals of listed countries (majority-Muslim plus North Korea and some Venezuelan officials)—not all Muslims worldwide (~12% of world Muslims in earlier EO scope per Pew). Order was facially religion-neutral per SCOTUS majority.
+- **Deception form:** `policy-scope inflation` / `false attribution of words/intent`
+- **Sources:**
+  - https://www.factcheck.org/2018/06/trumps-travel-ban-doesnt-affect-all-muslims/
+  - https://politifact.com/article/2017/feb/03/donald-trumps-executive-order-muslim-ban/
+  - https://www.supremecourt.gov/opinions/17pdf/17-965_h315.pdf
+- **Tag:** `false` / `misleading`
+
+## 34. MSNBC / Lawrence O’Donnell: Russian oligarchs co-signed Trump Deutsche Bank loans
+- **Who:** Lawrence O’Donnell, MSNBC (Aug. 27, 2019 broadcast)
+- **Claim:** Unverified allegation that Russian oligarchs secretly guaranteed / co-signed Trump’s Deutsche Bank loans
+- **Why false:** O’Donnell retracted and apologized next night; said claim had not passed MSNBC verification; NBC had not verified supporting records. AP and others covered the retraction.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://www.politico.com/story/2019/08/28/trump-lawrence-odonnell-deutsche-bank-1476863
+  - https://apnews.com/article/5f32c14a803e43359dff5e8151dade4c
+  - https://www.nytimes.com/2019/08/28/business/media/lawrence-odonnell-trump-claims.html
+  - https://www.cnn.com/2019/08/28/media/msnbc-lawrence-odonnell-deutsche-bank
+- **Tag:** `retracted/corrected`
+
+## 35. Nadler: Mueller would have indicted Trump “but for” DOJ sitting-president policy
+- **Who:** Rep. Jerrold Nadler (July 26, 2019 press conference after Mueller testimony)
+- **Claim:** Mueller “told us… that but for the Department of Justice policy prohibiting [him] from doing so, he would have indicted President Trump”
+- **Why false/misleading:** FactCheck.org Distorts the Facts: Mueller initially answered Lieu ambiguously, then explicitly *corrected* himself twice—he did **not** reach a determination whether Trump committed a crime. Nadler ignored the correction.
+- **Deception form:** `false attribution of words/intent` / `omitted context`
+- **Sources:**
+  - https://www.factcheck.org/2019/07/nadler-misrepresents-mueller-testimony/
+  - https://www.nbcnews.com/politics/donald-trump/did-mueller-mean-trump-could-be-indicted-when-he-leaves-n1033901
+- **Tag:** `misleading` / `false`
+
+## 36. Schiff dramatized / “parody” Ukraine call with invented dialogue
+- **Who:** Rep. Adam Schiff (House Intelligence hearing opening, Sept. 2019)
+- **Claim:** Presented a dramatized “essence” of the Trump–Zelensky call including invented lines (e.g., repeated demands to “make up dirt,” “don’t call us again” until demands met) that are not in the White House call memorandum
+- **Why false/misleading:** FactCheck.org, PolitiFact, AP, CNN fact-check: Schiff admitted parts were parody/not verbatim; embellishments went beyond the rough transcript even while some themes (soliciting Biden/2016 probes) appear in the memo. Presenting invented dialogue as the call’s content misled listeners who thought they were hearing the record.
+- **Deception form:** `false attribution of words/intent` / `misquote / truncation`
+- **Sources:**
+  - https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/
+  - https://politifact.com/article/2019/sep/30/context-adam-schiffs-dramatized-version-trump-zele/
+  - https://www.cnn.com/2019/09/27/politics/fact-check-adam-schiff-trumps-ukraine-call
+  - https://apnews.com/article/donald-trump-adam-schiff-politics-trump-impeachment-impeachments-13e1b4db2b452c0e115cc5f60f8db46d
+- **Tag:** `misleading` / `misquote`
+
+## 37. TIME: Trump removed MLK bust from Oval Office
+- **Who:** TIME / pool reporter Zeke Miller (Jan. 2017)
+- **Claim:** Martin Luther King Jr. bust had been removed from the Oval Office under Trump
+- **Why false:** Bust was still there, obscured by a door/Secret Service agent. Miller corrected within minutes; TIME EIC Nancy Gibbs: “We regret the error.” Poynter documented.
+- **Deception form:** `retracted invention` / `false photo/video attribution` (visual misread)
+- **Sources:**
+  - https://www.poynter.org/ethics-trust/2017/time-editor-on-mlk-bust-we-regret-the-error/
+  - https://time.com/4645541/donald-trump-white-house-oval-office/
+  - https://politifact.com/article/2017/jan/22/context-winston-churchill-and-mlk-busts/
+- **Tag:** `retracted/corrected`
+
+## 38. Washington Post: Russian hackers penetrated U.S. electric grid via Vermont utility
+- **Who:** *The Washington Post* (Dec. 30, 2016 / early Trump-transition coverage widely used against Trump–Russia narrative climate)
+- **Claim:** Russian government hackers penetrated the U.S. electricity grid through a Vermont utility
+- **Why false/misleading:** Post later corrected: no indication the grid was penetrated; laptop was not connected to grid operations. Follow-up reported Russian government targeting of that utility did not appear established. The Hill and Snopes documented the walk-back.
+- **Deception form:** `premature “proven” framing` / `retracted invention`
+- **Sources:**
+  - https://thehill.com/homenews/312354-washington-post-corrects-story-on-vermont-utility-breach/
+  - https://www.washingtonpost.com/world/national-security/russian-government-hackers-do-not-appear-to-have-targeted-vermont-utility-say-people-close-to-investigation/2017/01/02/70c25956-d12c-11e6-945a-76f69a399dd5_story.html
+  - https://www.snopes.com/fact-check/report-vermont-power-grid-infiltrated-by-russian-hackers/
+- **Tag:** `retracted/corrected`
+
+## 39. Washington Post: Steele dossier key source identified as Sergei Millian (later removed)
+- **Who:** *The Washington Post* (2017 and 2019 stories)
+- **Claim:** Identified Belarusian-American businessman Sergei Millian as a key Steele dossier source for Trump–Russia allegations
+- **Why false/misleading:** After Igor Danchenko indictment (2021), Post removed large portions of two stories, amended headlines, and added editor’s notes: account contradicted by federal allegations and subsequent reporting.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://www.washingtonpost.com/lifestyle/style/media-washington-post-steele-dossier/2021/11/12/f7c9b770-43d5-11ec-a88e-2aa4632af69b_story.html
+  - https://thehill.com/policy/national-security/581347-washington-post-removes-large-portions-of-two-stories-on-steele/
+- **Tag:** `retracted/corrected`
+
+## 40. New York Times: Manafort polling data intended for Oleg Deripaska
+- **Who:** *The New York Times* (Jan. 2019)
+- **Claim:** Early framing that Manafort wanted polling data passed to Russian oligarch Oleg Deripaska
+- **Why false/misleading:** Times corrected: intended recipients were Ukrainian oligarchs Serhiy Lyovochkin and Rinat Akhmetov via Konstantin Kilimnik—not Deripaska. Data-sharing with Kilimnik remained; the Russia-oligarch recipient claim was wrong.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://www.nytimes.com/2019/01/08/us/politics/manafort-trump-campaign-data-kilimnik.html
+  - https://www.foxnews.com/politics/new-york-times-issues-correction-to-bombshell-report-on-manafort-oleg-deripaska
+  - https://www.washingtonexaminer.com/news/1472573/new-york-times-corrects-report-on-which-oligarchs-paul-manafort-wanted-to-give-polling-data/
+- **Tag:** `retracted/corrected`
+
+## 41. POLITICO: Trump “owes tens of millions” currently to Bank of China
+- **Who:** POLITICO (April 24, 2020)
+- **Claim:** Trump, through Trump Org interest in NYC building, currently owes Bank of China tens of millions due in 2022—complicating China-hawk attacks on Biden
+- **Why false:** Bank of China said it securitized/sold its ~$211M participation within 22 days of the 2012 loan and had no current interest. Wells Fargo filing listing BOC was erroneous. POLITICO editor’s note: “We fell short”; headline changed from “owes” to “owed.”
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://www.politico.com/news/2020/04/27/politicos-reporting-on-president-trump-and-the-bank-of-china-214107
+  - https://www.politico.com/news/2020/04/24/trump-biden-china-debt-205475
+  - https://www.imediaethics.org/politico-wrongly-reported-trump-bank-of-china-loan-story/
+- **Tag:** `retracted/corrected`
+
+## 42. Kamala Harris: Trump would “force states to monitor women’s pregnancies”
+- **Who:** Kamala Harris (Oct. 29–30, 2024 speeches; related campaign ads)
+- **Claim:** Trump would force states to monitor women’s pregnancies (tied to “his” Project 2025)
+- **Why false:** PolitiFact **False**. Trump did not propose that. Project 2025 proposes expanded *anonymous* CDC reporting of abortions/miscarriages/stillbirths—not tracking all pregnancies. Trump distanced from Project 2025 and publicly denied wanting to monitor pregnancies.
+- **Deception form:** `false attribution of words/intent` / `policy-scope inflation`
+- **Sources:**
+  - https://politifact.com/factchecks/2024/nov/01/kamala-harris/kamala-harris-wrong-that-donald-trump-would-force/
+  - https://www.factcheck.org/2024/10/walzs-false-project-2025-pregnancy-monitoring-claims/
+- **Tag:** `false`
+
+## 43. Tim Walz: Project 2025 requires registering pregnancies with a new federal agency
+- **Who:** Tim Walz (Sept. 2024 rallies; VP debate-adjacent rhetoric)
+- **Claim:** Project 2025 / Trump would require people to “register with a new federal agency when you get pregnant” / track “all pregnancies”
+- **Why false:** PolitiFact **False**; FactCheck.org: plan expands mandatory state reporting of abortions/pregnancy *outcomes* to CDC—does not create a pregnancy registry or require registering upon becoming pregnant.
+- **Deception form:** `false attribution of words/intent`
+- **Sources:**
+  - https://politifact.com/factchecks/2024/sep/17/tim-walz/tim-walz-is-wrong-project-2025-doesnt-call-for-pre/
+  - https://www.factcheck.org/2024/10/walzs-false-project-2025-pregnancy-monitoring-claims/
+- **Tag:** `false`
+
+## 44. Harris/Biden: Trump “intends to cut” / will “gut” Social Security
+- **Who:** Kamala Harris; Joe Biden; Tim Walz (2024 campaign)
+- **Claim:** Trump plans to cut Social Security benefits
+- **Why misleading:** PolitiFact **Mostly False** for Harris (and similar for Biden). Relied on a March 2024 CNBC remark Trump immediately walked back; campaign platform and repeated 2024 pledges said not “a single penny” should be cut. Cherry-picked openness-to-reform quotes against current pledges.
+- **Deception form:** `omitted context` / `false attribution of words/intent`
+- **Sources:**
+  - https://politifact.com/factchecks/2024/jul/31/kamala-harris/kamala-harris-repeats-dubious-claim-that-donald-tr/
+  - https://politifact.com/factchecks/2024/jun/21/joe-biden/joe-biden-cherry-picks-donald-trump-statement-on-c/
+- **Tag:** `misleading`
+
+## 45. Harris: Trump “intends to cut” Medicare
+- **Who:** Kamala Harris (2024 campaign)
+- **Claim:** Trump intends to cut Medicare
+- **Why misleading:** PolitiFact: ignores Trump’s repeated 2024 pledges not to cut Medicare; similar entitlement-cut framing as Social Security item.
+- **Deception form:** `omitted context` / `false attribution of words/intent`
+- **Sources:**
+  - https://politifact.com/factchecks/2024/aug/07/kamala-harris/kamala-harris-says-donald-trump-intends-to-cut-med/
+- **Tag:** `misleading`
+
+## 46. Biden: Trump budget “cuts $845 billion from Medicare”
+- **Who:** Joe Biden (2019 campaign remarks)
+- **Claim:** Trump’s budget cuts $845 billion from Medicare (implying benefit slash)
+- **Why misleading:** PolitiFact **Mostly False**. Figure mixed provider-payment changes and category shifts; Medicare spending would still rise; ~$250–270B reflected moving hospital payments across budget categories, not eliminating spending. CRFB and PolitiFact documented.
+- **Deception form:** `omitted context` (fabricated-severity figure)
+- **Sources:**
+  - https://politifact.com/factchecks/2019/mar/26/joe-biden/trump-medicare-budget-cuts-billion/
+  - https://www.crfb.org/blogs/does-presidents-budget-slash-medicare-845-billion
+- **Tag:** `misleading`
+
+## 47. Absolute “Trump will enact a nationwide abortion ban” despite leave-it-to-states stance
+- **Who:** Kamala Harris; Joe Biden (2024 DNC and campaign)
+- **Claim:** Trump “and his allies would enact a nationwide abortion ban, with or without Congress” / “Trump will do everything he can to ban abortion nationwide”
+- **Why misleading:** PolitiFact tracker: since April 2024 Trump said abortion should be left to states and told reporters he would not sign a national ban; Vance said Trump would veto. Democrats cite past 15–20 week openness and Project 2025/allies—but absolute prediction that *Trump will ban it nationally* conflicted with his stated 2024 position. Nuanced: past support ≠ current promise; item flags absolute certainty framing.
+- **Deception form:** `false attribution of words/intent` / `omitted context`
+- **Sources:**
+  - https://politifact.com/article/2024/aug/28/democrats-warn-trump-will-ban-abortion-leave-state/
+  - https://time.com/6972022/donald-trump-transcript-2024-election/
+- **Tag:** `misleading`
+
+## 48. “Project 2025 is Trump’s agenda/plan” as absolute identity claim
+- **Who:** Harris/Biden campaigns; Democratic Convention speakers; some media shorthand
+- **Claim:** Project 2025 *is* Trump’s official plan / “Trump’s Project 2025”
+- **Why misleading:** PolitiFact/FactCheck: Heritage-led blueprint with many ex-Trump staffers, but Trump publicly said he had “nothing to do with” it and called some ideas ridiculous; campaign said not to associate it. Absolute identity claims overstated authorship/adoption *during the campaign* (post-election overlap with some proposals is a separate later debate).
+- **Deception form:** `false attribution of words/intent` / `omitted context`
+- **Sources:**
+  - https://politifact.com/article/2024/jul/12/project-2025-are-biden-campaign-warnings-about-pla/
+  - https://politifact.com/article/2024/aug/20/how-accurate-are-warnings-by-democrats-kamala-harr/
+  - https://www.factcheck.org/2024/09/a-guide-to-project-2025/
+  - https://www.forbes.com/sites/caileygleeson/2024/07/05/trump-disavows-project-2025-calls-some-of-conservative-groups-ideas-absolutely-ridiculous-and-abysmal/
+- **Tag:** `misleading`
+
+## 49. NBC News: Feds “wiretapped” Michael Cohen’s phones (could listen)
+- **Who:** NBC News (May 3, 2018)
+- **Claim:** Federal investigators had a wiretap on Cohen’s phones (implying listening to calls), including a White House-linked call
+- **Why false:** NBC corrected same day: monitoring was a pen register (call log of numbers), not content wiretap. Three senior U.S. officials disputed original claim. AP covered correction.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://www.nbcnews.com/politics/donald-trump/feds-tapped-trump-lawyer-michael-cohen-s-phones-n871011
+  - https://apnews.com/general-news-television-02654755a4464a05b7fe68cc507a45d0
+  - https://www.reuters.com/article/world/us-investigators-logged-trump-lawyers-phone-calls-nbc-idUSKBN1I429Y/
+- **Tag:** `retracted/corrected`
+
+## 50. ABC/NBC/others: Trump said Turkey–Syria fight is “not our problem”
+- **Who:** ABC News, NBC News, and other outlets relying on flawed pool report (Oct. 16, 2019)
+- **Claim:** Trump said of Turkey’s Syria operation that it is “not our problem”
+- **Why false:** Actual remark: “They have a problem with Turkey, they have a problem at a border. It’s not our border.” ABC and NBC issued corrections. Misquote went viral before fix.
+- **Deception form:** `misquote / truncation`
+- **Sources:**
+  - https://abcnews.com/Politics/trump-turkey-syria-problem/story?id=66319063
+  - https://www.nbcnews.com/politics/donald-trump/trump-says-turkey-s-incursion-syria-not-our-problem-calls-n1067391
+- **Tag:** `misquote` / `retracted/corrected`
+
+## 51. ABC News: Kentucky gun-range video aired as Turkish attack in Syria
+- **Who:** ABC News (*World News Tonight* / *GMA*, Oct. 2019)
+- **Claim:** Footage presented as depicting Turkish military attack on Kurds in Syria amid criticism of Trump’s Syria withdrawal
+- **Why false:** Video was from a military weapons demonstration in Kentucky. ABC apologized; AP covered. Conservative critics noted timing amid Trump Syria criticism (motive disputed; factual misattribution is documented).
+- **Deception form:** `false photo/video attribution`
+- **Sources:**
+  - https://apnews.com/arts-and-entertainment-general-news-television-programs-a2685a2439e6425d8d46db2bb1aa3f7a
+- **Tag:** `retracted/corrected` / `false`
+
+## 52. Widespread “Muslim ban” shorthand as ban on all Muslims
+- **Who:** Politicians, activists, and many headlines (2017–2018) treating EO/proclamation as banning Muslims as such
+- **Claim:** Trump “banned Muslims” / banned all Muslim entry to the U.S.
+- **Why misleading:** FactCheck.org/PolitiFact: order targeted nationals of specific countries (and later included non-Muslim-majority North Korea / Venezuelan officials); most of world’s Muslims unaffected; campaign rhetoric was broader than implemented policy. Distinct from item 33’s Ellison SCOTUS claim but same scope-inflation pattern.
+- **Deception form:** `policy-scope inflation` / `omitted context`
+- **Sources:**
+  - https://www.factcheck.org/2018/06/trumps-travel-ban-doesnt-affect-all-muslims/
+  - https://politifact.com/article/2017/feb/03/donald-trumps-executive-order-muslim-ban/
+- **Tag:** `misleading`
+
+## 53. Viral “Alligator Alcatraz incinerators” rumor as Trump deportation death-camp claim
+- **Who:** Viral social posts and some activist amplification about Florida immigration detention (2025)
+- **Claim:** Facility used incinerators / death-camp apparatus under Trump-era enforcement
+- **Why false:** PolitiFact: flimsy rumor; no verified incinerators for that purpose. Included as documented viral false narrative *about* Trump-era detention—not a network retraction, but clear False-rated factual claim.
+- **Deception form:** `inflammatory false premise` / `retracted invention` (debunked rumor)
+- **Sources:**
+  - https://politifact.com/article/2025/jul/10/incinerators-alligator-alcatraz-florida/
+- **Tag:** `false` / `inflammatory+false`
+
+## 54. Biden campaign clip of “bloodbath” paired with “wants another January 6”
+- **Who:** Joe Biden / Biden HQ (March 2024)
+- **Claim:** Explicit linkage: bloodbath clip + caption that Trump “wants another January 6”
+- **Why misleading:** Distinct from general headlines (item 31): Biden’s own post asserted Jan. 6 intent. FactCheck.org notes economic context as most plausible; violence reading required stripping auto-industry frame.
+- **Deception form:** `omitted context` / `inflammatory false premise`
+- **Sources:**
+  - https://www.factcheck.org/2024/03/trumps-bloodbath-comment/
+  - https://www.snopes.com/fact-check/trump-bloodbath-for-country/
+- **Tag:** `misleading` / `inflammatory+false`
+
+## 55. Harris DNC: Trump plans “national anti-abortion coordinator” forcing miscarriage/abortion reporting (as Trump’s plan)
+- **Who:** Kamala Harris (DNC speech Aug. 22, 2024; related ads)
+- **Claim:** Trump plans to create a national anti-abortion coordinator and force states to report women’s miscarriages and abortions
+- **Why misleading:** PolitiFact/FactCheck: Trump hadn’t proposed it; some elements resemble Project 2025 CDC data recommendations, which Harris then escalated into “monitor pregnancies” (items 42–43). Rated Mostly False at DNC phrasing; later pregnancy-monitor versions rated False.
+- **Deception form:** `false attribution of words/intent` / `omitted context`
+- **Sources:**
+  - https://www.factcheck.org/2024/10/walzs-false-project-2025-pregnancy-monitoring-claims/
+  - https://politifact.com/factchecks/2024/nov/01/kamala-harris/kamala-harris-wrong-that-donald-trump-would-force/
+  - https://politifact.com/article/2024/aug/28/democrats-warn-trump-will-ban-abortion-leave-state/
+- **Tag:** `misleading`
+
+---
+
+## Methodology & limits (updated)
+
+- Searched and fetched fact-checkers (FactCheck.org, PolitiFact, Snopes, AP Fact Check), network corrections, settlements, IG/DOJ reports, and contemporaneous correction roundups (e.g., Poynter 2017).
+- Preferred items with **corrections, retractions, settlements, SCO/IG contradictions, or clear transcript-vs-claim mismatches**.
+- Added **Deception form** labels to document *how* the false/misleading narrative was constructed (misquote, omitted context, false attribution, etc.)—without inventing cases.
+- **Not exhaustive.** Thousands of disputed Trump-era claims exist; many are contested without a clean “false” adjudication.
+- Focus is claims **about** Trump/admin by media/politicians—not a catalog of Trump’s own false statements.
+- Some items (Charlottesville “both sides,” Lafayette irritants, MS-13 “animals,” Project 2025 overlap) involve **context disputes** where the correcting fact is omission/truncation rather than pure invention—tagged accordingly.
+- Second-term (2025+) documented media corrections specifically *about* the admin remain fewer than first-term Russia-era corrections; items 17–19 and 53 are clear examples.
+- Contested-but-not-debunked stories (e.g., Atlantic “suckers and losers,” Gen. Kelly Hitler attribution rated Unproven by Snopes) are listed under Dropped, not as proven false claims *about* Trump.
+
+## Almost included / dropped for weak or contested sourcing
+
+| Item | Why dropped |
+|------|-------------|
+| Trump “saluted North Korean general” as fake | Footage was real (Snopes); dispute was propriety, not fabrication |
+| “Blood coming out of her wherever” as fabricated misquote | Quote is accurately documented; dispute is intended meaning |
+| AOC “concentration camps” | Historians split on terminology; not a clean falsehood adjudication |
+| Russia “bounties on U.S. troops” story as media hoax | Intel was real but low/medium confidence; Biden admin later called it not conclusive—not a clean media invention about Trump |
+| Dominion / election-fraud TV settlements | Primarily about 2020 election claims *by* hosts/guests, not classic “false claims about Trump admin policy actions” |
+| Time magazine “worst president” covers | Fabricated covers existed, but not as major network claims *about* admin actions |
+| Sharyl Attkisson “50 media mistakes” list | Useful pointer, but site blocked fetch here; individual items need separate verification before inclusion (several Attkisson-listed items *were* independently verified and included: TIME MLK, NBC Cohen, O’Donnell, etc.) |
+| Paramount/$60 Minutes Harris interview settlement (2025) | Settlement reported; primary dispute was edit/deceptive presentation of Harris interview more than a discrete false factual claim *about Trump admin*—borderline for this list |
+| Claims Trump “built the cages” as absolute invention | Facilities/enclosures existed under Obama; Trump used them too—oversimplified either way without careful sourcing |
+| Atlantic “suckers and losers” as proven media lie | Heavily denied by Trump; corroborated by AP and later on-record by John Kelly—**not adjudicated as false**; excluded for lack of clean “false claim about Trump” finding |
+| “Trump said Hitler did some good things” | Snopes **Unproven**; Kelly attribution disputed; no recording—excluded |
+| Trump “slow the testing down” as media invention | Trump did say the words at Tulsa; dispute is joke vs order—not a false media quote |
+| Sharpiegate as media falsehood about Trump | NWS corrected *Trump’s* Alabama forecast claim; media criticism tracked a real presidential error—wrong direction for this list |
+| “Terminate the Constitution” as misquote | Trump’s Truth Social post used those words; later spin disputed meaning—not a fabricated quote by media |
+| “Jews who vote Democrat are disloyal” as invented | Trump’s remarks are documented; dispute is antisemitic-trope interpretation—not fabricated attribution |
+| Inflated Trump golf-cost memes ($72M/$141M) | Estimates disputed and often overbroad, but not cleanly False as “no costs”—weak adjudication |
+| COVID “Trump delayed all testing” absolute claims | Mixed with real “slow testing” comments and complex CDC rollout—too muddy without a single False rating matching the theme |
+
+### Short appendix: inflammatory rhetoric without clean fact adjudication
+(Quotes documented; factual premise disputed or not False-rated—**not counted in main numbered list (historical appendix from v1)**.)
+- Gestapo / Nazi analogies for ICE (2025): common political rhetoric; Holocaust scholars note analogy risk; not a discrete False-rated factual predicate in major fact-checkers at compile time.
+- “Fascist” / clinical mental-fitness diagnoses by politicians: often opinion/rhetoric without adjudicated false medical claim.
+
+---
+
+---
+
+# NEW ITEMS (56+)
+
+## 56. Democratic ads/politicians: Trump called COVID-19 itself a “hoax”
+- **Who:** Priorities USA Action ad; Mike Bloomberg; Terry McAuliffe; other Democrats (Feb–Apr 2020)
+- **Claim:** That Trump called the coronavirus / COVID-19 a “hoax”
+- **Why false/misleading:** FactCheck.org and Snopes: at the Feb. 28, 2020 South Carolina rally, Trump called Democrats’ *politicization* of his response “their new hoax,” not the virus. He clarified Feb. 29 that he was “certainly not” referring to the disease. Priorities USA’s ad spliced “The coronavirus” with “this is their new hoax” as one on-screen sentence. PolitiFact likewise rejected the absolute “called the virus a hoax” charge.
+- **Deception form:** `misquote / truncation` / `omitted context`
+- **Sources:**
+  - https://www.factcheck.org/2020/03/trump-and-the-new-hoax/
+  - https://www.factcheck.org/2020/04/democratic-ad-twists-trumps-hoax-comment/
+  - https://www.snopes.com/fact-check/trump-coronavirus-rally-remark/
+  - https://www.politifact.com/article/2020/oct/08/ask-politifact-are-you-sure-donald-trump-didnt-cal/
+- **Tag:** `misleading` / `misquote`
+
+## 57. Tim Kaine: Trump said “all Mexicans are rapists”
+- **Who:** Sen. Tim Kaine (Aug. 2016 TV interview as Clinton running mate)
+- **Claim:** Donald Trump says “all Mexicans are rapists”
+- **Why false:** PolitiFact **False**. Trump’s June 16, 2015 announcement said Mexico was “sending” people who are “rapists” and “some, I assume, are good people”—targeting unauthorized border crossers, not “all Mexicans.” Kaine’s campaign citations did not show an “all Mexicans” statement.
+- **Deception form:** `policy-scope inflation` / `misquote / truncation`
+- **Sources:**
+  - https://www.politifact.com/factchecks/2016/aug/08/tim-kaine/tim-kaine-falsely-says-trump-said-all-mexicans-are/
+  - https://time.com/3923128/donald-trump-announcement-speech/
+- **Tag:** `false`
+
+## 58. BBC Panorama: deceptive splice of Jan. 6 “fight like hell” speech
+- **Who:** BBC *Panorama* (“Trump: A Second Chance?”), aired ahead of 2024 U.S. election; BBC Chair Samir Shah apology Nov. 2025
+- **Claim:** Edit presented as continuous speech: Trump urging march to the Capitol *and* “we fight like hell,” implying a direct call for violent action
+- **Why false/misleading:** BBC later accepted the edit “unintentionally created the impression” of one continuous section and a “mistaken impression that President Trump had made a direct call for violent action.” Segments were ~50+ minutes apart; peaceful-protest language was omitted from the splice. BBC apologized, said no plans to rebroadcast; rejected Trump’s compensation demand. (Separate debate remains over the speech’s overall “fight” rhetoric.)
+- **Deception form:** `misquote / truncation` / `omitted context`
+- **Sources:**
+  - https://www.bbc.com/news/articles/c4gw001kw97o
+  - https://www.npr.org/2025/11/14/nx-s1-5608004/bbc-apology-trump-speech
+  - https://apnews.com/article/britain-bbc-crisis-trump-panorama-a392fb275af25216ea23537c6f4347e4
+- **Tag:** `retracted/corrected` / `misleading`
+
+## 59. Reuters/CNBC: false “90-day tariff pause” headline (Apr. 7, 2025)
+- **Who:** Reuters (withdrawn story); CNBC on-air banner amplifying unverified claim about Kevin Hassett
+- **Claim:** White House adviser Kevin Hassett said Trump was considering a 90-day pause on tariffs (except China)
+- **Why false:** Origin was an unfounded social/trading-desk rumor; Hassett’s Fox interview did not announce such a pause. White House called it fake news. Stocks spiked briefly. Reuters withdrew the story and apologized; CNBC said it aired unconfirmed information and corrected on air. (Trump later announced a *different* partial pause Apr. 9—distinct from the false Apr. 7 report.)
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://www.nbcnews.com/business/markets/errant-headline-tariffs-pause-briefly-sent-stocks-soaring-rcna200004
+  - https://www.thewrap.com/reuters-retracts-report-trump-tariff-90-day-pause/
+  - https://www.cnn.com/2025/04/07/media/fake-news-x-post-caused-market-whiplash
+- **Tag:** `retracted/corrected`
+
+## 60. Washington Post: misquoted Trump on Georgia elections-investigator call
+- **Who:** *The Washington Post* (Jan. 9, 2021 story; corrected Mar. 2021 after audio release)
+- **Claim:** Trump told Georgia investigator Frances Watson to “find the fraud” and that she would be a “national hero” if she did
+- **Why false:** Released audio showed those quotes were wrong. Trump urged scrutiny of Fulton County ballots / “dishonesty” and said she had a very important job—not the invented “find the fraud” / “national hero” lines. Post issued a prominent correction removing the misattributed quotes (still maintained broader pressure narrative).
+- **Deception form:** `retracted invention` / `misquote / truncation`
+- **Sources:**
+  - https://www.washingtonpost.com/opinions/2021/03/16/washington-post-correction-trump-call-georgia-investigator/
+  - https://www.poynter.org/newsletters/2021/the-latest-on-the-washington-post-correction-including-where-those-false-trump-quotes-came-from/
+  - https://www.vox.com/2021/3/16/22333805/washington-post-correction-trump-georgia
+- **Tag:** `retracted/corrected`
+
+## 61. ProPublica: Gina Haspel oversaw Zubaydah waterboarding / mocked suffering
+- **Who:** ProPublica (Feb. 2017; major correction Mar. 15, 2018 amid Haspel CIA-director nomination)
+- **Claim:** Trump’s CIA nominee Gina Haspel ran the Thailand black site during Abu Zubaydah’s waterboarding and mocked his suffering
+- **Why false:** ProPublica retracted both assertions: Haspel did not take charge of the base until after Zubaydah’s interrogation ended. NPR and others covered the correction. (ProPublica still reported other Haspel black-site involvement, e.g., Nashiri.)
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://www.propublica.org/article/cia-cables-detail-its-new-deputy-directors-role-in-torture
+  - https://www.npr.org/2018/03/15/593998492/propublica-corrects-story-on-trump-cia-nominee-and-waterboarding
+  - https://apnews.com/article/europe-carter-page-cia-925492c0b3dce9c347bdcd46658d1543
+- **Tag:** `retracted/corrected`
+
+## 62. Nicolle Wallace / MSNBC: Trump “talking about exterminating Latinos”
+- **Who:** Nicolle Wallace, MSNBC (Aug. 2019, after El Paso)
+- **Claim:** Trump was “talking about exterminating Latinos”
+- **Why false:** PolitiFact **False**—Trump had not said that. Wallace apologized next day for misspeaking (kept broader criticism of “invasion” rhetoric). AP covered the apology.
+- **Deception form:** `false attribution of words/intent` / `inflammatory false premise`
+- **Sources:**
+  - https://www.politifact.com/factchecks/2019/aug/08/nicolle-wallace/no-trump-hasnt-talked-about-exterminating-latinos/
+  - https://apnews.com/article/553eb5c841b44ec19275360c12082559
+  - https://thehill.com/homenews/media/456474-msnbcs-nicolle-wallace-apologizes-for-saying-trump-is-calling-for/
+- **Tag:** `false` / `retracted/corrected`
+
+## 63. NBC / Chuck Todd: misleadingly shortened Barr clip on Flynn dismissal
+- **Who:** NBC *Meet the Press* / Chuck Todd (May 2020)
+- **Claim:** Framing via shortened clip that AG Barr’s Flynn dismissal undermined rule of law / was lawless
+- **Why misleading:** Clip omitted Barr’s statement that dismissing the Flynn case “wasn’t about the law so much… it was about the rule of law.” Todd apologized on air; AP: NBC apologized for “inaccurately” quoting Barr. PolitiFact documented omitted key context.
+- **Deception form:** `omitted context` / `misquote / truncation`
+- **Sources:**
+  - https://apnews.com/article/731c44e0e4e5492ce4d52c717609b7f4
+  - https://www.poynter.org/newsletters/2020/chuck-todd-apologized-on-air-for-meet-the-press-mistake/
+  - https://www.politifact.com/factchecks/2020/may/11/chuck-todd/nbcs-chuck-todd-meet-press-leave-out-key-context-s/
+- **Tag:** `retracted/corrected` / `misleading`
+
+## 64. Dave Weigel / Washington Post: empty-arena photo of Pensacola Trump rally
+- **Who:** Dave Weigel, *Washington Post* (Dec. 8, 2017 tweet)
+- **Claim:** Photo implying sparse attendance at Trump’s Pensacola rally
+- **Why false/misleading:** Photo was taken before doors opened / seats filled. Weigel deleted and apologized; Trump demanded firing. Poynter listed among major 2017 corrections/controversies. (Not an inauguration-crowd claim.)
+- **Deception form:** `false photo/video attribution` / `omitted context`
+- **Sources:**
+  - https://www.washingtonpost.com/lifestyle/style/president-trump-calls-for-washington-post-reporter-who-apologized-for-inaccurate-tweet-to-be-fired/2017/12/09/2fb467de-dd4b-11e7-b1a8-62589434a581_story.html
+  - https://apnews.com/united-states-government-national-ec42044634284abc8942d93f4a1299e4
+  - https://thehill.com/homenews/media/364124-washington-post-reporter-apologizes-for-tweet-on-crowd-size-at-trump-rally/
+- **Tag:** `retracted/corrected`
+
+## 65. Washington Post / Josh Rogin: State Department “entire senior management team” resigned in protest
+- **Who:** Josh Rogin, *Washington Post* (Jan. 26, 2017 blog/headline framing); viral amplification as mass anti-Trump revolt
+- **Claim:** That State’s entire senior management team “just resigned” as protest against Trump
+- **Why misleading:** Vox and follow-ups: four officials left amid a *routine* transition; accounts differed on push vs walk. Headline/viral framing of wholesale protest resignation overstated. Snopes documented context that senior political appointees routinely submit resignations at transitions.
+- **Deception form:** `omitted context` / `policy-scope inflation`
+- **Sources:**
+  - https://www.vox.com/world/2017/1/27/14405542/washington-post-state-department-resignations
+  - https://www.washingtonpost.com/news/josh-rogin/wp/2017/01/26/the-state-departments-entire-senior-management-team-just-resigned/
+  - https://www.snopes.com/news/2017/01/26/senior-state-department-officials-resign/
+- **Tag:** `misleading`
+
+## 66. New York Times: Trump campaign aides had repeated contacts with Russian intelligence
+- **Who:** *The New York Times* (Feb. 14, 2017)
+- **Claim:** Phone records / intercepts showed Trump campaign aides had repeated contacts with Russian intelligence officials
+- **Why false/misleading:** Then–FBI Director James Comey testified the story was “in the main… not true.” Times stood by reporting with nuance disputes over who counts as “intelligence,” but Comey’s on-record rebuttal is the documented contradiction used by critics and media-watch coverage (Poynter).
+- **Deception form:** `premature “proven” framing`
+- **Sources:**
+  - https://www.nytimes.com/2017/02/14/us/politics/russia-intelligence-communications-trump.html
+  - https://www.nytimes.com/2017/06/08/us/politics/james-comey-new-york-times-article-russia.html
+  - https://www.washingtonpost.com/politics/2017/live-updates/trump-white-house/james-comey-testimony-what-we-learn/comey-denounces-new-york-times-story/
+  - https://www.poynter.org/reporting-editing/2017/contradicted-by-comey-the-new-york-times-stands-by-its-reporting/
+- **Tag:** `misleading` (SCO/FBI leadership dispute; Times did not retract)
+
+## 67. Bloomberg / Wall Street Journal: Mueller subpoenaed Trump’s Deutsche Bank accounts
+- **Who:** Bloomberg News; *Wall Street Journal* (Dec. 5, 2017)
+- **Claim:** Special Counsel Mueller had subpoenaed Deutsche Bank for Trump’s personal/family bank records
+- **Why false/misleading:** Outlets corrected: subpoena concerned people or entities *affiliated* with Trump—not Trump’s personal accounts as originally framed. Trump’s lawyers denied any subpoena of the president’s accounts. Free Beacon and contemporaneous coverage documented the corrections.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://freebeacon.com/issues/bloomberg-wsj-correct-inaccurate-reports-mueller-subpoenaed-trumps-bank-accounts/
+  - https://www.reuters.com/article/world/trump-lawyer-denies-deutsche-bank-got-subpoena-on-trump-accounts-idUSKBN1DZ0XH/
+- **Tag:** `retracted/corrected`
+
+## 68. TIME cover: crying Honduran girl presented as separated from mother
+- **Who:** TIME magazine (June 2018 cover / related online text)
+- **Claim:** Cover package used Yanela Sanchez’s crying photo to symbolize Trump family-separation policy in a way that implied *this* child was taken from her mother
+- **Why false/misleading:** Father, Honduran officials, and U.S. authorities said the girl was not separated from her mother under zero-tolerance; brief pat-down then reunited/held together. TIME corrected an article line that agents “carried” the girl away; defended symbolic use. Reuters/AP/PolitiFact documented the mismatch.
+- **Deception form:** `false photo/video attribution` / `omitted context`
+- **Sources:**
+  - https://www.reuters.com/article/world/us/father-says-little-honduran-girl-on-time-cover-was-not-taken-from-mother-idUSKBN1JI07V/
+  - https://apnews.com/article/685ff48c1b814f1fb8c32f62ea6dcb91
+  - https://www.politifact.com/factchecks/2018/jun/25/gateway-pundit/immigrant-girl-time-cover-wasnt-separated-mother/
+- **Tag:** `misleading` / `false` (as to that child’s separation)
+
+## 69. Der Spiegel / Claas Relotius: fabricated Fergus Falls Trump-voter profile
+- **Who:** *Der Spiegel* reporter Claas Relotius (2017 feature on Fergus Falls, Minnesota as Trump-country archetype); CNN International had honored Relotius previously
+- **Claim:** Colorful “facts” about a Trump-supporting Midwestern town (characters, quotes, a “Mexicans Keep Out” sign, election details)
+- **Why false:** Relotius admitted inventing large portions of stories; Spiegel removed the piece, apologized to the town, and sent a corrective report. Major international media fabrication scandal centered on Trump-era American portrayal.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://www.spiegel.de/international/zeitgeist/claas-relotius-reporter-forgery-scandal-a-1244755.html
+  - https://www.spiegel.de/international/zeitgeist/the-relotius-scandal-reaches-fergus-falls-in-america-a-1244944.html
+  - https://www.spiegel.de/international/world/fergus-falls-a-fantastic-town-a-1245308.html
+- **Tag:** `retracted/corrected` / `false`
+
+## 70. Yahoo News: U.S. COVID testing far behind South Korea (Oval Office question)
+- **Who:** Hunter Walker, Yahoo News (Apr. 28, 2020 Oval Office exchange)
+- **Claim:** Pressed Trump that South Korea had done ~5× more COVID tests per capita than the U.S.
+- **Why false:** Dr. Deborah Birx corrected the statistic on the spot; U.S. was ahead on the chart Walker misread. Walker apologized to Trump. AP covered the apology.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://apnews.com/arts-and-entertainment-general-news-8abb428b94c45a621c80a82eba8e3ea7
+  - https://www.washingtonexaminer.com/news/2615947/yahoo-news-reporter-apologizes-to-trump-for-pressing-him-on-incorrect-coronavirus-testing-statistic/
+- **Tag:** `retracted/corrected`
+
+## 71. CBS News: Italian COVID hospital footage aired as New York / U.S. crisis video
+- **Who:** CBS This Morning / CBS News (late Mar–Apr 2020)
+- **Claim:** Video of overcrowded hospital ward presented in reporting on New York (and later Pennsylvania) COVID crisis
+- **Why false:** Footage was from Bergamo, Italy (previously aired by Sky News). CBS admitted editing mistake, removed clip; Snopes and iMediaEthics documented. Same Italy clip reportedly reused in a later PA segment—compounding error.
+- **Deception form:** `false photo/video attribution`
+- **Sources:**
+  - https://www.snopes.com/fact-check/cbs-news-italian-hospital/
+  - https://www.imediaethics.org/cbs-uses-italian-hospital-footage-in-nyc-coronavirus-report/
+- **Tag:** `retracted/corrected` / `false`
+
+## 72. Washington Post: Cotton COVID lab-leak comments labeled “debunked conspiracy theory”
+- **Who:** *The Washington Post* / Paulina Firozi (Feb. 16, 2020 piece; corrected June 2021)
+- **Claim:** Sen. Tom Cotton was repeating a “coronavirus conspiracy theory that was already debunked” (lab-origin discussion tied to Trump-era China scrutiny)
+- **Why false/misleading:** Post later changed headline from “debunked conspiracy theory” to “fringe theory that scientists have disputed” and added editor’s note: no definitive virus-origin determination existed then or since; prior wording inaccurately characterized Cotton’s comments. Lab-leak later treated as open hypothesis by many agencies/media.
+- **Deception form:** `premature “proven” framing` / `retracted invention`
+- **Sources:**
+  - https://www.washingtonpost.com/politics/2020/02/16/tom-cotton-coronavirus-conspiracy/
+  - https://thehill.com/homenews/media/556418-washington-post-issues-correction-on-2020-report-on-tom-cotton-lab-leak-theory/
+- **Tag:** `retracted/corrected`
+
+## 73. CNN: digitally altered Trump–Laura Loomer photo aired as real
+- **Who:** CNN (Pamela Brown, Anderson Cooper, Michael Smerconish segments, Sept. 2024)
+- **Claim:** Broadcast a photo of Trump with Laura Loomer as authentic visual context
+- **Why false:** Image had been digitally altered by a third party. Anchors stated it “should not have been included”; “We regret the error.” Snopes documented CNN’s on-air regrets.
+- **Deception form:** `false photo/video attribution` / `retracted invention`
+- **Sources:**
+  - https://www.snopes.com/news/2024/09/26/cnn-trump-photo-loomer/
+  - https://www.newsweek.com/laura-loomer-threatens-sue-anderson-cooper-over-photoshopped-image-1960104
+- **Tag:** `retracted/corrected`
+
+## 74. NBC News: misidentified Trump praise of Grant as praise of Robert E. Lee
+- **Who:** NBC News social/video post (Oct. 2018 Ohio rally coverage)
+- **Claim:** Trump called Robert E. Lee “incredible”
+- **Why false:** Trump called Lee a “great general,” but “incredible” referred to Union Gen. Ulysses S. Grant defeating Lee. NBC corrected and posted fuller video. HuffPost/iMediaEthics covered.
+- **Deception form:** `misquote / truncation` / `retracted invention`
+- **Sources:**
+  - https://www.huffpost.com/entry/nbc-news-trump-robert-e-lee_n_5bc3813de4b0bd9ed55b2eda
+  - https://www.imediaethics.org/nbc-news-corrects-trump-robert-e-lee-incredible-tweet/
+- **Tag:** `retracted/corrected` / `misquote`
+
+## 75. Paramount / CBS: $16M settlement over “60 Minutes” Harris interview editing
+- **Who:** Paramount (CBS parent); Trump lawsuit over Oct. 2024 *60 Minutes* Kamala Harris interview edits
+- **Claim:** Lawsuit alleged deceptive editing of Harris answers (including on Israel/Trump-related debate framing) that misled viewers about the race against Trump
+- **Why included:** July 2025 settlement (~$16M to Trump presidential library + fees) without admission of liability; Paramount also agreed to release future candidate-interview transcripts. Reuters/AP/CBS reported settlement. Included as documented legal resolution of alleged deceptive broadcast editing in Trump–Harris coverage—not as proof of every pleaded allegation.
+- **Deception form:** `omitted context` (alleged selective edit) settlement
+- **Sources:**
+  - https://www.cbsnews.com/news/paramount-trump-60-minutes-lawsuit-settlement/
+  - https://www.reuters.com/business/media-telecom/paramount-settles-with-trump-over-60-minutes-interview-la-times-reports-2025-07-02/
+  - https://apnews.com/article/trump-media-harris-minutes-paramount-6415042fe910ae60b432dd8c73ef61b2
+- **Tag:** `retracted/corrected` (settlement; no admission)
+
+## 76. Newsweek / viral media: Polish first lady “snubbed” Trump handshake
+- **Who:** Newsweek and other outlets amplifying short clip (July 2017 Warsaw visit)
+- **Claim:** Agata Kornhauser-Duda deliberately refused Trump’s handshake
+- **Why false/misleading:** Fuller video showed protocol/sequence with Melania first, then handshake with Trump. Polish President Andrzej Duda called snub reports “fake news.” Snopes: not a deliberate refusal.
+- **Deception form:** `omitted context` / `false photo/video attribution`
+- **Sources:**
+  - https://www.snopes.com/fact-check/polish-first-lady-trump-handshake/
+  - https://thehill.com/homenews/news/340934-polish-president-knocks-fake-news-over-wifes-trump-handshake/
+- **Tag:** `misleading` / `false`
+
+## 77. CNN / viral clip: Trump “impatiently” dumped entire box of koi food in Japan
+- **Who:** CNN and many outlets (Nov. 6, 2017 Abe–Trump koi feeding)
+- **Claim:** Framing that Trump awkwardly/impulsively dumped the whole box while Abe behaved properly
+- **Why misleading:** Full video: Abe emptied his box first; Trump followed seconds later. CNN article acknowledged Abe appeared to do it first, but headlines/tweets/zoomed clips omitted that order. Snopes rated the “impatient dump alone” framing misleading.
+- **Deception form:** `omitted context` / `false photo/video attribution`
+- **Sources:**
+  - https://www.snopes.com/fact-check/did-trump-impatiently-dump-fish-food-in-japanese-koi-pond/
+  - https://www.cnn.com/2017/11/06/politics/donald-trump-koi-pond-japan
+- **Tag:** `misleading`
+
+## 78. Clinton / media: “17 intelligence agencies” concluded Russia helped Trump
+- **Who:** Hillary Clinton (debates/campaign); widespread media shorthand 2016–2017
+- **Claim:** All 17 U.S. intelligence agencies concluded Russia intervened to help Trump
+- **Why misleading:** Jan. 2017 ICA was produced by CIA, FBI, NSA, and ODNI (with NSA at moderate confidence on intent-to-help-Trump). PolitiFact later: “17 intelligence organizations or 4?”—needs context; community-wide branding ≠ 17 independent assessments. Media/politician absolute “all 17” inflated the process.
+- **Deception form:** `policy-scope inflation` / `omitted context`
+- **Sources:**
+  - https://www.politifact.com/article/2017/jul/06/17-intelligence-organizations-or-four-either-way-r/
+  - https://www.dni.gov/files/documents/ICA_2017_01.pdf
+- **Tag:** `misleading`
+
+## 79. McClatchy: Michael Cohen Prague trip / cell-phone ping as Steele-dossier corroboration
+- **Who:** McClatchy (Dec. 2018 and related Cohen–Prague stories)
+- **Claim:** Evidence including cell data placed Michael Cohen near Prague around time of alleged Russia collusion meeting (Steele dossier plot point)
+- **Why false/misleading:** Mueller report stated Cohen was not in Prague; SCO did not corroborate the Prague meeting. McClatchy added editor’s notes after Mueller but largely stood by sources—classic premature “corroboration” of a dossier claim contradicted by SCO’s factual finding on travel.
+- **Deception form:** `premature “proven” framing`
+- **Sources:**
+  - https://www.mcclatchydc.com/news/investigations/article219016820.html
+  - https://www.mcclatchydc.com/news/investigations/article229424084.html
+  - https://www.imediaethics.org/mcclatchy-stands-by-michael-cohen-prague-stories-but-adds-editors-notes/
+  - Mueller report: https://www.justice.gov/d9/report.pdf
+- **Tag:** `misleading` / `false` (as to Cohen Prague travel per Mueller)
+
+## 80. AP: Trump threatened to send U.S. troops into Mexico over “bad hombres”
+- **Who:** Associated Press (Feb. 1, 2017); wide pickup
+- **Claim:** Trump told Mexico’s president the U.S. might send troops into Mexico to take care of “bad hombres” (invasion/war framing in headlines)
+- **Why false/misleading:** White House said remarks were lighthearted; U.S. and Mexican officials told *Washington Post* Trump did not threaten war/invasion. WaPo: “Trump did not threaten war with Mexico.” AP later carried White House denial framing. Invasion headline overreach beyond a disputed colorful remark.
+- **Deception form:** `inflammatory false premise` / `omitted context`
+- **Sources:**
+  - https://www.washingtonpost.com/news/worldviews/wp/2017/02/02/trump-did-not-threaten-war-with-mexico-u-s-and-mexican-officials-agree/
+  - https://apnews.com/article/mexico-united-states-government-5972d796cb884da8902f492049ea05ef
+  - https://thehill.com/policy/international/317463-ap-trump-told-mexican-president-to-handle-bad-hombres-or-us-troops-would/
+- **Tag:** `misleading`
+
+## 81. CNN / Jeff Zeleny: White House created twin Twitter accounts to hide SCOTUS pick
+- **Who:** Jeff Zeleny, CNN (Jan. 2017, before Gorsuch announcement)
+- **Claim:** White House set up matching Twitter accounts for SCOTUS finalists to conceal the choice
+- **Why false:** Zeleny later corrected: accounts were not created by the White House. Attkisson and contemporary media-criticism roundups documented the walk-back.
+- **Deception form:** `retracted invention`
+- **Sources:**
+  - https://www.cnn.com/2017/01/30/politics/donald-trump-supreme-court-choice-announcement-coming-tuesday-8-p-m-
+  - https://www.washingtonexaminer.com/opinion/1330144/media-need-to-set-a-standard-for-dealing-with-reporters-bogus-tweets/
+  - Sharyl Attkisson media-mistakes compilation citing Zeleny correction: https://sharylattkisson.substack.com/p/media-mistakes-in-reporting-on-donald
+- **Tag:** `retracted/corrected`
+
+## 82. Schiff post-Mueller: “Undoubtedly, there is collusion” as established criminal fact
+- **Who:** Rep. Adam Schiff (Mar. 2019 interviews after Barr summary of Mueller)
+- **Claim:** “Undoubtedly, there is collusion” / “ample evidence of collusion in plain sight” framed as settled despite Mueller’s no-conspiracy finding
+- **Why misleading:** Distinct from pre-Mueller “more than circumstantial” (item 11): after Barr/Mueller “did not establish” conspiracy/coordination, Schiff doubled down on “collusion” as proven. PolitiFact documented Democratic collusion rhetoric vs Mueller’s legal finding; Schiff redefined “collusion” away from criminal conspiracy while absolute soundbites still implied proven coordination.
+- **Deception form:** `premature “proven” framing` / `omitted context`
+- **Sources:**
+  - https://thehill.com/policy/national-security/435983-schiff-defiant-undoubtedly-there-is-collusion/
+  - https://www.politifact.com/article/2019/mar/25/what-democrats-said-about-trump-collusion-mueller/
+  - https://www.latimes.com/nation/politics/la-na-pol-russia-investigation-schiff-trump-20190327-story.html
+- **Tag:** `misleading`
+
+## 83. CDC “seven banned words” framed as Trump speech ban
+- **Who:** *Washington Post* initial framing (Dec. 2017) and viral political amplification that Trump “banned” words at CDC
+- **Claim:** Trump administration banned CDC officials from saying diversity, fetus, transgender, vulnerable, entitlement, evidence-based, science-based
+- **Why misleading:** Follow-ups (CNN, Snopes): guidance concerned *budget-document wording preferences*, not an agency-wide speech ban; CDC/HHS denied a blanket ban. PolitiFact and others dinged absolute “banned CDC from saying transgender” claims. Outrage rested on inflation from draft budget advice to total speech prohibition.
+- **Deception form:** `policy-scope inflation` / `omitted context`
+- **Sources:**
+  - https://www.washingtonpost.com/national/health-science/cdc-gets-list-of-forbidden-words-fetus-transgender-diversity/2017/12/15/f503837a-e1cf-11e7-89e8-edec16379010_story.html
+  - https://www.cnn.com/2018/01/11/health/cdc-word-ban-hhs-document
+  - https://www.snopes.com/news/2017/12/15/trump-administration-bans-cdc-officials-using-certain-words/
+- **Tag:** `misleading`
+
+## 84. New York Times editor tweet: Sessions told Comey to call Russia probe a “matter”
+- **Who:** Jonathan Weisman, *New York Times* (June 2017 tweet during Comey testimony)
+- **Claim:** AG Jeff Sessions told Comey not to call the Russia probe an “investigation” but a “matter”
+- **Why false:** Testimony concerned Obama-era AG Loretta Lynch telling Comey to call the *Clinton email* probe a “matter.” Weisman corrected/deleted. Washington Examiner and Attkisson documented.
+- **Deception form:** `false attribution of words/intent` / `retracted invention`
+- **Sources:**
+  - https://www.washingtonexaminer.com/opinion/1425798/no-jeff-sessions-never-told-james-comey-to-call-the-russia-probe-a-matter-instead-of-an-investigation/
+  - https://www.cbsnews.com/news/comey-says-ag-loretta-lynch-wanted-clinton-investigation-to-be-called-a-matter/
+  - https://sharylattkisson.substack.com/p/media-mistakes-in-reporting-on-donald
+- **Tag:** `retracted/corrected` / `false`
+
+## 85. Horowitz IG findings misreported as “no political bias” absolute clearance
+- **Who:** Multiple cable/print headlines after Dec. 2019 DOJ IG Horowitz FISA report
+- **Claim:** Absolute framing that Horowitz found “no political bias” in the Trump–Russia probe (implying process fully vindicated)
+- **Why misleading:** Horowitz found no documentary/testimonial evidence that bias *caused the opening* decision, but detailed 17 significant FISA errors/omissions, Steele problems, and said he could not rule out bias regarding other failures; referred matters. Absolute “cleared of bias” headlines omitted the scathing process findings. Distinct from Durham item 26.
+- **Deception form:** `omitted context`
+- **Sources:**
+  - https://www.justice.gov/storage/120919-examination.pdf
+  - https://www.cnn.com/2019/12/09/politics/horowitz-report-released
+  - Attkisson summary of media overclaim: https://sharylattkisson.substack.com/p/media-mistakes-in-reporting-on-donald
+- **Tag:** `misleading`
+
+---
+
+### Near-misses / dropped from this expansion (not counted)
+| Item | Why dropped / weak for inclusion |
+|------|-----------------------------------|
+| “Miracle, it will disappear” as media misquote | Trump *did* say “One day, it’s like a miracle, it will disappear” (Feb. 27, 2020)—not a false media attribution |
+| Atlantic “losers/suckers” as proven media lie | Still disputed; John Kelly later corroborated key themes—no clean False adjudication against media |
+| Hang Mike Pence as Trump *ordered* hanging | Rioters chanted it; testimony that Trump said Pence “deserves it” is contested—no solid fact-check that major outlets claimed Trump *ordered* the hanging |
+| Ukraine “bribery proven” pre-hearing absolute | Too mixed; Sondland/Mulvaney testimony evolved—hard to isolate one False-rated media invention beyond Schiff parody (item 36) |
+| Hydroxychloroquine “Trump said miracle cure” | NYT/others paraphrased; Trump hedged “may work / may not”—borderline without a clean correction |
+| Disabled-reporter mockery as invented | Heavily disputed interpretation of gestures—not a corrected factual invention |
+| Gulf of America / AP style fight | Style/access dispute, not a false factual claim *about* admin policy content |
+| DOGE firing-count media errors | Competing estimates; no single landmark correction matching this list’s standard |
+| Scarborough Red Cross ban claim | Red Cross denial widely reported 2018 but weak primary URL in this compile—dropped |
+| WH “100 days media hoaxes” list copy | Not copied uncritically; only independently verified overlaps included |
+
+### Short appendix: rhetoric without clean False adjudication (not counted)
+- Gestapo / Nazi analogies for ICE (2025): political rhetoric; not a discrete False-rated factual predicate in major checkers at compile time.
+- Clinical “fascist” / mental diagnoses by politicians: often opinion without adjudicated false medical claim.
+
+---
+
+*End of expanded list v2. Previous items: **55**. New items: **30** (56–85). **Total: 85**.*

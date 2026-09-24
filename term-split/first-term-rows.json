@@ -1,0 +1,652 @@
+[
+  {
+    "Claim": "That Trump called neo-Nazis / white supremacists at Charlottesville \u201cvery fine people\u201d (or \u201cvery good people\u201d).",
+    "URL": "https://www.snopes.com/fact-check/trump-very-fine-people/",
+    "Who": "Widespread media framing; Joe Biden campaign ads/speeches; Sen. Chuck Schumer and many other politicians",
+    "Duration": "years of campaign recirculation",
+    "Form": "misquote / truncation",
+    "Tag": "misquote / false",
+    "Item_ID": 1,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump \u201chas yet once to condemn white supremacy, the neo-Nazis. He hasn\u2019t condemned a darn thing.\u201d",
+    "URL": "https://www.factcheck.org/2020/02/trump-has-condemned-white-supremacists/",
+    "Who": "Joe Biden (ABC This Week, Feb. 2020)",
+    "Duration": "Not clearly documented",
+    "Form": "false attribution of words/intent (denial of documented condemnations)",
+    "Tag": "false",
+    "Item_ID": 2,
+    "Notes": null
+  },
+  {
+    "Claim": "Photos of children in chain-link holding cells showed what was \u201chappening right now\u201d under Trump.",
+    "URL": "https://politifact.com/factchecks/2018/may/29/donald-trump/trump-correctly-tweets-democrats-mistakenly-tweete/",
+    "Who": "Jon Favreau (former Obama speechwriter); Antonio Villaraigosa; other activists/journalists who shared the images as current Trump-era scenes",
+    "Duration": "~days until corrections/deletes (May 2018)",
+    "Form": "false photo/video attribution",
+    "Tag": "false",
+    "Item_ID": 3,
+    "Notes": null
+  },
+  {
+    "Claim": "Early framing that MAGA-hatted Covington students instigated conflict, blocked Nathan Phillips, taunted him, and chanted \u201cBuild that wall\u201d.",
+    "URL": "https://www.washingtonpost.com/nation/2019/03/01/editors-note-related-lincoln-memorial-incident/",
+    "Who": "The Washington Post, CNN, and other major outlets; viral social amplification",
+    "Duration": "weeks until fuller video; editor\u2019s note ~6 weeks later (Mar 2019); settlements 2020",
+    "Form": "premature \u201cproven\u201d framing / retracted invention (+ later via editor\u2019s note settlements)",
+    "Tag": "retracted/corrected",
+    "Item_ID": 4,
+    "Notes": "CNN and WaPo settlements; terms largely confidential"
+  },
+  {
+    "Claim": "Linked Trump ally Anthony Scaramucci to a Russian investment fund in a way CNN later said did not meet standards.",
+    "URL": "https://apnews.com/article/b38b7c50ea64423f96c40cca24221b15",
+    "Who": "CNN (online investigative story, June 2017)",
+    "Duration": "days until retraction (June 2017)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 5,
+    "Notes": null
+  },
+  {
+    "Claim": "Email gave Trump campaign advance access to WikiLeaks documents (implied pre-release tip on Sept. 4, 2016).",
+    "URL": "https://money.cnn.com/2017/12/08/media/cnn-correction-email-story/index.html",
+    "Who": "CNN (Dec. 2017)",
+    "Duration": "days until correction (Dec 2017)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 6,
+    "Notes": null
+  },
+  {
+    "Claim": "Comey would refute Trump\u2019s claim that Comey told him he was not personally under investigation.",
+    "URL": "https://www.washingtonpost.com/blogs/erik-wemple/wp/2017/06/07/cnn-corrects-comey-testimony-prediction-story/",
+    "Who": "CNN (June 2017, ahead of Comey testimony)",
+    "Duration": "hours\u2013days until Comey statement contradicted / CNN corrected (June 2017)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 7,
+    "Notes": null
+  },
+  {
+    "Claim": "Flynn prepared to testify that candidate Trump directed him to contact Russians during the campaign.",
+    "URL": "https://apnews.com/article/78440c185b7c49b39573257ad3353295",
+    "Who": "ABC News, Brian Ross (Dec. 1, 2017 special report)",
+    "Duration": "hours (same-day/next-day correction; Ross suspended)",
+    "Form": "retracted invention (timeline error with major implications)",
+    "Tag": "retracted/corrected",
+    "Item_ID": 8,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump personally instructed Cohen to lie to Congress about Trump Tower Moscow timing.",
+    "URL": "https://www.npr.org/2019/01/18/686532446/buzzfeed-trump-directed-cohen-to-lie-to-congress-about-a-trump-tower-in-moscow",
+    "Who": "BuzzFeed News (Jan. 2019)",
+    "Duration": "hours\u20131 day until Mueller office disputed (Jan 2019)",
+    "Form": "premature \u201cproven\u201d framing (SCO dispute)",
+    "Tag": "false",
+    "Item_ID": 9,
+    "Notes": "BuzzFeed stood by story; SCO said description \u201cnot accurate\u201d"
+  },
+  {
+    "Claim": "Dossier\u2019s core conspiracy claims (e.g., sustained Trump\u2013Russia criminal coordination, Prague meeting, etc.) presented as investigative foundation or validated.",
+    "URL": "https://www.justice.gov/storage/durhamreport.pdf",
+    "Who": "BuzzFeed (published full unverified dossier Jan. 10, 2017); extensive cable/network amplification of dossier allegations as serious/credible",
+    "Duration": "years of amplification until Mueller/Durham contradicted key claims",
+    "Form": "premature \u201cproven\u201d framing",
+    "Tag": "misleading",
+    "Item_ID": 10,
+    "Notes": "BuzzFeed labeled dossier unverified at publication; amplification treated as validated"
+  },
+  {
+    "Claim": "There was \u201cmore than circumstantial evidence\u201d of Trump\u2013Russia collusion; collusion portrayed as established fact ahead of Mueller.",
+    "URL": "https://www.justice.gov/d9/report.pdf",
+    "Who": "Rep. Adam Schiff and many media/political voices (2017\u20132019)",
+    "Duration": "months\u2013years until Mueller report (Mar 2019)",
+    "Form": "premature \u201cproven\u201d framing",
+    "Tag": "misleading",
+    "Item_ID": 11,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump told Americans drinking bleach could help with COVID-19.",
+    "URL": "https://politifact.com/factchecks/2020/jul/11/joe-biden/no-trump-didnt-tell-americans-infected-coronavirus/",
+    "Who": "Joe Biden (July 9, 2020 speech)",
+    "Duration": "Not clearly documented",
+    "Form": "misquote / truncation / false attribution of words/intent",
+    "Tag": "false / misleading",
+    "Item_ID": 12,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump said undocumented immigrants (generally) \u201caren\u2019t people\u2026 these are animals\u201d.",
+    "URL": "https://www.factcheck.org/2018/05/trumps-and-pelosis-immigration-spat/",
+    "Who": "Nancy Pelosi; some news headlines/coverage (May 2018)",
+    "Duration": "Not clearly documented",
+    "Form": "omitted context",
+    "Tag": "misleading",
+    "Item_ID": 13,
+    "Notes": null
+  },
+  {
+    "Claim": "Park Police cleared peaceful protesters from Lafayette Square specifically to enable Trump\u2019s Bible photo opportunity.",
+    "URL": "https://www.oversight.gov/sites/default/files/documents/reports/2021-06/SpecialReviewUSPPActionsAtLafayetteParkPublic.pdf",
+    "Who": "Widespread media framing after June 1, 2020 St. John\u2019s Church visit",
+    "Duration": "~1 year until Interior IG report (June 2021)",
+    "Form": "false attribution of words/intent / omitted context (motive)",
+    "Tag": "misleading",
+    "Item_ID": 14,
+    "Notes": "IG did not find clearing done for photo-op; separate debates on irritants remain"
+  },
+  {
+    "Claim": "NY Post laptop story had \u201call the classic earmarks of Russian information operations\u201d (often flattened in coverage to \u201cis Russian disinfo\u201d).",
+    "URL": "https://www.politico.com/news/2020/10/19/hunter-biden-story-russian-disinfo-430276",
+    "Who": "51 former intelligence officials (Oct. 19, 2020 public letter); media/political amplification treating story as likely Russian op; social platforms limited NY Post story",
+    "Duration": "months\u2013years until authentication / platform walk-backs",
+    "Form": "premature \u201cproven\u201d framing",
+    "Tag": "misleading",
+    "Item_ID": 15,
+    "Notes": null
+  },
+  {
+    "Claim": "Smollett was attacked by Trump supporters / MAGA assailants in a hate crime reflecting Trump-era racism.",
+    "URL": "https://apnews.com/article/debab6fce9db4e36b8e620b0b38e3258",
+    "Who": "Media and politicians (e.g., Kamala Harris tweet calling it an \u201cattempted modern-day lynching\u201d) who treated Smollett\u2019s account\u2014MAGA attackers, rope, Trump-era climate\u2014as factual",
+    "Duration": "weeks\u2013months until police staged finding; conviction later",
+    "Form": "inflammatory false premise / premature \u201cproven\u201d framing",
+    "Tag": "false",
+    "Item_ID": 20,
+    "Notes": "IL Supreme Court 2024 procedural reversal on special prosecutor; staging finding remains basis"
+  },
+  {
+    "Claim": "Tweet framing of Megyn Kelly\u2013Putin interview overstated what Putin said regarding compromising info on Trump.",
+    "URL": "https://www.poynter.org/fact-checking/2017/not-fake-news-just-plain-wrong-top-media-corrections-of-2017/",
+    "Who": "NBC News (June 2017 tweet)",
+    "Duration": "hours\u2013days until NBC correction (June 2017)",
+    "Form": "misquote / truncation / retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 21,
+    "Notes": null
+  },
+  {
+    "Claim": "Speculative story connecting an Obama Hawaii trip to judicial action on Trump\u2019s travel ban.",
+    "URL": "https://www.poynter.org/fact-checking/2017/not-fake-news-just-plain-wrong-top-media-corrections-of-2017/",
+    "Who": "Independent Journal Review (2017)",
+    "Duration": "days until IJR retraction (2017)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 22,
+    "Notes": null
+  },
+  {
+    "Claim": "Memes asserting Trump praised neo-Nazis as fine people, often omitting the condemnation sentence.",
+    "URL": "https://politifact.com/article/2019/apr/26/context-trumps-very-fine-people-both-sides-remarks/",
+    "Who": "Viral social posts; memes recirculating truncated Charlottesville quotes",
+    "Duration": "years of meme recirculation",
+    "Form": "misquote / truncation",
+    "Tag": "misquote",
+    "Item_ID": 23,
+    "Notes": null
+  },
+  {
+    "Claim": "Extreme versions on both sides; documented overstatements that Mueller \u201cexonerated\u201d on obstruction or that he proved criminal collusion.",
+    "URL": "https://www.justice.gov/d9/report.pdf",
+    "Who": "Cable news and print commentary equating \u201cno conspiracy\u201d with \u201cMueller found nothing\u201d or continuing to say \u201ccollusion proven\u201d after the report",
+    "Duration": "Not clearly documented",
+    "Form": "omitted context / premature \u201cproven\u201d framing",
+    "Tag": "misleading",
+    "Item_ID": 25,
+    "Notes": null
+  },
+  {
+    "Claim": "Absolute framing that there were no serious FBI process failures regarding Trump\u2013Russia investigation.",
+    "URL": "https://www.justice.gov/storage/durhamreport.pdf",
+    "Who": "Politicians/networks that treated all criticism of Crossfire Hurricane/FISA as baseless \u201cconspiracy theory\u201d",
+    "Duration": "years until Durham report (May 2023)",
+    "Form": "omitted context (process failures erased by absolute dismissal)",
+    "Tag": "misleading",
+    "Item_ID": 26,
+    "Notes": "Durham found process failures without proving broad criminal \u201cdeep state\u201d conspiracy"
+  },
+  {
+    "Claim": "Absolute claims that no chemical irritants / tear gas were used, or that Park Police used CS tear gas for the photo-op.",
+    "URL": "https://www.oversight.gov/sites/default/files/documents/reports/2021-06/SpecialReviewUSPPActionsAtLafayetteParkPublic.pdf",
+    "Who": "White House (\u201cno tear gas\u201d) vs media (\u201ctear gas used\u201d); politicians on both sides",
+    "Duration": "Not clearly documented",
+    "Form": "omitted context",
+    "Tag": "misleading",
+    "Item_ID": 27,
+    "Notes": null
+  },
+  {
+    "Claim": "Implied timing that the cage photos were contemporary Trump policy images.",
+    "URL": "https://politifact.com/factchecks/2018/may/29/donald-trump/trump-correctly-tweets-democrats-mistakenly-tweete/",
+    "Who": "Jake Silverstein (NYT Magazine editor-in-chief) and others who retweeted 2014 photos implying they were current Trump-era images",
+    "Duration": "hours\u2013days until acknowledgment (2018)",
+    "Form": "false photo/video attribution",
+    "Tag": "false / retracted/corrected",
+    "Item_ID": 28,
+    "Notes": null
+  },
+  {
+    "Claim": "Tweet expressing horror at cage photos as if depicting then-current Trump admin conditions (\u201cSpeechless. This is not who we are as a nation.\u201d).",
+    "URL": "https://apnews.com/article/a98f26f7c9424b44b7fa927ea1acd4d4",
+    "Who": "Antonio Villaraigosa (then CA gubernatorial candidate)",
+    "Duration": "Not clearly documented",
+    "Form": "false photo/video attribution",
+    "Tag": "false",
+    "Item_ID": 29,
+    "Notes": null
+  },
+  {
+    "Claim": "Initial piece harshly condemning Covington students based on incomplete video.",
+    "URL": "https://www.washingtonpost.com/nation/2019/03/01/editors-note-related-lincoln-memorial-incident/",
+    "Who": "National Review (Jan. 2019)",
+    "Duration": "days\u2013weeks until National Review retraction (Jan 2019)",
+    "Form": "premature \u201cproven\u201d framing / retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 30,
+    "Notes": null
+  },
+  {
+    "Claim": "Supreme Court \u201cratified Donald Trump\u2019s \u2018total and complete shutdown\u2019 of Muslims entry into the United States\u201d.",
+    "URL": "https://www.supremecourt.gov/opinions/17pdf/17-965_h315.pdf",
+    "Who": "Rep. Keith Ellison (tweet, June 26, 2018, after Trump v. Hawaii)",
+    "Duration": "Not clearly documented",
+    "Form": "policy-scope inflation / false attribution of words/intent",
+    "Tag": "false / misleading",
+    "Item_ID": 33,
+    "Notes": null
+  },
+  {
+    "Claim": "Unverified allegation that Russian oligarchs secretly guaranteed / co-signed Trump\u2019s Deutsche Bank loans.",
+    "URL": "https://apnews.com/article/5f32c14a803e43359dff5e8151dade4c",
+    "Who": "Lawrence O\u2019Donnell, MSNBC (Aug. 27, 2019 broadcast)",
+    "Duration": "hours (next-night retraction, Aug 2019)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 34,
+    "Notes": null
+  },
+  {
+    "Claim": "Mueller \u201ctold us\u2026 that but for the Department of Justice policy prohibiting [him] from doing so, he would have indicted President Trump\u201d.",
+    "URL": "https://www.factcheck.org/2019/07/nadler-misrepresents-mueller-testimony/",
+    "Who": "Rep. Jerrold Nadler (July 26, 2019 press conference after Mueller testimony)",
+    "Duration": "Not clearly documented",
+    "Form": "false attribution of words/intent / omitted context",
+    "Tag": "misleading / false",
+    "Item_ID": 35,
+    "Notes": null
+  },
+  {
+    "Claim": "Presented a dramatized \u201cessence\u201d of the Trump\u2013Zelensky call including invented lines (e.g., repeated demands to \u201cmake up dirt,\u201d \u201cdon\u2019t call us again\u201d until demands met) that are not in the White House call memorandum.",
+    "URL": "https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/",
+    "Who": "Rep. Adam Schiff (House Intelligence hearing opening, Sept. 2019)",
+    "Duration": "Not clearly documented",
+    "Form": "false attribution of words/intent / misquote / truncation",
+    "Tag": "misleading / misquote",
+    "Item_ID": 36,
+    "Notes": null
+  },
+  {
+    "Claim": "Martin Luther King Jr. bust had been removed from the Oval Office under Trump.",
+    "URL": "https://politifact.com/article/2017/jan/22/context-winston-churchill-and-mlk-busts/",
+    "Who": "TIME; pool reporter Zeke Miller (Jan. 2017)",
+    "Duration": "minutes\u2013hours (same-day correction, Jan 2017)",
+    "Form": "retracted invention / false photo/video attribution (visual misread)",
+    "Tag": "retracted/corrected",
+    "Item_ID": 37,
+    "Notes": null
+  },
+  {
+    "Claim": "Russian government hackers penetrated the U.S. electricity grid through a Vermont utility.",
+    "URL": "https://www.snopes.com/fact-check/report-vermont-power-grid-infiltrated-by-russian-hackers/",
+    "Who": "The Washington Post (Dec. 30, 2016; early Trump-transition coverage widely used against Trump\u2013Russia narrative climate)",
+    "Duration": "days until WaPo correction/follow-up (early Jan 2017)",
+    "Form": "premature \u201cproven\u201d framing / retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 38,
+    "Notes": null
+  },
+  {
+    "Claim": "Identified Belarusian-American businessman Sergei Millian as a key Steele dossier source for Trump\u2013Russia allegations.",
+    "URL": "https://www.washingtonpost.com/lifestyle/style/media-washington-post-steele-dossier/2021/11/12/f7c9b770-43d5-11ec-a88e-2aa4632af69b_story.html",
+    "Who": "The Washington Post (2017 and 2019 stories)",
+    "Duration": "years until large portions removed (Nov 2021)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 39,
+    "Notes": "Post removed large portions after Danchenko indictment; editor\u2019s notes added"
+  },
+  {
+    "Claim": "Early framing that Manafort wanted polling data passed to Russian oligarch Oleg Deripaska.",
+    "URL": "https://www.nytimes.com/2019/01/08/us/politics/manafort-trump-campaign-data-kilimnik.html",
+    "Who": "The New York Times (Jan. 2019)",
+    "Duration": "days until NYT correction (Jan 2019)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 40,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump, through Trump Org interest in NYC building, currently owes Bank of China tens of millions due in 2022\u2014complicating China-hawk attacks on Biden.",
+    "URL": "https://www.politico.com/news/2020/04/27/politicos-reporting-on-president-trump-and-the-bank-of-china-214107",
+    "Who": "POLITICO (April 24, 2020)",
+    "Duration": "days until POLITICO editor\u2019s note (April 2020)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 41,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump\u2019s budget cuts $845 billion from Medicare (implying benefit slash).",
+    "URL": "https://politifact.com/factchecks/2019/mar/26/joe-biden/trump-medicare-budget-cuts-billion/",
+    "Who": "Joe Biden (2019 campaign remarks)",
+    "Duration": "Not clearly documented",
+    "Form": "omitted context (fabricated-severity figure)",
+    "Tag": "misleading",
+    "Item_ID": 46,
+    "Notes": null
+  },
+  {
+    "Claim": "Federal investigators had a wiretap on Cohen\u2019s phones (implying listening to calls), including a White House-linked call.",
+    "URL": "https://apnews.com/general-news-television-02654755a4464a05b7fe68cc507a45d0",
+    "Who": "NBC News (May 3, 2018)",
+    "Duration": "hours (same-day correction, May 2018)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 49,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump said of Turkey\u2019s Syria operation that it is \u201cnot our problem\u201d.",
+    "URL": "https://abcnews.com/Politics/trump-turkey-syria-problem/story?id=66319063",
+    "Who": "ABC News, NBC News, and other outlets relying on flawed pool report (Oct. 16, 2019)",
+    "Duration": "hours\u2013days until ABC/NBC corrections (Oct 2019)",
+    "Form": "misquote / truncation",
+    "Tag": "misquote / retracted/corrected",
+    "Item_ID": 50,
+    "Notes": null
+  },
+  {
+    "Claim": "Footage presented as depicting Turkish military attack on Kurds in Syria amid criticism of Trump\u2019s Syria withdrawal.",
+    "URL": "https://apnews.com/arts-and-entertainment-general-news-television-programs-a2685a2439e6425d8d46db2bb1aa3f7a",
+    "Who": "ABC News (World News Tonight; GMA, Oct. 2019)",
+    "Duration": "days until ABC apology (Oct 2019)",
+    "Form": "false photo/video attribution",
+    "Tag": "retracted/corrected / false",
+    "Item_ID": 51,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump \u201cbanned Muslims\u201d / banned all Muslim entry to the U.S.",
+    "URL": "https://www.factcheck.org/2018/06/trumps-travel-ban-doesnt-affect-all-muslims/",
+    "Who": "Politicians, activists, and many headlines (2017\u20132018) treating EO/proclamation as banning Muslims as such",
+    "Duration": "months\u2013years of shorthand (2017\u20132018+)",
+    "Form": "policy-scope inflation / omitted context",
+    "Tag": "misleading",
+    "Item_ID": 52,
+    "Notes": null
+  },
+  {
+    "Claim": "That Trump called the coronavirus / COVID-19 a \u201choax\u201d.",
+    "URL": "https://www.factcheck.org/2020/03/trump-and-the-new-hoax/",
+    "Who": "Priorities USA Action ad; Mike Bloomberg; Terry McAuliffe; other Democrats (Feb\u2013Apr 2020)",
+    "Duration": "weeks\u2013months of 2020 ad/campaign recirculation",
+    "Form": "misquote / truncation / omitted context",
+    "Tag": "misleading / misquote",
+    "Item_ID": 56,
+    "Notes": null
+  },
+  {
+    "Claim": "Donald Trump says \u201call Mexicans are rapists\u201d.",
+    "URL": "https://www.politifact.com/factchecks/2016/aug/08/tim-kaine/tim-kaine-falsely-says-trump-said-all-mexicans-are/",
+    "Who": "Sen. Tim Kaine (Aug. 2016 TV interview as Clinton running mate)",
+    "Duration": "Not clearly documented",
+    "Form": "policy-scope inflation / misquote / truncation",
+    "Tag": "false",
+    "Item_ID": 57,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump told Georgia investigator Frances Watson to \u201cfind the fraud\u201d and that she would be a \u201cnational hero\u201d if she did.",
+    "URL": "https://www.washingtonpost.com/opinions/2021/03/16/washington-post-correction-trump-call-georgia-investigator/",
+    "Who": "The Washington Post (Jan. 9, 2021 story; corrected Mar. 2021 after audio release)",
+    "Duration": "~2 months until audio-driven correction (Jan\u2192Mar 2021)",
+    "Form": "retracted invention / misquote / truncation",
+    "Tag": "retracted/corrected",
+    "Item_ID": 60,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump\u2019s CIA nominee Gina Haspel ran the Thailand black site during Abu Zubaydah\u2019s waterboarding and mocked his suffering.",
+    "URL": "https://apnews.com/article/europe-carter-page-cia-925492c0b3dce9c347bdcd46658d1543",
+    "Who": "ProPublica (Feb. 2017; major correction Mar. 15, 2018 amid Haspel CIA-director nomination)",
+    "Duration": "~1 year until ProPublica major correction (Feb 2017\u2192Mar 2018)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 61,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump was \u201ctalking about exterminating Latinos\u201d.",
+    "URL": "https://www.politifact.com/factchecks/2019/aug/08/nicolle-wallace/no-trump-hasnt-talked-about-exterminating-latinos/",
+    "Who": "Nicolle Wallace, MSNBC (Aug. 2019, after El Paso)",
+    "Duration": "hours\u20131 day until Wallace apology (Aug 2019)",
+    "Form": "false attribution of words/intent / inflammatory false premise",
+    "Tag": "false / retracted/corrected",
+    "Item_ID": 62,
+    "Notes": null
+  },
+  {
+    "Claim": "Framing via shortened clip that AG Barr\u2019s Flynn dismissal undermined rule of law / was lawless.",
+    "URL": "https://apnews.com/article/731c44e0e4e5492ce4d52c717609b7f4",
+    "Who": "NBC Meet the Press; Chuck Todd (May 2020)",
+    "Duration": "days until Todd/NBC on-air apology (May 2020)",
+    "Form": "omitted context / misquote / truncation",
+    "Tag": "retracted/corrected / misleading",
+    "Item_ID": 63,
+    "Notes": null
+  },
+  {
+    "Claim": "Photo implying sparse attendance at Trump\u2019s Pensacola rally.",
+    "URL": "https://apnews.com/united-states-government-national-ec42044634284abc8942d93f4a1299e4",
+    "Who": "Dave Weigel, Washington Post (Dec. 8, 2017 tweet)",
+    "Duration": "hours (same-day delete/apology, Dec 2017)",
+    "Form": "false photo/video attribution / omitted context",
+    "Tag": "retracted/corrected",
+    "Item_ID": 64,
+    "Notes": null
+  },
+  {
+    "Claim": "That State\u2019s entire senior management team \u201cjust resigned\u201d as protest against Trump.",
+    "URL": "https://www.snopes.com/news/2017/01/26/senior-state-department-officials-resign/",
+    "Who": "Josh Rogin, Washington Post (Jan. 26, 2017 blog/headline framing); viral amplification as mass anti-Trump revolt",
+    "Duration": "days of viral framing until context reporting (Jan 2017)",
+    "Form": "omitted context / policy-scope inflation",
+    "Tag": "misleading",
+    "Item_ID": 65,
+    "Notes": null
+  },
+  {
+    "Claim": "Phone records / intercepts showed Trump campaign aides had repeated contacts with Russian intelligence officials.",
+    "URL": "https://www.nytimes.com/2017/02/14/us/politics/russia-intelligence-communications-trump.html",
+    "Who": "The New York Times (Feb. 14, 2017)",
+    "Duration": "months until Comey testimony contradicted (Feb\u2192June 2017)",
+    "Form": "premature \u201cproven\u201d framing",
+    "Tag": "misleading",
+    "Item_ID": 66,
+    "Notes": "Times stood by reporting; Comey said story \u201cin the main\u2026 not true\u201d"
+  },
+  {
+    "Claim": "Special Counsel Mueller had subpoenaed Deutsche Bank for Trump\u2019s personal/family bank records.",
+    "URL": "https://www.reuters.com/article/world/trump-lawyer-denies-deutsche-bank-got-subpoena-on-trump-accounts-idUSKBN1DZ0XH/",
+    "Who": "Bloomberg News; Wall Street Journal (Dec. 5, 2017)",
+    "Duration": "days until Bloomberg/WSJ corrections (Dec 2017)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 67,
+    "Notes": null
+  },
+  {
+    "Claim": "Cover package used Yanela Sanchez\u2019s crying photo to symbolize Trump family-separation policy in a way that implied this child was taken from her mother.",
+    "URL": "https://apnews.com/article/685ff48c1b814f1fb8c32f62ea6dcb91",
+    "Who": "TIME magazine (June 2018 cover; related online text)",
+    "Duration": "days until TIME article-line correction / father statements (June 2018)",
+    "Form": "false photo/video attribution / omitted context",
+    "Tag": "misleading / false",
+    "Item_ID": 68,
+    "Notes": "TIME corrected \u201ccarried away\u201d line; defended symbolic cover use"
+  },
+  {
+    "Claim": "Colorful \u201cfacts\u201d about a Trump-supporting Midwestern town (characters, quotes, a \u201cMexicans Keep Out\u201d sign, election details).",
+    "URL": "https://www.spiegel.de/international/zeitgeist/claas-relotius-reporter-forgery-scandal-a-1244755.html",
+    "Who": "Der Spiegel reporter Claas Relotius (2017 feature on Fergus Falls, Minnesota as Trump-country archetype); CNN International had honored Relotius previously",
+    "Duration": "months\u2013~1 year until Relotius confession / Spiegel removal (2018 scandal)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected / false",
+    "Item_ID": 69,
+    "Notes": null
+  },
+  {
+    "Claim": "Pressed Trump that South Korea had done ~5\u00d7 more COVID tests per capita than the U.S.",
+    "URL": "https://apnews.com/arts-and-entertainment-general-news-8abb428b94c45a621c80a82eba8e3ea7",
+    "Who": "Hunter Walker, Yahoo News (Apr. 28, 2020 Oval Office exchange)",
+    "Duration": "hours (same-briefing Birx correction + apology, Apr 2020)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 70,
+    "Notes": null
+  },
+  {
+    "Claim": "Video of overcrowded hospital ward presented in reporting on New York (and later Pennsylvania) COVID crisis.",
+    "URL": "https://www.snopes.com/fact-check/cbs-news-italian-hospital/",
+    "Who": "CBS This Morning; CBS News (late Mar\u2013Apr 2020)",
+    "Duration": "days until CBS removed clip / admitted error (Mar\u2013Apr 2020)",
+    "Form": "false photo/video attribution",
+    "Tag": "retracted/corrected / false",
+    "Item_ID": 71,
+    "Notes": null
+  },
+  {
+    "Claim": "Sen. Tom Cotton was repeating a \u201ccoronavirus conspiracy theory that was already debunked\u201d (lab-origin discussion tied to Trump-era China scrutiny).",
+    "URL": "https://www.washingtonpost.com/politics/2020/02/16/tom-cotton-coronavirus-conspiracy/",
+    "Who": "The Washington Post; Paulina Firozi (Feb. 16, 2020 piece; corrected June 2021)",
+    "Duration": "~16 months until WaPo editor\u2019s note (Feb 2020\u2192June 2021)",
+    "Form": "premature \u201cproven\u201d framing / retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 72,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump called Robert E. Lee \u201cincredible\u201d.",
+    "URL": "https://www.huffpost.com/entry/nbc-news-trump-robert-e-lee_n_5bc3813de4b0bd9ed55b2eda",
+    "Who": "NBC News social/video post (Oct. 2018 Ohio rally coverage)",
+    "Duration": "days until NBC correction (Oct 2018)",
+    "Form": "misquote / truncation / retracted invention",
+    "Tag": "retracted/corrected / misquote",
+    "Item_ID": 74,
+    "Notes": null
+  },
+  {
+    "Claim": "Agata Kornhauser-Duda deliberately refused Trump\u2019s handshake.",
+    "URL": "https://www.snopes.com/fact-check/polish-first-lady-trump-handshake/",
+    "Who": "Newsweek and other outlets amplifying short clip (July 2017 Warsaw visit)",
+    "Duration": "hours\u2013days until fuller video / Duda rebuttal (July 2017)",
+    "Form": "omitted context / false photo/video attribution",
+    "Tag": "misleading / false",
+    "Item_ID": 76,
+    "Notes": null
+  },
+  {
+    "Claim": "Framing that Trump awkwardly/impulsively dumped the whole box while Abe behaved properly.",
+    "URL": "https://www.snopes.com/fact-check/did-trump-impatiently-dump-fish-food-in-japanese-koi-pond/",
+    "Who": "CNN and many outlets (Nov. 6, 2017 Abe\u2013Trump koi feeding)",
+    "Duration": "Not clearly documented",
+    "Form": "omitted context / false photo/video attribution",
+    "Tag": "misleading",
+    "Item_ID": 77,
+    "Notes": null
+  },
+  {
+    "Claim": "All 17 U.S. intelligence agencies concluded Russia intervened to help Trump.",
+    "URL": "https://www.politifact.com/article/2017/jul/06/17-intelligence-organizations-or-four-either-way-r/",
+    "Who": "Hillary Clinton (debates/campaign); widespread media shorthand 2016\u20132017",
+    "Duration": "months\u2013years of shorthand (2016\u20132017+)",
+    "Form": "policy-scope inflation / omitted context",
+    "Tag": "misleading",
+    "Item_ID": 78,
+    "Notes": null
+  },
+  {
+    "Claim": "Evidence including cell data placed Michael Cohen near Prague around time of alleged Russia collusion meeting (Steele dossier plot point).",
+    "URL": "https://www.justice.gov/d9/report.pdf",
+    "Who": "McClatchy (Dec. 2018 and related Cohen\u2013Prague stories)",
+    "Duration": "months until Mueller contradicted Prague travel (report 2019)",
+    "Form": "premature \u201cproven\u201d framing",
+    "Tag": "misleading / false",
+    "Item_ID": 79,
+    "Notes": "McClatchy largely stood by sources after Mueller; added editor\u2019s notes"
+  },
+  {
+    "Claim": "Trump told Mexico\u2019s president the U.S. might send troops into Mexico to take care of \u201cbad hombres\u201d (invasion/war framing in headlines).",
+    "URL": "https://apnews.com/article/mexico-united-states-government-5972d796cb884da8902f492049ea05ef",
+    "Who": "Associated Press (Feb. 1, 2017); wide pickup",
+    "Duration": "days until U.S./Mexico official pushback (Feb 2017)",
+    "Form": "inflammatory false premise / omitted context",
+    "Tag": "misleading",
+    "Item_ID": 80,
+    "Notes": null
+  },
+  {
+    "Claim": "White House set up matching Twitter accounts for SCOTUS finalists to conceal the choice.",
+    "URL": "https://www.cnn.com/2017/01/30/politics/donald-trump-supreme-court-choice-announcement-coming-tuesday-8-p-m-",
+    "Who": "Jeff Zeleny, CNN (Jan. 2017, before Gorsuch announcement)",
+    "Duration": "hours\u2013days until Zeleny correction (Jan 2017)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 81,
+    "Notes": null
+  },
+  {
+    "Claim": "\u201cUndoubtedly, there is collusion\u201d / \u201cample evidence of collusion in plain sight\u201d framed as settled despite Mueller\u2019s no-conspiracy finding.",
+    "URL": "https://www.politifact.com/article/2019/mar/25/what-democrats-said-about-trump-collusion-mueller/",
+    "Who": "Rep. Adam Schiff (Mar. 2019 interviews after Barr summary of Mueller)",
+    "Duration": "ongoing despite Mueller finding (from Mar 2019)",
+    "Form": "premature \u201cproven\u201d framing / omitted context",
+    "Tag": "misleading",
+    "Item_ID": 82,
+    "Notes": "Distinct from pre-Mueller item 11; post-Barr absolute \u201ccollusion\u201d framing"
+  },
+  {
+    "Claim": "Trump administration banned CDC officials from saying diversity, fetus, transgender, vulnerable, entitlement, evidence-based, science-based.",
+    "URL": "https://www.snopes.com/news/2017/12/15/trump-administration-bans-cdc-officials-using-certain-words/",
+    "Who": "Washington Post initial framing (Dec. 2017) and viral political amplification that Trump \u201cbanned\u201d words at CDC",
+    "Duration": "days\u2013weeks of viral \u201cspeech ban\u201d framing (Dec 2017\u2013Jan 2018)",
+    "Form": "policy-scope inflation / omitted context",
+    "Tag": "misleading",
+    "Item_ID": 83,
+    "Notes": null
+  },
+  {
+    "Claim": "AG Jeff Sessions told Comey not to call the Russia probe an \u201cinvestigation\u201d but a \u201cmatter\u201d.",
+    "URL": "https://www.cbsnews.com/news/comey-says-ag-loretta-lynch-wanted-clinton-investigation-to-be-called-a-matter/",
+    "Who": "Jonathan Weisman, New York Times (June 2017 tweet during Comey testimony)",
+    "Duration": "hours (same-day correct/delete, June 2017)",
+    "Form": "false attribution of words/intent / retracted invention",
+    "Tag": "retracted/corrected / false",
+    "Item_ID": 84,
+    "Notes": null
+  },
+  {
+    "Claim": "Absolute framing that Horowitz found \u201cno political bias\u201d in the Trump\u2013Russia probe (implying process fully vindicated).",
+    "URL": "https://www.justice.gov/storage/120919-examination.pdf",
+    "Who": "Multiple cable/print headlines after Dec. 2019 DOJ IG Horowitz FISA report",
+    "Duration": "Not clearly documented",
+    "Form": "omitted context",
+    "Tag": "misleading",
+    "Item_ID": 85,
+    "Notes": null
+  }
+]

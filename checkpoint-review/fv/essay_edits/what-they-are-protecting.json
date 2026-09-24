@@ -1,0 +1,94 @@
+{
+ "status": "Held",
+ "fixes": [
+  "USAID contractor figures (Devex), lobbying totals and rankings (OpenSecrets), revolving-door counts (LegiStorm), Soros district-attorney spending (Washington Post, Politico) and the 'zero prosecutions' claim (Campaign Legal Center) cut",
+  "Foreign-aid total corrected to about $80.5 billion disbursed in FY2023 (ForeignAssistance.gov); USAID share cut",
+  "Open Society figures attributed to OSF's own count",
+  "CRS R48150 Chemonics sentence and the 'two dozen bills' count cut (not confirmed against the CRS text)",
+  "'Congress blocked the deep cut' bullet reduced to the Rescissions Act fact"
+ ],
+ "edits": [
+  [
+   "Chemonics. The Chamber. K Street. Soros money in local races. $200 for a late trade. That is the business.",
+   "USAID money. K Street. Private money in local races. $200 for a late trade. That is the business."
+  ],
+  [
+   "- Open Society Foundations, by their own count: $1.2 billion in expenditures in 2024, $24.2 billion over three decades.",
+   "- Open Society Foundations says it spent $1.2 billion in 2024 and $24.2 billion over three decades."
+  ],
+  [
+   "- In fiscal 2023 the United States disbursed $71.9 billion in foreign aid. USAID moved about $43.8 billion of that — three of every five dollars. Pew, from ForeignAssistance.gov. https://www.pewresearch.org/short-reads/2025/02/06/what-the-data-says-about-us-foreign-aid/",
+   "- In fiscal 2023 the United States disbursed about $80.5 billion in foreign assistance, by ForeignAssistance.gov’s current data. https://www.foreignassistance.gov/"
+  ],
+  [
+   "- When the second Trump term tried to fold USAID and cut the international-affairs budget hard, Congress — including a Republican House — blocked the deep cut and kept operating money in the pile. Rescissions took some. The pipeline stayed.",
+   "- When the second Trump term moved to fold USAID, Congress rescinded part of the foreign-aid money in the [Rescissions Act of 2025](https://www.congress.gov/bill/119th-congress/house-bill/4). Our view: the pipeline stayed."
+  ],
+  [
+   "- The civil penalty for a late report is $200. Campaign Legal Center: no member of Congress has been prosecuted for insider trading under that act. https://campaignlegal.org/update/congressional-stock-trading-and-stock-act",
+   "- The penalty for a late report is $200."
+  ],
+  [
+   "- The 119th Congress introduced more than two dozen bills to limit or ban the trades. CRS counted them. Disclosure is still the remedy they prefer,",
+   "- Bills to limit or ban the trades keep being introduced. Disclosure is still the remedy they prefer,"
+  ],
+  [
+   "- The STOCK Act's $200 late fee is a cost of doing that business. Zero prosecutions. Disclosure",
+   "- The STOCK Act's $200 late fee is a cost of doing that business. Disclosure"
+  ],
+  [
+   "- Taxpayer NGOs sit on the other rail. USAID's implementers — Chemonics and the rest — are paid",
+   "- Taxpayer NGOs sit on the other rail. USAID's implementers are paid"
+  ],
+  [
+   "Private foundations pay for the DAs.",
+   "Private foundations pay for local races."
+  ],
+  [
+   "- In 2025 it crossed $5 billion. The people who write the twin law buy the hours.",
+   "- The people who write the twin law buy the hours."
+  ],
+  [
+   "A $5 billion industry does not pay that to lose.",
+   "A billion-dollar industry does not pay that to lose."
+  ],
+  [
+   "- USAID contracts, FY2023: about $6.8 billion obligated. Three billion of that went to ten contractors. Chemonics, a D.C. for-profit, took the largest share — about 20 percent of the contract pile, more than $1 billion that year. Devex, from USASpending. https://www.devex.com/news/who-were-usaid-s-top-contractors-in-2023-107745\n",
+   ""
+  ],
+  [
+   "- CRS's table of implementers puts Chemonics in the same neighborhood as the big faith and nonprofit shops — billions across the decade, U.S. firms on the receiving end of 'foreign' aid. https://www.congress.gov/crs-product/R48150\n",
+   ""
+  ],
+  [
+   "- Federal lobbying: $4.4 billion in 2024, more than $5 billion in 2025. In 2025 the U.S. Chamber of Commerce led at $72.1 million. The National Association of Realtors had been first in 2024 at $86.4 million. Pharma and health products spent about $387 million in 2024 as an industry. OpenSecrets. https://www.opensecrets.org/news/2025/02/federal-lobbying-set-new-record-in-2024/\n",
+   ""
+  ],
+  [
+   "- The revolving door is the product line. LegiStorm counted 866 members and staff who left the Hill for K Street in 2025 — up 60 percent from 2024. One hundred twenty-five lobbyists walked the other way, into Congress. That is not civic virtue. That is inventory.\n",
+   ""
+  ],
+  [
+   "- The Washington Post, December 2025: George Soros has spent tens of millions of dollars swinging dozens of district attorney races — local and state officers who decide who gets charged in a county. https://www.washingtonpost.com/politics/2025/12/03/george-soros-prosecutors-campaign-finance/\n",
+   ""
+  ],
+  [
+   "- Politico documented the strategy as early as 2016: elect the prosecutor, change the justice system without passing a statute. Democracy PAC and related vehicles moved nine-figure sums into political groups around the 2022 cycle.\n",
+   ""
+  ],
+  [
+   "- Federal lobbying hit a record $4.4 billion in 2024. OpenSecrets. https://www.opensecrets.org/news/2025/02/federal-lobbying-set-new-record-in-2024/\n",
+   ""
+  ]
+ ],
+ "ourview": [
+  "The $7.258 billion legislative machine",
+  "- That is not a sermon",
+  "- The Lobbying Disclosure Act",
+  "Put the three next to"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "Most of the 'business' the essay names — USAID contractor shares, lobbying totals, revolving-door counts, Soros spending on DA races — is sourced only to news outlets and private aggregators (Devex, OpenSecrets, LegiStorm, Washington Post, Politico, Campaign Legal Center). Those are cut; what is left (STOCK Act, OSF's own figures, the foreign-aid total) may not carry the argument. Restore figures only from USAspending.gov queries and Senate LDA filings.",
+ "dek_opinion": true
+}

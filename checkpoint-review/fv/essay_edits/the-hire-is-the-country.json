@@ -1,0 +1,34 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "'About 18 charged with seditious conspiracy' replaced with what the record supports (Oath Keepers and Proud Boys leaders were convicted of seditious conspiracy)",
+  "First-impeachment row: 'the job of the executive under Article II' and 'floor speeches that did not match the memo' labelled Our view; the memo describes a request to look into the Bidens",
+  "Manhattan: 'still on appeal' softened to 'appealed'",
+  "Horowitz link corrected to the OIG's live PDF"
+ ],
+ "edits": [
+  [
+   "About 18 charged with seditious conspiracy under 18 U.S.C. § 2384.",
+   "Leaders of the Oath Keepers and the Proud Boys were convicted of seditious conspiracy under 18 U.S.C. § 2384."
+  ],
+  [
+   "The President asked about corruption involving the Bidens in a country receiving American aid. Looking into corruption in a foreign aid relationship is the job of the executive under Article II.",
+   "The President asked Ukraine’s president to look into the Bidens, in a country receiving American aid. Our view: looking into corruption in a foreign-aid relationship is the executive’s job under Article II."
+  ],
+  [
+   "Floor speeches that did not match the memo.",
+   "Floor speeches that, in our view, did not match the memo."
+  ],
+  [
+   "Manhattan is a records conviction, still on appeal,",
+   "Manhattan is a records conviction, appealed,"
+  ]
+ ],
+ "ourview": [
+  "The people hire the president"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

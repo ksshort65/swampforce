@@ -1,0 +1,12 @@
+URL verification log, Sep 24, 2026 (MT)
+Method: curl with a browser user agent. SEC requests used a declared user agent and a slower rate.
+Result: 101 cited URLs checked. The raw results are in raw/url_status.txt.
+- 73 URLs returned HTTP 200 on the first pass.
+- SEC EDGAR (26 URLs): 403 or 503 on the first pass (rate-limited). All returned 200 on a slow retry with a declared user agent.
+- justice.gov DOJ/FTC letter: curl got 401 (bot protection). It loaded and was read in full through the fetch tool (letter dated Jul 3, 2026).
+- centcom.mil Jul 8 release: curl got 403. It loaded and was read in full through the fetch tool.
+- CENTCOM Apr 12 blockade release: centcom.mil timed out, so the report cites the U.S. Mission China copy (loads, HTTP 200).
+- fred.stlouisfed.org series page: timed out for curl and the fetch tool. The FRED CSV endpoint fredgraph.csv?id=CPIAUCNS returns 200. The BLS page returns 200.
+- vlc.calgaslitigation.com (settlement site): errored (500 or timeout). Replaced with the CA AG press release (loads).
+- war.gov: 403 on every automated fetch. No war.gov URL is cited.
+- Only in oil-vs-gas.csv: the CPI rows' source_url field holds two URLs, BLS and FRED, separated by " ; ".

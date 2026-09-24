@@ -1,0 +1,1144 @@
+
+ Federal Register
+ :: 
+ Document Search Results for '14252'
+ Skip to Content
+ Home
+ Sections
+ Money
+ Environment
+ World
+ Science & Technology
+ Business & Industry
+ Health & Public Welfare
+ Browse
+Agencies
+Topics (CFR Indexing Terms)
+Dates
+Public Inspection
+Presidential Documents
+ Search
+ Document Search
+ Advanced Document Search
+ Public Inspection Search
+ FR Index
+ Reader Aids
+Reader Aids Home
+Office of the Federal Register Announcements
+Using FederalRegister.Gov
+Understanding the Federal Register
+Recent Site Updates
+Federal Register & CFR Statistics
+Videos & Tutorials
+Developer Resources
+Government Policy and OFR Procedures
+ My FR
+My Account
+My Clipboard
+My Comments
+My Subscriptions
+Sign In / Sign Up
+ Site Feedback
+Search the Federal Register
+Legal Status
+ This site displays a prototype of a “Web 2.0” version of the daily
+ Federal Register. It is not an official legal edition of the Federal
+ Register, and does not replace the official print version or the official
+ electronic version on GPO’s govinfo.gov.
+ The documents posted on this site are XML renditions of published Federal
+ Register documents. Each document posted on the site includes a link to the
+ corresponding official PDF file on govinfo.gov. This prototype edition of the
+ daily Federal Register on FederalRegister.gov will remain an unofficial
+ informational resource until the Administrative Committee of the Federal
+ Register (ACFR) issues a regulation granting it official legal status.
+ For complete information about, and access to, our official publications
+ and services, go to
+ About the Federal Register
+ on NARA's archives.gov.
+ The OFR/GPO partnership is committed to presenting accurate and reliable
+ regulatory information on FederalRegister.gov with the objective of
+ establishing the XML-based Federal Register as an ACFR-sanctioned
+ publication in the future. While every effort has been made to ensure that
+ the material on FederalRegister.gov is accurately displayed, consistent with
+ the official SGML-based PDF version on govinfo.gov, those relying on it for
+ legal research should verify their results against an official edition of
+ the Federal Register. Until the ACFR grants it official status, the XML
+ rendition of the daily Federal Register on FederalRegister.gov does not
+ provide legal notice to the public or judicial notice to the courts.
+Legal Status
+ Document Search
+modal#escClose"
+ data-suggestions-target="modal">
+modal#forceClose">
+ Enter a search term or FR citation e.g. 
+suggestions#fillExample"
+ class="example badge badge-info">88 FR 382
+suggestions#fillExample"
+ class="example badge badge-info desktop-only">30 FR 7878
+suggestions#fillExample"
+ class="example badge badge-info">2024-13208
+suggestions#fillExample"
+ class="example badge badge-info">USDA
+suggestions#fillExample"
+ class="example badge badge-info desktop-only">09/05/24
+suggestions#fillExample"
+ class="example badge badge-info">RULE
+suggestions#fillExample"
+ class="example badge badge-info desktop-only">0503-AA39
+suggestions#fillExample"
+ class="example badge badge-info desktop-only">SORN
+ Choosing an item from
+full text search results
+ will bring you to those results. Pressing enter in the search box
+ will also bring you to search results.
+ Choosing an item from
+suggestions
+ will bring you directly to the content. 
+ Background and more details are available in the
+Search & Navigation
+ guide.
+suggestions#goDefault">
+suggestions#modal"
+ placeholder="Enter a search term or CFR reference (eg. fishing or 1 CFR 1.1)"
+ type="text"
+ data-suggestions-target="nonModalInput"
+ name="conditions[term]"
+ id="suggestion">
+suggestions#go">
+suggestions#go">
+ Documents
+ Public Inspection
+Find
+*
+Document Category
+Notice
+Presidential Document
+Proposed Rule
+Rule
+Notice Type
+System of Records Notice (SORN)
+Sunshine Act Meeting
+Presidential Document Type
+Determination
+Executive Order
+Memorandum
+Notice
+Proclamation
+Presidential Order
+Other
+President
+Donald J. Trump
+Joseph R. Biden, Jr.
+Barack Obama
+George W. Bush
+Agency
+ACTION
+Administration Office, Executive Office of the President
+Administrative Conference of the United States
+Administrative Office of United States Courts
+Advisory Council on Historic Preservation
+Advocacy and Outreach Office
+Agency for Healthcare Research and Quality
+Agency for International Development
+Agency for Toxic Substances and Disease Registry
+Aging Administration
+Agricultural Marketing Service
+Agricultural Research Service
+Agriculture Department
+Air Force Department
+Air Quality National Commission
+Air Transportation Stabilization Board
+Alaska Power Administration
+Alcohol and Tobacco Tax and Trade Bureau
+Alcohol, Tobacco, Firearms, and Explosives Bureau
+American Battle Monuments Commission
+Amtrak Reform Council
+Animal and Plant Health Inspection Service
+Antitrust Division
+Antitrust Modernization Commission
+Appalachian Regional Commission
+Appalachian States Low-Level Radioactive Waste Commission
+Appraisal Subcommittee of the Federal Financial Institutions Examination Council
+Architect of the Capitol
+Architectural and Transportation Barriers Compliance Board
+Arctic Research Commission
+Armed Forces Retirement Home
+Arms Control and Disarmament Agency
+Army Department
+Assassination Records Review Board
+Barry M. Goldwater Scholarship and Excellence in Education Foundation
+Benefits Review Board
+Bipartisan Commission on Entitlement and Tax Reform
+Board of Directors of the Hope for Homeowners Program
+Bonneville Power Administration
+Broadcasting Board of Governors
+Bureau of the Fiscal Service
+Census Bureau
+Census Monitoring Board
+Centers for Disease Control and Prevention
+Centers for Medicare & Medicaid Services
+Central Intelligence Agency
+Chemical Safety and Hazard Investigation Board
+Child Support Enforcement Office
+Children and Families Administration
+Christopher Columbus Quincentenary Jubilee Commission
+Civil Rights Cold Case Records Review Board
+Civil Rights Commission
+Coast Guard
+Commerce Department
+Commercial Space Transportation Office
+Commission of Fine Arts
+Commission on Immigration Reform
+Commission on Protecting and Reducing Government Secrecy
+Commission on Review of Overseas Military Facility Structure of the United States
+Commission on Structural Alternatives for the Federal Courts of Appeals
+Commission on the Advancement of Federal Law Enforcement
+Commission on the Bicentennial of the United States Constitution
+Commission on the Future of the United States Aerospace Industry
+Commission on the Social Security Notch Issue
+Committee for Purchase From People Who Are Blind or Severely Disabled
+Committee for the Implementation of Textile Agreements
+Commodity Credit Corporation
+Commodity Futures Trading Commission
+Community Development Financial Institutions Fund
+Community Living Administration
+Competitiveness Policy Council
+Comptroller of the Currency
+Congressional Budget Office
+Consumer Financial Protection Bureau
+Consumer Product Safety Commission
+Cooperative State Research, Education, and Extension Service
+Coordinating Council on Juvenile Justice and Delinquency Prevention
+Copyright Office, Library of Congress
+Copyright Royalty Board
+Copyright Royalty Judges
+Corporation for National and Community Service
+Council of the Inspectors General on Integrity and Efficiency
+Council on Environmental Quality
+Counsel to the President
+Court Services and Offender Supervision Agency for the District of Columbia
+Crime and Security in U.S. Seaports, Interagency Commission
+Customs Service
+Defense Acquisition Regulations System
+Defense Base Closure and Realignment Commission
+Defense Contract Audit Agency
+Defense Criminal Investigative Service
+Defense Department
+Defense Information Systems Agency
+Defense Intelligence Agency
+Defense Investigative Service
+Defense Logistics Agency
+Defense Mapping Agency
+Defense Nuclear Facilities Safety Board
+Defense Special Weapons Agency
+Delaware River Basin Commission
+Delta Regional Authority
+Denali Commission
+Disability Employment Policy Office
+Drug Enforcement Administration
+Economic Analysis Bureau
+Economic Analysis Staff
+Economic Development Administration
+Economic Research Service
+Economics and Statistics Administration
+Education Department
+Election Assistance Commission
+Electronic Commerce Advisory Commission
+Emergency Oil and Gas Guaranteed Loan Board
+Emergency Steel Guarantee Loan Board
+Employee Benefits Security Administration
+Employees Compensation Appeals Board
+Employment and Training Administration
+Employment Standards Administration
+Energy and Environmental Policy Office
+Energy Department
+Energy Efficiency and Renewable Energy Office
+Energy Information Administration
+Energy Policy and New Uses Office
+Energy Research Office
+Engineers Corps
+Engraving and Printing Bureau
+Environment Office, Energy Department
+Environmental Protection Agency
+Equal Employment Opportunity Commission
+Executive Council on Integrity and Efficiency
+Executive Office for Immigration Review
+Executive Office of the President
+Export Administration Bureau
+Export-Import Bank
+Family Assistance Office
+Farm Credit Administration
+Farm Credit System Insurance Corporation
+Farm Production and Conservation Business Center
+Farm Service Agency
+Federal Accounting Standards Advisory Board
+Federal Acquisition Regulation System
+Federal Aviation Administration
+Federal Bureau of Investigation
+Federal Communications Commission
+Federal Contract Compliance Programs Office
+Federal Council on the Arts and the Humanities
+Federal Crop Insurance Corporation
+Federal Deposit Insurance Corporation
+Federal Election Commission
+Federal Emergency Management Agency
+Federal Energy Regulatory Commission
+Federal Financial Institutions Examination Council
+Federal Highway Administration
+Federal Housing Enterprise Oversight Office
+Federal Housing Finance Agency
+Federal Housing Finance Board
+Federal Labor Relations Authority
+Federal Law Enforcement Training Center
+Federal Maritime Commission
+Federal Mediation and Conciliation Service
+Federal Mine Safety and Health Review Commission
+Federal Motor Carrier Safety Administration
+Federal Pay, Advisory Committee
+Federal Permitting Improvement Steering Council
+Federal Prison Industries
+Federal Procurement Policy Office
+Federal Railroad Administration
+Federal Register Office
+Federal Register, Administrative Committee
+Federal Reserve System
+Federal Retirement Thrift Investment Board
+Federal Service Impasses Panel
+Federal Trade Commission
+Federal Transit Administration
+Financial Crimes Enforcement Network
+Financial Crisis Inquiry Commission
+Financial Research Office
+Financial Stability Oversight Council
+First Responder Network Authority
+Fiscal Service
+Fish and Wildlife Service
+Food and Consumer Service
+Food and Drug Administration
+Food and Nutrition Administration
+Food and Nutrition Service
+Food Safety and Inspection Service
+Foreign Agricultural Service
+Foreign Assets Control Office
+Foreign Claims Settlement Commission
+Foreign Service Grievance Board
+Foreign Service Impasse Disputes Panel
+Foreign Service Labor Relations Board
+Foreign-Trade Zones Board
+Forest Service
+General Services Administration
+Geographic Names Board
+Geological Survey
+Government Accountability Office
+Government Ethics Office
+Government National Mortgage Association
+Government Publishing Office
+Grain Inspection, Packers and Stockyards Administration
+Great Lakes St. Lawrence Seaway Development Corporation
+Gulf Coast Ecosystem Restoration Council
+Harry S. Truman Scholarship Foundation
+Health and Human Services Department
+Health Care Finance Administration
+Health Resources and Services Administration
+Hearings and Appeals Office, Energy Department
+Hearings and Appeals Office, Interior Department
+Homeland Security Department
+Housing and Urban Development Department
+Immigration and Naturalization Service
+Indian Affairs Bureau
+Indian Arts and Crafts Board
+Indian Health Service
+Indian Trust Transition Office
+Industry and Security Bureau
+Information Security Oversight Office
+Inspector General Office, Agriculture Department
+Inspector General Office, Health and Human Services Department
+Inspector General Office, Interior Department
+Inspector General Office, Treasury Department
+Institute of American Indian and Alaska Native Culture and Arts Development
+Institute of Museum and Library Services
+Intellectual Property Enforcement Coordinator Office
+Inter-American Foundation
+Interagency Floodplain Management Review Committee
+Intergovernmental Relations Advisory Commission
+Interior Department
+Internal Revenue Service
+International Boundary and Water Commission, United States and Mexico
+International Broadcasting Advisory Board
+International Broadcasting Board
+International Development Cooperation Agency
+International Investment Office
+International Joint Commission-United States and Canada
+International Organizations Employees Loyalty Board
+International Trade Administration
+International Trade Commission
+Interstate Commerce Commission
+Investment Security Office
+James Madison Memorial Fellowship Foundation
+Japan-United States Friendship Commission
+Joint Board for Enrollment of Actuaries
+Judicial Conference of the United States
+Judicial Review Commission on Foreign Asset Control
+Justice Department
+Justice Programs Office
+Juvenile Justice and Delinquency Prevention Office
+Labor Department
+Labor Statistics Bureau
+Labor-Management Standards Office
+Land Management Bureau
+Legal Services Corporation
+Library of Congress
+Local Television Loan Guarantee Board
+Management and Budget Office
+Marine Mammal Commission
+Marine Minerals Administration
+Maritime Administration
+Medicare Payment Advisory Commission
+Merit Systems Protection Board
+Military Compensation and Retirement Modernization Commission
+Millennium Challenge Corporation
+Mine Safety and Health Administration
+Minerals Management Service
+Mines Bureau
+Minority Business Development Agency
+Minority Economic Impact Office
+Mississippi River Commission
+Monetary Offices
+Morris K. Udall and Stewart L. Udall Foundation
+National Aeronautics and Space Administration
+National Agricultural Library
+National Agricultural Statistics Service
+National Archives and Records Administration
+National Assessment Governing Board
+National Bankruptcy Review Commission
+National Biological Service
+National Bipartisan Commission on Future of Medicare
+National Capital Planning Commission
+National Civilian Community Corps
+National Commission on Fiscal Responsibility and Reform
+National Commission on Intermodal Transportation
+National Commission on Libraries and Information Science
+National Commission on Manufactured Housing
+National Commission on Military, National, and Public Service
+National Commission on Terrorist Attacks Upon the United States
+National Commission on the Cost of Higher Education
+National Commission on the Future of the Navy
+National Communications System
+National Consumer Cooperative Bank
+National Council on Disability
+National Counterintelligence Center
+National Credit Union Administration
+National Crime Prevention and Privacy Compact Council
+National Economic Council
+National Education Goals Panel
+National Endowment for the Arts
+National Endowment for the Humanities
+National Foundation on the Arts and the Humanities
+National Gambling Impact Study Commission
+National Geospatial-Intelligence Agency
+National Highway Traffic Safety Administration
+National Historical Publications and Records Commission
+National Indian Gaming Commission
+National Institute for Literacy
+National Institute of Corrections
+National Institute of Food and Agriculture
+National Institute of Justice
+National Institute of Standards and Technology
+National Institutes of Health
+National Intelligence, Office of the National Director
+National Labor Relations Board
+National Library of Medicine
+National Mediation Board
+National Nanotechnology Coordination Office
+National Nuclear Security Administration
+National Oceanic and Atmospheric Administration
+National Park Service
+National Partnership for Reinventing Government
+National Prison Rape Elimination Commission
+National Railroad Passenger Corporation
+National Science Foundation
+National Security Agency/Central Security Service
+National Security Commission on Artificial Intelligence
+National Security Council
+National Shipping Authority
+National Skill Standards Board
+National Space Council
+National Technical Information Service
+National Telecommunications and Information Administration
+National Transportation Safety Board
+National Women's Business Council
+Natural Resources Conservation Service
+Natural Resources Revenue Office
+Navajo and Hopi Indian Relocation Office
+Navy Department
+Neighborhood Reinvestment Corporation
+Northeast Dairy Compact Commission
+Northeast Interstate Low-Level Radioactive Waste Commission
+Northern Border Regional Commission
+Nuclear Energy Office
+Nuclear Regulatory Commission
+Nuclear Waste Technical Review Board
+Occupational Safety and Health Administration
+Occupational Safety and Health Review Commission
+Ocean Energy Management Bureau
+Ocean Energy Management, Regulation, and Enforcement Bureau
+Ocean Policy Commission
+Office of Government Information Services
+Office of Motor Carrier Safety
+Office of National Drug Control Policy
+Office of Policy Development
+Office of the Chief Financial Officer, Agriculture Department
+Office of the National Cyber Director
+Oklahoma City National Memorial Trust
+Operations Office
+Ounce of Prevention Council
+Overseas Private Investment Corporation
+Pacific Northwest Electric Power and Conservation Planning Council
+Panama Canal Commission
+Parole Commission
+Partnerships and Public Engagement Office
+Patent and Trademark Office
+Peace Corps
+Pension and Welfare Benefits Administration
+Pension Benefit Guaranty Corporation
+Personnel Management Office
+Physician Payment Review Commission
+Pipeline and Hazardous Materials Safety Administration
+Postal Rate Commission
+Postal Regulatory Commission
+Postal Service
+President's Council on Integrity and Efficiency
+President's Council on Sustainable Development
+President's Critical Infrastructure Protection Board
+President's Economic Policy Advisory Board
+Presidential Advisory Committee on Gulf War Veterans' Illnesses
+Presidential Commission on Assignment of Women in the Armed Forces
+Presidio Trust
+Prisons Bureau
+Privacy and Civil Liberties Oversight Board
+Procurement and Property Management, Office of
+Program Support Center
+Prospective Payment Assessment Commission
+Public Buildings Reform Board
+Public Debt Bureau
+Public Health Service
+Railroad Retirement Board
+Reagan-Udall Foundation for the Food and Drug Administration
+Reclamation Bureau
+Recovery Accountability and Transparency Board
+Refugee Resettlement Office
+Regulatory Information Service Center
+Research and Innovative Technology Administration
+Research and Special Programs Administration
+Resolution Trust Corporation
+Risk Management Agency
+Rural Business-Cooperative Service
+Rural Housing and Community Development Service
+Rural Housing Service
+Rural Telephone Bank
+Rural Utilities Service
+Safety and Environmental Enforcement Bureau
+Saint Lawrence Seaway Development Corporation
+Science and Technology Policy Office
+Secret Service
+Securities and Exchange Commission
+Selective Service System
+Small Business Administration
+Smithsonian Institution
+Social Security Administration
+Southeastern Power Administration
+Southwestern Power Administration
+Special Counsel Office
+Special Inspector General for Afghanistan Reconstruction
+Special Inspector General For Iraq Reconstruction
+Special Trustee for American Indians Office
+State Department
+State Justice Institute
+Strategic Preparedness and Response Administration
+Substance Abuse and Mental Health Services Administration
+Surface Mining Reclamation and Enforcement Office
+Surface Transportation Board
+Susquehanna River Basin Commission
+Technology Administration
+Tennessee Valley Authority
+The White House Office
+Thrift Depositor Protection Oversight Board
+Thrift Supervision Office
+Trade and Development Agency
+Trade Representative, Office of United States
+Transportation Department
+Transportation Office
+Transportation Security Administration
+Transportation Statistics Bureau
+Travel and Tourism Administration
+Treasury Department
+Twenty-First Century Workforce Commission
+U.S. Citizenship and Immigration Services
+U.S. Codex Office
+U.S. Committee on the Marine Transportation System
+U.S. Customs and Border Protection
+U.S. House of Representatives
+U.S. Immigration and Customs Enforcement
+U.S. International Development Finance Corporation
+U.S. Trade Deficit Review Commission
+U.S.-China Economic and Security Review Commission
+Under-Secretary for Economic Affairs
+Unified Carrier Registration Plan
+Uniformed Services University of the Health Sciences
+United States African Development Foundation
+United States Agency for Global Media
+United States Enrichment Corporation
+United States Information Agency
+United States Institute of Peace
+United States Marshals Service
+United States Mint
+United States Olympic and Paralympic Committee
+United States Sentencing Commission
+Utah Reclamation Mitigation and Conservation Commission
+Valles Caldera Trust
+Veterans Affairs Department
+Veterans Employment and Training Service
+Victims of Crime Office
+Wage and Hour Division
+Western Area Power Administration
+Women's Business Enterprise Interagency Committee
+Women's Progress Commemoration Commission
+Women's Suffrage Centennial Commission
+Workers' Compensation Programs Office
+Publication Date
+ Is Exactly
+ In Year
+ Range
+Is
+*
+Year
+*
+2026
+2025
+2024
+2023
+2022
+2021
+2020
+2019
+2018
+2017
+2016
+2015
+2014
+2013
+2012
+2011
+2010
+2009
+2008
+2007
+2006
+2005
+2004
+2003
+2002
+2001
+2000
+1999
+1998
+1997
+1996
+1995
+1994
+On or after
+*
+On or before
+*
+Effective Date
+ Is Exactly
+ In Year
+ Range
+Is
+*
+Year
+*
+2026
+2025
+2024
+2023
+2022
+2021
+2020
+2019
+2018
+2017
+2016
+2015
+2014
+2013
+2012
+2011
+2010
+2009
+2008
+2007
+2006
+2005
+2004
+2003
+2002
+2001
+2000
+1999
+1998
+1997
+1996
+1995
+1994
+On or after
+*
+On or before
+*
+Comment Close Date
+ Is Exactly
+ In Year
+ Range
+Is
+*
+Year
+*
+2026
+2025
+2024
+2023
+2022
+2021
+2020
+2019
+2018
+2017
+2016
+2015
+2014
+2013
+2012
+2011
+2010
+2009
+2008
+2007
+2006
+2005
+2004
+2003
+2002
+2001
+2000
+1999
+1998
+1997
+1996
+1995
+1994
+On or after
+*
+On or before
+*
+Agency Docket
+Regulation ID Number (RIN)
+Significant Regulatory Actions
+Deemed Significant Under EO 12866
+Small Entities Affected
+Businesses
+Governmental Jurisdictions
+Organizations
+Affecting CFR Part
+Title
+*
+Part
+*
+Mentioning Locations Near
+Location
+*
+Within
+*
+5 miles
+10 miles
+25 miles
+50 miles
+100 miles
+200 miles
+Search Mode
+*
+Keyword Only
+Semantic
+ Subscribe
+CSV/Excel
+,
+JSON
+More Filters
+View Advanced Query Options
+Search
+Reset
+Relevant
+Newest
+Oldest
+← Previous
+1
+2
+3
+4
+Next →
+Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; West Coast Groundfish Trawl Logbook
+Add to clipboard
+ by the 
+National Oceanic and Atmospheric Administration
+ on 
+09/18/2025
+.
+ The Department of Commerce will submit the following information collection request to the Office of Management and Budget (OMB) for review and clearance in accordance with the Paperwork Reduction Act of 1995, on or after the date of publication of this notice. We invite the general public and other Federal agencies to comment on proposed and...
+SES Performance Review Board
+Add to clipboard
+ by the 
+Federal Communications Commission
+ on 
+07/29/2025
+.
+Center for Scientific Review; Amended Notice of Meeting
+Add to clipboard
+ by the 
+National Institutes of Health
+ on 
+06/28/2024
+.
+Measures To End Cashless Bail and Enforce the Law in the District of Columbia
+Add to clipboard
+ by the 
+Executive Office of the President
+ on 
+08/28/2025
+.
+Committee Management Renewals
+Add to clipboard
+ by the 
+National Science Foundation
+ on 
+07/05/2022
+.
+Additional Measures To Address the Crime Emergency in the District of Columbia
+Add to clipboard
+ by the 
+Executive Office of the President
+ on 
+08/28/2025
+.
+Combined Notice of Filings # 2
+Add to clipboard
+ by the 
+Federal Energy Regulatory Commission
+ on 
+07/06/2023
+.
+Making the District of Columbia Safe and Beautiful
+Add to clipboard
+ by the 
+Executive Office of the President
+ on 
+04/03/2025
+.
+Agency Information Collection Activities; Industrial Minerals Surveys
+Add to clipboard
+ by the 
+Geological Survey
+ on 
+07/06/2021
+.
+ In accordance with the Paperwork Reduction Act of 1995, we, the U.S. Geological Survey (USGS) are proposing to renew an information collection.
+Sport Fishing and Boating Partnership Council; Charter Renewal
+Add to clipboard
+ by the 
+Interior Department
+ on 
+07/03/2018
+.
+ This notice is published in accordance with the Federal Advisory Committee Act. Following consultation with the General Services Administration, the Secretary of the Interior (Secretary) has renewed the Sport Fishing and Boating Partnership Council (Council) charter for 2 years.
+National School Lunch, Special Milk, and School Breakfast Programs, National Average Payments/Maximum Reimbursement Rate
+Add to clipboard
+ by the 
+Food and Nutrition Administration
+ on 
+07/16/2026
+.
+ This Notice announces the annual adjustments to the national average payments, the amount of money the Federal Government provides States for lunches, afterschool snacks, and breakfasts served to children participating in the National School Lunch and School Breakfast Programs; to the maximum reimbursement rates, the maximum per lunch rate from...
+Delegation of Authority Under the Department of State Authorities Act, Fiscal Year 2017
+Add to clipboard
+ by the 
+Executive Office of the President
+ on 
+07/05/2017
+.
+Certain Toner Cartridges, Components Thereof, and Systems Containing Same; Institution of Investigation
+Add to clipboard
+ by the 
+International Trade Commission
+ on 
+09/23/2019
+.
+ Notice is hereby given that a complaint was filed with the U.S. International Trade Commission on August 19, 2019, under section 337 of the Tariff Act of 1930, as amended, on behalf of Brother Industries, Ltd. of Japan, Brother International Corp. (U.S.A.) of Bridgewater, New Jersey, and Brother Industries (U.S.A., Inc.) of Bartlett, Tennessee....
+Self-Regulatory Organizations; NYSE American LLC; Order Instituting Proceedings To Determine Whether To Approve or Disapprove a Proposed Rule Change To Amend the NYSE American Rule 6800 Series, the Exchange's Compliance Rule Regarding the National Market System Plan Governing the Consolidated Audit Trail
+Add to clipboard
+ by the 
+Securities and Exchange Commission
+ on 
+04/24/2020
+.
+Agency Information Collection Activities; Announcement of Office of Management and Budget Approval; Adverse Event Program for Medical Devices (Medical Product Safety Network)
+Add to clipboard
+ by the 
+Food and Drug Administration
+ on 
+06/18/2014
+.
+ The Food and Drug Administration (FDA) is announcing that a collection of information entitled "Adverse Event Program for Medical Devices (Medical Product Safety Network (MedSun))" has been approved by the Office of Management and Budget (OMB) under the Paperwork Reduction Act of 1995.
+Bellwood Hydro, LLC; Notice of Preliminary Permit Application Accepted for Filing and Soliciting Comments, Motions To Intervene, and Competing Applications
+Add to clipboard
+ by the 
+Federal Energy Regulatory Commission
+ on 
+09/28/2011
+.
+Duke Energy; McGuire Independent Spent Fuel Storage Installation
+Add to clipboard
+ by the 
+Nuclear Regulatory Commission
+ on 
+06/16/2016
+.
+ The U.S. Nuclear Regulatory Commission (NRC) is issuing an environmental assessment (EA) and a finding of no significant impact (FONSI) for its review and approval of the decommissioning funding plan submitted by Duke Energy Carolinas, LLC (Duke), on December 13, 2012, for the Independent Spent Fuel Storage Installation (ISFSI) at McGuire...
+Continental Tire the Americas, LLC, Grant of Petition for Decision of Inconsequential Noncompliance
+Add to clipboard
+ by the 
+National Highway Traffic Safety Administration
+ on 
+06/11/2015
+.
+ Continental Tire the Americas, LLC, (CTA), has determined that certain Continental replacement passenger car tires do not fully comply with paragraph S5.5(f) of Federal Motor Vehicle Safety Standard (FMVSS) No. 139, New Pneumatic Radial Tires for Light Vehicles. CTA has filed an appropriate report dated January 7, 2015, pursuant to 49 CFR part...
+Notice of Revocation of Customs Brokers' Licenses
+Add to clipboard
+ by the 
+U.S. Customs and Border Protection
+ on 
+08/24/2022
+.
+ This document provides notice of the revocation by operation of law of customs brokers' licenses.
+Formations of, Acquisitions by, and Mergers of Savings and Loan Holding Companies
+Add to clipboard
+ by the 
+Federal Reserve System
+ on 
+06/17/2013
+.
+New Hampshire Disaster #NH-00029
+Add to clipboard
+ by the 
+Small Business Administration
+ on 
+04/02/2015
+.
+ This is a Notice of the Presidential declaration of a major disaster for Public Assistance Only for the State of NEW HAMPSHIRE (FEMA-4209-DR), dated 03/25/2015. Incident: Severe Winter Storm and Snowstorm. Incident Period: 01/26/2015 through 01/28/2015. Effective Date: 03/25/2015. Physical Loan Application Deadline Date: 05/26/2015. Economic...
+Great-West Funds, Inc., et al.; Notice of Application
+Add to clipboard
+ by the 
+Securities and Exchange Commission
+ on 
+09/30/2014
+.
+Alabama Disaster Number AL-00036
+Add to clipboard
+ by the 
+Small Business Administration
+ on 
+06/10/2011
+.
+ This is an amendment of the Presidential declaration of a major disaster for the State of Alabama (FEMA-1971-DR), dated 04/28/ 2011. Incident: Severe Storms, Tornadoes, Straight-line Winds, and Flooding. Incident Period: 04/15/2011 and continuing. Effective Date: 06/01/2011. Physical Loan Application Deadline Date: 06/27/2011. EIDL Loan...
+Airworthiness Directives; The Boeing Company
+Add to clipboard
+ by the 
+Federal Aviation Administration
+ on 
+06/12/2012
+.
+ We propose to adopt a new airworthiness directive (AD) for certain The Boeing Company Model 777 airplanes. This proposed AD was prompted by reports of failure of wire support clamps in the forward section of the aft pressure bulkhead. This proposed AD would require a detailed inspection of the clamps on the power feeder cable auxiliary power...
+Federal Home Loan Bank Members Selected for Community Support Review 2014-2015 Review Cycle-3rd Round
+Add to clipboard
+ by the 
+Federal Housing Finance Agency
+ on 
+08/11/2014
+.
+ The Federal Housing Finance Agency (FHFA) is announcing the Federal Home Loan Bank (Bank) members it has selected for the 2014-2015 Review Cycle--3rd Round under FHFA's community support requirements regulation. This Notice also prescribes the deadline by which Bank members selected for this review cycle must submit Community Support Statements...
+Self-Regulatory Organizations; NYSE American LLC; Notice of Filing of Amendment No. 2 and Order Granting Accelerated Approval of Proposed Rule Change, as Modified by Amendment No. 2, To Amend Consolidated Audit Trail Compliance Rules
+Add to clipboard
+ by the 
+Securities and Exchange Commission
+ on 
+06/25/2020
+.
+Regulated Navigation Area; Chesapeake and Delaware Canal, Chesapeake City Anchorage Basin, MD
+Add to clipboard
+ by the 
+Coast Guard
+ on 
+06/17/2009
+.
+ The Coast Guard is establishing a permanent regulated navigation area (RNA) in certain waters of the Chesapeake and Delaware (C & D) Canal, within the anchorage basin at Chesapeake City, Maryland, to be enforced annually, on the last Saturday in June, from 12:01 a.m. until 11:59 p.m. This RNA is necessary to provide for the safety of life,...
+Absence and Leave; Sick Leave
+Add to clipboard
+ by the 
+Personnel Management Office
+ on 
+12/03/2010
+.
+ The U.S. Office of Personnel Management is issuing final regulations on the use of sick leave and advanced sick leave for serious communicable diseases, including pandemic influenza when appropriate. We are also permitting employees to substitute up to 26 weeks of accrued or accumulated sick leave for unpaid Family and Medical Leave Act (FMLA)...
+Absence and Leave; Definitions of Family Member, Immediate Relative, and Related Terms
+Add to clipboard
+ by the 
+Personnel Management Office
+ on 
+06/14/2010
+.
+ The U.S. Office of Personnel Management is issuing final regulations to modify definitions related to family member and immediate relative in 5 CFR part 630 and to add other defined terms, for purposes of use of sick leave, funeral leave, voluntary leave transfer, voluntary leave bank, and emergency leave transfer. These changes implement...
+Final Determination of Sales at Less Than Fair Value and Affirmative Determination of Critical Circumstances, in Part: Light-Walled Rectangular Pipe and Tube from the People's Republic of China
+Add to clipboard
+ by the 
+International Trade Administration
+ on 
+06/24/2008
+.
+ The Department of Commerce (the Department) has determined that light-walled rectangular pipe and tube (LWR) from the People's Republic of China (PRC) is being, or is likely to be, sold in the United States at less than fair value (LTFV) as provided in section 735 of the Tariff Act of 1930, as amended (the Act). The final dumping margins for...
+Agency Information Collection Activities: Extension of a Currently Approved Collection; Comment Request
+Add to clipboard
+ by the 
+Justice Programs Office
+ and the 
+Juvenile Justice and Delinquency Prevention Office
+ on 
+06/21/2006
+.
+Reclassification of Major Sources as Area Sources Under Section 112 of the Clean Air Act
+Add to clipboard
+ by the 
+Environmental Protection Agency
+ on 
+07/26/2019
+.
+ The Environmental Protection Agency (EPA) is proposing amendments to the General Provisions to the National Emission Standards for Hazardous Air Pollutants (NESHAP). The proposed amendments implement the plain language reading of the "major source" and "area source" definitions of section 112 of the Clean Air Act (CAA) and provide that a major...
+Agency Information Collection Activities: Proposed Collection; Comment Request
+Add to clipboard
+ by the 
+Energy Information Administration
+ on 
+07/24/2007
+.
+ The EIA is soliciting comments on the proposed revision and three-year extension to the Coal Program package. The forms include the EIA-1, "Weekly Coal Monitoring Report--General Industries and Blast Furnaces" (Standby); EIA-3, "Quarterly Coal Consumption and Quality Report--Manufacturing Plants;" EIA-4, "Weekly Coal Monitoring Report--Coke...
+Office of Hazardous Materials Safety; Notice of Delays in Processing of Special Permits Applications
+Add to clipboard
+ by the 
+Pipeline and Hazardous Materials Safety Administration
+ on 
+04/13/2006
+.
+ In accordance with the requirements of 49 U.S.C. 5117(c), PHMSA is publishing the following list of special permit applications that have been in process for 180 days or more. The reason(s) for delay and the expected completion date for action on each application is provided in association with each identified application.
+Advisory Circular 25.856-1, Thermal/Acoustic Insulation Flame Propagation Test Method Details
+Add to clipboard
+ by the 
+Federal Aviation Administration
+ on 
+07/20/2005
+.
+ This AC provides methods acceptable to the Administrator for showing compliance with the revised airworthiness standards concerning new fire protection requirements applicable to thermal/acoustic insulation materials. The guidance in this AC describes a test method to determine the flammability and flame propagation characteristics of...
+Airworthiness Directives; Hartzell Propeller Inc. Propellers
+Add to clipboard
+ by the 
+Federal Aviation Administration
+ on 
+09/09/2005
+.
+ The FAA is adopting a new airworthiness directive (AD) for certain Hartzell Propeller Inc. propellers. This AD requires inspecting the propeller blades and other critical propeller parts for corrosion and mechanical damage. This AD results from two events where a "Z- shank" blade failed and separated and the results of teardown inspections that...
+Pipeline and Hazardous Materials Safety Administration Office of Hazardous Materials Safety; Notice of Application for Special Permits
+Add to clipboard
+ by the 
+Transportation Department
+ on 
+10/20/2005
+.
+ In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations (49 CFR part 107, Subpart B), notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein. Each mode of...
+YES! Sportscars; Receipt of Application for a Temporary Exemption From the Advanced Air Bag Requirements of FMVSS No. 208
+Add to clipboard
+ by the 
+National Highway Traffic Safety Administration
+ on 
+08/28/2006
+.
+ In accordance with the procedures in 49 CFR part 555, YES! Sportscars has petitioned the agency for a temporary exemption from certain advanced air bag requirements of FMVSS No. 208. The basis for the application is that compliance would cause substantial economic hardship to a manufacturer that has tried in good faith to comply with the...
+Proposed Collection; Comment Request for Regulation Project
+Add to clipboard
+ by the 
+Internal Revenue Service
+ on 
+06/23/2004
+.
+ The Department of the Treasury, as part of its continuing effort to reduce paperwork and respondent burden, invites the general public and other Federal agencies to take this opportunity to comment on proposed and/or continuing information collections, as required by the Paperwork Reduction Act of 1995, Public Law 104-13 (44 U.S.C....
+Petitions for Exemption; Dispositions of Petitions Issued
+Add to clipboard
+ by the 
+Federal Aviation Administration
+ on 
+10/18/2004
+.
+ Pursuant to FAA's rulemaking provisions governing the application, processing, and disposition of petitions for exemption part 11 of Title 14, Code of Federal Regulations (14 CFR), this notice contains a summary of certain dispositions of certain petitions previously received. The purpose of this notice is to improve the public's awareness of,...
+← Previous
+1
+2
+3
+4
+Next →
+Home
+Home
+Sections
+Money
+Environment
+World
+Science & Technology
+Business & Industry
+Health & Public Welfare
+Browse
+Agencies
+Topics (CFR Indexing Terms)
+Dates
+Public Inspection
+Executive Orders
+Search
+Document Search
+Advanced Document Search
+Public Inspection Search
+Reader Aids
+Office of the Federal Register Announcements
+Using FederalRegister.Gov
+Understanding the Federal Register
+Recent Site Updates
+Federal Register & CFR Statistics
+Videos & Tutorials
+Developer Resources
+Government Policy and OFR Procedures
+My FR
+My Clipboard
+My Subscriptions
+My Comments
+Sign In
+Information
+About This Site
+Legal Status
+Contact Us
+Privacy
+Accessibility
+FOIA
+No Fear Act
+Continuity Information
+Site Feedback

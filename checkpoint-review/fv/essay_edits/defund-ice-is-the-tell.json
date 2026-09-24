@@ -1,0 +1,41 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "False claim cut: the party did not 'lose hundreds of thousands of children inside a federal program'; DHS OIG-24-46 found ICE could not monitor the locations of all released unaccompanied children (32,000+ failed to appear; 291,000+ never served a Notice to Appear)",
+  "'7,300 reports in the ignored pile' cut (no primary record)",
+  "Grassley roundtable claims attributed to Sen. Grassley's office (a politician's press release, not an independent record)"
+ ],
+ "edits": [
+  [
+   "lost hundreds of thousands of children inside a federal program,",
+   "released tens of thousands of children whom ICE, per its own [inspector general](https://www.oig.dhs.gov/sites/default/files/assets/2024-08/OIG-24-46-Aug24.pdf), could not keep track of,"
+  ],
+  [
+   "The 7,300 reports in the ignored pile are not a subplot. They are the plot.",
+   "The ignored reports are not a subplot. They are the plot."
+  ],
+  [
+   "Democrats refused Grassley's whistleblower roundtable. They opposed his bills",
+   "Sen. Grassley’s office says Democrats refused his whistleblower roundtable and opposed his bills"
+  ],
+  [
+   "- Grassley — Democrats refused the whistleblower roundtable; opposed contractor and rule bills — https://www.judiciary.senate.gov/press/rep/releases/new-hhs-data-confirms-biden-harris-admin-placed-tens-of-thousands-of-migrant-children-with-unvetted-sponsors-declined-recommended-home-studies\n",
+   "- DHS OIG-24-46 — ICE monitoring of unaccompanied children — https://www.oig.dhs.gov/sites/default/files/assets/2024-08/OIG-24-46-Aug24.pdf\n"
+  ],
+  [
+   "- DHS — ICE and HSI locating children; backlog of ignored reports —",
+   "- DHS — ICE and HSI locating children —"
+  ]
+ ],
+ "ourview": [
+  "Defund ICE is all the proof",
+  "They use Epstein",
+  "When a mayor forbids",
+  "Democrats refused",
+  "Sen. Grassley"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

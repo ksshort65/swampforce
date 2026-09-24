@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "index.html",
+    "fake-news.html",
+    "scorecard.html",
+    "betrayal.html",
+    "democrats.html",
+    "republicans.html",
+    "january-6.html",
+    "lawfare.html",
+    "brief.html",
+    "appendix.html",
+    "about.html",
+    "downloads.html",
+    "store.html",
+    "foreword.html",
+    "congress.html",
+    "border.html",
+    "remedy.html",
+    "404.html"
+  ],
+  "stats": {
+    "total": 250,
+    "proven": 178,
+    "misleading": 72,
+    "official": 65,
+    "transcript": 27,
+    "outlet": 64,
+    "factcheck": 94,
+    "never": 157,
+    "first": 142,
+    "later": 108
+  },
+  "corr": {
+    "Never corrected by the pusher": 157,
+    "Appended correction line": 64,
+    "After legal threat / settlement": 5,
+    "Not recorded": 14,
+    "Editor's note": 8,
+    "On-air correction": 2
+  },
+  "congress": 48,
+  "dem_rows": 14,
+  "gop_rows": 11,
+  "lawfare": 10,
+  "redirects": 65,
+  "top_methods": [
+    "retracted invention",
+    "omitted context",
+    "policy-scope inflation",
+    "fabrication",
+    "fabrication / false attribution",
+    "misquote / truncation",
+    "false photo/video attribution",
+    "premature \u201cproven\u201d framing"
+  ]
+}

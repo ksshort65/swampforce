@@ -1,0 +1,2317 @@
+SIGAR
+
+Special Inspector General for
+Afghanistan Reconstruction
+
+SIGAR 25-16 Audit Report
+
+Public International Organizations in Afghanistan:
+State and USAID Agreements with PIOs Need
+Strengthening to Ensure U.S. Funds are Not
+Diverted to Terrorist Groups
+
+MARCH
+
+2025
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+SIGAR
+
+Special Inspector General for
+Afghanistan Reconstruction
+WHAT SIGAR REVIEWED
+
+After the Taliban’s takeover of Afghanistan on August 15,
+2021, the U.S. government paused assistance programs and
+subsequently terminated direct funding to the Afghan
+governing institutions. However, in the months following that
+pause, the U.S. Department of State (State) and U.S. Agency
+for International Development (USAID) resumed funding for
+some preexisting assistance programs and began new
+programs to address the needs of the Afghan people in key
+sectors, such as health, education, agriculture, food security,
+and livelihoods.
+Since the Taliban’s takeover, U.S. agencies have increasingly
+relied on public international organizations (PIO) and are
+providing U.S. taxpayer funds to these organizations to
+implement activities intended to benefit the people of
+Afghanistan. A PIO is an organization composed of multiple
+member states (i.e., sovereign countries), or any other
+organization that U.S. agencies designate as a PIO. PIOs
+include UN organizations, such as the World Food
+Programme (WFP) and UN Children’s Fund, as well as the
+World Bank and regional organizations like the Colombo Plan
+for Cooperative Economic and Social Development in Asia
+and the Pacific. PIOs have partners in Afghanistan who help
+implement their programs that are intended to address the
+economic and humanitarian crises that have arisen since
+August 2021.
+SIGAR reviewed the agreements State and USAID entered
+into with PIOs for activities in Afghanistan from August 15,
+2021, to September 30, 2023. SIGAR identified the PIOs to
+whom State and USAID provided funding, and the monitoring
+practices used by nine of those PIOs. SIGAR compared those
+monitoring practices to the U.S. Government Accountability
+Office’s (GAO’s) list of leading practices to determine how
+well the PIOs’ practices align with U.S. agencies. In addition,
+SIGAR reviewed State and USAID’s guidance for monitoring
+and oversight of PIOs, as well as the monitoring practices
+included in the agencies’ standard agreements with PIOs.
+Finally, SIGAR reviewed how State, USAID, and PIOs prevent
+fraud and diversion by the Taliban by assessing their risk
+assessment policies and fraud reporting procedures.
+The objectives of this audit were to (1) determine if the
+monitoring policies and practices that PIOs use in
+Afghanistan align with leading monitoring practices; (2)
+identify U.S. policies and guidance that may limit efforts to
+monitor U.S. assistance to the Afghan people; and (3) assess
+the extent to which State and USAID have procedures in
+place to help identify and prevent Taliban interference with
+and diversion of U.S. assistance.
+
+March 2025
+Public International Organizations in Afghanistan: State and USAID
+Agreements with PIOs Need Strengthening to Ensure U.S. Funds are
+Not Diverted to Terrorist Groups
+SIGAR 25-16 AUDIT REPORT
+
+WHAT SIGAR FOUND
+SIGAR found that from August 2021 through September 2023,
+State and USAID funded 86 agreements across 18 PIOs, with a
+total project cost of $3.038 billion. SIGAR selected 9 of the 18
+PIOs through a judgmental sample to analyze the PIOs’ monitoring
+practices. SIGAR found that these nine PIOs have policies that
+generally align with GAO’s leading monitoring practices. However,
+some PIO policies are missing key monitoring practices. For
+example, the WFP lacks a requirement to develop a written
+monitoring plan in both its agency-wide strategic plan and its
+Afghanistan Country Strategic Plan. Without monitoring plans,
+oversight may not align with program goals and objectives,
+increasing program risks. Similarly, SIGAR found that the World
+Health Organization (WHO) does not require a written plan to
+monitor implementation partners. WHO also lacks monitoring
+practices for assessing and approving performance and financial
+reports from implementing partners, meaning it may not have
+complete information on its implementing partners activities.
+SIGAR also reviewed State and USAID monitoring guidance and
+the practices that the agencies include in their agreements with
+PIOs. State and USAID can negotiate terms to include additional
+monitoring practices in the agreements, such as conducting site
+visits and requiring performance reporting.
+However, State and USAID do not always add additional
+monitoring practices. For example, agreements between PIOs and
+State’s Bureau of Population, Refugees, and Migration (PRM) did
+not require implementing partners to submit performance reports.
+Additionally, State’s Office of Weapons Removal and Abatement
+(PM/WRA) and the Bureau of International Narcotics and Law
+Enforcement (INL) did not standardize a requirement for site visits,
+which limits the oversight of PIO’s.
+USAID’s Mission to Afghanistan’s (USAID/AFG) agreement
+template with PIOs does not include a site visit requirement,
+despite USAID guidance emphasizing the importance of site visits.
+Instead, USAID/AFG relies on the PIOs to conduct site visits. Since
+USAID/AFG does not use site visits to monitor the performance of
+its PIOs, it cannot independently verify the value of the projects
+and whether program modifications are warranted. In contrast,
+USAID’s Bureau for Humanitarian Assistance (BHA) requires PIOs
+to allow BHA to conduct site visits.
+In addition, State does not have a uniform process for determining
+if a PIO is capable of safeguarding U.S. funds prior to entering into
+an agreement with the PIO. State PRM and PM/WRA conduct preagreement risk assessments, but INL does not provide guidance
+for reviewing the PIO’s financial and management procedures. In
+
+For more information, contact SIGAR Public Affairs at (703) 545-5974 or sigar.pentagon.ccr.mbx.public-affairs@mail.mil.
+
+contrast, USAID’s Bureau for Planning, Learning, and Resource Management (PLR) conducts Organizational
+Capacity Reviews (OCRs) to ensure that PIOs have the capacity to safeguard U.S. funding. However, neither BHA
+nor USAID/AFG provided SIGAR with the required documentation to show they reviewed the OCRs prior to
+entering into an agreement with a PIO. In addition, USAID guidance requires PLR to update the OCRs every 5
+years but does not require agreement officers to review the updated OCRs for ongoing awards. Without a review
+of updated OCRs, USAID is limiting the amount of information it can use to identify and address the risks posed
+by its agreements with PIOs.
+SIGAR found that State, USAID, and PIOs have requirements and procedures to identify and mitigate the risk of
+diversion, including the development of risk assessments and diversion reporting requirements. While State and
+USAID guidance requires pre-agreement risk assessments, INL and USAID/AFG did not provide risk assessments
+for all its agreements. State guidance allows for each bureau to develop its own process for assessing risk.
+State’s Federal Assistance Directive (FAD) requires each bureau to conduct pre-agreement risk assessments.
+State PM/WRA and PRM provided SIGAR with the pre-agreement risk assessments for all their agreements.
+However, PRM’s agreements did not address all of the risk category requirements set forth in FAD. According to
+the FAD, the risk assessment section of the guidance does not apply to INL’s International Organization–Letters
+of Agreement. However, INL does have to comply with State’s Foreign Affairs Manual that requires bureaus to
+complete terrorist financing risk assessments after the agreements have begun. INL provided SIGAR with terrorist
+financing risk assessments for most, but not all, of its agreements. INL told SIGAR that it is in the process of
+improving its risk management to include a yearly terrorist financing risk assessment of programs in Afghanistan.
+USAID guidance does not require BHA and USAID/AFG to complete a pre-agreement risk assessment for either
+project contributions or cost-type agreements. However, BHA updated its policies in January 2021 to require PIOs
+to create risk mitigation and management plans (known as “RAMPs”) as part of the PIO proposal process. BHA
+provided SIGAR with RAMPs for all of its agreements with PIOs in Afghanistan. USAID/AFG issued an
+Administrative Notice in March 2022 that requires RAMPs or equivalent documentation. Although according to
+USAID the notice does not apply to project contributions with PIOs, the relevant paragraph uses broad language
+that does not specifically exclude project contributions. In response to SIGAR’s request, USAID/AFG stated that
+the requirements and exclusions for the Administrative Notice are not clearly defined, and USAID/AFG was
+drafting a mission order to clarify the scope of the RAMP requirement.
+State guidance does not require PIOs to report instances of diversion and INL and PM/WRA have no bureauspecific reporting requirements for PIOs. PRM does have a bureau-specific reporting requirement regarding
+diversion and includes the clause in all agreements with PIOs. SIGAR found that INL and PM/WRA have an
+informal process to monitor diversion. This informal process may not allow them to adjust activities to limit the
+impacts of diversion. SIGAR found that USAID/AFG uses an optional reporting clause for its project contribution
+agreements with PIOs but did not include it in all of its agreements. USAID/AFG also told SIGAR that it is unaware
+of any reports of diversion or interference from PIOs. In contrast, BHA included a required clause in all of its costtype awards, and BHA told SIGAR that it was informed of attempts of possible diversion on several occasions.
+PIOs have their own procedures to mitigate diversion, including the development of their own risk assessments
+and requirements to notify funding agencies of allegations or knowledge of funding susceptible to diversion. PIOs
+also have program management procedures they use to help mitigate the risk of diversion, and to assure donors
+that they will spend funds as intended. SIGAR found that all of the PIOs SIGAR reviewed require vetting of their
+partners against sanction lists and some PIOs employ additional procedures and strategies to mitigate risk.
+
+For more information, contact SIGAR Public Affairs at (703) 545-5974 or sigar.pentagon.ccr.mbx.public-affairs@mail.mil.
+
+WHAT SIGAR RECOMMENDS
+To improve the monitoring and oversight of U.S. assistance provided through PIOs to the Afghan people and
+reduce aid diversion, SIGAR recommends that the Secretary of State direct:
+1.
+
+INL and PM/WRA to include terms and conditions in their agreements with PIOs that ensure the right
+of the department to conduct site visits or third-party monitoring.
+
+2.
+
+INL to develop a standard process for reviewing a PIO’s financial and management procedures, prior
+to entering into an agreement, to ensure the PIO is capable of accounting for and safeguarding U.S.
+taxpayer funds.
+
+3.
+
+PRM to ensure that its pre-agreement risk assessments include all required risk categories outlined
+in the FAD for each PIO agreement.
+
+4.
+
+INL and PM/WRA to develop a standard process for requiring PIOs to report incidents or allegations of
+assistance diversion and interference, and include this process in the terms and conditions of their
+agreements with PIOs.
+
+Additionally, SIGAR recommends that the Acting USAID Administrator direct:
+1.
+
+USAID/AFG to include terms and conditions in its agreements with PIOs that ensure its right to
+conduct site visits or third-party monitoring.
+
+2.
+
+USAID/AFG and BHA to review updated OCRs for agreements with PIOs that are ongoing so that they
+can understand newly identified risks and ensure alignment with USAID’s adaptive management
+guidance.
+
+3.
+
+USAID/AFG to develop a standard process for assessing the risks associated with projects prior to
+giving U.S. taxpayer funds to PIOs through “project contributions.”
+
+4.
+
+USAID/AFG to ensure that all agreements include the diversion reporting clause in accordance with
+the ADS 308 project contribution template.
+
+SIGAR provided a draft of this report to USAID and State for review and comment. SIGAR did not receive
+comments from USAID. However, SIGAR received written comments from the Department of State (State) which
+are reproduced in Appendix II. State did not comment on the facts as they were presented in the report but did
+comment on SIGAR’s recommendations. Although State neither concurred nor non-concurred with our
+recommendations, it provided steps it intends to take or have taken regarding three of four recommendations
+directed to the department. Appendix II includes more details on State’s responses and SIGAR’s comments on
+the responses. In addition, both USAID and State provided technical comments which were incorporated as
+appropriate.
+
+For more information, contact SIGAR Public Affairs at (703) 545-5974 or sigar.pentagon.ccr.mbx.public-affairs@mail.mil.
+
+March 10, 2025
+
+The Honorable Marco Rubio
+Secretary of State
+Acting Administrator U.S. Agency for International Development
+
+This report discusses the results of SIGAR’s audit of Department of State (State) and U.S. Agency for
+International Development (USAID) practices for monitoring and overseeing U.S. taxpayer funds provided to
+public international organizations (PIOs) for activities in Afghanistan from August 15, 2021, through September
+30, 2023.
+We reviewed the monitoring practices of nine PIOs to whom State and USAID provide funding for implementing
+assistance programs in Afghanistan. We found that the PIOs’ practices generally align with the leading
+monitoring practices identified by the U.S. Government Accountability Office (GAO) in 2016. However, we also
+found that a combination of limits on authority, as well as agency inaction, have reduced the ability of State
+and USAID to consistently and proactively monitor PIOs. The main factors limiting U.S. government oversight of
+the funds given to PIOs are (1) that PIOs are exempt from some U.S. laws and regulations that would otherwise
+facilitate U.S. government oversight of their programs; and (2) the United States defers to the UN’s single audit
+principle that calls for the UN alone to conduct audits of the programs it implements.
+Although State and USAID officials acknowledged that they have significant influence over PIOs because of the
+extensive funding provided by the U.S. government, we found that State and USAID do not always include
+available monitoring requirements in the terms and conditions of agreements with PIOs.
+Specifically, we found that State’s Bureau of International Narcotics and Law Enforcement Affairs (INL) and
+Bureau of Political-Military Affairs/Office of Weapons Removal and Abatement (PM/WRA) do not include
+requirements for site visits or third-party monitoring in their agreements with PIOs. We also found that INL does
+not have a standard process for assessing whether a PIO is capable of safeguarding U.S. taxpayer funds.
+Additionally, we found that State’s Bureau of Population, Refugees, and Migration (PRM) does not ensure its
+risk assessments include all of the required elements outlined in State’s Federal Assistance Directive (FAD).
+Moreover, neither INL nor PM/WRA include a requirement in their agreements for PIOs to report instances of
+waste, fraud, abuse, diversion, or interference.
+We also found that USAID’s Mission to Afghanistan (USAID/AFG) did not include site visit or third-party
+monitoring requirements in all of its agreements with PIOs. USAID has an agency-wide policy that outlines
+requirements for the review of Organizational Capacity Reviews (OCRs) prior to entering into an agreement with
+a PIO to ensure that the PIO has the capacity to safeguard U.S. funding. However, we found no evidence that
+USAID/AFG and USAID’s Bureau for Humanitarian Assistance (BHA) have reviewed the OCRs for the PIOs that
+they provide funding to, as required. In addition, USAID/AFG does not require PIOs to prepare risk assessments
+for project contributions prior to providing funding for the agreement. Lastly, we found that USAID/AFG has an
+optional clause for PIOs to report instances of waste, fraud, abuse, diversion, or interference that it includes in
+some of its project contribution agreements’.
+We recommend that the Secretary of State direct (1) INL and PM/WRA to include terms and conditions in their
+agreements with PIOs that ensure the right of the department to conduct site visits or third-party monitoring;
+(2) INL to develop a standard process for reviewing a PIO’s financial and management procedures prior to
+
+entering into an agreement, to ensure the PIO is capable of accounting for and safeguarding U.S. taxpayer
+funds; (3) PRM to ensure that its pre-agreement risk assessments include all required risk categories outlined
+in the FAD for each PIO agreement; and (4) INL and PM/WRA to develop a standard process for requiring PIOs
+to report incidents or allegations of assistance diversion and interference, and include this process in the
+terms and conditions of their agreements with PIOs.
+We also recommend that the Acting USAID Administrator direct (1) USAID/AFG to include terms and conditions
+in its agreements with PIOs that ensure its right to conduct site visits or third-party monitoring; (2) USAID/AFG
+and BHA to review updated OCRs for agreements with PIOs that are ongoing, so that they can understand
+newly identified risks and ensure alignment with USAID’s adaptive management guidance; (3) USAID/AFG to
+develop a standard process for assessing the risks associated with projects prior to giving U.S. taxpayer funds
+to PIOs through “project contributions;” and (4) USAID/AFG to ensure that all agreements include the diversion
+reporting clause in accordance with the agency’s Automated Directives System (ADS) 308 project contribution
+template.
+We provided a draft of this report to USAID and State for review and comment. We did not receive comments
+from USAID. However, we received written comments from State which are reproduced in Appendix II. State did
+not comment on the facts as they were presented in the report but did comment on our recommendations.
+Although State neither concurred nor non-concurred with our recommendations, the department provided us
+with steps it has taken or intends to take for three of four recommendations directed to it. Appendix II includes
+more details on State’s responses and our comments on the responses. In addition, both USAID and State
+provided technical comments which were incorporated as appropriate.
+SIGAR conducted this work under the authority of Public Law No. 110‐181, as amended, and the Inspector
+General Act of 1978, 5 U.S.C. Chapter 4, and in accordance with generally accepted government auditing
+standards.
+
+Gene Aloise
+Acting Special Inspector General
+for Afghanistan Reconstruction
+
+TABLE OF CONTENTS
+Background .................................................................................................................................................................. 2
+Most PIOs Have Monitoring Policies that Generally Align with GAO’s Leading Monitoring Practices ..................... 7
+State and USAID Do Not Consistently Include All Available Monitoring Practices in PIO Agreements or
+Comply with Their Own Agency Requirements Designed to Safeguard U.S. Funds ................................................. 9
+State and USAID Do Not Consistently Implement Their Procedures Intended to Mitigate Aid Diverson .............. 16
+Conclusion.................................................................................................................................................................. 22
+Recommendations .................................................................................................................................................... 23
+Agency Comments ..................................................................................................................................................... 23
+Appendix I - Scope and Methodology ....................................................................................................................... 24
+Appendix II - Comments from the Department of State .......................................................................................... 25
+Appendix III - Acknowledgments ............................................................................................................................... 31
+
+TABLES
+Number and Total Cost of State and USAID Agreements Provided to PIOs for Assistance to
+the Afghan People from August 2021 through September 2023 ............................................................................ 2
+PIO Indirect Cost Recovery Rates from August 2021 through September 2023 ..................................... 6
+GAO Leading Practices Established in 2016 in Comparison to Nine PIOs’ Monitoring Practices ........... 8
+Monitoring Practices Included in State and USAID’s Standard Templates for PIO Agreements
+from August 2021 through September 2023 .......................................................................................................... 10
+Number of State and USAID Agreements with Risk Assessments and Diversion Reporting
+Clauses from August 2021 to September 2023 ..................................................................................................... 16
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page vi
+
+ABBREVIATIONS
+ADS
+
+Automated Directives System
+
+AMELA
+
+Afghanistan Monitoring Evaluation and Learning Activity
+
+BHA
+
+Bureau for Humanitarian Assistance
+
+Colombo Plan
+
+Colombo Plan for Cooperative Economic and Social
+Development in Asia and the Pacific
+
+FAD
+
+Federal Assistance Directive
+
+FAM
+
+Foreign Affairs Manual
+
+FAO
+
+Food and Agriculture Organization
+
+GAO
+
+U.S. Government Accountability Office
+
+INL
+
+Bureau of International Narcotics and Law Enforcement Affairs
+
+IO-LOA
+
+International Organization–Letters of Agreement
+
+IOM
+
+International Organization for Migration
+
+OCR
+
+Organizational Capacity Reviews
+
+PIO
+
+Public international organization
+
+PLR
+
+Bureau of Planning, Learning, and Resource Management
+
+PM/WRA
+
+Bureau of Political-Military Affairs/Office of Weapons Removal
+and Abatement
+
+PRM
+
+Bureau of Population, Refugees, and Migration
+
+State
+
+Department of State
+
+UN Women
+
+UN Entity for Gender Equality and the Empowerment of Women
+
+UNDP
+
+UN Development Programme
+
+UNFPA
+
+UN Population Fund
+
+UNICEF
+
+UN Children’s Fund
+
+UNMAS
+
+UN Mine Action Service
+
+USAID
+
+U.S. Agency for International Development
+
+USAID/AFG
+
+USAID Mission to Afghanistan
+
+WFP
+
+World Food Programme
+
+WHO
+
+World Health Organization
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page vii
+
+Since 2002, the U.S. government has appropriated or otherwise made available approximately $147 billion for
+reconstruction and related activities in Afghanistan. After the Taliban’s takeover of the Afghan government on
+August 15, 2021, the U.S. government paused assistance programs and subsequently terminated direct
+funding to Afghan governing institutions because the United States does not recognize the Taliban as
+Afghanistan’s official government. 1 However, in the months following the Taliban’s takeover, the Department of
+State (State) and the U.S. Agency for International Development (USAID) resumed funding for some preexisting
+assistance programs and began new programs to address the needs of the Afghan people in key sectors, such
+as health, education, agriculture, food security, and livelihoods. For example, State’s Bureau of Population,
+Refugees, and Migration (PRM) provided $468.49 million and USAID’s Bureau for Humanitarian Assistance
+(BHA) provided $1.31 billion to help Afghans in fiscal years 2022 and 2023.
+The U.S. government uses agreements with public international organizations (PIOs) to obligate funding for
+programs and other activities intended to assist the people of Afghanistan. A PIO is an organization composed
+of multiple member states (i.e., sovereign countries), or any other organization that U.S. agencies designate as
+a PIO. PIOs include the UN organizations, such as the World Food Programme (WFP) and UN Children’s Fund
+(UNICEF), as well as the World Bank and regional organizations, like the Colombo Plan for Cooperative
+Economic and Social Development in Asia and the Pacific (Colombo Plan). Since the Taliban’s takeover, U.S.
+agencies have increased their reliance on PIOs and provided over $1 billion of U.S. taxpayer funds to these
+organizations. PIOs partner with other international and local organizations in Afghanistan to help implement
+their programs that are intended to address the political, economic, and humanitarian crises that have arisen
+since August 2021. However, State and USAID have limited authority to monitor PIOs because PIOs are exempt
+from some U.S. laws and regulations, and the UN has a single audit principle, whereby member nations agree
+that only the UN will conduct audits of its programming instead of member states and outside organizations. 2
+On March 13, 2023, the Chairman of the U.S. House of Representatives’ Committee on Foreign Affairs sent
+SIGAR a letter expressing concerns that U.S. funding for Afghanistan may be subject to waste, fraud, and
+abuse, or may benefit the Taliban. The letter requested that we examine and report on 14 specific areas
+related to ongoing U.S. activities in Afghanistan, including the delivery, use, and oversight of U.S. funds
+intended to respond to Afghanistan’s humanitarian crisis.
+This report is related to a portion of the Chairman’s request and examines State and USAID agreements
+implemented by PIOs in Afghanistan since August 2021. Our objectives were to (1) determine if the monitoring
+policies and practices that PIOs use in Afghanistan align with leading monitoring practices; (2) identify U.S.
+policies and guidance that may limit efforts to monitor U.S. assistance to the Afghan people; and (3) assess the
+extent to which State and USAID have procedures to help identify and prevent Taliban interference with and
+diversion of U.S.-funded assistance to Afghanistan.
+To accomplish our objectives, we analyzed agreements, agreement files, and guidance documents from State,
+USAID, and relevant PIOs to determine the monitoring and oversight policies, guidance, and practices that have
+been in place since the Taliban’s takeover on August 15, 2021. We determined the policies, guidance, and
+practices that State, USAID, and various PIOs use to implement assistance programs for the Afghan people
+through responses to requests for information, interviews, publicly available documents, and previous SIGAR
+reports. We reviewed the U.S. Government Accountability Office’s (GAO’s) 14 leading practices for monitoring
+foreign assistance given the multiple monitoring requirements established by State and USAID bureaus and
+offices responsible for PIOs in Afghanistan. 3 For the purposes of this report, we selected 8 of GAO’s leading
+1 Direct funding, also referred to as on-budget funding, was provided to the Afghan government and was intended to allow
+the Afghans more freedom to manage their own budget and to build capacity.
+2 See, e.g., 22 U.S.C. § 288 et seq. (setting forth the privileges and immunities of international organizations); and 2 C.F.R.
+Part 200 (establishing uniform administrative requirements, cost principles, and audit requirements for financial
+assistance to non-Federal entities that do not apply to foreign organizations, including PIOs).
+3 GAO, Foreign Assistance: Selected Agencies’ Monitoring and Evaluation Policies Generally Address Leading Practices,
+GAO-16-861R, September 27, 2016, p. 6. GAO used the Standards for Internal Control in the Federal Government; the
+Government Performance and Results Act – Modernization Act of 2010; and Uniform Administrative Requirements, Cost
+Principles, and Audit Requirements for Federal Awards to develop the leading practices for monitoring foreign assistance.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 1
+
+practices to determine if the monitoring policies and practices that PIOs use in Afghanistan align with U.S.
+leading practices. We selected the 8 practices on their relevance to developing a monitoring approach,
+monitoring award implementation, and informing management decisions based on monitoring results. We
+conducted our work in Arlington, Virginia, from April 2023 through March 2025. Appendix I contains a detailed
+discussion of our scope and methodology.
+
+BACKGROUND
+One of the ways the U.S. government provides funding for assistance programs that address the needs of
+Afghans following the Taliban takeover is to enter into agreements with PIOs. State has three offices that
+provide funding through PIOs: PRM, the Bureau of International Narcotics and Law Enforcement Affairs (INL),
+and the Bureau of Political-Military Affairs/Office of Weapons Removal and Abatement (PM/WRA). 4 USAID has
+two operating units that provide funding through PIOs: BHA and the Mission to Afghanistan (USAID/AFG). 5
+Since August 2021, State and USAID have funded agreements with PIOs in Afghanistan that support, among
+other things, health initiatives, education programs, agriculture development, weapons destruction, and
+demining efforts. From August 2021 through September 2023, the agencies funded 86 agreements with 18
+PIOs for a total cost of $3.038 billion. 6 Of this total, State’s INL, PM/WRA, and PRM have funded 52
+agreements with a total cost of $518.67 million, and USAID’s USAID/AFG and BHA have funded 34
+agreements with a total cost of $2.519 billion. State’s bureaus and BHA fund agreements to individual PIOs,
+while USAID/AFG funds agreements to individual PIOs and the Afghanistan Resilience Trust Fund, a World
+Bank-administered, multi-donor trust fund that coordinates international assistance to Afghanistan. 7
+Table 1 shows the total funding amount and number of agreements that each State and USAID bureau has
+provided to PIOs for assistance to the Afghan people from August 2021 through September 2023.
+
+Number and Total Cost of State and USAID Agreements Provided to PIOs for Assistance to
+the Afghan People from August 2021 through September 2023
+Bureau
+
+Number of
+Agreements
+
+Total Project Cost for
+Afghanistan
+
+INL
+
+33
+
+$239,909,442
+
+PM/WRA
+
+3
+
+$8,383,864
+
+PRM
+
+16
+
+$270,377,175
+
+52
+
+$518,670,481
+
+USAID/AFG
+
+12
+
+$1,138,385,346
+
+BHA
+
+22
+
+$1,381,306,856
+
+USAID Total
+
+34
+
+$2,519,692,202
+
+GRAND TOTAL
+
+86
+
+$3,038,362,683
+
+Agency
+
+State
+State Total
+USAID
+
+Source: SIGAR analysis of State and USAID’s agreements.
+4 Three of State’s bureaus have funded agreements with PIOs for activities in Afghanistan since August 15, 2021,
+according to State. State bureaus use different terms when referring to PIOs: PM/WRA uses the term “Foreign Public Entity
+(FPE),” while PRM and INL uses the term “International Organization (IO).”
+5 For this report, we will refer to USAID’s operating units as bureaus when discussing both State and USAID together.
+6 Total project costs presented include agreements with start dates prior to August 2021. These agreements were ongoing
+as of or after August 2021.
+7 The Afghanistan Resilience Trust Fund was known as the “Afghanistan Reconstruction Trust Fund” prior to August 2021.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 2
+
+State and USAID Used PIOs as Implementing Partners
+State does not maintain a list of designated or State-approved PIOs for bureaus to fund as implementing
+partners. Instead, State refers to organizations classified as PIOs by executive orders and the International
+Organization Immunities Act, or otherwise determined by State’s Office of the Legal Adviser to be PIOs. 8 USAID
+maintains lists of organizations that it has designated as PIOs and has approved as implementing partners for
+USAID agreements. USAID designates an organization as a PIO based on set criteria, then approves the
+organization to be an implementing partner if the PIO’s policies and internal controls are determined to be
+capable of effectively managing U.S. resources. 9 State and USAID both recognize UN organizations and
+multilateral institutions, such as the World Bank, as PIOs that the agencies can fund for foreign assistance
+agreements. USAID also considers some regional organizations to be PIOs, such as the Colombo Plan, due to
+their multi-member state structure. 10
+We examined all 86 State and USAID agreements made with 18 PIOs from August 15, 2021, to September 30,
+2023. We then selected a judgmental sample of 9 of the 18 PIOs for further examination by selecting PIOs with
+agreements that met certain criteria, including agreement cost, multiple agreement types, and multiple funding
+bureaus across State and USAID. These criteria allowed us to compare the monitoring practices included in
+agreements across PIOs, agreement types, and funding offices. The nine PIOs selected in our review are:
+•
+
+Colombo Plan: a regional organization that focuses on economic and social development of South and
+Southeast Asia.
+
+•
+
+Food and Agriculture Organization (FAO): a UN agency that leads international efforts to defeat hunger
+and improve nutrition and food security.
+
+•
+
+International Organization for Migration (IOM): a UN agency that implements operational assistance
+programs for migrants, including internally displaced persons, refugees, and migrant workers.
+
+•
+
+UN Children’s Fund (UNICEF): a UN agency that provides humanitarian and developmental aid to
+children worldwide.
+
+•
+
+UN Entity for Gender Equality and the Empowerment of Women (UN Women): a UN agency that
+focuses on gender equality and the empowerment of women and girls worldwide.
+
+•
+
+UN Population Fund (UNFPA): a UN agency that provides programming to improve reproductive and
+maternal health worldwide.
+
+•
+
+World Bank: a multilateral organization that works to reduce poverty, increase shared prosperity, and
+promote sustainable development.
+
+•
+
+World Food Programme (WFP): a UN agency that provides several types of emergency food assistance,
+including in-kind food aid, cash transfers, and vouchers.
+
+•
+
+World Health Organization (WHO): a UN agency that focuses on promoting health, keeping people safe,
+and serving vulnerable populations.
+
+PIO Agreement Types Used by State and USAID
+State and USAID engage in a variety of agreement types with PIOs, based on guidance that outlines the
+circumstances under which different types of agreements should be used. Each bureau determines the
+agreement type based on various factors, including the funding source, risk factors, and required monitoring
+
+8 See, 22 U.S.C. § 288 note listing international organizations designated by executive order as public international
+organizations entitled to enjoy the privileges, exemptions, and immunities conferred by the International Organizations
+Immunities Act.
+9 USAID’s criteria to designate an organization as a PIO includes a review of the organization’s structure, international
+functions, authorizing authority, U.S. membership in the organization, and international status according to the UN.
+10 USAID, Automated Directives System (ADS) 308maa, “List of Public International Organizations,” January 30, 2023, p. 5.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 3
+
+and reporting guidelines. 11 State uses three PIO agreement types in Afghanistan: INL uses International
+Organization-Letters of Agreement (IO-LOA), PM/WRA uses grants or cooperative agreements, and PRM uses
+voluntary contributions. 12
+•
+
+IO-LOA: a legally binding executive agreement under the authority of the President to conduct foreign
+affairs—one that State asserts is neither a grant nor a procurement contract and therefore not an
+award—between the U.S. government and a PIO to provide funds under terms for a specific project and
+which reflects a commitment made by all parties to accomplish the project’s objectives. 13
+
+•
+
+Grants/Cooperative Agreement: an agreement to provide funds for a specific project or support an
+existing program or activity for an organization. PIOs cannot use this funding for their organization’s
+general operating budget. 14
+
+•
+
+Voluntary Contribution: an agreement to provide direct support for an organization’s activities or
+support the general budget and operations of the organization to carry out activities.
+
+USAID uses two PIO agreement types in Afghanistan: BHA uses cost-type agreements, while USAID/AFG uses
+project contribution agreements. 15
+•
+
+Project Contribution: an agreement to fund a program, project, or activity. These agreements do not
+fund specific goods or services. However, USAID requires that the PIO use the funds for the specific
+purpose outlined in the agreement.
+
+•
+
+Cost-type Agreement: an agreement to provide funds for specific goods or services to achieve the
+activity’s purpose.
+
+State and USAID Guidance for Agreements with PIOs
+Various laws, regulations, and agency policies govern U.S. assistance to Afghanistan. The Foreign Assistance
+Act of 1961, as amended, authorizes the U.S. to provide funds in support of economic or political stability. The
+Foreign Aid Transparency and Accountability Act of 2016 requires U.S. agencies to monitor their foreign
+assistance efforts, evaluate the outcomes and impacts of the foreign assistance they administer, and apply the
+
+11 For example, PRM told us that it determines what agreement type is appropriate based on the legislation that authorizes
+its funding. PRM stated that for agreements authorized by the Migration and Refugee Assistance Act of 1962, codified as
+amended at 22 U.S.C. § 2601 et seq., the appropriate agreement type is a voluntary contribution. USAID/AFG and BHA told
+us that they review the agreement’s disbursement method, like reimbursement payments for activities completed or lump
+sum payments upon the start of the agreement, to determine the agreement type. USAID/AFG and BHA also said that they
+review the agreements monitoring, evaluation, and reporting procedures to determine the agreement type.
+12 The one other agreement type that State describes in its guidance is assessed contributions, which provides funds to
+meet annual obligations of membership in international multilateral organizations and is typically pursuant to treaties
+ratified by Congress.
+13 INL officials and State’s Federal Assistance Directive (FAD) note that the funds provided to international organizations
+through LOAs are not federal financial assistance instrument and are therefore not “awards.” INL enters into LOAs under
+the president’s authority contained in Section 481(a)(4) of the Foreign Assistance Act of 1961, as amended,
+“notwithstanding any other provision of law, the President is authorized to furnish assistance to any country or international
+organization on such terms and conditions as he may determine, for the control of narcotics and psychotropic substances,
+or for other anti-crime purposes.” (See, 22 U.S.C. §. 2291(a)(4).)
+14 FAD guidance refers to grants and cooperative agreements interchangeably.
+15 There are four other agreement types outlined in USAID guidance but not used for agreements with PIOs in Afghanistan.
+These are 1) general contributions, which finance a contribution to a PIO for its overall operation and support and do not
+finance specific goods, services, or activities; 2) regional development objective agreements, which provide a broad range
+of assistance including assistance disbursed to third parties and to regional PIOs over a sustained period of time, and can
+be used to achieve one or more development objectives; 3) fixed amount agreements, which finance a specific level of
+support where payment is not based upon the actual costs incurred by the recipient; and 4) simplified agreements, which
+finance quick or simple activities in a streamlined fashion for relatively small agreements.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 4
+
+findings and conclusions of those evaluations to future project and program design. However, the Act does not
+establish one common monitoring, evaluation, or reporting standards. 16
+State and USAID have established agency-wide guidance intended to comply with the Foreign Aid Transparency
+and Accountability Act of 2016’s requirement for monitoring foreign assistance. State’s Foreign Affairs Manual
+(FAM) provides directives for planning and management procedures for activities. 17 In addition, State’s Federal
+Assistance Directive (FAD) serves as a consolidated reference point for management policies and procedures
+to all State bureaus administering federal financial assistance. The FAD outlines requirements for monitoring,
+risk assessments, performance reporting, and indirect costs. However, according to the FAD and INL officials,
+the FAD is a procurement and acquisitions policy and only one section of the FAD applies to IO-LOAs. 18
+USAID’s Automated Directives System (ADS) 308 establishes policies for agreements with PIOs, such as
+conducting reviews of PIOs monitoring practices, defining different PIO agreement types, outlining personnel
+responsibilities, and describing indirect costs guidelines. USAID’s ADS 201 outlines the requirements and
+procedures for planning, delivering, assessing, and adapting programming for U.S. foreign assistance.
+However, BHA told us that disaster and emergency food assistance agreements are exempt from ADS 201’s
+requirements for activity design, implementation, monitoring, and evaluation. 19 Instead, BHA developed its own
+bureau-specific guidance for conducting site visits and monitoring in non-permissive environments, and
+specific proposal and reporting templates for PIO agreements that outline required monitoring practices.
+
+Administrative Costs for Agreements with PIOs
+PIOs charge donors a fee to implement the programming that donor funds pay for, referring to these
+administrative costs as “indirect costs.” 20 The U.S. Code of Federal Regulations defines indirect costs as costs
+that have been “incurred for common or joint objectives and cannot be readily identified with a particular final
+cost objective.” 21 Examples of indirect costs include management services, resource mobilization, institutional
+legal support, and human resource management. PIOs recover indirect costs through an indirect cost recovery
+rate, a percentage fee charged on total direct costs. PIOs have policies at the global level that outline their
+indirect cost rates and detail how these rates support their programming. For example, UNFPA issued an
+updated policy in January 2022 that details its cost recovery rate approach to ensure its budget is fully funded
+and sustainable. UNFPA’s policy states that indirect costs are used for services necessary to support the
+implementation of the program and the organizational structure that cannot be directly attributed to a specific
+project activity. 22 Similarly, WFP issued a summary document in November 2021 defining its use of indirect
+support costs and how these costs add value to its global operations.
+
+16 Codified as amended at 22 U.S.C. § 2394c note.
+17 State, 18 FAM 301, “Principles and Practices,” October 20, 2022.
+18 State, FAD, “Chapter 3: Federal Award Requirements,” October 2022, p. vii; 111. The only section of the FAD that applies
+to IO-LOAs is Chapter 3, Section K-4, “Letters of Agreement Under C-175.” This section states that IO-LOAs “require [State]
+Department Circular 175 (11 FAM 720- Negotiation and Conclusion) authority to negotiate and conclude.” We found that
+the Circular No. 175 guidance outlines the different types of treaties and international agreements into which the U.S. can
+enter and the procedural requirements for authorizing these agreements. However, the circular does not include
+performance monitoring or reporting requirements.
+19 BHA told us that disaster and emergency food assistance agreements are exempt from parts of ADS 201 due to their
+funding source, which are the International Disaster Assistance appropriations. However, when we asked if an
+agreement funded by a different appropriation is required to follow all parts of ADS 201, BHA stated that “regardless of
+the funding source, disaster and emergency food assistance (EFA) awards managed by BHA are exempt from activity
+design and implementation requirements per ADS 201.3.4.2.B.” (BHA, written response to SIGAR request for
+information, August 16, 2023.)
+20 Another term that PIOs use for administrative costs is “project support costs.”
+21 2 C.F.R. Part 200.
+22 UNFPA, Policies and Procedures Manual: Cost Recovery Policy, January 1, 2022, pp. 4–6.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 5
+
+To account for these indirect costs, State and USAID include indirect costs in the total cost of the agreement
+that they provide to the PIO to implement activities. Based on the 86 agreements we reviewed, State and
+USAID paid PIOs an estimated total of $160.70 million for their indirect costs. 23
+Donor nations who are members of a PIO’s executive board or governing body vote on its indirect cost recovery
+rates. For instance, in the case of the joint cost recovery policy for UNICEF, UNFPA, UN Women, and UN
+Development Programme (UNDP), the PIOs present their executive boards with the policy analysis to review
+and approve the cost recovery methodology and the cost recovery rate. 24 PRM and INL said that State
+representatives have an opportunity to review many of these documents because the U.S. is a member of
+many of the PIOs’ executive boards. Similarly, BHA said that it provides input on the indirect cost recovery rate
+at the executive board meetings for its partners. PRM, INL, and USAID representatives stated that State and
+USAID have considerable leverage with some PIOs due to the large portion of funding that U.S. agencies
+provide to PIOs worldwide.
+Table 2 shows the indirect cost recovery rates for the nine PIOs that we reviewed. As Table 2 shows, WHO rates
+can vary depending on the type of programming.
+
+PIO Indirect Cost Recovery Rates from August 2021 through September 2023
+PIOs
+
+Indirect Cost Recovery Rate (%)
+
+World Bank*
+
+4.0
+
+WFP
+
+6.5
+
+IOM
+
+7.0
+
+FAO
+
+7.0
+
+UN Women
+
+8.0
+
+UNICEF
+
+8.0
+
+UNFPA
+
+8.0
+
+WHO
+
+7.0 / 13.0
+
+Colombo Plan
+
+14.0
+
+Source: SIGAR analysis of agreements that included indirect cost recovery rate since August 2021
+and information obtained from PIOs.
+* On April 18, 2025, subsequent to the issuance of the final report for this audit, the World Bank
+requested that we amend this table. Specifically, the Bank informed us that since January 1, 2017,
+it has been deducting 4 percent of grant funds transferred to the Bank to defray its administrative
+costs. It distinguished this general 4 percent deduction from the additional 17 percent indirect rate,
+shown in the original version of this report, which the bank charged for certain expenses, such as
+consultant services. Based on this new information we updated Table 2, as appropriate.
+
+A PIO’s executive board can grant waivers to lower the cost recovery rate for donors based on exceptional
+circumstances and on a case-by-case basis. In 2018, the executive boards of UNICEF, UNFPA, UN Women, and
+23 There were 14 agreements for which we calculated the indirect cost amount based on the obligated agreement amount
+and the PIO indirect cost recovery rate. PRM provided a response of “N/A” for the indirect cost amount on 7 of 16
+agreements and INL did not provide indirect costs for 7 of 33 agreements. PRM stated that its agreements were for broad
+PIO appeals and overall, but it does not receive indirect cost totals for these types of contributions. PRM told us that
+indirect costs are allowable under its PIO contributions, but it did not provide this funding information upon our requests.
+24 UNDP, UNFPA, UNICEF, and UN Women, Joint Comprehensive Cost Recovery Policy, September 2020. The UN agencies
+developed the policy together and presented it to each of their executive boards to review and approve.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 6
+
+UNDP jointly decided to reduce the number of waivers granted. However, agencies’ executive boards can
+continue to grant waivers if program funding would be at risk, potentially causing a negative impact on the
+program’s ability to achieve results. For instance, in 2022, UNICEF granted two waivers to the World Bank for
+Afghanistan Resilience Trust Fund programming. 25 At the request of the World Bank, the UNICEF executive
+board approved a reduction of the cost recovery rate to 4 percent for two of World Bank’s Afghanistan
+Resilience Trust Fund projects in Afghanistan. 26 World Bank officials told us these requests were to maximize
+the available Afghanistan Resilience Trust Fund resources for the direct benefit of Afghans. 27
+
+MOST PIOS HAVE MONITORING POLICIES THAT GENERALLY ALIGN WITH GAO’S
+LEADING MONITORING PRACTICES
+The U.S. government does not have one common monitoring standard for PIOs; however, GAO developed a list
+of leading monitoring practices in 2016 in response to a congressional request asking the agency to review the
+U.S. government’s foreign assistance monitoring and evaluation policies across six agencies. 28 We compared
+the leading practices developed by GAO to the policies established by PIOs to monitor their implementing
+partners, and found that GAO’s leading practices and PIOs’ monitoring policies generally align. 29
+We found that the nine PIOs we selected to review have standard monitoring policies across their
+organizations, which do not change based on the donor organization, implementing partner, or agreement
+type. Table 3 on the following page lists the leading monitoring practices determined by GAO and compares
+these practices to those established by the nine PIOs we reviewed.
+
+25 UNICEF, Report on the Implementation of the Integrated Results and Resources Framework of the UNICEF Strategic
+Plan, 2022–2025. May 1, 2023, p. 19.
+26 UNICEF, Strategic Plan, 2022-2025, pp. 18–19.
+27 World Bank, written response to SIGAR, April 12, 2024.
+28 GAO, Foreign Assistance: Selected Agencies’ Monitoring and Evaluation Policies Generally Address Leading Practices,
+GAO-16-861, September 27, 2016, pp. 1, 6.
+29 We reviewed the 14 GAO monitoring practices outlined in the 2016 report and subsequent GAO reports and consolidated
+them into these 8 practices: (1) develop monitoring plan(s) with program goals and objectives; (2) develop monitoring
+plan(s) to address risk; (3) develop relevant project-level performance measures, such as output and outcome performance
+indicators; (4) collect, review, and analyze monitoring data on a periodic basis; (5) assess and approve implementing
+partners’ periodic performance reports; (6) assess and approve implementing partners’ periodic financial reports; (7)
+validate implementing partners’ performance through site visits and other means of verification; (8) consider performance
+information in making management decisions. We did not select the other six GAO monitoring practices for our analysis
+because these focused on personnel resources for monitoring, data quality review procedures, and project execution and
+closeout processes.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 7
+
+GAO Leading Practices Established in 2016 in Comparison to Nine PIOs’ Monitoring Practices
+GAO Monitoring
+Practices Foreign
+Assistance
+
+Colombo
+Plan
+
+FAO
+
+IOM
+
+Develop monitoring
+plan(s) with program
+goals and objectives
+
+
+
+
+
+
+
+
+
+Develop monitoring
+plan(s) to address risk
+
+
+
+
+
+
+
+Develop relevant projectlevel performance
+measures, such as
+output and outcome
+performance indicators
+
+
+
+
+
+Collect, review, and
+analyze monitoring data
+on a periodic basis
+
+
+
+Assess and approve
+implementing partners’
+periodic performance
+reports
+
+UN
+UNFPA
+Women
+
+UNICEF
+
+WFP
+
+WHO
+
+World
+Bank
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Assess and approve
+implementing partners’
+periodic financial reports
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Validate implementing
+partners’ performance
+through site visits and
+other means of
+verification
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Consider performance
+information in making
+management decisions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Total Number of
+Practices
+
+6
+
+6
+
+8
+
+8
+
+8
+
+8
+
+5
+
+5
+
+8
+
+Source: SIGAR analysis of PIO oversight and monitoring policies since August 2021 and GAO’s reports on federal
+monitoring and evaluation guideline.
+
+As Table 3 shows, the majority of PIOs have monitoring practices similar to GAO’s leading practices. For
+example, UN Women’s policy, “Monitoring of Programme Partners Procedure,” provides guidance and
+monitoring tools for UN Women personnel monitoring implementing partners’ activity. This guidance includes
+requirements for
+•
+
+a UN Women-developed monitoring plan for each agreement that includes the monitoring tools and
+timelines for reports, reviews, and site visits.
+
+•
+
+project monitoring activities that should occur no less than quarterly but are dependent on the risks
+associated with the activity’s context; and
+
+•
+
+site visits that occur at least annually to monitor progress and verify data reported in the monitoring
+reports.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 8
+
+In addition, UNICEF developed its “UNICEF Procedure on Monitoring” to establish monitoring requirements for
+its headquarters level, country offices, and regional offices. This guidance outlines requirements for
+•
+
+multiple levels of indicator data, ranging from international outcomes and impacts to track progress
+against the UN’s sustainable development goals, outputs, and outcomes to monitor country level
+progress, and activity level indicators to track implementation, compliance issues, and community
+feedback; and
+
+•
+
+program implementation monitoring activities, such as reporting on indicators, site visits, risk-based
+programmatic monitoring for cash transfers, and beneficiary feedback mechanisms.
+
+However, as shown in Table 3, some PIO policies are missing key monitoring practices. For example, WFP lacks
+a requirement to develop a written monitoring plan in both its agency-wide strategic plan and its Afghanistan
+Country Strategic Plan. Without monitoring plans, oversight may not align with program goals and objectives,
+increasing the risk of program failure. Similarly, WHO does not require a written plan to monitor its
+implementing partners. We found WHO is also missing monitoring practices for assessing and approving
+performance and financial reports from implementing partners, meaning the WHO may not have complete
+information on its implementing partners’ activities.
+
+STATE AND USAID DO NOT CONSISTENTLY INCLUDE ALL AVAILABLE
+MONITORING PRACTICES IN PIO AGREEMENTS OR COMPLY WITH THEIR OWN
+AGENCY REQUIREMENTS DESIGNED TO SAFEGUARD U.S. FUNDS
+State and USAID requirements for monitoring foreign assistance vary depending on various factors, such as
+the awarding U.S. agency, the specific funding office within the U.S. agency, type of recipient (i.e., PIO, nonprofit and for-profit non-governmental organizations, or type of agreement (i.e., voluntary contributions, project
+contributions, cost-type, IO-LOAs). State and USAID can negotiate terms to include additional monitoring
+practices in the agreements, such as conducting site visits and requiring performance reporting. However, we
+found that State and USAID do not always do so. Additionally, State does not have a uniform process to
+determine if a PIO is capable of safeguarding U.S. funds prior to entering into an agreement with the PIO.
+USAID, meanwhile, does have an agency-wide process for reviewing PIO’s monitoring policies. It also has a preagreement process to ensure PIOs responsibly manage U.S. resources, but neither USAID/AFG nor BHA could
+provide required documentation to show their compliance with these requirements.
+
+Agreements Establish the Legal Requirements for PIO Monitoring Practices but
+State and USAID Do Not Always Add Monitoring Practices, Even When They Have
+the Authority to Do So
+According to State and USAID officials, the agencies have significant influence over PIOs because of the
+extensive funding and engagement in organizational structures, like executive level leadership meetings
+provided by the U.S. government. However, State and USAID have limited authority over the monitoring and
+oversight of PIOs. PIOs are exempt from some U.S. laws and regulations. 30 In addition, in 2005, the UN
+adopted a single audit principle, restricting audits from member states and outside organizations. The single
+audit principle states that the UN Board of Auditors is the only authority allowed to audit UN organizations in
+order to avoid duplication of effort for UN organizations. 31
+Because of the limited authority to monitor and audit PIOs, the agencies negotiate each specific agreement’s
+terms and conditions to include the monitoring and oversight practices that they deem necessary. These terms
+30 2 C.F.R. 200 which established uniform administrative requirements, cost principles, and audit requirements for federal
+financial assistance to non-federal entities does not apply to PIOs.
+31 UN Joint Inspection Unit, The Audit Function in the United Nations System, 2010, p. 40.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 9
+
+and conditions constitute the legal requirements between the bureau funding the agreement and the PIO
+implementing the agreement. In this way, State and USAID can adhere to the UN’s single audit principle while
+also including clauses in the terms and conditions that allow them to conduct a variety of monitoring practices,
+such as financial spot checks, site visits, and project evaluations. According to the agreements, monitoring
+activities do not constitute an audit and therefore comply with the UN’s single audit principle. 32
+Each State and USAID bureau that we reviewed has a standard template, based on their agency’s guidance, for
+agreements with PIOs. 33 These templates contain standard clauses related to performance and financial
+reports, monitoring and evaluation requirements, fraud and corruption, refund stipulations, and terrorist
+financing prohibitions.
+Table 4 shows the specific monitoring practices that State and USAID included in the templates for PIO
+agreements from August 2021 through September 2023. The table shows that some State and USAID offices
+include more monitoring practices than others.
+
+Monitoring Practices Included in State and USAID’s Standard Templates for PIO Agreements
+from August 2021 through September 2023
+State and USAID Monitoring Practices Included
+Templates
+
+INL
+
+PM/WRA
+
+PRM
+
+USAID/AFG
+
+BHA
+
+Implementing partner provides performance reports
+
+
+
+
+
+
+
+
+
+
+
+Implementing partner provides closeout/final reports
+
+
+
+
+
+
+
+
+
+
+
+Implementing partner provides financial reports
+
+
+
+
+
+
+
+
+
+
+
+Implementing partner provides post-distribution
+monitoring results if requested by U.S. agency 34
+
+
+
+N/A
+
+
+
+
+
+
+
+U.S. agency or third-party monitors conduct site visits
+
+
+
+
+
+
+
+
+
+
+
+U.S. agency undertakes a financial spot check
+
+
+
+
+
+
+
+
+
+
+
+U.S. agency has the ability to conduct an evaluation
+at any time during agreement implementation
+
+
+
+
+
+
+
+
+
+
+
+Implementing Partner and U.S. agency define a
+process to investigate allegations of fraud, waste,
+and abuse
+
+
+
+
+
+
+
+
+
+
+
+Note: We used “N/A” to note where post-monitoring distribution cannot be performed due to the type of assistance the
+agreement is providing. For example, PM/WRA provides support to UN organizations for the integration and coordination
+of demining efforts into humanitarian program cycle. Since the PIO is not distributing goods, services, or supplies, the
+PIO cannot perform post-monitoring distribution.
+Source: SIGAR analysis of the monitoring practices included in State and USAID’s standard templates for agreements
+with PIOs.
+
+32 USAID, ADS 308mab, “Standard Provisions for Cost-Type Agreements with Public International Organizations (PIOs),” July
+26, 2022, pp. 19–20.
+33 The term “template” refers to the standard language that State and USAID bureaus use in each agreement and the
+mandatory provisions outlined in the relevant guidance. ADS 308maf, the template for USAID project contributions, is a
+drafting model that can be used if recipients do not have a model of their own.
+34 USAID/BHA’s Internal Guidance for Monitoring in Non-Permissive Environments describes post-distribution monitoring as
+a tool used to monitor the use and quality of transfers (i.e., in-kind, cash, and vouchers), wait time, distance to distribution
+centers, and effectiveness of the complaints and feedback mechanism, as well as factors such as taste of food, content,
+quantity and quality of non-food items, and adequacy of distribution.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 10
+
+For State agreements, a grants officer or an agreements officer is responsible for administering and awarding
+agreements. State’s FAD guidance, which applies to PRM and PM/WRA, outlines that a grants officer “has the
+authority to the maximum extent practicable and consistent with law, to determine the application of rules,
+regulations, and policies, on a specific award.” 35 According to INL, an agreements officer has limited authority
+to negotiate terms and conditions. INL told us that some of the requirements in the agreements are “beyond
+INL’s control” as the negotiation of the terms and conditions involves multiple State bureaus. 36 However, the
+INL agreements do allow for amendments to the terms and conditions by mutual written agreement between
+State and the PIO. While State agreement officers have the ability to insert additional oversight requirements
+into awards with PIOs, they do not always do so, potentially reducing the information available to State.
+Similarly, an agreement officer acts on behalf of USAID to “enter into, amend, or terminate an agreement,” and
+has the legal responsibility for the agreement with the PIO. 37 An agreement officer can negotiate the terms and
+conditions of the agreements and insert additional, mutually-agreed-to conditions. Based on both State and
+USAID guidance, the responsible officers have discretion to determine what requirements are included in
+agreements with PIOs. Similarly to State grants/agreement officers, USAID agreement officers may insert
+additional oversight requirements into awards with PIOs, but do not always do so, potentially reducing the
+information available to USAID.
+
+PRM’s Lack of Required Performance Reporting and Inconsistent Site Visit Requirement Made Tracking
+Activity Progress Difficult
+From August 2021 through September 2023, PRM had 16 voluntary contribution agreements with PIOs,
+totaling $270.38 million. These agreements were with four PIOs: International Labor Organization, IOM,
+UNFPA, and the UN High Commissioner for Refugees. We found that PRM included the fewest monitoring
+practices in agreements of any State or USAID bureau. In particular, PRM did not require PIOs to provide
+written performance reports and did not consistently include site visit requirements in its agreements with
+PIOs. The FAM requires State bureaus to develop a monitoring plan that includes performance reporting
+components, such as developing a strategy for collecting data, setting indicator baselines and targets to
+monitor progress, and meeting external reporting or communication requirements.
+In September 2024, PRM acknowledged that “PRM had not standardized inclusion of requirements for
+performance reporting and third-party monitoring in the bureau template for voluntary contributions.” 38 In other
+words, the bureau had no standard practice of including performance reporting requirements in its voluntary
+contribution agreements. However, PRM told us that in May 2024 it developed a new voluntary contribution
+agreement template that instructs agreement officers to “[i]nsert partner specific requirements for
+performance and financial reporting [for] (both quarterly and final reports).” 39
+We found that all of the PIOs provided some type of report to PRM. However, because the agreements did not
+include a reporting requirement, the PIOs had discretion to determine the level of detail they included in their
+reports to PRM. We found that 8 of the 16 reports did not include indicator data or were not specific to the
+individual agreement and therefore could not be considered performance reports. For example, one of the
+reports from the UN High Commissioner for Refugees was a slide presentation that described the
+organization’s presence and strategic priorities in Afghanistan, but did not include baseline data, targets, or
+actual results compared to expected results for performance indicators, as required by the FAM.
+
+35 State, FAD, “Chapter 1: General,” October 2022, p. 3. According to INL, most sections of the FAD do not apply to its
+agreements with PIOs.
+36 INL, teleconference interview response to SIGAR, September 12, 2024.
+37 USAID, ADS 308, “Agreements with Public International Organizations,” September 4, 2024, p. 5.
+38 PRM, written response to SIGAR, September 20, 2024.
+39 PRM, “U.S. Department of State Award Specific for PIOs,” p. 1.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 11
+
+In addition, PRM included the option for site visits in some of its agreements but not all. 40 PRM uses the term
+“field monitoring” to refer to site visits conducted by the bureau or third-party monitors. 41 During our review of
+the agreements, we found that PRM did not include field monitoring in IOM and International Labor
+Organization agreements. When we asked PRM why some agreements included field monitoring and others did
+not, officials stated that this is a discrepancy that the agency will address going forward to ensure that it
+includes field monitoring in the agreements for all Afghanistan-related activities. An updated voluntary
+contribution template PRM provided us in September 2024 included field monitoring and third-party
+monitoring language to help to ensure that PRM’s grants officers include these monitoring activities in all PRM
+voluntary contribution agreements.
+
+PM/WRA’s Third-Party Monitor Reports Identified Minor Implementation Issues but an Absence of Site Visit
+Requirements Raises Concerns
+PM/WRA has three agreements with PIOs, totaling $8.38 million. These agreements are with two PIOs: the
+International Trust Fund Enhancing Human Security and UN Mine Action Service (UNMAS). 42 PM/WRA has
+performance and financial reporting requirements in its agreements with PIOs, but the agreements do not
+include language allowing site visits by either PM/WRA or its third-party monitor. However, PM/WRA told us
+that its third-party monitor conducted site visits to International Trust Fund Enhancing Human Security’s sites,
+and PM/WRA provided us with eight site visit reports, which we reviewed. We found the reports generally noted
+that project implementation was going well. In cases where the third-party monitor reported issues, it provided
+recommendations to solve those issues.
+Because PM/WRA does not include site visit requirements in its agreements, the bureau depends on the PIOs
+voluntarily permitting State’s third-party monitors to conduct site visits. PM/WRA acknowledged that UNMAS
+refused site visits and PM/WRA had to negotiate with it to allow site visits to take place. Due to the absence of
+specific agreement language requiring site visits, UNMAS was able to limit PM/WRA monitoring activities.
+PM/WRA told us it would revisit the bureau’s terms and conditions and update the monitoring language in its
+templates.
+
+INL Agreements Do Not Require Site Visits
+From August 2021 through September 2023, INL had 33 IO-LOAs with PIOs totaling approximately $239.91
+million. These agreements were with six PIOs: the Colombo Plan, International Development Law Organization,
+UN Women, UNDP, UN Office on Drugs and Crime, and UN Office for Project Service. While we found that INL
+included performance and financial reporting requirements in its agreements with PIOs, bureau officials told us
+that IO-LOAs do not include language that authorizes INL to conduct site visits. However, INL was able to
+provide site visit reports for agreements with the Colombo Plan and UNDP. According to INL, the bureau did not
+conduct site visits for several of its agreements with International Development Law Organization and the UN
+Office on Drugs and Crime because these agreements focused on training and coordination of stakeholders
+and producing written research products, activities for which INL does not conduct site visits. In addition, INL
+did not conduct site visits for its agreement with UN Women because the program faced—and continues to
+face—implementation delays. In technical comments to this report, INL noted the UN Office on Drugs and
+Crime conducted monitoring at UN Women’s service points.
+According to INL, the bureau does not have any specific requirements for conducting site visits for IO-LOAs and
+it depends on PIOs consenting to site visits, as they have in the past. Therefore, in the absence of such specific
+40 PRM told us “field monitoring” refers to both virtual and in-person site visits, and that PRM’s third-party monitor conducts
+
+PRM’s in-person site visits.
+41 The PRM Agreement SRMCO21VC3329, “Revised Afghanistan appeal released September 11, 2021,” awarded to
+UNFPA on September 28, 2021, includes the following clause, “…the Recipient agrees the Bureau will conduct regular
+monitoring including through…field monitoring by Bureau regional refugee coordinators and Bureau program officers…and
+third party-monitoring in settings where the Bureau and Recipient determines appropriate.”
+42 PM/WRA curtailed one agreement on September 8, 2021, due to the Former Afghan government’s collapse and
+subsequent takeover by Taliban forces.
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 12
+
+agreement terms, INL’s ability to monitor activities and validate performance will be limited if a PIO decides
+that it does not want to allow site visits.
+
+USAID/AFG Requires Performance Reports But Does Not Conduct Site Visits
+USAID/AFG has 12 project contributions with PIOs totaling $1.14 billion. These agreements are with seven
+PIOs: FAO, UN Women, UNDP, UNICEF, WFP, WHO, and the World Bank. We found that USAID/AFG agreements
+contain requirements for performance reporting, financial reporting, conducting evaluations, and a process for
+investigating allegations of fraud, waste, and abuse. USAID’s template for project contributions, a part of ADS
+308’s guidance, requires PIOs to provide either annual or semi-annual written progress reports for
+performance reporting. USAID/AFG can adjust these terms for more frequent performance reporting, as it did
+in its project contribution with FAO. 43
+USAID/AFG’s template for PIO agreements does not include site visit requirements even though USAID
+guidance emphasizes the importance of site visits. According to ADS 201, USAID missions should “perform site
+visits to provide oversight over agreements/awards, inspect implementation progress and deliverables, verify
+monitoring data, and learn from implementation.” 44 USAID/AFG’s Mission Order states that using third party
+monitoring allows USAID to “independently verify and confirm partner reporting.” 45
+We found that in the UN Women agreement, USAID/AFG modified the project contribution template provision
+to allow USAID to include a site visit provision, stating that “the Recipient agrees to allow access for site visits
+by USAID and/or its agents as necessary.…” 46 We also found that USAID/AFG has a contract with a third-party
+monitor working in Afghanistan, the Afghanistan Monitoring Evaluation and Learning Activity (AMELA). AMELA
+works to verify the most important activity interventions and inform adaptive management. However, a review
+of AMELA reports shows that between March 2022 and March 2024, USAID/AFG did not use AMELA to
+monitor its agreements with PIOs. USAID/AFG acknowledged that it can include special conditions, such as
+third-party monitoring, when entering into an agreement with a PIO, but it generally does not conduct thirdparty monitoring if it considers the PIO’s internal policies and procedures to be adequate.
+For example, in our October 2024 audit of USAID/AFG’s agreement with UNICEF for the implementation of a
+water, sanitation, and hygiene project in Afghanistan, we noted that USAID/AFG did not include site visits in its
+agreement with UNICEF. 47 However, we reported that we conducted 37 visits of UNICEF sites and found
+numerous issues that UNICEF did not report to USAID. 48 Had USAID conducted site visits, it could have
+identified these deficiencies and asked UNICEF to address them. This example demonstrates how dependance
+on PIO monitoring procedures may not be sufficient to identify issues with program implementation and
+effectiveness. Similarly, USAID/AFG told us that it was not conducting site visits on its UN Women agreement
+because it anticipated that UN Women would conduct site visits, engage its own third-party monitors, and
+provide those reports to USAID/AFG. 49 In January 2025 USAID/AFG told us that AMELA had begun to conduct
+site visits of UN Women activities in December 2024. 50 However, because USAID/AFG does not generally use
+site visits to monitor the performance of any of its PIOs, it is unable to independently verify activity
+implementation and may miss information on activity implementation needed to make program modifications
+in a complex environment like Afghanistan.
+43 USAID, ADS 308maf, p. 2; ADS 308mal, p. 7.
+44 USAID, ADS 201 “Program Cycle Operational Policy,” September 28, 2022, p. 74.
+45 USAID, “Performance Monitoring Mission Order,” Mission Order 201.05, November 20, 2023, p. 11.
+46 USAID, Agreement 72030622IO00003, “Enabling Essential Services for Afghan Women and Girls Activity,” awarded to
+UN Women, July 18, 2022, p. 3.
+47 SIGAR, Rural Water Supply, Sanitation, and Hygiene in Afghanistan: USAID is Meeting Programming Goals but Could Be
+Providing Better Oversight, SIGAR 25-01-AR, October 2024, p. 10.
+48 SIGAR, Rural Water Supply, Sanitation, and Hygiene in Afghanistan, October 2024, p. 5.
+49 SIGAR, Combating Violence Against Women in Afghanistan: State and USAID Can’t Fully Determine Impacts of U.S.
+Efforts Without Developing Goals and Increasing site Visits, SIGAR 25-03-AR, November 2024, p. 13.
+50 USAID/AFG sent us a third-party monitoring report that confirmed AMELA conducted site visits in 2024.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 13
+
+BHA Uses Standard and Supplemental Templates to Monitor PIOs
+USAID/BHA has 22 cost-type agreements with PIOs, totaling $1.38 billion. These agreements are with seven
+PIOs: FAO, IOM, UNFPA, UNICEF, UN Office for the Coordination of Humanitarian Affairs, WFP, and WHO. BHA’s
+agreements require PIOs to comply with multiple monitoring practices, providing BHA with visibility on the
+progress PIOs are making towards achieving results. BHA is also the only bureau out of the five we reviewed
+that includes a requirement in its standard agreement that the PIO must allow the agency to conduct site
+visits. This requirement states that USAID may evaluate or review its cooperation with the agreement recipient,
+and in doing so, “the recipient agrees to allow access for site visits by USAID and/or its agents as necessary.” 51
+BHA included this language in all 22 PIO agreements awarded since August 2021. We found that BHA is
+carrying out these site visits through the AMELA contract. We reviewed the AMELA reports and found that from
+March 2022 to March 2023, AMELA conducted 266 site visits for BHA agreements with UNICEF, WFP, and
+IOM. From March 2023 to March 2024, AMELA completed an additional 698 monitoring visits to these PIOs on
+BHA’s behalf, adding visits for agreements implemented by FAO, UNFPA, and WHO. 52
+BHA’s agreements contain detailed requirements for performance reporting, requiring PIOs to provide (1)
+notifications of any significant events that would delay or adversely impact the activity, (2) informal program
+updates on progress towards activity results, and (3) biannual and final performance reports. However, the
+agreement officer can determine if more frequent reporting is needed. For example, BHA’s agreement with the
+WFP increased the reporting requirement from biannually to monthly.
+BHA requires other monitoring practices through the use of supplementary templates in addition to the
+monitoring practices outlined in Table 4 above. BHA requires PIOs to use the “PIO Application Template” and
+the application’s “Risk Assessment and Management Plan for High-Risk Environments” in the pre-agreement
+approval process, and the “BHA’s PIO Reporting Template” for performance monitoring. BHA requires PIOs to
+develop monitoring plans and risk management plans, as well as collect and report on performance indicator
+data. 53 BHA’s example demonstrates that it is possible for bureaus to include additional monitoring practices
+for PIOs by providing supplementary templates.
+
+State Does Not Have a Standard Pre-Agreement Process to Assess PIO Monitoring
+Practices but USAID Does
+State does not have an agency-wide policy to review a PIO’s monitoring practices prior to entering into an
+agreement with said PIO. According to Chapter 2 of the FAD, State’s pre-agreement requirements include a risk
+assessment prior to finalizing the agreement. 54 The FAD requires that these risk assessments include a
+category for organizational risk, which is “the capability and integrity of the applicant to implement the
+award.” 55 This risk category includes assessing the financial stability, internal management controls, history of
+performance, and reports and findings from audits of the agreement applicant, such as the PIO. 56 We found
+that PRM and PM/WRA conduct pre-agreement risk assessments, which include a review of PIOs’
+
+51 USAID, ADS 308mab, p. 19.
+52 AMELA has not conducted any third-party monitoring for BHA’s agreements with the UN Office for the Coordination of
+Humanitarian Affairs because these agreements focus on overall coordination of humanitarian actors and therefore AMELA
+does not perform site visits.
+53 Recipients submit the PIO Application Template to BHA, which includes information such as descriptions of program
+activities, a proposed monitoring plan, anticipated results, and the program’s budget. The template includes a PIO
+Application Risk Assessment required for activities in “high-risk” areas like Afghanistan. The applicant is required to
+describe how they will mitigate sanctioned groups or individuals from interfering in program activities or the distribution of
+resources. The BHA reporting template requires PIOs to address 8 core questions including overall performance, progress
+made toward achieving results, information on beneficiaries served, and lessons learned.
+54 State, FAD, “Chapter 2: Pre-Federal Award Requirements,” October 2022, p. 61.
+55 State, FAD, “Chapter 2,” p. 61.
+56 State, FAD, “Chapter 2,” p. 61.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 14
+
+organizational risks. 57 INL, which told us most of the FAD does not apply to IO-LOAs, did not provide a preagreement analyses that assesses the organizational risk of PIOs that implement IO-LOAs. 58 INL said that it
+ensures the PIO is capable of safeguarding U.S. resources by completing “a thorough proposal approval
+process prior to entering into an agreement with a PIO, where the PIO’s financial and project management
+procedures including risk mitigation procedures, are considered.” 59 INL provided us with the proposal approval
+process, which is an instruction document outlining the roles and responsibilities of INL personnel involved in
+tracking and documenting the process for approving an IO-LOAs. However, we did not find INL guidance for
+reviewing the PIO’s financial and management procedures. Without a documented process, there is no
+evidence INL personnel conduct a process to mitigate risk and safeguard U.S. funds prior to entering into an
+agreement with a PIO.
+USAID’s Bureau for Planning, Learning, and Resource Management (PLR) conducts Organizational Capacity
+Reviews (OCRs) for Category 1 PIOs to ensure that PIOs have the capacity and ability to perform the agreement
+tasks and safeguard U.S. funding. 60 A January 2020 revision of ADS 308 directed PLR to assume responsibility
+for producing the OCRs and updating them at least every 5 years, or more frequently if specific circumstances
+warrant. An OCR is an in-depth review of a PIO’s policy and organizational framework from both internal and
+external records, audits, evaluations, and assessments. According to a PLR representative, “Gaps in [a] PIO’s
+internal policies or procedures are often identified through our review of internal and external audits.” 61
+Officials said that if the PIO has not responded to previous audit findings, PLR recommends that USAID staff
+determine if the PIO has resolved those issues when working with the PIO. Since June 2021, ADS 308 has
+required that bureaus document confirmation that that based on the OCR, there is no credible reason to
+believe the PIO is not organizationally capable of adequately safeguarding USAID resources. However, neither
+BHA nor USAID/AFG provided us with this required documentation. 62
+Moreover, 5 of the 10 OCRs used to determine if PIOs were capable of safeguarding USAID resources were
+from 2013 and 2016. PLR provided us with updated OCRs for the 5 outdated OCRs. We found the updated
+OCRs provide new information that could improve monitoring activities. The OCRs contain more information
+about gaps in a PIO’s internal policies and procedures than the previous versions. For example, a 2016 OCR
+for UN Women provided a summary of the PIO’s policies and practices but did not provide recommendations
+for USAID staff to consider, despite finding issues with UN Women’s oversight. The updated 2023 OCR for UN
+Women included more details, concerns, and potential recommendations that USAID could consider in its
+monitoring of UN Women. 63 While ADS 308 does not require agreement officers to review updated OCRs for
+ongoing agreements, performing this review aligns with USAID’s policies for organizational learning and
+adaptive management. According to USAID guidance on adaptive management, USAID’s adaptive management
+states that for “its programs to be effective, USAID must be able to adapt, in response to changes in context
+and new information.” 64 Furthermore, USAID can extend agreements multiple times through modifications. The
+risk factors, as well as PIOs policies, could change over time and reviewing the newly available OCRs would
+allow agreement officers to mitigate any newly identified risks to their agreements.
+
+57 We provide an analysis of the FAD’s risk assessment requirements, as well as PRM’s compliance with these
+requirements later in this report.
+58 As noted above, INL officials and State’s Federal Assistance Directive (FAD) said that the funds provided to international
+organizations through LOAs are not federal financial assistance instrument and are therefore not “awards.”
+59 INL, written response to SIGAR, March 5, 2024.
+60 ADS 308 describes Category 1 PIOs as global PIOs, along with some regional PIOs, with whom USAID works closely and
+frequently. See, USAID, ADS 308, p. 9.
+61 USAID PLR, written response to SIGAR, November 6, 2023.
+62 USAID, ADS 308, pp. 10–11.
+63 In 2023, USAID assessed UN Women’s ability to safeguard USAID’s funding and resources globally. For example, USAID
+reported concerns about UN Women’s transparency when reporting progress, its ability to deliver results on its gender
+related projects, and the effectiveness of UN Women’s monitoring and evaluation processes.
+64 USAID, ”Program Cycle Discussion Note: Adaptive Management,” June 2021, p. 1.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 15
+
+STATE AND USAID DO NOT CONSISTENTLY IMPLEMENT THEIR PROCEDURES
+INTENDED TO MITIGATE AID DIVERSON
+State, USAID, and PIOs have requirements and procedures intended to identify and mitigate the risk of
+diversion, including risk assessments and diversion reporting. 65 We found that while State and USAID guidance
+require risk assessments, INL did not have risk assessments for five of its agreements and USAID/AFG did not
+have a risk assessment for one of its agreements. Unlike USAID, State does not require PIOs to report
+instances of diversion. BHA included the required diversion clause in all of its cost-type agreements, whereas
+USAID/AFG included an optional diversion reporting clause in only some of its project contributions.
+Table 5 outlines the number of the State and USAID agreements that had risk assessments and the number of
+agreements that included diversion reporting clauses for agreements from August 2021 to September 2023.
+
+Number of State and USAID Agreements with Risk Assessments and Diversion Reporting
+Clauses from August 2021 to September 2023
+Risk and Diversion Reporting by Bureau
+
+INL
+
+PM/WRA
+
+PRM
+
+USAID/AFG
+
+BHA
+
+Risk Assessments or Equivalent Documentation
+Provided
+
+16/21*
+
+3/3
+
+16/16
+
+9/10**
+
+22/22
+
+Diversion Reporting Included in the Agreement
+
+0/33
+
+0/3
+
+16/16
+
+9/12
+
+22/22
+
+* Only 21 of 33 agreements were ongoing as of April 2023 when INL conducted these assessments.
+** We excluded 2 of the 12 USAID/AFG agreements because the agreements ended prior to March 2, 2022, when the
+requirement for implementing partners began.
+Source: SIGAR analysis based on State and USAID agreement templates and agreements with PIOs.
+
+We found that the nine PIOs we reviewed use a variety of procedures to mitigate diversion. Seven of the nine
+PIOs have risk assessment practices in place. In addition, some of the PIOs have requirements to notify
+funding agencies of any allegations of diversion or if there is funding that is susceptible to diversion. Although
+PIOs do not all have the same requirements and procedures for risk mitigation, we found that the PIOs have
+the capacity to address most cases of diversion without U.S. agency assistance.
+
+Most State and USAID Bureaus Require Risk Assessments but PRM Did Not Follow
+All Requirements
+State guidance allows each bureau to determine its own process for assessing risk, which the bureau must
+document in its standard operating procedures. However, the FAD outlines certain risk mitigation requirements
+that all bureaus must follow, such as completing a risk assessment prior to finalizing the agreement, and
+assessing organizational, programmatic, and country or region-specific risks. 66 Although this section of the FAD
+does not apply to INL’s IO-LOAs, the FAM does apply to INL’s IO-LOAs. As of May 2022, the FAM requires
+bureaus to perform a terrorist financing risk assessment for all agreement types, including IO-LOAs, to analyze
+the likelihood of PIO activities providing material support or resources to terrorist or terrorist-affiliated groups.
+However, unlike with the FAD, the FAM does not require bureaus to conduct the assessment before entering
+into the agreement with the PIO. 67
+
+65 Our use of the term “diversion” includes instances of waste, fraud, abuse, corruption, coercion, aid diversion, and
+interference.
+
+66 State, FAD, “Chapter 2,” pp. 60–61.
+67 State, 2 FAM 055, May 10, 2022, p. 5.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 16
+
+PM/WRA provided us with risk assessments for all three of its agreements, and we found each risk
+assessment included considerations for the three risk categories required by the FAD—organizational,
+programmatic, and country or region-specific risks. PRM provided us with risk assessments for all 16 of its
+agreements. However, we found discussions of some—but not all—of the FAD’s three required risk categories.
+For example, all 16 assessments included country or region risks and 14 mentioned organizational risks, but
+only 2 mentioned programmatic risks. The FAD requires State bureaus to assess programmatic risks to
+determine whether potential events may have a strategic impact on State’s ability to achieve its goals or an
+impact on the reputation and public perception of the department. According to PRM, it uses different
+terminology and definitions than what is in the FAD, but that still reflects the FAD’s risk categories. 68 PRM
+added that it is in the process of updating its Risk Management Best Practices to align with the FAD’s
+requirements more closely. 69 All 16 assessments showed evidence of being created prior to the start of the
+agreement as required by the FAD.
+The FAD’s risk assessment section does not apply to INL’s IO-LOAs. 70 However, we found that the FAM requires
+a terrorist financing risk assessment that is applicable to INL’s IO-LOAs. The FAM requires bureaus to conduct
+a terrorist financing risk assessment to determine the likelihood of providing material support or resources to
+terrorist or terrorist-affiliated groups. 71 Unlike the FAD, the FAM allows the bureaus to decide how and when
+these assessments are conducted. INL provided us with terrorist financing risk assessments for 16 of 21
+ongoing agreements as of April 2023. In March 2024, INL told us that the bureau is undergoing a broader
+effort to improve its risk management for all programs in response to State Office of Inspector General
+recommendations, both across the bureau and for Afghanistan specifically. 72 INL stated that it intends to
+conduct yearly terrorist financing risk assessments of programs in Afghanistan.
+ADS 308 does not require USAID to complete a pre-agreement risk assessment for project contributions or
+cost-type agreements. 73 However, BHA updated its policies in January 2021 to require that PIOs create risk
+mitigation and management plans (referred to as “RAMPs”) that outline their procedures to assess and
+mitigate risks to avoid assistance going to the Taliban. 74 BHA told us that since January 1, 2021, it has
+required that PIOs include a RAMP in agreement proposals for “high-risk” areas like Afghanistan. In creating
+the RAMP, a PIO must answer a series of questions designed to “ensure the provision of U.S. foreign
+assistance does not result in a violation of applicable sanctions.” 75 For example, BHA requires PIOs to describe
+strategies to mitigate the risk of sanctioned groups or individuals interfering with or influencing aid distribution
+and beneficiary decisions. PIOs must also describe how they will mitigate the risk of engaging in transactions
+with, or providing support to, sanctioned groups or individuals. 76 BHA provided us with RAMPs for all 22 of its
+agreements, with 21 of the RAMPs answering all the required questions from BHA’s template. 77
+On March 2, 2022, USAID/AFG issued an Administrative Notice stating that “every Mission awardee must
+submit to the Mission a [RAMP] or equivalent document,” which includes all new and ongoing agreements in
+68 PRM, written response to SIGAR, September 20, 2024.
+69 PRM, written response to SIGAR, September 20, 2024.
+70 According to the FAD the only section that applies to IO-LOAs is the FAD’s Chapter 3, Section K-4, “Letters of Agreement
+Under C-175,” which does not outline risk assessments practices.
+71 State, 2 FAM 055, May 10, 2022, p. 5.
+72 INL, written response to SIGAR, March 5, 2024.
+73 USAID, ADS 308, “Agreements with Public International Organizations,” June 15, 2021.
+74 BHA requires implementing partners to submit RAMPs to show their assessment of risk, mitigation efforts, and risk
+management strategies in Afghanistan and other high-risk countries. RAMPs must include answers to a series of
+standardized questions provided by USAID.
+75 BHA, “Annex 1 – Risk Assessment and Management Plan for High-Risk Environments,” November 2022, p. 1.
+76 BHA, Annex 1, pp. 2–3.
+77 BHA told us it did not require the UN Office for the Coordination of Humanitarian Affairs to provide all information in the
+RAMP because the office provided sufficient risk assessment and mitigation measures throughout the agreement proposal
+instead. BHA, written response to SIGAR, August 23, 2024.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 17
+
+Afghanistan. 78 However, according to USAID/AFG, the Administrative Notice is not intended to apply to project
+contribution agreements with PIOs. 79 Our review of the Administrative Notice did not find language that
+excludes project contributions in the relevant paragraph. Furthermore, both UN Women and UNICIEF
+specifically state that USAID/AFG required that the PIOs submit the RAMPs and FAO submitted a RAMP in
+support of its proposal as required by the Administrative Notice. In response to our inquiry about the
+Administrative Notice’s requirements, USAID/AFG stated that the requirements and exclusions for the
+Administrative Notice are not clearly defined, and that USAID/AFG is currently drafting a mission order to clarify
+the scope of the RAMP requirement. 80
+USAID/AFG’s RAMP template requires the implementing partner to answer seven questions to “demonstrate
+compliance with [Office of Foreign Assets Control] sanctions and the related General [L]icenses issued by the
+U.S. Treasury for continued implementation in Afghanistan.” 81 For example, the template asks implementing
+partners to describe how it will mitigate the risk of benefitting sanctioned groups or individuals, or the risk of
+other potential violations of Office of Foreign Assets Control General Licenses. USAID/AFG provided us with
+RAMPs for 4 of its 10 agreements. 82 The 4 RAMPs addressed all 7 of USAID/AFG required questions. Of the 6
+agreements that did not have RAMPs, USAID/AFG told us that 1 award has not been funded since April 2019,
+pre-dating the RAMP requirement, and the Mission does not have any record of award activity by the Mission
+after August 2021. 83 The remaining 5 agreements were implemented by the World Bank and WHO; USAID/AFG
+explained that these PIOs provided equivalent assurance of risk mitigation and management through other
+documentation. 84 USAID/AFG said that the WHO agreements are to “buy-in to a central mechanism,” and
+therefore do not require risk assessments. 85 Despite no RAMP requirement, USAID/AFG reviewed the WHO’s
+agreement documentation and found sufficient evidence of risk assessment and management processes. 86
+
+State and USAID/AFG Do Not Require PIOs to Report Diversion of U.S. Funds
+State’s FAD does not require PIOs to alert State to instances of diversion, and only PRM includes a reporting
+requirement in its agreements. USAID’s ADS 308 requires PIOs with cost-type agreements to report diversion,
+while the project contribution template used by USAID/AFG has an optional clause. These clauses state that
+PIOs are to report diversion to USAID Office of Inspector General or the USAID bureau overseeing the
+agreement, depending on the agreement type. 87 Without diversion reporting, USAID and State will not know the
+true extent to which the Taliban is interfering with and benefiting from U.S. funded activities.
+
+78 USAID, Admin Notice, March 2, 2022, p. 2. Prior to March 2, 2022, USAID/AFG had a requirement for nongovernmental
+organizations implementing grants and cooperative agreements to provide risk assessments but had no such requirement
+for PIOs implementing cost-type or project contributions agreements.
+79 USAID/AFG, written response to SIGAR, September 23, 2024.
+80 USAID/AFG, written response to SIGAR, October 23, 2024.
+81 USAID/AFG, “Risk Assessment and Management Plan to Prevent Misuse Or Diversion of U.S. Government Resources,”
+n.d., p. 1.
+82 We excluded 2 of the 12 USAID/AFG agreements because they ended prior to March 2, 2022, when USAID/AFG began
+requiring RAMPs from implementing partners.
+83 USAID/AFG, written response to SIGAR, September 23, 2024.
+84 USAID/AFG, written response to SIGAR, September 23, 2024; USAID/AFG, Action Memorandum, August 22, 2022.
+85 USAID/AFG, written response to SIGAR, August 26, 2024.
+86 USAID/AFG, Information Memorandum, June 2, 2022; USAID/AFG, Information Memorandum, June 13, 2022;
+USAID/AFG, written response to SIGAR, September 23, 2024.
+87 USAID, ADS 308maf, “Template for Project Contribution,” December 4, 2020, p. 2; ; ADS 308mab, “Standard Provisions
+for Cost-Type Agreements with Public International Organizations (PIOs),” July 26, 2022, pp. 17–19.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 18
+
+PRM, INL, and PM/WRA Monitor Diversion, But INL and PM/WRA’s Informal Processes May Limit Their
+Awareness of Diversion
+Neither the FAM nor the FAD mandate that agreements include a requirement that PIOs report instances of
+diversion; however, PRM has opted to include a reporting clause while PM/WRA and INL have not. PM/WRA
+told us that it relies on informal processes with the PIOs to report and investigate incidents of fraud, such as
+emails, phone calls, and reports it may receive from third-party monitors. 88 PM/WRA stated that it does not
+have a formal process because it believes that there are legal restrictions for what the UN can accept and what
+the bureau can require in an agreement’s terms and conditions. 89 Similarly, INL has no formal requirements
+for PIOs to report instances of diversion in its agreements. However, INL told us that like PM/WRA, it has
+informal processes through which PIOs are expected to report instances of diversion. 90 INL stated that
+because it does not include a clause for reporting diversion in their agreement templates, its expectations of
+receiving timely reporting of incidents or attempts of diversion or interference “may not be well understood” by
+PIOs. 91 Because INL and PM/WRA do not include a reporting diversion clause in their agreement templates,
+the bureaus may not be receiving timely reporting on incidents of diversion or interference. In contrast, PRM
+includes a requirement that PIOs report instances of diversion in its agreements with PIOs, including UN
+organizations.
+PRM, INL, and PM/WRA provided us the following information on incidents of diversion:
+•
+
+In February 2024, PRM told us PIOs reported that the Taliban have made requests for lists of program
+beneficiaries, to move the site of activities, and that they be involved in selecting beneficiaries. PRM
+also told us that the PIOs have countered these measures using their own guidelines, which vary
+depending on the PIO and nature of the attempted diversion. Furthermore, in 2024, the Taliban has
+interfered with the operations of several PIO activities by forcing the suspension of mental health and
+psychosocial support activities, as well as suspension of a female youth center. PRM stated that the
+responsible PIO is still working to address these instances of interference.
+
+•
+
+When we asked INL for information about aid diversion in May 2023 and February 2024, it claimed to
+have no information. However, in September 2024, INL provided us with an October 2023 report from
+the Colombo Plan that outlined eight instances of Taliban interference, including theft and harassment
+of the Colombo Plan’s partners. In an August 2023 written response to our questions, the Colombo
+Plan told us that on one occasion the Afghanistan Ministry of Labor and Social Affairs requested it
+fund monitoring trips for the Ministry and fund the reintegration of clients back into the community. 92
+The Colombo Plan told us it refused the request. 93 According to INL officials, the bureau learned about
+these instances through meetings in December 2022 and January 2023. INL did not explain why it did
+not share this information when we asked in May 2023 and February 2024, but told us that since mid2024, INL has “started more programmatic information sharing at weekly team meetings to discuss
+encounters from the Taliban and any attempts of intimidation or diversion in order to ensure all team
+members are aware of such encounters.” 94 INL did not provide us with any information on possible
+diversions identified by its five other PIOs.
+
+•
+
+PM/WRA told us that in February 2023, UNMAS suspended activities due to Taliban officials
+attempting to renegotiate the PIO’s operating agreements. However, UNMAS did not alert PM/WRA of
+
+88 PM/WRA, teleconference interview response to SIGAR, May 29, 2024; PM/WRA, written response to SIGAR, September
+2024.
+89 PM/WRA, teleconference interview response to SIGAR, May 29, 2024.
+90 INL, written response to SIGAR, September 20, 2024.
+91 INL, written response to SIGAR, September 20, 2024.
+92 INL funded Colombo Plan agreements that provided services to survivors of human trafficking to assist them in
+reintegrating into their community and with their families.
+93 Colombo Plan, written response to SIGAR, August 29, 2023.
+94 INL written response to SIGAR, September 20, 2024.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 19
+
+the suspension until April 2023 because UNMAS anticipated resolving the issue quickly. UNMAS
+brought the suspension to the attention of PM/WRA after it could not come to a resolution with the
+Taliban. UNMAS was able to come to a new working agreement with the Taliban after approximately 6
+months. In November 2023, PM/WRA completed an internal review to ensure there was no diversion
+of funds and resumed the use of U.S. funds. UNMAS agreed to investigate any misuse of funds by the
+Taliban and communicate with PM/WRA once a month.
+
+USAID/AFG Did Not Include a Diversion Reporting Clause in Three Agreements and Was Unaware of
+Diversion, While BHA Included a Diversion Clause in its Agreements and Knew of Diversions
+USAID’s template for project contributions, a part of ADS 308’s guidance, includes an optional clause for PIOs
+to investigate “credible and material allegations of fraud, corruption, collusion or coercion,” which we define as
+diversion, and inform USAID/AFG of the outcomes of the investigations as soon as it is practical. 95 We found
+this clause and USAID’s more stringent cost-type agreement’s standard provisions requirement in 9 of 12
+USAID/AFG agreements. USAID/AFG said that 3 of the agreements did not contain the optional reporting
+clause because USAID/AFG executed the agreements before the current templates included such language. 96
+USAID/AFG told us that there is no standard requirement or timeline for incorporating clauses into new or
+previously executed agreements, and the ability to make these changes depends on a number of factors such
+as operating environment, relationship with implementing partner, and feasibility of updating the agreement. 97
+In May 2023, we asked USAID/AFG if it received any reports of diversion or interference from PIOs. USAID/AFG
+told us that it was unaware of any diversion related to USAID/AFG funded programs occurring since August
+2021. 98 In February 2024, we asked USAID/AFG for any new information about instances of diversion but we
+received no additional information. 99 Because USAID/AFG does not include a requirement in its agreements, it
+may not be aware of diversions or attempted diversions of the activities it is funding.
+BHA uses USAID’s standard provisions for cost-type agreements, which require PIOs to report instances of
+diversion. 100 Furthermore, BHA’s template for cost-type agreements includes language stating that
+developments that have a significant impact on the activity, including losses, problems, delays, or adverse
+conditions that materially impair the PIO from meeting the objectives of the activity, must be included in
+monitoring reports. 101 BHA included the required standard provision in all 22 of its cost-type agreements. We
+found that BHA receives reports of diversion through PIO reporting and AMELA. In May 2023, BHA told us that
+UNICEF and the WFP alerted the bureau of the suspension of operations in Afghanistan following attempts by
+Taliban provincial personnel to divert assistance. In September 2023, UNICEF that told us that it had notified
+BHA and the USAID Office of Inspector General of five possible diversion incidents based on irregularities found
+for agreements funded by BHA. In March 2024, BHA told us that there has been an uptick in incidents of
+forced redistribution of food and other assistance away from eligible recipients, and BHA is working with the
+WFP to identify the extent of the impact and mitigate against future diversion.
+BHA also reviews AMELA’s monthly reports that list instances of diversion and attempts of diversion related to
+BHA’s activities. For example,
+•
+
+In May 2023, AMELA found that in Nangarhar province, an FAO partner suspended cash distribution
+after pressure from the Taliban to provide disbursements to unregistered beneficiaries. 102
+
+95 USAID, ADS 308maf, p. 2; ADS 308mal, p. 8.
+96 USAID/AFG, written response to SIGAR, August 26, 2024.
+97 USAID/AFG, written response to SIGAR, August 26, 2024; USAID/AFG, written response to SIGAR, September 23, 2024.
+98 USAID/AFG, written response to SIGAR, September 23, 2024.
+99 USAID/AFG did not provide updated information during the exit conference on September 24, 2024.
+100 USAID, ADS 308mab, pp. 17–19.
+101 USAID, Agreement No. 720BHA22IO00076, Agreement with FAO, March 28, 2022, pp. (1)-3–(1)-4.
+102 USAID, AMELA Third-Party Monitoring Report: FAO, May 2023, June 22, 2023, p. 9.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 20
+
+•
+
+In July 2023, implementing partners at multiple locations informed AMELA that the Taliban had
+instructed them not to directly provide aid to female beneficiaries, and instead required a male
+relative to collect the assistance on a woman’s behalf. 103
+
+•
+
+In August 2023, Taliban officials caused disruptions and delays in food distribution, including blocking
+ration cards for specific beneficiaries, and temporarily suspending distribution. 104
+
+AMELA also notifies BHA of other incidents through early warning email communications. For example, in
+September 2023, a beneficiary informed AMELA that community elders were requiring food entitlements to be
+transferred to them. The food was subsequently redistributed to other community members who did not meet
+eligibility requirements for the agreement that BHA was funding. The beneficiary stated that failure to comply
+would result in their ration being reduced as well as future ineligibility for rations. 105 In January 2024, AMELA
+also used early warning email communications to report 34 incidents of implementation issues to BHA
+regarding WFP assistance. 106 These incidents included a lack of female staff at distribution sites that made it
+difficult to verify female beneficiaries’ eligibility, concerns about the beneficiary selection process, and other
+problems with food distribution. 107
+
+PIOs Have Procedures to Help Mitigate Diversion
+PIOs have developed procedures to mitigate diversion including risk assessments, risk mitigation strategies,
+and requirements to notify the funding agency of allegations or knowledge of funding susceptible to diversion.
+PIOs also have program management procedures to help mitigate the risk of their implementing partners being
+susceptible to diversion, and to assure donors that they will spend funds as intended. We found that the nine
+PIOs we reviewed require vetting of their partners against sanction lists, thereby creating a baseline risk
+mitigation strategy for all activities. 108
+Some PIOs employ additional procedures and strategies. For example, UNFPA is responsible for procuring highvalue items for its agreements in Afghanistan, rather than relying on its implementing partners for this task.
+UNFPA told us that this procurement process is part of its accountability and risk management strategy in
+Afghanistan. According to UNFPA, by taking on the procurement of goods and services for the agreements, the
+office is minimizing activities that could benefit the Taliban. 109 In addition, we found that one of FAO’s
+agreements with USAID/AFG also procures goods and services in Afghanistan on behalf of its implementing
+partners. 110 According to UNFPA, these procurement policies may decrease diversion. UNFPA also told us that
+if there are any allegations of diversion, the office conducts spot-checks, which focus on administrative and
+financial management. Furthermore, IOM’s vendor agreements include anti-terrorist financing clauses. If there
+are allegations of violations, IOM will suspend its contracts and cease engagement with the vendor until the
+investigation is complete.
+
+103 USAID, AMELA Third-Party Monitoring Report: WFP, July 2023, August 22, 2023, p. 1.
+104 USAID, AMELA Third-Party Monitoring Report: WFP, August 2023, September 22, 2023, p. 24.
+105 USAID, AMELA Third-Party Monitoring Report: WFP, September 2023, October 22, 2023, p. 51.
+106 USAID, AMELA Third-Party Monitoring Report: WFP, January 2024, February 22, 2024, pp. 10–23.
+107 USAID, AMELA Report: WFP, January 2024, pp. 10, 12–13, 16–18, 20. Due to Taliban restrictions in Afghanistan,
+
+female staff must verify female beneficiaries’ eligibility because males and females are kept separate in public.
+
+108 Neither State nor USAID are required to conduct vetting of PIOs or their partners. However, USAID’s Mission Order
+
+201.06 allows USAID/AFG to conduct vetting of any non-U.S. parties to whom PIOs provide funding, or any awardee or
+partner whom the bureau has reason to believe is a prohibited party. In addition, ADS 308 allows USAID agreement officers
+to negotiate the terms in the cost-type agreements to mitigate identified risks and add special conditions in the presence of
+sanctioned groups, such as the Taliban should the operating environment deem it necessary.
+109 Although UN organizations are exempt from taxation, UN implementing partners working in Afghanistan are not. As
+such, the Taliban can tax implementing partners on the cost of procured goods and services.
+110 USAID, Award No. 72030622IO00005, Agreement with FAO, July 15, 2022, p. 22.
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 21
+
+According to IOM, UNICEF, FAO, and UN Women, “Engagement and negotiation with the Taliban is difficult, time
+consuming and expensive, but often successful.” 111 These PIOs have reported success with directly pushing
+back against the Taliban’s demands. 112 For example, when ordered by the Taliban to provide medical supplies,
+IOM refused and explained that such an act would violate its protocols. In addition, FAO reported that it has
+resolved all 709 incidents of diversion reported to it from August 2021 through March 2024. 113 In instances of
+confirmed diversion, PIOs like UNICEF and WFP will suspend aid until the situation is resolved or an agreement
+is reached. 114 This allows PIOs time to assess allegations and address the underlying issues without continuing
+to indirectly aid the Taliban. For example, in May 2023, BHA told us that the WFP halted distribution from
+January to April 2023 in two districts of Ghazi province when local officials attempted to interfere with the
+activities. In addition, in July 2022 after receiving reports of food theft, WFP investigated and terminated its
+relationship with the partner deemed responsible for the theft. 115 These actions were all conducted by the PIOs
+with no involvement by USAID.
+
+CONCLUSION
+Since the Taliban takeover of Afghanistan in August 2021, the U.S. government has spent billions of U.S.
+taxpayer funds on projects intended to provide for Afghans’ basic needs. State and USAID have turned to PIOs
+as the primary means of delivering this aid using a variety of agreement types to provide funding to the PIOs.
+However, State and USAID have been inconsistent in their efforts to formally require PIOs to agree to U.S.
+government oversight on how funding is spent and whether projects are delivering intended results. This
+inconsistency increases the likelihood that the agencies will be unable to fully assess the extent to which aid
+and funding is diverted to the Taliban. One critical element of successful project management is whether the
+agencies can regularly gather information about the status of ongoing projects and adjust their work
+depending on circumstances on the ground. Monitoring projects through periodic site visits (including by third
+party monitors) is an essential management tool to help ensure that U.S. taxpayer money is not being wasted
+on projects that are not meeting their intended goals or that are undermined by interference by the Taliban.
+We found that State and USAID do not consistently include the requisite oversight and monitoring provisions in
+agreements with PIOs that would provide the information necessary to verify project implementation and
+identify areas for improvement. Additionally, we found that INL, PM/WRA, and USAID/AFG do not require their
+PIO implementers to report attempts by the Taliban to divert or otherwise interfere with aid delivery. Due to the
+omission, these bureaus will not know the full extent of the Taliban’s exploitation of U.S.-funded activities and
+will not have the information needed to make changes that could safeguard U.S. taxpayer funds.
+In addition to neglecting to consistently include needed oversight provisions in their agreements, INL does not
+have a documented process for ensuring that prior to signing a funding agreement, its implementing PIOs are
+capable of safeguarding the U.S.-provided funds. Without proactively assessing where a PIO’s potential
+deficiencies may lie, INL is left to react to implementer shortcomings only after funding has already been
+provided, which increases the risk that U.S. taxpayer resources could be lost to diversion and waste.
+Additionally, the FAD requires State bureaus, like PRM, to identify potential programmatic risks and asses the
+degree to which program activities are sensitive or difficult to achieve. However, because PRM did not consider
+programmatic risks, it may not have adequately taken into account the effect of the Taliban’s takeover on the
+achievability of ongoing and future aid projects.
+
+111 Afghan Affairs Unit, “Afghanistan: Guarding the Guardians - UN Agencies Report Lessons Learned Mitigating Taliban Aid
+
+Interference,” Afghan Affairs Unit Cable 114, April 4, 2024.
+
+112 Afghan Affairs Unit, “Afghanistan”, Afghan Affairs Unit Cable 114.
+113 Afghan Affairs Unit, “Afghanistan”, Afghan Affairs Unit Cable 114.
+114 WFP, “Annex 1- Risk Assessment and Management Plan for High-Risk Environments,” September 7, 2021; UNICEF,
+RAMP, November 7, 2022.
+115 SIGAR, Emergency Food Assistance to Afghanistan, SIGAR 23-30-IP, August 29, 2023, p. 13.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 22
+
+Similarly, USAID guidance stresses the need to continually gather new and updated information during an
+agreement’s period of performance. However, after the award has been made, the agency does not require
+agreement officials to review USAID’s periodic updates of its assessments of a PIO’s management or newly
+identified concerns or risks. Without reviewing the updated assessments, USAID cannot be sure that a PIO can
+continue to adequately safeguard USAID resources.
+
+RECOMMENDATIONS
+To improve the monitoring and oversight of U.S. assistance provided through PIOs to the Afghan people and
+reduce aid diversion, SIGAR recommends that the Secretary of State direct:
+1. INL and PM/WRA to include terms and conditions in their agreements with PIOs that ensure the
+right of the department to conduct site visits or third-party monitoring.
+2. INL to develop a standard process for reviewing a PIO’s financial and management procedures,
+prior to entering into an agreement, to ensure the PIO is capable of accounting for and
+safeguarding U.S. taxpayer funds.
+3. PRM to ensure that its pre-agreement risk assessments include all required risk categories
+outlined in the FAD for each PIO agreement.
+4. INL and PM/WRA to develop a standard process for requiring PIOs to report incidents or allegations
+of assistance diversion and interference and include this process in the terms and conditions of
+their agreements with PIOs.
+Additionally, SIGAR recommends that the Acting USAID Administrator direct:
+1. USAID/AFG to include terms and conditions in its agreements with PIOs that ensure its right to
+conduct site visits or third-party monitoring.
+2. USAID/AFG and BHA to review updated OCRs for agreements with PIOs that are ongoing so that
+they can understand newly identified risks and ensure alignment with USAID’s adaptive
+management guidance.
+3.
+
+USAID/AFG to develop a standard process for assessing the risks associated with projects prior to
+giving U.S. taxpayer funds to PIOs through “project contributions.”
+
+4. USAID/AFG to ensure that all agreements include the diversion reporting clause in accordance with
+the ADS 308 project contribution template.
+
+AGENCY COMMENTS
+We provided a draft of this report to USAID and State or review and comment. We did not receive comments
+from USAID. However, we received written comments from State-which are reproduced in Appendix II. State did
+not comment on the facts as they were presented in the report but did comment on our recommendations.
+Although State neither concurred nor non-concurred with our recommendations, the department provided us
+with steps it has taken or intends to take for three of four recommendations directed to it. Appendix II includes
+more details on State’s responses and our comments on the responses. In addition, both USAID and State
+provided technical comments that were incorporated, as appropriate.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 23
+
+APPENDIX I - SCOPE AND METHODOLOGY
+This report responds to a portion of the March 13, 2023, request from the Chairman of the U.S. House of
+Representatives’ Committee on Foreign Affairs to examine Department of State (State) and U.S. Agency for
+International Development (USAID) agreements implemented by public international organizations (PIOs) in
+Afghanistan since the Taliban’s takeover on August 15, 2021. The report’s objectives were to (1) determine if
+the monitoring policies and practices that PIOs use in Afghanistan align with leading practices; (2) identify U.S.
+policies and guidance that may limit efforts to monitor U.S. assistance to the Afghan people; and (3) assess the
+extent to which USAID and State have polices in place to help identify and prevent Taliban interference with
+and diversion of U.S. assistance, including efforts to recover diverted assets.
+To achieve our objectives, we analyzed agreement terms and conditions, agreement reporting files, and
+guidance documents from State, USAID, and PIOs to determine the monitoring and oversight policies,
+guidance, and practices that have been in place from August 15, 2021, to September 30, 2023. Using
+information we obtained through responses to requests for information, interviews, publicly available
+documents, and previous SIGAR reports, we determined the policies, guidance, and practices that State,
+USAID, and various PIOs use to implement assistance programs for the Afghan people. Given the varying
+monitoring requirements established by State and USAID bureaus and the operating units responsible for
+agreements provided to PIOs in Afghanistan, we selected and applied 8 of the U.S. Government Accountability
+Office’s (GAO’s) 14 leading practices for monitoring foreign assistance to determine if the PIOs’ monitoring
+policies and practices align with these practices. Specifically, we selected 8 of GAO’s practices based on their
+relevance to developing a monitoring approach, monitoring agreement implementation, and informing
+management decisions based on monitoring results.
+We determined the total number of agreements that State and USAID have funded through PIOs in Afghanistan
+from August 15, 2021, to September 30, 2023, by reviewing datasets from other SIGAR teams and sending
+requests for information to both State and USAID to confirm our list of agreements. We found that 18 PIOs
+implemented 86 agreements from State and USAID in Afghanistan over the course of our audit scope. We
+requested and received specific agreement documentation from State and USAID to assess the monitoring and
+oversight practices carried out during the agreement activities. The documents included agreements’ terms
+and conditions, risk assessments, monitoring plans, performance reports, and financial reports.
+We worked with our methodologist to select nine PIOs to interview. We made this selection based on a
+judgmental sample looking at several factors, including total agreement costs, PIOs using multiple agreement
+types (e.g., project contribution, voluntary contribution, cost-type agreement), and PIOs implementing
+agreements across multiple USAID and State offices. The nine PIOs we reviewed are the following: Food and
+Agriculture Organization (FAO), International Organization for Migration (IOM), UN Population Fund (UNFPA), UN
+Children’s Fund (UNICEF), UN Entity for Gender Equality and the Empowerment of Women (UN Women), World
+Food Programme (WFP), World Health Organization (WHO), World Bank, and the Colombo Plan for Cooperative
+Economic and Social Development in Asia and the Pacific (Colombo Plan). In order to obtain information on the
+PIOs’ monitoring and oversight policies, we researched publicly available documents and interviewed PIO staff
+members who are in the role of providing monitoring and oversight for agreements in Afghanistan. We
+interviewed officials from six of the nine PIOs and requested policy documents from them directly; the three
+PIOs that we did not interview declined or did not respond to our interview request.
+We conducted our audit work in Arlington, Virginia, from April 2023 through March 2025, in accordance with
+generally accepted government auditing standards. Those standards require that we plan and perform the
+audit to obtain sufficient, appropriate evidence to provide a reasonable basis for our findings and conclusions
+based on our audit objectives. We believe that the evidence obtained provides a reasonable basis for our
+findings and conclusions based on our audit objectives. SIGAR performed this audit under the authority of
+Public Law No. 110-181, as amended, and the Inspector General Act of 1978, 5 U.S.C. Chapter 4.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 24
+
+APPENDIX II - COMMENTS FROM THE DEPARTMENT OF STATE
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 25
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 26
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 27
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 28
+
+SIGAR’s Response to Comments from the U.S. Department of State
+SIGAR Comment 1: In response to our first recommendation, that PM/WRA and INL include terms and
+conditions that ensure the right to conduct site visits, PM/WRA said that it could not unilaterally amend the
+terms and conditions of State’s agreements with PIOs, but that it would consult with the appropriate State
+office about including site visits in the award document. SIGAR considers PM/WRA actions to be responsive to
+our recommendation and we will close the recommendation.
+Furthermore, in response to this recommendation INL stated
+“In accordance with INL’s policies… site visits occur when possible, and as appropriate, as part of the
+[Agreement Officer Representative’s] responsibilities for International Organization-Letter of
+Agreement (IO-LOA) project monitoring. Additionally, as stated on page 12 in the report, this did not
+prohibit INL from having third-party monitoring visits. INL did conduct and provide evidence of thirdparty monitoring visits and continues to conduct third-party monitoring visits.”
+INL is correct that we stated in our report that INL was able to do site visits. However, we also pointed out that
+none of the agreements that INL has with its PIOs require the PIOs to allow site visits. Because of this, INL
+depends on the PIOs allowing it to conduct site visits. In the absence of a specific site visit provision in its
+agreements with PIOs, INL’s ability to monitor activities and validate performance will be limited and subject to
+the PIOs’ discretion.
+SIGAR Comment 2: In response to our second recommendation, that INL develop a standard process for
+reviewing a PIO’s financial management procedures before entering into an agreement, INL said that PIOs are
+required to provide INL with a certified, final financial report by June 30 of the year following project
+completion, which is then reviewed by an INL official. According to INL, the bureau assesses the PIO’s ability to
+manage the project based on past performance and best practices as demonstrated in previous projects. This
+assessment is one of the determining factors used by INL’s leadership to decide if the PIO is suitable for a
+particular project. While INL asserts that it completes an assessment of each PIO’s suitability, we noted in the
+report that INL has not documented the process for reviewing financial and management procedures. Without
+a documented process, which would specify steps to include in the financial and management review, INL
+cannot be certain that each agreement officer will review proposals using consistent standards or criteria.
+SIGAR Comment 3: In response to our third recommendation, that PRM ensure that its pre-agreement risk
+assessments include all required risk categories outlined in the FAD for each PIO agreement, PRM said that it
+“modified the instructions under all current PRM categories, including programmatic and operational,
+to correspond to FAD language. Additionally, the bureau ensured the FAD description of the
+country/context category was fully integrated into the other PRM categories, as appropriate. As such,
+PRM’s categories precisely reflect FAD risk category descriptions.”
+SIGAR considers PRM’s actions to be responsive to our recommendation and will close the recommendation.
+SIGAR Comment 4: In response to our fourth recommendation, that PM/WRA and INL develop a standard
+process for requiring PIOs to report incidents or allegation of assistance diversion and interference and include
+this in the terms and conditions of agreements with PIOs, PM/WRA said that it had established a monthly
+reporting process with its PIO partners in Afghanistan, which included written assurances that the PIO will
+notify PM/WRA within 2 days of any interference by the Taliban-controlled ministries. This agreement with its
+PIO partner is a good first step, but it does not address our recommendation. While PM/WRA cannot
+unilaterally amend State’s terms and conditions, it can add mutually agreed to provisions to its award
+agreements. We continue to believe that PM/WRA should consider negotiating award provisions with its PIOs
+that would require PIOs to report instances of interference and diversion.
+INL also stated that it will conduct a review of its current practices that relate to incidents or allegations of
+assistance diversion and interference. As a new practice, INL, if notified, is now directing all incidents or
+allegations of assistance diversion and interference to the Office of Inspector General hotline. While codifying a
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 29
+
+reporting procedure is a positive step, we continue to believe that INL should work with its PIOs to add mutually
+agreed to provisions requiring the reporting of allegations or actual instances of assistance diversion to INL
+and other relevant authorities.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 30
+
+APPENDIX III - ACKNOWLEDGMENTS
+Carole Coffey, Senior Audit Manager
+Kara Coughlin, Analyst-in-Charge
+Nick McElroy, Program Analyst
+Rhianon Small, Program Analyst
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 31
+
+This performance audit was conducted
+under project code SIGAR-159A.
+
+SIGAR 25-16-AR/Oversight of PIOs in Afghanistan
+
+Page 32
+
+SIGAR’s Mission
+
+Obtaining Copies of SIGAR
+Reports and Testimonies
+
+To Report Fraud, Waste, and
+Abuse in Afghanistan
+Reconstruction Programs
+
+SIGAR’s Mission
+
+The mission of the Special Inspector General for Afghanistan
+Reconstruction (SIGAR) is to enhance oversight of programs for the
+reconstruction of Afghanistan by conducting independent and objective
+audits, inspections, and investigations on the use of taxpayer dollars
+and related funds. SIGAR works to provide accurate and balanced
+information, evaluations, analysis, and recommendations to help the
+U.S. Congress, U.S. agencies, and other decision-makers to make
+informed oversight, policy, and funding decisions to:
+•
+
+improve effectiveness of the overall reconstruction strategy
+and its component programs;
+
+•
+
+improve management and accountability over funds
+administered by U.S. and Afghan agencies and their
+contractors;
+
+•
+
+improve contracting and contract management processes;
+
+•
+
+prevent fraud, waste, and abuse; and
+
+•
+
+advance U.S. interests in reconstructing Afghanistan.
+
+To obtain copies of SIGAR documents at no cost, go to SIGAR’s Web site
+(www.sigar.mil). SIGAR posts all publicly released reports, testimonies,
+and correspondence on its Web site.
+
+To help prevent fraud, waste, and abuse by reporting allegations of fraud,
+waste, abuse, mismanagement, and reprisal, contact SIGAR’s hotline:
+•
+
+Web: www.sigar.mil/fraud
+
+•
+
+Email: sigar.pentagon.inv.mbx.hotline@mail.mil
+
+•
+
+Phone International: +1-866-329-8893
+
+•
+
+Phone DSN International: 312-664-0378
+
+•
+
+U.S. fax: +1-703-601-4065
+
+Public Affairs Officer
+•
+
+Phone: 703-545-5974
+
+•
+
+Email: sigar.pentagon.ccr.mbx.public-affairs@mail.mil
+
+•
+
+Mail: SIGAR Public Affairs
+2530 Crystal Drive
+Arlington, VA 22202
+
+

@@ -1,0 +1,20 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "UN 2018 link moved from UN News to the White House transcript",
+  "'First time in a generation' labelled Our view; the public warnings are cited as his own statements"
+ ],
+ "edits": [
+  [
+   "the first time in a generation a named Iranian commander paid that price.",
+   "in our view the first time in a generation a named Iranian commander paid that price."
+  ]
+ ],
+ "ourview": [
+  "He did not do any of it"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

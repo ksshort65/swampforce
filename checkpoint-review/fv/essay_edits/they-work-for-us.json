@@ -1,0 +1,67 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Clip 2 re-sourced from Fox News to C-SPAN's full program of the May 19, 2026 CAP IDEAS speech plus the speech video on Jeffries's own YouTube channel; wording checked against the captions of his channel's upload (8:41) and CAP's full livestream (1:51:27): matches",
+  "Jeffries X link removed (social media); his own YouTube channel kept as where he said/posted it: the Apr. 22, 2026 video titled 'Democrats have checkmated the MAGA power grab 🔥 Maximum warfare, everywhere, all the time.'; the spoken 'maximum warfare' line checked against the unedited Apr. 22 news-conference feed (ABC News livestream, 25:55): matches",
+  "Schumer links moved from YouTube/CNN to the C-SPAN clip",
+  "Maxine Waters quotes cut (no unedited original video found; only third-party uploads)",
+  "Harris post kept as her own words, unlinked",
+  "Biden: the donor-call quote is kept only as what he acknowledged on camera to NBC's Lester Holt on July 15, 2024",
+  "'He named electoral defeat in the second sentence' corrected: 'beat them electorally' comes about ten seconds later, after 'We will defeat them.'",
+  "Jeffries quotes un-labeled as Our view (his words, now checked against video)"
+ ],
+ "edits": [
+  [
+   "He said it at a news conference about maps. He posted it. He put it in a YouTube title. C-SPAN kept the raw.",
+   "He said it at a news conference about maps. He put it in the title of a [video on his own YouTube channel](https://www.youtube.com/watch?v=0IVD7gE7-kg). C-SPAN kept the raw."
+  ],
+  [
+   "[Jeffries YouTube — “Maximum Warfare Everywhere All The Time”](https://www.youtube.com/watch?v=0IVD7gE7-kg)\n\n[Jeffries on X](https://x.com/hakeemjeffries/status/2046754383707148505)\n",
+   ""
+  ],
+  [
+   "May 19, 2026. A progressive conference.",
+   "May 19, 2026. The Center for American Progress IDEAS conference."
+  ],
+  [
+   "Fox News has the video of that speech: [Jeffries, “break them”](https://www.foxnews.com/video/6396075535112)\n\nWrite-up with the same quotes: [Fox News](https://www.foxnews.com/politics/hakeem-jeffries-shredded-disgustingly-violent-call-dems-break-spirit-maga)",
+   "C-SPAN has the full speech: [House Minority Leader Jeffries on Democracy](https://www.c-span.org/program/public-affairs-event/house-minority-leader-jeffries-on-democracy/679567)\n\nHis own channel posted the conversation: [Leader Jeffries at the 2026 CAP IDEAS Conference](https://www.youtube.com/watch?v=IUlRHoY-DlU&t=521s)"
+  ],
+  [
+   "The camera did not misspeak. [YouTube](https://www.youtube.com/watch?v=yu-7L5W6Rew) · [CNN](https://www.cnn.com/videos/politics/2020/03/04/schumer-gorsuch-kavanaugh-supreme-court-abortion-lead-vpx.cnn)",
+   "The camera did not misspeak. [C-SPAN](https://www.c-span.org/clip/us-senate/user-clip-youve-released-the-whirlwind-and-you-will-pay-the-price--sen-chuck-schumer/4944670)"
+  ],
+  [
+   "Maxine Waters, June 2018: if Trump cabinet members are seen in a restaurant, “you get out and you create a crowd and you push back on them… they are not welcome, anymore, anywhere.” [YouTube](https://www.youtube.com/watch?v=-1Fu3g1MGHY) April 2021, Minneapolis: “We’ve got to stay on the street… We’ve got to get more confrontational.” [YouTube](https://www.youtube.com/watch?v=tnNBvN4ZXms)\n\n",
+   ""
+  ],
+  [
+   "[The post](https://x.com/KamalaHarris/status/1267555018128965643)",
+   "The post is still on her account."
+  ],
+  [
+   "Joe Biden, July 8, 2024, to donors — later confirmed on camera to Lester Holt: “time to put Trump in the bull’s-eye.” He called it a mistake after the fact. The admission is the tape. [NBC](https://www.nbcnews.com/video/biden-says-it-was-a-mistake-to-use-bullseye-in-remarks-about-trump-214895685978)",
+   "Joe Biden, July 2024, told donors it was time to put Trump in the “bull’s-eye.” On July 15, 2024, he told NBC’s Lester Holt, on camera, that using the word was a mistake. The admission is the tape."
+  ],
+  [
+   "He named electoral defeat in the second sentence.",
+   "He named electoral defeat seconds later: “We will defeat them. We have to beat them electorally.”"
+  ]
+ ],
+ "ourview": [
+  "He named electoral defeat",
+  "It is a demand",
+  "Politicians work for the American people"
+ ],
+ "keep_links": [
+  "https://www.youtube.com/watch?v=0IVD7gE7-kg",
+  "https://www.youtube.com/watch?v=IUlRHoY-DlU&t=521s"
+ ],
+ "quote_keep": [
+  "Either MAGA extremists are going to break the country",
+  "We are in an era of maximum warfare",
+  "We have to beat them electorally, and then"
+ ],
+ "held_reason": "",
+ "dek_opinion": true
+}

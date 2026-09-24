@@ -1,0 +1,567 @@
+Derestricted 4 March 2026
+(This document has been derestricted at the meeting of the Board on 4 March 2026)
+
+Atoms for Peace and Development
+
+Board of Governors
+
+GOV/2026/8
+Date: 27 February 2026
+
+Original: English
+
+For official use only
+Item 6(d) of the provisional agenda
+(GOV/2026/9)
+
+Implementation of the NPT Safeguards Agreement
+and relevant provisions of the United Nations
+Security Council resolutions in the Islamic Republic
+of Iran
+Report by the Director General
+
+A. Introduction
+1. This report of the Director General to the Board of Governors (Board) and, in parallel, to the United
+Nations Security Council (Security Council) is on the implementation of the NPT Safeguards Agreement1
+and relevant provisions of Security Council resolutions in the Islamic Republic of Iran (Iran), as requested
+by the Board in its resolution GOV/2025/71 adopted on 20 November 2025.2
+2. The Board, in its resolution GOV/2025/71, noting that “the provisions of UNSC resolutions
+1696 (2006), 1737 (2006), 1747 (2007), 1803 (2008), 1835 (2008), and 1929 (2010) shall apply from
+28 September 2025 in the same manner as they applied before the adoption of UNSC resolution
+2231 (2015)” and that “the requests to the Agency for implementing, verifying and reporting on the
+implementation of the provisions of UNSC resolutions 1696 (2006), 1737 (2006), 1747 (2007),
+1803 (2008), 1835 (2008), and 1929 (2010) have also been reinstated since 28 September 2025”,3
+requested the Director General to: “report before each quarterly Board meeting on the implementation of
+Iran’s NPT Safeguards Agreement, and implement and report on the provisions of all relevant UNSC
+resolutions, including 1696 (2006), 1737 (2006), 1747 (2007), 1803 (2008), 1835 (2008), and
+__________________________________________________________________________________
+1 The Agreement between Iran and the Agency for the Application of Safeguards in Connection with the Treaty on the
+Non-Proliferation of Nuclear Weapons (INFCIRC/214), which entered into force on 15 May 1974.
+2 The previous report by the Director General to the Board was on the implementation of the NPT Safeguards Agreement in Iran,
+contained in document GOV/2025/65.
+3 GOV/2025/71, paras (f) and (h).
+
+GOV/2026/8
+Page 2
+
+1929 (2010), consistent with past practice”; “ensure that the report requested in [operative paragraph
+(OP) 1] includes information on the verification of Iran’s uranium stockpile, including the locations,
+quantities, chemical forms, and enrichment levels, and the inventories of centrifuges and related
+equipment”; and “in parallel provide the reports at [OPs 1 and 2] to the UNSC, consistent with established
+Agency practice”.4
+
+B. Previous developments
+3. The Director General, on 13 June 2025, reported to the Board and to the Security Council that the
+Agency had been informed of a military operation launched by Israel, which included attacks on several
+of Iran’s nuclear facilities. These attacks took place between 13-24 June 2025. On 22 June 2025, the
+United States conducted attacks on three of Iran’s nuclear facilities. The Agency stopped conducting
+verification activities in Iran at the commencement of the military attacks and, by the end of June 2025,
+had decided to withdraw all of its inspectors from Iran for safety reasons.
+4. In his statement to the Board on 13 June 2025, the Director General, inter alia, recalled the relevant
+General Conference resolutions, in particular GC(XXIX)/RES/444 and GC(XXXIV)/RES/533, which
+provided, inter alia, that “any armed attack on and threat against nuclear facilities devoted to peaceful
+purposes constitutes a violation of the principles of the United Nations Charter, international law and the
+Statute of the Agency”. The Director General also reiterated that he had repeatedly stated that nuclear
+facilities must never be attacked, regardless of the context or circumstances, as it could harm both people
+and the environment, and that such attacks have serious implications for nuclear safety, security and
+safeguards, as well as regional and international peace and security. On the same day, the Director General
+also briefed the Security Council on the matter where he called “on all parties to exercise maximum
+restraint and to avoid further escalation” and reaffirmed his readiness and the Agency’s readiness “to
+facilitate technical discussions and support efforts that promote transparency, safety, security and the
+peaceful resolution of nuclear-related issues in Iran”.
+5. On 2 July 2025, the President of Iran signed into force a law suspending cooperation with the
+Agency.5 The Director General in his communications to Iran, indicated the importance of re-establishing
+normal collaboration between Iran and the Agency in order to ensure compliance with the NPT Safeguards
+Agreement. He also indicated that in view of the possible impact of this law on the implementation of
+safeguards in Iran it was essential and urgent to arrive at an agreement on modalities that could guarantee
+the necessary compliance. The Director General made it clear that it was indispensable and urgent to
+restart safeguards activities in Iran in accordance with the NPT Safeguards Agreement and that
+implementation of the Agreement could not be suspended under any circumstances.
+6.
+To this end, the Director General presented a number of concrete steps, including the preparation
+and submission by Iran of a special report for highly enriched uranium (HEU) and low enriched uranium
+(LEU) and the provision of updated design information questionnaires (DIQs) for the nuclear facilities
+affected by the military attacks. In doing so, the Agency reminded Iran at the end of July 2025 that the
+Agency’s timeliness goal6 for the detection of the diversion of one significant quantity (SQ) of HEU is
+__________________________________________________________________________________
+4 GOV/2025/71, OPs 1-3.
+5 https://president.ir/en/160022.
+6 The Agency establishes timeliness goals (performance targets) which set out the verification effort – in terms of the frequency
+
+and intensity of the verification activities to be carried out – needed in order to provide assurance that declared nuclear material
+is not diverted from peaceful use and that undeclared production or processing of nuclear material has not taken place at a declared
+facility (see GOV/2014/41, Section C.4). The longer the Agency is unable to verify the inventories of declared nuclear material
+in Iran, therefore, the greater the risk that the Agency is unable to provide such assurance.
+
+GOV/2026/8
+Page 3
+
+one month7 and, therefore, verification of Iran’s declared inventory of HEU was already overdue. For
+facilities unaffected by the military attacks, the Director General proposed that the Agency would continue
+to provide advance notice for inspections and design information verifications (DIVs). The Director
+General also expressed the Agency’s readiness to discuss with Iran the modalities for accessing the
+affected facilities and conducting inspections and DIVs, and indicated the Agency’s readiness to take into
+account Iran’s security concerns, provided that such approaches remained consistent with the rights and
+obligations of Iran and the Agency under the NPT Safeguards Agreement.
+7.
+At the end of August 2025, the Agency resumed inspections at the Bushehr Nuclear Power Plant
+(BNPP) as part of its planned verification activities at this facility.
+8. On 9 September 2025, the Director General signed an agreement with the Foreign Minister of Iran,
+Dr Abbas Araghchi, in Cairo on ‘Practical Steps on Safeguards Implementation in Iran pursuant to the
+NPT Safeguards Agreement following the armed attacks on its safeguarded nuclear facilities’ (Cairo
+agreement) that provided an understanding of the procedures for Agency inspections, notifications and
+safeguards implementation covering all declared nuclear facilities and nuclear material in Iran.8 While
+taking into consideration Iran’s concerns, these procedures were in line with the relevant provisions of
+Iran’s NPT Safeguards Agreement.
+9. During October and November 2025, the Agency conducted three inspections/DIVs at the three
+unaffected facilities at BNPP and seven inspections/DIVs at four other unaffected facilities at the Atomic
+Energy Organization of Iran (AEOI) site in Tehran.
+10. On 7 November 2025, the Agency also reminded Iran that the provision by Iran “without delay” of
+a report for the affected facilities and associated nuclear material is a requirement under its NPT
+Safeguards Agreement,9 and which Iran had agreed to provide under the Cairo agreement. The Agency
+indicated that such a report would enable Iran and the Agency to discuss the modalities for the Agency to
+verify its contents, and was indispensable for the Agency to provide assurances that nuclear material
+subject to safeguards in Iran remained in peaceful nuclear activities and that the facilities subject to
+safeguards were not being misused.
+11. At the end of the previous reporting period, the Agency had conducted inspections/DIVs at 7 of the
+13 unaffected facilities, but had yet to conduct inspections/DIVs at any of the 8 affected facilities or at
+the Isfahan Fuel Enrichment Plant (IFEP).10
+
+C. Recent developments
+12. As indicated earlier, the Board, in its resolution GOV/2025/71 of 20 November 2025, requested the
+Director General, inter alia, to “report before each regular quarterly Board meeting on the implementation
+of Iran’s NPT Safeguards Agreement, and implement and report on the provisions of all relevant [Security
+Council] resolutions, including 1696 (2006), 1737 (2006), 1747 (2007), 1803 (2008), 1835 (2008), and
+1929 (2010), consistent with past practice”. In these resolutions, the Security Council decided, inter alia,
+that Iran shall suspend the following proliferation sensitive nuclear activities: all enrichment-related and
+reprocessing activities, including research and development, to be verified by the Agency; and work on
+__________________________________________________________________________________
+7 HEU is defined as uranium enriched to 20% U-235 and higher.
+8 Statement by IAEA Director General on Iran | IAEA.
+9 INFCIRC/214, Article 68.
+10 As no verification activities had been conducted at IFEP by that time, the Agency did not know whether it had been affected
+
+by the military attacks (GOV/2025/65, para. 14).
+
+GOV/2026/8
+Page 4
+
+all heavy water-related projects, including the construction of a research reactor moderated by heavy
+water, also to be verified by the Agency; provide such access and cooperation as the Agency requests to
+be able to verify such suspension; comply fully and without qualification with the NPT Safeguards
+Agreement, including through the application of modified Code 3.1 and called upon Iran to act strictly in
+accordance with the provisions of the Additional Protocol that it signed on 18 December 2003 and to
+ratify it promptly. The Board in its resolution GOV/2025/71also requested the Director General to ensure
+that such reports include “information on the verification of Iran’s uranium stockpile, including the
+locations, quantities, chemical forms, and enrichment levels, and the inventories of centrifuges and related
+equipment”.11
+13. Iran, in a letter dated 20 November 2025, informed the Director General that the Cairo agreement
+was “no longer valid and shall henceforth be regarded as terminated”.
+14. In order to conduct planned routine verification activities at the six remaining – out of the 13 –
+unaffected facilities and the LOF, the Agency had provided Iran with advance notifications in accordance
+with the NPT Safeguards Agreement. Between the issuance of the Director General’s previous report and
+29 January 2026, Iran only provided access to four of these six remaining unaffected facilities.
+15. The Agency, in a letter dated 29 January 2026, reiterated its request to Iran to facilitate verification
+at one of the two remaining unaffected nuclear facilities12 and to the LOF to enable the Agency to conduct
+the required annual physical inventory verifications (PIVs). The Agency also requested Iran to provide
+the reports and declarations on the status of the affected declared nuclear facilities to enable discussion
+between the Agency and Iran of the technical modalities for verifying such reports and declarations. The
+Agency indicated that in the absence of such access, reports and declarations, the Agency would not be
+able to conclude that there had been no diversion of declared nuclear material from peaceful nuclear
+activities in Iran.
+16. Iran, in its reply dated 2 February 2026, informed the Agency that its request to conduct inspections
+at the two locations referred to by the Agency was “currently under consideration”. Iran also stated that
+“given the conditions resulting from acts of aggression and the continuation of threats have created a
+situation in which the normal implementation of safeguards is legally untenable and materially
+impracticable” and that “it would be inconsistent with Iran’s essential security considerations”. Iran also
+indicated that “[c]onversely, the elimination of such threats would create the necessary conditions for
+further cooperation between Iran and the Agency”.
+17. The Director General, in his reply dated 3 February 2026, informed Iran that the required cooperation
+between the Agency and Iran to facilitate the implementation of safeguards, which is stipulated in
+Article 3 of the NPT Safeguards Agreement, could not be made conditional upon the elimination of
+perceived threats. Moreover, while the Agency had informed Iran of its readiness to start discussions
+immediately on modalities for reporting and access related to affected facilities within the framework of
+the NPT Safeguards Agreement, the Agency had received no communication from Iran on its willingness
+to start such discussions. The Director General reiterated his disposition to engage on modalities and to
+work constructively with Iran without delay to facilitate access to all facilities and locations under
+safeguards in Iran.
+18. The Agency, in a letter dated 6 February 2026, requested Iran to facilitate as soon as possible the
+conduct of design information examination (DIE) and DIV at IFEP that had been cancelled by the Agency
+in June 2025.
+__________________________________________________________________________________
+11 GOV/2025/71, OP 2.
+12 The second remaining unaffected nuclear facility is the Karun Nuclear Power Plant (KNPP) which is in the early stages of
+construction and contains no nuclear material, so a PIV was not planned.
+
+GOV/2026/8
+Page 5
+
+19. The Agency, in the same letter of 6 February 2026, also informed Iran that it had observed, through
+the analysis of commercially-available satellite imagery, regular vehicular activity around the entrance to
+the tunnel complex at Isfahan in which UF6 enriched up to 20% and 60% U-235 for four of Iran’s declared
+nuclear facilities – the Uranium Conversion Facility (UCF), the Fuel Manufacturing Plant (FMP), the
+Fuel Plate Fabrication Plant (FPFP) and the Enriched UO2 Powder Plant (EUPP) – was stored. The
+Agency, in light of this activity, requested Iran to facilitate, as soon as possible, the conduct of a DIV and
+inventory verification at all those parts of the tunnel complex at Isfahan belonging to the four abovementioned nuclear facilities.
+20. While the Agency has observed, through the analysis of commercially-available satellite imagery,
+activities being conducted at some of the affected nuclear facilities, including the enrichment facilities at
+Natanz and Fordow, without access to these facilities it is not possible for the Agency to confirm the
+nature and purpose of the activities.
+21. Iran, in its reply dated 6 February 2026, reiterated its position that “in light of prevailing
+circumstances […] the expectation of the normal implementation of safeguards in Iran is, from legal,
+technical, and operational perspectives, untenable”. With regard to IFEP and the tunnel complex at
+Isfahan, Iran stated that they had both been “subjected to illegal military attacks”. Iran also stated that it
+considered any measures adopted on the basis of the so-called “snapback” to be “without legal basis, null
+and void, and devoid of any legal effect, and accordingly does not recognize or accept their validity”. Iran
+maintained that its “willingness to engage constructively endures”.
+22. On 14 and 15 February 2026, the Agency conducted inspections at the LOF and Karaj Waste Storage,
+respectively.
+23. As of the date of this report, Iran had provided access to the Agency to each of its unaffected nuclear
+facilities at least once since the military attacks of June 2025, with the exception of Karun Nuclear Power
+Plant (KNPP), which is in the early stages of construction and does not contain nuclear material. However,
+Iran has not provided the Agency with declarations, reports or access in relation to any of its declared
+nuclear facilities that had been affected by, or subjected to, military attacks. Therefore, the Agency has
+not been able to fulfil its obligations under the NPT Safeguards Agreement in relation to these facilities
+and associated nuclear material or to verify if Iran has suspended the activities as required in the abovementioned Security Council resolutions.
+24. The Agency, in a letter dated 18 February 2026, informed Iran that it was essential that the Agency
+conduct the long-delayed DIE for IFEP as soon as possible and, if possible, the DIV immediately
+afterwards in order to confirm Iran’s statement that the facility had been “subjected to” military attacks.
+The Agency reiterated that it was prepared to conduct the DIE either at the site as originally planned or at
+another location, such as AEOI Headquarters in Tehran. The Agency requested Iran to facilitate the
+necessary access.
+
+D. Diplomatic engagement
+25. On 16 February 2026, the Director General held in-depth technical discussions with Iran’s Foreign
+Minister Araghchi in Geneva in preparation for negotiations the following day. The Director General was
+in attendance at the indirect negotiations between the United States of America and Iran that took place
+on 17 February 2026, in which he provided advice on issues relevant to the verification of Iran’s nuclear
+programme.
+26. On 26 February 2026, the Director General was in attendance at the following round of negotiations
+between the United States of America and Iran, in which he again provided advice on issues relevant to
+
+GOV/2026/8
+Page 6
+
+the verification of Iran’s nuclear programme. The bilateral negotiations are ongoing and are without
+prejudice to Iran’s obligations under its NPT Safeguards Agreement. A successful outcome of these
+negotiations would have a positive impact on the effective implementation of safeguards in Iran and the
+resolution of issues described in this report. Technical discussions will take place in Vienna in the week
+beginning 2 March 2026.
+
+E. Implementation of Safeguards in Iran
+E.1. Declared Facilities
+27. Under its NPT Safeguards Agreement, Iran has declared to the Agency 22 nuclear facilities and one
+LOF (see Annex I).13 According to its obligations under its NPT Safeguards Agreement, Iran is required
+to provide the Agency with nuclear material accounting reports, design information for facilities and the
+LOF, and access to enable the verification of such reports and information, to ensure that no declared
+nuclear material has been diverted from peaceful nuclear activities and that there has been no undeclared
+production or processing of nuclear material at those facilities and the LOF.
+28. As previously reported, on 12 June 2025,14 Iran notified the Agency of a new enrichment facility –
+IFEP – to which the Agency requested immediate access to conduct a DIE and DIV, which was agreed
+by Iran. However, the Agency cancelled these planned verification activities due to the commencement
+of the military attacks on 13 June 2025.
+29. The seven declared facilities that the Agency assesses were affected by the military attacks and which
+contained declared nuclear material are: the Fordow Fuel Enrichment Plant (FFEP); the Fuel Enrichment
+Plant (FEP); the Pilot Fuel Enrichment Plant (PFEP); UCF; FMP; FPFP; and EUPP. The Khondab Heavy
+Water Research Reactor (KHRR), which was under construction and did not contain nuclear material,
+was also affected by the attacks. In addition, as indicated earlier, Iran informed the Agency in February
+2026 that IFEP had also been “subjected” to military attacks, although it has not indicated whether it
+contained nuclear material at the time. As mentioned earlier, the Agency does not know the precise
+whereabouts of this facility and, therefore, cannot verify its status for safeguards purposes. Indeed, Iran
+has yet to confirm the current status for safeguards purposes of any of these affected facilities and
+associated nuclear material to the Agency.
+30. The 13 declared facilities that the Agency confirms were unaffected by the military attacks are:
+Tehran Research Reactor (TRR); Process Research Facility (PRF); Molybdenum, Iodine and Xenon
+Radioisotope Production Facility (MIX Facility); the Jabr Ibn Hayan Multipurpose Laboratories (JHL);
+Miniature Neutron Source Reactor (MNSR); Light Water Sub-Critical Reactor (LWSCR); Heavy Water
+Zero Power Reactor (HWZPR); Isfahan Research Reactor 10MW (IRR-10); Karaj Waste Storage; BNPP
+Units 1, 2 and 3 (BNPP-1, BNPP-2, BNPP-3); and the Karun Nuclear Power Plant (KNPP) at Darkhovin.
+The LOF was also unaffected.
+
+E.2. Enrichment-related activities
+31. Pursuant to the relevant provisions of Security Council and Board resolutions, Iran is required to
+suspend all enrichment-related activities – to be verified by the Agency. In addition, pursuant to its NPT
+Safeguards Agreement, Iran is required, inter alia, to provide the Agency with access to its declared
+nuclear facilities and LOF in order for the Agency to verify that no declared nuclear material has been
+__________________________________________________________________________________
+13 The LOF is situated in the Atomic Energy Organization of Iran’s (AEOI’s) Tehran site.
+14 GOV/2025/50, para. 27.
+
+GOV/2026/8
+Page 7
+
+diverted from peaceful nuclear activities and that there has been no undeclared production or processing
+of nuclear material at those facilities and LOF. As indicated earlier, the Board requested in OP 2 of
+GOV/2025/71 that this report include information on the verification of Iran’s uranium stockpile,
+including the locations, quantities, chemical forms, and enrichment levels, and the inventories of
+centrifuges and related equipment.15
+32. During the current reporting period, Iran did not provide access to the Agency to any of Iran’s four
+declared nuclear enrichment facilities. The Agency does not know whether IFEP contains nuclear material
+or is operational. Iran has not provided the Agency with access to this facility since it was first declared
+by Iran over eight months ago.
+33. Based on the information provided by Iran by 12 June 2025, previous Agency verification activities
+and estimates based on the past operating records of the relevant declared facilities, the Agency’s estimate
+of Iran’s total enriched uranium stockpile, as of 13 June 2025, was 9874.9 kg: comprising 9040.5 kg of
+uranium in the form of UF6 and 834.4 kg of uranium in other forms. The total enriched uranium stockpile
+in the form of UF6 of 9040.5 kg comprised: 2391.1 kg of uranium enriched up to 2% U-235; 6024.4 kg
+of uranium enriched up to 5% U-235; 184.1 kg of uranium enriched up to 20% U-235; and 440.9 kg of
+uranium enriched up to 60% U-235.16
+34. As noted above, on 7 November 2025, 29 January 2026 and 3 February 2026, the Agency reminded
+Iran that the provision by Iran of reports and declarations for the affected facilities and associated nuclear
+material is a requirement under its NPT Safeguards Agreement and, inter alia, is indispensable for the
+Agency to provide assurances that nuclear material subject to safeguards in Iran remains in peaceful
+nuclear activities and that the facilities subject to safeguards are not being misused.
+35. Due to the lack of access to any of Iran’s four declared enrichment facilities to perform verification
+activities the Agency cannot provide any information on the current size, composition or whereabouts of
+the stockpile of enriched uranium in Iran or whether Iran has suspended all enrichment related activities,
+including R&D. In addition, due to the lack of access since February 2021 to Iran’s centrifuge component
+manufacturing, centrifuge assembly and testing workshops for the Agency to perform verification
+activities, the Agency cannot provide any information on Iran’s current inventory of centrifuges or
+whether it has suspended their manufacture, assembly and testing.
+
+E.3. Reprocessing Activities
+36. Pursuant to the relevant provisions of Security Council and Board resolutions, Iran is required to
+suspend all reprocessing-related activities, including R&D – to be verified by the Agency. The Agency
+has continued to monitor the use of hot cells at the TRR17 and the MIX Facility,18 and the R&D activities
+at JHL.19 It is only with respect to the facilities to which the Agency has had access that the Agency can
+confirm that, as of late December 2025, there were no ongoing reprocessing-related activities at TRR or
+MIX. The Agency last conducted routine verification activities at JHL on 3 November 2025, during which
+there were no indications of reprocessing-related activities.
+__________________________________________________________________________________
+15 GOV/2025/71, OP 2.
+16 The Agency has verified 432.9 kg of this 440.9 kg of uranium in the form of UF enriched up to 60% U-235.
+6
+17 TRR is a 5 MW reactor which operates with 20% U-235 enriched fuel and is used for the irradiation of different types of targets
+and for research and training purposes.
+18 The MIX Facility is a hot cell complex for the separation of radiopharmaceutical isotopes from targets, including uranium,
+irradiated at TRR. The MIX Facility is not currently processing any uranium targets.
+19
+
+JHL is a multi-purpose research laboratory where Iran conducted plutonium separation experiments in the 1990s (see
+GOV/2003/75, para. 28).
+
+GOV/2026/8
+Page 8
+
+E.4. Heavy Water Related Projects
+37. Pursuant to the relevant provisions of Security Council and Board resolutions, Iran is required to
+suspend work on all heavy water related projects – to be verified by the Agency –, including, at Arak, the
+ongoing construction of the Khondab Heavy Water Research Reactor (KHRR), which was hit during the
+military attacks,20 and the production of heavy water at the Heavy Water Production Plant (HWPP),21
+which was damaged during the military attacks and which is assessed not to have been fully operational
+since that time. The Agency has not accessed KHRR since 14 May 2025.
+
+E.5. Uranium Conversion and Fuel Fabrication
+38. As indicated above, pursuant to the relevant provisions of Security Council and Board resolutions,
+Iran is required to suspend all enrichment-related activities and heavy-water-related projects – to be
+verified by the Agency. In the past, UCF, EUPP, FMP and FPFP facilities were involved in enrichmentrelated activities and heavy-water-related projects. Since the military attacks, the Agency has not been
+provided with access to any of these facilities and cannot, therefore, assess either their current status or
+the status of the associated nuclear material, previously reported as being contained therein, or verify if
+Iran has suspended related activities.
+
+E.6. Modified Code 3.1
+39. Contrary to its NPT Safeguards Agreement, relevant provisions of Security Council and Board
+resolutions, Iran is not implementing the provisions of the modified Code 3.1 of the Subsidiary
+Arrangements General Part to its Safeguards Agreement.
+40. The modified Code 3.1 provides for the submission to the Agency of design information for new
+nuclear facilities as soon as the decision to construct, or to authorize construction of, a new facility has
+been taken, whichever is the earlier. The modified Code 3.1 also provides for the submission of fuller
+design information as the design is developed early in the project definition, preliminary design,
+construction, and commissioning phases.22
+41. Iran stopped implementing modified Code 3.1 on 23 February 2021.23 The Agency has reminded
+Iran on many occasions that implementation of modified Code 3.1 is a legal obligation for Iran under the
+Subsidiary Arrangements to its NPT Safeguards Agreement. In February 2024, the Agency again
+reiterated to Iran that the Subsidiary Arrangements cannot be modified, or their implementation
+suspended, unilaterally by Iran. The Agency reminded Iran that Iran had accepted modified Code 3.1 in
+2003 and that, according to Article 39 of Iran’s NPT Safeguards Agreement, the Subsidiary Arrangements
+can only be changed by agreement with the Agency. Iran remains the only State with significant nuclear
+activities in which the Agency is implementing a CSA that is not implementing the provisions of the
+modified Code 3.1.
+42. Iran’s failure to implement the provisions of modified Code 3.1 has prevented the Agency from
+receiving early design information for any of the new nuclear reactors24 which Iran has publicly
+__________________________________________________________________________________
+20 ‘Update on Developments in Iran’, dated 19 June 2025.
+21 HWPP is not a nuclear facility.
+22 The initial Code 3.1 only required the submission of design information for a new facility “normally not later than 180 days
+before the facility is scheduled to receive nuclear material for the first time”.
+23 GOV/INF/2021/13.
+24 Information published on the AEOI website in June 2023 indicated that Iran had decided the locations for new power reactors
+and a new research reactor in Iran (GOV/2023/43, footnote 29). In November 2023, Vice-President Eslami made a statement
+
+GOV/2026/8
+Page 9
+
+announced it plans to construct. This significantly obstructs the Agency’s ability to conduct DIVs in
+respect of such new facilities and to provide assurance of the peaceful nature of Iran’s nuclear programme.
+
+E.7. Additional Protocol
+43. Contrary to the relevant provisions of Security Council and Board resolutions, Iran is not
+implementing its Additional Protocol (AP). Iran is called upon to act in strict accordance with the
+provisions of the AP and promptly to ratify it. The Additional Protocol equips the Agency with important
+additional tools that provide broader access to information and locations. The measures provided for under
+the AP thus significantly increase the Agency’s ability to verify the peaceful use of all nuclear material in
+Iran.
+44. Iran stopped provisionally applying its AP in February 2021, since which date Iran has not provided
+updated declarations and the Agency has not been able to conduct complementary access to any sites and
+other locations in Iran. Unless and until Iran implements its AP, the Agency will not be in a position to
+provide credible assurance about the absence of undeclared nuclear material and activities in Iran.25
+
+F. Unresolved safeguards issues
+F.1. Comprehensive Assessment
+45. The Director General’s report of 31 May 202526 provided a “comprehensive and updated assessment
+on the possible presence or use of undeclared nuclear material in connection with past and present
+outstanding issues regarding Iran’s nuclear programme”. The report identified a number of unresolved
+safeguards issues related, inter alia, to Iran not declaring nuclear material and nuclear-related activities at
+undeclared locations; the possible presence of undeclared nuclear material in Iran; and Iran’s limited
+cooperation with the Agency to address the outstanding safeguards issues. Unless and until Iran assists
+the Agency in resolving these issues, the Agency will not be in a position to provide assurance that Iran’s
+nuclear programme is exclusively peaceful.
+
+F.2. Board Resolution
+46. The Board considered the Director General’s report and, on 12 June 2025, adopted resolution
+GOV/2025/38 in which the Board, inter alia:
+
+found that “Iran’s many failures to uphold its obligations… constitutes non-compliance with
+its obligations under its Safeguards Agreement” (operative paragraph 3);
+
+found that “the Agency is not able to verify that there has been no diversion of nuclear
+material” (operative paragraph 4);
+
+reaffirmed its decision that “it is essential and urgent in order to ensure verification of the nondiversion of nuclear material that Iran act to fulfil its legal obligations” (operative paragraph 7);
+__________________________________________________________________________________
+referring to the excavation of the main building of the planned IR-360 reactor “in the coming days” and information available on
+the AEOI website referred to the “start of the executive operation of the construction of “Iran Hormoz” nuclear power plants by
+order of the president” (GOV/2024/8, para. 20).
+25 Iran’s Additional Protocol was approved by the Board of Governors on 21 November 2003 and signed by Iran on
+18 December 2003, although it has not been brought into force. Iran provisionally implemented its Additional Protocol between
+December 2003 and February 2006.
+26 GOV/2025/25.
+
+GOV/2026/8
+Page 10
+
+
+called upon Iran to “urgently remedy its non-compliance with its Safeguards Agreement”
+(operative paragraph 10); and
+
+
+decided to remain seized of the matter (operative paragraph 13).
+
+F.3. Recent developments
+47. During this reporting period Iran has not engaged the Agency on the unresolved safeguards issues
+described in the Director General’s report, GOV/2025/25.
+
+G. Summary
+48. To date, Iran has not provided to the Agency any report on the status for safeguards purposes of the
+nuclear facilities affected by the military attacks of June 2025 and associated nuclear material, or provided
+access to these facilities as required under its NPT Safeguards Agreement. Therefore, the Agency was
+unable to discharge its safeguards responsibilities at these facilities in Iran. Consequently, the Agency
+cannot verify the status, for safeguards purposes, of these affected nuclear facilities and associated nuclear
+material.
+49. Overall, the Agency cannot verify:
+
+
+whether Iran has suspended all enrichment-related activities, including research and
+development;
+
+
+
+whether Iran has suspended all reprocessing activities;
+
+
+
+the size of Iran’s uranium stockpile at the affected facilities;
+
+
+
+whether Iran has suspended work on all heavy water-related projects;
+
+
+
+Iran’s inventories of centrifuges and related equipment.
+
+In addition, Iran is not implementing the modified Code 3.1 of the Subsidiary Arrangements General Part,
+nor is it implementing the Additional Protocol. Moreover, in light of Iran’s continued unwillingness to
+address the unresolved safeguards issues, the Agency has outstanding concerns about the possible
+presence of undeclared nuclear material and activities in Iran.
+50. The Director General has emphasized to Iran that it is indispensable and urgent to implement
+effectively the NPT Safeguards Agreement, which remains in force, and that its implementation cannot
+be suspended by Iran under any circumstances.
+51. While the Agency acknowledged that the military attacks on Iran’s nuclear facilities had created an
+unprecedented situation, it is critical for it to conduct verification activities in Iran without any further
+delay in accordance with the NPT Safeguards Agreement and, as required, under the relevant provisions
+of Security Council and Board resolutions.
+52. Within the group of affected facilities, it is a matter of increasing concern that Iran has never
+provided the Agency with access to its fourth declared enrichment facility since it was first declared by
+Iran in June last year.
+53. Iran is the only NPT non-nuclear-weapon State to have produced and accumulated uranium enriched
+up to 60% U-235, of which it had accumulated 440.9 kg by the time of the military attacks in mid-June
+2025. The Agency’s lack of access to verify the previously declared HEU and LEU, for over eight months
+– which is long overdue according to standard safeguards practice – is a matter of proliferation concern
+
+GOV/2026/8
+Page 11
+
+and of compliance with the NPT Safeguards Agreement. The Agency’s loss of continuity of knowledge
+over all previously declared nuclear material at affected facilities in Iran needs to be addressed with the
+utmost urgency.
+54. The Director General notes that once again Iran has not engaged the Agency during this reporting
+period on the unresolved safeguards issues.
+55. The Director General calls on Iran to engage the Agency constructively in order to facilitate the full
+and effective implementation of safeguards in Iran in accordance with the NPT Safeguards Agreement
+and implement the relevant provisions of Security Council and Board resolutions.
+56. On 17 and 26 February 2026, the Director General was in attendance at the negotiations between the
+United States of America and Iran, in which he provided advice on issues relevant to the verification of
+Iran’s nuclear programme. The bilateral negotiations are ongoing and are without prejudice to Iran’s
+obligations under its NPT Safeguards Agreement. A successful outcome of these negotiations would have
+a positive impact on the effective implementation of safeguards in Iran and the resolution of issues
+described in this report. Technical discussions will take place in Vienna in the week beginning
+2 March 2026.
+57. The Director General will continue to report as appropriate.
+
+GOV/2026/8
+Page 12
+
+Annex I
+List of Declared Nuclear Facilities and LOF in Iran
+Tehran:
+1.
+2.
+3.
+4.
+
+Tehran Research Reactor (TRR)
+Process Research Facility (PRF)
+Molybdenum, Iodine and Xenon Radioisotope Production Facility (MIX Facility)
+Jabr Ibn Hayan Multipurpose Laboratories (JHL)
+Isfahan:
+
+5. Isfahan Fuel Enrichment Plant (IFEP)
+6. Miniature Neutron Source Reactor (MNSR)
+7. Light Water Sub-Critical Reactor (LWSCR)
+8. Heavy Water Zero Power Reactor (HWZPR)
+9. Uranium Conversion Facility (UCF)
+10. Fuel Manufacturing Plant (FMP)
+11. Fuel Plate Fabrication Plant (FPFP)
+12. Enriched UO2 Powder Plant (EUPP)
+13. Isfahan Research Reactor 10MW (IRR-10)
+Natanz:
+14. Fuel Enrichment Plant (FEP)
+15. Pilot Fuel Enrichment Plant (PFEP)
+Fordow:
+16. Fordow Fuel Enrichment Plant (FFEP)
+Arak:
+17. Khondab Heavy Water Research Reactor (KHRR)
+Karaj:
+18. Karaj Waste Storage
+Bushehr:
+19. Bushehr Nuclear Power Plant (BNPP) Unit 1 (BNPP-1)
+20. Bushehr Nuclear Power Plant (BNPP) Unit 2 (BNPP-2)
+21. Bushehr Nuclear Power Plant (BNPP) Unit 3 (BNPP-3)
+Darkhovin:
+22. Karun Nuclear Power Plant (KNPP)
+Location outside facilities:
+One location outside facilities where nuclear material is customarily used (LOF), (situated on the
+AEOI’s Tehran site)
+
+

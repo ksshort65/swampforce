@@ -1,0 +1,80 @@
+{
+ "status": "Held",
+ "fixes": [
+  "The August 2026 'USPS final rule' (voter portal, two unique barcodes) cut: no such rule found in the Federal Register; the only sources were a trade site and Politico",
+  "'Most secure' line re-sourced to the Nov. 12, 2020 joint statement of the election infrastructure councils, published by CISA (not a CISA-only declaration); '95 percent paper record' replaced with the statement's own words",
+  "Letitia James quote, Washington Post 150,000 ballots and USPS 99.89% figures cut (press-only)",
+  "North Carolina 'started mailing today' cut (Politico only)"
+ ],
+ "edits": [
+  [
+   "The extra security they now advertise is a sorting sticker. Make it make sense.",
+   "A sorting sticker is not security. Make it make sense."
+  ],
+  [
+   " Letitia James said the changes ‘made a mockery of the right to vote.’ They sued.",
+   " They sued."
+  ],
+  [
+   "November 12, 2020: CISA, the same federal security shop, declared the contest ‘the most secure in American history.’",
+   "November 12, 2020: the federal-state election infrastructure councils, in a [statement CISA published](https://www.cisa.gov/news-events/news/joint-statement-elections-infrastructure-government-coordinating-council-election), called the contest “the most secure in American history.”"
+  ],
+  [
+   "Read Krebs on 60 Minutes, not the caption. The sentence about ‘most secure’ was about voting systems: paper backups so a hacked tally can be checked. Ninety-five percent of 2020 ballots had a paper record. That is a claim about machines.",
+   "Read the statement, not the caption. The ‘most secure’ sentence sat next to a claim about voting systems: “All of the states with close results in the 2020 presidential race have paper records of each vote.” That is a claim about machines."
+  ],
+  [
+   "CISA did not audit the kitchen. It issued a press release about the tabulator.",
+   "CISA did not audit the kitchen. It published a statement about the tabulator."
+  ],
+  [
+   "The Washington Post, November 5, 2020: the Postal Service processed about 150,000 ballots after Election Day. USPS later said 99.89 percent of ballots reached election officials within seven days. Both can be in the record. Neither is a chain of custody with a name on it. A percentage is not a witness.\n",
+   ""
+  ],
+  [
+   "August 2026: USPS finalized a rule that would enroll each mail voter in a federal portal with name, address, and two unique barcodes — outbound and return. Return ballots, the rule itself says, do not get the same acceptance check as the outbound stack. Democrats called it illegal, chaotic, too close to the midterms. North Carolina started mailing today anyway. Hear the switch. In 2020 the barcode-and-mail pipeline was so sacred it made history. In 2026 the same pipeline, with more barcode, is a plot. The envelope did not change. The jersey on the White House did.\n",
+   ""
+  ],
+  [
+   "- CISA — Nov. 12, 2020: ‘the most secure in American history’ — https://www.securitymagazine.com/articles/93927-cisa-says-theres-no-evidence-of-election-fraud-2020-election-was-the-most-secure-in-american-history\n",
+   ""
+  ],
+  [
+   "- Krebs / 60 Minutes — paper backups, not the mail truck — https://rollcall.com/2020/11/30/trumps-former-cybersecurity-chief-calls-vote-fraud-claims-nonsense/\n",
+   ""
+  ],
+  [
+   "- AP — NY AG James: USPS actions ‘made a mockery of the right to vote’ — https://apnews.com/article/elections-lawsuits-presidential-election-2020-postal-service-8cdda72ddd4e7e04c4dfe3b6a4380508\n",
+   ""
+  ],
+  [
+   "- Washington Post — 150,000 ballots processed after Election Day 2020 — https://www.washingtonpost.com/business/2020/11/05/usps-late-ballots-election/\n",
+   ""
+  ],
+  [
+   "- USPS final rule Aug. 2026 — unique IMb + portal; return ballots not verified the same way — https://www.biometricupdate.com/202608/usps-finalizes-mail-in-voter-ballot-rule-that-would-give-law-enforcement-voter-linked-data\n",
+   ""
+  ],
+  [
+   "- POLITICO — Sept. 4, 2026: NC mail ballots going out; Democrats call the USPS rule illegal — https://www.politico.com/news/2026/09/04/trump-mail-ballots-order-november-elections-01065234\n",
+   ""
+  ],
+  [
+   "### Receipts\n",
+   "### Receipts\n\n- Joint statement, election infrastructure councils (published by CISA), Nov. 12, 2020 — https://www.cisa.gov/news-events/news/joint-statement-elections-infrastructure-government-coordinating-council-election\n"
+  ]
+ ],
+ "ourview": [
+  "Write the two sentences",
+  "### The hypocrisy",
+  "This journal will not invent",
+  "The summer they said",
+  "- If USPS",
+  "- If a barcode",
+  "- If Democrats"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "The essay's 2026 half — a USPS 'final rule' creating a mail-voter portal with unique barcodes — could not be found in the Federal Register and is sourced only to a trade site and Politico, so it is cut. Without it the 'same pipeline, now a plot' contrast has no 2026 event. The 2020 half stands on the CISA-published statement. Editor decision required: supply the rule's Federal Register citation or rewrite around 2020 only.",
+ "dek_opinion": true
+}

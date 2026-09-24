@@ -1,0 +1,633 @@
+Short-Term Energy
+Outlook
+September 2026
+
+September 2026
+
+The U.S. Energy Information Administration (EIA), the statistical and analytical agency within the
+U.S. Department of Energy (DOE), prepared this report. By law, our data, analyses, and forecasts are
+independent of approval by any other officer or employee of the U.S. Government. The views in this
+report do not represent those of DOE or any other federal agencies. The Short-Term Energy Outlook
+(STEO) is prepared in accordance with sections 52(b) and 57(a)(1) of Federal Energy Administration Act
+of 1974, as amended, and section 1245(d(4)(A) of the National Defense Authorization Act (NDAA) for
+Fiscal Year 2021, as amended.
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+1
+
+September 2026
+
+Short-Term Energy Outlook
+Overview
+U.S. energy market indicators
+
+2025
+
+2026
+
+2027
+
+Brent crude oil spot price (dollars per barrel)
+
+$69
+
+$91
+
+$74
+
+Retail gasoline price (dollars per gallon)
+
+$3.10
+
+$3.84
+
+$3.35
+
+U.S. crude oil production (million barrels per day)
+Natural gas price at Henry Hub (dollars per million British
+thermal units)
+U.S. liquefied natural gas gross exports (billion cubic feet
+per day)
+
+13.7
+
+13.8
+
+14.3
+
+$3.53
+
+$3.43
+
+$3.28
+
+15
+
+17
+
+19
+
+Natural gas
+
+40%
+
+40%
+
+40%
+
+Coal
+
+17%
+
+16%
+
+14%
+
+Nuclear
+
+18%
+
+18%
+
+18%
+
+Conventional hydropower
+
+6%
+
+6%
+
+6%
+
+Wind
+
+11%
+
+11%
+
+12%
+
+Solar
+
+7%
+
+8%
+
+9%
+
+Other energy sources
+
+1%
+
+1%
+
+1%
+
+2.1%
+
+2.1%
+
+2.4%
+
+4.9
+
+4.8
+
+4.8
+
+Shares of U.S. electricity generation
+
+U.S. GDP (percentage change)
+U.S. CO2 emissions (billion metric tons)
+
+Data source: U.S. Energy Information Administration, Short-Term Energy Outlook, September 2026
+Note: Values in this table are rounded and may not match values in other tables in this report.
+
+•
+
+Global oil market assumptions. We forecast oil production in the Middle East will rise in the
+coming months because of gradually increasing flows through the Strait of Hormuz and the use
+of alternative routes out of the region, according to our September 2026 Short-Term Energy
+Outlook (STEO). However, we assume some constraints to exporting oil from the Middle East
+will persist through the end of the year, which keeps crude oil production in the region below
+pre-conflict averages until the second quarter of 2027 (2Q27).
+
+•
+
+Global oil prices. Global oil prices rose to an average of $91 per barrel (b) in August, $7/b higher
+than in July. Prices remain elevated in response to falling global oil inventories, which we
+estimate have decreased by 400 million barrels so far this year. We expect inventories will
+continue falling through the end of 2026, which will keep prices near the August monthly
+average in the coming months. We now forecast the Brent crude oil spot price to average
+around $90/b in 2H26. As oil production rises into next year, and as inventories rebuild, we
+expect the Brent spot price to gradually fall to an average of $74/b in 2027.
+
+•
+
+Distillate fuel oil inventories. We forecast U.S. distillate fuel oil inventories will drop below 100
+million barrels in September and will remain below the five-year (2021–2025) low through much
+of 2027. Tightness in the global distillate market has raised domestic prices and incentivized U.S.
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+2
+
+September 2026
+exporters to increase distillate exports. We assume global production of distillate fuel will
+remain below last year’s levels in the coming months, contributing to low U.S. diesel inventories
+and high diesel prices.
+•
+
+Natural gas storage. U.S. natural gas inventories are on track to be above the five-year average
+at the start of winter. We forecast natural gas inventories will total 3,969 billion cubic feet on
+October 31, 2026—the end of the injection season—5% above the five-year average. Rising
+natural gas production in the Permian and Haynesville regions has supported inventory builds
+over the summer.
+
+•
+
+Electricity demand. The United States uses record amounts of electricity in our forecast. We
+expect electricity sales in the United States to total 4,135 billion kilowatthours (BkWh) in 2026
+and 4,211 BkWh in 2027, driven by data center development and increased manufacturing
+activity in the commercial and industrial sectors. Despite a pause in connecting new data center
+projects in Texas to the grid, the West South Central region accounts for the largest share of
+total electricity sales growth in our forecast.
+
+•
+
+Forecast timeline. We finalized inputs into the model on September 3, 2026. This month’s
+forecast does not specifically account for market events after that day.
+
+Notable forecast changes
+Current forecast: September 9, 2026; previous forecast: August 11, 2026
+
+2026
+
+2027
+
+Distillate crack spread (dollars per gallon)
+
+$1.57
+
+$1.25
+
+Previous forecast
+
+$1.30
+
+$0.97
+
+Percentage change
+
+20.8%
+
+28.5%
+
+$5.07
+
+$4.40
+
+Previous forecast
+
+$4.85
+
+$4.07
+
+Percentage change
+
+4.4%
+
+8.2%
+
+761
+
+790
+
+765
+
+829
+
+-0.5%
+
+-4.7%
+
+Retail diesel price (dollars per gallon)
+
+West South Central region electricity sales (billion kilowatthours)
+Previous forecast
+Percentage change
+Data source: U.S. Energy Information Administration, Short-Term Energy Outlook
+Note: Percentages and changes are calculated from unrounded values.
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+3
+
+September 2026
+
+Global Oil Markets
+Global oil prices
+The Brent crude oil spot price increased to an average of $91 per barrel (b) in August, $7/b higher than
+in July. Global crude oil prices rose in August as total exports out of the Middle East remained
+constrained, leading to more oil production shut-ins in the region. This is due, in part, to the renewal of
+the U.S. blockade on Iran’s oil exports following Iran’s attacks on tankers in the Strait of Hormuz, as well
+as because of a new rounds of sanctions from the Treasury Department’s Office of Foreign Assets
+Control against Iranian economic and oil interests. We expect these policies to restrict Iran’s oil exports
+and reduce its oil production.
+In addition, attacks on Saudi Arabia’s oil exports through the Bab el-Mandeb strait, a major world oil
+transit chokepoint, reduced oil exports departing from Saudi Arabia’s Yanbu port on the Red Sea, a route
+which bypasses the Strait of Hormuz. In August, exports out of Yanbu were down by about half from
+July, according to estimates from Vortexa. In response, Saudi Arabia has increased oil shipments through
+the Suez Canal at the north end of the Red Sea, a longer and costlier route for customers in Asia.
+Although Saudi Arabia has also reportedly begun to use a series of ship-to-ship transfers outside of the
+Persian Gulf, we expect that the constrained Red Sea shipping channel will limit Saudi Arabia’s supply in
+the near term until global shipping flows adjust.
+Table 1. Estimated Strait of Hormuz closure-related disruptions in crude oil production
+thousand barrels per day
+Estimated
+shut-ins
+
+Estimated
+
+Estimated
+
+Forecast
+
+Forecast
+
+Forecast
+
+Production
+
+Mar–June-26
+
+shut-ins
+
+shut-ins
+
+shut-ins
+
+shut-ins
+
+shut-ins
+
+Country
+
+Feb-26
+
+Average
+
+Jul-26
+
+Aug-26
+
+3Q26
+
+4Q26
+
+1Q27
+
+Kuwait
+
+2,560
+
+1,648
+
+850
+
+680
+
+UAE
+
+3,600
+
+925
+
+0
+
+0
+
+Iran
+
+3,390
+
+455
+
+200
+
+1,000
+
+aggregate disruptions for
+
+Iraq
+
+4,400
+
+2,880
+
+1,720
+
+1,160
+
+future months.
+
+Qatar
+
+557
+
+463
+
+150
+
+200
+
+Bahrain
+
+193
+
+143
+
+110
+
+130
+
+10,500
+
+2,923
+
+1,950
+
+3,550
+
+Saudi Arabia
+
+We only forecast
+
+Total
+25,200
+9,435
+4,980
+6,720
+6,230
+5,663
+Data source: U.S. Energy Information Administration, Short-Term Energy Outlook, September 2026
+
+2,717
+
+As flows through the Strait of Hormuz and the Bab el-Mandeb strait remain constrained and variable,
+crude oil production shut-ins rose over the past month. We assess that crude oil production shut-ins
+averaged 6.7 million barrels per day (b/d) in August, up from 5.0 million b/d in July. We assume that oil
+flows from the Middle East remain constrained through the fourth quarter of 2026 (4Q26), leading to
+shut-in production volumes averaging 5.7 million b/d during that quarter.
+Although we raised our forecast for production disruptions in coming months, we expect oil flows out of
+the Middle East will gradually increase as shippers continue to find workarounds that allow them to
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+4
+
+September 2026
+export oil from the Middle East: using pipeline and overland bypass routes, increasing ship-to-ship
+transfers, and using new bypass pipeline capacity in the United Arab Emirates, expected to come online
+in mid-2027. If these assumptions hold, we expect it will take until 2Q27 for most production and trade
+flows to return to pre-conflict averages. We anticipate, however, that some producers around the
+Persian Gulf will not be able to bring oil output back to pre-conflict averages during the forecast period.
+Because of the large drawdown in global inventories driven by continued disruptions of crude oil
+production, we forecast that oil prices will remain elevated until global oil flows return to normal and oil
+inventories can be replenished. We estimate that global oil inventories fell by an average of 3.9 million
+b/d in 2Q26 and that they will fall by an additional 3.0 million b/d on average in 3Q26 and 1.7 million
+b/d on average in 4Q26. As a result, we forecast the Brent crude oil spot price will average around $90/b
+in the second half of 2026 (2H26), $8/b higher than in last month’s STEO.
+As exports from the Middle East gradually increase and shut-in oil production restarts, we forecast oil
+prices will begin to fall, decreasing to an average of $77/b by 2Q27. We assess that most shut-in oil
+production will be largely restored in 2H27 and that global oil inventories will again start building,
+gradually lowering oil prices to an average of $67/b in 2H27, similar to last month’s STEO. However, we
+expect continued volatility in flows both through the Strait of Hormuz and through alternative routes
+based on changing conditions in the conflict, which will likely lead to more volatility in short-term price
+movements than our forecast indicates.
+
+U.S. Petroleum Products
+U.S. distillate inventories
+We forecast inventories of distillate fuel oil—often sold as diesel—in the United States to fall below 100
+million barrels in September and remain below the five-year (2021–2025) low through the end of 2026
+and most of 2027. Distillate inventories fell below the five-year range in April, coinciding with high U.S.
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+5
+
+September 2026
+net exports of the fuel following the loss of large amounts of distillate supply from the Middle East,
+Russia, and China. The low inventories are reflected in global distillate prices, which have increased
+throughout the summer in response to lower international refinery production of distillate fuel oil.
+
+Tightness in the global distillate market raises global prices for distillate and incentivizes U.S. exports of
+distillate. In the STEO, we assume that global production of distillate fuel will remain below last year’s
+levels in the coming months, which contributes to our forecast of higher net exports of distillate.
+Net exports of distillate have been above or near the five-year high in every month of 2026 since
+February. Low distillate inventories contribute to higher domestic diesel prices. We expect this effect
+will be particularly pronounced because of seasonal drops in distillate production and seasonal increases
+in distillate consumption during the fall and winter. Distillate production typically decreases during the
+fall refinery maintenance season while harvest-season agricultural demand for distillate increases. Low
+inventories may also contribute to higher prices for residential heating oil in the Northeastern United
+States.
+
+U.S. diesel crack spreads
+We estimate U.S. average diesel crack spreads to exceed $2 per gallon from August through November,
+before decreasing steadily through mid-2027. This decrease assumes a return to normal tanker traffic
+through the Strait of Hormuz in the near term, allowing refineries in Saudia Arabia and Kuwait to
+increase exports of distillate to the global market. We also expect the return of free-flowing crude oil
+through from the Middle East will improve the availability of crude oil supplies to East Asian refiners,
+who may increase production, thereby further contributing to lower international crack spreads. If the
+flows out of the Middle East remain constrained beyond the end of 2026, we would expect to see higher
+distillate crack spreads globally than what is included in our current forecast. Global distillate prices face
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+6
+
+September 2026
+additional upward pressure from the loss of refinery activity in Russia. We estimate that those refinery
+outages will continue to affect the global market through the first half of 2027.
+
+Natural Gas
+Natural gas storage
+U.S. natural gas inventories are set to be relatively high heading into the winter heating season. We
+forecast U.S. working natural gas inventories will total 3,969 billion cubic feet (Bcf) on October 31, 2026,
+5% above the previous five-year average (2021–2025) and 1% above October 2025 levels. Relatively high
+inventories in part reflect strong growth in natural gas production in recent months. Regional balances
+vary entering the withdrawal season (November—March), with inventories in the Mountain region at
+21% above their five-year average, followed by the Pacific at 10%, the Midwest at 6%, and South Central
+at 4%. Inventories in the East are expected to enter the withdrawal season about equal to the five-year
+average.
+Lower relative inventories in the East largely stem from a lower starting point for the injection season
+relative to the other regions and more limited regional production growth. Inventories in the region
+began the injection season 11% below the five-year average, following relatively large winter
+withdrawals owing to colder-than-normal weather. Although Appalachian natural gas production
+remains near record highs, its growth has been slower this year compared with other regions.
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+7
+
+September 2026
+
+Natural gas production
+U.S. marketed natural gas production continues to grow in our forecast, providing additional supply to
+meet demand and support storage additions. Production increases by 4.5 billion cubic feet per day
+(Bcf/d) in 2026 and 4.6 Bcf/d in 2027. The Permian and Haynesville regions together account for more
+than 70% of production growth in our forecast.
+
+Permian production in our forecast grows by 1.7 Bcf/d in 2026 and 2.2 Bcf/d in 2027. Most Permian
+natural gas production is associated with crude oil production. Natural gas production in the region has
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+8
+
+September 2026
+been growing faster than crude oil production as natural gas-to-oil ratios increase. The Permian natural
+gas-to-oil ratio averaged nearly 4,200 cubic feet per barrel in 2025, 15% higher than in 2021.
+Additionally, pipeline capacity additions help support production growth through the forecast period.
+Energy Transfer’s Hugh Brinson pipeline—which originates in the Permian—began interstate natural gas
+shipments in June, which is earlier than we had previously expected. The pipeline will ramp up flows
+through early 2027.
+Haynesville production in our forecast increases by 1.4 Bcf/d in 2026 and by 1.3 Bcf/d in 2027,
+supported by forecast stable natural gas prices at Henry Hub, the region’s proximity to Gulf Coast
+liquefied natural gas export terminals, and nearby industrial demand. Appalachian production increases
+by about 0.6 Bcf/d in 2026 and 0.3 Bcf/d in 2027.
+
+Electricity, Coal, and Renewables
+Electricity consumption
+Electricity consumption reaches record levels in our forecast, driven by data center development and
+increased manufacturing activity in the commercial and industrial sectors. We expect electricity sales in
+the United States to total 4,135 billion kilowatthours (BkWh) in 2026, an increase of almost 2% over
+2025. We expect an additional growth of nearly 2% in electricity sales in 2027, with total electricity
+consumption totaling 4,211 BkWh in 2027. We forecast that commercial sector electricity sales will
+increase by 3.3% in 2026 and 2.7% in 2027, accounting for 63% and 56% of the increase in electricity
+sales in those years. We forecast industrial sector electricity sales will rise 1.6% in 2026 and 2.6% in
+2027, accounting for an additional 22% and 36% of increased electricity sales, respectively. Although
+Texas has paused the connection of new data centers to the grid to facilitate a regulatory audit of
+proposed data center projects, the West South Central region still accounts for the largest regional share
+of growth in total electricity sales, totaling nearly 20% of nationwide growth in 2026 and nearly 40% in
+2027.
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+9
+
+September 2026
+
+Electricity generation
+Electricity generation grows in line with electricity use in the forecast. With natural gas generation in the
+United States rising by 2% in 2026 and 1% in 2027, coal generation falls by 8% in 2026 and 6% in 2027.
+As wind and utility-scale solar capacity continues to be added to the grid, we expect solar generation to
+grow by 21% in 2026 and by 18% in 2027, while wind generation grows 7% in 2026 and 5% in 2027.
+We expect the PJM interconnection to account for nearly 45% of the growth in total U.S. generation in
+our forecast, with natural gas generation driving the increase in 2026 and natural gas, coal, and wind
+generation driving the increase in 2027. Meanwhile, the growth in solar generation is concentrated in
+the parts of the grid managed by the Electric Reliability Council of Texas (ERCOT) and the Midcontinent
+Independent System Operator (MISO). In 2026, we expect added solar generation of 18 BkWh in ERCOT
+and 13 BkWh in MISO, followed by an additional 20 BkWh in ERCOT and 11 BkWh in MISO in 2027.
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+10
+
+September 2026
+
+Coal markets
+Reduced demand for coal in the electric power sector leads to lower coal production in our forecast. We
+expect coal production to fall from 528 million short tons (MMst) in 2025 to 516 MMst in 2026 and 497
+MMst in 2027. The decline is driven primarily by the Western region, which produces about half of total
+coal supply in the country. We expect production in the Western region to decline by about 4% in 2026
+and another 5% in 2027, to a total of 260 MMst. Smaller changes are expected in the Appalachian
+region, where production in 2026 remains relatively flat before declining by about 2% in 2027. The
+Interior region also is expected to have similar production levels in 2026 as last year, before dropping by
+about 5% in 2027 to 79 MMst.
+Although coal exports in our forecast increase compared with 2025, we forecast domestic demand for
+coal from the electric power sector will decline by 8% in 2026 and 6% in 2027, as natural gas and
+renewables generation in the Northwest and MISO regions increases.
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+11
+
+September 2026
+
+Economy, CO2, and Weather
+U.S. macroeconomics
+To generate the macroeconomic assumptions in the Short-Term Energy Outlook (STEO), we input STEO
+energy price forecasts into S&P Global’s Short-Term U.S. Macroeconomic Model to produce a
+conditional macroeconomic forecast. For more details on the macroeconomic model, see our
+documentation.
+
+Emissions
+We forecast U.S. energy-related carbon dioxide (CO2) emissions to decrease by 1.7% in 2026 relative to
+2025 and to decrease by 0.1% in 2027. In 2026, decreases in CO2 emissions are due primarily to
+expected declines in coal consumption and, to a lesser extent, declines in consumption of various
+petroleum products, most notably motor gasoline and distillate fuel oil. Declines in both coal-related
+and petroleum-related emissions are expected to continue in 2027 but are offset by rising natural gasrelated emissions, largely in the form of natural gas-fired electricity generation, resulting in a net
+decrease in total CO2 emissions.
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+12
+
+September 2026
+
+Weather
+We expect average temperatures in the final weeks of summer (June—September) to slightly offset
+warmer-than-average temperatures in July and August. Based on our current forecasts and data from
+the National Oceanic and Atmospheric Administration, we expect the United States to average 208
+cooling degree days (CDDs) in September, 3% more CDDs than September 2025 about the same as the
+10-year monthly average. Overall, our forecast assumes 2026 will be warmer than average, supported
+by warmer weather this summer—5% more CDDs than the 10-year summer average—and 5% fewer
+heating degree days in the first quarter of 2026 than the 10-year quarterly average.
+
+U.S. Energy Information Administration | Short-Term Energy Outlook
+
+13
+
+

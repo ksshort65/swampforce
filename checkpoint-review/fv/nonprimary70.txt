@@ -1,0 +1,420 @@
+=== #3 [media_claim_vs_record] Verified | Only their party
+T: CLAIM: It is a Democratic scandal. Or it is a Republican scandal. The channel decides. | TRUTH: The flight logs and the photographs show people from both parties’ worlds. A log records a passenger. It is not a charge. Naming one side and cutting the other is how the outrage was manufactured. The victims are not a party’s property.
+L: https://www.documentcloud.org/documents/25993306-doj-epstein-july-2025-memo
+B: https://politifact.com/factchecks/2025/feb/24/social-media/did-philadelphia-eagles-decline-trump-white-house/
+N: Duplicate of catalog LT-130. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #4 [media_claim_vs_record] Verified | The slogan, not the children
+T: CLAIM: Say Epstein, and you have proved you care about children. The other children are politics. | TRUTH: Maxwell’s conviction is the case about his victims. It is not a substitute for the children the government could not account for at the border. HHS said caseworkers could not reach sponsors on a follow-up call. CBP counted 10.83 million nationwide encounters in fiscal years 2021 through 2024. Using one set of victims as a slogan, and treating the other count as a party fight, is the manufacture. Both counts are children.
+L: https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics
+B: https://politifact.com/factchecks/2018/may/29/donald-trump/trump-correctly-tweets-democrats-mistakenly-tweete/
+N: Duplicate of catalog FT-3. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #5 [media_claim_vs_record] Verified | Clear and present danger
+T: CLAIM: He is a clear and present danger. Ordinary law is too slow. Break it to stop him. | TRUTH: The phrase is a speech test. Brandenburg v. Ohio, 395 U.S. 444, replaced Schenck: the state may punish speech only if it is meant to produce imminent lawless action and is likely to. It limits the government. It is not a finding, and it is not a license to break the law to stop an elected opponent.
+L: https://supreme.justia.com/cases/federal/us/395/444/
+B: https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/
+N: Duplicate of catalog FT-36. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #6 [media_claim_vs_record] Verified with correction needed | Domestic terrorists
+T: CLAIM: Parents at school boards are a domestic-terror problem. | TRUTH: The National School Boards Association asked the White House. On October 4, 2021, Attorney General Merrick Garland ordered U.S. Attorneys and the FBI to coordinate. Parents speaking at a school board are not a terrorism case.
+L: https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf
+B: https://www.politifact.com/factchecks/2019/apr/11/cory-booker/donald-trump-cut-funding-investigate-domestic-terr/
+N: Duplicate of catalog FT-175. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #7 [media_claim_vs_record] Verified | War of choice
+T: CLAIM: It is a reckless war of choice. Iran was not a nuclear problem. | TRUTH: Hakeem Jeffries used “war of choice.” Members repeated it on the House floor on March 4, 2026. The sentence leaves out the stockpile. IAEA GOV/2026/50 counted 440.9 kilograms of uranium enriched up to 60 percent as of June 13, 2025. A civilian reactor uses about 3 to 5 percent. Weapons-grade is about 90. Iran is the only non-weapon state at 60 percent. A power plant does not need that fuel. Omitting the number is how a half-truth is posted.
+L: https://www.iaea.org/sites/default/files/gov2026-50.pdf
+B: https://www.cnn.com/2017/01/30/politics/donald-trump-supreme-court-choice-announcement-coming-tuesday-8-p-m-
+N: Duplicate of catalog FT-81. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #8 [media_claim_vs_record] Verified | Illegal war
+T: CLAIM: It is Trump’s illegal war. One hundred days. The enrichment is not mentioned. | TRUTH: Chuck Schumer posted “100 days of Trump’s illegal war.” Ro Khanna called it immoral, illegal, and unstrategic. A fight over whether Congress authorized the force is a real constitutional argument. It is not a finding that the uranium was never there. The inspectors wrote 440.9 kilograms up to 60 percent before the June 2025 strikes, then lost access. Denying the enrichment is denying an inspection that already happened.
+L: https://www.iaea.org/sites/default/files/gov2026-50.pdf
+B: https://www.politifact.com/factchecks/2019/nov/21/pete-buttigieg/pete-buttigieg-falsely-says-donald-trump-illegally/
+N: Duplicate of catalog FT-170. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #14 [media_claim_vs_record] Verified with correction needed | Slow the testing
+T: CLAIM: He ordered the country to test less. | TRUTH: At Tulsa he said he told his people, “Slow the testing down, please.” The next day, asked if he was kidding, he said, “I don’t kid.” No order cutting tests was issued to the department. The order was added.
+L: https://www.c-span.org/clip/white-house-event/user-clip-trump-doesnt-kid-about-suggesting-we-stop-testing/4888561
+B: https://www.snopes.com/fact-check/trump-us-travel-restrictions/
+N: Duplicate of catalog LT-133. Inherited Evidence_Level. Site link HTTP 403.
+F: Replace/mirror site href (HTTP 403).
+=== #18 [media_claim_vs_record] Verified with correction needed | Kids in cages
+T: CLAIM: He built the cages in 2018. | TRUTH: AP’s own fact check: the viral photographs were taken in 2014, under the prior administration, and were posted as if they were new.
+L: https://apnews.com/article/a98f26f7c9424b44b7fa927ea1acd4d4
+B: https://apnews.com/article/a98f26f7c9424b44b7fa927ea1acd4d4
+N: AP fact-check URL resolves HTTP 200.
+F: Truth = 2014 photos mislabeled as 2018 Trump cages, not denial of 2018 family-separation policy.
+=== #23 [media_claim_vs_record] Verified | The dossier
+T: CLAIM: The Steele dossier was the corroborated file. | TRUTH: It was opposition research. Horowitz: seventeen FISA inaccuracies and omissions on Carter Page. Clinesmith altered an email. That is 18 U.S.C. § 1001.
+L: https://oig.justice.gov/node/1100
+B: https://www.washingtonpost.com/lifestyle/style/media-washington-post-steele-dossier/2021/11/12/f7c9b770-43d5-11ec-a88e-2aa4632af69b_story.html
+N: Duplicate of catalog FT-39. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #38 [media_claim_vs_record] Verified | Project 2025
+T: CLAIM: He secretly wrote Project 2025 and will enact it on day one. | TRUTH: Mandate for Leadership is a Heritage Foundation book. The editors are Paul Dans and Steven Groves. His name is not on the title page. People who worked in his government also worked on the book. Overlap is not authorship.
+L: https://archive.org/details/project-2025-mandate-for-leadership-heritage-foundation/
+B: https://politifact.com/factchecks/2024/nov/01/kamala-harris/kamala-harris-wrong-that-donald-trump-would-force/
+N: Duplicate of catalog LT-42. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #48 [media_claim_vs_record] Verified with correction needed | No vaccine
+T: CLAIM: He had nothing to do with the vaccine. | TRUTH: Operation Warp Speed was his administration’s program. The first shots were authorized in December 2020, during his term.
+L: https://www.fda.gov/news-events/press-announcements/fda-approves-first-covid-19-vaccine
+B: https://politifact.com/factchecks/2021/mar/05/joe-biden/bidens-criticism-trump-administration-vaccine-cont/
+N: Duplicate of catalog LT-116. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #53 [media_claim_vs_record] Verified | Republicans paid Steele
+T: CLAIM: Republicans funded the dossier. That is the whole story. | TRUTH: A Republican donor started opposition research. The Clinton campaign and the DNC then paid Fusion GPS, which paid Steele. The FEC fined them for reporting that spending as legal services.
+L: https://www.fec.gov/files/legal/murs/7291/7291_01.pdf
+B: https://www.washingtonpost.com/lifestyle/style/media-washington-post-steele-dossier/2021/11/12/f7c9b770-43d5-11ec-a88e-2aa4632af69b_story.html
+N: Duplicate of catalog FT-39. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #56 [media_claim_vs_record] Verified with correction needed | Manafort colluded
+T: CLAIM: Manafort was convicted of colluding with Russia. | TRUTH: Paul Manafort was convicted of tax and bank-fraud counts. Collusion was not the conviction.
+L: https://www.justice.gov/archives/sco/file/1373816/dl
+B: https://www.nytimes.com/2019/01/08/us/politics/manafort-trump-campaign-data-kilimnik.html
+N: Duplicate of catalog FT-40. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #57 [media_claim_vs_record] Verified with correction needed | Stone and WikiLeaks
+T: CLAIM: Roger Stone was convicted of conspiring with Russia. | TRUTH: Stone was convicted of lying to Congress, obstruction, and witness tampering. A Russia-conspiracy count was not the verdict. A pardon followed.
+L: https://www.justice.gov/usao-dc/pr/roger-stone-found-guilty-obstruction-false-statements-and-witness-tampering
+B: https://money.cnn.com/2017/12/08/media/cnn-correction-email-story/index.html
+N: Duplicate of catalog FT-6. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #59 [media_claim_vs_record] Verified | Removed
+T: CLAIM: He was impeached and removed. | TRUTH: The House impeached him twice. The Senate acquitted him twice. Removal never happened.
+L: https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00033.htm
+B: https://politifact.com/article/2017/jan/22/context-winston-churchill-and-mlk-busts/
+N: Duplicate of catalog FT-37. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #61 [media_claim_vs_record] Verified with correction needed | Already disqualified
+T: CLAIM: The Fourteenth Amendment already knocked him off the ballot. | TRUTH: Trump v. Anderson: states have no power to enforce Section 3 against a candidate for federal office. Congress holds that enforcement.
+L: https://supreme.justia.com/cases/federal/us/601/100/
+B: https://www.washingtonpost.com/politics/2020/02/16/tom-cotton-coronavirus-conspiracy/
+N: Duplicate of catalog FT-72. Inherited Evidence_Level. Site link HTTP 404.
+F: Replace/mirror site href (HTTP 404).
+=== #62 [media_claim_vs_record] Verified with correction needed | Hang Mike Pence
+T: CLAIM: He told the crowd to hang Mike Pence. | TRUTH: The crowd chanted it. His public sentence that afternoon was that Pence “didn’t have the courage.” The chant and the tweet are not the same words.
+L: https://www.c-span.org/video/?507744-1/president-trump-speaks-save-america-rally
+B: https://www.factcheck.org/2020/03/democrats-misleading-coronavirus-claims/
+N: Duplicate of catalog FT-92. Inherited Evidence_Level. Site link HTTP 403.
+F: Replace/mirror site href (HTTP 403).
+=== #64 [media_claim_vs_record] Verified with correction needed | We love you
+T: CLAIM: The video was only “we love you.” | TRUTH: The same video told them to go home in peace. One clause was kept. The other was cut.
+L: https://www.c-span.org/video/?507744-1/president-trump-speaks-save-america-rally
+B: https://www.reuters.com/article/world/trump-lawyer-denies-deutsche-bank-got-subpoena-on-trump-accounts-idUSKBN1DZ0XH/
+N: Duplicate of catalog FT-67. Inherited Evidence_Level. Site link HTTP 403.
+F: Replace/mirror site href (HTTP 403).
+=== #65 [media_claim_vs_record] Verified | Never called the Guard
+T: CLAIM: He never called the National Guard. | TRUTH: The Defense Department’s timeline has a request and a deployment that afternoon. It was not instant. “Never” is the word that does not survive the timeline.
+L: https://www.documentcloud.org/documents/20500984-planning-and-execution-timeline-for-the-national-guards-involvement-in-the-january-6-2021-violent-attack-at-the-us-capitol/
+B: https://www.snopes.com/news/2025/06/17/va-rules-refuse-treatment-veterans/
+N: Duplicate of catalog LT-146. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #67 [media_claim_vs_record] Verified with correction needed | He quoted Hitler
+T: CLAIM: He quoted Hitler on blood. | TRUTH: On December 16, 2023, in Durham, New Hampshire, he said illegal immigrants are “poisoning the blood of our country.” That sentence is his, and it is ugly. He did not read a line of Hitler on that tape. The phrase and a citation are not the same exhibit.
+L: https://www.c-span.org/clip/campaign-2024/donald-trump-on-illegal-immigrants-poisoning-the-blood-of-our-country/5098439
+B: https://www.foxnews.com/media/trump-admin-official-shreds-ny-times-multiple-corrections-report-silicon-valley-initiative
+N: Duplicate of catalog LT-182. Inherited Evidence_Level. Site link HTTP 403.
+F: Replace/mirror site href (HTTP 403).
+=== #70 [media_claim_vs_record] Verified with correction needed | Lost children
+T: CLAIM: He lost 1,475 children. | TRUTH: On April 26, 2018, HHS told a Senate subcommittee that caseworkers could not reach sponsors for 1,475 children on a follow-up call. The children had been released to sponsors. The agency said they were not lost. The number was printed as if it were family separation.
+L: https://www.hsgac.senate.gov/subcommittees/investigations/hearings/oversight-of-hhs-and-dhs-efforts-to-protect-unaccompanied-alien-children-from-human-trafficking-and-abuse/
+B: https://politifact.com/factchecks/2018/may/29/donald-trump/trump-correctly-tweets-democrats-mistakenly-tweete/
+N: Duplicate of catalog FT-3. Inherited Evidence_Level. Site link HTTP 503.
+F: Replace/mirror site href (HTTP 503).
+=== #71 [media_claim_vs_record] Verified with correction needed | He invented separation
+T: CLAIM: No child was separated before he invented it in 2018. | TRUTH: Zero tolerance, May 2018, formalized prosecutions of adults who crossed. Separations happened before that policy. The Flores settlement is 1997. “Invented” is the false word. The 2018 policy is real.
+L: https://www.justice.gov/archives/opa/pr/attorney-general-announces-zero-tolerance-policy-criminal-illegal-entry
+B: https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/
+N: Duplicate of catalog FT-36. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #76 [media_claim_vs_record] Verified | Liable for rape
+T: CLAIM: A jury found him liable for rape. | TRUTH: In the Carroll case the verdict form was sexual abuse. The judge later said the conduct met a common meaning of rape. The form and the headline were not the same word.
+L: https://www.courtlistener.com/docket/65895581/carroll-v-trump/
+B: https://www.reuters.com/legal/abc-pay-15-mln-trump-library-settle-lawsuit-court-documents-show-2024-12-14/
+N: Duplicate of catalog LT-16. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #87 [media_claim_vs_record] Verified | He fired the pandemic team
+T: CLAIM: He fired the entire pandemic response team in 2018. That is why the country was unready. | TRUTH: In 2018 the National Security Council folded a global-health directorate into another directorate. That is a reorganization. It is not the abolition of the CDC, the stockpile, or pandemic science. The motive was added later.
+L: https://trumpwhitehouse.archives.gov/nsc/
+B: https://www.reuters.com/article/world/partly-false-claim-trump-fired-entire-pandemic-response-team-in-2018-idUSKBN21C32C/
+N: Duplicate of catalog FT-95. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #88 [media_claim_vs_record] Verified with correction needed | Shoot them in the legs
+T: CLAIM: He ordered troops to shoot protesters in the legs. | TRUTH: The claim is in a memoir by a former defense secretary. There is no recording and no order in the file. A book is not a played tape.
+L: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/information-about-mifepristone-medical-termination-pregnancy-through-ten-weeks-gestation
+B: https://www.politifact.com/factchecks/2026/jan/26/social-media/Trump-Truth-Social-post-fake-guns-Minneapolis/
+N: Duplicate of catalog LT-141. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #92 [media_claim_vs_record] Verified with correction needed | Covington
+T: CLAIM: A boy in a MAGA hat smirked down a Native elder. That is the whole story. | TRUTH: The short clip in January 2019 cut the longer video. The students had been taunted before the stare. Nicholas Sandmann sued. CNN and the Washington Post settled. The first caption was the one that traveled.
+L: https://www.cnn.com/2019/01/19/us/covington-kentucky-catholic-school-video
+B: https://www.washingtonpost.com/nation/2019/03/01/editors-note-related-lincoln-memorial-incident/
+N: Duplicate of catalog FT-4. Inherited Evidence_Level. Site link HTTP 404.
+F: Replace/mirror site href (HTTP 404).
+=== #99 [media_claim_vs_record] Verified with correction needed | Vaccinated don’t carry
+T: CLAIM: If you are vaccinated, you do not carry the virus and you cannot give it to anyone. | TRUTH: That sentence was said in 2021, including by the CDC director. Later infections in vaccinated people showed it was false when it was said. A wish was reported as a finding.
+L: https://www.cdc.gov/mmwr/volumes/70/wr/mm7031e2.htm
+B: https://www.politifact.com/factchecks/2026/jan/26/social-media/Trump-Truth-Social-post-fake-guns-Minneapolis/
+N: Duplicate of catalog LT-141. Inherited Evidence_Level. Site link HTTP 403.
+F: Replace/mirror site href (HTTP 403).
+=== #105 [media_claim_vs_record] Verified with correction needed | ICE is terror
+T: CLAIM: ICE is out of control. They are terrorizing communities. | TRUTH: House Democrats posted that on September 21, 2026. Immigration and Customs Enforcement enforces the immigration statutes. The word terror is in a different official paper. On June 23, 2026, the Justice Department announced sentences for eight people in an attack on the Prairieland Detention Center. One sentence was 100 years, for attempted murder of a police officer. The department called them an Antifa cell. The official use of that word is on the attack, not on the agency.
+L: https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice
+B: https://www.politifact.com/factchecks/2019/apr/11/cory-booker/donald-trump-cut-funding-investigate-domestic-terr/
+N: Duplicate of catalog FT-175. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #113 [media_claim_vs_record] Verified | Just a ballroom
+T: CLAIM: It is a party room. The security talk is the excuse. | TRUTH: 
+L: 
+B: https://politifact.com/factchecks/2025/oct/24/hakeem-jeffries/democrats-leavitt-priority-ballroom-white-house/
+N: Duplicate of catalog LT-114. Inherited Evidence_Level. Site link HTTP no site link.
+F: 
+=== #119 [democrat_statement] Verified | The border is secure
+T: CLAIM: The border is secure. The border is closed. | TRUTH: CBP nationwide encounters, FY2021–24: 10.83 million. A secure border does not print that number.
+L: https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics
+B: https://www.politifact.com/factchecks/2019/mar/28/kamala-harris/kamala-harris-wrong-trump-isnt-raiding-money-milit/
+N: Duplicate of catalog FT-104. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #120 [democrat_statement] Verified with correction needed | Antifa
+T: CLAIM: Antifa is an idea, not an organization. | TRUTH: An idea does not throw a frozen bottle, publish an officer’s address, or fire on a detention center. On July 4, 2025, people attacked the Prairieland Detention Center. On June 23, 2026, a court sentenced eight of them. One sentence was 100 years, for attempted murder of a police officer. The eight together were 450 years. The Justice Department called them an Antifa cell. The years are for the attack.
+L: https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice
+B: https://apnews.com/article/prairieland-detention-center-shooting-sentencing-1eb7a8ac32dbb637e027709ae010f374
+N: NEW VERIFY 2026-09-24: DOJ PR 401; AP opened.
+F: Prefer DOJ OPA PR when accessible. AP confirms 100-year sentence.
+=== #121 [democrat_statement] Verified with correction needed | Parents
+T: CLAIM: School-board parents may be domestic terrorists. | TRUTH: The National School Boards Association letter, then the Attorney General’s October 4, 2021 memo. The apology did not pull the memo.
+L: https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf
+B: https://www.politifact.com/factchecks/2019/apr/11/cory-booker/donald-trump-cut-funding-investigate-domestic-terr/
+N: Duplicate of catalog FT-175. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #122 [democrat_statement] Verified | If you like your plan
+T: CLAIM: If you like your doctor, you can keep your doctor. | TRUTH: The promise did not survive the statute. PolitiFact later called it the lie of the year. The bill still passed.
+L: https://www.bls.gov/cpi/
+B: https://www.politifact.com/article/2013/dec/12/lie-year-if-you-like-your-plan-you-can-keep-it/
+N: Democrat ledger / Obama-era.
+F: Prefer HHS/CMS disruption data + Obama acknowledgment alongside fact-check.
+=== #126 [democrat_statement] Opinion | Inflation Reduction
+T: CLAIM: The Inflation Reduction Act reduces inflation. | TRUTH: The name is not the score. Independent scores did not find a meaningful drop in prices from the title.
+L: https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252
+B: https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252
+N: Label as opinion/campaign rhetoric if reused; not a catalog media-deception case without specific false caption + proof. Category: Democrat ledger.
+F: 
+=== #127 [democrat_statement] Opinion | You will not get it
+T: CLAIM: If you are vaccinated, you are not going to get COVID. | TRUTH: Biden, July 2021, CNN town hall. The sentence was false when he said it.
+L: https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252
+B: https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252
+N: Label as opinion/campaign rhetoric if reused; not a catalog media-deception case without specific false caption + proof. Category: Democrat ledger.
+F: 
+=== #128 [democrat_statement] Opinion | Deplorables
+T: CLAIM: Half of his supporters are a basket of deplorables. | TRUTH: Hillary Clinton, September 9, 2016. A candidate named the voters the enemy.
+L: https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252
+B: https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252
+N: Label as opinion/campaign rhetoric if reused; not a catalog media-deception case without specific false caption + proof. Category: Democrat ledger.
+F: 
+=== #129 [democrat_statement] Opinion | Garbage
+T: CLAIM: The only garbage is his supporters. Then an apostrophe. | TRUTH: The stenographer heard “supporters.” The press office added the apostrophe after. AP recorded the change.
+L: https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252
+B: https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252
+N: Label as opinion/campaign rhetoric if reused; not a catalog media-deception case without specific false caption + proof. Category: Democrat ledger.
+F: 
+=== #133 [democrat_statement] Verified | Get in their face
+T: CLAIM: If you see them in a restaurant, in a department store, get in their face. | TRUTH: Maxine Waters. That is not a debate. That is a direction.
+L: https://www.iaea.org/sites/default/files/gov2026-50.pdf
+B: https://politifact.com/factchecks/2025/feb/24/social-media/did-philadelphia-eagles-decline-trump-white-house/
+N: Duplicate of catalog LT-130. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #136 [democrat_statement] Verified | War of choice
+T: CLAIM: It is a reckless war of choice. | TRUTH: Jeffries said it. The House floor said it on March 4, 2026. The post does not mention the fuel. IAEA GOV/2026/50: 440.9 kilograms of uranium enriched up to 60 percent, as of June 13, 2025. A civilian reactor uses 3 to 5 percent. Leaving that number out is the half-truth.
+L: https://www.iaea.org/sites/default/files/gov2026-50.pdf
+B: https://www.cnn.com/2017/01/30/politics/donald-trump-supreme-court-choice-announcement-coming-tuesday-8-p-m-
+N: Internal duplicate of Item_No 7. Duplicate of catalog FT-81. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #137 [democrat_statement] Verified | Illegal war
+T: CLAIM: One hundred days of Trump’s illegal war. | TRUTH: Schumer posted that line. Khanna called the war immoral, illegal, and unstrategic. Whether Congress declared it is a separate argument under Article I. It does not erase the inspection. The 60 percent stockpile was already on the IAEA page.
+L: https://www.congress.gov/119/crec/2026/03/04/172/41/CREC-2026-03-04-house.pdf
+B: https://www.politifact.com/factchecks/2019/nov/21/pete-buttigieg/pete-buttigieg-falsely-says-donald-trump-illegally/
+N: Internal duplicate of Item_No 8. Duplicate of catalog FT-170. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #139 [democrat_statement] Verified with correction needed | SNAP was slashed for billionaires
+T: CLAIM: Republicans slashed SNAP to pay for tax breaks for billionaires. Millions of children do not know where the next meal is. | TRUTH: Public Law 119-21 changed a work rule. The Congressional Budget Office says able-bodied adults through age 64, and adults whose children are 14 or older, can draw benefits for three months in three years unless they work or train about 80 hours a month. The estimate is about 2.4 million fewer people in an average month. That is not a line that takes food from millions of children and hands it to billionaires. The work rule is the fact the post left out.
+L: https://www.cbo.gov/system/files/2025-08/61367-SNAP.pdf
+B: https://www.factcheck.org/2020/03/democrats-misleading-coronavirus-claims/
+N: Duplicate of catalog FT-91. Inherited Evidence_Level. Site link HTTP 403.
+F: Replace/mirror site href (HTTP 403).
+=== #144 [republican_statement] Verified with correction needed | Repeal
+T: CLAIM: Repeal and replace on day one. | TRUTH: Full Republican control in 2017. The repeal failed on the Senate floor. The promise was the campaign.
+L: https://www.justice.gov/opa/pr/former-irs-contractor-sentenced-disclosing-tax-return-information-news-organizations
+B: https://www.washingtonpost.com/news/fact-checker/wp/2017/05/10/kamala-harriss-claim-that-129-million-people-with-preexisting-conditions-could-be-denied-coverage/
+N: Duplicate of catalog FT-174. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #148 [republican_statement] Verified | Proven stolen
+T: CLAIM: The 2020 election was proven stolen in court. | TRUTH: Dozens of cases were filed. The outcome-changing proof was not established. A loss in court is not a win that was later found.
+L: 
+B: https://www.usatoday.com/story/news/factcheck/2025/02/21/doge-irs-congress-democrats-satire-fact-check/79429910007/
+N: Duplicate of catalog LT-150. Inherited Evidence_Level. Site link HTTP no site link.
+F: 
+=== #153 [republican_statement] Verified | Pence can flip it
+T: CLAIM: The vice president can reject the electoral votes. | TRUTH: The Twelfth Amendment makes him the presiding officer, not a second electorate. The theory was rejected. The pressure on him was real.
+L: 
+B: https://www.factcheck.org/2020/03/democrats-misleading-coronavirus-claims/
+N: Duplicate of catalog FT-92. Inherited Evidence_Level. Site link HTTP no site link.
+F: 
+=== #159 [republican_statement] Verified | The 34 counts
+T: CLAIM: The New York case is fake. Ignore the verdict. | TRUTH: A jury convicted on 34 counts of falsifying business records. The novel predicate is why it is on appeal. “Fake” erases the jury. That is not the file.
+L: 
+B: https://www.cnn.com/2017/01/30/politics/donald-trump-supreme-court-choice-announcement-coming-tuesday-8-p-m-
+N: Duplicate of catalog FT-81. Inherited Evidence_Level. Site link HTTP no site link.
+F: 
+=== #165 [republican_statement] Verified | Death panels
+T: CLAIM: The health bill creates death panels. | TRUTH: The phrase was a caption for end-of-life counseling language. It was not a board that voted on who dies.
+L: 
+B: https://www.politifact.com/factchecks/2020/sep/18/joe-biden/joe-biden-wrongly-claims-trump-couldve-prevented-e/
+N: Duplicate of catalog FT-164. Inherited Evidence_Level. Site link HTTP no site link.
+F: 
+=== #166 [republican_statement] Verified | Deficits don’t matter
+T: CLAIM: Reagan proved deficits don’t matter. | TRUTH: The debt is the matter. The grandchildren pay the interest. A shrug is not a budget.
+L: 
+B: https://www.cbsnews.com/news/comey-says-ag-loretta-lynch-wanted-clinton-investigation-to-be-called-a-matter/
+N: Duplicate of catalog FT-84. Inherited Evidence_Level. Site link HTTP no site link.
+F: 
+=== #181 [media_claim_vs_record] Verified with correction needed | Kids in cages
+T: CLAIM: He put children in cages. | TRUTH: The chain-link rooms were photographed in 2014. The Flores settlement is 1997. The pictures were not a 2018 invention.
+L: https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf
+B: https://apnews.com/article/a98f26f7c9424b44b7fa927ea1acd4d4
+N: Internal duplicate of Item_No 18. AP fact-check URL resolves HTTP 200.
+F: Truth = 2014 photos mislabeled as 2018 Trump cages, not denial of 2018 family-separation policy.
+=== #182 [media_claim_vs_record] Verified with correction needed | Domestic terrorists
+T: CLAIM: Parents at school boards are a domestic-terror problem. | TRUTH: The National School Boards Association asked the White House. Five days later the Attorney General ordered U.S. Attorneys and the FBI to coordinate.
+L: https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf
+B: https://www.politifact.com/factchecks/2019/apr/11/cory-booker/donald-trump-cut-funding-investigate-domestic-terr/
+N: Internal duplicate of Item_No 6. Duplicate of catalog FT-175. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #188 [media_claim_vs_record] Verified | The J6 panel was stacked
+T: The J6 panel was stacked: H.Res. 503 gave the Speaker the appointments. She named Liz Cheney and Adam Kinzinger. She rejected the minority leader’s picks, Jim Jordan and Jim Banks. A select committee that chooses its own opposition is not a jury. It is a production.
+L: https://www.congress.gov/bill/117th-congress/house-resolution/503
+B: https://www.politifact.com/factchecks/2025/sep/29/hakeem-jeffries/trump-medical-research-cuts-nih/
+N: Duplicate of catalog LT-115. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #190 [media_claim_vs_record] Verified | The tape sat in the House
+T: The tape sat in the House: The Capitol’s cameras recorded thousands of hours. The select committee showed clips. The full archive was not put in the public’s hands while the hearings ran. Later Speakers opened more of it. A hearing that holds the tape and plays the minutes it prefers is the same method as a six-second caption.
+L: https://www.congress.gov/committee/house-administration/hsha00
+B: https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/
+N: Duplicate of catalog FT-36. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #191 [media_claim_vs_record] Verified | A board to govern ‘disinformation’
+T: A board to govern ‘disinformation’: DHS stood up a Disinformation Governance Board in 2022. The Secretary told Congress it would combat a threat to homeland security. The department terminated the board and rescinded its charter on August 24, 2022. A cabinet department had named a board to police the information the public would receive.
+L: https://www.dhs.gov/archive/news/2022/08/24/following-hsac-recommendation-dhs-terminates-disinformation-governance-board
+B: https://www.snopes.com/fact-check/report-vermont-power-grid-infiltrated-by-russian-hackers/
+N: Duplicate of catalog FT-38. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #194 [media_claim_vs_record] Verified | The House record on the machine
+T: The House record on the machine: H.Res. 12 created the Select Subcommittee on the Weaponization of the Federal Government. The committee published that the executive had pressured platforms and that fifty-one former intelligence officials had signed a letter treating the Hunter Biden laptop as a Russian trick weeks before the 2020 vote. Read the House file. A panel is not a court. It is the other ledger.
+L: https://judiciary.house.gov/media/press-releases/new-judiciary-committee-website-highlights-activities-and-findings-select
+B: https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/
+N: Duplicate of catalog FT-36. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #196 [lawfare_case] Verified | First impeachment — abuse of power
+T: CAPTION: First impeachment — abuse of power | SOLD: Sold as a finding: he committed a crime on the call. The article was reported as the fact. An impeachment article is a charge. It was not sold as a charge. | FILE: The memo is public. The President asked about corruption involving the Bidens in a country receiving American aid. Looking into corruption in a foreign aid relationship is the job of the executive under Article II. The House called it an impeachable plot. The Senate acquitted on February 5, 2020. The country had already been split on a verdict the Senate did not return.
+L: https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf
+B: https://www.factcheck.org/2020/04/bidens-false-claim-on-trumps-response-to-coronavirus/
+N: Duplicate of catalog FT-96. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #199 [lawfare_case] Verified | The judge stayed on the case
+T: CAPTION: The judge stayed on the case | SOLD: Sold two ways, both as fact. One side: the judge was compromised and the verdict was fixed, because of his daughter’s firm. The other side: the conviction closed the question, a felon, full stop. Neither sentence was sold as an argument. | FILE: Opinion 23-54, May 4, 2023, said his impartiality could not reasonably be questioned, and that he did not have to step aside or disclose the facts. The opinion assumed his daughter had no interest the case could substantially affect. The defense said that premise was wrong, because clients of the firm raise
+L: https://www.nycourts.gov/ipjudicialethicsopinions/23-54.htm
+B: https://apnews.com/article/589aa9c8ab1b48f0b8d7fa171e6cb74c
+N: Duplicate of catalog FT-229. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #200 [lawfare_case] Verified | Bragg · 34 counts
+T: CAPTION: Bragg · 34 counts | SOLD: Sold as a finding: thirty-four felonies, election fraud, proved. After the verdict a second caption ran, also as fact: the judge told the jury the verdict did not have to be unanimous. The written charge does not say that. | FILE: The charge says the verdict on each count, guilty or not guilty, must be unanimous. It also says the People need not prove the other crime was in fact committed, only an intent to commit it or to hide it. The other crime he named for the jury was Election Law § 17-152. Then this sentence: although the jury must unanimously conclude 
+L: https://www.nycourts.gov/LegacyPDFS/press/PDFs/People%20v.%20DJT%20Jury%20Instructions%20and%20Charges%20FINAL%205-23-24.pdf
+B: https://www.cnn.com/2017/01/30/politics/donald-trump-supreme-court-choice-announcement-coming-tuesday-8-p-m-
+N: Duplicate of catalog FT-81. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #201 [lawfare_case] Verified | She was ordered to pay him
+T: CAPTION: She was ordered to pay him | SOLD: Sold as a finding: she beat him in court, and the only money in the story is the one he paid her to stay quiet. The fee order ran the other way, and then dropped out of the telling. | FILE: Who paid her lawyers: a public CrowdJustice page. By June 2018 that page had taken in more than half a million dollars. The donations were mostly small, and the donors were not named in a judgment. Her lawyer, Michael Avenatti, said the fees were hers or that page, and that he had not looked at who gave. No court finding identifies a party committee as the source.
+L: https://www.courtlistener.com/docket/7649164/stephanie-clifford-v-donald-j-trump/
+B: https://apnews.com/article/589aa9c8ab1b48f0b8d7fa171e6cb74c
+N: Duplicate of catalog FT-229. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #202 [lawfare_case] Verified | Carroll — she filed the day the window opened
+T: CAPTION: Carroll — she filed the day the window opened | SOLD: Sold as a finding: a rape conviction, a credible case with the evidence a criminal trial would require, and a governor who rewrote the clock by herself so this one plaintiff could sue. Also sold as a finished fact on both dollar amounts. | FILE: The window opened November 24, 2022. She filed that day. It closed November 24, 2023. November 4, 2019, was a different suit, defamation over his 2019 denial, and that one did not need the new statute. Who paid the later case: Reid Hoffman, a major Democratic donor, has said he supported it
+L: https://www.courtlistener.com/docket/65895581/carroll-v-trump/
+B: https://www.reuters.com/legal/abc-pay-15-mln-trump-library-settle-lawsuit-court-documents-show-2024-12-14/
+N: Duplicate of catalog LT-16. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #203 [lawfare_case] Verified | Letitia James · civil fraud
+T: CAPTION: Letitia James · civil fraud | SOLD: Sold as a finding: he inflated Mar-a-Lago, the banks were cheated, and he owed about $464 million. It was a civil case. The money was thrown out. | FILE: This is the Letitia James case. It is not the 34 counts. The statements of financial condition priced Mar-a-Lago between $347 million and $739 million. The figure placed next to that was Palm Beach County’s tax valuation, about $18 million to $27 million. The appeals court said neither the Attorney General nor the trial judge appraised the club at $18 million. They used the tax office’s number, a n
+L: https://www.nycourts.gov/reporter/3dseries/2025/2025_04756.htm
+B: https://www.washingtonpost.com/opinions/2021/03/16/washington-post-correction-trump-call-georgia-investigator/
+N: Duplicate of catalog FT-60. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #204 [lawfare_case] Verified | Florida — the documents case
+T: CAPTION: Florida — the documents case | SOLD: Sold as a finding before a trial: he stole the country’s secrets. The indictment was the exhibit. A charge was spoken as the crime. | FILE: She dismissed the case against him on July 15, 2024. The special counsel dropped the appeal as to him after the election. There is no jury verdict. The caption outlived the docket.
+L: https://www.courtlistener.com/docket/67490071/united-states-v-trump/
+B: https://money.cnn.com/2017/12/08/media/cnn-correction-email-story/index.html
+N: Duplicate of catalog FT-6. Inherited Evidence_Level. Site link HTTP 202.
+F: 
+=== #206 [lawfare_case] Verified | Georgia — the case was abandoned
+T: CAPTION: Georgia — the case was abandoned | SOLD: Sold as a finding: a criminal enterprise, racketeering, proved by the press conference. The indictment was treated as the conviction. | FILE: The Georgia Court of Appeals disqualified District Attorney Fani Willis and her office. Prosecutor Peter Skandalakis then moved to abandon the case. On November 26, 2025 the judge entered a nolle prosequi. He wrote there was no realistic prospect of trying a sitting president before January 20, 2029. The split was made at the announcement. The file ends with the case dropped.
+L: https://www.fultonclerk.org/
+B: https://www.washingtonpost.com/opinions/2021/03/16/washington-post-correction-trump-call-georgia-investigator/
+N: Duplicate of catalog FT-60. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #207 [lawfare_case] Verified with correction needed | The White House briefing — August 3, 2016
+T: CAPTION: The White House briefing — August 3, 2016 | SOLD: Sold as a finding, in both directions. One side: the FBI caught a Russian agent and the White House was only told. The other side: the White House ordered the frame. The paper is a briefing, not an order, and not a clean hands story. | FILE: Durham records the August 3 briefing and the referral. The FBI had already opened Crossfire Hurricane as a full investigation. It did not open on the Clinton-plan intelligence the way it opened on the campaign. The same director who sat in that briefing later signed applications to the secret court
+L: https://www.justice.gov/storage/durhamreport.pdf
+B: https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/
+N: Duplicate of catalog FT-36. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #209 [lawfare_case] Verified | One lawyer, three offices
+T: CAPTION: One lawyer, three offices | SOLD: Sold as a finding: the Justice Department dispatched a prosecutor to the Manhattan district attorney to bring the state case, on White House orders. Also sold the other way: the state case had nothing to do with Washington. | FILE: The path connects the civil case, the Department, and the criminal case in one résumé. No judgment in the criminal case finds that the White House or the Department ordered him there. A job is not a dispatch order. It is also not a coincidence the paper has explained. The New York case is the state case. The lawyer who help
+L: https://www.nycourts.gov/LegacyPDFS/press/PDFs/People%20v.%20DJT%20Jury%20Instructions%20and%20Charges%20FINAL%205-23-24.pdf
+B: https://www.washingtonpost.com/news/fact-checker/wp/2017/05/10/kamala-harriss-claim-that-129-million-people-with-preexisting-conditions-could-be-denied-coverage/
+N: Duplicate of catalog FT-174. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #210 [lawfare_case] Verified | The Georgia invoices
+T: CAPTION: The Georgia invoices | SOLD: Sold as a finding: the Biden White House ran the Fulton County case. Also sold as a finding: the state case was sealed off from Washington. | FILE: The invoices are a billing entry, not a transcript. They do not record what was said. They do record that the special prosecutor on the state election case charged the county for time with the White House and with the congressional committee, before the indictment. The case was later abandoned after the Georgia Court of Appeals disqualified Willis and her office over the relationship and the money, not over the
+L: https://www.congress.gov/118/meeting/house/117301/documents/HHRG-118-FD00-20240515-SD027-U27.pdf
+B: https://www.washingtonpost.com/opinions/2021/03/16/washington-post-correction-trump-call-georgia-investigator/
+N: Duplicate of catalog FT-60. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #211 [lawfare_case] Verified with correction needed | One special counsel, both federal cases
+T: CAPTION: One special counsel, both federal cases | SOLD: Sold as a finding: the White House appointed Jack Smith. Also sold as a finding: the appointment put the cases outside politics. | FILE: The order is the Attorney General’s. It does not recite a White House directive. Garland named the political calendar as the reason a special counsel was required. Judge Cannon later dismissed the documents case against Trump because the appointment was unlawful. The District of Columbia case was dismissed without prejudice after the election, on the government’s motion. Two federal cases, one prosecuto
+L: https://www.justice.gov/archives/opa/speech/attorney-general-merrick-b-garland-delivers-remarks-appointment-special-counsel
+B: https://www.reuters.com/article/world/trump-lawyer-denies-deutsche-bank-got-subpoena-on-trump-accounts-idUSKBN1DZ0XH/
+N: Duplicate of catalog FT-67. Inherited Evidence_Level. Site link HTTP 401.
+F: Replace/mirror site href (HTTP 401).
+=== #212 [lawfare_case] Verified | The family subpoenas
+T: CAPTION: The family subpoenas | SOLD: Sold as a finding: the family was under constant subpoena because the crimes were endless. No one gave a count. The paper has one. | FILE: The testimony count is four people, one investigation. The New York Attorney General was asking whether asset values were misstated on financial statements, loan applications, and tax papers to get better loans, insurance, and tax treatment. Eric Trump had already sat. The February 17, 2022 order says he took the Fifth to more than 500 questions. On December 1, 2021 the office subpoenaed Donald J. Trump for documents an
+L: https://www.nycourts.gov/Reporter/pdfs/2022/2022_30538.pdf
+B: https://www.reuters.com/article/world/trump-lawyer-denies-deutsche-bank-got-subpoena-on-trump-accounts-idUSKBN1DZ0XH/
+N: Duplicate of catalog FT-67. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #213 [lawfare_case] Verified | The dark money
+T: CAPTION: The dark money | SOLD: Sold two ways, both as fact. One side: the fight was spontaneous, just neighbors who woke up angry. The other side: one man bought the country. The ledger is neither. | FILE: The war had a caption. It also had a pipe. Congress votes an appropriation. An agency writes a grant. A private nonprofit cashes it. In fiscal 2023 the United States disbursed about $71.9 billion in foreign aid. The U.S. Agency for International Development moved about $43.8 billion of that. The Federal Emergency Management Agency awarded nearly $1.4 billion in fiscal 2023 and 2024 through 
+L: https://www.law.cornell.edu/uscode/text/26/6104
+B: https://www.politifact.com/factchecks/2019/mar/28/kamala-harris/kamala-harris-wrong-trump-isnt-raiding-money-milit/
+N: Duplicate of catalog FT-104. Inherited Evidence_Level. Site link HTTP 200.
+F: 
+=== #217 [scorecard_stat] Verified | MEDIA_TALLY
+T: MEDIA_LEAD tally claim: 108 captions; tape=21; word=78; standard=9; extracted mediaFrames=115
+L: 
+B: https://www.politifact.com/factchecks/2025/jan/30/viral-image/image-of-ice-officers-arresting-someone-wearing-a/
+N: Duplicate of catalog LT-135. Inherited Evidence_Level. Site link HTTP no site link.
+F: 
+=== #623 [scorecard_stat] Verified with correction needed | RECORD
+T: RECORD: Peaceable assembly is the right. Doxxing an ICE officer, assaulting him, and smashing the building is not. 18 U.S.C. § 111, § 119, § 1361. DHS: 275 assaults on ICE officers Jan. 20–Dec. 31, 2025, against 19 in the same stretch of 2024. 66 vehicular attacks against 2. Prairieland Detention Center, July 4, 2025: DOJ sentenced an Antifa cell for attacking the facility. Minnesota: 15 indicted for assaulting federal officers and destroying government property. Sanctuary rhetoric is not a defense.
+L: https://www.dhs.gov/news/2026/01/08/radical-rhetoric-sanctuary-politicians-leads-unprecedented-1300-increase-assaults
+B: https://apnews.com/article/prairieland-detention-center-shooting-sentencing-1eb7a8ac32dbb637e027709ae010f374
+N: Newly added 2026-09-24 (essay/scorecard extraction). NEW VERIFY: AP.
+F: Prefer DOJ PR; AP confirms 100-year sentence.
+=== #806 [scorecard_stat] Verified with correction needed | FAILURE
+T: FAILURE: The First Amendment protects peaceable assembly. It does not protect doxxing an ICE officer, assaulting him, or smashing the building. 18 U.S.C. § 111 is assault on a federal officer. 18 U.S.C. § 119 is publishing his home address to threaten him. 18 U.S.C. § 1361 is government property. DHS: 275 ICE assaults Jan. 20–Dec. 31, 2025, against 19 in 2024. 66 vehicular attacks against 2. DOJ: Prairieland Detention Center, July 4, 2025 — Antifa cell sentenced for attacking the facility. Direct Action Minnesota: 15 indicted for assaulting federal officers and destroying government property. 
+L: https://www.dhs.gov/news/2026/01/08/radical-rhetoric-sanctuary-politicians-leads-unprecedented-1300-increase-assaults
+B: https://apnews.com/article/prairieland-detention-center-shooting-sentencing-1eb7a8ac32dbb637e027709ae010f374
+N: Newly added 2026-09-24 (essay/scorecard extraction). NEW VERIFY: AP.
+F: Prefer DOJ PR; AP confirms 100-year sentence.

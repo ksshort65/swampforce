@@ -1,0 +1,202 @@
+[
+  {
+    "Claim": "Repeated that a jury found Trump liable for rape (E. Jean Carroll case).",
+    "URL": "https://www.reuters.com/legal/abc-pay-15-mln-trump-library-settle-lawsuit-court-documents-show-2024-12-14/",
+    "Who": "George Stephanopoulos; ABC News (March 2024 interview)",
+    "Duration": "months until ABC settlement (~Dec 2024)",
+    "Form": "misquote / truncation (verdict label) later settlement",
+    "Tag": "retracted/corrected",
+    "Item_ID": 16,
+    "Notes": "ABC settlement ~$15M to Trump library + fees; regret statement; no full liability admission required for inclusion"
+  },
+  {
+    "Claim": "DNI Tulsi Gabbard said Trump and Vladimir Putin \u201care very good friends\u201d.",
+    "URL": "https://apnews.com/article/gabbard-russia-trump-putin-d4f20f73d1c16dd7e365eae782ff9c5f",
+    "Who": "Associated Press (March 2025)",
+    "Duration": "hours\u2013days until AP withdrew (March 2025)",
+    "Form": "retracted invention / misquote / truncation",
+    "Tag": "retracted/corrected",
+    "Item_ID": 17,
+    "Notes": null
+  },
+  {
+    "Claim": "Initially characterized as false Trump\u2019s claim that federal money went to \u201cmaking mice transgender\u201d.",
+    "URL": "https://www.cnn.com/2025/03/04/politics/fact-check-trump-address-congress",
+    "Who": "CNN (March 2025 fact-check of Trump address to Congress)",
+    "Duration": "days until CNN updated fact-check (March 2025)",
+    "Form": "retracted invention (fact-check walk-back)",
+    "Tag": "retracted/corrected",
+    "Item_ID": 18,
+    "Notes": null
+  },
+  {
+    "Claim": "ICE agents showed up at Hamline Elementary School.",
+    "URL": "https://www.cbsnews.com/chicago/news/hamline-school-immigration-raid-chicago-ice-agents/",
+    "Who": "Chicago Public Schools leaders (and media echoing); Gov. JB Pritzker and others amplified ICE-raid fears",
+    "Duration": "hours\u2013days until CPS/Secret Service clarification (Jan 2025)",
+    "Form": "false attribution of words/intent / retracted invention",
+    "Tag": "false / retracted/corrected",
+    "Item_ID": 19,
+    "Notes": null
+  },
+  {
+    "Claim": "Continued characterizations that Trump told people to inject/drink disinfectant and that he endorsed neo-Nazis at Charlottesville.",
+    "URL": "https://politifact.com/factchecks/2024/mar/28/joe-biden/biden-exaggerates-trumps-pandemic-comments-about-d/",
+    "Who": "Joe Biden (ongoing campaign rhetoric; 2024 debate context)",
+    "Duration": "years of campaign recirculation",
+    "Form": "misquote / truncation / omitted context",
+    "Tag": "misleading",
+    "Item_ID": 24,
+    "Notes": null
+  },
+  {
+    "Claim": "That Trump\u2019s March 16, 2024 Ohio rally \u201cbloodbath\u201d comment threatened political violence / another Jan. 6 if he lost.",
+    "URL": "https://www.factcheck.org/2024/03/trumps-bloodbath-comment/",
+    "Who": "Biden campaign; Joe Biden (X post and statements); widespread media headlines treating remark as Jan. 6-style violence threat",
+    "Duration": "days of headline cycle (March 2024)",
+    "Form": "omitted context",
+    "Tag": "misleading",
+    "Item_ID": 31,
+    "Notes": null
+  },
+  {
+    "Claim": "Framing that Trump promised to be a dictator on day one (implying general authoritarian rule / retribution).",
+    "URL": "https://www.snopes.com/news/2024/01/24/trump-dictator-day-one/",
+    "Who": "Multiple outlets\u2019 headlines and Biden/Harris campaign amplification (Dec. 2023\u20132024)",
+    "Duration": "months of campaign recirculation (2023\u20132024)",
+    "Form": "omitted context / misquote / truncation",
+    "Tag": "misleading",
+    "Item_ID": 32,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump would force states to monitor women\u2019s pregnancies (tied to \u201chis\u201d Project 2025).",
+    "URL": "https://politifact.com/factchecks/2024/nov/01/kamala-harris/kamala-harris-wrong-that-donald-trump-would-force/",
+    "Who": "Kamala Harris (Oct. 29\u201330, 2024 speeches; related campaign ads)",
+    "Duration": "Not clearly documented",
+    "Form": "false attribution of words/intent / policy-scope inflation",
+    "Tag": "false",
+    "Item_ID": 42,
+    "Notes": null
+  },
+  {
+    "Claim": "Project 2025 / Trump would require people to \u201cregister with a new federal agency when you get pregnant\u201d / track \u201call pregnancies\u201d.",
+    "URL": "https://politifact.com/factchecks/2024/sep/17/tim-walz/tim-walz-is-wrong-project-2025-doesnt-call-for-pre/",
+    "Who": "Tim Walz (Sept. 2024 rallies; VP debate-adjacent rhetoric)",
+    "Duration": "Not clearly documented",
+    "Form": "false attribution of words/intent",
+    "Tag": "false",
+    "Item_ID": 43,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump plans to cut Social Security benefits.",
+    "URL": "https://politifact.com/factchecks/2024/jul/31/kamala-harris/kamala-harris-repeats-dubious-claim-that-donald-tr/",
+    "Who": "Kamala Harris; Joe Biden; Tim Walz (2024 campaign)",
+    "Duration": "months of 2024 campaign recirculation",
+    "Form": "omitted context / false attribution of words/intent",
+    "Tag": "misleading",
+    "Item_ID": 44,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump intends to cut Medicare.",
+    "URL": "https://politifact.com/factchecks/2024/aug/07/kamala-harris/kamala-harris-says-donald-trump-intends-to-cut-med/",
+    "Who": "Kamala Harris (2024 campaign)",
+    "Duration": "months of 2024 campaign recirculation",
+    "Form": "omitted context / false attribution of words/intent",
+    "Tag": "misleading",
+    "Item_ID": 45,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump \u201cand his allies would enact a nationwide abortion ban, with or without Congress\u201d / \u201cTrump will do everything he can to ban abortion nationwide\u201d.",
+    "URL": "https://politifact.com/article/2024/aug/28/democrats-warn-trump-will-ban-abortion-leave-state/",
+    "Who": "Kamala Harris; Joe Biden (2024 DNC and campaign)",
+    "Duration": "months of 2024 campaign recirculation",
+    "Form": "false attribution of words/intent / omitted context",
+    "Tag": "misleading",
+    "Item_ID": 47,
+    "Notes": null
+  },
+  {
+    "Claim": "Project 2025 is Trump\u2019s official plan / \u201cTrump\u2019s Project 2025\u201d.",
+    "URL": "https://politifact.com/article/2024/jul/12/project-2025-are-biden-campaign-warnings-about-pla/",
+    "Who": "Harris/Biden campaigns; Democratic Convention speakers; some media shorthand",
+    "Duration": "months of 2024 campaign recirculation",
+    "Form": "false attribution of words/intent / omitted context",
+    "Tag": "misleading",
+    "Item_ID": 48,
+    "Notes": null
+  },
+  {
+    "Claim": "Facility used incinerators / death-camp apparatus under Trump-era enforcement.",
+    "URL": "https://politifact.com/article/2025/jul/10/incinerators-alligator-alcatraz-florida/",
+    "Who": "Viral social posts and some activist amplification about Florida immigration detention (2025)",
+    "Duration": "Not clearly documented",
+    "Form": "inflammatory false premise / retracted invention (debunked rumor)",
+    "Tag": "false / inflammatory+false",
+    "Item_ID": 53,
+    "Notes": null
+  },
+  {
+    "Claim": "Explicit linkage: bloodbath clip + caption that Trump \u201cwants another January 6\u201d.",
+    "URL": "https://www.factcheck.org/2024/03/trumps-bloodbath-comment/",
+    "Who": "Joe Biden; Biden HQ (March 2024)",
+    "Duration": "days of campaign cycle (March 2024)",
+    "Form": "omitted context / inflammatory false premise",
+    "Tag": "misleading / inflammatory+false",
+    "Item_ID": 54,
+    "Notes": null
+  },
+  {
+    "Claim": "Trump plans to create a national anti-abortion coordinator and force states to report women\u2019s miscarriages and abortions.",
+    "URL": "https://www.factcheck.org/2024/10/walzs-false-project-2025-pregnancy-monitoring-claims/",
+    "Who": "Kamala Harris (DNC speech Aug. 22, 2024; related ads)",
+    "Duration": "Not clearly documented",
+    "Form": "false attribution of words/intent / omitted context",
+    "Tag": "misleading",
+    "Item_ID": 55,
+    "Notes": null
+  },
+  {
+    "Claim": "Edit presented as continuous speech: Trump urging march to the Capitol and \u201cwe fight like hell,\u201d implying a direct call for violent action.",
+    "URL": "https://apnews.com/article/britain-bbc-crisis-trump-panorama-a392fb275af25216ea23537c6f4347e4",
+    "Who": "BBC Panorama (\u201cTrump: A Second Chance?\u201d), aired ahead of 2024 U.S. election; BBC Chair Samir Shah apology Nov. 2025",
+    "Duration": "~1+ year until BBC apology (aired ~2024; apology Nov 2025)",
+    "Form": "misquote / truncation / omitted context",
+    "Tag": "retracted/corrected / misleading",
+    "Item_ID": 58,
+    "Notes": null
+  },
+  {
+    "Claim": "White House adviser Kevin Hassett said Trump was considering a 90-day pause on tariffs (except China).",
+    "URL": "https://www.nbcnews.com/business/markets/errant-headline-tariffs-pause-briefly-sent-stocks-soaring-rcna200004",
+    "Who": "Reuters (withdrawn story); CNBC on-air banner amplifying unverified claim about Kevin Hassett",
+    "Duration": "hours (same-day withdrawal, Apr 7, 2025)",
+    "Form": "retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 59,
+    "Notes": null
+  },
+  {
+    "Claim": "Broadcast a photo of Trump with Laura Loomer as authentic visual context.",
+    "URL": "https://www.snopes.com/news/2024/09/26/cnn-trump-photo-loomer/",
+    "Who": "CNN (Pamela Brown, Anderson Cooper, Michael Smerconish segments, Sept. 2024)",
+    "Duration": "days until on-air regrets (Sept 2024)",
+    "Form": "false photo/video attribution / retracted invention",
+    "Tag": "retracted/corrected",
+    "Item_ID": 73,
+    "Notes": null
+  },
+  {
+    "Claim": "Lawsuit alleged deceptive editing of Harris answers (including on Israel/Trump-related debate framing) that misled viewers about the race against Trump.",
+    "URL": "https://apnews.com/article/trump-media-harris-minutes-paramount-6415042fe910ae60b432dd8c73ef61b2",
+    "Who": "Paramount (CBS parent); Trump lawsuit over Oct. 2024 60 Minutes Kamala Harris interview edits",
+    "Duration": "months until Paramount settlement (Oct 2024\u2192July 2025)",
+    "Form": "omitted context (alleged selective edit) settlement",
+    "Tag": "retracted/corrected",
+    "Item_ID": 75,
+    "Notes": "Settlement without admission of liability; ~$16M to Trump library + fees"
+  }
+]

@@ -1,0 +1,97 @@
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+AddDefaultCharset UTF-8
+
+<IfModule mod_alias.c>
+Redirect 301 /explainer.html /betrayal.html
+Redirect 301 /archive.html /index.html
+Redirect 301 /pump.html /scorecard.html
+Redirect 301 /pending.html /index.html
+Redirect 301 /republic.html /foreword.html
+Redirect 301 /dispatch/a-barcode-is-not-a-lock.html /congress.html
+Redirect 301 /dispatch/a-caption-cannot-be-outlawed.html /fake-news.html
+Redirect 301 /dispatch/a-war-on-americans.html /lawfare.html
+Redirect 301 /dispatch/call-these-first.html /remedy.html
+Redirect 301 /dispatch/clean-hands.html /foreword.html
+Redirect 301 /dispatch/defund-ice-is-the-tell.html /border.html
+Redirect 301 /dispatch/division-is-the-product.html /fake-news.html
+Redirect 301 /dispatch/fema-ran-two-jobs.html /border.html
+Redirect 301 /dispatch/find-them.html /border.html
+Redirect 301 /dispatch/full-time-or-go-home.html /congress.html
+Redirect 301 /dispatch/how-the-house-was-captured.html /index.html
+Redirect 301 /dispatch/it-does-not-fit.html /congress.html
+Redirect 301 /dispatch/not-a-part-time-job.html /congress.html
+Redirect 301 /dispatch/one-word.html /fake-news.html
+Redirect 301 /dispatch/paying-the-taliban.html /congress.html
+Redirect 301 /dispatch/sixty-percent.html /fake-news.html
+Redirect 301 /dispatch/that-is-not-why-they-are-elected.html /foreword.html
+Redirect 301 /dispatch/the-7-billion-machine.html /congress.html
+Redirect 301 /dispatch/the-bill-they-sent.html /remedy.html
+Redirect 301 /dispatch/the-caption-was-not-the-charge.html /january-6.html
+Redirect 301 /dispatch/the-check-they-will-not-write.html /congress.html
+Redirect 301 /dispatch/the-debt-they-will-not-close.html /congress.html
+Redirect 301 /dispatch/the-democrat-ledger.html /democrats.html
+Redirect 301 /dispatch/the-docket.html /remedy.html
+Redirect 301 /dispatch/the-file-on-the-man.html /index.html
+Redirect 301 /dispatch/the-floor-not-the-feed.html /fake-news.html
+Redirect 301 /dispatch/the-funnel.html /congress.html
+Redirect 301 /dispatch/the-hire-is-the-country.html /lawfare.html
+Redirect 301 /dispatch/the-hospital-and-the-morgue.html /border.html
+Redirect 301 /dispatch/the-law-they-dont-mention.html /fake-news.html
+Redirect 301 /dispatch/the-line-in-the-sand.html /congress.html
+Redirect 301 /dispatch/the-media-ledger.html /fake-news.html
+Redirect 301 /dispatch/the-noise.html /congress.html
+Redirect 301 /dispatch/the-pool.html /fake-news.html
+Redirect 301 /dispatch/the-recess-blockade.html /congress.html
+Redirect 301 /dispatch/the-record-not-the-rally.html /fake-news.html
+Redirect 301 /dispatch/the-republic-not-the-caption.html /foreword.html
+Redirect 301 /dispatch/the-republican-ledger.html /republicans.html
+Redirect 301 /dispatch/the-statute-is-the-end.html /remedy.html
+Redirect 301 /dispatch/the-uniparty-mirror.html /index.html
+Redirect 301 /dispatch/the-whole-bill.html /congress.html
+Redirect 301 /dispatch/the-word-that-never-made-the-docket.html /index.html
+Redirect 301 /dispatch/they-called-it-protest.html /fake-news.html
+Redirect 301 /dispatch/they-clipped-the-tape.html /fake-news.html
+Redirect 301 /dispatch/they-dont-debate-they-flag.html /fake-news.html
+Redirect 301 /dispatch/they-dont-write-the-bills.html /congress.html
+Redirect 301 /dispatch/they-hold-it-by-the-blade.html /foreword.html
+Redirect 301 /dispatch/they-let-them-walk.html /remedy.html
+Redirect 301 /dispatch/they-opened-the-border.html /border.html
+Redirect 301 /dispatch/they-published-the-replacement.html /foreword.html
+Redirect 301 /dispatch/they-ran-it-anyway.html /fake-news.html
+Redirect 301 /dispatch/they-sold-the-split.html /congress.html
+Redirect 301 /dispatch/they-want-a-new-constitution.html /foreword.html
+Redirect 301 /dispatch/they-work-for-us.html /foreword.html
+Redirect 301 /dispatch/this-congress-cannot-police-itself.html /remedy.html
+Redirect 301 /dispatch/we-the-people.html /foreword.html
+Redirect 301 /dispatch/what-he-told-them.html /index.html
+Redirect 301 /dispatch/what-the-democratic-party-became.html /index.html
+Redirect 301 /dispatch/what-the-republican-party-became.html /index.html
+Redirect 301 /dispatch/what-the-taxpayer-bought.html /border.html
+Redirect 301 /dispatch/what-they-are-protecting.html /congress.html
+Redirect 301 /dispatch/what-we-can-do.html /congress.html
+Redirect 301 /dispatch/who-got-paid.html /border.html
+Redirect 301 /dispatch/why-he-became-the-enemy.html /index.html
+Redirect 301 /dispatch/why-the-lobby-should-be-illegal.html /congress.html
+RedirectMatch 301 ^/dispatch/?$ /index.html
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^.]+)$ $1.html [L]
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType application/javascript "access plus 7 days"
+ExpiresByType image/jpeg "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+</IfModule>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>

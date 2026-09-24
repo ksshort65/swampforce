@@ -1,0 +1,25 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Dek rewritten: \"three hundred thousand ... missing-persons file\" is not a government finding; DHS\u2019s 450,000/145,000 figures are attributed to DHS as its own statement",
+  "\"The remainder is still a search\" attributed to DHS"
+ ],
+ "edits": [
+  [
+   "Three hundred thousand children are still a missing-persons file. This journal stands with them. Anyone blocking the search has chosen a side.",
+   "DHS says it has located 145,000 of the unaccompanied children it says the prior administration lost track of. This journal stands with the search."
+  ],
+  [
+   "This journal treats missing children as a missing-persons file, not as a campaign costume.",
+   "This journal treats missing children as a search, not as a campaign costume."
+  ],
+  [
+   "The remainder is still a search. Anyone who tries to stop that search has chosen a side.",
+   "DHS says the search for the rest continues. Those are DHS\u2019s own figures; the inspector general\u2019s audit below is the independent record."
+  ]
+ ],
+ "ourview": [
+  "This page will not describe",
+  "It is a demand that every name"
+ ]
+}

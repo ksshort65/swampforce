@@ -1,0 +1,79 @@
+{
+    "imgurl": [],
+    "download": {
+        "premislink": "//www.govinfo.gov/metadata/pkg/USCOURTS-dcd-1_21-cr-00003/premis.xml",
+        "modslink": "//www.govinfo.gov/metadata/pkg/USCOURTS-dcd-1_21-cr-00003/mods.xml",
+        "ziplink": "//www.govinfo.gov/content/pkg/USCOURTS-dcd-1_21-cr-00003.zip"
+    },
+    "metadata": {"columnnamevalueset": [
+        {
+            "colname": "Category",
+            "colvalue": "Judicial Publications"
+        },
+        {
+            "colname": "Collection",
+            "colvalue": "United States Courts Opinions"
+        },
+        {
+            "colname": "SuDoc Class Number",
+            "colvalue": "JU 4.15"
+        },
+        {
+            "colname": "Court Type",
+            "colvalue": "District"
+        },
+        {
+            "colname": "Court Name",
+            "colvalue": "United States District Court District of Columbia"
+        },
+        {
+            "colname": "Circuit",
+            "colvalue": "DC"
+        },
+        {
+            "colname": "Office Location",
+            "colvalue": "Washington, DC"
+        },
+        {
+            "colname": "Case Type",
+            "colvalue": "criminal"
+        },
+        {
+            "colname": "Party Names",
+            "colvalue": "JACOB ANGELI, Defendant<br />JAKE ANGELI, Defendant<br />JACOB ANTHONY CHANSLEY, Defendant<br />PRESS COALITION, Interested Party<br />DON HAMRICK, Movant<br />USA, Plaintiff<br />"
+        }
+    ]},
+    "quicklinks": {
+        "browsecolurl": "//www.govinfo.gov/app/collection/uscourts",
+        "cgprecordurl": "http://catalog.gpo.gov",
+        "helplinkurl": "//www.govinfo.gov/help/uscourts",
+        "collection": "U.S. Court Opinions",
+        "buyurl": "//bookstore.gpo.gov"
+    },
+    "chicagoMD": [
+        "<i>USA v. CHANSLEY<\/i>,&nbsp;(D.C.&nbsp;2024).",
+        ""
+    ],
+    "dcMD": {
+        "dateIssued": "(5 Aug. 2024)",
+        "origDateIssued": "2024-08-05",
+        "governmentAuthors": [
+            "United States District Court District of Columbia",
+            ""
+        ],
+        "publisher": "Administrative Office of the United States Courts",
+        "language": "eng"
+    },
+    "documentincontext": {
+        "packageId": "USCOURTS-dcd-1_21-cr-00003",
+        "granuleId": [""],
+        "showDicTab": "true"
+    },
+    "bbMD": [
+        "USA v. CHANSLEY,&nbsp;(D.C.&nbsp;2024)",
+        ""
+    ],
+    "collection": "USCOURTS",
+    "text": [],
+    "title": "21-003 - USA v. CHANSLEY"
+}

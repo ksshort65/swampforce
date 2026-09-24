@@ -1,0 +1,1206 @@
+{
+ "275": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "official_record (to be linked)",
+  "Fix_Needed": "Remove the Letitia James quote unless the AG\u2019s own release/complaint is linked; the chalkboard framing may stay as Our view.",
+  "Notes": "Lawsuit exists (NY-led multistate suit vs. USPS, Aug. 2020); quote not opened from a primary copy."
+ },
+ "276": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove \"Ninety-five percent of 2020 ballots had a paper record\" and the 60 Minutes paraphrase unless CISA\u2019s Nov. 12, 2020 joint statement is linked and quoted directly.",
+  "Notes": "No primary copy opened in this pass; 60 Minutes is a network."
+ },
+ "277": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove both figures (150,000 ballots; 99.89 percent). Supported only by news reporting (tightened standard).",
+  "Notes": "WaPo is the stated source; no USPS/USPS-OIG record opened."
+ },
+ "278": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove. No August 2026 USPS rule on mail-voter enrollment/barcodes was found in the Federal Register (FR API search, 2026).",
+  "Notes": "Extraordinary claim with no primary record found."
+ },
+ "279": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "280": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "281": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": "General statements; no figure."
+ },
+ "378": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Cut \"Networks run 92% negative\" (MRC study; not primary). Quotes \"Maximum warfare\" (Jeffries, C-SPAN Apr. 22, 2026) and \"Get in their face\" (Waters, 2018) must link unedited video or be cut. Rest is Our view.",
+  "Notes": ""
+ },
+ "379": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "380": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://supreme.justia.com/cases/federal/us/395/444/",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "",
+  "Notes": "Brandenburg v. Ohio incitement test accurately stated; Article I, Sec. 5 discipline power accurate."
+ },
+ "381": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view (policy proposals).",
+  "Notes": ""
+ },
+ "231": {
+  "Verdict": "False, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove \"lost hundreds of thousands of children inside a federal program.\" DHS OIG (OIG-24-46, Aug. 2024) reported ICE could not monitor the location of 32,000+ unaccompanied children who failed to appear in court and that 291,000+ had not been served NTAs; that is not \"lost\" in a federal program. The rest is Our view.",
+  "Notes": "Misstates the OIG findings."
+ },
+ "232": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "233": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "218": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the MRC 92% figure. Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard).",
+  "Notes": ""
+ },
+ "284": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "285": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "286": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "",
+  "Source_Type": "book (primary text): Hannah Arendt, The Origins of Totalitarianism (1951), ch. 13",
+  "Fix_Needed": "",
+  "Notes": "Accurate paraphrase: \"The ideal subject of totalitarian rule is ... people for whom the distinction between fact and fiction ... no longer exist[s].\""
+ },
+ "239": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/R48612",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Fix member salary to $174,000 (CRS RL30064) where the paragraph says $174,500.",
+  "Notes": "P.L. 119-37: total $7.258B; House $2.083B; Senate $1.467B; Capitol Police $852M + $30M mutual aid = ~$882M."
+ },
+ "240": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/RL30064",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Say \"a pension after five years of service (FERS)\" and \"an office allowance of roughly $1.85\u2013$2.09 million per House office (2025)\". Label the call-time and lecture sentences Our view.",
+  "Notes": ""
+ },
+ "245": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Cut the Urban Institute estimate (think tank). Replace \"Congress has never scored the bill\" with \"CBO has not scored a specific Medicare for All bill.\"",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "246": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.cbo.gov/publication/61882",
+  "Source_Type": "official_record (CBO)",
+  "Fix_Needed": "Change \"CBO, March 2026\" to \"CBO, February 2026\". Keep $5.6T in, $7.4T out, $1.9T deficit (5.8% of GDP), debt held by the public 101% of GDP rising to 120% by 2036.",
+  "Notes": "CBO Outlook 2026\u20132036 Table 1-1: revenues $5,596B; outlays $7,449B; deficit $1,853B; debt held by public 100.6% (2026) \u2192 120.2% (2036)."
+ },
+ "247": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove: the arithmetic rests on the Urban Institute $34T estimate, which cannot stand as a source. ($5.6T \u00d7 6 = $33.6T and GDP \u2248 $32T are correct CBO-based figures.)",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "248": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove: the arithmetic rests on the Urban Institute $34T estimate, which cannot stand as a source. ($5.6T \u00d7 6 = $33.6T and GDP \u2248 $32T are correct CBO-based figures.)",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "249": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove: the arithmetic rests on the Urban Institute $34T estimate, which cannot stand as a source. ($5.6T \u00d7 6 = $33.6T and GDP \u2248 $32T are correct CBO-based figures.)",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "250": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove (Urban Institute estimate).",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "251": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the CRFB pay-for table.",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "252": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the CRFB pay-for table.",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "253": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the CRFB pay-for table.",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "254": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the CRFB pay-for table.",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "255": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the CRFB pay-for table.",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "256": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the CRFB pay-for table.",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "257": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the CRFB pay-for table.",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "258": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.cbo.gov/publication/61882",
+  "Source_Type": "official_record (CBO)",
+  "Fix_Needed": "Label the second half Our view.",
+  "Notes": "CBO: net interest $1,039B (2026) \u2192 $2,144B (2036), i.e., roughly doubles."
+ },
+ "259": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://program.dsausa.org/",
+  "Source_Type": "primary_document (DSA platform)",
+  "Fix_Needed": "Cut the Cato stack (think tank). DSA\u2019s own program may be cited for what DSA proposes. Label the \"not confused\" sentences Our view.",
+  "Notes": ""
+ },
+ "260": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the Urban $32\u201334T figure; keep the demand as Our view.",
+  "Notes": ""
+ },
+ "345": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/R48612",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Member salary is $174,000, not $174,500 (CRS RL30064).",
+  "Notes": "$7.258B, P.L. 119-37; member salary $174,000 (CRS RL30064)."
+ },
+ "346": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove (Ballotpedia is not a primary source). Replace, if desired, with congress.gov \"Days in Session\" calendars.",
+  "Notes": "Secondary compilation."
+ },
+ "347": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove unless linked to the official House/Senate calendars on congress.gov.",
+  "Notes": "Not opened from a primary calendar."
+ },
+ "348": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove (USAFacts compilation).",
+  "Notes": "Secondary compilation."
+ },
+ "349": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/RL30064",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Use $174,000 (not $174,500). Label \"It must stop\" as Our view.",
+  "Notes": ""
+ },
+ "288": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/bill/116th-congress/house-resolution/755",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Keep \"impeached twice\" and \"four criminal cases\"; label the rest Our view.",
+  "Notes": "Impeachments: H.Res. 755 (2019), H.Res. 24 (2021)."
+ },
+ "307": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/R40962",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Keep House $2.083B (R48612). Confirm the 2025 MRA range in CRS R40962 before publishing; 18 permanent + 4 additional staff is the House rule.",
+  "Notes": ""
+ },
+ "308": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/R48612",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Keep $1.467B. Label \"sits fewer days than a school year\" Our view or cite calendars.",
+  "Notes": ""
+ },
+ "309": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/R48612",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "",
+  "Notes": "Capitol Police $852.35M + $30.0M mutual aid (Div. A)."
+ },
+ "310": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/R48612",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "",
+  "Notes": "LOC incl. CRS ~$852M; CRS $136.1M (FY2025 level continued in FY2026)."
+ },
+ "311": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/R48612",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "",
+  "Notes": "AOC $811.9M."
+ },
+ "312": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/R48612",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Label \"auditor of everyone except...\" Our view.",
+  "Notes": "GAO $811.9M."
+ },
+ "313": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/R48612",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "",
+  "Notes": "GPO $132M; CBO $74.75M; Joint Items $24.96M; $522,000 widows/heirs (Div. A)."
+ },
+ "314": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/RL30064",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Fix the outside earned-income cap: \"$33,855 (2026)\". $33,285 was the 2024 limit.",
+  "Notes": "CRS RL30064: 2026 limit $33,855 (15% of Executive Schedule level II)."
+ },
+ "315": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/RL30064",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Fix salary: $174,000 (not $174,500). Label the rest Our view.",
+  "Notes": "CRS RL30064: $174,000."
+ },
+ "316": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/112/plaws/publ105/PLAW-112publ105.pdf",
+  "Source_Type": "statute",
+  "Fix_Needed": "Keep \"STOCK Act of 2012 (P.L. 112-105)\". Label \"was a press conference. The trades continued.\" Our view.",
+  "Notes": ""
+ },
+ "317": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "388": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf",
+  "Source_Type": "official_record (DOJ)",
+  "Fix_Needed": "Keep the NSBA quote only with a primary copy of the Sept. 29, 2021 letter; the AG memo (Oct. 4, 2021) is primary.",
+  "Notes": ""
+ },
+ "390": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/bill/117th-congress/house-resolution/503",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Label \"stacked\" as Our view.",
+  "Notes": "H.Res. 503 Sec. 2; Pelosi rejected Jordan and Banks (July 21, 2021)."
+ },
+ "391": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/bill/116th-congress/house-resolution/755",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Keep facts; label the rest Our view.",
+  "Notes": ""
+ },
+ "261": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/bill/118th-congress/house-bill/40",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Say \"A reparations study bill has been introduced in every Congress since 1989 (first by Rep. John Conyers).\" It studies; it does not pay.",
+  "Notes": "Bill number H.R. 40 was not used in 1989."
+ },
+ "262": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "263": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the Darity/Brookings figures.",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "264": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove (rests on think-tank estimates: Darity, Urban, Cato).",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "265": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove (rests on think-tank estimates: Darity, Urban, Cato).",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "266": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove (rests on think-tank estimates: Darity, Urban, Cato).",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "267": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove (rests on think-tank estimates: Darity, Urban, Cato).",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "268": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the $800 billion figure and the Newsom sentence unless the California Reparations Task Force report and a bill record are linked.",
+  "Notes": "Supported only by news reporting (tightened standard)."
+ },
+ "269": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/bill/100th-congress/house-bill/442",
+  "Source_Type": "statute",
+  "Fix_Needed": "Keep \"$20,000 to each eligible surviving internee (Civil Liberties Act of 1988, P.L. 100-383)\". Drop \"roughly $1.6 billion\" unless DOJ\u2019s Office of Redress Administration total is linked.",
+  "Notes": ""
+ },
+ "270": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the Evanston/DOJ 2026 sentence: no DOJ filing located.",
+  "Notes": ""
+ },
+ "271": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.cbo.gov/publication/61882",
+  "Source_Type": "official_record (CBO)",
+  "Fix_Needed": "Keep the CBO figures and \"debt near $40 trillion\" (Treasury). Remove the Cato $6.6T Forbes-400 figure.",
+  "Notes": ""
+ },
+ "272": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "273": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://constitution.congress.gov/constitution/amendment-14/",
+  "Source_Type": "constitution",
+  "Fix_Needed": "",
+  "Notes": "13th/14th/15th Amendments; Civil Rights Act 1964; Voting Rights Act 1965."
+ },
+ "274": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "358": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
+  "Source_Type": "government_data (Treasury)",
+  "Fix_Needed": "",
+  "Notes": "Debt to the Penny first exceeded $40T on Aug. 18, 2026 ($40.047T)."
+ },
+ "359": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/IN12324",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Replace Pew with CRS. Keep \"FY1997 was the last year all regular appropriations were enacted by Oct. 1.\" Keep the four-year list (FY1977, 1989, 1995, 1997) only if a CRS table is linked.",
+  "Notes": "CRS IN12324 confirms FY1997."
+ },
+ "360": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "361": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.law.cornell.edu/uscode/text/5/3331",
+  "Source_Type": "statute",
+  "Fix_Needed": "",
+  "Notes": "Accurate statement of the law."
+ },
+ "337": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.fbi.gov/",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Keep \"two impeachments, four criminal cases, 91 felony counts\". The Butler shooting (July 13, 2024) should link an FBI record.",
+  "Notes": ""
+ },
+ "338": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "382": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://constitution.congress.gov/constitution/article-1/",
+  "Source_Type": "constitution",
+  "Fix_Needed": "",
+  "Notes": "Art. I, Sec. 6, cl. 1."
+ },
+ "383": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://supreme.justia.com/cases/federal/us/443/111/",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "",
+  "Notes": "Hutchinson v. Proxmire, 443 U.S. 111 (1979); Gravel v. United States, 408 U.S. 606 (1972)."
+ },
+ "384": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://supreme.justia.com/cases/federal/us/395/444/",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "Replace the Oyez link with the opinion (Justia/supremecourt.gov).",
+  "Notes": ""
+ },
+ "385": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "386": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "318": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/bill/119th-congress/house-bill/22",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Say \"The SAVE Act (H.R. 22) passed the House April 10, 2025; the Senate has not taken it up.\" Label \"uniparty ... protecting a system\" Our view.",
+  "Notes": "congress.gov: latest action Apr. 10, 2025, received in the Senate."
+ },
+ "319": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the Pew 83% and Gallup 84% figures (both links 404).",
+  "Notes": "Private poll; not on the list of acceptable primary types (official record, government data, court filing, transcript, unedited video)."
+ },
+ "320": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "234": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove \"Gallup, April 2026: ten percent approve\".",
+  "Notes": "Private poll; not on the list of acceptable primary types (official record, government data, court filing, transcript, unedited video)."
+ },
+ "235": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/IN12324",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Keep \"not met on time since FY1997\". Remove \"least productive\" unless a congress.gov count of public laws is linked. Label the jersey sentences Our view.",
+  "Notes": ""
+ },
+ "304": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/RS21308",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "",
+  "Notes": "CRS RS21308: Clinton 139; G.W. Bush 171; Obama 32 (as of Feb. 1, 2015)."
+ },
+ "305": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.law.cornell.edu/supct/pdf/12-1281.pdf",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "Say \"a recess of fewer than ten days is presumptively too short\" (the Court\u2019s wording). Label \"Fiction with a gavel\" Our view.",
+  "Notes": "NLRB v. Noel Canning, 573 U.S. 513 (2014)."
+ },
+ "306": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "287": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://constitution.congress.gov/",
+  "Source_Type": "constitution",
+  "Fix_Needed": "",
+  "Notes": "Articles I\u2013III."
+ },
+ "321": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/bill/118th-congress/house-bill/3746",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Label \"keep the machine fed\" Our view.",
+  "Notes": "Fiscal Responsibility Act of 2023, P.L. 118-5."
+ },
+ "241": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/bill/93rd-congress/house-bill/7130",
+  "Source_Type": "statute",
+  "Fix_Needed": "Say \"the 1974 Budget Act set Oct. 1 as the fiscal year start and a timetable for appropriations; there are now twelve regular bills.\" The Act does not itself name twelve bills.",
+  "Notes": ""
+ },
+ "242": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the Urban $32\u201334T figure.",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "243": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/bill/93rd-congress/house-bill/7130",
+  "Source_Type": "statute",
+  "Fix_Needed": "Same as 241.",
+  "Notes": ""
+ },
+ "244": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.law.cornell.edu/uscode/text/5/3331",
+  "Source_Type": "statute",
+  "Fix_Needed": "Label the last sentences Our view.",
+  "Notes": ""
+ },
+ "282": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view (response to an accusation).",
+  "Notes": ""
+ },
+ "283": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "https://constitution.congress.gov/constitution/amendment-1/",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "296": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://supreme.justia.com/cases/federal/us/443/111/",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "Replace the Oyez link with the opinion.",
+  "Notes": ""
+ },
+ "297": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://supreme.justia.com/cases/federal/us/395/444/",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "",
+  "Notes": ""
+ },
+ "299": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://constitution.congress.gov/constitution/article-1/",
+  "Source_Type": "constitution",
+  "Fix_Needed": "",
+  "Notes": "Art. I, Sec. 9, cl. 7."
+ },
+ "300": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/IN12324",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "",
+  "Notes": "FY1997 last on-time year."
+ },
+ "301": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.law.cornell.edu/uscode/text/18/2384",
+  "Source_Type": "statute",
+  "Fix_Needed": "",
+  "Notes": "18 U.S.C. 2384 and 2385 accurately summarized."
+ },
+ "302": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://program.dsausa.org/",
+  "Source_Type": "primary_document (DSA platform)",
+  "Fix_Needed": "",
+  "Notes": "Live program page (program.dsausa.org, read 2026-09-24) says: \"to win the battle for democracy, draft a new constitution, and create a democratic socialist republic\"; also \"abolish the Senate\" and \"Replace the President and Supreme Court with an executive and judiciary chosen by and subordinate to Congress.\""
+ },
+ "303": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://constitution.congress.gov/constitution/article-5/",
+  "Source_Type": "constitution",
+  "Fix_Needed": "",
+  "Notes": ""
+ },
+ "236": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the MRC 92% figure.",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "237": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "238": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "https://supreme.justia.com/cases/federal/us/395/444/",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "290": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623",
+  "Source_Type": "unedited_video",
+  "Fix_Needed": "Keep with C-SPAN link (unedited). Quote not reviewed against video by auditor; confirm timestamp.",
+  "Notes": ""
+ },
+ "291": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove: the only link is a Fox News video (network). Restore only with unedited video or an official transcript.",
+  "Notes": ""
+ },
+ "292": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.c-span.org/clip/us-senate/user-clip-youve-released-the-whirlwind-and-you-will-pay-the-price--sen-chuck-schumer/4944670",
+  "Source_Type": "unedited_video",
+  "Fix_Needed": "Replace the YouTube link with the C-SPAN clip; \"He later said he misspoke\" \u2192 cite the Congressional Record, Mar. 5, 2020.",
+  "Notes": "Remarks were at a rally outside the Court, Mar. 4, 2020."
+ },
+ "293": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove unless the unedited original video (not an anonymous YouTube upload) is linked for each quote.",
+  "Notes": "Provenance of YouTube uploads not established."
+ },
+ "294": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://x.com/KamalaHarris/status/1267555018128965643",
+  "Source_Type": "social_media (where the statement was made)",
+  "Fix_Needed": "Keep only as \"Harris posted\" with the post linked; the post is the record of her own words, not proof of anything else.",
+  "Notes": ""
+ },
+ "295": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.nbcnews.com/video/biden-says-it-was-a-mistake-to-use-bullseye-in-remarks-about-trump-214895685978",
+  "Source_Type": "network (where the statement was made)",
+  "Fix_Needed": "Keep as \"Biden told NBC\u2019s Lester Holt (July 15, 2024)\"; the donor-call quote needs a primary transcript or should be cut.",
+  "Notes": "Interview aired July 15, 2024."
+ },
+ "342": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "343": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://supreme.justia.com/cases/federal/us/514/779/",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "",
+  "Notes": "U.S. Term Limits v. Thornton, 514 U.S. 779 (1995); Article V accurately described."
+ },
+ "344": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view (proposal).",
+  "Notes": ""
+ },
+ "339": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-73rd-session-united-nations-general-assembly-new-york-ny/",
+  "Source_Type": "original_transcript",
+  "Fix_Needed": "",
+  "Notes": "Sept. 25, 2018 UNGA: \"We reject the ideology of globalism, and we embrace the doctrine of patriotism.\""
+ },
+ "340": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.war.gov/News/Releases/Release/Article/2049534/statement-by-the-department-of-defense/",
+  "Source_Type": "official_record (DoD)",
+  "Fix_Needed": "Keep Jan. 3, 2020 strike (DoD statement). \"First time in a generation\" is Our view. Link his public warnings to the original posts as where they were made.",
+  "Notes": ""
+ },
+ "322": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/bill/88th-congress/house-bill/7152",
+  "Source_Type": "official_record",
+  "Fix_Needed": "History summary; label characterizations Our view.",
+  "Notes": ""
+ },
+ "323": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "324": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
+  "Source_Type": "government_data",
+  "Fix_Needed": "History summary; label characterizations Our view.",
+  "Notes": ""
+ },
+ "325": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "362": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "363": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the Devex figures (news). Restore only with USASpending.gov queries linked.",
+  "Notes": "Supported only by news reporting (tightened standard)."
+ },
+ "364": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/R48150",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Confirm the Chemonics wording against CRS R48150 before publishing; otherwise cut.",
+  "Notes": ""
+ },
+ "365": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the OpenSecrets lobbying figures (secondary compilation). Restore only with Senate LDA data.",
+  "Notes": "Secondary compilation."
+ },
+ "366": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove LegiStorm counts (secondary compilation).",
+  "Notes": ""
+ },
+ "367": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.opensocietyfoundations.org/",
+  "Source_Type": "organization\u2019s own disclosure",
+  "Fix_Needed": "Attribute: \"Open Society Foundations says it spent...\" Link the OSF expenditures page, not the home page.",
+  "Notes": ""
+ },
+ "368": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove (Washington Post).",
+  "Notes": "Supported only by news reporting (tightened standard)."
+ },
+ "369": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove (Politico).",
+  "Notes": "Supported only by news reporting (tightened standard)."
+ },
+ "370": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.foreignassistance.gov/",
+  "Source_Type": "government_data",
+  "Fix_Needed": "Replace the Pew link with ForeignAssistance.gov: FY2023 disbursements $71.9B; USAID ~$43.8B.",
+  "Notes": ""
+ },
+ "371": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "372": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove (OpenSecrets).",
+  "Notes": "Secondary compilation."
+ },
+ "373": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the \"$5 billion\" figure.",
+  "Notes": "Secondary compilation."
+ },
+ "374": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "375": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/112/plaws/publ105/PLAW-112publ105.pdf",
+  "Source_Type": "statute",
+  "Fix_Needed": "",
+  "Notes": "STOCK Act, P.L. 112-105 (2012)."
+ },
+ "376": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/112/plaws/publ105/PLAW-112publ105.pdf",
+  "Source_Type": "statute",
+  "Fix_Needed": "Keep the $200 late-filing fee. Remove the Campaign Legal Center claim (advocacy group).",
+  "Notes": ""
+ },
+ "377": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "350": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove \"Five billion in lobbying\" and \"Tens of millions into local prosecutors\" (cut elsewhere). Keep $40T (Treasury), $7.258B (CRS), $200 (STOCK Act). Rest Our view.",
+  "Notes": ""
+ },
+ "351": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://constitution.congress.gov/constitution/amendment-1/",
+  "Source_Type": "constitution",
+  "Fix_Needed": "Label the second half Our view.",
+  "Notes": ""
+ },
+ "352": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "353": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Keep \"Nov. 3, 2026\". Remove \"Two hundred eighty-two endorsements\" unless DSA\u2019s own endorsement list is linked. Rest Our view.",
+  "Notes": ""
+ },
+ "354": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "355": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "356": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "357": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "228": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the \"DHS estimate cited by House Homeland\" (committee page is political; the DHS document itself is not linked).",
+  "Notes": ""
+ },
+ "229": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters",
+  "Source_Type": "government_data (CBP)",
+  "Fix_Needed": "Remove 546,255 / 8.72 million / 2 million unless the CBP data pages are linked with as-of dates (not re-pulled in this pass).",
+  "Notes": "Figures not re-pulled from CBP in this pass."
+ },
+ "230": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove \"65,000 child-welfare reports sat in a drawer\" (no primary record). Add that FY2021 began Oct. 2020 under Trump. Rest Our view.",
+  "Notes": ""
+ },
+ "327": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "328": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the MRC 92% figure.",
+  "Notes": "Think-tank/advocacy estimate; not an official record, government data, court filing, transcript or unedited video (tightened standard)."
+ },
+ "329": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the Venezuela \"biggest oil deal\" paragraph unless a White House transcript is linked, and then only as \"he said\".",
+  "Notes": "Al Jazeera is the only source."
+ },
+ "330": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.eia.gov/outlooks/steo/",
+  "Source_Type": "government_data (EIA)",
+  "Fix_Needed": "Update: \"EIA\u2019s September 2026 STEO: U.S. crude output 13.83 million b/d in 2026, a record (13.66 in 2025), about 18.5% of world output while Middle East output is shut in.\"",
+  "Notes": "STEO Sept 2026 Table 3d: US 13.83; world 74.78."
+ },
+ "331": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics",
+  "Source_Type": "government_data (CBP)",
+  "Fix_Needed": "Say \"Southwest Border Patrol apprehensions in FY2025 were the lowest since 1970 (237,538).\" Label the rest Our view.",
+  "Notes": ""
+ },
+ "332": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/bill/119th-congress/senate-bill/5",
+  "Source_Type": "official_record",
+  "Fix_Needed": "",
+  "Notes": "P.L. 119-1, signed Jan. 29, 2025."
+ },
+ "333": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.supremecourt.gov/about/biographies.aspx",
+  "Source_Type": "official_record",
+  "Fix_Needed": "",
+  "Notes": "Gorsuch (2017), Kavanaugh (2018), Barrett (2020)."
+ },
+ "334": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.war.gov/News/Releases/Release/Article/2049534/statement-by-the-department-of-defense/",
+  "Source_Type": "official_record (DoD)",
+  "Fix_Needed": "Label \"paid a price the prior decade did not collect\" Our view.",
+  "Notes": "Strike Jan. 3, 2020 (Baghdad local time)."
+ },
+ "335": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "326": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.law.cornell.edu/uscode/text/2/1601",
+  "Source_Type": "statute",
+  "Fix_Needed": "Keep the LDA (1995) and petition-clause facts; label the argument Our view.",
+  "Notes": ""
+ },
+ "392": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.courtlistener.com/docket/72028010/national-trust-for-historic-preservation-in-the-united-states-v-national/",
+  "Source_Type": "court_filing",
+  "Fix_Needed": "Keep the docket facts; label \"the caption flipped\" Our view.",
+  "Notes": ""
+ },
+ "393": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.courtlistener.com/docket/72028010/national-trust-for-historic-preservation-in-the-united-states-v-national/",
+  "Source_Type": "court_filing",
+  "Fix_Needed": "Quote the Mar. 31, 2026 memorandum opinion directly; the docket confirms the opinion exists but its text was not opened.",
+  "Notes": ""
+ },
+ "394": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.courtlistener.com/docket/72028010/national-trust-for-historic-preservation-in-the-united-states-v-national/",
+  "Source_Type": "court_filing",
+  "Fix_Needed": "",
+  "Notes": "Complaint Dec. 12, 2025 (Doc. 1); Judge Leon memorandum opinion Mar. 31, 2026; cross appeals Apr. 2026."
+ },
+ "395": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Link Schumer\u2019s May 11, 2026 post as where the words were made; label \"The omission is the lie\" Our view.",
+  "Notes": ""
+ },
+ "396": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Editorial note; label Our view.",
+  "Notes": ""
+ },
+ "397": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "398": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/usao-sdny/pr/ghislaine-maxwell-sentenced-20-years-prison-conspiring-jeffrey-epstein-sexually-abuse",
+  "Source_Type": "official_record (DOJ)",
+  "Fix_Needed": "Keep: 2008 Florida guilty plea; 2019 SDNY indictment; Maxwell sentenced to 20 years (June 28, 2022). Label the rest Our view.",
+  "Notes": ""
+ },
+ "399": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://supreme.justia.com/cases/federal/us/395/444/",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "",
+  "Notes": "Schenck v. United States, 249 U.S. 47 (1919); Brandenburg (1969)."
+ },
+ "400": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://cha.house.gov/",
+  "Source_Type": "official_record (House committee)",
+  "Fix_Needed": "Keep the Nov. 2023 release facts attributed to the Speaker/committee; replace the Rumble link with the committee\u2019s own page.",
+  "Notes": ""
+ },
+ "401": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Keep quotes only with a primary link each (tape/transcript/his own post as where said).",
+  "Notes": ""
+ },
+ "403": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": ""
+ },
+ "404": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1151/vote_115_1_00179.htm",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Keep facts (repeal failed 49\u201351 on July 28, 2017; 34 counts). \"The taxes were not released\": note the House Ways and Means Committee released six years of returns in Dec. 2022. Label the last sentence Our view.",
+  "Notes": ""
+ },
+ "219": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/crs-product/RL30064",
+  "Source_Type": "official_record (CRS)",
+  "Fix_Needed": "Fix: \"A member of Congress makes $174,000 a year.\" Speaker $223,500 and leaders $193,400 are correct.",
+  "Notes": "Re-check 2026-09-24: CRS RL30064 says $174,000 for most members (frozen since 2009). $174,500 is wrong; earlier Verified verdict reversed."
+ }
+}

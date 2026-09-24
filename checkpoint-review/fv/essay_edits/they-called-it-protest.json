@@ -1,0 +1,51 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "All three Federal Register links corrected (the essay's document numbers for EO 14252, 14253 and 13933 were wrong)",
+  "2020 murder rate corrected to 6.5 per 100,000 (21,570 homicides; FBI data as tabulated in BJS Homicide Victimization in the United States, 2023, Appendix Table 2, https://bjs.ojp.gov/document/hvus23.pdf); 6.6 does not match; the chart image label (6.6) must be changed to 6.5",
+  "'The Oval that spent 2020 explaining away the fire' corrected (the 2020 Oval was Trump's); now 'the party'",
+  "Harris post kept as her own words, cited as where she said it; 'sixteen days later' TV remark and the Waters, Pressley and Pelosi quotes cut (press or social-media only, no unedited original video found)"
+ ],
+ "edits": [
+  [
+   "https://www.federalregister.gov/documents/2025/03/31/2025-05630/making-the-district-of-columbia-safe-and-beautiful",
+   "https://www.federalregister.gov/documents/2025/04/03/2025-05837/making-the-district-of-columbia-safe-and-beautiful"
+  ],
+  [
+   "https://www.federalregister.gov/documents/2025/04/03/2025-05836/restoring-truth-and-sanity-to-american-history",
+   "https://www.federalregister.gov/documents/2025/04/03/2025-05838/restoring-truth-and-sanity-to-american-history"
+  ],
+  [
+   "https://www.federalregister.gov/documents/2020/06/30/2020-14231/protecting-american-monuments-memorials-and-statues-and-combating-recent-criminal-violence",
+   "https://www.federalregister.gov/documents/2020/07/02/2020-14509/protecting-american-monuments-memorials-and-statues-and-combating-recent-criminal-violence"
+  ],
+  [
+   "The murder rate was 6.6.",
+   "The murder rate was 6.5."
+  ],
+  [
+   "The 2020 bar on this chart is **6.6**,",
+   "The FBI’s 2020 rate was **6.5** ([BJS table of FBI data](https://bjs.ojp.gov/document/hvus23.pdf)),"
+  ],
+  [
+   "So does this one: the Oval that spent 2020 explaining away the fire is not the Oval writing the order",
+   "So does this one: the party that spent 2020 explaining away the fire is not the one writing the order"
+  ],
+  [
+   "[The post is still up.](https://x.com/KamalaHarris/status/1267555018128965643) Sixteen days later she said they should not let up. Minneapolis",
+   "The post is still up on her account. Minneapolis"
+  ],
+  [
+   " Maxine Waters: create a crowd. Ayanna Pressley: bring the fire. Nancy Pelosi: people will do what they do. The wording, the insured bill, and the clean hands are in",
+   " The rest of the wording, the insured bill, and the clean hands are in"
+  ]
+ ],
+ "ourview": [
+  "They called it protest.",
+  "The bail was the return ticket"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

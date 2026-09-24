@@ -1,0 +1,45 @@
+
+## #16 [200] tl=256 https://storage.courtlistener.com/recap/gov.uscourts.nysd.590045/gov.uscourts.nysd.590045.174.0.pdf
+  <<raped>> 0
+  <<sexually abused>> 0
+  <<NO>> 0
+  <<YES>> 0
+
+## #10 [200] tl=1590382 https://web.archive.org/web/2020id_/https://www.justice.gov/storage/120919-examination.pdf
+  <<corroborat>> 2
+     ii Executive Summary Review of Four FISA Applications and Other Aspects of the FBl's Crossfire Hurricane Investigation Crossfire Hurricane team. We further determined that which the FBI described as "corroborated and used in F BI officials at every level concurred with this criminal proceedings." As discussed below, the judgment, from the OGC attorneys assigned to the representations about Steele's prior re
+  <<Steele>> 2
+     ctly contradicted" to "did not recall any discussion or mention of WikiLeaks during the telephone call was inconsistent with." In all instances, this phrase appears in connection with statements that Steele's Primary Sub-source made to the FBI during a January 2017 interview about information he provided to Steele that appeared in Steele's election reports. The corrected information appearing in this up
+  <<Primary Sub-source>> 2
+     radicted" to "did not recall any discussion or mention of WikiLeaks during the telephone call was inconsistent with." In all instances, this phrase appears in connection with statements that Steele's Primary Sub-source made to the FBI during a January 2017 interview about information he provided to Steele that appeared in Steele's election reports. The corrected information appearing in this updated report reflects
+
+## #195 [403] tl=114 https://www.cbo.gov/system/files/115th-congress-2017-2018/reports/53300-individualmandate.pdf
+  <<13 million>> 0
+  <<choose not to>> 0
+  <<individual mandate>> 0
+
+## #195b [000] tl=20 https://web.archive.org/web/20171109id_/https://www.cbo.gov/publication/53300
+  <<13 million>> 0
+  <<choose not>> 0
+
+## #202 [200] tl=197 https://api.bls.gov/publicAPI/v2/timeseries/data/LES1252881600Q?startyear=2017&endyear=2019
+  <<"2018">> 0
+  <<Q01>> 0
+  <<Q02>> 0
+
+## #235 [200] tl=2743 https://www.govinfo.gov/content/pkg/CHRG-116hhrg38910/html/CHRG-116hhrg38910.htm
+  <<Alfa>> 0
+  <<not true>> 0
+
+## #187 [200] tl=10352 https://www.census.gov/foreign-trade/statistics/historical/gands.pdf
+  <<2006>> 1
+     740 1,524,428 1,272,089 252,340 2004 -610,837 -664,764 53,927 1,168,120 823,584 344,536 1,778,957 1,488,348 290,609 2005 -716,543 -782,805 66,262 1,291,503 913,016 378,487 2,008,046 1,695,821 312,225 2006 -763,532 -837,288 73,756 1,463,992 1,040,906 423,086 2,227,524 1,878,194 349,329 2007 -710,998 -821,198 110,199 1,660,813 1,165,150 495,664 2,371,812 1,986,347 385,464 2008 -712,351 -832,493 120,142 
+  <<2020>> 1
+     911,415 2,356,345 555,070 2018 -577,497 -878,749 301,252 2,544,583 1,676,913 867,670 3,122,081 2,555,662 566,418 2019 -559,270 -857,260 297,989 2,554,094 1,655,098 898,996 3,113,364 2,512,358 601,007 2020 -646,042 -912,875 266,834 2,172,846 1,433,852 738,994 2,818,888 2,346,727 472,161 2021 -837,274 -1,083,190 245,916 2,584,068 1,765,853 818,215 3,421,342 2,849,043 572,300 2022 -923,729 -1,174,565 250
+  <<2022>> 1
+     3,364 2,512,358 601,007 2020 -646,042 -912,875 266,834 2,172,846 1,433,852 738,994 2,818,888 2,346,727 472,161 2021 -837,274 -1,083,190 245,916 2,584,068 1,765,853 818,215 3,421,342 2,849,043 572,300 2022 -923,729 -1,174,565 250,836 3,058,445 2,095,576 962,869 3,982,174 3,270,141 712,033 2023 -774,205 -1,057,495 283,290 3,092,536 2,047,457 1,045,079 3,866,741 3,104,952 761,789 2024 -903,532 -1,215,403
+
+## #170 [404] tl=6031 https://ag.ny.gov/press-release/2019/attorney-general-james-secures-court-victory-against-president-trump-trump-children
+  <<veterans>> 0
+  <<2 million>> 0
+  <<campaign>> 0

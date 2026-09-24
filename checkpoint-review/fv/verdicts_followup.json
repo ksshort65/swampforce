@@ -1,0 +1,81 @@
+{
+ "401": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://web.archive.org/web/20200531015829/https://mobile.twitter.com/realDonaldTrump/status/1266231100780744704",
+  "Source_Type": "original posts/recordings (Wayback captures of his tweet and Truth Social records; court opinion quoting the admitted tape; debate transcript; published interview recording)",
+  "Fix_Needed": "Replace the paragraph with: These are not in the lie column, because he said them. [“Fight like hell.”](https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc) [“Stand back and stand by.”](https://www.debates.org/voter-education/debate-transcripts/september-29-2020-debate-transcript/) [“When the looting starts, the shooting starts.”](https://web.archive.org/web/20200531015829/https://mobile.twitter.com/realDonaldTrump/status/1266231100780744704) The [Access Hollywood tape](https://law.justia.com/cases/federal/appellate-courts/ca2/23-793/23-793-2024-12-30.html), which he called [“locker room talk. I’m not proud of it.”](https://www.debates.org/voter-education/debate-transcripts/october-9-2016-debate-transcript/) [“I just want to find 11,780 votes.”](https://www.govinfo.gov/app/details/GPO-J6-REPORT) The [December 2022 post](https://web.archive.org/web/20221204195550/https://truthsocial.com/api/v1/statuses/109449803240069864): a fraud that size “allows for the termination of all rules, regulations, and articles, even those found in the Constitution.” [“Poisoning the blood.”](https://www.c-span.org/clip/campaign-2024/donald-trump-on-illegal-immigrants-poisoning-the-blood-of-our-country/5098439) [“Vermin.”](https://web.archive.org/web/20250525174651/https://truthsocial.com/api/v1/statuses/111393315342651569) He told Bob Woodward on tape, March 19, 2020, [“I wanted to always play it down.”](https://www.simonandschuster.com/p/the-trump-tapes)",
+  "Notes": "Every quote in the paragraph now has a primary link; five restored (looting post, Access Hollywood + his apology, Dec. 2022 post, vermin, Woodward). Exact wording: (1) Tweet 1266231100780744704, May 28, 2020, 9:53 PM PT (10:53 PM MT): \"....These THUGS are dishonoring the memory of George Floyd, and I won’t let that happen. Just spoke to Governor Tim Walz and told him that the Military is with him all the way. Any difficulty and we will assume control but, when the looting starts, the shooting starts. Thank you!\" (Wayback capture; Twitter's glorifying-violence notice not shown in that capture). (2) Access Hollywood tape as quoted by the 2d Cir., Carroll v. Trump, No. 23-793 (Dec. 30, 2024; tape admitted at trial): \"You know I'm automatically attracted to beautiful -- I just start kissing them. It's like a magnet. Just kiss. I don't even wait. And when you're a star, they let you do it. You can do anything. . . . Grab them by the pussy. You can do anything.\" His own words, Oct. 9, 2016 debate: \"this was locker room talk. I’m not proud of it. I apologize to my family. I apologize to the American people.\" The Oct. 7-8, 2016 video apology (\"I said it, I was wrong, and I apologize\") was found only in news transcripts and an unconfirmed YouTube upload; not cited. (3) Truth Social 109449803240069864, Dec. 3, 2022, 12:44 UTC (5:44 AM MT): \"...A Massive Fraud of this type and magnitude allows for the termination of all rules, regulations, and articles, even those found in the Constitution. Our great “Founders” did not want, and would not condone, False & Fraudulent Elections!\" (4) Truth Social 111393315342651569, Nov. 11, 2023, 18:25 UTC (11:25 AM MT), posted before the Claremont, N.H. speech: \"In honor of our great Veterans on Veteran’s Day, we pledge to you that we will root out the Communists, Marxists, Fascists, and Radical Left Thugs that live like vermin within the confines of our Country, lie, steal, and cheat on Elections...\" Speech (unedited: C-SPAN program 634890) used the same line; speech timestamp not checked (C-SPAN blocks fetch). (5) Woodward, March 19, 2020 recorded interview (published in The Trump Tapes, 2022): \"I wanted to always play it down. I still like playing it down, because I don't want to create a panic.\" Wording matches the tape audio as aired by CBS News (YouTube auto-captions) and published transcripts; the audiobook itself not played."
+ },
+ "142": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_21-cr-00003/pdf/USCOURTS-dcd-1_21-cr-00003-4.pdf",
+  "Source_Type": "court opinion (U.S. v. Chansley, No. 21-cr-3 (RCL), D.D.C., Mem. Op., ECF 127, July 20, 2023) + USAO-DC 48-month tally",
+  "Fix_Needed": "",
+  "Notes": "Lamberth quote confirmed in the opinion text (govinfo, p. 17): \"These videos are decidedly not exculpatory, especially when viewed in context with the \\\"miles and miles and miles of footage\\\" recorded of Mr. Chansley on January 6, 2021.\" Also p. 28: \"...is decidedly not so.\" Tally from USAO-DC: https://web.archive.org/web/0/https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol"
+ },
+ "185": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.fbi.gov/news/stories/violent-crime-falls-at-historic-rate-new-fbi-data-show",
+  "Source_Type": "government_data (FBI; BJS table of FBI data)",
+  "Fix_Needed": "Fix the EO 14252 link to https://www.federalregister.gov/documents/2025/04/03/2025-05837/making-the-district-of-columbia-safe-and-beautiful . Change \"The 2020 bar was 6.6\" to \"The 2020 rate was 6.5\" (source: https://bjs.ojp.gov/document/hvus23.pdf , Appendix Table 2, FBI data). Change the chart label from 6.6 to 6.5. Label \"The cleanup is hated because it is a verdict on that caption\" Our view.",
+  "Notes": "FBI Aug. 24, 2026: 2025 murder rate 4.1, same as 1955 and 1956. 2020: 21,570 homicides, 6.5 per 100,000 (BJS HVUS 2023, Appendix Table 2, sourced to FBI UCR/NIBRS estimates; 2019: 16,670, 5.0). FBI's Sept. 27, 2021 release (https://www.fbi.gov/news/press-releases/fbi-releases-2020-crime-statistics) gives the +29.4% rise but no rate. FBI Crime Data Explorer could not be queried (API rate-limited, site endpoints 404), so the CDE's current revised figure is not checked; 6.6 matches no table found."
+ },
+ "290": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623",
+  "Source_Type": "unedited video (C-SPAN; wording checked against ABC News unedited livestream)",
+  "Fix_Needed": "",
+  "Notes": "Apr. 22, 2026 news conference on the Virginia redistricting vote. Wording checked against the full unedited feed (ABC News YouTube livestream, 25:55, auto-captions): \"We are in an era of maximum warfare. Everywhere, all the time. And we're going to keep the pressure on Republicans in every single state in the Union to ensure at the end of the day that there is a fair national map because we believe that it's the people who should decide who's in the majority in the next Congress, not Donald Trump and MAGA extremists.\" Answer to a question about Florida maps. His own channel also posted a video titled \"Democrats have checkmated the MAGA power grab 🔥 Maximum warfare, everywhere, all the time.\" (https://www.youtube.com/watch?v=0IVD7gE7-kg). C-SPAN timestamp not checked (fetch blocked)."
+ },
+ "571": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623",
+  "Source_Type": "unedited video (C-SPAN; wording checked against ABC News unedited livestream)",
+  "Fix_Needed": "Add the exact words: “We are in an era of maximum warfare, everywhere, all the time. And we’re going to keep the pressure on Republicans in every single state in the Union to ensure at the end of the day that there is a fair national map.” (Apr. 22, 2026 news conference on Virginia redistricting, answering a question about Florida’s maps.)",
+  "Notes": "Date Apr. 22, 2026 confirmed (ABC News unedited livestream of the conference, uploaded 2026-04-22; wording at 25:55, auto-captions). C-SPAN clip timestamp not checked (fetch blocked)."
+ },
+ "291": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.youtube.com/watch?v=IUlRHoY-DlU&t=521s",
+  "Source_Type": "unedited video (Jeffries official YouTube channel; CAP livestream; C-SPAN program 679567)",
+  "Fix_Needed": "Replace the Fox News links with C-SPAN's full program (https://www.c-span.org/program/public-affairs-event/house-minority-leader-jeffries-on-democracy/679567) and his own channel's upload (https://www.youtube.com/watch?v=IUlRHoY-DlU&t=521s). Change \"He named an election in the second sentence.\" to \"Seconds later he said, “We will defeat them. We have to beat them electorally.”\" Keep the quotes as spoken at the CAP IDEAS conference, May 19, 2026, about \"MAGA extremists\".",
+  "Notes": "Wording checked against auto-captions of two uploads (Rep. Jeffries channel, 8:41; Center for American Progress full livestream, 1:51:27); both read: \"either MAGA extremists are going to break the country or we're going to break them. And our goal is to break them. We will defeat them. We have to beat them electorally and then we have to break their spirit because of the extremism that's being unleashed on the American people. That's completely and totally unacceptable.\" \"Electorally\" is in the fourth sentence, not the second."
+ },
+ "573": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.c-span.org/program/public-affairs-event/house-minority-leader-jeffries-on-democracy/679567",
+  "Source_Type": "unedited video (C-SPAN; wording checked against Jeffries official YouTube upload)",
+  "Fix_Needed": "",
+  "Notes": "Wording checked against the Rep. Jeffries YouTube upload \"Leader Jeffries at the 2026 CAP IDEAS Conference\" (https://www.youtube.com/watch?v=IUlRHoY-DlU&t=521s) and CAP's livestream (https://www.youtube.com/watch?v=m7nW3hVs_Is&t=6687s). C-SPAN page itself not opened (fetch blocked)."
+ },
+ "135": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.youtube.com/watch?v=IUlRHoY-DlU&t=521s",
+  "Source_Type": "unedited video (Jeffries official YouTube channel)",
+  "Fix_Needed": "Quote him exactly: “Our goal is to break them. We will defeat them. We have to beat them electorally and then we have to break their spirit.” (CAP IDEAS conference, May 19, 2026, about “MAGA extremists”; link https://www.youtube.com/watch?v=IUlRHoY-DlU&t=521s). Remove the IAEA link. Label \"Employees do not declare war on the people who hired them.\" Our view.",
+  "Notes": "The CLAIM line paraphrases; exact words from his channel's upload (8:41). Previous Best_Source_URL (IAEA GOV/2026/50) was unrelated."
+ },
+ "711": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.govinfo.gov/content/pkg/GPO-CRECB-1964-pt2/pdf/GPO-CRECB-1964-pt2-10-2.pdf",
+  "Source_Type": "Congressional Record (bound), vol. 110, pt. 2, p. 2804 (Feb. 10, 1964)",
+  "Fix_Needed": "",
+  "Notes": "Official record found: House passage of H.R. 7152, Feb. 10, 1964, \"yeas 290, nays 130, not voting 11\" (Congressional Record, vol. 110, pt. 2, p. 2804; govinfo). The Record lists members by name only, without party."
+ },
+ "712": {
+  "Best_Source_URL": "https://www.govtrack.us/congress/votes/88-1964/h128",
+  "Source_Type": "roll-call party split (GovTrack copy; fallback: the official Congressional Record, vol. 110 pt. 2 p. 2804, confirms the 290-130 total but lists names without party)"
+ },
+ "713": {
+  "Best_Source_URL": "https://www.govtrack.us/congress/votes/88-1964/h128",
+  "Source_Type": "roll-call party split (GovTrack copy; fallback: the official Congressional Record, vol. 110 pt. 2 p. 2804, confirms the 290-130 total but lists names without party)"
+ },
+ "714": {
+  "Best_Source_URL": "https://www.govtrack.us/congress/votes/88-1964/h128",
+  "Source_Type": "roll-call party split (GovTrack copy; fallback: the official Congressional Record, vol. 110 pt. 2 p. 2804, confirms the 290-130 total but lists names without party)"
+ },
+ "715": {
+  "Best_Source_URL": "https://www.govtrack.us/congress/votes/88-1964/h128",
+  "Source_Type": "roll-call party split (GovTrack copy; fallback: the official Congressional Record, vol. 110 pt. 2 p. 2804, confirms the 290-130 total but lists names without party)"
+ }
+}

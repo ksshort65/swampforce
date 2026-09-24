@@ -1,0 +1,236 @@
+{
+  "pages": [
+    "index.html",
+    "fake-news.html",
+    "scorecard.html",
+    "betrayal.html",
+    "democrats.html",
+    "republicans.html",
+    "january-6.html",
+    "lawfare.html",
+    "brief.html",
+    "appendix.html",
+    "about.html",
+    "downloads.html",
+    "store.html",
+    "foreword.html",
+    "congress.html",
+    "border.html",
+    "remedy.html",
+    "opinion.html",
+    "unsupported.html",
+    "trump-watch.html",
+    "movement-watch.html",
+    "record-2020.html",
+    "accountability.html",
+    "accountability-fraud.html",
+    "accountability-trading.html",
+    "accountability-minnesota.html",
+    "accountability-omar.html",
+    "accountability-covid-border.html",
+    "energy.html",
+    "voters.html",
+    "record-2020-floyd.html",
+    "censorship.html",
+    "404.html"
+  ],
+  "stats": {
+    "total": 252,
+    "proven": 179,
+    "misleading": 73,
+    "official": 67,
+    "transcript": 27,
+    "outlet": 64,
+    "factcheck": 94,
+    "never": 159,
+    "first": 142,
+    "later": 110
+  },
+  "corr": {
+    "Never corrected by the pusher": 159,
+    "Appended correction line": 64,
+    "After legal threat / settlement": 5,
+    "Not recorded": 14,
+    "Editor's note": 8,
+    "On-air correction": 2
+  },
+  "never_split": {
+    "fact_checked_only": 152,
+    "no_fact_check": 7
+  },
+  "congress": 48,
+  "dem_rows": 11,
+  "gop_rows": 9,
+  "balance": {
+    "Catalog": {
+      "Media: multiple or unnamed outlets": 8,
+      "Democrat": 106,
+      "Independent / other": 11,
+      "Media outlet": 97,
+      "Anonymous / viral social posts": 29,
+      "Mixed (both sides named)": 1
+    },
+    "All": {
+      "Media: multiple or unnamed outlets": 9,
+      "Democrat": 134,
+      "Independent / other": 17,
+      "Media outlet": 99,
+      "Anonymous / viral social posts": 29,
+      "Mixed (both sides named)": 1,
+      "Republican": 13,
+      "Unattributed / not classified": 13
+    },
+    "Party ledgers": {
+      "Democrat": 11,
+      "Republican": 9
+    },
+    "Trackers & watches": {
+      "Democrat": 17,
+      "Independent / other": 6,
+      "Media outlet": 2,
+      "Media: multiple or unnamed outlets": 1,
+      "Unattributed / not classified": 13,
+      "Republican": 4
+    }
+  },
+  "lawfare": 10,
+  "redirects": 65,
+  "top_methods": [
+    "retracted invention",
+    "omitted context",
+    "policy-scope inflation",
+    "fabrication",
+    "fabrication / false attribution",
+    "misquote / truncation",
+    "false photo/video attribution",
+    "premature \u201cproven\u201d framing"
+  ],
+  "unsupported": 1,
+  "watch": {
+    "trump-watch.html": {
+      "conflicts_verified": 5,
+      "conflicts_reported": 7,
+      "log_verified": 23,
+      "log_reported": 7,
+      "foreign_license_lines": 18,
+      "foreign_license_countries": 9,
+      "foreign_license_total": 59421411.83,
+      "pardon_grants": 165,
+      "gao_violations": 5,
+      "tiles": 9,
+      "salary_confirmed_quarters": 5,
+      "salary_total_primary": 478333.32,
+      "salary_recipient_only": 4,
+      "salary_reported": 6,
+      "schumer_quotes": 7,
+      "pool_contracts": 5,
+      "pool_total": 20052493.07
+    },
+    "movement-watch.html": {
+      "violence_official": 14,
+      "violence_reported": 4,
+      "claims_shown": 3,
+      "elsayed_verified": 9,
+      "elsayed_reported": 6,
+      "piker_verified": 3,
+      "piker_reported": 4,
+      "dsa_verified": 11,
+      "dsa_reported": 3,
+      "dsa_endorsements": 11,
+      "tiles": 4,
+      "omitted": [
+        "log.csv: Piker 'AIPAC boss call was made' post (reported only; original post not located)",
+        "candidates.csv: Hasan Piker AIPAC claim rated Unsupported. Not placed on the Unsupported page: the original post was not located, and that page lists only claims from the reverify review file"
+      ]
+    },
+    "record-2020.html": {
+      "tiles": 6,
+      "claims_rated": 3,
+      "unsupported_on_page": 1,
+      "timeline_items": 8,
+      "framing_cards": 3,
+      "not_supported_items": 9,
+      "draft_sources_used": 48,
+      "omitted": [
+        "R2020-05: on hold: officials' exact wording not yet verified from the original video",
+        "R2020-06: on hold: no named, primary-sourced person who made the claim",
+        "sources.csv row not used (verified=no): USAO Oregon: 74 people facing federal charges (Aug 28, 2020)",
+        "sources.csv row not used (verified=no): DOJ designation of NYC, Portland, Seattle as 'anarchist jurisdictions' (Sept 21, 2020)",
+        "sources.csv row not used (verified=no): AG withdrawal of anarchist-jurisdiction designation (Feb 25, 2021)",
+        "sources.csv row not used (verified=no): Chauvin federal guilty plea DOJ release (archived)",
+        "sources.csv row not used (verified=no): Minnesota disaster declaration request / FEMA denial (July-Aug 2020)"
+      ]
+    },
+    "accountability.html": {
+      "trackers": 5
+    },
+    "accountability-fraud.html": {
+      "fy_points": 22,
+      "fy2025_billion": 185.8,
+      "agencies": 13,
+      "reported": 1,
+      "grand_total": false
+    },
+    "accountability-trading.html": {
+      "transactions": 12646,
+      "late_lines": 2795,
+      "late_members": 63,
+      "top": 10,
+      "reported": 3
+    },
+    "accountability-minnesota.html": {
+      "charged": 108,
+      "convicted": 75,
+      "reported": 4,
+      "nine_billion": "Unresolved"
+    },
+    "accountability-omar.html": {
+      "label": "Unresolved (no official finding)",
+      "reported": 13
+    },
+    "accountability-covid-border.html": {
+      "months": 36,
+      "title42_total": 2912200,
+      "reported": 3
+    },
+    "energy.html": {
+      "gas_now": 4.478,
+      "peak_2008": 4.114,
+      "peak_real_2026": 6.27,
+      "refining_change_cents": 84.2,
+      "refiner_q2_2026_b": 12.705,
+      "spr_mbbl": 284.552,
+      "images": 4,
+      "reported": 6
+    },
+    "voters.html": {
+      "charts": 6,
+      "raw_rows": 21,
+      "discrepancies": 27,
+      "rolls_rows": 14,
+      "hickenlooper_claims_accurate": 7,
+      "harris": "Rated misleading",
+      "reuters_30k": "Rated misleading",
+      "griswold": "Unsupported",
+      "reported": 5
+    },
+    "record-2020-floyd.html": {
+      "court_file_rows": 14,
+      "ties_rows": 27,
+      "conflicts": 3,
+      "comparables": 7,
+      "reported": 17
+    },
+    "censorship.html": {
+      "documented_cards": 12,
+      "court_rows": 6,
+      "beliefs": 8,
+      "timeline_events": 65,
+      "timeline_confirmed": 56,
+      "timeline_partial": 4,
+      "timeline_reported": 5,
+      "reported": 11
+    }
+  },
+  "planned_sections": {}
+}

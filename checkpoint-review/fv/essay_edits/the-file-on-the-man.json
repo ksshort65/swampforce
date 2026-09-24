@@ -1,0 +1,29 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "'Children under threat' cut (no record named)",
+  "'No new American war in the first term' labelled Our view",
+  "MRC receipt and dead FBI Butler link removed",
+  "Golf-course attempt kept (Sept. 15, 2024; federal conviction)"
+ ],
+ "edits": [
+  [
+   " Children under threat.",
+   ""
+  ],
+  [
+   "the Abraham Accords, no new American war in the first term, Soleimani,",
+   "the Abraham Accords, no new American war in the first term (our view), Soleimani,"
+  ]
+ ],
+ "ourview": [
+  "Liking his mouth",
+  "What they put him through",
+  "This is not a chant",
+  "A caption is lying"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

@@ -1,0 +1,384 @@
+
+ Federal Register
+ :: 
+ Proposed Agency Information Collection Activities; Comment Request
+ Skip to Content
+ Home
+ Sections
+ Money
+ Environment
+ World
+ Science & Technology
+ Business & Industry
+ Health & Public Welfare
+ Browse
+Agencies
+Topics (CFR Indexing Terms)
+Dates
+Public Inspection
+Presidential Documents
+ Search
+ Document Search
+ Advanced Document Search
+ Public Inspection Search
+ FR Index
+ Reader Aids
+Reader Aids Home
+Office of the Federal Register Announcements
+Using FederalRegister.Gov
+Understanding the Federal Register
+Recent Site Updates
+Federal Register & CFR Statistics
+Videos & Tutorials
+Developer Resources
+Government Policy and OFR Procedures
+ My FR
+My Account
+My Clipboard
+My Comments
+My Subscriptions
+Sign In / Sign Up
+ Site Feedback
+Search the Federal Register
+Legal Status
+ This site displays a prototype of a “Web 2.0” version of the daily
+ Federal Register. It is not an official legal edition of the Federal
+ Register, and does not replace the official print version or the official
+ electronic version on GPO’s govinfo.gov.
+ The documents posted on this site are XML renditions of published Federal
+ Register documents. Each document posted on the site includes a link to the
+ corresponding official PDF file on govinfo.gov. This prototype edition of the
+ daily Federal Register on FederalRegister.gov will remain an unofficial
+ informational resource until the Administrative Committee of the Federal
+ Register (ACFR) issues a regulation granting it official legal status.
+ For complete information about, and access to, our official publications
+ and services, go to
+ About the Federal Register
+ on NARA's archives.gov.
+ The OFR/GPO partnership is committed to presenting accurate and reliable
+ regulatory information on FederalRegister.gov with the objective of
+ establishing the XML-based Federal Register as an ACFR-sanctioned
+ publication in the future. While every effort has been made to ensure that
+ the material on FederalRegister.gov is accurately displayed, consistent with
+ the official SGML-based PDF version on govinfo.gov, those relying on it for
+ legal research should verify their results against an official edition of
+ the Federal Register. Until the ACFR grants it official status, the XML
+ rendition of the daily Federal Register on FederalRegister.gov does not
+ provide legal notice to the public or judicial notice to the courts.
+Legal Status
+ Notice
+modal#escClose"
+ data-suggestions-target="modal">
+modal#forceClose">
+ Enter a search term or FR citation e.g. 
+suggestions#fillExample"
+ class="example badge badge-info">88 FR 382
+suggestions#fillExample"
+ class="example badge badge-info desktop-only">30 FR 7878
+suggestions#fillExample"
+ class="example badge badge-info">2024-13208
+suggestions#fillExample"
+ class="example badge badge-info">USDA
+suggestions#fillExample"
+ class="example badge badge-info desktop-only">09/05/24
+suggestions#fillExample"
+ class="example badge badge-info">RULE
+suggestions#fillExample"
+ class="example badge badge-info desktop-only">0503-AA39
+suggestions#fillExample"
+ class="example badge badge-info desktop-only">SORN
+ Choosing an item from
+full text search results
+ will bring you to those results. Pressing enter in the search box
+ will also bring you to search results.
+ Choosing an item from
+suggestions
+ will bring you directly to the content. 
+ Background and more details are available in the
+Search & Navigation
+ guide.
+suggestions#goDefault">
+suggestions#modal"
+ placeholder="Enter a search term or CFR reference (eg. fishing or 1 CFR 1.1)"
+ type="text"
+ data-suggestions-target="nonModalInput"
+ name="conditions[term]"
+ id="suggestion">
+suggestions#go">
+suggestions#go">
+ Proposed Agency Information Collection Activities; Comment Request
+ A Notice by 
+the 
+Federal Reserve System
+ on 
+04/02/2025
+Published Document: 2025-05647 (90 FR 14443)
+This document has been published in the 
+Federal Register
+. Use the PDF linked in the document sidebar for the official electronic format.
+Published Document: 2025-05647 (90 FR 14443)
+Document Details
+Published Content - Document Details
+Agency
+Federal Reserve System
+Document Citation
+ 90 FR 14443
+Document Number
+ 2025-05647
+Document Type
+Notice
+Pages
+ 14443-14444
+ (2 pages)
+Publication Date
+04/02/2025
+Published Content - Document Details
+PDF
+Official Content
+View printed version (PDF)
+Official Content
+Document Details
+Published Content - Document Details
+Agency
+Federal Reserve System
+Document Citation
+ 90 FR 14443
+Document Number
+ 2025-05647
+Document Type
+Notice
+Pages
+ 14443-14444
+ (2 pages)
+Publication Date
+04/02/2025
+Published Content - Document Details
+Document Dates
+Published Content - Document Dates
+Comments Close
+06/02/2025
+Dates Text
+Comments must be submitted on or before June 2, 2025.
+Published Content - Document Dates
+Table of Contents
+Enhanced Content - Table of Contents
+ This table of contents is a navigational tool, processed from the
+ headings within the legal text of Federal Register documents.
+ This repetition of headings to form internal navigation links
+ has no substantive legal effect.
+AGENCY:
+ACTION:
+SUMMARY:
+DATES:
+ADDRESSES:
+FOR FURTHER INFORMATION CONTACT:
+SUPPLEMENTARY INFORMATION:
+Request for Comment on Information Collection Proposal
+Proposal Under OMB Delegated Authority To Extend for Three Years, Without Revision, the Following Information Collection
+Enhanced Content - Table of Contents
+Public Comments
+Enhanced Content - Public Comments
+ Comments are no longer being accepted.
+ See 
+DATES
+ for details.
+Enhanced Content - Public Comments
+Regulations.gov Data
+Enhanced Content - Regulations.gov Data
+Additional information is not currently available for this document.
+Enhanced Content - Regulations.gov Data
+Sharing
+Enhanced Content - Sharing
+Shorter Document URL
+https://www.federalregister.gov/d/2025-05647
+Email
+ Email this document to a friend
+Enhanced Content - Sharing
+Print
+Enhanced Content - Print
+Print this document
+Enhanced Content - Print
+Document Statistics
+Enhanced Content - Document Statistics
+ Document page views are updated periodically throughout the day and are
+ cumulative counts for this document. Counts are subject to sampling,
+ reprocessing and revision (up or down) throughout the day.
+Page views
+ 259
+ as of
+ 09/24/2026 at 4:15 pm EDT
+Enhanced Content - Document Statistics
+Other Formats
+Enhanced Content - Other Formats
+ This document is also available in the following formats:
+JSON
+Normalized attributes and metadata
+XML
+Original full text XML
+MODS
+Government Publishing Office metadata
+ More information and documentation can be found in our
+developer tools pages
+.
+Enhanced Content - Other Formats
+Public Inspection
+Public Inspection
+ This 
+PDF
+ is FR Doc. 2025-05647 as it appeared on Public Inspection on
+ 04/01/2025 at 8:45 am.
+ It was viewed
+ 7
+ times while on Public Inspection.
+ If you are using public inspection listings for legal research, you
+ should verify the contents of the documents against a final, official
+ edition of the Federal Register. 
+Only official editions of the
+ Federal Register provide legal notice of publication to the public and judicial notice
+ to the courts under 
+44 U.S.C. 1503 & 1507
+.
+ Learn more 
+here
+.
+Public Inspection
+Published Document: 2025-05647 (90 FR 14443)
+This document has been published in the 
+Federal Register
+. Use the PDF linked in the document sidebar for the official electronic format.
+Document Headings
+ Document headings vary by document type but may contain
+ the following:
+ the agency or agencies that issued and signed a document
+ the number of the CFR title and the number of each part
+ the document amends, proposes to amend, or is directly
+ related to
+ the agency docket number / agency internal file number
+ the RIN which identifies each regulatory action listed in
+ the Unified Agenda of Federal Regulatory and Deregulatory
+ Actions
+ See the
+ Document Drafting Handbook
+ for more details.
+Federal Reserve System
+AGENCY:
+Board of Governors of the Federal Reserve System.
+ACTION:
+Notice, request for comment.
+SUMMARY:
+The Board of Governors of the Federal Reserve System (Board) invites comment on a proposal to extend for three years, without revision, the Recordkeeping and Disclosure Requirements Associated with Regulation H (Loans Secured by Real Estate Located in Flood Hazard Areas) (FR H-2; OMB No. 7100-0280).
+DATES:
+Comments must be submitted on or before June 2, 2025.
+ADDRESSES:
+You may submit comments, identified by FR H-2, by any of the following methods:
+Agency Website: 
+https://www.federalreserve.gov/​
+.
+ Follow the instructions for submitting comments, including attachments. 
+Preferred method.
+Mail:
+ Ann E. Misback, Secretary, Board of Governors of the Federal Reserve System, 20th Street and Constitution Avenue NW, Washington, DC 20551.
+Hand Delivery/Courier:
+ Same as mailing address.
+Other Means: 
+publiccomments@frb.gov
+.
+ You must include the OMB number or the FR number in the subject line of the message.
+ Comments received are subject to public discosure. In general, comments received will be made available on the Board's website at 
+https://www.federalreserve.gov/​apps/​proposals/​
+ without change and will not be modified to remove personal or business information including confidential, contact, or other identifying information. Comments should not include any information such as confidential information that would be not appropriate for public disclosure. Public comments may also be viewed electronically or in person in Room M-4365A, 2001 C St. NW, Washington, DC 20551, between 9 a.m. and 5 p.m. during Federal business weekdays.
+Additionally, commenters may send a copy of their comments to the Office of Management and Budget (OMB) Desk Officer for the Federal Reserve Board, Office of Information and Regulatory Affairs, Office of Management and Budget, New Executive Office Building, Room 10235, 725 17th Street NW, Washington, DC 20503, or by fax to (202) 395-6974.
+FOR FURTHER INFORMATION CONTACT:
+ Federal Reserve Board Clearance Officer—Nuha Elmaghrabi—Office of the Chief Data Officer, Board of Governors of the Federal Reserve System, 
+nuha.elmaghrabi@frb.gov
+,
+ (202) 452-3884.
+SUPPLEMENTARY INFORMATION:
+On June 15, 1984, OMB delegated to the Board authority under the Paperwork Reduction Act (PRA) to approve and assign OMB control numbers to collections of information conducted or sponsored by the Board. In exercising this delegated authority, the Board is directed to take every reasonable step to solicit comment. In determining whether to approve a collection of information, the Board will consider all comments received from the public and other agencies.
+ During the comment period for this proposal, a copy of the proposed PRA OMB submission, including the draft reporting form and instructions, supporting statement (which contains 
+ (
+ printed page 14444)
+ more detail about the information collection and burden estimates than this notice), and other documentation, will be made available on the Board's public website at 
+https://www.federalreserve.gov/​apps/​reportingforms/​review
+ or may be requested from the agency clearance officer, whose name appears above. On the page displayed at the link above, you can find the supporting information by referencing the collection identifier, FR H-2. Final versions of these documents will be made available at 
+https://www.reginfo.gov/​public/​do/​PRAMain
+,
+ if approved.
+Request for Comment on Information Collection Proposal
+The Board invites public comment on the following information collection, which is being reviewed under authority delegated by the OMB under the PRA. Comments are invited on the following:
+a. Whether the proposed collection of information is necessary for the proper performance of the Board's functions, including whether the information has practical utility;
+b. The accuracy of the Board's estimate of the burden of the proposed information collection, including the validity of the methodology and assumptions used;
+c. Ways to enhance the quality, utility, and clarity of the information to be collected;
+d. Ways to minimize the burden of information collection on respondents, including through the use of automated collection techniques or other forms of information technology; and
+e. Estimates of capital or startup costs and costs of operation, maintenance, and purchase of services to provide information.
+At the end of the comment period, the comments and recommendations received will be analyzed to determine the extent to which the Board should modify the proposal.
+Proposal Under OMB Delegated Authority To Extend for Three Years, Without Revision, the Following Information Collection
+Collection title:
+ Recordkeeping and Disclosure Requirements Associated with Regulation H (Loans Secured by Real Estate Located in Flood Hazard Areas).
+Collection identifier:
+ FR H-2.
+OMB control number:
+ 7100-0280.
+General description of collection:
+ The federal flood insurance statutes and Regulation H—Membership of State Banking Institutions in the Federal Reserve System (
+12 CFR part 208
+) provide that a lender shall not make, increase, extend, or renew a loan secured by a building or mobile home located in a special flood hazard area unless the secured property is covered by flood insurance for the term of the loan. With respect to the recordkeeping and disclosure provisions, Regulation H generally requires state member banks to retain certain flood hazard documentation and to notify borrowers and servicers regarding properties in flood hazard areas and requirements related to flood insurance. State member banks also must notify the Federal Emergency Management Agency of the identity of, and any change in, the servicer of a loan secured by improved property in a special flood hazard area. The information collection requirements under the flood hazard provisions of Regulation H are triggered by specific events in the lending process.
+Frequency:
+ Event-generated.
+Respondents:
+ State member banks or servicers acting on their behalf.
+Total estimated number of respondents:
+ 706.
+Total estimated annual burden hours:
+ 33,983.
+Board of Governors of the Federal Reserve System, March 28, 2025.
+Benjamin W. McDonough,
+Deputy Secretary and Ombuds of the Board.
+[
+FR Doc. 2025-05647
+ Filed 4-1-25; 8:45 am]
+BILLING CODE 6210-01-P
+Published Document: 2025-05647 (90 FR 14443)
+Home
+Home
+Sections
+Money
+Environment
+World
+Science & Technology
+Business & Industry
+Health & Public Welfare
+Browse
+Agencies
+Topics (CFR Indexing Terms)
+Dates
+Public Inspection
+Executive Orders
+Search
+Document Search
+Advanced Document Search
+Public Inspection Search
+Reader Aids
+Office of the Federal Register Announcements
+Using FederalRegister.Gov
+Understanding the Federal Register
+Recent Site Updates
+Federal Register & CFR Statistics
+Videos & Tutorials
+Developer Resources
+Government Policy and OFR Procedures
+My FR
+My Clipboard
+My Subscriptions
+My Comments
+Sign In
+Information
+About This Site
+Legal Status
+Contact Us
+Privacy
+Accessibility
+FOIA
+No Fear Act
+Continuity Information
+Site Feedback

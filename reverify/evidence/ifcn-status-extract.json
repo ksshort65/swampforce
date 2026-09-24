@@ -1,0 +1,444 @@
+{
+ "AFP Fact Check": {
+  "slug": "afp-fact-check",
+  "status": "Verified Signatory",
+  "status_date": "2026-09-15T18:18:01.105Z",
+  "apps": [
+   [
+    "Accepted",
+    "2018-01-09T04:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2019-02-07T04:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2020-02-22T20:35:15.000Z"
+   ],
+   [
+    "Accepted",
+    "2021-04-21T21:30:59.000Z"
+   ],
+   [
+    "Accepted",
+    "2022-07-11T12:52:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2023-08-23T19:36:06.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-09-25T14:59:50.629Z"
+   ],
+   [
+    "Accepted",
+    "2026-09-15T18:18:01.036Z"
+   ]
+  ]
+ },
+ "AP Fact Check": {
+  "slug": "ap-fact-check",
+  "status": "Verified Signatory",
+  "status_date": "2026-05-20T19:27:33.946Z",
+  "apps": [
+   [
+    "Accepted",
+    "2017-05-25T02:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2018-11-12T17:09:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2020-02-22T20:36:02.000Z"
+   ],
+   [
+    "Accepted",
+    "2021-09-20T22:06:03.000Z"
+   ],
+   [
+    "Accepted",
+    "2023-08-23T19:41:02.000Z"
+   ],
+   [
+    "Accepted",
+    "2026-05-20T19:27:33.886Z"
+   ]
+  ]
+ },
+ "Check Your Fact": {
+  "slug": "check-your-fact",
+  "status": "Expired Signatory",
+  "status_date": "2024-03-13T18:48:04.000Z",
+  "apps": [
+   [
+    "Accepted",
+    "2017-01-01T04:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2019-02-19T12:55:51.000Z"
+   ],
+   [
+    "Accepted",
+    "2020-02-27T00:52:23.000Z"
+   ],
+   [
+    "Accepted",
+    "2021-06-09T18:28:52.000Z"
+   ],
+   [
+    "Accepted",
+    "2023-01-19T21:30:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-03-13T18:48:04.000Z"
+   ]
+  ]
+ },
+ "FactCheck.org": {
+  "slug": "factcheck.org",
+  "status": "Verified Signatory",
+  "status_date": "2026-05-20T19:25:14.157Z",
+  "apps": [
+   [
+    "Accepted",
+    "2017-05-16T02:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2018-06-07T14:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2019-08-19T01:32:15.000Z"
+   ],
+   [
+    "Accepted",
+    "2020-10-22T21:24:32.000Z"
+   ],
+   [
+    "Accepted",
+    "2022-01-20T00:45:49.000Z"
+   ],
+   [
+    "Accepted",
+    "2023-04-04T19:58:58.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-03-13T18:50:10.000Z"
+   ],
+   [
+    "Accepted",
+    "2026-05-20T19:25:14.123Z"
+   ]
+  ]
+ },
+ "Full Fact": {
+  "slug": "full-fact",
+  "status": "Verified Signatory",
+  "status_date": "2026-08-26T18:25:41.263Z",
+  "apps": [
+   [
+    "Accepted",
+    "2017-03-22T03:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2018-04-30T18:30:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2019-07-22T18:26:30.000Z"
+   ],
+   [
+    "Accepted",
+    "2020-08-03T22:26:39.000Z"
+   ],
+   [
+    "Accepted",
+    "2021-09-20T23:30:33.000Z"
+   ],
+   [
+    "Accepted",
+    "2023-01-19T19:52:14.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-01-19T21:56:58.000Z"
+   ],
+   [
+    "Accepted",
+    "2026-08-26T18:25:41.219Z"
+   ]
+  ]
+ },
+ "Lead Stories": {
+  "slug": "lead-stories",
+  "status": "Verified Signatory",
+  "status_date": "2026-05-20T19:20:36.888Z",
+  "apps": [
+   [
+    "Accepted",
+    "2018-04-09T02:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2019-06-14T00:29:57.000Z"
+   ],
+   [
+    "Accepted",
+    "2020-11-24T01:38:06.000Z"
+   ],
+   [
+    "Accepted",
+    "2022-07-26T12:57:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2023-12-08T00:42:09.000Z"
+   ],
+   [
+    "Accepted",
+    "2026-05-20T19:20:36.823Z"
+   ]
+  ]
+ },
+ "PolitiFact": {
+  "slug": "politifact",
+  "status": "Verified Signatory",
+  "status_date": "2026-03-13T19:19:43.056Z",
+  "apps": [
+   [
+    "Accepted",
+    "2017-04-15T02:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2018-04-23T16:13:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2019-06-20T13:01:48.000Z"
+   ],
+   [
+    "Accepted",
+    "2021-03-08T22:07:22.000Z"
+   ],
+   [
+    "Accepted",
+    "2022-08-04T16:49:04.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-01-19T19:24:46.000Z"
+   ],
+   [
+    "Accepted",
+    "2026-03-13T19:19:43.026Z"
+   ]
+  ]
+ },
+ "Reuters": {
+  "slug": "reuters",
+  "status": "Verified Signatory",
+  "status_date": "2025-04-23T14:29:29.626Z",
+  "apps": [
+   [
+    "Accepted",
+    "2020-02-07T21:34:57.000Z"
+   ],
+   [
+    "Accepted",
+    "2021-06-09T18:31:30.000Z"
+   ],
+   [
+    "Accepted",
+    "2022-08-05T18:42:22.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-01-19T16:34:09.690Z"
+   ],
+   [
+    "Accepted",
+    "2025-04-23T14:29:29.585Z"
+   ]
+  ]
+ },
+ "Science Feedback": {
+  "slug": "science-feedback",
+  "status": "Expired Signatory",
+  "status_date": "2024-05-10T14:58:17.424Z",
+  "apps": [
+   [
+    "Accepted",
+    "2017-03-25T03:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2018-06-07T13:11:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2019-07-25T21:22:32.000Z"
+   ],
+   [
+    "Accepted",
+    "2020-09-18T19:52:44.000Z"
+   ],
+   [
+    "Accepted",
+    "2022-01-19T22:20:42.000Z"
+   ],
+   [
+    "Accepted",
+    "2023-04-04T20:22:11.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-05-10T14:58:17.378Z"
+   ]
+  ]
+ },
+ "Snopes.com": {
+  "slug": "snopes.com",
+  "status": "Verified Signatory",
+  "status_date": "2025-07-11T18:05:03.388Z",
+  "apps": [
+   [
+    "Accepted",
+    "2017-04-15T02:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2018-05-04T16:29:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2022-08-03T18:30:12.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-01-19T19:41:40.000Z"
+   ],
+   [
+    "Accepted",
+    "2025-07-11T18:05:03.340Z"
+   ]
+  ]
+ },
+ "The Dispatch Fact Check": {
+  "slug": "the-dispatch-fact-check",
+  "status": "Verified Signatory",
+  "status_date": "2025-07-29T17:47:23.045Z",
+  "apps": [
+   [
+    "Accepted",
+    "2020-05-15T15:42:37.000Z"
+   ],
+   [
+    "Accepted",
+    "2022-05-15T20:16:45.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-03-13T18:45:42.000Z"
+   ],
+   [
+    "Accepted",
+    "2025-07-29T17:47:22.992Z"
+   ],
+   [
+    "Application Review Completed",
+    null
+   ]
+  ]
+ },
+ "The Washington Post Fact Checker": {
+  "slug": "the-washington-post-fact-checker",
+  "status": "Verified Signatory",
+  "status_date": "2024-08-23T21:08:46.557Z",
+  "apps": [
+   [
+    "Accepted",
+    "2017-03-08T04:00:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2018-08-03T17:27:00.000Z"
+   ],
+   [
+    "Accepted",
+    "2019-06-20T13:02:07.000Z"
+   ],
+   [
+    "Accepted",
+    "2020-08-20T21:33:18.000Z"
+   ],
+   [
+    "Accepted",
+    "2022-01-20T01:12:56.000Z"
+   ],
+   [
+    "Accepted",
+    "2023-05-18T18:10:43.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-08-23T21:08:46.502Z"
+   ]
+  ]
+ },
+ "USA TODAY": {
+  "slug": "usa-today",
+  "status": "Expired Signatory",
+  "status_date": "2024-06-18T20:12:14.112Z",
+  "apps": [
+   [
+    "Accepted",
+    "2020-02-28T18:16:47.000Z"
+   ],
+   [
+    "Accepted",
+    "2021-07-19T22:06:52.000Z"
+   ],
+   [
+    "Accepted",
+    "2023-04-04T20:16:39.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-06-18T20:12:14.013Z"
+   ]
+  ]
+ },
+ "Verify": {
+  "slug": "verify",
+  "status": "In Renewal",
+  "status_date": "2024-12-05T15:43:56.058Z",
+  "apps": [
+   [
+    "Accepted",
+    "2022-01-20T02:02:38.000Z"
+   ],
+   [
+    "Accepted",
+    "2023-05-19T16:56:14.000Z"
+   ],
+   [
+    "Accepted",
+    "2024-12-05T15:43:55.995Z"
+   ],
+   [
+    "Assessment in Progress",
+    null
+   ]
+  ]
+ }
+}

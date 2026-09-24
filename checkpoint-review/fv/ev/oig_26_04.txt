@@ -1,0 +1,853 @@
+OIG-26-04                                April 22, 2026
+
+FINAL REPORT
+FEMA Cannot Ensure Humanitarian Funding for Aliens
+Complied with Laws and Regulations
+                      OFFICE OF INSPECTOR GENERAL
+                          U.S. Department of Homeland Security
+                            Washington, DC 20528 | www.oig.dhs.gov
+
+
+                                          April 22, 2026
+
+MEMORANDUM FOR:              Karen S. Evans
+                             Senior Official Performing the Duties of the Administrator
+                             Federal Emergency Management Agency
+
+FROM:                        Joseph V. Cuffari, Ph.D.
+                             Inspector General
+
+SUBJECT:                     FEMA Cannot Ensure Humanitarian Funding for Aliens Complied
+                             with Laws and Regulations
+
+Attached for your action is our final report, FEMA Cannot Ensure Humanitarian Funding for
+Aliens Complied with Laws and Regulations. We incorporated the formal comments provided by
+your office.
+
+The report contains five recommendations aimed at improving FEMA’s oversight controls for
+humanitarian funding during the grant closeout process for the Emergency Food and Shelter
+Program-Humanitarian Relief and Shelter and Services Program. Your office concurred with all
+five recommendations. Based on information provided in your response to the draft report, we
+consider the recommendations open and resolved. Once your office has fully implemented the
+recommendations, please submit a formal closeout letter to us within 30 days so that we may
+close the recommendations. The memorandum should be accompanied by evidence of
+completion of agreed-upon corrective actions and of the disposition of any monetary amounts.
+
+Please send your response or closure request to OIGAuditsFollowup@oig.dhs.gov.
+
+Consistent with our responsibility under the Inspector General Act, we will provide copies of our
+report to congressional committees with oversight and appropriation responsibility over the
+Department of Homeland Security. We will post the report on our website for public
+dissemination.
+
+Please contact me with any questions, or your staff may contact Craig Adelman, Deputy
+Inspector General, Office of Audits, at (202) 981-6000.
+
+Attachment
+
+
+
+
+                             OIG Project No. 24-016-AUD-FEMA, CBP
+                                      DHS OIG HIGHLIGHTS
+                          FEMA Cannot Ensure Humanitarian Funding for Aliens
+                                 Complied with Laws and Regulations
+
+
+ April 22, 2026                                 What We Found
+                                                The Federal Emergency Management Agency (FEMA) cannot ensure
+ Why We Did This                                non-Federal entities used Emergency Food and Shelter Program-
+                                                Humanitarian Relief (EFSP-H) and Shelter and Services Program
+ Audit                                          (SSP) funding in fiscal years 2023 and 2024 in compliance with
+                                                applicable laws and regulations. Without improved oversight, FEMA
+ FEMA awarded nearly $1.4 billion               faces an increased risk of funding unallowable costs and making
+ in grant funding through EFSP-H                duplicate payments when administering grants.
+ and SSP in FYs 2023 and 2024.
+ The grant funds supplemented                   Specifically, we found FEMA:
+ humanitarian relief efforts of state
+ and local governments and                      • did not review EFSP-H expenditures to ensure funds were used
+ nonprofit organizations (non-                    for allowable costs and eligible aliens, resulting in $425 million in
+ Federal entities) assisting aliens               questioned costs;
+ encountered by the Department
+ of Homeland Security. We                       • did not consistently review SSP payment requests to verify that
+ conducted this audit to determine                costs were allowable, resulting in $16.5 million in questioned
+ the extent to which FEMA ensured                 costs; and
+ non-Federal entities used EFSP-H
+ and SSP funding in FYs 2023 and                • did not perform verification to prevent duplication of funding
+ 2024 in compliance with                          between EFSP-H and SSP grants.
+ applicable laws and regulations.
+                                                These deficiencies occurred because FEMA did not establish and
+ What We                                        implement necessary internal controls to review EFSP-H and SSP
+                                                expenditures. Although DHS terminated the SSP grant awards after
+ Recommend                                      we began fieldwork, we completed this audit as our findings may
+                                                help FEMA avoid fraud, waste, or abuse during program closeout.
+ We made five recommendations
+ to improve FEMA’s oversight                    Data Access: FEMA denied us direct, read-only access to the FEMA
+ controls for humanitarian                      Grants Outcomes back-end database. After multiple delays, FEMA
+ funding during the EFSP-H and                  instead provided raw data for SSP grants and then direct, read-only
+ SSP grant closeout process.                    access to SSP award records through the system’s front-end interface.
+
+ For Further Information:
+ Contact OIG Public Affairs at (202) 981-6000   FEMA Response
+ or DHS-OIG.OfficePublicAffairs@oig.dhs.gov.
+                                                FEMA concurred with all five recommendations. Appendix B
+                                                contains FEMA’s management response in its entirety.
+
+
+www.oig.dhs.gov                                                                                                OIG-26-04
+                                   OFFICE OF INSPECTOR GENERAL
+                                     U.S. Department of Homeland Security
+
+
+                                                Background
+From fiscal years 2019 to 2024, Congress authorized the Federal Emergency Management
+Agency (FEMA) to provide grant funding to supplement the humanitarian relief efforts of state
+and local governments and nonprofit organizations (non-Federal entities)1 assisting aliens2
+encountered and released by the Department of Homeland Security. The grant funds were
+awarded to provide food, shelter, basic medical care, transportation, and other supportive
+services, and distributed through FEMA’s Emergency Food and Shelter Program-Humanitarian
+Relief (EFSP-H) and Shelter and Services Program (SSP).3
+
+Emergency Food and Shelter Program-Humanitarian Relief
+In FYs 2019, 2021, and 2022, Congress appropriated a total of $290 million to FEMA for EFSP-H.
+FEMA awarded the funds through grants to the National Board,4 which then disbursed the
+funds as subawards to non-Federal entities. The program involved multiple organizations and
+responsible officials, each with different roles:
+
+    •   The National Board served as the governing body to administer EFSP-H. It established
+        program policies, procedures, and guidelines; made award decisions; and oversaw
+        the use of funds. The Board was composed of six non-Federal organizations and FEMA.
+
+    •   The National Board’s designated fiscal agent and secretariat carried out the day-to-day
+        administrative duties and functions on behalf of the Board. This included receiving,
+        distributing, and reconciling FEMA funds, and collecting supporting documentation.
+
+
+
+1
+  Hereafter, we refer to state and local governments and nonprofit organizations as non-Federal entities.
+2
+  An alien is any person who is not a U.S. citizen or a U.S. national. 8 United States Code (U.S.C.) § 1101(a)(3).
+3
+  FEMA’s Emergency Food and Shelter Program (EFSP) was established in March 1983 through the passage of the
+Temporary Emergency Food Assistance Act of 1983 (Title I of P.L. 98−8) to supplement the work of local social
+service organizations (nonprofit, faith-based, and governmental) by providing food, shelter, and support
+services to individuals and families experiencing economic crisis, and to help prevent homelessness. EFSP was
+later authorized under the Stewart B. McKinney Homeless Assistance Act of 1987 (Title III of P.L. 100−77), which
+was renamed the McKinney-Vento Homeless Assistance Act in 2000. EFSP is codified at 42 U.S.C. §§ 11331 et.
+seq. In FY 2019, Congress expanded the program’s mission by authorizing FEMA to provide humanitarian relief
+through EFSP-H grants to non-Federal entities supporting aliens encountered by DHS along the Southern
+border. Four years later, Congress established SSP to replace EFSP-H. For additional information, see FEMA
+Assistance for Migrants Through the Emergency Food and Shelter Program-Humanitarian (EFSP-H) and Shelter
+and Services Program (SSP), Congressional Research Service R47681, August 31, 2023.
+4
+  The McKinney-Vento Homeless Assistance Act (Title III of P.L. 100−77) directed FEMA to constitute a National
+Board for the purpose of administering EFSP. According to this Act, the National Board shall establish written
+guidelines for carrying out the program, including methods for identifying individual localities with the highest
+need; methods for determining the amount and distribution of funds to such localities; eligible program costs;
+and responsibilities and reporting requirements of the National Board, its recipients, and service providers.
+
+
+www.oig.dhs.gov                                         1                                               OIG-26-04
+                                  OFFICE OF INSPECTOR GENERAL
+                                     U.S. Department of Homeland Security
+
+
+    •   FEMA’s Individual Assistance Division Director served as the National Board Chair. The
+        Chair acted as Federal liaison to the Board and provided the Board with administrative
+        support. Separately, in its role as grantor of EFSP-H funds, FEMA was responsible for
+        monitoring the grants and providing technical assistance to the grantee (the Board)
+        and did so through FEMA’s Individual Assistance Division.
+
+    •   The local board, which served as the governing body for its respective county or city,
+        was responsible for reviewing funding applications, determining applicant eligibility,
+        submitting applications to the National Board, and monitoring the use of funds.
+
+    •   The fiscal agent, a local recipient organization designated by the local board, received
+        and disbursed EFSP-H funds to vendors, maintained financial documentation, and
+        monitored the use of funds.
+
+Shelter and Services Program
+Due to increased migration along the Southern border, in FY 2023 Congress authorized FEMA
+and U.S. Customs and Border Protection (CBP) to establish a new grant program, SSP, to
+replace EFSP-H. DHS Appropriations Acts5 directed CBP to transfer $1.45 billion to FEMA for
+SSP — $800 million in FY 2023 and $650 million in FY 2024. Of the $800 million transferred in
+FY 2023, FEMA was authorized to use up to $785 million to continue services under EFSP-H
+while establishing SSP to ensure uninterrupted support.
+
+FEMA’s Grant Programs Directorate and CBP’s Operations Support Office established and
+jointly administered SSP.
+
+    •   As the Federal awarding agency, FEMA was responsible for developing SSP program
+        requirements, issuing notices of funding opportunity (NOFO),6 reviewing applications,
+        making grant awards, monitoring the use of funds, and conducting award closeout
+        procedures to ensure compliance with laws and regulations.
+
+    •   CBP provided FEMA with relevant data and models regarding aliens encountered at
+        U.S. borders, recommended funding priorities, and participated in the application
+        review process.
+
+
+
+
+5
+ Department of Homeland Security Appropriations Act, 2023 (Title II, Division F of Pub. L. No. 117−328) and
+Department of Homeland Security Appropriations Act, 2024 (Title II, Division C of Pub. L. No. 118−47) directed
+CBP to transfer the funds from CBP’s Operations and Support account to FEMA’s Federal Assistance account.
+6
+  A NOFO is a formal announcement of the availability of funding through a financial assistance program from a
+Federal awarding agency. It provides information on the award, including who is eligible to apply, evaluation
+criteria for selecting the awardee, required components of an application, and how to submit the application.
+
+
+www.oig.dhs.gov                                         2                                              OIG-26-04
+                                     OFFICE OF INSPECTOR GENERAL
+                                        U.S. Department of Homeland Security
+
+
+As of September 30, 2024, FEMA awarded nearly $1.4 billion in grant funding during FYs 2023
+and 2024. Of this amount, FEMA awarded $425 million to the National Board for EFSP-H in
+FY 2023, and about $1 billion to 84 non-Federal entities for SSP in FYs 2023 and 2024. Table 1
+provides a summary of FEMA’s grant awards.
+
+                           Table 1. FEMA Grant Awards through EFSP-H
+                           and SSP in FYs 2023 and 2024
+                            Fiscal Year             Award Type              Award Amount
+
+                                2023                   EFSP-H                $425.0 Million
+                                2023                    SSP                  $363.8 Million
+                                2024                    SSP                  $640.9 Million
+                                Total         EFSP-H and SSP                  $1.4 Billion
+
+                           Source: DHS Office of Inspector General analysis of FEMA records
+
+On January 28, 2025, DHS directed FEMA to place a hold on the disbursement of all grant
+funds, including SSP funding, to non-Federal entities whose activities were related to
+immigration.7 The funding hold did not apply to EFSP-H, as the National Board had already
+disbursed all FY 2023 program funding, and the related subaward spending period ended on
+December 31, 2024. On March 31, 2025, DHS terminated all SSP grant awards, stating the
+program was not aligned with the Department’s priorities related to immigration enforcement
+and border security. Subsequently, on April 1, 2025, FEMA issued letters to non-Federal
+entities terminating all FY 2023 and 2024 SSP grant awards.
+
+The National Board has initiated grant closeout procedures8 for EFSP-H, and FEMA has
+initiated grant closeout procedures for SSP. The closeout process includes reviewing final
+financial reports from non-Federal entities, determining allowable costs,9 recovering
+
+
+
+
+7
+ Memorandum from DHS Secretary for Component and Office Heads, Direction on Grants to Non-governmental
+Organizations, January 28, 2025. According to this memorandum, the reasons for this freeze included (1) concerns
+that these grants may be funding illegal activities, such as encouraging or inducing illegal immigration, 8 U.S.C.
+§ 1324(a)(1)(A)(iv), or illegal harboring of illegal aliens, 8 U.S.C. § 1324(a)(1)(A)(ii)-(iii); (2) concerns that there may
+be racially discriminatory language in certain grants; and (3) concerns that these grants may not be an efficient
+use of Government resources.
+8
+  2 Code of Federal Regulations (C.F.R.) §§ 200.344−345.
+9
+  To be allowable, costs must be reasonable in nature and amount, allocable to the FEMA award, included in the
+approved budget, and adequately documented. 2 C.F.R. § 200.403.
+
+
+www.oig.dhs.gov                                              3                                                  OIG-26-04
+                                 OFFICE OF INSPECTOR GENERAL
+                                    U.S. Department of Homeland Security
+
+
+unallowable costs, and de-obligating unused funds. According to Department officials, DHS
+repurposed SSP funding for FY 202510 and eliminated SSP funding in FY 2026.11
+
+Although DHS terminated the SSP grant awards after we began fieldwork, we continued the
+audit as our findings can help FEMA avoid potential fraud, waste, or abuse during program
+closeout. In an earlier report,12 we identified weaknesses in FEMA’s oversight of funding
+awarded to the National Board, which left EFSP-H funding susceptible to fraud, waste, and
+abuse. Specifically, we found non-Federal entities did not always provide documentation for
+claimed reimbursements and did not maintain information to verify whether the aliens served
+were eligible to receive services under EFSP-H. This occurred because FEMA relied on local
+boards and fiscal agents to enforce the Board’s guidance. We made two recommendations to
+improve FEMA’s oversight and enforcement for future appropriations.13 FEMA concurred with
+both recommendations. The second recommendation was closed, and the first
+recommendation remains open.
+
+We conducted this audit to determine the extent to which FEMA ensured non-Federal entities
+used EFSP-H and SSP funding in FYs 2023 and 2024 in compliance with applicable laws and
+regulations.
+
+                                           Results of Audit
+
+Key Finding 1. FEMA Did Not Review Expenditures for FY 2023 EFSP-H Awards
+FEMA’s Individual Assistance Division and the National Board did not review ongoing
+expenditures associated with FY 2023 EFSP-H awards to ensure humanitarian funds were used
+for allowable costs and eligible aliens, resulting in $425 million in questioned costs. Although
+FEMA and the Board issued new guidance to partially address recommendation 1 and close
+recommendation 2 from our 2023 report, we found they did not implement the guidance to
+provide appropriate oversight of EFSP-H expenditures.
+
+
+
+10
+   For FY 2025, Congress enacted three continuing resolutions that funded SSP at the FY 2024 level of $650
+million: the Continuing Appropriations and Extensions Act, 2025 (Pub. L. No. 118−83); the American Relief Act,
+2025 (Pub. L. No. 118−158); and the Full-Year Continuing Appropriations and Extensions Act, 2025 (Pub. L. No.
+119−4).
+11
+   Department of Homeland Security Fiscal Year 2026 Congressional Justification, June 12, 2025.
+12
+   FEMA Should Increase Oversight to Prevent Misuse of Humanitarian Relief Funds, OIG-23-20, March 28, 2023.
+13
+   Recommendation 1 was for FEMA to ensure the National Board resolves the $7.4 million in questioned costs
+and incorporates controls in EFSP-H guidance to minimize future reimbursements of unsupported costs.
+Recommendation 2 was for FEMA to ensure the National Board implements oversight measures to enforce EFSP-H
+guidance for future supplemental appropriations including by developing a risk-based methodology to review a
+sample of ongoing funding execution for future supplemental appropriations to ensure funds approved are
+reviewed and reconciled for completeness and accuracy and supported with appropriate documentation.
+
+
+www.oig.dhs.gov                                       4                                            OIG-26-04
+                                 OFFICE OF INSPECTOR GENERAL
+                                    U.S. Department of Homeland Security
+
+
+FEMA and the National Board Did Not Collect Quarterly Reports to Review Spending
+
+FEMA and the National Board did not collect quarterly spending reports to review ongoing
+expenditures related to EFSP-H funding, as required. In response to our 2023 report, FEMA
+and the Board issued new EFSP-H guidance14 requiring non-Federal entities to submit
+quarterly reports with spending information about services provided to aliens encountered by
+DHS. Despite issuing a policy to provide more oversight on how funds were spent, FEMA and
+the Board did not enforce the new requirement and did not collect any quarterly reports.
+
+This occurred because FEMA did not ensure the National Board established and implemented
+a system to collect the quarterly reports. FEMA and the Board continued to rely on local
+boards and fiscal agents to review ongoing expenditures without pursuing other methods.
+According to FEMA officials, the Board disbursed advanced funding directly to the non-Federal
+entities’ bank accounts. However, the Board did not have access to these accounts, so it
+could not monitor or report on how the funds were used. Officials explained that information
+on final expenditures and remaining balances will not be available to FEMA until the Board
+completes its review, reconciliation, and grant closeout process for EFSP-H subawards,
+scheduled for completion by September 30, 2026.
+
+As a result, FEMA and the National Board cannot verify that $425 million in EFSP-H funding
+was used for allowable costs.
+
+FEMA and the National Board Did Not Ensure EFSP-H Funds Were Used for Eligible Aliens
+
+FEMA and the National Board did not ensure non-Federal entities provided EFSP-H services
+only to eligible aliens — those encountered and released by DHS. In response to our 2023
+report, FEMA and the Board issued new EFSP-H guidance15 requiring non-Federal entities to
+maintain documentation with alien registration numbers (A-Number)16 and each alien’s first
+and last name for 3 years. However, the guidance did not require non-Federal entities to
+submit the A-Number data to the Board or CBP for validation.17 We found that neither FEMA
+nor the Board collected A-Number and name data from non-Federal entities. Further, FEMA
+
+
+14
+   National Board, Humanitarian Relief Funding Guidance Fiscal Year 2023 (Continuing Resolution $75 Million)
+Application and Funding Guidance, December 2022.
+15
+   National Board, Humanitarian Relief Funding Guidance Fiscal Year 2023 (Department of Homeland Security
+Appropriations Act, 2023 - $350 Million) Application and Funding Guidance, March 2023.
+16
+   The A-Number is a unique number assigned to aliens encountered by DHS to track their interactions with DHS.
+Only aliens with an A-Number are eligible to receive services under EFSP-H.
+17
+   DHS’ Enforcement Integrated Database stores and maintains information related to persons encountered
+during immigration and criminal law enforcement investigations and operations conducted by U.S. Immigration
+and Customs Enforcement, U.S. Citizenship and Immigration Services, and CBP. CBP can perform validation
+checks to ensure an alien’s A-Number, first name, and last name match information in the database. This
+validation process aims to avoid the reimbursement of costs for services provided to ineligible aliens.
+
+
+www.oig.dhs.gov                                       5                                             OIG-26-04
+                                OFFICE OF INSPECTOR GENERAL
+                                   U.S. Department of Homeland Security
+
+
+officials stated the Board did not plan to collect and validate such information as part of its
+review, reconciliation, and grant closeout process for EFSP-H subawards.
+
+FEMA cited two factors contributing to the lack of A-Number collection:
+
+     •   Collecting A-Numbers at the National Board level would have required significant
+         privacy controls to handle the sensitive personally identifiable information, thus
+         increasing the complexity and administrative cost of the program. Therefore, the
+         Board did not feel it was justified or feasible to collect A-Numbers.
+
+     •   The statutory structure for EFSP-H resulted in limited Federal control, as FEMA did not
+         have unilateral authority over the National Board. DHS and FEMA supported the
+         creation of SSP as a better structure to monitor the use of funds.
+
+Without the collection and validation of A-Numbers and alien’s first and last names, FEMA
+cannot ensure that non-Federal entities used humanitarian funding for eligible aliens.
+
+Key Finding 2. FEMA Did Not Consistently Review SSP Payment Requests
+FEMA’s Grant Programs Directorate did not consistently review SSP payment requests to verify
+whether costs associated with humanitarian funds for aliens were allowable. 2 C.F.R. Part 200
+and FEMA Manual 205-0-1, Grants Management Policy, Chapter 5, require FEMA to ensure non-
+Federal entities spend funds for allowable costs in compliance with applicable laws,
+regulations, and program requirements. According to the FY 2023 SSP NOFO and related FEMA
+training material,18 non-Federal entities must submit payment requests for reimbursement and
+upload supporting documentation in FEMA Grants Outcomes (FEMA GO),19 including:
+
+     •   a spreadsheet with A-Number data or evidence of DHS processing, first and last names,
+         and corresponding DHS release dates and services dates (start and end dates); and
+
+     •   proof of payment, such as canceled checks, credit card statements, personnel
+         timesheets, and payroll reports for labor costs, as well as proof of purchase, including
+         itemized receipts and invoices with sufficient detail.
+
+We reviewed a judgmental sample of seven approved payments to five non-Federal entities,
+totaling $48.2 million. This represented nearly 87 percent of the $55.6 million in payments
+
+
+ FEMA presentation, Requesting a Payment Shelter and Services Program Fiscal Year 2023 Recipients and
+18
+
+Shelter and Services Program Payment Request Slick Sheet, March 2024.
+19
+  FEMA GO is the grants management system of record for SSP. FEMA Manual 205-0-1 requires staff to maintain
+an official award file in FEMA GO containing records associated with administrative, financial, and
+programmatic activities throughout the grants management lifecycle.
+
+
+www.oig.dhs.gov                                      6                                            OIG-26-04
+                                  OFFICE OF INSPECTOR GENERAL
+                                    U.S. Department of Homeland Security
+
+
+FEMA made against the total $1 billion in SSP awards obligated in FYs 2023 and 2024.20 Based
+on our review, we questioned $16.5 million (or 34 percent of the $48.2 million) associated
+with six of the seven payments in the sample. Specifically, we found:
+
+     •   FEMA did not ensure required documents, including A-Number data, proof of payment,
+         or proof of purchase, were uploaded to FEMA GO for three payments, resulting in
+         $7.8 million in questioned costs.
+
+     •   Although FEMA requested that CBP perform A-Number validation checks in the DHS
+         Enforcement Integrated Database for aliens assisted through SSP, FEMA did not use
+         the results of these checks to accurately calculate allowable costs for two payments,
+         resulting in $5.6 million in questioned costs. FEMA made calculation errors and did
+         not ensure that invoice service dates aligned with the dates in the A-Number data.
+
+     •   FEMA did not ensure that invoices submitted for three payments included sufficient
+         detail to support the claimed SSP costs, resulting in $3.1 million in questioned costs.
+         Invoices for laundry services and medical care listed only flat amounts without
+         itemized breakdowns or applicable billing rates.
+
+This occurred because FEMA’s Grant Programs Directorate launched SSP without developing
+and implementing formal program guidance for reviewing SSP payment requests. Instead,
+FEMA officials relied on unsigned, ad-hoc policies and procedures. Without improved
+oversight during the grant closeout process, FEMA faces an increased risk of funding
+unallowable costs.
+
+Key Finding 3. FEMA Did Not Perform Verification to Prevent Duplication of
+Funding
+FEMA and the National Board relied solely on self-certifications21 from non-Federal entities
+and did not perform verification to ensure costs were not claimed under both the EFSP-H and
+SSP programs. Federal regulations and FEMA guidance22 prohibit duplication of funding.
+
+The FY 2023 and 2024 EFSP-H and SSP grants were at risk of duplication of funding because
+they provided similar services and because the spending periods for EFSP-H subawards
+
+20
+   As of September 30, 2024, FEMA paid about $55.6 million to non-Federal entities on the SSP grants awarded in
+FYs 2023 and 2024.
+21
+   We previously reported FEMA’s use of self-certification is not a reliable control to prevent duplication of
+funding and improper payments (FEMA Has Made More than $3 Billion in Improper and Potentially Fraudulent
+Payments for Home Repair Assistance since 2003, OIG-20-23, April 6, 2020, and FEMA Did Not Implement
+Controls to Prevent More than $3.7 Billion in Improper Payments from the Lost Wages Assistance Program, OIG-
+22-69, September 16, 2022).
+22
+   2 C.F.R. § 200.405(c) and FEMA Manual 205-0-1, § 4.3.3.2.
+
+
+www.oig.dhs.gov                                        7                                             OIG-26-04
+                            OFFICE OF INSPECTOR GENERAL
+                               U.S. Department of Homeland Security
+
+
+overlapped with the periods of performance for SSP grant awards by up to 22 months due to
+multiple EFSP-H extensions (see Figure 1). Although non-Federal entities were required to
+provide self-certifications, FEMA was unable to provide detailed EFSP-H spending data, which
+prevented us from testing for potential duplication between EFSP-H and SSP during the
+overlapping timeframes.
+
+Figure 1. EFSP-H and SSP Overlapping Periods of Performance
+
+
+
+
+Source: DHS OIG analysis of FEMA data
+
+FEMA and the National Board relied on self-certifications because they did not establish and
+implement a review process to prevent duplication of funding between EFSP-H and SSP
+grants and did not collect detailed information, including a detailed breakdown of EFSP-H
+funding amounts by service cost categories, that would have made such a review possible.
+
+As a result, FEMA has limited assurance that it prevented duplication of funding between
+EFSP-H and SSP grant awards. Without improved oversight during the grant closeout process,
+FEMA faces an increased risk of duplication between EFSP-H and SSP payments.
+
+
+
+
+www.oig.dhs.gov                               8                                      OIG-26-04
+                             OFFICE OF INSPECTOR GENERAL
+                               U.S. Department of Homeland Security
+
+
+                                    Recommendations
+Recommendation 1: We recommend the Director of FEMA’s Individual Assistance Division
+ensure the National Board resolves the $425 million in questioned costs associated with the
+Emergency Food and Shelter Program-Humanitarian Relief funding during the grant closeout
+process by collecting supporting documentation, determining whether the costs are
+allowable, and recouping any costs that are not allowable.
+
+Recommendation 2: We recommend the Assistant Administrator of FEMA’s Grant Programs
+Directorate resolve the $16.5 million in questioned costs associated with the Shelter and Services
+Program funding identified in our report. FEMA should collect supporting documentation,
+determine whether the costs are allowable, recoup any costs that are not allowable, and upload
+the necessary information to the FEMA Grants Outcomes system of record.
+
+Recommendation 3: We recommend the Assistant Administrator of FEMA’s Grant Programs
+Directorate review payment requests during the grant closeout process for all Shelter and
+Services Program awards in FY 2023 and FY 2024 to minimize the reimbursement of
+unsupported costs. FEMA should collect supporting documentation, determine whether the
+costs are allowable, and upload the necessary information to the FEMA Grants Outcomes
+system of record.
+
+Recommendation 4: We recommend the Assistant Administrator of FEMA’s Grant Programs
+Directorate develop and implement controls to ensure FEMA officials and grant recipients use
+FEMA Grants Outcomes as the system of record to maintain required documentation
+supporting all phases of the grants management lifecycle.
+
+Recommendation 5: We recommend the Director of FEMA’s Individual Assistance Division and
+the Assistant Administrator of FEMA’s Grant Programs Directorate establish a review process
+to ensure there was no duplication of FY 2023 funding between the Emergency Food and
+Shelter Program-Humanitarian Relief and the Shelter and Services Program. FEMA should
+recoup any duplicate payments identified.
+
+                      Management Comments and OIG Analysis
+FEMA provided management comments on a draft of this report. FEMA concurred with all
+five recommendations, which we consider open and resolved. Appendix B contains a copy of
+FEMA’s response in its entirety. FEMA also provided technical comments to our draft report.
+We incorporated these comments in our report, as appropriate. A summary of FEMA’s
+response to the recommendations and our analysis follows.
+
+
+
+
+www.oig.dhs.gov                                9                                       OIG-26-04
+                            OFFICE OF INSPECTOR GENERAL
+                               U.S. Department of Homeland Security
+
+
+FEMA disagreed with some of the findings in our report related to the questioned costs we
+identified during our review of sampled SSP grant payments. Specifically, FEMA disagreed
+that it made calculation errors when examining A-Number records, resulting in $5.6 million in
+questioned costs. FEMA also disagreed that it did not ensure invoices submitted for three
+payments included sufficient detail to support the claimed costs, resulting in $3.1 million in
+questioned costs. Our analysis showed that FEMA did not always accurately calculate the
+allowable costs and maintain sufficient documentation to support the claimed costs, as
+required. Therefore, we stand by our conclusion and the questioned costs.
+
+FEMA Response to Recommendation 1: Concur. FEMA’s Individual Assistance Division will
+work to close out the EFSP-H grant program and resolve the $425 million in questioned costs.
+Pursuant to 2 C.F.R. Section 200.344, the National Board must submit a closeout package to
+FEMA that includes all final financial, performance, and other reports and documentation.
+FEMA’s Individual Assistance Division will complete a closeout review by collecting supporting
+documentation, determining whether the costs are allowable, and recouping any costs that
+are not allowable. Estimated completion date: December 31, 2026.
+
+OIG Analysis: We consider these actions responsive to the recommendation, which is open
+and resolved. The recommendation will remain open until FEMA submits documentation
+showing the completion of these corrective actions.
+
+FEMA Response to Recommendation 2: Concur. FEMA’s Grant Programs Directorate will
+continue to collect supporting documentation during the closeout phase to determine
+whether final payment request costs are allowable as part of the payment review process. All
+previous and final payments will be reviewed before awards are closed out. If it is
+determined that any costs are not allowable, all options will be pursued to recoup those
+costs, as appropriate, and the necessary documentation will be uploaded to FEMA GO.
+Estimated Completion Date: September 30, 2026.
+
+OIG Analysis: We consider these actions responsive to the recommendation, which is open
+and resolved. The recommendation will remain open until FEMA submits documentation
+showing it has resolved the $16.5 million in questioned costs associated with the SSP funding
+identified in our report.
+
+FEMA Response to Recommendation 3: Concur. As part of the SSP closeout process, and in
+accordance with chapter 6 of FEMA Manual 205-0-1, FEMA will continue to review all previous
+and final payment requests for allowability. FEMA will implement internal SSP award
+closeout procedures addressing how it will verify that costs and service dates are within the
+period of performance, and ensure all documents are uploaded to FEMA GO. In addition, the
+payment request will be routed to FEMA and DHS leadership for final determination, as
+appropriate. Estimated Completion Date: September 30, 2026.
+
+
+www.oig.dhs.gov                               10                                      OIG-26-04
+                           OFFICE OF INSPECTOR GENERAL
+                              U.S. Department of Homeland Security
+
+
+OIG Analysis: We consider these actions responsive to the recommendation, which is open
+and resolved. The recommendation will remain open until FEMA submits documentation
+showing the completion of these corrective actions.
+
+FEMA Response to Recommendation 4: Concur. FEMA’s Grant Programs Directorate
+implemented controls to address this matter and will provide them to DHS OIG for reference.
+The FY 2023 SSP NOFO identifies FEMA GO as the system of record for SSP. Recipients already
+must use FEMA GO to submit their quarterly reports, amendments, and payment requests. To
+strengthen oversight, FEMA’s Grant Programs Directorate is implementing both a “Payment
+Request Reviewer Guide” and a “Payment Review Checklist,” which provide clear instructions
+for ensuring supporting documentation is attached within FEMA GO and for reviewing and
+reconciling reimbursement requests to ensure compliance and accuracy. Estimated
+Completion Date: February 27, 2026.
+
+OIG Analysis: We consider these actions responsive to the recommendation, which is open
+and resolved. The recommendation will remain open until FEMA submits documentation
+showing the completion of these corrective actions.
+
+FEMA Response to Recommendation 5: Concur. FEMA’s Individual Assistance Division will
+establish a review process to ensure there was no duplication of FY 2023 funding between
+EFSP-H and SSP. As the EFSP-H FY 2023 period of performance ends on September 30, 2026,
+FEMA will not be able to implement a review process until the National Board provides the
+closeout package and the program is officially closed. Once this process is complete, FEMA’s
+Individual Assistance Division will complete a sampling analysis to identify any duplicate
+payments and recoup those funds, as appropriate. Estimated Completion Date: December 31,
+2026.
+
+OIG Analysis: We consider these actions responsive to the recommendation, which is open
+and resolved. The recommendation will remain open until FEMA submits documentation
+showing the completion of these corrective actions.
+
+
+
+
+www.oig.dhs.gov                             11                                     OIG-26-04
+                                    OFFICE OF INSPECTOR GENERAL
+                                       U.S. Department of Homeland Security
+
+
+Appendix A:
+Objective, Scope, and Methodology
+The objective of this audit was to determine the extent to which FEMA ensured non-Federal
+entities used EFSP-H and SSP funding in FYs 2023 and 2024 in compliance with applicable laws
+and regulations. To answer our objective, we reviewed applicable Federal laws and regulations
+along with DHS, FEMA, CBP, and National Board policies, procedures, and guidance associated
+with the allocation, award, and administration of EFSP-H and SSP funding. We also reviewed
+DHS OIG and U.S. Government Accountability Office reports, relevant media articles,
+congressional testimonies, and DHS NOFOs.
+
+To understand the Department’s process related to allocating, awarding, and administering
+EFSP-H and SSP funding, we interviewed officials from:
+
+       •    FEMA’s Individual Assistance Division, Grant Programs Directorate, Office of the Chief
+            Financial Officer, Office of Chief Counsel, and Office of the Chief Security Officer
+       •    CBP’s Operations Support Office and Policy Directorate
+       •    National Board’s Fiscal Agent and Secretariat
+       •    DHS’ Office of Intelligence and Analysis and Office of the Chief Financial Officer
+
+We analyzed the universe of humanitarian relief funds awarded to non-Federal entities
+through EFSP-H and SSP grants in FYs 2023 and 2024. We selected a non-statistical,
+judgmental sample of seven SSP payments totaling $48.2 million, representing a portion of
+the $55.6 million in total payments made in FYs 2023 and 2024, as of September 30, 2024.
+We reviewed supporting documentation uploaded to FEMA GO to determine whether the
+expenses claimed were reasonable in nature and amount, allocable to the FEMA award,
+included in the approved budget, and adequately documented.
+
+We evaluated the actions taken by FEMA and the National Board to implement
+recommendation 2 from our 2023 report,23 which aimed to improve oversight of EFSP-H
+spending by reducing risk, increasing transparency, and allowing for sample reviews of
+ongoing expenditures. To assess whether implementation efforts achieved the desired
+results, we interviewed program officials and requested copies of the Board’s quarterly
+spending reports, which were expected to include a breakdown of the obligations,
+expenditures, and remaining balances by service category for each EFSP-H subaward.
+However, because FEMA did not ensure the Board established and implemented a system to
+collect the quarterly reports, we did not conduct further testing in this area.
+
+
+
+
+23
+     FEMA Should Increase Oversight to Prevent Misuse of Humanitarian Relief Funds, OIG-23-20, March 28, 2023.
+
+
+www.oig.dhs.gov                                         12                                            OIG-26-04
+                             OFFICE OF INSPECTOR GENERAL
+                               U.S. Department of Homeland Security
+
+
+We assessed the reliability of computer-processed data obtained from FEMA GO, FEMA’s
+Integrated Financial Management Information System, as well as separate spreadsheets
+manually created by FEMA and National Board officials to track allocations, award
+obligations, and expenditures related to humanitarian funding provided to aliens through
+EFSP-H and SSP grants in FYs 2023 and 2024. To test data reliability, we traced and
+compared reported amounts to source documentation, including grant files, financial system
+reports, and other corroborating evidence. We determined the data was sufficiently reliable
+for the purposes of our audit.
+
+We assessed internal controls related to FEMA’s oversight of humanitarian funding for aliens
+and identified internal control components and underlying internal control principles that
+were significant to the audit objective. Specifically, we identified weaknesses for the control
+environment, risk assessment, control activities, information and communication, and
+monitoring control components. These internal control weaknesses are discussed in the
+body of this report. However, because we limited our assessment to the audit objective, the
+report may not have disclosed all internal control deficiencies that may have existed at the
+time of our audit.
+
+We conducted this audit from June 2024 through September 2025 pursuant to the Inspector
+General Act of 1978, 5 U.S.C. §§ 401–424, and according to generally accepted government
+auditing standards. Those standards require that we plan and perform the audit to obtain
+sufficient, appropriate evidence to provide a reasonable basis for our findings and conclusions
+based on our audit objectives. We believe that the evidence obtained provides a reasonable
+basis for our findings and conclusions based on our audit objectives.
+
+DHS OIG’s Access to DHS Information
+
+FEMA denied DHS OIG direct, read-only access to the FEMA GO back-end database because it
+was not possible to partition the data access to only those records FEMA deemed relevant to
+the audit. In lieu of direct system access, after multiple delays, FEMA provided us with full
+copies of the raw data tables for all FY 2023 and 2024 SSP grants. The delays caused by the
+denial of direct FEMA GO access and subsequently obtaining extracts negatively impacted
+our timeliness in performing this audit. Subsequently, we obtained direct, read-only access
+to SSP award records for FYs 2023 and 2024 through the FEMA GO front-end interface.
+
+
+
+
+www.oig.dhs.gov                                13                                      OIG-26-04
+                     OFFICE OF INSPECTOR GENERAL
+                       U.S. Department of Homeland Security
+
+
+Appendix B:
+FEMA Comments on the Draft Report
+
+
+
+
+www.oig.dhs.gov                      14                       OIG-26-04
+                  OFFICE OF INSPECTOR GENERAL
+                   U.S. Department of Homeland Security
+
+
+
+
+www.oig.dhs.gov                  15                       OIG-26-04
+                  OFFICE OF INSPECTOR GENERAL
+                   U.S. Department of Homeland Security
+
+
+
+
+www.oig.dhs.gov                  16                       OIG-26-04
+                  OFFICE OF INSPECTOR GENERAL
+                   U.S. Department of Homeland Security
+
+
+
+
+www.oig.dhs.gov                  17                       OIG-26-04
+                  OFFICE OF INSPECTOR GENERAL
+                   U.S. Department of Homeland Security
+
+
+
+
+www.oig.dhs.gov                  18                       OIG-26-04
+                  OFFICE OF INSPECTOR GENERAL
+                   U.S. Department of Homeland Security
+
+
+
+
+www.oig.dhs.gov                  19                       OIG-26-04
+                             OFFICE OF INSPECTOR GENERAL
+                                U.S. Department of Homeland Security
+
+
+Appendix C:
+Potential Monetary Benefits
+
+Category of          Unsupported        Ineligible         Total   Funds to Be
+Humanitarian               Costs            Costs    Questioned         Put to
+Funding               Questioned       Questioned         Costs     Better Use   Rec No.
+EFSP-H                     $425 M              $0        $425 M            $0         1
+SSP                        $16.5 M             $0        $16.5 M           $0         2
+Totals                    $441.5 M             $0      $441.5 M            $0       N/A
+Source: DHS OIG analysis of FEMA records
+
+
+
+
+www.oig.dhs.gov                                20                                  OIG-26-04
+                           OFFICE OF INSPECTOR GENERAL
+                             U.S. Department of Homeland Security
+
+
+Appendix D:
+Report Distribution
+Department of Homeland Security
+
+Secretary
+Deputy Secretary
+Chief of Staff
+Deputy Chiefs of Staff
+General Counsel
+Executive Secretary
+Director, GAO/OIG Liaison Office
+Under Secretary, Office of Strategy, Policy, and Plans
+Under Secretary for Management
+Assistant Secretary for Office of Public Affairs
+Assistant Secretary for Office of Legislative Affairs
+Administrator, Federal Emergency Management Agency
+Associate Administrator, FEMA Office of Resilience
+Associate Administrator, FEMA Office of Response and Recovery
+Assistant Administrator, FEMA Grant Programs Directorate
+Assistant Administrator, FEMA Recovery Directorate
+Director, FEMA Individual Assistance Division
+Commissioner, U.S. Customs and Border Protection
+FEMA Audit Liaison Office
+CBP Audit Liaison Office
+
+Office of Management and Budget
+
+Chief, Homeland Security Branch
+DHS OIG Budget Examiner
+
+Congress
+
+Congressional Oversight and Appropriations Committees
+
+
+
+
+www.oig.dhs.gov                            21                       OIG-26-04
+                                 Additional Information
+To view this and any other DHS OIG reports, Please visit our website: www.oig.dhs.gov
+
+For further information or questions, please contact the DHS OIG Office of Public Affairs via email:
+DHS-OIG.OfficePublicAffairs@oig.dhs.gov
+
+
+
+
+                                     DHS OIG Hotline
+ To report fraud, waste, abuse, or criminal misconduct involving U.S. Department of Homeland
+        Security programs, personnel, and funds, please visit: www.oig.dhs.gov/hotline
+
+         If you cannot access our website, please contact the hotline by phone or mail:
+
+                                      Call: 1-800-323-8603
+
+                                            U.S. Mail:
+                               Department of Homeland Security
+                           Office of Inspector General, Mail Stop 0305
+                                        Attention: Hotline
+                                       245 Murray Drive SW
+                                   Washington, DC 20528-0305
+

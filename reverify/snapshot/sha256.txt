@@ -1,0 +1,3 @@
+fe91addc13ac36025920b33d35ddd813351b857046a28e1bf16e7e43bfbac5ee  snapshot/first-term-trump-admin-media-deception.csv
+cb4553439ca3a29ba42c3c7fb8a593e39455b21932ebbe5add29b14ffcabfce7  snapshot/later-second-term-trump-admin-media-deception.csv
+Thu Sep 24 14:49:58 MDT 2026

@@ -1,0 +1,29 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Maui context added: FEMA's $56.1 million in Individual Assistance was part of nearly $3 billion in federal support (same FEMA fact sheet)",
+  "Mayorkas remark and the House Homeland letter attributed to the committee's Republicans (a political letter, unlinked)",
+  "GAO-26-108154 helpline findings stated as GAO found them"
+ ],
+ "edits": [
+  [
+   "The Secretary of Homeland Security told reporters FEMA did not have the funds to make it through the hurricane season. [House Homeland wrote him](https://homeland.house.gov/wp-content/uploads/2024/10/2024-10-11-Green-et-al-to-Mayorkas-DHS-re-FEMA-Funding-Priorities.pdf) on October 11: Americans in those mountains on one line, migrant shelter on the other. The Committee said",
+   "House Homeland Security Committee Republicans wrote the Secretary on October 11, 2024, citing his public warning that FEMA did not have the funds to make it through the hurricane season. The Republicans said"
+  ],
+  [
+   "Helene survivors faced long wait times. Many could not reach a representative on the helpline.",
+   "after Helene and Milton, many survivors’ calls to FEMA’s helpline went unanswered, and answered calls waited, on average, from about half an hour to more than two hours at the peak."
+  ],
+  [
+   "**$56.1 million** in Individual Assistance to **7,141 people**.",
+   "**$56.1 million** in Individual Assistance to **7,141 people**, within nearly $3 billion in total federal support."
+  ]
+ ],
+ "ourview": [
+  "Say the wire correctly"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

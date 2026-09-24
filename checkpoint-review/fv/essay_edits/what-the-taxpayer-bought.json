@@ -1,0 +1,29 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Dek corrected: ICE counted homicide charges and convictions among people it arrested, not 'Americans murdered'",
+  "Phone-plan cap described exactly (the $10/$5 daily cap covers all shelter utilities, phone and internet plans included)",
+  "'Serving life' dropped (reported only in the press; the sentencing record was not reached); conviction kept"
+ ],
+ "edits": [
+  [
+   "Cash cards. Phones. Clothing. Housing. Property smashed. Americans murdered. The federal grant listed the first four. ICE counted the last two.",
+   "Cash cards. Phones. Clothing. Housing. Then the rap sheet. The federal grant listed the first four. ICE counted the charges."
+  ],
+  [
+   "**Cell phone plans** and internet, billed as facility utilities, capped at $10 a person a day overnight and $5 a day otherwise.",
+   "**Cell phone plans** and internet, billed with electricity, gas and water as facility utilities, with all utilities together capped at $10 per migrant a day at overnight shelters and $5 a day otherwise."
+  ],
+  [
+   "was convicted of that murder and is serving life.",
+   "was convicted of that murder."
+  ],
+  [
+   "— people who should not have been on an American street.",
+   "."
+  ]
+ ],
+ "ourview": [
+  "The shopping list and the rap sheet"
+ ]
+}

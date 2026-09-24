@@ -1,0 +1,630 @@
+
+Gasoline and Diesel Fuel Update - U.S. Energy Information Administration (EIA)
+Skip to sub-navigation
+U.S. Energy Information Administration - EIA - Independent Statistics and Analysis
+Menu
+Statistics
+Analysis
+Tools
+Education
+News
+Enter Search Term(s):
+Search
+ Petroleum & Other Liquids 
+Skip to page content
+Overview
+ Browse Data
+ Summary 
+ Prices 
+ Crude reserves and production 
+ Refining and processing 
+ Imports/exports 
+ Movements 
+ Stocks 
+ Consumption/sales 
+ Search by Tag
+ Major Topics 
+ Find by 
+Most popular
+Consumption/demand
+Exports/imports
+Forecasts/projections 
+Inventories/stocks
+Prices
+Production/supply
+Refining
+Reserves
+All reports
+ Alphabetical 
+ Recurring 
+ Tag Cloud 
+ Glossary 
+ FAQS 
+Gasoline and Diesel Fuel Update Home
+Gasoline and Diesel Fuel Update
+Gasoline Release Date:
+September 22, 2026
+Next Release Date:
+September 29, 2026
+Diesel Fuel Release Date:
+September 22, 2026
+Next Release Date:
+September 29, 2026
+U.S. Regular Gasoline Prices*(dollars per gallon) 
+full history 
+XLS
+Change from
+09/07/26
+09/14/26
+09/21/26
+2 year ago
+year ago
+week ago
+U.S.
+4.157
+4.319
+4.478
+1.293
+1.305
+0.159
+East Coast
+ (PADD1)
+4.031
+4.191
+4.285
+1.233
+1.255
+0.094
+New England
+ (PADD1A)
+4.189
+4.294
+4.382
+1.304
+1.307
+0.088
+Central Atlantic
+ (PADD1B)
+4.240
+4.387
+4.438
+1.233
+1.251
+0.051
+Lower Atlantic
+ (PADD1C)
+3.860
+4.041
+4.163
+1.212
+1.243
+0.122
+Midwest
+ (PADD2)
+3.894
+4.091
+4.386
+1.309
+1.378
+0.295
+Gulf Coast
+ (PADD3)
+3.685
+3.852
+3.972
+1.239
+1.256
+0.120
+Rocky Mountain
+ (PADD4)
+4.314
+4.438
+4.510
+1.076
+1.326
+0.072
+West Coast
+ (PADD5)
+5.362
+5.467
+5.600
+1.489
+1.328
+0.133
+West Coast
+ less California
+4.975
+5.026
+5.106
+1.409
+1.047
+0.080
+See less
+See more
+States
+Change from
+09/07/26
+09/14/26
+09/21/26
+2 year ago
+year ago
+week ago
+California
+5.678
+5.827
+6.003
+1.513
+1.535
+0.176
+Colorado
+4.187
+4.230
+4.257
+0.838
+1.192
+0.027
+Florida
+3.860
+4.102
+4.217
+1.157
+1.208
+0.115
+Massachusetts
+4.160
+4.253
+4.349
+1.262
+1.293
+0.096
+Minnesota
+4.077
+4.223
+4.343
+1.275
+1.331
+0.120
+New York
+4.260
+4.339
+4.421
+1.233
+1.295
+0.082
+Ohio
+3.885
+4.147
+4.478
+1.385
+1.459
+0.331
+Texas
+3.618
+3.806
+3.929
+1.219
+1.234
+0.123
+Washington
+5.483
+5.503
+5.516
+1.566
+1.001
+0.013
+Cities
+Boston
+4.178
+4.266
+4.387
+1.285
+1.313
+0.121
+Chicago
+4.321
+4.420
+4.879
+1.321
+1.413
+0.459
+Cleveland
+3.944
+4.181
+4.501
+1.399
+1.447
+0.320
+Denver
+4.152
+4.250
+4.211
+0.820
+1.168
+-0.039
+Houston
+3.592
+3.738
+3.863
+1.196
+1.188
+0.125
+Los Angeles
+5.682
+5.805
+5.984
+1.690
+1.482
+0.179
+Miami
+3.908
+4.105
+4.266
+1.161
+1.216
+0.161
+New York City
+4.227
+4.368
+4.407
+1.357
+1.329
+0.039
+San Francisco
+5.752
+5.930
+6.071
+1.217
+1.639
+0.141
+Seattle
+5.604
+5.653
+5.692
+1.483
+1.051
+0.039
+U.S. On-Highway Diesel Fuel Prices*(dollars per gallon)
+full history 
+XLS
+Change from
+09/07/26
+09/14/26
+09/21/26
+2 year ago
+year ago
+week ago
+U.S.
+5.967
+6.285
+6.529
+2.990
+2.780
+0.244
+East Coast
+ (PADD1)
+5.744
+6.158
+6.268
+2.691
+2.523
+0.110
+New England
+ (PADD1A)
+5.990
+6.202
+6.517
+2.720
+2.555
+0.315
+Central Atlantic
+ (PADD1B)
+6.051
+6.312
+6.546
+2.733
+2.638
+0.234
+Lower Atlantic
+ (PADD1C)
+5.605
+6.096
+6.139
+2.672
+2.475
+0.043
+Midwest
+ (PADD2)
+5.946
+6.250
+6.680
+3.169
+2.949
+0.430
+Gulf Coast
+ (PADD3)
+5.754
+6.027
+6.177
+2.986
+2.777
+0.150
+Rocky Mountain
+ (PADD4)
+5.805
+6.066
+6.340
+2.732
+2.593
+0.274
+West Coast
+ (PADD5)
+6.987
+7.250
+7.456
+3.217
+2.932
+0.206
+West Coast
+ less California
+6.314
+6.566
+6.791
+2.976
+2.668
+0.225
+California
+7.764
+8.039
+8.246
+3.519
+3.261
+0.207
+*prices include all taxes
+Download image
+What we pay for in a gallon of:
+Regular Gasoline
+May 2026
+Retail price: $4.48/gallon
+Diesel
+May 2026
+Retail price: $5.60/gallon
+Taxes
+Distribution
+& Marketing
+Refining
+Crude Oil
+12%
+15%
+22%
+52%
+11%
+23%
+25%
+42%
+Data source: U.S. Energy Information Administration, 
+Gasoline and Diesel Fuel Update
+Top
+Sign up for email updates
+Get the RSS feed
+Release Schedule
+﻿
+What Determines Gas Prices?
+Details...
+Procedures, Methodology, & Measures of Sampling Variability
+Gasoline
+Standard Errors
+Diesel fuel
+Standard Errors
+Geographical
+Gasoline:
+Gasoline prices by region
+Reformulated gasoline map
+Map of states in each region
+EIA city and state gasoline areas
+Gasoline city definitions
+Diesel Fuel:
+Map of states in each region
+Other
+Pump methodology and data history
+Federal and state motor fuel taxes
+Regular gasoline prices adjusted for inflation
+Diesel fuel prices adjusted for inflation
+Learn more
+What's up (and down) with gasoline prices?
+See all FAQs on Gasoline
+FAQs for EIA-878 survey
+How do I calculate/find diesel fuel surcharges?
+See all FAQs on Diesel Fuel
+FAQs for EIA-888 survey
+About EIA
+Open Data
+Legacy
+Contact Us
+U.S. Energy Information Administration
+1000 Independence Ave., SW
+Washington, DC 20585
+Policies
+Privacy/Security
+Copyright & Reuse
+Accessibility
+Information Quality
+Freedom of Information Act (FOIA)
+Related Sites
+usa.gov
+U.S. Department of Energy
+Stay Connected
+Facebook
+X
+Youtube
+LinkedIn
+Email Updates
+RSS Feeds
+Statistics
+Analysis
+Tools
+Education
+News
+Petroleum & Other Liquids
+Crude oil, gasoline, heating oil, diesel, propane, and other liquids including biofuels and natural gas liquids.
+Natural Gas
+Exploration and reserves, storage, imports and exports, production, prices, sales.
+Electricity
+Sales, revenue and prices, power plants, fuel use, stocks, generation, trade, demand & emissions.
+Coal
+Reserves, production, prices, employment and productivity, distribution, stocks, imports and exports.
+Nuclear & Uranium
+Uranium fuel, nuclear reactors, generation, spent fuel.
+Renewable & Alternative Fuels
+Includes hydropower, solar, wind, geothermal, biomass and ethanol.
+EIA Survey Forms
+Forms EIA uses to collect energy data including descriptions, links to survey instructions, and additional information.
+Total Energy
+Comprehensive data summaries, comparisons, analysis, and projections integrated across all energy sources.
+Monthly Energy Review
+Annual Energy Review
+Consumption & Efficiency
+Energy use in homes, commercial buildings, manufacturing, and transportation.
+Residential Energy Consumption Survey (RECS)
+Commercial Buildings Energy Consumption Survey (CBECS)
+Manufacturing Energy Consumption Survey (MECS)
+U.S. States
+State energy information, including overviews, rankings, data, and analyses.
+State Energy Data System (SEDS)
+International
+International energy information, including overviews, rankings, data, and analyses.
+International Energy Statistics
+Environment
+Greenhouse gas data, voluntary reporting, electric power plant emissions.
+U.S. Energy-Related Carbon Dioxide Emissions
+Energy-Related Carbon Dioxide Emissions at the State Level, 2005-2016
+Energy-Related Carbon Dioxide Emissions at the State Level
+Analysis and Projections
+Monthly and yearly energy forecasts, analysis of energy topics, financial analysis, congressional reports.
+Short-Term Energy Outlook
+Annual Energy Outlook
+Special Reports
+Special market analysis and/or data requests.
+EIA-112 Residential Utility Disconnections
+SHIP Act
+Energy & Financial Markets: What Drives Crude Oil Prices?
+International
+International energy analyses.
+Regional Analysis Briefs
+Country Analysis Briefs
+World Oil Transit Chokepoints
+OPEC Revenue
+Global Energy Security Data
+Glossary
+Data Tools, Apps, & Maps
+Tools to customize searches, view specific data sets, study detailed documentation, and access time-series data.
+Open Data
+EIA's free and open data available as API, Excel add-in, bulk files, and widgets
+EIA Beta
+Come test out some of the products still in development and let us know what you think!
+Open Source Code
+EIA's open source code, available on GitHub.
+All Reports & Products
+EIA Survey Forms
+Forms EIA uses to collect energy data including descriptions, links to survey instructions, and additional information.
+Email Updates
+Sign up for email subscriptions to receive messages about specific EIA products
+RSS Feeds
+Subscribe to feeds for updates on EIA products including Today in Energy and What's New.
+Follow us. . .
+A-Z Index
+A
+ |
+B
+ |
+C
+ |
+D
+ |
+E
+ |
+F
+ |
+G
+ |
+H
+ |
+I
+ |
+J
+ |
+K
+ |
+L
+ |
+M
+ |
+N
+ |
+O
+ |
+P
+ |
+Q
+ |
+R
+ |
+S
+ |
+T
+ |
+U
+ |
+V
+ |
+W
+ |
+XYZ
+Today in Energy
+Short, timely articles with graphics on energy, facts, issues, and trends.
+Energy Explained
+What is Energy?
+Units & Calculators
+U.S. Energy Facts
+Use of Energy
+Energy & Environment
+Petroleum
+Hydrocarbon Gas Liquids
+Natural Gas
+Coal
+Nuclear
+Electricity
+Hydrogen
+Hydropower
+Biofuels
+Biomass
+Wind
+Geothermal
+Solar
+For Teachers
+Lesson plans, science fair experiments, field trips, teacher guide, and career corner.
+Glossary
+FAQs
+Coal
+Conversion & Equivalents
+Oil/Petroleum
+Diesel
+Electricity
+Environment
+Gasoline
+General Energy
+Natural Gas
+Nuclear
+Prices
+Renewables
+What's New?
+U.S. Biofuels Plant Production Capacity Report
+Sep 24, 2026
+Electric Power Monthly
+Sep 24, 2026
+Wholesale Electricity Market Data
+Sep 17, 2026
+Press Room
+Press Releases
+Congressional Testimony
+Presentations
+Events

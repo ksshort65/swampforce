@@ -1,0 +1,63 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Record links moved to primary sources: C-SPAN full Vandalia rally, White House transcript of the Aug. 15, 2017 remarks, C-SPAN full Jan. 6 speech, White House roundtable transcript (May 16, 2018), the BBC's own statement; YouTube, Politico and NPR links removed",
+  "'BBC stuck two lines 54 minutes apart' softened to what the BBC itself admitted (it apologised for the edit)",
+  "'Outlets that widened it had to walk it back' cut (press-only); the transcript shows the answer followed a question about MS-13"
+ ],
+ "edits": [
+  [
+   "[Vandalia rally — bloodbath, the auto plants](https://www.youtube.com/watch?v=f57dRZMS0PQ)",
+   "[Vandalia rally, March 16, 2024 — bloodbath, the auto plants (C-SPAN, full)](https://www.c-span.org/program/public-affairs-event/former-president-trump-campaigns-for-bernie-moreno/639757)"
+  ],
+  [
+   "- [Hannity town hall — dictator on day one](https://www.youtube.com/watch?v=7lB3bfVg8Z8)\n",
+   "- Hannity town hall, Dec. 5, 2023 — dictator on day one (Fox News broadcast)\n"
+  ],
+  [
+   "[Charlottesville transcript — condemned totally](https://www.politico.com/story/2017/08/15/full-text-trump-comments-white-supremacists-alt-left-transcript-241662)",
+   "[Charlottesville remarks, Aug. 15, 2017 — White House transcript](https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-infrastructure/)"
+  ],
+  [
+   "[January 6 speech — full text](https://www.npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial)",
+   "[January 6 speech — C-SPAN, full](https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc)"
+  ],
+  [
+   "[BBC splice versus the original](https://www.youtube.com/watch?v=TAV5-oun3uM)",
+   "[BBC statement apologising for its edit](https://www.bbc.co.uk/mediacentre/statements/panorama-trump-a-second-chance/)"
+  ],
+  [
+   "Record: https://www.youtube.com/watch?v=f57dRZMS0PQ",
+   "Record: https://www.c-span.org/program/public-affairs-event/former-president-trump-campaigns-for-bernie-moreno/639757"
+  ],
+  [
+   "Record: https://www.youtube.com/watch?v=7lB3bfVg8Z8",
+   "Record: Fox News town hall, Dec. 5, 2023 (broadcast; no official transcript linked)"
+  ],
+  [
+   "Record: https://www.politico.com/story/2017/08/15/full-text-trump-comments-white-supremacists-alt-left-transcript-241662",
+   "Record: https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-infrastructure/"
+  ],
+  [
+   "“Peacefully and patriotically.” BBC stuck two lines 54 minutes apart.",
+   "“Peacefully and patriotically.” The BBC later [apologised](https://www.bbc.co.uk/mediacentre/statements/panorama-trump-a-second-chance/) for how it edited the speech."
+  ],
+  [
+   "Record: https://www.npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial",
+   "Record: https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc"
+  ],
+  [
+   "The file: The roundtable was MS-13. Outlets that widened it had to walk it back.",
+   "The file: The line followed a sheriff’s comment about MS-13 at the roundtable.\n\nRecord: https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-california-sanctuary-state-roundtable/"
+  ]
+ ],
+ "ourview": [
+  "A political argument",
+  "The table that follows",
+  "He said fight like hell"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

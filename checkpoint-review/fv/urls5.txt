@@ -1,0 +1,7 @@
+eia_diesel_hist https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=pet&s=emd_epd2d_pte_nus_dpg&f=w
+eia_wti_daily https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=pet&s=rwtc&f=d
+eia_gaspump https://www.eia.gov/petroleum/gasdiesel/gaspump_hist.php
+eia_tie67165 https://www.eia.gov/todayinenergy/detail.php?id=67165
+eia_steo https://www.eia.gov/outlooks/steo/report/global_oil.php
+eia_gasdiesel https://www.eia.gov/petroleum/gasdiesel/
+eia_refcap https://www.eia.gov/petroleum/refinerycapacity/

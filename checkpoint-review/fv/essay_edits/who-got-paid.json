@@ -1,0 +1,45 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Smuggling-revenue figures cut ($13B 'DHS estimate' known only via a House committee page and InSight Crime; the Washington Post $4–12B figure is press-only)",
+  "546,255 unaccompanied children and '2 million gotaways' cut (committee fact sheet, not CBP data); southwest encounters re-sourced to DHS OHSS (8.73 million, FY2021–24)",
+  "Bonillo and George sentences linked to DOJ releases (hosted by DHS OIG); Mexican officials' indictment dated and sourced (SDNY, unsealed April 29, 2026)",
+  "Cuellar pardon sourced to the DOJ pardon warrant (Dec. 2, 2025); the $200,000 laundering amount cut (press-only)",
+  "'65,000 child-welfare reports' and 'cartel revenue exploded' cut (no primary record); FY2021 caveat added"
+ ],
+ "edits": [
+  [
+   "DHS's own estimate, cited by House Homeland Security and by InSight Crime: human smuggling into the United States was generating as much as $13 billion a year by 2021 — Biden's first year. The Washington Post, November 2024: $4 billion to $12 billion a year as a top income stream. ILO's global trafficking number — about $150 billion worldwide — is a different ledger. Those numbers stay on different ledgers. The border product",
+   "This journal will not print a smuggling-revenue figure it cannot trace to a government record, and the ones in circulation trace to committee pages and press accounts. The border product"
+  ],
+  [
+   "CBP recorded 546,255 unaccompanied children at the southwest border since FY2021, on top of 8.72 million southwest encounters and about 2 million known gotaways. Somebody collected on every one of those bodies.",
+   "[DHS’s statistics office](https://ohss.dhs.gov/khsm/cbp-encounters) counts 8.73 million southwest border encounters in fiscal 2021–24 (fiscal 2021 began in October 2020). Our view: somebody collected on those crossings."
+  ],
+  [
+   "Diego Bonillo, 15 years. Leonard Darnell George, 23 years, bribes to pass drugs and people.",
+   "[Diego Bonillo](https://www.oig.dhs.gov/sites/default/files/assets/pr/2025/dojpr-111325-former-customs-and-border-protection-officer-sentenced-allowing-drug-laden-vehicles.pdf), 15 years. [Leonard Darnell George](https://www.oig.dhs.gov/sites/default/files/assets/pr/2024/dojpr-102524-customs-and-border-protection-officer-sentenced-receiving-bribes-allow-drug-laden.pdf), 23 years, bribes to pass drugs and people."
+  ],
+  [
+   "April 2026: the United States indicted ten current and former Mexican officials — Morena party — for aiding Sinaloa trafficking.",
+   "April 29, 2026: [federal prosecutors in Manhattan](https://www.dea.gov/press-releases/2026/04/29/governor-sinaloa-and-nine-current-and-former-mexican-officials-face-drug) unsealed charges against the governor of Sinaloa and nine other current and former Mexican officials for aiding Sinaloa Cartel trafficking. The charges are allegations."
+  ],
+  [
+   "Two of his advisers pleaded guilty to laundering more than $200,000 of the Mexican-bank money. Trump later pardoned Cuellar.",
+   "Two of his associates pleaded guilty in the case. Trump [pardoned Cuellar and his wife](https://www.justice.gov/pardon/media/1419976/dl?inline=) on December 2, 2025."
+  ],
+  [
+   "Encounters exploded. Cartel revenue exploded. 65,000 child-welfare reports sat in a drawer. Then",
+   "Encounters exploded. Then"
+  ]
+ ],
+ "ourview": [
+  "Somebody collected.",
+  "The political tie",
+  "Who got paid:"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

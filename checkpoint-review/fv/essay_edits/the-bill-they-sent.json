@@ -1,0 +1,33 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Dek corrected: federal law restricts public benefits for people here illegally but does not flatly forbid tax-funded shelter; 8 U.S.C. 1611(b)(1)(D) and 1621(b)(4) exempt short-term shelter and other aid necessary to protect life or safety, and Congress itself funded FEMA's Shelter and Services Program",
+  "Arizona v. United States described accurately (federal law occupies the field of alien registration), not 'the field of immigration'",
+  "In-state tuition tied to its own statute, 8 U.S.C. 1623; the legal conclusion is labelled Our view"
+ ],
+ "edits": [
+  [
+   "Federal law already forbade using tax money to house illegal immigrants. Governors still paid for hotels, debit cards, and clothes.",
+   "Federal law already limits public benefits for illegal immigrants. Governors still paid for hotels, debit cards, and clothes."
+  ],
+  [
+   "with narrow exceptions such as emergency medical care.",
+   "with narrow exceptions such as emergency medical care and short-term shelter or other aid the Attorney General deems necessary to protect life or safety."
+  ],
+  [
+   "A hotel room, a prepaid card, a clothing stipend, and in-state tuition are not an emergency room. A governor who spends those items on people the statute bars is spending past supreme federal law.",
+   "In-state tuition has its own bar in [8 U.S.C. § 1623](https://www.law.cornell.edu/uscode/text/8/1623). Our view: a prepaid card, a clothing stipend, and months in a hotel are not an emergency room, and a governor who spends them on people the statute bars, without the state law the statute requires, is spending past supreme federal law."
+  ],
+  [
+   "held that Congress occupies the field of immigration.",
+   "held that federal law occupies the field of alien registration and preempted three of the four Arizona provisions at issue."
+  ]
+ ],
+ "ourview": [
+  "The next lever"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

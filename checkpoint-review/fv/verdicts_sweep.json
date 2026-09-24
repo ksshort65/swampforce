@@ -1,0 +1,573 @@
+{
+ "13": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-56. Inherited Evidence_Level. Site link HTTP 403. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass.",
+  "Best_Source_URL": "https://www.c-span.org/program/campaign-2020/president-trump-campaign-event-in-north-charleston-south-carolina/541990"
+ },
+ "15": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-57. Inherited Evidence_Level. Site link HTTP 403. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass.",
+  "Best_Source_URL": "https://www.c-span.org/clip/campaign-2016/user-clip-donald-trump-presidential-campaign-announcement/4710423"
+ },
+ "17": {
+  "Best_Source_URL": "https://www.supremecourt.gov/opinions/17pdf/17-965_h315.pdf",
+  "Source_Type": "primary record (site link)"
+ },
+ "21": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-11. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass.",
+  "Best_Source_URL": "https://www.justice.gov/archives/sco/file/1373816/dl",
+  "Source_Type": "official_record (Mueller report)"
+ },
+ "22": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-78. Inherited Evidence_Level. Site link HTTP 403. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "26": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-235. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "27": {
+  "Best_Source_URL": "https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-narco-terrorism-charges-against-nicolas-maduro-current",
+  "Source_Type": "primary record (site link)"
+ },
+ "30": {
+  "Best_Source_URL": "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf",
+  "Source_Type": "primary record (site link)"
+ },
+ "31": {
+  "Best_Source_URL": "https://www.presidency.ucsb.edu/documents/remarks-prior-meeting-with-president-volodymyr-zelenskiy-ukraine-and-exchange-with",
+  "Source_Type": "original transcript (Sept. 25, 2019)",
+  "Verdict": "Verified with correction needed",
+  "Fix_Needed": "TRUTH: On September 25, 2019, Zelensky said of the call, “nobody pushed me.” The Senate acquitted on February 5, 2020."
+ },
+ "33": {
+  "Best_Source_URL": "https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc",
+  "Source_Type": "unedited video (C-SPAN, Ellipse, Jan. 6, 2021)",
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-248. Inherited Evidence_Level. Site link HTTP 403. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "37": {
+  "Best_Source_URL": "https://www.supremecourt.gov/opinions/21pdf/19-1392_6j37.pdf",
+  "Source_Type": "primary record (site link)"
+ },
+ "45": {
+  "Best_Source_URL": "https://www.debates.org/voter-education/debate-transcripts/september-29-2020-debate-transcript/",
+  "Source_Type": "primary record (site link)"
+ },
+ "52": {
+  "Best_Source_URL": "https://www.dni.gov/files/documents/ICA_2017_01.pdf",
+  "Source_Type": "primary record (site link)",
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-5. Inherited Evidence_Level. Site link HTTP 403. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "54": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-11. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass.",
+  "Best_Source_URL": "https://www.justice.gov/archives/sco/file/1373816/dl",
+  "Source_Type": "official_record (Mueller report)"
+ },
+ "55": {
+  "Best_Source_URL": "https://www.justice.gov/archives/sco/file/1373816/dl",
+  "Source_Type": "primary record (site link)",
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-8. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "63": {
+  "Best_Source_URL": "https://www.govinfo.gov/app/details/GPO-J6-REPORT",
+  "Source_Type": "official congressional report (Jan. 6 Select Committee final report, GPO)",
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-108. Inherited Evidence_Level. Site link HTTP 403. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "68": {
+  "Best_Source_URL": "https://www.uscp.gov/media-center/press-releases/medical-examiner-finds-uscp-officer-brian-sicknick-died-natural-causes",
+  "Source_Type": "primary record (site link)"
+ },
+ "77": {
+  "Best_Source_URL": "https://storage.courtlistener.com/recap/gov.uscourts.flsd.651411/gov.uscourts.flsd.651411.672.0.pdf",
+  "Source_Type": "primary record (site link)"
+ },
+ "79": {
+  "Best_Source_URL": "https://web.archive.org/web/20190819000652/https://ag.ny.gov/press-release/statement-ag-schneiderman-25-million-settlement-agreement-reached-trump-university",
+  "Source_Type": "primary record (site link)",
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-227. Inherited Evidence_Level. Site link HTTP 000. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "81": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-166. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "84": {
+  "Verdict": "Verified with correction needed",
+  "Fix_Needed": "TRUTH: The New York Times printed it in June 2020. On April 15, 2021, the White House said U.S. intelligence assessed with low to moderate confidence that Russian intelligence officers sought to encourage Taliban attacks on U.S. and coalition personnel. Low-to-moderate confidence is not a confirmed order.",
+  "Notes": "Duplicate of catalog FT-5. Inherited Evidence_Level. Site link HTTP 403. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass.",
+  "Best_Source_URL": "https://www.presidency.ucsb.edu/documents/background-press-call-senior-administration-officials-russia",
+  "Source_Type": "original transcript (White House background call, Apr. 15, 2021)"
+ },
+ "86": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-14. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "90": {
+  "Best_Source_URL": "",
+  "Source_Type": "primary record (site link)",
+  "Verdict": "Cannot verify, cut it",
+  "Fix_Needed": "remove",
+  "Notes": "No primary or where-said link for the Oct. 2024 interview located; the site link (Ferguson report) is unrelated."
+ },
+ "91": {
+  "Best_Source_URL": "https://www.justice.gov/sites/default/files/opa/press-releases/attachments/2015/03/04/doj_report_on_shooting_of_michael_brown_1.pdf",
+  "Source_Type": "primary record (site link)",
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-76. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "102": {
+  "Best_Source_URL": "https://www.illinoiscourts.gov/supreme-court/courts-supreme-court-high-profile-cases",
+  "Source_Type": "court record (Illinois Supreme Court)"
+ },
+ "104": {
+  "Best_Source_URL": "https://www.congress.gov/congressional-record/volume-172/issue-144",
+  "Source_Type": "primary record (site link)"
+ },
+ "116": {
+  "Best_Source_URL": "",
+  "Source_Type": "primary record (site link)",
+  "Verdict": "Opinion",
+  "Fix_Needed": "Label Our view."
+ },
+ "122": {
+  "Best_Source_URL": "https://www.bls.gov/cpi/",
+  "Source_Type": "primary record (site link)"
+ },
+ "138": {
+  "Best_Source_URL": "",
+  "Source_Type": "primary record (site link)",
+  "Verdict": "Cannot verify, cut it",
+  "Fix_Needed": "remove",
+  "Notes": "Standing/seated claim not checked against the unedited SOTU video; site link (CBO SNAP) is unrelated."
+ },
+ "143": {
+  "Best_Source_URL": "https://www.congress.gov/bill/116th-congress/house-joint-resolution/31",
+  "Source_Type": "statute (Consolidated Appropriations Act, 2019)",
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-80. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "176": {
+  "Best_Source_URL": "https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-narco-terrorism-charges-against-nicolas-maduro-current",
+  "Source_Type": "primary record (site link)"
+ },
+ "177": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-11. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass.",
+  "Best_Source_URL": "https://www.justice.gov/storage/durhamreport.pdf",
+  "Source_Type": "official_record (Durham report)"
+ },
+ "179": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Internal duplicate of Item_No 86. Duplicate of catalog FT-14. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass.",
+  "Best_Source_URL": "https://www.justice.gov/opa/pr/attorney-general-william-p-barrs-statement-riots-and-domestic-terrorism",
+  "Source_Type": "official statement (DOJ)"
+ },
+ "184": {
+  "Best_Source_URL": "https://www.justice.gov/storage/durhamreport.pdf",
+  "Source_Type": "official_record (Durham report)",
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-236. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "186": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-11. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass.",
+  "Best_Source_URL": "https://www.justice.gov/storage/durhamreport.pdf",
+  "Source_Type": "official_record (Durham report)"
+ },
+ "187": {
+  "Best_Source_URL": "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf",
+  "Source_Type": "primary record (site link)",
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-49. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass."
+ },
+ "193": {
+  "Best_Source_URL": "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf",
+  "Source_Type": "primary record (site link)"
+ },
+ "195": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-11. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass.",
+  "Best_Source_URL": "https://www.justice.gov/storage/durhamreport.pdf",
+  "Source_Type": "official_record (Durham report)"
+ },
+ "197": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Duplicate of catalog FT-202. Inherited Evidence_Level. Site link HTTP 401. | Site link is itself a primary record; it returned an HTTP error only to the automated checker (bot-blocked). Text confirmed in the earlier pass.",
+  "Best_Source_URL": "https://www.congress.gov/bill/117th-congress/house-resolution/24",
+  "Source_Type": "congressional record (H.Res. 24)"
+ },
+ "495": {
+  "Best_Source_URL": "https://www.ssa.gov/policy/docs/statcomps/ssi_asr/",
+  "Source_Type": "primary record (site link)"
+ },
+ "510": {
+  "Best_Source_URL": "https://www.ssa.gov/ssi/",
+  "Source_Type": "primary record (site link)"
+ },
+ "722": {
+  "Best_Source_URL": "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf",
+  "Source_Type": "primary record (site link)"
+ },
+ "764": {
+  "Best_Source_URL": "https://www.congress.gov/bill/88th-congress/house-bill/7152",
+  "Source_Type": "primary record (site link)"
+ },
+ "783": {
+  "Best_Source_URL": "https://www.law.cornell.edu/uscode/text/18/2383",
+  "Source_Type": "primary record (site link)"
+ },
+ "799": {
+  "Best_Source_URL": "https://www.law.cornell.edu/uscode/text/2/1415",
+  "Source_Type": "primary record (site link)"
+ },
+ "800": {
+  "Best_Source_URL": "https://www.law.cornell.edu/uscode/text/2/1415",
+  "Source_Type": "primary record (site link)",
+  "Fix_Needed": "Same correction as item 799: Cite the Office of Compliance (now OCWR) Dec. 2017 release of awards/settlements 1997–2017 rather than the statute; confirm \"$17 million\" figure there."
+ },
+ "2": {
+  "Best_Source_URL": "https://oig.justice.gov/sites/default/files/reports/23-085.pdf",
+  "Source_Type": "official_record (DOJ OIG report 23-085, June 2023)",
+  "Fix_Needed": "Link the medical-examiner ruling and the guard/camera failures to DOJ OIG report 23-085 (https://oig.justice.gov/sites/default/files/reports/23-085.pdf), and the July 2025 memo to https://www.justice.gov/opa/media/1407001/dl. No change to the wording."
+ },
+ "9": {
+  "Best_Source_URL": "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-infrastructure/"
+ },
+ "171": {
+  "Best_Source_URL": "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-infrastructure/"
+ },
+ "42": {
+  "Best_Source_URL": "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-infrastructure/"
+ },
+ "43": {
+  "Best_Source_URL": "https://www.presidency.ucsb.edu/documents/remarks-the-situation-charlottesville-virginia",
+  "Source_Type": "original transcript (Aug. 14, 2017 remarks, American Presidency Project)"
+ },
+ "10": {
+  "Best_Source_URL": "https://www.c-span.org/program/campaign-2024/former-president-trump-campaigns-in-vandalia-ohio/639757",
+  "Source_Type": "unedited video (C-SPAN, Vandalia, Ohio, Mar. 16, 2024)"
+ },
+ "169": {
+  "Best_Source_URL": "https://www.c-span.org/program/campaign-2024/former-president-trump-campaigns-in-vandalia-ohio/639757",
+  "Source_Type": "unedited video (C-SPAN, Vandalia, Ohio, Mar. 16, 2024)"
+ },
+ "11": {
+  "Best_Source_URL": "https://www.youtube.com/watch?v=7lB3bfVg8Z8",
+  "Source_Type": "unedited video of the Dec. 5, 2023 Fox News town hall (cited as where he said it)"
+ },
+ "170": {
+  "Best_Source_URL": "https://www.youtube.com/watch?v=7lB3bfVg8Z8",
+  "Source_Type": "unedited video of the Dec. 5, 2023 Fox News town hall (cited as where he said it)"
+ },
+ "115": {
+  "Best_Source_URL": "https://www.youtube.com/watch?v=PUcooQRy0PU",
+  "Source_Type": "unedited video (All-In Podcast, Sept. 15, 2026; cited as where he said it)"
+ },
+ "156": {
+  "Best_Source_URL": "https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc",
+  "Source_Type": "unedited video (C-SPAN, Ellipse, Jan. 6, 2021)"
+ },
+ "172": {
+  "Best_Source_URL": "https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc",
+  "Source_Type": "unedited video (C-SPAN, Ellipse, Jan. 6, 2021)"
+ },
+ "845": {
+  "Best_Source_URL": "https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc",
+  "Source_Type": "unedited video (C-SPAN, Ellipse, Jan. 6, 2021)",
+  "Verdict": "Verified with correction needed",
+  "Fix_Needed": "Replace “The House article — H.Res. 24, incitement of insurrection — put a clipped version of that speech on the floor. The country was shown the fighting words. The peaceably clause was not on the clip they ran.” with “The House article — H.Res. 24, incitement of insurrection — quoted “fight like hell” and not the line to protest “peacefully and patriotically.””"
+ },
+ "849": {
+  "Best_Source_URL": "https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc",
+  "Source_Type": "unedited video (C-SPAN, Ellipse, Jan. 6, 2021)",
+  "Verdict": "Verified",
+  "Fix_Needed": ""
+ },
+ "24": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/storage/durhamreport.pdf",
+  "Fix_Needed": "TRUTH: The Durham report says the FBI could not corroborate any of the substantive allegations in the Steele reports, including the claimed tape. A rumor is not an exhibit."
+ },
+ "25": {
+  "Verdict": "Verified with correction needed",
+  "Fix_Needed": "TRUTH: He was a U.S. person under a FISA warrant in which the inspector general found 17 significant errors and omissions. He was never charged as a Russian agent or with any crime."
+ },
+ "29": {
+  "Verdict": "Cannot verify, cut it",
+  "Fix_Needed": "remove",
+  "Best_Source_URL": "",
+  "Notes": "Only source is the House Oversight Committee (political). No primary record of the \"big guy\" line or bank records located."
+ },
+ "32": {
+  "Verdict": "Verified with correction needed",
+  "Fix_Needed": "TRUTH: 18 U.S.C. § 2383. USAO-DC: about 1,583 people federally charged, including about 608 charged with assaulting officers; leaders of the Oath Keepers and Proud Boys were convicted of seditious conspiracy under § 2384. Zero under § 2383."
+ },
+ "178": {
+  "Verdict": "Verified with correction needed",
+  "Fix_Needed": "TRUTH: 18 U.S.C. § 2383. About 1,583 federally charged, including about 608 charged with assaulting officers; leaders of the Oath Keepers and Proud Boys were convicted of seditious conspiracy under § 2384. Zero under the insurrection statute."
+ },
+ "298": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Accurate as written: no one was charged under § 2383 (USAO-DC 48-month tally). Seditious-conspiracy convictions (§ 2384) are a different statute."
+ },
+ "389": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Accurate as written: no one was charged under § 2383 (USAO-DC 48-month tally). Seditious-conspiracy convictions (§ 2384) are a different statute."
+ },
+ "448": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Accurate as written: no one was charged under § 2383 (USAO-DC 48-month tally). Seditious-conspiracy convictions (§ 2384) are a different statute."
+ },
+ "784": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Accurate as written: no one was charged under § 2383 (USAO-DC 48-month tally). Seditious-conspiracy convictions (§ 2384) are a different statute."
+ },
+ "872": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Accurate as written: no one was charged under § 2383 (USAO-DC 48-month tally). Seditious-conspiracy convictions (§ 2384) are a different statute."
+ },
+ "878": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Accurate as written: no one was charged under § 2383 (USAO-DC 48-month tally). Seditious-conspiracy convictions (§ 2384) are a different statute."
+ },
+ "882": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Accurate as written: no one was charged under § 2383 (USAO-DC 48-month tally). Seditious-conspiracy convictions (§ 2384) are a different statute."
+ },
+ "876": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "Caption quoted as the claim being tested; the record (USAO-DC tally) shows no § 2383 charge."
+ },
+ "456": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Best_Source_URL": "https://www.manhattanda.org/wp-content/uploads/2023/04/Donald-J.-Trump-Indictment.pdf",
+  "Source_Type": "court filing (Manhattan indictment)"
+ },
+ "847": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Best_Source_URL": "https://www.courtlistener.com/docket/67490071/united-states-v-trump/",
+  "Source_Type": "court docket (S.D. Fla. 23-cr-80101)"
+ },
+ "852": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Best_Source_URL": "https://www.justice.gov/archives/sco/file/1373816/dl",
+  "Source_Type": "official_record (Mueller report)"
+ },
+ "841": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Best_Source_URL": "https://www.courtlistener.com/docket/67656595/united-states-v-trump/",
+  "Source_Type": "court docket (D.D.C. 23-cr-257)"
+ },
+ "205": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Best_Source_URL": "https://www.courtlistener.com/docket/67656595/united-states-v-trump/"
+ },
+ "198": {
+  "Best_Source_URL": "https://www.courtlistener.com/docket/67656595/united-states-v-trump/"
+ },
+ "148": {
+  "Verdict": "Verified with correction needed",
+  "Fix_Needed": "TRUTH: Dozens of cases were filed. None established outcome-changing fraud. On December 11, 2020, the Supreme Court denied Texas leave to file its suit against Pennsylvania, Georgia, Michigan and Wisconsin."
+ },
+ "139": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "CBO 61367 (Aug. 2025) and CRS R48552 confirm about 2.4 million fewer participants in an average month; ages through 64 and adults with children 14 or older."
+ },
+ "61": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Best_Source_URL": "https://supreme.justia.com/cases/federal/us/601/100/"
+ },
+ "48": {
+  "Fix_Needed": "Replace the site link with the Dec. 11, 2020 FDA emergency use authorization release: https://www.fda.gov/news-events/press-announcements/fda-takes-key-action-fight-against-covid-19-issuing-emergency-use-authorization-first-covid-19. No change to the wording."
+ },
+ "69": {
+  "Verdict": "Cannot verify, cut it",
+  "Fix_Needed": "remove",
+  "Best_Source_URL": "",
+  "Notes": "Only support is news reporting (NPR); no primary CBP record located."
+ },
+ "107": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.dhs.gov/news/2026/09/22/correct-record-dhs-debunks-false-narratives-about-shooting-illegal-alien-austin",
+  "Source_Type": "official statement (DHS, Sept. 22, 2026)"
+ },
+ "110": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.dhs.gov/news/2026/09/22/correct-record-dhs-debunks-false-narratives-about-shooting-illegal-alien-austin",
+  "Source_Type": "official statement (DHS, Sept. 22, 2026)",
+  "Fix_Needed": "Replace “Resisting an officer and evading arrest is a federal felony.” with “Forcibly resisting a federal officer is a federal crime under 18 U.S.C. § 111.”"
+ },
+ "112": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.eia.gov/petroleum/gasdiesel/",
+  "Source_Type": "government data (EIA weekly retail prices)"
+ },
+ "132": {
+  "Verdict": "Cannot verify, cut it",
+  "Fix_Needed": "remove",
+  "Best_Source_URL": "",
+  "Notes": "No primary source attached (site link is an unrelated IAEA report)."
+ },
+ "140": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24-1260.html",
+  "Source_Type": "court docket (Watson v. RNC, No. 24-1260)"
+ },
+ "142": {
+  "Best_Source_URL": "https://web.archive.org/web/0/https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol",
+  "Source_Type": "official_record (USAO-DC 48-month tally)",
+  "Notes": "Lamberth quote not opened in this pass."
+ },
+ "157": {
+  "Verdict": "Opinion",
+  "Fix_Needed": "Label Our view.",
+  "Best_Source_URL": ""
+ },
+ "160": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://constitution.congress.gov/browse/essay/artI-S9-C7-1/ALDE_00001094/",
+  "Source_Type": "Constitution Annotated (Appropriations Clause)"
+ },
+ "34": {
+  "Verdict": "Cannot verify, cut it",
+  "Fix_Needed": "remove",
+  "Best_Source_URL": "",
+  "Notes": "Row has no record (\"TRUTH\") text and no primary source."
+ },
+ "289": {
+  "Best_Source_URL": "https://www.justice.gov/storage/durhamreport.pdf",
+  "Source_Type": "official_record (Durham report)"
+ },
+ "387": {
+  "Best_Source_URL": "https://www.justice.gov/storage/durhamreport.pdf",
+  "Source_Type": "official_record (Durham report)"
+ },
+ "208": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.hsgac.senate.gov/wp-content/uploads/imo/media/doc/rice%20letter.pdf",
+  "Source_Type": "declassified record (Rice note to file, via Senate HSGAC)"
+ },
+ "60": {
+  "Best_Source_URL": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00059.htm",
+  "Source_Type": "Senate roll call vote"
+ },
+ "80": {
+  "Best_Source_URL": "https://ag.ny.gov/press-release/2019/court-orders-president-trump-pay-2-million-illegally-using-trump-foundation-funds",
+  "Source_Type": "official statement (NY Attorney General)"
+ },
+ "117": {
+  "Best_Source_URL": "https://www.justice.gov/pardon/pardons-granted-president-joseph-biden-2021-present",
+  "Source_Type": "official_record (DOJ Office of the Pardon Attorney)"
+ },
+ "185": {
+  "Fix_Needed": "Fix the EO 14252 link to https://www.federalregister.gov/documents/2025/04/03/2025-05837/making-the-district-of-columbia-safe-and-beautiful . Change \"The 2020 bar was 6.6\" to \"The 2020 rate was about 6.5\" (FBI original 2020 estimate). Label \"The cleanup is hated because it is a verdict on that caption\" Our view."
+ },
+ "136": {
+  "Fix_Needed": "Keep 440.9 kg (GOV/2026/50). Change “Jeffries said it.” to ““War of choice” was said on the House floor on March 4, 2026 (Congressional Record, https://www.congress.gov/119/crec/2026/03/04/172/41/CREC-2026-03-04-house.pdf).”"
+ },
+ "182": {
+  "Fix_Needed": "Same correction as item 6: Say: \"The National School Boards Association’s Sept. 29, 2021 letter asked for federal help and invoked domestic terrorism. On Oct. 4, 2021, AG Garland directed the FBI and U.S. Attorneys to coordinate.\" Label the last sentence Our view."
+ },
+ "189": {
+  "Verdict": "Verified",
+  "Fix_Needed": ""
+ },
+ "243": {
+  "Fix_Needed": "Same correction as item 241: Say \"the 1974 Budget Act set Oct. 1 as the fiscal year start and a timetable for appropriations; there are now twelve regular bills.\" The Act does not itself name twelve bills."
+ },
+ "443": {
+  "Fix_Needed": "Same correction as item 440: Use: \"Southwest Border Patrol apprehensions, FY2009–FY2016: 3.31 million (FY2009 began Oct. 2008, under Bush). FY2014: 479,371, the year of the unaccompanied-child surge.\""
+ },
+ "479": {
+  "Fix_Needed": "Same correction as item 477: Cite CBO directly and use: \"$16.2B, federal + state emergency Medicaid for noncitizens ineligible for full Medicaid, FY2021–FY2023 (CBO).\""
+ },
+ "488": {
+  "Fix_Needed": "Same correction as item 487: Label must say what is counted: \"Homicide charges or convictions among noncitizens ICE arrested in FY2024: 2,894 (charges and convictions, not people).\""
+ },
+ "678": {
+  "Fix_Needed": "Same correction as item 480: Replace with: \"CBO to House Budget: FY2021–FY2023, federal plus state, $16.2B, vs. $7.3B in FY2017–FY2019. Covers noncitizens barred from full Medicaid, including some lawful immigrants still in the 5-year wait; CBO cannot say how much went to people here illegally. FY2021 began Oct. 2020, under Trump.\""
+ },
+ "566": {
+  "Verdict": "Cannot verify, cut it",
+  "Fix_Needed": "remove",
+  "Best_Source_URL": "",
+  "Notes": "McCaul quote not checked against the broadcast audio; network page is not a primary record. The essay paragraph using it was cut."
+ },
+ "567": {
+  "Verdict": "Cannot verify, cut it",
+  "Fix_Needed": "remove",
+  "Best_Source_URL": "",
+  "Notes": "McCaul quote not checked against the broadcast audio; network page is not a primary record. The essay paragraph using it was cut."
+ },
+ "711": {
+  "Source_Type": "roll-call data (GovTrack mirror of the official 1964 House roll call; judgment call: mirror of the official record, not GovTrack analysis)"
+ },
+ "712": {
+  "Source_Type": "roll-call data (GovTrack mirror of the official 1964 House roll call; judgment call: mirror of the official record, not GovTrack analysis)"
+ },
+ "713": {
+  "Source_Type": "roll-call data (GovTrack mirror of the official 1964 House roll call; judgment call: mirror of the official record, not GovTrack analysis)"
+ },
+ "714": {
+  "Source_Type": "roll-call data (GovTrack mirror of the official 1964 House roll call; judgment call: mirror of the official record, not GovTrack analysis)"
+ },
+ "715": {
+  "Source_Type": "roll-call data (GovTrack mirror of the official 1964 House roll call; judgment call: mirror of the official record, not GovTrack analysis)"
+ },
+ "364": {
+  "Verdict": "Cannot verify, cut it",
+  "Fix_Needed": "remove",
+  "Notes": "Chemonics wording not confirmed against the CRS R48150 text; cut in the essay."
+ },
+ "573": {
+  "Verdict": "Verified",
+  "Fix_Needed": "",
+  "Notes": "C-SPAN program 679567 (Jeffries at the CAP IDEAS conference) exists per search index; page blocks automated fetch, so quoted wording not reviewed against the video by the auditor."
+ },
+ "7": {
+  "Fix_Needed": "Replace “Iran is the only non-weapon state at 60 percent.” with “The IAEA’s February 2026 report (GOV/2026/8, https://www.iaea.org/sites/default/files/gov2026-8.pdf) says Iran is the only non-nuclear-weapon state party to the NPT producing uranium enriched to that level.” Keep 440.9 kg (GOV/2026/50). Change “Hakeem Jeffries used “war of choice.”” to ““War of choice” was said on the House floor on March 4, 2026 (Congressional Record).”"
+ }
+}

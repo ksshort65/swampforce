@@ -1,0 +1,143 @@
+CONGRESSIONAL BUDGET OFFICE                                 Phillip L. Swagel, Director
+U.S. Congress
+Washington, DC 20515
+
+
+
+
+                                         October 2, 2024
+
+
+
+Honorable Jodey Arrington
+Chairman
+Committee on the Budget
+U.S. House of Representatives
+Washington, DC 20515
+
+Re: Emergency Medicaid Services for Certain Non-U.S. Nationals
+
+Dear Mr. Chairman:
+
+You have asked the Congressional Budget Office to respond to questions
+concerning federal and state spending for emergency Medicaid services
+received by certain aliens (or non-U.S. nationals) present in the country
+from fiscal years 2017 to 2023. In that time, federal and state governments
+spent a total of $27 billion on emergency Medicaid services for people who
+were ineligible for full Medicaid coverage because of their immigration
+status (see Table 1).
+
+Non-U.S. Nationals’ Eligibility for Medicaid
+For noncitizens, federal and state coverage of health benefits depends on
+immigration status. Since the enactment of the Personal Responsibility and
+Work Opportunity Reconciliation Act of 1996 (Public Law 104-193),
+eligibility for many federal benefit programs—including Medicaid—has
+generally been limited to “qualified aliens,” as defined by that law. That
+group includes lawful permanent residents (also known as green-card
+holders), asylees, refugees, and people who are paroled into the United
+States for one year or more. Those people generally are eligible to
+participate in comprehensive Medicaid after a five-year waiting period,
+which may be waived for people in some groups, such as asylees and
+refugees.
+
+States also can choose to provide Medicaid to—and receive the federal
+share of Medicaid funding for—children and pregnant women who would
+qualify if they were not still within the five-year waiting period. During that
+
+
+www.cbo.gov
+Honorable Jodey Arrington
+Page 2
+
+time, qualified aliens may be eligible for premium tax credits, which help
+subsidize the cost of health insurance purchased through the marketplaces
+established under the Affordable Care Act, should they meet program
+requirements.
+
+Non-U.S. nationals who are not qualified aliens, including people who are
+in the country illegally or are here legally on a temporary basis (for
+example, if they have entered the country as nonagricultural workers under
+the H-2B program), are not eligible for comprehensive Medicaid coverage.
+Some states use state-only Medicaid funds to provide full benefits to low-
+income people regardless of immigration status.
+
+Under section 9406 of the Omnibus Budget Reconciliation Act of 1986
+(P.L. 99-509), limited Medicaid coverage for emergency medical services
+is available for people who would qualify for full Medicaid benefits if
+not for their immigration status. Under that program, people can receive
+care for medical emergencies that require immediate attention to prevent
+serious harm, disability, or death; they may also qualify for emergency
+labor and delivery services. Although the federal government generally
+defines what qualifies as an emergency medical condition, states have
+flexibility in determining what specific conditions qualify and which
+services are covered under the program. States can receive federal
+reimbursement for a portion of those expenditures based on their federal
+medical assistance percentage rate. 1
+
+Spending for Emergency Medicaid Services
+Data from the Centers for Medicare & Medicaid Services (CMS) show that
+from 2017 to 2023, the federal government spent about $18 billion and
+state governments spent about $9 billion on emergency Medicaid services
+for non‑U.S. nationals who were ineligible for comprehensive Medicaid by
+reason of immigration status or because they were still within the five-year
+waiting period (see Table 1).
+
+For this analysis, CBO used data on spending from the quarterly financial
+reports, called CMS-64 forms, that state agencies submit to CMS to request
+federal reimbursement for their expenditures. 2
+
+
+1.   The share of Medicaid costs paid by the state’s federal government for medical services used
+     by most Medicaid enrollees is specified by the federal medical assistance percentage rate,
+     which is determined by a formula that provides a higher rate of federal reimbursement for
+     states with lower per capita income relative to the national average and a lower rate for
+     higher-income states.
+2.   See Medicaid.gov, “Expenditure Reports From MBES/CBES” (accessed October 1, 2024),
+     https://tinyurl.com/mr2ce359.
+Honorable Jodey Arrington
+Page 3
+
+ Table 1.
+ Federal and State Spending for Emergency Medicaid Services, 2017–2023
+ Millions of dollars
+                                                                                       Average
+                                                                                    Federal Share
+ Fiscal Year             Federal               State             Total                (Percent)
+ 2017                        900                 635             1,535                     59
+ 2018                      1,630                 977             2,607                     63
+ 2019                      1,992               1,118             3,110                     64
+ 2020                      2,058               1,018             3,076                     67
+ 2021                      4,896               2,154             7,050                     69
+ 2022                      3,816               1,585             5,401                     71
+ 2023                      2,746               1,029             3,775                     73
+       Total              18,038               8,516            26,554
+ Source: Congressional Budget Office using data from the Centers for Medicare & Medicaid Services’ forms CMS-64.
+ a. States received a temporary increase in the federal medical assistance percentage for certain Medicaid
+    expenditures, including emergency Medicaid services, from January 1, 2020, through December 31, 2023.
+
+
+Based on the available data, CBO cannot distinguish how much of the total
+spending is attributable to any of the following groups:
+     • Qualified aliens who have not completed the five-year waiting
+       period,
+     • Qualified aliens who were granted parole by Customs and Border
+       Protection’s Office of Field Operations through one of several
+       processes created by the Administration since 2021 under section
+       212(d)(5) of the Immigration and Nationality Act (P.L. 82-414) and
+       who have not yet completed the five-year waiting period, and
+     • Non-U.S. nationals who are lawfully present on a temporary basis,
+       or non-U.S. nationals who are in the country illegally.
+
+I hope this information is helpful to you. Please contact me if you have
+further questions.
+                                                              Sincerely,
+
+
+
+
+                                                              Phillip L. Swagel
+                                                              Director
+cc: Honorable Brendan Boyle
+    Ranking Member
+    House Committee on the Budget
+

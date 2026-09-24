@@ -1,0 +1,26 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "'Networks run 92% negative' cut (MRC study, not a primary record)",
+  "'Get in their face' quote cut (no unedited original video located); 'Maximum warfare' kept (C-SPAN)"
+ ],
+ "edits": [
+  [
+   " ‘Maximum warfare.’ ‘Get in their face.’ A six-second cut on the other side of the aisle. Networks run 92% negative and call it weather.",
+   " ‘Maximum warfare.’ A six-second cut on the other side of the aisle."
+  ],
+  [
+   "- MRC 92% negative — https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage",
+   ""
+  ]
+ ],
+ "ourview": [
+  "The problem is real",
+  "The trap is",
+  "What we will argue"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

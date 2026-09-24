@@ -1,0 +1,21 @@
+line,entity,location,country,licensee,income_type,amount_usd,note
+63,DT Marks Abu Dhabi,"Abu Dhabi, UAE",UAE,DAMAC Sky View Real Estate LLC,License Fee,5000000,
+65,Al Raha Beach,"Abu Dhabi, UAE",UAE,DAMAC Properties Investment LLC,License Fee,5000000,
+71,Bucharest,"Bucharest, Romania",Romania,SDC Imobiliare SRL,License Fee,5000000,
+77,DT Marks Doha,"Doha, Qatar",Qatar,Dar Global Holdings for Real Estate LLC,License Fee,5250000,Underlying asset listed as an intercompany receivable from Trump Acquisition LLC
+79,Dubai DG,"Dubai, UAE",UAE,Dar Al Arkan Properties LLC,License Fee,10361458.68,
+81,Dubai,"Dubai, UAE",UAE,Damac Crescent Properties LLC,License Fee,1335140,
+87,Gurgaon 69,"Gurgaon, Haryana, India",India,Riverday Infrastructure Pvt. Ltd.,License Fee,3637775,
+89,Gurgaon,"Delhi, India",India,"Olive Realcon Private Limited, Mr. Kalpesh Mehta, M3M India Private Limited, Tribeca Creators LLP & M3M Homes Private Limited",License Fee,1795363,
+91,Hyderabad,"Hyderabad, India",India,IRA The Edge Developers LLP & Reliance 4IR,License Fee,1500000,
+94,KSA,Saudi Arabia,Saudi Arabia,Dar Al Arkan Properties LLC,License Fee,9243574.15,
+104,Noida 94,"Noida, Uttar Pradesh, India",India,Lavish Buildmart Private Limited & South Horizon Infratech LLP,License Fee,1500000,
+106,Oman,Oman,Oman,Dar Al Arkan Property Development,License Fee,949642,
+108,Philippines SV,Philippines,Philippines,J. Antonio Group Inc.,License Fee,1500000,Letter of intent; $1.5M receivable
+112,Pune Mundhwa,"Pune, India",India,Enbrick Properties LLP & Meadow Mist Realty LLP,License Fee,1500000,
+116,Vietnam,Vietnam,Vietnam,Hung Yen Hospitality Services Joint Stock Company,License Fee,5000000,
+118,Worli,"Mumbai, India",India,Jawala Real Estate Private Limited and Proficient Buildwell Private Limited and Lodha Developers Private Limited,License Fee,180850,
+322,Trump Marks Istanbul II,"Istanbul, Turkey",Turkey,D Gayrimenkul Yatirimlari ve Ticaret A.S.,License Fee,578190,
+332,Trump Marks Philippines,"Century City Makati, Philippines",Philippines,"Century Luxury Properties, Inc.",License Fee,89419,
+,DT Dubai Golf Manager,"Dubai, UAE",UAE,Damac Crescent Properties LLC,Management Fee,1254744,Management fee; not counted as a license fee
+,DT Lido Golf Manager,"Lido, Indonesia",Indonesia,PT Lido Nirwana Parahyangan,Management Fee,284398,Management fee; not counted as a license fee

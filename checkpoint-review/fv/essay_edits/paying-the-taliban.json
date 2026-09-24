@@ -1,0 +1,34 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Dek corrected: the 30–40 percent figure is one implementing partner's estimate reported by SIGAR, not a SIGAR finding",
+  "The finding that UN cash shipments stabilized the economy but benefited the Taliban is from SIGAR-24-32-IP (July 2024), not 24-12",
+  "'$1.6 billion UN' sentence replaced with SIGAR's wording (the audit could not examine U.S. money routed through UN agencies; the $10.9 million is 'probably a gross undercount')",
+  "$3.83 billion clarified: about 36 percent of all international aid since August 2021"
+ ],
+ "edits": [
+  [
+   "SIGAR: maybe 30 to 40 percent of donor funds reaches the population.",
+   "An aid partner told SIGAR maybe 30 to 40 percent of donor funds reaches the population."
+  ],
+  [
+   "More than **$3.83 billion** in humanitarian and development assistance went into that country.",
+   "**$3.83 billion** in U.S. humanitarian and development assistance went into that country, about 36 percent of all international aid, per [SIGAR](https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo248012/pdf/GOVPUB-S-PURL-gpo248012.pdf)."
+  ],
+  [
+   "SIGAR found those shipments stabilized an economy the Taliban ran — and benefited the Taliban.",
+   "A later SIGAR inspection (SIGAR-24-32-IP, July 2024) found those shipments stabilized the Afghan economy but benefit the Taliban."
+  ],
+  [
+   "SIGAR said that figure is a fraction. The UN took about **$1.6 billion** in U.S. funding for Afghanistan in that window and did not report the taxes its subawardees paid.",
+   "SIGAR said the figure was “probably a gross undercount”: the audit could not examine U.S. money routed through UN agencies, because the UN does not collect that data from its implementing partners."
+  ]
+ ],
+ "ourview": [
+  "That money did not appear by weather"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

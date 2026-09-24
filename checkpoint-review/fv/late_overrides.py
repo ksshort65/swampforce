@@ -1,0 +1,26 @@
+import json
+D={}
+def s(i,**kw): D[str(i)]=kw
+CSP='https://www.c-span.org/program/public-affairs-event/house-minority-leader-jeffries-on-democracy/679567'
+s(291,Verdict='Verified with correction needed',Best_Source_URL=CSP,Source_Type='unedited_video (C-SPAN)',Fix_Needed='Replace the Fox News links with C-SPAN\'s full program: '+CSP+' . Keep the two quotes as "at the Center for American Progress IDEAS conference, May 19, 2026, speaking of \'MAGA extremists\'".',Notes='C-SPAN program 679567 exists (search index); page blocks automated fetch, so wording not checked against the video by the auditor. PolitiFact/Fox not used as source.')
+s(370,Verdict='Verified with correction needed',Best_Source_URL='https://www.foreignassistance.gov/',Source_Type='government_data',Fix_Needed='Replace with: "In fiscal 2023 the United States disbursed about $80.5 billion in foreign assistance (ForeignAssistance.gov)." Cut the USAID $43.8 billion / "three of every five dollars" share (not re-pulled).',Notes='ForeignAssistance.gov country dataset (us_foreign_aid_country.csv, pulled 2026-09-24): FY2023 disbursements $80.50B current dollars; obligations $100.04B. Pew\'s $71.9B was an older snapshot.')
+s(691,Fix_Needed='Keep OIG and statute facts. Replace "$71.9 billion ... $43.8 billion" with "about $80.5 billion disbursed in fiscal 2023 (ForeignAssistance.gov)" and drop the USAID share. Change "That is taxpayer money into party-aligned shops" to "NED funds four core institutes, including party-affiliated NDI and IRI." Remove from "No charging document says..." to the end or label Our view.',Notes='OIG $1.4B and statutes confirmed. ForeignAssistance.gov country dataset pulled 2026-09-24: FY2023 disbursements $80.50B.')
+s(185,Verdict='Verified with correction needed',Best_Source_URL='https://www.fbi.gov/news/stories/violent-crime-falls-at-historic-rate-new-fbi-data-show',Source_Type='government_data (FBI)',Fix_Needed='Fix the EO 14252 link to https://www.federalregister.gov/documents/2025/04/03/2025-05837/making-the-district-of-columbia-safe-and-beautiful . Change "The 2020 bar was 6.6" to "The 2020 rate was about 6.5" (FBI original 2020 estimate). Label "The cleanup is hated because it is a verdict on that caption" Our view.',Notes='FBI Aug. 24, 2026: 2025 murder rate 4.1, same as 1955 and 1956. EO URL in Links_Given has a wrong document number (Federal Register API). 2020 rate: FBI original estimate 6.5 (21,570); 6.6 not matched to an FBI table.')
+json.dump(D,open('verdicts_late.json','w'),indent=1)
+print(len(D))
+D=json.load(open('verdicts_late.json'))
+BAB='https://www.justice.gov/usao-dc/pr/department-justice-closes-investigation-death-ashli-babbitt'
+J6V='https://www.c-span.org/video/?507744-1/president-trump-speaks-rally-washington-dc'
+s(225,Verdict='Cannot verify, cut it',Best_Source_URL='',Source_Type='advocacy catalog (not primary)',Fix_Needed='Remove the StopHate / independent-films sentence and link.',Notes='Tightened standard: a documentary catalog and a Substack post are not primary records. Previous Best_Source_URL (sharylattkisson.substack.com) was a journalist\'s blog and was removed.')
+s(226,Verdict='Verified with correction needed',Best_Source_URL=BAB,Source_Type='official_record (DOJ)',Fix_Needed='Link the DOJ closing statement for the Babbitt facts. Attribute Byrd\'s remarks as "Byrd told NBC News" (where he said it; not a source for the facts). Keep "The shot may have been lawful" as Our view.',Notes='Previous Best_Source_URL was a Substack blog (not primary); replaced with DOJ USAO-DC closing statement. USCP later said the officer\'s conduct was lawful and within department policy.')
+s(227,Verdict='Verified',Best_Source_URL=J6V,Source_Type='unedited_video (C-SPAN)',Fix_Needed='',Notes='C-SPAN full recording of the Jan. 6, 2021 Ellipse speech includes "peacefully and patriotically". Previous Substack source removed.')
+s(341,Verdict='Verified with correction needed',Fix_Needed='Change "two men were convicted of assaulting him with spray" to "one man, Julian Khater, pleaded guilty to assaulting officers with chemical spray, Sicknick among them."',Notes='USCP release on the medical examiner\'s finding (strokes; natural causes). Of the two men charged, only Khater pleaded guilty to assault with a dangerous weapon; George Tanios pleaded guilty to misdemeanors.')
+json.dump(D,open('verdicts_late.json','w'),indent=1)
+print(len(D))
+D=json.load(open('verdicts_late.json'))
+for i,u,st in ((220,'https://constitution.congress.gov/constitution/article-3/','constitution; 18 U.S.C. 2381'),(221,'https://www.law.cornell.edu/uscode/text/5/3331','constitution (Art. VI); 5 U.S.C. 3331'),
+               (222,'https://constitution.congress.gov/constitution/article-1/','constitution (Art. I, Sec. 9)'),(223,'https://constitution.congress.gov/constitution/amendment-27/','constitution (27th Amendment)'),
+               (224,'https://constitution.congress.gov/constitution/article-1/','constitution (Art. I, Sec. 5)')):
+    s(i,Verdict='Verified',Best_Source_URL=u,Source_Type=st,Fix_Needed='',Notes='Best_Source_URL corrected: the previous source (FY2020 budget Mid-Session Review PDF) was an unrelated document inherited from a mismatched duplicate. Text matches the cited constitutional/statutory provision.')
+json.dump(D,open('verdicts_late.json','w'),indent=1)
+print(len(D))

@@ -1,0 +1,1096 @@
+FRAUD ON ACTBLUE, PART III: ACTBLUE’S FAILURE TO PREVENT ILLEGAL
+FOREIGN POLITICAL CONTRIBUTIONS
+Interim Staff Report of the
+Committee on House Administration,
+Committee on the Judiciary, and
+Committee on Oversight and Government Reform
+U.S. House of Representatives
+
+September 16, 2026
+
+EXECUTIVE SUMMARY
+The Committee on House Administration, the Committee on the Judiciary, and the
+Committee on Oversight and Government Reform are charged with ensuring the integrity of
+American elections.1 To that end, the Committees have been examining allegations that ActBlue,
+a leading political fundraising organization, allowed bad actors, including foreign actors, to
+exploit its online platform to make fraudulent political donations.2
+In late 2024, the Committees began investigating ActBlue’s fraud-prevention practices.
+The Committees have since released two interim staff reports detailing ActBlue’s “lenient
+approach” to fraud prevention in 2024 and the resulting collapse of the platform’s legal and
+compliance team in the months after the 2024 election.3 During the investigation, ActBlue
+assured the Committees that it had produced all information relevant to the Committees’
+inquiry.4 However, on April 2, 2026, the New York Times published an article about ActBlue’s
+fraud-prevention practices, which contained facts and cited documents that ActBlue had not
+produced to the Committees.5 Among other details, the Times quoted from two documents—an
+employee resignation letter and internal company messages—revealing fraud and whistleblower
+retaliation at ActBlue.6 The Times also reported that ActBlue’s outside counsel and former Biden
+White House Counsel, Dana Remus, drafted memoranda for ActBlue concluding that CEO
+Regina Wallace-Jones may have misled Congress about ActBlue’s review processes for foreign
+contributions, and that ActBlue’s acceptance of illegal foreign contributions appeared to be
+“knowing and willful.”7
+Following these reports, the Committees requested additional documents related to
+ActBlue’s processes for reviewing foreign contributions. New information obtained by the
+Committees reveals new details about ActBlue’s unserious approach to fraud prevention on its
+platform. For example:
+
+Rules of the House of Representatives R. X (K) Committee on House Administration, (L) Committee on the
+Judiciary, (N) Committee on Oversight and Government Reform (2025).
+2
+See STAFF OF THE COMM. ON H. ADMIN., H. COMM. ON THE JUDICIARY, & H. COMM. ON OVERSIGHT AND GOV’T
+REFORM, 119TH CONG., FRAUD ON ACTBLUE: HOW THE DEMOCRATS’ TOP FUNDRAISING PLATFORM OPENS THE
+DOOR FOR ILLEGAL ELECTION CONTRIBUTIONS (Comm. Print Apr. 2, 2025) (hereinafter “ActBlue Staff Report I”);
+see also STAFF OF THE COMM. ON H. ADMIN., H. COMM. ON THE JUDICIARY, & H. COMM. ON OVERSIGHT AND
+GOV’T REFORM, 119TH CONG., FRAUD ON ACTBLUE, PART II: ILLICIT FOREIGN DONATIONS AND A COVER-UP
+SPUR MASS RESIGNATIONS AND FIRINGS ON ACTBLUE’S LEGAL AND COMPLIANCE TEAM (Comm. Print Apr. 20,
+2026) (hereinafter “ActBlue Staff Report II”).
+3
+Id.
+4
+See, e.g., Letter from Mr. Vincent Cohen, Counsel for ActBlue, to Rep. Jim Jordan, Chairman, H. Comm. on the
+Judiciary, Rep. James Comer, Chairman, H. Comm. on Oversight and Gov’t Reform, & Rep. Bryan Steil, Chairman,
+Comm. on H. Admin. (Sep. 19, 2025) (on file with Comms.).
+5
+Reid J. Epstein & Shane Goldmacher, ActBlue May Have Misled Congress on Vetting Foreign Donations, Its
+Lawyers Warned, N.Y. TIMES (Apr. 2, 2026).
+6
+Id.
+7
+Id.
+1
+
+1
+
+•
+
+ActBlue’s policies that allegedly “prevent” illegal, fraudulent political contributions
+could be bypassed easily by foreign actors.8
+
+•
+
+ActBlue’s “passport verification process,” which allegedly prevents illegal foreign
+donations, is an ineffective security method that does not actually require a valid U.S.
+passport number.9
+
+•
+
+ActBlue repeatedly instructed its fraud prevention analysts to “give the donor the benefit
+of the doubt” and to ignore red flags about contributions with foreign indicators.10
+
+In 2023, Wallace-Jones wrote to the Committee on House Administration to describe
+ActBlue's multilayered approach to “root out potential foreign contributions.”11 The letter
+claimed that ActBlue required passport information from donors providing an address outside of
+the United States, and that “[o]nly donations with passport information are processed.”12 In its
+subsequent document production, ActBlue claimed that the platform “validates” passport
+numbers to ensure that non-U.S. citizens or foreign donors cannot provide political contributions
+through the platform.13 However, internal documents reveal that ActBlue’s “passport
+verification” feature is essentially toothless—it only ensures that the entered passport number
+contains a certain number of characters, not that it is a valid U.S. passport number. The provided
+documents expose that ActBlue does “not verify the [passport number] information in any other
+way . . . [or] check the information provided against a government database.”14
+The documents produced to the Committees also detail several scenarios in which
+ActBlue supervisors instruct fraud prevention analysts to “give the donor the benefit of the
+doubt” in making a contribution, despite multiple red flags.15 Oftentimes, ActBlue employees
+were instructed to accept a donation that they had previously rejected for signs of an illegal
+foreign contribution. One ActBlue employee noted that a donor who “has a few red flags, such as
+IP/billing mismatch and a concerning IP provider name, a foreign credit card, an odd email
+domain, and [is] connected to other rejected users via browser fingerprint,” should be accepted
+because ActBlue “can’t say for sure that this is fraud.”16 In another case, an analyst reported “an
+odd pattern of small donations to the [Kamala] Harris campaign using prepaid cards,” which
+another ActBlue employee affirmed were “good to accept.”17 ActBlue reportedly banned
+contributions from foreign prepaid cards and gift cards just before the 2024 election to prevent
+fraudulent donations via these methods.18
+Doc. Production 5 from ActBlue to Rep. Jim Jordan, Chairman, H. Comm. on the Judiciary, Rep. James Comer,
+Chairman, H. Comm. on Oversight and Gov’t Reform, & Rep. Bryan Steil, Chairman, Comm. on H. Admin. (June
+25, 2026), (hereinafter “June 25 document production”).
+9
+Id.
+10
+Id.
+11
+Letter from Ms. Regina Wallace-Jones, Chief Executive Officer, ActBlue, to Rep. Bryan Steil, Chairman, Comm.
+on House Administration (Nov. 27, 2023).
+12
+Id.
+13
+June 25 document production, supra note 8.
+14
+Id.
+15
+Id.
+16
+Id.
+17
+Id.
+18
+Id.
+8
+
+2
+
+ActBlue previously insisted that requiring a card verification value (CVV) for recurring
+online political donations is unnecessary to prevent fraudulent donations and hinders the
+platform’s contribution rate. According to a letter from Wallace-Jones to Chairman Steil in
+November 2023, as of that time, ActBlue “currently require[s] and use[s] CVV on many
+transactions across the site, and ha[s] been in the process of increasing coverage of CVV to
+improve the donor experience.”19 In a subsequent letter to then-Virginia Attorney General Jason
+Miyares on August 12, 2024, ActBlue stated that CVVs are required for “all donors entering a
+new credit card number” and “are an additional measure used to verify that a person making a
+transaction is in physical possession of the card being used.”20 In January 2024, ActBlue began
+requiring a CVV for most transactions, although this rule change was carefully calibrated to
+minimize the effects on ActBlue’s donation volume and reputation.21
+The findings in this report expand upon the Committees’ earlier revelations about
+ActBlue’s flawed and inadequate fraud-prevention practices. As explained in the Committees’
+initial report from April 2025, ActBlue weakened its fraud-prevention standards twice in 2024 to
+take “a more lenient approach” to fraud prevention by triggering fewer manual reviews.22 In July
+2024, ActBlue confirmed that its recent policy changes allowed more fraud than the January
+2024 CVV requirement prevented.23 According to documents produced to the Committees,
+ActBlue stated that “there is no evidence that foreign donations through online or small-dollar
+contributions are a problem in U.S. elections,”24 and alleged that requiring a CVV for online
+contributions was a political scheme for “suppressing political participation.”25 ActBlue
+explained that “adding additional fields to a contribution form decreases conversion rates, and
+suppresses contributions, while not adding any security.”26 ActBlue’s approach to implementing
+fraud prevention polices is reflected in internally-circulated documents stating that the CVV
+requirement is a result of Republicans’ supposed “fear” of ActBlue and the alleged “power of
+Democratic small-dollar donors.”27
+These new revelations build on the Committees’ previous findings regarding ActBlue’s
+lenient fraud-prevention policies. The Committees’ April 2025 report detailed how internal
+documents produced to the Committees by ActBlue and its fraud-prevention contractor, Sift,
+“reflect a fundamentally unserious approach to fraud prevention at ActBlue—one that has left
+the door open for largescale fraud campaigns on Democrats’ top fundraising platform.”28 The
+Letter from Ms. Regina Wallace-Jones, CEO, ActBlue, to Rep. Bryan Steil, Chairman, Comm. on H. Admin.
+(Nov. 27, 2023).
+20
+Letter from ActBlue to Jason S. Miyares, Att’y Gen. of Virginia (Aug. 12, 2024).
+21
+Email from ActBlue Product Manager to ActBlue Staff (Jan. 2, 2024), see Ex. 1; ActBlue Meeting Agenda &
+Notes re: Sift percentile change, ActBlue (July 8, 2024); see Ex. 2.
+22
+ActBlue Staff Report I, supra note 2, at 6.
+23
+Id.
+24
+June 25 document production, supra note 8.
+25
+Memorandum from ActBlue, Requiring a CVV for online contributions suppresses small-dollar donations and
+doesn’t prevent foreign transactions, AB-House-000415 (on file with Comms.).
+26
+Memorandum from ActBlue, Requiring a CVV for online contributions suppresses small-dollar donations and
+doesn’t prevent foreign transactions, AB-House-000501 (on file with Comms.).
+27
+Memorandum from ActBlue, Historic Dem Fundraising through ActBlue Leads to Right-Wing Attacks, ABHouse-000422, (on file with Comms.).
+28
+ActBlue Staff Report I, supra note 2, at 1.
+19
+
+3
+
+Committees’ oversight has found that ActBlue, in its own words, decided to take “a more lenient
+approach” to fraud prevention in 2024, weakening its fraud-prevention policies at least twice
+even though internal assessments showed that these changes would result in a measurable
+increase in fraudulent contributions.29 Similarly, internal trainings directed ActBlue’s fraudprevention team to “look for reasons to accept contributions” rather than to examine them closely
+for indicators of fraud—as required by federal regulation.30 ActBlue took this lax approach to
+fraud prevention even though it had detected at least 22 significant fraud campaigns on the
+platform in recent years, including several from foreign sources.31
+In April 2026, the Committees published a second interim report, following reports that at
+least seven senior staff members, including ActBlue’s “highest-ranking legal officer,” resigned
+from or were fired by the platform in the months following the 2024 election.32 According to
+reporting by the New York Times, the last remaining lawyer on ActBlue’s legal team, Zain
+Ahmad, went “on leave” and had his access to internal systems revoked in late February 2025.33
+Ahmad reportedly claimed that he had been retaliated against by ActBlue staff for blowing the
+whistle on internal misconduct.34 After ActBlue suspended its voluntary cooperation with the
+Committees’ oversight in June 2025,35 the Committees issued subpoenas for documents and
+communications related to staff turmoil and alleged retaliation on July 22, 2025.36
+Documents produced pursuant to the Committees’ subpoenas show the collapse of
+ActBlue’s legal and compliance team. By March 2025, every member of ActBlue’s legal and
+compliance team resigned, was fired, or went on extended leave from the platform.37 According
+to subsequent media reports, this mass exodus was a direct consequence of ActBlue’s failure to
+deter illegal foreign political donations—which the Committees first uncovered in April
+202538—and Wallace-Jones’s previous misstatements to Congress.39 Put simply: every member
+of ActBlue’s legal and compliance team appears to have left the platform after the 2024 election
+because of its “knowing and willful” acceptance of illegal foreign contributions, and the
+subsequent cover-up.40
+Id. at 6-9.
+Id. at 10-14; see Deposit of receipts and disbursements, 11 C.F.R. § 103.3(b) (2024).
+31
+ActBlue Staff Report I, supra note 2, at 14-17.
+32
+Reid J. Epstein & Shane Goldmacher, ActBlue, the Democratic Fund-Raising Powerhouse, Faces Internal Chaos,
+N.Y. TIMES (Mar. 5, 2025).
+33
+Id.
+34
+Id.
+35
+Letter from Mr. Vincent Cohen & Mr. Jonathan Streeter, Counsel for ActBlue, to Rep. Jim Jordan, Chairman, H.
+Comm. on the Judiciary, Rep. James Comer, Chairman, H. Comm. on Oversight and Gov’t Reform, & Rep. Bryan
+Steil, Chairman, Comm. on H. Admin. (June 9, 2025) (on file with Comms.).
+36
+Letter from Rep. Bryan Steil, Chairman, Comm. on H. Admin., Rep. Jim Jordan, Chairman, H. Comm. on the
+Judiciary, & Rep. James Comer, Chairman, H. Comm. on Oversight and Gov’t Reform, to Ms. Regina WallaceJones, CEO, ActBlue (July 22, 2025) (attaching subpoena).
+37
+Email from ActBlue Union to ActBlue Board (Feb. 27, 2025), see Ex. 3; ActBlue Legal & Compliance Operations
+Specialist Resignation Letter (Mar. 4, 2025), see Ex. 4; Email from ActBlue HR Employee to Regina Wallace-Jones
+(Feb. 26, 2025, 5:01 PM), see Ex. 5.
+38
+ActBlue Staff Report I, supra note 2.
+39
+Reid J. Epstein & Shane Goldmacher, ActBlue May Have Misled Congress on Vetting Foreign Donations, Its
+Lawyers Warned, N.Y. TIMES (Apr. 2, 2026).
+40
+Id. (quoting memoranda prepared by ActBlue’s outside counsel).
+29
+30
+
+4
+
+One of these abrupt departures was ActBlue’s Interim General Counsel Aaron Ting.41
+Internal messages among ActBlue staff stated that Ting was “really unhappy with what he[] [had]
+seen while being in the interim role” and staff claimed that Ting may have been “more fed up
+tha[n] we realized.”42 However, Ting’s concerns were much more serious. According to the New
+York Times, which reviewed Ting’s resignation letter, Ting wrote that he was “concerned that
+leadership is not fully committed to transparently addressing with the Board the seriousness of
+our most pressing concerns: the legal compliance of ActBlue’s past practices for screening
+political donations from abroad and its past representations to Congress regarding foreign
+donations and related matters[.]”43 The Committees pressed ActBlue to produce Ting’s
+resignation letter, which falls under the scope of the Committees’ subpoenas. To date, ActBlue
+continues to withhold large portions of Ting’s resignation letter on the basis of attorney-client
+privilege.44 Notably, when ActBlue finally produced a heavily redacted version of the resignation
+letter to the Committees, all information regarding misconduct at ActBlue—including the words
+quoted by the New York Times—was redacted and shielded as supposed “legal advice.”45
+After Ting’s resignation, Legal Counsel Zain Ahmad became the new interim head of
+ActBlue’s legal team, reporting directly to CEO Wallace-Jones.46 On his first full day, February
+25, 2025, Ahmad sent the memoranda from ActBlue’s outside counsel detailing the platform’s
+misconduct “to the ActBlue board of directors [and] ActBlue’s executive leadership team[.]”47
+Later that day, Ahmad suspiciously requested a “leave of absence.”48 The following day, ActBlue
+Chief People & Culture Officer Candace King violated internal policy and locked Ahmad out of
+his email and other internal systems.49 However, Ahmad retained access to Slack, ActBlue’s
+internal messaging platform.50 On February 26, 2025, Ahmad sent a Slack message to ActBlue’s
+IT Support group requesting that they restore access to his essential accounts.51 However, Hanna
+Bonin, ActBlue’s director of IT, deleted Ahmad’s message minutes after it was sent.52 Ahmad
+
+Internal ActBlue Employee Message (Feb. 21, 2025), see Ex. 6; Internal Message from Aaron Ting to Candace
+King (Feb. 14, 2025, 10:14 PM), see Ex. 7; see also Reid J. Epstein & Shane Goldmacher, ActBlue May Have
+Misled Congress on Vetting Foreign Donations, Its Lawyers Warned, N.Y. TIMES (Apr. 2, 2026).
+42
+Internal ActBlue Employee Message (Feb. 21, 2025), see Ex. 6; Internal ActBlue Employee Message (Feb. 18,
+2025), see Ex. 8.
+43
+Reid J. Epstein & Shane Goldmacher, ActBlue May Have Misled Congress on Vetting Foreign Donations, Its
+Lawyers Warned, N.Y. TIMES (Apr. 2, 2026) (quoting letter).
+44
+Email from Vincent Cohen, Counsel to ActBlue, to Comm. Staff, H. Comm. on the Judiciary (July 2, 2026) (on file
+with Comms.).
+45
+Letter from Mr. Vincent Cohen, Counsel for ActBlue, to Rep. Jim Jordan, Chairman, H. Comm. on the Judiciary,
+Rep. James Comer, Chairman, H. Comm. on Oversight and Gov’t Reform, & Rep. Bryan Steil, Chairman, Comm.
+on H. Admin. (June 26, 2026).
+46
+ActBlue Staff Report I, supra note 2.
+47
+Reid J. Epstein & Shane Goldmacher, ActBlue May Have Misled Congress on Vetting Foreign Donations, Its
+Lawyers Warned, N.Y. TIMES (Apr. 2, 2026).
+48
+Id.; Email from ActBlue HR Employee to Zain Ahmad (Feb. 25, 2025), see Ex. 9; Email from ActBlue Union to
+ActBlue Board (Feb. 27, 2025), see Ex 3.; see also Reid J. Epstein & Shane Goldmacher, ActBlue, the Democratic
+Fund-Raising Powerhouse, Faces Internal Chaos, N.Y. TIMES (Mar. 5, 2025).
+49
+Internal Message from Candace King to ActBlue Employee (Feb. 26, 2025), see Ex. 10.
+50
+Email from ActBlue HR Employee to Regina Wallace-Jones (Feb. 26, 2025, 5:01 PM), see Ex. 5.
+51
+Internal Message from Zain Ahmad to 277 ActBlue Employees (Feb. 26, 2025), see Ex. 11.
+52
+Id.
+41
+
+5
+
+sent several additional messages, alluding to retaliation for blowing the whistle on ActBlue’s
+misconduct.53 Bonin deleted each message after they were sent—a total of six times.54
+ActBlue’s “knowing and willful” acceptance of illegal foreign political donations and
+subsequent cover-up, as well as its lenient approach to preventing fraudulent donations, are of
+great concern to the Committees.55 It is unlawful “to solicit, accept, or receive a [political]
+contribution or donation” from “a foreign national.”56 Federal law also prohibits making “any
+materially false, fictitious, or fraudulent statement or representation” to Congress.57 ActBlue and
+Wallace-Jones appear to have done both.
+The Committees are charged by the House of Representatives with protecting the
+integrity of American elections and will continue investigating to inform potential legislative
+reforms that improve and strengthen America’s democracy. In May 2026, the Committee on
+House Administration passed multiple bills to improve transparency and eliminate foreign
+donations in American elections.58 As these bills continue through the legislative process, the
+Committees’ oversight will ensure that American elections are free, fair, and decided by
+Americans alone.
+
+53
+
+Id
+Id.
+55
+Reid J. Epstein & Shane Goldmacher, ActBlue May Have Misled Congress on Vetting Foreign Donations, Its
+Lawyers Warned, N.Y. TIMES (Apr. 2, 2026).
+56
+52 U.S.C. § 30121; 52 U.S.C. § 30109(d).
+57
+18 U.S.C. § 1001; 2 U.S.C. § 192.
+58
+H.R. 3535, the Stop Foreign Funds in Elections Act, 119th Cong. (2026); H.R. 8720, the Campaign Finance
+Transparency Act, 119th Cong. (2026); H.R. 8721, the Preventing Foreign Interference in American Elections Act,
+119th Cong. (2026).
+54
+
+6
+
+TABLE OF CONTENTS
+EXECUTIVE SUMMARY ..................................................................................................................... 1
+TABLE OF CONTENTS ....................................................................................................................... 7
+ACTBLUE’S FAILURE TO PREVENT FOREIGN POLITICAL DONATIONS ............................................... 8
+I.
+
+ActBlue’s “passport verification process” is an ineffective security method that does
+not actually require a valid U.S. passport to donate. .......................................................8
+
+II.
+
+ActBlue has repeatedly instructed its fraud-prevention analysts to “give the donor the
+benefit of the doubt” and ignore red flags about contributions. ....................................10
+
+III.
+
+According to reporting by the New York Times, ActBlue’s legal team voiced significant
+concerns about ActBlue’s past practices for screening foreign donations. ....................13
+
+ACTBLUE PURPOSEFULLY WITHHELD INFORMATION FROM THE COMMITTEES INDICATING IT
+MISLED CONGRESS ........................................................................................................................ 19
+CONCLUSION.................................................................................................................................. 22
+
+7
+
+ACTBLUE’S FAILURE TO PREVENT FOREIGN POLITICAL DONATIONS
+In March 2024, ActBlue released a new “passport verification” feature to prevent
+fraudulent political donations from foreign actors.59 ActBlue claimed that the feature “validates”
+the passport number of U.S. citizens traveling or living abroad during the time of their
+contribution to ensure that non-U.S. citizens or foreign donors cannot provide political
+contributions through the platform.60 However, documents produced to the Committees
+undermine ActBlue’s assertion. The documents describe how ActBlue’s passport verification
+process only requires that the entered passport number contain a certain number of characters;
+the process does not involve authenticating the U.S. passport number.61 This “verification”
+process could allow foreign actors to enter any random combination of numbers and donate to
+political campaigns in the United States, in violation of federal law. In addition to the platform’s
+weak fraud-prevention policies and verification procedures, ActBlue has regularly instructed its
+employees to “give the donor the benefit of the doubt,” even when there are significant concerns
+that a contribution may be from a fraudulent, foreign donor.62
+I.
+
+ActBlue’s “passport verification process” is an ineffective security method that does
+not actually require a valid U.S. passport to donate.
+
+Internal documents describe how ActBlue’s “passport verification” feature would
+potentially allow fraudulent political donations from foreign actors. 63 ActBlue reportedly
+designed the process so that donors living or traveling abroad must enter their U.S. passport
+number, or they “cannot complete their contribution.”64 According to ActBlue, “[i]f someone
+enters an address when making a contribution that includes a country other than the United
+States, they see a popup in the contribution flow requesting their passport number.”65 ActBlue’s
+own policy states, however, that the “verification” process requires only that a donor enter the
+correct amount of characters to complete the prompt; it does not actually require that the donor
+provide a legitimate U.S. passport number.66 Under ActBlue’s procedures, the passport
+verification feature “uses very basic validation—number of characters—to ensure that the
+number entered is a valid passport number, but [it does] not verify the information in any other
+way. . . . [It does] not, for instance, check the information provided against a government
+database. . . . [It] merely store[s] the information and continue[s] the contribution flow.”67
+
+Memorandum from ActBlue, Slack Announcement for New Passport Verification Feature, see Ex. 12.
+Memorandum from ActBlue, Procedure for Contributions Made Without a Passport Number, see Ex. 13.
+61
+Id.
+62
+See, e.g., ActBlue Employee Contribution Review, see Ex. 14.
+63
+Memorandum from ActBlue, Procedure for Contributions Made Without a Passport Number, see Ex. 13.
+64
+Id.
+65
+Id.
+66
+Id.
+67
+Id.
+59
+60
+
+8
+
+An ActBlue customer service page details the “Procedure for Contributions Made Without a
+Passport Number.”
+Even more concerning, ActBlue’s internal documents describe that if a donor does not
+have a U.S. passport or address in the United States, an ActBlue employee has the ability to
+determine an “alternative method of verifying the [donor’s] citizenship.”68 The employee’s
+decision allegedly requires an explanation of the law and review from ActBlue’s legal
+department, but the procedure ultimately allows, and in fact encourages, ActBlue employees to
+put “a placeholder in the passport number field of [the donor’s] ActBlue account.”69 The
+placeholder allows ActBlue to accept all subsequent contributions from the donor without
+requiring a U.S. passport number.70 If an ActBlue employee determines a donor without a U.S.
+passport or address in the United States is a U.S. citizen, ActBlue’s ostensibly secure passport
+number placeholder is “ACTBLUEXX.”71 In one example, ActBlue accepted a contribution
+from a foreign donor who provided copies of a Form 225-A (“Card of Identity and Registration),
+which expired on August 27, 1974, and a birth certificate from the Detroit Health Department,
+but no U.S. passport.72 A member of ActBlue’s Legal and Compliance team stated that “[t]his
+seems like sufficient evidence to me!”73
+Despite ActBlue’s ineffective passport verification process, ActBlue employees regularly
+relied on the feature to determine that donors were not foreign actors. ActBlue’s policy for
+passport verification from foreign donations was woefully inadequate for meaningfully
+identifying and flagging foreign donations. ActBlue supervisors directed their teams to accept
+donations even when there were red flags for potential foreign donations, relying instead on the
+
+68
+
+Id.
+Id.
+70
+Id.
+71
+Id.
+72
+Doc. Production 9 from ActBlue to Rep. Jim Jordan, Chairman, H. Comm. on the Judiciary, Rep. James Comer,
+Chairman, H. Comm. on Oversight and Gov’t Reform, & Rep. Bryan Steil, Chairman, Comm. on H. Admin. (Sep. 4,
+2026).
+73
+Id.
+69
+
+9
+
+incomplete passport verification process.74 For example, one ActBlue supervisor corrected a
+fraud-prevention staffer’s review of a contribution, noting that a donation should be accepted
+even though “[t]he donor is foreign, [because they] correctly entered their billing address, so they
+would be prompted for a passport number.”75
+
+An ActBlue supervisor recorded their notes while auditing a fraud-prevention staffer’s manual
+reviews of contributions.
+Another supervisor wrote that the employee should accept a foreign donation to a
+political organization because “the donor used the correct country code . . . so they would need to
+enter a passport number.”76 Here, the supervisor acknowledged that even though the donation
+was foreign, the donor would need to enter a passport number and so long as the passport
+number was the correct number of digits, that was sufficient for ActBlue’s verification process.
+In both cases, the ActBlue supervisors relied on an inadequate passport verification process to
+verify a donor’s identity — a process that apparently is incapable of determining whether an
+entered number is a legitimate U.S. passport number.
+
+An ActBlue supervisor recommended accepting a foreign contribution to a political
+organization, relying on the passport verification process to prevent fraud.
+II.
+
+ActBlue has repeatedly instructed its fraud-prevention analysts to “give the donor
+the benefit of the doubt” and ignore red flags about contributions.77
+
+As detailed in the Committees’ initial April 2025 report, ActBlue employs Sift, an “AIpowered fraud decisioning” platform, as the key cog in its fraud-prevention operations.78 Most
+ActBlue transactions are processed through Sift, which assigns each transaction a 0 to 100 fraud
+likelihood score based on various indicators of fraud.79 ActBlue sets and periodically tweaks
+guidelines dictating the transactions that Sift flags for ActBlue staff to review.80 Transactions
+with high Sift scores (indicating a high likelihood of fraud) from high-risk countries, or bearing
+other indicators of fraud, may be flagged for automatic rejection or manual review.81
+See e.g., Internal Messages between ActBlue Employees, ActBlue Employee Contribution Review, see Ex. 14.
+Id.
+76
+Internal Messages between ActBlue Employees, ActBlue Employee Contribution Review, see Ex. 15.
+77
+See, e.g., ActBlue Employee Contribution Review, see Ex. 16.
+78
+ActBlue Staff Report I, supra note 2.
+79
+Memorandum from ActBlue, Fraud Prevention FAQ (on file with the Comms.).
+80
+Memorandum from ActBlue, Summary of changes to Sift rules since 2023 (on file with the Comms.).
+81
+Id.
+74
+75
+
+10
+
+Following Sift’s review, ActBlue automatically accepts 99.8 percent of donations.82
+According to ActBlue, the remaining 0.2 percent are manually reviewed by ActBlue staff, or
+automatically rejected if they “use foreign prepaid/gift cards, domestic gift cards, are from highrisk/sanctioned countries, [or] have the highest level of risk as determined by Sift.”83 Only five
+percent of contributions that are manually reviewed are rejected, meaning that ActBlue rejects
+significantly “less than 0.1 [percent] of all contributions” for suspected fraud.84
+In its June 25, 2026, production to the Committees, ActBlue provided logs of staffers’
+manual reviews of contributions that were flagged for potential fraud between October 9, 2022,
+and October 31, 2024.85 ActBlue supervisors recorded notes regarding the performance of each
+fraud prevention analyst during their shift, including recommending that certain contributions be
+either accepted or rejected. These entries reveal the frequency with which supervisors reinforced
+the ActBlue policy: “we give the benefit of the doubt to the donor.”86 On one occasion, shown
+below, a supervisor listed the various red flags associated with a particular foreign donor,
+including “IP/billing mismatch and a concerning IP provider name, a foreign credit card, an odd
+email domain, and being connected to other rejected users” but instead of commending his or her
+subordinate for blocking the donation, the supervisor instructed the subordinate to accept the
+donation because they could not “say for sure that this is fraud.”87 While this process gives the
+appearance that ActBlue supervisors meaningfully review potentially fraudulent donations, the
+logs are clear that the consistent instruction to ActBlue staff was to accept donations that appear
+fraudulent based on “the benefit of the doubt.”
+
+An ActBlue supervisor reiterated that a fraud-prevention staffer should “give the benefit of the
+doubt to the donor,” despite multiple red flags about the contribution.
+One ActBlue supervisor explained that a contribution “set off a lot of Sift’s alarms but [they]
+agree with [the employee] in giving them the benefit of the doubt and accepting this.”88
+
+82
+
+Id.
+Id.
+84
+Memorandum from ActBlue, How Sift is Impacting Our Work at ActBlue (on file with the Comms.);
+Memorandum from ActBlue, Fraud Prevention 101 for New Associates in the Workflow (on file with the Comms.).
+85
+See June 25 document production, supra note 8.
+86
+Internal Messages between ActBlue Employees, ActBlue Employee Contribution Review, see Ex. 16.
+87
+Id.
+88
+Internal Messages between ActBlue Employees, ActBlue Employee Contribution Review, see Ex. 17.
+83
+
+11
+
+An ActBlue supervisor agreed that fraud-prevention staffers should “give the donor the benefit
+of the doubt,” despite multiple fraud indicators.
+Another supervisor commended a “great accept,” because a “donor has a few foreign IPs, but
+they are all consistently in the same place.”89
+
+An ActBlue supervisor approved accepting a contribution from a donor with several foreign IP
+addresses.
+One supervisor noted that a denied foreign contribution “should have [been] accepted,” even
+though “[t]he donor uses an Arkansas state code which isn’t great, but [the] system can be
+wonky with requiring state codes for foreign donors.”90
+
+An ActBlue supervisor recommended that a foreign contribution from a previous donor be
+accepted.
+Another employee suggested that a donor who “sometimes has an IP in Hong Kong” be accepted
+because “none of their signals [potential fraud-indicators] raise any eyebrows.”91
+
+An ActBlue supervisor approved of accepting a potentially foreign contribution.
+Further, instead of verifying a donors’ identity using a reliable source, ActBlue
+employees referred to donors’ social media accounts to confirm their identity. In one case,
+according to review logs, an ActBlue supervisor noted that “all signs point to [a donor] being
+from Canada, but they used a Missouri billing address.”92 Nonetheless, the supervisor
+recommended that ActBlue accept the donation because the donor appeared to have an active
+Twitter account.93
+
+Internal Messages between ActBlue Employees, ActBlue Employee Contribution Review, see Ex. 18.
+Internal Messages between ActBlue Employees, ActBlue Employee Contribution Review, see Ex. 19.
+91
+Internal Messages between ActBlue Employees, ActBlue Employee Contribution Review, see Ex. 20.
+92
+Internal Messages between ActBlue Employees, ActBlue Employee Contribution Review, see Ex. 21.
+93
+Id.
+89
+90
+
+12
+
+An ActBlue supervisor approves of accepting a contribution from a potentially foreign donor
+because they have a Twitter account.
+One ActBlue employee noted that a foreign donation should be accepted, “[e]ven though
+they have some IP/Billing mismatches, [because] it seems like this is a real donor, reinforced by
+them having a LinkedIn.”94
+
+An ActBlue supervisor approved of accepting a contribution from a potentially foreign donor
+because they had a LinkedIn account.
+Another ActBlue supervisor wrote that there is “nothing suspicious” about a donor who
+used a prepaid card and that it was not enough reason to reject the contribution.95 ActBlue
+reportedly banned contributions from foreign prepaid cards and gift cards just before the 2024
+election to prevent fraudulent donations using these methods.96
+
+An ActBlue supervisor approved of accepting a donation from a prepaid card.
+Documents provided to the Committees demonstrate additional examples in which
+ActBlue supervisors instructed fraud-prevention staffers to accept potentially fraudulent
+donations, often deferring to ActBlue’s ineffective “passport verification process” to “prevent”
+illegal foreign political contributions. These documents make it clear that ActBlue maintained a
+culture within its fraud-prevention team that instructed analysts to accept potentially fraudulent
+or illegal foreign donations, even in the face of significant red flags.
+III.
+
+According to reporting by the New York Times, ActBlue’s legal team voiced
+significant concerns about ActBlue’s past practices for screening foreign donations.
+
+In October 2023, the Committee on House Administration requested information about
+ActBlue’s failure to require CVVs and deter fraud on the platform.97 According to the New York
+Times, ActBlue’s November 2023 response, signed by CEO Wallace-Jones, made material
+
+Internal Messages between ActBlue Employees, ActBlue Employee Contribution Review, see Ex. 22.
+Internal Messages between ActBlue Employees, ActBlue Employee Contribution Review, see Ex. 23.
+96
+Memorandum from ActBlue, Sift Rule Changes – Adjustments to Prepaid Cards (on file with the Comms.).
+97
+Letter from Rep. Bryan Steil, Chairman, Comm. on H. Admin., to Ms. Regina Wallace-Jones, CEO, ActBlue (Oct.
+31, 2023).
+94
+95
+
+13
+
+misrepresentations about ActBlue’s processes for deterring illegal foreign donations.98 In fact,
+the fraud-prevention processes were alarmingly weak.99 In late 2024, as ActBlue faced renewed
+scrutiny from the Committees for its suspect fraud-prevention practices,100 ActBlue’s outside
+counsel prepared two memoranda detailing ActBlue’s apparently “knowing and willful”
+acceptance of illegal foreign donations and Wallace-Jones’s subsequent misstatements to
+Congress.101 The outside counsel’s review, as quoted by the Times, concluded that “ActBlue did
+not have the rigor in its review of overseas donations that was required or that it had described to
+congressional investigators.”102 ActBlue’s outside lawyers proposed that Wallace-Jones “correct
+the record,” noting “risks” associated with failing to do so.103 Former Biden White House
+Counsel Dana Remus, who led the legal review, even recommended that Wallace-Jones hire a
+personal lawyer to navigate her own criminal exposure.104 Instead of heeding Remus’s advice,
+Wallace-Jones “terminated” the law firm and disparaged their review.105 Wallace-Jones’s refusal
+to address the apparent illegal contributions or her misstatements to Congress appears to have led
+every remaining member of ActBlue’s internal legal and compliance team to leave the company,
+including former Interim General Counsel Aaron Ting.
+Ting’s resignation letter reportedly stated that he was resigning because of his concerns
+about “ActBlue’s past practices for screening political donations from abroad and its past
+representations to Congress regarding foreign donations and related matters.”106 As reported by
+the Times, Ting also wrote that he was “concerned that leadership [was] not fully committed to
+transparently addressing with the Board the seriousness of” ActBlue’s misconduct.107 Ting’s
+letter also reportedly raised concerns about ActBlue’s misleading statements to Congress.108
+Following Ting’s resignation, Zain Ahmad, the last remaining lawyer on ActBlue’s legal
+team, went “on leave” and against company policy, had his access to internal systems revoked in
+late February 2025.109 Before his departure, Ahmad, consistent with his legal and ethical
+responsibilities, reportedly notified ActBlue leadership, including ActBlue’s Board of Directors,
+
+Letter from Ms. Regina Wallace-Jones, CEO, ActBlue, to Rep. Bryan Steil, Chairman, Comm. on H. Admin.
+(Nov. 27, 2023).
+99
+ActBlue Staff Report I, supra note 2.
+100
+Letter from Rep. Bryan Steil, Chairman, Comm. on H. Admin., to Ms. Regina Wallace-Jones, CEO, ActBlue
+(Oct. 28, 2024); Letter from Rep. Bryan Steil, Chairman, Comm. on H. Admin., to Ms. Regina Wallace-Jones, CEO,
+ActBlue (Oct. 30, 2024) (attaching subpoena); Letter from Rep. Jim Jordan, Chairman, H. Comm. on the Judiciary,
+to Ms. Regina Wallace-Jones, CEO, ActBlue (Dec. 9, 2024).
+101
+Reid J. Epstein & Shane Goldmacher, ActBlue May Have Misled Congress on Vetting Foreign Donations, Its
+Lawyers Warned, N.Y. TIMES (Apr. 2, 2026) (quoting memoranda).
+102
+Id.
+103
+Id. (quoting memoranda).
+104
+Id.
+105
+Id.
+106
+Id. (quoting letter).
+107
+Id. (quoting letter).
+108
+Id.
+109
+Internal Message from Candace King to ActBlue Employee (Feb. 26, 2025), see Ex. 10; ActBlue Leave of
+Absence & FMLA Guidance (“While access to most systems will be paused” during an extended leave, “essential
+tools such as email . . . will remain available to ensure continuity if necessary.”), see Ex. 24.
+98
+
+14
+
+of credible allegations of misconduct at the company, including significant alleged violations of
+federal campaign finance law and false statements to Congress.110
+Ahmad then went on a suspicious medical leave of absence while ActBlue’s top HR
+official locked him out of his “essential” accounts.111 Despite HR staff’s assertion that Ahmad
+would retain access to his ActBlue accounts, ActBlue Chief People & Culture Officer Candace
+King violated internal policy and locked Ahmad out of his email and other internal systems.112 In
+response, Ahmad sent an internal Slack message to ActBlue’s IT Support group, a group that
+contains 277 people, stating that his “access to email, Confluence, and other essential platforms
+was revoked this morning” and requested IT restore his access.113 Ahmad explained that
+employees on medical leave “should still have access to essential platforms like email,
+Confluence, Slack, etc.”114 Hanna Bonin, ActBlue’s director of IT, deleted Ahmad’s request five
+minutes later.115
+
+10:50 PM Slack Message from Zain Ahmad requesting his access be restored. Hanna Bonin
+deleted the message five minutes later.
+After Bonin deleted Ahmad’s second request, Ahmad wrote, “Please be advised that we have
+Anti-Retaliation and Whistleblower Policies for a reason,” alleging that King’s and Bonin’s
+treatment toward him was retaliation for blowing the whistle on ActBlue’s misconduct.116 Bonin
+deleted this message too.117
+
+Reid J. Epstein & Shane Goldmacher, ActBlue May Have Misled Congress on Vetting Foreign Donations, Its
+Lawyers Warned, N.Y. TIMES (Apr. 2, 2026).
+111
+ActBlue Leave of Absence & FMLA Guidance, see Ex. 24.
+112
+Id.; Internal Message from Candace King to ActBlue Employee (Feb. 26, 2025), see Ex. 10.
+113
+Internal Message from Zain Ahmad to 277 ActBlue Employees (Feb. 26, 2025), see Ex. 11.
+114
+Id.
+115
+Id.
+116
+Id.
+117
+Id.
+110
+
+15
+
+11:00 PM Slack messages from Ahmad citing the Employee Handbook, Leave Policy, AntiRetaliation, and Whistleblower Policies. Bonin deleted both messages minutes later.
+Ahmed then sent ActBlue’s Time Off and Leave Policy, the Non-Retaliation Policy, and the
+Whistleblower Protection Policy.118 Bonin deleted these messages just minutes later.119
+
+11:04 PM Slack messages from Ahmad attaching the Leave and Non-Retaliation Policies. Bonin
+deleted both messages minutes later.
+Again, Ahmad messaged Bonin requesting that she “[p]lease stop” deleting his requests
+because she was “violating the laws and policies of” ActBlue.120 Here, too, Bonin deleted
+Ahmad’s message—a message declaring that she was violating the laws and ActBlue’s policies
+by retaliating against him.121
+118
+
+Id.
+Id.
+120
+Id.
+121
+Id.
+119
+
+16
+
+11:05 PM Slack message from Ahmad requesting Bonin stop deleting his messages. Bonin
+deleted Ahmad’s message five seconds later.
+This process occurred six times in total, which other ActBlue staff contemporaneously noted
+“look[ed] like blatant retaliation.”122 Amid this staff outcry, King relented and granted Ahmad
+access to his email again—on the condition that she could spy on it, using ActBlue’s internal
+security tools to “key in on him” and, presumably, to ensure that he did not jeopardize the coverup.123
+After ActBlue’s outside counsel noted serious concerns about potentially illegal conduct
+at the company, the platform’s entire legal and compliance team either resigned, was fired, or
+went on extended leave within just four months after the 2024 election.124 The Committees
+sought to question both Ting and Ahmad about these allegations; however, both lawyers asserted
+their Fifth Amendment right against self-incrimination during depositions.125 In any event, the
+documents produced to the Committees further support the Committees’ concerns about
+ActBlue’s fundamentally unserious approach to fraud prevention. The company’s passport
+verification process is nothing more than a veneer of protection against illegal foreign
+contributions.126 Behind the scenes, ActBlue supervisors urged analysts to accept foreign
+
+Id.; Internal Message from ActBlue Employee to Candace King (Feb. 26, 2025, 11:46 PM), see Ex. 25.
+Internal Messages between ActBlue Employee and Candace King (Feb. 27, 2025), see Ex. 26.
+124
+ActBlue Legal & Compliance Operations Specialist Resignation Letter (Mar. 4, 2025); Email from ActBlue
+Union to ActBlue Board (Feb. 27, 2025); see also Reid J. Epstein & Shane Goldmacher, ActBlue May Have Misled
+Congress on Vetting Foreign Donations, Its Lawyers Warned, N.Y. TIMES (Apr. 2, 2026).
+125
+Deposition of Aaron Ting, Former Director & Associate General Counsel, Product and Privacy, ActBlue, Comm.
+on H. Admin., H. Comm. on the Judiciary, & H. Comm. on Oversight and Gov’t Reform (Nov. 17, 2025);
+Deposition of Zain Ahmad, Legal Counsel, ActBlue, Comm. on H. Admin., H. Comm. on the Judiciary, & H.
+Comm. on Oversight and Gov’t Reform (Dec. 5, 2025).
+126
+Memorandum from ActBlue, Procedure for Contributions Made Without a Passport Number, see Ex. 13.
+122
+123
+
+17
+
+donations—giving donors “the benefit of the doubt” despite real concerns that the contributions
+were illegal.127
+
+127
+
+See, e.g., Memorandum from ActBlue, ActBlue Employee Contribution Review, see Ex. 16.
+
+18
+
+ACTBLUE PURPOSEFULLY WITHHELD INFORMATION FROM THE COMMITTEES INDICATING IT
+MISLED CONGRESS
+On April 2, 2026, the New York Times reported on ActBlue’s poor fraud-prevention
+practices and CEO Wallace-Jones’s misstatements to Congress, quoting from ActBlue
+documents that were not produced to the Committees, despite falling under the scope of the
+Committees’ subpoenas.128 The documents, which included former Interim General Counsel
+Aaron Ting’s resignation letter and internal messages in which former Legal Counsel Zain
+Ahmad alleged that he was retaliated against for blowing the whistle on internal misconduct at
+ActBlue, were clearly responsive to the Committees’ subpoenas and unprotected by any
+reasonable assertion of the attorney-client privilege.129
+These documents likely contain evidence that ActBlue accepted foreign donations,
+misled Congress, and then retaliated against an employee who spoke up about it.130 Nonetheless,
+ActBlue initially asserted attorney-client privilege or attorney work-product privilege over these
+and 420 other documents responsive to the Committees’ subpoenas.131
+In a detailed letter to ActBlue dated June 18, 2026, the Committees rejected ActBlue’s
+assertion of privilege over Ting’s resignation letter, Ahmad’s internal messages, and the category
+of “documents circulated among non-lawyers containing or reflecting . . . information from an
+attorney.”132 The Committees explained that because both Ting’s resignation letter and Ahmad’s
+internal messages were drafted and sent in the context of an employer-employee relationship—
+and not an attorney-client relationship “for the purpose of obtaining or providing legal
+advice”133—ActBlue’s assertion of privilege over these documents was improper.134 The
+Committees also explained that generalized “information from an attorney” is not a sufficient
+basis on which to assert privilege because attorney-client privilege does not attach if a document
+is not created “for the purpose of obtaining or providing legal advice,”135 which ActBlue seems
+to concede was the case for these documents.136
+128
+Reid J. Epstein & Shane Goldmacher, ActBlue May Have Misled Congress on Vetting Foreign Donations, Its
+Lawyers Warned, N.Y. TIMES (Apr. 2, 2026).
+129
+Id.
+130
+Id.
+131
+Letter from Mr. Vincent Cohen, Counsel for ActBlue, to Rep. Jim Jordan, Chairman, H. Comm. on the Judiciary,
+Rep. James Comer, Chairman, H. Comm. on Oversight and Gov’t Reform, & Rep. Bryan Steil, Chairman, Comm.
+on H. Admin. (June 5, 2026) (attaching log of privileged materials).
+132
+Letter from Rep. Bryan Steil, Chairman, Comm. on H. Admin., Rep. Jim Jordan, Chairman, H. Comm. on the
+Judiciary, & Rep. James Comer, Chairman, H. Comm. on Oversight and Gov’t Reform, to Ms. Regina WallaceJones, CEO, ActBlue (June 18, 2026).
+133
+In re Kellogg Brown & Root, Inc., 756 F.3d 754, 757 (D.C. Cir. 2014); see also United States v. Mejia, 655 F.3d
+126, 132 (2d Cir. 2011) (explaining that the attorney-client privilege “protects communications (1) between a client
+and his or her attorney (2) that are intended to be, and in fact were, kept confidential (3) for the purpose of obtaining
+or providing legal advice.”).
+134
+Letter from Rep. Bryan Steil, Chairman, Comm. on H. Admin., Rep. Jim Jordan, Chairman, H. Comm. on the
+Judiciary, & Rep. James Comer, Chairman, H. Comm. on Oversight and Gov’t Reform, to Ms. Regina WallaceJones, CEO, ActBlue (June 18, 2026).
+135
+Kellogg Brown & Root, 756 F.3d at 757.
+136
+Letter from Rep. Bryan Steil, Chairman, Comm. on H. Admin., Rep. Jim Jordan, Chairman, H. Comm. on the
+Judiciary, & Rep. James Comer, Chairman, H. Comm. on Oversight and Gov’t Reform, to Ms. Regina WallaceJones, CEO, ActBlue (June 18, 2026); see Letter from Mr. Vincent Cohen, Counsel for ActBlue, to Rep. Jim Jordan,
+
+19
+
+On June 27, 2026, over a year after the Committees issued the subpoenas, ActBlue finally
+produced heavily redacted versions of Ting’s resignation letter and Ahmad’s internal messages.
+ActBlue stated that it would only produce the letter and messages in redacted form because “the
+provision of legal advice was among the significant purposes of the communication[s].”137
+Additionally, ActBlue argued that “even if the Committees were right that each document served
+a non-legal purpose—which ActBlue does not concede—a multi-purpose communication is
+privileged” for this reason.138 Notably, ActBlue redacted all information in the documents
+regarding misconduct at the company, labeling it as supposed “legal advice.”
+On July 10, 2026, after additional pressure from the Committees, ActBlue finally
+produced Ahmad’s internal messages in unredacted form. This production came only after the
+Committees urged ActBlue to again review its privilege assertions. As the Committees explained,
+Ahmad’s internal messages were sent for the purpose of making a claim of retaliation—not to
+obtain or provide legal advice. Based on the surrounding context, it is clear that Ahmad was
+acting as an employee trying to restore his e-mail access, and not an attorney providing legal
+advice. There is no indication that any ActBlue employee was seeking to obtain his legal advice.
+Contemporaneous evidence also indicates that Ahmad sent the internal messages to an
+“[information technology] support” messaging thread, unrelated to any legal advisory function,
+and employees across ActBlue knew in real time that Ahmad had posted a message alleging
+retaliation.139 Further, Ahmad sent this message to 277 individuals. Although sending a message
+to many people does not necessarily destroy privilege, it is evidence that these messages were
+not intended to be kept confidential.140 After the Committees raised these facts, ActBlue revised
+its assertion of privilege and produced the internal messages in unredacted form.
+Although ActBlue produced Ahmad’s messages in unredacted form to the Committees,
+ActBlue continues to withhold large portions of Ting’s resignation letter because it supposedly
+contains legal advice. ActBlue’s redactions cover the portions of the letter from which the New
+York Times quoted and which reportedly contain information about ActBlue’s acceptance of
+illegal foreign donations.141 The resignation letter reportedly states that Ting resigned because of
+his concerns about “ActBlue’s past practices for screening political donations from abroad and
+its past representations to Congress regarding foreign donations and related matters.”142 Ting’s
+letter also reportedly contains information about CEO Wallace-Jones’s false statements to
+Chairman, H. Comm. on the Judiciary, Rep. James Comer, Chairman, H. Comm. on Oversight and Gov’t Reform, &
+Rep. Bryan Steil, Chairman, Comm. on H. Admin. (Oct. 27, 2025).
+137
+Letter from Mr. Vincent Cohen, Counsel for ActBlue, to Rep. Jim Jordan, Chairman, H. Comm. on the Judiciary,
+Rep. James Comer, Chairman, H. Comm. on Oversight and Gov’t Reform, & Rep. Bryan Steil, Chairman, Comm.
+on H. Admin. (June 26, 2026).
+138
+Id.
+139
+Internal Message from Zain Ahmad to 277 ActBlue Employees (Feb. 26, 2025, 10:50 PM), see Ex. 11; Internal
+Message from ActBlue Employee to Candace King (Feb. 26, 2025, 11:46 PM), see Ex. 25.
+140
+See Fed. R. Civ. P. 502.
+141
+See June 25 document production, supra note 8; Reid J. Epstein & Shane Goldmacher, ActBlue May Have Misled
+Congress on Vetting Foreign Donations, Its Lawyers Warned, N.Y. TIMES (Apr. 2, 2026).
+142
+Reid J. Epstein & Shane Goldmacher, ActBlue May Have Misled Congress on Vetting Foreign Donations, Its
+Lawyers Warned, N.Y. TIMES (Apr. 2, 2026).
+
+20
+
+Congress.143 However, to date, the Committees have only received heavily redacted versions of
+this letter. ActBlue defended the redactions of entire portions of the letter, explaining that the
+document discusses “recommendations related to steps that could be taken to mitigate legal risk
+for the organization, including with respect to the structure of the legal department.”144 ActBlue’s
+decision to withhold this information materially impedes the Committees’ oversight.
+
+143
+
+Id.
+Email from Vincent Cohen, Counsel to ActBlue, to Comm. Staff, H. Comm. on the Judiciary (July 2, 2026, 2:30
+p.m.).
+144
+
+21
+
+CONCLUSION
+American elections belong to American citizens. ActBlue, one of the largest online
+political contribution platforms, maintains unserious fraud-prevention practices that allow illegal
+foreign donations in U.S. elections. The Committees have been conducting oversight of
+ActBlue’s lax fraud-prevention practices since 2024. This third interim report presents new
+information about ActBlue’s unserious approach to fraud prevention.
+ActBlue claims that its policies prevent fraudulent political contributions from foreign
+actors. However, internal ActBlue documents reveal that the platform’s feature to verify the
+identity of donors using a U.S. passport number accepts any combination of digits entered that
+meets a certain character number. The passport verification feature does not determine whether
+the entered number is a real U.S. passport number or whether the donor is an American citizen.
+ActBlue’s policies also allow an employee to verify a donor’s citizenship on their own, then
+input a passport number placeholder of “ACTBLUEXX” that skips future verification for the
+donor. Thus, ActBlue’s donor “verification” method is ineffective and allows foreign actors to
+provide illegal political contributions through ActBlue.
+In addition, internal logs show how ActBlue maintains a culture that instructs fraud
+analysts to err on the side of accepting questionable foreign donations. As these logs highlight,
+ActBlue employees’ manual reviews of flagged foreign donations are often subjective. ActBlue
+accepts foreign donations, even disregarding red flags that suggest an illegal foreign
+contribution, due to a policy to give “the benefit of the doubt to the donor.” ActBlue’s lenient and
+inconsistent fraud-prevention practices have left the door open for large-scale fraud campaigns
+on the Democrats’ top fundraising platform.
+ActBlue’s cooperation with the Committees’ oversight has been incomplete. ActBlue has
+continually forced the Committees to compel documents from the company. After the company
+represented to the Committees that it had produced all responsive documents, an exposé in the
+New York Times quoted from ActBlue documents that the company had not produced. Even
+today, ActBlue continues to withhold large portions of Aaron Ting’s resignation letter and other
+documents, unpersuasively claiming they are protected by attorney-client privilege. The
+company’s obstruction with the Committees’ oversight has prevented a full accounting of the
+scope of misconduct on ActBlue’s platform.
+The Committees will continue to pursue the facts to inform potential legislative reform to
+ensure that American elections are safe, secure, and decided only by American citizens.
+
+22
+
+INDEX OF EXHIBITS
+EXHIBIT
+NUMBER
+
+TITLE
+
+1
+
+Email from ActBlue Product Manager to ActBlue Staff (Jan. 2, 2024)
+
+2
+
+ActBlue Meeting Agenda & Notes, Sift Percentile Change (July 8, 2024)
+
+3
+
+Email from ActBlue Union to ActBlue Board (Feb. 27, 2025).
+
+4
+
+ActBlue Legal & Compliance Operations Specialist Resignation Letter (Mar. 4,
+2025)
+
+5
+
+Email from ActBlue HR Employee to Regina Wallace-Jones (Feb. 26, 2025,
+5:01 PM)
+
+6
+
+Internal ActBlue Employee Message (Feb. 21, 2025)
+
+7
+
+Internal Message from Aaron Ting to Candace King (Feb. 14, 2025)
+
+8
+
+Internal ActBlue Employee Message (Feb. 18, 2025)
+
+9
+
+Email from ActBlue HR Staff to Zain Ahmad (Feb. 25, 2025)
+
+10
+
+Internal Message from Candace King to ActBlue Employee (Feb. 26, 2025)
+
+11
+
+Internal Message from Zain Ahmad to 277 ActBlue Employees (Feb. 26, 2025)
+
+12
+
+Memorandum from ActBlue, Slack Announcement for New Passport
+Verification Feature
+
+13
+
+Memorandum from ActBlue, Procedure for Contributions Made Without a
+Passport Number
+
+14
+
+ActBlue Employee Contribution Review
+
+15
+
+ActBlue Employee Contribution Review
+
+16
+
+ActBlue Employee Contribution Review
+23
+
+17
+
+ActBlue Employee Contribution Review
+
+18
+
+ActBlue Employee Contribution Review
+
+19
+
+ActBlue Employee Contribution Review
+
+20
+
+ActBlue Employee Contribution Review
+
+21
+
+ActBlue Employee Contribution Review
+
+22
+
+ActBlue Employee Contribution Review
+
+23
+
+ActBlue Employee Contribution Review
+
+24
+
+ActBlue Leave of Absence & FMLA Guidance
+
+25
+
+Internal Message from ActBlue Employee to Candace King (Feb. 26, 2025,
+11:46 PM)
+
+26
+
+Internal Messages between ActBlue Employee and Candace King (Feb. 27,
+2025)
+
+24
+
+EXHIBIT 1
+Email from ActBlue Product Manager to ActBlue
+Staff (Jan. 2, 2024)
+
+EXHIBIT 2
+ActBlue Meeting Agenda and Notes, Sift
+Percentile Change (July 8, 2024)
+
+EXHIBIT 3
+Email from ActBlue Union to ActBlue Board
+(Feb. 27, 2025)
+
+EXHIBIT 4
+ActBlue Legal & Compliance Operations Specialist
+Resignation Letter (Mar. 4, 2025)
+
+EXHIBIT 5
+Email from ActBlue HR Employee to Regina
+Wallace-Jones (Feb 26. 2025, 5:01 PM)
+
+EXHIBIT 6
+Internal ActBlue Employee Message (Feb. 21, 2025)
+
+

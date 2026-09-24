@@ -1,0 +1,248 @@
+
+COVID-19 Relief: Consequences of Fraud and Lessons for Prevention | U.S. GAO
+ Skip to main content
+U.S. Government Accountability Office
+Menu
+Reports & Testimonies
+Reports & Testimonies
+Recommendations Database
+Month in Review
+Order Copies
+Restricted Reports
+View Topics
+View Agencies
+Bid Protests & Appropriations Law
+Bid Protests & Appropriations Law
+Bid Protests
+Appropriations Law
+Federal Vacancies Reform Act
+Congressional Review Act
+Other Legal
+About
+About
+What GAO Does
+U.S. Comptroller General
+Careers
+Contact Us
+For Congress
+Press Center
+Careers
+Blog
+Breadcrumb
+Home
+Reports & Testimonies
+COVID-19 Relief: Consequences of Fraud and Lessons For Prevention
+ COVID-19 Relief:
+Consequences of Fraud and Lessons for Prevention
+GAO-25-107746
+ Published: Apr 09, 2025. Publicly Released: Apr 09, 2025.
+ Jump To: 
+Jump To
+Elder Abuse
+Services for Older Adults
+State and Local-Level Drivers and Trends
+State and Local Fiscal Projections
+Federal Borrowing
+Managing the Debt
+Summary of Funding Provisions
+Summary of FYs 2022-2024 Funds
+Status of FYs 2022-2024 Funds
+Implementation of FYs 2022-2023 Projects
+Previous Tracking the Funds Reports
+Auditing the Government's Books
+Unpacking the Financial Report
+Highlights
+Recommendations
+Background
+About This Work
+About This Work
+Topics
+Trends
+About the Center
+Why It's High Risk
+What Remains To Be Done
+Key Reports
+Newest COVID-Related Reports
+AI at GAO
+Flood Insurance
+Past Pandemic-Related Reports
+CARES Act Oversight Reports
+All COVID-19 Reports
+Report Suspected Fraud
+Subjects
+How to Get Notified
+Past Reports
+Public Health Threats
+Explore the FY 2022 and 2023 Funds
+Status of FY22 Projects
+Lessons Learned
+Agency Reports
+Recent Reports
+Recommendations
+Supplemental Material
+Full Report
+Additional Data
+View Decision
+Downloads
+Previously Identified Actions
+Related Pages
+Associated Agencies
+Tough Choices and Opportunities Ahead
+Americas Fiscal Future Key Areas
+Retirement Security Key Areas
+Current List
+About The High Risk List
+Area Ratings
+Previous High Risk Products
+Search Federal Vacancies
+Past Federal Vacancies
+Violation Letters
+About the Yellow Book
+Related Resources
+Comment Letters
+Related Publications
+Contacts and Resources
+Types of Changes
+Listing of Key Changes
+Major Issues Facing the Nation
+Meeting Strategic Challenges
+Additional Resources
+About the Green Book
+Resources
+Advisory Council
+Mission Teams
+Operations and Staff Offices 
+Organization Chart 
+Why a Career at GAO?
+Am I Qualified?
+Company Culture
+Reasonable Accommodations
+Video Gallery
+Paid Internships
+Student Volunteers
+Professional Development Program
+Advancement
+Executive Candidate Program
+Summer Associates
+Externships
+Benefits
+Strategy
+Use Cases
+Contacts
+Priority Open Recommendation Letters
+Key Resources
+Major Issues
+Downloadable Resources
+How Could Federal Debt Affect You?
+GAO Contacts
+Drivers
+Interest
+Sustainability
+What Needs to Be Done?
+Technology Assessments
+Science & Tech Spotlights
+Artificial Intelligence (AI)-Related Reports
+Performance Audits
+Blogs
+Multimedia
+Podcasts
+Videos
+Career Highlights
+Tribute Videos & Statements
+Testimonies
+Presentations
+Forums & Roundtables
+Fast Facts
+Hundreds of billions of dollars were likely lost to fraud during the pandemic. As of December 2024, the Department of Justice has charged more than 3,000 people, companies, and other entities with fraud-related crimes.
+Defendants were typically sentenced to prison, usually 1–5 years. Most were also ordered to pay restitution in varying amounts, with the highest over $71 million.
+It’s crucial for agencies to learn from these events to help them fight fraud during normal operations and future emergencies.
+This 
+Q&A
+ offers ways for agencies to enhance their antifraud strategies. We also discuss examples of pandemic-relief fraud and consequences.
+Skip to Highlights
+Highlights
+What GAO Found
+The full extent of fraud within the pandemic-relief programs will never be known with certainty. The scope of the pandemic-relief response; the inherently deceptive nature of fraudulent activities; and the resources needed for detection, investigation, and prosecution of fraud make it difficult to measure. However, estimates indicate hundreds of billions of dollars in potentially fraudulent payments were disbursed.
+As of December 31, 2024, the Department of Justice (DOJ) has publicly announced criminal fraud-related charges involving pandemic-relief programs against at least 3,096 defendants—which can be individuals or entities. 
+Number of Defendants Charged with Criminal Fraud-Related Offenses Involving Pandemic-Relief Programs and Case Status, as of December 31, 2024
+a
+Defendants found guilty of pandemic-related criminal fraud charges have been typically sentenced to prison time and ordered to pay restitution. Their sentencing varied based on the circumstances of the offense, as well as other factors.
+The number of defendants facing criminal fraud-related charges involving pandemic-relief programs continues to increase, as it takes time for new cases to be identified and developed, and hundreds of investigations are still underway. Additionally, extensions to statutes of limitations may contribute to an increase in cases.
+In reviewing DOJ case documentation, GAO identified different types of fraud schemes and fraudsters who defrauded at least 19 different pandemic-relief programs. In addition to more traditional and organized criminal groups, entities in a wide variety of sectors, and individuals from all walks of life, defrauded these programs.
+Although criminal prosecutions serve as a key tool in the mission to address pandemic-relief program fraud and recover stolen funds, civil actions offer the government alternative ways to uncover more fraud schemes and recover assets. According to DOJ, from March 2020 to December 31, 2024, it has secured more than 650 civil settlements and judgments, totaling more than $500 million to resolve allegations of fraud or overpayments in connection with the pandemic-relief programs.
+Interagency task forces, such as the COVID-19 Fraud Enforcement Task Force, and the Pandemic Response Accountability Committee (PRAC) were established to combat pandemic-relief program fraud. According to the task force’s 2024 report, civil administrative and civil and criminal judicial cases resulted in the forfeiture of over $1 billion in fraudulent proceeds. In December 2024, the PRAC reported that the PRAC Fraud Task Force efforts have led to criminal charges against 111 subjects and assisted the federal government in recovering over $16 million.
+Although some individuals might never be swayed from attempting to defraud government programs, agencies can implement deterrence actions—such as emphasizing the consequences of committing fraud and highlighting controls in place—to help prevent future fraudsters. Also, by examining fraudsters and fraud schemes that emerged during the pandemic, agencies can identify fraud mitigation controls that can be implemented in emergency environments and normal operations.
+GAO’s 
+Fraud Risk Framework
+ identifies leading practices for agencies to better plan for and take a more strategic approach toward managing fraud risks in normal operations but also when responding to emergency situations. In addition, GAO has recommended numerous actions that federal agencies should take to help ensure they are effectively managing fraud risks and preventing as much fraud as possible up front. For example, GAO recommended that agencies use data analytics to better manage fraud risk.
+Further, GAO has released various 
+reports
+ and 
+insights
+ that may help agencies as they prepare and plan to implement controls and mitigate fraud risks for future emergencies. Considering what was likely lost to fraud during the pandemic, it is crucial for agencies to have effective fraud prevention and deterrence strategies.
+Why GAO Did This Study
+Pandemic-relief programs were critical for assuring public health and economic stability. However, they also created unprecedented opportunities for fraud due to the dollars involved and other risk factors.
+Considering what was likely lost to fraud during the pandemic, assessing what lessons and insights can be taken to better prepare for both normal operations and future emergencies is critical for agencies. Beyond financial impacts, fraud erodes public trust in government and hinders agencies’ efforts to execute their missions and program objectives effectively and efficiently. Therefore, it is important to take steps to prevent fraud from occurring in the first place.
+While the disbursement of pandemic-relief funds is largely over, the work of investigating, prosecuting, and recovering fraudulently disbursed funds is still ongoing. DOJ and its law enforcement partners continue to prioritize the investigation and prosecution of defendants that committed these offenses.
+GAO performed this work under the CARES Act that includes a provision for GAO to report on its ongoing monitoring and oversight efforts related to the COVID-19 pandemic. This report provides information on the status of pandemic-relief program cases involving fraud-related charges brought by DOJ and how agencies can enhance fraud prevention.
+For more information, contact Rebecca Shea at 
+shear@gao.gov
+.
+Full Report
+Full Report
+(21 pages)
+Accessible PDF
+(21 pages)
+GAO Contacts
+Rebecca Shea
+Director
+Forensic Audits and Investigative Service
+shear@gao.gov
+Media Inquiries
+Sarah Kaczmarek
+Managing Director
+Office of Public Affairs
+media@gao.gov
+Public Inquiries
+ Contact Us
+Topics
+Government Operations
+Criminal investigations
+Defendants
+Federal assistance programs
+Improper payments
+pandemics
+Public health emergencies
+Restitution
+Statutory limitation
+Whistleblowers
+Law courts
+Multimedia
+Blog Post
+Fraud and Its Consequences—Who Steals from Federal Programs and What’s the Cost?
+Thursday, July 17, 2025
+ Hundreds of billions of dollars are lost to fraud each year. Fraud can happen at any time. But...
+Blog Post
+Nine Ways Congress Can Combat Fraud in the Federal Government
+Tuesday, September 1, 2026
+ Each year the federal government loses an estimated $233 billion to $521 billion to fraud. There is...
+Receive GAO Updates
+ Stay informed as we add new reports & testimonies.
+ U.S. Government Accountability Office
+Footer menu
+Column 1 
+Press Center
+Contact Us
+Inspector General
+Restricted Reports
+Column 2 
+Copyright & Terms of Use
+Privacy Policy
+Accessibility
+Sitemap
+Column 3 
+FOIA Requests
+Scam Alerts
+No FEAR Act Data
+Health Care Advisory Committees
+ v4.2.27

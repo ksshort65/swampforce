@@ -1,0 +1,1847 @@
+       Case 1:21-cr-00003-RCL            Document 127      Filed 07/20/23      Page 1 of 35
+
+
+
+                            UNITED STATES DISTRICT COURT
+                            FOR THE DISTRICT OF COLUMBIA
+
+ UNITED STATES OF AMERICA
+
+ v.
+                                                            Case No. 1:21-cr-3 (RCL)
+ JACOB ANTHONY CHANSLEY,
+
+       Defendant.
+
+
+                                  MEMORANDUM OPINION
+
+        Defendant Jacob Anthony Chansley, who was the face of the riot at the United States
+
+Capitol on January 6, 2021, is now the face challenging the prosecutions of the criminal conduct
+
+that occurred that day. Citing what he calls "newly discovered" evidence, Mr. Chansley moves to
+
+vacate, set aside, or correct his guilty plea and corresponding sentence under 28 U.S.C. § 2255.
+
+The government opposes and urges the Court to summarily deny Mr. Chansley's motion.
+
+       Upon consideration of Mr. Chansley's motion, the government's opposition, the record
+
+therein, and the applicable law, the Court will DENY Mr. Chansley's § 2255 motion.
+
+                                    I.      BACKGROUND
+
+       A. Mr. Chansley's Involvement in the Events of January 6, 2021 and Indictment
+
+       On January 6, 2021, at approximately 1:00 pm, the Senate and House of Representatives
+
+assembled in a joint session at the U.S. Capitol building to count electoral votes cast in the 2020
+
+presidential election. Statement of Offense, ECF No. 70, ,r 3. Then-Vice President Michael R.
+
+Pence was present and presiding over the joint session. Id. At approximately 1:30 pm, the Senate
+
+and House adjourned to their respective chambers to resolve an objection to the certification. Id.
+
+Vice President Pence adjourned with the Senate and presided over that proceeding.               Id.
+
+
+
+
+                                                1
+        Case 1:21-cr-00003-RCL             Document 127         Filed 07/20/23   Page 2 of 35
+
+
+
+
+ Meanwhile, a large crowd of rioters gathered outside of the building, assembled behind barricades
+
+ in front of the police line at the West front of the Capitol. Id. ,r,r 4, 5.
+
+         At approximately 1:50 pm, Mr. Chansley scaled a media tower constructed in preparation
+
+ for the presidential inauguration. Id. ,r 5. That day, Mr. Chansley was shirtless, wearing a homed
+
+ and fur-lined hat, and red, white, and blue face paint. Id. He carried a six-foot-long pole with an
+
+American flag zip-tied to it and a spearhead affixed to the top, as well as a bullhorn. Id.; United
+
+States v. Chansley, 525 F. Supp. 3d 151, 155 (D.D.C. 2021). Approximately ten minutes later,
+
+Mr. Chansley and the other rioters breached the barricades and advanced to the Capitol's West
+
+front. Statement of Offense ,r,r 6, 7. At approximately 2:13 pm, rioters forced open the Senate
+
+Wing Door, which set off a loud alarm. Id. ,r 9. One minute later, Mr. Chansley entered the Capitol
+
+through the broken door, becoming one of the first thirty rioters to do so. Id. ,r 10.
+
+        At approximately 2:16 pm, two minutes after entering the Capitol, Mr. Chansley and other
+
+rioters charged upstairs to the second floor of the Senate side of the Capitol building. Id. ,r 11. On
+
+the second floor, Mr. Chansley encountered several U.S. Capitol police officers, including Officer
+
+Keith Robishaw. Chansley, 525 F. Supp. 3d at 155. Officer Robishaw instructed Mr. Chansley
+
+and his fellow rioters to leave the building. Statement of Offense ,r 11. Most of the other rioters
+
+complied, but Mr. Chansley refused. Id.           Instead, he used his bullhorn to demand that the
+
+lawmakers be brought out to face the crowd. Id. At 2:20 pm, the members of the Senate and
+
+House, including the Vice President, evacuated their chambers and all certification proceedings
+
+were suspended. Id. ,r 10. During this time, Mr. Chansley ascended another staircase, arriving on
+
+the third floor of the Senate side of the Capitol building. Id. ,r 12.
+
+        At approximately 2:52 pm, Mr. Chansley entered the Senate gallery alone. Id. While
+
+standing in the gallery, Mr. Chansley shouted obscenities. Id. After that, Mr. Chansley exited the
+
+
+
+                                                     2
+       Case 1:21-cr-00003-RCL          Document 127       Filed 07/20/23      Page 3 of 35
+
+
+
+
+gallery and descended a staircase, where he again met Officer Robishaw. Id. ,r 13. Officer
+
+Robishaw again instructed Mr. Chansley to leave the building, but Mr. Chansley again refused.
+
+Id. Instead, Mr. Chansley said that he planned to join rioters who were on the Senate floor. Id.
+
+        Mr. Chansley then entered the Senate chamber, followed by Officer Robishaw. Id. Once
+
+inside the Senate chamber, he climbed onto the Senate dais and sat in the Vice President's chair,
+
+taking pictures of himself as he did so. Id. ,r 14. Officer Robishaw asked Mr. Chansley to vacate
+
+the seat, but Mr. Chansley refused. Id. Instead, he stated, "Mike Pence is a fucking traitor." Id.
+
+Mr. Chansley then grabbed paper left on the dais and wrote the following note to the Vice
+
+President: "It's Only A Matter of Time. Justice Is Coming!" Id.; Chansley, 525 F. Supp. 3d at
+
+155. Mr. Chansley repeated the same message verbally to a reporter from The New Yorker who
+
+was filming the events in the Senate chamber at the time. Chansley, 525 F. Supp. 3d at 155.
+
+Officer Robishaw asked that Mr. Chansley vacate the seat and assist him by using his bullhorn to
+
+convince his fellow rioters to leave the Senate chamber, but Mr. Chansley refused. Statement of
+
+Offense ,r 15. Instead, Mr. Chansley used his bullhorn to lead his fellow rioters in the following
+
+"prayer": "Thank you for allowing the United States of America to be reborn. Thank you for
+
+allowing us to get rid of the communists, the globalists, and the traitors within our government."
+
+Id.; Chansley, 525 F. Supp. 3d at 155. At that time, there were approximately 20 rioters in the
+
+Senate Chamber. Sent'g Hr'g Tr., ECF No. 111, at 7:7-12. Officer Robishaw was the only law
+
+enforcement officer present. Statement of Offense ,r 14. At approximately 3 :09 pm, additional
+
+law enforcement officers arrived in the Senate chamber. Id. ,r 16. The officers then cleared Mr.
+
+Chansley and the other rioters from the chamber. Id.
+
+       Several media outlets interviewed Mr. Chansley in the hours and days after he left the
+
+Capitol. Id. ,r 18. In an interview on January 7, 2021, Mr. Chansley stated: "The fact that we had
+
+
+
+                                                3
+         Case 1:21-cr-00003-RCL        Document 127        Filed 07/20/23      Page 4 of 35
+
+
+
+
+ a bunch of our traitors in office hunker down, put on their gas masks and retreat into their
+
+ underground bunker, I consider that a win." Id.; Chansley, 525 F. Supp. 3d at 156.
+
+         On January 8, 2021-just two days after the riot-the government filed a sealed criminal
+
+ complaint against Mr. Chansley, alleging that his actions on January 6 violated various federal
+
+laws. See ECF No. 1. Three days later, on January 11, 2021, a grand jury returned an indictment
+
+against Mr. Chansley, making him the first Capitol rioter to be indicted in connection with the
+
+events of January 6. Indictment, ECF No. 3; Sent'g Hr'g Tr. at 3:22-24. The indictment charged
+
+him with six counts: civil disorder in violation of 18 U.S.C. § 23 l(a)(3) (Count One); obstruction
+
+of an official proceeding in violation of 18 U.S.C. § 1512(c)(2) (Count Two); entering and
+
+remaining in a restricted building in violation of 18 U.S.C. § 1752(a)(l) (Count Three); disorderly
+
+and disruptive conduct in a restricted building in violation of18 U.S.C. § 1752(a)(2) (Count Four);
+
+violent entry and disorderly conduct in a Capitol building in violation of 40 U.S.C. § 5104(e)(2)(A)
+
+(Count Five); and parading, demonstrating, or picketing in a Capitol building in violation of 40
+
+U.S.C. § 5104(e)(2)(G) (Count Six). See Indictment.
+
+         On the same day as his indictment, Mr. Chansley was arrested and appeared before U.S.
+
+Magistrate Judge Deborah M. Fine in the District of Arizona. Chansley, 525 F. Supp. 3d at 156.
+
+The government moved for, and Magistrate Judge Fine ordered, Mr. Chansley' s pre-trial detention.
+
+Id. at 156-57; United States v. Chansley, 2:21-mj-5000 (DMF), ECF Nos. 5, 10 (D. Ariz. Jan. 19,
+
+2021).   Magistrate Judge Fine then ordered Mr. Chansley to be committed to this District.
+
+Chansley, 2:21-mj-5000 (DMF), ECF No. 11 (D. Ariz. Jan. 19, 2021). Mr. Chansley was arraigned
+
+by the undersigned in late January 2021. Minute Entry (01/29/2021). He was then represented by
+
+Mr. Albert Watkins ("plea counsel"). Id.
+
+
+
+
+                                                4
+           Case 1:21-cr-00003-RCL                Document 127           Filed 07/20/23         Page 5 of 35
+
+
+
+
+             B. Video Evidence and Discovery Process
+
+             Mr. Chansley, through plea counsel, moved in this Court for pre-trial release and the Court
+
+    held a hearing on the motion on March 5, 2021. Minute Entry (03/05/2021); ECF No. 12. At the
+
+    hearing, plea counsel made several representations regarding the video evidence in this case: that
+
+    "there's miles and miles and miles of footage of my client from January 6th[,]" ECF No. 28, at
+
+    7:5--6; that he "provided the Court with the video footage that we were able to gamer through an
+
+    independent investigative undertaking" in conjunction with a "former FBI special agent[,]" id. at
+
+    7:13-15; and "[t]here's a lot of footage of my client interacting peacefully, chatting with and
+
+    supporting law enforcement who were similarly positioned in [the Senate] part of the Capitol[,]"
+
+    id. at 10:2-4. Considering this evidence, in conjunction with the other evidence of Mr. Chansley's
+
+    actions that day, the Court denied Mr. Chansley's motion. Chansley, 525 F. Supp. 3d at 172.
+
+            The case then proceeded. As part of the discovery process, the government filed in March
+
+and April 2021 motions for a protective order and for an order to disclose certain sealed and
+
+protected materials with defense counsel. Gov't Opp'n, ECF No. 123, at 2; ECF Nos. 21 & 36.
+
+The Court granted both motions within days of their filing. ECF Nos. 24 & 37.
+
+            On May 20, 2021, the government provided its first notice of discovery with the Court. 1
+
+ECF No. 38. That notice contained a letter to plea counsel, dated the same date, recounting the
+
+various discovery productions made to counsel between January and mid-May 2021. ECF No. 38-
+
+1. Of relevance here, the letter listed the following productions:
+
+           (1) video footage from the Senate floor (produced April 24, 2021); (2) video
+           footage from a subpoena to The New Yorker (produced April 24, 2021); (3) nine
+           videos from relevant Metropolitan Police Department ("MPD") body worn cameras
+           ([produced] May 17, 2021); (4) five videos of Capitol Closed Circuit Video
+           ("CCV") footage ([produced] May 18, 2021); and (5) two grand jury transcripts
+           with ten accompanying grand jury exhibits ([produced] May 19, 2021).
+
+1
+    In total, the government provided nine discovery updates in this case. Gov't Opp'n at 3 n.2.
+
+                                                            5
+       Case 1:21-cr-00003-RCL          Document 127        Filed 07/20/23      Page 6 of 35
+
+
+
+
+ Gov't Opp'n at 2 (referencing ECF No. 38-1 at 2).
+
+        On September 17, 2021, the government provided two updates on the status of discovery.
+
+ ECF Nos. 75 & 76. In the first update, describing the status of discovery as of August 23, 2021,
+
+the government expressly acknowledged the following: "Defense counsel in Capitol Breach cases
+
+have made requests including any and all information that captures an individual defendant's
+
+conduct or statements; shows people "peacefully walking around the Capitol"; or suggests that a
+
+member (or members) of law enforcement allowed people to enter or remain in the Capitol or on
+
+restricted grounds, acted friendly or sympathetic to the rioters, or otherwise failed to do their
+
+jobs." ECF No. 75 at 2 (emphasis added). In response, the government noted "there may be
+
+additional types of information a defendant may consider material or exculpatory" but that "since
+
+the government does not know the defense theory in any particular case, it is impossible to [sic]
+
+for the government to determine what other types of information a defendant may believe to be
+
+material." Id. The government added: "To the extent the type of information described above
+
+may exist, it may be interspersed among the voluminous sets of data." Id.
+
+       The government informed plea counsel of its proposed solution to this discovery
+
+conundrum. The government described how it was working with the Federal Public Defender
+
+("FPD") for the District of Columbia to upload discovery materials to electronic databases. Id. at
+
+3. Specifically, the government noted that it had already begun populating one database, named
+
+Relativity, with documentary discovery.     Id. at 5.   Further, due to processing and usability
+
+limitations associated with Relativity, the government explained that it was in the final stages of
+
+contracting to facilitate, in close consultation with FPD, production of video discovery via a
+
+different database, named Evidence.com. Id. at 7.
+
+
+
+
+                                                6
+       Case 1:21-cr-00003-RCL          Document 127        Filed 07/20/23     Page 7 of 35
+
+
+
+
+        In the second discovery update of September 17, 2021, describing the status of discovery
+
+as of September 14, 2021, the government confirmed that the Evidence.com contracting process
+
+was complete and that the database was operational. ECF No. 76 at 2-3. The government further
+
+reported that it was in the process of populating Evidence.com with approximately 2,300 hours of
+
+footage captured by law enforcement body-worn cameras. Id. at 3. Specifically, the government
+
+stated that it "expect[ed} to produce [such footage] no later than the end of next week (Friday,
+
+September 24, 2021)." Id. (emphasis added).
+
+        On October 25, 2021, the government provided its fourth update regarding the status of
+
+discovery, current as of October 21, 2021. ECF No. 78. The update reported, in relevant part, that
+
+the following evidence had been made available on Evidence.com: (1) 16,925 closed circuit
+
+television ("CCTV") video files, containing approximately 4,800 hours of footage, recorded by
+
+515 cameras located throughout the Capitol; (2) 15 maps indicating the location of cameras in the
+
+Capitol Visitor Center and interior of the Capitol; and (3) 1,676 files from body-worn cameras
+
+belonging to Metropolitan Police Department ("MPD") officers, containing approximately 1,600
+
+hours of footage. Id. at 2. The government later represented that these materials were made
+
+available to defense counsel through Evidence.com on October 22, 2021. Def.'s Mot., ECF No.
+
+117, at 12; Gov't Opp'n at 16.      Separately, the government provided defense counsel with
+
+information about the location of the files within the database, their naming conventions, and the
+
+videos' timestamps. Gov't Opp'n at 17. Additionally, the government noted in the October 25,
+
+2021 update that the FPD, who was coordinating access to Evidence.com on behalf of defendants
+
+charged with crimes related to January 6, 2021, had sent emails to all defense counsel with
+
+information on how to request a license to access the database. ECF No. 78 at 2. The FPD had
+
+also developed and shared a guide for defense attorneys on how to use Evidence.com and share
+
+
+
+                                                7
+       Case 1:21-cr-00003-RCL          Document 127         Filed 07/20/23     Page 8 of 35
+
+
+
+
+ discovery with their clients. Id. Mr. Chansley's plea counsel received the FPD's notification on
+
+ October 15, 2021. Def.'s Reply at 6-7.
+
+        On November 5, 2021, the government provided its fifth update regarding the status of
+
+discovery, current as of that date. ECF No. 79. The government noted that, since the last status
+
+update, the government had populated Evidence.com with additional video footage. Id. at 2. In
+
+relevant part, the government stated that it shared an additional 4,204 CCTV video files recorded
+
+by 123 cameras, some of which were located in the Capitol's interior. Id.
+
+        C. Mr. Chansley's Guilty Plea and Sentencing
+
+        On September 3, 2021, Mr. Chansley pleaded guilty to Count Two, obstruction of an
+
+official proceeding in violation of 18 U.S.C. § 1512(c)(2), in exchange for the government's
+
+dismissal of the five other charges then-pending against him. See Minute Entry (09/03/2021). Mr.
+
+Chansley, in consultation with plea counsel, executed and signed a written plea agreement with
+
+the government. Plea Agreement, ECF No. 69. In the plea agreement, Mr. Chansley agreed that
+
+he was pleading guilty to Count Two because he was "in fact guilty." Id. at 10. In so doing, Mr.
+
+Chansley averred that the Statement of the Offense "fairly and accurately describe[d] [his] actions
+
+and involvement" in the offense. Id. ,i II. Mr. Chansley also agreed that he had "read every page
+
+of [the] Agreement," "discussed it with [his] attorney," and "fully underst[ood the] Agreement and
+
+agree[d] to it without reservation." Id. at 10. In the plea agreement, Mr. Chansley attested that he
+
+was "satisfied with the legal services provided by [his] attorney in connection with [the]
+
+Agreement and the matters related to it." Id. at 10. Mr. Chansley reiterated his satisfaction with
+
+plea counsel to this Court during the plea hearing. See Plea Hr'g Tr., ECF No. 110, at 7:9-15;
+
+9:22-25.
+
+
+
+
+                                                 8
+       Case 1:21-cr-00003-RCL           Document 127        Filed 07/20/23      Page 9 of 35
+
+
+
+
+        The plea agreement contained-and Mr. Chansley assented to-several express waivers.
+
+ Specifically, Mr. Chansley agreed to waive his right to directly appeal his sentence, except for his
+
+rights to appeal a sentence imposed beyond the statutory maximum or U.S. Sentencing Guidelines
+
+range, and to appeal based on ineffective assistance of counsel.         Plea Agreement ,r IX(D).
+
+Furthermore, Mr. Chansley agreed to waive "any right to challenge the conviction entered or
+
+sentence imposed" through a motion brought under 28 U.S.C. § 2255, unless "such a motion is
+
+based on newly discovered evidence or on a claim that [Mr. Chansley] received ineffective
+
+assistance of counsel." Id. ,r IX(E).
+
+        Finally, Mr. Chansley agreed to several provisions regarding sentencing. As relevant here,
+
+Mr. Chansley agreed that his sentence would be "determined by the Court, pursuant to the factors
+
+sector forth in 18 U.S.C. § 3553(a), including a consideration of the Sentencing Guidelines[,]" id.
+
+,r IV, and that he understood "that the sentence to be imposed is a matter solely within the
+discretion of the Court." Id. ,r VII. He further agreed to the government's estimated offense level
+
+calculations under the Guidelines. Id. ,r IV(C). Specifically, he agreed that the estimated offense
+
+level for Count Two was 25, representing the base offense level (14) plus enhancements for
+
+property damage (8) and substantial interference (3). Id. ,r IV(A). The estimated Count Two
+
+offense level of 25, minus reductions for acceptance of responsibility (2) and assistance to
+
+authorities (1 ), rendered an estimated total offense level of 22. Id. Accordingly, Mr. Chansley
+
+agreed that, considering an estimated total offense level of 22 and criminal history category of I,
+
+id. ,r IV(B), the estimated Sentencing Guidelines range in his case was 41 to 51 months'
+
+incarceration. Id. ,r IV(C). He further concurred with the government's estimated monetary
+
+penalties, including a fine range of $15,000 to $150,000, id., a special assessment of $100 for his
+
+
+
+
+                                                 9
+       Case 1:21-cr-00003-RCL          Document 127         Filed 07/20/23      Page 10 of 35
+
+
+
+
+ felony conviction, id. ,r,r I, IV(C), and restitution in the amount of $2,000, id. ,r XI. Finally, he
+
+ agreed that his conviction carried a maximum supervised-release term of three years. Id. ,r I.
+
+        On November 17, 2021, after the government's five updates regarding the status of
+
+ discovery, this Court sentenced Mr. Chansley. See Minute Entry (11/17/2021). In calculating the
+
+ applicable sentence, the Court agreed with the Guidelines calculations as outlined by the parties in
+
+the plea agreement and calculated a total offense level of 22. Sent'g Hr'g Tr. at 2:25-3:7. When
+
+it came time for plea counsel's presentation, he appreciated the seriousness of the events of January
+
+6, 2021, id. at 14 :9-11, and acknowledged the overwhelming evidence in this case: "I've provided
+
+you with videos. I've provided the government with videos. The government's given me videos.
+
+The government's given you videos that I've given her. This isn't a drive-in movie theater. You
+
+don't need to see more video." Id. at 16:18-21. Plea counsel went on to focus on Mr. Chansley's
+
+acceptance of responsibility, which he previewed by saying, "Jake presents with having apologized
+
+without equivocation. No buts, no blames, I did it, I want to be accountable, I want to be held
+
+accountable." Id. at 27:15-17.
+
+        Mr. Chansley then spoke to the Court, accepting responsibility for his actions and
+
+expressmg remorse. See, e.g., id. at 32:23-33:4 ("So I had to come to terms with the fact that I
+
+was in solitary confinement because of me, because of my decision. I broke the law, and if I
+
+believe in freedom, if I believe in law and order, if I believe in responsibility and accountability,
+
+then that means that I should do what Gandhi would do and take responsibility even and especially
+
+when it incriminates me. No ifs, ands, or buts about it. That's what men of honor do."); id. at
+
+34:25-35:5 ("I am truly, truly repentant for my actions, because repentance is not just saying
+
+you're sorry. Repentance is apologizing and then moving in the exact opposite direction of the sin
+
+that you committed. And that's what I've been trying to do ever since I realized the magnitude of
+
+
+
+                                                 10
+          Case 1:21-cr-00003-RCL           Document 127          Filed 07/20/23        Page 11 of 35
+
+
+
+
+    my error and the magnitude of my mistake."). Mr. Chansley unequivocally stated: "[I]n retrospect,
+
+    I would do everything differently on January 6. In all honesty, I would do everything differently."
+
+    Id. at 35:16-18. The Court heavily credited Mr. Chansley's apparent remorse and acceptance of
+
+    responsibility. See id. at 48:21-22 ("[Y]ou have evolved in your thinking clearly and reversed
+
+    your thinking in many ways"); id. at 49:3-5 ("You've certainly done everything you could today
+
+    to convince the Court that you're anew person, and I think you're on the right track"); id. at 55:23-
+
+    56:2 ("[Y]ou were smart. It may not feel it today, but let me guarantee you, you were smart. You
+
+    did the right thing. And you owned up to it today in a fashion that is unusual for me to see, the
+
+    candor with which you approached me today. I appreciate it.").
+
+           The Court then sentenced Mr. Chansley to 41 months' incarceration as to Count Two, the
+
+    bottom of the Guidelines range, with credit for time served. See J., ECF No. 92, at 2. In explaining
+
+    the sentence, the Court stated: "[W]hat you did here was horrific, as you now concede, and
+
+    obstructing the functioning of the government as you did is the type of conduct that is so serious
+
+that I cannot justify a downward departure [from the Sentencing Guidelines range of 41 to 51
+
+months]." Sent'g Hr'g Tr. at 48:22-25. Even considering the seriousness of the offense, the Court
+
+credited Mr. Chansley's remorse and acceptance of responsibility to sentence Mr. Chansley
+
+consistent with the bottom of the applicable Guidelines range. See id. 49:1-3 ("I do think that the
+
+minimum under the guidelines is something you've earned because you've done everything right
+
+from the time that you started in the other direction."). The Court also sentenced Mr. Chansley to
+
+three years of supervised release, a special assessment of$ 100, and $2,000 in restitution. 2 See J.
+
+at 3, 6. Approximately two weeks after sentencing, Mr. Chansley's current counsel, Mr. William
+
+
+
+
+2
+ Mr. Chansley appealed his conviction, ECF No. 108, but the U.S. Court of Appeals for the District of Columbia
+Circuit later issued a mandate dismissing Mr. Chansley's appeal pursuant to his own motion, ECF No. 112.
+
+                                                     11
+          Case 1:21-cr-00003-RCL          Document 127          Filed 07/20/23         Page 12 of 35
+
+
+
+
+    Shipley ("post-conviction counsel") appeared to represent Mr. Chansley, ECF No. 101 , and the
+
+    Court granted plea counsel's motion to withdraw. Minute Entry (11/29/2021).
+
+           In late March 2023, Mr. Chansley was released from custody after having completed his
+
+    term of incarceration, accounting for his time previously served and good-time credit. 3
+
+           D. Post-Sentencing Events Related to Mr. Chansley's Case
+
+           On March 6, 2023, then-television host Tucker Carlson aired footage from January 6, 2021
+
+    on his eponymous show. 4 The host claimed that certain videos recorded on January 6 had been
+
+    withheld from the public and that such videos demonstrated that the Capitol rioters were merely
+
+    "sightseers." That segment prominently featured Mr. Chansley.                All of the footage of Mr.
+
+    Chansley aired on the program was recorded on CCTV cameras positioned inside the Capitol
+
+    building between the times of 2:49 pm and 2:59 pm, except for one CCTV clip recorded at 2: 13
+
+pm. Gov't Opp'n at 9-10. Mr. Chansley arrived at the Capitol more than one hour prior to this
+
+period and stayed for some time afterward. Statement of Offense ,r,r 4, 5, 16. The footage, in
+
+relevant part, showed Mr. Chansley traversing hallways in the Senate side of the Capitol,
+
+sometimes followed by and sometimes following law enforcement officers who did not visibly
+
+impede Mr. Chansley' s movements. The footage did not include any audio recordings. The host
+
+claimed that the videos undermined the legitimacy of the government's prosecution against Mr.
+
+Chansley. Two days later, plea counsel stated on the same television program that he had not seen
+
+the videos at any point during his representation of Mr. Chansley. 5
+
+
+
+3 Scott Macfarlane, "QAnon Shaman" Jacob Chansley Released Early from Federal Prison, Transferred to Halfway
+
+House, CBS News, https://www.cbsnews.com/news/qanon-shaman-jacob-chansley-released-early-federal-prison-
+halfway-house-jan-6/ [https://perma.cc/4WNZ-4WVS].
+4
+   Fox News, Tucker: This Video Tells A Different Story of Jan              6,    YouTube (Mar.   6, 2023),
+https://youtu.be/Opy7MLGAPBk?t=169 [https://perma.cc/753P-ESUW].
+5
+  Fox News, "QAnon Shaman's" Lawyer Speaks Out After Jan. 6 Bombshell Footage Released, YouTube (Mar. 9,
+2023) https://www.youtube.com/watch?v=WTdL5VtjbtY [https://perma.cc/T4BP-68ST].
+
+                                                    12
+        Case 1:21-cr-00003-RCL                Document 127            Filed 07/20/23          Page 13 of 35
+
+
+
+
+          On March 9, 2023, Dominic Pezzola, who at the time was on trial for his own felonious
+
+ conduct on January 6, 2021, moved to dismiss his indictment based on the government's failure to
+
+ disclose the footage aired on March 6, which Pezzola claimed was "exculpatory" for himself and
+
+ Mr. Chansley. 6 See United States v. Pezzola, 21-cr-175-6 (TJK), ECF No. 679. On March 12,
+
+ 2023, the government opposed, claiming that the footage of Pezzola and Mr. Chansley aired during
+
+ the broadcast was neither withheld from the defense nor exculpatory. Pezzola, ECF No. 689, at 2.
+
+ Specifically, the government asserted that all of the footage aired on the broadcast, save for one
+
+ 10-second clip, was produced to defense counsel via the Evidence.com database by September 24,
+
+2021, and that the remaining clip was produced on January 23, 2023. Id. at 3. Based on these
+
+representations, along with a consideration of the applicable law, Judge Timothy J. Kelly denied
+
+the motion because "Pezzola ha[d] not shown that the video footage tends to show his innocence"
+
+"[n]or ha[d] the evidence been suppressed." Mem. Order, Pezzola, ECF No. 755, at 3.
+
+         On March 17, 2023, Mr. Chansley's post-conviction counsel contacted the government via
+
+letter asking specific questions about when the CCTV videos appearing in the March 6, 2023
+
+segment were produced. Def.'s Mot. at 11; Gov't Opp'n at 9. The government responded on
+
+March 27, 2023, explaining that all of the clips appearing in the broadcast, except for the 10-second
+
+clip, were produced on October 22, 2021, and that the remaining clip was produced on February
+
+21, 2023. Def.'s Mot. at 12; Gov't Opp'n at 9-10.
+
+         The Court summarizes the videos aired on March 6, 2023 as the following:
+
+
+
+
+6
+  In early May 2023, a jury convicted Pezzola of eight of the ten crimes for which he was indicted, including seditious
+conspiracy in violation of 18 U.S.C. § 2384. Verdict, United States v. Pezzola, 21-cr-175-6 (TJK), ECF No. 804.
+
+                                                          13
+        Case 1:21-cr-00003-RCL                 Document 127            Filed 07/20/23          Page 14 of 35
+
+
+
+
+    Approximate Time             U.S. Capitol CCTV             Time Stamp in                Government's
+    on January 6, 2021           Camera7                       Television Segment           Representation of
+                                                                                            Approximate Date
+                                                                                            Disclosed to Defense
+                                                                                            via Evidence.com
+    2:13 pm                     Camera A                       2:48                         May 2021 or October
+                                                                                            22, 2021 8
+    2:49 pm                     CameraE                        2:06                         October 22, 2021
+    2:51 pm                     CameraE                        3:09                         October 22, 2021
+    2:56pm                      CameraF                        4:31                         October 22, 2021
+    2:56 pm                     Camera F                       5:14                         October 22, 2021
+    2:57 pm                     CameraD                        3:35                         October 22, 2021
+    2:57pm                      CameraD                        5:21                         October 22, 2021
+    2:57pm                      CameraE                        4:12                         October 22, 2021
+    2:57pm                      CameraE                        5:00                         October 22, 2021
+    2:57pm                      CameraH                        3:40                         October 22, 2021
+    2:57pm                      CameraH                        5:25                         October 22, 2021
+    2:59pm                      CameraB                        3:28                         October 22, 2021
+    2:59pm                      Camerae                        4:01                         October 22, 2021
+    2:59pm                      CameraG                        3:48                         February 21, 2023 9
+
+See De£ 's Mot. at 12; Gov't Opp'n at 9-10.
+
+          In April 2023, Mr. Chansley, through counsel, moved to vacate, set aside, or correct his
+
+sentence under 28 U.S.C. § 2255, claiming newly discovered evidence and ineffective assistance
+
+of his plea counsel.         Def. ' s Mot. at 2--4.      Specifically, he claims that conduct by both the
+
+government and his plea counsel with respect to the videos aired during the March 6 broadcast
+
+rendered both his plea agreement and resulting sentence unconstitutional. Id. First, Mr. Chansley
+
+asserts that the videos were both exculpatory and withheld from the defense in violation of Brady
+
+
+
+
+7
+  The Court follows government counsel's lead in referring to cameras by letter instead of their true identifiers due to
+the sensitive nature of the cameras and their locations. See Gov't Opp'n at 9 n.4.
+8
+ Mr. Chansley's motion contains a purported excerpt from the government's March 27 letter indicating that this video
+was produced via Evidence.com on October 22, 2021 along with the vast majority of the other videos appearing in the
+segment. Def.'s Mot. at 12. However, the government's opposition indicates that this file was produced in May 2021.
+Gov't Opp'n at 9. The exact date of production is immaterial, as the Court will explain, because the record
+unmistakably shows that this video was not suppressed nor is it exculpatory.
+9
+  Even though this clip was not available to Mr. Chansley prior to the conclusion of his case, it does not exculpate him
+nor would its disclosure have affected this Court's sentencing determination. See Part 111.C.
+
+                                                          14
+      Case 1:21-cr-00003-RCL            Document 127       Filed 07/20/23      Page 15 of 35
+
+
+
+
+v. Maryland, 373 U.S. 83 (1963), and that, had the videos been disclosed to the defense prior to
+
+sentencing, plea counsel would have used the videos' contents to argue for, and that this Court
+
+would have imposed, a lower sentence than the one Mr. Chansley received. Id. at 16-1 7. Second,
+
+he claims that plea counsel was unconstitutionally ineffective because counsel did not seek
+
+production of the videos from the government and because counsel recommended that Mr.
+
+Chansley accept the plea agreement containing a sentencing-enhancement stipulation and waiving
+
+appeal rights without this evidence. Id. at 17-21. Relatedly, he insists that further discovery into
+
+the video-disclosure issue is required, particularly due to government's conflicting statements
+
+regarding the dates of production as stated in filings in this and the Pezzola case. Id. at 21-22.
+
+        In June 2023, the government opposed, insisting that Mr. Chansley has not met his burden
+
+to establish that he is entitled to collateral relief because he either waived his claims or they are
+
+meritless. Gov't Opp'n at 1. Mr. Chansley submitted a brief reply. Def.'s Reply, ECF No. 126.
+
+Mr. Chansley's motion is now ripe for review.
+
+                                  II.    LEGAL STANDARDS
+
+       A. 28 U.S.C. § 2255
+
+       A prisoner may move to vacate, set aside, or correct his sentence if (1) the sentence was
+
+imposed "in violation of the Constitution or laws of the United States"; (2) the court lacked
+
+jurisdiction to impose the sentence; (3) the sentence "was in excess of the maximum authorized
+
+by law"; or (4) the sentence is "otherwise subject to collateral attack." 28 U.S.C. § 2255(a). The
+
+petitioner bears the burden to prove his right to relief by a preponderance of the evidence. United
+
+States v. Baugham, 941 F. Supp. 2d 109, 112 (D.D.C. 2012). A court need not hold an evidentiary
+
+hearing when "the motion and the files and records of the case conclusively show the prisoner is
+
+entitled to no relief." 28 U.S.C. § 2255(b).
+
+
+
+                                                15
+      Case 1:21-cr-00003-RCL          Document 127        Filed 07/20/23      Page 16 of 35
+
+
+
+
+        B. Government's Discovery Obligations
+
+        The government has a constitutional obligation, as recognized in Brady and its progeny, to
+
+disclose "evidence in its possession that is favorable to the accused and material either to a
+
+defendant's guilt or punishment." United States v. Trie, 21 F. Supp. 2d 7, 23 (D.D.C. 1998).
+
+Favorable evidence "tends to help the defense by either bolstering the defense case or impeaching
+
+potential prosecution witnesses." United States v. Sa/avian, 233 F.R.D. 12, 16 (D.D.C. 2005); see
+
+also Brady, 373 U.S. at 87; Giglio v. United States, 405 U.S. 150, 153-55 (1972). To prevail on
+
+a Brady claim, the defendant must show prejudice; in other words, '" a reasonable probability that,
+
+had the evidence been disclosed to the defense, the result of the proceeding would have been
+
+different."' United States v. Sitzmann, 893 F.3d 811, 826 (D.C. Cir. 2018) (quoting United States
+
+v. Bagley, 473 U.S. 667, 682 (1985)). "A court should evaluate prejudice under Brady based on
+
+the suppressed evidence as a whole rather than an 'item by item' basis." United States v. Martin,
+
+No. 98-cr-329 (RCL), 2021 WL 4989983, at *4 (D.D.C. Oct. 27, 2021) (quoting Kyles v. Whitley,
+
+514 U.S. 419,420 (1995)). Importantly, "[f]or an item to be Brady, it must be something that is
+
+being 'suppress[ed] by the prosecution."' United States v. Blackley, 986 F. Supp. 600,603 (D.D.C.
+
+1997) (quoting Brady, 373 U.S. at 87).
+
+       C. Ineffective Assistance of Counsel
+
+       To prevail on a claim of ineffective assistance of counsel, a petitioner "must prove both
+
+incompetence and prejudice." Kimme/man v. Morrison, 477 U.S. 365, 381 (1986). Specifically,
+
+the petitioner must demonstrate that (1) "counsel's representation fell below an objective standard
+
+of reasonableness ... under prevailing professional norms" and (2) "there is a reasonable
+
+probability that, but for counsel's unprofessional errors, the result of the proceeding would have
+
+been different." Strickland v. Washington, 466 U.S. 668, 687-88, 694 (1984). That sets a high
+
+
+
+                                                16
+       Case 1:21-cr-00003-RCL          Document 127         Filed 07/20/23      Page 17 of 35
+
+
+
+
+ bar, as a court's evaluation of counsel's actions "must be highly deferential," and is assessed under
+
+ the circumstances present at the time of representation without the benefit of hindsight. Id. at 689.
+
+ Furthermore, a "reasonable probability" under Strickland's second prong is one that is "sufficient
+
+ to undermine confidence in the outcome." Id. at 694. To establish prejudice, the petitioner must
+
+ show there is "a substantial, not just conceivable, likelihood of a different result." Cullen v.
+
+Pinholster, 563 U.S. 170, 189 (2011) (internal quotations and modifications omitted).             An
+
+ ineffective assistance of counsel claim is defeated if the defendant fails to demonstrate either
+
+prong. Strickland, 466 U.S. at 700.
+
+                                       III.    DISCUSSION
+
+        Mr. Chansley' s motion concocts a Brady claim, and a derivative ineffective assistance of
+
+counsel claim, based on videos aired devoid of context and supposedly inconsistent disclosure
+
+dates provided by government counsel in two separate cases. These videos are decidedly not
+
+exculpatory, especially when viewed in context with the "miles and miles and miles of footage"
+
+recorded of Mr. Chansley on January 6, 2021. ECF No. 28, at 7:5--6. Such footage, conveniently
+
+omitted by the March 6, 2023 program, shows nearly all of Mr. Chansley's actions that day,
+
+including: carrying a six-foot-long pole armed with a spearhead, unlawfully entering the Capitol
+
+through a broken door, disobeying orders from law enforcement on more than a half-dozen
+
+occasions, screaming obscenities, entering the Senate chamber, climbing onto the Senate dais,
+
+sitting in the Vice President's chair, and leaving a threatening message for the Vice President.
+
+Moreover, the precise date that the particular videos appearing in the program were disclosed is
+
+immaterial because Mr. Chansley and plea counsel were aware of the videos' content-Mr.
+
+Chansley interacting with law enforcement officers who did not visibly impede his progress-by
+
+May 20, 2021. In other words, Mr. Chansley possessed the facts in the videos well in advance of
+
+
+
+                                                 17
+        Case 1:21-cr-00003-RCL                Document 127            Filed 07/20/23         Page 18 of 35
+
+
+
+
+ his plea agreement, yet still determined, quite sensibly, to accept responsibility for his role in the
+
+ criminal events of January 6, 2021. What is more, the record shows that the government disclosed
+
+ virtually all of the videos at issue weeks before Mr. Chansley' s sentencing. These facts and the
+
+ underlying law conclusively demonstrate that Mr. Chansley is not entitled to relief under§ 2255.
+
+          A. Mr. Chansley's Claims Are Timely, Not Waived, and Not Moot
+
+          As a threshold matter, Mr. Chansley claims are not time-barred. Under the Anti-Terrorism
+
+ and Effective Death Penalty Act, a defendant must bring any § 2255 claims within one year of "the
+
+ date on which the facts supporting the claim or claims presented could have been discovered
+
+ through the exercise of due diligence." 28 U.S.C. § 2255(£)(4). Mr. Chansley's claims rely on
+
+ facts, namely alleged discrepancies in the dates and circumstances surrounding discovery in his
+
+ case, discovered in March 2023. Because Mr. Chansley filed his motion within one year after
+
+these events, his motion is timely.
+
+         Nevertheless, the government insists that Mr. Chansley's Brady claim is procedurally
+
+barred because he waived this claim through his plea agreement. 10 Gov't Opp'n at 14-16. Mr.
+
+Chansley agreed to waive a collateral challenge to his conviction unless the motion was based on
+
+"newly discovered evidence." Mr. Chansley responds that his claim is not waived because neither
+
+he nor his plea counsel were aware of the specific evidence (the videos broadcast on March 6,
+
+2023), even if they may have been aware of the facts contained in the evidence. Def.'s Reply at
+
+2-3. The Court is mindful of the government's view that the "concern with finality served by the
+
+limitation on collateral attack has special force with respect to convictions based on guilty pleas."
+
+Gov't Opp'n at 15 (quoting Bousley v. United States, 523 U.S. 614, 621 (1998)). At the same
+
+
+
+
+10
+  Mr. Chansley's plea agreement expressly reserved the right to collaterally attack his conviction based on a claim of
+ineffective assistance of counsel. Plea Agreement ,r IX(E).
+
+                                                         18
+       Case 1:21-cr-00003-RCL           Document 127         Filed 07/20/23       Page 19 of 35
+
+
+
+
+ time, this Court "will not bar the door" to Mr. Chansley's collateral attack when "his waiver only
+
+ arguably or ambiguously forecloses his claims." United States v. Hunt, 843 F.3d 1022, 1027 (D.C.
+
+ Cir. 2016). Because it is not clear that Mr. Chansley's plea agreement unambiguously waived his
+
+right to bring his claim, and because the government admits that one 10-second video appearing
+
+in the March 6, 2023 was not disclosed prior to Mr. Chansley's plea and sentencing, the Court
+
+concludes that Mr. Chansley did not waive his Brady claim.
+
+        Additionally, although not raised by either party, the Court notes that Mr. Chansley's
+
+claims are not moot even though he ended his period of incarceration prior to filing his motion. In
+
+addition to a prison term, the Court sentenced Mr. Chansley to supervised release, a special
+
+assessment, and restitution. He may still pursue relief from the remaining aspects of his sentence
+
+under§ 2255. See United States v. Mejia, No. 10-cr-256-03 (RCL), _ F. Supp._, 2023 WL
+
+2297465, at *2 (D.D.C. Feb. 23, 2023) (citing United States v. Mejia, No. 20-3086, 2022 WL
+
+4280686, at *1 (D.C. Cir. Sept. 14, 2022)).
+
+        The Court will therefore proceed to the merits of Mr. Chansley' s claims.
+
+        B. Brady Applies at the Plea-Bargaining Stage
+
+        Mr. Chansley' s motion assumes that Brady provides a right to the disclosure of exculpatory
+
+information by the government to the criminal defendant at the plea-bargaining stage but does not
+
+directly address this question or offer any authority to support his position. The government, on
+
+the other hand, does engage with the question-whether Brady applies throughout the criminal
+
+proceeding or if it is only a trial right-and notes that there is currently a circuit split on the issue
+
+with no binding authority in this Circuit, but does not take a formal position. See Gov't Opp'n at
+
+11 n.5; compare United States v. Avellino, 136 F.3d 249, 255 (2d Cir. 1998) (holding that Brady
+
+applies to the non-disclosure of exculpatory evidence prior to plea bargain); Campbell v. Marshall,
+
+
+
+                                                  19
+       Case 1:21-cr-00003-RCL          Document 127         Filed 07/20/23     Page 20 of 35
+
+
+
+
+ 769 F.2d 314, 322-24 (6th Cir. 1985) (same); White v. United States, 858 F.2d 416,422 (8th Cir.
+
+ 1988) (same); Sanchez v. United States, 50 F.3d 1448, 1453 (9th Cir. 1995) (same); United States
+
+ v. Ohiri, 133 Fed. App'x 555, 561--62 (10th Cir. 2005) (same); with United States v. Moussaoui,
+
+ 591 F.3d 263,285 (4th Cir. 2010) (holding that Brady applies to the non-disclosure of exculpatory
+
+ evidence only at the trial stage); Matthew v. Johnson, 201 F.3d 353, 361--62 (5th Cir. 2000) (same).
+
+        This Court joins the weight of authority and the principles enshrined in Brady to conclude
+
+that a defendant may challenge the validity of his guilty plea on the basis of Brady. Plea bargaining
+
+is a critical component of our modern criminal justice system. As the Supreme Court emphasized
+
+in Brady, "our system of the administration ofjustice suffers when any accused is treated unfairly."
+
+373 U.S. at 87. When a defendant is forced to decide whether to go to trial or plead guilty without
+
+knowledge of exculpatory evidence in the government's possession, he suffers unfairness of the
+
+highest order. This is because shielding the plea-bargaining process from Brady creates perverse
+
+incentives for prosecutors to "deliberately withhold exculpatory information as part of an attempt
+
+to elicit guilty pleas." Sanchez, 50 F .3d at 1453. What is more, plea bargaining is just one step in
+
+the process of preparing for a trial. Plea agreements, like any other contract, are only finalized
+
+after the assent of both parties. See Puckett v. United States, 556 U.S. 129, 137 (2009). In the
+
+situation where a defendant and the government fail to reach a plea agreement, or if that agreement
+
+is not accepted by the Court, a defendant must proceed to trial. A Brady rule that absolves the
+
+government of any responsibility to disclose exculpatory evidence until the eve of trial would
+
+impermissibly hinder a criminal defendant in the preparation of his defense. See United States v.
+
+Pollack, 534 F.2d 964, 973-74 (D.C. Cir. 1976). Under these circumstances, the Court agrees
+
+with the majority of circuit courts that Brady provides a right to the disclosure of exculpatory
+
+information at the plea-bargaining stage.
+
+
+
+                                                 20
+        Case 1:21-cr-00003-RCL                Document 127            Filed 07/20/23         Page 21 of 35
+
+
+
+
+          C. Mr. Chansley's Brady Argument Is Without Merit
+
+          Even though Mr. Chansley may assert his Brady claim, he does not meet his burden to
+
+ show that he is entitled to relief on that basis.             He argues that the government violated its
+
+ obligations under Brady, and therefore secured an unconstitutional sentence, by not disclosing the
+
+ videos broadcast on March 6, 2023. Mr. Chansley's argument, and its various permutations, is
+
+ belied by the record, applicable law-or both.
+
+          1. Nearly all of the videos at issue were disclosed to the defense
+
+          Mr. Chansley relies primarily on a televised statement by his former counsel-unswom
+
+and not subject to Rule 11 sanctions-along with the absence of plea counsel's discussion of the
+
+videos at sentencing as evidence that the videos were withheld from the defense. Perhaps plea
+
+counsel's memory has faded over the past two years. Perhaps plea counsel's statement was fueled
+
+by personal motives contrary to the interest of his former client. Regardless, the record is plain
+
+that the vast majority of the videos, and all the pertinent content contained therein, was indeed
+
+disclosed to the defense as early as May 2021 and by mid-October 2021 at the latest. 11
+
+          All of the facts surrounding Mr. Chansley's movements around the Capitol featured in the
+
+television program were disclosed months before Mr. Chansley's guilty plea, as he concedes.
+
+Def. 's Reply at 2-3.         For example, the program showed Mr. Chansley's interaction with
+
+enforcement officers in the Senate stairwell, after he left the Senate gallery and before he entered
+
+the Senate chamber. This same footage was captured by MPD body-worn cameras that were made
+
+discoverable on May 17, 2021. Gov't Opp'n at 18; ECF No. 38-1 at 2. Finally, grand jury
+
+transcripts containing testimony of an officer who encountered Mr. Chansley several times on
+
+
+
+11
+   One IO-second video showing Mr. Chansley's movements outside of the Senate chamber was not disclosed to plea
+counsel prior to sentencing. However, because that video was not exculpatory, there is no Brady violation with respect
+to that video. See Part III.C.2.
+
+                                                         21
+        Case 1:21-cr-00003-RCL               Document 127            Filed 07/20/23         Page 22 of 35
+
+
+
+
+ January 6, 2021, and who appears in the footage aired in the March 6, 2023 broadcast, were
+
+ disclosed to plea counsel by May 19, 2021. Gov't Opp'n at 19; ECF No. 38-1 at 2. 12
+
+          The television program also discussed Mr. Chansley' s time on the Senate floor. The record
+
+ demonstrates that footage depicting these same events, recorded by The New Yorker, was disclosed
+
+ to plea counsel on April 24, 2021. Gov't Opp'n at 18; ECF No. 38-1 at 2. On May 14, 2021, plea
+
+ counsel confirmed by email that he was aware of the video and that it was his position that the
+
+video "depict[ed] the door to the Chamber being held for Mr. Chansley by law enforcement as he
+
+ entered into the Chamber (followed thereafter by law enforcement)[,]" whom plea counsel later
+
+identified as Officer Robishaw. Gov't Opp'n at 18 (quoting Email, Ex. 1 to Sealed Gov't Opp'n,
+
+ECF No. 124-1 at 1, 5). Plea counsel further claimed that the video showed Mr. Chansley "being
+
+escorted into the Chamber just before 3:00p[m]." Id. (quoting Email at 1). In fact, plea counsel
+
+demonstrated awareness of evidence of his client supposedly interacting peacefully with law
+
+enforcement in the Capitol building two months earlier when he argued in support of his client's
+
+(unsuccessful) motion for pre-trial release. ECF No. 28 at 10:2-4. Thus, plea counsel's statements
+
+by email and in court reveal that counsel was aware of all pertinent facts aired in the March 6,
+
+2023 program at least four months prior to Mr. Chansley' s plea.
+
+         The vast majority of the CCTV footage aired on the program, which did not contain any
+
+new facts, was made discoverable through Evidence.com prior to Mr. Chansley's sentencing.
+
+Gov't Opp'n at 16-17. Mr. Chansley cries foul at the government's representation in the Pezzola
+
+case-that disclosure occurred on September 24, 2021-and the government's representation in
+
+
+12
+   In fact, as Mr. Chansley admits, counsel was aware of this information even earlier. On January 9, 2021, Mr.
+Chansley participated in an interview with the Federal Bureau of Investigation. Def. 's Mot. at 18-19. In that
+interview, Mr. Chansley "claimed that police escorted him into the Senate Chamber and asked if he would assist in
+getting the protestors to vacate the Chamber. [Mr.] Chansley claimed to use his megaphone to request that protestors
+depart." Id. at 19. Though Mr. Chansley later contradicted the second claim through his agreement to the facts as
+outlined in the Statement of Offense, the first claim is consistent with the Statement of Offense.
+
+                                                        22
+       Case 1:21-cr-00003-RCL         Document 127        Filed 07/20/23      Page 23 of 35
+
+
+
+
+ this case-that disclosure occurred on October 22, 2021-and claims that both representations are
+
+ likely "false." Def.'s Mot. at 12. Rather than intentional government obfuscation, there is a far
+
+ more likely, innocent explanation for the date discrepancy. As the government stated in its second
+
+ discovery update in this case, filed on September 17, 2021, the government merely "expect[ed]"
+
+to produce the videos via Evidence.com by September 24, 2021. The next update, filed on October
+
+25, 2021, confirmed that the videos were, in fact, produced as of October 21, 2021 (which the
+
+government now clarifies as October 22, 2021).        Regardless, contrary to defense counsel's
+
+assertions, the information was, in fact, produced by October 2021 at the very latest.
+
+        In alternative, Mr. Chansley argues that even if the videos were disclosed, the government
+
+provided too many videos too late because it would have been physically impossible for defense
+
+counsel to review the 4,800 hours of footage disclosed on October 22, 2021 before Mr. Chansley' s
+
+sentencing in mid-November 2021. Def.'s Mot. at 16 & n.3. Aside from the fact that "[Mr.
+
+Chansley] cite[ s] no authority for the proposition that the government fails to meet its Brady []
+
+obligations by providing too much discovery," United States v. Bingert, Nos. 21-cr-91-1, 21-cr-
+
+91-2 (RCL), 2023 WL 3203092, at *6 (D.D.C. May 9, 2023) (emphasis in original), this argument
+
+is an obvious red herring. As the government points out, Mr. Chansley was well aware of the path
+
+he walked on January 6, 2021.       Gov't Opp'n at 17.      That knowledge, combined with the
+
+government's disclosure of maps showing the CCTV cameras' locations and a guide for
+
+identifying the relevant cameras, certainly enabled the defense to focus on reviewing footage
+
+captured by cameras only in the areas of the Capitol that Mr. Chansley actually visited.
+
+       Mr. Chansley's Brady claim fails at the outset because the record confirms that none of the
+
+relevant facts have been suppressed. Blackley, 986 F. Supp. at 603. The Court further notes that
+
+"the volume of discovery does not excuse defense counsel," including Mr. Chansley's post-
+
+
+
+                                               23
+       Case 1:21-cr-00003-RCL         Document 127        Filed 07/20/23      Page 24 of 35
+
+
+
+
+ conviction counsel, "from making reasonable efforts to ascertain whether an item has been
+
+produced before making representations about what was and was not produced, let alone before
+
+filing inaccurate and inflammatory allegations of discovery failures." Mem. Order, Pezzola, at 3.
+
+        2. None of the videos are exculpatory
+
+        Despite spilling much ink on the supposed significance of the videos, Mr. Chansley does
+
+not explain why he believes the videos are exculpatory with respect to the charge to which he
+
+pleaded guilty: obstruction of an official proceeding in violation of 18 U.S.C. § 1512(c)(2). This
+
+is likely because he cannot make this showing.
+
+        Mr. Chansley admitted to engaging in the following conduct on January 6, 2021, all before
+
+the events recorded in the videos aired in the March 6, 2023 program: participating in a violent
+
+riot; being one of the first rioters to unlawfully enter the Capitol; traveling through hallways,
+
+stairwells, and the Senate gallery for approximately 38 minutes; encountering law enforcement on
+
+several occasions; ignoring their direct orders; screaming obscenities; and demanding that fleeing
+
+lawmakers be brought out to face the mob. Moreover, Mr. Chansley admitted to engaging in the
+
+following conduct after the events recorded in the videos: entering the Senate chamber; climbing
+
+on the Senate dais; ignoring multiple direct orders from the lone law enforcement officer in the
+
+chamber; sitting in the Vice President's chair; leaving a threatening message for the Vice
+
+President; leading the rioters in the chamber in a demonstration; and only vacating the chamber
+
+after multiple other law enforcement officers arrived. These facts show that Mr. Chansley intended
+
+to, and did, obstruct the certification proceedings. That law enforcement officers outnumbered by
+
+the quantity of rioters did not physically engage Mr. Chansley or impede his progress is irrelevant
+
+to his guilt with respect to Count Two.
+
+
+
+
+                                                 24
+       Case 1:21-cr-00003-RCL          Document 127         Filed 07/20/23      Page 25 of 35
+
+
+
+
+        Of the videos appearing in the March 6, 2023 segment, one 10-second video was disclosed
+
+in February 2023, after the conclusion of Mr. Chansley's case. The clip, capturing Mr. Chansley's
+
+movements at approximately 2:59 pm, appears to show him outside of the Senate chamber
+
+accompanied by two law enforcement officers. One of the law enforcement officers reaches out
+
+to briefly touch a door before leading Mr. Chansley away from the Senate chamber. Mr. Chansley
+
+argues that this video, and others, provide further context "about how he came to be inside the
+
+Senate Chamber," which he argues is evidence casting doubt on his intent to obstruct the
+
+certification proceedings. Def.' s Mot. at 19. This argument, like his others, misses the mark. The
+
+circumstances surrounding his entry into the Senate chamber are not legally relevant. His presence
+
+that day, his refusal to obey multiple orders :from law enforcement, and his specific statements and
+
+actions all created serious safety concerns and forced an end to the certification proceedings,
+
+consistent with his expressed intent. In addition, entry into the Senate chamber, or ev,en the Capitol
+
+building, is not a required element for guilt under 18 U.S.C. § 1512(c), as this Court has implicitly
+
+determined numerous times. See, e.g., Notes for Oral Ruling, United States v. Worrell, No. 21-cr-
+
+292-1, ECF No. 245 (D.D.C. May 12, 2023); Notes for Oral Ruling, Bingert, ECF No. 166; Notes
+
+for Oral Ruling, United States v. Hostetter, No. 21-cr-392-1 (RCL), ECF No. 275 (D.D.C. July 13,
+
+2023); Findings of Pact and Conclusions of Law, United States v. Powell, No. 21-cr-179 (RCL),
+
+ECF No. 110 (D.D.C. July 18, 2023).
+
+       As a fallback position, Mr. Chansley appears to argue that the videos show that "he
+
+committed no acts of violence, that he expressed no hostility or intention to do violence to any
+
+property or individuals" and therefore the 8-point sentencing enhancement was improper. Def. 's
+
+Mot. at 19; see also id. at 17-19. But that argument suffers from the same fatal defect as the March
+
+6, 2023 broadcast: it lacks the context of what occurred before and after. The enhancement applies
+
+
+
+                                                 25
+       Case 1:21-cr-00003-RCL          Document 127         Filed 07/20/23      Page 26 of 35
+
+
+
+
+ "[i]f the offense involved causing or threatening to cause physical injury to a person, or property
+
+ damage, in order to obstruct the administration of justice[.]" U.S.S.G. § 2Jl.2(b)(l)(B). As
+
+ explained above, Mr. Chansley's actions on January 6, 2021 more than fit the bill.
+
+        Whether the videos from the March 6, 2023 television segment are viewed individually or
+
+in context with the rest of the evidence against Mr. Chansley, the videos are not exculpatory.
+
+Therefore, Mr. Chansley's Brady claim fails at the second prong of the analysis as well.
+
+        3. The government's discovery approach in his case did not violate its Brady obligations
+
+        Separate from the alleged failure to disclose specific videos, Mr. Chansley argues that the
+
+government's approach to discovery contravened the applicable Brady standard in this District.
+
+See, e.g., Def. 's Mot. at 9; Def. 's Reply at 3-4. That argument, like his others, is misplaced.
+
+        In cases involving voluminous discovery, courts are "wary of requiring the government to,
+
+in effect, do defense counsel's work for them and of inserting itself into the fray of micromanaging
+
+discovery in these cases." United States v. Sheppard, No. 21-cr-203 (JDB), 2022 WL 17978837,
+
+at *14 (D.D.C. Dec. 28, 2022). "On the other hand, [courts are] sympathetic to the needle-in-the-
+
+haystack problem defendants face when confronted with such enormous amounts of discovery,
+
+only some of which is relevant to their cases, particularly since defense counsel have
+
+comparatively fewer resources at their disposal for identifying which evidence is relevant."
+
+Bingert, 2023 WL 3203092, at *6 (citing United States v. Hsia, 24 F. Supp. 2d 14, 29 (D.D.C.
+
+1998)). Balancing the government's obligations and defendants' responsibilities, courts in this
+
+District have settled on the following standard: '"[T]o the extent that the government knows of
+
+any [Brady] material in its production,' the Court will 'require [the government] to identify' it."
+
+Sheppard, 2022 WL 17978837, at *14 (alterations in original) (quoting United States v. Saffarinia,
+
+424 F. Supp. 3d 46, 86 (D.D.C. 2020)).
+
+
+
+                                                 26
+       Case 1:21-cr-00003-RCL          Document 127        Filed 07/20/23      Page 27 of 35
+
+
+
+
+        Mr. Chansley cites the government's first September 17, 2021 discovery update, and the
+
+ two district court cases referenced in a footnote therein, as evidence that the government's
+
+approach to discovery does not adhere to Saffarinia. Def 's Mot. at 14; ECF No. 75 at 2 (citing
+
+ United States v. Meek, No. 19-cr-378 (JMS/MJD), 2021 WL 1049773, at *5 (S.D. Ind. Mar. 19,
+
+2021) and United States v. Ohle, No. S3-08-cr-1109 (JSR), 2011 WL 651849, at *4 (S.D.N.Y. Feb.
+
+7, 2011)).
+
+        Taking the second portion of his argument first-and declining to opine on the wisdom of
+
+the government's choice to cite out-of-circuit, unpublished memorandum orders for points oflaw
+
+as important as Brady-Mr. Chansley' s argument misses the mark. The government cited those
+
+cases merely for the proposition that "[ d]efendants are in a better position to determine what
+
+evidence they believe is exculpatory and will help in their defense" than the government. ECF
+
+No. 75 at 2 (citing Meek, 2021 WL 1049773, at *5). That proposition is not inconsistent with
+
+Saffarinia. What is more, Mr. Chansley reads Saffarinia far too broadly. That opinion clearly
+
+held that the government is only required "to identify Brady material already known to it based on
+
+its existing knowledge of the documents it collected and reviewed in the first instance[,]" and that,
+
+as a corollary, the government is not required to "sift through the evidence in search of anything
+
+that could help the defense[.]" Saffarinia, 424 F. Supp. 3d at 86 (emphases in original) (internal
+
+citations omitted). In other words, Saffarinia does not require the government to specifically
+
+identify to a defendant any evidence in the government's voluminous disclosures that could
+
+conceivably qualify as Brady material based on the government's anticipation of any possible
+
+defense theory. Instead, Saffarinia only requires the government to identify exculpatory evidence
+
+of which it is aware.
+
+
+
+
+                                                27
+       Case 1:21-cr-00003-RCL           Document 127          Filed 07/20/23     Page 28 of 35
+
+
+
+
+        The first part of Mr. Chansley's Brady argument similarly falters.           In his view, the
+
+government's en masse production of discovery with the opportunity for defendants to lodge
+
+specific requests for information that they believe to be exculpatory is improper because this
+
+District "looks with disfavor on narrow readings of the government's Brady obligations[.]" Def. 's
+
+Mot. at 10 (collecting cases). But it is precisely the government's recognition of this District's
+
+exacting Brady standards that compelled the government to contract for, fund, and facilitate the
+
+introduction of a platform to disseminate massive amounts of discovery in cases related to January
+
+6, 2021, and to equip defense teams with the tools necessary to digest the information made
+
+available on the platform. To be sure, this unprecedented prosecutorial effort places enormous
+
+disclosure burdens on the government and necessitates novel approaches to sharing discovery
+
+information with defendants. That said, Mr. Chansley has not demonstrated how the government's
+
+approach is inconsistent with Brady.
+
+        As a last gasp, Mr. Chansley faults the government for not providing him with specific
+
+discovery earlier because he was "easy to identify in the crowd of people who entered the Capitol"
+
+due to his distinctive costume. Def.'s Mot. at 13. Mr. Chansley does not cite any authority, and
+
+the Court is aware of none, stating that the government faces a heightened Brady obligation merely
+
+because a defendant is recognizable. Regardless, as previously discussed, the evidence that Mr.
+
+Chansley claims is exculpatory is decidedly not so.
+
+                                          *       *       *
+
+       Mr. Chansley has failed to demonstrate that the government fell short of its Brady
+
+obligations with respect to the production of video evidence in his case. Therefore, this claim fails.
+
+
+
+
+                                                 28
+       Case 1:21-cr-00003-RCL          Document 127         Filed 07/20/23      Page 29 of 35
+
+
+
+
+        D. Mr. Chansley's Ineffective Assistance of Counsel Argument Is Without Merit
+
+        Despite his repeated assertions that he was satisfied with plea counsel in writing and on the
+
+ record, Mr. Chansley now argues that plea counsel was ineffective in two ways: (1) by encouraging
+
+ him to accept a plea agreement containing a sentencing enhancement and appeal waivers; and (2)
+
+ by not demanding production of the CCTV videos aired during the March 6, 2023 program prior
+
+ to sentencing in order to use such video at sentencing. Def.'s Mot. at 17-21. He claims that he
+
+ suffered prejudice because, absent these errors, he would have received a more favorable plea
+
+agreement and the Court would have imposed a lower sentence. Id. His argument is wildly
+
+speculative, contrary to established caselaw and practice, and devoid of common sense.
+
+        I. Mr. Chansley has not demonstrated that plea counsel's performance was deficient
+
+        Mr. Chansley's ineffective assistance of counsel claim stumbles at the start because he is
+
+unable to establish that his plea counsel's performance was deficient.
+
+        Mr. Chansley's first argument, that plea counsel erred in negotiating the terms of his plea
+
+agreement, collapses upon cursory inspection. First, a "prosecutor is not obligated to make a plea
+
+offer at all, let alone a plea offer on any particular terms." United States v. Zaia, 751 F. Supp. 2d
+
+132, 143 (D.D.C. 2010). Similarly, Mr. Chansley does not point this Court to any authority stating
+
+that counsel has a constitutional duty to pursue a plea agreement more favorable than the
+
+agreement actually offered. What is more, dissatisfaction with the terms of a plea agreement alone
+
+cannot serve as a basis for an ineffective assistance of counsel claim. See United States v. Brunetti,
+
+376 F.3d 93, 95 (2d Cir. 2004); Hunter v. United States, 160 F.3d 1109, 1115 (6th Cir. 1998).
+
+Second, plea counsel's suggestion to Mr. Chansley that he accept the plea agreement with the
+
+sentencing enhancement and appeal waiver fell squarely within the "wide range of reasonable
+
+professional assistance" that Strickland protects. 466 U.S. at 689. In exchange for Mr. Chansley' s
+
+
+
+                                                 29
+       Case 1:21-cr-00003-RCL           Document 127         Filed 07/20/23      Page 30 of 35
+
+
+
+
+ plea, the government agreed to dismiss the other charges pending against him and not to pursue
+
+ other potential sentencing enhancements. Gov't Opp'n at 24 n.11. This sort of bargained-for-
+
+ exchange is entirely consistent with effective performance by counsel during the plea process.
+
+        Mr. Chansley' s second claim, that plea counsel erred by not demanding or using the CCTV
+
+footage, also fails. As previously discussed, plea counsel did, in fact, have access to the videos
+
+well in advance of Mr. Chansley's sentencing. Similarly, as the government correctly notes, the
+
+record reflects that plea counsel reviewed such evidence with Mr. Chansley. See id. at 27 (citing
+
+Sent'g Hr'g Tr. at 26:13-16). And contrary to Mr. Chansley's insistence, plea counsel's decision
+
+not to present the videos during sentencing does not demonstrate ineffective assistance-in fact, it
+
+was quite effective. The Court agrees with the government that plea counsel's strategic choice to
+
+use his presentation to focus on Mr. Chansley's remorse and acceptance of responsibility, rather
+
+than present additional video evidence in a futile attempt to contradict the obvious facts of the
+
+case, was objectively reasonable. See id. at 27-28. And that decision was all the more reasonable
+
+when considering that the Court previously rejected as unpersuasive plea counsel's attempt to cite
+
+the facts contained in the videos in light of the rest of the evidence of Mr. Chansley's conduct. See
+
+Chansley, 525 F. Supp. 3d at 170-71. Plea counsel sensibly changed course at sentencing, noting
+
+that the government was still pursuing investigations and gathering evidence related to the events
+
+of January 6, 2021, but that he and Mr. Chansley were "not in a position of slowing this court
+
+proceeding down because [they didn't] have to, because those investigations, those outcomes are
+
+irrelevant as to [Mr. Chansley], as to the defendant in this case, as to the decision of [Mr. Chansley]
+
+to enter a plea[.]" Sent'g Hr'g Tr. at 16:11-15. Plea counsel emphasized that Mr. Chansley wanted
+
+"to be held accountable based on evidence that we have today, that this court has seen." Id. at
+
+16:16-17. Based on this presentation, along with Mr. Chansley's own comments, the Court
+
+
+
+                                                  30
+        Case 1:21-cr-00003-RCL                Document 127            Filed 07/20/23          Page 31 of 35
+
+
+
+
+ determined that the appropriate sentence in his case was the bottom of the applicable Guidelines
+
+range, despite the seriousness of Mr. Chansley' s conduct.
+
+          Mr. Chansley does not meet his burden to establish that plea counsel performed deficiently.
+
+          2. Mr. Chansley has not demonstrated that he suffered any prejudice
+
+          As for prejudice, Mr. Chansley attempts to tread a fine line. He wisely does not claim that
+
+he would have opted for trial absent counsel's performance. Nor could he.13 Instead, he argues
+
+that, had plea counsel performed effectively, he would still have proceeded with a plea agreement,
+
+but would have agreed to one absent the sentencing-enhancement stipulation or the appeal waivers.
+
+Def.'s Mot. at 20-21.           Mr. Chansley argues that without the stipulation, his recommended
+
+Guidelines sentence would have been lower and that without the waiver, he would have been able
+
+to appeal his sentence on any grounds he wished. Id. However, these hypothetical scenarios fall
+
+woefully short of establishing a legally sufficient showing of prejudice.
+
+         As discussed above, neither the government nor plea counsel had any obligation to reach a
+
+plea agreement without the sentencing enhancement or appeal waiver. Also, the enhancement at
+
+issue, U.S.S.G. § 2Jl.2(b)(l)(B), has been approved by courts in this District in a variety of cases
+
+involving the events of January 6, 2021, including this Court. Gov't Opp'n at 26 (collecting cases).
+
+And regarding the appeal waiver, it is clear that "[a] 'knowing, intelligent, and voluntary' waiver
+
+of the right to appeal 'generally may be enforced."' United States v. Adams, 780 F .3d 1182, 1183
+
+(D.C. Cir. 2015) (quoting United States v. Guillen, 561 F.3d 527, 529 (D.C. Cir. 2009)). Mr.
+
+Chansley has not alleged, much less shown, that his plea was not knowing, intelligent or voluntary.
+
+
+13
+   Both the government and plea counsel acknowledged the overwhelming evidence of Mr. Chansley's guilt, Sent'g
+Hr'g Tr. at 4: 13-16; 16:18-21. Given these facts, "[i]t is highly improbable" that Mr. Chansley would have declined
+to plead guilty and instead proceed to trial. United States v. Thomas, 999 F.3d 723, 738 (D.C. Cir. 2021). Furthermore,
+Mr. Chansley faced a potential sentence of 20 years in prison-more than five times longer than the term he actually
+received-had he gone to trial. Sent'g Hr'g Tr. at 42:12-18. A defendant cannot establish prejudice under these
+circumstances. See United States v. Ayers, 938 F. Supp. 2d 108, 115 (D.D.C. 2013).
+
+                                                         31
+        Case 1:21-cr-00003-RCL                 Document 127             Filed 07/20/23        Page 32 of 35
+
+
+
+
+ Nor has he so much as hinted at what other legal challenges to his conviction he could or would
+
+ have raised had he not waived his direct-appeal rights. Under these circumstances, he cannot show
+
+ that he suffered any prejudice due to the terms of the plea agreement that he accepted.
+
+          Similarly, Mr. Chansley has not met the required prejudice showing with respect to plea
+
+ counsel's alleged failure to demand or use the CCTV footage appearing in the March 6, 2023
+
+ broadcast. Even if plea counsel had presented the Court with this footage, which, as discussed
+
+ above, plea counsel was correct not to, Mr. Chansley would not have received a lower sentence.
+
+ The criminal nature of Mr. Chansley's actions that day, including his decision to leave a note
+
+ threatening "It's Only A Matter of Time. Justice Is Coming!" at the heart of the U.S. government,
+
+ establish the appropriateness of a sentence of at least 41 months' incarceration. 14 In fact, without
+
+Mr. Chansley' s apparently unequivocal acceptance of responsibility, the Court is confident that he
+
+would have received a higher sentence.
+
+          In sum, Mr. Chansley cannot demonstrate that either the absence of certain terms in the
+
+plea agreement or the presence of the CCTV footage at sentencing would have resulted in even a
+
+"conceivable[] likelihood of a different result," much less a "substantial" one. Cullen, 563 U.S. at
+
+189. Therefore, he has not established prejudice.
+
+                                                  *        *        *
+
+         Mr. Chansley' s claims are without merit. Thus, the Court will DENY his motion to vacate,
+
+set aside, or correct his conviction under 28 U.S.C. § 2255.
+
+
+
+
+14
+   At the time of his November 2021 sentencing, the government had not gathered any evidence that Mr. Chansley
+was aware of the noose hanging outside of the Capitol building at the time that he sat in the Vice President's chair and
+wrote his threatening note. Sent'g Hr'g Tr. at 8:7-13. Therefore, the Court did not take that event into consideration
+in imposing Mr. Chansley's sentence. Since then, the government has gathered terabytes of additional evidence
+regarding the events of January 6, 2021. Were Mr. Chansley to be resentenced today, perhaps the government would
+be able to present such evidence and, if so, the Court would certainly consider such evidence in imposing a new
+sentence.
+
+                                                          32
+          Case 1:21-cr-00003-RCL           Document 127         Filed 07/20/23       Page 33 of 35
+
+
+
+
+            The Court is disappointed to learn that, through his filings and public statements, Mr.
+
+ Chansley has recanted the contrition displayed at his sentencing nearly two years ago. 15 Such an
+
+ about-face casts serious doubt on the veracity of any of Mr. Chansley' s claims, here or elsewhere.
+
+            Finally, the Court would be remiss if it did not address the ill-advised television program
+
+ of March 6, 2023. Not only was the broadcast replete with misstatements and misrepresentations
+
+ regarding the events of January 6, 2021 too numerous to count, the host explicitly questioned the
+
+ integrity of this Court-not to mention the legitimacy of the entire U.S. criminal justice system-
+
+ with inflammatory characterizations of cherry-picked videos stripped of their proper context. In
+
+ so doing, he called on his followers to "reject the evidence of [their] eyes and ears," language
+
+resembling the destructive, misguided rhetoric that fueled the events of January 6 in the first
+
+place. 16 The Court finds it alarming that the host's viewers throughout the nation so readily heeded
+
+his command. But this Court cannot and will not reject the evidence before it. Nor should the
+
+public. Members of the public who are concerned about the evidence presented in Mr. Chansley's
+
+case and others like may view the public docket and even attend court proceedings in these cases.
+
+Those ofus who have presided over dozens of cases arising from, listened to hundreds of hours of
+
+testimony describing, and reviewed thousands of pages of briefing about the attack on our
+
+democracy of January 6 know all too well that neither the events of that day nor any particular
+
+defendant's involvement can be fully captured in a seconds-long video carelessly, or perhaps even
+
+cynically, aired in a television segment or attached to a tweet.
+
+
+
+
+15
+   See, e.g., Caitlin Sievers, "QAnon Shaman" Looks to Overturn Sentence, Says He Never Renounced QAnon, A'Z
+Mirror (June 22, 2023), https://www.azmirror.com/2023/06/22/qanon-shaman-looks-to-overtum-sentence-says-he-
+never-renounced-qanon/ [https://perma.ccN84G-UUR.7]; Mike Wendling, The 'QAnon Shaman' and Other Capitol
+Rioters Who Regret Pleading Guilty, BBC News (July 16, 2023), https://www.bbc.com/news/world-us-canada-
+66169914 [https://perma.cc/8MTE-PWKM].
+16
+     George Orwell, 1984, at 103 (1949).
+
+                                                    33
+       Case 1:21-cr-00003-RCL          Document 127         Filed 07/20/23      Page 34 of 35
+
+
+
+
+                         IV.     CERTIFICATE OF APPEALABILITY
+
+        Before appealing a final order denying a § 2255 motion, a court must "issue or deny a
+
+ certificate of appealability." Fed. R. Governing § 2255 Proceedings 1 l(b). The defendant may
+
+not appeal without this certificate of appealability, which requires "a substantial showing of the
+
+denial of a constitutional right." 28 U.S.C. § 2253(c).        Doing so requires the defendant to
+
+demonstrate "that reasonable jurists could debate whether (or, for that matter, agree that) the
+
+petition should have been resolved in a different manner or that the issues presented were adequate
+
+to deserve encouragement to proceed further." Slack v. McDaniel, 529 U.S. 473, 484 (2000)
+
+(quoting Barefoot v. Estelle, 463 U.S. 880, 893 & n.4 (1983) (internal quotation marks omitted)).
+
+When a district court denies relief on procedural grounds, the defendant must also show that
+
+reasonable jurists would debate "whether the district court was correct in its procedural ruling."
+
+United States v. Baxter, 761 F.3d 17, 26 n.10 (D.C. Cir. 2014) (quoting Slack, 529 U.S. at 484).
+
+        Mr. Chansley's arguments are without merit. For these reasons, the Court finds that
+
+reasonable jurists would not debate whether his claims deserve encouragement to proceed further.
+
+Mr. Chansley has not made a substantial showing of the denial of a constitutional right. The Court
+
+will therefore decline to issue a certificate of appealability for Mr. Chansley's claims.
+
+                                      V.     CONCLUSION
+
+       For these reasons, the Court concludes that Mr. Chansley's motion and the record in his
+
+case do not show his entitlement to relief.           No evidentiary hearing is warranted, see
+
+28 U.S.C. § 2255(b), and the Court will DENY Mr. Chansley's motion.                No certificate of
+
+appealability shall issue. A separate Order consistent with this Memorandum Opinion shall issue.
+
+
+
+
+                                                 34
+     Case 1:21-cr-00003-RCL    Document 127   Filed 07/20/23    Page 35 of 35
+
+
+
+
+SIGNED this   ~ day of July, 2023 .
+                                                    Royce C. Lamberth
+                                                United States District Judge
+
+
+
+
+                                      35
+

@@ -1,0 +1,47 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Member salary corrected to $174,000 (CRS RL30064), not $174,500",
+  "Days-in-session averages (Ballotpedia) and session-length shares (USAFacts) cut; dek rewritten",
+  "Office allowance stated precisely (about $1.85–$2.09 million per House office, 2025)"
+ ],
+ "edits": [
+  [
+   "House: about 150 days a year. A third of those sessions under five minutes. No part-time job on earth pays like this.",
+   "No part-time job on earth pays like this."
+  ],
+  [
+   "People hear $174,500 and think they are cheap.",
+   "People hear $174,000 and think they are cheap."
+  ],
+  [
+   "No part-time job in America pays $174,500 plus a pension that outlives the seat, FEHB, a million-dollar office allowance,",
+   "No part-time job in America pays $174,000 plus a pension that outlives the seat, FEHB, an office allowance of roughly $1.85 million to $2.09 million,"
+  ],
+  [
+   "- From 2001 to 2023 the House averaged about 150 days in session a year. The Senate averaged about 167. Ballotpedia, from the official calendars. https://ballotpedia.org/119th_Congress_legislative_calendar\n",
+   ""
+  ],
+  [
+   "- For 2025 the House was scheduled for 135 days. The Senate, 179. A full-time job in this country is about 260 weekdays, minus holidays. A school year is about 180 days. They sit less than the school.\n",
+   ""
+  ],
+  [
+   "- USAFacts, 2025: 30 percent of House sessions lasted less than five minutes. 18 percent of Senate sessions, the same. A typical House session ran about four hours — half a civilian workday. https://usafacts.org/articles/congressional-time-in-session/\n",
+   ""
+  ],
+  [
+   "- A 'day in session' can be a gavel and a prayer.",
+   "- The official [days-in-session calendars](https://www.congress.gov/days-in-session) show the count. A 'day in session' can be a gavel and a prayer."
+  ]
+ ],
+ "ourview": [
+  "No part-time job",
+  "Politics as a jersey",
+  "- A 'day in session'"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

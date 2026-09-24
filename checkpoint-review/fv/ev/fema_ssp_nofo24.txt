@@ -1,0 +1,2730 @@
+                                                                                                   1
+
+
+              The U. S. Department of Homeland Security (DHS)
+                   Notice of Funding Opportunity (NOFO)
+      Fiscal Year 2024 Shelter and Services Program - Allocated (SSP-A)
+
+
+All entities wishing to do business with the federal government must have a Unique Entity
+Identifier (UEI). The UEI number is issued by the system. Request a UEI using the System
+for Award Management (SAM.gov) at: SAM's Entity Registration webpage.
+
+Grants.gov registration information can be found at: Grants.gov Register webpage.
+
+Updates in Grant Application Forms:
+
+The Data Universal Numbering System (DUNS) Number was replaced by a new, non-
+proprietary identifier requested in, and assigned by, SAM.gov. This new identifier is the Unique
+Entity Identifier.
+Additional information can be found on Grants.gov: Grants.gov.
+
+
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                                                          2
+
+
+        Table of Contents
+        Updates in Grant Application Forms: ................................................................................. 1
+A.   Program Description................................................................................................................ 5
+        1. Issued By ..................................................................................................................... 5
+        2. Assistance Listing Number ......................................................................................... 5
+        3. Assistance Listing Title ............................................................................................... 5
+        4. Funding Opportunity Title........................................................................................... 5
+        5. Funding Opportunity Number ..................................................................................... 5
+        6. Authorizing Authority for Program ............................................................................. 5
+        7. Appropriation Authority for Program ......................................................................... 5
+        8. Announcement Type ................................................................................................... 5
+        9. Program Category........................................................................................................ 5
+        10. Program Overview, Objectives, and Priorities ............................................................ 5
+        11. Performance Measures ................................................................................................ 6
+B.   Federal Award Information ..................................................................................................... 7
+        1. Available Funding for the NOFO: $300,000,000....................................................... 7
+        2. Projected Number of Awards: 55 ............................................................................. 9
+        3. Period of Performance: ................................................................................................ 9
+        4. Projected Period of Performance Start Date(s): October 1, 2023 .............................. 9
+        5. Projected Period of Performance End Date(s): September 30, 2026 ......................... 9
+        6. Projected Budget Period(s) .......................................................................................... 9
+        7. Funding Instrument Type: Grant ................................................................................ 9
+C.   Eligibility Information ............................................................................................................. 9
+        1. Eligible Applicants ...................................................................................................... 9
+        2. Applicant Eligibility Criteria ..................................................................................... 10
+        3. Subawards and Beneficiaries..................................................................................... 10
+        4. Other Eligibility Criteria/Restrictions ....................................................................... 10
+        5. Maintenance of Effort (MOE) ................................................................................... 11
+        6. Cost Share or Match .................................................................................................. 11
+D.   Application and Submission Information.............................................................................. 11
+        1. Key Dates and Times ................................................................................................ 11
+          a. Application Start Date: 04/12/2024 at 12:00 PM ET .............................................. 11
+          b. Application Submission Deadline: 04/26/2024 at 03:00 PM ET ............................. 11
+          c. Anticipated Award Date: No later than 09/30/2024 .................................................. 12
+          d. Other Key Dates ........................................................................................................ 12
+        2. Agreeing to Terms and Conditions of the Award ..................................................... 12
+        3. Address to Request Application Package .................................................................. 12
+        4. Requirements: Obtain a Unique Entity Identifier (UEI) and Register in the System
+             for Award Management (SAM.gov) ......................................................................... 12
+        5. Steps Required to Obtain a UEI, Register in SAM.gov, and Submit an Application 13
+        6. Electronic Delivery.................................................................................................... 14
+        7. How to Register to Apply .......................................................................................... 14
+          a. General Instructions: ................................................................................................. 14
+          b. Obtain an UEI Number: ............................................................................................ 14
+          c. Obtain Employer Identification Number:.................................................................. 14
+          d. Create a login.gov account: ....................................................................................... 15
+
+
+
+                                                    FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                                                      3
+
+
+       e. Register with SAM: ................................................................................................... 15
+       f. Register in FEMA GO, Add the Organization to the System, and Establish the AOR:
+          15
+     8. Submitting the Final Application .............................................................................. 16
+     9. Timely Receipt Requirements and Proof of Timely Submission .............................. 16
+     10. Content and Form of Application Submission .......................................................... 16
+       a. Standard Required Application Forms and Information ........................................... 16
+       b. Program-Specific Required Forms and Information ................................................. 17
+     11. Other Submission Requirements ............................................................................... 18
+     12. Intergovernmental Review ........................................................................................ 18
+     13. Funding Restrictions and Allowable Costs ............................................................... 18
+       a. Prohibitions on Expending FEMA Award Funds for Covered Telecommunications
+       Equipment or Services ................................................................................................... 19
+       b. Pre-Award Costs........................................................................................................ 21
+       c. Management and Administration (M&A) Costs ....................................................... 21
+       d. Indirect Facilities & Administrative (F&A) Costs .................................................... 21
+       e. Evaluation Costs ........................................................................................................ 21
+       f. Other Direct Costs ..................................................................................................... 22
+E. Application Review Information ........................................................................................... 22
+     1. Application Evaluation Criteria................................................................................. 22
+       a. Programmatic Criteria ............................................................................................... 22
+       b. Financial Integrity Criteria ........................................................................................ 22
+       c. Supplemental Financial Integrity Criteria and Review ............................................. 22
+     2. Review and Selection Process ................................................................................... 23
+       a. Security Review ........................................................................................................ 23
+       d. Subrecipient Process.................................................................................................. 23
+       e. Review and Selection Process ................................................................................... 23
+F. Federal Award Administration Information .......................................................................... 23
+     1. Notice of Award ........................................................................................................ 23
+     2. Pass-Through Requirements...................................................................................... 24
+     3. Administrative and National Policy Requirements ................................................... 24
+       a. DHS Standard Terms and Conditions ....................................................................... 24
+       b. Ensuring the Protection of Civil Rights .................................................................... 24
+       c. Environmental Planning and Historic Preservation (EHP) Compliance ................... 25
+       d. Mandatory Disclosures .............................................................................................. 26
+     4. Reporting ................................................................................................................... 26
+       a. Financial Reporting Requirements ............................................................................ 26
+       b. Programmatic Performance Reporting Requirements ............................................... 27
+       c. Closeout Reporting Requirements............................................................................. 27
+       d. Additional Reporting Requirements .......................................................................... 29
+     5. Monitoring and Oversight ......................................................................................... 30
+G. DHS Awarding Agency Contact Information ....................................................................... 31
+     1. Contact and Resource Information ............................................................................ 31
+       a. Program Office Contact............................................................................................. 31
+       b. FEMA Grants News .................................................................................................. 31
+       c. Grant Programs Directorate (GPD) Award Administration Division ....................... 31
+
+
+
+                                                    FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                                                          4
+
+
+        d. Equal Rights .............................................................................................................. 32
+        e. Environmental Planning and Historic Preservation .................................................. 32
+      2. Systems Information.................................................................................................. 32
+        a. FEMA GO ................................................................................................................. 32
+H. Additional Information .......................................................................................................... 32
+      1. Termination Provisions ............................................................................................. 32
+        a. Noncompliance .......................................................................................................... 32
+        b. With the Consent of the Recipient ............................................................................ 32
+        c. Notification by the Recipient .................................................................................... 33
+      2. Program Evaluation ................................................................................................... 33
+      3. Period of Performance Extensions ............................................................................ 33
+      4. Disability Integration ................................................................................................. 34
+      5. Conflicts of Interest in the Administration of Federal Awards or Subawards .......... 35
+      6. Procurement Integrity ................................................................................................ 36
+        a. Important Changes to Procurement Standards in 2 C.F.R. Part 200 ......................... 36
+        b. Competition and Conflicts of Interest ....................................................................... 37
+        c. Supply Schedules and Purchasing Programs............................................................. 38
+        d. Procurement Documentation ..................................................................................... 40
+      7. Financial Assistance Programs for Infrastructure ......................................................... 40
+        f. Build America, Buy America Act ............................................................................. 40
+        g. Waivers ...................................................................................................................... 41
+        h. Definitions ................................................................................................................. 41
+      8. Record Retention ....................................................................................................... 41
+        a. Record Retention Period ........................................................................................... 41
+        b. Types of Records to Retain ....................................................................................... 42
+      9. Actions to Address Noncompliance .......................................................................... 42
+      10. Audits ........................................................................................................................ 44
+      11. Payment Information ................................................................................................. 45
+      12. Whole Community Preparedness .............................................................................. 45
+      13. Report issues of fraud, waste, abuse.......................................................................... 46
+      14. Hazard-Resistant Building Codes ............................................................................. 46
+Appendix A: Allowable Activities................................................................................................ 47
+      Primary Services ............................................................................................................... 47
+      Secondary Services ........................................................................................................... 50
+      Management & Administration ........................................................................................ 50
+Appendix B: Payment Requests and Amendments ...................................................................... 52
+      Payments and Amendments .............................................................................................. 52
+      Reimbursement and Advanced Funding ........................................................................... 53
+      Reimbursement ................................................................................................................. 53
+      Advanced Funding ............................................................................................................ 53
+      Payment Requests During Closeout.................................................................................. 54
+      Amendments ..................................................................................................................... 54
+
+
+
+
+                                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                              5
+
+
+A. Program Description
+1. Issued By
+   U.S. Department of Homeland Security (DHS)/Federal Emergency Management Agency
+   (FEMA)/Grant Programs Directorate
+
+2. Assistance Listing Number
+   97.141
+
+3. Assistance Listing Title
+   Shelter and Services Program - Allocated (SSP-A)
+
+4. Funding Opportunity Title
+   Fiscal Year 2024 Shelter and Services Program – Allocated (SSP-A)
+
+5. Funding Opportunity Number
+   DHS-24-GPD-141-00-98
+
+6. Authorizing Authority for Program
+   Department of Homeland Security Appropriations Act, 2024, Pub. L. No. 118-47, Title II
+   Security, Enforcement, and Investigations, U.S. Customs and Border Protection, Operations
+   and Support.
+
+7. Appropriation Authority for Program
+   Department of Homeland Security Appropriations Act, 2024, Pub. L. No. 118-47, Title II
+   Security, Enforcement, and Investigations, U.S. Customs and Border Protection, Operations
+   and Support.
+
+8. Announcement Type
+   Initial
+
+9. Program Category
+   CBP Human Services
+
+10. Program Overview, Objectives, and Priorities
+
+a. Overview
+    As directed by Congress, SSP makes federal funds available to enable non-federal entities to
+    off-set allowable costs incurred for services associated with noncitizen migrants recently
+    encountered and released by DHS. 1 As stated in the FY 2024 appropriation, the primary
+    purpose of SSP is to “reliev[e] overcrowding in short-term holding facilities of [CBP].”
+    Recipients of SSP may also seek grant funds for renovations or costs associated with
+
+
+
+1
+ The term Encounter as used in this announcement means: An encounter is an apprehension by a U.S. Border Patrol
+(Title 8) Agent or a determination of inadmissibility by a CBP Officer at a Port of Entry (Title 8).
+
+
+                                          FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                    6
+
+
+   modifications to existing facilities in support of individuals who have recently been released
+   from the custody of CBP. Refer to Appendix A of the NOFO for allowable activities.
+
+   The Department of Homeland Security (DHS) has committed to bolstering the capacity of
+   non-federal entities to receive noncitizens after they have been processed by U.S. Customs
+   and Border Protection (CBP) and released from a DHS facility. DHS is committed to
+   ensuring appropriate coordination with and support for state, local, and community leaders to
+   help mitigate increased impacts to their communities as outlined in the DHS Plan for
+   Southwest Border Security and Preparedness, issued on April 26, 2022, and updated on
+   December 13, 2022.
+
+   The FY 2024 appropriation provided $650 million for SSP, including FEMA administrative
+   costs. This NOFO announces $300 million to be distributed through allocations as described
+   in section B.1 below. A future NOFO utilizing a competitive process to distribute the
+   remaining FY 2024 funding will be announced separately.
+
+b. Goals, Objectives, and Priorities
+   The goal of SSP is the safe, orderly, and humane release of noncitizen migrants from DHS
+   short-term holding facilities.
+
+   The objectives are:
+      • To provide funding to non-federal entities that serve noncitizen migrants recently
+          released from DHS custody to temporarily provide shelter, food, transportation, acute
+          medical care, personal hygiene supplies, and labor necessary to provide these
+          services; and,
+      • To provide funding to non-federal entities to increase their capacity to temporarily
+          shelter noncitizen migrants recently released from DHS custody, including
+          renovations and modifications to existing facilities.
+
+c. Alignment to Program Purpose and the DHS and FEMA Strategic Plan
+   SSP supports the FY 2020–2024 DHS Strategic Plan, Goal 5: Strengthen Preparedness and
+   Resilience, Objective 5.1: Build a National Culture of Preparedness, and the 2022-2026
+   FEMA Strategic Plan Goal 3: Promote and Sustain a Ready FEMA and Prepared Nation.
+
+11. Performance Measures
+    Performance measures for SSP awardees are:
+    • Number of meals provided.
+    • Number of nights of lodging provided.
+    • Number of noncitizen migrants transported.
+    • Number of acute medical care items provided, by type.
+    • Number of personal hygiene supplies provided, by type.
+    • Number of hours of labor paid to manage cases to provide these services.
+    • Number of clothing items provided.
+    • Number of noncitizen migrants served through translation services.
+
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                  7
+
+
+   •   Number of noncitizen migrants served through outreach activities.
+   •   Number of renovation or modifications to existing facilities projects completed.
+
+   FEMA will calculate and analyze the above metrics through a review of performance
+   progress reports and award monitoring to ensure that the funds are expended for their
+   intended purpose and achieve the stated outcomes in the grant application.
+
+B. Federal Award Information
+1. Available Funding for the NOFO:                           $300,000,000
+
+   Funding in this NOFO is allocated to eligible applicants listed in the below table. The
+   allocations were based on release and destination data received from CBP over the time
+   period of July 1, 2023 to December 31, 2023 along with operational information available to
+   CBP.
+
+   In the event an eligible applicant does not apply for its full allocation or FEMA does not
+   issue an award to an eligible applicant for other reasons, the Secretary of Homeland Security
+   will reallocate the funding to account for rapidly changing trends and operational
+   considerations. Reallocations will occur as part of the reserve fund allocation prior to the end
+   of September 2024.
+
+   A reserve fund representing $25 million of the $300 million will be established to
+   accommodate evolving operational requirements. This fund would provide allocated awards
+   to eligible applicants on an expedited basis. New data provided by CBP regarding migrant
+   encounters, releases, and demographics; and recent reports, trends, policies will be used to
+   direct reserve funding to locations that would most benefit from an exigent award. Eligible
+   applicants may change with the reserve funding, and the eligible applicants will be identified
+   in an amended NOFO expected to be published in Summer 2024.
+
+
+                                                                             FY 2024 Round 1
+              Eligible Applicant                       Jurisdiction          SSP-A Allocation
+Arizona
+Maricopa County                                    Maricopa County                   $11,606,329
+Pima County                                        Pima County                       $21,827,581
+World Hunger Ecumenical Arizona Task               Maricopa County
+Force, Inc. (Maricopa)                                                               $11,606,329
+World Hunger Ecumenical Arizona Task               Yuma County
+Force, Inc. (Yuma)                                                                    $9,532,854
+California
+Catholic Charities, Diocese of San Diego           San Diego                         $19,592,554
+County of Riverside                                Riverside County                   $6,011,261
+County of San Diego                                San Diego County                  $19,592,554
+Colorado
+City/County of Denver                              Denver County                      $4,852,467
+
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                         8
+
+
+                                                                      FY 2024 Round 1
+              Eligible Applicant                  Jurisdiction        SSP-A Allocation
+State of Colorado                              Arapahoe County                $4,852,467
+Washington D.C.
+                                                                               $8,702,215
+District of Columbia                           District of Columbia
+Florida
+United Way of Miami                            Miami-Dade County               $6,469,107
+Georgia
+City of Atlanta                                Fulton County                  $10,819,662
+Illinois
+City of Chicago                                Cook County                     $9,632,300
+State of Illinois                              Sangamon County                 $9,632,300
+Massachusetts
+Commonwealth of Massachusetts                  Suffolk County                  $6,994,954
+Maine
+United Way of Southern Maine                   Cumberland County                 $255,745
+Minnesota
+Hennepin County                                Hennepin County                 $3,955,830
+New Mexico
+City of Albuquerque                            Albuquerque                       $330,000
+Colores United/Mariposa Ranch                  Luna County                       $800,000
+United Way of Southwest New Mexico             Dona Ana County                 $2,951,095
+New York
+Jericho Road Community Health Center           Buffalo                           $289,386
+NYC Office of Management and Budget            Manhattan                      $38,864,884
+The Campaign Against Hunger                    Brooklyn                          $511,930
+Pennsylvania
+City of Philadelphia                           Philadelphia                    $2,868,000
+Texas
+Annunciation House, Inc                        El Paso County                    $381,000
+Bishop Enrique San Pedro Ozanam Center         Brownsville                       $350,000
+Catholic Charities - Dallas                    Dallas County                   $1,000,000
+
+Catholic Charities Archdiocese of San          Bexar County                   $10,877,226
+Antonio, Inc.
+Catholic Charities of the Archdiocese of       Houston/Harris                    $578,474
+Galveston-Houston                              County
+Catholic Charities of the Diocese of Laredo    Harris County                   $1,644,000
+Catholic Charities of the Rio Grande Valley    Hidalgo County                  $7,421,965
+Catholic Diocese of El Paso                    El Paso County                    $150,000
+City of Brownsville                            Cameron County                  $1,921,965
+City of El Paso                                El Paso                         $2,042,014
+
+
+                                   FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                  9
+
+
+                                                                           FY 2024 Round 1
+               Eligible Applicant                     Jurisdiction         SSP-A Allocation
+ City of McAllen                                  Hidalgo County                   $3,921,965
+ City of San Antonio                              Bexar County                     $3,000,000
+ Corazon Ministries, Inc.                         San Antonio                         $10,000
+ El Paso Baptist Association                      El Paso County                      $90,000
+ El Paso County                                   El Paso County                   $4,542,014
+ El Pasoans Fighting Hunger                       El Paso County                     $822,804
+ Episcopal Diocese of the Rio Grande              El Paso County                     $130,679
+ Episcopal Diocese of West Texas                  San Antonio                      $1,041,370
+ Good Neighbor Settlement House                   Brownsville                      $1,636,235
+ Holding Institute                                Laredo                           $2,564,468
+ Iglesia Bautista West Brownsville                Brownsville                        $216,000
+ Interfaith Welcome Coalition                     San Antonio                        $500,000
+ La Posada Providencia                            Cameron County                   $1,100,000
+ Mission: Border Hope                             Maverick County                $12,000,000
+ Opportunity Center for the Homeless              El Paso County                     $270,000
+ Reynolds House Non Profit Corporation            El Paso County                     $100,000
+ Salvation Army Corps Center                      McAllen                            $615,600
+ San Antonio Food Bank                            San Antonio County               $2,400,000
+ St. Ignatius Church                              El Paso County                     $480,000
+ Team Brownsville                                 Brownsville                        $360,000
+ The Salvation Army                               El Paso County                     $280,417
+ Reserve Funding                                                                 $25,000,000
+ Total Allocation                                                               $300,000,000
+
+2. Projected Number of Awards:                              55
+
+3. Period of Performance:                                  36 months
+   Extensions to the period of performance (POP) are allowed. For additional information on
+   period of performance extensions, please refer to Section H of this NOFO.
+
+4. Projected Period of Performance Start Date(s):           October 1, 2023
+
+5. Projected Period of Performance End Date(s):             September 30, 2026
+
+6. Projected Budget Period(s)
+   There will be only a single budget period with the same start and end dates as the period of
+   performance.
+
+7. Funding Instrument Type:                                 Grant
+
+C. Eligibility Information
+1. Eligible Applicants
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                               10
+
+
+   The applicants identified in the tables in Section B.1 Available Funding for the NOFO are the
+   only entities eligible to submit SSP-A applications to DHS/FEMA, including those
+   applications submitted on behalf of eligible subapplicants. Eligible applicants may change
+   with the reserve funding.
+
+2. Applicant Eligibility Criteria
+   Each eligible applicant may submit only one SSP-A grant application to FEMA.
+   An eligible applicant through their application must demonstrate their capacity, either
+   internally or through a partnership, to carry out each SSP-A allowable activity for which they
+   propose funding.
+   Funding will not be provided to any applicant that charges any noncitizen migrant for
+   services.
+3. Subawards and Beneficiaries
+a. Subaward Allowability
+   Under the FY 2024 SSP-A, eligible subapplicants may apply to and receive subawards from
+   a non-federal entity that is applying for and receiving an SSP-A award directly from FEMA.
+
+b. Subrecipient Eligibility:
+   Subapplicants must meet the following criteria to be eligible:
+   1. Are one of the following entities:
+         a. Local governments as defined by 2 C.F.R. § 200.1
+         b. Indian Tribes as defined by 2 C.F.R. § 200.1
+         c. Nonprofit organizations as defined by 2 C.F.R. § 200.1
+         d. The 50 states of the United States, the District of Columbia, the Commonwealth
+             of Puerto Rico, and any agency or instrumentality thereof exclusive of local
+             governments (the term “state” or “state government” where used in this NOFO
+             refers to these entities).
+   2. Must have the capacity to perform each SSP-A allowable activity proposed by the
+      applicant to be performed by the subapplicant.
+
+   Subapplicants must work directly with non-federal entities applying for SSP-A funding to be
+   included in an application.
+
+c. Other subaward information (if applicable)
+   The other parts of this NOFO that discuss requirements or restrictions specifically related to
+   subawards/subrecipients are: cost share or match, Unique Entity Identifier, content and form
+   of application submission, funding restrictions, allowable costs (Appendix A), management
+   and administration costs, and indirect costs.
+d. Beneficiaries or Participants
+   This NOFO and any subsequent federal awards create no rights or causes of action for any
+   participant or beneficiary.
+4. Other Eligibility Criteria/Restrictions
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                 11
+
+
+   Not applicable
+
+5. Maintenance of Effort (MOE)
+   Maintenance of Effort is not required.
+
+6. Cost Share or Match
+   Cost share or match is not required or allowed.
+
+D. Application and Submission Information
+1. Key Dates and Times
+
+       a.     Application Start Date:                       04/12/2024 at 12 p.m. ET
+
+       b.     Application Submission Deadline:              04/26/2024 at 3 p.m. ET
+
+   All applications must be received by the established deadline.
+
+   FEMA’s Grants Outcomes System (FEMA GO) automatically records proof of timely
+   submission and the system generates an electronic date/time stamp when FEMA GO
+   successfully receives the application. The individual with the Authorized Organization
+   Representative role that submitted the application will also receive the official date/time
+   stamp and a FEMA GO tracking number in an email serving as proof of their timely
+   submission. For additional information on how an applicant will be notified of application
+   receipt, see the subsection titled “Timely Receipt Requirements and Proof of Timely
+   Submission” in Section D of this NOFO.
+
+   FEMA will not review applications that are received after the deadline or consider
+   these late applications for funding. FEMA may, however, extend the application deadline
+   on request for any applicant who can demonstrate that good cause exists to justify extending
+   the deadline. Good cause for an extension may include technical problems outside of the
+   applicant’s control that prevent submission of the application by the deadline, other exigent
+   or emergency circumstances, or statutory requirements for FEMA to make an award.
+
+   Applicants experiencing technical problems outside of their control must notify FEMA
+   as soon as possible and before the application deadline. Failure to timely notify FEMA of
+   the issue that prevented the timely filing of the application may preclude consideration of the
+   award. “Timely notification” of FEMA means the following: prior to the application deadline
+   and within 48 hours after the applicant became aware of the issue.
+
+   A list of FEMA contacts can be found in Section G of this NOFO, “DHS Awarding Agency
+   Contact Information.” For technical assistance with the FEMA GO system, please contact the
+   FEMA GO Helpdesk at femago@fema.dhs.gov or (877) 585-3242, Monday through Friday,
+   9 a.m. – 6 p.m. Eastern Time (ET). For programmatic or grants management questions,
+   please contact your Program Analyst or Grants Management Specialist. If applicants do not
+   know who to contact or if there are programmatic questions or concerns, please contact the
+
+
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                    12
+
+
+   FEMA Grants News by phone at (800) 368-6498 or by email at fema-grants-
+   news@fema.dhs.gov, Monday through Friday, 9 a.m. – 5 p.m. ET.
+
+       c.     Anticipated Award Date:                        No later than September 30, 2024
+
+       d.     Other Key Dates
+
+                  Event                          Suggested Deadline for Completion
+    Obtaining Unique Entity Identifier
+                                          Before actual submission deadline
+    (UEI) number
+    Obtaining a valid Employer
+                                          Before actual submission deadline
+    Identification Number (EIN)
+    Creating an account with login.gov    Before actual submission deadline
+    Registering in SAM or updating SAM
+                                          Before actual submission deadline
+    registration
+    Registering Organization in FEMA
+                                          Prior to beginning application
+    GO
+    Submitting complete application in
+                                          By the submission deadline
+    FEMA GO
+
+2. Agreeing to Terms and Conditions of the Award
+   By submitting an application, applicants agree to comply with the requirements of this
+   NOFO and the terms and conditions of the award, should they receive an award.
+
+3. Address to Request Application Package
+   Applications are processed through the FEMA GO system. To access the system, go to
+   FEMA GO.
+
+   Hard copies of the NOFO can be downloaded at Grants.gov or obtained via email from the
+   Awarding Office points of contact listed in Section G of this NOFO, “DHS Awarding
+   Agency Contact Information” or by TTY (800) 462-7585.
+
+4. Requirements: Obtain a Unique Entity Identifier (UEI) and Register in the System for
+   Award Management (SAM.gov)
+   Each applicant, unless they have a valid exception under 2 CFR §25.110, must:
+          1) Be registered in SAM.gov before application submission.
+          2) Provide a valid UEI in its application.
+          3) Continue to always maintain an active System for Award Management (SAM)
+              registration with current information during the Federal Award process.
+
+   Note: Per 2 C.F.R. § 25.300, subrecipients are NOT required to go through the full SAM
+   registration process. First-tier subrecipients (meaning entities receiving funds directly from
+   the recipient) are only required to obtain a UEI through SAM, but they are not required to
+   complete the full SAM registration to obtain a UEI. Recipients may not make subawards
+   unless the subrecipient has obtained and provided the UEI.
+
+
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                13
+
+
+   Lower-tier subrecipients (meaning entities receiving funds passed through by a higher-tier
+   subrecipient) are not required to have a UEI and are not required to register in SAM.
+   Recipients are also not permitted to require subrecipients to register in SAM.
+
+5. Steps Required to Obtain a UEI, Register in SAM.gov, and Submit an Application
+   Applying for an award under this program is a multi-step process and requires time to
+   complete. Applicants are encouraged to register early as the registration process can take four
+   weeks or more to complete. Therefore, registration should be done in sufficient time to
+   ensure it does not impact your ability to meet required submission deadlines.
+   Please review the table above for estimated deadlines to complete each of the steps listed.
+   Failure of an applicant to comply with any of the required steps before the deadline for
+   submitting an application may disqualify that application from funding.
+
+   To apply for an award under this program, all applicants must:
+
+       a. Apply for, update, or verify their Employer Identification Number (EIN) from the
+          Internal Revenue Service;
+       b. In the application, provide an UEI number;
+       c. Have an account with login.gov;
+       d. Register for, update, or verify their SAM account and UEI and ensure the account is
+          active before submitting the application;
+       e. Register in FEMA GO, add the organization to the system, and establish the
+          Authorized Organization Representative (AOR). The organization’s electronic
+          business point of contact (EBiz POC) from the SAM registration may need to be
+          involved in this step. For step-by-step instructions, see the FEMA GO Startup Guide.
+       f. Submit the complete application in FEMA GO; and
+       g. Continue to maintain an active SAM registration with current information at all times
+          during which it has an active federal award or an application or plan under
+          consideration by a federal awarding agency. As part of this, applicants must also
+          provide information on an applicant’s immediate and highest-level owner and
+          subsidiaries, as well as on all predecessors that have been awarded federal contracts
+          or federal financial assistance within the last three years, if applicable.
+
+   Applicants are advised that FEMA may not make a federal award until the applicant has
+   complied with all applicable SAM requirements. Therefore, an applicant’s SAM registration
+   must be active not only at the time of application, but also during the application review
+   period and when FEMA is ready to make a federal award. Further, as noted above, an
+   applicant’s or recipient’s SAM registration must remain active for the duration of an active
+   federal award. If an applicant’s SAM registration is expired at the time of application, expires
+   during application review, or expires any other time before award, FEMA may determine
+   that the applicant is not qualified to receive a federal award and use that determination as a
+   basis for making a federal award to another applicant.
+
+   Per 2 C.F.R. § 25.110(c)(2)(iii), if an applicant is experiencing exigent circumstances that
+   prevents it from obtaining an UEI number and completing SAM registration prior to
+   receiving a federal award, the applicant must notify FEMA as soon as possible by contacting
+
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                14
+
+
+   fema-grants-news@fema.dhs.gov and providing the details of the circumstances that prevent
+   completion of these requirements. If FEMA determines that there are exigent circumstances
+   and FEMA has decided to make an award, the applicant will be required to obtain an UEI
+   number, if applicable, and complete SAM registration within 30 days of the federal award
+   date.
+
+   Further, following acceptance of a federal award, a recipient’s SAM registration must remain
+   active for the duration of the award. If a recipient’s SAM registration expires during the
+   federal award period of performance, FEMA may impose one or more remedy for
+   noncompliance (see 2 C.F.R. § 200.339), which could include terminating the federal award.
+
+6. Electronic Delivery
+   DHS is participating in the Grants.gov initiative to provide the grant community with a single
+   site to find and apply for grant funding opportunities. DHS encourages or requires applicants
+   to submit their applications online through Grants.gov, depending on the funding
+   opportunity.
+
+   For this funding opportunity, FEMA requires applicants to submit applications through
+   FEMA GO.
+
+7. How to Register to Apply
+a. General Instructions:
+   Registering and applying for an award under this program is a multi-step process and
+   requires time to complete. Read the instructions below about registering to apply for FEMA
+   funds. Applicants should read the registration instructions carefully and prepare the
+   information requested before beginning the registration process. Reviewing and assembling
+   the required information before beginning the registration process will alleviate last-minute
+   searches for required information.
+
+   The registration process can take up to four weeks to complete. To ensure an application
+   meets the deadline, applicants are advised to start the required steps well in advance of their
+   submission.
+
+   Organizations must have an UEI number, an EIN, and an active SAM registration and
+   Grants.gov account to apply for a federal award under this funding opportunity.
+
+b. Obtain an UEI Number:
+   All entities applying for funding, including renewal funding, must have a UEI number.
+   Applicants must enter the UEI number in the applicable data entry field on the SF-424 form.
+
+   For more detailed instructions for obtaining a UEI number, refer to: SAM.gov.
+
+c. Obtain Employer Identification Number:
+   All entities applying for funding must provide an Employer Identification Number (EIN).
+   The EIN can be obtained from the IRS by visiting: Apply for an Employer Identification
+   Number (EIN) Online.
+
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                       15
+
+
+d. Create a login.gov Account:
+   Applicants must have a login.gov account in order to register with SAM or update their SAM
+   registration. Applicants can create a login.gov account by visiting: login.gov.
+
+      Applicants only have to create a login.gov account once. For applicants that are existing
+      SAM users, use the same email address for the login.gov account as with SAM.gov so that
+      the two accounts can be linked.
+
+      For more information on the login.gov requirements for SAM registration, refer to:
+      SAM.gov.
+
+e. Register with SAM:
+   All applicants applying online through FEMA GO must register with SAM. Failure to
+   register with SAM will prevent an applicant from completing the application in FEMA GO.
+   SAM registration must be renewed annually. Organizations will be issued a UEI number with
+   the completed SAM registration.
+
+      For more detailed instructions for registering with SAM, refer to Step 2: Register with SAM.
+
+      Note: Per 2 C.F.R. § 25.200, applicants must also provide the applicant’s immediate and
+      highest-level owner, subsidiaries, and predecessors that have been awarded federal contracts
+      or federal financial assistance within the last three years, if applicable.
+
+I.    ADDITIONAL SAM REMINDERS
+      Existing SAM.gov account holders should check their account to make sure it is “ACTIVE.”
+      SAM registration should be completed at the very beginning of the application period and
+      should be renewed annually to avoid being “INACTIVE.” Please allow plenty of time
+      before the grant application submission deadline to obtain an UEI number and then to
+      register in SAM. It may be four weeks or more after an applicant submits the SAM
+      registration before the registration is active in SAM, and then it may be an additional
+      24 hours before FEMA’s system recognizes the information.
+
+      It is imperative that the information applicants provide is correct and current. Please ensure
+      that your organization’s name, address, and EIN are up to date in SAM and that the UEI
+      number used in SAM is the same one used to apply for all other FEMA awards. Payment
+      under any FEMA award is contingent on the recipient’s having a current SAM registration.
+
+II.   HELP WITH SAM
+      The SAM quick start guide for new recipient registration and SAM video tutorial for new
+      applicants are tools created by the General Services Administration (GSA) to assist those
+      registering with SAM. If applicants have questions or concerns about a SAM registration,
+      please contact the Federal Service Desk at https://www.fsd.gov/gsafsd_sp or call toll free
+      (866) 606-8220.
+
+f. Register in FEMA GO, Add the Organization to the System, and Establish the AOR:
+
+
+
+
+                                        FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                               16
+
+
+   Applicants must register in FEMA GO and add their organization to the system. The
+   organization’s electronic business point of contact (EBiz POC) from the SAM registration
+   may need to be involved in this step. For step-by-step instructions, see FEMA GO Startup
+   Guide.
+
+   Note: FEMA GO will support only the most recent major release of the following browsers:
+      • Google Chrome
+      • Internet Explorer
+      • Mozilla Firefox
+      • Apple Safari
+      • Microsoft Edge
+
+   Users who attempt to use tablet type devices or other browsers may encounter issues with
+   using FEMA GO.
+
+8. Submitting the Final Application
+   Applicants will be prompted to submit the standard application information and any
+   program-specific information required as described in Section D.10 of this NOFO, “Content
+   and Form of Application Submission.” The Standard Forms (SF) may be accessed in the
+   Forms tab under the SF-424 family on Grants.gov. Applicants should review these forms
+   before applying to ensure they have all the information required.
+
+   After submitting the final application, FEMA GO will provide either an error message or a
+   successfully received transmission in the form of an email sent to the AOR that submitted the
+   application. Applicants using slow internet connections, such as dial-up connections, should
+   be aware that transmission can take some time before FEMA GO receives your application.
+
+   For additional application submission requirements, including program-specific
+   requirements, please refer to the subsection titled “Content and Form of Application
+   Submission” under Section D of this NOFO.
+
+9. Timely Receipt Requirements and Proof of Timely Submission
+   All applications must be completed in FEMA GO by the application deadline. FEMA GO
+   automatically records proof of timely submission and the system generates an electronic
+   date/time stamp when FEMA GO successfully receives the application. The individual with
+   the AOR role that submitted the application will also receive the official date/time stamp and
+   a FEMA GO tracking number in an email serving as proof of their timely submission on the
+   date and time that FEMA GO received the application.
+
+   Applicants who experience system-related issues will be addressed until 3 p.m. ET on
+   the date applications are due. No new system-related issues will be addressed after this
+   deadline. Applications not received by the application submission deadline will not be
+   accepted.
+
+10. Content and Form of Application Submission
+a. Standard Required Application Forms and Information
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                               17
+
+
+   The following forms or information are required to be submitted via FEMA GO. The
+   Standard Forms (SF) are also available at SF-424 family on Grants.gov.
+   • SF-424, Application for Federal Assistance
+   • Grants.gov Lobbying Form, Certification Regarding Lobbying
+   • SF-424A, Budget Information (Non-Construction)
+          o For construction under an award, submit SF-424C, Budget Information
+             (Construction), in addition to or instead of SF-424A
+   • SF-424B, Standard Assurances (Non-Construction)
+          o For construction under an award, submit SF-424D, Standard Assurances
+             (Construction), in addition to or instead of SF-424B
+   • SF-LLL, Disclosure of Lobbying Activities
+
+b. Program-Specific Required Forms and Information
+   The following program-specific forms or information are required to be submitted in FEMA
+   GO:
+
+   •   SSP-A Application Worksheet: Additional certifications for the funds requested, budget
+       instructions, and any subapplicant information known at the time of application
+       submission. Applicants must upload their completed worksheet to the Project Worksheet
+       section in FEMA GO as an Excel file with the naming convention
+       SSPA_Application_Worksheet.
+
+   •   For nonprofit applicants only: Submit evidence entity meets definition of nonprofit
+       organization in 2 C.F.R. 200.1; for example, submit an IRS Form 990 with your
+       application if you have previously filed one. Applicants must upload IRS Form 990s to
+       the Additional Attachment (General Attachment) section in FEMA GO as a PDF with the
+       naming convention SSPA_IRS_990_Form.
+
+   •   For applicants with known nonprofit organization subapplicants only: Applicants
+       must verify the nonprofit status of subapplicants and retain a copy of the documentation
+       submitted by the subapplicant(s) as evidence of their nonprofit status for auditing
+       purposes.
+
+   •   For renovations or modifications to rented real property only: If an applicant or
+       subapplicant is requesting funding for renovations or modifications to rented real
+       property, submit the rental agreement addressing space, any limitations of use, and rental
+       period. Applicants must upload documents to the Additional Attachment (General
+       Attachment) section in FEMA GO as a PDF with the naming convention
+       SSPA_Rental_Property. Upload one document for each individual rental agreement.
+
+   •   For Reimbursement Funding Requests only:
+             o Alien Registration Number (A-Number) or evidence of DHS processing
+               (e.g., I-94, I-385, I-860, I-862): A summary list reporting A-Numbers, names,
+               corresponding DHS release dates of the served population, and corresponding
+               service dates of the served population. Please do not send copies of the forms
+               themselves. Applicants must use the provided A-Number Submission Template
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                 18
+
+
+                to populate the information, then upload to the Project Worksheet Section in
+                FEMA as an Excel file with the naming convention
+                SSPA_ANumber_Worksheet. Recipients must ensure that full A-Numbers and
+                accurate dates of service are provided.
+              o Proof of Purchase Documentation:
+                          For each requested allowable activity service category (See
+                             Appendix A), provide one example of proof of payment (e.g.,
+                             canceled check, credit card statement, etc.) and a receipt reflecting
+                             the purchase. Applicants must upload proofs of payment and
+                             receipts to the Additional Attachment (General Attachment)
+                             section in FEMA GO as a PDF with the naming convention
+                             SSPA_Costs_Under_5000. Upload one document inclusive of all
+                             proofs of payment and receipts under $5,000. In the document,
+                             identify which proofs of payment and receipts are for which
+                             allowable activity service category.
+                          For each purchase or allowable cost of $5,000 or more, provide
+                             proof of payment and a receipt reflecting the purchase or other
+                             documentation demonstrating calculation and allocation of cost in
+                             accordance with 2 C.F.R. Part 200, Subpart E. Applicants must
+                             upload proofs of payment and receipts to the Additional
+                             Attachment (General Attachment) section in FEMA GO as a PDF
+                             with the naming convention SSPA_Costs_Over_5000. Upload one
+                             document inclusive of all proofs of payment and receipts of $5,000
+                             or more. In the document, identify which proofs of payment and
+                             receipts are for which allowable activity service category (See
+                             Appendix A).
+                          Note: This information will be required when recipients draw
+                             down funds.
+
+11. Other Submission Requirements
+    Notice to applicants applying with known nonprofit organizations with 501(c) (3) IRS status
+    subapplicants:
+
+   For nonprofit organizations that have been approved as exempt from federal income tax
+   under section 501(c)(3) of the Internal Revenue Code, FEMA may request a copy of IRS’s
+   approval of the applicant’s or subapplicant’s tax exempt status (e.g., a determination letter or
+   affirmation letter).
+
+   Applicants requesting pre-award costs must follow the instructions outlined in Section
+   D.13.b. Pre-Award Costs.
+
+12. Intergovernmental Review
+    An intergovernmental review may be required. Applicants must contact their state’s Single
+    Point of Contact (SPOC) to comply with the state’s process under Executive Order 12372
+    (See Executive Order 12372; Intergovernmental Review (SPOC List)).
+13. Funding Restrictions and Allowable Costs
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                               19
+
+
+   Federal funds made available through this award may be used for the purpose set forth in this
+   NOFO and the terms and conditions of the award and must be consistent with the statutory
+   authority for the award. Award funds may not be used for matching funds for any other
+   federal awards, lobbying, or intervention in federal regulatory or adjudicatory proceedings. In
+   addition, federal funds may not be used to sue the Federal Government or any other
+   government entity.
+
+   All costs charged to federal awards (including both federal funding and any non-federal
+   matching or cost sharing funds) must comply with applicable statutes, rules and regulations,
+   and policies, this NOFO, and the terms and conditions of the federal award. They must also
+   comply with the Uniform Administrative Requirements, Cost Principles, and Audit
+   Requirements at 2 C.F.R. Part 200 unless otherwise indicated in the NOFO or the terms and
+   conditions of the federal award. This includes, among other requirements, that costs must be
+   incurred, and products and services must be delivered within the budget period. See 2 C.F.R.
+   § 200.403(h) (referring to budget periods, which for FEMA awards under this program is the
+   same as the period of performance).
+
+   The following identifies a list of activities for which a recipient may not use federal funds
+   and any cost sharing or matching funds under federal awards:
+      • Matching or cost sharing requirements for other federal grants and cooperative
+          agreements (see 2 C.F.R. § 200.306)
+      • Lobbying or other prohibited activities under 18 U.S.C. § 1913 or 2 C.F.R. § 200.450
+      • Prosecuting claims against the federal government or any other government entity
+          (see 2 C.F.R. § 200.435). See subsections below for information on any other funding
+          restrictions.
+
+   SSP funds may not be used for costs associated with new construction or to purchase real
+   estate.
+
+   Costs associated with renovations or modifications to existing facilities may not exceed
+   $250,000.00 for the entire application budget. All activities and programs funded by FEMA,
+   including grant-funded projects, must comply with federal Environmental and Historic
+   Preservation laws, Executive Orders, regulations, and policies, as applicable. See Section
+   F.3.c. Environmental Planning and Historic Preservation Compliance.
+
+a. Prohibitions on Expending FEMA Award Funds for Covered Telecommunications
+   Equipment or Services
+   Recipients, subrecipients, and their contractors must comply with the prohibitions set forth in
+   Section 889 of the John S. McCain National Defense Authorization Act for Fiscal Year 2019,
+   Pub. L. No. 115-232 (2018) (FY 2019 NDAA) and 2 C.F.R. §§ 200.216, 200.327, 200.471,
+   and Appendix II to 2 C.F.R. Part 200. The FY 2019 NDAA and these regulations, as they
+   apply to recipients, subrecipients, and their contractors and subcontractors, provide for two
+   distinct prohibitions: (1) prevent the use of federal award funds to procure or obtain covered
+   telecommunications equipment or services; and (2) prevent the use of federal award funds to
+   contract with an entity that uses such covered telecommunications equipment or services.
+
+
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                  20
+
+
+      Guidance is available at FEMA Policy #405-143-1 - Prohibitions on Expending FEMA
+      Award Funds for Covered Telecommunications Equipment or Services.
+
+      Additional guidance is available at Contract Provisions Guide: Navigating Appendix II to
+      Part 200 - Contract Provisions for Non-Federal Entity Contracts Under Federal Awards
+      (fema.gov).
+      FEMA recipients and subrecipients may not use any FEMA funds under open or new awards
+      to:
+          • Procure or obtain any equipment, system, or service that uses covered
+            telecommunications equipment or services as a substantial or essential component of
+            any system, or as critical technology of any system;
+          • Enter into, extend, or renew a contract to procure or obtain any equipment, system, or
+            service that uses covered telecommunications equipment or services as a substantial
+            or essential component of any system, or as critical technology of any system; or
+          • Enter into, extend, or renew contracts with entities that use covered
+            telecommunications equipment or services as a substantial or essential component of
+            any system, or as critical technology as part of any system.
+
+I.    REPLACEMENT EQUIPMENT AND SERVICES
+      FEMA grant funding may be permitted to procure replacement equipment and services
+      impacted by this prohibition, provided the costs are otherwise consistent with the
+      requirements of the NOFO.
+
+II.   DEFINITIONS
+      Per section 889(f)(2)-(3) of the FY 2019 NDAA and 2 C.F.R. § 200.216, covered
+      telecommunications equipment or services means:
+             i.  Telecommunications equipment produced by Huawei Technologies Company or
+                 ZTE Corporation, (or any subsidiary or affiliate of such entities);
+            ii.  For the purpose of public safety, security of Government facilities, physical
+                 security surveillance of critical infrastructure, and other national security
+                 purposes, video surveillance and telecommunications equipment produced by
+                 Hytera Communications Corporation, Hangzhou Hikvision Digital Technology
+                 Company, or Dahua Technology Company (or any subsidiary or affiliate of such
+                 entities);
+           iii. Telecommunications or video surveillance services provided by such entities or
+                 using such equipment; or
+           iv.   Telecommunications or video surveillance equipment or services produced or
+                 provided by an entity that the Secretary of Defense, in consultation with the
+                 Director of National Intelligence or the Director of the Federal Bureau of
+                 Investigation, reasonably believes to be an entity owned or controlled by, or
+                 otherwise connected to, the People’s Republic of China.
+
+      Examples of the types of products covered by this prohibition include phones, internet, video
+      surveillance, and cloud servers when produced, provided, or used by the entities listed in the
+      definition of “covered telecommunications equipment or services.” See 2 C.F.R. § 200.471.
+
+
+
+                                        FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                               21
+
+
+b. Pre-Award Costs
+   Pre-award costs are costs incurred prior to the effective date of the federal award or
+   subaward. Pre-award costs are allowable only with the prior written approval of DHS/FEMA
+   and if they are included in the award agreement. To request pre-award costs, applicants must
+   include the costs with their application. The application must outline what the pre-award
+   costs are for and include a detailed budget break-out of all costs included in the funding
+   request.
+
+   The pre-award cost must meet the requirements of 2 C.F.R. Part 200.458, which provides
+   that the cost must be necessary for efficient and timely performance of the grant’s scope of
+   work. FEMA reserves the right to re-evaluate and disallow pre-award costs at time of award
+   monitoring if it is later determined that the services were not properly procured or do not
+   satisfy the requirements of 2 C.F.R. Part 200.458.
+
+c. Management and Administration (M&A) Costs
+   Recipients may expend up to 5% of an SSP award for allowable M&A costs. Subrecipients
+   may also expend up to 5% of their SSP subaward for allowable M&A costs. These may
+   include services providing grants management, including grant application preparation.
+   These may also include recordkeeping (e.g., IT assistance (contracts and external support)
+   and costs associated with creating a database and/or tracking system to assist with managing
+   SSP funds as well as cybersecurity assessments and enhancements).
+
+d. Indirect Facilities & Administrative (F&A) Costs
+   Indirect costs are allowable under this program as described in 2 C.F.R. Part 200, including 2
+   C.F.R. § 200.414. Indirect (F&A) costs (IDC) mean those costs incurred for a common or
+   joint purpose benefitting more than one cost objective and not readily assignable to the cost
+   objectives specifically benefitted, without effort disproportionate to the results achieved.
+   IDCs are allowable by the recipient [and subrecipients] as described in 2 C.F.R. Part 200,
+   including 2 C.F.R. § 200.414. Applicants with a current negotiated IDC rate agreement who
+   desire to charge indirect costs to a federal award must provide a copy of their IDC rate
+   agreement with their applications. Not all applicants are required to have a current negotiated
+   IDC rate agreement. Applicants that are not required to have a negotiated IDC rate agreement
+   but are required to develop an IDC rate proposal must provide a copy of their proposal with
+   their applications. Applicants who do not have a current negotiated IDC rate agreement
+   (including a provisional rate) and wish to charge the de minimis rate must reach out to
+   FEMA for further instructions. Applicants who wish to use a cost allocation plan in lieu of an
+   IDC rate proposal must reach out to the FEMA Point of Contact for further instructions. As it
+   relates to the IDC for subrecipients, a recipient must follow the requirements of 2 C.F.R. §§
+   200.332 and 200.414 in approving the IDC rate for subawards.
+
+   For information on procedures for establishing indirect cost rates, see FEMA’s Preparedness
+   Grants Manual.
+
+e. Evaluation Costs
+   Evaluation costs are allowable.
+
+
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                22
+
+
+f. Other Direct Costs
+   Refer to Appendix A for a description of eligible activities.
+E. Application Review Information
+1. Application Evaluation Criteria
+a. Programmatic Criteria
+   FEMA will review applications to ensure eligibility and compliance with all application
+   requirements provided in this NOFO, as well as apply the following programmatic criteria:
+
+          Activities proposed are only those identified as allowable in this NOFO.
+          The applicant demonstrates their capacity, either organically or through a partnership,
+           to provide each SSP allowable activity proposed for funding.
+          Proposed deliverables are consistent with the objectives and priorities of the SSP.
+          Project timelines are realistic, attainable, and conform to the performance period of
+           the SSP.
+          Proposed costs are allowable, reasonable, and cost-effective in relation to proposed
+           activities.
+          The applicant possesses the organic capacity to manage a federal award consistent
+           with Federal statutes, regulations, and the terms and conditions of the Federal award.
+
+b. Financial Integrity Criteria
+   Prior to making a federal award, FEMA is required by 31 U.S.C. § 3354, as enacted by the
+   Payment Integrity Information Act of 2019, Pub. L. No. 116-117 (2020); 41 U.S.C. § 2313;
+   and 2 C.F.R. § 200.206 to review information available through any Office of Management
+   and Budget (OMB)-designated repositories of governmentwide eligibility qualification or
+   financial integrity information, including whether SAM.gov identifies the applicant as being
+   excluded from receiving federal awards or is flagged for any integrity record submission.
+   FEMA may also pose additional questions to the applicant to aid in conducting the pre-award
+   risk review. Therefore, application evaluation criteria may include the following risk-based
+   considerations of the applicant:
+   i. Financial stability.
+   ii. Quality of management systems and ability to meet management standards.
+   iii. History of performance in managing federal awards.
+   iv. Reports and findings from audits.
+   v. Ability to effectively implement statutory, regulatory, or other requirements.
+
+c. Supplemental Financial Integrity Criteria and Review
+   Prior to making a federal award where the anticipated total federal share will be greater than
+   the simplified acquisition threshold, currently $250,000.
+
+   FEMA is required by 41 U.S.C. § 2313 and 2 C.F.R. § 200.206(a)(2) to review and consider
+   any information about the applicant, including information on the applicant’s immediate and
+   highest-level owner, subsidiaries, and predecessors, if applicable, that is in the designated
+   integrity and performance system accessible through the System for Award Management
+   (SAM).
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                23
+
+
+   i. An applicant, at its option, may review information in FAPIIS and comment on
+       any information about itself that a federal awarding agency previously entered.
+   ii. FEMA will consider any comments by the applicant, in addition to the other
+       information in FAPIIS, in making a judgment about the applicant’s integrity,
+       business ethics, and record of performance under federal awards when completing
+       the review of risk posed by applicants as described in 2 C.F.R. § 200.206.
+
+2. Review and Selection Process
+a. Security Review
+   The DHS Office of Intelligence and Analysis receives a list of potential SSP recipient
+   organizations, which it reviews against U.S. intelligence community reporting. The security
+   review occurs before the review and selection process. The information provided for the
+   security review is limited to the applicant’s name and physical address. Any potentially
+   derogatory information, as well as any potentially mitigating information, that could assist in
+   determining whether a security risk exists, is sent to FEMA and is used in making award
+   decisions.
+
+b. Subrecipient Process
+   For application packages that include subapplicants, the applicant must review subapplicants
+   based on the eligibility criteria (Section C.1). As part of the review for SSP, the applicant
+   must:
+
+       •   Conduct an eligibility review; and,
+       •   Review and include only complete subapplicant application packages (include all
+           application submission requirements).
+c. Review and Selection Process
+   All proposed funding applications will undergo a federal review by DHS/FEMA to verify
+   compliance with all administrative and eligibility criteria defined in the NOFO. The federal
+   review will be conducted by DHS staff, who will use a checklist to verify compliance with
+   all administrative and eligibility criteria identified in the NOFO.
+
+F. Federal Award Administration Information
+1. Notice of Award
+   Before accepting the award, the AOR and recipient should carefully read the award package.
+   The award package includes instructions on administering the grant award and the terms and
+   conditions associated with responsibilities under federal awards. Recipients must accept all
+   conditions in this NOFO as well as any specific terms and conditions in the Notice of
+   Award to receive an award under this program.
+
+   FEMA will provide the federal award package to the applicant electronically via FEMA GO.
+   Award packages include an Award Letter, Summary Award Memo, Agreement Articles, and
+   Obligating Document. An email notification of the award package will be sent through
+   FEMA’s grant application system to the AOR that submitted the application.
+
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                 24
+
+
+   Recipients must accept their awards no later than 45 days from the award date. The recipient
+   shall notify FEMA of its intent to accept and proceed with work under the award through the
+   FEMA GO system.
+
+   Funds will remain on hold until the recipient accepts the award through the FEMA GO
+   system and all other conditions of the award have been satisfied or until the award is
+   otherwise rescinded. Failure to accept a grant award within the specified timeframe may
+   result in a loss of funds.
+
+2. Pass-Through Requirements
+   FEMA strongly encourages recipients to pass through funds to eligible subrecipients. See
+   Section C.3. Subapplicant Eligibility Criteria.
+3. Administrative and National Policy Requirements
+   In addition to the requirements of this section and in this NOFO, FEMA may place specific
+   terms and conditions on individual awards in accordance with 2 C.F.R. Part 200.
+
+a. DHS Standard Terms and Conditions
+   All successful applicants for DHS grant and cooperative agreements are required to comply
+   with DHS Standard Terms and Conditions, which are available online at: DHS Standard
+   Terms and Conditions.
+
+   The applicable DHS Standard Terms and Conditions will be those in effect at the time the
+   award was made. What terms and conditions will apply for the award will be clearly stated in
+   the award package at the time of award.
+
+b. Ensuring the Protection of Civil Rights
+   As the Nation works towards achieving the National Preparedness Goal, it is important to
+   continue to protect the civil rights of individuals. Recipients and subrecipients must carry out
+   their programs and activities, including those related to the building, sustainment, and
+   delivery of core capabilities, in a manner that respects and ensures the protection of civil
+   rights for protected populations.
+
+   Federal civil rights statutes, such as Section 504 of the Rehabilitation Act of 1973 and Title
+   VI of the Civil Rights Act of 1964, along with DHS and FEMA regulations, prohibit
+   discrimination on the basis of race, color, national origin, sex, religion, age, disability,
+   limited English proficiency, or economic status in connection with programs and activities
+   receiving federal financial assistance from FEMA, as applicable.
+   The DHS Standard Terms and Conditions include a fuller list of the civil rights provisions
+   that apply to recipients. These terms and conditions can be found in the DHS Standard Terms
+   and Conditions. Additional information on civil rights provisions is available at External
+   Civil Rights Division webpage.
+
+   Monitoring and oversight requirements in connection with recipient compliance with federal
+   civil rights laws are also authorized pursuant to 44 C.F.R. Part 7 or other applicable
+   regulations.
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                 25
+
+
+
+   In accordance with civil rights laws and regulations, recipients and subrecipients must ensure
+   the consistent and systematic fair, just, and impartial treatment of all individuals, including
+   individuals who belong to underserved communities that have been denied such treatment.
+
+c. Environmental Planning and Historic Preservation (EHP) Compliance
+   As a federal agency, FEMA is required to consider the effects of its actions on the
+   environment and historic properties to ensure that all activities and programs funded by
+   FEMA, including grant-funded projects, comply with federal EHP laws, Executive Orders,
+   regulations, and policies, as applicable.
+   Recipients and subrecipients proposing projects that have the potential to impact the
+   environment, including, but not limited to, the construction of communication towers,
+   modification or renovation of existing buildings, structures, and facilities, or new
+   construction including replacement of facilities, must participate in the FEMA EHP
+   review process. The EHP review process involves the submission of a detailed project
+   description along with any supporting documentation requested by FEMA in order to
+   determine whether the proposed project has the potential to impact environmental resources
+   including, but not limited to, threatened or endangered species and historic properties; and
+   identify mitigation measures and/or alternative courses of action that may lessen any impact
+   to those resources.
+
+   In some cases, FEMA is also required to consult with other regulatory agencies and the
+   public in order to complete the review process. Federal law requires EHP review to be
+   completed before federal funds are released to carry out proposed projects. FEMA may not
+   be able to fund projects that are not in compliance with applicable EHP laws, Executive
+   Orders, regulations, and policies. FEMA may recommend mitigation measures and/or
+   alternative courses of action to lessen any impact to environmental resources and bring the
+   project into compliance with EHP requirements.
+   Guidance on the EHP process is found at Environmental Planning and Historic Preservation.
+   The site contains links to various documents including those identifying agency EHP
+   responsibilities and program requirements, such as implementation of the National
+   Environmental Policy Act and other EHP laws, regulations, and Executive Orders. DHS and
+   FEMA EHP policy is also found in the EHP Directive & Instruction. All FEMA actions,
+   including grant-funded actions, must comply with National Flood Insurance Program criteria
+   or any more restrictive federal, state, or local floodplain management standards or building
+   code (44 C.F.R. § 9.11(d)(6)).
+
+   All FEMA-funded non-critical actions in 1% annual chance floodplains (also known as 100-
+   year floodplains) that involve new construction or substantial improvement of structures
+   must be elevated, at a minimum, to the lower of:
+
+       •   Two feet above the 1% annual chance flood elevation (also known as the base flood
+           elevation), in accordance with the Federal Flood Risk Management Standard
+           (FFRMS) “Freeboard Value Approach” (FVA); or
+
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                26
+
+
+       •   The 0.2% annual chance flood elevation. Where 0.2% annual chance flood elevations
+           are not available, such actions must be elevated to at least two feet above the 1%
+           annual chance flood elevation.
+   All FEMA-funded critical actions in 0.2% annual chance floodplains (also known as 500-
+   year floodplains) that involve new construction or substantial improvement of structures
+   must be elevated, at a minimum, to the higher of:
+
+       •   Three feet above the 1% annual chance flood elevation; or
+
+       •   The 0.2% annual chance flood elevation. Where 0.2% annual chance flood elevations
+           are not available, such actions must be elevated to at least three feet above the 1%
+           annual chance flood elevation.
+   See Executive Order 11988, Floodplain Management, as amended by Executive Order
+   13690, Establishing a Federal Flood Risk Management Standard and a Process for Further
+   Soliciting and Considering Stakeholder Input.
+   DHS and FEMA EHP policy is found in directives and instructions available on the
+   FEMA.gov EHP page, the FEMA website page that includes documents regarding EHP
+   responsibilities and program requirements, including implementation of the National
+   Environmental Policy Act and other EHP regulations and Executive Orders.
+   The GPD EHP screening form is located on this FEMA Form. Additionally, all recipients
+   under this funding opportunity are required to comply with FEMA GPD EHP Policy
+   Guidance, FEMA Policy #108-023-1.
+d. Mandatory Disclosures
+   The non-federal entity or applicant for a Federal award must disclose, in a timely manner, in
+   writing to the Federal awarding agency or pass-through entity all violations of Federal
+   criminal law involving fraud, bribery, or gratuity violations potentially affecting the Federal
+   award. (2 C.F.R. 200.113)
+
+   Please note applicants and recipients may report issues of fraud, waste, abuse, and
+   mismanagement, or other criminal or noncriminal misconduct to the Office of Inspector
+   General (OIG) Hotline. The toll-free numbers to call are 1-800-323-8603, and TTY 1-844-
+   889-4357.
+4. Reporting
+   Recipients are required to submit various financial and programmatic reports as a condition
+   of award acceptance. Future awards and funds drawdown may be withheld if these reports
+   are delinquent.
+
+a. Financial Reporting Requirements
+I. FEDERAL FINANCIAL REPORT (FFR)
+   Recipients must report obligations and expenditures through the FFR form (SF-425) to
+   FEMA.
+
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                    27
+
+
+      Recipients may review the Federal Financial Reporting Form (FFR) (SF-425) at Grants.gov
+      Post-Award Reporting Forms webpage.
+
+      Recipients must file the FFR electronically using FEMA GO.
+
+II.   FFR REPORTING PERIODS AND DUE DATES
+      An FFR must be submitted quarterly throughout the POP, including partial calendar quarters,
+      as well as in periods where no grant award activity occurs. The final FFR is due within 120
+      calendar days after the end of the POP. Future awards and fund drawdowns may be withheld
+      if these reports are delinquent, demonstrate lack of progress, or are insufficient in detail.
+
+      Except for the final FFR due at 120 days after the end of the POP for purposes of closeout,
+      the following reporting periods and due dates apply for the FFR:
+
+                     Reporting Period              Report Due Date
+                  October 1 – December 31        January 30
+                  January 1 – March 31           April 30
+                  April 1 – June 30              July 30
+                  July 1 – September 30          October 30
+
+b. Programmatic Performance Reporting Requirements
+I. PERFORMANCE PROGRESS Report (PPR)
+   Recipients are required to submit a performance progress report on a quarterly basis
+   throughout the POP through FEMA GO, including partial calendar quarters, as well as in
+   periods where no grant award activity occurs. PPRs are due 30 calendar days after the end of
+   each reporting period. The final PPR is due within 120 calendar days after the end of the
+   POP.
+      The report shall include:
+      • Quantitative data for all applicable SSP performance measures (e.g., how many nights of
+         congregate shelter, how many meals served);
+      • Description of activities during the reporting period, as applicable; and,
+      • Narrative summaries of SSP funding impacts and any relevant organizational
+         partnerships.
+
+  II. PPR Periods and Due Dates (PPR)
+      The following reporting periods and due dates apply for the PPR:
+
+                       Reporting Period             Report Due Date
+                   October 1–December 31          January 30
+                   January 1–March 31             April 30
+                   April 1–June 30                July 30
+                   July 1–September 30            October 30
+
+c. Closeout Reporting Requirements
+
+
+
+                                          FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                   28
+
+
+I.    CLOSEOUT REPORTING
+      Within 120 calendar days after the end of the period of performance for the prime award or
+      after an amendment has been issued to close out an award before the original POP ends,
+      recipients must liquidate all financial obligations and must submit the following:
+              i. The final request for payment, if applicable.
+             ii. The final FFR (SF-425).
+           iii. The final progress report detailing all accomplishments, including a narrative
+                 summary of the impact of those accomplishments throughout the period of
+                 performance. If applicable, the recipient must include with the final progress
+                 report an inventory of all construction projects.
+            iv.  Other documents required by this NOFO, terms and conditions of the award, or
+                 other FEMA guidance. If the final FFR and performance report periods coincide
+                 with the end of the period of performance, FEMA has discretion under 2 C.F.R.
+                 Part 200 to waive the last quarterly/semiannual/annual reports and only require
+                 the final FFR and performance report for closeout purposes. The recipient is
+                 responsible for returning any balances of unobligated or unliquidated funds that
+                 have been drawn down that are not authorized to be retained per 2 C.F.R. §
+                 200.344(d).
+
+      In addition, pass-through entities are responsible for closing out their subawards as described
+      in 2 C.F.R. § 200.344; subrecipients are still required to submit closeout materials within 90
+      calendar days of the period of performance end date. When a subrecipient completes all
+      closeout requirements, pass-through entities must promptly complete all closeout actions for
+      subawards in time for the recipient to submit all necessary documentation and information to
+      FEMA during the closeout of the prime award.
+
+      After the prime award closeout reports have been reviewed and approved by FEMA, a
+      closeout notice will be completed to close out the grant. The notice will indicate the period of
+      performance as closed, list any remaining funds that will be deobligated, and address the
+      requirement of maintaining the grant records for at least three years from the date of the final
+      FFR. The record retention period may be longer, such as due to an audit or litigation, for
+      equipment or real property used beyond the period of performance, or due to other
+      circumstances outlined in 2 C.F.R. § 200.334.
+
+      The recipient is responsible for refunding to FEMA any balances of unobligated cash that
+      FEMA paid that are not authorized to be retained per 2 C.F.R. § 200.344(d).
+
+II.   ADMINISTRATIVE CLOSEOUT
+      Administrative closeout is a mechanism for FEMA to unilaterally move forward with
+      closeout of an award using available award information in lieu of final reports from the
+      recipient per 2 C.F.R. § 200.344(h)-(i). It is a last resort available to FEMA, and if FEMA
+      needs to administratively close an award, this may negatively impact a recipient’s ability to
+      obtain future funding. This mechanism can also require FEMA to make cash or cost
+      adjustments and ineligible cost determinations based on the information it has, which may
+      result in identifying a debt owed to FEMA by the recipient.
+
+
+
+
+                                        FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                        29
+
+
+      When a recipient is not responsive to FEMA’s reasonable efforts to collect required reports
+      needed to complete the standard closeout process, FEMA is required under 2 C.F.R. §
+      200.344(h) to start the administrative closeout process within the regulatory timeframe.
+      FEMA will make at least three written attempts to collect required reports before initiating
+      administrative closeout. If the recipient does not submit all required reports in accordance
+      with 2 C.F.R. § 200.344, this NOFO, and the terms and conditions of the award, FEMA must
+      proceed to administratively close the award with the information available within one year of
+      the period of performance end date. Additionally, if the recipient does not submit all required
+      reports within one year of the period of performance end date, per 2 C.F.R. § 200.344(i),
+      FEMA must report in Contracting Performance Assessment Reporting System (CPARS) the
+      recipient’s material failure to comply with the terms and conditions of the award.
+
+      If FEMA administratively closes an award where no final FFR has been submitted, FEMA
+      uses that administrative closeout date in lieu of the final FFR submission date as the start of
+      the record retention period under 2 C.F.R. § 200.334.
+
+      In addition, if an award is administratively closed, FEMA may decide to impose remedies for
+      noncompliance per 2 C.F.R. § 200.339, consider this information in reviewing future award
+      applications, or apply special conditions to existing or future awards.
+
+d. Additional Reporting Requirements
+I. DISCLOSING INFORMATION PER 2 C.F.R. § 180.335
+   This reporting requirement pertains to disclosing information related to government-wide
+   suspension and debarment requirements. Before a recipient enters into a grant award with
+   FEMA, the recipient must notify FEMA if it knows if it or any of the recipient’s principals
+   under the award fall under one or more of the four criteria listed at 2 C.F.R. § 180.335:
+          i. Are presently excluded or disqualified;
+          ii. Have been convicted within the preceding three years of any of the offenses listed
+               in 2 C.F.R. § 180.800(a) or had a civil judgment rendered against it or any of the
+               recipient’s principals for one of those offenses within that time period;
+          iii. Are presently indicted for or otherwise criminally or civilly charged by a
+               governmental entity (federal, state or local) with commission of any of the
+               offenses listed in 2 C.F.R. § 180.800(a); or
+          iv. Have had one or more public transactions (federal, state, or local) terminated
+               within the preceding three years for cause or default.
+
+      At any time after accepting the award, if the recipient learns that it or any of its principals
+      falls under one or more of the criteria listed at 2 C.F.R. § 180.335, the recipient must
+      provide immediate written notice to FEMA in accordance with 2 C.F.R. § 180.350.
+
+II.   REPORTING OF MATTERS RELATED TO RECIPIENT INTEGRITY AND PERFORMANCE
+      Appendix XII to 2 C.F.R. Part 200 sets forth a term and condition related to recipient
+      integrity and performance matters that will apply to all federal awards under this funding
+      opportunity. If the total value of currently active grants, cooperative agreements, and
+      procurement contracts from all federal awarding agencies exceeds $10,000,000 for any
+      period of time during the period of performance of a federal award under this funding
+
+
+
+                                         FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                               30
+
+
+   opportunity, then a recipient must maintain the currency of information reported in the
+   Contracting Performance Assessment Reporting System (CPARS) about civil, criminal, or
+   administrative proceedings described in paragraph 2 of Appendix XII at the reporting
+   frequency described in paragraph 4 of Appendix XII.
+
+III. SINGLE AUDIT REPORT
+   A recipient that expends $750,000 or more during the recipient’s fiscal year in federal awards
+   (as defined by 2 C.F.R. § 200.1) must have a single audit conducted in accordance with 2
+   C.F.R. § 200.514 except when it elects to have a program-specific audit conducted in
+   accordance with 2 C.F.R. § 200.501. The audit must be conducted in accordance with 2
+   C.F.R. Part 200, Subpart F and, as required by 2 C.F.R. § 200.514, in accordance with the
+   U.S. Government Accountability Office (GAO) Generally Accepted Government Auditing
+   Standards, which can be found on the Yellow Book page of the GAO website.
+
+5. Monitoring and Oversight
+   The regulation at 2 C.F.R. § 200.337 provides DHS and any of its authorized representatives
+   with the right of access to any documents, papers, or other records of the recipient [and any
+   subrecipients] that are pertinent to a federal award in order to make audits, examinations,
+   excerpts, and transcripts. The right also includes timely and reasonable access to the
+   recipient’s or subrecipient’s personnel for the purpose of interview and discussion related to
+   such documents. Pursuant to this right and per 2 C.F.R. § 200.329, DHS may conduct desk
+   reviews and make site visits to review project accomplishments and management control
+   systems to evaluate project accomplishments and to provide any required technical
+   assistance. During site visits, DHS may review a recipient’s or subrecipient’s files pertinent
+   to the federal award and interview and/or discuss these files with the recipient’s or
+   subrecipient’s personnel. Recipients and subrecipients must respond in a timely and accurate
+   manner to DHS requests for information relating to a federal award.
+
+   Effective monitoring and oversight help FEMA ensure that recipients use grant funds for
+   their intended purpose(s); verify that projects undertaken are consistent with approved plans;
+   and ensure that recipients make adequate progress toward stated goals and objectives.
+   Additionally, monitoring serves as the primary mechanism to ensure that recipients comply
+   with applicable laws, rules, regulations, program guidance, and requirements. FEMA
+   regularly monitors all grant programs both financially and programmatically in accordance
+   with federal laws, regulations (including 2 C.F.R. Part 200), program guidance, and the terms
+   and conditions of the award. All monitoring efforts ultimately serve to evaluate progress
+   towards grant goals and proactively target and address issues that may threaten grant success
+   during the period of performance.
+
+   FEMA staff will periodically monitor recipients to ensure that administrative processes,
+   policies and procedures, budgets, and other related award criteria are meeting Federal
+   Government-wide and FEMA regulations. Aside from reviewing quarterly financial and
+   programmatic reports, FEMA may also conduct enhanced monitoring through either desk-
+   based reviews, onsite monitoring visits, or both. Enhanced monitoring will involve the
+   review and analysis of the financial compliance and administrative processes, policies,
+
+
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                   31
+
+
+   activities, and other attributes of each federal assistance award, and it will identify areas
+   where the recipient may need technical assistance, corrective actions, or other support.
+
+   Financial and programmatic monitoring are complementary processes within FEMA’s
+   overarching monitoring strategy that function together to ensure effective grants
+   management, accountability, and transparency; validate progress against grant and program
+   goals; and safeguard federal funds against fraud, waste, and abuse. Financial monitoring
+   primarily focuses on statutory and regulatory compliance with administrative grant
+   requirements, while programmatic monitoring seeks to validate and assist in grant progress,
+   targeting issues that may be hindering achievement of project goals and ensuring compliance
+   with the purpose of the grant and grant program. Both monitoring processes are similar in
+   that they feature initial reviews of all open awards, and additional, in-depth monitoring of
+   grants requiring additional attention.
+
+   Recipients and subrecipients who are pass-through entities are responsible for monitoring
+   their subrecipients in a manner consistent with the terms of the federal award at 2 C.F.R. Part
+   200, including 2 C.F.R. § 200.332. This includes the pass-through entity’s responsibility to
+   monitor the activities of the subrecipient as necessary to ensure that the subaward is used for
+   authorized purposes, in compliance with federal statutes, regulations, and the terms and
+   conditions of the subaward; and that subaward performance goals are achieved.
+
+   In terms of overall award management, recipient and subrecipient responsibilities include,
+   but are not limited to: accounting of receipts and expenditures, cash management,
+   maintaining adequate financial records, reporting and refunding expenditures disallowed by
+   audits, monitoring if acting as a pass-through entity, or other assessments and reviews, and
+   ensuring overall compliance with the terms and conditions of the award or subaward, as
+   applicable, including the terms of 2 C.F.R. Part 200.
+
+G. DHS Awarding Agency Contact Information
+1. Contact and Resource Information
+a. Program Office Contact
+   FEMA’s Grant Programs Directorate is the overall programmatic lead for the SSP. For
+   questions related to project design and other required elements of the program, please contact
+   FEMA-SSP@fema.dhs.gov.
+
+b. FEMA Grants News
+   FEMA Grants News is a non-emergency comprehensive management and information
+   resource developed by FEMA for grants stakeholders. This channel provides general
+   information on all FEMA grant programs and maintains a comprehensive database
+   containing key personnel contact information at the federal, state, and local levels. When
+   necessary, recipients will be directed to a federal point of contact who can answer specific
+   programmatic questions or concerns. FEMA Grants News can be reached by email at fema-
+   grants-news@fema.dhs.gov or by phone at (800) 368-6498, Monday through Friday, 9 a.m.
+   – 5 p.m. ET.
+
+c. Grant Programs Directorate (GPD) Award Administration Division
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                32
+
+
+   GPD’s Award Administration Division (AAD) provides support regarding financial matters
+   and budgetary technical assistance. Additional guidance and information can be obtained by
+   contacting the AAD’s Help Desk via email at ASK-GMD@fema.dhs.gov.
+
+d. Equal Rights
+   The FEMA Office of Equal Rights (OER) is responsible for compliance with and
+   enforcement of federal civil rights obligations in connection with programs and services
+   conducted by FEMA and recipients of FEMA financial assistance. All inquiries and
+   communications about federal civil rights compliance for FEMA grants under this NOFO
+   should be sent to FEMA-CivilRightsOffice@fema.dhs.gov.
+
+e. Environmental Planning and Historic Preservation
+   The EHP Team provides guidance and information about the EHP review process to
+   recipients and subrecipients. All inquiries and communications about GPD projects under
+   this NOFO or the EHP review process, including the submittal of EHP review materials,
+   should be sent to gpdehpinfo@fema.dhs.gov.
+
+2. Systems Information
+a. FEMA GO
+   For technical assistance with the FEMA GO system, please contact the FEMA GO Helpdesk
+   at femago@fema.dhs.gov or (877) 585-3242, Monday through Friday, 9 a.m. – 6 p.m. ET.
+
+H. Additional Information
+1. Termination Provisions
+   FEMA may terminate a federal award in whole or in part for one of the following reasons.
+   FEMA and the recipient must still comply with closeout requirements at 2 C.F.R. §§
+   200.344-200.345 even if an award is terminated in whole or in part. To the extent that
+   subawards are permitted under this NOFO, pass-through entities should refer to 2 C.F.R. §
+   200.340 for additional information on termination regarding subawards.
+
+a. Noncompliance
+   If a recipient fails to comply with the terms and conditions of a federal award, FEMA may
+   terminate the award in whole or in part. If the noncompliance can be corrected, FEMA may
+   first attempt to direct the recipient to correct the noncompliance. This may take the form of a
+   Compliance Notification. If the noncompliance cannot be corrected or the recipient is non-
+   responsive, FEMA may proceed with a Remedy Notification, which could impose a remedy
+   for noncompliance per 2 C.F.R. § 200.339, including termination. Any action to terminate
+   based on noncompliance will follow the requirements of 2 C.F.R. §§ 200.341-200.342 as
+   well as the requirement of 2 C.F.R. § 200.340(c) to report in FAPIIS the recipient’s material
+   failure to comply with the award terms and conditions. See also the section on Actions to
+   Address Noncompliance in this NOFO.
+
+b. With the Consent of the Recipient
+   FEMA may also terminate an award in whole or in part with the consent of the recipient, in
+   which case the parties must agree upon the termination conditions, including the effective
+   date, and in the case of partial termination, the portion to be terminated.
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                33
+
+
+
+c. Notification by the Recipient
+   The recipient may terminate the award, in whole or in part, by sending written notification to
+   FEMA setting forth the reasons for such termination, the effective date, and in the case of
+   partial termination, the portion to be terminated. In the case of partial termination, FEMA
+   may determine that a partially terminated award will not accomplish the purpose of the
+   federal award, so FEMA may terminate the award in its entirety. If that occurs, FEMA will
+   follow the requirements of 2 C.F.R. §§ 200.341-200.342 in deciding to fully terminate the
+   award.
+
+2. Program Evaluation
+   Federal agencies are required to structure NOFOs that incorporate program evaluation
+   activities from the outset of their program design and implementation to meaningfully
+   document and measure their progress towards meeting agency priority goal(s) and program
+   outcomes.
+   OMB Memorandum M-21-27, Evidence-Based Policymaking: Learning Agendas and
+   Annual Evaluation Plans, implementing Title I of the Foundations for Evidence-Based
+   Policymaking Act of 2018, Pub. L. No. 115-435 (2019) (Evidence Act), urges federal
+   awarding agencies to use program evaluation as a critical tool to learn, improve equitable
+   delivery, and elevate program service and delivery across the program lifecycle. Evaluation
+   means “an assessment using systematic data collection and analysis of one or more programs,
+   policies, and organizations intended to assess their effectiveness and efficiency.” Evidence
+   Act, § 101 (codified at 5 U.S.C. § 311).
+   As such, recipients and subrecipients are required to participate in a DHS-, Component-, or
+   Program Office-led evaluation if selected, which may be carried out by a third-party on
+   behalf of the DHS, its component agencies, or the Program Office. Such an evaluation may
+   involve information collections including, but not limited to, surveys, interviews, or
+   discussions with individuals who benefit from the federal award program operating
+   personnel, and award recipients, as specified in a DHS-, component agency-, or Program
+   Office-approved evaluation plan. More details about evaluation requirements may be
+   provided in the federal award, if available at that time, or following the award as evaluation
+   requirements are finalized. Evaluation costs incurred during the period of performance are
+   allowable costs (either as direct or indirect). Recipients and subrecipients are also
+   encouraged, but not required, to participate in any additional evaluations after the period of
+   performance ends, although any costs incurred to participate in such evaluations are not
+   allowable and may not be charged to the federal award.
+3. Period of Performance Extensions
+   Extensions to the period of performance (POP) for this program may be permitted only with
+   prior written approval from FEMA. Recipients must request extensions prior to the
+   expiration of the POP. Extensions to the POP identified in the award will only be considered
+   through formal, written requests to the recipient’s FEMA Program Analyst or other relevant
+   FEMA position and must contain specific and compelling justifications as to why an
+   extension is required. Recipients are advised to coordinate with the FEMA Program Analyst
+   or other relevant FEMA position as needed when preparing an extension request.
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                 34
+
+
+
+   All extension requests must address the following:
+       a. The grant program, fiscal year, and award number;
+       b. Reason for the delay –including details of the legal, policy, or operational challenges
+           that prevent the final outlay of awarded funds by the deadline;
+       c. Current status of the activity(ies);
+       d. Approved POP termination date and new project completion date;
+       e. Amount of funds drawn down to date;
+       f. Remaining available funds, both federal and, if applicable, non-federal;
+       g. Budget outlining how remaining federal and, if applicable, non-federal funds will be
+           expended;
+       h. Plan for completion, including milestones and timeframes for achieving each
+           milestone and the position or person responsible for implementing the plan for
+           completion; and
+       i. Certification that the activity(ies) will be completed within the extended POP without
+           any modification to the original statement of work and as approved by FEMA.
+
+   Extension requests will be granted only due to compelling legal, policy, or operational
+   challenges. Extension requests will only be considered for the following reasons:
+      • Contractual commitments by the recipient or subrecipient with vendors prevent
+          completion of the project, including delivery of equipment or services, within the
+          existing POP;
+      • The project must undergo a complex environmental review that cannot be completed
+          within the existing POP;
+      • Projects are long-term by design, and therefore acceleration would compromise core
+          programmatic goals; or
+      • Where other special or extenuating circumstances exist.
+
+   Recipients should submit all proposed extension requests to FEMA for review and approval
+   at least 120 days prior to the end of the POP to allow sufficient processing time. Extensions
+   may be granted one time for up to 120 days. Extensions are typically granted for no more
+   than a six-month period.
+
+4. Disability Integration
+   Pursuant to Section 504 of the Rehabilitation Act of 1973, recipients of FEMA financial
+   assistance must ensure that their programs and activities do not discriminate against qualified
+   individuals with disabilities.
+
+   Grant and cooperative agreement recipients should engage with the whole community to
+   advance individual and community preparedness and to work as a nation to build and sustain
+   resilience. In doing so, recipients are encouraged to consider the needs of individuals with
+   disabilities into the activities and projects funded by the grant or cooperative agreement.
+
+   FEMA expects that the integration of the needs of people with disabilities will occur at all
+   levels, including planning; alerting, notification, and public outreach; training; purchasing of
+   equipment and supplies; protective action implementation; and exercises/drills.
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                  35
+
+
+
+   The following are examples that demonstrate the integration of the needs of people with
+   disabilities in carrying out FEMA awards:
+       • Include representatives of organizations that work with/for people with disabilities on
+           planning committees, work groups and other bodies engaged in development and
+           implementation of the grant programs and activities.
+       • Hold all activities related to the grant in locations that are accessible to persons with
+           physical disabilities and intellectual disabilities to the extent practicable.
+       • Provide auxiliary aids and services, including American Sign Language interpreters,
+           that provide public information across the community and in shelters.
+       • Ensure shelter-specific grant funds are in alignment with FEMA’s Guidance on
+           Planning for Integration of Functional Needs Support Services in General Population
+           Shelters.
+       • If making alterations to an existing building to a primary function area utilizing
+           federal funds, complying with the most recent codes and standards and making path
+           of travel to the primary function area accessible to the greatest extent possible.
+       • Implement specific procedures used by public transportation agencies that include
+           evacuation and passenger communication plans and measures for individuals with
+           disabilities.
+       • Identify, create, and deliver training to address any training gaps specifically aimed
+           toward whole-community preparedness. Include and interact with individuals with
+           disabilities, aligning with the designated program capability.
+       • Establish best practices in inclusive planning and preparedness that consider physical
+           access, needs of individuals with intellectual disabilities, and information access.
+
+   FEMA grant recipients can fund projects towards the resiliency of the whole community,
+   including people with disabilities, such as training, outreach and safety campaigns, provided
+   that the project aligns with this NOFO and the terms and conditions of the award.
+
+5. Conflicts of Interest in the Administration of Federal Awards or Subawards
+   For conflicts of interest under grant-funded procurements and contracts, refer to the section
+   on Procurement Integrity in this NOFO and 2 C.F.R. §§ 200.317 – 200.327.
+
+   To eliminate and reduce the impact of conflicts of interest in the subaward process, recipients
+   and pass-through entities must follow their own policies and procedures regarding the
+   elimination or reduction of conflicts of interest when making subawards. Recipients and
+   pass-through entities are also required to follow any applicable federal and state, local, tribal,
+   or territorial (SLTT) statutes or regulations governing conflicts of interest in the making of
+   subawards.
+
+   The recipient or pass-through entity must disclose to the respective Program Analyst or
+   Program Manager, in writing, any real or potential conflict of interest that may arise during
+   the administration of the federal award, as defined by the federal or SLTT statutes or
+   regulations or their own existing policies, within five days of learning of the conflict of
+   interest. Similarly, subrecipients, whether acting as subrecipients or as pass-through entities,
+   must disclose any real or potential conflict of interest to the recipient or next-level pass-
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                  36
+
+
+   through entity as required by the recipient or pass-through entity’s conflict of interest
+   policies, or any applicable federal or SLTT statutes or regulations.
+
+   Conflicts of interest may arise during the process of FEMA making a federal award in
+   situations where an employee, officer, or agent, any members of his or her immediate family,
+   his or her partner has a close personal relationship, a business relationship, or a professional
+   relationship, with an applicant, subapplicant, recipient, subrecipient, or FEMA employees.
+
+6. Procurement Integrity
+   Through audits conducted by the DHS Office of Inspector General (OIG) and FEMA grant
+   monitoring, findings have shown that some FEMA recipients have not fully adhered to the
+   proper procurement requirements at 2 C.F.R. §§ 200.317 – 200.327 when spending grant
+   funds. Anything less than full compliance with federal procurement requirements jeopardizes
+   the integrity of the grant as well as the grant program. To assist with determining whether an
+   action is a procurement or instead a subaward, please consult 2 C.F.R. § 200.331. For
+   detailed guidance on the federal procurement standards, recipients and subrecipients should
+   refer to various materials issued by FEMA’s Procurement Disaster Assistance Team (PDAT),
+   such as the PDAT Field Manual and Contract Provisions Guide. Additional resources,
+   including an upcoming trainings schedule, can be found on the PDAT Website.
+
+   The below highlights the federal procurement requirements for FEMA recipients when
+   procuring goods and services with federal grant funds. FEMA will include a review of
+   recipients’ procurement practices as part of the normal monitoring activities. All
+   procurement activity must be conducted in accordance with federal procurement
+   standards at 2 C.F.R. §§ 200.317 – 200.327. Select requirements under these standards are
+   listed below. The recipient and any of its subrecipients must comply with all requirements,
+   even if they are not listed below.
+
+   Under 2 C.F.R. § 200.317, when procuring property and services under a federal award,
+   states (including territories) must follow the same policies and procedures they use for
+   procurements from their non-federal funds; additionally, states must now follow 2 C.F.R. §
+   200.321 regarding socioeconomic steps, 200.322 regarding domestic preferences for
+   procurements, 200.323 regarding procurement of recovered materials, and 2 C.F.R. §
+   200.327 regarding required contract provisions.
+
+   All other non-federal entities, such as tribes (collectively, non-state entities), must have and
+   use their own documented procurement procedures that reflect applicable SLTT laws and
+   regulations, provided that the procurements conform to applicable federal law and the
+   standards identified in 2 C.F.R. Part 200. These standards include, but are not limited to,
+   providing for full and open competition consistent with the standards of 2 C.F.R. § 200.319
+   and the required procurement methods at § 200.320.
+
+a. Important Changes to Procurement Standards in 2 C.F.R. Part 200
+   States are now required to follow the socioeconomic steps in soliciting small and minority
+   businesses, women’s business enterprises, and labor surplus area firms per 2 C.F.R. §
+   200.321. All non-federal entities should also, to the greatest extent practicable under a federal
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                   37
+
+
+   award, provide a preference for the purchase, acquisition, or use of goods, products, or
+   materials produced in the United States per 2 C.F.R. § 200.322. More information on OMB’s
+   revisions to the federal procurement standards can be found in Purchasing Under a FEMA
+   Award: OMB Revisions Fact Sheet.
+
+   The recognized procurement methods in 2 C.F.R. § 200.320 have been reorganized into
+   informal procurement methods, which include micro-purchases and small purchases; formal
+   procurement methods, which include sealed bidding and competitive proposals; and
+   noncompetitive procurements. The federal micro-purchase threshold is currently $10,000,
+   and non-state entities may use a lower threshold when using micro-purchase procedures
+   under a FEMA award. If a non-state entity wants to use a micro-purchase threshold higher
+   than the federal threshold, it must follow the requirements of 2 C.F.R. § 200.320(a)(1)(iii)-
+   (v). The federal simplified acquisition threshold is currently $250,000, and a non-state entity
+   may use a lower threshold but may not exceed the federal threshold when using small
+   purchase procedures under a FEMA award. See 2 C.F.R. § 200.1 (citing the definition of
+   simplified acquisition threshold from 48 C.F.R. Part 2, Subpart 2.1).
+
+   See 2 C.F.R. §§ 200.216, 200.471, and Appendix II as well as section D.13.a of the NOFO
+   regarding prohibitions on covered telecommunications equipment or services.
+
+b. Competition and Conflicts of Interest
+   Among the requirements of 2 C.F.R. § 200.319(b) applicable to all non-federal entities other
+   than states, in order to ensure objective contractor performance and eliminate unfair
+   competitive advantage, contractors that develop or draft specifications, requirements,
+   statements of work, or invitations for bids or requests for proposals must be excluded from
+   competing for such procurements. FEMA considers these actions to be an organizational
+   conflict of interest and interprets this restriction as applying to contractors that help a non-
+   federal entity develop its grant application, project plans, or project budget. This prohibition
+   also applies to the use of former employees to manage the grant or carry out a contract when
+   those former employees worked on such activities while they were employees of the non-
+   federal entity.
+
+   Under this prohibition, unless the non-federal entity solicits for and awards a contract
+   covering both development and execution of specifications (or similar elements as described
+   above), and this contract was procured in compliance with 2 C.F.R. §§ 200.317 – 200.327,
+   federal funds cannot be used to pay a contractor to carry out the work if that contractor also
+   worked on the development of those specifications. This rule applies to all contracts funded
+   with federal grant funds, including pre-award costs, such as grant writer fees, as well as post-
+   award costs, such as grant management fees.
+
+   Additionally, some of the situations considered to be restrictive of competition include, but
+   are not limited to:
+       • Placing unreasonable requirements on firms for them to qualify to do business;
+       • Requiring unnecessary experience and excessive bonding;
+       • Noncompetitive pricing practices between firms or between affiliated companies;
+       • Noncompetitive contracts to consultants that are on retainer contracts;
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                      38
+
+
+         •   Organizational conflicts of interest;
+         •   Specifying only a “brand name” product instead of allowing “an equal” product to be
+             offered and describing the performance or other relevant requirements of the
+             procurement; and
+         •   Any arbitrary action in the procurement process.
+
+     Per 2 C.F.R. § 200.319(c), non-federal entities other than states must conduct procurements
+     in a manner that prohibits the use of statutorily or administratively imposed SLTT
+     geographical preferences in the evaluation of bids or proposals, except in those cases where
+     applicable federal statutes expressly mandate or encourage geographic preference. Nothing in
+     this section preempts state licensing laws. When contracting for architectural and engineering
+     services, geographic location may be a selection criterion provided its application leaves an
+     appropriate number of qualified firms, given the nature and size of the project, to compete for
+     the contract.
+
+     Under 2 C.F.R. § 200.318(c)(1), non-federal entities other than states are required to maintain
+     written standards of conduct covering conflicts of interest and governing the actions of their
+     employees engaged in the selection, award, and administration of contracts. No employee,
+     officer, or agent may participate in the selection, award, or administration of a contract
+     supported by a federal award if he or she has a real or apparent conflict of interest.
+     Such conflicts of interest would arise when the employee, officer or agent, any member of
+     his or her immediate family, his or her partner, or an organization that employs or is about to
+     employ any of the parties indicated herein, has a financial or other interest in or a tangible
+     personal benefit from a firm considered for a contract. The officers, employees, and agents of
+     the non-federal entity may neither solicit nor accept gratuities, favors, or anything of
+     monetary value from contractors or parties to subcontracts. However, non-federal entities
+     may set standards for situations in which the financial interest is not substantial, or the gift is
+     an unsolicited item of nominal value. The standards of conduct must provide for disciplinary
+     actions to be applied for violations of such standards by officers, employees, or agents of the
+     non-federal entity.
+
+     Under 2 C.F.R. 200.318(c)(2), if the recipient or subrecipient (other than states) has a parent,
+     affiliate, or subsidiary organization that is not a state, local, tribal, or territorial government,
+     the non-federal entity must also maintain written standards of conduct covering
+     organizational conflicts of interest. In this context, organizational conflict of interest means
+     that because of a relationship with a parent company, affiliate, or subsidiary organization, the
+     non-federal entity is unable or appears to be unable to be impartial in conducting a
+     procurement action involving a related organization. The non-federal entity must disclose in
+     writing any potential conflicts of interest to FEMA or the pass-through entity in accordance
+     with applicable FEMA policy.
+
+c. Supply Schedules and Purchasing Programs
+   Generally, a non-federal entity may seek to procure goods or services from a federal supply
+   schedule, state supply schedule, or group purchasing agreement.
+
+I.   GENERAL SERVICES ADMINISTRATION SCHEDULES
+
+
+                                         FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                   39
+
+
+      States, tribes, and local governments, and any instrumentality thereof (such as local
+      education agencies or institutions of higher education) may procure goods and services from
+      a General Services Administration (GSA) schedule. GSA offers multiple efficient and
+      effective procurement programs for state, tribal, and local governments, and instrumentalities
+      thereof, to purchase products and services directly from pre-vetted contractors. The GSA
+      Schedules (also referred to as the Multiple Award Schedules and the Federal Supply
+      Schedules) are long-term government-wide contracts with commercial firms that provide
+      access to millions of commercial products and services at volume discount pricing.
+
+      Information about GSA programs for states, tribes, and local governments, and
+      instrumentalities thereof, can be found on the GSA webpages for State and Local
+      Governments Resources and Schedule Buyers.
+
+      For tribes, local governments, and their instrumentalities that purchase off of a GSA
+      schedule, this will satisfy the federal requirements for full and open competition provided
+      that the recipient follows the GSA ordering procedures; however, tribes, local governments,
+      and their instrumentalities will still need to follow the other rules under 2 C.F.R. §§ 200.317
+      – 200.327, such as solicitation of minority businesses, women’s business enterprises, small
+      businesses, or labor surplus area firms (§ 200.321), domestic preferences (§ 200.322),
+      contract cost and price (§ 200.324), and required contract provisions (§ 200.327 and
+      Appendix II).
+
+II.   OTHER SUPPLY SCHEDULES AND PROGRAMS
+      For non-federal entities other than states, such as tribes, local governments, and nonprofits,
+      that want to procure goods or services from a state supply schedule, cooperative purchasing
+      program, or other similar program, in order for such procurements to be permissible under
+      federal requirements, the following must be true:
+          • The procurement of the original contract or purchasing schedule and its use by the
+             non-federal entity complies with state and local law, regulations, and written
+             procurement procedures;
+          • The state or other entity that originally procured the original contract or purchasing
+             schedule entered into the contract or schedule with the express purpose of making it
+             available to the non-federal entity and other similar types of entities;
+          • The contract or purchasing schedule specifically allows for such use, and the work to
+             be performed for the non-federal entity falls within the scope of work under the
+             contract as to type, amount, and geography;
+          • The procurement of the original contract or purchasing schedule complied with all the
+             procurement standards applicable to a non-federal entity other than states under 2
+             C.F.R. §§ 200.317 – 200.327; and
+          • With respect to the use of a purchasing schedule, the non-federal entity must follow
+             ordering procedures that adhere to applicable state, tribal, and local laws and
+             regulations and the minimum requirements of full and open competition under 2
+             C.F.R. Part 200.
+
+      If a non-federal entity other than a state seeks to use a state supply schedule, cooperative
+      purchasing program, or other similar type of arrangement, FEMA recommends the recipient
+
+
+                                        FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                  40
+
+
+   discuss the procurement plans with its FEMA Program Analyst or other relevant FEMA
+   position.
+
+d. Procurement Documentation
+   Per 2 C.F.R. § 200.318(i), non-federal entities other than states and territories are required to
+   maintain and retain records sufficient to detail the history of procurement covering at least
+   the rationale for the procurement method, selection of contract type, contractor selection or
+   rejection, and the basis for the contract price. States and territories are encouraged to
+   maintain and retain this information as well and are reminded that in order for any cost to be
+   allowable, it must be adequately documented per 2 C.F.R. § 200.403(g).
+
+   Examples of the types of documents that would cover this information include but are not
+   limited to:
+       • Solicitation documentation, such as requests for quotes, invitations for bids, or
+           requests for proposals;
+       • Responses to solicitations, such as quotes, bids, or proposals;
+       • Pre-solicitation independent cost estimates and post-solicitation cost/price analyses on
+           file for review by federal personnel, if applicable;
+       • Contract documents and amendments, including required contract provisions; and
+       • Other documents required by federal regulations applicable at the time a grant is
+           awarded to a recipient.
+       • Additional information on required procurement records can be found on pages 24-26
+           of the PDAT Field Manual.
+
+
+7. Financial Assistance Programs for Infrastructure
+e. Build America, Buy America Act
+   Recipients and subrecipients must comply with the Build America, Buy America Act
+   (BABAA), which was enacted as part of the Infrastructure Investment and Jobs Act §§ 70901-
+   70927, Pub. L. No. 117-58 (2021); and Executive Order 14005, Ensuring the Future is Made
+   in All of America by All of America’s Workers. See also 2 C.F.R. Part 184 and Office of
+   Management and Budget (OMB) Memorandum M-24-02, Implementation Guidance on
+   Application of Buy America Preference in Federal Financial Assistance Programs for
+   Infrastructure.
+
+  None of the funds provided under this program may be used for a project for infrastructure
+  unless the iron and steel, manufactured products, and construction materials used in that
+  infrastructure are produced in the United States.
+
+  The Buy America preference only applies to articles, materials, and supplies that are
+  consumed in, incorporated into, or affixed to an infrastructure project. As such, it does not
+  apply to tools, equipment, and supplies, such as temporary scaffolding, brought to the
+  construction site and removed at or before the completion of the infrastructure project. Nor
+  does a Buy America preference apply to equipment and furnishings, such as movable chairs,
+  desks, and portable computer equipment, that are used at or within the finished infrastructure
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                  41
+
+
+  project but are not an integral part of the structure or permanently affixed to the infrastructure
+  project.
+
+  For FEMA's official policy on BABAA, please see FEMA Policy 207-22-0001: Buy America
+  Preference in FEMA Financial Assistance Programs for Infrastructure. To see whether a
+  particular FEMA federal financial assistance program is considered an infrastructure program
+  and thus required to include a Buy America preference, please see Programs and Definitions:
+  Build America, Buy America Act | FEMA.gov and Buy America Preference in FEMA
+  Financial Assistance Programs for Infrastructure.
+
+f. Waivers
+   When necessary, recipients (and subrecipients through their pass-through entity) may apply
+   for, and FEMA may grant, a waiver from these requirements.
+
+   A waiver of the domestic content procurement preference may be granted by the agency
+   awarding official if FEMA determines that:
+      • Applying the domestic content procurement preference would be inconsistent with
+          the public interest.
+      • The types of iron, steel, manufactured products, or construction materials are not
+          produced in the United States in sufficient and reasonably available quantities or of a
+          satisfactory quality.
+      • The inclusion of iron, steel, manufactured products, or construction materials
+          produced in the United States will increase the cost of the overall project by more
+          than 25%.
+
+   For FEMA awards, the process for requesting a waiver from the Buy America preference
+   requirements can be found on FEMA’s website at: "Buy America" Preference in FEMA
+   Financial Assistance Programs for Infrastructure | FEMA.gov.
+
+g. Definitions
+   For BABAA specific definitions, please refer to the FEMA Buy America website at:
+   “Programs and Definitions: Build America, Buy America Act | FEMA.gov.”
+   Please refer to the applicable DHS Standard Terms & Conditions for the BABAA specific
+   term applicable to all FEMA financial assistance awards for infrastructure.
+8. Record Retention
+a. Record Retention Period
+   Financial records, supporting documents, statistical records, and all other non-federal entity
+   records pertinent to a Federal award generally must be maintained for at least three years
+   from the date the final FFR is submitted. See 2 C.F.R. § 200.334. Further, if the recipient
+   does not submit a final FFR and the award is administratively closed, FEMA uses the date of
+   administrative closeout as the start of the general record retention period.
+
+   The record retention period may be longer than three years or have a different start date
+   in certain cases. These include:
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                 42
+
+
+   •   Records for real property and equipment acquired with Federal funds must be retained for
+       three years after final disposition of the property. See 2 C.F.R. § 200.334(c).
+   •   If any litigation, claim, or audit is started before the expiration of the three-year period,
+       the records must be retained until all litigation, claims, or audit findings involving the
+       records have been resolved and final action taken. See 2 C.F.R. § 200.334(a).
+   •   The record retention period will be extended if the non-federal entity is notified in
+       writing of the extension by FEMA, the cognizant or oversight agency for audit, or the
+       cognizant agency for indirect costs, or pass-through entity. See 2 C.F.R. § 200.334(b).
+   •   Where FEMA requires recipients to report program income after the period of
+       performance ends, the program income record retention period begins at the end of
+       the recipient’s fiscal year in which program income is earned. See 2 C.F.R. §
+       200.334(e).
+   •   For indirect cost rate computations and proposals, cost allocation plans, or any similar
+       accounting computations of the rate at which a particular group of costs is chargeable
+       (such as computer usage chargeback rates or composite fringe benefit rates), the start of
+       the record retention period depends on whether the indirect cost rate documents were
+       submitted for negotiation. If the indirect cost rate documents were submitted for
+       negotiation, the record retention period begins from the date those documents were
+       submitted for negotiation. If indirect cost rate documents were not submitted for
+       negotiation, the record retention period begins at the end of the recipient’s fiscal
+       year or other accounting period covered by that indirect cost rate. See 2 C.F.R. §
+       200.334(f).
+
+b. Types of Records to Retain
+   FEMA requires that non-federal entities maintain the following documentation for federally
+   funded purchases:
+   • Specifications
+   • Solicitations
+   • Competitive quotes or proposals
+   • Basis for selection decisions
+   • Purchase orders
+   • Contracts
+   • Invoices
+   • Cancelled checks
+
+   Non-federal entities should keep detailed records of all transactions involving the grant.
+   FEMA may at any time request copies of any relevant documentation and records, including
+   purchasing documentation along with copies of canceled checks for verification. See, e.g., 2
+   C.F.R. §§ 200.318(i), 200.334, 200.337.
+
+   In order for any cost to be allowable, it must be adequately documented per 2 C.F.R. §
+   200.403(g). Non-federal entities who fail to fully document all purchases may find their
+   expenditures questioned and subsequently disallowed.
+
+9. Actions to Address Noncompliance
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                               43
+
+
+Non-federal entities receiving financial assistance funding from FEMA are required to
+comply with requirements in the terms and conditions of their awards or subawards,
+including the terms set forth in applicable federal statutes, regulations, NOFOs, and policies.
+Throughout the award lifecycle or even after an award has been closed, FEMA or the pass-
+through entity may discover potential or actual noncompliance on the part of a recipient or
+subrecipient. This potential or actual noncompliance may be discovered through routine
+monitoring, audits, civil rights complaint investigations and compliance reviews, closeout, or
+reporting from various sources.
+
+In the case of any potential or actual noncompliance, FEMA may place special conditions on
+an award per 2 C.F.R. §§ 200.208 and 200.339, FEMA may place a hold on funds until the
+matter is corrected, or additional information is provided per 2 C.F.R. § 200.339, or it may do
+both. Similar remedies for noncompliance with certain federal civil rights laws are authorized
+pursuant to 44 C.F.R. Parts 7 and 19 or other applicable regulations.
+
+In the event the noncompliance is not able to be corrected by imposing additional conditions
+or the recipient or subrecipient refuses to correct the matter, FEMA may take other remedies
+allowed under 2 C.F.R. § 200.339. These remedies include actions to disallow costs, recover
+funds, wholly or partly suspend or terminate the award, initiate suspension and debarment
+proceedings, withhold further federal awards, or take other remedies that may be legally
+available. For further information on termination due to noncompliance, see the section on
+Termination Provisions in the NOFO.
+
+FEMA may discover and take action on noncompliance even after an award has been closed.
+The closeout of an award does not affect FEMA’s right to disallow costs and recover funds
+as long as the action to disallow costs takes place during the record retention period. See 2
+C.F.R. §§ 200.334, 200.345(a). Closeout also does not affect the obligation of the non-federal
+entity to return any funds due as a result of later refunds, corrections, or other transactions. 2
+C.F.R. § 200.345(a)(2).
+
+The types of funds FEMA may attempt to recover include, but are not limited to, improper
+payments, cost share reimbursements, program income, interest earned on advance payments,
+or equipment disposition amounts.
+
+FEMA may seek to recover disallowed costs through a Notice of Potential Debt Letter, a
+Remedy Notification, or other letter. The document will describe the potential amount owed,
+the reason why FEMA is recovering the funds, the recipient’s appeal rights, how the amount
+can be paid, and the consequences for not appealing or paying the amount by the deadline.
+
+If the recipient neither appeals nor pays the amount by the deadline, the amount owed will
+become final. Potential consequences if the debt is not paid in full or otherwise resolved by
+the deadline include the assessment of interest, administrative fees, and penalty charges;
+administratively offsetting the debt against other payable federal funds; and transferring the
+debt to the U.S. Department of the Treasury for collection.
+
+FEMA notes the following common areas of noncompliance for FEMA’s grant programs:
+
+
+
+                                   FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                  44
+
+
+       •   Insufficient documentation and lack of record retention.
+       •   Failure to follow the procurement under grants requirements.
+       •   Failure to submit closeout documents in a timely manner.
+       •   Failure to follow EHP requirements.
+       •   Failure to comply with the POP deadline.
+
+10. Audits
+    FEMA grant recipients are subject to audit oversight from multiple entities including the
+    DHS OIG, the GAO, the pass-through entity, or independent auditing firms for single audits,
+    and may cover activities and costs incurred under the award. Auditing agencies such as the
+    DHS OIG, the GAO, and the pass-through entity (if applicable), and FEMA in its oversight
+    capacity, must have access to records pertaining to the FEMA award. Recipients and
+    subrecipients must retain award documents for at least three years from the date the final
+    FFR is submitted, and even longer in many cases subject to the requirements of 2 C.F.R. §
+    200.334. In the case of administrative closeout, documents must be retained for at least three
+    years from the date of closeout, or longer subject to the requirements of 2 C.F.R. § 200.334.
+    If documents are retained longer than the required retention period, the DHS OIG, the GAO,
+    and the pass-through entity, as well as FEMA in its oversight capacity, have the right to
+    access these records as well. See 2 C.F.R. §§ 200.334, 200.337.
+
+   Additionally, non-federal entities must comply with the single audit requirements at 2 C.F.R.
+   Part 200, Subpart F. Specifically, non-federal entities, other than for-profit subrecipients, that
+   expend $750,000 or more in federal awards during their fiscal year must have a single or
+   program-specific audit conducted for that year in accordance with Subpart F. 2 C.F.R. §
+   200.501. A single audit covers all federal funds expended during a fiscal year, not just FEMA
+   funds. The cost of audit services may be allowable per 2 C.F.R. § 200.425, but non-federal
+   entities must select auditors in accordance with 2 C.F.R. § 200.509, including following the
+   proper procurement procedures. For additional information on single audit reporting
+   requirements, see section F of this NOFO under the header “Single Audit Report” within the
+   subsection “Additional Reporting Requirements” or other applicable document.
+
+   The objectives of single audits are to:
+      • Determine if financial statements conform to generally accepted accounting
+          principles (GAAP);
+      • Determine whether the schedule of expenditures of federal awards is presented fairly;
+      • Understand, assess, and test the adequacy of internal controls for compliance with
+          major programs; and
+      • Determine if the entity complied with applicable laws, regulations, and contracts or
+          grants.
+
+   For single audits, the auditee is required to prepare financial statements reflecting its
+   financial position, a schedule of federal award expenditures, and a summary of the status of
+   prior audit findings and questioned costs. The auditee also is required to follow up and take
+   appropriate corrective actions on new and previously issued but not yet addressed audit
+   findings. The auditee must prepare a corrective action plan to address the new audit findings.
+   2 C.F.R. §§ 200.508, 200.510, 200.511.
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                  45
+
+
+
+   Non-federal entities must have an audit conducted, either single or program-specific, of their
+   financial statements and federal expenditures annually or biennially pursuant to 2 C.F.R. §
+   200.504. Non-federal entities must also follow the information submission requirements of 2
+   C.F.R. § 200.512, including submitting the audit information to the Federal Audit
+   Clearinghouse within the earlier of 30 calendar days after receipt of the auditor’s report(s) or
+   nine months after the end of the audit period. The audit information to be submitted include
+   the data collection form described at 2 C.F.R. § 200.512(c) and Appendix X to 2 C.F.R. Part
+   200 as well as the reporting package described at 2 C.F.R. § 200.512(b).
+
+   The non-federal entity must retain one copy of the data collection form and one copy of the
+   reporting package for three years from the date of submission to the Federal Audit
+   Clearinghouse. 2 C.F.R. § 200.512; see also 2 C.F.R. § 200.517 (setting requirements for
+   retention of documents by the auditor and access to audit records in the auditor’s possession).
+
+   FEMA, the DHS OIG, the GAO, and the pass-through entity (if applicable), as part of
+   monitoring or as part of an audit, may review a non-federal entity’s compliance with the
+   single audit requirements. In cases of continued inability or unwillingness to have an audit
+   conducted in compliance with 2 C.F.R. Part 200, Subpart F, FEMA and the pass-through
+   entity, if applicable, are required to take appropriate remedial action under 2 C.F.R. §
+   200.339 for noncompliance, pursuant to 2 C.F.R. § 200.505.
+
+11. Payment Information
+    FEMA uses the Direct Deposit/Electronic Funds Transfer (DD/EFT) method of payment to
+    recipients.
+
+   Payment requests are submitted through FEMA GO.
+
+12. Whole Community Preparedness
+    Preparedness is a shared responsibility that calls for the involvement of everyone—not just
+    the government—in preparedness efforts. By working together, everyone can help keep the
+    nation safe from harm and help keep it resilient when struck by hazards, such as natural
+    disasters, acts of terrorism, and pandemics.
+
+   Whole Community includes:
+     • Individuals and families, including those with access and functional needs
+     • Businesses
+     • Faith-based and community organizations
+     • Nonprofit groups
+     • Schools and academia
+     • Media outlets
+     • All levels of government, including state, local, tribal, territorial, and federal partners
+
+   The phrase “Whole Community” often appears in preparedness materials, as it is one of the
+   guiding principles. It means two things:
+      1. Involving people in the development of national preparedness documents.
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                 46
+
+
+       2. Ensuring their roles and responsibilities are reflected in the content of the materials.
+
+13. Report issues of fraud, waste, abuse
+    Please note, when applying to this notice of funding opportunity and when administering the
+    grant, applicants may report issues of fraud, waste, abuse, and mismanagement, or other
+    criminal or noncriminal misconduct to the Office of Inspector General (OIG) Hotline. The
+    toll-free numbers to call are 1-800-323-8603, and TTY 1-844-889-4357.
+14. Hazard-Resistant Building Codes
+    Hazard-resistant building codes are a foundational element of a more resilient nation,
+    safeguarding communities and lives against natural disasters, with an estimated $11:1 return
+    on investment. The adoption, enforcement and application of modern building codes
+    mitigates community vulnerabilities, reduces disaster recovery costs, and strengthens
+    nationwide capability. FEMA is working to promote and support building codes in all areas
+    of its work in support of the multi-agency National Initiative to Advance Building Codes. In
+    the interest of building a stronger, more resilient nation, FEMA encourages all grant
+    recipients and subrecipients to meet current published editions of relevant consensus-based
+    building codes, specifications and standards, and to exceed them where feasible.
+
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                 47
+
+
+                               Appendix A: Allowable Activities
+
+To be reimbursed, all costs must be allowable, reasonable, and allocable (2 C.F.R. 200.403 -
+405). In addition to the criteria at 2 C.F.R. § 200.403, costs are allowable only for activities
+identified in Appendix A. At least one primary service is required for all eligible applicants. All
+services are allowed only for noncitizen migrants released from a DHS facility. Recipients must
+ensure they are not charging to FY 2024 SSP-A prior costs associated with Emergency Food and
+Shelter Program-Humanitarian or other SSP awards.
+
+Primary Services
+   • Shelter
+         o Per diem per noncitizen migrant sheltered in an overnight congregate facility;
+             applicants can request full per diem on the first through last days of any multi-day
+             stay (rate cannot exceed $12.50 per noncitizen migrant per day)
+         o Rental costs of real property used for providing services covered under SSP.
+         o Hotel/motel room costs used to provide services (costs should be reasonable
+             based on the rate set by the U.S. General Services Administration (GSA) for the
+             location plus necessary taxes and fees, or to the extent the costs do not exceed
+             charges normally allowed by the applicant in its regular operations).
+         o Cots and beds, including pillows
+         o Temporary structures (e.g., tents)
+         o Linens (e.g., sheets, towels, washcloths)
+         o Overnight shelter utilities (electricity, gas, water, cell phone plans, internet plans)
+             (rate cannot exceed $10 per noncitizen migrant served per day)
+         o Non-overnight facility utilities (electricity, gas, water, cell phone plans, internet
+             plans) (rate cannot exceed $5 per noncitizen migrant served per day)
+         o Maintenance and housekeeping (e.g., repair and cleaning supplies, shower
+             maintenance)
+         o Contracted Services (e.g., security, laundry, trash pickup, cleaning services)
+         o Applicants are strongly encouraged to consider use of shelter services in
+             compliance with the Hotel and Motel Fire Safety Act of 1990, which encourages
+             fire safety in places that offer lodging to the public.
+   • Food
+         o Food items
+         o Food banks (direct food/meal-supportive purchases for noncitizen migrants
+             recently released by DHS)
+         o Food banks (indirect support of noncitizen migrants recently released by DHS by
+             giving food/meal supportive items to other agencies that provide the direct
+             services)
+         o Contracted meals (paying a contractor to pay for/provide meals) (rate cannot
+             exceed $15 per meal)
+         o Food storage containers (e.g., separating bulk food purchases, storing prepared
+             food)
+         o Dishes, utensils, and linens (e.g., plates, forks, knives, napkins)
+         o Cookware and serveware (e.g., pots, pans)
+         o Maintenance and housekeeping (e.g., repair and cleaning supplies)
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                           48
+
+
+       o Contracted services (e.g., security, trash pickup, cleaning services)
+•   Transportation
+       o Subject to the limitations below, transportation expenses are allowable for the
+          following activities:
+                Transportation of noncitizen migrants from DHS release facility to the
+                   shelter or services provider’s location. Eligible transportation expenses
+                   from DHS facility to shelter or service provider may include charter bus,
+                   taxi, mileage, etc.
+                Onward destination transportation, which is defined as transportation of a
+                   noncitizen migrant from a shelter and/or service provider’s location to the
+                   noncitizen migrant’s final destination/point of contact
+                       • Long distance transportation (50 miles or more) includes air, bus,
+                           or train expenses to move families and individuals released by
+                           DHS to another city or state.
+                Transportation of a noncitizen migrant from one shelter or service
+                   provider’s location to another shelter or service provider’s location to
+                   decompress the population at the shelter or service provider.
+                Rideshares:
+                       • Rideshares are allowable for transportation from DHS release
+                           facility to a shelter or service provider and for transportation
+                           between shelter or service providers but are not allowable for
+                           onward destination travel.
+                       • If rideshares are purchased, total mileage cannot exceed 50 miles
+                           per ride
+       o Parking (e.g., local street, airport).
+       o Transportation Limitations:
+                Transportation used must be the most cost-effective form and be at a
+                   reasonable overall cost to maximize grant dollars.
+                Any form of contracted transportation services must meet the procurement
+                   standards in 2 C.F.R. Part 200.
+                International transportation is not allowable. Only transportation within
+                   the contiguous United States (lower 48 states and Washington, D.C.) are
+                   allowed.
+                All fares must be coach class on a commercial airline or train; any form of
+                   “luxury” transportation is not allowable (e.g., business or first class,
+                   limousine services, etc.).
+                If tickets are purchased for individuals, airfare cannot exceed $700 per
+                   ticket.
+                For all applicable transportation expenses, the mileage rate cannot exceed
+                   current GSA federal rate
+                Rental/lease of multi passenger vans may be used only for transportation
+                   of noncitizen migrants from DHS facility to shelter and service provider
+                   location.
+                Charter bus and other forms of grouped transportation should operate at a
+                   minimum average of 66% capacity. This minimum should be achieved on
+                   average, across multiple charter bus or other grouped transportation trips
+
+
+                                  FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                             49
+
+
+                   over the course of a documented period of time. Recipients should self-
+                   verify average grouped transportation capacity metrics on a weekly,
+                   monthly, or quarterly basis, as applicable.
+       o Additional limitations on transportation of a noncitizen migrant from one shelter
+           or service provider’s location to another shelter or service provider’s location:
+                This transportation is allowable only if the transportation was coordinated,
+                   in writing, between the providers prior to travel.
+                Coordination includes but is not limited to: a minimum of 48-hour
+                   (distance permitting) notice before arrival; the identification of an arrival
+                   time and location that is suitable to the receiving service provider; and the
+                   identification of any critical unmet needs.
+                       • Upon request, recipients may be required to provide proof of this
+                           written coordination in order to be reimbursed.
+                The chartering of aircraft, watercraft, or other vehicle not specifically
+                   stated in this Appendix is not allowable.
+                If an individual released by DHS presents themselves or is observed to
+                   have acute or severe medical issues, those issues must be addressed before
+                   engaging in long-distance travel (50 miles or greater) or the cost is not
+                   allowable.
+•   Acute medical care
+       o Basic first aid care and supplies (e.g., band-aids)
+       o Health screenings, including for mental health
+       o Medical care for assessment and stabilization for onward travel, including
+           ground-based ambulance transport
+       o Testing and limited care related to quarantining and isolation
+       o Over-The-Counter Medication (e.g., aspirin)
+       o Personal Protective Equipment (PPE) for both shelter staff and noncitizen
+           migrants
+       o Limited Durable Medical Equipment (DME)
+                Examples of DME include: bariatric cots, wheelchairs, wheelchair ramps,
+                   walkers, commodes, toilet seats, IV-Poles, canes, crutches, handheld
+                   shower, shower chair, transfer boards, gait belt, gravity feeding set,
+                   assistive listening devices, headset, magnifying glass, communication
+                   cards, adaptive eating devices, bedside commode, elevated toilet seat, 3-
+                   in-one commode, shower mat non-slip, digital infrared thermometer,
+                   seated (Bariatric) walker, comfort box, small refrigerator for medications.
+       o Prescription medication for managing acute or chronic care
+       o Lab testing
+•   Personal hygiene supplies (hygiene items, toiletries, feminine hygiene products, baby
+    wipes, diapers, etc.)
+•   Labor for primary services (for more information, see 2 CFR 200.430)
+       o Labor for primary services means only the compensation for the time employees
+           or contractors are directly providing primary services and/or receiving training on
+           the provision of primary services. Labor (personal services) must follow the
+           requirements and guidelines established in 2 CFR 200.430.
+
+
+
+                                  FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                 50
+
+
+           o Personnel managing cases to provide primary services, such as coordinating
+             initial transportation and onward destination movement, is allowable.
+           o Travel and relocation expenses for primary labor (personal service) costs are not
+             allowable.
+           o Costs associated with management and administration are addressed separately
+             below.
+Secondary Services
+   • Renovations or modifications to existing facilities
+          o Applications that include funding requests for renovations or modifications to
+              existing facilities cannot exceed $250,000 for the entire application budget.
+          o SSP funding may only be used for those parts of the facility that are directly
+              associated with providing services to noncitizen migrants released from DHS
+              custody.
+          o Funding can be used for:
+                   Improvements to expand capacity and services and to address safety
+                      concerns. Renovations and modifications to existing facilities cannot
+                      change the existing footprint of the facility.
+                   Repairs to facilities to provide services (e.g., update bathroom/renovate
+                      kitchen) to make them safe and sanitary or compliant with state and local
+                      codes.
+                   Planning costs to support the SSP renovations or modifications to existing
+                      facilities are allowable. These planning activities include the following:
+                          • Develop plans, protocols, or procedures for the operation and use
+                               related to new capabilities as a result of the renovations or
+                               modifications to existing facilities;
+                          • Conduct physical security assessments;
+                          • Analyze design and implementation of protection system (e.g., fire
+                               protection and suppression, atmospheric filtration, explosives
+                               mitigation) for renovations or modifications to existing facilities.
+                   Obtaining permits and completing inspections which are necessary for
+                      specified improvements.
+   • Clothing (shirts, pants, outerwear, underwear and bras, socks, shoes/shoelaces,
+      backpacks, belts, etc.)
+   • Outreach information (e.g., communications development and distribution, contracts,
+      printing services)
+   • Translation services (e.g., contracts and external support)
+   • Labor for secondary services (see 2 CFR 200.430))
+          o Labor for secondary services means only the compensation for the time
+              employees or contractors are directly providing secondary services and/or
+              receiving training on the provision of secondary services.
+          o Travel and relocation expenses for secondary labor (personal service) costs are
+              not allowable.
+          o Costs associated with management and administration are addressed separately
+              below.
+Management & Administration
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                            51
+
+
+Management & Administration (M&A) costs are allowable and do not count as a primary or
+secondary service. M&A is defined as director/manager level and administrative staff time,
+contracted or otherwise, to provide services directly or to support needs of families and
+individuals released by DHS. Recipients may expend up to 5% of an SSP award for allowable
+M&A costs. Subrecipients may also expend up to 5% of their SSP subaward for allowable M&A
+costs. These may include services providing grants management, including grant application
+preparation. These may also include recordkeeping (e.g., IT assistance (contracts and external
+support) and costs associated with creating a database and/or tracking system to assist with
+managing SSP funds as well as cybersecurity assessments and enhancements.
+
+
+
+
+                                    FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                               52
+
+
+                      Appendix B: Payment Requests and Amendments
+
+Appendix B contains detailed information on SSP Award Administration. Reviewing this
+information may help recipients in the programmatic and financial administration of their
+award(s).
+
+Payments and Amendments
+FEMA uses the Direct Deposit/Electronic Funds Transfer (DD/EFT) method of payment to
+recipients. SSP payment/drawdown requests are generated using FEMA GO. SSP
+payment/drawdown requests will be governed by applicable federal regulations in effect at the
+time a grant is awarded to the recipient and may be either advances or reimbursements.
+Recipients should not expend funds until all special conditions listed on the grant award
+document have been met, including completion of EHP review, active SAM.gov registration, and
+the request for payment in FEMA GO has been approved.
+
+Recipients should draw down funds based upon immediate disbursement requirements; however,
+FEMA strongly encourages recipients to draw down funds as close to disbursement or
+expenditure as possible to avoid accruing interest.
+
+Non-federal entities must submit the following documents at time of drawdown requests:
+   • If the drawdown request includes money for a subrecipient, specify the subrecipient and
+      allowable activities the funding covers.
+   • For renovations or modifications to rented real property only: If an applicant or
+      subapplicant is requesting funding for renovations or modifications to rented real
+      property and documentation has not previously been provided, submit rental agreement
+      addressing space, any limitations of use, and rental period.
+   • For all services covered by the draw down request, provide Alien Registration Numbers
+      (A-Numbers) or evidence of DHS processing (e.g., I-94, I-385, I-860, I-862): A summary
+      list reporting A-Numbers, names, corresponding DHS release dates of the served
+      population, and corresponding service dates of the served population. Please do not send
+      copies of the forms themselves. Applicants must use the provided A-Number Submission
+      Template to populate the information. Recipients must ensure that full A-Numbers and
+      accurate dates of service are provided.
+   • Proof of Purchase Documentation:
+           o For each requested allowable activity service category (See Appendix A), provide
+              one example of proof of payment (e.g., canceled check, credit card statement,
+              etc.) and a receipt reflecting the purchase. Provide one document inclusive of all
+              proofs of payment and receipts less than $5,000. In the document (a spreadsheet is
+               preferred), identify the following things:
+                    For each proof of payment receipt, the allowable activity/service category
+                       being funded (see the Application Worksheet, Budget Worksheet tab for
+                       categories)
+                    The date of the receipt
+                    The proof of purchase associated with the line item (file name, page
+                       number, transaction ID, or other unique identifier to clearly link the line
+                       item with the proof of purchase)
+
+
+                                     FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                53
+
+
+                    The line item details from the receipt (what the item is)
+                    The quantity if more than one
+                    The amount requested for reimbursement by line item, not receipt total
+                    If applicable, which proofs of payment and receipts are for which
+                     subrecipient.
+           o For each purchase or allowable cost of $5,000 or more, provide proof of payment
+             and a receipt reflecting the purchase or other documentation demonstrating
+             calculation and allocation of cost in accordance with 2 CFR Part 200, Subpart E.
+             Provide one document inclusive of all proofs of payment and receipts $5,000 or
+             more. In the document, identify which proofs of payment and receipts are for
+             which allowable activity service category (See Appendix A). If applicable, also
+             identify which proofs of payment and receipts are for which subrecipient.
+
+Non-federal entities should keep detailed records of all transactions involving the grant. FEMA
+may at any time request copies of any relevant documentation and records. See, e.g., 2 C.F.R. §§
+200.318(i), 200.334, 200.337.
+
+Reimbursement and Advanced Funding
+FEMA recognizes that many SSP recipients and subrecipients – particularly nonprofit
+organizations – may not have the requisite cash on hand readily available for immediate
+procurement of services. Given this situation, FEMA will allow for advanced-based funding in
+addition to the preferred reimbursement-based funding, with the following caveats:
+
+Reimbursement
+Payment by reimbursement is the preferred method (see 2 C.F.R. § 200.305). As a prerequisite of
+SSP approval for reimbursement requests, recipients shall include proof of purchase, in the form
+of a canceled check or credit card transaction, active SAM.gov registration, and a final invoice(s)
+in each reimbursement SSP Program payment/drawdown request. In accordance with U.S.
+Department of Treasury regulations at 31 C.F.R. Part 205, if applicable, the recipient shall
+maintain procedures to minimize the time elapsing between the transfer of funds and the
+disbursement of said funds.
+
+Advanced Funding
+Recipients may be paid in advance, provided they maintain or demonstrate the willingness and
+ability to maintain procedures to minimize the time elapsing between the transfer of funds and its
+disbursement by the recipient (not to exceed 30 days), and the financial management systems
+that meet the standards for fund control and accountability as established in 2 C.F.R. Part 200.
+The recipient shall include invoice(s) and/or purchase orders for advance SSP
+payment/drawdown requests. In the case of advance payments, recipients submit additional
+documentation (e.g., A-Number template) after the disbursement of funds. EHP review
+requirements must be met prior to advanced payments. Although advance drawdown requests are
+permissible, recipients remain subject to applicable federal laws in effect at the time a grant is
+awarded to the recipient. Governing interest requirements include the Uniform Administrative
+Requirements Cost Principles, and Audit Requirements for Federal Awards at 2 C.F.R. Part 200
+and the Cash Management Improvement Act (CMIA) and its implementing regulations at 31
+C.F.R. Part 205. Interest under CMIA will accrue from the time federal funds are credited to a
+
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                                54
+
+
+recipient’s account until the time the recipient pays out the funds for program purposes. For the
+rate to use in calculating interest, please visit Treasury Current Value rate.
+
+Payment Requests During Closeout
+A recipient may only submit reimbursement payment requests up to 120 calendar days after the
+expiration of the period of performance, during an award’s closeout reconciliation.
+Reimbursement payments are the only eligible type of requests to be submitted after a grant’s
+period of performance has expired. The expenditure must have been obligated and received
+during the period of performance of the award. The recipient’s request should contain clear and
+specific information certifying that the liquidation of federal funds is reimbursement for an
+obligation properly incurred during the active period of performance; FEMA may request
+documentation supporting the reimbursement for review at any time.
+
+Amendments
+FEMA may approve SSP award amendments on a case-by-case basis, for the following reasons:
+
+   •   Extension of the period of performance in order to complete the scope of work;
+   •   Changes to the activity, mission, retroactive approval (pre-award), closeout issues, and
+       some excess funds requests;
+   •   Program adjustments due to pressing need (transfer or redistribute available funds from
+       uses described in the submitted budget to other uses within the grant scope);
+   •   Budget changes (adding funds to award/non-closeout deobligation of funds); or
+   •   Adding subrecipients to an award. To add a subrecipient to an award:
+          o Provide the information listed on Tab 3 Subapplicant Information of the
+              Application Worksheet.
+          o Applicants must verify the nonprofit status of subapplicants and retain a copy of
+              the documentation submitted by the subapplicant(s) as evidence of their nonprofit
+              status for auditing purposes.
+
+FEMA will only consider amendments submitted via FEMA GO. These requests must contain
+specific and compelling justifications for the requested change. Amendments or changes to the
+scope of work may require additional EHP review. FEMA strongly encourages recipients to
+expend grant funds in a timely manner, to be consistent with SSP goals and objectives. All
+amendments require recipients to maintain an active SAM.gov registration.
+
+NOTE: A recipient may deobligate (i.e., return) unused funds (i.e., those remaining funds
+previously drawn down via payment request and/or remaining award funding that was never
+requested) to DHS/FEMA prior to the end of an award’s period of performance. To exercise
+this option, a recipient must submit an amendment via FEMA GO and state in the amendment
+that the unliquidated funds (i.e., the funds to be returned) are not necessary for the fulfillment
+or success of the grant’s obligations or mission. The recipient must also indicate in the
+amendment that it understands that the returned funds will be deobligated and unavailable for
+any future award expenses. Deobligation of funds will decrease the federal portion of the
+grant and the amount of the recipient’s Cost Share obligation. FEMA will confirm
+deobligation amendments with all points of contact; after confirmation of the recipient’s
+intent to deobligate, FEMA will hold the approved deobligation request for 14 calendar days
+
+
+                                      FY 2024 Shelter and Services Program – Allocated (SSP-A)
+                                                                                          55
+
+
+as a period for recipient reconsideration before FEMA processes the deobligation request. The
+deobligation of funds cannot be reversed.
+
+
+
+
+                                   FY 2024 Shelter and Services Program – Allocated (SSP-A)
+

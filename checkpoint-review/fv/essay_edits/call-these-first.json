@@ -1,0 +1,18 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Links to the named legal groups kept as directory links to their own sites (they source no facts); the journal does not vouch for them"
+ ],
+ "edits": [],
+ "ourview": [],
+ "keep_links": [
+  "https://www.judicialwatch.org/",
+  "https://aflegal.org/priority/election-integrity/",
+  "https://www.publicinterestlegal.org/",
+  "https://www.irli.org/",
+  "https://www.fairus.org/"
+ ],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

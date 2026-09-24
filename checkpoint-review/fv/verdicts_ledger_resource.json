@@ -1,0 +1,492 @@
+{
+ "3": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view. The DOJ July 2025 memo does not tabulate passengers by party; \"people from both parties\u2019 worlds\" is characterization.",
+  "Notes": "Characterization; no checkable figure. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://politifact.com/factchecks/2025/feb/24/social-media/did-philadelphia-eagles-decline-trump-white-house/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "4": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics",
+  "Source_Type": "government_data",
+  "Fix_Needed": "",
+  "Notes": "CBP: 10.83M nationwide encounters FY2021\u2013FY2024 (FY2021 began Oct. 2020 under Trump). HHS 1,475 figure: Senate PSI hearing Apr. 26, 2018. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://politifact.com/factchecks/2018/may/29/donald-trump/trump-correctly-tweets-democrats-mistakenly-tweete/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "5": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://supreme.justia.com/cases/federal/us/395/444/",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "",
+  "Notes": "Brandenburg v. Ohio, 395 U.S. 444 (1969) correctly summarized. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "6": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Say: \"The National School Boards Association\u2019s Sept. 29, 2021 letter asked for federal help and invoked domestic terrorism. On Oct. 4, 2021, AG Garland directed the FBI and U.S. Attorneys to coordinate.\" Label the last sentence Our view.",
+  "Notes": "AG memo Oct. 4, 2021 (justice.gov blocks automated fetch; loads in a browser). Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2019/apr/11/cory-booker/donald-trump-cut-funding-investigate-domestic-terr/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "7": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.iaea.org/sites/default/files/gov2026-50.pdf",
+  "Source_Type": "official_record (IAEA)",
+  "Fix_Needed": "Keep 440.9 kg up to 60% as of June 13, 2025 (GOV/2026/50, dated Sept. 1, 2026). Drop \"Iran is the only non-weapon state at 60 percent\" (not stated in GOV/2026/50) or cite an IAEA report that says it. Jeffries\u2019 words: cite the Congressional Record/video where said.",
+  "Notes": "GOV/2026/50 para 27: 440.9 kg HEU up to 60% (432.9 kg verified). Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.cnn.com/2017/01/30/politics/donald-trump-supreme-court-choice-announcement-coming-tuesday-8-p-m-) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "8": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.iaea.org/sites/default/files/gov2026-50.pdf",
+  "Source_Type": "official_record (IAEA)",
+  "Fix_Needed": "Keep the IAEA figure; cite Schumer\u2019s and Khanna\u2019s words only as where the claim was made (link the original post/record). Label \"Denying the enrichment is denying an inspection\" as Our view.",
+  "Notes": "GOV/2026/50 para 27. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2019/nov/21/pete-buttigieg/pete-buttigieg-falsely-says-donald-trump-illegally/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "14": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.c-span.org/clip/white-house-event/user-clip-trump-doesnt-kid-about-suggesting-we-stop-testing/4888561",
+  "Source_Type": "unedited_video",
+  "Fix_Needed": "Keep quotes (Tulsa, June 20, 2020; \"I don\u2019t kid,\" June 23, 2020). \"No order cutting tests was issued\" is a negative; say \"No written order to reduce testing has been produced.\"",
+  "Notes": "C-SPAN clip of unedited coverage (bot-blocked to curl). Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.snopes.com/fact-check/trump-us-travel-restrictions/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "18": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove. The only source is AP\u2019s own fact check about AP photos; under the tightened standard a news outlet cannot be the source for a fact, and a checker never confirms a case about its own outlet.",
+  "Notes": "No primary record of the 2014 photo dates located. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://apnews.com/article/a98f26f7c9424b44b7fa927ea1acd4d4) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "23": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://oig.justice.gov/reports/review-four-fisa-applications-and-other-aspects-fbis-crossfire-hurricane-investigation",
+  "Source_Type": "official_record (DOJ OIG)",
+  "Fix_Needed": "",
+  "Notes": "Horowitz report 20-012 (Dec. 9, 2019): 17 significant inaccuracies and omissions; Clinesmith altered email (pleaded guilty, 18 U.S.C. 1001, Aug. 2020). Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.washingtonpost.com/lifestyle/style/media-washington-post-steele-dossier/2021/11/12/f7c9b770-43d5-11ec-a88e-2aa4632af69b_story.html) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "38": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://archive.org/details/project-2025-mandate-for-leadership-heritage-foundation/",
+  "Source_Type": "primary_document (the book)",
+  "Fix_Needed": "",
+  "Notes": "Mandate for Leadership title page: Paul Dans and Steven Groves, eds. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://politifact.com/factchecks/2024/nov/01/kamala-harris/kamala-harris-wrong-that-donald-trump-would-force/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "48": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.fda.gov/news-events/press-announcements/fda-takes-key-action-fight-against-covid-19-issuing-emergency-use-authorization-first-covid-19",
+  "Source_Type": "official_record (FDA)",
+  "Fix_Needed": "Link the Dec. 11, 2020 FDA emergency use authorization release (the site links the Aug. 2021 full approval).",
+  "Notes": "First EUA Dec. 11, 2020 (Pfizer-BioNTech), during Trump\u2019s term. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://politifact.com/factchecks/2021/mar/05/joe-biden/bidens-criticism-trump-administration-vaccine-cont/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "53": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.fec.gov/files/legal/murs/7291/7291_01.pdf",
+  "Source_Type": "official_record (FEC)",
+  "Fix_Needed": "Keep the FEC fine (MUR 7291). The \"Republican donor started opposition research\" clause needs a primary cite (e.g., Durham report) or should be cut.",
+  "Notes": "FEC MUR 7291: DNC and Hillary for America fined for reporting Fusion GPS payments as legal services. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.washingtonpost.com/lifestyle/style/media-washington-post-steele-dossier/2021/11/12/f7c9b770-43d5-11ec-a88e-2aa4632af69b_story.html) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "56": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.justice.gov/archives/sco/file/1373816/dl",
+  "Source_Type": "official_record (Special Counsel report)",
+  "Fix_Needed": "",
+  "Notes": "Manafort convicted Aug. 2018 (E.D. Va.) on 8 tax and bank-fraud counts; no conspiracy-with-Russia charge. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.nytimes.com/2019/01/08/us/politics/manafort-trump-campaign-data-kilimnik.html) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "57": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.justice.gov/usao-dc/pr/roger-stone-found-guilty-obstruction-false-statements-and-witness-tampering",
+  "Source_Type": "official_record (DOJ)",
+  "Fix_Needed": "",
+  "Notes": "Convicted Nov. 15, 2019: obstruction, five false statements, witness tampering. Commuted July 2020; pardoned Dec. 2020. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://money.cnn.com/2017/12/08/media/cnn-correction-email-story/index.html) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "59": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00033.htm",
+  "Source_Type": "official_record (Senate roll call)",
+  "Fix_Needed": "",
+  "Notes": "Acquittals Feb. 5, 2020 and Feb. 13, 2021 (https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00059.htm, 57\u201343, short of 67). Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://politifact.com/article/2017/jan/22/context-winston-churchill-and-mlk-busts/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "61": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://supreme.justia.com/cases/federal/us/601/100/",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "Replace the dead site link (404) with the Trump v. Anderson opinion.",
+  "Notes": "Trump v. Anderson, 601 U.S. 100 (2024). Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.washingtonpost.com/politics/2020/02/16/tom-cotton-coronavirus-conspiracy/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "62": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.govinfo.gov/app/details/GPO-J6-REPORT",
+  "Source_Type": "official_record (House select committee report)",
+  "Fix_Needed": "Say: \"Rioters chanted \u2018Hang Mike Pence.\u2019 At 2:24 p.m. he posted that Pence \u2018didn\u2019t have the courage.\u2019\" Link the J6 committee final report (committee record) instead of the rally video, which does not contain the post.",
+  "Notes": "Rally video does not contain the 2:24 p.m. post. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.factcheck.org/2020/03/democrats-misleading-coronavirus-claims/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "64": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.govinfo.gov/app/details/GPO-J6-REPORT",
+  "Source_Type": "official_record (House select committee report)",
+  "Fix_Needed": "Link the 4:17 p.m. Jan. 6 video record, not the rally video; keep \"go home in peace\".",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.reuters.com/article/world/trump-lawyer-denies-deutsche-bank-got-subpoena-on-trump-accounts-idUSKBN1DZ0XH/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "65": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.documentcloud.org/documents/20500984-planning-and-execution-timeline-for-the-national-guards-involvement-in-the-january-6-2021-violent-attack-at-the-us-capitol/",
+  "Source_Type": "official_record (DoD timeline, hosted copy)",
+  "Fix_Needed": "",
+  "Notes": "DoD timeline document. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.snopes.com/news/2025/06/17/va-rules-refuse-treatment-veterans/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "67": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.c-span.org/clip/campaign-2024/donald-trump-on-illegal-immigrants-poisoning-the-blood-of-our-country/5098439",
+  "Source_Type": "unedited_video",
+  "Fix_Needed": "Label \"and it is ugly\" as Our view.",
+  "Notes": "Durham, N.H., Dec. 16, 2023. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.foxnews.com/media/trump-admin-official-shreds-ny-times-multiple-corrections-report-silicon-valley-initiative) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "70": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.hsgac.senate.gov/subcommittees/investigations/hearings/oversight-of-hhs-and-dhs-efforts-to-protect-unaccompanied-alien-children-from-human-trafficking-and-abuse/",
+  "Source_Type": "official_record (Senate PSI hearing)",
+  "Fix_Needed": "",
+  "Notes": "Apr. 26, 2018 PSI hearing: HHS could not determine whereabouts of 1,475 children on follow-up calls to sponsors (page intermittently 503). Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://politifact.com/factchecks/2018/may/29/donald-trump/trump-correctly-tweets-democrats-mistakenly-tweete/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "71": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/archives/opa/pr/attorney-general-announces-zero-tolerance-policy-criminal-illegal-entry",
+  "Source_Type": "official_record (DOJ)",
+  "Fix_Needed": "Fix date: \"Zero tolerance was announced April 6, 2018; DHS began referring all adult crossers in May 2018.\" Support \"separations happened before that policy\" with HHS OIG OEI-BL-18-00511 (Jan. 2019): https://oig.hhs.gov/reports/all/2019/separated-children-placed-in-office-of-refugee-resettlement-care/",
+  "Notes": "Flores settlement 1997. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "76": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.courtlistener.com/docket/65895581/carroll-v-trump/",
+  "Source_Type": "court_filing",
+  "Fix_Needed": "",
+  "Notes": "Verdict form: sexual abuse (May 9, 2023); Judge Kaplan, July 19, 2023 opinion. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.reuters.com/legal/abc-pay-15-mln-trump-library-settle-lawsuit-court-documents-show-2024-12-14/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "87": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove. No primary record of the 2018 NSC reorganization was located; the only support is a Reuters fact check (approved with caution, secondary only).",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.reuters.com/article/world/partly-false-claim-trump-fired-entire-pandemic-response-team-in-2018-idUSKBN21C32C/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "88": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove. The only support is a memoir and news; the linked FDA page is unrelated. \"No recording and no order in the file\" is an unprovable negative.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2026/jan/26/social-media/Trump-Truth-Social-post-fake-guns-Minneapolis/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "92": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove. Settlements are supported only by news coverage in this pass; no court docket linked.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.washingtonpost.com/nation/2019/03/01/editors-note-related-lincoln-memorial-incident/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "99": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.cdc.gov/mmwr/volumes/70/wr/mm7031e2.htm",
+  "Source_Type": "government_data (CDC MMWR)",
+  "Fix_Needed": "Attribute the quote to where it was said (Walensky, MSNBC, Mar. 29, 2021). Replace \"false when it was said\" with \"CDC data published July 30, 2021 showed vaccinated people could be infected and carry similar viral loads.\"",
+  "Notes": "MMWR 70(31), Provincetown outbreak. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2026/jan/26/social-media/Trump-Truth-Social-post-fake-guns-Minneapolis/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "105": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice",
+  "Source_Type": "official_record (DOJ)",
+  "Fix_Needed": "Keep DOJ facts (June 23, 2026; eight sentenced; 100 years for Benjamin Song, attempted murder of an Alvarado officer; combined 450 years). Link the House Democrats\u2019 Sept. 21, 2026 post only as where the claim was made. Label the last sentence Our view.",
+  "Notes": "DOJ PR read via Wayback snapshot of Sept. 19, 2026. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2019/apr/11/cory-booker/donald-trump-cut-funding-investigate-domestic-terr/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "113": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove. No record (\"TRUTH\") text and no primary source.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://politifact.com/factchecks/2025/oct/24/hakeem-jeffries/democrats-leavitt-priority-ballroom-white-house/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "119": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics",
+  "Source_Type": "government_data",
+  "Fix_Needed": "Add: FY2021 began Oct. 1, 2020 under Trump.",
+  "Notes": "CBP nationwide encounters FY2021\u2013FY2024: 10.83M. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2019/mar/28/kamala-harris/kamala-harris-wrong-trump-isnt-raiding-money-milit/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "120": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice",
+  "Source_Type": "official_record (DOJ)",
+  "Fix_Needed": "Keep DOJ facts. Label \"An idea does not throw a frozen bottle...\" as Our view.",
+  "Notes": "DOJ June 23, 2026: 8 sentenced, Song 100 years, combined 450 years. Attack July 4, 2025. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://apnews.com/article/prairieland-detention-center-shooting-sentencing-1eb7a8ac32dbb637e027709ae010f374) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "121": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Label the last sentence Our view or cite the NSBA Oct. 22, 2021 letter.",
+  "Notes": "AG memo Oct. 4, 2021. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2019/apr/11/cory-booker/donald-trump-cut-funding-investigate-domestic-terr/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "122": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.politifact.com/article/2013/dec/12/lie-year-if-you-like-your-plan-you-can-keep-it/",
+  "Source_Type": "fact_checker (record of its own designation)",
+  "Fix_Needed": "Keep only as \"PolitiFact named it its 2013 Lie of the Year\" (PolitiFact is approved with caution; this is its own record of its own award). \"The promise did not survive the statute\" needs CMS/HHS data or Our-view label.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/article/2013/dec/12/lie-year-if-you-like-your-plan-you-can-keep-it/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "126": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view, or cite CBO\u2019s Aug. 2022 estimate directly.",
+  "Notes": "Former AP link was unrelated. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "127": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view; cite the CNN town hall (July 21, 2021) only as where the words were said.",
+  "Notes": "Former AP link was unrelated. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "128": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view; cite the Sept. 9, 2016 speech transcript/video only as where the words were said.",
+  "Notes": "Former AP link was unrelated. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "129": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the stenographer/apostrophe detail: supported only by AP reporting.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://apnews.com/article/biden-garbage-transcript-puerto-rico-trump-326e2f516a94a470a423011a946b6252) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "133": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove unless unedited video of the June 23, 2018 remarks is linked (none located; the linked IAEA PDF is unrelated).",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://politifact.com/factchecks/2025/feb/24/social-media/did-philadelphia-eagles-decline-trump-white-house/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "136": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.iaea.org/sites/default/files/gov2026-50.pdf",
+  "Source_Type": "official_record (IAEA)",
+  "Fix_Needed": "Same as item 7.",
+  "Notes": "GOV/2026/50 para 27. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.cnn.com/2017/01/30/politics/donald-trump-supreme-court-choice-announcement-coming-tuesday-8-p-m-) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "137": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/119/crec/2026/03/04/172/41/CREC-2026-03-04-house.pdf",
+  "Source_Type": "official_record (Congressional Record)",
+  "Fix_Needed": "Link Schumer\u2019s post only as where the claim was made; keep IAEA figure with GOV/2026/50 link.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2019/nov/21/pete-buttigieg/pete-buttigieg-falsely-says-donald-trump-illegally/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "139": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.cbo.gov/system/files/2025-08/61367-SNAP.pdf",
+  "Source_Type": "official_record (CBO)",
+  "Fix_Needed": "Confirm the 2.4 million figure against the CBO letter before publishing (cbo.gov blocks automated fetch).",
+  "Notes": "CBO SNAP estimate for P.L. 119-21. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.factcheck.org/2020/03/democrats-misleading-coronavirus-claims/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "144": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1151/vote_115_1_00179.htm",
+  "Source_Type": "official_record (Senate roll call)",
+  "Fix_Needed": "",
+  "Notes": "July 28, 2017, \"skinny repeal\" failed 49\u201351. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.washingtonpost.com/news/fact-checker/wp/2017/05/10/kamala-harriss-claim-that-129-million-people-with-preexisting-conditions-could-be-denied-coverage/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "148": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.supremecourt.gov/orders/courtorders/121120zr_p860.pdf",
+  "Source_Type": "court_filing",
+  "Fix_Needed": "Cite specific court records (e.g., Texas v. Pennsylvania, Dec. 11, 2020 order) rather than a generic statement.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.usatoday.com/story/news/factcheck/2025/02/21/doge-irs-congress-democrats-satire-fact-check/79429910007/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "153": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://constitution.congress.gov/constitution/amendment-12/",
+  "Source_Type": "constitution",
+  "Fix_Needed": "",
+  "Notes": "Electoral Count Reform Act of 2022 later codified the ministerial role. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.factcheck.org/2020/03/democrats-misleading-coronavirus-claims/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "159": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.manhattanda.org/wp-content/uploads/2023/04/Donald-J.-Trump-Indictment.pdf",
+  "Source_Type": "court_filing",
+  "Fix_Needed": "",
+  "Notes": "34 counts; jury verdict May 30, 2024. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.cnn.com/2017/01/30/politics/donald-trump-supreme-court-choice-announcement-coming-tuesday-8-p-m-) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "165": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/bill/111th-congress/house-bill/3200",
+  "Source_Type": "official_record",
+  "Fix_Needed": "",
+  "Notes": "H.R. 3200 Sec. 1233, advance care planning consultation. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2020/sep/18/joe-biden/joe-biden-wrongly-claims-trump-couldve-prevented-e/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "166": {
+  "Verdict": "Opinion",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Label Our view.",
+  "Notes": "Rhetoric. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.cbsnews.com/news/comey-says-ag-loretta-lynch-wanted-clinton-investigation-to-be-called-a-matter/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "188": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/bill/117th-congress/house-resolution/503",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Label \"is not a jury. It is a production.\" as Our view.",
+  "Notes": "H.Res. 503 Sec. 2: Speaker appoints; Pelosi rejected Jordan and Banks July 21, 2021. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2025/sep/29/hakeem-jeffries/trump-medical-research-cuts-nih/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "190": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove the factual claims or label the paragraph Our view; the committee home page does not document the footage releases.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "191": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.dhs.gov/archive/news/2022/08/24/following-hsac-recommendation-dhs-terminates-disinformation-governance-board",
+  "Source_Type": "official_record (DHS)",
+  "Fix_Needed": "",
+  "Notes": "Terminated Aug. 24, 2022. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.snopes.com/fact-check/report-vermont-power-grid-infiltrated-by-russian-hackers/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "194": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.congress.gov/bill/118th-congress/house-resolution/12",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Attribute findings to the Select Subcommittee (a committee report, not a court). Link the report itself, not a press release.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "196": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Label \"Looking into corruption ... is the job of the executive\" as Our view.",
+  "Notes": "Senate acquittal Feb. 5, 2020. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.factcheck.org/2020/04/bidens-false-claim-on-trumps-response-to-coronavirus/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "199": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.nycourts.gov/ipjudicialethicsopinions/23-54.htm",
+  "Source_Type": "official_record",
+  "Fix_Needed": "",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://apnews.com/article/589aa9c8ab1b48f0b8d7fa171e6cb74c) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "200": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.nycourts.gov/LegacyPDFS/press/PDFs/People%20v.%20DJT%20Jury%20Instructions%20and%20Charges%20FINAL%205-23-24.pdf",
+  "Source_Type": "court_filing",
+  "Fix_Needed": "",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.cnn.com/2017/01/30/politics/donald-trump-supreme-court-choice-announcement-coming-tuesday-8-p-m-) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "201": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.courtlistener.com/docket/7649164/stephanie-clifford-v-donald-j-trump/",
+  "Source_Type": "court_filing",
+  "Fix_Needed": "Keep the fee order. Cut the Avenatti statements and CrowdJustice totals (news only).",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://apnews.com/article/589aa9c8ab1b48f0b8d7fa171e6cb74c) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "202": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.courtlistener.com/docket/65895581/carroll-v-trump/",
+  "Source_Type": "court_filing",
+  "Fix_Needed": "Keep filing dates (N.Y. CPLR 214-j window Nov. 24, 2022\u2013Nov. 24, 2023). Cut the Reid Hoffman funding clause (news only).",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.reuters.com/legal/abc-pay-15-mln-trump-library-settle-lawsuit-court-documents-show-2024-12-14/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "203": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.nycourts.gov/reporter/3dseries/2025/2025_04756.htm",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.washingtonpost.com/opinions/2021/03/16/washington-post-correction-trump-call-georgia-investigator/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "204": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.courtlistener.com/docket/67490071/united-states-v-trump/",
+  "Source_Type": "court_filing",
+  "Fix_Needed": "",
+  "Notes": "Dismissed July 15, 2024. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://money.cnn.com/2017/12/08/media/cnn-correction-email-story/index.html) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "206": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.fultonclerk.org/",
+  "Source_Type": "official_record (court clerk)",
+  "Fix_Needed": "Link the Nov. 26, 2025 nolle prosequi order itself (clerk home page is not the record).",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.washingtonpost.com/opinions/2021/03/16/washington-post-correction-trump-call-georgia-investigator/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "207": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/storage/durhamreport.pdf",
+  "Source_Type": "official_record (DOJ)",
+  "Fix_Needed": "Keep as is; label characterizations as Our view.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.factcheck.org/2019/10/schiffs-parody-and-trumps-response/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "209": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Remove: no primary record linked for the employment path (jury instructions are unrelated).",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.washingtonpost.com/news/fact-checker/wp/2017/05/10/kamala-harriss-claim-that-129-million-people-with-preexisting-conditions-could-be-denied-coverage/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "210": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.congress.gov/118/meeting/house/117301/documents/HHRG-118-FD00-20240515-SD027-U27.pdf",
+  "Source_Type": "official_record (House hearing exhibit)",
+  "Fix_Needed": "",
+  "Notes": "Wade invoices. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.washingtonpost.com/opinions/2021/03/16/washington-post-correction-trump-call-georgia-investigator/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "211": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/archives/opa/speech/attorney-general-merrick-b-garland-delivers-remarks-appointment-special-counsel",
+  "Source_Type": "official_record (DOJ)",
+  "Fix_Needed": "Keep; DC case dismissed without prejudice Nov. 25, 2024.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.reuters.com/article/world/trump-lawyer-denies-deutsche-bank-got-subpoena-on-trump-accounts-idUSKBN1DZ0XH/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "212": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.nycourts.gov/Reporter/pdfs/2022/2022_30538.pdf",
+  "Source_Type": "court_opinion",
+  "Fix_Needed": "",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.reuters.com/article/world/trump-lawyer-denies-deutsche-bank-got-subpoena-on-trump-accounts-idUSKBN1DZ0XH/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "213": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "https://www.foreignassistance.gov/",
+  "Source_Type": "government_data",
+  "Fix_Needed": "",
+  "Notes": "FY2023 disbursements; FEMA SSP figures per OIG-26-04. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2019/mar/28/kamala-harris/kamala-harris-wrong-trump-isnt-raiding-money-milit/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "217": {
+  "Verdict": "Verified",
+  "Best_Source_URL": "",
+  "Source_Type": "internal_count (repo src/lib/ledgers.ts)",
+  "Fix_Needed": "",
+  "Notes": "Count of the site\u2019s own captions; no external source needed. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2025/jan/30/viral-image/image-of-ice-officers-arresting-someone-wearing-a/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "623": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice",
+  "Source_Type": "official_record (DOJ)",
+  "Fix_Needed": "Cite DOJ, not AP: June 23, 2026, eight sentenced, combined 450 years; Song 100 years.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://apnews.com/article/prairieland-detention-center-shooting-sentencing-1eb7a8ac32dbb637e027709ae010f374) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "806": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice",
+  "Source_Type": "official_record (DOJ)",
+  "Fix_Needed": "Cite DOJ, not AP.",
+  "Notes": "Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://apnews.com/article/prairieland-detention-center-shooting-sentencing-1eb7a8ac32dbb637e027709ae010f374) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "181": {
+  "Verdict": "Cannot verify, cut it",
+  "Best_Source_URL": "",
+  "Source_Type": "",
+  "Fix_Needed": "Keep \"The Flores settlement is 1997\" only with a court-record link; remove the 2014-photo sentence (supported only by AP).",
+  "Notes": "Internal duplicate of 18. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://apnews.com/article/a98f26f7c9424b44b7fa927ea1acd4d4) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ },
+ "182": {
+  "Verdict": "Verified with correction needed",
+  "Best_Source_URL": "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf",
+  "Source_Type": "official_record",
+  "Fix_Needed": "Same as item 6.",
+  "Notes": "Internal duplicate of 6. Tightened sourcing pass 2026-09-24: former Best_Source_URL (https://www.politifact.com/factchecks/2019/apr/11/cory-booker/donald-trump-cut-funding-investigate-domestic-terr/) removed; it was a news/fact-check page and in most cases an unrelated page inherited from a mismatched catalog duplicate."
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "\"Three hundred million people\" changed to \"About 340 million people\" (Census)",
+  "Opinion passages labeled Our view"
+ ],
+ "edits": [
+  [
+   "Three hundred million people hired 535 clerks.",
+   "About 340 million people hired 535 clerks."
+  ]
+ ],
+ "quote_keep": [
+  "That to secure these rights"
+ ],
+ "ourview": [
+  "A nation of this size cannot be overseen",
+  "A republic cannot survive if half",
+  "The Constitution does not authorize a private war"
+ ]
+}

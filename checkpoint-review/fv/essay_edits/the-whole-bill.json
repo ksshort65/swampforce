@@ -1,0 +1,32 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Budget Act wording corrected: the 1974 Act set October 1 as the start of the fiscal year and a timetable; the Act does not itself name twelve bills (there are twelve regular bills today)",
+  "Urban Institute $32–34 trillion figure cut (think-tank estimate, not a primary record)"
+ ],
+ "edits": [
+  [
+   "It is twelve money bills the 1974 Budget Act already required by October 1",
+   "It is twelve regular money bills due by October 1, the fiscal-year start the 1974 Budget Act set"
+  ],
+  [
+   " Medicare for all names the money — Urban Institute already put extra federal cost near $32–34 trillion over ten years. If the number is different, show the arithmetic.",
+   " Medicare for all names the money and shows the arithmetic."
+  ],
+  [
+   "Statute they already wrote: Congressional Budget Act of 1974. Twelve bills by October 1.",
+   "Statute they already wrote: Congressional Budget Act of 1974, which set the October 1 fiscal year. Twelve regular bills by that date."
+  ],
+  [
+   "- Urban Institute — single-payer extra federal cost ~$34T / 10 years — https://www.urban.org/urban-wire/dont-confuse-changes-federal-health-spending-national-health-spending\n",
+   ""
+  ]
+ ],
+ "ourview": [
+  "This is not a street"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

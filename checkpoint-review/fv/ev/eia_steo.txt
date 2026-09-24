@@ -1,0 +1,392 @@
+
+Short-Term Energy Outlook - U.S. Energy Information Administration (EIA)
+U.S. Energy Information Administration - EIA - Independent Statistics and Analysis
+Skip to sub-navigation
+U.S. Energy Information Administration - EIA - Independent Statistics and Analysis
+Menu
+Statistics
+Analysis
+Tools
+Education
+News
+Enter Search Term(s):
+Search
+‹ Analysis & Projections
+Short-Term Energy Outlook 
+Release Date:
+ September 9, 2026  | 
+Forecast Completed:
+ September 3, 2026  | 
+Next Release Date:
+ October 6, 2026 
+  | 
+Full Report
+    |  
+Text Only
+   |  
+All Tables
+   |  
+All Figures
+Glossary ›
+FAQS ›
+Forecasts
+Overview
+Global oil markets
+Petroleum products
+Natural gas
+Electricity, coal, and renewables
+Economy, weather, and CO
+2
+Data
+Figures
+Tables
+STEO Data browser
+Real Prices Viewer
+Data series changes
+Global Energy Security Data
+Supplements
+Global oil markets
+Global oil prices
+The Brent crude oil spot price increased to an average of $91 per barrel (b) in August, $7/b higher than in July. Global crude oil prices rose in August as total exports out of the Middle East remained constrained, leading to more oil production shut-ins in the region. This is due, in part, to the renewal of the U.S. blockade on Iran’s oil exports following Iran’s attacks on tankers in the Strait of Hormuz, as well as because of a 
+new rounds of sanctions
+ from the Treasury Department’s Office of Foreign Assets Control against Iranian economic and oil interests. We expect these policies to restrict Iran’s oil exports and reduce its oil production. 
+In addition, attacks on Saudi Arabia’s oil exports through the Bab el-Mandeb strait, 
+a major world oil transit chokepoint
+, reduced oil exports departing from Saudi Arabia’s Yanbu port on the Red Sea, a route which bypasses the Strait of Hormuz. In August, exports out of Yanbu were down by about half from July, according to estimates from Vortexa. In response, Saudi Arabia has increased oil shipments through the Suez Canal at the north end of the Red Sea, a longer and costlier route for customers in Asia. Although Saudi Arabia has also 
+reportedly begun to use a series of ship-to-ship transfers
+ outside of the Persian Gulf, we expect that the constrained Red Sea shipping channel will limit Saudi Arabia’s supply in the near term until global shipping flows adjust. 
+As flows through the Strait of Hormuz and the Bab el-Mandeb strait remain constrained and variable, crude oil production shut-ins rose over the past month. We assess that crude oil production shut-ins averaged 6.7 million barrels per day (b/d) in August, up from 5.0 million b/d in July. We assume that oil flows from the Middle East remain constrained through the fourth quarter of 2026 (4Q26), leading to shut-in production volumes averaging 5.7 million b/d during that quarter. 
+Although we raised our forecast for production disruptions in coming months, we expect oil flows out of the Middle East will gradually increase as shippers continue to find workarounds that allow them to export oil from the Middle East: using pipeline and overland bypass routes, increasing ship-to-ship transfers, and using new bypass pipeline capacity in the United Arab Emirates, 
+expected to come online in mid-2027
+. If these assumptions hold, we expect it will take until 2Q27 for most production and trade flows to return to pre-conflict averages. We anticipate, however, that some producers around the Persian Gulf will not be able to bring oil output back to pre-conflict averages during the forecast period. 
+Because of the large drawdown in global inventories driven by continued disruptions of crude oil production, we forecast that oil prices will remain elevated until global oil flows return to normal and oil inventories can be replenished. We estimate that global oil inventories fell by an average of 3.9 million b/d in 2Q26 and that they will fall by an additional 3.0 million b/d on average in 3Q26 and 1.7 million b/d on average in 4Q26. As a result, we forecast the Brent crude oil spot price will average around $90/b in the second half of 2026 (2H26), $8/b higher than in last month’s STEO. 
+As exports from the Middle East gradually increase and shut-in oil production restarts, we forecast oil prices will begin to fall, decreasing to an average of $77/b by 2Q27. We assess that most shut-in oil production will be largely restored in 2H27 and that global oil inventories will again start building, gradually lowering oil prices to an average of $67/b in 2H27, similar to last month’s STEO. However, we expect continued volatility in flows both through the Strait of Hormuz and through alternative routes based on changing conditions in the conflict, which will likely lead to more volatility in short-term price movements than our forecast indicates.
+ Global Petroleum and Other Liquids 
+2024
+2025
+2026
+projected
+2027
+projected
+Brent crude oil spot price
+(dollars per barrel)
+81
+69
+91
+74
+Global liquid fuels production
+(million barrels per day)
+103.2
+106.2
+100.6
+109.9
+OPEC liquid fuels production
+(million barrels per day)
+28.4
+29.3
+23.6
+29.4
+Non-OPEC liquid fuels production
+(million barrels per day)
+74.7
+76.9
+77.0
+80.5
+Global liquid fuels consumption
+(million barrels per day)
+103.1
+104.3
+102.6
+105.0
+Global GDP
+(percentage change)
+3.4
+3.4
+3.0
+3.4
+Interactive Data Viewers
+Provides custom data views of historical and forecast data
+STEO Data browser ›
+Real Prices Viewer ›
+Related Tables
+Table 2. Energy Prices
+PDF
+Table 3b. Non-OPEC Petroleum and Other Liquids Production
+PDF
+Table 3c. Total Liquid Fuels Production
+PDF
+Table 3d. Total Crude Oil Production
+PDF
+Table 3e. World Petroleum and Other Liquid Fuels Consumption
+PDF
+Related Figures
+West Texas Intermediate (WTI) crude oil price
+XLSX
+PNG
+World liquid fuels production and consumption balance
+XLSX
+PNG
+World liquid fuels production and consumption
+XLSX
+PNG
+World crude oil and liquid fuels production 
+XLSX
+PNG
+U.S. crude oil production
+XLSX
+PNG
+OPEC surplus crude oil production capacity
+XLSX
+PNG
+World liquid fuels consumption
+XLSX
+PNG
+World liquid fuels consumption growth
+XLSX
+PNG
+OECD commercial inventories of crude oil and other liquids (days of supply)
+XLSX
+PNG
+Estimated unplanned crude oil production outages among OPEC and non-OPEC producers 
+XLSX
+PNG
+Monthly U.S. tight oil production by formation
+XLSX
+PNG
+Monthly U.S. crude oil production by region
+XLSX
+PNG
+Other Resources
+WTI crude oil probabilities
+ (Microsoft Excel file)
+Energy Price Volatility and Forecast Uncertainty documentation
+ (Adobe PDF file)
+ West Texas Intermediate crude oil price and NYMEX 95% confidence intervals
+January 2023 - Current Month
+ (Adobe PDF file)
+January 2021 - December 2022
+ (Adobe PDF file)
+January 2019 - December 2020
+ (Adobe PDF file)
+January 2017 - December 2018
+ (Adobe PDF file)
+January 2015 - December 2016
+ (Adobe PDF file)
+January 2013 - December 2014
+ (Adobe PDF file)
+January 2011 - December 2012
+ (Adobe PDF file)
+January 2009 - December 2010
+ (Adobe PDF file)
+January 2007 - December 2008
+ (Adobe PDF file)
+About the 
+Short-Term Energy Outlook
+STEO Release Schedule
+Contact STEO Experts
+Model Documentation
+Sign up for email updates
+Previous STEO Forecasts:
+Changes in Forecast from Last Month
+STEO Archives
+August 2026
+July 2026
+June 2026
+May 2026
+April 2026
+prior issues
+Other EIA Outlooks:
+Annual Energy Outlook
+International Energy Outlook
+About EIA
+Open Data
+Legacy
+Contact Us
+U.S. Energy Information Administration
+1000 Independence Ave., SW
+Washington, DC 20585
+Policies
+Privacy/Security
+Copyright & Reuse
+Accessibility
+Information Quality
+Freedom of Information Act (FOIA)
+Related Sites
+usa.gov
+U.S. Department of Energy
+Stay Connected
+Facebook
+X
+Youtube
+LinkedIn
+Email Updates
+RSS Feeds
+Statistics
+Analysis
+Tools
+Education
+News
+Petroleum & Other Liquids
+Crude oil, gasoline, heating oil, diesel, propane, and other liquids including biofuels and natural gas liquids.
+Natural Gas
+Exploration and reserves, storage, imports and exports, production, prices, sales.
+Electricity
+Sales, revenue and prices, power plants, fuel use, stocks, generation, trade, demand & emissions.
+Coal
+Reserves, production, prices, employment and productivity, distribution, stocks, imports and exports.
+Nuclear & Uranium
+Uranium fuel, nuclear reactors, generation, spent fuel.
+Renewable & Alternative Fuels
+Includes hydropower, solar, wind, geothermal, biomass and ethanol.
+EIA Survey Forms
+Forms EIA uses to collect energy data including descriptions, links to survey instructions, and additional information.
+Total Energy
+Comprehensive data summaries, comparisons, analysis, and projections integrated across all energy sources.
+Monthly Energy Review
+Annual Energy Review
+Consumption & Efficiency
+Energy use in homes, commercial buildings, manufacturing, and transportation.
+Residential Energy Consumption Survey (RECS)
+Commercial Buildings Energy Consumption Survey (CBECS)
+Manufacturing Energy Consumption Survey (MECS)
+U.S. States
+State energy information, including overviews, rankings, data, and analyses.
+State Energy Data System (SEDS)
+International
+International energy information, including overviews, rankings, data, and analyses.
+International Energy Statistics
+Environment
+Greenhouse gas data, voluntary reporting, electric power plant emissions.
+U.S. Energy-Related Carbon Dioxide Emissions
+Energy-Related Carbon Dioxide Emissions at the State Level, 2005-2016
+Energy-Related Carbon Dioxide Emissions at the State Level
+Analysis and Projections
+Monthly and yearly energy forecasts, analysis of energy topics, financial analysis, congressional reports.
+Short-Term Energy Outlook
+Annual Energy Outlook
+Special Reports
+Special market analysis and/or data requests.
+EIA-112 Residential Utility Disconnections
+SHIP Act
+Energy & Financial Markets: What Drives Crude Oil Prices?
+International
+International energy analyses.
+Regional Analysis Briefs
+Country Analysis Briefs
+World Oil Transit Chokepoints
+OPEC Revenue
+Global Energy Security Data
+Glossary
+Data Tools, Apps, & Maps
+Tools to customize searches, view specific data sets, study detailed documentation, and access time-series data.
+Open Data
+EIA's free and open data available as API, Excel add-in, bulk files, and widgets
+EIA Beta
+Come test out some of the products still in development and let us know what you think!
+Open Source Code
+EIA's open source code, available on GitHub.
+All Reports & Products
+EIA Survey Forms
+Forms EIA uses to collect energy data including descriptions, links to survey instructions, and additional information.
+Email Updates
+Sign up for email subscriptions to receive messages about specific EIA products
+RSS Feeds
+Subscribe to feeds for updates on EIA products including Today in Energy and What's New.
+Follow us. . .
+A-Z Index
+A
+ |
+B
+ |
+C
+ |
+D
+ |
+E
+ |
+F
+ |
+G
+ |
+H
+ |
+I
+ |
+J
+ |
+K
+ |
+L
+ |
+M
+ |
+N
+ |
+O
+ |
+P
+ |
+Q
+ |
+R
+ |
+S
+ |
+T
+ |
+U
+ |
+V
+ |
+W
+ |
+XYZ
+Today in Energy
+Short, timely articles with graphics on energy, facts, issues, and trends.
+Energy Explained
+What is Energy?
+Units & Calculators
+U.S. Energy Facts
+Use of Energy
+Energy & Environment
+Petroleum
+Hydrocarbon Gas Liquids
+Natural Gas
+Coal
+Nuclear
+Electricity
+Hydrogen
+Hydropower
+Biofuels
+Biomass
+Wind
+Geothermal
+Solar
+For Teachers
+Lesson plans, science fair experiments, field trips, teacher guide, and career corner.
+Glossary
+FAQs
+Coal
+Conversion & Equivalents
+Oil/Petroleum
+Diesel
+Electricity
+Environment
+Gasoline
+General Energy
+Natural Gas
+Nuclear
+Prices
+Renewables
+What's New?
+U.S. Biofuels Plant Production Capacity Report
+Sep 24, 2026
+Electric Power Monthly
+Sep 24, 2026
+Wholesale Electricity Market Data
+Sep 17, 2026
+Press Room
+Press Releases
+Congressional Testimony
+Presentations
+Events

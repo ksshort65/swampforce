@@ -1,0 +1,25 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Member salary corrected to $174,000 (CRS RL30064), not $174,500",
+  "Pension and office allowance stated precisely (FERS vesting after five years; House office allowances roughly $1.85–$2.09 million in 2025)"
+ ],
+ "edits": [
+  [
+   "A member’s $174,500 is the decoy.",
+   "A member’s $174,000 salary is the decoy."
+  ],
+  [
+   "plus a pension after five years, plus health coverage, plus a million-dollar office allowance,",
+   "plus a pension after five years of service, plus health coverage, plus an office allowance of roughly $1.85 million to $2.09 million per House office,"
+  ]
+ ],
+ "ourview": [
+  "No other job in this country",
+  "House and Senate rules can require"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}

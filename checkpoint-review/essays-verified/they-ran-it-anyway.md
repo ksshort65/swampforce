@@ -1,0 +1,26 @@
+Status: Cleared with fixes — Schiff dates separated: on March 20, 2017 he read Steele-dossier allegations at a public hearing; the 'more than circumstantial evidence' line was a separate March 2017 TV interview (as H.Res. 630 itself records); H.Res. 630 described accurately: a censure resolution House Republicans introduced in October 2019, which the House tabled; it is quoted as their claim, not as a finding; Horowitz report link corrected to the OIG's live PDF
+
+_Sourcing standard: facts link only to official records, government data, court filings, original transcripts or unedited video. Passages marked **Our view** are opinion._
+
+## They ran it anyway
+
+- Slug: they-ran-it-anyway
+- Series: The Tape
+- Date: 2026-09-21
+
+**Our view:** Crossfire Hurricane had no actual evidence of collusion when it opened. Politicians and networks ran it for the entire first term. That is how a president is poisoned and a nation is divided.
+
+Image: /images/chart-they-ran-it.jpg — Opened empty. Ran for years. Mueller closed the conspiracy. They ran it anyway.
+
+The [Durham report](https://www.justice.gov/storage/durhamreport.pdf) is the file. Crossfire Hurricane opened as a full FBI investigation of a presidential campaign. Durham: neither U.S. law enforcement nor the Intelligence Community appears to have possessed any actual evidence of collusion in their holdings at the commencement of that investigation. Raw. Uncorroborated. A different standard than the one used when the other campaign was the subject. The Steele reporting was later used on a FISA targeting a U.S. person tied to the campaign. Durham: the investigators did not and could not corroborate the substantive allegations in that reporting. [Horowitz](https://oig.justice.gov/sites/default/files/reports/120919-examination.pdf): seventeen inaccuracies and omissions in those applications. That is what the government had. That is what the government did not have.
+
+**Our view:** The country was told the opposite. On March 20, 2017 — two months into the first term — the ranking Democrat on House Intelligence read Steele-dossier allegations into a public hearing, and that same month he said in a television interview that he had “more than circumstantial evidence” of collusion. Networks put that sentence on a loop. Politicians who sat on the committee put it on the floor. House Republicans’ censure resolution, H.Res. 630 (October 2019, tabled by the House), put their charge in the [Congressional Record](https://www.congress.gov/congressional-record/volume-165/issue-163/house-section/article/H8153-5): false accusations of collusion spread for more than two years, including that March 2017 claim. In April 2019 the Attorney General quoted Mueller: the investigation did not establish that members of the Trump Campaign conspired or coordinated with the Russian government. They ran it anyway. After the report. Through the first term. A hired president spent those years answering a caption the FBI did not have in the file when it opened the case. Neighbors were taught the people who hired him had hired a Kremlin asset. That is not journalism. That is not oversight. That is an information war run against an elected president and against the Americans who hired him. The ledger is [Taxpayer-funded hoaxes](/dispatch/the-hire-is-the-country).
+
+> **Our view:** The file was empty at the opening. They ran it for the whole first term. That is how a presidency is poisoned.
+
+### Receipts
+
+- Durham report — https://www.justice.gov/storage/durhamreport.pdf
+- Barr remarks on the Mueller report — https://www.justice.gov/archives/opa/speech/attorney-general-william-p-barr-delivers-remarks-release-report-investigation-russian
+- Horowitz IG — FISA — https://oig.justice.gov/sites/default/files/reports/120919-examination.pdf
+- Congressional Record — H.Res. 630 — https://www.congress.gov/congressional-record/volume-165/issue-163/house-section/article/H8153-5

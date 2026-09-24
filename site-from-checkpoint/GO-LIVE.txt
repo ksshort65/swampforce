@@ -1,0 +1,60 @@
+SWAMP FORCE: GO-LIVE (Namecheap shared hosting)
+================================================
+
+1) UPLOAD
+   - In Namecheap cPanel, open File Manager and go to public_html/.
+   - Back up or remove the old site files. Keep cgi-bin/ and .well-known/ if present.
+   - Upload swampforce-from-checkpoint.zip into public_html/, right-click it, choose Extract, then delete the zip.
+   - The archive root holds index.html and .htaccess. index.html must sit directly in public_html/, not in a subfolder.
+   - .htaccess is a hidden file. In File Manager, open Settings and tick "Show Hidden Files" to confirm it is there.
+     It holds the 404 page, the old-URL 301 redirects (/dispatch/*.html, explainer, pump, pending, republic), caching and compression.
+
+2) TURN ON THE STORE (one setting)
+   - Edit public_html/assets/store.js in File Manager (right-click, Edit).
+   - Change line 7:
+         var PRINTIFY_POPUP_URL = "";
+     to your Printify Pop-Up Store address, which must start with https://, for example:
+         var PRINTIFY_POPUP_URL = "https://swampforce.printify.me/";
+   - Save. No rebuild is needed.
+   - While the value is empty, store.html shows "The shop opens soon" and a "Notify me" email link to editor@swampforce.com.
+   - When it is set, store.html shows "Open the full store" and the embedded store, and the header Shop button opens the store directly.
+   - If Printify blocks embedding, the frame stays blank, but the "Open the full store" button still works.
+
+3) HTTPS
+   - In cPanel, open SSL/TLS Status and run AutoSSL for swampforce.com and www.swampforce.com.
+   - Optional: to force https, add these lines at the top of .htaccess:
+         RewriteEngine On
+         RewriteCond %{HTTPS} off
+         RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+4) TEST AFTER UPLOAD (desktop and phone)
+   https://swampforce.com/
+   https://swampforce.com/fake-news.html           (tap a card; try a chart bar; try #case-1)
+   https://swampforce.com/scorecard.html#dem       (tabs: #gop #dem #split #oval #compare)
+   https://swampforce.com/brief.html               (PDF opens; Print works)
+   https://swampforce.com/appendix.html
+   https://swampforce.com/opinion.html            (OPINION label, banner, 3 posts; source links under each post)
+   https://swampforce.com/trump-watch.html         (Watch menu; tiles, charts, overlaps table, grey Reported-only lists)
+   https://swampforce.com/movement-watch.html      (Watch menu; claims checked, 2026 violence table stacks on phone)
+   https://swampforce.com/record-2020.html         (Watch menu; Floyd full-record panel, timeline, claim cards)
+   https://swampforce.com/downloads.html           (CSV/XLSX/PDF download)
+   https://swampforce.com/lawfare.html             (court PDFs open)
+   https://swampforce.com/store.html
+   https://swampforce.com/dispatch/anything.html   (should redirect, not 404)
+   https://swampforce.com/no-such-page             (styled 404)
+   Check that the red SHOP button shows in the header on the phone.
+
+5) SHARING / SEO
+   - og.jpg (1200x630) is the link preview image. sitemap.xml and robots.txt are included.
+   - Submit https://swampforce.com/sitemap.xml in Google Search Console.
+
+6) EDITING LATER
+   - AFTER ANY DATA CHANGE, RUN ONE COMMAND:  /workspace/.venv/bin/python /workspace/sync_all.py
+     It rebuilds everything in order from the catalog CSVs (spreadsheets + zips, brief and appendix PDF/HTML and thumbnails,
+     lawfare tracker, site, site zip), runs QA, prints the headline counts, and fails loudly if any output disagrees with
+     the catalog or any copy is not byte-identical to its source. Then upload the new swampforce-from-checkpoint.zip.
+   - The site is generated; build.py alone (cd /workspace/site-from-checkpoint && /workspace/.venv/bin/python build.py)
+     rebuilds only the pages, so prefer sync_all.py.
+   - Unsupported claims: when /workspace/reverify/unsupported-final.csv exists and has rows, sync_all.py adds
+     unsupported.html plus its links and a CSV download. Until then nothing about it appears on the site.
+   - The store URL is the exception: edit it directly in assets/store.js.

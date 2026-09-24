@@ -1,0 +1,1162 @@
+U.S. Department of Justice
+Office of Justice Programs                                  Revised August 19, 2025
+Bureau of Justice Statistics
+
+                                                                                                                         May 2025, NCJ 309889
+
+
+
+
+                                                                                                                                       Bul l etin
+Homicide Victimization in the
+United States, 2023
+Lizabeth Remrey, PhD, BJS Statistician
+
+
+
+I
+    n 2023, there were an estimated 19,800
+    homicide victimizations in the United States,               FIGURE 1
+                                                                Number and rate of homicide victimizations,
+    a rate of 5.9 homicides per 100,000 persons
+                                                                2014–2023
+(figure 1). This was lower than the estimated
+22,240 victimizations (6.7 per 100,000) in 2022                 Number                                      Rate per 100,000a
+                                                                25,000                                                    8.0
+but higher than the 16,670 victimizations (5.0
+per 100,000) in 2019. (See appendix table 1 for                                                                           7.0
+                                                                20,000                                                    6.0
+state estimates.) Homicide refers to the offenses
+of murder and nonnegligent manslaughter and is                  15,000                                                    5.0
+defined as “the willful (nonnegligent) killing of                                                                         4.0
+one human being by another.”1                                   10,000                                                    3.0
+                                                                                                                          2.0
+Findings in this report are based on the Bureau                  5,000
+of Justice Statistics’ and FBI’s National Incident-                                                                       1.0
+Based Reporting System (NIBRS) Estimation                            0                                                    0.0
+                                                                       2014 2015 2016 2017 2018 2019 2020 2021 2022 2023
+Program and the FBI’s Supplementary Homicide                                                  Year
+Reports (SHR).                                                  Note: The 2022 National Incident-Based Reporting System
+                                                                Estimation Program estimates were updated to reflect data
+1See NIBRS User Manual, page 29, https://le.fbi.gov/file-       transmitted to the FBI after the 2022 cutoff date. See Methodology.
+repository/nibrs-user-manual-063023.pdf/view.                   See appendix table 2 for estimates and confidence intervals.
+                                                                aRates are calculated per 100,000 U.S. residents.
+                                                                Source: Federal Bureau of Investigation, Supplementary
+                                                                Homicide Reports, 2014–2020; U.S. Census Bureau Population,
+                                                                2014–2020; and Bureau of Justice Statistics and Federal Bureau
+                                                                of Investigation, National Incident-Based Reporting System
+                                                                Estimation Program, 2021–2023.
+
+
+
+
+HIGHLIGHTS
+In 2023:                                                         Females (0.9 per 100,000 persons) experienced
+
+ The rate of homicide victimization was 5.9 per                   a higher rate of intimate partner homicide than
+   100,000 persons. This marks a decrease from the                 males (0.5 per 100,000).
+   rate of 6.7 per 100,000 in 2022.                              Most homicide incidents (93%) involved
+
+ The male homicide victimization rate (9.3 per                    one victim.
+   100,000 persons) was 3.5 times greater than                   The percentage of homicide victimizations
+   the homicide victimization rate for females                     involving a firearm was 80%, compared to 68%
+   (2.6 per 100,000).                                              in 2014.
+ The homicide victimization rate for black persons              About half of homicide victimizations were
+   (21.3 per 100,000 persons) was more than 6 times                cleared by arrest (47%), which was not
+   the rate for white persons (3.2 per 100,000).                   statistically different from the percentage that
+ The largest percentage of homicide                               were not cleared (48%).
+   victimizations (39%) was committed by someone
+   outside the family but known to the victim.
+List of tables
+Table 1. Number, percent, and rate of homicide victimizations, by victim demographic characteristics, 2023
+
+Table 2. Percent of reported homicide victimizations, by ethnicity, 2023
+
+Table 3. Percent of homicide victimizations, by victim-offender relationship and victim demographic
+characteristics, 2023
+
+Table 4. Rate of homicide victimization, by victim-offender relationship and victim demographic
+characteristics, 2023
+
+Table 5. Percent of homicide incidents, by number of victims, 2023
+
+Table 6. Percent of homicide victimizations, by weapon type and victim demographic characteristics, 2023
+
+Table 7. Percent of homicide victimizations, by clearance type and victim demographic
+characteristics, 2023
+
+List of figures
+Figure 1. Number and rate of homicide victimizations, 2014–2023
+
+Figure 2. Percent of homicide victimizations involving a firearm, 2014–2023
+
+Figure 3. Percent of homicide offenses, by clearance, 2014–2023
+
+List of appendix tables
+Appendix table 1. Number and rate of homicide victimizations, by state, 2023
+
+Appendix table 2. Estimates and confidence intervals for figure 1: Number and rate of homicide
+victimizations, 2014–2023
+
+Appendix table 3. Confidence intervals for table 1: Number, percent, and rate of homicide
+victimizations, by victim demographic characteristics, 2023
+
+Appendix table 4. Counts and percentages, by state, for table 2: Percent of reported homicide
+victimizations, by ethnicity, 2023
+
+Appendix table 5. Confidence intervals for table 3: Percent of homicide victimizations, by victim-
+offender relationship and victim demographic characteristics, 2023
+
+Appendix table 6. Confidence intervals for table 4: Rate of homicide victimization, by victim-offender
+relationship and victim demographic characteristics, 2023
+
+Appendix table 7. Confidence intervals for table 5: Percent of homicide incidents, by number of
+victims, 2023
+
+Appendix table 8. Estimates and confidence intervals for figure 2: Percent of homicide victimizations
+involving a firearm, 2014–2023
+
+Appendix table 9. Confidence intervals for table 6: Percent of homicide victimizations, by weapon type
+and victim demographic characteristics, 2023
+
+Appendix table 10. Estimates and confidence intervals for figure 3: Percent of homicide offenses, by
+clearance, 2014–2023
+
+Appendix table 11. Confidence intervals for table 7: Percent of homicide victimizations, by clearance
+type and victim demographic characteristics, 2023
+NIBRS collects detailed information on homicide                                 victimization rate of 9.3 per 100,000 persons (table 1).2
+victimizations reported to state and local law                                  By comparison, the female homicide victimization rate
+enforcement in the United States, including victim and                          (2.6 per 100,000 persons) was lower.
+suspected offender demographic characteristics, the type
+of weapon(s) present, and the number of victims killed                          Compared to the homicide victimization rate for white
+during the incident. NIBRS estimates use imputation                             persons (3.2 per 100,000) in 2023, the homicide rate was
+and weighting procedures to account for nonresponse                             higher for black persons (21.3 per 100,000) and Native
+and missing data. In this report, homicide incident and                         Hawaiian and Other Pacific Islander persons (6.5 per
+victimization information from 2021 to 2023 comes from                          100,000), while the rate for Asians (1.4 per 100,000)
+NIBRS estimates. Information on homicides prior to                              was lower. Overall, the homicide victimization rate
+2021 was collected through the SHR. See Methodology                             experienced by black persons was higher than the rate for
+for more information.                                                           victims in each of the other race categories.
+
+                                                                                The highest homicide rate by age group in 2023 was
+In 2023, black persons experienced the highest                                  experienced by persons ages 18 to 24 at 12.9 per 100,000
+homicide victimization rate compared to persons of                              persons. This rate was greater than the homicide rates
+all other racial groups                                                         experienced by each of the other age groups.
+Males represented the majority (78%) of homicide                                2In this report, statistical significance is reported at the 95%
+victims in 2023 and experienced a homicide                                      confidence level. All comparisons made in text are statistically
+                                                                                significant unless otherwise stated. See figures and tables for testing
+                                                                                on specific findings.
+
+
+TABLE 1
+Number, percent, and rate of homicide victimizations, by victim demographic characteristics, 2023
+Victim demographic characteristic                       Number                                 Percent                        Rate per 100,000a
+   Total                                                19,800                                  100%                                 5.9
+Sex
+   Male*                                                15,440                                 78.0%                                 9.3
+   Female                                                4,360 †                               22.0 †                                2.6 †
+Race
+   White*                                                8,070                                 40.8%                                 3.2
+   Black                                                11,060 †                               55.8 †                               21.3 †
+   Asian                                                   370 †                                1.9 †                                1.4 †
+   American Indian or Alaska Native                        250 †                                1.3 †                                4.2
+   Native Hawaiian or Other Pacific Islander                50 †                                0.3 †                                6.5 †
+Age
+   11 or younger                                            620 †                               3.1% †                               1.3 †
+   12–17                                                  1,330 †                               6.7 †                                5.1 †
+   18–24*                                                 4,080                                20.6                                 12.9
+   25–34                                                  5,150 †                              26.0 †                               11.2 †
+   35–64                                                  7,530 †                              38.0 †                                5.9 †
+   65 or older                                            1,090 †                               5.5 †                                2.0 †
+Note: See appendix table 3 for confidence intervals.
+*Comparison group.
+†Difference with comparison group is significant at the 95% confidence level.
+aRates are calculated per 100,000 U.S. residents.
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                               3
+  Ethnicity data collected through the National Incident-Based Reporting System
+  In the National Incident-Based Reporting System (NIBRS),           that were of Hispanic or Latino origin. In 2023, 15%
+  victim race is a required data element consisting of six           of homicide victims were Hispanic or Latino and the
+  categories: white, black or African American, American             ethnicity designation was missing or unknown for 22%
+  Indian or Alaska Native, Asian, Native Hawaiian or Other           of homicide victims (table 2). This information is based
+  Pacific Islander, and unknown. Victim ethnicity is a               on data from 15,071 of 19,169 law enforcement agencies
+  separate data element with three categories: Hispanic              that were eligible to report crime data in 2023. The 15,071
+  or Latino, not Hispanic or Latino, and unknown. Unlike             agencies cover 84% of the U.S. population.
+  race, victim ethnicity is not currently a required data
+  element, meaning law enforcement agencies do not
+  have to report ethnicity when submitting NIBRS data.               TABLE 2
+  A quality assessment of the ethnicity data reported in             Percent of reported homicide victimizations, by
+  NIBRS revealed inconsistent reporting by participating             ethnicity, 2023
+  law enforcement agencies. Because of this, ethnicity is not        Ethnicity                 Percent of reported homicide victimizations
+  included in the race estimates in this report. Additional             Total                                    100%
+  research is currently underway to develop weighted                 Hispanic or Latino                          15.4
+  estimates that accurately represent the population                 Non-Hispanic                                63.1
+  and align with the Statistical Policy Directive No.                Missing/unknown                             21.6
+  15 guidelines.3                                                    Note: Ethnicity percentages are based on homicide data reported
+                                                                     by 79% of law enforcement agencies in the United States. Details may
+  Examination of the reported, unweighted NIBRS data                 not sum to totals due to rounding. The data are not statistically adjusted
+  provides insight into the percentage of homicide victims           to account for missing information or nonreporting. See Methodology.
+                                                                     See appendix table 4 for counts and percentages overall and by state.
+  3See https://spd15revision.gov/content/spd15revision/en/2024-      Source: Bureau of Justice Statistics and Federal Bureau of Investigation,
+  spd15.html.                                                        National Incident-Based Reporting System Extract File Program, 2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                       4
+The largest percentage of homicide victimizations                             Homicide victimizations of white persons (16%) were
+was committed by someone outside the family but                               more likely to be perpetrated by an intimate partner than
+known to the victim                                                           those of black persons (9%). White persons (41%) were
+                                                                              also more likely than black (37%) or Asian (32%) persons
+In 2023, 39% of homicide victimizations were                                  to experience homicide victimization from someone
+perpetrated by someone outside the family but known                           outside the family but known to the victim.
+to the victim (table 3). Among homicides of males, 42%
+were perpetrated by someone outside the family but                            For victims in each age group from 12 to 64, the
+known to the victim. Among homicides of females, 36%                          homicide was more likely to involve a perpetrator who
+were committed by an intimate partner (i.e., current                          was outside the family but known to the victim than any
+or former spouse, boyfriend or girlfriend). Overall,                          other victim-offender relationship. Among victims age
+homicides of females were more likely than homicides of                       11 or younger (76%) and age 65 or older (32%), the most
+males to be perpetrated by a family member (a current                         common victim-offender relationship was the category
+or former intimate partner or other family member).                           other family member.
+Perpetrators of homicides against males were more
+likely than perpetrators of homicides against females to
+be non-family (outside of family but known to victim,
+stranger, or unknown).
+
+
+TABLE 3
+Percent of homicide victimizations, by victim-offender relationship and victim demographic characteristics, 2023
+Victim demographic                                                       Victim-offender relationship
+characteristic                Intimate partnera     Other familyb         Outside family but knownc            Stranger              Unknown
+   Total                           12.5%               13.4%                        38.7%                       19.2%                 28.4%
+Sex
+   Male*                            5.8%               11.9%                        42.4%                        21.6%                 31.6%
+   Female                          35.8 †              19.0 †                       25.7 †                       11.0 †                17.1 †
+Race
+   White*                          16.3%               17.7%                        40.9%                        22.5%                 21.2%
+   Black                            9.3 †              10.2 †                       37.3 †                       16.6 †                34.0 †
+   Asian                           19.4                17.9                         31.7 †                       23.6                  23.3
+   American Indian or
+     Alaska Native                 15.6                14.2 †                       43.4                         20.6                  24.4
+   Native Hawaiian or
+     Other Pacific Islander        19.0                  8.9 †                      36.9                         32.7                  16.4
+Age
+   11 or younger                    1.6% †             76.2% †                      16.6% †                      10.3% †                9.7% †
+   12–17                            5.1 †              12.2 †                       56.5 †                       24.1                  40.1
+   18–24*                           8.9                 7.9                         45.5                         23.6                  37.8
+   25–34                           12.6 †               8.1                         38.6 †                       20.1                  31.3
+   35–64                           15.9 †              12.5 †                       35.6 †                       16.8 †                23.3 †
+   65 or older                     16.0 †              32.1 †                       26.4 †                       15.1 †                11.5 †
+Note: Percentages do not sum to 100 because there can be more than one offender in an incident. See Methodology for additional information on
+relationship types. See appendix table 5 for confidence intervals.
+*Comparison group.
+†Difference with comparison group is significant at the 95% confidence level.
+aIncludes current or former spouses, boyfriends, or girlfriends.
+bExcludes intimate partners.
+cIncludes friends and anyone else known to the victim.
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                      5
+Females had a higher rate of intimate partner                                   persons of other races. Black persons also had the highest
+homicide than males                                                             rate of homicide victimization for the victim-offender
+                                                                                relationship outside of family but known to the victim
+The overall rate of homicide victimization perpetrated                          at 7.9 per 100,000. This was 6 times the rate for white
+by an intimate partner was 0.7 per 100,000 persons in                           persons (1.3 per 100,000).
+2023 (table 4). Females had a higher rate of intimate
+partner homicide (0.9 per 100,000) than males (0.5 per                          The rate of homicide victimization for individuals ages
+100,000). For all other victim-offender relationship types,                     18 to 24 (5.9 per 100,000) and ages 25 to 34 (4.3 per
+males experienced higher rates of homicide victimization                        100,000) was highest when the offender was outside the
+than females.                                                                   family but known to the victim. Among those age 11
+                                                                                or younger (1.0 per 100,000) and age 65 or older (0.6
+In 2023, black persons (2.0 per 100,000) experienced the                        per 100,000), the highest rate of homicide victimization
+highest rate of intimate partner homicide compared to                           involved an offender who was a family member.
+
+TABLE 4
+Rate of homicide victimization, by victim-offender relationship and victim demographic characteristics, 2023
+                                                                                Rate per 100,000a
+Victim demographic                                                         Victim-offender relationship
+characteristic                Intimate partnerb      Other familyc         Outside family but knownd              Stranger              Unknown
+   Total                            0.7                  0.8                           2.3                           1.1                  1.7
+Sex
+   Male*                            0.5                   1.1                          3.9                           2.0                       2.9
+   Female                           0.9 †                 0.5 †                        0.7 †                         0.3 †                     0.4 †
+Race
+   White*                           0.5                   0.6                          1.3                           0.7                       0.7
+   Black                            2.0 †                 2.2 †                        7.9 †                         3.5 †                     7.2 †
+   Asian                            0.3 †                 0.3 †                        0.5 †                         0.3 †                     0.3 †
+   American Indian or
+     Alaska Native                  0.7                   0.6                          1.8                           0.9                       1.0
+   Native Hawaiian or
+     Other Pacific Islander         1.2 †                 0.6                          2.4 †                         2.1                       1.1 †
+Age
+   11 or younger                    0.0 †                 1.0                          0.2 †                         0.1 †                     0.1 †
+   12–17                            0.3 †                 0.6 †                        2.9 †                         1.2 †                     2.1 †
+   18–24*                           1.2                   1.0                          5.9                           3.0                       4.9
+   25–34                            1.4                   0.9                          4.3 †                         2.3 †                     3.5 †
+   35–64                            0.9                   0.7 †                        2.1 †                         1.0 †                     1.4 †
+   65 or older                      0.3 †                 0.6 †                        0.5 †                         0.3 †                     0.2 †
+Note: See Methodology for additional information on relationship types. See appendix table 6 for confidence intervals.
+*Comparison group.
+†Difference with comparison group is significant at the 95% confidence level.
+aRates are calculated per 100,000 U.S. residents.
+bIncludes current or former spouses, boyfriends, or girlfriends.
+cExcludes intimate partners.
+dIncludes friends and anyone else known to the victim.
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                            6
+More than 90% of homicide incidents involved                                The percent of homicide victimizations involving a
+one victim                                                                  firearm has remained stable since 2021
+
+In 2023, 93% of homicide incidents involved one victim,                     The percentage of homicide victimizations involving a
+accounting for 17,030 of the 19,800 total homicide                          firearm was 68% in 2014 and 80% in 2023 (figure 2).
+victims (table 5). An estimated 5% of homicide incidents                    Since 2021, the percentage of firearm-involved homicides
+involved two victims, and fewer than 2% of homicide                         has remained stable around 80%.
+incidents involved three or more victims.
+
+TABLE 5                                                                     FIGURE 2
+Percent of homicide incidents, by number of victims,                        Percent of homicide victimizations involving a firearm,
+2023                                                                        2014–2023
+Number of             Number          Number             Percent of         Percent
+victims in incident   of victims      of incidents       incidents          100
+   Total               19,800           18,230             100%
+                                                                             90
+1 victim*              17,030           17,030             93.4                                                              79.6%
+2 victims                1,960              980             5.4 †            80
+3 victims                  430              140             0.8 †            70
+4 or more victims          380               70             0.4 †                   68.2%
+                                                                             60
+Note: Details may not sum to totals due to rounding. See appendix table 7
+for estimates and confidence intervals.                                      50
+*Comparison group.                                                           40
+†Difference with comparison group is significant at the 95%                  30
+confidence level.
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation,    20
+National Incident-Based Reporting System Estimation Program, 2023.
+                                                                             10
+                                                                              0
+                                                                                 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023
+                                                                                                        Year
+                                                                            Note: The 2022 National Incident-Based Reporting System Estimation
+                                                                            Program estimates were updated to reflect data transmitted to the FBI
+                                                                            after the 2022 cutoff date. See Methodology. See appendix table 8 for
+                                                                            estimates and confidence intervals.
+                                                                            Source: Federal Bureau of Investigation, Supplementary Homicide
+                                                                            Reports, 2014–2020; and Bureau of Justice Statistics and Federal Bureau
+                                                                            of Investigation, National Incident-Based Reporting System Estimation
+                                                                            Program, 2021–2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                           7
+Firearms were the most common type of weapon                                 and Native Hawaiian or Other Pacific Islander persons.
+involved in homicides                                                        Approximately one-third of homicide victimizations
+                                                                             among persons age 11 or younger involved a firearm
+In 2023, 4 in 5 (80%) homicide victimizations involved                       (36%) or personal weapon (33%).
+the use of a firearm (table 6). Knives, blunt instruments,
+personal weapons, and other non-personal weapons                             For Native Hawaiian or Other Pacific Islander persons,
+were each involved in fewer than 1 in 10 (10%)                               45% of homicide victimizations involved a firearm
+homicide victimizations.                                                     and 26% involved other non-personal weapons. For
+                                                                             persons who were white, black, Asian, or American
+Firearms were the most common type of weapon                                 Indian or Alaska Native, more than half of all homicide
+involved in homicides regardless of victim sex, race,                        victimizations involved a firearm.
+or age, with two exceptions: those age 11 or younger,
+
+
+TABLE 6
+Percent of homicide victimizations, by weapon type and victim demographic characteristics, 2023
+                                                                                  Weapon type
+Victim demographic                                                                                            Other non-
+characteristic                 Firearm               Knife          Blunt instrument     Personal weapon      personal weapona       Unknown
+   Total                        79.6%                8.9%                  2.0%                5.0%                5.5%                4.1%
+Sex
+   Male*                        83.7%                8.0%                 1.7%                   3.8%              4.3%                 3.5%
+   Female                       65.0                12.2                  3.0                    9.6 †             9.5                  6.4
+Race
+   White*                       68.5%               12.3%                 3.2%                   7.4%              9.3%                 5.0%
+   Black                        88.5                 6.1                  0.9 †                  3.1 †             2.4 †                3.4
+   Asian                        71.0                12.8                  4.5                    9.2               5.7                  4.4
+   American Indian or
+     Alaska Native              62.3                13.3                  3.1                   10.3              10.8                  8.0
+   Native Hawaiian or
+     Other Pacific Islander     45.2                19.3                  2.0                      :              25.7                  7.8
+Age
+   11 or younger                36.1% †              5.1%                 1.8% †                33.4 % †          20.7% †              11.6% †
+   12–17                        90.9                 3.6                  0.5                    2.4               3.7                  3.2
+   18–24*                       91.9                 4.8                  0.4                    1.5               3.5                  2.7
+   25–34                        86.4                 7.3                  0.8                    2.9               3.9                  3.1
+   35–64                        74.2                12.0 †                3.0 †                  5.5 †             5.8                  4.7
+   65 or older                  49.4                19.2 †                8.2 †                 12.5 †            10.9 †                6.8 †
+Note: Percentages do not sum to 100 because there can be more than one weapon in an incident. See Methodology for definitions of weapon types.
+See appendix table 9 for confidence intervals.
+*Comparison group.
+†Difference with comparison group is significant at the 95% confidence level.
+:Not shown; estimate did not meet statistical reliability criteria. See Methodology.
+aIncludes poison, explosives, fire, drugs, asphyxiation, and other weapon types. See Methodology.
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                      8
+                                                            Revised August 19, 2025
+
+Over half of homicide incidents in 2023 resulted in
+                                                                         FIGURE 3
+case clearance
+                                                                         Percent of homicide offenses, by clearance, 2014–2023
+In 2023, the percentage of homicide incidents cleared by                 Percent
+arrest or exceptional means was 52% (figure 3).4 This                    100
+                                                                                                                                        Cleared
+was lower than the percent cleared in 2022 (53%). In                      90
+                                                                                                                                    Not Cleared
+2014, almost two-thirds (65%) of homicide incidents                       80
+were cleared.                                                             70 64.5%
+4Law enforcement agencies clear an incident when at least one person      60                                                               51.7%
+is arrested, charged, and turned over to the court for prosecution.       50
+Law enforcement agencies may also clear an incident by exceptional                                                                         48.3%
+means, indicating that they have identified the offender and have
+                                                                          40 35.5%
+gathered enough evidence to support that offender’s arrest and            30
+prosecution, but they have encountered a circumstance outside the
+                                                                          20
+control of law enforcement that prohibits the agency from arresting,
+charging, and prosecuting the offender. See Methodology.                  10
+                                                                           0
+                                                                               2014 2015 2016 2017 2018 2019 2020 2021 2022 2023
+                                                                                                      Year
+                                                                         Note: Percent cleared includes cleared by arrest and exceptional clearance;
+                                                                         clearance data before 2021 did not distinguish nature of clearance.
+                                                                         Exceptional clearance includes crimes cleared because the offender died,
+                                                                         the prosecution was declined, the victim refused to cooperate, extradition
+                                                                         of the offender was denied by another jurisdiction, or the offender was
+                                                                         a juvenile but no referral was made to the juvenile court as a matter
+                                                                         of accepted law enforcement policy. An incident cannot be cleared by
+                                                                         exceptional means if it was previously or concurrently reported as cleared
+                                                                         by arrest. The 2022 National Incident-Based Reporting System Estimation
+                                                                         Program estimates were updated to reflect data transmitted to the FBI
+                                                                         after the 2022 cutoff date. See Methodology. See appendix table 10 for
+                                                                         estimates and confidence intervals.
+                                                                         Source: Federal Bureau of Investigation, Crime in the United States,
+                                                                         2014–2020; and Bureau of Justice Statistics and Federal Bureau of
+                                                                         Investigation, National Incident-Based Reporting System Estimation
+                                                                         Program, 2021–2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                        9
+Exceptional clearance was more common among                                     white persons. Clearance of homicide victimizations
+females, Asian persons, and those age 65 or older                               was more common among persons age 11 or younger
+than those in other sex, race, or age categories                                (53%) and age 65 or older (53%) than among age groups
+                                                                                between 12 and 64.
+In 2023, 47% of homicide victimizations were cleared
+through arrest, which was similar to the 48% of homicide                        Homicide victimizations of females (11%), Asian persons
+victimizations that were not cleared (table 7). Half of                         (13%), and those age 65 or older (10%) were more likely
+male homicide victimizations were not cleared (51%),                            than victims in other sex, race, or age categories to be
+which was larger than the percentage of female homicide                         cleared by exceptional means (i.e., cleared because the
+victimizations that were not cleared (40%). About 52%                           offender died, the prosecution was declined, the victim
+of homicide victimizations of white persons were cleared                        refused to cooperate, extradition of the offender was
+through arrest, while 42% were not cleared. Homicide                            denied by another jurisdiction, or the offender was a
+victimizations of black persons were less likely to be                          juvenile but no referral was made to the juvenile court as
+cleared through arrest (43%) and more likely to not be                          a matter of accepted law enforcement policy).
+cleared (54%) compared to homicide victimizations of
+
+
+TABLE 7
+Percent of homicide victimizations, by clearance type and victim demographic characteristics, 2023
+Victim demographic                                                                Clearance type
+characteristic                     Cleared through arrest                     Exceptional clearancea                          Not cleared
+   Total                                   47.1%                                       4.6%                                     48.3%
+Sex
+   Male*                                   46.6%                                       2.9%                                      50.6%
+   Female                                  49.0 †                                     10.8 †                                     40.3 †
+Race
+   White*                                  51.6%                                       6.9%                                      41.5%
+   Black                                   43.4 †                                      2.7 †                                     53.9 †
+   Asian                                   52.0                                       13.2 †                                     34.8 †
+   American Indian or
+     Alaska Native                         52.0                                        3.2 †                                     44.8
+   Native Hawaiian or
+     Other Pacific Islander                66.1 †                                      2.0 †                                     31.8
+Age
+   11 or younger                           53.0% †                                     7.8% †                                    39.2% †
+   12–17                                   47.1                                        3.3 †                                     49.6 †
+   18–24*                                  45.5                                        2.2                                       52.4
+   25–34                                   45.0                                        3.4 †                                     51.6
+   35–64                                   48.1 †                                      5.9 †                                     46.1 †
+   65 or older                             53.1 †                                     10.4 †                                     36.5 †
+Note: Percentages may not sum to 100 due to rounding. See Methodology for definitions of clearance types. See appendix table 11 for confidence intervals.
+*Comparison group.
+†Difference with comparison group is statistically significant at the 95% confidence level.
+aExceptional clearance includes crimes cleared because the offender died, the prosecution was declined, the victim refused to cooperate, extradition of
+the offender was denied by another jurisdiction, or the offender was a juvenile but no referral was made to the juvenile court as a matter of accepted law
+enforcement policy. An incident cannot be cleared by exceptional means if it was previously or concurrently reported as cleared by arrest.
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                            10
+Methodology                                                            information about the NIBRS data structure and details
+                                                                       about the data elements included in the collection, see
+Homicide data in this report come from the FBI’s                       BJS’s National Incident-Based Reporting System webpage
+Supplementary Homicide Reports (SHR) for 2014 to                       and the FBI’s Crime Data Explorer.6,7
+2020, and from the Bureau of Justice Statistics (BJS) and
+FBI’s National Incident-Based Reporting System (NIBRS)                 Calculating national estimates of crime
+Estimation Program for 2021 to 2023. SHR data are
+the source of national homicide estimates from 2014 to                 Beginning with the 2021 data year, the FBI began
+2020 since relying upon NIBRS data to generate national                publishing national estimates of crime reported to
+estimates of homicide was not possible until 2021. NIBRS               law enforcement based on NIBRS data. To calculate
+and SHR use the same definition for homicide, making                   national estimates using NIBRS data, BJS and the FBI, in
+these two data sources comparable.                                     partnership with RTI International, established a new set
+                                                                       of statistical procedures to account for the NIBRS data
+Supplementary Homicide Reports data                                    structure and for agencies that did not report data to the
+                                                                       system. In October 2022, the FBI published the first set
+The SHR are collected by the FBI’s Uniform Crime                       of national estimates derived from the new methodology.
+Reporting (UCR) Program. The SHR data provide                          The data tables for the 2021 and 2022 data years are
+detailed information on homicide incidents, including                  available through the FBI’s Crime Data Explorer on the
+data on the reporting agency and its resident population;              NIBRS Estimates webpage. For additional information
+the sex, age, and race of victims and offenders; and the               on the NIBRS estimation methodology, see Estimation
+victim-offender relationship, weapon use, location, and                Procedures for Crimes in the United States Based on
+circumstance of the crime. The analyses presented in                   NIBRS Data (NCJ 305108, BJS, FBI, August 2022).
+this report exclude deaths caused by negligence, suicide,
+or accident; justifiable homicides; attempts to murder;                Annual NIBRS estimates are based on data reported to
+and murders of U.S. residents that occurred outside the                law enforcement, which typically reflect the incident
+United States.                                                         date. That means 2023 data would include all incidents
+                                                                       that occurred in 2023 that were reported to law
+The data included in the SHR are for homicides known                   enforcement by the time data were transmitted to the FBI
+to law enforcement. The determination that a crime was                 or aggregated elsewhere. NIBRS data that are transmitted
+a homicide was made solely based on police investigation               to the FBI after the cutoff date are still considered part of
+rather than the decision of a court, medical examiner,                 that year’s data, but they are not published until the data
+coroner, jury, or other non-law enforcement entity.                    release the following year. For example, 2022 data that
+                                                                       did not make the cutoff date were not included in the
+The SHR data were weighted to compensate for the                       original 2022 estimates but were included in the updated
+average annual 10% of homicides that were not reported                 2022 estimates that were published with the original
+to the SHR from 2014 to 2020. The annual weights are                   2023 estimates. For this reason, prior year estimates will
+calculated using a three-step process. For details on the              slightly differ from previously published estimates.
+weighting process, see the Methodology in Homicide in
+the U.S. Known to Law Enforcement, 2011 (NCJ 243035,                   Unit nonresponse
+BJS, December 2013).
+                                                                       Nonreporting agencies are law enforcement agencies
+National Incident-Based Reporting System data                          that do not report any NIBRS crime incident data to the
+                                                                       FBI. The number of nonreporting agencies has decreased
+NIBRS is a data collection system designed and                         annually, as additional law enforcement agencies
+maintained by the FBI through the UCR Program that                     complete their transitions to NIBRS reporting. The
+compiles data on crimes recorded by participating state                percentage of eligible law enforcement agencies that were
+and local law enforcement agencies. NIBRS captures                     nonreporting agencies was about 27% in 2023, with 73%
+detailed information on 52 different offenses that can                 of law enforcement agencies (N = 14,039) reporting at
+occur within a crime incident and collects arrest-only                 least 1 month of NIBRS data to the FBI that year.
+information for an additional 10 offenses.5 For more
+                                                                       6https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs.
+5Federal agencies submitting NIBRS data to the FBI may report an       7https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/home.
+additional 19 offense types and 3 arrest-only offense types that are
+exclusive to federal crime incidents.
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                              11
+To account for nonreporting agencies, a unit                         BJS conducted statistical tests to determine whether
+nonresponse weight was applied to the reporting                      differences in estimated percentages in this report were
+agencies. NIBRS unit nonresponse weights allow                       statistically significant. The primary test procedure was
+reporting agencies to represent both themselves                      to examine whether confidence intervals of the estimates
+and the nonreporting agencies with similar agency                    overlapped. This check was performed by comparing the
+characteristics, such as agency size and agency type.                upper bound of the smaller estimate to the lower bound
+                                                                     of the larger estimate. A statistically significant difference
+Because the distribution of nonreporting agencies                    is detected when the upper bound of the smaller estimate
+throughout the United States varies by state and region,             is less than the lower bound of the larger estimate.
+additional statistical weights were created for different            For example, the upper bound estimate for the rate of
+geographic levels of estimation. Specifically, a weight was          homicide victimization involving a female victim is 2.77
+created for estimation at each of the geographic levels              (2.6 + 0.17), and the lower bound estimate for the rate of
+for which estimates were produced: (1) national, (2)                 homicide victimization involving a male victim is 8.81
+regional, (3) state, (4) metropolitan statistical area, (5)          (9.3 – 0.49). There is a statistically significant difference
+judicial district, and (6) FBI field office. Having separate         for rate of homicide victimization by sex because the
+weights for different geographic areas helps ensure                  upper bound estimate for female victims is less than
+that the weights accurately reflect the geographic area              the lower bound estimate for male victims. Findings
+being estimated.                                                     described in this report as increases or decreases
+For more information about the weighting procedures                  passed this test at the 0.05 level (95% confidence level)
+used for NIBRS estimation, see Primer on Weighting.8                 of significance.
+
+Confidence intervals                                                 Estimate reliability
+
+A confidence interval is a statistical measure of how                The reliability of NIBRS-based crime estimates is affected
+well the estimated value of an indicator represents the              by several factors, including agency coverage rates and
+population value, usually expressed as a range. The                  the rareness of the event or phenomenon being measured
+degree of statistical confidence around estimates derived            (e.g., bias or hate crime), among other factors. Consistent
+from NIBRS crime data is a function of:                              with standard principles and practices, statistically
+                                                                     unreliable estimates (those with a level of statistical
+a. the overall population coverage rate each year                    uncertainty above an established threshold) are not
+   (described below)                                                 included in the published data because they may lead
+                                                                     to erroneous conclusions or interpretations. Decisions
+b. which agencies are reporting NIBRS data—because
+                                                                     about which estimates to withhold were based on a set of
+   agency participation is not random across all potential
+                                                                     specific and consistent criteria developed as part of the
+   reporting agencies.
+                                                                     estimation procedures.
+Sixty-five percent of the population was covered by
+NIBRS-reporting agencies in 2021, 77% in 2022, and 83%               The measure of statistical uncertainty used with the
+in 2023, resulting in greater precision for most NIBRS-              NIBRS estimates is the mean squared error (MSE). The
+based crime estimates for 2023. A higher coverage rate               MSE is a measure of the magnitude of potential error in
+increases the amount of statistical confidence in the                an estimate that is attributable to the data collection and
+estimates. These measures of statistical confidence are              estimation process. In all cases, the smaller the value of
+expressed as confidence intervals around each NIBRS-                 uncertainty, the closer the estimate will be, on average, to
+based estimate. The confidence intervals present the                 the population value.9
+estimated range in which the population value lies, based            9In a sample survey, like BJS’s National Crime Victimization Survey
+on a 95% confidence estimate. The wider the range of the             (NCVS), the bias is assumed to be zero because a random sample
+confidence interval, the more statistical uncertainty there          of the population is drawn. Therefore, in the case of the NCVS, the
+is in the estimate.                                                  measure of uncertainty is the sampling variance. However, for NIBRS
+                                                                     estimates, agency participation is not random. Therefore, the measure
+8For primers on NIBRS estimates, see https://cde.ucr.cjis.gov/       of uncertainty must account for the bias component.
+LATEST/webapp/#/pages/explorer/crime/nibrs-estimates.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                            12
+For an estimate (E), the MSE is a function of the                        For geographic estimation domains that are not
+sampling error (variance) and non-sampling error (bias)                   within a Metropolitan Statistical Area (MSA), must-
+and defined as:                                                           have agencies are those comprising 10% or more of
+                                                                          the population for the entire domain.
+                    MSE = Var(E) + Bias2
+                                                                         For MSAs, must-have agencies are those designated
+Statistical uncertainty, as expressed through MSE, is the                 by the U.S. Census Bureau as principal cities.
+building block for the confidence intervals associated
+                                                                     If all must-have agencies respond, estimates are
+with each of the estimates generated by the NIBRS
+                                                                     considered statistically reliable and are published if
+estimation process. It is used to determine whether an
+                                                                     population coverage for the estimation domain is over
+estimate is of sufficient quality to publish, based on
+                                                                     80%, regardless of the value of the ratio RMSE/E.
+criteria established for NIBRS estimation.
+
+The following are the criteria used to determine the                 A note on Hispanic origin
+statistical reliability of NIBRS estimates. Estimates
+                                                                     Because Hispanic origin is an optional field in NIBRS, it
+considered to be statistically unreliable are not shown in
+                                                                     contains a high level of missing data. There are concerns
+tables or figures.
+                                                                     that the missingness is not random because some
+An individual estimate is statistically unreliable if:               agencies may do a more thorough job completing this
+                                                                     field than other agencies. Therefore, to date, Hispanic
+ The ratio generated by dividing the value of the square            origin has not been included in the estimation process.
+  root of the MSE (root-mean-square error or RMSE)                   Research is underway to determine if imputation of
+  by the value of the estimate is greater than or equal              Hispanic origin is possible which would allow for
+  to 30% (RMSE/E ≥ 0.30) and the NIBRS population                    estimation in future publications featuring NIBRS data.
+  coverage for the estimation domain (e.g., a region or              Data on Hispanic origin used in this report come from
+  state) is less than 80%.                                           the BJS and FBI NIBRS Extract File Program, 2023,
+ The estimate equals zero and the population coverage               which can be accessed at https://www.icpsr.umich.edu/
+  for the estimation domain is less than 80%.                        web/NACJD/studies/39270.
+
+All estimates within an estimate domain are not                      For additional information about measuring reliability
+published if:                                                        of the estimates used for NIBRS estimation, see Primer
+                                                                     on Uncertainty Confidence Intervals and Suppression.10
+ The NIBRS population coverage for the estimation                   For further information about the development of the
+  domain is less than 80% and the ratio RMSE/E is                    estimation procedures, including links to technical
+  greater than or equal to 30% for 75% or more of                    reports documenting the process, see the BJS NIBRS
+  key estimates.                                                     Estimation Project webpage.
+ One or more must-have agencies for an estimation                   10For primers on NIBRS estimates, see https://cde.ucr.cjis.gov/
+  domain did not report NIBRS data during                            LATEST/webapp/#/pages/explorer/crime/nibrs-estimates.
+  the reporting period. Must-have agencies are
+  defined below.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                            13
+NIBRS definitions                                                          Victim was spouse
+
+Homicide is composed of the two categories of                              Victim was ex-relationship (ex-boyfriend or
+
+murder and nonnegligent manslaughter. Murder                                ex-girlfriend)
+and nonnegligent manslaughter are defined as “The                          Victim was ex-spouse.
+willful (nonnegligent) killing of one human being by
+                                                                         Other family:
+another.”11 Attempted murder is coded as aggravated
+assault in NIBRS. Other fatalities such as accidental                      Victim was child
+deaths, suicides, and traffic-related are not included. In
+                                                                           Victim was grandchild
+addition, “felony murder” or situations where a victim
+dies of another cause (such as a heart attack) because of                  Victim was grandparent
+a crime being committed against them is not classified as
+                                                                           Victim was in-law
+a murder.
+                                                                           Victim was other family member
+The presence and type of weapon are based on the
+NIBRS Type Weapon/Force Involved data element, which                       Victim was parent
+
+includes 15 different weapon or force types, as well as                    Victim was sibling
+categories for unknown weapon type and no weapon
+                                                                           Victim was stepchild
+involved. For this analysis, weapons and physical force
+were grouped into seven aggregate categories:                              Victim was stepparent
+
+ Firearms—includes the weapon types of firearm,                           Victim was stepsibling.
+  handgun, rifle, shotgun and other firearm.                             Outside family but known to victim:
+ Knives and other cutting instruments—includes
+                                                                           Victim was acquaintance
+  knives, razors, hatchets, axes, cleavers, scissors, glass,
+  broken bottles, ice picks, etc.                                          Victim was the baby or child in the care of
+                                                                            a babysitter
+ Blunt instruments—includes baseball bats, butt
+  of handgun, clubs, bricks, jack handles, tire irons,                     Victim was child of boyfriend or girlfriend
+  bottles, etc.                                                            Victim was employee
+ Personal weapons—includes physical force exerted                         Victim was employer
+  using hands, fist, feet, arms, teeth, etc.
+                                                                           Victim was friend
+ Other non-personal weapons—includes poison,
+  explosives, fire, drugs, asphyxiation, other weapon                      Victim was neighbor
+
+  types (such as BB guns, tasers, pepper spray, etc.).                     Victim was otherwise known.
+
+ Unknown—unknown weapon type.                                           Stranger:
+
+ No weapon or force used.                                                 Victim was stranger.
+
+The relationship of the victim to the alleged offender(s)                Victim was offender: includes Victim was offender;
+is based on the NIBRS Relationship(s) of Victim to                        this relationship type is used to denote when a
+Offender(s) data element, which includes 26 distinct                      participant in a crime incident was both a victim
+relationship types. For this analysis, the relationship                   and an offender, such as domestic disputes or bar
+types were aggregated into six categories and are                         fights where two or more persons were identified
+detailed below.                                                           as participating. This relationship category is not
+                                                                          included in this report. Less than 3% of murders and
+ Intimate partner:
+                                                                          nonnegligent manslaughters in 2023 were estimated to
+    Victim was boyfriend or girlfriend                                   include this type of relationship.
+    Victim was common-law spouse                                        Unknown relationship:
+
+11See NIBRS User Manual, page 29, https://le.fbi.gov/file-repository/      The relationship between the victim and offender
+nibrs-user-manual-063023.pdf/view.                                          has not been established.
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                    14
+There are three ways incident clearance can be reported                  the prosecutor’s decision to decline prosecution of
+by law enforcement agencies:                                              the case after it was referred from law enforcement
+
+ Cleared through arrest: includes any on-view arrest that               the victim’s refusal to cooperate with the prosecution
+
+  occurs absent a warrant or previous incident report,                    after the offender had been identified
+  arrests where an offender is taken into custody based on               the denial of extradition because the offender had
+  a warrant or previously submitted incident report, and                  committed a crime in another jurisdiction and is
+  incidents for which an offender is issued a summons to                  being prosecuted for that offense
+  appear in court but not taken into police custody.
+                                                                         the offender was a juvenile and not taken into
+ Exceptional clearance: occurs when an incident                          police custody.
+  is cleared without an arrest due to circumstances
+  outside of the control of law enforcement. To clear                An incident cannot be cleared by exceptional means if
+  an offense by exceptional means, agencies must meet                it was previously or concurrently reported as cleared
+  the following criteria: an investigation must have                 by arrest.
+  clearly established the identity of a least one offender;           Not cleared: A crime incident that is not reported in
+  there must be sufficient probable cause to support                   NIBRS as cleared by an arrest or exceptional means is
+  the arrest, charging, and prosecution of the offender;               considered not cleared.
+  law enforcement must know the exact location of
+  the offender so that an arrest could be made had                   Incidents that are administratively closed do not
+  circumstances not prevented the arrest; and there must             necessarily meet the criteria to be reported as cleared.
+  be a reason outside the control of law enforcement that            NIBRS does not record information on administrative
+  prevents law enforcement from making an arrest and                 case closures.
+  charging the offender. Exceptional clearance includes:
+                                                                     For more information, see the NIBRS User Manual
+   the death of the offender (e.g., suicide or justifiably          at https://le.fbi.gov/file-repository/nibrs-user-
+     killed by law enforcement or citizen)                           manual-063023.pdf/view.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                     15
+APPENDIX TABLE 1
+Number and rate of homicide victimizations, by state, 2023
+State                                     Number                 95% confidence interval           Rate per 100,000a          95% confidence interval
+    Total                                 19,800                         ±792                              5.9                       ±0.20
+Alabama                                      510                         ±104                             10.0                       ±2.04
+Alaska                                          :                           ~                                 :                          ~
+Arizona                                         :                           ~                                 :                          ~
+Arkansas                                     280                          ±21                              9.3                       ±0.68
+California                                 2,080                         ±316                              5.3                       ±0.81
+Colorado                                     320                           ±3                              5.4                       ±0.06
+Connecticut                                  140                           ±0                              3.7                       ±0.00
+Delaware                                      50                           ±0                              4.6                       ±0.00
+District of Columbia                         270                           ±0                             39.0                       ±0.00
+Florida                                    1,350                         ±211                              6.0                       ±0.94
+Georgia                                      760                         ±151                              6.9                       ±1.37
+Hawaii                                          :                           ~                                 :                          ~
+Idaho                                         50                           ±2                              2.5                       ±0.11
+Illinois                                     930                          ±99                              7.4                       ±0.79
+Indiana                                      400                          ±38                              5.8                       ±0.56
+Iowa                                          80                           ±5                              2.5                       ±0.14
+Kansas                                       170                          ±41                              5.9                       ±1.39
+Kentucky                                     280                           ±4                              6.1                       ±0.10
+Louisiana                                    440                         ±121                              9.7                       ±2.66
+Maine                                         60                           ±0                              4.3                       ±0.00
+Maryland                                     520                           ±7                              8.4                       ±0.12
+Massachusetts                                140                           ±9                              2.0                       ±0.12
+Michigan                                     600                          ±15                              6.0                       ±0.15
+Minnesota                                    180                           ±3                              3.2                       ±0.05
+Mississippi                                  280                          ±17                              9.5                       ±0.57
+Missouri                                     570                          ±15                              9.3                       ±0.24
+Montana                                       40                           ±2                              3.1                       ±0.15
+Nebraska                                      50                          ±10                              2.6                       ±0.49
+Nevada                                       220                           ±4                              6.9                       ±0.12
+New Hampshire                                 30                           ±4                              2.3                       ±0.25
+New Jersey                                   250                          ±82                              2.7                       ±0.89
+New Mexico                                   230                          ±11                             11.1                       ±0.54
+New York                                     580                         ±175                              3.0                       ±0.89
+North Carolina                               870                          ±17                              8.0                       ±0.15
+North Dakota                                  30                           ±4                              3.4                       ±0.49
+Ohio                                         660                          ±36                              5.6                       ±0.30
+Oklahoma                                     250                           ±5                              6.1                       ±0.13
+Oregon                                       190                           ±1                              4.5                       ±0.02
+Pennsylvania                                 930                          ±89                              7.2                       ±0.69
+Rhode Island                                  30                           ±2                              2.6                       ±0.17
+South Carolina                               480                          ±33                              8.9                       ±0.62
+South Dakota                                  30                           ±4                              3.1                       ±0.43
+Tennessee                                    710                           ±9                             10.0                       ±0.12
+Texas                                      1,880                          ±46                              6.1                       ±0.15
+Utah                                          70                           ±5                              2.0                       ±0.16
+Vermont                                       20                           ±0                              2.5                       ±0.00
+Virginia                                     520                          ±10                              6.0                       ±0.12
+Washington                                   380                          ±15                              4.8                       ±0.20
+West Virginia                                110                          ±14                              5.9                       ±0.81
+Wisconsin                                    290                           ±7                              4.9                       ±0.12
+Wyoming                                       20                           ±0                              3.1                       ±0.07
+Note: Details may not sum to totals due to rounding and omission of estimates that did not meet statistical reliability. See Methodology.
+:Not shown; estimate did not meet statistical reliability criteria. See Methodology.
+~Not applicable.
+aRates are calculated per 100,000 U.S. residents.
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+APPENDIX TABLE 2
+Estimates and confidence intervals for figure 1: Number and rate of homicide victimizations, 2014–2023
+Year                                       Number                95% confidence interval           Rate per 100,000a          95% confidence interval
+2014                                       14,160                           ~                             4.4                            ~
+2015                                       15,880                           ~                             4.9                            ~
+2016                                       17,410                           ~                             5.4                            ~
+2017                                       17,290                           ~                             5.3                            ~
+2018                                       16,370                           ~                             5.0                            ~
+2019                                       16,670                           ~                             5.0                            ~
+2020                                       21,570                           ~                             6.5                            ~
+2021                                       23,060                      ±6,972                             6.9                       ±2.10
+2022                                       22,240                       ±944                              6.7                       ±0.28
+2023                                       19,800                       ±792                              5.9                       ±0.24
+Note: Confidence intervals are calculated for 2021, 2022, and 2023 because estimates are from the National Incident-Based Reporting System (NIBRS)
+Estimation Program. They are not applicable for 2014 to 2020. The 2022 NIBRS Estimation Program estimates were updated to reflect data transmitted to
+the FBI after the 2022 cutoff date. See Methodology.
+~Not applicable.
+aRates are calculated per 100,000 U.S. residents.
+Source: Federal Bureau of Investigation, Supplementary Homicide Reports, 2014–2020; U.S. Census Bureau Population, 2014–2020; and Bureau of Justice
+Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2021–2023.
+
+
+
+APPENDIX TABLE 3
+Confidence intervals for table 1: Number, percent, and rate of homicide victimizations, by victim demographic
+characteristics, 2023
+                                                                                         95% confidence interval
+Victim demographic characteristic                              Number                          Percent                          Rate per 100,000
+   Total                                                        ±792                                ~                                 ±0.24
+Sex
+   Male                                                         ±813                             ±1.68%                                ±0.49
+   Female                                                       ±287                             ±1.68                                 ±0.17
+Race
+   White                                                        ±849                             ±2.87%                                ±0.34
+   Black                                                        ±235                             ±3.01                                 ±0.45
+   Asian                                                         ±35                             ±0.22                                 ±0.13
+   American Indian or Alaska Native                              ±71                             ±0.36                                 ±1.18
+   Native Hawaiian or Other Pacific Islander                      ±7                             ±0.04                                 ±0.89
+Age
+   11 or younger                                                 ±30                             ±0.19%                                ±0.06
+   12–17                                                         ±88                             ±0.58                                 ±0.34
+   18–24                                                        ±272                             ±0.25                                 ±0.86
+   25–34                                                        ±350                             ±0.28                                 ±0.76
+   35–64                                                        ±569                             ±0.35                                 ±0.44
+   65 or older                                                   ±34                             ±0.35                                 ±0.06
+~Not applicable.
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                         17
+APPENDIX TABLE 4
+Counts and percentages, by state, for table 2: Percent of reported homicide victimizations, by ethnicity, 2023
+                                                                                                    Victim ethnicity
+State                              Homicides reported           Percent Hispanic or Latino        Percent non-Hispanic          Percent missing or unknown
+    Total                               16,140                           15.4%                           63.1%                            21.6%
+Alabama                                    460                             2.0                           82.8                             15.2
+Alaska                                      40                             0.0                           22.5                             77.5
+Arizona                                    210                           22.9                            56.6                             20.5
+Arkansas                                   280                             2.8                           77.5                             19.7
+California                                 930                           37.9                            44.4                             17.7
+Colorado                                   310                           33.9                            55.3                             10.9
+Connecticut                                140                           24.4                            61.5                             14.1
+Delaware                                    50                             6.5                           91.3                               2.2
+District of Columbia                       270                             5.3                           65.7                             29.1
+Florida                                    470                           19.7                            68.2                             12.0
+Georgia                                    680                             5.2                           75.1                             19.7
+Hawaii                                      10                             0.0                           50.0                             50.0
+Idaho                                       50                           15.2                            58.7                             26.1
+Illinois                                   800                           15.4                            71.4                             13.3
+Indiana                                    380                             6.9                           78.2                             14.9
+Iowa                                        80                             6.4                           70.5                             23.1
+Kansas                                     130                           16.0                            77.1                               6.9
+Kentucky                                   280                             4.7                           92.0                               3.3
+Louisiana                                  330                             2.8                           84.4                             12.9
+Maine                                       60                             0.0                           91.7                               8.3
+Maryland                                   500                             7.4                           57.3                             35.2
+Massachusetts                              140                           31.5                            56.6                             11.9
+Michigan                                   590                             1.2                            9.2                             89.6
+Minnesota                                  180                             5.6                           50.0                             44.4
+Mississippi                                110                             2.7                           74.3                             23.0
+Missouri                                   560                             5.5                           82.1                             12.4
+Montana                                     30                             0.0                           87.5                             12.5
+Nebraska                                    40                           19.0                            69.0                             11.9
+Nevada                                     220                           23.4                            45.0                             31.7
+New Hampshire                               30                             7.7                           61.5                             30.8
+New Jersey                                 160                           27.2                            61.7                             11.1
+New Mexico                                 220                           45.3                            32.3                             22.4
+New York                                   500                           23.1                            68.6                               8.3
+North Carolina                             810                             7.0                           78.8                             14.2
+North Dakota                                30                             3.8                           96.2                               0.0
+Ohio                                       630                             3.0                           12.8                             84.2
+Oklahoma                                   250                             0.0                            0.0                            100.0
+Oregon                                     190                           16.0                            17.0                             67.0
+Pennsylvania                               580                           15.6                            77.9                               6.5
+Rhode Island                                30                           42.9                            57.1                               0.0
+South Carolina                             480                             6.7                           91.0                               2.3
+South Dakota                                30                             0.0                           63.0                             37.0
+Tennessee                                  700                             8.1                           90.0                               1.9
+Texas                                    1,850                           37.2                            57.9                               4.8
+Utah                                        70                           14.7                            51.5                             33.8
+Vermont                                     20                             0.0                           43.8                             56.3
+Virginia                                   520                             4.6                           86.5                               8.8
+Washington                                 370                           16.4                            53.2                             30.4
+West Virginia                               80                             0.0                           68.7                             31.3
+Wisconsin                                  280                           13.5                            70.2                             16.3
+Wyoming                                     20                           11.8                            82.4                               5.9
+Note: Zero percent Hispanic indicates no victims were reported to be of Hispanic or Latino ethnicity. Total is the sum of all listed states. Details may not sum
+to totals due to rounding. The data are not statistically adjusted to account for missing information or nonreporting. See Methodology.
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Extract File Program, 2023.
+APPENDIX TABLE 5
+Confidence intervals for table 3: Percent of homicide victimizations, by victim-offender relationship and victim
+demographic characteristics, 2023
+                                                                              95% confidence interval
+Victim demographic                                                          Victim-offender relationship
+characteristic                Intimate partner           Other family        Outside family but known          Stranger                Unknown
+   Total                           ±0.82%                  ±0.81%                     ±2.16%                    ±0.55%                  ±2.27%
+Sex
+   Male                           ±0.42%                   ±0.81%                     ±2.10%                   ±0.63%                    ±2.98%
+   Female                         ±1.86                    ±0.70                      ±1.20                    ±0.59                     ±0.89
+Race
+   White                          ±0.57%                    ±0.50%                    ±1.09%                   ±1.19%                    ±0.91%
+   Black                          ±0.89                     ±1.20                     ±2.21                    ±0.92                     ±3.34
+   Asian                          ±2.64                     ±3.13                     ±6.23                    ±7.88                     ±3.34
+   American Indian or
+     Alaska Native                ±1.96                     ±2.48                     ±5.45                     ±3.79                    ±3.69
+   Native Hawaiian or
+     Other Pacific Islander       ±5.47                     ±3.27                    ±13.09                   ±18.06                     ±4.03
+Age
+   11 or younger                  ±0.42%                    ±2.56%                    ±1.61%                    ±2.08%                   ±1.78%
+   12–17                          ±0.53                     ±0.84                     ±3.52                     ±1.97                    ±2.54
+   18–24                          ±0.69                     ±0.37                     ±1.82                     ±1.50                    ±3.67
+   25–34                          ±0.93                     ±0.77                     ±2.73                     ±2.26                    ±3.26
+   35–64                          ±1.08                     ±1.15                     ±1.59                     ±0.63                    ±0.95
+   65 or older                    ±1.14                     ±1.64                     ±2.03                     ±1.61                    ±2.15
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+
+
+
+APPENDIX TABLE 6
+Confidence intervals for table 4: Rate of homicide victimization, by victim-offender relationship and victim
+demographic characteristics, 2023
+                                                                               95% confidence interval
+                                                                                   Rate per 100,000
+Victim demographic                                                           Victim-offender relationship
+characteristic                  Intimate partner          Other family        Outside family but known          Stranger                Unknown
+   Total                             ±0.07                   ±0.08                      ±0.21                    ±0.06                   ±0.19
+Sex
+   Male                              ±0.06                    ±0.13                     ±0.38                    ±0.12                    ±0.41
+   Female                            ±0.10                    ±0.03                     ±0.07                    ±0.02                    ±0.04
+Race
+   White                             ±0.06                    ±0.04                     ±0.13                    ±0.04                    ±0.05
+   Black                             ±0.29                    ±0.36                     ±0.90                    ±0.38                    ±1.08
+   Asian                             ±0.03                    ±0.09                     ±0.18                    ±0.21                    ±0.05
+   American Indian or
+     Alaska Native                   ±0.19                    ±0.21                     ±0.46                    ±0.19                    ±0.37
+   Native Hawaiian or
+     Other Pacific Islander          ±0.40                    ±0.20                     ±0.70                    ±1.93                    ±0.26
+Age
+   11 or younger                     ±0.01                    ±0.05                     ±0.02                    ±0.03                    ±0.03
+   12–17                             ±0.04                    ±0.05                     ±0.33                    ±0.09                    ±0.14
+   18–24                             ±0.15                    ±0.09                     ±0.55                    ±0.14                    ±0.75
+   25–34                             ±0.19                    ±0.14                     ±0.57                    ±0.38                    ±0.57
+   35–64                             ±0.13                    ±0.12                     ±0.24                    ±0.09                    ±0.13
+   65 or older                       ±0.02                    ±0.04                     ±0.04                    ±0.04                    ±0.04
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                       19
+APPENDIX TABLE 7
+Confidence intervals for table 5: Percent of homicide incidents, by number of victims, 2023
+                                                                                    95% confidence interval
+Number of victims in incident                   Number of victims                    Number of incidents                    Percent of incidents
+   Total                                               ~                                 ±1,058.79                                    ~
+1 victim                                               ~                                   ±405.49                               ±0.79%
+2 victims                                              ~                                   ±130.87                               ±0.60
+3 victims                                              ~                                    ±31.39                               ±0.17
+4 or more victims                                      ~                                    ±10.52                               ±0.05
+~Not applicable.
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+
+
+
+APPENDIX TABLE 8
+Estimates and confidence intervals for figure 2: Percent of homicide victimizations involving a firearm, 2014–2023
+Year                                             Percent involving firearm                                     95% confidence interval
+2014                                                      68.2%                                                          ~
+2015                                                      71.5                                                           ~
+2016                                                      72.9                                                           ~
+2017                                                      72.5                                                           ~
+2018                                                      72.3                                                           ~
+2019                                                      73.3                                                           ~
+2020                                                      76.9                                                           ~
+2021                                                      79.8                                                       ±6.98%
+2022                                                      79.6                                                       ±2.62
+2023                                                      79.6                                                       ±1.31
+Note: Confidence intervals are calculated for 2021, 2022, and 2023 because estimates are from the National Incident-Based Reporting System (NIBRS)
+Estimation Program. They are not applicable for 2014 to 2020. The 2022 NIBRS Estimation Program estimates were updated to reflect data transmitted to
+the FBI after the 2022 cutoff date. See Methodology.
+~Not applicable.
+Source: Federal Bureau of Investigation, Supplementary Homicide Reports, 2014–2020; and Bureau of Justice Statistics and Federal Bureau of Investigation,
+National Incident-Based Reporting System Estimation Program, 2021–2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                           20
+APPENDIX TABLE 9
+Confidence intervals for table 6: Percent of homicide victimizations, by weapon type and victim demographic
+characteristics, 2023
+                                                                               95% confidence interval
+                                                                                    Weapon type
+Victim demographic                                                                                                 Other non-
+characteristic                Firearm                 Knife           Blunt instrument      Personal weapon        personal weapon         Unknown
+   Total                      ±1.31%                 ±0.25%               ±0.13%                ±0.30%                 ±0.35%               ±0.33%
+Sex
+   Male                       ±31.63%                ±3.17%               ±0.61%                 ±1.44%                ±1.63%               ±1.20%
+   Female                     ±22.95                 ±4.73                ±1.23                  ±3.68                 ±3.81                ±2.52
+Race
+   White                      ±25.35%                ±4.84%               ±1.31%                 ±2.91%                ±3.60%               ±1.91%
+   Black                      ±34.74                 ±2.64                ±0.37                  ±1.25                 ±1.07                ±1.26
+   Asian                      ±22.87                 ±5.07                ±1.04                  ±3.31                 ±1.39                ±1.52
+   American Indian or
+     Alaska Native            ±26.93                 ±5.62                ±1.62                  ±4.59                 ±6.39                ±3.39
+   Native Hawaiian or
+     Other Pacific Islander    ±8.03                 ±7.08                ±1.51                      ~               ±18.16                 ±3.50
+Age
+   11 or younger              ±11.94%                ±2.39%               ±0.88%               ±12.59%                 ±6.77%               ±4.47%
+   12–17                      ±39.28                 ±1.72                ±0.27                 ±1.65                  ±1.49                ±1.79
+   18–24                      ±35.00                 ±1.80                ±0.19                 ±0.59                  ±1.41                ±1.02
+   25–34                      ±33.63                 ±2.87                ±0.36                 ±0.83                  ±1.45                ±1.05
+   35–64                      ±28.74                 ±4.93                ±1.17                 ±2.28                  ±2.32                ±1.75
+   65 or older                ±17.24                 ±7.13                ±2.50                 ±4.10                  ±5.37                ±2.38
+~Not applicable.
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+
+
+
+APPENDIX TABLE 10
+Estimates and confidence intervals for figure 3: Percent of homicide offenses, by clearance, 2014–2023
+                                                    Cleared                                                           Not cleared
+Year                                Percent                95% confidence interval                       Percent               95% confidence interval
+2014                                 64.5%                            ~                                   35.5%                           ~
+2015                                 61.5                             ~                                   38.5                            ~
+2016                                 59.4                             ~                                   40.6                            ~
+2017                                 61.6                             ~                                   38.4                            ~
+2018                                 62.3                             ~                                   37.7                            ~
+2019                                 61.4                             ~                                   38.6                            ~
+2020                                 54.4                             ~                                   45.6                            ~
+2021                                 52.2                             ~                                   47.8                        ±1.11
+2022                                 53.3                         ±0.94                                   46.7                        ±0.94
+2023                                 51.7                         ±1.17                                   48.3                        ±1.17
+Note: Confidence intervals are calculated for 2022 and 2023 because estimates are from the National Incident-Based Reporting System (NIBRS) Estimation
+Program. They are not applicable for 2014 to 2020. Confidence intervals for 2021 were estimated for cleared through arrest and exceptional clearance
+separately; the combined confidence interval is not available. Percent cleared includes cleared by arrest and exceptional clearance; clearance data before
+2021 did not distinguish nature of clearance. Exceptional clearance includes crimes cleared because the offender died, the prosecution was declined, the
+victim refused to cooperate, extradition of the offender was denied by another jurisdiction, or the offender was a juvenile but no referral was made to the
+juvenile court as a matter of accepted law enforcement policy. An incident cannot be cleared by exceptional means if it was previously or concurrently
+reported as cleared by arrest. The 2022 NIBRS Estimation Program estimates were updated to reflect data transmitted to the FBI after the 2022 cutoff date.
+See Methodology.
+~Not applicable.
+Source: Federal Bureau of Investigation, Crime in the United States, 2014–2020; and Bureau of Justice Statistics and Federal Bureau of Investigation,
+National Incident-Based Reporting System Estimation Program, 2021–2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                              21
+APPENDIX TABLE 11
+Confidence intervals for table 7: Percent of homicide victimizations, by clearance type and victim demographic
+characteristics, 2023
+                                                                              95% confidence interval
+Victim demographic                                                                Clearance type
+characteristic                       Cleared through arrest                    Exceptional clearance                          Not cleared
+   Total                                    ±1.21%                                    ±0.26%                                    ±1.17%
+Sex
+   Male                                      ±0.87%                                    ±0.23%                                    ±0.94%
+   Female                                    ±0.80                                     ±0.78                                     ±1.08
+Race
+   White                                     ±1.15%                                    ±0.44%                                    ±1.29%
+   Black                                     ±0.82                                     ±0.28                                     ±0.93
+   Asian                                     ±3.60                                     ±4.44                                     ±4.94
+   American Indian or
+     Alaska Native                           ±3.43                                     ±1.16                                     ±3.68
+   Native Hawaiian or
+     Other Pacific Islander                 ±10.21                                     ±1.48                                     ±9.26
+Age
+   11 or younger                             ±2.10%                                    ±1.38%                                    ±1.84%
+   12–17                                     ±1.38                                     ±0.44                                     ±1.39
+   18–24                                     ±0.92                                     ±0.32                                     ±0.90
+   25–34                                     ±0.85                                     ±0.26                                     ±0.89
+   35–64                                     ±0.97                                     ±0.46                                     ±0.90
+   65 or older                               ±2.68                                     ±1.19                                     ±3.12
+Source: Bureau of Justice Statistics and Federal Bureau of Investigation, National Incident-Based Reporting System Estimation Program, 2023.
+
+
+
+
+H O M I C I D E V I C T I M I Z AT I O N I N T H E U N I T E D S TAT E S , 2023 | M AY 2025                                                    22
+The Bureau of Justice Statistics of the U.S. Department of Justice is the
+principal federal agency responsible for measuring crime, criminal
+victimization, criminal offenders, victims of crime, correlates of crime, and the
+operation of criminal and civil justice systems at the federal, state, tribal, and
+local levels. BJS collects, analyzes, and disseminates reliable statistics on crime
+and justice systems in the United States, supports improvements to state and
+local criminal justice information systems, and participates with national and
+international organizations to develop and recommend national standards for
+justice statistics. Kevin M. Scott, PhD, is the acting director.
+
+This report was written by Lizabeth Remrey, PhD. James T. Hubbell, PhD, and
+Erica L. Smith verified the report.
+
+Kathryn A. Sweeney, PhD, edited the report. Jeffrey Link produced the report.
+
+May 2025, NCJ 309889
+
+
+
+
+                       Office of Justice Programs
+   Building Solutions • Supporting Communities • Advancing Justice
+                              www.ojp.gov
+

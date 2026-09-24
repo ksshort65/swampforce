@@ -1,0 +1,31 @@
+{
+ "status": "Cleared with fixes",
+ "fixes": [
+  "Foreign-aid totals corrected: ForeignAssistance.gov's current data show about $80.5 billion disbursed in FY2023 (not $71.9 billion); the USAID $43.8 billion share was not re-pulled and is cut",
+  "USAID OIG figures linked to the two May 2026 audit reports ($36 million cash assistance to four NGOs; 18 humanitarian awards, $650 million); '$25.9 billion audited' semiannual figure cut (not located)",
+  "OIG-26-04 link corrected",
+  "NED sentence restated: NED funds four core institutes, including the party-affiliated NDI and IRI"
+ ],
+ "edits": [
+  [
+   "In fiscal 2023 the United States disbursed about **$71.9 billion** in foreign aid. USAID moved about **$43.8 billion** of that — three of every five dollars.",
+   "In fiscal 2023 the United States disbursed about **$80.5 billion** in foreign assistance, by ForeignAssistance.gov’s current data."
+  ],
+  [
+   "Cash assistance in the West Bank and Gaza: about **$36 million** in fiscal 2024 to four NGOs, with fraud risk USAID did not identify. Humanitarian awards in that theater: **$650 million**, eighteen awards, vetting that still left a diversion risk. The spring 2026 semiannual report: **$25.9 billion** audited, convictions, debarments, NGO officers sentenced for laundering grant money.",
+   "[Cash assistance in the West Bank and Gaza](https://oig.usaid.gov/sites/default/files/2026-05/Audit%20of%20USAID%20Cash%20Assistance%20to%20West%20Bank%20Gaza%20%20%289-000-26-002-P%29.pdf): about **$36 million** in fiscal 2024 to four NGOs, with key fraud risks USAID did not identify. [Humanitarian awards in that theater](https://oig.usaid.gov/sites/default/files/2026-05/Final%20Audit%20Report%20-%20West%20Bank%20and%20Gaza%20Partner%20Vetting%20Audit%20%288-294-26-003-P%29_0.pdf): **$650 million** across eighteen awards, with selective partner vetting that the auditor said could increase the risk of diversion."
+  ],
+  [
+   "That is taxpayer money into party-aligned shops.",
+   "NED funds four core institutes, including those two party-affiliated ones."
+  ]
+ ],
+ "ourview": [
+  "Federal grant money is not supposed",
+  "Anyone who says"
+ ],
+ "keep_links": [],
+ "quote_keep": [],
+ "held_reason": "",
+ "dek_opinion": true
+}
