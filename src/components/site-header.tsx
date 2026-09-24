@@ -1,5 +1,66 @@
+import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { SITE, FAKE_NEWS_SLUGS, getPost } from "@/lib/content";
+
+function FakeNewsMenu() {
+  const ref = useRef<HTMLDetailsElement>(null);
+
+  function close() {
+    if (ref.current) ref.current.open = false;
+  }
+
+  useEffect(() => {
+    const menu = ref.current;
+    if (!menu) return;
+
+    function onDoc(e: MouseEvent) {
+      if (!menu.open) return;
+      if (!menu.contains(e.target as Node)) menu.open = false;
+    }
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") menu.open = false;
+    }
+    function onScroll() {
+      if (menu.open) menu.open = false;
+    }
+
+    document.addEventListener("mousedown", onDoc);
+    document.addEventListener("keydown", onKey);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      document.removeEventListener("mousedown", onDoc);
+      document.removeEventListener("keydown", onKey);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  return (
+    <details ref={ref} className="relative">
+      <summary className="inline-flex min-h-11 cursor-pointer list-none items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase hover:text-sage [&::-webkit-details-marker]:hidden">
+        Fake News
+      </summary>
+      <div
+        className="absolute top-full left-0 z-50 mt-1 max-h-[70vh] w-72 overflow-y-auto rounded-md border border-border bg-bg p-1.5 shadow-lg"
+        onClick={close}
+      >
+        {FAKE_NEWS_SLUGS.map((slug) => {
+          const post = getPost(slug);
+          if (!post) return null;
+          return (
+            <Link
+              key={slug}
+              to="/dispatch/$slug"
+              params={{ slug }}
+              className="block rounded-md px-3 py-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:bg-surface"
+            >
+              {post.title}
+            </Link>
+          );
+        })}
+      </div>
+    </details>
+  );
+}
 
 export function SiteHeader() {
   return (
@@ -25,27 +86,7 @@ export function SiteHeader() {
           {["Republic", "Fake News", "Democrats", "Republicans", "Congress", "Border", "Remedy", "J6", "Scorecard", "Pump", "Foreword"].map(
             (label) =>
               label === "Fake News" ? (
-                <details key={label} className="relative">
-                  <summary className="inline-flex min-h-11 cursor-pointer list-none items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase hover:text-sage [&::-webkit-details-marker]:hidden">
-                    {label}
-                  </summary>
-                  <div className="absolute top-full left-0 z-50 mt-1 max-h-[70vh] w-72 overflow-y-auto rounded-md border border-border bg-bg p-1.5 shadow-lg">
-                    {FAKE_NEWS_SLUGS.map((slug) => {
-                      const post = getPost(slug);
-                      if (!post) return null;
-                      return (
-                        <Link
-                          key={slug}
-                          to="/dispatch/$slug"
-                          params={{ slug }}
-                          className="block rounded-md px-3 py-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:bg-surface"
-                        >
-                          {post.title}
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </details>
+                <FakeNewsMenu key={label} />
               ) : (
                 <span
                   key={label}
