@@ -312,7 +312,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
         ))}
       </div>
       <div className="overflow-x-auto rounded-md border border-neutral-800">
-        <table className="w-full min-w-[64rem] border-collapse text-left">
+        <table className="w-full table-fixed border-collapse text-left">
           <thead>
             <tr>
               <th className="w-1/2 border-r border-white/10 bg-[#3a1214] px-3 py-3 font-display text-sm font-bold tracking-[0.12em] text-red-100 uppercase">
