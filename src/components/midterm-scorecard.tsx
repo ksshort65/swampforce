@@ -23,6 +23,7 @@ import {
   CPI_PEAK,
   ALIENS,
   DEBT_WHY,
+  THE_LOSS,
   CHARTS,
   COMPARE_CHARTS,
   COMPARE_WIDE,
@@ -1199,6 +1200,30 @@ export function MidtermScorecard() {
             <p className="text-sm leading-relaxed">
               Democrats: {DEBT_WHY.dem}
             </p>
+            <div className="mt-6">
+              <p className="font-display text-sm font-bold tracking-[0.16em] text-sage uppercase">
+                {THE_LOSS.k}
+              </p>
+              <div className="mt-3 grid gap-3">
+                {THE_LOSS.rows.map((row) => (
+                  <a
+                    key={row.k}
+                    href={row.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block rounded-md border border-border bg-surface px-4 py-4 text-fg no-underline hover:border-sage"
+                  >
+                    <p className="font-display text-xs font-semibold tracking-[0.14em] text-sage uppercase">
+                      {row.k}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed">{row.v}</p>
+                    <p className="mt-2 font-display text-[11px] tracking-[0.12em] text-sage uppercase">
+                      The record →
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </div>
             <p>
               <a
                 href={DEBT_WHY.payHref}

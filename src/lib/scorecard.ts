@@ -127,6 +127,37 @@ export const DEBT_MATH =
   "$10.96 + $12.65 + $16.48 = $40.09. Before 1857 the two parties did not yet run the modern Congress. The debt then was $29 million.";
 
 /** Article I. Majority control is the purse. */
+export const THE_LOSS = {
+  k: "What the missed work cost",
+  rows: [
+    {
+      k: "The interest",
+      v: "Congressional Budget Office, February 2026. Net interest was $970 billion in fiscal 2025. It is $1.039 trillion in fiscal 2026. Defense that year is $885 billion. The interest is larger than the military. That bill is what Americans pay because the books were not closed.",
+      href: "https://www.cbo.gov/publication/62050",
+    },
+    {
+      k: "The last surplus",
+      v: "The same office’s historical tables. The last surplus was fiscal year 2001. Every year since, a new layer went on the card. Both parties held the gavel in those years. Neither closed it.",
+      href: "https://www.cbo.gov/data/budget-economic-data",
+    },
+    {
+      k: "The twelve bills",
+      v: "Congressional Research Service. The last time all twelve regular appropriations were law by October 1 was fiscal year 1997. Since then they have not passed more than five of the twelve on time, and in most recent years they passed none. A continuing resolution copies last year and stuffs exceptions in after dark. The calendar they wrote is the calendar they refuse.",
+      href: "https://www.congress.gov/crs-product/IN12324",
+    },
+    {
+      k: "The open door",
+      v: "Government Accountability Office. Fiscal 2024: about $162 billion in improper payments. About $135 billion of that was overpayments. Since fiscal 2003 the estimate is about $2.8 trillion. Oversight is the job that was supposed to check the payment before it left. Congress holds that job. The money left.",
+      href: "https://www.gao.gov/products/gao-25-107753",
+    },
+    {
+      k: "The split",
+      v: "While the twelve bills did not pass, the country was handed a caption. Collusion. Insurrection. A neighbor was taught that the neighbor was the enemy. Durham: no actual evidence of collusion in the holdings when the case opened. The insurrection statute was not the charge. The fight ran for years. The appropriations calendar did not. Both parties kept the microphone. Neither closed the books. The interest and the improper payments are what that choice cost.",
+      href: "https://www.justice.gov/storage/durhamreport.pdf",
+    },
+  ],
+};
+
 export const PURSE = {
   k: "Congress holds the purse. Majority control is the test.",
   v: "Article I gives Congress the power of the purse. The Oval spends what Congress votes. Majority control means one party holds the House and the Senate at the same time. Then that party can pass a spending bill without the other. Helped and hurt on this page are the bills they passed and the prices, the border, and the debt that followed. A speech is not a record.",
