@@ -1,7 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { MidtermScorecard } from "@/components/midterm-scorecard";
 
 export const Route = createFileRoute("/scorecard")({
+  beforeLoad: () => {
+    throw redirect({ to: "/" });
+  },
   component: ScorecardPage,
   head: () => ({
     meta: [

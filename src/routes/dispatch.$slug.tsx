@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { NarrativeFrames } from "@/components/narrative-frames";
 import { EraCompare } from "@/components/era-compare";
@@ -8,6 +8,9 @@ import { nextChapter } from "@/lib/flow";
 import { essayHead } from "@/lib/share-head";
 
 export const Route = createFileRoute("/dispatch/$slug")({
+  beforeLoad: () => {
+    throw redirect({ to: "/" });
+  },
   component: EssayPage,
   loader: ({ params }) => {
     const post = getPost(params.slug);

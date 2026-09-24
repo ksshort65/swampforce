@@ -1,7 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { SITE } from "@/lib/content";
 
 export const Route = createFileRoute("/copyright")({
+  beforeLoad: () => {
+    throw redirect({ to: "/" });
+  },
   component: CopyrightPage,
 });
 

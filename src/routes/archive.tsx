@@ -1,7 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { JOURNAL, posts, getPost } from "@/lib/content";
 
 export const Route = createFileRoute("/archive")({
+  beforeLoad: () => {
+    throw redirect({ to: "/" });
+  },
   component: ArchivePage,
   head: () => ({
     meta: [
