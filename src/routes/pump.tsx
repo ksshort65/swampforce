@@ -91,7 +91,7 @@ function PumpPage() {
                 href={OPEC_FILE.opec}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sage no-underline hover:text-fg"
+                className="text-sage underline decoration-sage underline-offset-2"
               >
                 OPEC — who sits at the table →
               </a>
@@ -100,7 +100,7 @@ function PumpPage() {
                 href={OPEC_FILE.href}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sage no-underline hover:text-fg"
+                className="text-sage underline decoration-sage underline-offset-2"
               >
                 EIA STEO — OPEC+ production →
               </a>
@@ -187,7 +187,7 @@ function PumpPage() {
                 href={RULES_FILE.eia}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sage no-underline hover:text-fg"
+                className="text-sage underline decoration-sage underline-offset-2"
               >
                 EIA — factors affecting gasoline prices →
               </a>
@@ -196,7 +196,7 @@ function PumpPage() {
                 href={RULES_FILE.href}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sage no-underline hover:text-fg"
+                className="text-sage underline decoration-sage underline-offset-2"
               >
                 CRS — gasoline prices →
               </a>
@@ -270,7 +270,7 @@ function PumpPage() {
                 {i > 0 ? " · " : null}
                 <a
                   href={s.href}
-                  className="text-sage no-underline hover:underline"
+                  className="text-sage underline decoration-sage underline-offset-2"
                   target="_blank"
                   rel="noreferrer"
                 >
