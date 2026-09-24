@@ -371,7 +371,7 @@ export const LEDGER_POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "The failure is not the viewer's. The truth was withheld. What ran was a coordinated attack. The network archives are the proof, and they cannot be disputed. The studies are the method.",
+        text: "The failure is not the viewer's. The truth was withheld. What ran was a coordinated attack. The [network archives](https://www.youtube.com/watch?v=EsjwtaIocUw) are the proof, and they cannot be disputed. [The uncut recording](https://www.c-span.org/clip/public-affairs-event/user-clip-trump-says-bloodbath/5110570) is a source that does not lie. The studies are the method.",
       },
       {
         type: "p",
