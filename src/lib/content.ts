@@ -563,11 +563,25 @@ export const posts: Post[] = [
 		featured: true,
 		series: "The Republic",
 		part: 5,
-		receipts: [],
+		receipts: [
+			{
+				label: "DSA — What is Democratic Socialism",
+				href: "https://www.dsausa.org/about-us/what-is-democratic-socialism/",
+			},
+			{ label: "DSA program — Workers Deserve More", href: "https://program.dsausa.org/" },
+			{
+				label: "DSA program PDF, September 2, 2026",
+				href: "https://program.dsausa.org/wp-content/uploads/2026/09/WDM-Program.pdf",
+			},
+		],
 		body: [
 			{
 				type: "p",
 				text: "The Democratic Socialists of America published a 2026 program that calls for drafting a new constitution and building a democratic socialist republic. That document is on their own site: the [DSA 2026 program PDF](https://program.dsausa.org/wp-content/uploads/2026/07/WDM-Program.pdf). A caucus inside that organization, [Red Star](https://redstarcaucus.org/zenith4-points-of-unity/), states that the aim is to abolish capitalism and ultimately to achieve communism. Those are their words. This journal does not need a reporter to translate them.",
+			},
+			{
+				type: "p",
+				text: "On their own page they state the belief in one line: working people should run both the economy and society democratically to meet human needs, not to make profits for a few. [What is Democratic Socialism](https://www.dsausa.org/about-us/what-is-democratic-socialism/). The program states the goal in their words: win the battle for democracy, draft a new constitution, and create a democratic socialist republic. [Workers Deserve More](https://program.dsausa.org/) · [PDF, September 2, 2026](https://program.dsausa.org/wp-content/uploads/2026/09/WDM-Program.pdf).",
 			},
 			{
 				type: "q",
