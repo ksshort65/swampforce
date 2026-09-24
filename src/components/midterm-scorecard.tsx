@@ -162,7 +162,7 @@ function FarmBars() {
         <p className="mt-2 text-sm leading-relaxed">
           <a
             href={FARM.filings.href2024}
-            className="text-sage no-underline hover:underline"
+            className="text-sage underline decoration-sage underline-offset-2"
             target="_blank"
             rel="noreferrer"
           >
@@ -171,7 +171,7 @@ function FarmBars() {
           {" · "}
           <a
             href={FARM.filings.href2025}
-            className="text-sage no-underline hover:underline"
+            className="text-sage underline decoration-sage underline-offset-2"
             target="_blank"
             rel="noreferrer"
           >
@@ -273,7 +273,7 @@ function ChartStack({ tab }: { tab: TabId }) {
                 {i > 0 ? " · " : null}
                 <a
                   href={s.href}
-                  className="text-sage no-underline hover:underline"
+                  className="text-sage underline decoration-sage underline-offset-2"
                   target="_blank"
                   rel="noreferrer"
                 >
