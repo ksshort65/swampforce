@@ -248,7 +248,7 @@ export const LAWS: { k: string; href: string }[] = [
   { k: "8 U.S.C. § 1324 — harboring", href: "https://www.law.cornell.edu/uscode/text/8/1324" },
   { k: "8 U.S.C. § 1373 — no gag on ICE", href: "https://www.law.cornell.edu/uscode/text/8/1373" },
   { k: "8 U.S.C. § 1611 — federal benefits", href: "https://www.law.cornell.edu/uscode/text/8/1611" },
-  { k: "2 U.S.C. § 1415 — they billed you for their misconduct", href: "https://www.law.cornell.edu/uscode/text/2/1415" },
+  { k: "2 U.S.C. § 1415 — they billed the taxpayer for their misconduct", href: "https://www.law.cornell.edu/uscode/text/2/1415" },
   { k: "18 U.S.C. § 2383 — insurrection", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
 ];
 
@@ -266,7 +266,7 @@ export const HOAXES: { k: string; v: string; href: string }[] = [
   },
   {
     k: "Crossfire Hurricane",
-    v: "Durham: no actual evidence of collusion in the holdings when the FBI opened a full investigation. Ranking members told the country it was more than circumstantial. Networks ran that sentence for the entire first term. Mueller did not establish a conspiracy. They ran it anyway. That is how you poison a presidency and divide a nation.",
+    v: "Durham: no actual evidence of collusion in the holdings when the FBI opened a full investigation. Ranking members told the country it was more than circumstantial. Networks ran that sentence for the entire first term. Mueller did not establish a conspiracy. They ran it anyway. That is how a presidency is poisoned and a nation is divided.",
     href: "https://www.justice.gov/storage/durhamreport.pdf",
   },
   {
@@ -389,8 +389,8 @@ export const WARFARE = {
   k: "Psychological warfare and gaslighting",
   war: "Psychological warfare here is not a battlefield. It is an information operation run on a country. A caption is written. Six seconds are cut from a speech. One word is swapped. The country is then taught to hate the neighbor and to distrust the thing in front of its own eyes. The file is still there. The method is to make the file feel rude to mention. The target is the American argument.",
   gas: "Gaslighting is the method inside that operation. A speaker replaces what happened with a word that cannot survive the file, then repeats the word until the listener treats the file as the lie. The rest of the sentence can stay true. The swapped word does all the work. Kidnapped instead of arrested. Insurrection instead of a docket that never charged it. Mostly peaceful under a precinct on fire. The listener is not argued with. The listener is trained.",
-  clip: "They stop the statement short. They play six seconds. They do not play the rest of the answer. A hearing that holds thousands of hours and plays the minutes it prefers is the same method as a six-second package. BBC stuck two January 6 lines fifty-four minutes apart. Bloodbath was auto plants in Mexico and a tariff. Dictator was close the border, drill, then “after that, I’m not a dictator.” Fine people condemned neo-Nazis in the same remarks. Play the whole tape or it is not journalism. It is a frame.",
-  frame: "Narrative framing is the one-word swap. Change the noun, teach the opposite crime. The United States becomes the kidnapper. A campaign becomes a Russian agent. A riot becomes a protest. A warrant becomes a snatch. Read across: left is what ran. Right is what the recording and the statute still contain.",
+  clip: "They stop the statement short. They play six seconds. They do not play the rest of the answer. A hearing that holds thousands of hours and plays the minutes it prefers is the same method as a six-second package. BBC stuck two January 6 lines fifty-four minutes apart. Bloodbath was auto plants in Mexico and a tariff. Dictator was close the border, drill, then “after that, I’m not a dictator.” Fine people condemned neo-Nazis in the same remarks. A clip that is not the whole tape is not journalism. It is a frame.",
+  frame: "Narrative framing is the one-word swap. Change the noun, teach the opposite crime. The United States becomes the kidnapper. A campaign becomes a Russian agent. A riot becomes a protest. A warrant becomes a snatch. The left column is what ran. The right column is what the recording and the statute still contain.",
 };
 
 export const FAKE_NEWS: {
@@ -627,7 +627,7 @@ export const OVAL_RECORD: {
   },
   {
     k: "The United States is a republic",
-    v: "Article IV, Section 4: the United States shall guarantee to every State a Republican Form of Government. Madison, Federalist 10: they built a republic, not a pure democracy, because a pure democracy has no cure for faction. Enumerated powers. Elections. Courts. A Bill of Rights that binds the majority. Our democracy as a slogan is how you skip the parts of the document that slow you down. A republic is supposed to slow you down.",
+    v: "Article IV, Section 4: the United States shall guarantee to every State a Republican Form of Government. Madison, Federalist 10: they built a republic, not a pure democracy, because a pure democracy has no cure for faction. Enumerated powers. Elections. Courts. A Bill of Rights that binds the majority. Our democracy as a slogan is how the parts of the document that slow a majority get skipped. A republic is built to slow a majority.",
     href: "https://constitution.congress.gov/constitution/article-4/",
     desks: ["four", "trump1", "trump2"],
   },
@@ -1098,7 +1098,7 @@ export const WAR: WarRow[] = [
   },
   {
     topic: "Smears are not a statute",
-    gop: "A clip is not a budget. Ugly sentences on tape stay here — including yours. Govern or go home.",
+    gop: "A clip is not a budget. Ugly sentences on tape stay here — including the ones from this party. Govern or go home.",
     dem: "When they cannot beat the file they make it radioactive. Fourteen replies. A lie. Reports filed, posts stayed. Noise does not appropriate a dollar. It has to stop.",
     sources: [
       { label: "Amendment I — Congress shall make no law… abridging the freedom of speech", href: "https://constitution.congress.gov/constitution/amendment-1/" },
@@ -2295,20 +2295,20 @@ export const SCORE_ROWS: ScoreRow[] = [
   {
     topic: "What they got right",
     gop: "TCJA, 2017: take-home pay rose. This term: southwest-border encounters at a 50-year low (Pew). That is the file. The ugly sentences stay on this card too, so it is not a smear sheet.",
-    dem: "Social Security’s passage and the 1964 Civil Rights Act are on this party’s ledger. This journal said it would print the wins. This Congress does not get those trophies for a caption. Credit the statute that still stands. Do not pretend 2020 was peace.",
+    dem: "Social Security’s passage and the 1964 Civil Rights Act are on this party’s ledger. This Congress does not get those trophies for a caption. The statute that still stands is the credit. 2020 was not peace.",
     dsa: "They publish the program. That is more honest than a six-second caption. Honesty about wanting a new constitution is not a virtue that pays for the constitution. It is still the file.",
     href: "https://www.pewresearch.org/short-reads/2026/02/02/migrant-encounters-at-the-us-mexico-border-are-at-their-lowest-level-in-more-than-50-years/",
   },
   {
     topic: "Smears are not a statute",
-    gop: "A clip is not a budget. Flagging a citizen is not a hearing. Ugly sentences already on tape stay on this card — including yours. What has to stop is using a smear instead of a bill. Govern or go home.",
+    gop: "A clip is not a budget. Flagging a citizen is not a hearing. Ugly sentences already on tape stay on this card — including the ones from this party. What has to stop is using a smear instead of a bill. Govern or go home.",
     dem: "When they cannot beat the file they make the file radioactive. Fourteen replies. A child-sex lie. Reports filed, posts stayed. That is not opposition. That is not oversight. It is noise, and noise does not appropriate a dollar or locate a child. It has to stop. Bring a statute or leave the microphone.",
     dsa: "A purity test is not a law. Calling a neighbor a fascist for asking who pays is not a program. The 2026 pamphlet is the file. The smear is the dodge.",
     href: "https://constitution.congress.gov/constitution/amendment-1/",
   },
   {
     topic: "Who gets to hear",
-    gop: "There is no state television. The same rule applies: play the uncut tape. If a network buries an ugly sentence, we still print it. If a network buries theirs, we print that too. Censorship of the recording is how a country is taught a crime that was never filed.",
+    gop: "There is no state television. The same rule applies: the uncut tape is the record. If a network buries an ugly sentence, the sentence still prints. If a network buries theirs, that prints too. Censorship of the recording is how a country is taught a crime that was never filed.",
     dem: "MRC: 92% negative coverage of the 2025 term in the first hundred days on ABC/CBS/NBC. That is not a free press doing its job. That is a filter on what the people are allowed to hear. A caption that says ‘mostly peaceful’ while a precinct burns is not journalism. It is harm. The people own the argument. A panel does not.",
     dsa: "Deplatform as policy. If the other ledger cannot be heard, the pamphlet wins by silence. That is not democracy. That is an editor with a government-sized thumb.",
     href: "https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage",

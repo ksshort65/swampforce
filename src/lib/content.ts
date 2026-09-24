@@ -451,7 +451,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "House Minority Leader Hakeem Jeffries said, on camera at a news conference carried in full by [C-SPAN on April 22, 2026](https://www.c-span.org/program/news-conference/house-democrats-hold-news-conference-on-virginia-redistricting-vote/677945), that “we are in an era of maximum warfare, everywhere, all the time.” The isolated sentence is [this C-SPAN clip](https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623). The next sentences in the same answer were about congressional maps. Play the whole file. The words “maximum warfare” were still said, on camera, by an employee of the House, about tens of millions of Americans who vote.",
+				text: "House Minority Leader Hakeem Jeffries said, on camera at a news conference carried in full by [C-SPAN on April 22, 2026](https://www.c-span.org/program/news-conference/house-democrats-hold-news-conference-on-virginia-redistricting-vote/677945), that “we are in an era of maximum warfare, everywhere, all the time.” The isolated sentence is [this C-SPAN clip](https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623). The next sentences in the same answer were about congressional maps. The whole file is the record. The words “maximum warfare” were still said, on camera, by an employee of the House, about tens of millions of Americans who vote.",
 			},
 			{
 				type: "p",
@@ -764,7 +764,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "This journal will not invent a Congressman on a Sinaloa payroll because a caption wants one. If there is no indictment, we say so. April 2026: the United States indicted ten current and former Mexican officials — Morena party — for aiding Sinaloa trafficking. On this side of the river: Rep. Henry Cuellar (D-Texas) and his wife were indicted May 3, 2024, for about $600,000 in alleged bribes from Azerbaijan's state oil company and a Mexico City bank — not a named cartel, a bank and a foreign government. Two of his advisers pleaded guilty to laundering more than $200,000 of the Mexican-bank money. Trump later pardoned Cuellar. The pardon does not erase the charging document. It also does not turn the document into a Sinaloa membership card. We will not do that cut. If a Republican took the same cash, his name goes on this page the same day.",
+				text: "No Congressman is invented onto a Sinaloa payroll because a caption wants one. If there is no indictment, the page says so. April 2026: the United States indicted ten current and former Mexican officials — Morena party — for aiding Sinaloa trafficking. On this side of the river: Rep. Henry Cuellar (D-Texas) and his wife were indicted May 3, 2024, for about $600,000 in alleged bribes from Azerbaijan's state oil company and a Mexico City bank — not a named cartel, a bank and a foreign government. Two of his advisers pleaded guilty to laundering more than $200,000 of the Mexican-bank money. Trump later pardoned Cuellar. The pardon does not erase the charging document. It also does not turn the document into a Sinaloa membership card. That cut is not made. If a Republican took the same cash, his name goes on this page the same day.",
 			},
 			{
 				type: "p",
@@ -1058,7 +1058,7 @@ export const posts: Post[] = [
 			{ type: "p", text: "The Washington Post, November 5, 2020: the Postal Service processed about 150,000 ballots after Election Day. USPS later said 99.89 percent of ballots reached election officials within seven days. Both can be in the record. Neither is a chain of custody with a name on it. A percentage is not a witness." },
 			{ type: "h", text: "What a barcode is" },
 			{ type: "p", text: "The Intelligent Mail barcode — IMb — is sixty-five bars the Postal Service prints so a sorter knows which bin. It is the same family of mark that rides on a catalog and a utility bill. BallotTrax and the county software can ping when the envelope is scanned. That is tracking. Tracking is not identity. The envelope is supposed to carry a signature. Signatures are matched by a clerk under rules that vary by state, by county, by how tired the clerk is at 9 p.m. The barcode does not watch the kitchen table. It does not watch who filled the oval. It does not watch who licked the flap. It watches a piece of paper go through a camera in a plant." },
-			{ type: "p", text: "August 2026: USPS finalized a rule that would enroll each mail voter in a federal portal with name, address, and two unique barcodes — outbound and return. Return ballots, the rule itself says, do not get the same acceptance check as the outbound stack. Democrats called it illegal, chaotic, too close to the midterms. North Carolina started mailing today anyway. Hear the switch. In 2020 the barcode-and-mail pipeline was so sacred it made history. In 2026 the same pipeline, with more barcode, is a plot. The envelope did not change. The jersey on the White House did." },
+			{ type: "p", text: "August 2026: USPS finalized a rule that would enroll each mail voter in a federal portal with name, address, and two unique barcodes — outbound and return. Return ballots, the rule itself says, do not get the same acceptance check as the outbound stack. Democrats called it illegal, chaotic, too close to the midterms. North Carolina started mailing today anyway. The switch is the tell. In 2020 the barcode-and-mail pipeline was so sacred it made history. In 2026 the same pipeline, with more barcode, is a plot. The envelope did not change. The jersey on the White House did." },
 			{ type: "h", text: "The hypocrisy, in English" },
 			{ type: "ul", items: [
 				"If USPS was too broken to deliver a ballot in August 2020, it was not the courier of the most secure election in November.",
@@ -1223,7 +1223,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "q",
-				text: "They work for us. The networks do not. The queue does not. Play the tape anyway."
+				text: "They work for us. The networks do not. The queue does not. The tape is the record anyway.",
 			}
 		]
 	},
@@ -1494,7 +1494,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "This journal does not ask for trust in a vibe. We put the date, the room, and the link. If there is no tape, we say so. If the man said the ugly line, we say so. Then we put the Democratic frame on the left and the file on the right. Read across. That is the education. Not a lecture about who is ignorant. A habit: do not share a sentence not heard in full."
+				text: "The date, the room, and the link are the method. If there is no tape, the page says so. If the man said the ugly line, the page says so. The Democratic frame sits on the left. The file sits on the right. A sentence not heard in full is not a fact.",
 			},
 			{
 				type: "p",
@@ -1568,7 +1568,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The table that follows is that homework. The left column is what ran. The right column is what the recording still contains. This journal is not recruiting fans. Hear the rest of the answer — and then, in the last rows, to hear the lines we will not wash, because a journal that only corrects in one direction is not correcting anything."
+				text: "The left column is what ran. The right column is what the recording still contains. The last rows are the lines that stay, because a correction that runs in only one direction is not a correction.",
 			},
 			{
 				type: "h",
@@ -1576,7 +1576,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "He said fight like hell on January 6. He said stand back and stand by to the Proud Boys. He tweeted when the looting starts, the shooting starts. Those are on tape. Play them next to the sentences they buried. The country can survive an ugly sentence. It cannot survive a fake one.",
+				text: "He said fight like hell on January 6. He said stand back and stand by to the Proud Boys. He tweeted when the looting starts, the shooting starts. Those are on tape. They sit next to the sentences that were buried. The country can survive an ugly sentence. It cannot survive a fake one.",
 			},
 			{
 				type: "ul",
@@ -2433,7 +2433,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "That is not a sporting event. That is an insulated class protecting surveillance, debt, and lobbyist-written piles of law. When an outsider threatened the gravy train, the fake war got loud and the committees became weapons. A nation fighting itself never looks up to see who holds the whip. Look at the roll calls. The whip is not a vibe."
+				text: "That is not a sporting event. That is an insulated class protecting surveillance, debt, and lobbyist-written piles of law. When an outsider threatened the gravy train, the fake war got loud and the committees became weapons. A nation fighting itself never looks up to see who holds the whip. The roll calls are the whip. The whip is not a vibe.",
 			}
 		]
 	},
