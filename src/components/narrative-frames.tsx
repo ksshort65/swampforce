@@ -295,7 +295,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
   return (
     <section className="mt-8">
       <p className="mb-3 text-base leading-relaxed text-fg">
-        Pick the method. Open one column. That column only. Blue text leaves this journal for the record.
+        The method is the button. The claim names who said it, when, and how long it ran. The truth is the file.
       </p>
       <div className="mb-4 flex flex-wrap gap-2">
         {METHODS.map((name) => (
@@ -315,10 +315,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
         <table className="w-full min-w-[64rem] border-collapse text-left">
           <thead>
             <tr>
-              <th className="w-[28%] border-r border-white/10 bg-[#1c1917] px-3 py-3 font-display text-sm font-bold tracking-[0.12em] text-neutral-100 uppercase">
-                Date and who
-              </th>
-              <th className="w-[32%] border-r border-white/10 bg-[#3a1214] px-3 py-3 font-display text-sm font-bold tracking-[0.12em] text-red-100 uppercase">
+              <th className="w-1/2 border-r border-white/10 bg-[#3a1214] px-3 py-3 font-display text-sm font-bold tracking-[0.12em] text-red-100 uppercase">
                 The claim
               </th>
               <th className="bg-[#10233f] px-3 py-3 font-display text-sm font-bold tracking-[0.12em] text-blue-100 uppercase">
@@ -344,17 +341,12 @@ function TapeTable({ frames }: { frames: Frame[] }) {
               return (
                 <Fragment key={f.tag}>
                   <tr className="border-t border-white/10">
-                    <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
-                      <button type="button" onClick={() => setOpen(on("who") ? null : cell("who"))} className="text-left">
-                        <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-blue-300 uppercase">{methodOf(f.tag)}</span>
-                        <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">{f.tag}</span>
-                        <span className="block text-blue-300">{who}</span>
-                      </button>
-                    </td>
-                    <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
+                    <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm leading-snug text-red-50">
                       <button type="button" onClick={() => setOpen(on("claim") ? null : cell("claim"))} className="text-left text-blue-200">
+                        <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-300 uppercase">{f.tag}</span>
+                        <span className="mb-2 block text-blue-200">{who}</span>
                         {(ballroom ? ["Vanity. Cake. A palace. Taxpayers. A boondoggle. The design is the threat. The lawsuit."] : claims).map((claim) => (
-                          <span key={claim} className="mb-2 block last:mb-0">{claim}</span>
+                          <span key={claim} className="mb-2 block font-semibold last:mb-0">{claim}</span>
                         ))}
                       </button>
                     </td>
@@ -364,19 +356,24 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                       </button>
                     </td>
                   </tr>
-                  {pick ? (
+                  {pick && col === "claim" ? (
                     <tr className="border-t border-white/10">
-                      <td colSpan={3} className="bg-white px-4 py-4 text-neutral-900">
-                        {pick.head ? <p className="text-base font-semibold leading-relaxed">{pick.head}</p> : null}
-                        <ul className={pick.head ? "mt-3 list-disc space-y-2 pl-5" : "list-disc space-y-2 pl-5"}>
+                      <td colSpan={2} className="bg-white px-4 py-4 text-neutral-900">
+                        <ul className="list-disc space-y-2 pl-5">
+                          {BALLROOM.who.items.map((item) => (
+                            <li key={item.href + item.text}>
+                              <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-700">{item.text}</a>
+                            </li>
+                          ))}
+                        </ul>
+                        {pick.head ? <p className="mt-4 text-base font-semibold leading-relaxed">{pick.head}</p> : null}
+                        <ul className="mt-3 list-disc space-y-2 pl-5">
                           {pick.items.map((item, i) => {
                             const showGroup = item.group && item.group !== pick.items[i - 1]?.group;
                             return (
                               <li key={item.href + item.text} className={showGroup ? "mt-4 list-none" : undefined}>
                                 {showGroup ? <p className="mb-1 font-semibold text-neutral-900">{item.group}</p> : null}
-                                <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-700">
-                                  {item.text}
-                                </a>
+                                <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-700">{item.text}</a>
                               </li>
                             );
                           })}
@@ -384,17 +381,24 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                       </td>
                     </tr>
                   ) : null}
-                  {!pick && col === "who" ? (
+                  {pick && col === "truth" ? (
                     <tr className="border-t border-white/10">
-                      <td colSpan={3} className="bg-white px-4 py-4 text-base leading-relaxed text-neutral-900">
-                        {who}
+                      <td colSpan={2} className="bg-white px-4 py-4 text-neutral-900">
+                        <ul className="list-disc space-y-2 pl-5">
+                          {pick.items.map((item) => (
+                            <li key={item.href + item.text}>
+                              <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-700">{item.text}</a>
+                            </li>
+                          ))}
+                        </ul>
                       </td>
                     </tr>
                   ) : null}
                   {!pick && col === "claim" ? (
                     <tr className="border-t border-white/10">
-                      <td colSpan={3} className="bg-white px-4 py-4 text-neutral-900">
-                        <ul className="list-disc space-y-2 pl-5">
+                      <td colSpan={2} className="bg-white px-4 py-4 text-neutral-900">
+                        <p className="text-base leading-relaxed">{who}</p>
+                        <ul className="mt-3 list-disc space-y-2 pl-5">
                           {claims.map((claim) => (
                             <li key={claim} className="text-base leading-relaxed">{claim}</li>
                           ))}
@@ -404,7 +408,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                   ) : null}
                   {!pick && col === "truth" ? (
                     <tr className="border-t border-white/10">
-                      <td colSpan={3} className="bg-white px-4 py-4 text-neutral-900">
+                      <td colSpan={2} className="bg-white px-4 py-4 text-neutral-900">
                         <p className="text-base leading-relaxed">{linkify(f.tape)}</p>
                         {f.tag === "Bloodbath" ? <div className="mt-4"><BloodbathDetail /></div> : null}
                         {links.length ? (
