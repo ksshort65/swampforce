@@ -3398,6 +3398,23 @@ export const START_HERE = [
 	"they-opened-the-border",
 	"find-them",
 ] as const;
+export const FAKE_NEWS_SLUGS = [
+	"the-media-ledger",
+	"they-clipped-the-tape",
+	"one-word",
+	"they-ran-it-anyway",
+	"the-caption-was-not-the-charge",
+	"they-called-it-protest",
+	"they-dont-debate-they-flag",
+	"sixty-percent",
+	"the-hire-is-the-country",
+	"a-war-on-americans",
+	"the-pool",
+	"a-caption-cannot-be-outlawed",
+	"the-record-not-the-rally",
+	"the-floor-not-the-feed",
+	"division-is-the-product",
+] as const;
 export const LEAD_SERIES = "The Republic";
 /** Duplicates and drafts. URLs still resolve. Not in the nav. */
 export const HIDDEN = new Set([

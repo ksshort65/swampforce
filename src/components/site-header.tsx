@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { SITE } from "@/lib/content";
+import { SITE, FAKE_NEWS_SLUGS, getPost } from "@/lib/content";
 
 export function SiteHeader() {
   return (
@@ -22,36 +22,38 @@ export function SiteHeader() {
       </div>
       <div className="mx-auto flex max-w-6xl items-center overflow-visible px-4 py-1 sm:px-6">
         <nav className="flex flex-wrap items-center overflow-visible">
-          {[
-            "Republic",
-            "Fake News Exposed",
-            "Democrats",
-            "Republicans",
-            "Congress",
-            "Border",
-            "Remedy",
-            "J6",
-            "Scorecard",
-            "Pump",
-            "Foreword",
-          ].map((label) =>
-            label === "Fake News Exposed" ? (
-              <Link
-                key={label}
-                to="/dispatch/$slug"
-                params={{ slug: "the-media-ledger" }}
-                className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:text-sage"
-              >
-                {label}
-              </Link>
-            ) : (
-              <span
-                key={label}
-                className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase"
-              >
-                {label}
-              </span>
-            ),
+          {["Republic", "Fake News Exposed", "Democrats", "Republicans", "Congress", "Border", "Remedy", "J6", "Scorecard", "Pump", "Foreword"].map(
+            (label) =>
+              label === "Fake News Exposed" ? (
+                <details key={label} className="relative">
+                  <summary className="inline-flex min-h-11 cursor-pointer list-none items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase hover:text-sage [&::-webkit-details-marker]:hidden">
+                    {label}
+                  </summary>
+                  <div className="absolute top-full left-0 z-50 mt-1 max-h-[70vh] w-72 overflow-y-auto rounded-md border border-border bg-bg p-1.5 shadow-lg">
+                    {FAKE_NEWS_SLUGS.map((slug) => {
+                      const post = getPost(slug);
+                      if (!post) return null;
+                      return (
+                        <Link
+                          key={slug}
+                          to="/dispatch/$slug"
+                          params={{ slug }}
+                          className="block rounded-md px-3 py-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:bg-surface"
+                        >
+                          {post.title}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </details>
+              ) : (
+                <span
+                  key={label}
+                  className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase"
+                >
+                  {label}
+                </span>
+              ),
           )}
         </nav>
       </div>

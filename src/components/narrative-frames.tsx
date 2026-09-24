@@ -86,22 +86,49 @@ const JOURNALISTS = new Set([
   "Nothing on the laptop",
 ]);
 
+const CLIPPED = new Set([
+  "Bloodbath",
+  "Fine people",
+  "Dictator",
+  "Bleach",
+  "The virus is a hoax",
+  "Slow the testing",
+  "All Mexicans are rapists",
+  "Muslim ban",
+  "Kids in cages",
+  "Animals",
+  "He never said peacefully",
+  "Schiff’s transcript",
+  "No condemnation",
+  "Many sides",
+  "Stand by",
+  "Inject light",
+  "Hang Mike Pence",
+  "187 minutes",
+  "We love you",
+  "Suckers and losers",
+  "Bible upside down",
+  "Mostly peaceful",
+]);
+
 function bucket(tag: string) {
+  if (CLIPPED.has(tag)) return "clipped";
   if (POLITICIANS.has(tag)) return "politician";
   if (JOURNALISTS.has(tag)) return "journalist";
   return "network";
 }
 
-function firstLine(text: string) {
+function oneLine(text: string, max = 140) {
   const one = text.split(/(?<=\.)\s+/)[0] ?? text;
-  return one.length > 220 ? `${one.slice(0, 217)}…` : one;
+  return one.length > max ? `${one.slice(0, max - 1)}…` : one;
 }
 
 function TapeTable({ frames }: { frames: Frame[] }) {
   const groups = [
+    { key: "clipped", title: "Tape cut short" },
     { key: "politician", title: "Politicians" },
     { key: "network", title: "Networks" },
-    { key: "journalist", title: "Journalists — gaslighting, lies, and a tape cut short" },
+    { key: "journalist", title: "Journalists" },
   ] as const;
   return (
     <section className="mt-8">
@@ -127,6 +154,9 @@ function TapeTable({ frames }: { frames: Frame[] }) {
             {groups.map((group) => {
               const rows = frames.filter((f) => bucket(f.tag) === group.key);
               if (!rows.length) return null;
+              if (group.key === "clipped") {
+                rows.sort((a, b) => (a.tag === "Bloodbath" ? -1 : b.tag === "Bloodbath" ? 1 : 0));
+              }
               return (
                 <GroupRows key={group.key} title={group.title} frames={rows} />
               );
@@ -165,25 +195,33 @@ function ChartRow({ f }: { f: Frame }) {
       </tr>
     );
   }
-  const who = firstLine(f.ran || f.tag);
-  const claim = firstLine(f.they);
-  const truth = f.href ? (
-    <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-      {fileLine(f.tape)}
-    </a>
-  ) : (
-    fileLine(f.tape)
-  );
+  const who = oneLine(f.ran || f.tag, 120);
+  const claim = oneLine(f.they, 140);
+  const truthText = oneLine(f.tape, 140);
   return (
     <tr className="border-t border-white/10">
       <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
         <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">{f.tag}</span>
-        {who}
+        {f.href ? (
+          <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            {who}
+          </a>
+        ) : (
+          who
+        )}
       </td>
       <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
         {claim}
       </td>
-      <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">{truth}</td>
+      <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
+        {f.href ? (
+          <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            {truthText}
+          </a>
+        ) : (
+          truthText
+        )}
+      </td>
     </tr>
   );
 }
