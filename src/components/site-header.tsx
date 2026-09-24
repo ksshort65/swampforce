@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
-import { SITE, FAKE_NEWS_SLUGS, getPost } from "@/lib/content";
+import { SITE, NAV_MENUS, getPost } from "@/lib/content";
 
-function FakeNewsMenu() {
+function NavMenu({ label, slugs }: { label: string; slugs: readonly string[] }) {
   const ref = useRef<HTMLDetailsElement>(null);
 
   function close() {
@@ -35,16 +35,24 @@ function FakeNewsMenu() {
     };
   }, []);
 
+  if (!slugs.length) {
+    return (
+      <span className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase">
+        {label}
+      </span>
+    );
+  }
+
   return (
     <details ref={ref} className="relative">
       <summary className="inline-flex min-h-11 cursor-pointer list-none items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase hover:text-sage [&::-webkit-details-marker]:hidden">
-        Fake News
+        {label}
       </summary>
       <div
         className="absolute top-full left-0 z-50 mt-1 max-h-[70vh] w-72 overflow-y-auto rounded-md border border-border bg-bg p-1.5 shadow-lg"
         onClick={close}
       >
-        {FAKE_NEWS_SLUGS.map((slug) => {
+        {slugs.map((slug) => {
           const post = getPost(slug);
           if (!post) return null;
           return (
@@ -84,19 +92,9 @@ export function SiteHeader() {
       </div>
       <div className="mx-auto flex max-w-6xl items-center overflow-visible px-4 py-1 sm:px-6">
         <nav className="flex flex-wrap items-center overflow-visible">
-          {["Republic", "Fake News", "Democrats", "Republicans", "Congress", "Border", "Remedy", "J6", "Scorecard", "Pump", "Foreword"].map(
-            (label) =>
-              label === "Fake News" ? (
-                <FakeNewsMenu key={label} />
-              ) : (
-                <span
-                  key={label}
-                  className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase"
-                >
-                  {label}
-                </span>
-              ),
-          )}
+          {NAV_MENUS.map((menu) => (
+            <NavMenu key={menu.label} label={menu.label} slugs={menu.slugs} />
+          ))}
         </nav>
       </div>
     </header>

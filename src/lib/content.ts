@@ -3417,6 +3417,38 @@ export const FAKE_NEWS_SLUGS = [
 	"the-record-not-the-rally",
 	"the-floor-not-the-feed",
 	"division-is-the-product",
+	"the-law-they-dont-mention",
+] as const;
+/** Header menus. A topic leaves Fake News only when that topic is already a row in the table. */
+export const NAV_MENUS = [
+	{
+		label: "Republic",
+		slugs: ["division-is-the-product", "the-record-not-the-rally"],
+	},
+	{
+		label: "Fake News",
+		slugs: [
+			"understanding-mechanics",
+			"the-media-ledger",
+			"they-ran-it-anyway",
+			"the-hire-is-the-country",
+			"a-war-on-americans",
+			"sixty-percent",
+			"they-dont-debate-they-flag",
+		],
+	},
+	{ label: "Democrats", slugs: ["the-democrat-ledger"] },
+	{ label: "Republicans", slugs: ["the-republican-ledger"] },
+	{
+		label: "Congress",
+		slugs: ["the-law-they-dont-mention", "the-floor-not-the-feed", "a-caption-cannot-be-outlawed"],
+	},
+	{ label: "Border", slugs: [] as string[] },
+	{ label: "Remedy", slugs: [] as string[] },
+	{ label: "J6", slugs: ["the-caption-was-not-the-charge"] },
+	{ label: "Scorecard", slugs: ["they-called-it-protest"] },
+	{ label: "Pump", slugs: [] as string[] },
+	{ label: "Foreword", slugs: [] as string[] },
 ] as const;
 export const LEAD_SERIES = "The Republic";
 /** Duplicates and drafts. URLs still resolve. Not in the nav. */
@@ -3468,28 +3500,21 @@ export const JOURNAL = [
 			"that-is-not-why-they-are-elected",
 			"clean-hands",
 			"they-want-a-new-constitution",
+			"division-is-the-product",
+			"the-record-not-the-rally",
 		],
 	},
 	{
 		name: "Fake News Exposed",
 		dek: "The chart, the cut tape, and the caption that did not match the file.",
 		slugs: [
+			"understanding-mechanics",
 			"the-media-ledger",
-			"they-clipped-the-tape",
-			"one-word",
 			"they-ran-it-anyway",
 			"the-hire-is-the-country",
 			"a-war-on-americans",
 			"sixty-percent",
-			"the-pool",
 			"they-dont-debate-they-flag",
-			"division-is-the-product",
-			"the-record-not-the-rally",
-			"they-called-it-protest",
-			"a-caption-cannot-be-outlawed",
-			"the-floor-not-the-feed",
-			"the-law-they-dont-mention",
-			"the-caption-was-not-the-charge",
 		],
 	},
 	{
@@ -3514,6 +3539,9 @@ export const JOURNAL = [
 			"the-debt-they-will-not-close",
 			"the-recess-blockade",
 			"a-barcode-is-not-a-lock",
+			"the-law-they-dont-mention",
+			"the-floor-not-the-feed",
+			"a-caption-cannot-be-outlawed",
 		],
 	},
 	{
