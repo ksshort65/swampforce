@@ -360,7 +360,7 @@ export const LEDGER_POSTS: Post[] = [
     body: [
       {
         type: "p",
-        text: "This is not your failure. The truth was not on the screen. It was kept from you. What ran was a coordinated attack on the country. The videos below are the proof. The studies are the method.",
+        text: "The failure is not the viewer's. The truth was not on the screen. It was withheld. What ran was a coordinated attack on the country. The tapes are the proof. The studies are the method.",
       },
       {
         type: "p",

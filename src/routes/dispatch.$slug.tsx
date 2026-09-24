@@ -232,25 +232,6 @@ function EssayPage() {
           </Link>
         </p>
       </article>
-
-      <section className="border-t border-border">
-        <div className="mx-auto max-w-2xl px-4 py-14 sm:px-6">
-          <h2 className="font-display text-2xl font-semibold tracking-wide uppercase">
-            Another file
-          </h2>
-          <p className="mt-2 text-sm text-muted">
-            The rest stay closed until one is opened.
-          </p>
-          <p className="mt-6">
-            <Link
-              to="/archive"
-              className="font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase no-underline hover:text-fg"
-            >
-              Open the archive →
-            </Link>
-          </p>
-        </div>
-      </section>
     </main>
   );
 }
