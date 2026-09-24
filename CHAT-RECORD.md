@@ -25,6 +25,14 @@ The claim is the row. The short version opens a few lines, not a lecture. Each l
 - Bill rows name the law and say “The record.”
 - Scorecard still shows Republicans, Democrats, Split, Oval, and Compare, plus hoaxes, border, benefits, and the bill lists.
 
+## Final checklist before Namecheap
+
+This list is not on the public journal. Do not remove a line unless the owner says that item is done. Add a line when a gap would ship broken, or when a subject the owner named is still unwritten.
+
+1. Foreign funding of the chaos and the deception of America, and what those funders stand to gain. Not written yet. Required before the site is placed on Namecheap.
+2. The J6 control opens the media ledger and does not land on a January 6 section. No `id="j6"` on that page.
+3. Pump “Charts” and “Read” go to `#charts` and `#read`. Those ids are not on the pump page.
+
 ## Still missing
 
 These are not on the live page. They are not deleted from git if a copy was saved. They were not found as a complete file on disk.
