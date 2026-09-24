@@ -116,7 +116,7 @@ const EXTRA: Record<string, { label: string; href: string }[]> = {
 };
 
 type Cell = "who" | "claim" | "truth";
-type Bullet = { text: string; href: string };
+type Bullet = { text: string; href: string; group?: string };
 
 const BALLROOM: Record<Cell, { head: string; items: Bullet[] }> = {
   who: {
@@ -138,16 +138,16 @@ const BALLROOM: Record<Cell, { head: string; items: Bullet[] }> = {
     ],
   },
   claim: {
-    head: "What they said about it.",
+    head: "Fourteen months, from the July 31, 2025 announcement through September 23, 2026. Still running. No official page counts every network.",
     items: [
-      { text: "It is a vanity ballroom. Let them eat cake. Americans do not need one. — Schumer, May 11, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/in-dear-colleague-letter-leader-schumer-vows-senate-democrats-will-fight-ballroom-republicans-pushing-for-trumps-vanity-projects-and-rogue-ice-operation-instead-of-helping-families-facing-gop-affordability-crisis" },
-      { text: "Taxpayers are being charged $1 billion for a gilded ballroom. It has nothing to do with security. It is ego. — Schumer, Senate floor, May 11, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-floor-remarks-denouncing-senate-republicans-reconciliation-bill-that-spends-1-billion-of-taxpayer-money-on-trumps-gilded-ballroom-without-addressing-the-rising-cost-of-living" },
-      { text: "It is a gilded palace. Americans do not want it, do not need it, and should not pay for it. — Schumer, May 16, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-and-senate-democrats-blow-up-gops-first-attempt-to-make-taxpayers-fund-trumps-billion-dollar-ballroom" },
-      { text: "Taxpayer money was diverted to build it. — Murray and Murphy to the GAO, June 23, 2026.", href: "https://www.murray.senate.gov/murray-murphy-urge-watchdog-to-investigate-trump-admins-use-of-taxpayer-dollars-for-trumps-ballroom/" },
-      { text: "It is a gilded ballroom boondoggle. The private-funding claim is a lie, and taxpayers will bear the cost. — Schumer, Merkley, and six other senators, August 13, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-senator-jeff-merkley-and-top-senate-democrats-with-jurisdiction-over-trumps-gilded-ballroom-boondoggle-call-on-watchdog-to-conduct-a-full-audit-of-the-project" },
-      { text: "The design itself is the national security threat. — the caption, September 23, 2026.", href: "https://nymag.com/intelligencer/article/trump-shoddy-ballroom-design-building-codes-safety-threat.html" },
-      { text: "The negative coverage has run fourteen months, from the July 31, 2025 announcement through September 23, 2026, and it is still running. No official page counts every network. These are the ones that can be opened.", href: "https://www.nytimes.com/2026/08/31/us/politics/supreme-court-trump-ballroom.html" },
-      { text: "The construction is unlawful and should be stopped. — National Trust for Historic Preservation, December 12, 2025.", href: "https://storage.courtlistener.com/recap/gov.uscourts.dcd.287645/gov.uscourts.dcd.287645.1.0_4.pdf" },
+      { group: "They cut the fact out.", text: "A vanity ballroom. Let them eat cake. Americans do not need one. The security is not in the sentence. — Schumer, May 11, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/in-dear-colleague-letter-leader-schumer-vows-senate-democrats-will-fight-ballroom-republicans-pushing-for-trumps-vanity-projects-and-rogue-ice-operation-instead-of-helping-families-facing-gop-affordability-crisis" },
+      { group: "They cut the fact out.", text: "A gilded palace. Americans do not want it and should not pay. The donor announcement is not in the sentence. — Schumer, May 16, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-and-senate-democrats-blow-up-gops-first-attempt-to-make-taxpayers-fund-trumps-billion-dollar-ballroom" },
+      { group: "They cut the fact out.", text: "The construction is unlawful and should be stopped. The complaint leaves out the later order. The Court did not rule the project illegal. — National Trust, December 12, 2025.", href: "https://storage.courtlistener.com/recap/gov.uscourts.dcd.287645/gov.uscourts.dcd.287645.1.0_4.pdf" },
+      { group: "They denied the file.", text: "It has nothing to do with security. It is ego. — Schumer, Senate floor, May 11, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-floor-remarks-denouncing-senate-republicans-reconciliation-bill-that-spends-1-billion-of-taxpayer-money-on-trumps-gilded-ballroom-without-addressing-the-rising-cost-of-living" },
+      { group: "They denied the file.", text: "The private-funding claim is a lie. — Schumer, Merkley, and six other senators, August 13, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-senator-jeff-merkley-and-top-senate-democrats-with-jurisdiction-over-trumps-gilded-ballroom-boondoggle-call-on-watchdog-to-conduct-a-full-audit-of-the-project" },
+      { group: "They stated a fact the record does not show.", text: "Taxpayers are being charged $1 billion for the ballroom. — Schumer, Senate floor, May 11, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-floor-remarks-denouncing-senate-republicans-reconciliation-bill-that-spends-1-billion-of-taxpayer-money-on-trumps-gilded-ballroom-without-addressing-the-rising-cost-of-living" },
+      { group: "They stated a fact the record does not show.", text: "Taxpayer money was diverted to build it. The letter asks for an investigation. It is not a finding. — Murray and Murphy, June 23, 2026.", href: "https://www.murray.senate.gov/murray-murphy-urge-watchdog-to-investigate-trump-admins-use-of-taxpayer-dollars-for-trumps-ballroom/" },
+      { group: "They moved his word.", text: "The design is the national security threat. He said the building is the security. They put the word on the design. — September 23, 2026.", href: "https://nymag.com/intelligencer/article/trump-shoddy-ballroom-design-building-codes-safety-threat.html" },
     ],
   },
   truth: {
@@ -218,18 +218,18 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                     <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
                       <button type="button" onClick={() => setOpen(on("who") ? null : cell("who"))} className="text-left">
                         <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">{f.tag}</span>
-                        <span className="block underline decoration-white/30 underline-offset-2">{who}</span>
+                        <span className="block text-blue-300">{who}</span>
                       </button>
                     </td>
                     <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
-                      <button type="button" onClick={() => setOpen(on("claim") ? null : cell("claim"))} className="text-left">
+                      <button type="button" onClick={() => setOpen(on("claim") ? null : cell("claim"))} className="text-left text-blue-200">
                         {(ballroom ? ["Vanity. Cake. A palace. Taxpayers. A boondoggle. The design is the threat. The lawsuit."] : claims).map((claim) => (
                           <span key={claim} className="mb-2 block last:mb-0">{claim}</span>
                         ))}
                       </button>
                     </td>
                     <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
-                      <button type="button" onClick={() => setOpen(on("truth") ? null : cell("truth"))} className="text-left underline decoration-white/30 underline-offset-2">
+                      <button type="button" onClick={() => setOpen(on("truth") ? null : cell("truth"))} className="text-left text-blue-200">
                         {ballroom ? "Privately paid. Built for security after two attempts to kill him. Open the list." : oneLine(f.tape, 180)}
                       </button>
                     </td>
@@ -239,13 +239,17 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                       <td colSpan={3} className="bg-white px-4 py-4 text-neutral-900">
                         {pick.head ? <p className="text-base font-semibold leading-relaxed">{pick.head}</p> : null}
                         <ul className={pick.head ? "mt-3 list-disc space-y-2 pl-5" : "list-disc space-y-2 pl-5"}>
-                          {pick.items.map((item) => (
-                            <li key={item.href + item.text} className="text-base leading-relaxed">
-                              <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-800 underline">
-                                {item.text}
-                              </a>
-                            </li>
-                          ))}
+                          {pick.items.map((item, i) => {
+                            const showGroup = item.group && item.group !== pick.items[i - 1]?.group;
+                            return (
+                              <li key={item.href + item.text} className={showGroup ? "mt-4 list-none" : undefined}>
+                                {showGroup ? <p className="mb-1 font-semibold text-neutral-900">{item.group}</p> : null}
+                                <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-700">
+                                  {item.text}
+                                </a>
+                              </li>
+                            );
+                          })}
                         </ul>
                       </td>
                     </tr>
@@ -268,7 +272,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                             <ul className="mt-2 space-y-2">
                               {links.map((link) => (
                                 <li key={link.href + link.label}>
-                                  <a href={link.href} target="_blank" rel="noreferrer" className="text-base text-blue-800 underline">
+                                  <a href={link.href} target="_blank" rel="noreferrer" className="text-base text-blue-700">
                                     {link.label}
                                   </a>
                                 </li>
