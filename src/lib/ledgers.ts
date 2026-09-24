@@ -389,6 +389,10 @@ export const LEDGER_POSTS: Post[] = [
         type: "p",
         text: "A year later, on March 4, 2025, Chuck Schumer, Elizabeth Warren, Cory Booker, and about twenty other Democratic senators posted one speech, word for word, about prices, not the plants. [The network archive](https://www.youtube.com/watch?v=EsjwtaIocUw). That is not an accident. It is a coordinated attack on the nation.",
       },
+      {
+        type: "p",
+        text: "I have uncovered enough evidence to prove a coordinated attack. [editor@swampforce.com](mailto:editor@swampforce.com). Does the [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) cover an abandoned [oath](https://www.law.cornell.edu/uscode/text/5/3331) and a coordinated attack on this nation for absolute power? Twelve years of the same script is not a coincidence. Why has no one stopped it? Is coordination, on that scale, not a conspiracy?",
+      },
     ],
   },
   {
