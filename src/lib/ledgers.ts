@@ -344,7 +344,7 @@ export const LEDGER_POSTS: Post[] = [
     readMinutes: 22,
     image: "/images/chart-one-word-ledger.jpg",
     imageAlt: "Caption versus the file",
-    series: "Fake News",
+    series: "Fake News Exposed",
     frameDek: "One file. Politicians, networks, and journalists. Gaslighting, lies, and a tape cut short.",
     frameLeft: "What ran",
     frameRight: "The file",

@@ -1098,7 +1098,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/essay-eagle.jpg",
 		imageAlt: "Eagle over the Capitol",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 1,
 		receipts: [
 			{ label: "CNN — pool assignment pulled, Sept. 20, 2026", href: "https://www.cnn.com/2026/09/20/media/cnn-trump-white-house-pool-ban" },
@@ -1139,7 +1139,7 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/chart-iran.jpg",
 		imageAlt: "The Iranian terrorist regime at 60 percent enrichment, 1979–2026",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 1,
 		receipts: [
 			{ label: "IAEA GOV/2026/50 — 440.9 kg up to 60%, as of 13 June 2025", href: "https://www.iaea.org/sites/default/files/gov2026-50.pdf" },
@@ -1200,7 +1200,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/essay-eagle.jpg",
 		imageAlt: "Angry eagle over the Capitol in the swamp",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 3,
 		body: [
 			{
@@ -1255,7 +1255,7 @@ export const posts: Post[] = [
 		image: "/images/essay-eagle.jpg",
 		imageAlt: "Angry eagle over the Capitol in the swamp",
 		featured: true,
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 2,
 		receipts: [
 			{
@@ -1327,7 +1327,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/chamber.jpg",
 		imageAlt: "The House chamber — where the political class writes the mess",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 7,
 		receipts: [{
 			label: "Border — Pew",
@@ -1523,7 +1523,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/chamber.jpg",
 		imageAlt: "The House — where the record is supposed to live",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 1,
 	body: [
 			{
@@ -1569,7 +1569,7 @@ export const posts: Post[] = [
 		readMinutes: 7,
 		image: "/images/chart-one-word-ledger.jpg",
 		imageAlt: "Twelve years of one-word swaps: the caption versus the file",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 2,
 		receipts: [
 			{ label: "DOJ SDNY — Maduro charged, 26 March 2020", href: "https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-narco-terrorism-charges-against-nicolas-maduro-current" },
@@ -1609,7 +1609,7 @@ export const posts: Post[] = [
 		readMinutes: 8,
 		image: "/images/chart-lawfare.jpg",
 		imageAlt: "Lawfare against the hire: the caption, the evidence they used, the file that closed it",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 3,
 		receipts: [
 			{ label: "July 25, 2019 call memorandum", href: "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf" },
@@ -1698,7 +1698,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/chart-they-ran-it.jpg",
 		imageAlt: "Crossfire opened empty. Schiff ran more than circumstantial. Mueller did not establish. They kept running it.",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 3,
 		receipts: [
 			{ label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
@@ -1731,7 +1731,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/chart-crime.jpg",
 		imageAlt: "FBI murder rate by administration — 2020 spike, 2025 at 4.1",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 4,
 		receipts: [
 			{ label: "Kamala Harris — Minnesota Freedom Fund, June 1, 2020", href: "https://x.com/KamalaHarris/status/1267555018128965643" },
@@ -2955,7 +2955,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/chamber.jpg",
 		imageAlt: "The mic they will not share",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 4,
 		receipts: [
 			{
@@ -3003,7 +3003,7 @@ export const posts: Post[] = [
 		readMinutes: 5,
 		image: "/images/chamber.jpg",
 		imageAlt: "The mic they will not share",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 5,
 		receipts: [
 			{
@@ -3055,7 +3055,7 @@ export const posts: Post[] = [
 		readMinutes: 3,
 		image: "/images/constitution.jpg",
 		imageAlt: "The charter they legislate around",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		part: 6,
 		receipts: [{
 			label: "How a bill becomes law — Congress.gov",
@@ -3088,7 +3088,7 @@ export const posts: Post[] = [
 		readMinutes: 6,
 		image: "/images/chamber.jpg",
 		imageAlt: "The House chamber",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		receipts: [
 			{ label: "Durham report", href: "https://www.justice.gov/storage/durhamreport.pdf" },
 			{ label: "18 U.S.C. § 2383 — insurrection", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
@@ -3131,7 +3131,7 @@ export const posts: Post[] = [
 		featured: true,
 		image: "/images/chart-oval-slogan.jpg",
 		imageAlt: "The slogan versus the document — lawfare is not a debate",
-		series: "The Tape",
+		series: "Fake News Exposed",
 		receipts: [],
 		lawfare: [
 			{
@@ -3451,21 +3451,26 @@ export const JOURNAL = [
 		],
 	},
 	{
-		name: "The Tape",
-		dek: "The cut sentence, the one word, and the file that does not match.",
+		name: "Fake News Exposed",
+		dek: "The chart, the cut tape, and the caption that did not match the file.",
 		slugs: [
+			"the-media-ledger",
 			"they-clipped-the-tape",
 			"one-word",
 			"they-ran-it-anyway",
 			"the-hire-is-the-country",
 			"a-war-on-americans",
 			"sixty-percent",
+			"the-pool",
+			"they-dont-debate-they-flag",
+			"division-is-the-product",
+			"the-record-not-the-rally",
+			"they-called-it-protest",
+			"a-caption-cannot-be-outlawed",
+			"the-floor-not-the-feed",
+			"the-law-they-dont-mention",
+			"the-caption-was-not-the-charge",
 		],
-	},
-	{
-		name: "Fake News",
-		dek: "Politicians, networks, and journalists. Gaslighting, lies, and a tape cut short.",
-		slugs: ["the-media-ledger"],
 	},
 	{
 		name: "Democrats",
