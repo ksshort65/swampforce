@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { SITE, getPost, JOURNAL } from "@/lib/content";
 
@@ -7,12 +7,54 @@ function navLabel(name: string) {
 }
 
 function NavDetails({ label, children }: { label: string; children: ReactNode }) {
+  const ref = useRef<HTMLDetailsElement>(null);
+
+  function close() {
+    if (ref.current) ref.current.open = false;
+  }
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    function onDoc(e: MouseEvent) {
+      if (!el.open) return;
+      if (!el.contains(e.target as Node)) el.open = false;
+    }
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") el.open = false;
+    }
+    function onScroll() {
+      if (el.open) el.open = false;
+    }
+    function onToggle() {
+      if (!el.open) return;
+      document.querySelectorAll("header details").forEach((node) => {
+        if (node !== el) (node as HTMLDetailsElement).open = false;
+      });
+    }
+
+    document.addEventListener("mousedown", onDoc);
+    document.addEventListener("keydown", onKey);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    el.addEventListener("toggle", onToggle);
+    return () => {
+      document.removeEventListener("mousedown", onDoc);
+      document.removeEventListener("keydown", onKey);
+      window.removeEventListener("scroll", onScroll);
+      el.removeEventListener("toggle", onToggle);
+    };
+  }, []);
+
   return (
-    <details className="relative">
+    <details ref={ref} className="relative">
       <summary className="inline-flex min-h-11 cursor-pointer list-none items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase hover:text-sage [&::-webkit-details-marker]:hidden">
         {label}
       </summary>
-      <div className="absolute top-full left-0 z-50 mt-1 max-h-[70vh] w-72 overflow-y-auto rounded-md border border-border bg-bg p-1.5 shadow-lg">
+      <div
+        className="absolute top-full left-0 z-50 mt-1 max-h-[70vh] w-72 overflow-y-auto rounded-md border border-border bg-bg p-1.5 shadow-lg"
+        onClick={close}
+      >
         {children}
       </div>
     </details>
