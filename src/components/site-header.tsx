@@ -35,6 +35,18 @@ function NavMenu({ label, slugs }: { label: string; slugs: readonly string[] }) 
     };
   }, []);
 
+  if (label === "J6" && slugs[0]) {
+    const slug = slugs[0];
+    return (
+      <Link
+        to="/dispatch/$slug"
+        params={{ slug }}
+        className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:text-sage"
+      >
+        {label}
+      </Link>
+    );
+  }
   if (!slugs.length) {
     return (
       <span className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase">

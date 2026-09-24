@@ -3122,6 +3122,41 @@ export const posts: Post[] = [
 		]
 	},
 	{
+		slug: "january-6",
+		title: "January 6",
+		dek: "Insurrection on television. Not on the charging document. The committee was stacked. The House held the tape.",
+		date: "2026-09-21",
+		category: "Dispatch",
+		readMinutes: 4,
+		image: "/images/capitol.jpg",
+		imageAlt: "The Capitol at night",
+		series: "J6",
+		receipts: [
+			{ label: "18 U.S.C. § 2383 — insurrection", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
+			{ label: "USAO-DC — 48 months of January 6 cases", href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol" },
+			{ label: "H.Res. 503 — the select committee", href: "https://www.congress.gov/bill/117th-congress/house-resolution/503" },
+			{ label: "C-SPAN — the Ellipse speech", href: "https://www.c-span.org/video/?507744-1/president-trump-speaks-save-america-rally" },
+		],
+		body: [
+			{
+				type: "p",
+				text: "January 6 was sold as insurrection. [18 U.S.C. § 2383](https://www.law.cornell.edu/uscode/text/18/2383) is the insurrection statute. The U.S. Attorney for the District of Columbia published the tally after four years: about 1,583 people federally charged — assault, trespass, civil disorder, destruction — and about eighteen charged with seditious conspiracy under a different statute, [§ 2384](https://www.law.cornell.edu/uscode/text/18/2384). [Zero were charged under § 2383](https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol). Some of those cases were violent. This page does not wash a cop being hit. It names the gap. The country was told insurrection. The charging document did not say that word.",
+			},
+			{
+				type: "p",
+				text: "The speech they clipped is still on [C-SPAN](https://www.c-span.org/video/?507744-1/president-trump-speaks-save-america-rally). “Peacefully and patriotically” is on that recording. “Fight like hell” is on the same recording. The House article used the second line. The first line was not on the clip they ran.",
+			},
+			{
+				type: "p",
+				text: "The hearing that sold the caption was stacked. [H.Res. 503](https://www.congress.gov/bill/117th-congress/house-resolution/503) gave the Speaker the appointments. Nancy Pelosi named Liz Cheney and Adam Kinzinger. She rejected the minority leader’s picks, Jim Jordan and Jim Banks. A select committee that chooses its own opposition is not an inquiry. It is a production.",
+			},
+			{
+				type: "p",
+				text: "The Capitol cameras recorded thousands of hours. The committee showed clips. The House held the rest of the tape while the hearings ran. Later Speakers opened more of the archive. A body that holds the recording and plays the minutes it prefers is doing the same work as a six-second caption. The individual captions — insurrection, the hallway clip, Officer Sicknick, the Guard — stay on the Fake News table, each one next to the record.",
+			},
+		],
+	},
+	{
 		slug: "a-war-on-americans",
 		title: "A war was waged on Americans",
 		dek: "Lawfare and lies were used to replace the American argument. The people own this country. That is not allowed.",
@@ -3418,6 +3453,7 @@ export const FAKE_NEWS_SLUGS = [
 	"the-floor-not-the-feed",
 	"division-is-the-product",
 	"the-law-they-dont-mention",
+	"january-6",
 ] as const;
 /** Header menus. A topic leaves Fake News only when that topic is already a row in the table. */
 export const NAV_MENUS = [
@@ -3445,7 +3481,7 @@ export const NAV_MENUS = [
 	},
 	{ label: "Border", slugs: [] as string[] },
 	{ label: "Remedy", slugs: [] as string[] },
-	{ label: "J6", slugs: ["the-caption-was-not-the-charge"] },
+	{ label: "J6", slugs: ["january-6"] },
 	{ label: "Scorecard", slugs: ["they-called-it-protest"] },
 	{ label: "Pump", slugs: [] as string[] },
 	{ label: "Foreword", slugs: [] as string[] },
