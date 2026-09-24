@@ -12,16 +12,17 @@ function FakeNewsMenu() {
   useEffect(() => {
     const menu = ref.current;
     if (!menu) return;
+    const el: HTMLDetailsElement = menu;
 
     function onDoc(e: MouseEvent) {
-      if (!menu.open) return;
-      if (!menu.contains(e.target as Node)) menu.open = false;
+      if (!el.open) return;
+      if (!el.contains(e.target as Node)) el.open = false;
     }
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") menu.open = false;
+      if (e.key === "Escape") el.open = false;
     }
     function onScroll() {
-      if (menu.open) menu.open = false;
+      if (el.open) el.open = false;
     }
 
     document.addEventListener("mousedown", onDoc);
