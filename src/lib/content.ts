@@ -1528,7 +1528,7 @@ export const posts: Post[] = [
 	body: [
 			{
 				type: "p",
-				text: "The chart is in one place, so it is not printed twice. [Fake News](/dispatch/the-media-ledger) holds it in three sections: politicians, networks, and journalists. The rows are the gaslighting, the lies, and the tape cut short."
+				text: "The chart is in one place, so it is not printed twice. [Fake News](/dispatch/the-media-ledger) is that chart. Open a row. The name is who said it. The link is the official record."
 			},
 			{
 				type: "p",

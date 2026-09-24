@@ -1,3 +1,4 @@
+import { Fragment, useState, type ReactNode } from "react";
 import type { Frame } from "@/lib/content";
 import { InteractiveChart, KeptRead } from "@/components/interactive-chart";
 
@@ -54,89 +55,72 @@ function fileLine(text: string) {
   return two.length > 320 ? `${two.slice(0, 317)}…` : two;
 }
 
-const POLITICIANS = new Set([
-  "Russia collusion",
-  "Schiff’s transcript",
-  "Whips",
-  "Bend the knee",
-  "Laziest Congress",
-  "ICE is terror",
-  "The war raised the gallon",
-  "The ballroom",
-  "The Iran war",
-  "Sharp as a tack",
-  "Seventeen agencies",
-  "Shoot them in the legs",
-  "Clear and present danger",
-  "Domestic terrorists",
-  "Lynching",
-  "They should not let up",
-  "Soldiers of Christ",
-  "Most secure election",
-  "Check your rolls",
-]);
-
-const JOURNALISTS = new Set([
-  "Suckers and losers",
-  "Russian bounties",
-  "The crying girl",
-  "Hydroxychloroquine kills",
-  "Pee tape",
-  "The dossier",
-  "Covington",
-  "He pays no taxes",
-  "The laptop",
-  "Nothing on the laptop",
-]);
-
-const CLIPPED = new Set([
-  "Bloodbath",
-  "Fine people",
-  "Dictator",
-  "Bleach",
-  "The virus is a hoax",
-  "Slow the testing",
-  "All Mexicans are rapists",
-  "Muslim ban",
-  "Kids in cages",
-  "Animals",
-  "He never said peacefully",
-  "Schiff’s transcript",
-  "No condemnation",
-  "Many sides",
-  "Stand by",
-  "Inject light",
-  "Hang Mike Pence",
-  "187 minutes",
-  "We love you",
-  "Suckers and losers",
-  "Bible upside down",
-  "Mostly peaceful",
-]);
-
-function bucket(tag: string) {
-  if (CLIPPED.has(tag)) return "clipped";
-  if (POLITICIANS.has(tag)) return "politician";
-  if (JOURNALISTS.has(tag)) return "journalist";
-  return "network";
-}
-
 function oneLine(text: string, max = 140) {
   const one = text.split(/(?<=\.)\s+/)[0] ?? text;
   return one.length > max ? `${one.slice(0, max - 1)}…` : one;
 }
 
+function urlsIn(text: string) {
+  const found = text.match(/https?:\/\/[^\s)]+/g) ?? [];
+  return [...new Set(found.map((u) => u.replace(/[.,;]+$/, "")))];
+}
+
+function linkify(text: string): ReactNode[] {
+  const re = /https?:\/\/[^\s)]+/g;
+  const nodes: ReactNode[] = [];
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let i = 0;
+  while ((m = re.exec(text))) {
+    if (m.index > last) nodes.push(text.slice(last, m.index));
+    const href = m[0].replace(/[.,;]+$/, "");
+    nodes.push(
+      <a key={`${href}-${i++}`} href={href} target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+        {href.replace(/^https?:\/\//, "")}
+      </a>,
+    );
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes;
+}
+
+const EXTRA: Record<string, { label: string; href: string }[]> = {
+  "Check your rolls": [
+    { label: "Harris, Detroit, September 22, 2026", href: "https://townhall.com/news/amy-curtis/2026/09/23/kamala-harris-removing-ineligible-voters-is-cheating-n2683440" },
+    { label: "The statute that requires the rolls to be cleaned", href: "https://www.law.cornell.edu/uscode/text/52/20507" },
+    { label: "New Jersey, the noncitizen additions", href: "https://www.nj.gov/governor/news/2026/20260721a.shtml" },
+    { label: "The cumulative tally, not 30,000 added that day", href: "https://thedailyrecord.com/2026/09/23/states-mistakenly-added-noncitizens-to-voter-rolls-errors/" },
+  ],
+  Lynching: [
+    { label: "Pressley and 59 colleagues, September 8, 2026", href: "https://admin-pressley.house.gov/2026/09/10/breaking-pressley-leads-nearly-60-lawmakers-demanding-investigation-into-black-people-found-hanging-invokes-legacy-of-lynching-in-america/" },
+    { label: "Fortune, ruled a homicide", href: "https://apnews.com/article/tasia-fortune-mississippi-hanging-arrest-4aa7ada8208008fea580369ede0eef37" },
+    { label: "Reed, ruled a suicide", href: "https://www.clarionledger.com/story/news/2026/09/11/man-arrested-in-tasia-fortune-hanging-death-in-jackson-ms-jpd-police-chief-says/91284884007/" },
+  ],
+  "Clear and present danger": [
+    { label: "Schiff, December 15, 2019", href: "https://www.bbc.com/news/world-us-canada-50802150" },
+    { label: "Pelosi, January 13, 2021", href: "https://www.c-span.org/clip/us-house-of-representatives/speaker-pelosi-d-ca-on-impeachment-of-president-trump/4937259" },
+    { label: "Brandenburg v. Ohio", href: "https://tile.loc.gov/storage-services/service/ll/usrep/usrep395/usrep395444/usrep395444.pdf" },
+  ],
+  "The press pass": [
+    { label: "The complaint", href: "https://variety.com/wp-content/uploads/2026/09/CNN-MS-NOW-Politico-vs.-Trump-et-al.pdf" },
+    { label: "The 14-day order", href: "https://www.courtlistener.com/docket/74823502/24/cable-news-network-inc-v-trump/" },
+    { label: "Acosta, November 2018", href: "https://www.cnn.com/2018/11/19/media/cnn-acosta-emergency-hearing" },
+    { label: "Obama staff, skip Fox, 2009", href: "https://www.judicialwatch.org/documents-show-obama-white-house-attacked-excluded-fox-news-channel/" },
+    { label: "Rosen, 2013", href: "https://www.latimes.com/nation/politics/politicsnow/la-pn-justice-department-journalist-investigations-20130712-story.html" },
+    { label: "Biden hard-pass count, 2023", href: "https://www.politico.com/newsletters/west-wing-playbook/2023/08/02/simons-no-longer-got-a-hard-pass-00109526" },
+    { label: "This month’s pool ban", href: "https://www.nytimes.com/2026/09/23/business/media/fox-trump-press-pool-ban.html" },
+    { label: "Obama, unimaginable, September 19, 2026", href: "https://www.independent.co.uk/news/world/americas/us-politics/obama-criticize-trump-media-ban-b3052936.html" },
+    { label: "Garcia, Schumer, Raskin, Warren, Booker, Sanders", href: "https://oversightdemocrats.house.gov/news/press-releases/ranking-member-robert-garcia-demands-answers-after-trump-bans-free-press-from-white-house" },
+  ],
+};
+
 function TapeTable({ frames }: { frames: Frame[] }) {
-  const groups = [
-    { key: "clipped", title: "Tape cut short" },
-    { key: "politician", title: "Politicians" },
-    { key: "network", title: "Networks" },
-    { key: "journalist", title: "Journalists" },
-  ] as const;
+  const [open, setOpen] = useState<string | null>(null);
   return (
     <section className="mt-8">
       <p className="mb-3 text-base leading-relaxed text-fg">
-        One chart. The truth opens the official record, outside this journal.
+        One chart. Open a row. The name is who said it. Every link leaves this journal for the official record.
       </p>
       <div className="overflow-x-auto rounded-md border border-neutral-800">
         <table className="w-full min-w-[64rem] border-collapse text-left">
@@ -154,14 +138,68 @@ function TapeTable({ frames }: { frames: Frame[] }) {
             </tr>
           </thead>
           <tbody>
-            {groups.map((group) => {
-              const rows = frames.filter((f) => bucket(f.tag) === group.key);
-              if (!rows.length) return null;
-              if (group.key === "clipped") {
-                rows.sort((a, b) => (a.tag === "Bloodbath" ? -1 : b.tag === "Bloodbath" ? 1 : 0));
-              }
+            {frames.map((f) => {
+              const on = open === f.tag;
+              const claims = f.they.split("||").map((s) => s.trim()).filter(Boolean);
+              const who = f.ran?.trim() || "The file names them.";
+              const links = [
+                ...(EXTRA[f.tag] ?? []),
+                ...urlsIn(`${f.tape}\n${f.href ?? ""}`)
+                  .filter((href) => !(EXTRA[f.tag] ?? []).some((item) => item.href === href))
+                  .map((href) => ({ label: "The record", href })),
+              ];
               return (
-                <GroupRows key={group.key} title={group.title} frames={rows} />
+                <Fragment key={f.tag}>
+                  <tr className="border-t border-white/10">
+                    <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
+                      <button type="button" onClick={() => setOpen(on ? null : f.tag)} className="text-left">
+                        <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">{f.tag}</span>
+                        <span className="block underline decoration-white/30 underline-offset-2">{who}</span>
+                      </button>
+                    </td>
+                    <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
+                      <button type="button" onClick={() => setOpen(on ? null : f.tag)} className="text-left">
+                        {claims.map((claim) => (
+                          <span key={claim} className="mb-2 block last:mb-0">{claim}</span>
+                        ))}
+                      </button>
+                    </td>
+                    <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
+                      <button type="button" onClick={() => setOpen(on ? null : f.tag)} className="text-left underline decoration-white/30 underline-offset-2">
+                        {oneLine(f.tape, 180)}
+                      </button>
+                    </td>
+                  </tr>
+                  {on ? (
+                    <tr className="border-t border-white/10">
+                      <td colSpan={3} className="bg-white px-4 py-4 text-neutral-900">
+                        <p className="font-display text-sm font-bold tracking-[0.14em] text-red-800 uppercase">What they said</p>
+                        <ul className="mt-2 space-y-2">
+                          {claims.map((claim) => (
+                            <li key={claim} className="text-base leading-relaxed">{claim}</li>
+                          ))}
+                        </ul>
+                        <p className="mt-5 font-display text-sm font-bold tracking-[0.14em] text-blue-900 uppercase">The file</p>
+                        <p className="mt-2 text-base leading-relaxed">{linkify(f.tape)}</p>
+                        {f.tag === "Bloodbath" ? <div className="mt-4"><BloodbathDetail /></div> : null}
+                        {links.length ? (
+                          <>
+                            <p className="mt-5 font-display text-sm font-bold tracking-[0.14em] text-blue-900 uppercase">The official record</p>
+                            <ul className="mt-2 space-y-2">
+                              {links.map((link) => (
+                                <li key={link.href + link.label}>
+                                  <a href={link.href} target="_blank" rel="noreferrer" className="text-base text-blue-800 underline">
+                                    {link.label}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : null}
+                      </td>
+                    </tr>
+                  ) : null}
+                </Fragment>
               );
             })}
           </tbody>
@@ -171,191 +209,6 @@ function TapeTable({ frames }: { frames: Frame[] }) {
   );
 }
 
-function ChartRow({ f }: { f: Frame }) {
-  if (f.tag === "Fourteen days") {
-    return (
-      <tr className="border-t border-white/10">
-        <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
-          <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">Fourteen days</span>
-          <span className="block">September 19–24, 2026. Six named statements.</span>
-        </td>
-        <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
-          <a href="https://variety.com/wp-content/uploads/2026/09/CNN-MS-NOW-Politico-vs.-Trump-et-al.pdf" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            A lost badge is an assault on free speech, and it has never happened.
-          </a>
-        </td>
-        <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
-          <a href="https://variety.com/wp-content/uploads/2026/09/CNN-MS-NOW-Politico-vs.-Trump-et-al.pdf" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            Said six times on the record: the complaint, Boutrous, CNN, MS NOW, Heinrich, and Obama. No larger count was located.
-          </a>
-          <a href="https://www.courtlistener.com/docket/74823502/24/cable-news-network-inc-v-trump/" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            September 24. The judge gave the badges back for 14 days, for lack of notice. Not a right to be inside.
-          </a>
-        </td>
-      </tr>
-    );
-  }
-  if (f.tag === "Only under Trump") {
-    return (
-      <tr className="border-t border-white/10">
-        <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
-          <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">Only under Trump</span>
-          <span className="block">2018, 2009, 2013, 2023, and this month. The networks.</span>
-        </td>
-        <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
-          <a href="https://www.cnn.com/2018/11/19/media/cnn-acosta-emergency-hearing" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            A revoked pass is an attack on a free press, and it only happens under Trump.
-          </a>
-        </td>
-        <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
-          <a href="https://www.cnn.com/2018/11/19/media/cnn-acosta-emergency-hearing" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            November 7, 2018. Acosta’s pass was pulled, then returned on November 19 after CNN sued.
-          </a>
-          <a href="https://www.judicialwatch.org/documents-show-obama-white-house-attacked-excluded-fox-news-channel/" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            October 2009. Obama’s staff wrote “skip Fox.” The other networks refused to film until Fox was in.
-          </a>
-          <a href="https://www.latimes.com/nation/politics/politicsnow/la-pn-justice-department-journalist-investigations-20130712-story.html" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            May 2013. Obama’s Justice Department called a Fox reporter a possible co-conspirator to read his email.
-          </a>
-          <a href="https://www.politico.com/newsletters/west-wing-playbook/2023/08/02/simons-no-longer-got-a-hard-pass-00109526" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            2023. Under Biden, hard passes fell from 1,417 to 975. Day passes stayed. One applicant was denied.
-          </a>
-          <a href="https://www.nytimes.com/2026/09/23/business/media/fox-trump-press-pool-ban.html" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            This month. CNN, Politico, and MS NOW were barred. They sued on Monday. They did not sue in 2009.
-          </a>
-          <a href="https://www.independent.co.uk/news/world/americas/us-politics/obama-criticize-trump-media-ban-b3052936.html" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            September 19, 2026. Obama said if he had told Fox, “you’re out of here,” it would be unimaginable.
-          </a>
-          <a href="https://variety.com/wp-content/uploads/2026/09/CNN-MS-NOW-Politico-vs.-Trump-et-al.pdf" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            Their lawyer called a lost badge an assault on free speech, and unprecedented. They can still publish. The sidewalk is open. The 2009 attempt is the sentence they left out.
-          </a>
-        </td>
-      </tr>
-    );
-  }
-  if (f.tag === "Check your rolls") {
-    return (
-      <tr className="border-t border-white/10">
-        <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
-          <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">Check your rolls</span>
-          <span className="block">September 22, 2026. Kamala Harris. Detroit NAACP.</span>
-        </td>
-        <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
-          <a href="https://townhall.com/news/amy-curtis/2026/09/23/kamala-harris-removing-ineligible-voters-is-cheating-n2683440" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            They are cheating by purging voter rolls. Check that you have not been purged.
-          </a>
-        </td>
-        <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
-          <a href="https://www.law.cornell.edu/uscode/text/52/20507" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            Federal law requires the rolls to drop ineligible voters.
-          </a>
-          <a href="https://www.nj.gov/governor/news/2026/20260721a.shtml" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            New Jersey added about 6,600 people who had said they were not citizens.
-          </a>
-          <a href="https://thedailyrecord.com/2026/09/23/states-mistakenly-added-noncitizens-to-voter-rolls-errors/" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            A tally published this day put those mistaken additions above 30,000 since 2000. Not 30,000 added today.
-          </a>
-        </td>
-      </tr>
-    );
-  }
-  if (f.tag === "Lynching") {
-    return (
-      <tr className="border-t border-white/10">
-        <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
-          <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">Lynching</span>
-          <span className="block">September 8, 2026. Ayanna Pressley and 59 House Democrats.</span>
-        </td>
-        <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
-          <a href="https://admin-pressley.house.gov/2026/09/10/breaking-pressley-leads-nearly-60-lawmakers-demanding-investigation-into-black-people-found-hanging-invokes-legacy-of-lynching-in-america/" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            A national crisis of modern-day lynchings.
-          </a>
-        </td>
-        <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
-          <a href="https://apnews.com/article/tasia-fortune-mississippi-hanging-arrest-4aa7ada8208008fea580369ede0eef37" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            Fortune was ruled a homicide. Police arrested a man associated with her.
-          </a>
-          <a href="https://www.clarionledger.com/story/news/2026/09/11/man-arrested-in-tasia-fortune-hanging-death-in-jackson-ms-jpd-police-chief-says/91284884007/" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            Reed was ruled a suicide. No foul play.
-          </a>
-        </td>
-      </tr>
-    );
-  }
-  if (f.tag === "Clear and present danger") {
-    return (
-      <tr className="border-t border-white/10">
-        <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
-          <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">Clear and present danger</span>
-          <span className="block">December 15, 2019. January 13, 2021. Multiple politicians.</span>
-          <a href="https://www.bbc.com/news/world-us-canada-50802150" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            Adam Schiff, December 15, 2019
-          </a>
-          <a href="https://www.c-span.org/clip/us-house-of-representatives/speaker-pelosi-d-ca-on-impeachment-of-president-trump/4937259" target="_blank" rel="noreferrer" className="mt-1 block underline decoration-white/40 underline-offset-2">
-            Nancy Pelosi, January 13, 2021
-          </a>
-        </td>
-        <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
-          <a href="https://www.c-span.org/clip/us-house-of-representatives/speaker-pelosi-d-ca-on-impeachment-of-president-trump/4937259" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            He is a clear and present danger to the nation.
-          </a>
-        </td>
-        <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
-          <a href="https://tile.loc.gov/storage-services/service/ll/usrep/usrep395/usrep395444/usrep395444.pdf" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            A 1969 speech test. Not a license to break the law.
-          </a>
-        </td>
-      </tr>
-    );
-  }
-  const who = oneLine(f.ran || f.tag, 120);
-  const claims = f.they.split("||").map((s) => s.trim()).filter(Boolean);
-  const truthText = oneLine(f.tape, 220);
-  return (
-    <tr className="border-t border-white/10">
-      <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
-        <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">{f.tag}</span>
-        {f.href ? (
-          <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            {who}
-          </a>
-        ) : (
-          who
-        )}
-      </td>
-      <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
-        {claims.map((claim) => (
-          <span key={claim} className="mb-2 block last:mb-0">
-            {claim}
-          </span>
-        ))}
-      </td>
-      <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
-        {f.href ? (
-          <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
-            {truthText}
-          </a>
-        ) : (
-          truthText
-        )}
-      </td>
-    </tr>
-  );
-}
-function GroupRows({ title, frames }: { title: string; frames: Frame[] }) {
-  return (
-    <>
-      <tr className="border-t border-white/10">
-        <td colSpan={3} className="bg-black px-3 py-2 font-display text-sm font-bold tracking-[0.14em] text-white uppercase">
-          {title}
-        </td>
-      </tr>
-      {frames.map((f) => (
-        <ChartRow key={f.tag} f={f} />
-      ))}
-    </>
-  );
-}
 
 export function NarrativeFrames({
   frames,
@@ -372,7 +225,6 @@ export function NarrativeFrames({
   tapeTable?: boolean;
   showClaim?: boolean;
 }) {
-  const iran = frames.find((f) => f.tag === "The Iran war");
   const first = ["The ballroom", "The press pass", "The Iran war"];
   const ordered = [
     ...first.map((tag) => frames.find((f) => f.tag === tag)).filter((f): f is Frame => Boolean(f)),
@@ -380,26 +232,6 @@ export function NarrativeFrames({
   ];
   return (
     <>
-      {iran ? (
-        <figure className="mt-12 border-t border-border px-4 py-5">
-          <img
-            src="/images/chart-iran.jpg"
-            alt="Uranium enrichment. Power-plant fuel is about 5 percent. The 2015 cap was 3.67 percent. Iran was at 60 percent. A bomb is about 90 percent."
-            className="h-auto w-full rounded-md border border-border"
-          />
-          <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
-            <a
-              href="https://www.iaea.org/sites/default/files/gov2026-50.pdf"
-              className="text-sage underline decoration-sage underline-offset-2"
-              target="_blank"
-              rel="noreferrer"
-            >
-              IAEA GOV/2026/50
-            </a>
-            {" · 440.9 kilograms enriched up to 60 percent, as of June 13, 2025. The slogan under this chart leaves the bar out."}
-          </figcaption>
-        </figure>
-      ) : null}
       {tapeTable ? (
         <TapeTable frames={ordered} />
       ) : (
