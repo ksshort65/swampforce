@@ -482,7 +482,7 @@ function youtubeId(href: string) {
 
 function speakerNames(f: Frame, includeTape = false) {
   const blob = `${f.ran ?? ""}\n${f.they}\n${includeTape ? f.tape : ""}\n${(EXTRA[f.tag] ?? []).map((item) => item.label).join("\n")}`;
-  const found = blob.match(/\b(CNN|NBC|MSNBC|MS NOW|ABC|CBS|Fox News|BBC|New York Times|New York Magazine|Washington Post|Politico|The Atlantic|Associated Press|Schumer|Pelosi|Biden|Harris|Jeffries|Merkley|Murray|Murphy|Pressley|Waters|Obama|Schiff|Khanna|Garcia|Raskin|Warren|Booker|Sanders|McGovern|Mullin|Johnson|Bush|Cheney|Yellen|Palin)\b/gi) ?? [];
+  const found = blob.match(/\b(CNN|NBC|MSNBC|MS NOW|ABC|CBS|Fox News|BBC|New York Times|New York Magazine|Washington Post|Politico|The Atlantic|Associated Press|Schumer|Pelosi|Biden|Harris|Jeffries|Merkley|Murray|Murphy|Pressley|Waters|Obama|Schiff|Khanna|Garcia|Raskin|Warren|Booker|Sanders|McGovern|Mullin|Johnson|Bush|Cheney|Yellen|Palin|Clinton|Garland|Mayorkas|Rice|Jean-Pierre|Psaki|Abrams|Omar|Ocasio-Cortez|Craig|Padilla|Durbin|Peters|Neguse|Morelle|House Democrats)\b/gi) ?? [];
   const seen = new Set<string>();
   const names: string[] = [];
   for (const raw of found) {
