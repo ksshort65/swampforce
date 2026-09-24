@@ -1,5 +1,5 @@
 import type { LawfareRow } from "@/lib/content";
-import { InteractiveChart, KeptRead } from "@/components/interactive-chart";
+import { InteractiveChart, KeptRead, firstLine } from "@/components/interactive-chart";
 
 const LINE: Record<string, string> = {
   "The judge stayed on the case":
@@ -154,10 +154,10 @@ export function LawfareLedger({ rows }: { rows: LawfareRow[] }) {
   return (
     <InteractiveChart
       title="Lawfare"
-      subtitle="The claim is the row. The short version is a few lines. The record opens the document."
       rows={rows.map((r) => ({
         id: r.caption,
         name: r.caption,
+        line: (COVER[r.caption] ?? firstLine(LINE[r.caption] ?? r.sold)).replace(/^Issue:\s*/, ""),
         href: r.href,
         proof: "The record",
         read: (
@@ -166,7 +166,7 @@ export function LawfareLedger({ rows }: { rows: LawfareRow[] }) {
             note={COVER[r.caption]}
             record={LINE[r.caption] ?? r.file}
             links={[
-              { label: r.doc ?? "Open the court record", href: r.href },
+              { label: r.doc ?? "The court record", href: r.href },
               ...(r.docs ?? []),
             ]}
           />
@@ -235,6 +235,7 @@ export function SloganChart() {
       rows={SLOGAN.map((r) => ({
         id: r.name,
         name: r.name,
+        line: firstLine(r.file),
         href: r.href,
         proof: "The record",
         read: (

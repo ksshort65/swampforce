@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { named, InteractiveChart, KeptRead } from "@/components/interactive-chart";
+import { named, InteractiveChart, KeptRead, firstLine } from "@/components/interactive-chart";
 import {
   AT_HOME,
   COVID_CELL,
@@ -774,6 +774,7 @@ function RestoredFiles() {
         rows={OVAL_DESKS.map((d) => ({
           id: d.id,
           name: d.k,
+          line: firstLine(d.v),
           read: <KeptRead said={d.k} record={d.v} links={[]} />,
         }))}
       />
@@ -783,6 +784,7 @@ function RestoredFiles() {
         rows={PAPERS.map((p) => ({
           id: p.k,
           name: p.k,
+          line: firstLine(p.paper),
           href: p.href,
           proof: "The record",
           read: (
@@ -803,6 +805,7 @@ function RestoredFiles() {
         rows={[...FAKE_NEWS, ...FRAMES].map((f) => ({
           id: f.tag,
           name: f.tag,
+          line: firstLine(f.tape),
           href: f.href,
           proof: "The record",
           read: (
@@ -825,6 +828,7 @@ function RestoredFiles() {
         ].map((row) => ({
           id: row.id,
           name: row.name,
+          line: firstLine(row.record),
           read: <KeptRead said={row.name} record={row.record} links={[]} />,
         }))}
       />
@@ -835,6 +839,7 @@ function RestoredFiles() {
           {
             id: "funnel",
             name: FUNNEL.k,
+            line: firstLine(FUNNEL.line),
             href: FUNNEL.href,
             proof: "The record",
             read: (
@@ -848,6 +853,7 @@ function RestoredFiles() {
           ...FUNNEL.pipes.map((pipe) => ({
             id: pipe.k,
             name: `${pipe.k} — ${pipe.amt}`,
+            line: firstLine(pipe.note),
             href: pipe.href,
             proof: "The record",
             read: (
@@ -866,6 +872,7 @@ function RestoredFiles() {
         rows={RAIL_FILE.rows.map((row) => ({
           id: row.k,
           name: row.k,
+          line: firstLine(row.record),
           href: row.href,
           proof: "The record",
           read: <KeptRead said={row.said} record={row.record} links={row.links} />,
@@ -877,6 +884,7 @@ function RestoredFiles() {
         rows={COVID_CELL.rows.map((row) => ({
           id: row.k,
           name: row.k,
+          line: firstLine(row.record),
           href: row.href,
           proof: "The record",
           read: <KeptRead said={row.said} record={row.record} links={row.links} />,
@@ -888,6 +896,7 @@ function RestoredFiles() {
         rows={SUITS.map((row) => ({
           id: row.k,
           name: row.k,
+          line: firstLine(row.record),
           href: row.href,
           proof: "The record",
           read: <KeptRead said={row.said} record={row.record} links={row.links} />,
@@ -899,6 +908,7 @@ function RestoredFiles() {
         rows={DEALS.map((row) => ({
           id: row.k,
           name: row.k,
+          line: firstLine(row.record),
           href: row.href,
           proof: "The record",
           read: (
@@ -917,6 +927,7 @@ function RestoredFiles() {
         rows={[...AT_HOME, ...OTHER_OVALS].map((row) => ({
           id: row.k,
           name: row.k,
+          line: firstLine(row.record),
           href: row.href,
           proof: "The record",
           read: (
@@ -934,6 +945,7 @@ function RestoredFiles() {
         rows={TERM_COMPARE.map((row) => ({
           id: row.k,
           name: row.k,
+          line: firstLine(row.record),
           href: row.href,
           proof: "The record",
           read: (

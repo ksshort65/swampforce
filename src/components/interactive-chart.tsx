@@ -95,7 +95,7 @@ export function InteractiveChart({
   rows: ChartRow[];
 }) {
   const [open, setOpen] = useState<string | null>(null);
-  const picked = rows.find((r) => r.id === open) ?? null;
+  const note = subtitle?.startsWith("The claim is the row") ? null : subtitle;
 
   function choose(id: string) {
     setOpen((current) => (current === id ? null : id));
@@ -103,57 +103,58 @@ export function InteractiveChart({
 
   return (
     <section className="mt-8">
-      <div className="overflow-hidden rounded-md border border-neutral-300 bg-white text-black">
-        <div className="px-5 py-6">
-          <p className="font-display text-2xl font-bold tracking-wide sm:text-3xl">{title}</p>
-          {subtitle ? <p className="mt-2 max-w-xl text-sm leading-relaxed text-neutral-600">{subtitle}</p> : null}
+      <div className="overflow-hidden rounded-md border border-neutral-800 bg-[#140e0c] text-white">
+        <div className="px-5 py-5">
+          <p className="font-display text-2xl font-bold tracking-wide uppercase sm:text-3xl">{title}</p>
+          {note ? <p className="mt-2 max-w-xl text-sm leading-relaxed text-neutral-300">{note}</p> : null}
         </div>
-        <div className="grid grid-cols-1 border-y border-neutral-300 bg-neutral-50 sm:grid-cols-[1.3fr_auto]">
-          <p className="px-4 py-2 text-[13px] font-semibold text-red-800">The claim</p>
-          <p className="border-t border-neutral-300 px-4 py-2 text-[13px] font-semibold text-blue-900 sm:border-t-0 sm:border-l">
-            The record
+        <div className="grid grid-cols-1 sm:grid-cols-2">
+          <p className="bg-[#3a1214] px-4 py-3 font-display text-[11px] font-bold tracking-[0.18em] text-red-100 uppercase">
+            The claim
+          </p>
+          <p className="bg-[#10233f] px-4 py-3 font-display text-[11px] font-bold tracking-[0.18em] text-blue-100 uppercase">
+            The file
           </p>
         </div>
-        {rows.map((r) => (
-          <div
-            key={r.id}
-            className={`grid grid-cols-1 border-b border-neutral-200 sm:grid-cols-[1.3fr_auto] ${open === r.id ? "bg-amber-50" : ""}`}
-          >
-            <button
-              type="button"
-              onClick={() => choose(r.id)}
-              className="px-4 py-3 text-left text-[15px] font-semibold break-words text-neutral-900 hover:bg-neutral-50"
-            >
-              {r.name}
-            </button>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-neutral-200 px-4 py-3 sm:border-t-0 sm:border-l">
-              <button
-                type="button"
-                onClick={() => choose(r.id)}
-                className="text-[13px] font-semibold text-red-800 underline-offset-2 hover:underline"
-              >
-                {open === r.id ? "Close" : "The short version"}
-              </button>
-              {r.href ? (
-                <a
-                  href={r.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-[13px] font-semibold text-blue-800 no-underline hover:underline"
+        {rows.map((r) => {
+          const on = open === r.id;
+          return (
+            <div key={r.id} className="border-t border-white/10">
+              <div className="grid grid-cols-1 sm:grid-cols-2">
+                <button
+                  type="button"
+                  onClick={() => choose(r.id)}
+                  className={`px-4 py-3 text-left text-[15px] font-semibold break-words text-red-50 ${on ? "bg-[#4a181c]" : "bg-[#2a1214]"}`}
                 >
-                  {r.proof ?? "The record"}
-                </a>
+                  {r.name}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => choose(r.id)}
+                  className={`border-t border-white/10 px-4 py-3 text-left text-[14px] leading-relaxed break-words text-blue-50 sm:border-t-0 sm:border-l ${on ? "bg-[#163056]" : "bg-[#0e1c33]"}`}
+                >
+                  {r.line ?? r.proof ?? "The record"}
+                </button>
+              </div>
+              {on ? (
+                <div className="border-t border-neutral-200 bg-white px-5 py-4 text-black">
+                  {r.read}
+                  {r.href ? (
+                    <a
+                      href={r.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-4 inline-block text-[13px] font-semibold text-blue-800 no-underline hover:underline"
+                    >
+                      {r.proof ?? "The record"}
+                    </a>
+                  ) : null}
+                </div>
               ) : null}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
-      {picked ? (
-        <div id="chart-read" className="mt-4 overflow-hidden rounded-md border border-neutral-300 bg-white text-black">
-          <p className="border-b border-neutral-200 px-5 py-3 text-lg font-semibold">{picked.name}</p>
-          <div className="px-5 py-4">{picked.read}</div>
-        </div>
-      ) : null}
     </section>
   );
 }
