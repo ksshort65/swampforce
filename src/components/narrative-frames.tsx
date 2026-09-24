@@ -139,6 +139,32 @@ function TapeTable({ frames }: { frames: Frame[] }) {
 }
 
 function ChartRow({ f }: { f: Frame }) {
+  if (f.tag === "Clear and present danger") {
+    return (
+      <tr className="border-t border-white/10">
+        <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
+          <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">Clear and present danger</span>
+          <span className="block">December 15, 2019. January 13, 2021. Multiple politicians.</span>
+          <a href="https://www.bbc.com/news/world-us-canada-50802150" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+            Adam Schiff, December 15, 2019
+          </a>
+          <a href="https://www.c-span.org/clip/us-house-of-representatives/speaker-pelosi-d-ca-on-impeachment-of-president-trump/4937259" target="_blank" rel="noreferrer" className="mt-1 block underline decoration-white/40 underline-offset-2">
+            Nancy Pelosi, January 13, 2021
+          </a>
+        </td>
+        <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
+          <a href="https://www.c-span.org/clip/us-house-of-representatives/speaker-pelosi-d-ca-on-impeachment-of-president-trump/4937259" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            He is a clear and present danger to the nation.
+          </a>
+        </td>
+        <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
+          <a href="https://tile.loc.gov/storage-services/service/ll/usrep/usrep395/usrep395444/usrep395444.pdf" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            A 1969 speech test. Not a license to break the law.
+          </a>
+        </td>
+      </tr>
+    );
+  }
   const who = firstLine(f.ran || f.tag);
   const claim = firstLine(f.they);
   const truth = f.href ? (
