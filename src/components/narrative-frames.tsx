@@ -30,7 +30,7 @@ export function NarrativeFrames({
           <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
             <a
               href="https://www.iaea.org/sites/default/files/gov2026-50.pdf"
-              className="text-sage no-underline hover:underline"
+              className="text-sage underline decoration-sage underline-offset-2"
               target="_blank"
               rel="noreferrer"
             >
