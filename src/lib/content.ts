@@ -3441,6 +3441,20 @@ export const posts: Post[] = [
 					{ label: "Order No. 5559-2022", href: "https://www.justice.gov/d9/press-releases/attachments/2022/11/18/2022.11.18_order_5559-2022.pdf" },
 				],
 			},
+			{
+				caption: "The family subpoenas",
+				sold: "Sold as a finding: the family was under constant subpoena because the crimes were endless. No one gave a count. The paper has one.",
+				evidence: "Testimony subpoenas to four of them in one New York investigation. Separate subpoenas to the banks and the accountant for the family’s records. Not a summons every week.",
+				source: "People v. Trump Organization, Index No. 451685/2020, Justice Engoron, February 17, 2022. Contempt affirmed, 2023 NY Slip Op 00825. Trump v. Mazars, July 9, 2020. Trump v. Vance, July 9, 2020.",
+				file: "The testimony count is four people, one investigation. The New York Attorney General was asking whether asset values were misstated on financial statements, loan applications, and tax papers to get better loans, insurance, and tax treatment. Eric Trump had already sat. The February 17, 2022 order says he took the Fifth to more than 500 questions. On December 1, 2021 the office subpoenaed Donald J. Trump for documents and testimony, and Ivanka Trump and Donald Trump Jr. for testimony. They moved to quash. The court denied it. Donald had 14 days for the papers and 21 days to sit. Ivanka and Donald Jr. had 21 days to sit. In April 2022 the same judge held Donald in civil contempt for the document part and set the sanction at $10,000 a day until he complied. The appeals court affirmed that sanction. The investigation became the civil fraud case. On August 21, 2025 the money penalty was vacated. The liability finding was left standing. The House, in April 2019, issued four subpoenas. They were not handed to the children. Two went to Deutsche Bank, one to Capital One, one to Mazars, for the finances of the President, his children, and the businesses. On July 9, 2020 the Supreme Court did not enforce them and did not kill them. It sent them back. A congressional subpoena for a president’s papers is not an ordinary subpoena. This page does not have a later order that says every page was turned over. The Manhattan district attorney sent one grand jury subpoena to Mazars for tax returns and related records from 2011 on. On the same day the Supreme Court held that a sitting president is not immune from a state criminal subpoena. The point on that paper is a state criminal investigation of the records. Not in the count: the January 6 committee listed Ivanka Trump, Donald Trump Jr., and Jared Kushner as witnesses. This page does not have their subpoenas, so they are not numbered here. A news report of a later grand jury subpoena is not a filing on this page.",
+				href: "https://www.nycourts.gov/Reporter/pdfs/2022/2022_30538.pdf",
+				doc: "Engoron — February 17, 2022",
+				docs: [
+					{ label: "Contempt — $10,000 a day, affirmed", href: "https://www.nycourts.gov/reporter/3dseries/2023/2023_00825.htm" },
+					{ label: "Trump v. Mazars — the House subpoenas", href: "https://supreme.justia.com/cases/federal/us/591/19-715/" },
+					{ label: "Trump v. Vance — the grand jury subpoena", href: "https://supreme.justia.com/cases/federal/us/591/19-635/" },
+				],
+			},
 		],
 		body: [
 			{

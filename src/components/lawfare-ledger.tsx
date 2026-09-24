@@ -28,6 +28,8 @@ const LINE: Record<string, string> = {
     "The special prosecutor billed the county for time with the White House. A billing line is not a transcript. The case was later dropped.",
   "One special counsel, both federal cases":
     "Garland appointed one prosecutor for both federal cases and named the campaign calendar as the reason.",
+  "The family subpoenas":
+    "Four of them were ordered to sit in one New York investigation about property values. Eric had already taken the Fifth more than 500 times. Donald was fined $10,000 a day for the documents. The House and the Manhattan grand jury subpoenaed the banks and the accountant, not the children in person. A witness list is not a subpoena.",
   "Russia collusion — Crossfire Hurricane":
     "Sold as a finding for years. Durham: no actual evidence of collusion in the holdings when the investigation opened. Mueller did not establish a conspiracy.",
   "First impeachment — abuse of power":
@@ -65,6 +67,8 @@ const COVER: Record<string, string> = {
     "Issue: the state prosecutor billed the county for time with the White House.",
   "One special counsel, both federal cases":
     "Issue: one prosecutor, both federal cases, appointed because both men were running.",
+  "The family subpoenas":
+    "Issue: the family was said to be under constant subpoena. The paper has four testimony orders in one case, plus subpoenas to the banks and the accountant.",
   "Russia collusion — Crossfire Hurricane":
     "Issue: it was sold as a finding. Durham: no actual evidence of collusion when it opened.",
   "First impeachment — abuse of power":
