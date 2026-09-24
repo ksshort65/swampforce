@@ -22,9 +22,9 @@ export function SiteHeader() {
       </div>
       <div className="mx-auto flex max-w-6xl items-center overflow-visible px-4 py-1 sm:px-6">
         <nav className="flex flex-wrap items-center overflow-visible">
-          {["Republic", "Under Construction", "Democrats", "Republicans", "Congress", "Border", "Remedy", "J6", "Scorecard", "Pump", "Foreword"].map(
+          {["Republic", "Fake News", "Democrats", "Republicans", "Congress", "Border", "Remedy", "J6", "Scorecard", "Pump", "Foreword"].map(
             (label) =>
-              label === "Under Construction" ? (
+              label === "Fake News" ? (
                 <details key={label} className="relative">
                   <summary className="inline-flex min-h-11 cursor-pointer list-none items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase hover:text-sage [&::-webkit-details-marker]:hidden">
                     {label}

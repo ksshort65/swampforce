@@ -64,7 +64,8 @@ function EssayPage() {
         />
         <div className="absolute inset-0 bg-linear-to-t from-bg via-bg/60 to-bg/20" />
         <div className="relative mx-auto flex min-h-[52vh] max-w-3xl flex-col justify-end px-4 pb-10 sm:px-6">
-          {(FAKE_NEWS_SLUGS as readonly string[]).includes(post.slug) ? (
+          {(FAKE_NEWS_SLUGS as readonly string[]).includes(post.slug) &&
+          post.slug !== "understanding-mechanics" ? (
             <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
               Under construction
             </p>

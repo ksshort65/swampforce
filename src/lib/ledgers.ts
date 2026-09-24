@@ -348,6 +348,30 @@ const gopFrames: Post["frames"] = [
 
 export const LEDGER_POSTS: Post[] = [
   {
+    slug: "understanding-mechanics",
+    title: "Understanding Mechanics of Fake News",
+    dek: "One inflammatory word, repeated on every network, then read back by politicians, until the country treats the caption as the tape.",
+    date: "2026-09-23",
+    category: "Dispatch",
+    readMinutes: 2,
+    image: "/images/essay-eagle.jpg",
+    imageAlt: "Eagle on the Capitol",
+    series: "Fake News",
+    body: [
+      {
+        type: "p",
+        text: "Psychological warfare, on a screen, is not a secret army. It is a habit. Gaslighting is the moment you are shown a sentence and told you heard a different one. The weapon is often one inflammatory word left standing after the rest of the sentence is cut. That word is then said on every network, in the same hour, and politicians read it back as if they had thought of it. A short false sentence is easier to keep than a transcript. After enough days of the same word, a country will argue for a fact it never checked, and it will sort a neighbor into an enemy. They do it because a public trained on the wrong fact will vote, give money, and hate without anyone having to pass a law. The person who sold the word stays clean. The country is left holding the lie.",
+      },
+      {
+        type: "ul",
+        items: [
+          "The networks, the same word. On March 16, 2024, he said “bloodbath” about Chinese car plants in Mexico and a 100 percent tariff. By the next morning the plants were gone and the word was the story. Politico, NBC, and CBS ran that headline. MSNBC and ABC defended it. The supercut of them saying it is [here](https://www.foxnews.com/media/msnbc-abc-vigorously-defend-trump-bloodbath-coverage-did-not-miss-full-context). CNN’s own story, the same night, is [here](https://www.cnn.com/2024/03/16/politics/trump-bloodbath-auto-industry-election).",
+          "The politicians, the same script. On March 4, 2025, about twenty-two Democratic senators posted one speech, word for word, including Chuck Schumer, Elizabeth Warren, and Cory Booker. The tape of them reading it is [here](https://www.youtube.com/watch?v=EsjwtaIocUw).",
+        ],
+      },
+    ],
+  },
+  {
     slug: "the-media-ledger",
     title: "Fake News",
     dek: "Politicians, networks, and journalists. The caption they sold, and the file that did not match.",

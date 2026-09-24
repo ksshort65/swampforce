@@ -3399,6 +3399,7 @@ export const START_HERE = [
 	"find-them",
 ] as const;
 export const FAKE_NEWS_SLUGS = [
+	"understanding-mechanics",
 	"the-media-ledger",
 	"the-democrat-ledger",
 	"the-republican-ledger",
