@@ -597,7 +597,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Read the PDF. Read the oath. Then vote as if the document is on the ballot, because for this faction it is.",
+				text: "Members of the House are hired to represent a district. The tape is the record of what they said instead.",
 			},
 		],
 	},
@@ -1895,23 +1895,27 @@ export const posts: Post[] = [
 		dek: "Employees do not threaten the people who pay them.",
 		date: "2026-08-24",
 		category: "Dispatch",
-		readMinutes: 4,
+		readMinutes: 3,
 		image: "/images/capitol.jpg",
 		imageAlt: "The Capitol at night — they work for us",
 		series: "The Republic",
 		part: 7,
+		receipts: [
+			{ label: "C-SPAN — maximum warfare", href: "https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623" },
+			{ label: "C-SPAN — the full news conference", href: "https://www.c-span.org/program/news-conference/house-democrats-hold-news-conference-on-virginia-redistricting-vote/677945" },
+			{ label: "Jeffries — the same line on YouTube", href: "https://www.youtube.com/watch?v=0IVD7gE7-kg" },
+			{ label: "Jeffries on X", href: "https://x.com/hakeemjeffries/status/2046754383707148505" },
+			{ label: "Fox News — break them", href: "https://www.foxnews.com/video/6396075535112" },
+			{ label: "Schumer, March 4, 2020", href: "https://www.youtube.com/watch?v=yu-7L5W6Rew" },
+			{ label: "Waters, June 2018", href: "https://www.youtube.com/watch?v=-1Fu3g1MGHY" },
+			{ label: "Waters, April 2021", href: "https://www.youtube.com/watch?v=tnNBvN4ZXms" },
+			{ label: "Harris, June 1, 2020", href: "https://x.com/KamalaHarris/status/1267555018128965643" },
+			{ label: "Biden to Lester Holt", href: "https://www.nbcnews.com/video/biden-says-it-was-a-mistake-to-use-bullseye-in-remarks-about-trump-214895685978" },
+		],
 		body: [
 			{
-				type: "p",
-				text: "Politicians work for the American people. They do not get to threaten the people who pay them and then cash the paycheck. Here is the tape — not a meme, not a paraphrase. Two separate Jeffries clips. Then a short log of other lines that are also on video. If a clip is missing, it is because it is not on tape. We do not invent audio."
-			},
-			{
 				type: "h",
-				text: "Clip 1 — “Maximum warfare”"
-			},
-			{
-				type: "p",
-				text: "April 21–22, 2026. Virginia redistricting. House Minority Leader Hakeem Jeffries, on camera:"
+				text: "Maximum warfare"
 			},
 			{
 				type: "q",
@@ -1919,31 +1923,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "He said it at a news conference about maps. He posted it. He put it in a YouTube title. C-SPAN kept the raw. Watch the original, not a remix."
-			},
-			{
-				type: "p",
-				text: "[C-SPAN clip — Jeffries, “maximum warfare”](https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623)",
-			},
-			{
-				type: "p",
-				text: "[C-SPAN full conference — House Democrats on Virginia maps](https://www.c-span.org/program/news-conference/house-democrats-hold-news-conference-on-virginia-redistricting-vote/677945)",
-			},
-			{
-				type: "p",
-				text: "[Jeffries YouTube — “Maximum Warfare Everywhere All The Time”](https://www.youtube.com/watch?v=0IVD7gE7-kg)",
-			},
-			{
-				type: "p",
-				text: "[Jeffries on X](https://x.com/hakeemjeffries/status/2046754383707148505)",
+				text: "April 22, 2026. House Minority Leader Hakeem Jeffries, at a news conference about Virginia maps. [C-SPAN, the sentence](https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623). [C-SPAN, the full conference](https://www.c-span.org/program/news-conference/house-democrats-hold-news-conference-on-virginia-redistricting-vote/677945)."
 			},
 			{
 				type: "h",
-				text: "Clip 2 — “Break them” / “break their spirit”"
-			},
-			{
-				type: "p",
-				text: "May 19, 2026. A progressive conference. Separate event. Separate camera. Exact words — not “we will break MAGA then break their spirit.” What he said:"
+				text: "Break them"
 			},
 			{
 				type: "q",
@@ -1955,43 +1939,27 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "Fox News has the video of that speech: [Jeffries, “break them”](https://www.foxnews.com/video/6396075535112)",
+				text: "May 19, 2026. A separate room. [Fox News has the speech](https://www.foxnews.com/video/6396075535112). He named an election in the second sentence. He still said the goal is to break them, then to break their spirit."
 			},
 			{
 				type: "p",
-				text: "Write-up with the same quotes: [Fox News](https://www.foxnews.com/politics/hakeem-jeffries-shredded-disgustingly-violent-call-dems-break-spirit-maga)",
+				text: "Chuck Schumer, March 4, 2020, on the Supreme Court steps, to Justices Gorsuch and Kavanaugh: “You have released the whirlwind, and you will pay the price. You won’t know what hit you.” He later said he misspoke. [The tape](https://www.youtube.com/watch?v=yu-7L5W6Rew)."
 			},
 			{
 				type: "p",
-				text: "He named electoral defeat in the second sentence. He still said the goal is to “break them,” then “break their spirit.” That is the House Democratic leader talking about tens of millions of Americans as a thing to be broken. They work for us. That is not how employees talk."
-			},
-			{
-				type: "h",
-				text: "The rest of the log — also on tape"
+				text: "Maxine Waters, June 2018: “you get out and you create a crowd and you push back on them.” [The tape](https://www.youtube.com/watch?v=-1Fu3g1MGHY). April 2021: “We’ve got to get more confrontational.” [The tape](https://www.youtube.com/watch?v=tnNBvN4ZXms)."
 			},
 			{
 				type: "p",
-				text: "Chuck Schumer, March 4, 2020, steps of the Supreme Court, pointing at the building: “I want to tell you, Gorsuch; I want to tell you, Kavanaugh. You have released the whirlwind, and you will pay the price. You won’t know what hit you…” Chief Justice Roberts called it “dangerous.” Schumer later said he misspoke. The camera did not misspeak. [YouTube](https://www.youtube.com/watch?v=yu-7L5W6Rew) · [CNN](https://www.cnn.com/videos/politics/2020/03/04/schumer-gorsuch-kavanaugh-supreme-court-abortion-lead-vpx.cnn)",
+				text: "Kamala Harris, June 1, 2020: “chip in now to the @MNFreedomFund to help post bail for those protesting on the ground in Minnesota.” [The post](https://x.com/KamalaHarris/status/1267555018128965643)."
 			},
 			{
 				type: "p",
-				text: "Maxine Waters, June 2018: if Trump cabinet members are seen in a restaurant, “you get out and you create a crowd and you push back on them… they are not welcome, anymore, anywhere.” [YouTube](https://www.youtube.com/watch?v=-1Fu3g1MGHY) April 2021, Minneapolis: “We’ve got to stay on the street… We’ve got to get more confrontational.” [YouTube](https://www.youtube.com/watch?v=tnNBvN4ZXms)",
-			},
-			{
-				type: "p",
-				text: "Kamala Harris, June 1, 2020, on X — not a speech, still her words — while cities burned: “If you’re able to, chip in now to the @MNFreedomFund to help post bail for those protesting on the ground in Minnesota.” [The post](https://x.com/KamalaHarris/status/1267555018128965643)",
-			},
-			{
-				type: "p",
-				text: "Joe Biden, July 8, 2024, to donors — later confirmed on camera to Lester Holt: “time to put Trump in the bull’s-eye.” He called it a mistake after the fact. The admission is the tape. [NBC](https://www.nbcnews.com/video/biden-says-it-was-a-mistake-to-use-bullseye-in-remarks-about-trump-214895685978)",
+				text: "Joe Biden, July 8, 2024, to donors, later on camera to Lester Holt: “time to put Trump in the bull’s-eye.” He later called the word a mistake. [NBC](https://www.nbcnews.com/video/biden-says-it-was-a-mistake-to-use-bullseye-in-remarks-about-trump-214895685978)."
 			},
 			{
 				type: "q",
 				text: "They work for us. They do not threaten us and expect us to pay them."
-			},
-			{
-				type: "p",
-				text: "It is a demand that the people who draw a salary from 300 million citizens stop talking like an occupying force. Watch the tapes. If they want to walk it back, they can do it on the same cameras. Until then, the tape is the story."
 			}
 		]
 	},
@@ -2001,14 +1969,14 @@ export const posts: Post[] = [
 		dek: "They did not repeal the Constitution. They learned to use it as a weapon — the clause that shields them, never the duty that binds them.",
 		date: "2026-08-30",
 		category: "Dispatch",
-		readMinutes: 5,
+		readMinutes: 3,
 		image: "/images/constitution.jpg",
 		imageAlt: "The written charter — not a caption",
 		series: "The Republic",
 		part: 4,
 		receipts: [
 			{
-				label: "Article I §6 — Speech or Debate",
+				label: "Article I — Speech or Debate, and the purse",
 				href: "https://constitution.congress.gov/constitution/article-1/"
 			},
 			{
@@ -2016,33 +1984,32 @@ export const posts: Post[] = [
 				href: "https://www.oyez.org/cases/1978/78-680"
 			},
 			{
-				label: "18 U.S.C. § 2383 — unused on Jan. 6",
+				label: "18 U.S.C. § 2383",
 				href: "https://www.law.cornell.edu/uscode/text/18/2383"
 			},
 			{
-				label: "the Supreme Court's incitement test",
-				href: "https://www.oyez.org/cases/1968/492"
+				label: "Brandenburg v. Ohio",
+				href: "https://supreme.justia.com/cases/federal/us/395/444/"
+			},
+			{
+				label: "5 U.S.C. § 3331 — the oath",
+				href: "https://www.law.cornell.edu/uscode/text/5/3331"
 			}
 		],
 		body: [
 			{
 				type: "p",
-				text: "The Constitution is not the enemy. The people who hold it by the blade are. They did not repeal Article I. They learned which clauses make a sword and which make a duty, and they only pick up the sword."
+				text: "They did not repeal Article I. They learned which clauses shield them, and they leave the duties on the table."
 			},
 			{
 				type: "ul",
 				items: [
-					"Speech or Debate (Art. I §6) is waved at a camera as if the Constitution blessed the cable rant. It blesses the floor. Hutchinson v. Proxmire already said the press release is not the chamber. They hold up the clause anyway so the employee looks untouchable on the feed. https://www.oyez.org/cases/1978/78-680",
-					"The First Amendment is a fence they stand behind when they light the country on fire with a verb that stops just short of a crime — and a statute they would write for a citizen who used the same heat. The amendment is not a weapon. The double standard is.",
-					"Insurrection is the word they ran all day. 18 U.S.C. § 2383 is the statute they did not file. A caption with a constitutional flavor is still a caption. https://www.law.cornell.edu/uscode/text/18/2383",
-					"Appropriations ‘made by law’ (Art. I §9) is the letter they hide the giant unread bill behind. The clause requires a law. It does not require them to read it. They turned a limit on the Treasury into a door for a thousand pages at 2 a.m.",
-					"The oath (Art. VI, 5 U.S.C. § 3331) is theater unless someone asks whether they faithfully discharged the duties. They have not passed twelve bills on time since FY1997. They still recite the words.",
-					"They divided a nation with selected clauses. Neighbor against neighbor. Jersey against jersey. Arendt's point stands: they need a country unable to tell the charter from the clip. The villain is not the Constitution. The villain is the hand on the blade."
+					"[Speech or Debate, Article I, Section 6](https://constitution.congress.gov/constitution/article-1/), covers the floor. [Hutchinson v. Proxmire](https://www.oyez.org/cases/1978/78-680) said a press release is not the floor.",
+					"The [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) is the fence. [Brandenburg v. Ohio](https://supreme.justia.com/cases/federal/us/395/444/) is the line: imminent lawless action, and likely to produce it.",
+					"Insurrection was the word. [18 U.S.C. § 2383](https://www.law.cornell.edu/uscode/text/18/2383) is the statute that was not filed.",
+					"[Article I, Section 9](https://constitution.congress.gov/constitution/article-1/) says money is drawn only by law. The clause does not require them to read the law.",
+					"The oath, [Article VI](https://constitution.congress.gov/constitution/article-6/) and [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331), is still recited. Twelve appropriations bills have not been passed on time since fiscal year 1997."
 				]
-			},
-			{
-				type: "p",
-				text: "A republic uses the document as a limit on Congress. A syndicate uses it as a costume. Pull it back together by reading the rest of the article — the duty, not just the shield. The file is the hilt. They do not get to keep only the edge."
 			}
 		]
 	},
@@ -2052,39 +2019,29 @@ export const posts: Post[] = [
 		dek: "DSA’s 2026 program: a new constitution and a socialist republic. The criminal statutes require force. The charter is still the target.",
 		date: "2026-08-24",
 		category: "Constitution",
-		readMinutes: 8,
+		readMinutes: 4,
 		image: "/images/torn-charter.jpg",
 		imageAlt: "Torn We the People over a faded flag",
 		series: "The Republic",
 		part: 6,
+		receipts: [
+			{ label: "18 U.S.C. § 2384", href: "https://www.law.cornell.edu/uscode/text/18/2384" },
+			{ label: "18 U.S.C. § 2385", href: "https://www.law.cornell.edu/uscode/text/18/2385" },
+			{ label: "DSA program — Workers Deserve More", href: "https://program.dsausa.org/" },
+			{ label: "Article V", href: "https://constitution.congress.gov/constitution/article-5/" },
+		],
 		body: [
 			{
 				type: "p",
-				text: "Look up the statutes before they are chanted. [18 U.S.C. § 2384](https://www.law.cornell.edu/uscode/text/18/2384) — seditious conspiracy — is a felony for two or more people who conspire to overthrow the United States by force, levy war against it, or by force hinder federal law. Fine, twenty years, or both. [18 U.S.C. § 2385](https://www.law.cornell.edu/uscode/text/18/2385) — the Smith Act — reaches advocating overthrow by force or violence. Courts have been clear: abstract politics is not the crime. Force is the hinge."
-			},
-			{
-				type: "p",
-				text: "That cuts both ways. No one gets to invent a conviction. They do not get to call a new constitution “just policy.”"
-			},
-			{
-				type: "h",
-				text: "What they wrote in public"
+				text: "[18 U.S.C. § 2384](https://www.law.cornell.edu/uscode/text/18/2384), seditious conspiracy, is a felony when two or more people conspire to overthrow the United States by force, levy war against it, or by force hinder federal law. [18 U.S.C. § 2385](https://www.law.cornell.edu/uscode/text/18/2385), the Smith Act, reaches advocating overthrow by force or violence. Abstract politics is not the crime. Force is."
 			},
 			{
 				type: "p",
 				text: "In 2026 the Democratic Socialists of America published [Workers Deserve More](https://program.dsausa.org/). Their words: “draft a new constitution, and create a democratic socialist republic.” Abolish the Senate. Replace the President and the Supreme Court with an executive and judiciary chosen by and subordinate to Congress. Public ownership of the largest corporations and essential industries. Abolish ICE. Amnesty regardless of status. Complete victory, they write, requires “building a new society from the ground up.”"
 			},
 			{
-				type: "q",
-				text: "A bomb is not required if institutions are captured and throw out the charter."
-			},
-			{
 				type: "p",
-				text: "A prosecutor still has to prove an agreement to use force. Their paper program does not recite rifles. A felony is not invented here. A rewrite of the Senate, the presidency, the Court, property, and citizenship is not shrugged off. Article V is how Americans change the Constitution. A faction drafting a socialist republic is not Article V. It is a hostile swap sold as compassion."
-			},
-			{
-				type: "p",
-				text: "Source the law: [Cornell LII, 18 U.S.C. § 2384](https://www.law.cornell.edu/uscode/text/18/2384) and [§ 2385](https://www.law.cornell.edu/uscode/text/18/2385). Source their words: [program.dsausa.org](https://program.dsausa.org/). Neither one is handed to a caption."
+				text: "A prosecutor still has to prove an agreement to use force. The paper does not recite rifles. [Article V](https://constitution.congress.gov/constitution/article-5/) is how the Constitution is changed. A draft of a socialist republic is not Article V."
 			}
 		]
 	},
