@@ -434,7 +434,7 @@ export const LEDGER_POSTS: Post[] = [
   {
     slug: "the-media-ledger",
     title: "Fake News",
-    dek: "The buttons are the methods. One word. A clipped tape. A fact cut out. A claim the file does not show. And the line that was actually said.",
+    dek: "Twelve years ago a decision was made to split this country. Who made it, and who is this afraid of the file?",
     date: "2026-09-22",
     category: "Dispatch",
     readMinutes: 4,

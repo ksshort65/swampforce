@@ -90,7 +90,7 @@ function EssayPage() {
                 Fake News
               </h1>
               <p className="mt-3 max-w-2xl font-serif text-xl leading-snug text-fg/90">
-                Who made this decision twelve years ago, and why? The war was opened on a businessman, a former donor, and every American citizen. The tools were lies, hate, and violence. Who is terrified of the exposure?
+                Twelve years ago a decision was made to split this country. The first target was a businessman, and a former donor. Then it was every citizen who would not repeat the line. The tools were a lie, then hate, then violence. Who made that decision? And who is this afraid of the file?
               </p>
             </>
           ) : (
@@ -226,16 +226,17 @@ function EssayPage() {
             </div>
             <div className="max-w-2xl space-y-6 font-serif text-lg leading-8 text-fg/85">
               <p>
-                The buttons under this line are the methods. One word is the framing effect. The same facts, a different word, and the choice reverses.{" "}
+                A caption does not become the truth because it is loud. It becomes the truth by a method. The buttons sort this file by which method was used.
+              </p>
+              <p>
+                One word is the framing effect. The facts stay. The word changes. The choice reverses.{" "}
                 <a className="text-blue-800" href="https://gwern.net/doc/psychology/1981-tversky.pdf" target="_blank" rel="noreferrer">Tversky and Kahneman, 1981</a>.
+                {" "}Clipped the tape is the sentence with the minutes removed. Cut the fact out is the half they kept. A fact the file does not show is a claim with no document behind it. He said it is the line that is actually on the recording. That one stays. A correction that only runs one way is the same trick.
               </p>
               <p>
-                Clipped the tape is the sentence with the minutes cut out. Cut the fact out is the omission. A fact the file does not show is the claim with no document behind it. He said it is the line that is on the recording, and does not get washed.
-              </p>
-              <p>
-                Any of them works because the line is said again. A review of 182 studies found that hearing a statement again makes people rate it as more true.{" "}
-                <a className="text-blue-800" href="https://www.nature.com/articles/s41467-026-70041-x" target="_blank" rel="noreferrer">The illusory truth effect</a>.
-                {" "}That is why the same script ran for twelve years. The file getting this close is what the operation cannot survive.
+                The reason any of it held is that the line was said again. Hear a statement twice and people rate it as more true. A review of 182 studies is the{" "}
+                <a className="text-blue-800" href="https://www.nature.com/articles/s41467-026-70041-x" target="_blank" rel="noreferrer">illusory truth effect</a>.
+                {" "}Twelve years of one script is not an accident. It is what gets run when the exposure would end the people who ordered it.
               </p>
             </div>
           </div>
