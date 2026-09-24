@@ -113,6 +113,47 @@ const EXTRA: Record<string, { label: string; href: string }[]> = {
     { label: "Obama, unimaginable, September 19, 2026", href: "https://www.independent.co.uk/news/world/americas/us-politics/obama-criticize-trump-media-ban-b3052936.html" },
     { label: "Garcia, Schumer, Raskin, Warren, Booker, Sanders", href: "https://oversightdemocrats.house.gov/news/press-releases/ranking-member-robert-garcia-demands-answers-after-trump-bans-free-press-from-white-house" },
   ],
+  "Fine people": [
+    { label: "The transcript", href: "https://www.politico.com/story/2017/08/15/full-text-trump-comments-white-supremacists-alt-left-transcript-241662" },
+  ],
+  Bloodbath: [
+    { label: "The uncut recording", href: "https://www.c-span.org/clip/public-affairs-event/user-clip-trump-says-bloodbath/5110570" },
+    { label: "The rally, at 29:45", href: "https://www.youtube.com/watch?v=f57dRZMS0PQ&t=1785s" },
+  ],
+  "Schiff’s transcript": [
+    { label: "The floor parody", href: "https://www.c-span.org/video/?c4820134/schiffs-parody" },
+    { label: "The call memorandum", href: "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf" },
+  ],
+  "He never said peacefully": [
+    { label: "The Ellipse, full", href: "https://www.c-span.org/video/?507744-1/president-trump-speaks-save-america-rally" },
+    { label: "The BBC splice set against the original", href: "https://www.youtube.com/watch?v=TAV5-oun3uM" },
+    { label: "The speech text", href: "https://www.npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial" },
+  ],
+  Kidnapped: [
+    { label: "The indictment", href: "https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-narco-terrorism-charges-against-nicolas-maduro-current" },
+    { label: "State Department, custody", href: "https://www.state.gov/nicolas-maduro-moros" },
+  ],
+  Insurrection: [
+    { label: "The charge tally", href: "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol" },
+    { label: "H.Res. 24", href: "https://www.congress.gov/bill/117th-congress/house-resolution/24" },
+    { label: "18 U.S.C. § 2383", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
+  ],
+  "Russia collusion": [
+    { label: "Durham", href: "https://www.justice.gov/storage/durhamreport.pdf" },
+    { label: "Horowitz, the FISA", href: "https://oig.justice.gov/reports/2019/o1912.pdf" },
+    { label: "Mueller, volume 1", href: "https://www.justice.gov/storage/report_volume1.pdf" },
+  ],
+  "The first impeachment": [
+    { label: "The call memorandum", href: "https://trumpwhitehouse.archives.gov/wp-content/uploads/2019/09/Unclassified09.2019.pdf" },
+    { label: "H.Res. 755", href: "https://www.congress.gov/bill/116th-congress/house-resolution/755" },
+  ],
+  "Four dockets": [
+    { label: "District of Columbia docket", href: "https://www.courtlistener.com/docket/67656595/united-states-v-trump/" },
+    { label: "The indictment", href: "https://www.justice.gov/storage/US_v_Trump_23_cr_257.pdf" },
+    { label: "The dismissal", href: "https://www.courtlistener.com/docket/67656595/283/united-states-v-trump/" },
+    { label: "Florida, dismissed", href: "https://www.courtlistener.com/docket/67490071/672/united-states-v-trump/" },
+    { label: "Manhattan indictment", href: "https://www.manhattanda.org/wp-content/uploads/2023/04/Donald-J.-Trump-Indictment.pdf" },
+  ],
 };
 
 type Cell = "who" | "claim" | "truth";
@@ -175,13 +216,101 @@ const BALLROOM: Record<Cell, { head: string; items: Bullet[] }> = {
   },
 };
 
+const METHOD: Record<string, string> = {
+  Bloodbath: "One word",
+  Dictator: "One word",
+  Bleach: "One word",
+  "Inject light": "One word",
+  "The virus is a hoax": "One word",
+  "All Mexicans are rapists": "One word",
+  Animals: "One word",
+  Kidnapped: "One word",
+  "Muslim ban": "One word",
+  "Bible upside down": "One word",
+  "Seventeen agencies": "One word",
+  Insurrection: "One word",
+  Sicknick: "One word",
+  "David Duke": "One word",
+  "187 minutes": "One word",
+  "Never called the Guard": "One word",
+  "Five officers": "One word",
+  "He invented separation": "One word",
+  "Concentration camps": "One word",
+  "Not one mile": "One word",
+  "Liable for rape": "One word",
+  "Convicted of all of it": "One word",
+  "Hands up": "One word",
+  "Fine people": "Clipped the tape",
+  "He never said peacefully": "Clipped the tape",
+  "Schiff’s transcript": "Clipped the tape",
+  "We love you": "Clipped the tape",
+  "No condemnation": "Clipped the tape",
+  "Many sides": "Clipped the tape",
+  "The escort clip": "Clipped the tape",
+  "Fight like hell": "Clipped the tape",
+  "The ballroom": "Cut the fact out",
+  "The Iran war": "Cut the fact out",
+  "Kids in cages": "Cut the fact out",
+  "The laptop": "Cut the fact out",
+  "Nothing on the laptop": "Cut the fact out",
+  "Zelensky confirmed the crime": "Cut the fact out",
+  "Project 2025": "Cut the fact out",
+  "The press pass": "Cut the fact out",
+  "Check your rolls": "Cut the fact out",
+  "Most secure election": "Cut the fact out",
+  "The slogan, not the children": "Cut the fact out",
+  "Only their party": "Cut the fact out",
+  "Clear and present danger": "Cut the fact out",
+  "Russia collusion": "A fact the file does not show",
+  "The client list": "A fact the file does not show",
+  "Murdered in the cell": "A fact the file does not show",
+  Lynching: "A fact the file does not show",
+  "Mostly peaceful": "A fact the file does not show",
+  "Four dockets": "A fact the file does not show",
+  "The first impeachment": "A fact the file does not show",
+  "Nuclear secrets": "A fact the file does not show",
+  "Pee tape": "A fact the file does not show",
+  "Suckers and losers": "A fact the file does not show",
+  "Russian bounties": "A fact the file does not show",
+  "Hydroxychloroquine kills": "A fact the file does not show",
+  Whips: "A fact the file does not show",
+  "Stand by": "He said it",
+  "When the looting starts": "He said it",
+  "He quoted Hitler": "He said it",
+  "Liz Cheney": "He said it",
+  "Find 11,780": "He said it",
+  "Soldiers of Christ": "He said it",
+};
+
+const METHODS = ["All", "One word", "Clipped the tape", "Cut the fact out", "A fact the file does not show", "He said it", "Not sorted yet"];
+
+function methodOf(tag: string) {
+  return METHOD[tag] ?? "Not sorted yet";
+}
+
 function TapeTable({ frames }: { frames: Frame[] }) {
   const [open, setOpen] = useState<string | null>(null);
+  const [method, setMethod] = useState("All");
+  const shown = frames.filter((f) => method === "All" || methodOf(f.tag) === method);
   return (
     <section className="mt-8">
       <p className="mb-3 text-base leading-relaxed text-fg">
-        One chart. Open a column. The name is who said it. Every link leaves this journal for the official record.
+        Pick the method. Open a row. Blue text leaves this journal for the record. Nothing on the other Fake News pages was removed.
       </p>
+      <div className="mb-4 flex flex-wrap gap-2">
+        {METHODS.map((name) => (
+          <button
+            key={name}
+            type="button"
+            onClick={() => { setMethod(name); setOpen(null); }}
+            className={method === name
+              ? "rounded-full bg-neutral-900 px-3 py-2 text-sm font-semibold text-white"
+              : "rounded-full border border-neutral-700 px-3 py-2 text-sm font-semibold text-blue-700"}
+          >
+            {name}
+          </button>
+        ))}
+      </div>
       <div className="overflow-x-auto rounded-md border border-neutral-800">
         <table className="w-full min-w-[64rem] border-collapse text-left">
           <thead>
@@ -198,7 +327,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
             </tr>
           </thead>
           <tbody>
-            {frames.map((f) => {
+            {shown.map((f) => {
               const ballroom = f.tag === "The ballroom";
               const cell = (name: Cell) => (ballroom ? `${f.tag}:${name}` : f.tag);
               const on = (name: Cell) => open === cell(name);
@@ -217,6 +346,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                   <tr className="border-t border-white/10">
                     <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
                       <button type="button" onClick={() => setOpen(on("who") ? null : cell("who"))} className="text-left">
+                        <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-blue-300 uppercase">{methodOf(f.tag)}</span>
                         <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">{f.tag}</span>
                         <span className="block text-blue-300">{who}</span>
                       </button>
