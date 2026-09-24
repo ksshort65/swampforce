@@ -360,33 +360,23 @@ export const LEDGER_POSTS: Post[] = [
     body: [
       {
         type: "p",
-        text: "The failure is not the viewer's. The truth was not on the screen. It was withheld. What ran was a coordinated attack on the country. The tapes are the proof. The studies are the method.",
+        text: "The failure is not the viewer's. The truth was withheld. What ran was a coordinated attack. The tapes are the proof. The studies are the method.",
       },
       {
         type: "p",
-        text: "Psychological warfare, on a screen, is not a secret army. It is a habit. Gaslighting is being told the recording you watched did not say what it said. The cut is a different move. One inflammatory word is left standing after the rest of the sentence is removed.",
+        text: "Gaslighting is being told a recording did not say what it said. The cut is different. One word is left after the sentence is removed. Researchers call that the [framing effect](https://gwern.net/doc/psychology/1981-tversky.pdf). Tversky and Kahneman, Science, 1981: the same facts, a different word, reversed the choice.",
       },
       {
         type: "p",
-        text: "Researchers call that wording change the [framing effect](https://gwern.net/doc/psychology/1981-tversky.pdf). Amos Tversky and Daniel Kahneman showed it in Science in 1981. The same facts, described with a different word, reversed what people chose.",
+        text: "The word is then said on every network, and politicians read it back. Researchers call the repetition the [illusory truth effect](https://www.nature.com/articles/s41467-026-70041-x). A 2026 review of 182 studies found that hearing a statement again makes people rate it as more true. A public that keeps the caption will vote, pay, and hate. The seller of the word stays clean.",
       },
       {
         type: "p",
-        text: "That word is then said on every network, in the same hour, and politicians read it back as if they had thought of it. Researchers call the repetition the [illusory truth effect](https://www.nature.com/articles/s41467-026-70041-x). A 2026 review of 182 studies, in Nature Communications, found that hearing a statement again makes people rate it as more true, including statements they already had reason to doubt.",
+        text: "On March 16, 2024, Donald Trump said “bloodbath” about Chinese car plants and a 100 percent tariff. By morning the plants were gone. [CNN that night](https://www.cnn.com/2024/03/16/politics/trump-bloodbath-auto-industry-election). Politico, NBC, and CBS ran the headline. [MSNBC and ABC](https://www.foxnews.com/media/msnbc-abc-vigorously-defend-trump-bloodbath-coverage-did-not-miss-full-context) defended the word.",
       },
       {
         type: "p",
-        text: "A short false sentence is easier to keep than a transcript. After enough days of the same word, a country will argue for a fact it never checked, and it will sort a neighbor into an enemy. They do it because a public trained on the wrong fact will vote, give money, and hate without anyone having to pass a law. The person who sold the word stays clean. The country is left holding the lie.",
-      },
-      {
-        type: "ul",
-        items: [
-          "The networks, the same word. On March 16, 2024, Donald Trump said “bloodbath” about Chinese car plants in Mexico and a 100 percent tariff. By the next morning the plants were gone and the word was the story. [CNN’s own story that night](https://www.cnn.com/2024/03/16/politics/trump-bloodbath-auto-industry-election). Politico, NBC, and CBS ran the same kind of headline. [MSNBC and ABC defending the word](https://www.foxnews.com/media/msnbc-abc-vigorously-defend-trump-bloodbath-coverage-did-not-miss-full-context) is a compilation of them saying it.",
-        ],
-      },
-      {
-        type: "p",
-        text: "A year after March 16, 2024, on March 4, 2025, politicians were still on one script. Chuck Schumer, Elizabeth Warren, Cory Booker, and about twenty other Democratic senators posted the same speech, word for word. The speech was about prices, not the car plants. The method was the same. [The tape of them reading it](https://www.youtube.com/watch?v=EsjwtaIocUw). That is not an accident. It is a coordinated attack on the nation.",
+        text: "A year later, on March 4, 2025, Chuck Schumer, Elizabeth Warren, Cory Booker, and about twenty other Democratic senators posted one speech, word for word, about prices, not the plants. [The tape](https://www.youtube.com/watch?v=EsjwtaIocUw). That is not an accident. It is a coordinated attack on the nation.",
       },
     ],
   },
