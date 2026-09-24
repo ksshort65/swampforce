@@ -589,7 +589,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "The party used as the slur named itself the National Socialist German Workers’ Party, and its 1920 program demanded the nationalization of all trusts, the end of income that does not arise from work, and a strong central authority over the state. [The 25 points](https://avalon.law.yale.edu/imt/nsdappro.asp). The program published now, under the socialist name, demands public ownership of the largest corporations and a new constitution.",
+				text: "The National Socialist German Workers’ Party, 1920 program: nationalization of all trusts, abolition of income that does not arise from work, and a strong central authority over the state. [The 25 points](https://avalon.law.yale.edu/imt/nsdappro.asp).",
 			},
 			{
 				type: "q",

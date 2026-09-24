@@ -287,7 +287,7 @@ The Democratic Socialists of America published a 2026 program that calls for dra
 
 On their own page they state the belief in one line: working people should run both the economy and society democratically to meet human needs, not to make profits for a few. [What is Democratic Socialism](https://www.dsausa.org/about-us/what-is-democratic-socialism/). The program states the goal in their words: win the battle for democracy, draft a new constitution, and create a democratic socialist republic. [Workers Deserve More](https://program.dsausa.org/) · [PDF, September 2, 2026](https://program.dsausa.org/wp-content/uploads/2026/09/WDM-Program.pdf).
 
-The party used as the slur named itself the National Socialist German Workers’ Party, and its 1920 program demanded the nationalization of all trusts, the end of income that does not arise from work, and a strong central authority over the state. [The 25 points](https://avalon.law.yale.edu/imt/nsdappro.asp). The program published now, under the socialist name, demands public ownership of the largest corporations and a new constitution.
+The National Socialist German Workers’ Party, 1920 program: nationalization of all trusts, abolition of income that does not arise from work, and a strong central authority over the state. [The 25 points](https://avalon.law.yale.edu/imt/nsdappro.asp).
 
 > They wrote a replacement country on a PDF. Members who swear this Constitution cannot pretend they did not read it.
 
