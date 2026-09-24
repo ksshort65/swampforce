@@ -423,7 +423,15 @@ export const posts: Post[] = [
 		featured: true,
 		series: "The Republic",
 		part: 1,
-		receipts: [],
+		receipts: [
+			{ label: "Article I", href: "https://constitution.congress.gov/constitution/article-1/" },
+			{ label: "5 U.S.C. § 3331 — the oath", href: "https://www.law.cornell.edu/uscode/text/5/3331" },
+			{ label: "Fox News Radio — McCaul, July 12, 2026", href: "https://radio.foxnews.com/2026/07/12/from-washington-rep-michael-mccaul-on-two-decades-of-public-service-and-the-changing-face-of-congress/" },
+			{ label: "C-SPAN — Jeffries news conference, April 22, 2026", href: "https://www.c-span.org/program/news-conference/house-democrats-hold-news-conference-on-virginia-redistricting-vote/677945" },
+			{ label: "C-SPAN — “maximum warfare”", href: "https://www.c-span.org/clip/news-conference/user-clip-jeffries-maximum-warfare/5199623" },
+			{ label: "C-SPAN — Jeffries, May 19, 2026", href: "https://www.c-span.org/program/public-affairs-event/house-minority-leader-jeffries-on-democracy/679567" },
+			{ label: "C-SPAN — Schumer, March 4, 2020", href: "https://www.c-span.org/clip/us-senate/user-clip-youve-released-the-whirlwind-and-you-will-pay-the-price--sen-chuck-schumer/4944670" },
+		],
 		body: [
 			{
 				type: "p",
@@ -435,7 +443,7 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "A Texas Republican who is leaving after twenty-two years said the quiet part on the way out. Representative Michael McCaul, former chairman of Homeland Security and of Foreign Affairs, is not running again. On July 12, 2026 he sat for an exit interview on [Fox News Radio’s From Washington](https://radio.foxnews.com/2026/07/12/from-washington-rep-michael-mccaul-on-two-decades-of-public-service-and-the-changing-face-of-congress/). He named internecine warfare. He named a House that had stopped looking like a job. He was describing what the chamber had become, not handing out an assignment. The New York Times Magazine later printed the sentences in full, September 16, 2026: “Internecine warfare is what has become vogue.” Then: “You’re elected not to get along with the other side and get good things done for the country. You’re elected to fight and kill the other side.” [Those lines are here.](https://www.nytimes.com/2026/09/16/magazine/congress-trump-midterms.html) He also said that when he arrived, voting against the rule was punished, and that the discipline is gone. That sentence is McCaul’s, not Hakeem Jeffries’s. This journal will not move it onto the other man’s tape. It will not pretend McCaul was recruiting a riot. He was a Member walking out the door, naming the job as a kill. That is still not Article I. That is still not the oath. That is why this essay exists.",
+				text: "Representative Michael McCaul, leaving after twenty-two years as chairman of Homeland Security and of Foreign Affairs, said it on the way out. On July 12, 2026 he sat for [Fox News Radio’s From Washington](https://radio.foxnews.com/2026/07/12/from-washington-rep-michael-mccaul-on-two-decades-of-public-service-and-the-changing-face-of-congress/). The New York Times Magazine printed the sentences on September 16, 2026: “Internecine warfare is what has become vogue.” Then: “You’re elected not to get along with the other side and get good things done for the country. You’re elected to fight and kill the other side.” [The printed lines](https://www.nytimes.com/2026/09/16/magazine/congress-trump-midterms.html). That sentence is McCaul’s. It is not Article I. It is not the oath.",
 			},
 			{
 				type: "p",
@@ -443,15 +451,11 @@ export const posts: Post[] = [
 			},
 			{
 				type: "p",
-				text: "On May 19, 2026, Jeffries sat for a [C-SPAN recording of the Center for American Progress IDEAS conference](https://www.c-span.org/program/public-affairs-event/house-minority-leader-jeffries-on-democracy/679567). In that room he said the goal was to “break them,” then: beat them electorally, “and then we have to break their spirit.” That is a second tape, a second room, not a caption. Watch it uncut.",
+				text: "On May 19, 2026, Jeffries sat for a [C-SPAN recording of the Center for American Progress IDEAS conference](https://www.c-span.org/program/public-affairs-event/house-minority-leader-jeffries-on-democracy/679567). In that room he said the goal was to “break them,” then: beat them electorally, “and then we have to break their spirit.” That is a second tape, a second room.",
 			},
 			{
 				type: "p",
 				text: "On March 4, 2020, Senate Minority Leader Chuck Schumer stood on the steps of the Supreme Court and said, of Justices Gorsuch and Kavanaugh, “you have released the whirlwind and you will pay the price” and “you won’t know what hit you.” [C-SPAN preserved the clip](https://www.c-span.org/clip/us-senate/user-clip-youve-released-the-whirlwind-and-you-will-pay-the-price--sen-chuck-schumer/4944670). Chief Justice Roberts issued a statement the same day.",
-			},
-			{
-				type: "p",
-				text: "The next essay is the method: words cut just short of a crime, a crowd that takes the hint, a bill the taxpayer pays, and a Member who still has clean hands. Watch the tape. If the words were not meant, the same cameras are still there.",
 			},
 		],
 	},
