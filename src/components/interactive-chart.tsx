@@ -144,7 +144,7 @@ export function InteractiveChart({
                       href={r.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-4 inline-block text-[13px] font-semibold text-blue-800 no-underline hover:underline"
+                      className="mt-4 inline-block text-[13px] font-semibold text-blue-800 underline decoration-blue-300 underline-offset-2"
                     >
                       {r.proof ?? "The record"}
                     </a>
