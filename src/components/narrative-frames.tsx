@@ -285,6 +285,17 @@ const METHOD: Record<string, string> = {
   "Liz Cheney": "He said it",
   "Find 11,780": "He said it",
   "Soldiers of Christ": "He said it",
+  "The border is secure": "A fact the file does not show",
+  Antifa: "A fact the file does not show",
+  "You will not get it": "A fact the file does not show",
+  Garbage: "One word",
+  "Jim Crow": "One word",
+  "Proven stolen": "A fact the file does not show",
+  "2,000 Mules": "A fact the file does not show",
+  "A tour": "One word",
+  "No one was armed": "A fact the file does not show",
+  "Antifa did it": "A fact the file does not show",
+  "The weapons": "A fact the file does not show",
 };
 
 const METHODS = ["All", "One word", "Clipped the tape", "Cut the fact out", "A fact the file does not show", "He said it", "Not sorted yet"];
