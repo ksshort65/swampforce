@@ -123,7 +123,7 @@ function Split({
                 href={d.href}
                 target="_blank"
                 rel="noreferrer"
-                className="font-display text-[11px] font-semibold tracking-[0.14em] text-blue-200 uppercase no-underline hover:text-white"
+                className="font-display text-[11px] font-semibold tracking-[0.14em] text-blue-200 uppercase underline decoration-blue-200/70 underline-offset-2 hover:text-white"
               >
                 {d.label} →
               </a>
