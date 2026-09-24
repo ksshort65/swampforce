@@ -396,7 +396,7 @@ const gopFrames: Post["frames"] = [
 export const LEDGER_POSTS: Post[] = [
   {
     slug: "understanding-mechanics",
-    title: "Understanding Mechanics of Fake News",
+    title: "Understanding the Mechanics of Fake News",
     dek: "One inflammatory word, repeated on every network, then read back by politicians, until the country treats the caption as the absolute truth.",
     date: "2026-09-23",
     category: "Dispatch",
@@ -427,14 +427,14 @@ export const LEDGER_POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "This is my opinion, based on the evidence I have located. Does the [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) cover an abandoned [oath](https://www.law.cornell.edu/uscode/text/5/3331) and a coordinated attack on this nation for absolute power? Twelve years of the same script is not a coincidence. Why has no one stopped it? The aim is a record long enough to show a conspiracy, not speech the First Amendment covers.",
+        text: "This is my opinion, based on the evidence I have located. Does the [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) cover abandoning the [oath of office](https://www.law.cornell.edu/uscode/text/5/3331) and a coordinated attack on this nation for absolute power? Twelve years of the same script is not a coincidence. Why has no one stopped it? The aim is a record long enough to show a conspiracy, not speech the First Amendment covers.",
       },
     ],
   },
   {
     slug: "the-media-ledger",
     title: "The American Betrayal",
-    dek: "Fake news and the politicians who read it back. The country was the thing they spent.",
+    dek: "Fake news, and the politicians who read it back. The country was the price.",
     date: "2026-09-22",
     category: "Dispatch",
     readMinutes: 4,

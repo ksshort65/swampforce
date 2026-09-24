@@ -65,14 +65,6 @@ function EssayPage() {
         />
         <div className="absolute inset-0 bg-linear-to-t from-bg via-bg/60 to-bg/20" />
         <div className="relative mx-auto flex min-h-[52vh] max-w-3xl flex-col justify-end px-4 pb-10 sm:px-6">
-          {(FAKE_NEWS_SLUGS as readonly string[]).includes(post.slug) &&
-          post.slug !== "understanding-mechanics" &&
-          post.slug !== "the-media-ledger" &&
-          post.slug !== "january-6" ? (
-            <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
-              Under construction
-            </p>
-          ) : null}
           <p className="mt-2 font-display text-xs font-semibold tracking-[0.16em] text-fg/80 uppercase">
             {post.slug === "the-media-ledger" ? "Fake News. Politicians." : post.series || post.category}
           </p>
@@ -91,7 +83,7 @@ function EssayPage() {
                 The American Betrayal
               </h1>
               <p className="mt-3 max-w-2xl font-serif text-xl leading-snug text-fg/90">
-                Donald Trump stood in the gap for every American. He did not have to. He is rich, and past the age when a man takes a job that keeps his life in danger. He took that danger anyway. It is time we stood in that gap for him, and for every American. The way through is the truth.
+                Donald Trump stood in the gap for every American. He did not have to. He is rich, and he is past the age when a man takes a job that keeps his life in danger. He took that danger anyway. It is time we stood in that gap for him, and for every American. The way through is the truth.
               </p>
             </>
           ) : (
@@ -201,16 +193,16 @@ function EssayPage() {
           <div className="mt-2 max-w-2xl space-y-8">
             <div className="space-y-6 font-serif text-lg leading-8 text-fg/85">
               <p>
-                A caption does not become the truth because it is loud. It becomes the truth by a method. The buttons sort this file by which method was used.
+                A caption does not become the truth because it is loud. It becomes the truth by a method. The buttons sort this file by the method that was used.
               </p>
               <p>
-                One word is the framing effect. The facts stay. The word changes. The choice reverses.{" "}
+                “One word” is the framing effect. The facts stay. The word changes. The choice reverses.{" "}
                 <a className="text-blue-800" href="https://gwern.net/doc/psychology/1981-tversky.pdf" target="_blank" rel="noreferrer">Tversky and Kahneman, 1981</a>.
-                {" "}Clipped the tape is the sentence with the minutes removed. Cut the fact out is the half they kept. A fact the file does not show is a claim with no document behind it. He said it is the line that is actually on the recording. That one stays. A correction that only runs one way is the same trick.
+                {" "}“Clipped the tape” is the sentence with the minutes removed. “Cut the fact out” is the half of the file they kept, and the half they dropped. “A fact the file does not show” is a claim with no document behind it. “He said it” is the line that is actually on the recording. That one stays. A correction that only runs one way is the same trick.
               </p>
               <p>
-                The reason any of it held is that the line was said again. Hear a statement twice and people rate it as more true. A review of 182 studies is the{" "}
-                <a className="text-blue-800" href="https://www.nature.com/articles/s41467-026-70041-x" target="_blank" rel="noreferrer">illusory truth effect</a>.
+                The reason any of it held is that the line was said again. When people hear a statement twice, they rate it as more true. A 2026 review of 182 studies measured that effect.{" "}
+                <a className="text-blue-800" href="https://www.nature.com/articles/s41467-026-70041-x" target="_blank" rel="noreferrer">The illusory truth effect</a>.
                 {" "}Twelve years of one script is not an accident. We are at war in the United States. Who are we at war with? We cannot fight an invisible coward.
               </p>
             </div>
@@ -224,7 +216,7 @@ function EssayPage() {
                   allowFullScreen
                 />
                 <figcaption className="mt-1 font-serif text-xs leading-5 text-fg/60">
-                  April 2018. Anchors. One script.
+                  March 2018. Anchors. One script.
                 </figcaption>
               </figure>
               <figure>
@@ -236,7 +228,7 @@ function EssayPage() {
                   allowFullScreen
                 />
                 <figcaption className="mt-1 font-serif text-xs leading-5 text-fg/60">
-                  March 2025. Twenty-two senators. One script.
+                  March 4, 2025. Senators. One script.
                 </figcaption>
               </figure>
             </div>
