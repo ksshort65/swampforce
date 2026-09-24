@@ -72,6 +72,9 @@ const POLITICIANS = new Set([
   "Clear and present danger",
   "Domestic terrorists",
   "Lynching",
+  "They should not let up",
+  "Soldiers of Christ",
+  "Most secure election",
 ]);
 
 const JOURNALISTS = new Set([
