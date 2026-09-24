@@ -360,13 +360,29 @@ export const LEDGER_POSTS: Post[] = [
     body: [
       {
         type: "p",
-        text: "Psychological warfare, on a screen, is not a secret army. It is a habit. Gaslighting is the moment you are shown a sentence and told you heard a different one. The weapon is often one inflammatory word left standing after the rest of the sentence is cut. That word is then said on every network, in the same hour, and politicians read it back as if they had thought of it. A short false sentence is easier to keep than a transcript. After enough days of the same word, a country will argue for a fact it never checked, and it will sort a neighbor into an enemy. They do it because a public trained on the wrong fact will vote, give money, and hate without anyone having to pass a law. The person who sold the word stays clean. The country is left holding the lie. The laboratory name for the repetition is the illusory truth effect. A 2026 review of 182 studies, published in Nature Communications, found that hearing a statement again makes people rate it as more true, including statements they already had reason to doubt. [The review is here](https://www.nature.com/articles/s41467-026-70041-x).",
+        text: "This is not your failure. The truth was not on the screen. It was kept from you. What ran was a coordinated attack on the country. The videos below are the proof. The studies are the method.",
+      },
+      {
+        type: "p",
+        text: "Psychological warfare, on a screen, is not a secret army. It is a habit. Gaslighting is being told the recording you watched did not say what it said. The cut is a different move. One inflammatory word is left standing after the rest of the sentence is removed.",
+      },
+      {
+        type: "p",
+        text: "Researchers call that wording change the [framing effect](https://gwern.net/doc/psychology/1981-tversky.pdf). Amos Tversky and Daniel Kahneman showed it in Science in 1981. The same facts, described with a different word, reversed what people chose.",
+      },
+      {
+        type: "p",
+        text: "That word is then said on every network, in the same hour, and politicians read it back as if they had thought of it. Researchers call the repetition the [illusory truth effect](https://www.nature.com/articles/s41467-026-70041-x). A 2026 review of 182 studies, in Nature Communications, found that hearing a statement again makes people rate it as more true, including statements they already had reason to doubt.",
+      },
+      {
+        type: "p",
+        text: "A short false sentence is easier to keep than a transcript. After enough days of the same word, a country will argue for a fact it never checked, and it will sort a neighbor into an enemy. They do it because a public trained on the wrong fact will vote, give money, and hate without anyone having to pass a law. The person who sold the word stays clean. The country is left holding the lie.",
       },
       {
         type: "ul",
         items: [
-          "The networks, the same word. On March 16, 2024, he said “bloodbath” about Chinese car plants in Mexico and a 100 percent tariff. By the next morning the plants were gone and the word was the story. Politico, NBC, and CBS ran that headline. MSNBC and ABC defended it. The supercut of them saying it is [here](https://www.foxnews.com/media/msnbc-abc-vigorously-defend-trump-bloodbath-coverage-did-not-miss-full-context). CNN’s own story, the same night, is [here](https://www.cnn.com/2024/03/16/politics/trump-bloodbath-auto-industry-election).",
-          "The politicians, the same script. On March 4, 2025, about twenty-two Democratic senators posted one speech, word for word, including Chuck Schumer, Elizabeth Warren, and Cory Booker. The tape of them reading it is [here](https://www.youtube.com/watch?v=EsjwtaIocUw).",
+          "The networks, the same word. On March 16, 2024, Donald Trump said “bloodbath” about Chinese car plants in Mexico and a 100 percent tariff. By the next morning the plants were gone and the word was the story. [CNN’s own story that night](https://www.cnn.com/2024/03/16/politics/trump-bloodbath-auto-industry-election). Politico, NBC, and CBS ran the same kind of headline. [MSNBC and ABC defending the word](https://www.foxnews.com/media/msnbc-abc-vigorously-defend-trump-bloodbath-coverage-did-not-miss-full-context) is a compilation of them saying it.",
+          "The politicians, the same script. On March 4, 2025, about twenty-two Democratic senators, including Chuck Schumer, Elizabeth Warren, and Cory Booker, posted one speech, word for word. [The tape of them reading it](https://www.youtube.com/watch?v=EsjwtaIocUw).",
         ],
       },
     ],
