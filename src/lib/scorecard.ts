@@ -651,7 +651,7 @@ export const OVAL_RECORD: {
   },
   {
     k: "A war was waged on Americans",
-    v: "The people own this country. Lawfare is not a debate. Paid Steele into a FISA. Fifty-one names on a laptop letter. Four dockets in an election year. Fifth Amendment due process is a fair machine, not a campaign. 18 U.S.C. § 2383 was not charged. CPI-U +21.4 percent. That effort was to undermine how Americans think.",
+    v: "The people own this country. Lawfare is not a debate. Paid Steele into a FISA. Fifty-one names on a laptop letter. Four dockets in an election year. Fifth Amendment due process is a fair machine, not a campaign. 18 U.S.C. § 2383 was not charged. CPI-U +21.4 percent. That effort was to undermine how Americans think. The money was in the pipe. Congress voted the grants. A nonprofit cashed them. 26 U.S.C. § 6104 keeps most donor names off the public form. The Federal Election Commission prints the names the law requires, including George Soros on prosecutor-race filings. The 501(c)(4) feeder does not. No charging document says a named donor paid a person to set a fire. Americans still paid into a pipe they cannot see.",
     href: "/dispatch/a-war-on-americans",
     desks: ["four", "trump1", "trump2"],
   },

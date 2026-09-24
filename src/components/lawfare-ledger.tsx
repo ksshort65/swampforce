@@ -69,6 +69,8 @@ const COVER: Record<string, string> = {
     "Issue: one prosecutor, both federal cases, appointed because both men were running.",
   "The family subpoenas":
     "Issue: the family was said to be under constant subpoena. The paper has four testimony orders in one case, plus subpoenas to the banks and the accountant.",
+  "The dark money":
+    "Issue: the fight was sold as spontaneous, or as one man buying the country. The grants are public. Most donor names are not.",
   "Russia collusion — Crossfire Hurricane":
     "Issue: it was sold as a finding. Durham: no actual evidence of collusion when it opened.",
   "First impeachment — abuse of power":
