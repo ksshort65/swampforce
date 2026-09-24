@@ -350,7 +350,7 @@ export const LEDGER_POSTS: Post[] = [
   {
     slug: "understanding-mechanics",
     title: "Understanding Mechanics of Fake News",
-    dek: "One inflammatory word, repeated on every network, then read back by politicians, until the country treats the caption as the tape.",
+    dek: "One inflammatory word, repeated on every network, then read back by politicians, until the country treats the caption as the absolute truth.",
     date: "2026-09-23",
     category: "Dispatch",
     readMinutes: 2,
