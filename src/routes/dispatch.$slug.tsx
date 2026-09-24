@@ -162,7 +162,9 @@ function EssayPage() {
             <EraCompare topics={post.eras} />
           </div>
         ) : null}
-        {post.frames?.length ? <NarrativeFrames frames={post.frames} /> : null}
+        {post.frames?.length ? (
+          <NarrativeFrames frames={post.frames} tapeTable={post.slug === "the-media-ledger"} />
+        ) : null}
         {post.video ? (
           <video
             className="mt-8 w-full rounded-lg bg-black"
