@@ -15,7 +15,7 @@ export function DispatchIndex() {
           <img
             src="/images/hero-capitol.jpg"
             alt="Eagle on the Capitol in the swamp"
-            className="absolute inset-0 h-full w-full max-w-none object-cover object-center"
+            className="absolute inset-0 h-full w-full max-w-none object-cover object-[center_12%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
         </div>
