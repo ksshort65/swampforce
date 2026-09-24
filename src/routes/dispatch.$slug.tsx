@@ -73,7 +73,7 @@ function EssayPage() {
             </p>
           ) : null}
           <p className="mt-2 font-display text-xs font-semibold tracking-[0.16em] text-fg/80 uppercase">
-            {post.series || post.category}
+            {post.slug === "the-media-ledger" ? "Fake News. Politicians." : post.series || post.category}
           </p>
           {post.slug === "the-media-ledger" ? (
             <>
@@ -87,7 +87,7 @@ function EssayPage() {
                 A caption to check, or a caption to add to the table.
               </p>
               <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[0.95] font-bold tracking-wide uppercase sm:text-6xl">
-                Fake News
+                The American Betrayal
               </h1>
               <p className="mt-3 max-w-2xl font-serif text-xl leading-snug text-fg/90">
                 Donald Trump stood in the gap for every American. He did not have to. He is rich, and past the age when a man takes a job that keeps his life in danger. He took that danger anyway. It is time we stood in that gap for him, and for every American. The way through is the truth.
