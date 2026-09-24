@@ -90,7 +90,7 @@ function EssayPage() {
                 Fake News
               </h1>
               <p className="mt-3 max-w-2xl font-serif text-xl leading-snug text-fg/90">
-                Twelve years ago a decision was made to split this country. The first target was a businessman, and a former donor. Then it was every citizen who would not repeat the line. The tools were a lie, then hate, then violence. Who made that decision? And who is this afraid of the file?
+                Donald Trump stood in the gap for every American. He did not have to. He is rich, and past the age when a man takes a job that keeps his life in danger. He took that danger anyway. It is time we stood in that gap for him, and for every American. The way through is the truth.
               </p>
             </>
           ) : (
@@ -210,7 +210,7 @@ function EssayPage() {
               <p>
                 The reason any of it held is that the line was said again. Hear a statement twice and people rate it as more true. A review of 182 studies is the{" "}
                 <a className="text-blue-800" href="https://www.nature.com/articles/s41467-026-70041-x" target="_blank" rel="noreferrer">illusory truth effect</a>.
-                {" "}Twelve years of one script is not an accident. It is what gets run when the exposure would end the people who ordered it.
+                {" "}Twelve years of one script is not an accident. We are at war in the United States. Who are we at war with? We cannot fight an invisible coward.
               </p>
             </div>
             <div className="grid max-w-md grid-cols-2 gap-3">
