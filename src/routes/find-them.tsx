@@ -21,7 +21,7 @@ function LinkedText({ text }: { text: string }) {
           <a
             key={i}
             href={part}
-            className="break-all text-sage"
+            className="break-all text-sage underline decoration-sage underline-offset-2"
             target="_blank"
             rel="noreferrer"
           >
@@ -72,7 +72,7 @@ function FindThem() {
                     href={r.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm text-sage underline-offset-2 hover:underline"
+                    className="text-sm text-sage underline decoration-sage underline-offset-2"
                   >
                     {r.label}
                   </a>
