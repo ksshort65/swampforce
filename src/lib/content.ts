@@ -526,6 +526,10 @@ export const posts: Post[] = [
 				text: "The people who said create a crowd, bring the fire, they should not let up, people will do what they do, did not receive an invoice. They kept the chair. Speech or Debate in [Article I, Section 6](https://constitution.congress.gov/constitution/article-1/) covers words on the floor. The incitement test covers the rally and the talk show if no prosecutor can prove imminence. The arsonist, if caught, is a local case. The Member is a national brand. That is the split: rage is delegated. Liability is not.",
 			},
 			{
+				type: "p",
+				text: "The sentence is built to stop one word short of that test, so the member is not charged, while the arson and the assault remain crimes that prosecutors left unfiled. That decision did not create a right.",
+			},
+			{
 				type: "h",
 				text: "The cover",
 			},
