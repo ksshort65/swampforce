@@ -376,7 +376,7 @@ export const LEDGER_POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "A short false sentence is easier to keep than a transcript. After enough days of the same word, a country will argue for a fact it never checked, and it will sort a neighbor into an enemy. They do it because a public trained on the wrong fact will vote, give money, and hate without anyone having to pass a law. The person who sold the word stays clean. The country is left holding the lie.",
+        text: "A short false sentence is easier to keep than a transcript. After enough days of the same word, a country will argue for a fact it never checked, and it will sort a neighbor into an enemy. The word did not die that week. Joe Biden and Kamala Harris brought the same lie back and repeated it through election day. Harris said it again at the debate on September 10, 2024. [That repetition is on the record](https://link.springer.com/chapter/10.1007/978-3-031-95345-3_5). That is not an accident. It is a coordinated attack on the nation. They do it because a public trained on the wrong fact will vote, give money, and hate without anyone having to pass a law. The person who sold the word stays clean. The country is left holding the lie.",
       },
       {
         type: "ul",
