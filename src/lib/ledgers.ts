@@ -392,7 +392,7 @@ export const LEDGER_POSTS: Post[] = [
   {
     slug: "the-media-ledger",
     title: "Fake News",
-    dek: "One chart. Who said it, the claim, and the file. Open a row for the official record.",
+    dek: "Why has a nation been turned upside down by networks and politicians to obstruct one man, at all costs, from improving the lives of Americans and the stability of the nation? That is what has to be uncovered and stopped. We are at war with something that does not want to be exposed. What is it?",
     date: "2026-09-22",
     category: "Dispatch",
     readMinutes: 22,

@@ -128,7 +128,13 @@ const BALLROOM: Record<Cell, { head: string; items: Bullet[] }> = {
       { text: "May 16, 2026 — Chuck Schumer.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-and-senate-democrats-blow-up-gops-first-attempt-to-make-taxpayers-fund-trumps-billion-dollar-ballroom" },
       { text: "June 23, 2026 — Patty Murray and Chris Murphy.", href: "https://www.murray.senate.gov/murray-murphy-urge-watchdog-to-investigate-trump-admins-use-of-taxpayer-dollars-for-trumps-ballroom/" },
       { text: "August 13, 2026 — Schumer, Merkley, Durbin, Whitehouse, Heinrich, Murray, Reed, and Peters.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-senator-jeff-merkley-and-top-senate-democrats-with-jurisdiction-over-trumps-gilded-ballroom-boondoggle-call-on-watchdog-to-conduct-a-full-audit-of-the-project" },
-      { text: "September 23, 2026 — the design-is-the-threat caption.", href: "https://nymag.com/intelligencer/article/trump-shoddy-ballroom-design-building-codes-safety-threat.html" },
+      { text: "September 23, 2026 — the design-is-the-threat caption. New York Magazine.", href: "https://nymag.com/intelligencer/article/trump-shoddy-ballroom-design-building-codes-safety-threat.html" },
+      { text: "The networks. No office has published a count of every one. The negative coverage that can be opened has run from the July 31, 2025 announcement through September 23, 2026. Fourteen months. It has not stopped.", href: "https://www.whitehouse.gov/briefings-statements/2025/07/the-white-house-announces-white-house-ballroom-construction-to-begin/" },
+      { text: "March 29, 2026 — New York Times.", href: "https://www.nytimes.com/interactive/2026/03/29/upshot/white-house-ballroom.html" },
+      { text: "August 18, 2026 — New York Times.", href: "https://www.nytimes.com/2026/08/18/us/politics/trump-ballroom-construction.html" },
+      { text: "August 31, 2026 — New York Times.", href: "https://www.nytimes.com/2026/08/31/us/politics/supreme-court-trump-ballroom.html" },
+      { text: "January 1, 2026 — Washington Post.", href: "https://www.washingtonpost.com/politics/2025/12/31/trump-ballroom-timeline-reviews/" },
+      { text: "September 5, 2026 — The Atlantic.", href: "https://www.theatlantic.com/culture/2026/09/trump-ballroom-arch-rush/688523/" },
     ],
   },
   claim: {
@@ -140,11 +146,12 @@ const BALLROOM: Record<Cell, { head: string; items: Bullet[] }> = {
       { text: "Taxpayer money was diverted to build it. — Murray and Murphy to the GAO, June 23, 2026.", href: "https://www.murray.senate.gov/murray-murphy-urge-watchdog-to-investigate-trump-admins-use-of-taxpayer-dollars-for-trumps-ballroom/" },
       { text: "It is a gilded ballroom boondoggle. The private-funding claim is a lie, and taxpayers will bear the cost. — Schumer, Merkley, and six other senators, August 13, 2026.", href: "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-senator-jeff-merkley-and-top-senate-democrats-with-jurisdiction-over-trumps-gilded-ballroom-boondoggle-call-on-watchdog-to-conduct-a-full-audit-of-the-project" },
       { text: "The design itself is the national security threat. — the caption, September 23, 2026.", href: "https://nymag.com/intelligencer/article/trump-shoddy-ballroom-design-building-codes-safety-threat.html" },
+      { text: "The negative coverage has run fourteen months, from the July 31, 2025 announcement through September 23, 2026, and it is still running. No official page counts every network. These are the ones that can be opened.", href: "https://www.nytimes.com/2026/08/31/us/politics/supreme-court-trump-ballroom.html" },
       { text: "The construction is unlawful and should be stopped. — National Trust for Historic Preservation, December 12, 2025.", href: "https://storage.courtlistener.com/recap/gov.uscourts.dcd.287645/gov.uscourts.dcd.287645.1.0_4.pdf" },
     ],
   },
   truth: {
-    head: "This is the first time a president has been treated this way. For twelve years the country has been kept in chaos, until the chaos feels normal. A crooked tie is enough for a fight. The question is why.",
+    head: "",
     items: [
       { text: "The ballroom is paid for by the president and private donors. The White House said so when construction was announced.", href: "https://www.whitehouse.gov/briefings-statements/2025/07/the-white-house-announces-white-house-ballroom-construction-to-begin/" },
       { text: "It is a security build. Two attempts to kill him are why a tent is not a plan. The layout is not for a caption. Publishing the layout is the breach.", href: "https://www.whitehouse.gov/about/" },
@@ -152,6 +159,7 @@ const BALLROOM: Record<Cell, { head: string; items: Bullet[] }> = {
       { text: "September 15, 2024, West Palm Beach. Ryan Wesley Routh waited with a rifle. A jury convicted him. On February 4, 2026, he was sentenced to life.", href: "https://www.justice.gov/opa/pr/ryan-wesley-routh-sentenced-life-prison-attempted-assassination-president-donald-j-trump-and" },
       { text: "The court allowed the work that is strictly necessary for the safety of the White House and the president. That order is Document 61.", href: "https://storage.courtlistener.com/recap/gov.uscourts.dcd.287645/gov.uscourts.dcd.287645.61.0.pdf" },
       { text: "The lawsuit to stop that work is the obstruction. Same method, twelve years running: a case, a caption, then the country is told the caption is the fact.", href: "https://www.courtlistener.com/docket/72028010/national-trust-for-historic-preservation-in-the-united-states-v-national/" },
+      { text: "The building is still going up. On August 31, 2026, the Supreme Court allowed construction to continue, 5–4. It did not rule the project illegal. The administration told the Court the project was 65 percent complete on August 13. What Congress has left is the fight: the lawsuit, the audit demand, and the caption. That is the control.", href: "https://www.scotusblog.com/2026/08/supreme-court-allows-construction-on-white-house-ballroom-to-continue/" },
     ],
   },
 };
@@ -218,8 +226,8 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                   {any && pick ? (
                     <tr className="border-t border-white/10">
                       <td colSpan={3} className="bg-white px-4 py-4 text-neutral-900">
-                        <p className="text-base font-semibold leading-relaxed">{pick.head}</p>
-                        <ul className="mt-3 list-disc space-y-2 pl-5">
+                        {pick.head ? <p className="text-base font-semibold leading-relaxed">{pick.head}</p> : null}
+                        <ul className={pick.head ? "mt-3 list-disc space-y-2 pl-5" : "list-disc space-y-2 pl-5"}>
                           {pick.items.map((item) => (
                             <li key={item.href + item.text} className="text-base leading-relaxed">
                               <a href={item.href} target="_blank" rel="noreferrer" className="text-blue-800 underline">

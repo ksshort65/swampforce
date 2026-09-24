@@ -74,8 +74,10 @@ function EssayPage() {
           <p className="mt-2 font-display text-xs font-semibold tracking-[0.16em] text-fg/80 uppercase">
             {post.series || post.category}
           </p>
-          <h1 className="mt-3 font-display leading-[0.92] font-bold tracking-wide uppercase text-[clamp(2rem,8vw,4.5rem)]">
-            {post.title}
+          <h1 className={post.slug === "the-media-ledger"
+            ? "mt-3 max-w-3xl font-serif text-2xl leading-snug font-semibold tracking-normal normal-case sm:text-3xl"
+            : "mt-3 font-display leading-[0.92] font-bold tracking-wide uppercase text-[clamp(2rem,8vw,4.5rem)]"}>
+            {post.slug === "the-media-ledger" ? post.dek : post.title}
           </h1>
         </div>
       </div>
@@ -87,7 +89,9 @@ function EssayPage() {
             : "mx-auto max-w-2xl px-4 py-12 sm:px-6"
         }
       >
-        <p className="font-serif text-2xl leading-snug text-fg/90">{post.dek}</p>
+        {post.slug === "the-media-ledger" ? null : (
+          <p className="font-serif text-2xl leading-snug text-fg/90">{post.dek}</p>
+        )}
         <p className="mt-3 font-display text-xs tracking-[0.16em] text-muted uppercase">
           {SITE.copyright}
         </p>
