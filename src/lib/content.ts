@@ -1525,62 +1525,18 @@ export const posts: Post[] = [
 		imageAlt: "The House — where the record is supposed to live",
 		series: "The Tape",
 		part: 1,
-		frames: [
-			{
-				tag: "Bloodbath",
-				they: "First incorrect report: CNN, March 16, 2024, 6:52 p.m. Eastern. Kit Maher and Alayna Treene wrote that it would be a bloodbath if he loses the election. The cars were left out.",
-				tape: "He said the word twice, in one stretch, starting at 29:45. Chinese car plants in Mexico and a 100 percent tariff.",
-				href: "https://www.youtube.com/watch?v=f57dRZMS0PQ&t=1785s",
-			},
-			{
-				tag: "Dictator",
-				they: "He said he will be a dictator on day one.",
-				tape: "Close the border. Drill, drill, drill. “After that, I’m not a dictator.”",
-				href: "https://www.youtube.com/watch?v=7lB3bfVg8Z8",
-			},
-			{
-				tag: "Fine people",
-				they: "He called neo-Nazis very fine people.",
-				tape: "Same remarks: neo-Nazis and white nationalists “should be condemned totally.”",
-				href: "https://www.politico.com/story/2017/08/15/full-text-trump-comments-white-supremacists-alt-left-transcript-241662",
-			},
-			{
-				tag: "Ukraine call",
-				they: "Schiff read the shakedown: “make up dirt on my political opponent.”",
-				tape: "Those lines are not in the call memo. He later called it “part in parody.”",
-				href: "https://www.c-span.org/video/?c4820134/schiffs-parody",
-			},
-			{
-				tag: "Jan 6 speech",
-				they: "Walk to the Capitol + fight like hell, as one order.",
-				tape: "“Peacefully and patriotically.” BBC stuck two lines 54 minutes apart.",
-				href: "https://www.npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial",
-			},
-			{
-				tag: "Bleach",
-				they: "He told Americans to inject bleach / drink disinfectant.",
-				tape: "Asked doctors if UV/disinfectant research was “interesting to check.”",
-				href: "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-31/",
-			},
-			{
-				tag: "Animals",
-				they: "He called immigrants animals.",
-				tape: "The roundtable was MS-13. Outlets that widened it had to walk it back."
-			},
-			{
-				tag: "Suckers / losers",
-				they: "Biden: he called veterans suckers and losers.",
-				tape: "No recording. Atlantic anonymous. We do not invent audio."
-			}
-		],
 	body: [
+			{
+				type: "p",
+				text: "The chart is in one place, so it is not printed twice. [Manufactured outrage](/dispatch/the-media-ledger) holds the captions in three parts: a tape clipped short, his words changed, and an outright lie."
+			},
 			{
 				type: "p",
 				text: "A political argument in this country is now usually a fight about a sentence that has been removed from the paragraph it lived in. The method is stable enough to teach. A phrase is cut. A caption is written as if the phrase were the whole. The caption is repeated until it is the memory. Anyone who plays the rest of the recording is treated as a partisan, or worse. Liking Donald Trump is not required to see the pattern. Sitting still for the next sentence is."
 			},
 			{
 				type: "p",
-				text: "The left column is what ran. The right column is what the recording still contains. The last rows are the lines that stay, because a correction that runs in only one direction is not a correction.",
+				text: "The one file is what ran, set next to what the recording still contains. The last lines stay, because a correction that runs in only one direction is not a correction.",
 			},
 			{
 				type: "h",

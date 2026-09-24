@@ -88,68 +88,149 @@ function fileLine(text: string) {
   return two.length > 320 ? `${two.slice(0, 317)}…` : two;
 }
 
-function TapeTable({ frames }: { frames: Frame[] }) {
+const CLIPPED = new Set([
+  "Bloodbath",
+  "Dictator",
+  "Fine people",
+  "The virus is a hoax",
+  "All Mexicans are rapists",
+  "Animals",
+  "He never said peacefully",
+  "Many sides",
+  "No condemnation",
+  "We love you",
+  "187 minutes",
+  "David Duke",
+  "Another chance",
+  "Just a ballroom",
+  "They made it necessary",
+  "Covington",
+  "The escort clip",
+]);
+
+const CHANGED = new Set([
+  "Bleach",
+  "Inject light",
+  "Slow the testing",
+  "Muslim ban",
+  "Schiff's transcript",
+  "Hang Mike Pence",
+  "Stand by",
+  "Let them die",
+  "He quoted Hitler",
+  "National abortion ban",
+  "Ban the pill",
+  "Insurrection",
+  "Impeached for treason",
+  "Seventeen agencies",
+  "Liable for rape",
+  "Convicted of all of it",
+  "No exoneration",
+  "Ten crimes",
+  "He confessed",
+  "Flynn the agent",
+  "Manafort colluded",
+  "Stone and WikiLeaks",
+  "Concentration camps",
+  "Don't say gay",
+  "Horse paste",
+  "Zero inflation",
+  "He fired the pandemic team",
+  "Lost children",
+  "ICE is terror",
+  "Enemy within",
+  "Liz Cheney",
+]);
+
+function bucket(tag: string) {
+  if (CLIPPED.has(tag)) return "clip";
+  if (CHANGED.has(tag)) return "changed";
+  return "lie";
+}
+
+function FrameRows({ frames }: { frames: Frame[] }) {
   return (
-    <section className="mt-8">
-      <p className="mb-3 text-base leading-relaxed text-fg">
-        This table is interactive. Choose a block and it opens the proof.
+    <>
+      {frames.map((f) => {
+        if (f.tag === "Bloodbath") return <BloodbathRow key={f.tag} />;
+        const proof = f.href ? (
+          <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            {f.they}
+          </a>
+        ) : (
+          f.they
+        );
+        const tape = f.href ? (
+          <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            {f.tape}
+          </a>
+        ) : (
+          f.tape
+        );
+        return (
+          <tr key={f.tag} className="border-t border-white/10">
+            <td className="border-r border-white/10 bg-[#2a1214] px-4 py-4 align-top text-base font-semibold leading-snug text-red-50">
+              <span className="mb-2 block font-display text-[11px] font-bold tracking-[0.14em] text-red-200 uppercase">{f.tag}</span>
+              {proof}
+            </td>
+            <td className="bg-[#0e1c33] px-4 py-4 align-top text-base leading-relaxed text-blue-50">{tape}</td>
+          </tr>
+        );
+      })}
+    </>
+  );
+}
+
+function TapeTable({ frames }: { frames: Frame[] }) {
+  const groups = [
+    {
+      key: "clip",
+      title: "Clipping a tape short",
+      note: "The recording exists. The rest of the sentence was not played.",
+    },
+    {
+      key: "changed",
+      title: "Changing his words",
+      note: "A word was swapped, or a sentence was put in his mouth.",
+    },
+    {
+      key: "lie",
+      title: "Outright lies",
+      note: "There is no recording of it, or the event did not happen.",
+    },
+  ] as const;
+  return (
+    <section className="mt-8 space-y-10">
+      <p className="text-base leading-relaxed text-fg">
+        One file. Three parts. This table is interactive. Choose a block and it opens the proof.
       </p>
-      <div className="overflow-x-auto rounded-md border border-neutral-800">
-        <table className="w-full min-w-[48rem] border-collapse text-left">
-          <thead>
-            <tr>
-              <th className="w-[34%] border-r border-white/10 bg-[#3a1214] px-4 py-3 font-display text-sm font-bold tracking-[0.14em] text-red-100 uppercase">
-                What ran
-              </th>
-              <th className="bg-[#10233f] px-4 py-3 font-display text-sm font-bold tracking-[0.14em] text-blue-100 uppercase">
-                The tape
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {frames.map((f) => {
-              if (f.tag === "Bloodbath") return <BloodbathRow key={f.tag} />;
-              const proof = f.href ? (
-                <a
-                  href={f.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline decoration-white/40 underline-offset-2"
-                >
-                  {f.they}
-                </a>
-              ) : (
-                f.they
-              );
-              const tape = f.href ? (
-                <a
-                  href={f.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline decoration-white/40 underline-offset-2"
-                >
-                  {f.tape}
-                </a>
-              ) : (
-                f.tape
-              );
-              return (
-                <tr key={f.tag} className="border-t border-white/10">
-                  <td className="border-r border-white/10 bg-[#2a1214] px-4 py-4 align-top text-base font-semibold leading-snug text-red-50">
-                    <span className="mb-2 block font-display text-[11px] font-bold tracking-[0.14em] text-red-200 uppercase">
-                      {f.tag}
-                    </span>
-                    {proof}
-                  </td>
-                  <td className="bg-[#0e1c33] px-4 py-4 align-top text-base leading-relaxed text-blue-50">
-                    {tape}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+      {groups.map((group) => {
+        const rows = frames.filter((f) => bucket(f.tag) === group.key);
+        if (!rows.length) return null;
+        return (
+          <div key={group.key}>
+            <h2 className="font-display text-2xl font-bold tracking-wide text-fg uppercase">{group.title}</h2>
+            <p className="mt-2 mb-3 text-base leading-relaxed text-fg">{group.note}</p>
+            <div className="overflow-x-auto rounded-md border border-neutral-800">
+              <table className="w-full min-w-[48rem] border-collapse text-left">
+                <thead>
+                  <tr>
+                    <th className="w-[34%] border-r border-white/10 bg-[#3a1214] px-4 py-3 font-display text-sm font-bold tracking-[0.14em] text-red-100 uppercase">
+                      The claim
+                    </th>
+                    <th className="bg-[#10233f] px-4 py-3 font-display text-sm font-bold tracking-[0.14em] text-blue-100 uppercase">
+                      The truth
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <FrameRows frames={rows} />
+                </tbody>
+              </table>
+            </div>
+          </div>
+        );
+      })}
     </section>
   );
 }
