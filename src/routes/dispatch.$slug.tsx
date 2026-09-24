@@ -31,7 +31,7 @@ function LinkedText({ text }: { text: string }) {
       <a
         key={`a${i}`}
         href={href}
-        className="text-sage underline-offset-2 hover:underline"
+        className="text-sage underline decoration-sage underline-offset-2"
         target="_blank"
         rel="noreferrer"
       >
@@ -92,7 +92,7 @@ function EssayPage() {
                     href={r.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm text-sage underline-offset-2 hover:underline"
+                    className="text-sm text-sage underline decoration-sage underline-offset-2"
                   >
                     {r.label}
                   </a>
