@@ -371,7 +371,7 @@ export const LEDGER_POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "The failure is not the viewer's. The truth was withheld. What ran was a coordinated attack. The tapes are the proof. The studies are the method.",
+        text: "The failure is not the viewer's. The truth was withheld. What ran was a coordinated attack. The network archives are the proof, and they cannot be disputed. The studies are the method.",
       },
       {
         type: "p",
@@ -387,7 +387,7 @@ export const LEDGER_POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "A year later, on March 4, 2025, Chuck Schumer, Elizabeth Warren, Cory Booker, and about twenty other Democratic senators posted one speech, word for word, about prices, not the plants. [The tape](https://www.youtube.com/watch?v=EsjwtaIocUw). That is not an accident. It is a coordinated attack on the nation.",
+        text: "A year later, on March 4, 2025, Chuck Schumer, Elizabeth Warren, Cory Booker, and about twenty other Democratic senators posted one speech, word for word, about prices, not the plants. [The network archive](https://www.youtube.com/watch?v=EsjwtaIocUw). That is not an accident. It is a coordinated attack on the nation.",
       },
     ],
   },
