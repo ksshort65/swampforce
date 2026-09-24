@@ -1,4 +1,4 @@
-import { Fragment, useState, type ReactNode } from "react";
+import { Fragment, useEffect, useState, type ReactNode } from "react";
 import { frameId } from "@/lib/ledgers";
 import type { Frame } from "@/lib/content";
 import { InteractiveChart, KeptRead } from "@/components/interactive-chart";
@@ -480,8 +480,8 @@ function youtubeId(href: string) {
   return null;
 }
 
-function speakerNames(f: Frame) {
-  const blob = `${f.ran ?? ""}\n${f.they}\n${(EXTRA[f.tag] ?? []).map((item) => item.label).join("\n")}`;
+function speakerNames(f: Frame, includeTape = false) {
+  const blob = `${f.ran ?? ""}\n${f.they}\n${includeTape ? f.tape : ""}\n${(EXTRA[f.tag] ?? []).map((item) => item.label).join("\n")}`;
   const found = blob.match(/\b(CNN|NBC|MSNBC|MS NOW|ABC|CBS|Fox News|BBC|New York Times|New York Magazine|Washington Post|Politico|The Atlantic|Associated Press|Schumer|Pelosi|Biden|Harris|Jeffries|Merkley|Murray|Murphy|Pressley|Waters|Obama|Schiff|Khanna|Garcia|Raskin|Warren|Booker|Sanders|McGovern|Mullin|Johnson|Bush|Cheney|Yellen|Palin)\b/gi) ?? [];
   const seen = new Set<string>();
   const names: string[] = [];
@@ -523,19 +523,28 @@ function rowLinks(f: Frame) {
   return [...named, ...more];
 }
 
-function TapeTable({ frames }: { frames: Frame[] }) {
+function TapeTable({ frames, filters = true }: { frames: Frame[]; filters?: boolean }) {
   const [open, setOpen] = useState<string | null>(null);
   const [method, setMethod] = useState("All");
   const shown = frames
-    .filter((f) => method === "All" || methodOf(f.tag) === method)
+    .filter((f) => !filters || method === "All" || methodOf(f.tag) === method)
     .map((f, i) => ({ f, i, t: claimTime(f) }))
-    .sort((a, b) => b.t - a.t || a.i - b.i)
+    .sort((a, b) => (filters ? b.t - a.t || a.i - b.i : a.i - b.i))
     .map((row) => row.f);
+  useEffect(() => {
+    const id = window.location.hash.replace("#", "");
+    if (!id) return;
+    const match = frames.find((frame) => frameId(frame.tag) === id);
+    if (!match) return;
+    setOpen(`${match.tag}:claim`);
+    document.getElementById(id)?.scrollIntoView({ block: "start" });
+  }, [frames]);
   return (
     <section className="mt-8">
       <p className="mb-3 text-base leading-relaxed text-fg">
         The left is the claim and the names. Open it for each statement and the link that shows they said it. The right is Documented Evidence of False Claims. Open it for the facts and the named source.
       </p>
+      {filters ? (
       <div className="mb-4 flex flex-wrap gap-2">
         {METHODS.map((name) => (
           <button
@@ -550,6 +559,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
           </button>
         ))}
       </div>
+      ) : null}
       <div className="overflow-x-auto rounded-md border border-neutral-800">
         <table className="w-full table-fixed border-collapse text-left">
           <thead>
@@ -578,12 +588,12 @@ function TapeTable({ frames }: { frames: Frame[] }) {
               const truthItems = ballroom ? BALLROOM.truth.items : null;
               return (
                 <Fragment key={f.tag}>
-                  <tr className="border-t border-white/10">
+                  <tr id={frameId(f.tag)} className="scroll-mt-28 border-t border-white/10">
                     <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm leading-snug text-red-50">
                       <button type="button" onClick={() => setOpen(on("claim") ? null : cell("claim"))} className="text-left">
                         <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-300 uppercase">{f.tag}</span>
                         <span className="mb-1 block font-semibold text-red-50">{claimLine(f)}</span>
-                        <span className="block text-blue-200">{speakerNames(f).join(", ") || "No named speaker is on this row"}</span>
+                        <span className="block text-blue-200">{speakerNames(f, !filters).join(", ") || "No named speaker is on this row"}</span>
                       </button>
                     </td>
                     <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug">
@@ -687,6 +697,7 @@ export function NarrativeFrames({
   dek = "The claim is the row. The short version is a few lines. The record opens the document.",
   heading = "The caption · the file",
   tapeTable = false,
+  filters = true,
   showClaim = false,
 }: {
   frames: Frame[];
@@ -695,6 +706,7 @@ export function NarrativeFrames({
   right?: string;
   heading?: string;
   tapeTable?: boolean;
+  filters?: boolean;
   showClaim?: boolean;
 }) {
   const first = ["The ballroom", "The press pass", "The Iran war"];
@@ -705,7 +717,7 @@ export function NarrativeFrames({
   return (
     <>
       {tapeTable ? (
-        <TapeTable frames={ordered} />
+        <TapeTable frames={ordered} filters={filters} />
       ) : (
       <InteractiveChart
         large

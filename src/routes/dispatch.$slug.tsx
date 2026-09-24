@@ -237,7 +237,8 @@ function EssayPage() {
         {post.frames?.length ? (
           <NarrativeFrames
             frames={post.frames}
-            tapeTable={post.slug === "the-media-ledger"}
+            tapeTable={post.slug === "the-media-ledger" || post.slug === "the-democrat-ledger"}
+            filters={post.slug !== "the-democrat-ledger"}
             showClaim={post.slug === "they-clipped-the-tape"}
           />
         ) : null}
