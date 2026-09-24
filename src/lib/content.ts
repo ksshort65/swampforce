@@ -1528,9 +1528,9 @@ export const posts: Post[] = [
 		frames: [
 			{
 				tag: "Bloodbath",
-				they: "If he loses it will be a bloodbath. He wants another January 6.",
-				tape: "Chinese car plants in Mexico. 100% tariff. “They’re not going to sell those cars.”",
-				href: "https://www.youtube.com/watch?v=f57dRZMS0PQ",
+				they: "First incorrect report: CNN, March 16, 2024, 6:52 p.m. Eastern. Kit Maher and Alayna Treene wrote that it would be a bloodbath if he loses the election. The cars were left out.",
+				tape: "He said the word twice, in one stretch, starting at 29:45. Chinese car plants in Mexico and a 100 percent tariff.",
+				href: "https://www.youtube.com/watch?v=f57dRZMS0PQ&t=1785s",
 			},
 			{
 				tag: "Dictator",

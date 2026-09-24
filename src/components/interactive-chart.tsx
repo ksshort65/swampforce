@@ -79,6 +79,7 @@ export function ShortRead({
 export type ChartRow = {
   id: string;
   name: string;
+  kicker?: string;
   line?: string;
   href?: string;
   proof?: string;
@@ -90,11 +91,13 @@ export function InteractiveChart({
   subtitle,
   rows,
   large = false,
+  rightLabel = "The file",
 }: {
   title: string;
   subtitle?: string;
   rows: ChartRow[];
   large?: boolean;
+  rightLabel?: string;
 }) {
   const [open, setOpen] = useState<string | null>(null);
   const note = subtitle?.startsWith("The claim is the row") ? null : subtitle;
@@ -115,7 +118,7 @@ export function InteractiveChart({
             The claim
           </p>
           <p className={`bg-[#10233f] px-4 py-3 font-display font-bold tracking-[0.18em] text-blue-100 uppercase ${large ? "text-sm" : "text-[11px]"}`}>
-            The file
+            {rightLabel}
           </p>
         </div>
         {rows.map((r) => {
@@ -128,6 +131,11 @@ export function InteractiveChart({
                   onClick={() => choose(r.id)}
                   className={`px-4 py-4 text-left font-semibold break-words text-red-50 ${large ? "text-lg leading-snug" : "text-[15px]"} ${on ? "bg-[#4a181c]" : "bg-[#2a1214]"}`}
                 >
+                  {r.kicker ? (
+                    <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.14em] text-red-200 uppercase">
+                      {r.kicker}
+                    </span>
+                  ) : null}
                   {r.name}
                 </button>
                 <button

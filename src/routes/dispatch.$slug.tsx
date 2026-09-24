@@ -163,7 +163,11 @@ function EssayPage() {
           </div>
         ) : null}
         {post.frames?.length ? (
-          <NarrativeFrames frames={post.frames} tapeTable={post.slug === "the-media-ledger"} />
+          <NarrativeFrames
+            frames={post.frames}
+            tapeTable={post.slug === "the-media-ledger"}
+            showClaim={post.slug === "they-clipped-the-tape"}
+          />
         ) : null}
         {post.video ? (
           <video
