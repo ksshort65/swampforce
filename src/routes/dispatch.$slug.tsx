@@ -64,7 +64,12 @@ function EssayPage() {
         />
         <div className="absolute inset-0 bg-linear-to-t from-bg via-bg/60 to-bg/20" />
         <div className="relative mx-auto flex min-h-[52vh] max-w-3xl flex-col justify-end px-4 pb-10 sm:px-6">
-          <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+          {(FAKE_NEWS_SLUGS as readonly string[]).includes(post.slug) ? (
+            <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+              Under construction
+            </p>
+          ) : null}
+          <p className="mt-2 font-display text-xs font-semibold tracking-[0.16em] text-fg/80 uppercase">
             {post.series || post.category}
           </p>
           <h1 className="mt-3 font-display leading-[0.92] font-bold tracking-wide uppercase text-[clamp(2rem,8vw,4.5rem)]">

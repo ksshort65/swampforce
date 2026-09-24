@@ -3400,6 +3400,8 @@ export const START_HERE = [
 ] as const;
 export const FAKE_NEWS_SLUGS = [
 	"the-media-ledger",
+	"the-democrat-ledger",
+	"the-republican-ledger",
 	"they-clipped-the-tape",
 	"one-word",
 	"they-ran-it-anyway",
