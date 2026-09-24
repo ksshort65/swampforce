@@ -466,40 +466,22 @@ function youtubeId(href: string) {
   return null;
 }
 
-const METHOD_PLAIN: Record<string, string> = {
-  "One word": "One word was changed",
-  "Clipped the tape": "The tape was cut",
-  "Cut the fact out": "A fact was cut out",
-  "A fact the file does not show": "A fact was added",
-  "He said it": "The words were said",
-};
-
-function whoMade(f: Frame) {
-  const blob = `${f.ran ?? ""}\n${f.they}\n${f.tape}\n${(EXTRA[f.tag] ?? []).map((item) => item.label).join("\n")}`;
-  const nets = new Set((blob.match(/\b(CNN|NBC|MSNBC|MS NOW|ABC|CBS|Fox News|BBC|New York Times|Washington Post|Politico|The Atlantic|Associated Press)\b/gi) ?? []).map((name) => name.toLowerCase()));
-  const manyNets = nets.size > 1 || /\b(networks|anchors|every network)\b/i.test(blob);
-  const pols = new Set(blob.match(/\b(Schumer|Pelosi|Biden|Harris|Jeffries|Merkley|Murray|Murphy|Pressley|Waters|Obama|Schiff|Khanna|Garcia|Raskin|Warren|Booker|Sanders|McGovern|Mullin|Johnson|Bush|Cheney|Yellen|Palin)\b/g) ?? []);
-  const manyPols = pols.size > 1;
-  const onePol = pols.size === 1;
-  if (manyNets && (manyPols || onePol)) return "Multiple networks and politicians";
-  if (manyNets) return "Multiple networks";
-  if (nets.size === 1 && manyPols) return "One network and multiple politicians";
-  if (nets.size === 1 && onePol) return "One network and one politician";
-  if (manyPols) return "Multiple politicians";
-  if (nets.size === 1) return "One network";
-  if (onePol) return "One politician";
-  return "No named speaker is on this row";
+function speakerNames(f: Frame) {
+  const blob = `${f.ran ?? ""}\n${f.they}\n${(EXTRA[f.tag] ?? []).map((item) => item.label).join("\n")}`;
+  const found = blob.match(/\b(CNN|NBC|MSNBC|MS NOW|ABC|CBS|Fox News|BBC|New York Times|Washington Post|Politico|The Atlantic|Associated Press|Schumer|Pelosi|Biden|Harris|Jeffries|Merkley|Murray|Murphy|Pressley|Waters|Obama|Schiff|Khanna|Garcia|Raskin|Warren|Booker|Sanders|McGovern|Mullin|Johnson|Bush|Cheney|Yellen|Palin)\b/gi) ?? [];
+  const seen = new Set<string>();
+  const names: string[] = [];
+  for (const raw of found) {
+    const key = raw.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    names.push(raw);
+  }
+  return names;
 }
 
-function durationLine(ran?: string) {
-  if (!ran?.trim()) return "How long it ran is inside";
-  const first = ran.split(/(?<=\.)\s+/)[0]?.trim() ?? ran.trim();
-  return first.length > 160 ? `${first.slice(0, 157)}…` : first;
-}
-
-function claimCover(f: Frame) {
-  const method = METHOD_PLAIN[methodOf(f.tag)] ?? "The method is inside";
-  return `${whoMade(f)} made this claim. ${method}. ${durationLine(f.ran)}`;
+function claimLine(f: Frame) {
+  return f.they.split("||").map((part) => part.trim()).filter(Boolean).join(" ");
 }
 
 function cleanBits(text: string) {
@@ -538,7 +520,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
   return (
     <section className="mt-8">
       <p className="mb-3 text-base leading-relaxed text-fg">
-        The left names who made the claim, the method, and how long it ran. Open it for each statement and the link that shows they said it. The right is Documented Evidence of False Claims. Open it for the facts and the named source.
+        The left is the claim and the names. Open it for each statement and the link that shows they said it. The right is Documented Evidence of False Claims. Open it for the facts and the named source.
       </p>
       <div className="mb-4 flex flex-wrap gap-2">
         {METHODS.map((name) => (
@@ -586,7 +568,8 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                     <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm leading-snug text-red-50">
                       <button type="button" onClick={() => setOpen(on("claim") ? null : cell("claim"))} className="text-left">
                         <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-300 uppercase">{f.tag}</span>
-                        <span className="block text-blue-200">{claimCover(f)}</span>
+                        <span className="mb-1 block font-semibold text-red-50">{claimLine(f)}</span>
+                        <span className="block text-blue-200">{speakerNames(f).join(", ") || "No named speaker is on this row"}</span>
                       </button>
                     </td>
                     <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug">
