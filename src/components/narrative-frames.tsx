@@ -293,14 +293,47 @@ function methodOf(tag: string) {
   return METHOD[tag] ?? "Not sorted yet";
 }
 
+const MONTH_NUM: Record<string, number> = {
+  january: 0, february: 1, march: 2, april: 3, may: 4, june: 5,
+  july: 6, august: 7, september: 8, october: 9, november: 10, december: 11,
+};
+
+function latestDate(text: string) {
+  let best = 0;
+  const full = /\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})(?:\s*[–-]\s*(\d{1,2}))?,\s*(\d{4})/gi;
+  for (const m of text.matchAll(full)) {
+    const month = MONTH_NUM[m[1].toLowerCase()];
+    const day = Number(m[3] ?? m[2]);
+    const year = Number(m[4]);
+    const t = Date.UTC(year, month, day);
+    if (t > best) best = t;
+  }
+  const monthYear = /\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})\b/gi;
+  for (const m of text.matchAll(monthYear)) {
+    const t = Date.UTC(Number(m[2]), MONTH_NUM[m[1].toLowerCase()], 1);
+    if (t > best) best = t;
+  }
+  return best;
+}
+
+function claimTime(f: Frame) {
+  const fromWho = latestDate(f.ran ?? "");
+  if (fromWho) return fromWho;
+  return latestDate(`${f.they}\n${f.tape}`);
+}
+
 function TapeTable({ frames }: { frames: Frame[] }) {
   const [open, setOpen] = useState<string | null>(null);
   const [method, setMethod] = useState("All");
-  const shown = frames.filter((f) => method === "All" || methodOf(f.tag) === method);
+  const shown = frames
+    .filter((f) => method === "All" || methodOf(f.tag) === method)
+    .map((f, i) => ({ f, i, t: claimTime(f) }))
+    .sort((a, b) => b.t - a.t || a.i - b.i)
+    .map((row) => row.f);
   return (
     <section className="mt-8">
       <p className="mb-3 text-base leading-relaxed text-fg">
-        The method is the button. The claim names who said it, when, and how long it ran. The truth is the file.
+        Newest claim first. The method is the button. The claim names who said it, when, and how long it ran. The truth is the file.
       </p>
       <div className="mb-4 flex flex-wrap gap-2">
         {METHODS.map((name) => (
