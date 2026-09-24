@@ -295,7 +295,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
   return (
     <section className="mt-8">
       <p className="mb-3 text-base leading-relaxed text-fg">
-        Pick the method. Open a row. Blue text leaves this journal for the record. Nothing on the other Fake News pages was removed.
+        Pick the method. Open one column. That column only. Blue text leaves this journal for the record.
       </p>
       <div className="mb-4 flex flex-wrap gap-2">
         {METHODS.map((name) => (
@@ -329,18 +329,18 @@ function TapeTable({ frames }: { frames: Frame[] }) {
           <tbody>
             {shown.map((f) => {
               const ballroom = f.tag === "The ballroom";
-              const cell = (name: Cell) => (ballroom ? `${f.tag}:${name}` : f.tag);
+              const cell = (name: Cell) => `${f.tag}:${name}`;
               const on = (name: Cell) => open === cell(name);
-              const any = ballroom ? open?.startsWith(`${f.tag}:`) : open === f.tag;
+              const col = open?.startsWith(`${f.tag}:`) ? (open.slice(f.tag.length + 1) as Cell) : null;
               const claims = f.they.split("||").map((s) => s.trim()).filter(Boolean);
-              const who = ballroom ? "Schumer, Merkley, Murray, Murphy. May 11 to September 23, 2026. Open for each date." : f.ran?.trim() || "The file names them.";
+              const who = ballroom ? "Schumer, Merkley, Murray, Murphy. May 11 to September 23, 2026. Open for each date." : f.ran?.trim() || "The date and the name are in the file. They have not been pulled onto this line yet.";
               const links = [
                 ...(EXTRA[f.tag] ?? []),
                 ...urlsIn(`${f.tape}\n${f.href ?? ""}`)
                   .filter((href) => !(EXTRA[f.tag] ?? []).some((item) => item.href === href))
                   .map((href) => ({ label: "The record", href })),
               ];
-              const pick = ballroom && open?.startsWith(`${f.tag}:`) ? BALLROOM[open.slice(f.tag.length + 1) as Cell] : null;
+              const pick = ballroom && col ? BALLROOM[col] : null;
               return (
                 <Fragment key={f.tag}>
                   <tr className="border-t border-white/10">
@@ -364,7 +364,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                       </button>
                     </td>
                   </tr>
-                  {any && pick ? (
+                  {pick ? (
                     <tr className="border-t border-white/10">
                       <td colSpan={3} className="bg-white px-4 py-4 text-neutral-900">
                         {pick.head ? <p className="text-base font-semibold leading-relaxed">{pick.head}</p> : null}
@@ -384,31 +384,39 @@ function TapeTable({ frames }: { frames: Frame[] }) {
                       </td>
                     </tr>
                   ) : null}
-                  {any && !pick ? (
+                  {!pick && col === "who" ? (
+                    <tr className="border-t border-white/10">
+                      <td colSpan={3} className="bg-white px-4 py-4 text-base leading-relaxed text-neutral-900">
+                        {who}
+                      </td>
+                    </tr>
+                  ) : null}
+                  {!pick && col === "claim" ? (
                     <tr className="border-t border-white/10">
                       <td colSpan={3} className="bg-white px-4 py-4 text-neutral-900">
-                        <p className="font-display text-sm font-bold tracking-[0.14em] text-red-800 uppercase">What they said</p>
-                        <ul className="mt-2 space-y-2">
+                        <ul className="list-disc space-y-2 pl-5">
                           {claims.map((claim) => (
                             <li key={claim} className="text-base leading-relaxed">{claim}</li>
                           ))}
                         </ul>
-                        <p className="mt-5 font-display text-sm font-bold tracking-[0.14em] text-blue-900 uppercase">The file</p>
-                        <p className="mt-2 text-base leading-relaxed">{linkify(f.tape)}</p>
+                      </td>
+                    </tr>
+                  ) : null}
+                  {!pick && col === "truth" ? (
+                    <tr className="border-t border-white/10">
+                      <td colSpan={3} className="bg-white px-4 py-4 text-neutral-900">
+                        <p className="text-base leading-relaxed">{linkify(f.tape)}</p>
                         {f.tag === "Bloodbath" ? <div className="mt-4"><BloodbathDetail /></div> : null}
                         {links.length ? (
-                          <>
-                            <p className="mt-5 font-display text-sm font-bold tracking-[0.14em] text-blue-900 uppercase">The official record</p>
-                            <ul className="mt-2 space-y-2">
-                              {links.map((link) => (
-                                <li key={link.href + link.label}>
-                                  <a href={link.href} target="_blank" rel="noreferrer" className="text-base text-blue-700">
-                                    {link.label}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                          </>
+                          <ul className="mt-3 space-y-2">
+                            {links.map((link) => (
+                              <li key={link.href + link.label}>
+                                <a href={link.href} target="_blank" rel="noreferrer" className="text-base text-blue-700">
+                                  {link.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
                         ) : null}
                       </td>
                     </tr>
