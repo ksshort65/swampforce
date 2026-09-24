@@ -71,6 +71,7 @@ const POLITICIANS = new Set([
   "Shoot them in the legs",
   "Clear and present danger",
   "Domestic terrorists",
+  "Lynching",
 ]);
 
 const JOURNALISTS = new Set([
@@ -169,6 +170,29 @@ function TapeTable({ frames }: { frames: Frame[] }) {
 }
 
 function ChartRow({ f }: { f: Frame }) {
+  if (f.tag === "Lynching") {
+    return (
+      <tr className="border-t border-white/10">
+        <td className="border-r border-white/10 bg-[#161412] px-3 py-3 align-top text-sm leading-snug text-neutral-100">
+          <span className="mb-1 block font-display text-[11px] font-bold tracking-[0.12em] text-neutral-400 uppercase">Lynching</span>
+          <span className="block">September 8, 2026. Ayanna Pressley and 59 House Democrats.</span>
+        </td>
+        <td className="border-r border-white/10 bg-[#2a1214] px-3 py-3 align-top text-sm font-semibold leading-snug text-red-50">
+          <a href="https://admin-pressley.house.gov/2026/09/10/breaking-pressley-leads-nearly-60-lawmakers-demanding-investigation-into-black-people-found-hanging-invokes-legacy-of-lynching-in-america/" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            A national crisis of modern-day lynchings.
+          </a>
+        </td>
+        <td className="bg-[#0e1c33] px-3 py-3 align-top text-sm leading-snug text-blue-50">
+          <a href="https://apnews.com/article/tasia-fortune-mississippi-hanging-arrest-4aa7ada8208008fea580369ede0eef37" target="_blank" rel="noreferrer" className="underline decoration-white/40 underline-offset-2">
+            Fortune was ruled a homicide. Police arrested a man associated with her.
+          </a>
+          <a href="https://www.clarionledger.com/story/news/2026/09/11/man-arrested-in-tasia-fortune-hanging-death-in-jackson-ms-jpd-police-chief-says/91284884007/" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
+            Reed was ruled a suicide. No foul play.
+          </a>
+        </td>
+      </tr>
+    );
+  }
   if (f.tag === "Clear and present danger") {
     return (
       <tr className="border-t border-white/10">
