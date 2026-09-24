@@ -206,7 +206,7 @@ function ChartRow({ f }: { f: Frame }) {
             September 19, 2026. Obama said if he had told Fox, “you’re out of here,” it would be unimaginable.
           </a>
           <a href="https://variety.com/wp-content/uploads/2026/09/CNN-MS-NOW-Politico-vs.-Trump-et-al.pdf" target="_blank" rel="noreferrer" className="mt-2 block underline decoration-white/40 underline-offset-2">
-            Their lawyer called this ban unprecedented. The 2009 attempt is the sentence they left out.
+            Their lawyer called a lost badge an assault on free speech, and unprecedented. They can still publish. The sidewalk is open. The 2009 attempt is the sentence they left out.
           </a>
         </td>
       </tr>
