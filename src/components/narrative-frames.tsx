@@ -475,12 +475,12 @@ const METHOD_PLAIN: Record<string, string> = {
 };
 
 function whoMade(f: Frame) {
-  const blob = `${f.ran ?? ""}\n${f.they}\n${(EXTRA[f.tag] ?? []).map((item) => item.label).join("\n")}`;
-  const nets = new Set((blob.match(/\b(CNN|NBC|MSNBC|MS NOW|ABC|CBS|Fox News|BBC|New York Times|Washington Post|Politico|The Atlantic)\b/gi) ?? []).map((name) => name.toLowerCase()));
+  const blob = `${f.ran ?? ""}\n${f.they}\n${f.tape}\n${(EXTRA[f.tag] ?? []).map((item) => item.label).join("\n")}`;
+  const nets = new Set((blob.match(/\b(CNN|NBC|MSNBC|MS NOW|ABC|CBS|Fox News|BBC|New York Times|Washington Post|Politico|The Atlantic|Associated Press)\b/gi) ?? []).map((name) => name.toLowerCase()));
   const manyNets = nets.size > 1 || /\b(networks|anchors|every network)\b/i.test(blob);
-  const pols = new Set(blob.match(/\b(Schumer|Pelosi|Biden|Harris|Jeffries|Merkley|Murray|Murphy|Pressley|Waters|Obama|Schiff|Khanna|Garcia|Raskin|Warren|Booker|Sanders)\b/g) ?? []);
-  const manyPols = pols.size > 1 || /\b(members|senators|lawmakers|colleagues)\b/i.test(blob);
-  const onePol = pols.size === 1 || /\b(senator|representative|president|spokesman)\b/i.test(blob);
+  const pols = new Set(blob.match(/\b(Schumer|Pelosi|Biden|Harris|Jeffries|Merkley|Murray|Murphy|Pressley|Waters|Obama|Schiff|Khanna|Garcia|Raskin|Warren|Booker|Sanders|McGovern|Mullin|Johnson|Bush|Cheney|Yellen|Palin)\b/g) ?? []);
+  const manyPols = pols.size > 1;
+  const onePol = pols.size === 1;
   if (manyNets && (manyPols || onePol)) return "Multiple networks and politicians";
   if (manyNets) return "Multiple networks";
   if (nets.size === 1 && manyPols) return "One network and multiple politicians";
@@ -488,7 +488,7 @@ function whoMade(f: Frame) {
   if (manyPols) return "Multiple politicians";
   if (nets.size === 1) return "One network";
   if (onePol) return "One politician";
-  return "One source";
+  return "No named speaker is on this row";
 }
 
 function durationLine(ran?: string) {
@@ -538,7 +538,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
   return (
     <section className="mt-8">
       <p className="mb-3 text-base leading-relaxed text-fg">
-        The left names who made the claim, the method, and how long it ran. Open it for each statement and the link that shows they said it. The right says Truth (Proof). Open it for the facts and the named source.
+        The left names who made the claim, the method, and how long it ran. Open it for each statement and the link that shows they said it. The right is Documented Evidence of False Claims. Open it for the facts and the named source.
       </p>
       <div className="mb-4 flex flex-wrap gap-2">
         {METHODS.map((name) => (
@@ -561,8 +561,8 @@ function TapeTable({ frames }: { frames: Frame[] }) {
               <th className="w-1/2 border-r border-white/10 bg-[#3a1214] px-3 py-3 font-display text-sm font-bold tracking-[0.12em] text-red-100 uppercase">
                 The claim
               </th>
-              <th className="bg-[#10233f] px-3 py-3 font-display text-sm font-bold tracking-[0.12em] text-blue-100 uppercase">
-                The truth
+              <th className="bg-[#10233f] px-3 py-3 font-display text-sm font-bold tracking-[0.08em] text-blue-100 uppercase">
+                Documented Evidence of False Claims
               </th>
             </tr>
           </thead>
