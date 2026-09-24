@@ -54,64 +54,41 @@ function fileLine(text: string) {
   return two.length > 320 ? `${two.slice(0, 317)}…` : two;
 }
 
-const CLIPPED = new Set([
-  "Bloodbath",
-  "Dictator",
-  "Fine people",
-  "The virus is a hoax",
-  "All Mexicans are rapists",
-  "Animals",
-  "He never said peacefully",
-  "Many sides",
-  "No condemnation",
-  "We love you",
-  "187 minutes",
-  "David Duke",
-  "Another chance",
+const POLITICIANS = new Set([
+  "War of choice",
+  "Illegal war",
+  "Russia collusion",
+  "Schiff’s transcript",
+  "Whips",
+  "Bend the knee",
+  "Laziest Congress",
+  "ICE is terror",
+  "The war raised the gallon",
   "Just a ballroom",
   "They made it necessary",
-  "Covington",
-  "The escort clip",
+  "Sharp as a tack",
+  "Seventeen agencies",
+  "Shoot them in the legs",
+  "Clear and present danger",
 ]);
 
-const CHANGED = new Set([
-  "Bleach",
-  "Inject light",
-  "Slow the testing",
-  "Muslim ban",
-  "Schiff's transcript",
-  "Hang Mike Pence",
-  "Stand by",
-  "Let them die",
-  "He quoted Hitler",
-  "National abortion ban",
-  "Ban the pill",
-  "Insurrection",
-  "Impeached for treason",
-  "Seventeen agencies",
-  "Liable for rape",
-  "Convicted of all of it",
-  "No exoneration",
-  "Ten crimes",
-  "He confessed",
-  "Flynn the agent",
-  "Manafort colluded",
-  "Stone and WikiLeaks",
-  "Concentration camps",
-  "Don't say gay",
-  "Horse paste",
-  "Zero inflation",
-  "He fired the pandemic team",
-  "Lost children",
-  "ICE is terror",
-  "Enemy within",
-  "Liz Cheney",
+const JOURNALISTS = new Set([
+  "Suckers and losers",
+  "Russian bounties",
+  "The crying girl",
+  "Hydroxychloroquine kills",
+  "Pee tape",
+  "The dossier",
+  "Covington",
+  "He pays no taxes",
+  "The laptop",
+  "Nothing on the laptop",
 ]);
 
 function bucket(tag: string) {
-  if (CLIPPED.has(tag)) return "clip";
-  if (CHANGED.has(tag)) return "changed";
-  return "lie";
+  if (POLITICIANS.has(tag)) return "politician";
+  if (JOURNALISTS.has(tag)) return "journalist";
+  return "network";
 }
 
 function firstLine(text: string) {
@@ -121,9 +98,9 @@ function firstLine(text: string) {
 
 function TapeTable({ frames }: { frames: Frame[] }) {
   const groups = [
-    { key: "clip", title: "Clipping a tape short" },
-    { key: "changed", title: "Changing his words" },
-    { key: "lie", title: "Outright lies" },
+    { key: "politician", title: "Politicians" },
+    { key: "network", title: "Networks" },
+    { key: "journalist", title: "Journalists — gaslighting, lies, and a tape cut short" },
   ] as const;
   return (
     <section className="mt-8">

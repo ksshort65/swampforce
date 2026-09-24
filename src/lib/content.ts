@@ -1528,7 +1528,7 @@ export const posts: Post[] = [
 	body: [
 			{
 				type: "p",
-				text: "The chart is in one place, so it is not printed twice. [Manufactured outrage](/dispatch/the-media-ledger) holds the captions in three parts: a tape clipped short, his words changed, and an outright lie."
+				text: "The chart is in one place, so it is not printed twice. [Manufactured outrage](/dispatch/the-media-ledger) holds it in three sections: politicians, networks, and journalists. The rows are the gaslighting, the lies, and the tape cut short."
 			},
 			{
 				type: "p",
