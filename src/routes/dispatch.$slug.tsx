@@ -8,7 +8,8 @@ import { nextChapter } from "@/lib/flow";
 import { essayHead } from "@/lib/share-head";
 
 export const Route = createFileRoute("/dispatch/$slug")({
-  beforeLoad: () => {
+  beforeLoad: ({ params }) => {
+    if (params.slug === "the-media-ledger") return;
     throw redirect({ to: "/" });
   },
   component: EssayPage,

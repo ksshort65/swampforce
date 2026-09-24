@@ -34,14 +34,25 @@ export function SiteHeader() {
             "Scorecard",
             "Pump",
             "Foreword",
-          ].map((label) => (
-            <span
-              key={label}
-              className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase"
-            >
-              {label}
-            </span>
-          ))}
+          ].map((label) =>
+            label === "Fake News Exposed" ? (
+              <Link
+                key={label}
+                to="/dispatch/$slug"
+                params={{ slug: "the-media-ledger" }}
+                className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:text-sage"
+              >
+                {label}
+              </Link>
+            ) : (
+              <span
+                key={label}
+                className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase"
+              >
+                {label}
+              </span>
+            ),
+          )}
         </nav>
       </div>
     </header>
