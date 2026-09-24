@@ -138,6 +138,10 @@ const EXTRA: Record<string, { label: string; href: string }[]> = {
     { label: "H.Res. 24", href: "https://www.congress.gov/bill/117th-congress/house-resolution/24" },
     { label: "18 U.S.C. § 2383", href: "https://www.law.cornell.edu/uscode/text/18/2383" },
   ],
+  "The escort clip": [
+    { label: "The House CCTV channel", href: "https://rumble.com/c/CHASubcommitteeOnOversightRepublicanMajority" },
+    { label: "The committee’s release notice", href: "https://cha.house.gov/2024/3/chairman-loudermilk-releases-additional-january-6-2021-uscp-cctv-footage" },
+  ],
   "Russia collusion": [
     { label: "Durham", href: "https://www.justice.gov/storage/durhamreport.pdf" },
     { label: "Horowitz, the FISA", href: "https://oig.justice.gov/reports/2019/o1912.pdf" },
@@ -276,6 +280,7 @@ const METHOD: Record<string, string> = {
   Whips: "A fact the file does not show",
   "Stand by": "He said it",
   "When the looting starts": "He said it",
+  "He said the rest": "He said it",
   "He quoted Hitler": "He said it",
   "Liz Cheney": "He said it",
   "Find 11,780": "He said it",
