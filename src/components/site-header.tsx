@@ -14,35 +14,35 @@ function NavDetails({ label, children }: { label: string; children: ReactNode })
   }
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    const node = ref.current;
+    if (!node) return;
 
     function onDoc(e: MouseEvent) {
-      if (!el.open) return;
-      if (!el.contains(e.target as Node)) el.open = false;
+      if (!node.open) return;
+      if (!node.contains(e.target as Node)) node.open = false;
     }
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") el.open = false;
+      if (e.key === "Escape") node.open = false;
     }
     function onScroll() {
-      if (el.open) el.open = false;
+      if (node.open) node.open = false;
     }
     function onToggle() {
-      if (!el.open) return;
-      document.querySelectorAll("header details").forEach((node) => {
-        if (node !== el) (node as HTMLDetailsElement).open = false;
+      if (!node.open) return;
+      document.querySelectorAll("header details").forEach((other) => {
+        if (other !== node) (other as HTMLDetailsElement).open = false;
       });
     }
 
     document.addEventListener("mousedown", onDoc);
     document.addEventListener("keydown", onKey);
     window.addEventListener("scroll", onScroll, { passive: true });
-    el.addEventListener("toggle", onToggle);
+    node.addEventListener("toggle", onToggle);
     return () => {
       document.removeEventListener("mousedown", onDoc);
       document.removeEventListener("keydown", onKey);
       window.removeEventListener("scroll", onScroll);
-      el.removeEventListener("toggle", onToggle);
+      node.removeEventListener("toggle", onToggle);
     };
   }, []);
 
