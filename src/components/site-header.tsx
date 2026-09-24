@@ -35,7 +35,7 @@ function NavMenu({ label, slugs }: { label: string; slugs: readonly string[] }) 
     };
   }, []);
 
-  if (label === "J6" && slugs[0]) {
+  if ((label === "J6" || label === "Democrats") && slugs[0]) {
     const slug = slugs[0];
     return (
       <Link
