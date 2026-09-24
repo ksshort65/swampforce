@@ -78,7 +78,7 @@ function EssayPage() {
       >
         <p className="font-serif text-2xl leading-snug text-fg/90">{post.dek}</p>
         <p className="mt-3 font-display text-xs tracking-[0.16em] text-muted uppercase">
-          {SITE.author} · {SITE.copyright}
+          {SITE.copyright}
         </p>
         {post.receipts?.length ? (
           <div className="mt-8 rounded-lg bg-surface p-4">

@@ -52,7 +52,7 @@ export function SiteFooter() {
     </nav>
    </div>
    <p className="mx-auto mt-4 max-w-6xl">
-    {SITE.copyright} · {SITE.author}
+    {SITE.copyright}
    </p>
   </footer>
  );
