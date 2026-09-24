@@ -1,6 +1,80 @@
+import { useState } from "react";
 import type { Frame } from "@/lib/content";
 import { InteractiveChart, KeptRead } from "@/components/interactive-chart";
 
+function BloodbathRow() {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <tr className="border-t border-white/10">
+        <td className="border-r border-white/10 bg-[#2a1214] px-4 py-4 align-top text-base font-semibold leading-snug text-red-50">
+          <button type="button" onClick={() => setOpen((v) => !v)} className="text-left">
+            <span className="mb-2 block font-display text-[11px] font-bold tracking-[0.14em] text-red-200 uppercase">
+              Bloodbath
+            </span>
+            First incorrect report: CNN, March 16, 2024, 6:52 p.m. Eastern. Kit Maher and Alayna Treene wrote that it would be a bloodbath if he loses the election. The cars were left out.
+          </button>
+        </td>
+        <td className="bg-[#0e1c33] px-4 py-4 align-top text-base leading-relaxed text-blue-50">
+          <button type="button" onClick={() => setOpen((v) => !v)} className="text-left">
+            <span className="mb-2 block font-display text-[11px] font-bold tracking-[0.14em] text-blue-200 uppercase">
+              The truth
+            </span>
+            He said the word twice, in one stretch, starting at 29:45. Open this row for the recordings.
+          </button>
+        </td>
+      </tr>
+      {open ? (
+        <tr className="border-t border-white/10 bg-white text-neutral-900">
+          <td colSpan={2} className="px-5 py-5">
+            <p className="font-display text-sm font-bold tracking-[0.14em] text-red-800 uppercase">The claim</p>
+            <ul className="mt-3 space-y-3 text-base leading-relaxed">
+              <li>
+                CNN, Kit Maher and Alayna Treene, March 16, 2024, 6:52 p.m. Eastern. This is the first timed headline. It said the bloodbath was if he loses the election.{" "}
+                <a className="text-blue-800 underline" href="https://www.cnn.com/politics/live-news/2024-election-news-03-16-24" target="_blank" rel="noreferrer">CNN live file</a>
+                . No minute-count of airtime was published.
+              </li>
+              <li>
+                NBC News, Emma Barnett and Jillian Frankel, March 16, 2024, 9:37 p.m. Eastern. Headline: there will be a bloodbath if he loses the election. The headline is still that sentence.{" "}
+                <a className="text-blue-800 underline" href="https://www.nbcnews.com/politics/donald-trump/trump-bloodbath-loses-election-2024-rcna143746" target="_blank" rel="noreferrer">NBC News</a>
+              </li>
+              <li>
+                The New York Times, March 16, 2024. Headline: he predicts a blood bath if he loses. The cars are not in the headline.{" "}
+                <a className="text-blue-800 underline" href="https://www.nytimes.com/2024/03/16/us/politics/trump-speech-ohio.html" target="_blank" rel="noreferrer">New York Times</a>
+              </li>
+              <li>
+                James Singer, spokesman for the Biden-Harris campaign, the night of March 16, 2024. He called it a threat of political violence and said, “He wants another January 6.” That statement is printed in the NBC story above.
+              </li>
+              <li>
+                Joe Biden, March 17, 2024. “It’s clear this guy wants another January 6.” His post sits on a clip that starts at the bloodbath line and leaves the cars out.{" "}
+                <a className="text-blue-800 underline" href="https://x.com/JoeBiden/status/1769454648946049261" target="_blank" rel="noreferrer">Joe Biden, March 17, 2024</a>
+              </li>
+              <li>
+                Joe Biden, July 15, 2024, 121 days later. “He talks about, there’ll be a bloodbath if he loses.”{" "}
+                <a className="text-blue-800 underline" href="https://x.com/HQNewsNow/status/1812964082430980276" target="_blank" rel="noreferrer">The July 15 clip</a>
+              </li>
+            </ul>
+            <p className="mt-6 font-display text-sm font-bold tracking-[0.14em] text-blue-900 uppercase">The truth</p>
+            <p className="mt-3 text-base leading-relaxed">
+              He said the word twice, both in the same stretch, on March 16, 2024, in Vandalia, Ohio. No second occasion was located. At 29:45 in the Roll Call recording: “Now, if I don’t get elected, it’s going to be a bloodbath for the whole — that’s going to be the least of it. It’s going to be a bloodbath for the country. That’ll be the least of it. But they’re not going to sell those cars.” The sentence before it is a 100 percent tariff on Chinese cars built in Mexico.
+            </p>
+            <ul className="mt-3 space-y-2 text-base leading-relaxed">
+              <li>
+                <a className="text-blue-800 underline" href="https://www.youtube.com/watch?v=f57dRZMS0PQ&t=1785s" target="_blank" rel="noreferrer">Roll Call recording — he starts at 29:45</a>
+              </li>
+              <li>
+                <a className="text-blue-800 underline" href="https://www.c-span.org/clip/public-affairs-event/user-clip-trump-says-bloodbath/5110570" target="_blank" rel="noreferrer">C-SPAN clip — opens on the line</a>
+              </li>
+              <li>
+                <a className="text-blue-800 underline" href="https://www.c-span.org/program/public-affairs-event/former-president-trump-campaigns-for-bernie-moreno/639757" target="_blank" rel="noreferrer">C-SPAN full program, 1 hour 35 minutes, March 16, 2024</a>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      ) : null}
+    </>
+  );
+}
 function fileLine(text: string) {
   const two = text.split(/(?<=\.)\s+/).slice(0, 2).join(" ");
   return two.length > 320 ? `${two.slice(0, 317)}…` : two;
@@ -26,6 +100,7 @@ function TapeTable({ frames }: { frames: Frame[] }) {
           </thead>
           <tbody>
             {frames.map((f) => {
+              if (f.tag === "Bloodbath") return <BloodbathRow key={f.tag} />;
               const proof = f.href ? (
                 <a
                   href={f.href}
