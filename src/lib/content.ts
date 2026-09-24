@@ -573,6 +573,10 @@ export const posts: Post[] = [
 				label: "DSA program PDF, September 2, 2026",
 				href: "https://program.dsausa.org/wp-content/uploads/2026/09/WDM-Program.pdf",
 			},
+			{
+				label: "National Socialist German Workers’ Party — the 25 points, 1920",
+				href: "https://avalon.law.yale.edu/imt/nsdappro.asp",
+			},
 		],
 		body: [
 			{
@@ -582,6 +586,10 @@ export const posts: Post[] = [
 			{
 				type: "p",
 				text: "On their own page they state the belief in one line: working people should run both the economy and society democratically to meet human needs, not to make profits for a few. [What is Democratic Socialism](https://www.dsausa.org/about-us/what-is-democratic-socialism/). The program states the goal in their words: win the battle for democracy, draft a new constitution, and create a democratic socialist republic. [Workers Deserve More](https://program.dsausa.org/) · [PDF, September 2, 2026](https://program.dsausa.org/wp-content/uploads/2026/09/WDM-Program.pdf).",
+			},
+			{
+				type: "p",
+				text: "The party used as the slur named itself the National Socialist German Workers’ Party, and its 1920 program demanded the nationalization of all trusts, the end of income that does not arise from work, and a strong central authority over the state. [The 25 points](https://avalon.law.yale.edu/imt/nsdappro.asp). The program published now, under the socialist name, demands public ownership of the largest corporations and a new constitution.",
 			},
 			{
 				type: "q",
