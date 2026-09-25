@@ -71,12 +71,12 @@ def drop(label, icon, items, active):
 def nav(active):
     def a(h, label, icon):
         return f'<a href="{h}"{" class=active" if h == active else ""}>{ico(icon)}{e(label)}</a>'
-    return (drop("Evidence", "search", EVIDENCE_MENU, active) + a("scorecard.html", "Midterms", "chart")
-            + a("betrayal.html", "The Betrayal", "scale")
-            + f'<a href="opinion.html" class="nav-op{" active" if active == "opinion.html" else ""}">{ico("quote")}Opinion</a>'
-            + drop("Journal", "book", JOURNAL_MENU, active)
-            + (drop("Watch", "eye", WATCH_MENU, active) if WATCH_MENU else "")
-            + drop("For Lawmakers", "capitol", LAW_MENU, active))
+    # Trimmed to 5 (launch, Sep 25, 2026); every page stays reachable from these menus and the footer.
+    facts = EVIDENCE_MENU + [("betrayal.html", "The Betrayal", "How a narrative gets built"), ("opinion.html", "Opinion", "Our view, always labeled")]
+    return (a("scorecard.html", "Midterms", "chart") + drop("Fact Checks", "search", facts, active)
+            + a("congress.html", "Congress", "capitol")
+            + drop("Journal", "book", JOURNAL_MENU + WATCH_MENU, active)
+            + drop("For Lawmakers", "file", LAW_MENU, active))
 
 
 BRAND_ART = ('<picture class="brand-eagle"><source srcset="assets/brand/eagle-mark.webp" type="image/webp"><img src="assets/brand/eagle-mark.png" alt="" width="103" height="120"></picture>'
@@ -309,6 +309,21 @@ def _col(row, *names):
 UNSUP_EXTRA = SITE / "watch-data" / "unsupported-extra.csv"  # claims from the watch pages rated Unsupported
 
 
+# Privacy (Karen, Sep 25, 2026): never single out one state in prose. Case names stay (Trump v. Anderson).
+_DECOLO = [("Trump v. Anderson (Colorado ballot / Anderson v. Griswold) and Maine Secretary of State ballot ruling", "Trump v. Anderson (the 2024 ballot-removal case) and the Maine Secretary of State ballot ruling"),
+           ("Colorado proceedings captioned Anderson v. Griswold in state courts", "state-court proceedings"),
+           ("Colorado Supreme Court", "State supreme court"), ("Colorado Republican primary ballot", "the state's Republican primary ballot"),
+           ("Brought by Colorado voters", "Brought by voters"), ("Colorado Secretary of State Jena Griswold", "A state secretary of state"),
+           ("Griswold", "the secretary"), ("Colorado state courts", "State courts"), ("Colorado's", "the state's"), ("Colorado could", "the state could"),
+           ("Colorado petition", "state petition"), ("Colorado disqualification", "state disqualification"), ("Colorado", "the state")]
+
+
+def decolo(s):
+    for a, b in _DECOLO:
+        s = (s or "").replace(a, b)
+    return s
+
+
 def load_unsupported():
     out = []
     rows = []
@@ -326,6 +341,7 @@ def load_unsupported():
             reason = _col(r, "Reason", "Why_Unsupported", "Unsupported_Reason", "Verification_Note", "Note", "Notes", "Flag")
             urls = [u for u in re.findall(r"https?://[^\s;,|]+", " ".join(
                 _col(r, k) for k in ("Verification_Source_URL", "Source_URL", "Truth_Source_URL", "Primary_Source_URL", "URL", "URLs")))]
+            claim, reason = decolo(claim), decolo(reason)
             out.append({"id": iid, "claim": claim.split("\n")[0], "who": _col(r, "Who_Pushed_It", "Who") or cat.get("who", ""),
                         "reason": reason, "urls": list(dict.fromkeys(urls)), "checked": _col(r, "Checked", "Date_Checked", "Source_Loaded", "Date"),
                         "in_catalog": iid in _CASE})
@@ -392,6 +408,182 @@ def charts_evidence():
     ]
 
 
+
+# ───────── Homepage midterm front (Sep 25, 2026). Facts reuse figures already verified on the site. ─────────
+ADULTS_VIEW = ("Where are the adults in the room? Congress was hired to manage this country's money and watch over every federal program. "
+               "Instead, too many of its members spend their time blaming whoever sits in the White House for problems that Congress was supposed to catch. "
+               "While they fight each other, the debt grows, the fraud spreads, and the country gets more divided. "
+               "We need them to stop acting like children and start acting like the people we sent to Washington to represent us.")
+FRONT_SRC = {
+    "cpi_series": "https://data.bls.gov/timeseries/CUUR0000SA0",
+    "ohss": "https://ohss.dhs.gov/khsm/cbp-encounters",
+    "oig2604": "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf",
+    "cbo60805": "https://www.cbo.gov/publication/60805",
+    "ssi": "https://www.ssa.gov/ssi/spotlights/spot-non-citizens.htm",
+    "usc1611": "https://www.law.cornell.edu/uscode/text/8/1611",
+    "ford990": "https://projects.propublica.org/nonprofits/organizations/131684331/202203199349101880/full",
+    "crs_pay": "https://www.congress.gov/crs-product/RL30064",
+    "crs_leg": "https://www.congress.gov/crs-product/R48612",
+    "days": "https://www.congress.gov/days-in-session",
+    "gao_fraud": "https://www.gao.gov/products/gao-24-105833",
+    "crs_approps": "https://www.congress.gov/crs-product/IN12324",
+    "cbo_hist": "https://www.cbo.gov/data/budget-economic-data",
+}
+
+
+def _ev(*links):
+    """Evidence line under a chart or block: (label, url) pairs; internal links open in place."""
+    out = []
+    for lbl, u in links:
+        ext = u.startswith("http")
+        out.append(f'<a href="{e(u)}"{" target=_blank rel=noopener" if ext else ""}>{e(lbl)}{" ↗" if ext else " →"}</a>')
+    return '<p class="fr-ev"><b>Evidence:</b> ' + " · ".join(out) + "</p>"
+
+
+def _our_view(text, title="Our view · Opinion", draft=False):
+    d = '<span class="fr-draft">DRAFT: awaiting Karen\'s OK</span> ' if draft else ""
+    return f'<aside class="opinion fr-view"><p class="opinion-label">{d}{e(title)}</p><p>{e(text)}</p></aside>'
+
+
+def _lcard(href, kicker, title, text, flag=""):
+    f = f'<span class="fr-flag">{e(flag)}</span>' if flag else ""
+    return f'<a class="fr-card" href="{href}"><span class="fr-k">{e(kicker)}</span><strong>{e(title)}</strong><span>{e(text)}</span>{f}</a>'
+
+
+def front_charts():
+    import midterms as M
+    sc = {c["id"]: c for c in scorecard_charts()}
+    return [sc["sc-cpi"], sc["sc-enc-all"],
+            {"id": "fr-cart", "type": "bar", "labels": ["Jan 2021", "Jan 2025", "Aug 2026"], "data": [100, 121.44, 128.06],
+             "colors": ["#64748b", "#1e3a8a", "#0c2340"], "fmt": "usd"},
+            [c for c in M.charts() if c["id"] == "mt-debt-all"][0]]
+
+
+def home_front():
+    import midterms as M
+    nc = corr["Never corrected by the pusher"]
+    blame = "".join([
+        tile(str(ST["total"]), "Documented false or misleading claims", "Each set against the record that settled it.", accent=True, count=ST["total"], src='<a class="src" href="fake-news.html">Fake News Exposed →</a>'),
+        tile(str(nc), "Never corrected by whoever pushed it", count=nc, src='<a class="src" href="fake-news.html">The cases →</a>'),
+        tile(str(CONGRESS_N), "Pushed by sitting members of Congress", count=CONGRESS_N, src='<a class="src" href="democrats.html">Party ledgers →</a>'),
+    ])
+    return f"""
+<section class="fr-band" id="front">
+ <p class="section-label">Midterms · Tuesday, Nov 3, 2026</p>
+ <h2 class="section-title">All 435 House seats are on the ballot. Here is the record.</h2>
+ <p class="fr-dek">Charts first. Every chart has its evidence link right under it. Opinion is only in boxes labeled “Our view.”</p>
+</section>
+
+<section class="fr-block" id="front-blame">
+ <p class="section-label">1 · Who's twisting words and playing the blame game</p>
+ <h2 class="section-title">Both parties. Checked against the record.</h2>
+ <div class="tile-grid">{blame}</div>
+ <div class="chart-grid two">{chart_card("chart-evidence", "Verdict on every documented claim", "Tap a slice to open those cases")}
+  <div class="fr-cards">
+   {_lcard("democrats.html", "Party ledger", "Democrats", "Claims Democratic officials made, set against the record.")}
+   {_lcard("republicans.html", "Party ledger", "Republicans", "Claims Republican officials made, set against the record.")}
+   {_lcard("unsupported.html", "Held back", "Unsupported claims", "Claims we could not tie to a primary record. Kept apart, not counted.")}
+  </div></div>
+ {_ev(("All cases, with sources", "fake-news.html"), ("How evidence is ranked", "about.html"))}
+ {_our_view(ADULTS_VIEW)}
+</section>
+
+<section class="fr-block" id="front-votes">
+ <p class="section-label">2 · The voting record</p>
+ <h2 class="section-title">What passed, what didn't, who it helped, who it hurt.</h2>
+ <p class="fr-dek">Laws by which party held Congress, with the debt added under each. Tap a party to open its room.</p>
+ {M.compare_grid().replace('href="#', 'href="scorecard.html#')}
+ <div class="chart-grid two">{chart_card("mt-debt-all", "Debt added by who ran Congress, 1857 to Sep 17, 2026", "Trillions of dollars")}
+  <div class="fr-cards">
+   {_lcard("scorecard.html#wallet", "Your wallet", "How did your rep vote?", "Eight laws that changed what a household keeps: tips and overtime, child credit, stimulus checks, insulin, ACA, minimum wage. Each opens the roll call.")}
+   {_lcard("scorecard.html", "Midterm scorecard", "Helped and hurt, party by party", "Republicans · Democrats · Split · Compare · The Oval.")}
+  </div></div>
+ {_ev(("Treasury debt history", M.TREAS_HIST), ("Debt to the Penny", M.TREAS_PENNY), ("Senate party divisions", M.PARTYDIV), ("House party divisions", M.HOUSEDIV))}
+</section>
+
+<section class="fr-block" id="front-costs">
+ <p class="section-label">3 · Everyday costs</p>
+ <h2 class="section-title">Gas, insurance, medicine: who actually sets the price?</h2>
+ <div class="fr-cards grid3">
+  {_lcard("gas-gap.html#gg-oil", "Gas", "No one person in the White House sets gas prices", "Crude oil (OPEC+ decisions), refining, and taxes make up the price. Six cards, each tied to a record.")}
+  {_lcard("gas-gap.html#gg-state", "Gas taxes", "What your state adds to every gallon", "All 50 states, DC and Puerto Rico, sortable, from EIA's July 2026 table.", "Set by your STATE legislature, not Congress")}
+  {_lcard("gas-gap.html", "Gas", "Where each cent of a gallon goes", "Refining slice, red flags, investigations and political money from both parties.")}
+  {_lcard("scorecard.html#wallet-insulin", "Medicine", "$35 insulin in Medicare", "The 2022 cap and drug-price negotiation, with the House and Senate votes by party.")}
+  {_lcard("scorecard.html#wallet-aca", "Insurance", "ACA premium subsidies", "The bigger subsidies ended after 2025. The House passed an extension; the Senate did not take it up.")}
+  {_lcard("scorecard.html#wallet-tips", "Paychecks", "Tips, overtime and the 65+ deduction", "Federal deductions for 2025–2028. Each state legislature decides whether its own income tax follows.", "State income tax: your STATE legislature")}
+ </div>
+ {_ev(("EIA weekly U.S. regular gas price", "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPMR_PTE_NUS_DPG&f=W"), ("EIA state fuel taxes", "gas-gap.html#gg-state"), ("Law text and roll calls", "scorecard.html#wallet"))}
+</section>
+
+<section class="fr-block fr-back" id="front-go-back">
+ <p class="opinion-label">Our view · the question we are asking</p>
+ <h2 class="section-title">Do we want to go back?</h2>
+ <p class="fr-dek">The record from the Democratic trifecta (White House, House and Senate, Jan 2021 – Jan 2023) and the Biden years (Jan 2021 – Jan 2025). Facts below; the question above is ours.</p>
+ <div class="tile-grid">
+  {tile("+21.4%", "Consumer prices, Jan 2021 to Jan 2025", "CPI-U 261.582 to 317.671. Aug 2026: 334.980 (+5.4% since).", accent=True, src=src_link(FRONT_SRC["cpi_series"], "BLS CPI-U series"))}
+  {tile("9.1%", "Peak 12-month inflation, June 2022", "Largest since November 1981.", src=S("bls22"))}
+  {tile("10.83M", "CBP nationwide encounters, FY2021–24", "8.73M at the southwest land border. FY2021 began Oct 2020.", src=S("cbp"))}
+  {tile("$8.13B", "One city's asylum-seeker bill, FY2023–25", "New York City Comptroller.", src=S("nyc"))}
+ </div>
+ <div class="chart-grid">
+  {chart_card("fr-cart", "What a $100 cart cost later", "Same basket, priced by BLS CPI-U")}
+  {chart_card("sc-cpi", "12-month inflation readings", "Sep 2011 and Jun 2022 are those terms' peaks. Aug 2026 is the latest reading, not a peak.")}
+  {chart_card("sc-enc-all", "CBP encounters by fiscal year", "The White House changed hands during FY2025 (red)", tall=True)}
+ </div>
+ {_ev(("BLS CPI-U (CUUR0000SA0)", FRONT_SRC["cpi_series"]), ("BLS June 2022 release", SRC["bls22"][1]), ("CBP enforcement statistics", SRC["cbp"][1]), ("DHS OHSS encounters", FRONT_SRC["ohss"]), ("Border charts", "border.html"))}
+ <h3 class="fr-h3">What taxpayers paid (official figures; not added together)</h3>
+ <ul class="fr-list">
+  <li><b>$1.4 billion</b> in FEMA shelter grants (Shelter and Services Program and EFSP-H), fiscal 2023–24, moved from CBP. The Inspector General found FEMA could not ensure it was used as the law required, and questioned <b>$425 million</b>. “Questioned costs” is an audit term; it is not a finding of fraud. <a href="{FRONT_SRC['oig2604']}" target="_blank" rel="noopener">DHS OIG-26-04 ↗</a> · <a href="journal-fema-ran-two-jobs.html">FEMA ran two jobs →</a></li>
+  <li><b>$8.13 billion</b> for asylum-seeker services in New York City over three fiscal years. <a href="{SRC['nyc'][1]}" target="_blank" rel="noopener">NYC Comptroller ↗</a> · <a href="journal-what-the-taxpayer-bought.html">What the taxpayer bought →</a></li>
+  <li><b>About $27 billion</b> in emergency Medicaid, federal and state, fiscal 2017–2023, for people ineligible for full Medicaid because of immigration status. That span covers both administrations. <a href="{FRONT_SRC['cbo60805']}" target="_blank" rel="noopener">CBO, Oct 2, 2024 ↗</a> · <a href="journal-the-hospital-and-the-morgue.html">The hospital and the morgue →</a></li>
+  <li><b>SSI is not Social Security.</b> It is paid from general revenue. SSA lists parole, asylum and refugee status among the ways some noncitizens can qualify; federal law (8 U.S.C. 1611) bars most federal benefits for noncitizens who are not “qualified.” <a href="{FRONT_SRC['ssi']}" target="_blank" rel="noopener">SSA spotlight ↗</a> · <a href="{FRONT_SRC['usc1611']}" target="_blank" rel="noopener">8 U.S.C. 1611 ↗</a> · <a href="journal-they-opened-the-border.html">They opened the border →</a></li>
+  <li>Who got paid, program by program: <a href="journal-who-got-paid.html">Who got paid →</a></li>
+ </ul>
+ <h3 class="fr-h3">2020: the riots and who funds the organizers</h3>
+ <ul class="fr-list">
+  <li>The summer 2020 unrest (Minneapolis Third Precinct, Kenosha) happened during President Trump's term, in cities and states run by local officials. <a href="record-2020.html">The 2020 record →</a></li>
+  <li>Large foundations fund national organizing groups, per their own IRS Form 990 filings. Example: Ford Foundation “core support for the Movement for Black Lives,” $1.65 million in 2021, through Common Counsel Foundation. <a href="{FRONT_SRC['ford990']}" target="_blank" rel="noopener">Ford Foundation 990 ↗</a></li>
+  <li>We found <b>no primary record</b> (court finding, prosecution, government report, IRS filing or company admission) that people attending the 2020 protests were paid to attend. We do not claim it.</li>
+ </ul>
+ <div class="fact-box"><p class="fact-tag">Keep the dates straight</p><p>COVID lockdowns and the 2020 job losses came before Jan 20, 2021. The CARES Act (2020) passed with both parties' votes; the American Rescue Plan (2021, the $1,400 checks) passed with Democratic votes only. Both are spending by Congress. <a href="scorecard.html#wallet-checks">Both votes, by party →</a></p></div>
+</section>
+
+<section class="fr-block" id="front-lawfare">
+ <p class="section-label">4 · Lawfare</p>
+ <h2 class="section-title">Ten cases against Donald J. Trump, from the court record.</h2>
+ <div class="fr-cards grid3">
+  {_lcard("lawfare.html", "Docket tracker", "Court, docket, status, key rulings", "Every case links to the official docket and the court PDFs.")}
+  {_lcard("downloads/lawfare-tracker.pdf", "PDF", "The tracker as a document", "Print it or send it to your representative.")}
+ </div>
+ {_ev(("Lawfare docket tracker", "lawfare.html"))}
+</section>
+
+<section class="fr-block" id="front-congress">
+ <p class="section-label">5 · Congress: the people we hired</p>
+ <h2 class="section-title">Their job vs. their record.</h2>
+ <div class="tile-grid">
+  {tile("$174,000", "Base salary, rank-and-file member", "Leaders are paid more.", accent=True, src=src_link(FRONT_SRC["crs_pay"], "CRS RL30064"))}
+  {tile("$7.258B", "Legislative branch, fiscal 2026", "Public Law 119-37.", src=src_link(FRONT_SRC["crs_leg"], "CRS R48612"))}
+  {tile("$40.09T", "National debt", "Sep 17, 2026.", src=S("treas"))}
+  {tile("$233–521B", "Federal money lost to fraud, per year", "GAO statistical estimate (FY2018–22 data), not a count of proven cases.", src=src_link(FRONT_SRC["gao_fraud"], "GAO-24-105833"))}
+  {tile("FY1997", "Last year all 12 spending bills passed on time", "Deadline: October 1.", src=src_link(FRONT_SRC["crs_approps"], "CRS IN12324"))}
+  {tile("FY2001", "Last budget surplus", "", src=src_link(FRONT_SRC["cbo_hist"], "CBO historical data"))}
+ </div>
+ <div class="fr-cards grid3">
+  {_lcard(FRONT_SRC["days"], "Official calendars", "Days in session", "Congress.gov publishes the House and Senate days in session. A pro forma day still counts.")}
+  {_lcard("congress.html", "The purse", "Congress holds the money", "Debt, deficit and interest, from CBO and Treasury.")}
+  {_lcard("accountability-fraud.html", "Fraud tracker", "Improper payments and fraud", "GAO and inspector-general figures, kept in separate tiers.")}
+ </div>
+ {_ev(("Not a part-time job (essay)", "journal-not-a-part-time-job.html"), ("The $7 billion machine", "journal-the-7-billion-machine.html"), ("Article V: the peaceful path", "article-v.html"))}
+</section>
+
+<section class="fr-keep" id="keep-reading">
+ <p class="section-label">Keep reading</p>
+ <h2 class="section-title">The full evidence file</h2>
+</section>
+"""
+
+
 def build_home():
     import midterms as M
     nc = corr["Never corrected by the pusher"]
@@ -419,6 +611,7 @@ def build_home():
  </div>
 </section>
 <div class="wrap">
+{home_front()}
 <a class="mt-home" href="scorecard.html">
  <span class="mt-home-k">Midterm scorecard</span>
  <span class="mt-home-h">Who ran Congress. What it cost.</span>
@@ -442,7 +635,6 @@ def build_home():
  <p class="section-label">The evidence at a glance</p>
  <h2 class="section-title">Tap any bar to open those cases.</h2>
  <div class="chart-grid">
-  {chart_card("chart-evidence", "Verdict", "How each claim was rated")}
   {chart_card("chart-proof", "Strength of proof", "Strongest proof first")}
   {chart_card("chart-term", "When it ran", "Cases by period")}
   {chart_card("chart-methods", "How it was done", "Most common methods", tall=True)}
@@ -487,7 +679,7 @@ def build_home():
 """
     return page("index.html", "Swamp Force — Vote the file. Not the feeling.",
                 f"{ST['total']} documented claims about President Trump, each checked against the record. Staff brief and evidence appendix for lawmakers.",
-                body, charts=charts_evidence(), flush=True)
+                body, charts=charts_evidence() + front_charts(), flush=True)
 
 
 def build_fake_news():
@@ -918,6 +1110,8 @@ def build_lawfare():
         dockets = list(csv.DictReader(fh))
     with (LAW / "lawfare-rulings.csv").open(encoding="utf-8-sig") as fh:
         rulings = list(csv.DictReader(fh))
+    dockets = [{k: decolo(v) if isinstance(v, str) else v for k, v in d.items()} for d in dockets]
+    rulings = [{k: decolo(v) if isinstance(v, str) else v for k, v in d.items()} for d in rulings]
     by = defaultdict(list)
     for r in rulings:
         by[r.get("Case") or ""].append(r)
@@ -1524,6 +1718,10 @@ def main():
     for name, h in pages.items():
         h = h.replace("In this site&#x27;s audit of", "In this site&#x27;s review of")
         (OUT / name).write_text(h, encoding="utf-8")
+    # /midterms.html: .htaccess 301s to scorecard.html; this stub covers hosts/previews that ignore .htaccess.
+    (OUT / "midterms.html").write_text('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Midterm scorecard</title>'
+        '<link rel="canonical" href="https://swampforce.com/scorecard.html"><meta http-equiv="refresh" content="0; url=scorecard.html"></head>'
+        '<body><p><a href="scorecard.html">The midterm scorecard has moved here.</a></p></body></html>', encoding="utf-8")
     sb = OUT / "docs" / "staff-brief.html"
     if sb.exists():
         sb.write_text(sb.read_text(encoding="utf-8").replace("<b>Evidence audit:</b>", "<b>Evidence review:</b>"), encoding="utf-8")

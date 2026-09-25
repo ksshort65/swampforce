@@ -147,10 +147,8 @@ def _block(law, line, votes, pkg, extra, ptr):
 STATE = (
  '<div class="wv-state"><p class="wv-state-h">Federal only. Your state decides its own tax.</p>'
  '<p>These are deductions from federal income tax. Each state legislature decides whether its own income tax follows them.</p>'
- '<p><b>Colorado:</b> tips stay deductible on the state return. Overtime is added back and taxed by the state starting with tax year 2026 '
- '(HB25-1296, signed May 16, 2025; Colorado House 40–24, Senate 23–12).</p>'
  '<p class="wv-state-go">Check your state: your state legislature decides this.</p>'
- f'<div class="wv-src">{_btn(CO_BILL, "Colorado bill HB25-1296")}{_btn(CO_GUIDE, "Colorado Dept. of Revenue guide (PDF)")}</div></div>')
+ '</div>')
 
 
 def _card(cid, num, title, teaser, blocks, extra):

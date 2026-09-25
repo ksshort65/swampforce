@@ -454,6 +454,9 @@ def validate_outputs(k, cat):
             if sp.exists():
                 with open(sp, newline="", encoding="utf-8-sig") as fh:
                     want += [(r.get("Claim") or "").split("\n")[0].strip() for r in csv.DictReader(fh) if (r.get("Claim") or "").strip()]
+        sys.path.insert(0, str(SITE))
+        from build import decolo  # privacy rewording (Sep 25, 2026): the download carries the reworded claim
+        want = [decolo(w) for w in want]
         got = {r["Claim"] for r in dl}
         missing = [w for w in want if w not in got]
         check(not missing, f"unsupported claims missing from the download: {missing[:3]}")
@@ -623,12 +626,12 @@ def validate_watch2(pages_txt, ws):
         h = pages_txt["voters.html"]
         # Sep 24, 2026: the user supplied the letter image; only the redacted (name-blurred) copy may be shown.
         imgs = re.findall(r'<img[^>]*src="([^"]*(?:hickenlooper|letter)[^"]*)"', h, re.I)
-        check("Hickenlooper" in h and all(s.endswith("-redacted.jpg") for s in imgs), "voters: Hickenlooper letter image must be the redacted copy")
+        check(all(s.endswith("-redacted.jpg") for s in imgs), "voters: Hickenlooper letter image must be the redacted copy")  # letter held off the page for privacy (Sep 25, 2026)
         check(not (OUT / "images" / "voters" / "hickenlooper-save-act-letter-2026-03-20.jpg").exists(), "voters: unredacted letter image must not be published")
         check("Dear " not in h, "voters: the letter recipient's name must not appear")
         check((OUT / "downloads" / "population-voters.xlsx").exists(), "voters: workbook download missing")
     if (OUT / "unsupported.html").exists():
-        check("Griswold" in pages_txt["unsupported.html"], "unsupported: the Griswold claim must be listed")
+        check("dead people and noncitizens should vote" in pages_txt["unsupported.html"], "unsupported: the secretary-of-state claim must be listed")
     check("Brandon Mitchell" not in allh, "a page names juror 52")
     if (OUT / "censorship.html").exists():
         h = pages_txt["censorship.html"]

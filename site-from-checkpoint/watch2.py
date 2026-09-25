@@ -857,7 +857,7 @@ def build_voters(H):
     ch, co = rows("Colorado")
     cc = {h: i for i, h in enumerate(ch)}
     co_reg = [(r[0], r[cc["EAVS registered total"]]) for r in co if isinstance(r[0], int) and _n(r[cc["EAVS registered total"]])]
-    charts.append({"id": "chart-co", "type": "bar", "labels": [str(y) for y, _ in co_reg], "data": [v for _, v in co_reg], "colors": ["#16325c"] * len(co_reg)})
+    if False: charts.append({"id": "chart-co", "type": "bar", "labels": [str(y) for y, _ in co_reg], "data": [v for _, v in co_reg], "colors": ["#16325c"] * len(co_reg)})
     tiles = [H.tile(f"{last[col['ACS US citizens (B05001)']] / 1e6:.1f}M", "U.S. citizens, 2024 (ACS)", f"Noncitizens: {last[col['ACS noncitizens (B05001)']] / 1e6:.1f}M", src=H.src_link("https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/1YRData/acsdt1y2024-b05001.dat", "Census ACS")),
              H.tile(f"{last[col['EAVS registered voters, total (as published)']] / 1e6:.1f}M", "Registrations on state rolls, 2024", "EAVS; includes inactive records", src=H.src_link("https://www.eac.gov/sites/default/files/2025-07/2024_EAVS_Report_508.pdf", "EAC EAVS 2024")),
              H.tile(f"{last[col['EAVS removals total']] / 1e6:.1f}M", "Removed from rolls, 2022–24 cycle", "Mostly moves, deaths and unanswered notices", src=H.src_link("https://www.eac.gov/sites/default/files/2025-07/2024_EAVS_Report_508.pdf", "EAC")),
@@ -934,7 +934,7 @@ def build_voters(H):
     body = (head("Watch", "Voters & Population: the Raw Numbers",
                  "U.S. population and citizenship, voter registration and removals, naturalization, noncitizens on the rolls, and Biden-period humanitarian programs, as published by Census, EAC, DHS, SSA and state officials. Only year-over-year differences are computed; nothing is adjusted or reconciled.",
                  f'<div class="doc-actions"><a class="btn navy sm" href="downloads/population-voters.xlsx">{H.ico("down")} Workbook (Excel)</a></div>')
-            + legend() + toc([("pv-charts", "Charts"), ("pv-findings", "Findings"), ("pv-rolls", "Noncitizens on rolls"), ("pv-disc", "Discrepancies"), ("pv-hum", "Humanitarian"), ("pv-claims", "Claims checked"), ("pv-co", "Colorado")])
+            + legend() + toc([("pv-charts", "Charts"), ("pv-findings", "Findings"), ("pv-rolls", "Noncitizens on rolls"), ("pv-disc", "Discrepancies"), ("pv-hum", "Humanitarian"), ("pv-claims", "Claims checked")])
             + f'<div class="tile-grid">{"".join(tiles)}</div>'
             + section("pv-charts", "The numbers in charts", '<div class="chart-grid two">'
                       + H.chart_card("chart-cit", "U.S. citizens and noncitizens (ACS)", "2006–2024; 2005 and 2020 omitted as not comparable")
@@ -942,17 +942,15 @@ def build_voters(H):
                       + H.chart_card("chart-rem", "Removals and new valid registrations (EAVS)", "By federal election cycle")
                       + H.chart_card("chart-nat", "Persons naturalized (DHS)", "Fiscal years")
                       + H.chart_card("chart-bd", "Births and deaths (CDC/NCHS)", "Pending source check: not stamped; 2025 provisional")
-                      + H.chart_card("chart-co", "Colorado registrations (EAVS)", "Total incl. inactive")
                       + "</div>" + raw + src_line(H, PV_SRC))
             + section("pv-findings", "Findings in brief", findings, primary=False)
             + section("pv-rolls", "Noncitizens on voter rolls: official counts", '<p>Official counts are small next to rolls of millions. Flags are not confirmations, and many noncitizen registrations came from government processing errors.</p>' + rolls_html
                       + src_line(H, [("DHS SAVE figure: U.S. stay application, No. 26A308", SCOTUS_SAVE), ("DOJ release 26-1082, Sep 18, 2026", DOJ_16), ("Georgia SOS 2024 citizenship audit statement (copy)", GA_AUDIT), ("Ohio SOS, Jun 3, 2025", "https://www.ohiosos.gov/media-center/press-releases/2025/2025-06-03/")]) + nj)
             + section("pv-disc", "Where official numbers disagree", '<p>Shown side by side; no reconciliation is attempted.</p>' + disc_html + src_line(H, PV_SRC[:1] + PV_SRC[4:6] + [("Census population estimates (Vintage 2025)", "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv")]))
             + section("pv-hum", "Humanitarian and parole programs, Biden period", hum)
-            + section("pv-claims", "Claims checked", f'<div class="frames">{harris_card}{reuters_card}</div>{gris}{hick}'
+            + section("pv-claims", "Claims checked", f'<div class="frames">{harris_card}{reuters_card}</div>'
                       + rep_box(H, rep_quote, title="Reported, not confirmed by primary record: the Harris quote", intro="Transcriptions of a clip by two outlets; no official transcript or unedited video transcript was located."), primary=False)
             + section("pv-jw", "Judicial Watch voter-roll cases: court records vs. claims", jw)
-            + section("pv-co", "Colorado", colo)
             + rep_box(H, rep)
             + reader_path([("unsupported.html", "Unsupported claims"), ("accountability.html", "Accountability trackers"), ("about.html", "Methodology")]))
     html_out = H.page("voters.html", "Voters & Population: the Raw Numbers · Swamp Force",
@@ -1233,7 +1231,7 @@ def build_censorship(H):
         years.setdefault(yr, {"yes": 0, "partial": 0, "no": 0})[conf if conf in ("yes", "partial", "no") else "no"] += 1
         ev = e(_mask(t["event"]))
         if conf == "yes":
-            src = H.src_link(t["primary_source_url"], t["source_type"][:40]) if t["primary_source_url"].startswith("http") else ""
+            src = H.src_link(t["primary_source_url"], (t["source_type"] if len(t["source_type"]) <= 40 else t["source_type"][:40].rsplit(" ", 1)[0])) if t["primary_source_url"].startswith("http") else ""
             rows_html.append(f'<li class="cen-tl-item"><span class="cen-tl-date">{e(t["date"])}</span><p>{ev} {src} <span class="cen-ok" title="Confirmed by primary record">\u2713</span></p></li>')
         else:
             lbl = "Partly confirmed" if conf == "partial" else "Reported only"
@@ -1417,18 +1415,21 @@ def build_gas_gap(H):
     tiles = [H.tile(f"${retail:.3f}", "U.S. regular, Sep 21, 2026", "July 2008 peak: $4.114", src=H.src_link("https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPMR_PTE_NUS_DPG&f=W", "EIA")),
              H.tile(f"{ref:.0f}¢", "Refining slice per gallon today", "Gulf wholesale minus WTI; −2¢ in July 2008", accent=True, src=H.src_link("https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EER_EPMRU_PF4_RGC_DPG&f=W", "EIA")),
              H.tile(f"{war:.0f}¢", "War-shortage premium", "Cause documented (IEA); size not measured by any agency", src=H.src_link("https://www.iea.org/reports/oil-market-report-september-2026", "IEA")),
-             H.tile(f"{bw:.1f}¢", "Not explained by a primary record", "Brent–WTI gap above its 2025 level", src=H.src_link("https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=RBRTE&f=W", "EIA")),
-             H.tile(f"${co:.3f}", "Colorado regular, Sep 21, 2026", "22¢ below U.S.; Suncor is the state's only refinery", src=H.src_link("https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPMR_PTE_SCO_DPG&f=W", "EIA"))]
+             H.tile(f"{bw:.1f}¢", "Not explained by a primary record", "Brent–WTI gap above its 2025 level", src=H.src_link("https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=RBRTE&f=W", "EIA"))]
     figs = {"1": _fig(imgs["gap-pump-wholesale-crude-2005-2026"], "Pump vs wholesale vs crude, weekly 2005–2026", "U.S. retail, Gulf Coast wholesale gasoline, WTI and Brent per gallon. EIA weekly data.")
                  + _fig(imgs["gap-cents-per-gallon-breakdown-2005-2026"], "Cents-per-gallon breakdown, monthly 2005–2026", "EIA gasoline pump components (share × retail price), Jan 2005 – May 2026."),
             "2": _fig(imgs["gap-refiner-profits-vs-margin"], "Refiner profits vs refining margin", "Combined net income of five U.S. refiners (SEC) vs the Gulf Coast gasoline–WTI spread (EIA). 2026 is January–June only.")}
-    anchors = {"oil": "Who sets the price?", "1": "Where the money goes", "2": "Red flags", "3": "Ownership & Colorado", "4": "Investigations", "5": "Political money", "6": "Viral claim", "state": "State taxes"}
+    anchors = {"oil": "Who sets the price?", "1": "Where the money goes", "2": "Red flags", "3": "Refining ownership", "4": "Investigations", "5": "Political money", "6": "Viral claim", "state": "State taxes"}
     parts = []
     intro = next(l for t, l in MD.sections(txt) if t == "")
     for t, lines in MD.sections(txt):
         if not t or t == "Files" or not t[0].isdigit():
             continue
         no = t.split(".")[0]
+        # Privacy (Karen, Sep 25): no single state singled out.
+        lines = [l.replace("Colorado AG, CFTC, FBI", "State AGs, CFTC, FBI").replace("; PBF and Suncor have no FEC-registered PAC", "; PBF has no FEC-registered PAC") for l in lines]
+        lines = [l for l in lines if not re.search(r"Colorado|Suncor", l)]
+        t = t.replace("Refining ownership and Colorado", "Refining ownership")
         inner = md.render(lines, rep_sink=rep) + figs.get(no, "")
         if no == "6":
             inner = f'<div class="wrong-box">{inner}</div>'

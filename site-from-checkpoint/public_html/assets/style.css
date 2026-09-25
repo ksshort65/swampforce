@@ -1202,3 +1202,26 @@ a.src { white-space: nowrap; }
 /* Oil series cards (gas-gap #gg-oil), Sep 25, 2026 */
 @media(min-width:760px){#gg-oil .ft-figs{grid-template-columns:repeat(3,1fr)}}
 .oil-fig img{border:1px solid rgba(15,23,42,.12)}
+
+/* Homepage midterm front (Sep 25, 2026) */
+.fr-band { padding: 30px 0 4px; }
+.fr-dek { color: #334155; max-width: 70ch; margin: 0 0 12px; }
+.fr-block { padding: 26px 0 10px; border-top: 1px solid var(--line); }
+.fr-block .section-title, .fr-band .section-title { margin-bottom: 10px; }
+.fr-ev { font-size: .9rem; color: #475569; margin: 8px 0 14px; overflow-wrap: anywhere; }
+.fr-ev a { font-weight: 600; }
+.fr-view { margin-top: 14px; }
+.fr-draft { display: inline-block; background: #fde68a; color: #7c2d12; padding: 1px 6px; border-radius: 4px; margin-right: 6px; }
+.fr-cards { display: grid; gap: 10px; align-content: start; }
+.fr-cards.grid3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 12px 0; }
+.fr-card { display: flex; flex-direction: column; gap: 4px; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--navy); border-radius: 0 var(--radius) var(--radius) 0; padding: 12px 14px; text-decoration: none; color: inherit; box-shadow: var(--shadow-sm); min-width: 0; }
+.fr-card:hover { border-left-color: var(--red); }
+.fr-card strong { color: var(--navy); font-size: 1.05rem; line-height: 1.25; }
+.fr-card span { color: #334155; font-size: .93rem; }
+.fr-card .fr-k { font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
+.fr-flag { display: inline-block; align-self: flex-start; background: #fef3c7; color: #7c2d12 !important; font-weight: 700; font-size: .8rem !important; padding: 2px 8px; border-radius: 4px; margin-top: 4px; }
+.fr-back .tile-grid .stat .num { font-size: 2rem; }
+.fr-h3 { font-family: var(--sans); color: var(--navy); margin: 18px 0 6px; font-size: 1.15rem; }
+.fr-list { margin: 0 0 10px; padding-left: 1.2rem; }
+.fr-list li { margin: 0 0 8px; overflow-wrap: anywhere; }
+.fr-keep { padding: 30px 0 0; border-top: 3px solid var(--navy); margin-top: 20px; }

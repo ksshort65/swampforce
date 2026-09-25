@@ -270,7 +270,7 @@
       "cpi_rows": 5
     },
     "voters.html": {
-      "charts": 6,
+      "charts": 5,
       "raw_rows": 21,
       "discrepancies": 27,
       "rolls_rows": 14,
@@ -313,7 +313,7 @@
       "war_premium_c": 56.0,
       "colorado": 4.257,
       "images": 3,
-      "reported": 4
+      "reported": 1
     },
     "journal.html": {
       "essays": 60
