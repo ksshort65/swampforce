@@ -272,6 +272,11 @@ def rep_box(H, items, title="Reported only: not confirmed by a primary record", 
     return reported_box(H, out, title=title, intro=intro)
 
 
+def src_line(H, links):
+    """A 'Sources:' line of primary-record links for a section whose table cites no per-row link."""
+    return '<p class="law-note">Sources: ' + " · ".join(H.src_link(u, l) for l, u in links) + '</p>'
+
+
 def section(anchor, title, inner, primary=True):
     st = f" {stamp()}" if primary else ""
     return f'<section class="doc-section" id="{anchor}"><h2>{e(title)}{st}</h2>{inner}</section>'
@@ -351,6 +356,11 @@ def build_acc_fraud(H):
                  f'{H.chart_card("chart-ip-agency", "FY2025 improper payments by agency", "Improper + unknown")}</div>') + r
         anchor = "fr-" + re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")[:28]
         title = "Why there is no single \"grand total\" of fraud" if t.startswith("Read this first") else t
+        if t.startswith("Read this first"):
+            r += src_line(H, [("GAO-26-108694 (improper payments)", "https://www.gao.gov/products/gao-26-108694"), ("GAO-24-105833 (fraud estimate)", "https://www.gao.gov/products/gao-24-105833"),
+                              ("SBA OIG 23-09 (PPP/EIDL)", "https://www.oversight.gov/sites/default/files/documents/reports/2023-06/SBA-OIG-Report-23-09.pdf"), ("GAO-23-106696 (UI fraud)", "https://www.gao.gov/products/gao-23-106696"),
+                              ("DOJ FCA FY2025", "https://www.justice.gov/opa/pr/false-claims-act-settlements-and-judgments-exceed-68b-fiscal-year-2025"),
+                              ("CIGIE FY2025", "https://www.ignet.gov/sites/default/files/files/CIGIE%202025%20Annual%20Report%20to%20the%20President_FINAL.pdf"), ("GAO-26-108615 (DOGE)", "https://files.gao.gov/reports/GAO-26-108615/index.html")])
         parts.append(section(anchor, title, r, primary=not t.startswith("Read this first")))
     body = (f'<div class="tile-grid">{"".join(tiles)}</div>' + "".join(parts) + law_chips(H, "fraud-tally.md") + rep_box(H, rep))
     html_out = _acc_page(H, "accountability-fraud.html", "Waste, Fraud & Abuse: the running tally",
@@ -383,6 +393,8 @@ def build_acc_trading(H):
         r = md.render(lines, rep_sink=rep)
         if t.startswith("2. Top"):
             r = H.chart_card("chart-trade-top", "Top 10 by disclosed volume", "Sum of range minimums, all assets (dollars)") + r
+        if t.startswith("1."):
+            r += src_line(H, [("House Clerk periodic transaction reports", "https://disclosures-clerk.house.gov/FinancialDisclosure"), ("Senate eFD", "https://efdsearch.senate.gov/search/")])
         parts.append(section("tr-" + t.split(".")[0], t, r))
     extra = [{"citation": "Pub. L. 112-105 (STOCK Act)", "topic": "STOCK Act of 2012", "link": "https://www.congress.gov/112/plaws/publ105/PLAW-112publ105.pdf",
               "relevance_note": "Applied the disclosure law's periodic-transaction reporting to members of Congress."},
@@ -593,6 +605,9 @@ def build_energy(H):
             continue
         s1.append(f'<h3 class="watch-h3">{e(titles.get(no, t))}</h3>{inner}')
     data = next(l for t, l in MD.sections(og) if t.startswith("Data tables"))
+    s1.append(src_line(H, [("EIA pump components", "https://www.eia.gov/petroleum/gasdiesel/gaspump_hist.php"), ("EIA method", "https://www.eia.gov/petroleum/gasdiesel/pump_methodology.php"),
+                           ("EIA weekly retail price", "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPMR_PTE_NUS_DPG&f=W"), ("BLS CPI-U", "https://data.bls.gov/timeseries/CUUR0000SA0"),
+                           ("EIA refinery capacity", "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=8_NA_8D0_NUS_5&f=A")]))
     s1_html = section("en-gas", "Oil at $145 in 2008, gas at $4.11: why gas costs more today with crude much lower", "".join(s1))
     data_html = section("en-data", "Data tables and sources", f'<details class="watch-details"><summary>Prices, components, crack spreads, capacity, profits, taxes, exports and official investigations</summary>{md.render(data, rep_sink=rep)}</details>')
     s2 = []
@@ -605,7 +620,7 @@ def build_energy(H):
                  "Why gas costs more than at the 2008 peak even with cheaper crude, where each dollar at the pump goes, and how the 2026 U.S.–Iran conflict moved prices, from EIA, BLS, SEC, Treasury, DOE and regulator records.")
             + legend() + toc([("en-gas", "Gas vs. oil"), ("en-data", "Data tables"), ("ir-summary", "Iran summary"), ("ir-1", "Timeline"), ("ir-2", "Prices"), ("ir-3", "Hormuz"), ("ir-7", "SPR")])
             + f'<div class="tile-grid">{"".join(tiles)}</div>' + s1_html + data_html + "".join(s2) + rep_box(H, rep)
-            + reader_path([("accountability.html", "Accountability trackers"), ("about.html", "Methodology")]))
+            + reader_path([("gas-gap.html", "Gas Price Gap Tracker"), ("accountability.html", "Accountability trackers"), ("about.html", "Methodology")]))
     html_out = H.page("energy.html", "Energy: Gas Prices, Refiners and the Iran War · Swamp Force",
                       "Gas vs. oil prices since 2008, pump-price components, refiner profits, official findings, and the 2026 U.S.–Iran conflict's effect on fuel.", body, charts=charts, serious=True)
     return html_out, {"gas_now": now, "peak_2008": peak, "peak_real_2026": real, "refining_change_cents": refining, "refiner_q2_2026_b": q2_26, "spr_mbbl": spr, "images": len(imgs), "reported": len(rep)}
@@ -765,10 +780,10 @@ def build_voters(H):
                       + H.chart_card("chart-nat", "Persons naturalized (DHS)", "Fiscal years")
                       + H.chart_card("chart-bd", "Births and deaths (CDC/NCHS)", "Pending source check: not stamped; 2025 provisional")
                       + H.chart_card("chart-co", "Colorado registrations (EAVS)", "Total incl. inactive")
-                      + "</div>" + raw)
+                      + "</div>" + raw + src_line(H, PV_SRC))
             + section("pv-findings", "Findings in brief", findings, primary=False)
             + section("pv-rolls", "Noncitizens on voter rolls: official counts", '<p>Official counts are small next to rolls of millions. Flags are not confirmations, and many noncitizen registrations came from government processing errors.</p>' + rolls_html + nj)
-            + section("pv-disc", "Where official numbers disagree", '<p>Shown side by side; no reconciliation is attempted.</p>' + disc_html)
+            + section("pv-disc", "Where official numbers disagree", '<p>Shown side by side; no reconciliation is attempted.</p>' + disc_html + src_line(H, PV_SRC[:1] + PV_SRC[4:6] + [("Census population estimates (Vintage 2025)", "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv")]))
             + section("pv-hum", "Humanitarian and parole programs, Biden period", hum)
             + section("pv-claims", "Claims checked", f'<div class="frames">{harris_card}{reuters_card}</div>{gris}{hick}'
                       + rep_box(H, rep_quote, title="Reported, not confirmed by primary record: the Harris quote", intro="Transcriptions of a clip by two outlets; no official transcript or unedited video transcript was located."), primary=False)
@@ -794,6 +809,15 @@ def _floyd_drop(s):
     s = re.sub(r"\(publicly self-identified; news names [^()]*\)", "", s)
     s = _JUROR.sub("Juror 52", s)
     return s
+
+
+PV_SRC = [("Census ACS summary files", "https://www2.census.gov/programs-surveys/acs/summary_file/"),
+          ("Census CPS voting tables", "https://www2.census.gov/programs-surveys/cps/tables/p20/"),
+          ("EAC EAVS 2024", "https://www.eac.gov/sites/default/files/2025-07/2024_EAVS_Report_508.pdf"),
+          ("SSA statistical supplement", "https://www.ssa.gov/policy/docs/statcomps/supplement/2025/2f.html"),
+          ("DHS naturalizations FY2024", "https://ohss.dhs.gov/system/files/2026-06/2026_0604_ohss_yearbook_naturalizations_fy2024.xlsx"),
+          ("DHS refugees FY2024", "https://ohss.dhs.gov/system/files/2025-08/2025_0812_ohss_yearbook_refugees_fy2024.xlsx"),
+          ("All sources, with check status (workbook)", "downloads/population-voters.xlsx")]
 
 
 def build_floyd(H):
@@ -911,7 +935,7 @@ def build_floyd(H):
             + section("fd-homicide", "What \"manner of death: homicide\" means", A(1) + A(2) + '<h3 class="watch-h3">The sources</h3>' + B("2. What \"manner of death: homicide\" means"))
             + section("fd-doubt", "The case for doubt, and how the courts handled it", A(3) + f'<blockquote class="watch-quote">\u201c{e(plea)}\u201d <span class="muted-note">Chauvin federal plea agreement, Doc. 142</span> {H.src_link(S("Federal plea agreement"), "Plea agreement")}</blockquote>'
                       + '<h3 class="watch-h3">Cause-of-death testimony</h3>' + md.render(b1["1.7 Cause-of-death testimony (transcript cites as given in the Thao verdict findings, which drew on the Chauvin and federal trial transcripts)"], rep_sink=rep))
-            + section("fd-timeline", "Body-camera timeline, May 25, 2020 (p.m.)", '<p class="muted-note">As found by the court in the Thao verdict from body-worn camera video.</p>' + md.render(b1["1.8 Timeline (Thao verdict findings from body-cam video; times p.m., May 25, 2020)"], rep_sink=rep))
+            + section("fd-timeline", "Body-camera timeline, May 25, 2020 (p.m.)", '<p class="muted-note">As found by the court in the Thao verdict from body-worn camera video.</p>' + md.render(b1["1.8 Timeline (Thao verdict findings from body-cam video; times p.m., May 25, 2020)"], rep_sink=rep) + src_line(H, [("State v. Thao verdict and memorandum opinion (May 1, 2023)", S("Thao verdict"))]))
             + section("fd-court", "The court file", cf_tbl + f'<details class="watch-details"><summary>Charges, rulings, instructions, verdict, appeals and the federal case in detail</summary>{b1_html}</details>')
             + section("fd-ties", "People and their documented ties", A(6) + ties_tbl + '<p class="muted-note">Ties are listed as facts. None was the subject of a recusal motion or court finding in the records reviewed. Unconfirmed contributor identities are not listed.</p>')
             + section("fd-conflicts", "Documented conflicts or improprieties: the complete list", conflicts)
@@ -1096,3 +1120,54 @@ def build_censorship(H):
 
 
 SECTIONS2.append(Section("censorship.html", "Censorship", "Platforms, pressure, courts", [CEN / "censorship.md", CEN / "timeline.csv", CEN / "sources.csv"], build_censorship))
+
+
+# ───────────────────────── Gas Price Gap Tracker ─────────────────────────
+GG = EN / "gap-tracker"
+
+
+def build_gas_gap(H):
+    txt = (GG / "gap-report.md").read_text(encoding="utf-8")
+    md = MD(H); rep = []
+    imgs = {k: _copy_img(GG / "charts" / f"{k}.png", f"{k}.png") for k in
+            ["gap-pump-wholesale-crude-2005-2026", "gap-cents-per-gallon-breakdown-2005-2026", "gap-refiner-profits-vs-margin"]}
+    dl = OUT / "downloads"; dl.mkdir(exist_ok=True)
+    shutil.copyfile(GG / "gas-gap-tracker.xlsx", dl / "gas-gap-tracker.xlsx")
+    retail = num_md(txt, r"U\.S\. regular was \*\*\$([\d.]+)/gal\*\* on Sep 21, 2026", float)
+    ref = num_md(txt, r"\| Refining \(Gulf wholesale − WTI\) \| −?[\d.]+¢ \| ([\d.]+)¢", float)
+    bw = num_md(txt, r"\*\*Brent–WTI gap above normal\*\* \(\$[\d.]+/bbl vs \$[\d.]+ in 2025\) \| \*\*([\d.]+)\*\*", float)
+    war = num_md(txt, r"\*\*War shortage premium\*\*[^|]*\| \*\*([\d.]+)\*\*", float)
+    co = num_md(txt, r"Colorado regular was \*\*\$([\d.]+)\*\*", float)
+    tiles = [H.tile(f"${retail:.3f}", "U.S. regular, Sep 21, 2026", "July 2008 peak: $4.114", src=H.src_link("https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPMR_PTE_NUS_DPG&f=W", "EIA")),
+             H.tile(f"{ref:.0f}¢", "Refining slice per gallon today", "Gulf wholesale minus WTI; −2¢ in July 2008", accent=True, src=H.src_link("https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EER_EPMRU_PF4_RGC_DPG&f=W", "EIA")),
+             H.tile(f"{war:.0f}¢", "War-shortage premium", "Cause documented (IEA); size not measured by any agency", src=H.src_link("https://www.iea.org/reports/oil-market-report-september-2026", "IEA")),
+             H.tile(f"{bw:.1f}¢", "Not explained by a primary record", "Brent–WTI gap above its 2025 level", src=H.src_link("https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=RBRTE&f=W", "EIA")),
+             H.tile(f"${co:.3f}", "Colorado regular, Sep 21, 2026", "22¢ below U.S.; Suncor is the state's only refinery", src=H.src_link("https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPMR_PTE_SCO_DPG&f=W", "EIA"))]
+    figs = {"1": _fig(imgs["gap-pump-wholesale-crude-2005-2026"], "Pump vs wholesale vs crude, weekly 2005–2026", "U.S. retail, Gulf Coast wholesale gasoline, WTI and Brent per gallon. EIA weekly data.")
+                 + _fig(imgs["gap-cents-per-gallon-breakdown-2005-2026"], "Cents-per-gallon breakdown, monthly 2005–2026", "EIA gasoline pump components (share × retail price), Jan 2005 – May 2026."),
+            "2": _fig(imgs["gap-refiner-profits-vs-margin"], "Refiner profits vs refining margin", "Combined net income of five U.S. refiners (SEC) vs the Gulf Coast gasoline–WTI spread (EIA). 2026 is January–June only.")}
+    anchors = {"1": "Where the money goes", "2": "Red flags", "3": "Ownership & Colorado", "4": "Investigations", "5": "Political money", "6": "Viral claim"}
+    parts = []
+    intro = next(l for t, l in MD.sections(txt) if t == "")
+    for t, lines in MD.sections(txt):
+        if not t or t == "Files" or not t[0].isdigit():
+            continue
+        no = t.split(".")[0]
+        inner = md.render(lines, rep_sink=rep) + figs.get(no, "")
+        if no == "6":
+            inner = f'<div class="wrong-box">{inner}</div>'
+        parts.append(section(f"gg-{no}", t.split(". ", 1)[1], inner))
+    body = (head("Watch", "Gas Price Gap Tracker",
+                 "Why pump prices stay high while crude is far cheaper than in 2008: each cent of a gallon traced to EIA, SEC, CFTC and FEC records, with the data points that do not fit the documented explanations.")
+            + legend() + toc([(f"gg-{k}", v) for k, v in anchors.items()])
+            + f'<div class="tile-grid">{"".join(tiles)}</div>'
+            + f'<div class="answer-box"><p><b>How to read this page.</b> A red flag is a number that does not fit the documented explanations. It is not a finding of wrongdoing, and no crime is implied without a charge or finding. '
+              f'Raw data for every figure: <a href="downloads/gas-gap-tracker.xlsx">Gas Price Gap workbook (XLSX)</a>. Background: <a href="energy.html">Energy: gas vs. 2008 and the Iran war</a>.</p></div>'
+            + "".join(parts) + rep_box(H, rep)
+            + reader_path([("energy.html", "Energy"), ("unsupported.html", "Unsupported claims"), ("about.html", "Methodology")]))
+    html_out = H.page("gas-gap.html", "Gas Price Gap Tracker · Swamp Force",
+                      "Where each cent of a gallon goes, what the records explain, and what they do not: EIA, SEC, CFTC and FEC data.", body, serious=True)
+    return html_out, {"retail": retail, "refining_c": ref, "unexplained_c": bw, "war_premium_c": war, "colorado": co, "images": len(imgs), "reported": len(rep)}
+
+
+SECTIONS2.append(Section("gas-gap.html", "Gas Price Gap", "Where each cent of a gallon goes", [GG / "gap-report.md", GG / "gas-gap-tracker.xlsx", GG / "charts"], build_gas_gap))

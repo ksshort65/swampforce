@@ -1,0 +1,1449 @@
+{
+ "cot_067651": {
+  "2008": {
+   "peak": 114742,
+   "peak_date": "2008-04-22",
+   "avg": 52404,
+   "peak_pct": 8.6
+  },
+  "2022": {
+   "peak": 279511,
+   "peak_date": "2022-01-18",
+   "avg": 201212,
+   "peak_pct": 15.2
+  },
+  "2026": {
+   "peak": 111731,
+   "peak_date": "2026-09-08",
+   "avg": 79705,
+   "peak_pct": 5.8
+  },
+  "latest": {
+   "date": "2026-09-15",
+   "net": 106279,
+   "pct": 5.4,
+   "alltime_peak": 339278,
+   "alltime_peak_date": "2014-03-04",
+   "rank_latest_pct": 461,
+   "n": 640
+  }
+ },
+ "cot_111659": {
+  "2008": {
+   "peak": 62535,
+   "peak_date": "2008-05-20",
+   "avg": 38984,
+   "peak_pct": 23.3
+  },
+  "2022": {
+   "peak": 81212,
+   "peak_date": "2022-02-15",
+   "avg": 59117,
+   "peak_pct": 24.8
+  },
+  "2026": {
+   "peak": 92848,
+   "peak_date": "2026-09-08",
+   "avg": 70348,
+   "peak_pct": 25.4
+  },
+  "latest": {
+   "date": "2026-09-15",
+   "net": 83171,
+   "pct": 23.2,
+   "alltime_peak": 96012,
+   "alltime_peak_date": "2012-03-06",
+   "rank_latest_pct": 101,
+   "n": 640
+  }
+ },
+ "fec": {
+  "2020": {
+   "DEM": 402000,
+   "REP": 2230200,
+   "total": 2634700,
+   "n": 1067
+  },
+  "2022": {
+   "DEM": 341800,
+   "REP": 1917700,
+   "total": 2284000,
+   "n": 918
+  },
+  "2024": {
+   "DEM": 337000,
+   "REP": 2326000,
+   "total": 2674700,
+   "n": 1071
+  },
+  "2026": {
+   "DEM": 165000,
+   "REP": 2062000,
+   "total": 2257000,
+   "n": 888
+  }
+ },
+ "fec_by_pac": {
+  "2020|American Fuel & Petrochemical Manufacturers PAC (AFPM PAC)": {
+   "DEM": 58500,
+   "REP": 158500
+  },
+  "2020|American Petroleum Institute PAC (API PAC)": {
+   "DEM": 32500,
+   "REP": 98200
+  },
+  "2020|HF Sinclair PAC (DINO PAC; formerly HollyFrontier PAC)": {
+   "DEM": 10000,
+   "REP": 221000
+  },
+  "2020|Marathon Petroleum Corp Employees PAC (MPAC)": {
+   "DEM": 75500,
+   "REP": 862000
+  },
+  "2020|Phillips 66 PAC": {
+   "DEM": 130500,
+   "REP": 383500
+  },
+  "2020|Valero Energy Corp PAC": {
+   "DEM": 95000,
+   "REP": 507000
+  },
+  "2022|American Fuel & Petrochemical Manufacturers PAC (AFPM PAC)": {
+   "DEM": 50000,
+   "REP": 183000
+  },
+  "2022|American Petroleum Institute PAC (API PAC)": {
+   "DEM": 20000,
+   "REP": 98700
+  },
+  "2022|HF Sinclair PAC (DINO PAC; formerly HollyFrontier PAC)": {
+   "DEM": 6800,
+   "REP": 128500
+  },
+  "2022|Marathon Petroleum Corp Employees PAC (MPAC)": {
+   "DEM": 57500,
+   "REP": 618500
+  },
+  "2022|Phillips 66 PAC": {
+   "DEM": 151000,
+   "REP": 361500
+  },
+  "2022|Valero Energy Corp PAC": {
+   "DEM": 56500,
+   "REP": 527500
+  },
+  "2024|American Fuel & Petrochemical Manufacturers PAC (AFPM PAC)": {
+   "DEM": 5500,
+   "REP": 163000
+  },
+  "2024|American Petroleum Institute PAC (API PAC)": {
+   "DEM": 89500,
+   "REP": 236000
+  },
+  "2024|HF Sinclair PAC (DINO PAC; formerly HollyFrontier PAC)": {
+   "DEM": 1500,
+   "REP": 149000
+  },
+  "2024|Marathon Petroleum Corp Employees PAC (MPAC)": {
+   "DEM": 50000,
+   "REP": 587500
+  },
+  "2024|Phillips 66 PAC": {
+   "DEM": 173000,
+   "REP": 615500
+  },
+  "2024|Valero Energy Corp PAC": {
+   "DEM": 17500,
+   "REP": 575000
+  },
+  "2026|American Fuel & Petrochemical Manufacturers PAC (AFPM PAC)": {
+   "DEM": 3500,
+   "REP": 105500
+  },
+  "2026|American Petroleum Institute PAC (API PAC)": {
+   "DEM": 36500,
+   "REP": 183000
+  },
+  "2026|HF Sinclair PAC (DINO PAC; formerly HollyFrontier PAC)": {
+   "DEM": 1000,
+   "REP": 206000
+  },
+  "2026|Marathon Petroleum Corp Employees PAC (MPAC)": {
+   "DEM": 7500,
+   "REP": 474500
+  },
+  "2026|Phillips 66 PAC": {
+   "DEM": 111500,
+   "REP": 555500
+  },
+  "2026|Valero Energy Corp PAC": {
+   "DEM": 5000,
+   "REP": 537500
+  }
+ },
+ "opensecrets": [
+  [
+   2024,
+   "$248,680,218",
+   "$9,207,146",
+   "$69,822,551",
+   "11.63%",
+   "88.19%"
+  ],
+  [
+   2022,
+   "$135,884,940",
+   "$9,726,060",
+   "$41,100,819",
+   "19.11%",
+   "80.77%"
+  ],
+  [
+   2020,
+   "$149,897,380",
+   "$13,366,122",
+   "$70,040,001",
+   "16.00%",
+   "83.84%"
+  ],
+  [
+   2026,
+   "not published",
+   "not published",
+   "not published",
+   "",
+   ""
+  ]
+ ],
+ "latest": {
+  "us": 4.478,
+  "co": 4.257,
+  "p4": 4.51,
+  "ca": 6.003,
+  "wti": 103.54,
+  "brent": 124.15,
+  "gc": 3.888,
+  "ny": 3.542,
+  "la": 4.123,
+  "tax": 0.5216,
+  "gap": 1.4911619047619045,
+  "crack": 1.4227619047619045,
+  "crackb": 0.9320476190476188,
+  "ret_whl": 0.5899999999999999,
+  "week": "2026-09-21",
+  "spot_week": "2026-09-18"
+ },
+ "jul7_2008": {
+  "us": 4.114,
+  "co": 3.989,
+  "p4": 4.065,
+  "ca": 4.55,
+  "wti": 142.52,
+  "brent": 141.07,
+  "gc": 3.371,
+  "ny": 3.36,
+  "la": 3.58,
+  "tax": 0.403172,
+  "gap": 0.31749466666666637,
+  "crack": -0.022333333333333538,
+  "crackb": 0.012190476190476307,
+  "ret_whl": 0.7429999999999999
+ },
+ "gap_annual": {
+  "2005": 0.493,
+  "2006": 0.54,
+  "2007": 0.674,
+  "2008": 0.461,
+  "2009": 0.489,
+  "2010": 0.493,
+  "2011": 0.862,
+  "2012": 0.962,
+  "2013": 0.755,
+  "2014": 0.704,
+  "2015": 0.816,
+  "2016": 0.671,
+  "2017": 0.747,
+  "2018": 0.704,
+  "2019": 0.774,
+  "2020": 0.747,
+  "2021": 0.912,
+  "2022": 1.196,
+  "2023": 1.165,
+  "2024": 0.972,
+  "2025": 1.023,
+  "2026": 1.283
+ },
+ "crack_annual": {
+  "2005": 0.25,
+  "2006": 0.265,
+  "2007": 0.312,
+  "2008": 0.1,
+  "2009": 0.157,
+  "2010": 0.16,
+  "2011": 0.487,
+  "2012": 0.568,
+  "2013": 0.364,
+  "2014": 0.269,
+  "2015": 0.39,
+  "2016": 0.301,
+  "2017": 0.394,
+  "2018": 0.333,
+  "2019": 0.344,
+  "2020": 0.19,
+  "2021": 0.438,
+  "2022": 0.687,
+  "2023": 0.639,
+  "2024": 0.414,
+  "2025": 0.458,
+  "2026": 0.939
+ },
+ "retwhl_annual": {
+  "2005": 0.682,
+  "2006": 0.743,
+  "2007": 0.773,
+  "2008": 0.76,
+  "2009": 0.735,
+  "2010": 0.735,
+  "2011": 0.778,
+  "2012": 0.807,
+  "2013": 0.809,
+  "2014": 0.859,
+  "2015": 0.875,
+  "2016": 0.819,
+  "2017": 0.813,
+  "2018": 0.84,
+  "2019": 0.905,
+  "2020": 1.039,
+  "2021": 0.961,
+  "2022": 1.006,
+  "2023": 1.031,
+  "2024": 1.068,
+  "2025": 1.078,
+  "2026": 0.862
+ },
+ "co_minus_us_annual": {
+  "2005": -0.013,
+  "2006": -0.026,
+  "2007": -0.01,
+  "2008": -0.08,
+  "2009": -0.102,
+  "2010": -0.113,
+  "2011": -0.12,
+  "2012": -0.133,
+  "2013": -0.087,
+  "2014": -0.029,
+  "2015": -0.101,
+  "2016": -0.106,
+  "2017": -0.095,
+  "2018": -0.082,
+  "2019": -0.058,
+  "2020": 0.04,
+  "2021": 0.125,
+  "2022": -0.196,
+  "2023": 0.005,
+  "2024": -0.249,
+  "2025": -0.23,
+  "2026": -0.164
+ },
+ "co_minus_p4_annual": {
+  "2005": -0.007,
+  "2006": -0.009,
+  "2007": -0.011,
+  "2008": -0.049,
+  "2009": -0.035,
+  "2010": -0.098,
+  "2011": -0.018,
+  "2012": -0.018,
+  "2013": -0.011,
+  "2014": -0.006,
+  "2015": -0.079,
+  "2016": -0.09,
+  "2017": -0.087,
+  "2018": -0.138,
+  "2019": -0.1,
+  "2020": -0.041,
+  "2021": -0.045,
+  "2022": -0.227,
+  "2023": -0.074,
+  "2024": -0.119,
+  "2025": -0.154,
+  "2026": -0.087
+ },
+ "max_gap": {
+  "val": 1.8162285714285713,
+  "week": "2022-06-27"
+ },
+ "max_crack": {
+  "val": 1.549238095238095,
+  "week": "2026-08-31"
+ },
+ "gap_latest_rank": 19,
+ "n_weeks": 1134,
+ "ref_c_top": [
+  [
+   "2022-06",
+   134.6
+  ],
+  [
+   "2022-05",
+   113.3
+  ],
+  [
+   "2026-05",
+   97.2
+  ],
+  [
+   "2023-08",
+   97.2
+  ],
+  [
+   "2023-07",
+   89.6
+  ],
+  [
+   "2007-05",
+   87.8
+  ],
+  [
+   "2023-06",
+   86.4
+  ],
+  [
+   "2022-10",
+   82.8
+  ]
+ ],
+ "ref_c_may26_rank": 3,
+ "ref_c_2022_max": [
+  [
+   "2022-06",
+   134.6
+  ]
+ ],
+ "dm_c_top": [
+  [
+   "2020-03",
+   92.7
+  ],
+  [
+   "2020-04",
+   85.4
+  ],
+  [
+   "2023-10",
+   77.7
+  ],
+  [
+   "2022-07",
+   77.0
+  ],
+  [
+   "2008-10",
+   76.3
+  ]
+ ],
+ "dm_c_2026": [
+  [
+   "2026-01",
+   32.0,
+   55.3
+  ],
+  [
+   "2026-02",
+   38.7,
+   49.4
+  ],
+  [
+   "2026-03",
+   27.6,
+   77.5
+  ],
+  [
+   "2026-04",
+   56.2,
+   68.1
+  ],
+  [
+   "2026-05",
+   66.3,
+   97.2
+  ]
+ ],
+ "win_down": {
+  "from": "2026-06-01",
+  "to": "2026-07-06",
+  "retail_chg": -0.528,
+  "gc_chg": -0.11,
+  "brent_chg_gal": -0.651,
+  "wti_chg_gal": -0.547
+ },
+ "win_up": {
+  "from": "2026-07-06",
+  "to": "2026-09-21",
+  "retail_chg": 0.701,
+  "gc_chg": 0.85,
+  "brent_chg_gal": 1.296,
+  "wti_chg_gal": 0.787
+ },
+ "win_war": {
+  "from": "2026-02-23",
+  "to": "2026-04-06",
+  "retail_chg": 1.183,
+  "gc_chg": 1.511,
+  "brent_chg_gal": 1.245,
+  "wti_chg_gal": 0.961
+ },
+ "stocks": {
+  "latest": 206046.0,
+  "date": "2026-09-18",
+  "same_week_by_year": {
+   "2005": 195431.0,
+   "2006": 207554.0,
+   "2007": 191366.0,
+   "2008": 178739.0,
+   "2009": 213109.0,
+   "2010": 226058.0,
+   "2011": 214075.0,
+   "2012": 195828.0,
+   "2013": 216235.0,
+   "2014": 210324.0,
+   "2015": 218756.0,
+   "2016": 225156.0,
+   "2017": 216185.0,
+   "2018": 235680.0,
+   "2019": 230204.0,
+   "2020": 227499.0,
+   "2021": 221616.0,
+   "2022": 214610.0,
+   "2023": 219476.0,
+   "2024": 220083.0,
+   "2025": 216569.0,
+   "2026": 206046.0
+  },
+  "last_year_lower": 2012
+ },
+ "decomp": {
+  "crude_wti": 2.4652380952380955,
+  "refining_vs_wti": 1.4227619047619045,
+  "taxes": 0.5216,
+  "dist_mkt": 0.0683999999999999,
+  "retail": 4.478,
+  "baseline_2025_gc_wti": 0.4580842490842491,
+  "bw_today": 0.4907142857142857,
+  "bw_2025": 0.08581959706959708,
+  "bw_widening": 0.40489468864468864,
+  "crackb_today": 0.9320476190476188,
+  "crackb_2025": 0.37226465201465203,
+  "crackb_excess": 0.5597829670329668,
+  "j08_crude": 3.3933333333333335,
+  "j08_refining": -0.022333333333333538,
+  "j08_taxes": 0.403172,
+  "j08_dm": 0.3398279999999999,
+  "j08_retail": 4.114
+ },
+ "rbob_sep8_highest_since": "2012-04-03",
+ "retwhl_jun1": 1.1569999999999996,
+ "retwhl_jul6": 0.7390000000000003,
+ "crack_max_prev": {
+  "val": 1.3856190476190475,
+  "week": "2022-06-13"
+ },
+ "gasx": {
+  "war_avg": 899,
+  "prewar_avg": 940,
+  "y2025_avg": 904,
+  "latest": 838.0
+ },
+ "refiners": [
+  {
+   "co": "HF Sinclair (2022-)",
+   "period": "2022",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.256,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.923,
+   "Share buybacks (cash paid)": 1.372
+  },
+  {
+   "co": "HF Sinclair (2022-)",
+   "period": "2023",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.341,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 1.59,
+   "Share buybacks (cash paid)": 0.999
+  },
+  {
+   "co": "HF Sinclair (2022-)",
+   "period": "2024",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.386,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.177,
+   "Share buybacks (cash paid)": 0.672
+  },
+  {
+   "co": "HF Sinclair (2022-)",
+   "period": "2025",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.376,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.579,
+   "Share buybacks (cash paid)": 0.354
+  },
+  {
+   "co": "HF Sinclair (2022-)",
+   "period": "2025Q2",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.208,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "HF Sinclair (2022-)",
+   "period": "2026 H1 (Jan-Jun)",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.18,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 1.54,
+   "Share buybacks (cash paid)": 0.255
+  },
+  {
+   "co": "HF Sinclair (2022-)",
+   "period": "2026Q2",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.892,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "HollyFrontier (to 2021)",
+   "period": "2008",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.029,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.121,
+   "Share buybacks (cash paid)": 0.151
+  },
+  {
+   "co": "HollyFrontier (to 2021)",
+   "period": "2012",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.658,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 1.727,
+   "Share buybacks (cash paid)": 0.21
+  },
+  {
+   "co": "HollyFrontier (to 2021)",
+   "period": "2013",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.646,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.736,
+   "Share buybacks (cash paid)": 0.225
+  },
+  {
+   "co": "HollyFrontier (to 2021)",
+   "period": "2014",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.647,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.281,
+   "Share buybacks (cash paid)": 0.159
+  },
+  {
+   "co": "HollyFrontier (to 2021)",
+   "period": "2015",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.247,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.74,
+   "Share buybacks (cash paid)": 0.743
+  },
+  {
+   "co": "HollyFrontier (to 2021)",
+   "period": "2016",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.234,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": -0.26,
+   "Share buybacks (cash paid)": 0.138
+  },
+  {
+   "co": "HollyFrontier (to 2021)",
+   "period": "2017",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.236,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.805,
+   "Share buybacks (cash paid)": 0.016
+  },
+  {
+   "co": "HollyFrontier (to 2021)",
+   "period": "2018",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.234,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 1.098,
+   "Share buybacks (cash paid)": 0.363
+  },
+  {
+   "co": "HollyFrontier (to 2021)",
+   "period": "2019",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.225,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.772,
+   "Share buybacks (cash paid)": 0.533
+  },
+  {
+   "co": "HollyFrontier (to 2021)",
+   "period": "2020",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.229,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": -0.601,
+   "Share buybacks (cash paid)": 0.008
+  },
+  {
+   "co": "HollyFrontier (to 2021)",
+   "period": "2021",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.058,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.558,
+   "Share buybacks (cash paid)": 0.007
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2012",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.407,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 3.389,
+   "Share buybacks (cash paid)": 1.35
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2013",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.484,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.112,
+   "Share buybacks (cash paid)": 2.793
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2014",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.524,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.524,
+   "Share buybacks (cash paid)": 2.131
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2015",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.613,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.852,
+   "Share buybacks (cash paid)": 0.965
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2016",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.719,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 1.174,
+   "Share buybacks (cash paid)": 0.197
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2017",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.773,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 3.432,
+   "Share buybacks (cash paid)": 2.372
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2018",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.954,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.78,
+   "Share buybacks (cash paid)": 3.287
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2019",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.398,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.637,
+   "Share buybacks (cash paid)": 1.95
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2020",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.51,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": -9.826,
+   "Share buybacks (cash paid)": 0.0
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2021",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.484,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 9.738,
+   "Share buybacks (cash paid)": 4.654
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2022",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.279,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 14.516,
+   "Share buybacks (cash paid)": 11.922
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2023",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.261,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 9.681,
+   "Share buybacks (cash paid)": 11.572
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2024",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.154,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 3.445,
+   "Share buybacks (cash paid)": 9.189
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2025",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.14,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 4.047,
+   "Share buybacks (cash paid)": 3.488
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2025Q2",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 1.216,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2026 H1 (Jan-Jun)",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.585,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 5.649,
+   "Share buybacks (cash paid)": 3.283
+  },
+  {
+   "co": "Marathon Petroleum",
+   "period": "2026Q2",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 5.138,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2012",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.0,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.002,
+   "Share buybacks (cash paid)": 0.0
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2013",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.038,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.04,
+   "Share buybacks (cash paid)": 0.0
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2014",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.089,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": -0.038,
+   "Share buybacks (cash paid)": 0.143
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2015",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.107,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.146,
+   "Share buybacks (cash paid)": 0.008
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2016",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.117,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.171,
+   "Share buybacks (cash paid)": 0.001
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2017",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.132,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.416,
+   "Share buybacks (cash paid)": 0.001
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2018",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.139,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.128,
+   "Share buybacks (cash paid)": 0.008
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2019",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.144,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.319,
+   "Share buybacks (cash paid)": 0.005
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2020",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": -1.392,
+   "Share buybacks (cash paid)": 0.002
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2021",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.231,
+   "Share buybacks (cash paid)": 0.0
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2022",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.877,
+   "Share buybacks (cash paid)": 0.156
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2023",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.14,
+   "Share buybacks (cash paid)": 0.532
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2024",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": -0.534,
+   "Share buybacks (cash paid)": 0.329
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2025",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": -0.158,
+   "Share buybacks (cash paid)": 0.0
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2025Q2",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": -0.005,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2026 H1 (Jan-Jun)",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 1.105,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "PBF Energy",
+   "period": "2026Q2",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.906,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2012",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.282,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 4.124,
+   "Share buybacks (cash paid)": 0.356
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2013",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.807,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 3.726,
+   "Share buybacks (cash paid)": 2.246
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2014",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.062,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 4.762,
+   "Share buybacks (cash paid)": 2.282
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2015",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.172,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 4.227,
+   "Share buybacks (cash paid)": 1.512
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2016",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.282,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 1.555,
+   "Share buybacks (cash paid)": 1.042
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2017",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.395,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 5.106,
+   "Share buybacks (cash paid)": 1.59
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2018",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.436,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 5.595,
+   "Share buybacks (cash paid)": 4.645
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2019",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.57,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 3.076,
+   "Share buybacks (cash paid)": 1.65
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2020",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.575,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": -3.975,
+   "Share buybacks (cash paid)": 0.443
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2021",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.585,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 1.317,
+   "Share buybacks (cash paid)": 0.0
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2022",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.793,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 11.024,
+   "Share buybacks (cash paid)": 1.513
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2023",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.882,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 7.015,
+   "Share buybacks (cash paid)": 4.014
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2024",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.882,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.117,
+   "Share buybacks (cash paid)": 3.451
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2025",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.922,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 4.403,
+   "Share buybacks (cash paid)": 1.207
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2025Q2",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.877,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2026 H1 (Jan-Jun)",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.017,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 4.054,
+   "Share buybacks (cash paid)": 0.648
+  },
+  {
+   "co": "Phillips 66",
+   "period": "2026Q2",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 3.847,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "Suncor Energy (whole company, CAD, IFRS; 40-F)",
+   "period": "2016",
+   "Dividends paid (cash)": 1.877,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": 0.445,
+   "Net income attributable to company": NaN,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "Suncor Energy (whole company, CAD, IFRS; 40-F)",
+   "period": "2017",
+   "Dividends paid (cash)": 2.124,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": 4.458,
+   "Net income attributable to company": NaN,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "Suncor Energy (whole company, CAD, IFRS; 40-F)",
+   "period": "2018",
+   "Dividends paid (cash)": 2.333,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": 3.293,
+   "Net income attributable to company": NaN,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "Suncor Energy (whole company, CAD, IFRS; 40-F)",
+   "period": "2019",
+   "Dividends paid (cash)": 2.614,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": 2.899,
+   "Net income attributable to company": NaN,
+   "Share buybacks (cash paid)": 2.274
+  },
+  {
+   "co": "Suncor Energy (whole company, CAD, IFRS; 40-F)",
+   "period": "2020",
+   "Dividends paid (cash)": 1.67,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": -4.319,
+   "Net income attributable to company": NaN,
+   "Share buybacks (cash paid)": 0.307
+  },
+  {
+   "co": "Suncor Energy (whole company, CAD, IFRS; 40-F)",
+   "period": "2021",
+   "Dividends paid (cash)": 1.55,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": 4.119,
+   "Net income attributable to company": NaN,
+   "Share buybacks (cash paid)": 2.304
+  },
+  {
+   "co": "Suncor Energy (whole company, CAD, IFRS; 40-F)",
+   "period": "2022",
+   "Dividends paid (cash)": 2.596,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": 9.077,
+   "Net income attributable to company": NaN,
+   "Share buybacks (cash paid)": 5.135
+  },
+  {
+   "co": "Suncor Energy (whole company, CAD, IFRS; 40-F)",
+   "period": "2023",
+   "Dividends paid (cash)": 2.749,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": 8.295,
+   "Net income attributable to company": NaN,
+   "Share buybacks (cash paid)": 2.233
+  },
+  {
+   "co": "Suncor Energy (whole company, CAD, IFRS; 40-F)",
+   "period": "2024",
+   "Dividends paid (cash)": 2.803,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": 6.016,
+   "Net income attributable to company": NaN,
+   "Share buybacks (cash paid)": 2.908
+  },
+  {
+   "co": "Suncor Energy (whole company, CAD, IFRS; 40-F)",
+   "period": "2025",
+   "Dividends paid (cash)": 2.809,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": 5.918,
+   "Net income attributable to company": NaN,
+   "Share buybacks (cash paid)": 3.129
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2008",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.299,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": -1.131,
+   "Share buybacks (cash paid)": 0.955
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2012",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.36,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.083,
+   "Share buybacks (cash paid)": 0.281
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2013",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.462,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.72,
+   "Share buybacks (cash paid)": 0.928
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2014",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.554,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 3.63,
+   "Share buybacks (cash paid)": 1.296
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2015",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.848,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 3.99,
+   "Share buybacks (cash paid)": 2.838
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2016",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.111,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.289,
+   "Share buybacks (cash paid)": 1.336
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2017",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.242,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 4.065,
+   "Share buybacks (cash paid)": 1.372
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2018",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.369,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 3.122,
+   "Share buybacks (cash paid)": 1.708
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2019",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.492,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.422,
+   "Share buybacks (cash paid)": 0.777
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2020",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.6,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": -1.421,
+   "Share buybacks (cash paid)": 0.156
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2021",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.602,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.93,
+   "Share buybacks (cash paid)": 0.027
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2022",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.562,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 11.528,
+   "Share buybacks (cash paid)": 4.577
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2023",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.452,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 8.835,
+   "Share buybacks (cash paid)": 5.136
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2024",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.384,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.77,
+   "Share buybacks (cash paid)": 2.875
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2025",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 1.405,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 2.348,
+   "Share buybacks (cash paid)": 2.598
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2025Q2",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 0.714,
+   "Share buybacks (cash paid)": NaN
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2026 H1 (Jan-Jun)",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": 0.714,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 4.983,
+   "Share buybacks (cash paid)": 2.836
+  },
+  {
+   "co": "Valero Energy",
+   "period": "2026Q2",
+   "Dividends paid (cash)": NaN,
+   "Dividends paid to common (cash)": NaN,
+   "Net income (profit or loss, incl. minority)": NaN,
+   "Net income attributable to company": 3.72,
+   "Share buybacks (cash paid)": NaN
+  }
+ ],
+ "ni5": {
+  "2012": 11.325,
+  "2013": 9.333,
+  "2014": 11.159,
+  "2015": 11.956,
+  "2016": 4.928,
+  "2017": 13.824,
+  "2018": 12.723,
+  "2019": 9.227,
+  "2020": -17.216,
+  "2021": 12.774,
+  "2022": 42.868,
+  "2023": 29.262,
+  "2024": 7.975,
+  "2025": 11.218,
+  "2026H1": 17.331
+ }
+}

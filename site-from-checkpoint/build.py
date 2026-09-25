@@ -220,16 +220,48 @@ def case_card(c):
 </article>"""
 
 
-def frame_simple(tag, claim, truth, url, verdict_label="On the record", claim_h="The caption", truth_h="The file"):
+def frame_simple(tag, claim, truth, url, verdict_label="On the record", claim_h="The caption", truth_h="The file", row=None):
+    row = row or {}
+    fact, _, view = truth.partition("Our view:")
+    view_html = f'<p class="opinion-inline"><span class="op-tag">Our view</span> {e(view.strip())}</p>' if view.strip() else ""
+    links = src_link(url, row.get("_src_label", "Source")) + "".join(" " + src_link(u, l) for l, u in row.get("_extra", []))
     return f"""<article class="frame open"><div class="frame-head static"><span class="frame-tag">{e(tag)}</span>
 <span class="frame-meta"><span class="badge proven">{e(verdict_label)}</span></span></div>
 <div class="frame-body"><div class="frame-cols"><div class="frame-col claim-side"><h3>{e(claim_h)}</h3><p>{e(claim)}</p></div>
-<div class="frame-col truth-side"><h3>{e(truth_h)}</h3><p>{e(truth)}</p></div></div>
-<div class="frame-foot">{src_link(url, "Source")}</div></div></article>"""
+<div class="frame-col truth-side"><h3>{e(truth_h)}</h3><p>{e(fact.strip())}</p>{view_html}</div></div>
+<div class="frame-foot">{links}</div></div></article>"""
 
 # ───── data ─────
 cases = V.load_catalog()
 verified = V.load_verified()
+
+
+def _apply_site_fixes(rows):
+    """Apply /workspace/checkpoint-review/site-apply.json: 'cut it' entries are never rendered; rows this site renders
+    take their corrected text from watch-data/site-apply-overlay.json (written from the entry's fix instructions)."""
+    sa = json.loads((AUDIT / "site-apply.json").read_text(encoding="utf-8"))
+    ov = json.loads((SITE / "watch-data" / "site-apply-overlay.json").read_text(encoding="utf-8"))["rows"]
+    cut = {x["id"] for x in sa["entries"] if "cut it" in (x.get("verdict") or "")}
+    out = []
+    for r in rows:
+        if r["Item_No"] in cut:
+            continue
+        o = ov.get(r["Item_No"])
+        if o:
+            r = dict(r)
+            for k in ("Text", "Best_Source_URL", "Attributed_To"):
+                if o.get(k):
+                    r[k] = o[k]
+            r["_src_label"] = o.get("source_label", "Source")
+            r["_extra"] = o.get("extra_links", [])
+            r["_applied"] = o["entry"]
+        out.append(r)
+    SITE_APPLY.update(entries=len(sa["entries"]), cut=len(cut), overlay=len(ov), rows_after=len(out))
+    return out
+
+
+SITE_APPLY = {}
+verified = _apply_site_fixes(verified)
 VROW = {r["Item_No"]: r for r in verified}
 ST = V.stats(cases)
 EVIDENCE_MENU[0] = (EVIDENCE_MENU[0][0], EVIDENCE_MENU[0][1], EVIDENCE_MENU[0][2].format(total=ST["total"]))
@@ -788,7 +820,7 @@ def party_page(fname, title, page_name, dek):
                          f'<span>{e(claim[:170])}{"…" if len(claim) > 170 else ""}</span><em>Open case #{e(cid)} →</em></a>')
         else:
             full.append(frame_simple(tag, claim, truth or "See the linked record.", (r.get("Best_Source_URL") or "").strip(),
-                                     claim_h="The claim", truth_h="The record"))
+                                     claim_h="The claim", truth_h="The record", row=r))
     body = f"""
 <section class="band-hero slim"><div class="wrap"><p class="hero-kicker">Evidence · Party ledger</p><h1>{e(title)}</h1>
 <p class="dek">{e(dek)}</p>
@@ -816,7 +848,7 @@ def build_j6():
         if not truth or claim[:60].lower() in seen or "cookielaw" in url:
             continue
         seen.add(claim[:60].lower())
-        frames.append(frame_simple((r.get("Attributed_To") or "January 6")[:90], claim, truth, url))
+        frames.append(frame_simple((r.get("Attributed_To") or "January 6")[:90], claim, truth, url, row=r))
     cat = [c for c in cases if any(k in (c["claim"] + " " + c["notes"]).lower() for k in keys)]
     body = f"""
 <section class="band-hero slim"><div class="wrap"><p class="hero-kicker">Evidence · J6</p>
@@ -1465,7 +1497,7 @@ def main():
     n_red = write_infra(list(pages))
     meta = {"pages": list(pages), "stats": ST, "corr": dict(corr), "never_split": {"fact_checked_only": NC_FC, "no_fact_check": NC_NOFC}, "congress": CONGRESS_N, "dem_rows": dem_n, "gop_rows": gop_n, "balance": BALANCE_STATS,
             "lawfare": law_n, "redirects": n_red, "top_methods": TOP_METHODS, "unsupported": len(UNSUP),
-            "watch": watch_stats, "planned_sections": W.planned_status()}
+            "watch": watch_stats, "planned_sections": W.planned_status(), "site_apply": SITE_APPLY}
     (SITE / "build-summary.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
     print(json.dumps(meta, indent=1))
 

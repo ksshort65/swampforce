@@ -286,7 +286,7 @@ def monuments_section(H):
          f'Construction: pledged by "President Trump, and other patriot donors" (about $200M in the Jul 31, 2025 announcement). Security: USSS. {H.src_link(WH_BALL, "White House")} '
          f'In June 2026 OMB set aside $385.8M (construction/procurement) plus about $10.75M (operations) of existing Secret Service funds for "White House Security Measures". {H.src_link(OMB, "OMB apportionment")}'),
         ("Lincoln Memorial Reflecting Pool", "NPS (National Mall and Memorial Parks)",
-         f'Federal contracts, {usd(pool_total, 2)} across the {len(pools)} awards listed below, paid from NPS visitor-fee receipts, the NPS construction appropriation, and $5,000,000 from the NPS donations account.'),
+         f'Federal contracts, {usd(pool_total, 2)} across the {len(pools)} awards listed below, paid from NPS visitor-fee receipts, the NPS construction appropriation, and $5,000,000 from the NPS donations account. ' + " ".join(H.src_link(c["url"], c["piid"]) for c in pools)),
         ("Triumphal Arch (Memorial Circle)", "NPS (George Washington Memorial Parkway)",
          f'NEH has reserved $2M of special-initiative funds and $13M of matching funds (a match must be raised) for the Arch. {H.src_link(NEH, "NEH FY2026 spend plan")} NPS review: {H.src_link(ARCH, "EA/FONSI")}'),
         ("National Garden of American Heroes (not named by Schumer in the records found)", "NEH and NEA (statue grants)",

@@ -32,6 +32,7 @@
     "voters.html",
     "record-2020-floyd.html",
     "censorship.html",
+    "gas-gap.html",
     "404.html"
   ],
   "stats": {
@@ -105,7 +106,7 @@
     "false photo/video attribution",
     "premature \u201cproven\u201d framing"
   ],
-  "unsupported": 1,
+  "unsupported": 2,
   "watch": {
     "trump-watch.html": {
       "conflicts_verified": 5,
@@ -230,7 +231,22 @@
       "timeline_partial": 4,
       "timeline_reported": 5,
       "reported": 11
+    },
+    "gas-gap.html": {
+      "retail": 4.478,
+      "refining_c": 142.3,
+      "unexplained_c": 40.5,
+      "war_premium_c": 56.0,
+      "colorado": 4.257,
+      "images": 3,
+      "reported": 4
     }
   },
-  "planned_sections": {}
+  "planned_sections": {},
+  "site_apply": {
+    "entries": 331,
+    "cut": 97,
+    "overlay": 9,
+    "rows_after": 799
+  }
 }

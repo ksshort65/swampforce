@@ -969,3 +969,5 @@ a.src { white-space: nowrap; }
 .cen-tl-item.grey::before { background: #a8a29e; }
 .cen-tl-item.grey .cen-tl-date { color: #6b7280; }
 .cen-ok { color: var(--proven); font-weight: 700; }
+.opinion-inline { margin-top: .6em; padding: .5em .7em; border-left: 3px solid #b45309; background: #fff7ed; font-style: italic; }
+.opinion-inline .op-tag { font-style: normal; margin-right: .35em; }

@@ -1,0 +1,948 @@
+{
+ "national": {
+  "total": 18160493,
+  "top": [
+   [
+    "MARATHON PETROLEUM CORP",
+    2986000
+   ],
+   [
+    "VALERO ENERGY CORP",
+    2231300
+   ],
+   [
+    "EXXONMOBIL CORP",
+    1967000
+   ],
+   [
+    "PHILLIPS 66 COMPANY",
+    1219700
+   ],
+   [
+    "CHEVRON CORP",
+    1060181
+   ],
+   [
+    "PBF ENERGY CO LLC",
+    1042200
+   ],
+   [
+    "PDV AMERICA INC",
+    824223
+   ],
+   [
+    "HF SINCLAIR CORP",
+    720005
+   ],
+   [
+    "KOCH INDUSTRIES INC",
+    712500
+   ],
+   [
+    "BP PLC",
+    673500
+   ]
+  ]
+ },
+ "padd": {
+  "1": {
+   "total": 928300,
+   "top": [
+    [
+     "PBF ENERGY CO LLC",
+     363000
+    ],
+    [
+     "PHILLIPS 66 COMPANY",
+     275000
+    ],
+    [
+     "DELTA AIR LINES INC",
+     190000
+    ],
+    [
+     "RED APPLE GROUP INC",
+     67000
+    ],
+    [
+     "ERGON INC",
+     22300
+    ],
+    [
+     "AMERICAN REFINING GROUP INC",
+     11000
+    ]
+   ],
+   "refineries": [
+    [
+     "PHILLIPS 66 COMPANY",
+     "Linden",
+     "NJ",
+     275000
+    ],
+    [
+     "PBF ENERGY CO LLC",
+     "Delaware City",
+     "DE",
+     171000
+    ],
+    [
+     "PBF ENERGY CO LLC",
+     "Paulsboro",
+     "NJ",
+     160000
+    ],
+    [
+     "PBF ENERGY CO LLC",
+     "Paulsboro",
+     "NJ",
+     32000
+    ],
+    [
+     "DELTA AIR LINES INC",
+     "Trainer",
+     "PA",
+     190000
+    ],
+    [
+     "RED APPLE GROUP INC",
+     "Warren",
+     "PA",
+     67000
+    ],
+    [
+     "ERGON INC",
+     "Newell",
+     "WV",
+     22300
+    ],
+    [
+     "AMERICAN REFINING GROUP INC",
+     "Bradford",
+     "PA",
+     11000
+    ]
+   ]
+  },
+  "2": {
+   "total": 4282670,
+   "top": [
+    [
+     "MARATHON PETROLEUM CORP",
+     983000
+    ],
+    [
+     "BP PLC",
+     435000
+    ],
+    [
+     "CENOVUS ENERGY INC",
+     383347
+    ],
+    [
+     "WRB REFINING LP",
+     345000
+    ],
+    [
+     "KOCH INDUSTRIES INC",
+     335000
+    ],
+    [
+     "HF SINCLAIR CORP",
+     317300
+    ]
+   ],
+   "refineries": [
+    [
+     "MARATHON PETROLEUM CORP",
+     "Catlettsburg",
+     "KY",
+     307000
+    ],
+    [
+     "MARATHON PETROLEUM CORP",
+     "Robinson",
+     "IL",
+     253000
+    ],
+    [
+     "MARATHON PETROLEUM CORP",
+     "Detroit",
+     "MI",
+     146000
+    ],
+    [
+     "MARATHON PETROLEUM CORP",
+     "Canton",
+     "OH",
+     100000
+    ],
+    [
+     "MARATHON PETROLEUM CORP",
+     "Mandan",
+     "ND",
+     72000
+    ],
+    [
+     "MARATHON PETROLEUM CORP",
+     "Saint Paul",
+     "MN",
+     105000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Memphis",
+     "TN",
+     180000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Ardmore",
+     "OK",
+     86000
+    ],
+    [
+     "EXXONMOBIL CORP",
+     "Joliet",
+     "IL",
+     267000
+    ],
+    [
+     "PHILLIPS 66 COMPANY",
+     "Ponca City",
+     "OK",
+     228000
+    ],
+    [
+     "PBF ENERGY CO LLC",
+     "Toledo",
+     "OH",
+     172800
+    ],
+    [
+     "PDV AMERICA INC",
+     "Lemont",
+     "IL",
+     188023
+    ],
+    [
+     "HF SINCLAIR CORP",
+     "El Dorado",
+     "KS",
+     162000
+    ],
+    [
+     "HF SINCLAIR CORP",
+     "Tulsa West",
+     "OK",
+     85000
+    ],
+    [
+     "HF SINCLAIR CORP",
+     "Tulsa East",
+     "OK",
+     70300
+    ],
+    [
+     "KOCH INDUSTRIES INC",
+     "Saint Paul",
+     "MN",
+     335000
+    ],
+    [
+     "BP PLC",
+     "Whiting",
+     "IN",
+     435000
+    ],
+    [
+     "WRB REFINING LP",
+     "Wood River",
+     "IL",
+     345000
+    ],
+    [
+     "CENOVUS ENERGY INC",
+     "Lima",
+     "OH",
+     183000
+    ],
+    [
+     "CENOVUS ENERGY INC",
+     "Toledo",
+     "OH",
+     150800
+    ],
+    [
+     "CENOVUS ENERGY INC",
+     "Superior",
+     "WI",
+     49547
+    ],
+    [
+     "CVR ENERGY",
+     "Coffeyville",
+     "KS",
+     132000
+    ],
+    [
+     "CVR ENERGY",
+     "Wynnewood",
+     "OK",
+     74500
+    ],
+    [
+     "CHS INC",
+     "McPherson",
+     "KS",
+     119000
+    ],
+    [
+     "COUNTRYMARK COOP INC",
+     "Mount Vernon",
+     "IN",
+     36700
+    ]
+   ]
+  },
+  "3": {
+   "total": 9876563,
+   "top": [
+    [
+     "VALERO ENERGY CORP",
+     1729000
+    ],
+    [
+     "EXXONMOBIL CORP",
+     1700000
+    ],
+    [
+     "MARATHON PETROLEUM CORP",
+     1381000
+    ],
+    [
+     "SAUDI ARAMCO",
+     656400
+    ],
+    [
+     "PDV AMERICA INC",
+     636200
+    ],
+    [
+     "PHILLIPS 66 COMPANY",
+     540700
+    ]
+   ],
+   "refineries": [
+    [
+     "MARATHON PETROLEUM CORP",
+     "Galveston Bay",
+     "TX",
+     631000
+    ],
+    [
+     "MARATHON PETROLEUM CORP",
+     "Garyville",
+     "LA",
+     617000
+    ],
+    [
+     "MARATHON PETROLEUM CORP",
+     "El Paso",
+     "TX",
+     133000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Corpus Christi",
+     "TX",
+     290000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Texas City",
+     "TX",
+     225000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Houston",
+     "TX",
+     205000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Port Arthur",
+     "TX",
+     385000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Sunray",
+     "TX",
+     195000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Three Rivers",
+     "TX",
+     89000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Norco",
+     "LA",
+     215000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Meraux",
+     "LA",
+     125000
+    ],
+    [
+     "EXXONMOBIL CORP",
+     "Beaumont",
+     "TX",
+     612000
+    ],
+    [
+     "EXXONMOBIL CORP",
+     "Baytown",
+     "TX",
+     564500
+    ],
+    [
+     "EXXONMOBIL CORP",
+     "Baton Rouge",
+     "LA",
+     523500
+    ],
+    [
+     "PHILLIPS 66 COMPANY",
+     "Sweeny",
+     "TX",
+     277000
+    ],
+    [
+     "PHILLIPS 66 COMPANY",
+     "Westlake",
+     "LA",
+     263700
+    ],
+    [
+     "CHEVRON CORP",
+     "Pascagoula",
+     "MS",
+     356440
+    ],
+    [
+     "CHEVRON CORP",
+     "Pasadena",
+     "TX",
+     118750
+    ],
+    [
+     "PBF ENERGY CO LLC",
+     "Chalmette",
+     "LA",
+     190000
+    ],
+    [
+     "PDV AMERICA INC",
+     "Lake Charles",
+     "LA",
+     471200
+    ],
+    [
+     "PDV AMERICA INC",
+     "Corpus Christi",
+     "TX",
+     165000
+    ],
+    [
+     "HF SINCLAIR CORP",
+     "Artesia",
+     "NM",
+     110000
+    ],
+    [
+     "KOCH INDUSTRIES INC",
+     "Corpus Christi West",
+     "TX",
+     290000
+    ],
+    [
+     "KOCH INDUSTRIES INC",
+     "Corpus Christi East",
+     "TX",
+     87500
+    ],
+    [
+     "SAUDI ARAMCO",
+     "Port Arthur",
+     "TX",
+     656400
+    ],
+    [
+     "WRB REFINING LP",
+     "Borger",
+     "TX",
+     149000
+    ],
+    [
+     "PEMEX",
+     "Deer Park",
+     "TX",
+     312500
+    ],
+    [
+     "DELEK GROUP LTD",
+     "El Dorado",
+     "AR",
+     83000
+    ],
+    [
+     "DELEK GROUP LTD",
+     "Krotz Springs",
+     "LA",
+     80000
+    ],
+    [
+     "DELEK GROUP LTD",
+     "Tyler",
+     "TX",
+     74000
+    ],
+    [
+     "DELEK GROUP LTD",
+     "Big Spring",
+     "TX",
+     73000
+    ],
+    [
+     "TOTALENERGIES SE",
+     "Port Arthur",
+     "TX",
+     238000
+    ],
+    [
+     "SHELL PLC",
+     "Norco",
+     "LA",
+     231153
+    ],
+    [
+     "TRANSWORLD OIL USA INC",
+     "Lake Charles",
+     "LA",
+     135500
+    ],
+    [
+     "KINDER MORGAN ENERGY PTNRS LP",
+     "Galena Park",
+     "TX",
+     105000
+    ],
+    [
+     "CALUMET SPECIALTY PRODUCTS PARTNERS, L.P.",
+     "Shreveport",
+     "LA",
+     57000
+    ],
+    [
+     "CALUMET SPECIALTY PRODUCTS PARTNERS, L.P.",
+     "Cotton Valley",
+     "LA",
+     13020
+    ],
+    [
+     "CALUMET SPECIALTY PRODUCTS PARTNERS, L.P.",
+     "Princeton",
+     "LA",
+     8300
+    ],
+    [
+     "VERTEX ENERGY LP",
+     "Saraland",
+     "AL",
+     88000
+    ],
+    [
+     "PLACID OIL CO",
+     "Port Allen",
+     "LA",
+     75000
+    ],
+    [
+     "HUNT CONSLD INC",
+     "Tuscaloosa",
+     "AL",
+     50000
+    ],
+    [
+     "HUNT CONSLD INC",
+     "Sandersville",
+     "MS",
+     11000
+    ],
+    [
+     "BUCKEYE PARTNERS LP",
+     "Corpus Christi",
+     "TX",
+     60000
+    ],
+    [
+     "ONEOK INC",
+     "Corpus Christi",
+     "TX",
+     50000
+    ],
+    [
+     "ERGON INC",
+     "Vicksburg",
+     "MS",
+     26500
+    ],
+    [
+     "HARTREE PARTNERS LP",
+     "Channelview",
+     "TX",
+     45000
+    ],
+    [
+     "TEXAS INTL TERMINALS",
+     "Galveston",
+     "TX",
+     45000
+    ],
+    [
+     "PETROMAX REFINING CO LLC",
+     "Houston",
+     "TX",
+     25000
+    ],
+    [
+     "STARLIGHT RELATIVITY ACQUISITION CO",
+     "San Antonio",
+     "TX",
+     20000
+    ],
+    [
+     "BLUE DOLPHIN ENERGY CO",
+     "Nixon",
+     "TX",
+     14000
+    ],
+    [
+     "MARTIN RESOURCE MGMT CORP",
+     "Smackover",
+     "AR",
+     7500
+    ],
+    [
+     "GOODWAY REFINING LLC",
+     "Atmore",
+     "AL",
+     4100
+    ]
+   ]
+  },
+  "4": {
+   "total": 653089,
+   "top": [
+    [
+     "HF SINCLAIR CORP",
+     147705
+    ],
+    [
+     "SUNCOR ENERGY INC",
+     103000
+    ],
+    [
+     "PAR PACIFIC HOLDINGS",
+     79500
+    ],
+    [
+     "PHILLIPS 66 COMPANY",
+     71000
+    ],
+    [
+     "MARATHON PETROLEUM CORP",
+     70000
+    ],
+    [
+     "CHS INC",
+     62500
+    ]
+   ],
+   "refineries": [
+    [
+     "MARATHON PETROLEUM CORP",
+     "Salt Lake City",
+     "UT",
+     70000
+    ],
+    [
+     "PHILLIPS 66 COMPANY",
+     "Billings",
+     "MT",
+     71000
+    ],
+    [
+     "CHEVRON CORP",
+     "Salt Lake City",
+     "UT",
+     54720
+    ],
+    [
+     "HF SINCLAIR CORP",
+     "Sinclair",
+     "WY",
+     75000
+    ],
+    [
+     "HF SINCLAIR CORP",
+     "Woods Cross",
+     "UT",
+     41705
+    ],
+    [
+     "HF SINCLAIR CORP",
+     "Evansville",
+     "WY",
+     31000
+    ],
+    [
+     "PAR PACIFIC HOLDINGS",
+     "Billings",
+     "MT",
+     61500
+    ],
+    [
+     "PAR PACIFIC HOLDINGS",
+     "Newcastle",
+     "WY",
+     18000
+    ],
+    [
+     "CHS INC",
+     "Laurel",
+     "MT",
+     62500
+    ],
+    [
+     "SUNCOR ENERGY INC",
+     "Commerce City West",
+     "CO",
+     67000
+    ],
+    [
+     "SUNCOR ENERGY INC",
+     "Commerce City East",
+     "CO",
+     36000
+    ],
+    [
+     "CALUMET SPECIALTY PRODUCTS PARTNERS, L.P.",
+     "Great Falls",
+     "MT",
+     15000
+    ],
+    [
+     "FJ MANAGEMENT INC",
+     "North Salt Lake",
+     "UT",
+     31664
+    ],
+    [
+     "SILVER EAGLE REFINING INC",
+     "Woods Cross",
+     "UT",
+     15000
+    ],
+    [
+     "SILVER EAGLE REFINING INC",
+     "Evanston",
+     "WY",
+     3000
+    ]
+   ]
+  },
+  "5": {
+   "total": 2419871,
+   "top": [
+    [
+     "MARATHON PETROLEUM CORP",
+     552000
+    ],
+    [
+     "CHEVRON CORP",
+     530271
+    ],
+    [
+     "PBF ENERGY CO LLC",
+     316400
+    ],
+    [
+     "BP PLC",
+     238500
+    ],
+    [
+     "VALERO ENERGY CORP",
+     236300
+    ],
+    [
+     "HF SINCLAIR CORP",
+     145000
+    ]
+   ],
+   "refineries": [
+    [
+     "MARATHON PETROLEUM CORP",
+     "Carson",
+     "CA",
+     365000
+    ],
+    [
+     "MARATHON PETROLEUM CORP",
+     "Anacortes",
+     "WA",
+     119000
+    ],
+    [
+     "MARATHON PETROLEUM CORP",
+     "Kenai",
+     "AK",
+     68000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Benicia",
+     "CA",
+     145000
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Wilmington",
+     "CA",
+     6300
+    ],
+    [
+     "VALERO ENERGY CORP",
+     "Wilmington",
+     "CA",
+     85000
+    ],
+    [
+     "PHILLIPS 66 COMPANY",
+     "Ferndale",
+     "WA",
+     105000
+    ],
+    [
+     "CHEVRON CORP",
+     "El Segundo",
+     "CA",
+     285000
+    ],
+    [
+     "CHEVRON CORP",
+     "Richmond",
+     "CA",
+     245271
+    ],
+    [
+     "PBF ENERGY CO LLC",
+     "Torrance",
+     "CA",
+     160000
+    ],
+    [
+     "PBF ENERGY CO LLC",
+     "Martinez",
+     "CA",
+     156400
+    ],
+    [
+     "HF SINCLAIR CORP",
+     "Anacortes",
+     "WA",
+     145000
+    ],
+    [
+     "BP PLC",
+     "Ferndale",
+     "WA",
+     238500
+    ],
+    [
+     "PAR PACIFIC HOLDINGS",
+     "Kapolei",
+     "HI",
+     93500
+    ],
+    [
+     "PAR PACIFIC HOLDINGS",
+     "Tacoma",
+     "WA",
+     40700
+    ],
+    [
+     "ARCTIC SLOPE REGIONAL CORP",
+     "Valdez",
+     "AK",
+     62500
+    ],
+    [
+     "ARCTIC SLOPE REGIONAL CORP",
+     "North Pole",
+     "AK",
+     25000
+    ],
+    [
+     "KERN OIL & REFINING CO",
+     "Bakersfield",
+     "CA",
+     26000
+    ],
+    [
+     "CONOCOPHILLIPS CO",
+     "Prudhoe Bay",
+     "AK",
+     15000
+    ],
+    [
+     "SAN JOAQUIN REFINING CO INC",
+     "Bakersfield",
+     "CA",
+     15000
+    ],
+    [
+     "WORLD OIL CO",
+     "South Gate",
+     "CA",
+     8500
+    ],
+    [
+     "HILCORP ENERGY CO",
+     "Prudhoe Bay",
+     "AK",
+     6500
+    ],
+    [
+     "FORELAND REFINING CORP",
+     "Ely",
+     "NV",
+     2000
+    ],
+    [
+     "TALLEY ASPHALT PRODUCTS INC",
+     "Kern",
+     "CA",
+     1700
+    ]
+   ]
+  }
+ }
+}
