@@ -17,7 +17,7 @@ Redirect 301 /dispatch/clean-hands.html /foreword.html
 Redirect 301 /dispatch/defund-ice-is-the-tell.html /border.html
 Redirect 301 /dispatch/division-is-the-product.html /fake-news.html
 Redirect 301 /dispatch/fema-ran-two-jobs.html /border.html
-Redirect 301 /dispatch/find-them.html /border.html
+Redirect 301 /dispatch/find-them.html /journal-find-them.html
 Redirect 301 /dispatch/full-time-or-go-home.html /congress.html
 Redirect 301 /dispatch/how-the-house-was-captured.html /index.html
 Redirect 301 /dispatch/it-does-not-fit.html /congress.html
@@ -25,7 +25,7 @@ Redirect 301 /dispatch/not-a-part-time-job.html /congress.html
 Redirect 301 /dispatch/one-word.html /fake-news.html
 Redirect 301 /dispatch/paying-the-taliban.html /congress.html
 Redirect 301 /dispatch/sixty-percent.html /fake-news.html
-Redirect 301 /dispatch/that-is-not-why-they-are-elected.html /foreword.html
+Redirect 301 /dispatch/that-is-not-why-they-are-elected.html /journal-they-forgot-who-they-work-for.html
 Redirect 301 /dispatch/the-7-billion-machine.html /congress.html
 Redirect 301 /dispatch/the-bill-they-sent.html /remedy.html
 Redirect 301 /dispatch/the-caption-was-not-the-charge.html /january-6.html
@@ -62,7 +62,7 @@ Redirect 301 /dispatch/they-published-the-replacement.html /foreword.html
 Redirect 301 /dispatch/they-ran-it-anyway.html /fake-news.html
 Redirect 301 /dispatch/they-sold-the-split.html /congress.html
 Redirect 301 /dispatch/they-want-a-new-constitution.html /foreword.html
-Redirect 301 /dispatch/they-work-for-us.html /foreword.html
+Redirect 301 /dispatch/they-work-for-us.html /journal-they-work-for-us.html
 Redirect 301 /dispatch/this-congress-cannot-police-itself.html /remedy.html
 Redirect 301 /dispatch/we-the-people.html /foreword.html
 Redirect 301 /dispatch/what-he-told-them.html /index.html

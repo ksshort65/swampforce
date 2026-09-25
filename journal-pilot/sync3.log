@@ -1,0 +1,60 @@
+
+=== [   0.0s] 1. Catalog: validate CSVs, sync XLSX, page-header counts, workspace zips
+  first-term-trump-admin-media-deception.xlsx: already matches CSV
+  later-second-term-trump-admin-media-deception.xlsx: already matches CSV
+  page-header.txt: counts already current
+  rebuilt /workspace/first-term-media-deception.zip
+  rebuilt /workspace/later-second-term-media-deception.zip
+
+=== [   0.2s] 2. Brief + appendix (PDF + HTML) and thumbnails
+  $ /workspace/.venv/bin/python build_appendix.py
+  $ /workspace/.venv/bin/python build_brief.py
+  $ pdftoppm -jpeg -jpegopt quality=88 -scale-to-x 700 -scale-to-y 905 -f 1 -l 1 -singlefile /workspace/brief/swampforce-brief.pdf /workspace/site-from-checkpoint/public_html/images/brief-p1
+  $ pdftoppm -jpeg -jpegopt quality=88 -scale-to-x 700 -scale-to-y 905 -f 2 -l 2 -singlefile /workspace/brief/swampforce-brief.pdf /workspace/site-from-checkpoint/public_html/images/brief-p2
+  $ pdftoppm -jpeg -jpegopt quality=88 -scale-to-x 700 -scale-to-y 905 -f 1 -l 1 -singlefile /workspace/brief/swampforce-evidence-appendix.pdf /workspace/site-from-checkpoint/public_html/images/appendix-p1
+
+=== [   2.9s] 3. Lawfare tracker
+  $ /workspace/.venv/bin/python gen.py
+  lawfare files updated: none (generator output matches)
+
+=== [   3.2s] 4. Site build (pages, downloads, docs, data)
+  $ /workspace/.venv/bin/python build.py
+
+=== [   3.7s] 5. Site zip
+  /workspace/swampforce-from-checkpoint.zip: 94 files
+
+=== [   4.1s] Validation: counts vs catalog, byte-identical copies
+  $ pdfinfo /workspace/brief/swampforce-brief.pdf
+
+=== [   4.7s] 6. QA (browser: overflow at 1280/390, console errors, broken links)
+  $ /workspace/.venv/bin/python scripts/qa.py
+  QA: overflow 0, console 0, broken links 0
+
+=== [ 228.3s] Headline counts (from the catalog)
+  Cases 252  (first term 142 / 2021-present 110)
+  Proven false 179 · Rated misleading 73
+  Proof: official record 67 · transcript/video 27 · outlet correction 64 · fact-check only 94
+  Never corrected 159 (fact-checked only 152; no fact-check on file 7) · appended 64 · editor's note 8 · legal/settlement 5 · on-air 2 · unknown 14
+  Pushed by sitting members of Congress 48 · Unsupported claims listed 2
+  Watch trump-watch.html: conflicts_verified 5, conflicts_reported 7, log_verified 23, log_reported 7, foreign_license_lines 18, foreign_license_countries 9, foreign_license_total 59421411.83, pardon_grants 165, gao_violations 5, tiles 9, salary_confirmed_quarters 5, salary_total_primary 478333.32, salary_recipient_only 4, salary_reported 6, schumer_quotes 7, pool_contracts 5, pool_total 20052493.07
+  Watch movement-watch.html: violence_official 14, violence_reported 4, claims_shown 3, elsayed_verified 9, elsayed_reported 6, piker_verified 3, piker_reported 4, dsa_verified 11, dsa_reported 3, dsa_endorsements 11, tiles 4
+  Watch record-2020.html: tiles 6, claims_rated 3, unsupported_on_page 1, timeline_items 8, framing_cards 3, not_supported_items 9, draft_sources_used 48
+  Watch accountability.html: trackers 5
+  Watch accountability-fraud.html: fy_points 22, fy2025_billion 185.8, agencies 13, reported 1, grand_total False
+  Watch accountability-trading.html: transactions 12646, late_lines 2795, late_members 63, top 10, reported 3
+  Watch accountability-minnesota.html: charged 108, convicted 75, reported 4, nine_billion Unresolved
+  Watch accountability-omar.html: label Unresolved (no official finding), reported 13
+  Watch accountability-covid-border.html: months 36, title42_total 2912200, reported 3, funding_rows 10
+  Watch energy.html: gas_now 4.478, peak_2008 4.114, peak_real_2026 6.27, refining_change_cents 84.2, refiner_q2_2026_b 12.705, spr_mbbl 284.552, images 4, reported 6, iaea_rows 19, cpi_rows 5
+  Watch voters.html: charts 6, raw_rows 21, discrepancies 27, rolls_rows 14, hickenlooper_claims_accurate 6, hickenlooper_verdicts {'The SAVE Act would require states to ob': 'Accurate', 'It would also require states to remove ': 'Accurate', 'State-issued driver’s licenses wouldn’t': 'Accurate', 'The bill would not give states any addi': 'Accurate', 'Noncitizens voting in federal elections': 'Accurate', 'It’s also incredibly rare for a nonciti': 'Accurate', 'Even if they did attempt to, we have pr': 'Rated misleading'}, harris Rated misleading, reuters_30k Rated misleading, griswold Unsupported, reported 5
+  Watch record-2020-floyd.html: court_file_rows 14, ties_rows 27, conflicts 3, comparables 7, reported 17
+  Watch censorship.html: documented_cards 12, court_rows 6, beliefs 8, timeline_events 65, timeline_confirmed 56, timeline_partial 4, timeline_reported 5, reported 11
+  Watch gas-gap.html: retail 4.478, refining_c 142.3, unexplained_c 40.5, war_premium_c 56.0, colorado 4.257, images 3, reported 4
+  Watch journal.html: essays 3
+  Watch journal-find-them.html: slug find-them, verified_words 464, visible_words 221
+  Watch journal-they-forgot-who-they-work-for.html: slug that-is-not-why-they-are-elected, verified_words 347, visible_words 228
+  Watch journal-they-work-for-us.html: slug they-work-for-us, verified_words 542, visible_words 253
+  Watch article-v.html: group_count 20, linked_to_official_record 20
+  Finished in 228s
+
+SYNC OK: every output matches the catalog and every copy is byte-identical to its source.

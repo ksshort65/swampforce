@@ -44,7 +44,8 @@ EVIDENCE_MENU = [("fake-news.html", "Fake News Exposed", "{total} claim | record
                  ("republicans.html", "Republicans", "Party ledger"),
                  ("january-6.html", "J6", "The caption vs. the charge"),
                  ("lawfare.html", "Lawfare", "10 dockets, key rulings")]
-JOURNAL_MENU = [("foreword.html", "The Republic", "Foreword: who the hire works for"),
+JOURNAL_MENU = [("journal.html", "Journal essays", "30-second reads, the record, our view"),
+                ("foreword.html", "The Republic", "Foreword: who the hire works for"),
                 ("congress.html", "Congress", "The purse, the debt, the members"),
                 ("border.html", "The Border", "Encounters by fiscal year"),
                 ("remedy.html", "The Remedy", "Courts, statutes, accountability")]
@@ -133,7 +134,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
         <span class="op-tag">Opinion</span>.</p>
         <p>© 2026 Renee Stewart · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
       <div><p class="foot-h">Evidence</p><a href="fake-news.html">Fake News Exposed</a><a href="democrats.html">Democrats</a><a href="republicans.html">Republicans</a><a href="january-6.html">J6</a><a href="lawfare.html">Lawfare</a>{'<a href="unsupported.html">Unsupported claims</a>' if UNSUP else ''}</div>
-      <div><p class="foot-h">Read</p><a href="scorecard.html">Scorecard</a><a href="betrayal.html">The Betrayal</a><a href="opinion.html">Opinion</a><a href="foreword.html">The Republic</a><a href="congress.html">Congress</a><a href="border.html">The Border</a><a href="remedy.html">The Remedy</a></div>
+      <div><p class="foot-h">Read</p><a href="journal.html">Journal</a><a href="scorecard.html">Scorecard</a><a href="betrayal.html">The Betrayal</a><a href="opinion.html">Opinion</a><a href="foreword.html">The Republic</a><a href="congress.html">Congress</a><a href="border.html">The Border</a><a href="remedy.html">The Remedy</a></div>
       {('<div><p class="foot-h">Watch</p>' + "".join(f'<a href="{h}">{e(t)}</a>' for h, t, _ in WATCH_MENU) + '</div>') if WATCH_MENU else ''}
       <div><p class="foot-h">For lawmakers</p><a href="brief.html">Staff brief</a><a href="appendix.html">Evidence appendix</a><a href="about.html">Methodology</a><a href="downloads.html">Downloads</a><a href="store.html">Store</a></div>
     </div>
@@ -1377,6 +1378,8 @@ def essay_redirects():
          for m in re.finditer(r"- Slug: (\S+)\n- Series: ([^\n]+)", text)}
     d.update({"the-media-ledger": "fake-news.html", "the-democrat-ledger": "democrats.html", "the-republican-ledger": "republicans.html",
               "the-caption-was-not-the-charge": "january-6.html", "the-hire-is-the-country": "lawfare.html", "a-war-on-americans": "lawfare.html"})
+    import journal  # converted essays: /dispatch/<slug>.html -> their new journal page
+    d.update(journal.REDIRECTS)
     return d
 
 

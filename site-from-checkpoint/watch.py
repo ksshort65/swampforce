@@ -1019,3 +1019,7 @@ def active():
 # Second wave of pages (accountability trackers, energy, voters, Floyd deep record, censorship)
 from watch2 import SECTIONS2  # noqa: E402  (imported last: watch2 uses the helpers above)
 SECTIONS += SECTIONS2
+
+# Journal pilot (short visual essays + Article V page)
+from journal import SECTIONS_J  # noqa: E402
+SECTIONS += SECTIONS_J

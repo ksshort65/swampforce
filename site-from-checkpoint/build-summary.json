@@ -33,6 +33,11 @@
     "record-2020-floyd.html",
     "censorship.html",
     "gas-gap.html",
+    "journal.html",
+    "journal-find-them.html",
+    "journal-they-forgot-who-they-work-for.html",
+    "journal-they-work-for-us.html",
+    "article-v.html",
     "404.html"
   ],
   "stats": {
@@ -252,6 +257,28 @@
       "colorado": 4.257,
       "images": 3,
       "reported": 4
+    },
+    "journal.html": {
+      "essays": 3
+    },
+    "journal-find-them.html": {
+      "slug": "find-them",
+      "verified_words": 464,
+      "visible_words": 221
+    },
+    "journal-they-forgot-who-they-work-for.html": {
+      "slug": "that-is-not-why-they-are-elected",
+      "verified_words": 347,
+      "visible_words": 228
+    },
+    "journal-they-work-for-us.html": {
+      "slug": "they-work-for-us",
+      "verified_words": 542,
+      "visible_words": 253
+    },
+    "article-v.html": {
+      "group_count": 20,
+      "linked_to_official_record": 20
     }
   },
   "planned_sections": {},
