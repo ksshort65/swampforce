@@ -1092,3 +1092,48 @@ a.src { white-space: nowrap; }
 @media (max-width:360px){.mast{gap:6px;padding-left:10px;padding-right:10px}.shop-btn{padding:6px 9px}.nav-toggle{padding:6px 10px}.brand-word{font-size:1.15rem}}
 .mb-stamp img,.sh-stamp img{aspect-ratio:1/1;object-fit:contain;max-height:none;width:min(220px,60vw)}
 @media (max-width:720px){.mb-stamp img,.sh-stamp img{width:150px;max-height:none}}
+
+/* ── Midterm scorecard (helped / hurt by control) ── */
+.mt-col{margin:14px 0 8px}
+.mt-debt{border-radius:var(--radius-sm,10px);padding:14px 16px;color:#fff;background:#0c2340;margin:10px 0 14px}
+.mt-gop .mt-debt{background:#a51d24}.mt-dem .mt-debt{background:#1e3a8a}.mt-split .mt-debt{background:#475569}
+.mt-debt-num{font-family:Anton,Impact,sans-serif;font-size:2.4rem;line-height:1}
+.mt-debt-lbl{font-weight:700;margin-top:4px}
+.mt-debt-sub{font-size:.85rem;opacity:.92;margin-top:6px}
+.mt-debt .vstamp{background:rgba(255,255,255,.16);color:#fff;border-color:rgba(255,255,255,.4)}
+.mt-h{display:flex;align-items:center;gap:8px;font-size:1.05rem;text-transform:uppercase;letter-spacing:.08em;margin:16px 0 8px}
+.mt-h span{display:inline-grid;place-items:center;min-width:26px;height:26px;border-radius:13px;color:#fff;font-size:.8rem}
+.mt-h-help{color:#166534}.mt-h-help span{background:#166534}
+.mt-h-hurt{color:#a51d24}.mt-h-hurt span{background:#a51d24}
+.mt-item.mt-help{border-left-color:#166534}
+.mt-mark{font-size:.8em}.mt-help .mt-mark{color:#166534}.mt-hurt .mt-mark{color:#a51d24}
+.mt-cmp-grid{display:grid;gap:10px;grid-template-columns:1fr;margin:12px 0}
+@media(min-width:760px){.mt-cmp-grid{grid-template-columns:repeat(3,1fr)}}
+.mt-cmp{display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:10px;color:#fff;text-decoration:none;min-width:0}
+.mt-cmp.mt-gop{background:#a51d24}.mt-cmp.mt-dem{background:#1e3a8a}.mt-cmp.mt-split{background:#475569}
+.mt-cmp strong{font-size:1.05rem}.mt-cmp-debt{font-family:Anton,Impact,sans-serif;font-size:1.5rem}
+.mt-cmp-row{font-size:.85rem;line-height:1.35;overflow-wrap:anywhere}
+.mt-cmp-row b{display:inline-block;min-width:34px;background:rgba(255,255,255,.18);border-radius:6px;padding:0 5px;margin-right:4px}
+.mt-ptrs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0}
+@media(min-width:760px){.mt-ptrs{grid-template-columns:repeat(4,1fr)}}
+.mt-ptr{display:flex;flex-direction:column;gap:4px;padding:12px;border:1px solid var(--line,#e2e8f0);border-top:4px solid #a51d24;border-radius:10px;background:#fff;text-decoration:none;color:inherit;min-width:0}
+.mt-ptr-num{font-family:Anton,Impact,sans-serif;font-size:1.6rem;color:#0c2340}
+.mt-ptr-lbl{font-size:.85rem;line-height:1.3}
+.mt-ptr-go{font-size:.8rem;font-weight:700;color:#a51d24;margin-top:auto}
+.mt-era{border:1px solid var(--line,#e2e8f0);border-radius:10px;margin:10px 0;background:#fff;overflow:hidden}
+.mt-era>summary{cursor:pointer;padding:12px 14px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;background:#f1f5f9;min-height:44px}
+.mt-era-row{display:grid;grid-template-columns:88px 1fr;gap:10px;padding:10px 14px;border-top:1px solid var(--line,#e2e8f0)}
+.mt-era-row.now{background:#fef2f2}
+.mt-era-who b{display:block}.mt-era-who span{font-size:.75rem;color:#64748b}
+.mt-era-row p{margin:0;font-size:.95rem;line-height:1.4;min-width:0;overflow-wrap:anywhere}
+.mt-era-row a{color:inherit;text-decoration:underline;text-decoration-color:#cbd5e1}
+.mt-shared{margin:8px 0 16px;padding-left:1.1rem}.mt-shared li{margin:6px 0}
+.hero-note{font-size:.85rem;opacity:.85;margin-top:10px}.hero-note a{color:inherit}
+.mt-home{display:block;margin:18px 0 6px;padding:16px 18px;border-radius:12px;background:#071528;color:#fff;text-decoration:none;border-left:6px solid #a51d24}
+.mt-home-k{display:block;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;opacity:.8}
+.mt-home-h{display:block;font-family:Anton,Impact,sans-serif;font-size:1.8rem;line-height:1.1;margin:4px 0 10px}
+.mt-home-bars{display:grid;gap:6px;grid-template-columns:1fr}
+@media(min-width:700px){.mt-home-bars{grid-template-columns:repeat(3,1fr)}}
+.mt-hb{padding:8px 10px;border-radius:8px;font-size:.9rem}.mt-hb b{font-family:Anton,Impact,sans-serif;font-size:1.3rem;margin-right:6px;font-weight:400}
+.mt-hb.gop{background:#a51d24}.mt-hb.dem{background:#1e3a8a}.mt-hb.split{background:#475569}
+.mt-home-go{display:block;margin-top:10px;font-weight:700}

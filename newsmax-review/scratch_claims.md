@@ -37,3 +37,22 @@ cA1JcvwQsl8 Higbie/Nick Shirley: AB 2624 57-19, Newsom signed, Mia Bonta author 
 mMiWnoY0MI4 Schmitt: billions stolen by Somali fraudsters MN; Walz ended career over it; City Journal $180B CA; Mia Bonta drafted bill
 v0BAkgJWe1o Schmitt: El-Sayed mother/father-in-law tied to Muslim Brotherhood; Angie Nixon Senate candidate
 SZP37_UBR-Y Higbie: Trump worked at McDonald's; Trump self-funded no donors (2016)
+JUThZ5mI9_g Higbie 1% pay 40% of taxes; Dem party favorability -25; DSA co-chair $1.5M townhouse
+kYTD3qxDqp4 Schmitt: El-Sayed mother worked for designated terror group that gave bin Laden $; Senate hearing on father-in-law; Vindman lost to Nixon outspending 6:1; Vindman claimed Trump trying to steal 2020; Trump vindicated
+5tu_UTHp7u8 Higbie IQ figures by country; MA activated Guard 4:1 and deported Martha's Vineyard migrants; TPS countries list
+BzcjFnBBURs Higbie LA County lost 17,496 high earners etc; billionaire wealth $8-9T vs all govts $10-11T; Ro Khanna 1,200x median
+I1qOyrg4-eI Higbie 22 veterans a day suicide; Abraham Lincoln carrier
+JGNrzYsAedA Higbie/guests: Klobuchar father Star Tribune 40 yrs; CA rail $126B
+QF1FphqRqY0 Higbie trans athletes list (not govt)
+62-0bxU6HVc Higbie: In-N-Out Idaho 3 dead 7 wounded; Boise Towne Square 2021 2 killed; >90% shootings in gun-free zones
+P99WvDUeP88 Higbie Biden let in 20 million; Spain 100,000 in a day; migrants breed 4x
+b97Focm7aSg Flynn(guest) 15-20M under Biden; Eagle Pass 50,000; Trump quote Spain hundreds of thousands
+nmQ4CLdK5w0 Higbie Burdick: pardon void before accusation; Fauci pardon autopen; blanket 10-yr pardon; Menendez gold bars; Dems shut down govt to cut ICE funding
+fMwsVelLE_U Higbie McConnell hasn't voted ~2 months
+vT0OufMKt_M Higbie data center 17B gal/yr = 25,000 pools; dozen states restrict rainwater
+UeYPQNajw08 Higbie top1% 40% / bottom 50% 3%; Communist Control Act quote (omits force/violence); US GDP largest
+lMpbvAa2yU4 Higbie El-Sayed beat Stevens; black Dems didn't vote Sayed; Rogers bio
+DNsFa0A10HM Higbie 2020 dollar worth 70 cents; Saucier year in jail, pardoned; Petraeus walked; Biden no library
+zkfqpD9kEBg Schmitt(guest on Higbie): slavery ended 1865 Lincoln; DNC lost ~$30k scam
+2V9mDs8V-kY Rick Scott: 80%+ want voter ID; Spain 50k overnight; Higbie: GA more black voted after voter ID
+dPRlYXN1-84 Higbie LA fires 31 dead 13,000 homes; CA HSR $100B

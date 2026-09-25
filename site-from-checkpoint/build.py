@@ -71,7 +71,7 @@ def drop(label, icon, items, active):
 def nav(active):
     def a(h, label, icon):
         return f'<a href="{h}"{" class=active" if h == active else ""}>{ico(icon)}{e(label)}</a>'
-    return (drop("Evidence", "search", EVIDENCE_MENU, active) + a("scorecard.html", "Scorecard", "chart")
+    return (drop("Evidence", "search", EVIDENCE_MENU, active) + a("scorecard.html", "Midterms", "chart")
             + a("betrayal.html", "The Betrayal", "scale")
             + f'<a href="opinion.html" class="nav-op{" active" if active == "opinion.html" else ""}">{ico("quote")}Opinion</a>'
             + drop("Journal", "book", JOURNAL_MENU, active)
@@ -142,7 +142,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
         <span class="op-tag">Opinion</span>.</p>
         <p>© 2026 Renee Stewart · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
       <div><p class="foot-h">Evidence</p><a href="fake-news.html">Fake News Exposed</a><a href="democrats.html">Democrats</a><a href="republicans.html">Republicans</a><a href="january-6.html">J6</a><a href="lawfare.html">Lawfare</a>{'<a href="unsupported.html">Unsupported claims</a>' if UNSUP else ''}</div>
-      <div><p class="foot-h">Read</p><a href="journal.html">Journal</a><a href="scorecard.html">Scorecard</a><a href="betrayal.html">The Betrayal</a><a href="opinion.html">Opinion</a><a href="foreword.html">The Republic</a><a href="congress.html">Congress</a><a href="border.html">The Border</a><a href="remedy.html">The Remedy</a></div>
+      <div><p class="foot-h">Read</p><a href="journal.html">Journal</a><a href="scorecard.html">Midterm scorecard</a><a href="betrayal.html">The Betrayal</a><a href="opinion.html">Opinion</a><a href="foreword.html">The Republic</a><a href="congress.html">Congress</a><a href="border.html">The Border</a><a href="remedy.html">The Remedy</a></div>
       {('<div><p class="foot-h">Watch</p>' + "".join(f'<a href="{h}">{e(t)}</a>' for h, t, _ in WATCH_MENU) + '</div>') if WATCH_MENU else ''}
       <div><p class="foot-h">For lawmakers</p><a href="brief.html">Staff brief</a><a href="appendix.html">Evidence appendix</a><a href="about.html">Methodology</a><a href="downloads.html">Downloads</a><a href="store.html">Store</a></div>
     </div>
@@ -393,6 +393,7 @@ def charts_evidence():
 
 
 def build_home():
+    import midterms as M
     nc = corr["Never corrected by the pusher"]
     tiles = "".join([
         tile(str(ST["total"]), "Documented cases", accent=True, count=ST["total"], dark=True),
@@ -410,13 +411,24 @@ def build_home():
   <h1>Vote the file.<br>Not the feeling.</h1>
   <p class="dek">{ST['total']} claims about a president. Each one checked against the record that settled it.</p>
   <div class="hero-ctas">
-   <a class="btn" href="fake-news.html">{ico("search")} Flip through the cases</a>
+   <a class="btn" href="scorecard.html">{ico("chart")} Midterm scorecard: helped &amp; hurt</a>
+   <a class="btn ghost" href="fake-news.html">{ico("search")} Flip through the cases</a>
    <a class="btn ghost" href="brief.html">{ico("capitol")} For lawmakers: staff brief</a>
   </div>
   <div class="stat-rail">{tiles}</div>
  </div>
 </section>
 <div class="wrap">
+<a class="mt-home" href="scorecard.html">
+ <span class="mt-home-k">Midterm scorecard</span>
+ <span class="mt-home-h">Who ran Congress. What it cost.</span>
+ <span class="mt-home-bars">
+  <span class="mt-hb gop"><b>${M.T['R']:.2f}T</b> Republican control</span>
+  <span class="mt-hb dem"><b>${M.T['D']:.2f}T</b> Democratic control</span>
+  <span class="mt-hb split"><b>${M.T['S']:.2f}T</b> Split Congress</span>
+ </span>
+ <span class="mt-home-go">Helped and hurt, party by party →</span>
+</a>
 <section class="lawmaker-band">
  <div class="lb-copy"><p class="section-label light">For lawmakers &amp; staff</p>
   <h2>A two-page brief. A full evidence appendix. Every citation ranked.</h2>
@@ -447,7 +459,7 @@ def build_home():
  <h2 class="section-title">Pick a door.</h2>
  <div class="cards">
   {explore_card("fake-news.html", "images/chamber.jpg", "Fake News Exposed", f"{ST['total']} claims, each set against the record that corrected it.", ["Proven false", "Filter + search"])}
-  {explore_card("scorecard.html", "images/capitol.jpg", "The Scorecard", "Prices, encounters, debt. Official figures, tagged with who held power at the time.", ["Charts", "5 rooms"])}
+  {explore_card("scorecard.html", "images/capitol.jpg", "Midterm Scorecard", "Helped and hurt under Republican, Democratic and split control, with the debt added under each.", ["Helped · Hurt", "Debt by control"])}
   {explore_card("betrayal.html", "images/flag-wave.jpg", "The Great American Betrayal", "How a narrative gets built, and why the correction never catches up.", ["Opinion labeled"])}
   {explore_card("january-6.html", "images/chamber.jpg", "J6", "What the television said, set against the charging statute.", ["§ 2383"])}
   {explore_card("lawfare.html", "images/capitol.jpg", "Lawfare", "Ten dockets, their key rulings, and the court PDFs.", ["Court record"])}
@@ -550,7 +562,7 @@ def under(title, why="Being checked against the official source. A number appear
 
 def room(rid, title, control, intro, content, active=False):
     return (f'<section class="tab-panel room{" active" if active else ""}" id="tab-{rid}" aria-label="{e(title)}">'
-            f'<div class="room-head"><div><h2>{e(title)}</h2><p class="control">{e(control)}</p></div><p class="room-intro">{e(intro)}</p></div>'
+            f'<div class="room-head"><div><h2 id="{rid}">{e(title)}</h2><p class="control">{e(control)}</p></div><p class="room-intro">{e(intro)}</p></div>'
             f'{content}</section>')
 
 
@@ -592,41 +604,30 @@ def frames_oval():
 
 
 def build_scorecard():
-    dem = f"""
-<div class="tile-grid">
- {tile("9.1%", "Inflation peak, June 2022", "12-month CPI increase. Democratic House, Senate and White House.", accent=True, count=9.1, suffix="%", decimals=1, src=S("bls22"))}
- {tile("10.83M", "CBP encounters, FY2021–24", "Nationwide, every place CBP counts.", count=10.83, suffix="M", decimals=2, src=S("cbp"))}
- {tile("8.73M", "Of those, at the southwest land border", "The rest of the map: about 2.10 million.", count=8.73, suffix="M", decimals=2, src=S("cbp"))}
- {tile("$8.13B", "New York City asylum-seeker spending", "FY2023–25, per the NYC Comptroller.", count=8.13, prefix="$", suffix="B", decimals=2, src=S("nyc"))}
-</div>
-<p class="period-note"><b>Who held power:</b> Democrats held the White House from January 2021 to January 2025 and both chambers of Congress from 2021 to 2023. Republicans held the House from January 2023. Fiscal year 2021 began in October 2020, under the prior administration.</p>
-<div class="chart-grid">
- {chart_card("sc-enc-dem", "CBP encounters by fiscal year", "Nationwide total enforcement encounters")}
- {chart_card("sc-sw", "Where the 10.83 million were counted", "Millions, FY2021–24")}
- {chart_card("sc-nyc", "New York City asylum-seeker spending", "Billions of dollars, by city fiscal year")}
-</div>
-{under("Bills they passed")}
-"""
+    import midterms as M
+    vs = W.stamp() if hasattr(W, "stamp") else ""
     gop = f"""
+{M.column("R", vs)}
+<p class="period-note"><b>Now:</b> Republicans have held the House, the Senate and the White House since January 2025. FY2026 is the first full budget year under that control. CBO projections:</p>
 <div class="tile-grid">
  {tile("$1.9T", "Projected deficit, FY2026", "CBO, February 2026.", accent=True, count=1.9, prefix="$", suffix="T", decimals=1, src=S("cbo"))}
- {tile("$7.4T", "Federal outlays, FY2026", "23.3% of GDP (GDP about $32T).", count=7.4, prefix="$", suffix="T", decimals=1, src=S("cbo"))}
- {tile("$5.6T", "Federal receipts, FY2026", "CBO projection.", count=5.6, prefix="$", suffix="T", decimals=1, src=S("cbo"))}
  {tile("$1.039T", "Net interest, FY2026", "Up from $970 billion in FY2025.", count=1.039, prefix="$", suffix="T", decimals=3, src=S("cbo"))}
 </div>
-<p class="period-note"><b>Who held power:</b> Republicans have held the House, the Senate and the White House since January 2025. FY2026 is the first full budget year under that control. These are CBO projections.</p>
 <div class="chart-grid">
  {chart_card("sc-cbo", "FY2026 budget, CBO projection", "Trillions of dollars")}
  {chart_card("sc-interest", "Net interest on the debt", "Billions of dollars")}
 </div>
-{under("Bills they passed")}{under("Debt added under Republican majorities")}
+"""
+    dem = f"""
+{M.column("D", vs)}
+<p class="period-note"><b>Who held power:</b> Democrats held both chambers 1993–95, 2007–11 and 2021–23. In 2007–09 the president was a Republican (Bush); Republicans took the House in January 2023. Border costs are under Compare.</p>
 """
     split = f"""
+{M.column("S", vs)}
 <div class="tile-grid">
  {tile("3.9%", "Inflation peak, September 2011", "Obama White House, Republican House, Democratic Senate.", accent=True, count=3.9, suffix="%", decimals=1, src=S("bls11"))}
 </div>
-<p class="period-note">Under a split Congress, each party held one chamber. The inflation comparison across presidents is in the Oval room.</p>
-{under("Largest slice of the debt under split control")}{under("Bills passed under split control")}
+<p class="period-note">Split means each party held one chamber. The 107th Congress (2001–03) is scored as split: the Senate changed hands in June 2001.</p>
 """
     oval = f"""
 <div class="subtabs tabs" role="tablist">
@@ -640,7 +641,8 @@ def build_scorecard():
   {chart_card("sc-enc-all", "CBP encounters, FY2021–25", "The White House changed hands during FY2025 (red)")}
  </div>
  <p class="period-note">Sources: {S("bls11")} · {S("bls22")} · {S("bls26")} · {S("cbp")}</p>
- {under("Trump first-term inflation peak")}
+ <div class="chart-grid">{chart_card("mt-pres", "Debt added by president", "Trillions of dollars, inauguration to inauguration (Treasury)")}</div>
+ <p class="period-note">{M.e(M.pres_note())} <a href="{M.TREAS_PENNY}" target="_blank" rel="noopener">Debt to the Penny ↗</a> · <a href="{M.TREAS_HIST}" target="_blank" rel="noopener">Treasury history ↗</a>. Congress, not the president, passes the budget: see who held it under Compare.</p>
 </div>
 <div class="tab-panel" id="desk-trump1">{under("Trump first-term scorecard figures")}</div>
 <div class="tab-panel" id="desk-trump2">
@@ -655,8 +657,27 @@ def build_scorecard():
 <div class="ledger">{frames_oval()}</div>
 """
     compare = f"""
+<h3 class="strip-h">Helped and hurt, side by side</h3>
+<p class="strip-dek">Tap a box to open that column. ▲ helped · ▼ hurt. Each line is a law or an official number.</p>
+{M.compare_grid()}
+<div class="chart-grid">
+ {chart_card("mt-debt-all", "Who added the $40.09 trillion", "Debt added while each arrangement held Congress, 1857 to Sep 17, 2026 (trillions)")}
+ {chart_card("mt-debt-rate", "Debt added per year of control, since 1993", "Trillions of dollars a year")}
+</div>
+<p class="period-note">How it is counted: the change in total federal debt over each two-year Congress, credited to whoever held both chambers (split if they differed). Treasury annual history before 1993 (straight-line between year-ends), Treasury daily Debt to the Penny after. 2008–09 (the crash) fell under Democratic control; 2020 (COVID) under split control. <a href="{M.TREAS_HIST}" target="_blank" rel="noopener">Treasury history ↗</a> · <a href="{M.TREAS_PENNY}" target="_blank" rel="noopener">Debt to the Penny ↗</a> · <a href="{M.PARTYDIV}" target="_blank" rel="noopener">Senate party divisions ↗</a> · <a href="{M.HOUSEDIV}" target="_blank" rel="noopener">House party divisions ↗</a></p>
+<h3 class="strip-h" id="border-harm">Border harm</h3>
+<p class="strip-dek">What the border cost at home. Each figure has its full record in one place; tap to open it.</p>
+<div class="mt-ptrs">{M.border_html()}</div>
+<h3 class="strip-h" id="three-jobs">Three jobs</h3>
+<p class="strip-dek">Read the last line first. That is today. Then read up to see who opened it.</p>
+{M.eras_html()}
+<div class="chart-grid">{chart_card("mt-mfg", "Manufacturing jobs gained or lost, by president", "Thousands, January to January (BLS). *Trump II through Aug 2026, preliminary")}</div>
+<p class="period-note"><a href="{M.BLS_MFG}" target="_blank" rel="noopener">BLS manufacturing employment ↗</a> · <a href="{M.CBP_HIST}" target="_blank" rel="noopener">CBP apprehensions FY1960–2019 ↗</a></p>
+<h3 class="strip-h">Both parties, same failure</h3>
+<ul class="mt-shared">{"".join(f'<li><a href="{h}">{M.e(t)} →</a></li>' for t, h in M.SHARED)}</ul>
+<aside class="jr-view"><p><span class="op-tag">Our view</span> <span class="jr-view-who">The owner, in the owner’s words</span></p><p class="jr-view-txt">{M.e(" ".join(M.OUR_VIEW))}</p></aside>
+<h3 class="strip-h">The household ledger</h3>
 <div class="tile-grid">
- {tile("$40.09T", "National debt", "Total public debt outstanding, Sep 17, 2026.", accent=True, count=40.09, prefix="$", suffix="T", decimals=2, src=S("treas"))}
  {tile("$158.4B", "Net farm income, 2026 forecast", "Down $4.3B, even though government payments rose $19.5B.", count=158.4, prefix="$", suffix="B", decimals=1, src=S("ers"))}
  {tile("$2,086", "Average retired-worker check", "July 2026. Paid for with FICA.", count=2086, prefix="$", src=S("ssa"))}
  {tile("$202.90", "Medicare Part B premium", "Standard monthly premium, 2026.", count=202.90, prefix="$", decimals=2, src=S("cms"))}
@@ -667,36 +688,37 @@ def build_scorecard():
 </div>
 <p class="period-note">Sources: {S("ssa")} · {S("ssi")} · {S("cms")} · {S("fns")}. SSI is need-based and separate from the earned Social Security check.</p>
 """
-    tabs = [("gop", "Republicans"), ("dem", "Democrats"), ("split", "Split"), ("oval", "The Oval"), ("compare", "Side by side")]
+    tabs = [("gop", "Republicans"), ("dem", "Democrats"), ("split", "Split"), ("compare", "Compare"), ("oval", "The Oval")]
     tabbar = "".join(f'<button type="button" data-tab="tab-{r}" class="{"active" if i == 0 else ""}">{e(l)}</button>' for i, (r, l) in enumerate(tabs))
     body = f"""
 <section class="band-hero">
  <div class="wrap">
-  <p class="hero-kicker">Midterm scorecard</p>
-  <h1>Score them on the record.</h1>
-  <p class="dek">Official figures only. Each one carries its source and who held power when it happened. A figure still being checked shows as "Under review."</p>
+  <p class="hero-kicker">Midterm scorecard · Helped and hurt</p>
+  <h1>Who ran Congress. What it cost.</h1>
+  <p class="dek">Congress holds the purse. Here is what each party passed when it held both chambers, what a split Congress passed, and the debt added under each. Every line opens its record.</p>
   <div class="stat-rail four">
-   {tile("$40.09T", "National debt", count=40.09, prefix="$", suffix="T", decimals=2, dark=True, accent=True)}
-   {tile("9.1%", "Inflation peak, Jun 2022", count=9.1, suffix="%", decimals=1, dark=True)}
-   {tile("10.83M", "CBP encounters FY21–24", count=10.83, suffix="M", decimals=2, dark=True)}
-   {tile("237,538", "SW Border Patrol, FY2025", count=237538, dark=True)}
+   {tile(f"${M.T['R']:.2f}T", "Added under Republican control", count=round(M.T['R'], 2), prefix="$", suffix="T", decimals=2, dark=True)}
+   {tile(f"${M.T['D']:.2f}T", "Added under Democratic control", count=round(M.T['D'], 2), prefix="$", suffix="T", decimals=2, dark=True)}
+   {tile(f"${M.T['S']:.2f}T", "Added under a split Congress", count=round(M.T['S'], 2), prefix="$", suffix="T", decimals=2, dark=True)}
+   {tile("$40.09T", "Total debt, Sep 17, 2026", count=40.09, prefix="$", suffix="T", decimals=2, dark=True, accent=True)}
   </div>
+  <p class="hero-note">Since 1857. Sum of Treasury figures by who held both chambers. <a href="#compare">How it is counted</a></p>
  </div>
 </section>
 <div class="wrap">
 <div class="room-tabs"><div class="tabs sticky-tabs" role="tablist">{tabbar}</div>
-{room("gop", "Republicans", "Control: House + Senate + White House, 2025 to present", "The bills they passed. The debt they added.", gop, True)}
-{room("dem", "Democrats", "Control: House + Senate + White House, 2021–23", "The bills they passed. The border they opened.", dem)}
-{room("split", "Split", "Control: one chamber each", "One chamber each, and the largest slice of the debt.", split)}
+{room("gop", "Republicans", "Both chambers: " + M.PERIODS["R"], "What they passed. What it cost.", gop, True)}
+{room("dem", "Democrats", "Both chambers: " + M.PERIODS["D"], "What they passed. What it cost.", dem)}
+{room("split", "Split Congress", "One chamber each: " + M.PERIODS["S"], "Neither could pass a bill alone. They still spent.", split)}
+{room("compare", "Compare", "All three, side by side", "Helped, hurt, debt, the border and three jobs.", compare)}
 {room("oval", "The Oval", "Four presidents, compared", "Four presidents. Trump 1 and Trump 2.", oval)}
-{room("compare", "Side by side", "Neutral: the national ledger", "What helped and what hurt, on one page.", compare)}
 </div>
 {shop_strip("Take the scorecard off the screen.")}
 </div>
 """
-    return page("scorecard.html", "Midterm Scorecard · Swamp Force",
-                "Official figures on prices, border encounters, debt and the farm economy, each tagged with who held power when it happened.",
-                body, charts=scorecard_charts(), flush=True)
+    return page("scorecard.html", "Midterm Scorecard: Helped and Hurt · Swamp Force",
+                "What Republicans, Democrats and split Congresses passed, what it cost, and the debt added under each. Every line opens its record.",
+                body, charts=[c for c in scorecard_charts() if c["id"] not in ("sc-enc-dem", "sc-sw", "sc-nyc")] + M.charts() + [M.pres_chart()], flush=True)
 
 
 EXPL = V.EXPLAINER_TITLES
@@ -1419,7 +1441,7 @@ def write_infra(pages):
     red = essay_redirects()
     L = ["Options -Indexes", "DirectoryIndex index.html", "ErrorDocument 404 /404.html", "AddDefaultCharset UTF-8", "",
          "<IfModule mod_alias.c>", "Redirect 301 /explainer.html /betrayal.html", "Redirect 301 /archive.html /index.html",
-         "Redirect 301 /pump.html /scorecard.html", "Redirect 301 /pending.html /index.html", "Redirect 301 /republic.html /foreword.html"]
+         "Redirect 301 /pump.html /scorecard.html", "Redirect 301 /midterms.html /scorecard.html", "Redirect 301 /pending.html /index.html", "Redirect 301 /republic.html /foreword.html"]
     for slug, tgt in sorted(red.items()):
         L.append(f"Redirect 301 /dispatch/{slug}.html /{tgt}")
     L += ["RedirectMatch 301 ^/dispatch/?$ /index.html", "</IfModule>", "",
