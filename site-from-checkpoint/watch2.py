@@ -1349,6 +1349,59 @@ def fuel_tax_section(H):
     return section("gg-state", "What your state adds to every gallon", inner)
 
 
+# ── Oil series: "No president sets your gas price" (6 phone cards), added Sep 25, 2026 ──
+OIL_CARDS = [("oil-1-no-president-sets-gas-price", "No president sets your gas price. Not this one, not the last one, not the next one. Either party."),
+             ("oil-2-where-your-gallon-goes", "Where your $4.48 goes, May 2026: oil $2.32, refinery $0.97, pipe/truck/station $0.66, taxes $0.52."),
+             ("oil-3-who-decides-how-much-oil", "Who decides how much oil is pumped: the U.S. is the world's number one producer; seven OPEC+ countries set October 2026 limits."),
+             ("oil-4-getting-it-to-you", "Getting it to you: well, ship or pipe, refinery, truck, pump. $82.25 a barrel divided by 42 gallons is about $1.96 of oil per gallon."),
+             ("oil-5-tax-changes-by-state", "Gas tax by state, cents per gallon with federal: California 92, Illinois 89, Washington 79, Colorado 49, Texas 38, Alaska 27, Indiana 19 while paused."),
+             ("oil-6-remember-this", "Remember this: the world market sets the oil price; companies and OPEC+ decide how much is pumped; states set their own tax; no president sets the price.")]
+OIL_SRC = [("OPEC press release, Sep 6, 2026", "https://www.opec.org/pr-detail/613-6-september-2026.html"),
+           ("OPEC press release, Aug 2, 2026", "https://www.opec.org/pr-detail/611-2-august-2026.html"),
+           ("UAE news agency WAM: exit from OPEC, Apr 28, 2026", "https://www.wam.ae/en/article/bzxzuh7-uae-announces-decision-exit-opec-opec+"),
+           ("EIA: gasoline pump components (May 2026)", "https://www.eia.gov/petroleum/gasdiesel/gaspump_hist.php"),
+           ("EIA: factors affecting gasoline prices (2025)", "https://www.eia.gov/energyexplained/gasoline/factors-affecting-gasoline-prices.php"),
+           ("EIA: refiner crude cost, July 2026", "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=R0000____3&f=M"),
+           ("EIA: top oil producers", "https://www.eia.gov/tools/faqs/faq.php?id=709&t=6"),
+           ("AAA national average, Sep 25, 2026", "https://gasprices.aaa.com/"),
+           ("U.S. Code: Jones Act, 46 U.S.C. 55102", "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title46-section55102&num=0&edition=prelim"),
+           ("U.S. Code: waivers, 46 U.S.C. 501", "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title46-section501&num=0&edition=prelim"),
+           ("U.S. Code: reserve oil sales, 42 U.S.C. 6241", "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section6241&num=0&edition=prelim")]
+OIL_FIXES = [
+    ("National pump price", "The draft used $4.44 for Sep 17. AAA shows only today's number, and its week-ago figure (Sep 18) was $4.47, so $4.44 could not be checked. Used: $4.49, AAA, Sep 25, 2026."),
+    ("Where the gallon goes", "The draft's 2025 shares were right (EIA: crude 51.4%, distribution 17.8%, taxes 16.6%, refining 14.3% of $3.10). The series uses EIA's newest month instead, May 2026 ($4.479)."),
+    ("Draft receipt: '$1.96 for making and moving it'", "That was a leftover, not a measured number. Replaced by EIA's measured May 2026 parts."),
+    ("Indiana tax", "The draft showed 81.5¢. By law it is 82.9¢ with federal, but the state taxes are paused through Oct 5, 2026, so 19.4¢ is collected now."),
+    ("Utah, Vermont, Nevada, Puerto Rico", "Draft totals were off (see the state table below). Puerto Rico has no federal fuel tax."),
+    ("'Foreign governments decide how much oil to sell'", "Misleading. The U.S. is the world's largest oil producer, and U.S. companies decide how much they pump."),
+    ("Low-carbon fuel cents (CA ~42¢, WA ~17¢, OR ~9¢)", "No primary record found for these numbers. Dropped."),
+]
+
+
+def oil_series_section(H):
+    _here = Path(__file__).parent
+    figs = ""
+    for k, alt in OIL_CARDS:
+        src = _copy_img(_here / "watch-data" / "oil-series" / f"{k}.png", f"{k}.png", width=1080)
+        figs += (f'<figure class="ft-fig oil-fig"><a href="{src}" target="_blank" rel="noopener" aria-label="Open full size">'
+                 f'<img src="{src}" alt="{e(alt)}" loading="lazy" width="1080" height="1350"></a></figure>')
+    fixes = "".join(f'<li><b>{e(a)}:</b> {e(b)}</li>' for a, b in OIL_FIXES)
+    btns = "".join(f'<a class="jr-srcbtn" href="{e(u)}" target="_blank" rel="noopener"><span class="jr-srctype">{e(l)}</span><span class="jr-srcgo">Open ↗</span></a>' for l, u in OIL_SRC)
+    inner = (f'<div class="answer-box"><p><b>The short answer:</b> no president, from either party, sets the price of gas. '
+             f'Oil is priced on a world market, and oil is about half of every gallon. A president can nudge supply a little '
+             f'(selling emergency reserve oil, sanctions, drilling leases, Jones Act waivers). That is a nudge, not a price.</p></div>'
+             f'<p class="ft-hint">Six cards, made for phones. Tap a card to open it full size, save it, or share it. '
+             f'Every state’s tax is in the <a href="#gg-state">state table below</a>; where each cent goes over time is in <a href="#gg-1">Where the money goes</a>.</p>'
+             f'<div class="ft-figs">{figs}</div>'
+             f'<details class="jr-fact"><summary><span class="jr-fact-sum">Why only seven OPEC+ countries?</span><span class="jr-fact-type">OPEC press releases</span></summary>'
+             f'<div class="jr-fact-body"><p>The monthly OPEC+ decisions are made by the countries that added extra voluntary cuts in 2023. That group had eight members; the United Arab Emirates left OPEC and OPEC+ on May 1, 2026 (WAM, Apr 28, 2026), leaving seven. '
+             f'On Sep 6, 2026 the seven kept October the same as September. The 2023 cut of about 1.65 million barrels a day was brought back in steps; the Aug 2, 2026 step was 188,000 barrels a day for September. Next meeting: Oct 4, 2026.</p></div></details>'
+             f'<details class="jr-fact"><summary><span class="jr-fact-sum">What we fixed from the draft graphics</span><span class="jr-fact-type">Checked against OPEC, EIA, AAA and state records</span></summary>'
+             f'<div class="jr-fact-body"><ul>{fixes}</ul></div></details>'
+             f'<div class="wv-src">{btns}</div>')
+    return section("gg-oil", "Who sets the price of gas? No one person.", inner)
+
+
 def build_gas_gap(H):
     txt = (GG / "gap-report.md").read_text(encoding="utf-8")
     md = MD(H); rep = []
@@ -1369,7 +1422,7 @@ def build_gas_gap(H):
     figs = {"1": _fig(imgs["gap-pump-wholesale-crude-2005-2026"], "Pump vs wholesale vs crude, weekly 2005–2026", "U.S. retail, Gulf Coast wholesale gasoline, WTI and Brent per gallon. EIA weekly data.")
                  + _fig(imgs["gap-cents-per-gallon-breakdown-2005-2026"], "Cents-per-gallon breakdown, monthly 2005–2026", "EIA gasoline pump components (share × retail price), Jan 2005 – May 2026."),
             "2": _fig(imgs["gap-refiner-profits-vs-margin"], "Refiner profits vs refining margin", "Combined net income of five U.S. refiners (SEC) vs the Gulf Coast gasoline–WTI spread (EIA). 2026 is January–June only.")}
-    anchors = {"1": "Where the money goes", "2": "Red flags", "3": "Ownership & Colorado", "4": "Investigations", "5": "Political money", "6": "Viral claim", "state": "State taxes"}
+    anchors = {"oil": "Who sets the price?", "1": "Where the money goes", "2": "Red flags", "3": "Ownership & Colorado", "4": "Investigations", "5": "Political money", "6": "Viral claim", "state": "State taxes"}
     parts = []
     intro = next(l for t, l in MD.sections(txt) if t == "")
     for t, lines in MD.sections(txt):
@@ -1386,7 +1439,7 @@ def build_gas_gap(H):
             + f'<div class="tile-grid">{"".join(tiles)}</div>'
             + f'<div class="answer-box"><p><b>How to read this page.</b> A red flag is a number that does not fit the documented explanations. It is not a finding of wrongdoing, and no crime is implied without a charge or finding. '
               f'Raw data for every figure: <a href="downloads/gas-gap-tracker.xlsx">Gas Price Gap workbook (XLSX)</a>. Background: <a href="energy.html">Energy: gas vs. 2008 and the Iran war</a>.</p></div>'
-            + "".join(parts) + fuel_tax_section(H) + rep_box(H, rep)
+            + oil_series_section(H) + "".join(parts) + fuel_tax_section(H) + rep_box(H, rep)
             + reader_path([("energy.html", "Energy"), ("unsupported.html", "Unsupported claims"), ("about.html", "Methodology")]))
     html_out = H.page("gas-gap.html", "Gas Price Gap Tracker · Swamp Force",
                       "Where each cent of a gallon goes, what the records explain, and what they do not: EIA, SEC, CFTC and FEC data.", body, serious=True)
