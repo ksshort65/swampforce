@@ -4,7 +4,7 @@
    var PRINTIFY_POPUP_URL = "https://swampforce.printify.me/";
    Leave it empty ("") to show "The shop opens soon".
    ============================================================ */
-var PRINTIFY_POPUP_URL = "";
+var PRINTIFY_POPUP_URL = "https://swamp-force.printify.me/";
 
 (function () {
   var url = (typeof PRINTIFY_POPUP_URL === 'string') ? PRINTIFY_POPUP_URL.trim() : '';
@@ -16,7 +16,8 @@ var PRINTIFY_POPUP_URL = "";
   if (ph) ph.hidden = true;
   if (live) live.hidden = false;
   if (btn) btn.href = url;
-  if (frame) frame.src = url;
+  /* Printify blocks embedding (frame-ancestors), so hide the frame and use the button */
+  if (frame && frame.parentNode) frame.parentNode.hidden = true;
   /* Header/footer Shop buttons go straight to the store once it is live */
   document.querySelectorAll('a.shop-btn').forEach(function (a) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; });
 })();

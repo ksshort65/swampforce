@@ -154,11 +154,12 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
 </html>
 """
 
-PROOF_ORDER = ["Official record", "Original transcript/video", "Outlet's own correction", "Fact-check only"]
+PROOF_ORDER = ["Official record", "Original transcript/video", "Outlet's own correction", "Primary document or record search"]
 PROOF_LABEL = {"Official record": "Official record", "Original transcript/video": "Transcript / video",
-               "Outlet's own correction": "Outlet's own correction", "Fact-check only": "Independent fact-check"}
+               "Outlet's own correction": "Outlet's own correction", "Fact-check only": "Independent fact-check",
+               "Primary document or record search": "Primary document / record search", "Unverified": "Still being checked"}
 PROOF_CLS = {"Official record": "official", "Original transcript/video": "transcript",
-             "Outlet's own correction": "outlet", "Fact-check only": "factcheck"}
+             "Outlet's own correction": "outlet", "Fact-check only": "factcheck", "Primary document or record search": "transcript"}
 
 
 def proof_badge(p):
@@ -166,6 +167,8 @@ def proof_badge(p):
 
 
 def ev_badge(ev):
+    if ev == WATCH_EV:
+        return '<span class="badge watch">Still being checked</span>'
     if ev == "Proven false":
         return '<span class="badge proven">Proven false</span>'
     if ev == "Rated misleading":
@@ -212,20 +215,32 @@ def case_card(c):
     short = c["claim"] if len(c["claim"]) <= 170 else c["claim"][:167].rsplit(" ", 1)[0] + "…"
     search = " ".join([c["claim"], c["notes"], c["who"], c["method"], c["id"], c["tag"]])
     links = " ".join(x for x in [src_link(c.get("primary"), "Primary source"), src_link(c.get("truth_url"), "The record")] if x)
+    if c.get("status") == "verified":
+        status = f'<p class="vline"><span class="vtag">Verified by SwampForce</span>'
+        if c.get("verify_url"):
+            status += f' {src_link(c["verify_url"], "Record we checked")}'
+        if c.get("confirm"):
+            status += (f' <span class="also">Also confirmed by <a href="{e(c["confirm_url"])}" target="_blank" rel="noopener">{e(c["confirm"])} ↗</a></span>'
+                       if c.get("confirm_url") else f' <span class="also">Also confirmed by {e(c["confirm"])}</span>')
+        status += "</p>"
+    elif c.get("status") == "watch":
+        status = f'<p class="vline watchline"><span class="wtag">Still being checked</span> {e(WATCH_NOTE)}</p>'
+    else:
+        status = ""
     dates = ""
     if c.get("began") or c.get("ended"):
         dates = f'<p class="meta-line"><b>Began</b> {e(c.get("began") or "—")} · <b>Ended</b> {e(c.get("ended") or "—")}</p>'
     return f"""<article class="frame case" id="case-{e(c['id'])}" data-case="{e(c['id'])}" data-method="{e(c['method'])}" data-evidence="{e(c['evidence'])}" data-proof="{e(c['proof'])}" data-term="{e(c['term'])}" data-search="{e(search)}">
 <button type="button" class="frame-head" data-frame-toggle aria-expanded="false">
 <span class="case-id">#{e(c['id'])}</span><span class="frame-tag">{e(short)}</span>
-<span class="frame-meta">{ev_badge(c['evidence'])}{proof_badge(c['proof'])}<span class="chip ghost">{e(c['method'])}</span></span>
+<span class="frame-meta">{'<span class="badge vbadge">Verified</span>' if c.get('status') == 'verified' else ''}{ev_badge(c['evidence'])}{proof_badge(c['proof']) if c.get('status') != 'watch' else ''}<span class="chip ghost">{e(c['method'])}</span></span>
 <span class="flip-hint">See the record {ico("chev")}</span></button>
 <div class="frame-body"><div class="frame-cols">
 <div class="frame-col claim-side"><h3>What they said</h3><p>{e(c['claim'])}</p>{dates}
 <p class="meta-line"><b>Pushed by</b> {e(c['who'] or '—')}</p><p class="meta-line"><b>How long it ran</b> {e(c['duration'] or '—')}</p></div>
 <div class="frame-col truth-side"><h3>What the record shows</h3><p>{e(c['notes'] or 'See the linked record.')}</p>
-<p class="meta-line"><b>Correction</b> {e(c['corrvis'] or '—')}</p></div></div>
-<div class="frame-foot">{proof_badge(c['proof'])} {links} <a class="cite" href="#case-{e(c['id'])}" data-cite>Link to this case</a></div></div>
+<p class="meta-line"><b>Correction</b> {e(c['corrvis'] or '—')}</p>{status}</div></div>
+<div class="frame-foot">{proof_badge(c['proof']) if c.get('status') != 'watch' else ''} {links} <a class="cite" href="#case-{e(c['id'])}" data-cite>Link to this case</a></div></div>
 </article>"""
 
 
@@ -243,6 +258,47 @@ def frame_simple(tag, claim, truth, url, verdict_label="On the record", claim_h=
 # ───── data ─────
 cases = V.load_catalog()
 verified = V.load_verified()
+
+# ───── Sep 24, 2026 re-verification (Sep 25 site apply) ─────
+# /workspace/reverify/cases-reverified.csv re-checked every catalog row against its original record. The site shows:
+#   verified (Adjusted_Evidence_Level Proven false / Rated misleading) -> "Verified by SwampForce" (+ "Also confirmed by" when named)
+#   Watch list (unverified) -> kept on Fake News Exposed, labeled "Still being checked", never counted in headline figures
+#   Unsupported -> moved to unsupported.html;  Removed -> not shown anywhere
+# The term-split catalog (and the downloads/brief PDFs built from it) is left untouched; CASES_CAT/ST_CAT keep its counts.
+WATCH_EV = "Still being checked"
+WATCH_NOTE = "Rated false by a fact-checker, not yet confirmed by us against the original record."
+_PROOF_MAP = {"Primary document": "Primary document or record search", "Primary record search (archive)": "Primary document or record search",
+              "Official record search": "Primary document or record search", "Sworn testimony + documented record search": "Primary document or record search"}
+with open(ROOT / "reverify" / "cases-reverified.csv", encoding="utf-8-sig", newline="") as _fh:
+    RV = {r["Item_ID"].strip(): r for r in csv.DictReader(_fh)}
+CASES_CAT = cases
+assert sorted(RV, key=int) == sorted((c["id"] for c in cases), key=int), "cases-reverified.csv ids differ from the catalog"
+RV_REMOVED = sorted((i for i, r in RV.items() if r["Adjusted_Evidence_Level"] == "Removed"), key=int)
+RV_UNSUP = sorted((i for i, r in RV.items() if r["Adjusted_Evidence_Level"] == "Unsupported"), key=int)
+
+
+def _reverify(rows):
+    out = []
+    for c in rows:
+        r = RV[c["id"]]
+        lvl = r["Adjusted_Evidence_Level"]
+        if lvl in ("Removed", "Unsupported"):
+            continue
+        c = dict(c)
+        if lvl in ("Proven false", "Rated misleading"):
+            c.update(status="verified", evidence=lvl, proof=_PROOF_MAP.get(r["Adjusted_Proof_Basis"], r["Adjusted_Proof_Basis"]),
+                     confirm=(r["Independent_Confirmation_Name"] or "").strip(), confirm_url=(r["Independent_Confirmation_URL"] or "").strip(),
+                     verify_url=(r["Verification_Source_URL"] or "").strip())
+        else:
+            assert lvl == "Watch list (unverified)", lvl
+            c.update(status="watch", evidence=WATCH_EV, proof="Unverified")
+        out.append(c)
+    return out
+
+
+cases = _reverify(cases)
+VCASES = [c for c in cases if c["status"] == "verified"]
+WCASES = [c for c in cases if c["status"] == "watch"]
 
 
 def _apply_site_fixes(rows):
@@ -270,24 +326,94 @@ def _apply_site_fixes(rows):
 
 
 SITE_APPLY = {}
+ASSET_V = "20260925b"
 verified = _apply_site_fixes(verified)
 VROW = {r["Item_No"]: r for r in verified}
-ST = V.stats(cases)
+ST_CAT = V.stats(CASES_CAT)  # research catalog (build-summary "stats"; checked by sync_all against term-split)
+ST = V.stats(VCASES)  # every headline figure on the site: verified rows only
+ST["watch"] = len(WCASES)
 EVIDENCE_MENU[0] = (EVIDENCE_MENU[0][0], EVIDENCE_MENU[0][1], EVIDENCE_MENU[0][2].format(total=ST["total"]))
 CID = {c["id"] for c in cases}
+# The catalog-wide Congress count (congress-count.json) cannot be re-derived for verified rows only, so the site no longer shows it.
 CONGRESS_N = json.loads((TS / "congress-count.json").read_text())["count"]
-corr = Counter()
-for c in cases:
-    cv = (c["corrvis"] or "").lower()
-    if cv.startswith("never"): corr["Never corrected by the pusher"] += 1
-    elif "editor" in cv: corr["Editor's note"] += 1
-    elif "legal" in cv or "settle" in cv: corr["After legal threat / settlement"] += 1
-    elif "on-air" in cv or "on air" in cv: corr["On-air correction"] += 1
-    elif cv.startswith("appended"): corr["Appended correction line"] += 1
-    elif cv: corr["Not recorded"] += 1
+
+
+def _corr(rows):
+    k = Counter()
+    for c in rows:
+        cv = (c["corrvis"] or "").lower()
+        if cv.startswith("never"): k["Never corrected by the pusher"] += 1
+        elif "editor" in cv: k["Editor's note"] += 1
+        elif "legal" in cv or "settle" in cv: k["After legal threat / settlement"] += 1
+        elif "on-air" in cv or "on air" in cv: k["On-air correction"] += 1
+        elif cv.startswith("appended"): k["Appended correction line"] += 1
+        elif cv: k["Not recorded"] += 1
+    return k
+
+
+def _ncfc(rows):
+    return sum(1 for c in rows if (c["corrvis"] or "").lower().startswith("never") and "fact-check" in (c["corrvis"] or "").lower())
+
+
+corr = _corr(VCASES)
+corr_cat = _corr(CASES_CAT)
 # "Never corrected" splits into rows a fact-check later addressed and rows with no fact-check on file.
-NC_FC = sum(1 for c in cases if (c["corrvis"] or "").lower().startswith("never") and "fact-check" in (c["corrvis"] or "").lower())
+NC_FC = _ncfc(VCASES)
 NC_NOFC = corr["Never corrected by the pusher"] - NC_FC
+NC_FC_CAT = _ncfc(CASES_CAT)
+NC_EV = Counter(c["evidence"] for c in VCASES if (c["corrvis"] or "").lower().startswith("never"))
+
+# How they did it: the verified rows' Deception_Form, sorted by its first listed method into plain buckets.
+HOW_BUCKETS = [
+    ("Words cut or twisted", ("misquote", "truncat", "clip", "false attribution", "authorship", "counting phrases", "joke/qualified")),
+    ("Made up or retracted", ("fabricat", "invent", "retract")),
+    ("Context left out", ("omitted context", "omission", "cherry-pick", "outdated position")),
+    ("Numbers inflated or misread", ("policy-scope inflation", "statistic", "inflate", "rounds up", "conflates", "bundles", "gross ", "2027",
+                                     "unrealized capital gains", "assigns all term debt", "erases across-the-board", "outlier private index",
+                                     "contradicted by then-current bls", "pandemic employment", "attributes combined policy", "cbo", "jct")),
+]
+
+
+def how_bucket(form):
+    first = (form or "").replace('"', "").split(" / ")[0].lower()
+    for name, keys in HOW_BUCKETS:
+        if any(k in first for k in keys):
+            return name
+    return "Other"
+
+
+HOW = Counter(how_bucket(c["method"]) for c in VCASES)
+CONFIRMED_N = sum(1 for c in VCASES if c.get("confirm"))
+PDF_NOTE = ("The PDF brief and PDF appendix were printed before the Sep 24, 2026 re-verification and still count every catalog row. "
+            "The figures on this page are the verified ones.")
+ATTACK_H = "This wasn't an attack on one man. It was an attack on every American who voted for him."
+SCALE_VIEW = ("The scale of fake news aimed at President Trump has never been seen against any other sitting president or candidate. "
+              "A scale like this suggests coordination that cannot be overlooked. This was not coincidence. "
+              "It was an assault on the whole country for choosing a candidate they didn't want.")
+PEOPLE_VIEW = ("What we do, not what we say, proves who we are. This site shows what our government has done, and how Americans were taught "
+               "to see a neighbor or family member who votes differently as an enemy instead of a fellow American. That division was manufactured, "
+               "and we have the evidence. The Constitution begins with \u201cWe the People,\u201d not the networks and not the politicians. "
+               "It\u2019s time we the people take our country back.")
+NOT_COMPLETE = ("This is not the full list. These cases came from a limited review by one small team, and more checking would turn up more. "
+                "We add cases only after we confirm them against the original record.")
+
+
+def corr_line():
+    app, ed = corr["Appended correction line"], corr["Editor's note"]
+    legal, onair = corr["After legal threat / settlement"], corr["On-air correction"]
+    doc = app + ed + legal + onair
+    extra = (f", {legal} after a legal threat or settlement" if legal else "") + (f", {onair} on air" if onair else "")
+    return (f'<p class="how-line"><b>How the corrections happened:</b> of the {ST["total"]}, only {doc} have a documented correction, and {app + ed} of those were '
+            f'a line added to the story or an editor&#x27;s note ({app} appended lines, {ed} editor&#x27;s notes{extra}). '
+            f'{corr["Never corrected by the pusher"]} were never corrected; for {corr["Not recorded"]}, how it was handled is not recorded.</p>')
+
+
+def how_line():
+    order = [n for n, _ in HOW_BUCKETS] + ["Other"]
+    parts = " · ".join(f"{e(n)} <b>{HOW[n]}</b>" for n in order if HOW.get(n))
+    return f'<p class="how-line"><b>How they did it</b> ({ST["total"]} verified): {parts}</p>'
+
+assert sum(HOW.values()) == ST["total"]
 
 # ───── unsupported claims (optional input) ─────
 # If /workspace/reverify/unsupported-final.csv exists and has rows, the site gains an "Unsupported claims" page
@@ -295,7 +421,7 @@ NC_NOFC = corr["Never corrected by the pusher"] - NC_FC
 # built and no link, heading or placeholder appears anywhere. Column names are matched loosely (see _col).
 import os
 UNSUP_SRC = Path(os.environ.get("SWAMP_UNSUPPORTED_CSV", str(ROOT / "reverify" / "unsupported-final.csv")))  # env override is for testing only
-_CASE = {c["id"]: c for c in cases}
+_CASE = {c["id"]: c for c in CASES_CAT}
 
 
 def _col(row, *names):
@@ -331,6 +457,7 @@ def load_unsupported():
         if src.exists():
             with open(src, encoding="utf-8-sig", newline="") as fh:
                 rows += list(csv.DictReader(fh))
+    rows += [dict(RV[i], Checked="Sep 24, 2026") for i in RV_UNSUP]  # re-verification (Sep 24, 2026): moved off Fake News Exposed
     if True:
         for r in rows:
             iid = _col(r, "Item_ID", "ID", "Item_No", "Case_ID")
@@ -344,7 +471,7 @@ def load_unsupported():
             claim, reason = decolo(claim), decolo(reason)
             out.append({"id": iid, "claim": claim.split("\n")[0], "who": _col(r, "Who_Pushed_It", "Who") or cat.get("who", ""),
                         "reason": reason, "urls": list(dict.fromkeys(urls)), "checked": _col(r, "Checked", "Date_Checked", "Source_Loaded", "Date"),
-                        "in_catalog": iid in _CASE})
+                        "in_catalog": iid in CID})
     return out
 
 
@@ -399,7 +526,7 @@ def charts_evidence():
          "link": {"key": "evidence", "values": ["Proven false", "Rated misleading"]}},
         {"id": "chart-proof", "type": "bar", "horizontal": True,
          "labels": [PROOF_LABEL[p] for p in PROOF_ORDER],
-         "data": [sum(1 for c in cases if c["proof"] == p) for p in PROOF_ORDER],
+         "data": [sum(1 for c in VCASES if c["proof"] == p) for p in PROOF_ORDER],
          "colors": ["#14532d", "#1e3a5f", "#7c2d12", "#57534e"], "link": {"key": "proof", "values": PROOF_ORDER}},
         {"id": "chart-term", "type": "bar", "labels": ["First term (2017–21)", "2021 – present"],
          "data": [ST["first"], ST["later"]], "colors": ["#0c2340", "#b91c1c"], "link": {"key": "term", "values": ["first", "later"]}},
@@ -463,9 +590,9 @@ def home_front():
     import midterms as M
     nc = corr["Never corrected by the pusher"]
     blame = "".join([
-        tile(str(ST["total"]), "Documented false or misleading claims", "Each set against the record that settled it.", accent=True, count=ST["total"], src='<a class="src" href="fake-news.html">Fake News Exposed →</a>'),
-        tile(str(nc), "Never corrected by whoever pushed it", count=nc, src='<a class="src" href="fake-news.html">The cases →</a>'),
-        tile(str(CONGRESS_N), "Pushed by sitting members of Congress", count=CONGRESS_N, src='<a class="src" href="democrats.html">Party ledgers →</a>'),
+        tile(str(ST["total"]), "Claims checked against the original record", f"{ST['proven']} proven false / {ST['misleading']} misleading", accent=True, count=ST["total"], src='<a class="src" href="fake-news.html">See the proof →</a>'),
+        tile(str(nc), "Never corrected by whoever pushed them", f"{NC_EV['Proven false']} false / {NC_EV['Rated misleading']} misleading", count=nc, src='<a class="src" href="fake-news.html">The cases →</a>'),
+        tile(str(CONFIRMED_N), "Also confirmed by an approved fact-checker", f"The other {ST['total'] - CONFIRMED_N} rest on our own check of the record.", count=CONFIRMED_N, src='<a class="src" href="factcheckers.html">How we picked our fact-checkers →</a>'),
     ])
     return f"""
 <section class="fr-band" id="front">
@@ -475,16 +602,23 @@ def home_front():
 </section>
 
 <section class="fr-block" id="front-blame">
- <p class="section-label">1 · Who's twisting words and playing the blame game</p>
- <h2 class="section-title">Both parties. Checked against the record.</h2>
+ <p class="section-label">1 · Fake news, checked by us against the original record</p>
+ <p class="opinion-label">Our view</p>
+ <h2 class="section-title attack-h">{e(ATTACK_H)}</h2>
+ <p class="fact-line">{ST['total']} news claims we verified as false or misleading. {nc} never corrected.</p>
+ <p class="notfull">{e(NOT_COMPLETE)}</p>
  <div class="tile-grid">{blame}</div>
- <div class="chart-grid two">{chart_card("chart-evidence", "Verdict on every documented claim", "Tap a slice to open those cases")}
+ {corr_line()}
+ <p class="fn-view">* <b class="fn-label">Our view:</b> The lie gets the headline. The correction gets a footnote nobody sees.</p>
+ {_our_view(SCALE_VIEW, title="Our View")}
+ <p class="watch-line">{ST['watch']} more are rated false by fact-checkers and are still being checked. <a href="fake-news.html#still-checking">See the full list.</a></p>
+ <div class="chart-grid two">{chart_card("chart-evidence", f"Verdict on the {ST['total']} verified claims", "Tap a slice to open those cases")}
   <div class="fr-cards">
    {_lcard("democrats.html", "Party ledger", "Democrats", "Claims Democratic officials made, set against the record.")}
    {_lcard("republicans.html", "Party ledger", "Republicans", "Claims Republican officials made, set against the record.")}
    {_lcard("unsupported.html", "Held back", "Unsupported claims", "Claims we could not tie to a primary record. Kept apart, not counted.")}
   </div></div>
- {_ev(("All cases, with sources", "fake-news.html"), ("How evidence is ranked", "about.html"))}
+ {_ev(("All cases, with sources", "fake-news.html"), ("How evidence is ranked", "about.html"), ("How we picked our fact-checkers", "factcheckers.html"))}
  {_our_view(ADULTS_VIEW)}
 </section>
 
@@ -587,30 +721,25 @@ def home_front():
 def build_home():
     import midterms as M
     nc = corr["Never corrected by the pusher"]
-    tiles = "".join([
-        tile(str(ST["total"]), "Documented cases", accent=True, count=ST["total"], dark=True),
-        tile(str(ST["proven"]), "Proven false", count=ST["proven"], dark=True),
-        tile(str(ST["official"]), "Settled by the official record", count=ST["official"], dark=True),
-        tile(str(nc), "Never corrected by whoever pushed it", count=nc, dark=True),
-        tile(str(CONGRESS_N), "Pushed by sitting members of Congress", count=CONGRESS_N, dark=True),
-    ])
-    picks = [c for c in cases if c["proof"] == "Official record" and c["evidence"] == "Proven false"][:3]
+    picks = [c for c in VCASES if c["proof"] == "Official record" and c["evidence"] == "Proven false"][:3]
     body = f"""
 <section class="hero" style="background-image:url('images/hero-eagle.jpg')">
  <div class="hero-inner">
   <picture class="hero-lockup"><source srcset="assets/brand/lockup-light.webp" type="image/webp"><img src="assets/brand/lockup-light.png" alt="SwampForce" width="1100" height="583" fetchpriority="high"></picture>
   <p class="hero-kicker">The record, not the rerun</p>
   <h1>Vote the file.<br>Not the feeling.</h1>
-  <p class="dek">{ST['total']} claims about a president. Each one checked against the record that settled it.</p>
+  <p class="dek">{ST['total']} claims about a president, each checked by us against the original record.</p>
   <div class="hero-ctas">
    <a class="btn" href="scorecard.html">{ico("chart")} Midterm scorecard: helped &amp; hurt</a>
    <a class="btn ghost" href="fake-news.html">{ico("search")} Flip through the cases</a>
    <a class="btn ghost" href="brief.html">{ico("capitol")} For lawmakers: staff brief</a>
   </div>
-  <div class="stat-rail">{tiles}</div>
+  <a class="hero-down" href="#front">Midterms · Tuesday, Nov 3, 2026 ↓</a>
  </div>
 </section>
 <div class="wrap">
+<aside class="pull-view" aria-label="Our View"><p class="opinion-label">Our View</p>
+ <blockquote><p>{e(PEOPLE_VIEW)}</p></blockquote></aside>
 {home_front()}
 <a class="mt-home" href="scorecard.html">
  <span class="mt-home-k">Midterm scorecard</span>
@@ -644,13 +773,13 @@ def build_home():
  <p class="section-label">Flip a case</p>
  <h2 class="section-title">What they said. What the record shows.</h2>
  <div class="ledger">{"".join(case_card(c) for c in picks)}</div>
- <p class="center"><a class="btn navy" href="fake-news.html">See all {ST['total']} cases</a></p>
+ <p class="center"><a class="btn navy" href="fake-news.html">See all {ST['total']} verified cases</a></p>
 </section>
 <section class="section-pad">
  <p class="section-label">Explore</p>
  <h2 class="section-title">Pick a door.</h2>
  <div class="cards">
-  {explore_card("fake-news.html", "images/chamber.jpg", "Fake News Exposed", f"{ST['total']} claims, each set against the record that corrected it.", ["Proven false", "Filter + search"])}
+  {explore_card("fake-news.html", "images/chamber.jpg", "Fake News Exposed", f"{ST['total']} verified claims, each set against the original record.", ["Proven false", "Filter + search"])}
   {explore_card("scorecard.html", "images/capitol.jpg", "Midterm Scorecard", "Helped and hurt under Republican, Democratic and split control, with the debt added under each.", ["Helped · Hurt", "Debt by control"])}
   {explore_card("betrayal.html", "images/flag-wave.jpg", "The Great American Betrayal", "How a narrative gets built, and why the correction never catches up.", ["Opinion labeled"])}
   {explore_card("january-6.html", "images/chamber.jpg", "J6", "What the television said, set against the charging statute.", ["§ 2383"])}
@@ -662,7 +791,7 @@ def build_home():
  <div class="spine-copy"><p class="opinion-label">Our view · Opinion</p>
   <h2>The Great American Betrayal</h2>
   <p>Free elections assume citizens can give informed consent. Push false claims, amplify them, and leave them standing after the record corrects them, and that consent is poisoned.</p>
-  <p class="spine-fact"><b>On the record:</b> {nc} of {ST['total']} cases were never corrected by whoever pushed them.</p>
+  <p class="spine-fact"><b>On the record:</b> {nc} of {ST['total']} verified cases were never corrected by whoever pushed them.</p>
   <a class="btn" href="opinion.html#the-great-american-betrayal">Read the argument</a></div>
  <div class="spine-media" style="background-image:url('images/flag-wave.jpg')"></div>
 </section>
@@ -678,7 +807,7 @@ def build_home():
 </div>
 """
     return page("index.html", "Swamp Force — Vote the file. Not the feeling.",
-                f"{ST['total']} documented claims about President Trump, each checked against the record. Staff brief and evidence appendix for lawmakers.",
+                f"{ST['total']} claims about President Trump, each checked by Swamp Force against the original record. Staff brief and evidence appendix for lawmakers.",
                 body, charts=charts_evidence() + front_charts(), flush=True)
 
 
@@ -687,7 +816,7 @@ def build_fake_news():
     opts = "".join(f'<option value="{e(m)}">{e(m)}</option>' for m in sorted(methods))
     def chip(k, v, label):
         return f'<button type="button" class="chip btnchip" data-chip-filter="{k}" data-chip-value="{e(v)}">{e(label)}</button>'
-    chips_ev = chip("evidence", "Proven false", "Proven false") + chip("evidence", "Rated misleading", "Rated misleading")
+    chips_ev = chip("evidence", "Proven false", "Proven false") + chip("evidence", "Rated misleading", "Rated misleading") + chip("evidence", WATCH_EV, WATCH_EV)
     chips_pr = "".join(chip("proof", p, PROOF_LABEL[p]) for p in PROOF_ORDER)
     chips_t = chip("term", "first", "First term") + chip("term", "later", "2021 – present")
     chips_m = "".join(chip("method", m, m) for m in TOP_METHODS)
@@ -695,14 +824,21 @@ def build_fake_news():
 <section class="band-hero">
  <div class="wrap">
   <p class="hero-kicker">Fake News Exposed</p>
+  <p class="opinion-label op-light">Our view</p>
+  <p class="attack-h dark">{e(ATTACK_H)}</p>
   <h1>What they said. What the record shows.</h1>
-  <p class="dek">{ST['total']} claims about President Trump or his administration, each later corrected, retracted, settled, or shown false or misleading by the record. Tap a card to see the record.</p>
+  <p class="fact-line dark">{ST['total']} news claims we verified as false or misleading. {nc} never corrected.</p>
+  <p class="dek">{ST['total']} claims about President Trump or his administration, each checked by us against the original record and found false or misleading. Tap a card to see the record.</p>
+  <p class="notfull dark">{e(NOT_COMPLETE)}</p>
   <div class="stat-rail four">
-   {tile(str(ST['total']), "Cases", accent=True, count=ST['total'], dark=True)}
+   {tile(str(ST['total']), "Verified by SwampForce", accent=True, count=ST['total'], dark=True)}
    {tile(str(ST['proven']), "Proven false", count=ST['proven'], dark=True)}
    {tile(str(ST['misleading']), "Rated misleading", count=ST['misleading'], dark=True)}
    {tile(str(nc), "Never corrected by the pusher", count=nc, dark=True)}
   </div>
+  <div class="fn-scale">{_our_view(SCALE_VIEW, title="Our View")}</div>
+  <p class="band-note">Plus <a href="#still-checking">{ST['watch']} still being checked</a>: rated false by a fact-checker, not yet confirmed by us against the original record. They are listed below and are not counted above.
+  {CONFIRMED_N} of the {ST['total']} verified cases were also confirmed by an approved fact-checker. <a href="factcheckers.html">How we picked our fact-checkers</a>.</p>
  </div>
 </section>
 <div class="wrap">
@@ -717,31 +853,40 @@ def build_fake_news():
  <div class="filter-top">
   <label class="grow">Search<input type="search" id="q" placeholder="Search a name, outlet, word…" autocomplete="off"></label>
   <label>Method<select id="filter-method"><option value="">All methods</option>{opts}</select></label>
-  <select id="filter-evidence" hidden aria-hidden="true"><option value=""></option><option>Proven false</option><option>Rated misleading</option></select>
+  <select id="filter-evidence" hidden aria-hidden="true"><option value=""></option><option>Proven false</option><option>Rated misleading</option><option>{WATCH_EV}</option></select>
   <select id="filter-proof" hidden aria-hidden="true"><option value=""></option>{"".join(f'<option value="{e(p)}">{e(p)}</option>' for p in PROOF_ORDER)}</select>
   <select id="filter-term" hidden aria-hidden="true"><option value=""></option><option value="first">first</option><option value="later">later</option></select>
  </div>
  <div class="chip-bar"><span class="chip-lbl">Verdict</span>{chips_ev}<span class="chip-lbl">Proof</span>{chips_pr}<span class="chip-lbl">Period</span>{chips_t}</div>
  <div class="chip-bar"><span class="chip-lbl">Method</span>{chips_m}</div>
- <p class="result-line"><span id="result-count">{ST['total']} of {ST['total']} cases</span>
+ <p class="result-line"><span id="result-count">{len(cases)} of {len(cases)} cases</span>
   <button type="button" class="linkbtn" id="clear-filters">Clear filters</button>
   <button type="button" class="linkbtn" id="expand-all">Open all</button></p>
 </div>
+<h2 class="ledger-h" id="verified">Verified by SwampForce ({ST['total']})</h2>
 <div class="ledger" id="ledger">
-{"".join(case_card(c) for c in cases)}
+{"".join(case_card(c) for c in VCASES)}
 </div>
+<section class="still-checking" id="still-checking">
+<h2 class="ledger-h">Still being checked ({ST['watch']})</h2>
+<p class="watch-intro"><b>Still being checked:</b> {e(WATCH_NOTE)} These are not counted in any figure on this site until we confirm them. A fact-checker is never our proof; see <a href="factcheckers.html">how we picked our fact-checkers</a>.</p>
+<div class="ledger">
+{"".join(case_card(c) for c in WCASES)}
+</div>
+</section>
 <p class="empty-note" id="empty-note" hidden>No cases match those filters.</p>
 <section class="reader-path">
  <p class="section-label">Read more</p>
  <p>Why do these claims stick after they are corrected? <a href="betrayal.html">The Great American Betrayal</a> covers the research.
- Need citations? The <a href="appendix.html">evidence appendix</a> lists every case with its sources, and the spreadsheets are on <a href="downloads.html">Downloads</a>.</p>
+ Need citations? The <a href="appendix.html">evidence appendix</a> lists every verified case with its sources, and the spreadsheets are on <a href="downloads.html">Downloads</a>.</p>
+ <p>How confirmations are chosen: <a href="factcheckers.html">How we picked our fact-checkers</a>. Removed after re-checking: {len(RV_REMOVED)} case (the evidence did not support it).</p>
  {f'<p>Claims that were reviewed and could not be supported by a primary source are kept apart on <a href="unsupported.html">Unsupported claims</a> ({len(UNSUP)}).</p>' if UNSUP else ''}
 </section>
 {shop_strip("Know the record? Wear it.")}
 </div>
 """
     return page("fake-news.html", "Fake News Exposed · Swamp Force",
-                f"{ST['total']} claims about President Trump set against the record that corrected them. Filter by method, verdict, proof and period.",
+                f"{ST['total']} verified claims about President Trump set against the original record, plus {ST['watch']} still being checked. Filter by method, verdict, proof and period.",
                 body, charts=charts_evidence(), flush=True)
 
 
@@ -993,9 +1138,8 @@ def build_betrayal():
   <h1>The Great American Betrayal</h1>
   <p class="dek">How a narrative gets built, why the correction never catches it, and what that does to a self-governing people.</p>
   <div class="stat-rail four">
-   {tile(str(ST['total']), "Documented cases", count=ST['total'], dark=True, accent=True)}
+   {tile(str(ST['total']), "Verified cases", count=ST['total'], dark=True, accent=True)}
    {tile(str(nc), "Never corrected by the pusher", count=nc, dark=True)}
-   {tile(str(CONGRESS_N), "Pushed by members of Congress", count=CONGRESS_N, dark=True)}
    {tile(str(ST['official']), "Settled by the official record", count=ST['official'], dark=True)}
   </div>
  </div>
@@ -1004,7 +1148,7 @@ def build_betrayal():
 <p class="legend"><span class="fact-tag">Fact</span> The case counts, the research and the law cited below are documented.
 <span class="op-tag">Opinion</span> The site owner's argument is on the <a href="opinion.html">Opinion page</a>, kept apart from the evidence here.</p>
 <div class="chart-grid">
- {chart_card("chart-corr", "When a claim proved wrong, how was it corrected?", f"All {ST['total']} cases")}
+ {chart_card("chart-corr", "When a claim proved wrong, how was it corrected?", f"All {ST['total']} verified cases")}
  {chart_card("chart-proof", "What settled it", "Tap a bar to see those cases")}
 </div>
 <aside class="op-pointer big"><span class="op-tag">Opinion</span> <b>The argument.</b> The site owner's argument, “The Great American Betrayal,” is on the <a href="opinion.html#the-great-american-betrayal">Opinion page</a>. This page keeps the evidence it rests on.</aside>
@@ -1014,7 +1158,7 @@ def build_betrayal():
  <p class="section-dek">Tap a section to read it in full. Citations are inline.</p>
  <div class="read-list">{"".join(reads)}</div>
 </section>
-<section class="reader-path"><p>Judge for yourself: <a class="btn navy sm" href="fake-news.html">Open the {ST['total']} cases</a> <a class="btn ghost-dark sm" href="brief.html">Staff brief</a></p></section>
+<section class="reader-path"><p>Judge for yourself: <a class="btn navy sm" href="fake-news.html">Open the {ST['total']} verified cases</a> <a class="btn ghost-dark sm" href="brief.html">Staff brief</a></p></section>
 </div>
 """
     return page("betrayal.html", "The Great American Betrayal · Swamp Force",
@@ -1075,7 +1219,7 @@ def build_j6():
             continue
         seen.add(claim[:60].lower())
         frames.append(frame_simple((r.get("Attributed_To") or "January 6")[:90], claim, truth, url, row=r))
-    cat = [c for c in cases if any(k in (c["claim"] + " " + c["notes"]).lower() for k in keys)]
+    cat = [c for c in VCASES if any(k in (c["claim"] + " " + c["notes"]).lower() for k in keys)]
     body = f"""
 <section class="band-hero slim"><div class="wrap"><p class="hero-kicker">Evidence · J6</p>
 <h1>The caption was not the charge.</h1>
@@ -1157,10 +1301,11 @@ def rank_table():
     desc = {"Official record": "A court or DOJ finding, inspector general, FEC, government data, or a settlement.",
             "Original transcript/video": "The full transcript or unedited video shows the claim was wrong.",
             "Outlet's own correction": "The outlet that ran the claim corrected or retracted it, or appended a note.",
-            "Fact-check only": "An independent fact-checker rated it false or misleading. No stronger proof is on file."}
+            "Fact-check only": "An independent fact-checker rated it false or misleading. No stronger proof is on file.",
+            "Primary document or record search": "A primary document, or a documented search of the official record or archive."}
     rows = []
     for i, p in enumerate(PROOF_ORDER, 1):
-        n = sum(1 for c in cases if c["proof"] == p)
+        n = sum(1 for c in VCASES if c["proof"] == p)
         pct = round(100 * n / ST["total"])
         rows.append(f'<tr><td class="rank">{i}</td><td>{proof_badge(p)}</td><td>{e(desc[p])}</td><td class="num">{n}</td>'
                     f'<td class="barcell"><div class="bar-track"><div class="bar-fill" data-pct="{pct}"></div></div><span class="pct">{pct}%</span></td></tr>')
@@ -1172,8 +1317,9 @@ def build_brief():
     nc = corr["Never corrected by the pusher"]
     body = f"""
 <header class="doc-head"><p class="doc-kicker">For lawmakers &amp; staff</p><h1>Documented Deception of American Voters</h1>
-<p class="doc-lede">A two-page staff brief and a case-by-case evidence appendix built from {ST['total']} documented cases: {ST['first']} from the first term and {ST['later']} from 2021 to the present.
+<p class="doc-lede">{ST['total']} cases verified by Swamp Force against the original record: {ST['first']} from the first term and {ST['later']} from 2021 to the present.
 {ST['proven']} are proven false and {ST['misleading']} are rated misleading. {ST['official']} are settled by the official record.</p>
+<p class="notfull">{PDF_NOTE}</p>
 <div class="doc-actions"><a class="btn navy" href="docs/swampforce-brief.pdf">{ico("down")} Staff brief (PDF, 2 pages)</a>
 <a class="btn ghost-dark" href="docs/staff-brief.html">Brief (HTML)</a><a class="btn ghost-dark" href="appendix.html">{ico("file")} Evidence appendix</a>
 <button type="button" class="btn ghost-dark" data-print>{ico("print")} Print this page</button></div></header>
@@ -1184,9 +1330,9 @@ def build_brief():
 </div>
 <section class="doc-section"><h2>Key findings</h2>
 <ul class="findings">
-<li><b>{ST['total']}</b> claims about President Trump or his administration were later corrected, retracted or settled, or shown false or misleading by the record.</li>
-<li><b>{nc}</b> were never corrected by whoever pushed them. A later fact-check addressed {NC_FC} of them; the other {NC_NOFC} have no fact-check on file, only the official record.</li>
-<li><b>{CONGRESS_N}</b> were pushed by a sitting Representative, Senator, Speaker or party leader.</li>
+<li><b>{ST['total']}</b> claims about President Trump or his administration were checked by us against the original record and found false or misleading.</li>
+<li><b>{nc}</b> were never corrected by whoever pushed them ({NC_EV['Proven false']} proven false, {NC_EV['Rated misleading']} misleading). A later fact-check addressed {NC_FC} of them; the other {NC_NOFC} have no fact-check on file, only the record.</li>
+<li><b>{ST['watch']}</b> more were rated false by a fact-checker and are still being checked; they are not counted here.</li>
 <li><b>{ST['official']}</b> are settled by the official record: a court, the DOJ, an inspector general, the FEC or government data.</li>
 </ul></section>
 <section class="doc-section"><h2>How the evidence is ranked</h2>
@@ -1203,19 +1349,20 @@ The Speech or Debate Clause (<a href="{LAWSRC['art1']}" target="_blank" rel="noo
 <section class="doc-section"><h2>Contact</h2><p>Editor: <a href="mailto:editor@swampforce.com">editor@swampforce.com</a>. Staff requests for spreadsheets or specific case files are welcome.</p></section>
 """
     return page("brief.html", "Staff brief for lawmakers · Swamp Force",
-                f"Two-page staff brief and evidence appendix: {ST['total']} documented cases, each ranked by the strength of its proof.", body, serious=True)
+                f"Staff brief and evidence appendix: {ST['total']} verified cases, each ranked by the strength of its proof.", body, serious=True)
 
 
 def build_appendix():
-    groups = "".join(f'<li>{proof_badge(p)} <b>{sum(1 for c in cases if c["proof"] == p)}</b> cases</li>' for p in PROOF_ORDER)
-    srt = sorted(cases, key=lambda c: (PROOF_ORDER.index(c["proof"]) if c["proof"] in PROOF_ORDER else 9, int(c["id"])))
+    groups = "".join(f'<li>{proof_badge(p)} <b>{sum(1 for c in VCASES if c["proof"] == p)}</b> cases</li>' for p in PROOF_ORDER)
+    srt = sorted(VCASES, key=lambda c: (PROOF_ORDER.index(c["proof"]) if c["proof"] in PROOF_ORDER else 9, int(c["id"])))
     rows = "".join(
         f'<tr><td><a href="fake-news.html#case-{e(c["id"])}">#{e(c["id"])}</a></td><td>{e(c["claim"][:240])}{"…" if len(c["claim"]) > 240 else ""}</td>'
         f'<td>{ev_badge(c["evidence"])}</td><td>{proof_badge(c["proof"])}</td>'
         f'<td class="srcs">{src_link(c.get("truth_url"), "Record")} {src_link(c.get("primary"), "Primary")}</td></tr>' for c in srt)
     body = f"""
 <header class="doc-head"><p class="doc-kicker">For lawmakers &amp; staff</p><h1>Evidence appendix</h1>
-<p class="doc-lede">All {ST['total']} cases, sorted by strength of proof (official record first). Each lists the correcting record and, where available, the primary source.</p>
+<p class="doc-lede">All {ST['total']} verified cases, sorted by strength of proof (official record first). Each lists the correcting record and, where available, the primary source.</p>
+<p class="muted small">{PDF_NOTE}</p>
 <div class="doc-actions"><a class="btn navy" href="docs/swampforce-evidence-appendix.pdf">{ico("down")} Appendix (PDF)</a>
 <a class="btn ghost-dark" href="docs/evidence-appendix.html">Printable HTML</a><a class="btn ghost-dark" href="downloads.html">Spreadsheets</a>
 <button type="button" class="btn ghost-dark" data-print>{ico("print")} Print</button></div>
@@ -1223,13 +1370,13 @@ def build_appendix():
 <div class="table-wrap"><table class="appendix-table"><thead><tr><th>Case</th><th>Claim</th><th>Verdict</th><th>Proof</th><th>Sources</th></tr></thead><tbody>{rows}</tbody></table></div>
 """
     return page("appendix.html", "Evidence appendix · Swamp Force",
-                f"All {ST['total']} documented cases ranked by strength of proof, with the correcting record and primary source.", body, serious=True)
+                f"All {ST['total']} verified cases ranked by strength of proof, with the correcting record and primary source.", body, serious=True)
 
 
 def _balance():
     import balance as BAL
     n = lambda pg: sum(1 for r in verified if r["Page"] == pg and r["Verdict"] in OK)
-    res = BAL.compute(cases, [("Democrat", n("Democrats Ledger")), ("Republican", n("Republicans Ledger"))])
+    res = BAL.compute(VCASES, [("Democrat", n("Democrats Ledger")), ("Republican", n("Republicans Ledger"))])
     (SITE / "balance-report.md").write_text(BAL.report_md(res, "Sep 24, 2026"), encoding="utf-8")
     by, outlets, labels = BAL.tables(res)
     BALANCE_STATS.update({g: dict(c) for g, c in by.items()})
@@ -1249,9 +1396,11 @@ def build_about():
 <li>A claim about President Trump or his administration that is unfavorable to him or them.</li>
 <li><b>Proven false:</b> the claim was corrected, retracted or settled; a court, the DOJ, an inspector general or the FEC found it false; or a major fact-checker rated it False, Mostly False, Pants on Fire or Four Pinocchios.</li>
 <li><b>Rated misleading:</b> rated misleading, missing context or Three Pinocchios (or equivalent).</li>
+<li><b>Re-verification (Sep 24, 2026):</b> every case was re-checked against its original record. {ST['total']} were verified by Swamp Force; {ST['watch']} are listed as "Still being checked" and are not counted; {len(RV_UNSUP)} moved to Unsupported; {len(RV_REMOVED)} was removed. A fact-checker is never our proof, only a second confirmation. <a href="factcheckers.html">How we picked our fact-checkers</a>.</li>
 <li>Unproven claims are left out.{f' Claims that were reviewed and could not be supported are listed separately on <a href="unsupported.html">Unsupported claims</a>.' if UNSUP else ''}</li></ul></section>
+<section class="doc-section"><h2>Fact-checkers</h2><p>A fact-checker is never our proof, only a second confirmation after we check the original record. The 7 tests and all 16 results: <a href="factcheckers.html">How we picked our fact-checkers</a>.</p></section>
 <section class="doc-section"><h2>2. How proof is ranked</h2>{rank_table()}</section>
-<section class="doc-section"><h2>3. Correction visibility</h2><p>Each case records how, or whether, the original pusher corrected it:</p><ul>
+<section class="doc-section"><h2>3. Correction visibility</h2><p>Each verified case records how, or whether, the original pusher corrected it:</p><ul>
 {"".join(f"<li><b>{v}</b> · {e(k)}</li>" for k, v in corr.most_common())}</ul></section>
 <section class="doc-section"><h2>4. Party ledgers and J6</h2><p>A party-ledger row appears only after both its claim and its record are confirmed. A row that duplicates a Fake News case links to that case instead of repeating it.</p></section>
 <section class="doc-section"><h2>5. Scorecard</h2><p>Every figure comes from an official source (BLS, CBP, Treasury, CBO, USDA, SSA, CMS, a city comptroller) and is tagged with who held power at the time. Until a figure is confirmed against its source, it is marked <span class="chip gold">Under review</span> and shows no number.</p></section>
@@ -1271,9 +1420,9 @@ def build_downloads():
 <p class="doc-lede">The full record in formats staff can sort, filter and cite.</p></header>
 <div class="dl-grid">
 {item("Staff brief", "Two pages, September 2026.", [("docs/swampforce-brief.pdf", "PDF", "navy"), ("docs/staff-brief.html", "HTML", "ghost-dark")])}
-{item("Evidence appendix", f"All {ST['total']} cases with sources.", [("docs/swampforce-evidence-appendix.pdf", "PDF", "navy"), ("docs/evidence-appendix.html", "HTML", "ghost-dark")])}
-{item(f"First term ({ST['first']} cases)", "2017–2021 catalog.", [("downloads/first-term-trump-admin-media-deception.csv", "CSV", "navy"), ("downloads/first-term-trump-admin-media-deception.xlsx", "Excel", "ghost-dark"), ("downloads/first-term-media-deception.zip", "ZIP", "ghost-dark")])}
-{item(f"2021 to present ({ST['later']} cases)", "Later / second-term catalog.", [("downloads/later-second-term-trump-admin-media-deception.csv", "CSV", "navy"), ("downloads/later-second-term-trump-admin-media-deception.xlsx", "Excel", "ghost-dark"), ("downloads/later-second-term-media-deception.zip", "ZIP", "ghost-dark")])}
+{item("Evidence appendix", f"All {ST['total']} verified cases with sources (the PDF predates the Sep 24 re-check).", [("docs/swampforce-evidence-appendix.pdf", "PDF", "navy"), ("docs/evidence-appendix.html", "HTML", "ghost-dark")])}
+{item(f"First term ({ST_CAT['first']} cases)", "2017–2021 research catalog, before the Sep 24, 2026 re-check (includes cases still being checked).", [("downloads/first-term-trump-admin-media-deception.csv", "CSV", "navy"), ("downloads/first-term-trump-admin-media-deception.xlsx", "Excel", "ghost-dark"), ("downloads/first-term-media-deception.zip", "ZIP", "ghost-dark")])}
+{item(f"2021 to present ({ST_CAT['later']} cases)", "Later / second-term research catalog, before the Sep 24, 2026 re-check (includes cases still being checked).", [("downloads/later-second-term-trump-admin-media-deception.csv", "CSV", "navy"), ("downloads/later-second-term-trump-admin-media-deception.xlsx", "Excel", "ghost-dark"), ("downloads/later-second-term-media-deception.zip", "ZIP", "ghost-dark")])}
 {item("Lawfare tracker", "Ten dockets and key rulings.", [("downloads/lawfare-tracker.pdf", "PDF", "navy"), ("downloads/lawfare-docket-tracker.csv", "CSV", "ghost-dark"), ("downloads/lawfare-docket-tracker.xlsx", "Excel", "ghost-dark"), ("downloads/lawfare-rulings.csv", "Rulings", "ghost-dark")])}
 {item(f"Unsupported claims ({len(UNSUP)})", "Reviewed and could not be supported; kept apart from the cases.", [("unsupported.html", "Page", "navy"), ("downloads/unsupported-claims.csv", "CSV", "ghost-dark")]) if UNSUP else ""}
 </div>"""
@@ -1327,7 +1476,7 @@ def build_foreword():
 <div class="fact-box"><p class="fact-tag">On the record</p>
 <p>The Preamble: "We the People of the United States … do ordain and establish this Constitution for the United States of America." {src_link("https://constitution.congress.gov/constitution/preamble/", "Constitution Annotated")}</p>
 <p>The oath of office, 5 U.S.C. § 3331, requires every member to support and defend the Constitution "without any mental reservation or purpose of evasion." {src_link("https://www.law.cornell.edu/uscode/text/5/3331", "5 U.S.C. § 3331")}</p></div>
-<div class="cards">{explore_card("fake-news.html", "images/chamber.jpg", "Start with the evidence", f"{ST['total']} cases, each against the record.", ["Evidence"])}
+<div class="cards">{explore_card("fake-news.html", "images/chamber.jpg", "Start with the evidence", f"{ST['total']} verified cases, each against the record.", ["Evidence"])}
 {explore_card("betrayal.html", "images/flag-wave.jpg", "The Great American Betrayal", "The argument, with the research inline.", ["Opinion labeled"])}</div>
 {shop_strip()}</div>"""
     return page("foreword.html", "The Republic: Foreword · Swamp Force", "The people are the employer. The foreword to the Swamp Force journal.", body, flush=True)
@@ -1340,7 +1489,7 @@ def build_congress():
  {tile("$40.09T", "National debt", "Sep 17, 2026.", accent=True, count=40.09, prefix="$", suffix="T", decimals=2, src=S("treas"))}
  {tile("$1.9T", "Projected deficit, FY2026", "CBO, Feb 2026.", count=1.9, prefix="$", suffix="T", decimals=1, src=S("cbo"))}
  {tile("$1.039T", "Net interest, FY2026", "Up from $970B in FY2025.", count=1.039, prefix="$", suffix="T", decimals=3, src=S("cbo"))}
- {tile(str(CONGRESS_N), "False claims pushed by sitting members", f"Of the {ST['total']} documented cases.", count=CONGRESS_N, src='<a class="src" href="fake-news.html">Fake News Exposed</a>')}
+ {tile(str(ST['total']), "Claims we verified against the record", f"{ST['proven']} proven false / {ST['misleading']} misleading.", count=ST['total'], src='<a class="src" href="fake-news.html">Fake News Exposed</a>')}
 </div>
 <div class="chart-grid">{chart_card("sc-cbo", "FY2026 budget, CBO projection", "Trillions of dollars")}{chart_card("sc-interest", "Net interest on the debt", "Billions of dollars")}</div>
 <div class="fact-box"><p class="fact-tag">On the record</p><p>The Speech or Debate Clause (<a href="{LAWSRC['art1']}" target="_blank" rel="noopener">art. I, § 6</a>) protects legislative acts. It did not cover a senator's private publication of the Pentagon Papers (<a href="{LAWSRC['gravel']}" target="_blank" rel="noopener"><em>Gravel v. United States</em></a>, 1972) or a senator's newsletters and press release (<a href="{LAWSRC['hutchinson']}" target="_blank" rel="noopener"><em>Hutchinson v. Proxmire</em></a>, 1979). Each House may punish its members and, with a two-thirds vote, expel one (<a href="{LAWSRC['art1']}" target="_blank" rel="noopener">art. I, § 5</a>); the House has <a href="{LAWSRC['discipline']}" target="_blank" rel="noopener">expelled {HOUSE_DISCIPLINE['expelled']} members and censured {HOUSE_DISCIPLINE['censured']}</a> in its history.
@@ -1442,8 +1591,8 @@ OPINION_POSTS = [
             "already punish. It is an argument about what accountability should become: if a free people cannot tell fact from fiction, "
             "they cannot govern themselves.",
             "Congress, which [writes the rules for itself](" + LAWSRC["art1"] + "), has betrayed voters by refusing to police its own members' "
-            "false statements. In this record alone, [{congress} cases](fake-news.html) were pushed by a sitting Representative, Senator, "
-            "Speaker, or party leader in the House or Senate. The Speech or Debate Clause ([art. I, \u00a7 6](" + LAWSRC["art1"] + ")) protects "
+            "false statements. [Cases in this record](fake-news.html) were pushed by sitting Representatives, Senators, "
+            "Speakers, and party leaders in the House and Senate. The Speech or Debate Clause ([art. I, \u00a7 6](" + LAWSRC["art1"] + ")) protects "
             "legislative acts, but not everything a member does in public. In [Gravel v. United States](" + LAWSRC["gravel"] + ") (1972) the Court "
             "held that a senator's private publication of the Pentagon Papers \u201cwas in no way essential to the deliberations of the "
             "Senate\u201d and was not protected. In [Hutchinson v. Proxmire](" + LAWSRC["hutchinson"] + ") (1979) it held that \u201cneither the "
@@ -1551,7 +1700,7 @@ def build_opinion():
 <p class="doc-lede">The site owner's arguments, kept apart from the evidence. The cases and their records are on <a href="fake-news.html">Fake News Exposed</a> and <a href="betrayal.html">The Great American Betrayal</a>.</p></header>
 <div class="op-banner" role="note"><b>Opinion.</b> The facts cited here are sourced to the record; the conclusions are the author's.</div>
 <div class="op-list">{"".join(cards)}</div>
-<section class="reader-path"><p>Judge for yourself: <a class="btn navy sm" href="fake-news.html">Open the {ST['total']} cases</a> <a class="btn ghost-dark sm" href="betrayal.html">The evidence spine</a> <a class="btn ghost-dark sm" href="about.html">Methodology</a></p></section>
+<section class="reader-path"><p>Judge for yourself: <a class="btn navy sm" href="fake-news.html">Open the {ST['total']} verified cases</a> <a class="btn ghost-dark sm" href="betrayal.html">The evidence spine</a> <a class="btn ghost-dark sm" href="about.html">Methodology</a></p></section>
 """
     return page("opinion.html", "Opinion · Swamp Force",
                 "Opinion: the site owner's arguments, labeled and kept apart from the evidence. Facts cited are linked to the record.",
@@ -1582,13 +1731,86 @@ def build_unsupported():
         cards.append("".join(parts) + "</article>")
     body = f"""
 <header class="doc-head"><p class="doc-kicker">Evidence</p><h1>Unsupported claims</h1>
-<p class="doc-lede">{len(UNSUP)} claim{'s were' if len(UNSUP) != 1 else ' was'} reviewed and could not be tied to a primary source. {'They are' if len(UNSUP) != 1 else 'It is'} kept apart from the {ST['total']} documented cases on <a href="fake-news.html">Fake News Exposed</a>.</p>
+<p class="doc-lede">{len(UNSUP)} claim{'s were' if len(UNSUP) != 1 else ' was'} reviewed and could not be tied to a primary source. {'They are' if len(UNSUP) != 1 else 'It is'} kept apart from the {ST['total']} verified cases on <a href="fake-news.html">Fake News Exposed</a>.</p>
 <div class="doc-actions"><a class="btn ghost-dark sm" href="downloads/unsupported-claims.csv">{ico("down")} CSV</a><button type="button" class="btn ghost-dark sm" data-print>{ico("print")} Print</button></div></header>
 <div class="unsup-list">{"".join(cards)}</div>
-<section class="reader-path"><p>How claims are judged: <a class="btn ghost-dark sm" href="about.html">Methodology</a> <a class="btn navy sm" href="fake-news.html">The {ST['total']} documented cases</a></p></section>
+<section class="reader-path"><p>How claims are judged: <a class="btn ghost-dark sm" href="about.html">Methodology</a> <a class="btn navy sm" href="fake-news.html">The {ST['total']} verified cases</a></p></section>
 """
     return page("unsupported.html", "Unsupported claims · Swamp Force",
                 f"{len(UNSUP)} claims reviewed by Swamp Force that could not be supported by a primary source.", body, serious=True)
+
+
+# ───── How we picked our fact-checkers (from /workspace/reverify/factchecker-vetting.csv, evidence date Sep 24, 2026) ─────
+_FC_WORDING = [  # a missing page is something we could not locate, never proof that it does not exist
+    ("No central corrections log and no itemized fact-check funding page", "We could not locate a central corrections log or an itemized fact-check funding page"),
+    ("No located methodology or corrections policy", "We could not locate a methodology or corrections policy"),
+    ("No corrections policy located", "We could not locate a corrections policy"),
+    ("No unit-level disclosure", "We could not locate a unit-level disclosure"),
+    ("No central public corrections log", "We could not locate a central public corrections log"),
+    ("No central public log located", "We could not locate a central public log"),
+    ("No central log located", "We could not locate a central log"),
+    ("No central corrections log", "We could not locate a central corrections log"),
+    ("Not located", "We could not locate one"),
+]
+
+
+def _fcw(t):
+    for a, b in _FC_WORDING:
+        t = (t or "").replace(a, b)
+    return t
+
+
+def build_factcheckers():
+    with open(ROOT / "reverify" / "factchecker-vetting.csv", encoding="utf-8-sig", newline="") as fh:
+        rows = [r for r in csv.DictReader(fh) if r["Outcome"] in ("Approved", "Approved with caution", "Rejected")]
+    assert len(rows) == 16, len(rows)
+    oc = Counter(r["Outcome"] for r in rows)
+    used = Counter(c["confirm"] for c in VCASES if c.get("confirm"))
+    cls = {"Approved": "ok", "Approved with caution": "caution", "Rejected": "rej"}
+    def slug(n):
+        return re.sub(r"[^a-z0-9]+", "-", n.lower()).strip("-")
+    def lk(url, label="link"):
+        return f' <a href="{e(url)}" target="_blank" rel="noopener">{e(label)} ↗</a>' if url and url.startswith("http") else ""
+    trs = "".join(
+        f'<tr><td><a href="#fc-{slug(r["Name"])}">{e(r["Name"])}</a></td><td>{e(r["Lean_Note"])}</td><td>{e(r["IFCN_Status"])}</td>'
+        f'<td><span class="fc-out {cls[r["Outcome"]]}">{e(r["Outcome"])}</span></td><td class="num">{used.get(r["Name"], 0)}</td></tr>' for r in rows)
+    det = []
+    for r in rows:
+        items = [("Owner / lean", r["Lean_Note"], ""), ("IFCN status", r["IFCN_Status"], r["IFCN_URL"]),
+                 ("Corrections policy", r["Corrections_Policy"], r["Corrections_Policy_URL"]), ("Corrections log", r["Corrections_Log"], r["Corrections_Log_URL"]),
+                 ("Documented corrections or reversals", r["Documented_Rating_Reversals"], ""), ("Funding", r["Funding_Transparency"], r["Funding_URL"]),
+                 ("Methodology", r["Methodology"], r["Methodology_URL"]), ("Condition", r["Caution_Note"], "")]
+        rev = " ".join(lk(u.strip(), f"source {i}") for i, u in enumerate([u for u in re.split(r"\s*;\s*|\s+", r["Reversal_URLs"] or "") if u.startswith("http")], 1))
+        lis = "".join(f'<li><b>{e(k)}:</b> {e(_fcw(v))}{lk(u)}{rev if k.startswith("Documented") else ""}</li>' for k, v, u in items if (v or "").strip())
+        det.append(f'<article class="fc-card" id="fc-{slug(r["Name"])}"><h3>{e(r["Name"])} <span class="fc-out {cls[r["Outcome"]]}">{e(r["Outcome"])}</span></h3>'
+                   f'<ul>{lis}</ul><p><b>Why:</b> {e(_fcw(r["Rationale"]))}</p></article>')
+    tests = [
+        ("IFCN status", "Is it a current signatory of the International Fact-Checking Network's code of principles? Current passes; lapsed, in renewal or never means caution. Status alone never approves or rejects."),
+        ("A published corrections policy", "Required. If we could not locate one, the checker is rejected. That is a documentation failure, not a finding about its accuracy."),
+        ("A public corrections log", "If we could not locate one, that means caution."),
+        ("Its record of corrections and reversals", "Open corrections are expected. A documented reversal of a politically charged rating, or an integrity failure, means caution."),
+        ("Funding transparency", "Funding that is not itemized, or not disclosed for the fact-check unit, means caution."),
+        ("A published methodology", "Required. If we could not locate one, the checker is rejected."),
+        ("Still operating", "A closed or leaderless unit is archive-only (caution), or rejected if its policies can no longer be checked."),
+    ]
+    body = f"""
+<header class="doc-head"><p class="doc-kicker">Methodology</p><h1>How we picked our fact-checkers</h1>
+<p class="doc-lede">We tested 16 fact-checkers against the same 7 tests. {oc['Approved']} was approved, {oc['Approved with caution']} were approved with caution, and {oc['Rejected']} were rejected. Evidence date: Sep 24, 2026.</p>
+<div class="doc-actions"><button type="button" class="btn ghost-dark sm" data-print>{ico("print")} Print</button></div></header>
+<section class="doc-section"><h2>The rule: a fact-checker is never our proof</h2>
+<p>Every case on <a href="fake-news.html">Fake News Exposed</a> is first checked by us against the original record: the transcript, the video, the court filing, the government data, or the outlet's own correction. Only after that check does a case get the label <b>Verified by SwampForce</b>.</p>
+<p>An approved fact-checker can then be named as a second confirmation (<b>Also confirmed by</b>). It is never the proof, and a checker never confirms a case about its own parent outlet. Of the {ST['total']} verified cases, {CONFIRMED_N} also carry a confirmation from an approved checker; the other {ST['total'] - CONFIRMED_N} rest on our own check alone. Cases that a fact-checker rated false but that we have not yet confirmed against the original record are listed as <a href="fake-news.html#still-checking">Still being checked</a> and are not counted.</p></section>
+<section class="doc-section"><h2>The 7 tests (the same for every checker)</h2><ol>{"".join(f"<li><b>{e(a)}.</b> {e(b)}</li>" for a, b in tests)}</ol>
+<p><b>Approved</b> means it passed all 7 with no caution. <b>Approved with caution</b> means it has a corrections policy and a methodology we could locate, but hit one or more caution tests. <b>Rejected</b> means we could not locate its corrections policy or its methodology.</p>
+<p>When we say we "could not locate" a page, that means our search did not find it on Sep 24, 2026. It is not a claim that none exists. A rejected checker can be re-tested if the pages are found.</p></section>
+<section class="doc-section"><h2>All 16 at a glance</h2>
+<div class="table-wrap"><table class="fc-table"><thead><tr><th>Fact-checker</th><th>Owner / lean</th><th>IFCN status (Sep 24, 2026)</th><th>Outcome</th><th>Cases it confirms</th></tr></thead><tbody>{trs}</tbody></table></div>
+<p class="muted small">Right-leaning checkers were included for balance: Check Your Fact (Daily Caller), The Dispatch Fact Check, and TWS Fact Check (Weekly Standard, closed 2018). IFCN status comes from the public signatory list at <a href="https://ifcncodeofprinciples.poynter.org/signatories" target="_blank" rel="noopener">ifcncodeofprinciples.poynter.org ↗</a>.</p></section>
+<section class="doc-section"><h2>Checker by checker</h2>{"".join(det)}</section>
+<section class="reader-path"><p>See it applied: <a class="btn navy sm" href="fake-news.html">The {ST['total']} verified cases</a> <a class="btn ghost-dark sm" href="about.html">Methodology</a></p></section>
+"""
+    return page("factcheckers.html", "How we picked our fact-checkers · Swamp Force",
+                "The 7 tests Swamp Force applied to 16 fact-checkers, and the rule that a fact-checker is never our proof, only a second confirmation.", body, serious=True)
 
 
 def build_404():
@@ -1687,7 +1909,7 @@ def main():
         "index.html": build_home(), "fake-news.html": build_fake_news(), "scorecard.html": build_scorecard(),
         "betrayal.html": build_betrayal(), "democrats.html": dem_html, "republicans.html": gop_html,
         "january-6.html": build_j6(), "lawfare.html": law_html, "brief.html": build_brief(), "appendix.html": build_appendix(),
-        "about.html": build_about(), "downloads.html": build_downloads(), "store.html": build_store(),
+        "about.html": build_about(), "factcheckers.html": build_factcheckers(), "downloads.html": build_downloads(), "store.html": build_store(),
         "foreword.html": build_foreword(), "congress.html": build_congress(), "border.html": build_border(),
         "remedy.html": build_remedy(law_n), "opinion.html": build_opinion(), "404.html": build_404(),
     }
@@ -1717,6 +1939,7 @@ def main():
         (OUT / old).unlink(missing_ok=True)
     for name, h in pages.items():
         h = h.replace("In this site&#x27;s audit of", "In this site&#x27;s review of")
+        h = re.sub(r'(assets/(?:style\.css|app\.js|store\.js))"', r'\1?v=' + ASSET_V + '"', h)  # cache-busting
         (OUT / name).write_text(h, encoding="utf-8")
     # /midterms.html: .htaccess 301s to scorecard.html; this stub covers hosts/previews that ignore .htaccess.
     (OUT / "midterms.html").write_text('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Midterm scorecard</title>'
@@ -1726,10 +1949,13 @@ def main():
     if sb.exists():
         sb.write_text(sb.read_text(encoding="utf-8").replace("<b>Evidence audit:</b>", "<b>Evidence review:</b>"), encoding="utf-8")
     (OUT / "data" / "cases.json").write_text(json.dumps(
-        [{k: c[k] for k in ("id", "claim", "evidence", "proof", "method", "term", "truth_url", "primary", "notes", "who")} for c in cases],
+        [{**{k: c[k] for k in ("id", "claim", "evidence", "proof", "method", "term", "truth_url", "primary", "notes", "who")},
+          "status": "Verified by SwampForce" if c["status"] == "verified" else WATCH_EV, "also_confirmed_by": c.get("confirm", "")} for c in cases],
         ensure_ascii=False, indent=1), encoding="utf-8")
     n_red = write_infra(list(pages))
-    meta = {"pages": list(pages), "stats": ST, "corr": dict(corr), "never_split": {"fact_checked_only": NC_FC, "no_fact_check": NC_NOFC}, "congress": CONGRESS_N, "dem_rows": dem_n, "gop_rows": gop_n, "balance": BALANCE_STATS,
+    meta = {"pages": list(pages), "stats": ST_CAT, "corr": dict(corr_cat), "never_split": {"fact_checked_only": NC_FC_CAT, "no_fact_check": ST_CAT["never"] - NC_FC_CAT}, "congress": CONGRESS_N,
+            "site_stats": {**ST, "never_by_verdict": dict(NC_EV), "corr": dict(corr), "never_fact_checked_only": NC_FC, "confirmed": CONFIRMED_N,
+                           "how": dict(HOW), "removed": RV_REMOVED, "unsupported_moved": RV_UNSUP, "site_ids": [c["id"] for c in cases]}, "dem_rows": dem_n, "gop_rows": gop_n, "balance": BALANCE_STATS,
             "lawfare": law_n, "redirects": n_red, "top_methods": TOP_METHODS, "unsupported": len(UNSUP),
             "watch": watch_stats, "planned_sections": W.planned_status(), "site_apply": SITE_APPLY}
     (SITE / "build-summary.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")

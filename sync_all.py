@@ -39,6 +39,7 @@ LAW = W / "lawfare"
 SITE = W / "site-from-checkpoint"
 OUT = SITE / "public_html"
 UNSUP = W / "reverify" / "unsupported-final.csv"
+REVERIFIED = W / "reverify" / "cases-reverified.csv"  # Sep 24, 2026 re-verification: the site's headline figures come from its verified rows
 SITE_ZIP = W / "swampforce-from-checkpoint.zip"
 LAW_ZIP = W / "lawfare-docket-tracker.zip"
 QA_PORT = 8931
@@ -328,8 +329,27 @@ def ensure_preview_server():
 
 
 # ───────────────────────── validation ─────────────────────────
+def reverified_counts():
+    with open(REVERIFIED, newline="", encoding="utf-8-sig") as fh:
+        rows = list(csv.DictReader(fh))
+    ver = [r for r in rows if r["Adjusted_Evidence_Level"] in EVIDENCE]
+    never = [r for r in ver if r["Correction_Visibility"].lower().startswith("never")]
+    return {
+        "total": len(ver), "proven": sum(r["Adjusted_Evidence_Level"] == "Proven false" for r in ver),
+        "misleading": sum(r["Adjusted_Evidence_Level"] == "Rated misleading" for r in ver),
+        "first": sum(r["Term"] == "first" for r in ver), "later": sum(r["Term"] == "later" for r in ver),
+        "never": len(never), "never_fc": sum("fact-check" in r["Correction_Visibility"].lower() for r in never),
+        "never_false": sum(r["Adjusted_Evidence_Level"] == "Proven false" for r in never),
+        "never_misleading": sum(r["Adjusted_Evidence_Level"] == "Rated misleading" for r in never),
+        "watch": sum(r["Adjusted_Evidence_Level"] == "Watch list (unverified)" for r in rows),
+        "site_ids": sorted((r["Item_ID"] for r in rows if r["Adjusted_Evidence_Level"] not in ("Removed", "Unsupported")), key=int),
+        "gone": sorted((r["Item_ID"] for r in rows if r["Adjusted_Evidence_Level"] in ("Removed", "Unsupported")), key=int),
+    }
+
+
 def validate_outputs(k, cat):
     total, ids = k["total"], k["ids"]
+    v = reverified_counts()
 
     # catalog files themselves
     for term, rows in cat.items():
@@ -384,11 +404,15 @@ def validate_outputs(k, cat):
     check(bs.get("never_split") == {"fact_checked_only": k["never_fc"], "no_fact_check": k["never_nofc"]}, "build-summary never_split mismatch")
     check(bs.get("congress") == k["congress"], f"build-summary congress {bs.get('congress')} != congress-count.json {k['congress']}")
     cj = json.loads((OUT / "data" / "cases.json").read_text(encoding="utf-8"))
-    check(sorted((c["id"] for c in cj), key=int) == ids, f"data/cases.json has {len(cj)} cases; catalog has {total}")
+    check(sorted((c["id"] for c in cj), key=int) == v["site_ids"], f"data/cases.json has {len(cj)} cases; re-verified site list has {len(v['site_ids'])}")
+    check(sum(c.get("status") == "Verified by SwampForce" for c in cj) == v["total"], "data/cases.json verified count != cases-reverified.csv")
+    ss = bs.get("site_stats", {})
+    for key in ("total", "proven", "misleading", "first", "later", "never", "watch"):
+        check(ss.get(key) == v[key], f"build-summary site_stats.{key} = {ss.get(key)} but cases-reverified.csv = {v[key]}")
 
     # site: page text
     pages_txt = {p.name: p.read_text(encoding="utf-8") for p in sorted(OUT.glob("*.html"))}
-    allowed = {total, k["first"], k["later"]}
+    allowed = {total, k["first"], k["later"], v["total"], v["first"], v["later"], v["watch"], len(v["site_ids"])}
     for name, h in pages_txt.items():
         for m in re.finditer(r"\b(\d{3})(?:</b>)? (?:documented )?(?:cases|claims)\b", h):
             if re.search(r"\d[\d,]* of $", h[max(0, m.start() - 12):m.start()]):
@@ -397,14 +421,20 @@ def validate_outputs(k, cat):
         for m in re.finditer(r"In this site&#x27;s (?:audit|review) of (\d+) cases, (\d+) were never corrected by the original pusher "
                              r"\((\d+) fact-checked only; (\d+) with no fact-check on file\)", h):
             got = tuple(map(int, m.groups()))
-            check(got == (total, k["never"], k["never_fc"], k["never_nofc"]), f"{name}: correction sentence {got} is stale")
-    check(f"{k['never']} of {total} cases were never corrected" in pages_txt["index.html"], "index.html never-corrected line is stale")
-    check(f"<b>{k['never']}</b> were never corrected" in pages_txt["brief.html"] and
-          f"addressed {k['never_fc']} of them; the other {k['never_nofc']}" in pages_txt["brief.html"], "brief.html key finding is stale")
-    check(f"<b>{k['congress']}</b> were pushed" in pages_txt["brief.html"], "brief.html Congress count is stale")
+            check(got == (v["total"], v["never"], v["never_fc"], v["never"] - v["never_fc"]), f"{name}: correction sentence {got} is not the verified count")
+    check(f"{v['never']} of {v['total']} verified cases were never corrected" in pages_txt["index.html"], "index.html never-corrected line is stale")
+    check(f"{v['never_false']} false / {v['never_misleading']} misleading" in pages_txt["index.html"], "index.html never-corrected tile split is stale")
+    check(f"{v['proven']} proven false / {v['misleading']} misleading" in pages_txt["index.html"], "index.html verified tile split is stale")
+    check(f"<b>{v['never']}</b> were never corrected" in pages_txt["brief.html"] and
+          f"addressed {v['never_fc']} of them; the other {v['never'] - v['never_fc']}" in pages_txt["brief.html"], "brief.html key finding is stale")
+    # the catalog-wide Congress count cannot be re-derived for verified rows only, so no page may state it
+    check("were pushed by a sitting" not in pages_txt["brief.html"], "brief.html still states the unverified Congress count")
+    for gid in v["gone"]:
+        check(f'id="case-{gid}"' not in pages_txt["fake-news.html"], f"fake-news.html still shows removed/unsupported case #{gid}")
     check(f"First term ({k['first']} cases)" in pages_txt["downloads.html"] and f"2021 to present ({k['later']} cases)" in pages_txt["downloads.html"],
           "downloads.html term counts are stale")
-    check(f">{k['congress']} cases</a>" in pages_txt["opinion.html"], "opinion.html Congress count is stale")
+    check(f">{k['congress']} cases</a>" not in pages_txt["opinion.html"] and ">Cases in this record</a>" in pages_txt["opinion.html"],
+          "opinion.html must not state the unverified Congress count")
 
     # site: byte-identical copies
     for term in cat:
