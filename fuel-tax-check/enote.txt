@@ -1,0 +1,998 @@
+Petroleum Marketing Explanatory Notes                                                        June 2024
+The EIA-782 survey
+
+Background
+The EIA-782 surveys were implemented in 1983 to fulfill the data requirements necessary to meet U.S.
+Energy Information Administration (EIA) legislative mandates and user community data needs. The
+requirements include petroleum product price, market distribution, demand (or sales), and product
+supply data, which are needed for a complete evaluation of petroleum market performance. The EIA-
+782 series includes the Form EIA-782A, Refiners’/Gas Plant Operators’ Monthly Petroleum Product Sales
+Report; Form EIA-782B, Resellers’/Retailers’ Monthly Petroleum Product Sales Report; and Form EIA-
+782C, Monthly Report of Prime Supplier Sales of Petroleum Products Sold for Local Consumption.
+
+The Form EIA-782A collects refiner and gas plant operator monthly price and volume data at a state
+level on 14 petroleum products for various retail and wholesale marketing categories. The Form EIA-
+782B collects reseller/retailer monthly price and volume data at a state level for gasoline, No. 2
+distillate, propane, and residual fuel. The Form EIA-782C collects prime supplier monthly volume data on
+14 petroleum products. Beginning March 1984, gasoline and residual fuel were added to the EIA-782B.
+The EIA-782 forms were modified in October 1993 to reflect the changes in refined petroleum products
+arising out of the requirements of the Clean Air Act Amendments of 1990 (CAAA). The CAAA require that
+oxygenated gasoline be sold during the winter months in carbon monoxide nonattainment areas
+beginning October 1, 1992. They require that reformulated gasoline be sold in ozone nonattainment
+areas beginning January 1, 1995. Beginning October 1, 1993, diesel fuel sold for on-highway use must be
+low-sulfur diesel fuel (i.e., diesel fuel containing less than or equal to 0.05% sulfur). As a result of these
+environmental regulations, gasoline data collected on the EIA-782 forms were divided into conventional,
+oxygenated, and reformulated categories. Diesel fuel sales were separated into low-and high-sulfur
+categories. The wholesale gasoline categories on the EIA-782A and EIA-782B forms were also modified
+to include dealer tank wagon, rack, and bulk sales. The retail category for propane on the EIA-782 was
+expanded to include residential, commercial/institutional, industrial, sales through company-operated
+retail outlets, petrochemical, and other end user sales. Propane was added to the EIA-782B
+corresponding to the EIA-782A propane categories. Beginning with January 2004, the collection of
+naphtha-type jet fuel on the EIA-782C was eliminated due to declining sales. To accommodate changes
+in the industry as a result of the Environmental Protection Agency’s mandate to lower sulfur content in
+diesel fuel, the EIA-782 forms were modified beginning with January 2007 data to separate low sulfur
+diesel into ultra-low and low sulfur diesel. In addition, the collection of oxygenated gasoline as a
+separate category was eliminated and combined with conventional gasoline. Publication tables were
+modified to incorporate these changes.
+
+
+Discussion of sample design
+The Form EIA-782A is sent to a census of refiners and gas plant operators. Respondents are selected
+with certainty due to their small number and because of the relative size of their sales volume.
+
+The Form EIA-782B is sent to a scientifically selected sample of motor gasoline, distillate, propane, and
+residual fuel oil resellers and retailers. The Form EIA-863, Petroleum Product Sales Identification Survey,
+served as the basis of the sampling frame of dealers. Information obtained from the Form EIA-863 was
+supplemented with information from the Form EIA-821, Annual Fuel Oil and Kerosene Sales Report. The
+
+                                                      1
+sales volumes obtained from these surveys were used to assign measures of size for sampling. Dealers
+comprising 5% or more of sales in a state were selected with certainty. The remaining units on the frame
+were each assigned a probability of selection. In this design, the probability was based on the size of the
+company, as determined by their sales volume, relative to the total for all companies for each
+geographic area and type-of-sale classification relevant for that company. In addition, a random number
+between 0 and 1 was assigned to each company. The companies were then ordered by the ratio of the
+random number minus the random number times the probability to the probability minus the random
+number times the probability (r-rp)/(p-rp). The first 2,200 companies in this ordering were then selected
+for the sample. The noncertainty companies were then post-stratified within each geographic/type-of-
+sale category by their volume. The sample weights, the inverse of the probabilities, were multiplied by
+the sample expectation adjustment which was the ratio of the sum of the probabilities of selection for
+all frame units in the stratum to the actual sample size of the stratum.
+
+The geographic areas were defined as (a) the 24 states in which No. 2 distillate was a significant heating
+source and 50 states and the District of Columbia for residual and motor gasoline, (b) the 25 states in
+which propane was a significant energy source, or as (c) the PAD Districts for districts where not all state
+estimates are provided. The type-of-sale classifications were retail and resale for motor gasoline and
+residual fuel oil, and residential and nonresidential retail and wholesale for distillate and propane. Four
+volume-of-sales strata (certainty, zero, low, and high) were defined with volume boundaries differing by
+state, sales type, and product.
+
+The design of the EIA-782B sample was based on ten target variables: total retail motor gasoline, total
+wholesale motor gasoline, residential No. 2 fuel oil, other retail No. 2 fuel oil, total wholesale No. 2 fuel
+oil, residential propane, total other retail propane, wholesale propane, total retail residual fuel oil, and
+total wholesale residual fuel oil. A sample size of 2,200 was expected to yield a median level of accuracy
+for each target variable of volume coefficients of variation (CV) of 15% for No. 2 distillate and 10% for
+the other products, determined at the publishable state level (24 states for distillate, 25 for propane, 50
+states and the District of Columbia for motor gasoline and residual). Studies on the relationship of
+volume CV to price CV have shown that this will produce price CVs of less than 1%. The reliability of
+current month estimates will vary from these goals due to the deterioration of the frame over time and
+the changing distributions of price and volume.
+
+Prior to March 1997, the sample design was a linked stratified sample. Within each product, sales type,
+and geographic area, companies were stratified by the size of the company as determined by their sales
+volumes. The samples resulting from the separate stratification schemes were combined by means of
+joint linked selection to yield a sample size of approximately 3,500 companies. Prior to October of 1993,
+the sample design, the survey sample, and the survey form did not include propane. As of the March,
+2011 reference month, data collection on the EIA-782B survey was suspended.
+
+The Form EIA-782C was sent to all prime suppliers of any of the selected products on the EIA-782C. A
+prime supplier is a firm that produces, imports, or transports any of the selected petroleum products
+across state boundaries and local marketing areas and sells the product to local distributors, local
+retailers, or end users. They were selected with certainty due to their small number and the relative size
+of their sales volumes.
+
+
+
+
+                                                      2
+Discussion of the sampling frame
+The EIA-782A survey consists of a census of respondents who either directly or indirectly control a
+refinery or gas plant facility. The EIA-782A form collects sales data on 14 refined petroleum products.
+Currently, about 85 companies respond to the EIA-782A survey.
+
+The EIA-863 data base provided the sampling frame for the EIA-782B survey. The Form EIA-863,
+Petroleum Product Sales Identification Survey, was mailed to approximately 27,000 companies in
+January 2003, in order to collect 2002 state-level sales volume data for No. 2 distillate, residual, and
+motor gasoline. The No. 2 distillate data were further identified by residential/nonresidential end-use
+and non-end use sales, while the residual and motor gasoline data were identified by end-use and non-
+end-use sales. The mailing list for the EIA-863 survey was constructed by merging and unduplicating the
+previous master frame file and approximately 59 state and commercial lists.
+
+Data from the 2002 EIA-821, Annual Fuel Oil and Kerosene Sales Report survey were merged with data
+from the EIA-863 survey to yield a combined file. A transformed and edited version of this file was
+created to form the sample file used to design and select the EIA-782B sample.
+
+NOTE: Service stations and smaller truck stops selling No. 2 diesel fuel were specifically included in this
+frame update. Therefore, the EIA-782B end-use category, “sales through company outlets,” does
+incorporate all sales of No. 2 distillate.
+
+The EIA-782C survey consists of a census of suppliers who produce, import, or transport any of the 14
+refined petroleum products listed on the form across state boundaries and local marketing areas, and
+who sell the product to local distributors, local retailers, or end users. Currently, about 182 firms
+respond to the EIA-782C survey.
+
+
+Reliability of data
+There are two types of errors possible in an estimate based on a sample survey: sampling and
+nonsampling. Sampling errors occur because observations are made only on a sample, not on the entire
+population. Nonsampling errors can be attributed to many sources in the collection and processing of
+data. The accuracy of survey results is determined by the joint effects of sampling and nonsampling
+errors.
+
+
+Measures of sampling variability
+For data prior to March 2011, tables 12 through 15, 28 through 30, and 34 through 38 utilize a sample of
+nonrefiners and, therefore, have sampling error. The remainder of the tables published are based on
+census data; therefore, there is no error due to sampling. The particular sample used for the EIA-782B is
+one of a large number of all possible samples that could have been selected using the same design.
+Estimates derived from the different samples would differ from each other. The average of these
+estimates would be close to the estimate derived from a complete enumeration of the population (a
+census), assuming that a complete enumeration has the same nonsampling errors as the sample survey.
+
+The sampling error, or standard error of the estimate, is a measure of the variability among the
+estimates from all possible samples of the same size and design and, thus, is a measure of the precision
+with which an estimate from a particular sample approximates the results of a complete enumeration.
+
+
+
+                                                      3
+Nonsampling errors
+Nonsampling errors can be attributed to many sources: (1) inability to obtain complete information
+about all cases in the sample (i.e., nonresponse), (2) response errors, (3) definitional difficulties, (4)
+differences in the interpretation of questions, (5) mistakes in recording or coding the data obtained, and
+(6) other errors of collection, response, coverage, and estimation for missing data. These nonsampling
+errors also occur in complete censuses.
+
+Although no direct measurement of the biases due to nonsampling errors can be obtained,
+precautionary steps were taken in all phases of the frame development and data collection, processing,
+and tabulation processes, in an effort to minimize their influence. In addition, the close cooperative
+consultation between EIA and the EIA-782 survey respondents and data users results in a more accurate
+information gathering and reporting process.
+
+
+Imputation and estimation
+Survey data gathered from the respondents invariably contain incomplete reporting, nonresponse, and
+values that fail editing. These missing data are estimated, or imputed for, as follows. First, for all survey
+units, the previous month’s reported value and the previous month’s predicted value are weighted
+together to yield a predicted value for the current month. The sum of the weighted, predicted values for
+nonrespondents in the current month is then multiplied by a chain link multiplier (the ratio of the sum of
+the weighted, reported values for respondents in the current month to the sum of the weighted,
+predicted values for respondents in the current month). The resulting estimate for nonreported values is
+then added to the reported values. That is,
+
+        𝑉𝑉�𝑡𝑡 = �𝑅𝑅,ℎ 𝑊𝑊𝑖𝑖,ℎ 𝑉𝑉𝑖𝑖,ℎ,𝑡𝑡 + �                      𝑊𝑊𝑗𝑗,ℎ 𝑉𝑉 ′𝑗𝑗,ℎ,𝑡𝑡
+                                                     𝑁𝑁𝑁𝑁,ℎ
+
+and similarly
+
+        𝑄𝑄�𝑡𝑡 = �𝑅𝑅,ℎ 𝑊𝑊𝑖𝑖,ℎ 𝑉𝑉𝑖𝑖,ℎ,𝑡𝑡 𝑃𝑃𝑖𝑖,ℎ,𝑡𝑡 + �                       𝑊𝑊𝑗𝑗,ℎ 𝑉𝑉 ′𝑗𝑗,ℎ,𝑡𝑡 𝑃𝑃′𝑗𝑗,ℎ,𝑡𝑡
+                                                                  𝑁𝑁𝑁𝑁,ℎ
+
+where
+
+                       �𝑅𝑅,ℎ,𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃 𝑊𝑊𝑖𝑖,ℎ 𝑉𝑉𝑖𝑖,ℎ,𝑡𝑡
+        𝑉𝑉′𝑗𝑗,ℎ,𝑡𝑡 =                                        𝑉𝑉�𝑗𝑗,ℎ,𝑡𝑡
+                       �𝑅𝑅,ℎ,𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃 𝑊𝑊𝑖𝑖,ℎ 𝑉𝑉�𝑖𝑖,ℎ,𝑡𝑡
+
+
+
+                       �𝑅𝑅,ℎ,𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃 𝑃𝑃𝑖𝑖,ℎ,𝑡𝑡
+        𝑃𝑃′𝑗𝑗,ℎ,𝑡𝑡 =                               𝑃𝑃�𝑗𝑗,ℎ,𝑡𝑡
+                       �𝑅𝑅,ℎ,𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃 𝑃𝑃�𝑖𝑖,ℎ,𝑡𝑡
+
+and,
+                                   𝑖𝑖
+                           𝑁𝑁ℎ
+                       ∑         𝑊𝑊𝑖𝑖,ℎ �W �
+                                          𝑖𝑖,ℎ
+        𝑊𝑊 ∗ 𝑖𝑖,ℎ =
+                                   𝑛𝑛ℎ
+
+Wi,h = the weight for company i in stratum h. For resellers/retailers responding to EIA-782B, Wi,h is
+inversely proportional to the probability of inclusion. For all certainty units Wi,h = 1. The certainty units
+
+                                                                                     4
+are all respondents to the EIA-782A, the EIA-782C, and the units selected with certainty for the EIA-
+782B.
+
+Nh = total number of population units in stratum h,
+
+nh = number of sampled units in stratum h,
+
+∑𝑅𝑅,ℎ =summation across current month respondents i, all strata
+
+∑𝑁𝑁𝑁𝑁,ℎ =summation across current month nonrespondents j, all strata
+
+Vi,h,t = current month (t) reported volume for company i, in stratum h
+
+Pi,h,t = current month (t) reported price for company i, in stratum h
+
+ � 𝑡𝑡 = current month (t) estimated total volume,
+𝑉𝑉′
+
+𝑄𝑄�𝑡𝑡 = current month (t) estimated total revenue,
+
+ � 𝑖𝑖,𝑡𝑡 = current month (t) predicted volume for company i, respondent,
+𝑉𝑉′
+
+𝑃𝑃�𝑖𝑖,𝑡𝑡 = current month (t) predicted price for company i, respondent,
+
+𝑉𝑉𝑖𝑖,𝑡𝑡 = 𝛼𝛼𝑉𝑉′𝑖𝑖,𝑡𝑡−1 + (1 − 𝛼𝛼 )𝑉𝑉𝑖𝑖,𝑡𝑡−1
+
+𝑃𝑃𝑖𝑖,𝑡𝑡 = 𝛼𝛼𝑃𝑃′𝑖𝑖,𝑡𝑡−1 + (1 − 𝛼𝛼 )𝑃𝑃𝑖𝑖,𝑡𝑡−1
+
+where
+
+V = previous month (t-1) reported volume for company i,
+  it, −1
+
+
+
+
+P = previous month (t-1) reported price for company i,
+ it, −1
+
+
+
+
+α= constant between 0 and 1, set by form, product, type of sale and price or volume,
+
+and
+
+           𝑄𝑄�𝑡𝑡
+�t =
+P
+            � 𝑡𝑡
+           𝑉𝑉′
+
+the resulting estimate of price at the published level for month t.
+
+Multiple product data collection and linked sample selection yield two types of respondents: basic and
+supplemental. Both types are used for imputation, estimation, and standard errors.
+
+The variance estimate is:
+                     1                                𝑀𝑀𝑘𝑘
+𝑉𝑉𝑉𝑉𝑉𝑉(𝑃𝑃�𝑡𝑡 ) =         � 𝑁𝑁𝑘𝑘2 𝑛𝑛𝑘𝑘 (1 − 𝑓𝑓𝑘𝑘 )
+                   𝑉𝑉�𝑡𝑡
+                       2                          (∑𝑖𝑖 𝑊𝑊𝑙𝑙𝑙𝑙 )2
+                         𝑘𝑘
+
+where
+Nk = the number of population units in group k,
+
+nk = the number of basic and volunteer respondents in group k,
+                                                                   5
+Wik = the sampling weight for respondent i in group k,
+                  𝑛𝑛𝑘𝑘
+         𝑓𝑓𝑘𝑘 =
+                  𝑁𝑁𝑘𝑘
+
+and 𝑃𝑃�𝑡𝑡 and 𝑉𝑉�𝑡𝑡 are previously defined.
+
+The term 𝑀𝑀𝑡𝑡 is computed as follows:
+
+                    ∑𝑖𝑖(𝑀𝑀𝑙𝑙𝑙𝑙 )2
+         𝑀𝑀𝑘𝑘 =
+                     𝑛𝑛𝑘𝑘 − 1
+
+where
+                                               𝑊𝑊𝑙𝑙𝑙𝑙
+         𝑀𝑀𝑙𝑙𝑙𝑙 = 𝑊𝑊𝑙𝑙𝑙𝑙 𝑉𝑉𝑙𝑙𝑙𝑙 𝐷𝐷𝑙𝑙𝑙𝑙 −                 𝑥𝑥 �(𝑊𝑊𝑙𝑙𝑙𝑙 𝑉𝑉𝑙𝑙𝑙𝑙 𝐷𝐷𝑙𝑙𝑙𝑙 )
+                                           (∑𝑖𝑖 𝑊𝑊𝑙𝑙𝑙𝑙 )
+                                                               𝑙𝑙
+
+and
+
+         𝐷𝐷𝑖𝑖𝑖𝑖 = 𝑃𝑃𝑖𝑖𝑖𝑖 − 𝑃𝑃�𝑡𝑡
+
+
+
+𝑉𝑉𝑖𝑖𝑖𝑖 = reported volume for respondent i in group k
+
+𝑃𝑃𝑖𝑖𝑖𝑖 = reported price for respondent i in group k.
+
+
+Data continuity
+When the EIA-782 series was implemented in 1983, it replaced prior surveys that had been used to meet
+the U.S. Energy Information Administration’s data requirements. The Form EIA-782A replaced the
+refiner and gas plant operator portions of the Form EIA-460, Petroleum Industry Monthly Report for
+Product Prices; and Form EIA-9A, No. 2 Distillate Price Monitoring Report; the Form EIA-782B replaced
+the nonrefiner portions of the Form EIA-460 and Form EIA-9A; and the Form EIA-782C replaced Form
+EIA-25, Prime Supplier’s Monthly Report.
+
+Since the transition from the EIA-460, the EIA-9A, and the EIA-25 to the EIA-782 took place over a period
+of 4 months, rather than occurring at one time, it was possible to compare data from the predecessor
+surveys with data from the new survey during the transition period for some data elements. This
+comparative analysis yielded adjustment factors which reflected the estimated overall effect of the
+changes.
+
+These adjustment factors were applied to the appropriate predecessor survey prices to yield a backcast
+estimate. A complete description of the estimation of historical data prior to January 1983 is contained
+in the feature article of the December 1983(3) issue of the Petroleum Marketing Monthly (PMM).
+
+The backcast price estimation employed the predecessor survey published price as the initial
+approximation. The initial approximation, however, frequently represented less aggregated product
+categories and more aggregated seller/sales categories. Therefore, more comparable product categories
+were formed by volume weighting the disaggregated predecessor survey product prices. For the EIA-9A,
+comparable categories were formed by subtracting from the price the average taxes reported.
+Comparable seller/sales categories were formed by multiplying the predecessor price by the ratio of the
+                                                                            6
+EIA-782 price for the category to be estimated divided by the volume weighted prices for the aggregate
+of the EIA-782 categories most comparable to the predecessor category. That is,
+
+                            �
+                            P
+             P        �460,j 782,i
+             �460,i = P
+                            �
+                            P782,j
+
+where i represents the EIA-782 category to be back-cast and j represents the most similar category on
+the predecessor survey.
+
+The backcast price series were estimated by multiplying the estimate for the previous time period from
+the predecessor survey by an adjustment factor:
+
+𝑃𝑃�782,𝑖𝑖,𝑡𝑡 = 𝑃𝑃�𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃,𝑖𝑖,𝑡𝑡 × (𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹)
+
+where t = reference month.
+
+Adjustment factors were computed by dividing the EIA-782 December price by the derived December
+predecessor price for comparable categories:
+
+                                               𝑃𝑃�782,𝑖𝑖,𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷
+𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹 =
+                                        𝑃𝑃�𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃,𝑖𝑖,𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷
+
+The EIA-782 December 1982 price for all respondents had to be estimated since not all of the EIA-782
+respondents were reporting in December. This estimate was based on the average of the ratios of the
+prices for the December respondents to the prices for all respondents in January, February, and March
+of 1982. That is,
+
+                                                              𝑃𝑃�
+                                                           ∑𝑚𝑚 782,𝑖𝑖,𝑟𝑟,𝑚𝑚
+                                                                𝑃𝑃�782,𝑖𝑖,𝑚𝑚
+𝑃𝑃�782,𝑖𝑖,𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷 = 𝑃𝑃�782,𝑖𝑖,𝑟𝑟,𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷
+                                                                   3
+
+where r = respondents who reported in the December reference month and m = the months of January,
+February, and March.
+
+Starting with the September 1990 final estimates, prices published are derived using the sample
+described under “Discussion of Sample Design.” Prices published for January 1984 through August 1990
+were derived using different samples and slightly different designs (refer to the 1987 PMA for a further
+description). Also, the monthly price estimates from January through December 1983 were derived
+using another sample design (see the December 1983(3) issue of the PMM). Therefore, there may be
+some minor discontinuity in price estimates between August 1988 and September 1988 and between
+December 1983 and January 1984.
+
+Collection methods
+Survey data are collected every month by mail, fax, Secure File Transfer, and PC Electronic Data
+Reporting Option (PEDRO) System. It is mandatory for each respondent to submit completed forms to
+EIA within the specified time allotted. For the EIA-782A, completed forms must be submitted no later
+than 30 calendar days after the close of each reference month. For the EIA-782C, completed forms must
+be submitted no later than 20 calendar days after the close of the reference month. Telephone follow-
+up calls to non-respondents begin the day after the established due date in order to collect all
+outstanding data. Late submissions and resubmissions are processed when received.
+                                                                                        7
+Data processing
+As EIA-782 forms are received, they are logged into an automated Survey Control File which maintains
+monthly status codes for each company. The data are reviewed manually and then entered into the
+computer files. The EIA-782A and EIA-782C surveys use Electronic Data Extraction System (EDES) forms
+that will securely capture respondents’ excel spreadsheet submissions without manual keying. They are
+then processed through an automated edit program which detects missing data, inconsistent prices,
+volumes and prices that significantly differ from those previously reported by the company, and outlying
+values that will affect published estimates. Data that fail the edits are resolved by contacting the data
+reporters, and corrections and verification codes are entered into the computer files. Statistical reports,
+including publication tables, are then generated using only acceptable and verified data.
+
+Nondisclosure
+The data contained in this publication are subject to statistical nondisclosure procedures. The objective
+of the disclosure-avoidance procedures, as stated in the Office of Management and Budget Standard
+7.2, Data Protection and Disclosure Avoidance for Dissemination , is to ensure that confidential,
+company-identifiable data are not disclosed in tables where “company specific responses may be
+proprietary and prohibited from public disclosure by 18 U.S.C. 1905.” Statistics representing data
+aggregated from fewer than three companies or that are dominated by input from one or two
+companies are withheld. EIA identifies cells that are sensitive according to these criteria by applying a
+statistical formula to the data contained in each cell to determine if a few companies “dominate” the
+cell.
+
+If a cell is sensitive, the data in that cell are suppressed and a “W” is placed in the publication cell. Also,
+since many tables include row or column totals, some nonsensitive data cells have been suppressed to
+prevent the reader from calculating the suppressed numbers by simply subtracting the published
+numbers from the total. In conjunction with the 2007 survey changes, the Total columns in certain
+publication tables have been eliminated to help ensure that sensitive data reported to EIA by individual
+survey respondents may not be closely estimated using the aggregates published by EIA.
+
+
+
+
+                                                       8
+Table EN1. Federal and state motor fuels taxes1 (see updated rates)
+cents per gallon
+
+                            Motor            Diesel                                                 Motor            Diesel
+                            gasoline         fuel          Gasohol                                  gasoline         fuel        Gasohol
+  Federal[2]                18.40            24.40         18.40               Mississippi[4]       18.40            18.40       18.40
+  Average state tax         24.12            24.90         24.08               Missouri[4]          17.30            17.30       17.30
+                                                                               Montana[4]           27.75            28.50       27.75
+  Alabama[4]                19.00            20.75         19.00               Nebraska             27.30            26.70       27.30
+  Alaska[5]                   8.00            8.00          8.00               Nevada[4]            23.81            27.75       23.81
+  Arizona                   19.00            19.00         19.00               New Hampshire        19.63            19.63       19.63
+  Arkansas                  21.80            22.80         21.80               New Jersey[3]        10.55            13.55       10.55
+  California[3][4]          37.56            12.56         37.56               New Mexico           18.88            22.88       18.88
+  Colorado                  22.01            20.51         22.01               New York[3][4]       26.74            24.94       26.74
+  Connecticut[3]            25.00            54.90         25.00               North Carolina       36.75            36.75       36.75
+  Delaware                  23.00            22.00         23.00               North Dakota         23.03            23.03       23.03
+  District of Columbia      23.50            23.50         23.50               Ohio                 28.00            28.00       28.00
+  Florida[4]                19.29            33.37         19.29               Oklahoma             17.00            14.00       17.00
+  Georgia[3][4]               8.00            8.00          8.00               Oregon[4]            30.00            30.00       30.00
+  Hawaii[3][4]              19.50            19.50         19.50               Pennsylvania         41.80            52.10       41.80
+  Idaho                     26.00            26.00         26.00               Rhode Island         33.12            33.12       33.12
+  Illinois[3][4]            21.10            22.60         20.10               South Carolina[4]    16.75            16.75       16.75
+  Indiana[3]                19.00            17.00         19.00               South Dakota         24.00            24.00       24.00
+  Iowa[3]                   22.00            23.50         20.00               Tennessee            21.40            18.40       21.40
+  Kansas                    25.03            27.03         25.03               Texas                20.00            20.00       20.00
+  Kentucky                  32.50            29.50         32.50               Utah                 25.00            25.00       25.00
+  Louisiana                 20.13            20.13         20.13               Vermont[3]           32.95            32.00       32.95
+  Maine                     31.40            32.60         31.40               Virginia[3]          11.70            20.80       11.70
+  Maryland                  27.59            28.34         27.59               Washington[4]        37.51            37.51       37.51
+  Massachusetts             24.02            24.02         24.02               West Virginia        35.70            35.70       35.70
+  Michigan[3]               19.88            15.88         19.88               Wisconsin            32.90            32.90       32.90
+  Minnesota                     30.60           30.60         30.60                Wyoming              24.00           24.00         24.00
+  1 This figure lists rates of general application (including, but not limited to, excise taxes, environmental taxes, special taxes, and
+  inspection fees), exclusive of county and local taxes. Rates are also exclusive of any State taxes based on gross or net receipts. The
+  State rates are in effect as of July 1, 2014. (see updated rates)
+  2 The Federal tax on motor gasoline and diesel fuel increased to 18.4 and 24.4 cents, respectively, on October 1, 1997. The Federal
+  tax on gasohol increased to 18.4 cents on January 1, 2003.
+  3 Additional State taxes are levied as follows: California: 2.25 percent sales tax on gasoline, 9.25 percent sales tax on diesel fuel in
+  addition to local sales taxes; Connecticut: 7.0 percent gross earnings tax; Georgia: 4 percent Prepaid State Tax; Hawaii: 4 percent
+  gross income tax, Illinois: 6.25 percent sales tax (suspended for the period beginning July 1, 2000, and ending December 31, 2000);
+  Indiana: 7 percent sales tax (suspended for the period between July 1, 2000 and September 15, 2000); Michigan: 6 percent sales tax;
+  New Jersey: gross receipts tax of 4 cents per gallon for on-highway use fuels; New York: 8.0 cents per gallon state sales tax in
+  addition to local sales taxes; Vermont: Motor Fuels Transportation Infrastructure Assessment Fee (subject to change on a quarterly
+  basis for gasoline and 3.0 cents per gallon on diesel fuel) and the Motor Fuel Tax Assessment on gasoline; Virginia: 2.1 percent
+  Wholesales Sales Tax in certain jurisdictions.
+  4 Local option taxes (LOTS) are allowed. Florida: the State assesses a State Comprehensive Enhanced Transportation System (SCETS)
+  tax on gasoline which is two-thirds of each county’s rate. In addition, the State collects a “ninth cent tax” and a second local tax.
+  These taxes add an unweighted average of 15.8 cents to the gasoline State tax. Georgia: a Transportation Local Option Sales Tax
+  (TSPLOST) may apply. Hawaii LOTS are as follows: Honolulu: 16.5 cents per gallon; Maui: 16.0 cents per gallon; Hawaii: 8.8 cents per
+  gallon; Kauai: 17.0 cents per gallon. Nevada: additional county taxes on gasoline range from 5 to 10 cents per gallon.
+  5 The State of Alaska suspended its motor fuels taxes on all fuel types and uses for a period of one year beginning September 1, 2008
+  and ending August 31, 2009.
+                                                                9
+Table EN2. U.S. postal two-letter state abbreviations
+  State                                State                                State
+  code    State                        code    State                        code    State
+  AL      Alabama                      KY      Kentucky                     ND      North Dakota
+  AK      Alaska                       LA      Louisiana                    OH      Ohio
+  AZ      Arizona                      ME      Maine                        OK      Oklahoma
+  AR      Arkansas                     MD      Maryland                     OR      Oregon
+  CA      California                   MA      Massachusetts                PA      Pennsylvania
+  CO      Colorado                     MI      Michigan                     RI      Rhode Island
+  CT      Connecticut                  MN      Minnesota                    SC      South Carolina
+  DE      Delaware                     MS      Mississippi                  SD      South Dakota
+  DC      District of Columbia         MO      Missouri                     TN      Tennessee
+  FL      Florida                      MT      Montana                      TX      Texas
+  GA      Georgia                      NE      Nebraska                     UT      Utah
+  HI      Hawaii                       NV      Nevada                       VT      Vermont
+  ID      Idaho                        NH      New Hampshire                VA      Virginia
+  IL      Illinois                     NJ      New Jersey                   WA      Washington
+  IN      Indiana                      NM      New Mexico                   WI      Wisconsin
+  IA      Iowa                         NY      New York                     WV      West Virginia
+  KS      Kansas                       NC      North Carolina               WY      Wyoming
+
+
+
+
+Relationship of refiner and prime supplier sales volumes
+The refiner sales volumes collected on the EIA-782A are related to the prime supplier sales volumes
+collected on the EIA-782C, but conceptual differences exist that cause variations between these data. In
+general, EIA-782A volumes are intended to reflect refiner sales of petroleum products into all secondary
+and tertiary markets, while EIA-782C volumes are designed to measure prime supplier sales into only
+the local markets of final consumption. Specifically:
+
+The reporting universe for the EIA-782C survey is significantly larger than that of the EIA-782A. While
+nearly all refiners and gas plant operators report on both surveys (a small number do not qualify as
+prime suppliers), some large, interstate distributors and retailers, as well as some importers, report only
+on the EIA-782C.
+
+EIA-782A respondents are asked only to exclude sales to other refiners (that is, other respondents that
+comprise the primary market), while EIA-782C respondents are asked to exclude sales to any company
+that is not a local distributor, local retailer, or end user (DRE). Therefore, EIA-782C respondents are
+asked not only to exclude sales to refiners, but also to most large interstate resellers, importers, traders,
+and retailers who transport products across state boundaries.
+
+The EIA-782A is designed to gather data on the sales of selected petroleum products made in each state,
+regardless of where the products are physically located or will be consumed. In contrast, the EIA-782C is
+designed to collect data reflecting only delivered sales of selected petroleum products into those states
+where the products are expected to be locally consumed.
+
+Consequently, EIA-782A and EIA-782C volumetric data generally vary at national, regional, and state
+levels. In particular, differences are expected in states and regions in which major supply origination,
+pipeline distribution, or transfer points are located. In these states, large volumes of products may
+change hands many times, often for eventual shipment outside the state. Since the EIA-782C is intended
+to measure only those sales into the final local markets of consumption (sales to DREs), all preceding
+                                                      10
+sales are excluded. Furthermore, sales by EIA-782C respondents are reported wherever the product was
+delivered, which may differ from the state where title transferred. In contrast, the EIA-782A reflects all
+sales made to secondary resellers, wherever title transfers.
+
+Additionally, the EIA-782C reflects imports by firms that are neither refiners nor gas plant operators,
+that would not be measured on the EIA-782A unless they were transferred to a distribution chain. This
+mostly affects regions with a high level of product imports, such as the New England or Mid-Atlantic
+states.
+
+Therefore, states with major refining areas, such as Texas or California, generally show higher volumes
+on the EIA-782A survey than the EIA-782C survey, since some of the volumes reported on the EIA-782A
+are excluded on the EIA-782C or are reported in different states. Conversely, net consuming states (e.g.,
+most PAD District 1 and PAD District 2 states) may show larger prime supplier sales on the EIA-782C due
+to interstate movements or imports by resellers and/or differences in state of delivery versus title
+transfer. However, this may be partially or entirely offset by some refiners reporting larger sales
+volumes on the EIA-782A than on the EIA-782C (due to fewer exclusions taken on the EIA-782A).
+
+In summary, caution should be exercised when comparing sales volumes between refiners and prime
+suppliers. Whereas EIA-782A data reflect the marketing of products by refiners to non-refiners where
+the sale occurs, EIA-782C data reflect prime supplier sales to local distributors, local retailers, and end
+users where the product is delivered. Therefore, the EIA-782A and EIA-782C surveys differ by the
+respondents reporting (refiners versus prime suppliers), the types of sales reported (sales to non-
+refiners versus sales to DREs), and the location of the reported sales (point of title transfer versus
+destination of the sale).
+
+
+
+Table EN3. Revision error in selected 2021 U.S. refiner average price data
+dollars per gallon excluding taxes
+
+                          Regular gasoline                    No. 2 distillate                     Residual fuel oil
+                         sales to end users                 sales to end users                    sales to end users
+ Date             PMM          Final Difference          PMM         Final   Difference   PMM             Final    Difference
+ January          1.884        1.884         0.000       1.715       1.715        0.000   1.462           1.462         0.000
+ February         2.102        2.102         0.000       1.935       1.935        0.000   1.617           1.617         0.000
+ March            2.341        2.341         0.000       2.113       2.113        0.000   1.766           1.766         0.000
+ April            2.390        2.389        -0.001       2.085       2.091        0.006   1.756           1.756         0.000
+ May              2.520        2.566         0.046       2.209       2.177       -0.032   1.760           1.760         0.000
+ June             2.868        2.868         0.000       2.229       2.228       -0.001   1.867           1.867         0.000
+ July             2.974        2.969        -0.005       2.282       2.283        0.001   1.969           1.969         0.000
+ August           3.009        3.008        -0.001       2.267       2.267        0.000   1.901           1.901         0.000
+ September        3.003        3.003         0.000       2.324       2.324        0.000   1.950           1.950         0.000
+ October          3.061        3.061         0.000       2.561       2.562        0.001   2.093           2.091        -0.002
+ November         3.173        3.172        -0.001       2.535       2.544        0.009   2.141           2.141         0.000
+ December         3.135        3.135         0.000       2.379       2.379        0.000   2.090           2.090         0.000
+ Sources: Data are from Tables 2 and 6 of the Petroleum Marketing Monthly.
+
+
+
+
+                                                           11
+Table EN4. Revision error in selected 2021 U.S. refiner sales volume data
+million gallons per day
+
+                                  Motor gasoline                       No. 2 distillate                    Residual fuel oil
+                                  sales for resale                     sales for resale                   sales to end users
+                                                     Percent                              Percent                              Percent
+ Date                     PMM            Final       change    PMM             Final      change     PMM            Final      change
+ January                  245.8         246.5           0.3%   143.7          143.7          0.0%      4.9            4.9         0.0%
+ February                 250.9         251.0           0.0%   145.4          145.8          0.3%      5.0            4.9        -2.2%
+ March                    271.8         271.8           0.0%   155.0          155.0          0.0%      6.4            7.0         8.8%
+ April                    281.8         283.4           0.6%   155.9          156.6          0.4%      4.9            4.9         0.0%
+ May                      288.8         297.7           3.0%   147.7          148.5          0.5%      5.1            5.1         0.0%
+ June                     312.8         312.4          -0.1%   162.0          161.7         -0.2%      5.3            5.8         7.9%
+ July                     312.6         312.6           0.0%   148.9          149.4          0.3%      4.1            4.1         0.0%
+ August                   308.6         308.7           0.0%   152.3          152.6          0.2%      4.9            4.9         0.0%
+ September                305.6         304.0          -0.5%   159.3          158.7         -0.4%      4.9            4.9         0.0%
+ October                  296.5         296.1          -0.1%   160.0          158.3         -1.1%      5.7            6.0         5.1%
+ November                 299.5         298.2          -0.5%   156.0          156.0          0.0%      5.6            5.6         0.0%
+ December                 292.9         292.8           0.0%   158.7          158.7          0.0%      7.2            7.2         0.0%
+ Sources: Data are from Tables 3 and 5 of the Petroleum Marketing Monthly.
+
+
+
+Table EN5. Revision error in selected volumes of 2021 U.S. prime supplier sales data
+million gallons per day
+
+                         Total motor gasoline               Total no. 2 distillate sales             Total residual fuel oil
+                                            Percent                                  Percent                                Percent
+ Date                 PMM          Final     change         PMM           Final       change        PMM          Final       change
+ January              309.2      308.9         -0.1%        164.3        164.4          0.0%          8.1          8.1         0.0%
+ February             313.2      312.4         -0.2%        169.4        169.3         -0.1%          6.4          6.9         7.2%
+ March                343.7      343.7          0.0%        175.9        175.9          0.0%          7.9          8.8        10.1%
+ April                357.1      357.0          0.0%        175.1        174.0         -0.6%          7.7          7.7        -1.0%
+ May                  362.4      362.4          0.0%        164.6        164.6          0.0%          7.1          7.1         0.0%
+ June                 373.9      371.4         -0.7%        173.3        172.3         -0.6%          8.1          8.3         2.5%
+ July                 371.4      371.8          0.1%        161.2        161.4          0.1%          6.7          6.7         0.0%
+ August               368.3      368.0         -0.1%        167.0        169.7          1.6%          7.2          7.2         0.0%
+ September            361.5      358.9         -0.7%        175.3        174.8         -0.3%          7.0          6.7        -3.9%
+ October              354.0      354.5          0.1%        177.1        176.1         -0.6%          6.7          6.7         0.0%
+ November             350.4      351.2          0.2%        174.6        174.9          0.2%          7.8          8.1         3.1%
+ December             343.6      344.2          0.2%        170.4        171.1          0.4%          8.5          8.5        -0.3%
+ Sources: Data are from Tables 45, 46, and 47 of the Petroleum Marketing Monthly.
+
+
+
+Revision error
+The petroleum product price and volume data shown for the current month are preliminary. These
+numbers may be revised in the next month’s publication based on data received late or revisions to
+previously submitted data. For example, if the latest data shown are for the month of February, the
+February data are preliminary and the January data may have been revised due to the receipt of late or
+revised data. The data are final upon publication in the April issue of the Petroleum Marketing Monthly
+(PMM). In the above example, the difference between the preliminary January data is called the revision
+error. The amount of revision error for some selected EIA-782 data series is shown in Tables EN3 - EN5.
+
+
+
+
+                                                                12
+The crude oil price surveys
+
+Background
+Form EIA-182: Domestic Crude Oil First Purchase Report
+Each month, the Form EIA-182 collects data from first purchase buyers of domestic crude oil. A “first
+purchase” constitutes a transfer of ownership of crude oil during or immediately after the physical
+removal of the crude oil from a production property for the first time. Transactions between affiliated
+companies are reported as if they were arms-length transactions. The primary objective is to calculate
+an average first purchase price at various levels of aggregation. A company’s monthly average first
+purchase prices are volume weighted across given geographical areas for selected crude streams and
+gravity bands. Prices are computed from the following reported data elements:
+
+Area of production. The producing state or non-state production “area” (i.e., Alaska North Slope, Alaska
+South, and Federal Offshore Gulf—about one-fifth off the coastline of Texas and the remainder off
+Louisiana).
+
+Average cost. Reported at the lease boundary and based on the actual purchase expenditures, including
+any taxes, discounts or premiums paid.
+
+Total volume purchased. The amount of crude bought and paid for as it is measured at the lease
+boundary (usually at a lease automatic custody transfer unit—a LACT unit), adjusted for basic sediment
+and water (BS&W) and temperature.
+
+Prices published from data collected on Form EIA-182 are calculated by dividing the sum of the total
+volume weighted average costs paid by the sum of the total volumes purchased.
+
+Beginning with the November 2017 data release, due to the increase of crude oil activity in the North
+Dakota region, EIA replaced the North Dakota Sweet Crude Stream on the EIA-182, Domestic Crude Oil
+First Purchase Report with the predominant North Dakota Bakken Crude Stream to provide an accurate
+price estimate for an important high volume crude stream regularly traded in domestic crude oil
+markets.
+
+Beginning with January 2004 data, EIA deleted selected crude streams and began collecting and
+publishing relevant crude oil stream price information to provide for better analysis of crude oil markets.
+Changes to the following states and areas are described below:
+
+    •   California: Deleted the crude streams for Huntington Beach, San Ardo, and Ventura and began
+        collecting for Coalinga, Cymric, and Lost Hills.
+    •   Gulf Coast: Deleted the crude streams for Texas Gulf Refugio and Louisiana South Mix and began
+        collecting for Heavy Louisiana Sweet (HLS), Louisiana Light Sweet (LLS), Mars Blend, Eugene
+        Island, HOOPS Blend, and High Island.
+    •   Oklahoma: Deleted the crude streams Cement and Garber and began collecting for Sweet.
+    •   Texas: Deleted the crude stream for Hawkins and began collecting for Panhandle, North Texas
+        Sweet, South Texas Sweet, and West Central Texas.
+
+Form EIA-856: Monthly Foreign Crude Oil Acquisition Report
+The Form EIA-856 collects monthly price and volume data for about 90% of all crude oil imported into
+the United states. It also collects classification data that enable EIA to determine the terms of an
+acquisition. The data are reported for the parent company and all the affiliates controlled by the parent.
+                                                    13
+Under this definition, the acquisition price reported for each cargo is the one paid to an unaffiliated
+seller, in principle an “arms-length” price, which is consistent with use of the data to represent market
+trends, rather than monitoring internal company transfer pricing policies.
+
+Each month, respondents report the following for cargos acquired for U.S. importation:
+
+Offshore inventories. Crude oil owned by the respondent that is intended for importation into the
+United States. These inventories include oil in tankers en route to the United States and floating or on-
+land storage outside the United States.
+
+Crude type. Includes the country of origin of the cargo of crude, the stream or type of crude oil (e.g.,
+Saudi Light), and the API gravity.
+
+Volume acquired. The number of 42 U.S. gallon barrels in the cargo.
+
+Dates. The date of loading/acquisition and the expected date of landing.
+
+Transportation. Ports of loading and landing and the name of the vessel.
+
+Prices. Acquisition cost, landed cost, and other costs such as demurrage, agent’s fees, import tariffs and
+fees, etc. (all costs are reported in dollars per barrel).
+
+Day’s credit. The number of day’s credit is extended to the purchaser by the seller. This information is
+optional.
+
+Purchase classifying information. Type of transaction (e.g., purchase from host government), terms of
+transaction (spot or contract), and point of transaction (f.o.b. (free on board), country of origin or CIF
+(cost, insurance, and freight), U.S. port of entry).
+
+Published prices are calculated by first multiplying the purchase volume by a price to obtain a total cost,
+then the sums of the total costs are divided by the sums of the purchase volumes.
+
+The prices associated with data collected on Form EIA-856 are aggregated within the month of
+acquisition, which can be the month of loading, the month of landing, or sometime between those
+events. By design, the prices are not aggregated for the month in which they are determined, unless the
+acquisition and price determination month are the same. EIA-856 data reflect types of trades occurring
+over the entire spectrum of international crude oil markets, ranging from continuing supply agreements
+to spot market purchases. Prices can be determined at time of loading or at time of landing. Prices can
+be negotiated between the parties involved or tied to spot or futures market price levels. The
+methodology chosen for the EIA-856 provides a consistent historical series even though its prices may
+not always agree with measures of prices from other sources.
+
+International crude oil markets are complex and dynamic. For example, a cargo of Saudi Arabian crude
+oil could be acquired in June at a loading port in Saudi Arabia. The cargo may land in the United States in
+August. The price for the crude oil could be determined by spot crude oil prices in effect during the 5
+days before and after landing. For the PMM, the price for this cargo will be aggregated in the month of
+June, when it was acquired. Conversely, a cargo of Brent crude may be acquired in June, but its price
+may have been determined in the forward Brent market in April. This cargo’s price will also be
+aggregated in June, when the purchaser took title to the crude.
+
+
+                                                     14
+In the early 1980’s, most crude oil prices were set by the country selling the crude. Gradually, as the
+supply of crude oil became more abundant, markets became more competitive. A robust spot market
+for crude evolved, in which prices for crude oil were determined by demand and supply. Frequently, the
+official sales price set by the selling government was considerably different than spot market
+assessments. As buyers began to purchase more crude oil on the spot market, the control that sellers
+had theretofore exercised eroded.
+
+In order to protect their market share, crude oil producing governments began to tie prices for their
+crude to market-related prices. When these market-related pricing formulas came into prominence in
+late 1985, many crude oil prices were tied to a “netback realization,” wherein a crude oil’s value was
+determined by volume weighted spot market prices of products derivable from that crude. The weights
+essentially reflected the relative yield of selected products from a given crude stream. These netback-
+based formulas gradually gave way to formulas based on spot crude oil assessments.
+
+The formulas and terms used by sellers of crude oil continue to change. Since the EIA-856 prices are
+aggregated by month of acquisition—not necessarily the same as month of price determination—they
+may not always show the same pattern as a series from another source (e.g., trade-press publications).
+During periods of dramatic change in crude oil prices, aggregate prices derived from EIA-856 data will
+tend to “lead” the market. That is, these prices will show the emerging trend earlier, reach the inflection
+point sooner, and then return to the underlying trend. When averaged over longer periods of time,
+however, EIA-856 prices show the same relative price movements as exogenous sources.
+
+Form EIA-14: Refiners’ Monthly Cost Report
+The EIA-14 is a monthly census of all U.S. refiners. It collects the net acquisition costs and volumes of
+crude oil, both domestic and imported, on a corporate regional basis. Prior to 2004, the EIA-14 was
+collected at the national level only.
+
+Included in the costs are all charges associated with the acquisition, transportation, and storage of crude
+incurred by respondents up to the time the oil is booked into their refineries. PAD District costs and
+volumes reflect the PAD District in which the crude oil is intended to be refined. See Glossary for PAD
+District definition.
+
+Each month, refiners report the volume (in thousands of barrels) and costs (in thousands of dollars) for:
+
+Domestic crude oil. Oil produced in the United States or from its outer continental shelf.
+
+Imported crude oil. Oil produced outside the United States and brought into the United States for
+domestic processing.
+
+ Composite crude oil cost. The average amount that refiners pay for all the crude oil they refine, both
+domestic and imported. It is calculated by dividing the sum of the domestic and imported costs by the
+sum of the domestic and imported volumes.
+
+Initial price estimates. Each month an initial price estimate is published for the domestic, imported, and
+composite refiner acquisition cost of crude oil. For example, if the published data is for January 2014,
+EIA will also publish an initial estimate for February 2014 that is a forecast of what the published
+February 2014 will be. In January 2012, EIA updated the methodology used to calculate the initial price
+estimates for refiner acquisition costs of crude oil. The price estimate for domestic crude oil comes from
+a regression model based on West Texas Intermediate (WTI) crude oil spot market prices. The price
+
+                                                     15
+estimate for imported crude oil comes from a regression model that uses a basket of world crude oil
+prices. When WTI crude oil spot market prices or world crude oil prices are not available other methods
+are used. The composite price estimate is a weighted average of the domestic and imported prices
+based on refinery receipts data found in the Petroleum Supply Annual.
+
+Initial price estimates for the November 1998 report period first appeared in the January 1999
+Petroleum Marketing Monthly. The first initial estimates were forecasted using autoregressive
+integrated moving average (ARIMA) transfer function models. Transfer function models are ARIMA
+models which use input data series as predictors. The initial estimates were calculated based on their
+own past values and present and past values of other related time series.
+
+Respondent frame
+Form EIA-182:
+All firms that buy domestic crude oil at the lease boundary, acquiring ownership of the crude in a first
+purchase transaction. The list initially was compiled from the 1974 Federal Energy Administration (FEA)
+Oil and Gas Survey of Producers and Operators. Collection of data from first purchasers began in
+February 1976. By 1978, the frame consisted of 340 respondents. Of these, 198 purchased more than
+150,000 barrels per year and together represented 99.9 % of the total reported volume.
+
+Adjustments to the frame have mostly been “deaths,” with relatively few “births.” Following decontrol
+in January 1981, there was a major contraction of the list of active first purchasers. Many small firms
+went out of business or were absorbed by larger companies. Currently, the EIA-182 survey collects data
+from 85 active respondents.
+
+Form EIA-856:
+All companies that acquire more than 500,000 barrels of foreign crude oil in the report month for
+importation into the United States are required to prepare and submit an EIA-856 for that month. Prior
+to November 2017, all companies that were reporting data on the ERA51, Transfer Pricing Report, as of
+June 1982, regardless of the total volumes of crude oil they imported were also included.
+
+Form EIA-14:
+All refiners of crude oil in the United States, including its territories and possessions. There are currently
+55 respondents on the EIA-14.
+
+The list of respondents to the EIA-14 is updated periodically by supplementation from the EIA-782A,
+Refiners’/Gas Plant Operators’ Monthly Petroleum Product Sales Report, and the EIA-810, Monthly
+Refinery Report.
+
+Data collection processing
+All three crude oil data collection systems are operated independently. Each performs similar data
+collection and processing functions that are outlined below.
+
+Survey data are collected every month by mail, fax and Secure File Transfer. It is mandatory for each
+respondent to submit completed forms to EIA no later than 30 calendar days after the close of each
+reference month. Telephone follow-up calls to nonrespondents begin two days after the established due
+date in order to collect all outstanding data. Late submissions and resubmissions are processed when
+received.
+
+
+
+                                                      16
+The EIA-856 forms are manually logged and the data are entered onto computer files. The EIA-14 and
+EIA-182 have transitioned to Electronic Data Extraction System (EDES) forms that securely capture
+respondents’ excel spreadsheet submissions without manual keying. The files are then processed
+through an automated edit program which detects missing data, inconsistent prices, and outlying values
+that affect published estimates. Data that fail the edits are resolved through telephone calls to data
+reporters, and corrections and verification codes are entered onto computer files. Statistical reports,
+including publication tables, are then generated using only acceptable and verified data. Response rates
+are normally 100% by the time final statistics are calculated.
+
+
+Nondisclosure
+The data contained in this publication are subject to statistical nondisclosure procedures. The objective
+of the disclosure-avoidance procedures, as stated in the Office of Management and Budget Standard
+7.2, Data Protection and Disclosure Avoidance for Dissemination, is to ensure that confidential,
+company-identifiable data are not disclosed in tables where “company specific responses may be
+proprietary and prohibited from public disclosure by 18 U.S.C. 1905.” Statistics representing data
+aggregated from fewer than three companies or that are dominated by input from one or two
+companies are withheld. EIA identifies cells that are sensitive according to these criteria by applying a
+statistical formula to the data contained in each cell to determine if a few companies “dominate” the
+cell.
+
+If a cell is sensitive, the data in that cell are suppressed and a “W” is placed in the publication cell. Also,
+since many tables include row or column totals, some nonsensitive data cells have been suppressed to
+prevent the reader from calculating the suppressed numbers by simply subtracting the published
+numbers from the total.
+
+
+Data Continuity
+Some of the crude oil statistics published in the Petroleum Marketing Monthly (PMM) are republished in
+the Monthly Energy Review (MER). For a number of years before the PMM, these statistics had been
+published in the MER and Annual Energy Review (AER). The data currently collected through the crude
+oil surveys are compatible with data used to derive statistics for the historical series. The definitions,
+respondents, and processing have not changed substantially over the years the data have been
+collected. The target populations and the computational algorithms have remained virtually unchanged.
+
+
+
+
+                                                       17
+Table EN6. Revision error in 2023 U.S. refiner acquisition cost data
+dollars per barrel
+                                                           Refiner acquisition costs
+
+                              Domestic                             Imported                           Composite
+  Date               PMM         Final   Difference      PMM         Final    Difference     PMM            Final   Difference
+  January            79.18      79.23          0.05      70.23       70.32         0.09      75.63          75.70         0.07
+  February           78.33      78.34          0.01      69.52       69.67         0.15      74.80          74.86         0.06
+  March              75.82      75.84          0.02      68.45       68.53         0.08      72.96          73.00         0.04
+  April              80.51      80.51          0.00      74.83       75.23         0.40      78.38          78.53         0.15
+  May                74.18      74.20          0.02      69.51       70.05         0.54      72.35          72.57         0.22
+  June               72.52      72.50         -0.02      69.63       69.58         -0.05     71.43          71.39         -0.04
+  July               77.41      77.41          0.00      74.83       74.83         0.00      76.41          76.41         0.00
+  August             82.22      82.22          0.00      81.02       81.10         0.08      81.76          81.78         0.02
+  September          90.76      90.76          0.00      87.17       87.14         -0.03     89.33          89.32         -0.01
+  October            88.68      88.68          0.00      83.30       83.21         -0.09     86.63          86.60         -0.03
+  November           82.10      82.10          0.00      76.39       76.42         0.03      79.69          79.70         0.01
+  December           75.31      75.31          0.00      68.09       68.09         0.00      72.34          72.34         0.00
+  Sources: PMM data are the first publication of EIA-14, Refiners’ Monthly Cost Report, survey data from Table 1 of the
+  Petroleum Marketing Monthly. Final data include revisions to monthly data that are published in the June Petroleum
+  Marketing Monthly.
+
+
+
+Table EN7. Revision error in 2023 U.S. domestic first purchase price data
+dollars per barrel
+
+
+ Date                                        PMM                   Final               Difference
+ January                                     75.71                 75.71                    0.00
+ February                                    74.32                 74.32                    0.00
+ March                                       72.09                 72.09                    0.00
+ April                                       77.22                 77.23                    0.01
+ May                                         70.14                 70.14                    0.00
+ June                                        68.58                 68.59                    0.01
+ July                                        74.05                 74.07                    0.02
+ August                                      79.78                 79.78                    0.00
+ September                                   87.96                 87.96                    0.00
+ October                                     84.65                 84.65                    0.00
+ November                                    77.45                 77.46                    0.01
+ December                                     71.00               71.01                      0.01
+ Sources: PMM data are the first publication of EIA-182, Domestic Crude Oil First Purchase Report, survey
+ data from Table 1 of the Petroleum Marketing Monthly. Final data are revisions to monthly data that are
+ published in the June Petroleum Marketing Monthly.
+
+
+
+
+                                                              18
+Table EN8. Revision error in 2023 U.S. foreign crude oil acquisition cost data
+dollars per barrel
+
+                        FOB cost of imports                         Landed cost of imports
+ Date                PMM       Final   Difference                 PMM       Final   Difference
+ January             62.81     62.82          0.01   67.22        67.35     0.13         62.81
+ February            60.58     60.58          0.00   65.40        65.40     0.00         60.58
+ March               62.79     62.79          0.00   66.32        66.32     0.00         62.79
+ April               68.95     68.95          0.00   71.15        71.15     0.00         68.95
+ May                 63.60     63.68          0.08   68.56        68.58     0.02         63.60
+ June                63.69     63.82          0.13   69.14        69.36     0.22         63.69
+ July                69.71     69.71          0.00   73.52        73.92     0.40         69.71
+ August              75.82     75.82          0.00   78.56        78.57     0.01         75.82
+ September           79.77     79.77          0.00   83.10        83.09     -0.01        79.77
+ October             76.04     76.04          0.00   79.90        79.90     0.00         76.04
+ November            69.33     69.33          0.00   73.38        73.50     0.12         69.33
+ December            60.13      60.13          0.00 65.95        65.95      0.00           60.13
+ Sources: PMM data is the first publication of EIA-856, Monthly Foreign Crude Oil Acquisition Report, survey
+ data from Table 1 of the Petroleum Marketing Monthly. Final data include revisions to monthly data that are
+ published in the June Petroleum Marketing Monthly.
+
+
+
+
+Reliability of data
+There are two types of errors possible in an estimate based on a sample survey: sampling and
+nonsampling. Sampling errors occur because observations are made only on a sample, not on the entire
+population. Since the crude oil surveys are based on a census of the population, these surveys contain
+no sampling error.
+
+Nonsampling errors can be attributed to many sources: (1) inability to obtain complete information from
+all respondents in the survey (i.e., nonresponse), (2) response errors, (3) definitional difficulties, (4)
+differences in the interpretation of questions, (5) mistakes in recording or coding the data obtained, and
+(6) other errors of collection, response, coverage, and estimation for missing data.
+
+Although no direct measurement of the biases due to nonsampling errors can be obtained,
+precautionary steps were taken in all phases of the frame development and data collection, processing,
+and tabulation processes, in an effort to minimize their influence. In addition, the close cooperative
+consultation between EIA and the survey respondents and data users results in a more accurate
+information gathering and reporting process.
+
+
+Imputation
+Since the response rates for the crude oil survey are virtually 100%, there are no imputation procedures
+in the PMM data for nonresponse to these surveys. Imputation is performed, however, on EIA-182
+volume data used in estimating crude oil production published in the Petroleum Supply Monthly (PSM).
+Since production estimates for the PSM are required on an expedited schedule, some responses are
+imputed for the PSM. However, all responses are received prior to the publication of the PMM, thus no
+imputation is required for the price data published in the PMM. See Note 4 in the Explanatory Notes in
+                                                             19
+the PSM for additional information on the use of EIA-182 data in estimating domestic crude oil
+production.
+
+
+Revision error
+The values shown for Domestic First Purchase Prices and the Refiner Acquisition Cost (RAC) prices for
+the current month and the Average FOB and Landed Costs for the most recent two months are
+preliminary. These numbers are revised in the month after the preliminary month(s) based on data
+received late or revisions to previously submitted data. For example, the February RAC data are
+preliminary and the January RAC data may have been revised due to receipt of late or revised data.
+
+The data can be revised again and are final upon publication in the June issue of the Petroleum
+Marketing Monthly (PMM). In the above example, the difference between the February preliminary
+RAC data and when it is made final in the June PMM is the revision error. The amount of the revision
+error for some selected crude oil data series is shown in Tables EN6 through EN8.
+
+
+
+
+                                                   20
+

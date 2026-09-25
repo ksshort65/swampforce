@@ -605,6 +605,7 @@ def frames_oval():
 
 def build_scorecard():
     import midterms as M
+    import wallet as WV
     vs = W.stamp() if hasattr(W, "stamp") else ""
     gop = f"""
 {M.column("R", vs)}
@@ -702,7 +703,7 @@ def build_scorecard():
    {tile(f"${M.T['S']:.2f}T", "Added under a split Congress", count=round(M.T['S'], 2), prefix="$", suffix="T", decimals=2, dark=True)}
    {tile("$40.09T", "Total debt, Sep 17, 2026", count=40.09, prefix="$", suffix="T", decimals=2, dark=True, accent=True)}
   </div>
-  <p class="hero-note">Since 1857. Sum of Treasury figures by who held both chambers. <a href="#compare">How it is counted</a></p>
+  <p class="hero-note">Since 1857. Sum of Treasury figures by who held both chambers. <a href="#compare">How it is counted</a> · <a href="#wallet">How did your rep vote? Your wallet</a></p>
  </div>
 </section>
 <div class="wrap">
@@ -713,6 +714,7 @@ def build_scorecard():
 {room("compare", "Compare", "All three, side by side", "Helped, hurt, debt, the border and three jobs.", compare)}
 {room("oval", "The Oval", "Four presidents, compared", "Four presidents. Trump 1 and Trump 2.", oval)}
 </div>
+{WV.section(vs)}
 {shop_strip("Take the scorecard off the screen.")}
 </div>
 """

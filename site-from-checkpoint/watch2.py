@@ -1290,6 +1290,65 @@ SECTIONS2.append(Section("censorship.html", "Censorship", "Platforms, pressure, 
 GG = EN / "gap-tracker"
 
 
+# ── What your state adds to every gallon (owner's fuel-tax charts + verified table), added Sep 24, 2026 ──
+FT_SRC = [("EIA state motor fuel taxes, Jul 2026 (XLSX)", "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx"),
+          ("U.S. Code: federal rates, 26 U.S.C. 4081", "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section4081&num=0&edition=prelim"),
+          ("U.S. Code: “United States” = states + DC, 26 U.S.C. 7701(a)(9)", "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section7701&num=0&edition=prelim"),
+          ("Illinois Dept. of Revenue bulletin FY 2026-23-A", "https://tax.illinois.gov/research/publications/bulletins/fy-2026-23.html"),
+          ("Indiana Dept. of Revenue: gas tax suspension", "https://www.in.gov/dor/i-am-a/business-corp/gasoline-use-tax/"),
+          ("Indiana executive order, Sep 3, 2026", "https://iar.iga.in.gov/register/20260916-IR-GOV260349EOA"),
+          ("FHWA state tax rates (MF-121T)", "https://www.fhwa.dot.gov/policyinformation/statistics/2024/mf121t.cfm")]
+FT_FIXES = [
+    ("Utah gas", "38.55¢ state (37.9¢ excise + 0.65¢ fee), 56.95¢ with federal. The chart shows 32.6¢ / 51.0¢."),
+    ("Vermont gas", "31.26¢ state, 49.66¢ with federal. The chart shows 34.9¢ / 53.3¢."),
+    ("Nevada gas", "23.81¢ state, 42.21¢ with federal. The chart shows 24.8¢ / 43.2¢; it appears to add the 1¢ county tax, and local taxes are left out for every other state."),
+    ("Indiana gas", "The July 1 statutory total is 64.5¢ (37.0¢ excise + 26.5¢ gasoline use tax + 1.0¢ fee); the chart shows 63.1¢. Both taxes are suspended by executive order through Oct 5, 2026, so only the 1.0¢ fee is collected now (19.4¢ with federal)."),
+    ("Puerto Rico", "No federal fuel excise applies there. Its per-barrel petroleum taxes are taxes, not pretax programs: 36.9¢ gas, 22.0¢ diesel. State totals: 52.9¢ gas, 26.0¢ diesel. The chart adds 18.4¢ / 24.4¢ federal and lists the barrel tax as “~22¢ pretax” for both."),
+    ("Illinois (chart was right)", "The chart’s 48.3¢ gas / 55.8¢ diesel is correct: Illinois froze the rate for Jul 1–Dec 31, 2026. EIA’s table shows the unfrozen 49.6¢ / 57.1¢."),
+]
+
+
+def fuel_tax_section(H):
+    import json as _j
+    _here = Path(__file__).parent
+    d = _j.load(open(_here / "watch-data" / "fuel-tax-2026-07.json"))
+    cdir = _here / "watch-data" / "fuel-tax-charts"
+    figs = ""
+    for k, cap in [("gas-1of2", "Gas, 1 of 2"), ("gas-2of2", "Gas, 2 of 2"), ("diesel-1of2", "Diesel, 1 of 2"), ("diesel-2of2", "Diesel, 2 of 2")]:
+        src = _copy_img(cdir / f"{k}.jpg", f"fuel-tax-{k}.jpg", width=2000)
+        figs += (f'<figure class="ft-fig"><a href="{src}" target="_blank" rel="noopener" aria-label="Enlarge: {e(cap)}">'
+                 f'<img src="{src}" alt="The owner’s chart: state fuel taxes, {e(cap)}" loading="lazy" width="2000" height="1020"></a>'
+                 f'<figcaption>{e(cap)} · tap to enlarge</figcaption></figure>')
+    fix = {"Utah": "g", "Vermont": "g", "Nevada": "g", "Indiana": "g", "Puerto Rico": "gd", "Illinois": ""}
+    trs = ""
+    for r in d["rows"]:
+        f = fix.get(r["state"])
+        mk = ' <sup class="ft-mk">*</sup>' if r["note"] else ""
+        gcls = ' class="ft-fixed"' if f and "g" in f else ""
+        dcls = ' class="ft-fixed"' if f and "d" in f else ""
+        trs += (f'<tr><th scope="row">{e(r["state"])}{mk}</th><td data-v="{r["gas_state"]}">{r["gas_state"]:.1f}</td><td{gcls} data-v="{r["gas_total"]}"><b>{r["gas_total"]:.1f}</b></td>'
+                f'<td data-v="{r["dsl_state"]}">{r["dsl_state"]:.1f}</td><td{dcls} data-v="{r["dsl_total"]}"><b>{r["dsl_total"]:.1f}</b></td></tr>')
+    notes = "".join(f'<li><b>{e(r["state"])}:</b> {e(r["note"])}</li>' for r in d["rows"] if r["note"])
+    fixes = "".join(f'<li><b>{e(a)}:</b> {e(b)}</li>' for a, b in FT_FIXES)
+    btns = "".join(f'<a class="jr-srcbtn" href="{e(u)}" target="_blank" rel="noopener"><span class="jr-srctype">{e(l)}</span><span class="jr-srcgo">Open ↗</span></a>' for l, u in FT_SRC)
+    inner = (f'<p>Every gallon carries the federal tax, <b>18.4¢ on gas and 24.4¢ on diesel</b> (18.3¢ / 24.3¢ excise plus a 0.1¢ tank-cleanup fee), plus what your state adds. '
+             f'State totals are taxes and fees of general application as of July 1, 2026, including sales tax where a state charges it per gallon. <b>Do not add sales tax again.</b> '
+             f'County and city taxes and gross-receipts taxes are not included, so some drivers pay more.</p>'
+             f'<p class="ft-hint">Cents per gallon. Tap a column to sort. Red = corrected from the owner’s chart. Source: {H.src_link(FT_SRC[0][1], "EIA")} · {H.src_link(FT_SRC[3][1], "Illinois DOR")}</p>'
+             f'<div class="table-wrap ft-wrap"><table class="ft-table sortable"><thead><tr><th scope="col" data-sort="t">State</th><th scope="col" data-sort="n">Gas: state</th><th scope="col" data-sort="n">Gas + federal</th>'
+             f'<th scope="col" data-sort="n">Diesel: state</th><th scope="col" data-sort="n">Diesel + federal</th></tr></thead><tbody>{trs}</tbody></table></div>'
+             f'<ul class="ft-notes">{notes}</ul>'
+             f'<details class="jr-fact ft-changed"><summary><span class="jr-fact-sum">What changed from the owner’s charts (5 corrections, 1 confirmed)</span><span class="jr-fact-type">Checked against EIA and state revenue records</span></summary>'
+             f'<div class="jr-fact-body"><ul>{fixes}</ul><p>All 50 states, DC and Puerto Rico are on both charts, with no repeats. Every other total matches EIA within 0.1¢. '
+             f'Some column splits differ from the official table (for example, Connecticut’s 25¢ gas and 49.9¢ diesel are all excise in EIA’s table, and Hawaii’s total leaves out county taxes); the totals are right.</p></div></details>'
+             f'<h3 class="strip-h">The owner’s charts</h3>'
+             f'<p class="strip-dek">Made by the owner. Her sources: Tax Foundation / EIA July 2026, IRS/FHWA, California CDTFA, Puerto Rico Hacienda, CEC / Washington / Oregon. '
+             f'The pretax program estimates (California ~42¢, Washington ~17¢, Oregon ~9¢) are hers and were not checked against a primary record. Corrections are in the table above.</p>'
+             f'<div class="ft-figs">{figs}</div>'
+             f'<div class="wv-src">{btns}</div>')
+    return section("gg-state", "What your state adds to every gallon", inner)
+
+
 def build_gas_gap(H):
     txt = (GG / "gap-report.md").read_text(encoding="utf-8")
     md = MD(H); rep = []
@@ -1310,7 +1369,7 @@ def build_gas_gap(H):
     figs = {"1": _fig(imgs["gap-pump-wholesale-crude-2005-2026"], "Pump vs wholesale vs crude, weekly 2005–2026", "U.S. retail, Gulf Coast wholesale gasoline, WTI and Brent per gallon. EIA weekly data.")
                  + _fig(imgs["gap-cents-per-gallon-breakdown-2005-2026"], "Cents-per-gallon breakdown, monthly 2005–2026", "EIA gasoline pump components (share × retail price), Jan 2005 – May 2026."),
             "2": _fig(imgs["gap-refiner-profits-vs-margin"], "Refiner profits vs refining margin", "Combined net income of five U.S. refiners (SEC) vs the Gulf Coast gasoline–WTI spread (EIA). 2026 is January–June only.")}
-    anchors = {"1": "Where the money goes", "2": "Red flags", "3": "Ownership & Colorado", "4": "Investigations", "5": "Political money", "6": "Viral claim"}
+    anchors = {"1": "Where the money goes", "2": "Red flags", "3": "Ownership & Colorado", "4": "Investigations", "5": "Political money", "6": "Viral claim", "state": "State taxes"}
     parts = []
     intro = next(l for t, l in MD.sections(txt) if t == "")
     for t, lines in MD.sections(txt):
@@ -1327,7 +1386,7 @@ def build_gas_gap(H):
             + f'<div class="tile-grid">{"".join(tiles)}</div>'
             + f'<div class="answer-box"><p><b>How to read this page.</b> A red flag is a number that does not fit the documented explanations. It is not a finding of wrongdoing, and no crime is implied without a charge or finding. '
               f'Raw data for every figure: <a href="downloads/gas-gap-tracker.xlsx">Gas Price Gap workbook (XLSX)</a>. Background: <a href="energy.html">Energy: gas vs. 2008 and the Iran war</a>.</p></div>'
-            + "".join(parts) + rep_box(H, rep)
+            + "".join(parts) + fuel_tax_section(H) + rep_box(H, rep)
             + reader_path([("energy.html", "Energy"), ("unsupported.html", "Unsupported claims"), ("about.html", "Methodology")]))
     html_out = H.page("gas-gap.html", "Gas Price Gap Tracker · Swamp Force",
                       "Where each cent of a gallon goes, what the records explain, and what they do not: EIA, SEC, CFTC and FEC data.", body, serious=True)

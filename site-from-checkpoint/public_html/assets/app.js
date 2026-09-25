@@ -272,3 +272,25 @@
   });
   window.addEventListener('pagehide', function () { synth.cancel(); });
 })();
+/* Sortable tables (class="sortable"): tap a header to sort; numbers read from data-v. */
+(function () {
+  document.querySelectorAll('table.sortable').forEach(function (t) {
+    t.querySelectorAll('thead th').forEach(function (th, i) {
+      th.tabIndex = 0;
+      function go() {
+        var asc = th.getAttribute('aria-sort') !== 'ascending';
+        t.querySelectorAll('thead th').forEach(function (x) { x.removeAttribute('aria-sort'); });
+        th.setAttribute('aria-sort', asc ? 'ascending' : 'descending');
+        var tb = t.tBodies[0], rows = Array.prototype.slice.call(tb.rows), num = th.dataset.sort === 'n';
+        rows.sort(function (a, b) {
+          var x = a.cells[i], y = b.cells[i];
+          var r = num ? (parseFloat(x.dataset.v) - parseFloat(y.dataset.v)) : x.textContent.localeCompare(y.textContent);
+          return asc ? r : -r;
+        });
+        rows.forEach(function (r) { tb.appendChild(r); });
+      }
+      th.addEventListener('click', go);
+      th.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); go(); } });
+    });
+  });
+})();

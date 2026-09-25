@@ -1137,3 +1137,65 @@ a.src { white-space: nowrap; }
 .mt-hb{padding:8px 10px;border-radius:8px;font-size:.9rem}.mt-hb b{font-family:Anton,Impact,sans-serif;font-size:1.3rem;margin-right:6px;font-weight:400}
 .mt-hb.gop{background:#a51d24}.mt-hb.dem{background:#1e3a8a}.mt-hb.split{background:#475569}
 .mt-home-go{display:block;margin-top:10px;font-weight:700}
+/* ── Wallet votes: "How did your rep vote? Your wallet" (wallet.py, scorecard.html#wallet) ── */
+.wv{margin:26px 0 10px;padding-top:6px;border-top:4px solid #a51d24}
+.wv .hero-kicker{color:#a51d24}
+.wv-h{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:2rem;line-height:1.05;margin:4px 0 8px;color:#0c2340}
+.wv-dek{margin:0 0 12px;line-height:1.45}
+.wv-top{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0}
+.wv-find{display:flex;flex-direction:column;gap:2px;padding:12px;border-radius:10px;background:#a51d24;color:#fff;text-decoration:none;min-height:44px;min-width:0}
+.wv-find b{font-size:1rem;line-height:1.2}.wv-find span{font-size:.8rem;opacity:.9;overflow-wrap:anywhere}
+.wv-find:hover,.wv-find:focus-visible{background:#0c2340}
+.wv-elect{display:flex;flex-direction:column;gap:3px;padding:12px 14px;border-radius:10px;background:#071528;color:#fff;margin:10px 0 14px}
+.wv-elect-d{font-family:Anton,Impact,sans-serif;font-size:1.6rem;line-height:1}
+.wv-elect-t{font-weight:700}.wv-elect-a{font-size:.85rem}.wv-elect-a a{color:#fff}
+.wv-cards{display:grid;gap:10px}
+.wv-card>summary{display:flex;gap:12px;align-items:center}
+.wv-num{flex:0 0 74px;font-family:Anton,Impact,sans-serif;font-size:1.45rem;color:#a51d24;text-align:center;line-height:1}
+.wv-sum{min-width:0}
+.wv-law{border-top:1px solid var(--line,#e2e8f0);padding:10px 0 6px}
+.wv-law:first-child{border-top:0;padding-top:0}
+.wv-law-h{margin:0 0 4px;font-size:1rem}
+.wv-ctl{font-size:.82rem;color:#475569;margin:0 0 6px}
+.wv-tag{display:inline-block;padding:1px 7px;border-radius:6px;color:#fff;font-weight:700;font-size:.75rem}
+.wv-tag.wv-gop{background:#a51d24}.wv-tag.wv-dem{background:#1e3a8a}.wv-tag.wv-split{background:#475569}
+.wv-line{font-weight:600;line-height:1.45;margin:4px 0 8px}
+.wv-votes{display:grid;gap:8px;grid-template-columns:1fr}
+@media(min-width:700px){.wv-votes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.wv-vote{border:1px solid var(--line,#e2e8f0);border-radius:10px;padding:10px;background:#f8fafc;min-width:0}
+.wv-vrow{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.wv-ch{font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+.wv-tot{font-family:Anton,Impact,sans-serif;font-size:1.35rem;color:#0c2340}
+.wv-date{font-size:.8rem;color:#64748b}
+.wv-parties{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.wv-p{padding:2px 8px;border-radius:6px;font-weight:700;font-size:.85rem;color:#fff}
+.wv-p.wv-r{background:#a51d24}.wv-p.wv-d{background:#1e3a8a}.wv-p.wv-ind{background:#475569}
+.wv-vnote{font-size:.8rem;color:#334155;margin:4px 0}
+.wv-btn{display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:6px;padding:8px 10px;border-radius:10px;font-weight:700;font-size:.9rem;text-align:center;text-decoration:none;overflow-wrap:anywhere}
+.wv-rep{background:#a51d24;color:#fff}.wv-sen{background:#fff;color:#0c2340;border:2px solid #0c2340}
+.wv-rep:hover,.wv-rep:focus-visible{background:#0c2340;color:#fff}
+.wv-sen:hover,.wv-sen:focus-visible{background:#0c2340;color:#fff}
+.wv-find:hover,.wv-find:focus-visible{color:#fff}
+.wv-pkg{font-size:.85rem;background:#fef2f2;border-left:3px solid #a51d24;padding:6px 10px;border-radius:6px;margin:8px 0}
+.wv-same{font-size:.85rem;color:#334155;margin:0 0 6px}
+.wv-src{margin-top:4px}
+.wv-ptr{display:inline-block;margin-top:6px;font-size:.85rem;font-weight:700;color:#a51d24}
+.wv-state{margin-top:10px;padding:10px 12px;border-radius:10px;background:#eef2f7}
+.wv-state p{margin:4px 0}.wv-state-h{font-weight:800}.wv-state-go{font-weight:700;color:#a51d24}
+/* ── Fuel tax by state (watch2.py fuel_tax_section, gas-gap.html#gg-state) ── */
+.ft-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+.ft-table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.85rem;min-width:0}
+.ft-table th,.ft-table td{padding:6px 6px;border-bottom:1px solid var(--line,#e2e8f0);text-align:right;white-space:nowrap}
+.ft-table th[scope=row],.ft-table thead th:first-child{text-align:left;white-space:normal}
+.ft-table thead th{background:#0c2340;color:#fff;cursor:pointer;position:sticky;top:0;font-size:.75rem;white-space:normal;line-height:1.2}
+.ft-table thead th[aria-sort]::after{content:" ▾"}.ft-table thead th[aria-sort=ascending]::after{content:" ▴"}
+.ft-table tbody tr:nth-child(even){background:#f8fafc}
+.ft-table td.ft-fixed{background:#fde2e2;color:#a51d24}
+.ft-mk{color:#a51d24;font-weight:700}
+.ft-hint{font-size:.8rem;color:#475569;margin:6px 0}
+.ft-notes{font-size:.82rem;color:#334155;padding-left:1.1rem}
+.ft-changed{margin:10px 0}
+.ft-figs{display:grid;gap:10px;grid-template-columns:1fr}
+@media(min-width:760px){.ft-figs{grid-template-columns:repeat(2,1fr)}}
+.ft-fig{margin:0}.ft-fig img{width:100%;height:auto;border-radius:8px;display:block}
+.ft-fig figcaption{font-size:.8rem;color:#475569;margin-top:4px}

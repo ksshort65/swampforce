@@ -1,0 +1,1797 @@
+Colorado
+Individual Income
+Tax Guide
+Colorado Individual Income Tax
+Colorado imposes a tax on the income of every                     This publication is designed to provide taxpayers with
+Colorado resident individual. Colorado income tax also            general guidance regarding Colorado individual income
+applies to the Colorado-source income of any                      tax, including the calculation of the tax, filing of
+nonresident individual. In the case of an individual who          returns, and other related requirements. Nothing in
+is a Colorado resident for only part of the year,                 this publication modifies or is intended to modify the
+Colorado tax is imposed both on the income recognized             requirements of Colorado’s statutes and regulations.
+while the individual was a Colorado resident, as well as          Taxpayers are encouraged to consult their tax advisors
+any income derived from Colorado sources.                         for guidance regarding specific situations.
+
+In general, each Colorado resident, part-year resident,                            Table of Contents
+or nonresident with income from Colorado sources is
+required to file a Colorado return if they are required
+                                                                  Part 1: Colorado Residency ................................. 2
+to file a federal income tax return or they incur a
+Colorado tax liability. If an individual is not required to       Part 2: Calculating Colorado Income Tax ................. 4
+file a federal income tax return, they generally are not
+required to file a Colorado income tax return.                    Part 3: Additions to Taxable Income ...................... 6
+
+Colorado income tax is based generally on federal                 Part 4: Subtractions from Taxable Income ............. 11
+taxable income, although various modifications and
+adjustments are made in the calculation of Colorado               Part 5: Income Tax Withholding ......................... 16
+income tax. Colorado law requires certain additions,
+and permits certain subtractions, in the calculation of           Part 6: Estimated Tax Payments ......................... 18
+Colorado taxable income.
+                                                                  Part 7: Filing and Recordkeeping ........................ 22
+Colorado allows a variety of income tax credits that
+may be applied against an individual’s income tax                 Part 8: Refunds ............................................. 26
+liability. Additionally, many Colorado income tax
+                                                                  Part 9: Assessments ........................................ 31
+credits are refundable, to the extent they exceed the
+tax otherwise due. Information about refundable and
+nonrefundable credits is available online at
+Income Tax Credits.
+
+Individuals are generally required to remit Colorado
+income tax as they receive income throughout the
+year. If the individual earns wage income as an
+employee, their employer will generally withhold
+Colorado income tax from their wages. If an individual
+receives income from other sources, they may be
+required to remit quarterly estimated tax payments in
+anticipation of the Colorado income tax they will owe.
+A refund is allowed for any overpayment of an
+individual’s tax resulting from either wage withholding
+or estimated tax payments.
+
+
+
+
+                                                              1
+                                                                                                             Revised January 2026
+Part 1: Colorado Residency
+An individual is subject to Colorado income tax for a             Domicile
+given tax year if that individual is either:
+                                                                  In general, a person’s domicile is the place they consider
+ ➢ a Colorado resident for all or part of the tax year;           their home. It is the permanent place of abode to which
+   or                                                             a person intends to return, whenever they are away. A
+                                                                  person’s permanent place of abode may include, but is
+ ➢ a nonresident who realizes income from sources in
+                                                                  not limited to, a house, condominium, apartment, room
+   Colorado.                                                      in a house, or mobile home.
+
+This Part 1 describes rules that determine whether an             Various factors may be considered in determining
+individual is a full-year resident, a part-year resident,         domicile and a person’s domicile is demonstrated by
+or a nonresident for Colorado income tax purposes.                objective evidence. No one factor is determinative and
+                                                                  not all factors may be relevant or equally weighted.
+                                                                  Evidence of domicile may include:
+Colorado residency
+                                                                   ➢ state tax return filed as a resident of that state;
+The entirety of a resident individual’s income is subject
+to Colorado income tax, regardless of whether the                  ➢ driver’s license;
+income was derived from sources inside or outside of
+Colorado. For information about the credit Colorado                ➢ motor vehicle registration;
+residents can claim for income derived from sources in,
+                                                                   ➢ voter registration;
+and taxed by, another state, please see Department
+publication Income Tax Topics: Credit for Tax Paid to
+                                                                   ➢ residency of spouse and dependents;
+Another State, available online at
+Individual Income Tax Guidance Publications.                       ➢ ownership and occupation of real property; and
+
+In general, an individual is a Colorado resident if either:        ➢ residency status for the purpose of college tuition.
+
+ ➢ the individual is domiciled in Colorado; or                    Once a person’s domicile is established in a state, it
+                                                                  will continue to be the person’s domicile until the
+ ➢ the individual maintains a permanent place of
+                                                                  person establishes domicile in another state. A person
+   abode in Colorado and spends, in aggregate, more
+                                                                  who is domiciled in a state remains a domiciliary of
+   than six months of the tax year in Colorado.
+                                                                  that state even if the person temporarily resides
+                                                                  outside that state.
+The following sections provide further guidance for
+determining whether a person is a Colorado resident.
+                                                                  College students
+For questions regarding residency not addressed in this
+publication, please see Department Rule 39-22-                    A student who moves to another state to attend
+103(8)(a) in 1 CCR 201-2.                                         college, but who does not intend to remain in that
+                                                                  state after graduation, has not changed domicile.
+Military servicemembers                                           Moreover, a student who is being supported by a parent
+                                                                  or parents does not establish a domicile separate from
+Specific state and federal laws apply in determining the          the parent(s) simply by attending school in another
+residency of military servicemembers. For additional              state, regardless of whether the student takes such
+information, please see Department publication                    steps as acquiring a driver's license or registering to
+Income Tax Topics: Military Servicemembers.                       vote in the state in which he or she attends school.
+
+
+                                                              2
+                                                                                                         Revised January 2026
+Part 1: Colorado Residency
+
+Statutory residents                                            Nonresidents
+A person who is not domiciled in Colorado is                   Anyone who is not a Colorado resident at any time
+nonetheless a Colorado resident for income tax                 during the tax year is a nonresident. A nonresident is
+purposes if that person both maintains a permanent             subject to Colorado taxation and may incur a Colorado
+place of abode in Colorado and spends, in aggregate,           income tax liability if they realize any income from
+more than six months of the tax year in Colorado.              Colorado sources during the tax year. For additional
+                                                               information, please see Department publication
+A person who changes domicile by moving into or out of
+                                                               Income Tax Topics: Part-Year Residents & Nonresidents.
+Colorado during the tax year generally is not
+considered a statutory resident under these rules, even
+if that person spends more than six months living in
+                                                               Additional resources
+Colorado. Instead, the person is considered a part-year
+resident for that part of the year during which they
+                                                               The following is a list of statutes, regulations, forms,
+were domiciled in Colorado. Please see the following
+                                                               and guidance pertaining to Colorado residency and the
+section regarding part-year residents for additional
+                                                               imposition of Colorado income tax on individuals. This
+information.
+                                                               list is not, and is not intended to be, an exhaustive list
+                                                               of authorities that govern the tax treatment of every
+                                                               situation. Taxpayers with specific questions should
+Part-year residents
+                                                               consult their tax advisors.
+
+In general, a part-year Colorado resident is anyone who
+is either:                                                     Statutes and regulations
+
+ ➢ domiciled in Colorado at the beginning of the tax            ➢ § 39-22-103, C.R.S. Definitions.
+   year, but then abandons their Colorado domicile
+                                                                ➢ § 39-22-104, C.R.S. Income tax imposed on
+   during the tax year; or
+                                                                  individuals.
+ ➢ domiciled outside of Colorado at the beginning of
+                                                                ➢ § 39-22-601, C.R.S. Returns.
+   the tax year but then moves to Colorado during the
+   tax year and establishes domicile in the state.              ➢ Rule 39-22-103(8)(a). Resident Individual.
+
+At any given time, a person has only one domicile. A
+part-year resident is a Colorado resident for that part        Forms and guidance
+of the year during which they are domiciled in Colorado
+and a non-resident for that part of the year during             ➢ Individual Income Tax Guidance Publications
+which they are domiciled outside of Colorado.
+                                                                ➢ Income Tax Topics: Credit for Tax Paid to Another
+                                                                  State
+All of the income realized by a taxpayer when they are
+domiciled in Colorado is subject to Colorado taxation.          ➢ Income Tax Topics: Part-Year Residents & Nonresidents
+Additionally, any income they realize while they are not
+domiciled in Colorado is subject to Colorado taxation if        ➢ Income Tax Topics: Military Servicemembers
+it is derived from Colorado sources. For additional
+information, please see Department publication
+Income Tax Topics: Part-Year Residents & Nonresidents.
+
+
+
+
+                                                           3
+                                                                                                      Revised January 2026
+Part 2: Calculating Colorado Income Tax
+In general, Colorado imposes an income tax on the             Colorado income tax rate
+modified federal taxable income of each individual,
+whether they are a Colorado resident, a nonresident,          Colorado income tax is calculated as a percentage of
+or a part-year resident. In the case of part-year             Colorado taxable income. The Colorado income tax rate
+residents and nonresidents, the tax is apportioned as         varies by tax year. The tax rates for recent tax years
+described in Department publication                           are shown below.
+Income Tax Topics: Part-Year Residents & Nonresidents.
+This Part 2 provides information regarding the
+calculation of Colorado taxable income (also known as                   Colorado Income Tax Rates
+modified federal taxable income), the Colorado income
+tax rate, and alternative minimum tax.                                        Tax Year     Tax Rate
+
+                                                                                 2019        4.5%
+Colorado taxable income                                                          2020        4.55%
+
+For the calculation of Colorado income tax, an                                   2021        4.5%
+individual’s federal taxable income must be modified
+as required by Colorado law. Most individuals must                               2022        4.4%
+prepare IRS Form 1040 or IRS Form 1040-SR to
+                                                                                 2023        4.4%
+determine their federal taxable income. Additional
+federal forms, such as IRS Schedule 1 and IRS Schedule                           2024        4.25%
+A, may also be required to compute an individual’s
+federal taxable income.                                                          2025        4.4%
+
+Modifications to federal taxable income required by
+                                                              For individuals with Colorado taxable incomes of less
+Colorado law include both additions and subtractions.
+                                                              than $50,000, the Department publishes tax tables which
+Part 3 of this publication discusses required additions
+                                                              approximate the individual’s Colorado tax determined at
+to taxable income. Allowable subtractions are
+                                                              the applicable prescribed rate.
+described in Part 4.
+
+
+
+
+                                                          4
+                                                                                                     Revised January 2026
+Part 2: Calculating Colorado Income Tax
+
+
+Alternative minimum tax (AMT)                                  Additional resources
+
+Colorado law establishes an alternative minimum tax            The following is a list of statutes, regulations, forms,
+(AMT) for individuals. Colorado AMT is based largely on        and guidance pertaining to the calculation of Colorado
+federal alternative minimum taxable income, making it          individual income tax. This list is not, and is not
+likely that a taxpayer who owes federal AMT will also          intended to be, an exhaustive list of authorities that
+owe Colorado AMT. The Colorado AMT is in addition to           govern the tax treatment of every situation. Taxpayers
+the normal Colorado income tax a taxpayer owes and is          with specific questions should consult their tax
+equal to the amount by which the tentative minimum             advisors.
+tax exceeds the normal tax.
+
+                                                               Statutes and regulations
+Calculating Colorado AMT
+                                                                ➢ § 39-22-103, C.R.S. Definitions – construction of terms.
+Colorado AMT is computed using the Colorado
+Alternative Minimum Tax Computation Schedule                    ➢ § 39-22-104, C.R.S. Income tax imposed on individuals.
+(DR 0104AMT). Individuals must first prepare IRS Form
+6251 before completing Colorado form DR 0104AMT. In             ➢ § 39-22-105, C.R.S. Alternative minimum tax.
+general, Colorado AMT is calculated in four steps:
+                                                                ➢ § 39-22-627, C.R.S. Temporary adjustment of rate
+ 1) A taxpayer’s federal alternative minimum taxable
+                                                                  of income tax – refund of excess state revenues –
+    income is first reduced by the applicable federal
+                                                                  authority of executive director.
+    exemption (please see IRS Form 6251 for the
+    exemption amount).
+                                                               Forms and guidance
+ 2) The resulting amount is then modified by any
+    applicable Colorado additions and subtractions              ➢ Individual Income Tax
+    (except for state income tax addback and the state
+    income tax refund subtraction) in order to                  ➢ Income Tax Forms for Individuals
+    determine Colorado alternative minimum taxable
+    income.                                                     ➢ Colorado Individual Income Tax Return (DR 0104)
+
+ 3) Next, Colorado tentative minimum tax is                     ➢ Colorado Minimum Tax Computation Schedule
+    calculated by multiplying Colorado alternative                (DR 0104AMT)
+    minimum taxable income by 3.47% and, in the case
+    of part-year residents and nonresidents,                    ➢ Income Tax Topics: Part-Year Residents &
+    apportioning the result as described in the                   Nonresidents
+    instructions for form DR 0104AMT.
+                                                                ➢ IRS Topic No. 556 Alternative Minimum Tax
+ 4) Finally, Colorado alternative minimum tax is
+    calculated by subtracting the taxpayer’s normal
+                                                                ➢ IRS Form 6251, Alternative Minimum Tax -
+    Colorado income tax from the taxpayer’s tentative
+                                                                  Individuals
+    Colorado minimum tax.
+
+If a taxpayer’s tentative Colorado minimum tax is less
+than their normal Colorado income tax, the taxpayer
+owes no Colorado AMT. See form DR 0104AMT for
+additional information regarding the calculation of AMT.
+
+
+                                                           5
+                                                                                                      Revised January 2026
+Part 3: Additions to Taxable Income
+Colorado income tax is based on federal taxable                 Addbacks of federal deductions
+income. However, Colorado law provides for a number
+of modifications to federal taxable income that apply           Colorado generally conforms to federal law and permits
+in the calculation of Colorado tax. Additions are               in the calculation of Colorado tax the same deductions
+generally required for one of three reasons:                    that are allowed in calculating federal tax. However,
+                                                                Colorado law disallows or reduces certain federal
+ 1) To impose Colorado income tax on certain types of
+                                                                deductions for the purpose of calculating Colorado tax.
+    income that are exempt from federal taxation;
+                                                                Individuals that claim any of the following deductions
+ 2) To eliminate or reduce a deduction that is allowed          in the calculation of their federal taxable income must
+    under federal law, but not under state law                  make the required addition in the calculation of their
+    (referred to as an “addback” of the amount                  Colorado tax.
+    deducted); or
+                                                                Deductions for state taxes paid
+ 3) To recapture a previously claimed subtraction.
+                                                                An individual who claims an itemized deduction on
+This Part 3 provides information regarding the additions        their federal income tax return for state income tax
+to federal taxable income that are required under               must add back on their Colorado returns the amount of
+Colorado law.                                                   state income tax deducted, subject to certain
+                                                                limitations. Individuals must add back the state income
+                                                                taxes they deduct, regardless of whether the state
+Income exempt from federal tax                                  income taxes were paid to Colorado or to another
+                                                                state. A state income tax addback is also required for
+Certain income is exempt from federal income tax, but           any partner or shareholder in a partnership or S
+subject to Colorado income tax. Consequently, this              corporation that claims a federal deduction for state
+income must be added to federal taxable income for              income taxes. For additional information, please see
+Colorado income tax purposes.                                   Department publication
+                                                                Income Tax Topics: State Income Tax Addback.
+Non-Colorado state and local bond interest
+                                                                Overtime compensation deduction addback
+Interest on state and local bonds is generally exempt
+from federal income tax and therefore not included in           For tax years 2026 and later, an individual who claims a
+federal taxable income. However, any state or local             deduction for overtime compensation on their federal
+bond interest, other than interest from the State of            income tax return must add back the amount of the
+Colorado or any political subdivision thereof, is subject       deduction on their Colorado return. The addback is
+to Colorado income tax and therefore must be added to           required for the full amount of the federal deduction
+federal taxable income. Political subdivisions include          claimed on the taxpayer’s IRS Schedule 1-A
+any city, county, or special district in Colorado.              (Form 1040).
+
+The required addition does not include any                      No addback is required on the taxpayer’s Colorado
+amortization of the bond premium and is reduced by              return for any deduction claimed on their federal
+the amount of the deductions required by the Internal           return for qualified tips.
+Revenue Code to be allocated to the interest income.
+
+
+
+
+                                                            6
+                                                                                                     Revised January 2026
+Part 3: Additions to Taxable Income
+
+Qualified business income deduction                            Tax year 2022
+
+An individual who claims a qualified business income           For tax year 2022 only, the addback is required for any
+(QBI) deduction on their federal income tax return may         single or joint filer whose adjusted gross income
+be required to add back on their Colorado returns the          exceeds $400,000 and who claims itemized deductions
+full amount of the deduction.                                  on their federal return in excess of the limit shown in
+                                                               the following table.
+For tax years 2018 and later, an individual who is a
+partner or shareholder in a partnership or S corporation             Deduction Limit for Tax Year 2022
+that makes a SALT Parity election for the tax year must
+add back any QBI deduction the individual is allowed on
+                                                                            Filing Status           Limit
+their federal return. The individual must add back the
+full amount of their QBI deduction and not only the                         Single                 $30,000
+amount of the QBI deduction attributable to the
+partnership or S corporation that makes the SALT Parity                     Joint                  $60,000
+election. For tax years 2018 through 2021, this addback
+may be made as part of the composite amended return            The required addback is the amount by which the
+filed by the partnership or S corporation making the           itemized deductions the taxpayer claims on their federal
+election.                                                      return exceeds the applicable limit. The addback is not
+                                                               required for tax year 2022 for any taxpayer who claims
+For tax years 2021 and later, the addback is required          the standard deduction on their federal return.
+for single filers whose adjusted gross income (AGI)
+exceeds $500,000 and for joint filers whose AGI                Tax year 2023 and later
+exceeds $1,000,000. The addback is not required for
+any taxpayer who files a Schedule F as an attachment           For tax year 2023 and later, the addback is required for
+to their federal income tax return for the tax year in         any single or joint filer whose adjusted gross income
+which they claimed the qualified business income               exceeds $300,000 and who claims either itemized
+deduction.                                                     deductions or the standard deduction on their federal
+                                                               return in excess of the limit shown in the following table.
+Federal itemized or standard deductions
+                                                               Deduction Limit for Tax Years 2023 and Later
+For tax years 2022 and later, an individual may be
+required to add back on their Colorado return a portion
+of their itemized deductions or standard deduction                   Tax Years         Single Filers        Joint Filers
+from their federal return.
+                                                                     2023 – 2025          $12,000             $16,000
+
+                                                                    2026 and later        $1,000              $2,000
+
+
+                                                               The required addback is the amount by which the
+                                                               standard deduction or itemized deductions the
+                                                               taxpayer claims on their federal return exceeds the
+                                                               applicable limit. The addback is required for tax years
+                                                               2023 and later regardless of whether the taxpayer
+                                                               claims itemized deductions or the standard deduction
+                                                               on their federal return.
+
+
+                                                           7
+                                                                                                       Revised January 2026
+Part 3: Additions to Taxable Income
+
+Gross conservation easement deduction                            Unauthorized alien labor services
+
+Individuals may be able to claim both a federal charitable       Individuals must make an addition on their Colorado
+contribution deduction and a Colorado income tax credit          income tax returns for any business expenses deducted
+for the donation of a gross conservation easement on             in the calculation of federal taxable income for wages
+property located in Colorado. If a taxpayer claims both a        or remuneration paid to an unauthorized alien for the
+federal deduction and a Colorado credit for the same             physical performance of services in Colorado. An
+donation, the taxpayer must make an addition on their            individual is not required to make any addition if:
+Colorado return in the amount of the federal deduction,
+subject to applicable limitations described below. If the         ➢ the business did not know of the unauthorized
+taxpayer carries part of the federal deduction forward to           status of the worker at the time of hiring; or
+subsequent tax years, the addition is required for any
+                                                                  ➢ the business is domiciled in Colorado and is exempt
+year in which the taxpayer claims the deduction to reduce
+                                                                    from compliance with federal employment
+federal taxable income. The addition is required
+                                                                    verification procedures under federal law that makes
+regardless of whether all or part of the credit is:
+                                                                    the employment of unauthorized aliens unlawful.
+ ➢ waitlisted by the Division of Conservation;
+                                                                 Furthermore, the addition is not required if the worker:
+ ➢ carried forward to a subsequent tax year; or
+                                                                  ➢ was lawfully admitted to the United States for
+ ➢ transferred to another taxpayer.                                 permanent residence;
+
+With respect to any single gross conservation easement            ➢ was authorized to work in the United States by
+donation, the aggregate addition required for all tax               Chapter 12 of Title 8 of the U.S. Code or by the
+years in which federal deductions are claimed is limited            U.S. Attorney General;
+to the contribution amount upon which the gross
+conservation easement credit claim is based.                      ➢ was paid less than $600 in wages or remuneration
+                                                                    for the year;
+Deductions for certain business expenses
+                                                                  ➢ was hired by the business prior to December 31, 2006;
+
+Certain business expenses, discussed below, that are
+                                                                  ➢ was not directly compensated or employed by the
+deductible in the calculation of federal taxable income
+                                                                    business; or
+must be added back in the calculation of Colorado
+income tax. These additions are required regardless of            ➢ holds and presents to the business a valid license
+whether the individual claimed the deduction as the                 or identification card issued by the Colorado
+sole proprietor of the business on Schedule C of their              Department of Revenue.
+federal return or if the deduction was taken in the
+calculation of their income from a partnership or S
+corporation in which they were a partner or
+shareholder. A partner or shareholder must add back on
+their Colorado return their distributive or pro rata
+share of the deduction claimed by a partnership or S
+corporation.
+
+
+
+
+                                                             8
+                                                                                                       Revised January 2026
+Part 3: Additions to Taxable Income
+
+Clubs that restrict membership                                Federal net operating loss (NOL) deduction
+
+Individuals must make an addition on their Colorado           Individuals who have a federal net operating loss (NOL)
+returns for any expenses deducted in the calculation of       may be able to carry the loss either forward or back and
+federal taxable income that were incurred with respect        claim the loss as a deduction for a subsequent or prior
+to expenditures made at, or payments made to, any             tax year. In general, an individual is not required to
+club that both:                                               make any further adjustment on their Colorado return
+                                                              for the NOL deduction claimed on their federal return.
+ ➢ is licensed pursuant to section 44-3-418, C.R.S., to       However, individuals may need to add back on their
+   sell alcohol beverages by the drink only to                Colorado return some or all of the federal NOL deduction
+   members of the club and guests for consumption             claimed if either it was sourced to another state.
+   on the premises of the club; and
+                                                              Non-Colorado NOL deductions
+ ➢ has a policy to restrict membership on the basis of
+   sex, sexual orientation, gender identity, gender           An individual must make an addition on their Colorado
+   expression, marital status, race, creed, religion,         return for any deduction claimed on their federal
+   color, ancestry, or national origin.                       return for an NOL that is not allocated to Colorado.
+
+Food and beverage expense deduction                           If an individual is a Colorado resident for the entire tax
+                                                              year in which the NOL was sustained, the entire NOL is
+For tax year 2022, individuals must make an addition          allocated to Colorado.
+on their Colorado returns for a portion of any business
+deduction claimed for food and beverage expenses. In          If an individual is not a Colorado resident for any part
+general, the allowable federal deduction is limited to        of the tax year in which the NOL was sustained, the
+50% of the expense. However, for tax years 2021 and           NOL is allocated to Colorado to the extent that it is
+2022, section 274(n)(2)(D) of the Internal Revenue Code       derived from sources within Colorado. Guidance for
+generally permits deduction of 100% of the expense for        determining the source of income and losses can be
+food and beverages provided by a restaurant. The              found in Department publication
+required addback is equal to the amount of the                Income Tax Topics: Part-Year Residents & Nonresidents.
+deduction claimed in excess of 50% of the expense.
+                                                              If an individual is a Colorado resident for only part of
+Business meals deduction                                      the tax year in which the NOL was sustained, the loss is
+                                                              allocated to Colorado in two steps. First, the NOL is
+For tax years 2024 through 2030, individuals must make        allocated to Colorado to the extent that it is derived
+an addition on their Colorado returns for any business        from sources within Colorado. Then, any remaining part
+deduction claimed for business meals. The required            of the NOL that is not allocated to Colorado based on
+addback is equal to the full amount of the deduction          source is allocated to Colorado by multiplying it by a
+claimed pursuant to section 274(k) of the Internal            fraction. The numerator of the fraction is number of
+Revenue Code.                                                 days during the tax year that the taxpayer was a
+                                                              Colorado resident and the denominator is the total
+                                                              number of days in the tax year.
+
+
+
+
+                                                          9
+                                                                                                     Revised January 2026
+Part 3: Additions to Taxable Income
+
+
+Recapture of prior subtractions                                  contributions the employee subtracted on their
+                                                                 Colorado return for any prior year. For additional
+                                                                 information, please see Department publication Income
+Various subtractions are allowed under Colorado law as
+                                                                 Tax Topics: Employer Contributions to Home Savings
+outlined in Part 4 of this publication. However, under
+                                                                 Accounts, available online at
+certain circumstances, taxpayers must recapture a
+                                                                 Individual Income Tax Guidance Publications.
+previously claimed subtraction in a subsequent year.
+The required recapture must be reported as an addition
+to federal taxable income on the taxpayer’s Colorado
+income tax return.
+                                                                 Additional resources
+
+                                                                 The following is a list of statutes, regulations, forms,
+CollegeInvest contributions                                      and guidance pertaining to required additions to
+                                                                 taxable income. This list is not, and is not intended to
+A subtraction is allowed to taxpayers who make a
+                                                                 be, an exhaustive list of authorities that govern the tax
+contribution to a 529 savings plan administered by
+                                                                 treatment of every situation. Taxpayers with specific
+CollegeInvest. If, in any subsequent tax year, there is a
+                                                                 questions should consult their tax advisors.
+non-qualifying distribution, refund, or withdrawal, the
+account holder must make an addition on their
+Colorado return for the distribution, refund, or                 Statutes and regulations
+withdrawal. For additional information, please see
+Department publication Income Tax Topics:                         ➢ § 39-22-104, C.R.S. Income tax imposed on individuals.
+CollegeInvest Contribution Subtraction.
+                                                                  ➢ § 39-22-504, C.R.S. Net operating losses.
+
+ABLE contributions                                                ➢ § 39-22-529, C.R.S. Business expense deduction –
+                                                                    labor services – unauthorized alien – definitions.
+For tax years 2023 through 2030, a subtraction is
+allowed to taxpayers who make a contribution to a                 ➢ Rule 39-22-104(3)(g). Gross conservation easement
+qualified Achieving a Better Life Experience (ABLE)                 addition.
+program administered by Colorado ABLE. If, in any
+subsequent tax year, there is a non-qualifying
+                                                                 Forms and guidance
+distribution, refund, or withdrawal, the account holder
+must make an addition on their Colorado return for the            ➢ Individual Income Tax
+distribution, refund, or withdrawal. For additional
+information, please see Department publication                    ➢ Individual Income Tax Guidance Publications
+Income Tax Topics: ABLE Contribution Subtraction.
+                                                                  ➢ Income Tax Topics: ABLE Contribution Subtraction
+Qualifying home savings accounts
+                                                                  ➢ Income Tax Topics: CollegeInvest Contribution
+                                                                    Subtraction
+For tax years 2024 through 2026, individuals may claim
+a subtraction for any employer contribution made to
+                                                                  ➢ Income Tax Topics: State Income Tax Addback
+their qualifying home savings account and included in
+their federal taxable income. If the individual ends              ➢ Income Tax Topics: Employer Contributions to
+their employment with the employer or uses money                    Home Savings Accounts
+from the account for something other than eligible
+expenses, the individual must add to their federal
+taxable income the full amount of any employer
+
+                                                            10
+                                                                                                       Revised January 2026
+Part 4: Subtractions from Taxable Income
+Colorado income tax is based on federal taxable                 Income from U.S. government obligations
+income. However, Colorado law provides for a number
+of modifications to federal taxable income that apply           A subtraction is allowed for certain types of income from
+in the calculation of Colorado tax. Subtractions are            U.S. government obligations to the extent such income is
+generally allowed to either fully or partially exempt           included in federal taxable income. The subtraction
+from state taxation an item of income that is subject to        applies to interest income on obligations of the United
+federal taxation or provide a state-level tax deduction         States and its possessions, as well as any income from
+for an expense or contribution that is not deductible in        stocks or obligations of the United States government.
+the calculation of federal income tax. This Part 4              No subtraction is allowed for any obligation or payment
+provides information regarding the subtractions from            from the U.S. government for services rendered or for
+federal taxable income that are allowed under                   income from instruments issued by private financial
+Colorado law. Department publications referenced in             institutions and guaranteed by the U.S. government. For
+                                                                additional information, please see Department
+Part 4 are available online at Individual Income Tax
+                                                                publication FYI Income 20: U.S. Government Interest,
+Guidance Publications.
+                                                                available online at
+                                                                Individual Income Tax Guidance Publications.
+
+Income exempted from Colorado taxation
+                                                                State income tax refunds
+Various types of income are subject to federal income
+tax, and therefore included in federal taxable income,          A subtraction is allowed for the amount of any state
+but fully or partially exempt from Colorado taxation. A         income tax refunds, credits, or offsets reported on an
+subtraction is allowed for the following types of               individual’s federal return and included in their federal
+                                                                taxable income. An individual is generally required to
+income, if included in a taxpayer’s federal taxable
+                                                                report a state income tax refund on their federal
+income, in order to fully or partially exempt this
+                                                                return only if they claimed itemized deduction for the
+income from Colorado taxation.
+                                                                tax year in which the state income tax was paid. The
+                                                                subtraction a taxpayer can claim on their Colorado
+Social security, pensions, and annuities                        return is generally the amount of any state income tax
+                                                                refund reported on line 1 of their IRS Schedule 1.
+Depending on their age at the end of the tax year,
+taxpayers may be allowed to subtract some or all of the
+                                                                PERA and DPS retirement benefits
+social security, pension, and annuity income included
+in their federal taxable income. For additional
+                                                                Under certain circumstances, a portion of pension
+information, please see Department publication Income           income paid by the Colorado Public Employees
+Tax Topics: Social Security, Pensions, and Annuities.           Retirement Association (PERA) or the Denver Public
+                                                                Schools (DPS) Retirement System and included in a
+                                                                taxpayer’s federal taxable income may qualify for
+                                                                subtraction. Most PERA and DPS retirement benefits
+                                                                will not qualify for subtraction. The subtraction is only
+                                                                allowed to retirees who made contributions to PERA or
+                                                                the DPS Retirement System between 1984 and 1986.
+                                                                For additional information, please see Department
+                                                                publication Income Tax Topics: Social Security,
+                                                                Pensions, and Annuities.
+
+
+
+
+                                                           11
+                                                                                                       Revised January 2026
+Part 4: Subtractions from Taxable Income
+
+Railroad retirement benefits                                      Military Family Relief Fund grants
+
+A subtraction is allowed for any annuities or                     A subtraction is allowed for any amount received as a
+supplemental annuities paid by the U.S. Railroad                  grant from the Military Family Relief Fund, to the
+Retirement Board that are included in an individual’s             extent that it is included in federal taxable income.
+federal taxable income. Railroad retirement benefits              Additional information about the fund is available
+that are eligible for the subtraction include:                    online at Military Family Relief Fund Application.
+
+ ➢ Tier I and Tier II benefits;
+                                                                  Reacquisition of Colorado residency by
+ ➢ vested dual benefits; and                                      military servicemember
+
+ ➢ supplemental annuities.                                        Under certain circumstances, a military servicemember
+                                                                  who is a Colorado resident can claim a subtraction for any
+Railroad retirement benefits are reported on Form                 compensation they receive for active duty military service
+RRB-1099 and Form RRB-1099-R. The subtraction is                  that is included in their federal taxable income. The
+limited to those benefits that are included in an                 subtraction is not allowed for any other type of income
+individual’s federal taxable income, which may be less            the servicemember may receive during the tax year.
+than the full amount of benefits reported on Form
+RRB-1099 and Form RRB-1099-R. For additional                      A servicemember may qualify for this subtraction only if:
+information, please see Department publication Income
+Tax Topics: Social Security, Pensions, and Annuities.              ➢ the servicemember’s home of record is Colorado;
+
+                                                                   ➢ while in the military, the servicemember acquired
+Military retirement benefits
+                                                                     legal residence in a state other than Colorado; and
+A subtraction is allowed to retired military
+                                                                   ➢ the servicemember subsequently reacquired
+servicemembers under 55 years of age at the end of the
+                                                                     Colorado residency.
+tax year for military retirement benefits included in
+their federal taxable income. The allowable subtraction
+                                                                  A servicemember claiming this subtraction must provide
+is subject to the following limits, based on the tax year.
+                                                                  documentation substantiating their changes of residency.
+                                                                  For additional information, please see Department
+            Tax year                  Limit                       publication Income Tax Topics: Military Servicemembers.
+               2019                 $ 4,500
+               2020                 $ 7,500                       Capital gain subtraction
+               2021                 $10,000
+                                                                  Qualifying taxpayers can claim a subtraction for certain
+            2022-2028               $15,000                       qualifying capital gain income included in their federal
+                                                                  taxable income. For additional information, please see
+For additional information, please see Department                 Department publication
+publication Income Tax Topics: Military Servicemembers.           Income Tax Topics: Colorado Capital Gain Subtraction.
+
+
+
+
+                                                             12
+                                                                                                         Revised January 2026
+Part 4: Subtractions from Taxable Income
+
+Qualified reservation income                                    Certain employer contributions
+
+A subtraction is allowed for the qualified reservation          Under certain circumstances, an employee may claim a
+income of an enrolled tribal member who lives on a              subtraction on their Colorado return for contributions
+reservation. The income must be derived wholly from             made by their employer to the employee’s savings
+reservation sources and must be included in the tribal          account either for college or for a qualifying home
+member’s federal taxable income to qualify for                  purchase. In either case, the subtraction is allowed
+subtraction.                                                    only to the extent that the employer’s contribution is
+                                                                included in the employee’s federal taxable income.
+Compensation for exonerated persons
+                                                                529 CollegeInvest accounts
+A subtraction is allowed for any amount received as
+compensation for an exonerated person pursuant to               Individuals may claim a subtraction for any amount
+section 13-65-103, C.R.S. The subtraction is allowed            they received during the tax year as employer matching
+only for amounts included in the taxpayer’s federal             contributions to their adult learner’s individual trust
+taxable income. No subtraction is allowed for any               account or savings account with CollegeInvest. The
+portions of the judgment awarded as attorney's fees.            individual must be the account owner and account
+                                                                beneficiary and have opened the account to pursue
+Olympic medals                                                  their own postsecondary educational opportunities and
+                                                                job retraining goals. The subtraction is allowed only to
+A subtraction is allowed to any individual who wins a           the extent that the employer’s contribution is included
+medal while competing for the United States of                  in the employee’s federal taxable income. Please visit
+America in either the Olympic Games or the Paralympic           CollegeInvest.org for additional information regarding
+Games, so long as the individual’s adjusted gross               CollegeInvest accounts.
+income for the tax year does not exceed $1 million
+($500,000 if married filing separately).                        The employee may also be allowed to claim a
+                                                                subtraction for their own contribution which their
+The value of any medal won while competing for the              employer matched. For additional information, please
+U.S. at either the Olympic Games or the Paralympic              see Department publication Income Tax Topics:
+Games is subtracted from federal taxable income,                CollegeInvest Contribution Subtraction.
+regardless of whether or not the medal’s monetary
+value is included in federal taxable income.                    Qualifying home savings accounts
+
+In general, prize money awarded by the U.S. Olympic             For tax years 2024 through 2026, individuals may claim
+Committee to medal winners is excluded from federal             a subtraction for any employer contribution made to
+taxable income on the winner’s federal income tax               their qualifying home savings account and included in
+return and no additional Colorado subtraction is allowed        their federal taxable income. Employees may not claim
+for prize money. However, if a medal winner’s federal           any subtraction for contributions they make to their
+taxable income includes any monetary award given for            own accounts. For additional information, please see
+winning the medal by the U.S. Olympic Committee or
+                                                                Department publication Income Tax Topics: Employer
+any sport-specific national governing body or Paralympic
+                                                                Contributions to Home Savings Accounts, available
+sport organization, a subtraction is allowed on the
+                                                                online at Individual Income Tax Guidance Publications.
+Colorado return for that monetary award.
+
+The subtraction is not allowed for any endorsement
+income or nonmonetary benefits.
+
+
+                                                           13
+                                                                                                     Revised January 2026
+Part 4: Subtractions from Taxable Income
+
+First responder death benefits                                 Charitable contribution subtraction
+
+Senate Bill 25-310 provides a death benefit to the             Individuals who claim the standard deduction, rather
+surviving spouse, family member, or designee of any            than itemized deductions on their federal income tax
+first responder that died because of injuries or an            returns, may claim a subtraction for charitable
+occupational disease sustained while performing their          contributions they make during the tax year. The
+job. The Colorado First Responder Death Benefit                subtraction is allowed only for the aggregate amount of
+Program is administered by the Colorado Department of          charitable contributions in excess of $500. Charitable
+Public Safety.                                                 contributions must qualify for deduction under federal
+                                                               law to be eligible for subtraction. For additional
+The amount of the death benefit is generally excluded          information, please see Department publication
+from federal taxable income under section 101(h) of            Income Tax Topics: Charitable Contributions.
+the Internal Revenue Code. For tax years 2026 and
+later, if any of the death benefit is included in the          State tuition program contributions
+federal taxable income of the beneficiary, they may
+claim a subtraction on their Colorado return for the           Individuals may claim a subtraction from federal
+included amount.                                               taxable income for contributions they make during the
+                                                               tax year to a qualified state tuition program
+                                                               established by CollegeInvest. For additional
+Segal AmeriCorps Education Awards
+                                                               information, please see Department publication Income
+                                                               Tax Topics: CollegeInvest Contribution Subtraction.
+For tax years 2026 and later, individuals may claim a
+subtraction for the amount of any
+Segal AmeriCorps Education Award included in their             ABLE contributions
+federal taxable income.
+                                                               For tax years 2023 through 2030, individuals may claim
+                                                               a subtraction from federal taxable income for
+Deductions for expenses and contributions                      contributions they make during the tax year to a
+                                                               qualified Achieving a Better Life Experience (ABLE)
+                                                               program administered by Colorado ABLE. For additional
+Colorado allows subtractions for various types of
+                                                               information, please see Department publication
+expenses and contributions that do not qualify for
+                                                               Income Tax Topics: ABLE Contribution Subtraction.
+deduction in the calculation of federal taxable income.
+Subtractions are allowed for the following types of
+expenses and contributions.                                    Marijuana business expenses
+
+                                                               A subtraction is allowed to individuals licensed under the
+                                                               Colorado Marijuana Code for an amount equal to any
+                                                               expenditure that would be eligible to be claimed as a
+                                                               federal income tax deduction, but for which deduction is
+                                                               disallowed by section 280E of the Internal Revenue Code
+                                                               because marijuana is a controlled substance under
+                                                               federal law. Additional information about licensing
+                                                               under the Colorado Marijuana Code can be found online
+                                                               on the Marijuana Enforcement Division website.
+
+
+
+
+                                                          14
+                                                                                                      Revised January 2026
+Part 4: Subtractions from Taxable Income
+
+Natural medicine business expenses                               Forms and guidance
+
+A subtraction is allowed to individuals licensed under            ➢ Individual Income Tax
+the Colorado Natural Medicine Code (article 50 of title
+44, C.R.S.) for an amount equal to any expenditure                ➢ Income Tax Forms for Individuals
+that would be eligible to be claimed as a federal
+income tax deduction, but for which deduction is                  ➢ Individual Income Tax Guidance Publications
+disallowed by section 280E of the Internal Revenue
+                                                                  ➢ Colorado Individual Income Tax Return (DR 0104)
+Code because natural medicine is a controlled
+substance under federal law. Additional information               ➢ Subtractions from Income Schedule (DR 0104AD)
+about natural medicine under the Colorado Natural
+Medicine Code can be found online on the                          ➢ Colorado Source Capital Gain Subtraction Affidavit
+Natural Medicine Division website.                                  (DR 1316)
+
+                                                                  ➢ Income Tax Topics: CollegeInvest Contribution
+Additional resources                                                Subtraction
+
+The following is a list of statutes, regulations, forms,          ➢ Income Tax Topics: Charitable Contributions
+and guidance pertaining to subtractions allowed in the
+                                                                  ➢ Income Tax Topics: Colorado Capital Gain
+calculation of Colorado income tax. This list is not, and
+                                                                    Subtraction
+is not intended to be, an exhaustive list of authorities
+that govern the tax treatment of every situation.
+                                                                  ➢ Income Tax Topics: Military Servicemembers
+Taxpayers with specific questions should consult their
+tax advisors.                                                     ➢ Income Tax Topics: Social Security, Pensions, and
+                                                                    Annuities
+Statutes and regulations
+                                                                  ➢ FYI Income 20: U.S. Government Interest
+ ➢ § 39-22-104, C.R.S. Income tax imposed on
+   individuals.
+
+ ➢ § 39-22-518, C.R.S. Tax modification for net
+   capital gains.
+
+ ➢ Rule 39-22-104(4). Subtractions from Federal
+   Taxable Income.
+
+ ➢ Rule 39-22-104(4)(f). Pension and Annuity
+   Subtraction.
+
+ ➢ Rule 39-22-104(4)(m). Charitable Contribution
+   Subtraction.
+
+
+
+
+                                                            15
+                                                                                                    Revised January 2026
+Part 5: Income Tax Withholding
+Colorado law requires the payer of certain types of               Please see IRS Publication 505 and the
+income to withhold Colorado income tax. This Part 5               Colorado Wage Withholding Guide for additional
+discusses the types of income that are subject to                 information regarding taxable wages.
+Colorado income tax withholding. For those types of
+income, the payer must do all of the following:                   Colorado income tax withholding, along with the
+                                                                  employee’s wages, are reported on IRS Form W-2,
+ ➢ withhold the prescribed amount of income tax                   Wage and Tax Statement. The employee may claim
+   from any payment made to the recipient;                        credit for the withholding on their
+                                                                  Colorado Individual Income Tax Return (DR 0104) and
+ ➢ remit the income tax withholding to the
+                                                                  may claim a refund if the withholding exceeds the
+   Department; and
+                                                                  amount of tax due. A copy of any Form W-2 reporting
+ ➢ issue a statement (such as IRS Form W-2 or 1099) to            Colorado withholding must be submitted with the
+   the recipient indicating the amount of tax withheld.           taxpayer’s return.
+
+The taxpayer may then claim the withholding, when they
+file their Colorado income tax return, as a credit against        Withholding from gambling winnings
+the due. To the extent the income tax withheld exceeds
+the tax due, the taxpayer may either claim a refund for           In general, gambling winnings of more than $5,000 from
+the excess or carry forward the excess as a credit toward         any of the following sources in Colorado are subject to
+estimated tax due for the following tax year.                     Colorado income tax withholding:
+
+                                                                   ➢ any sweepstakes or lottery;
+Wage withholding
+                                                                   ➢ any wagering pool, including payments made to
+In general, employers are required to withhold Colorado              winners of poker tournaments; and
+income tax from any compensation paid to an employee
+who is either of the following:                                    ➢ any other wager if the proceeds are at least 300
+                                                                     times the amount of the bet.
+ ➢ a Colorado resident; or
+                                                                  Withholding is generally not required for gambling
+ ➢ a nonresident who performed work in Colorado.
+                                                                  winnings from bingo, keno, and slot machines. Please
+Colorado income tax withholding is generally required             see IRS Publication 505 for additional information
+with respect to any compensation that is subject to               regarding gambling winnings for which withholding is
+federal income tax withholding. Additionally, overtime            required.
+compensation is subject to Colorado withholding even if
+it is exempt from federal withholding. Compensation               Colorado income tax withholding, along with the
+that is subject to Colorado wage withholding includes,            amount of the winnings, are reported on IRS Form
+but is not limited to:                                            W-2G, Certain Gambling Winnings. The winner may
+                                                                  claim credit for the withholding on their
+ ➢ salaries and wages;                                            Colorado Individual Income Tax Return (DR 0104) and
+ ➢ tips;                                                          may claim a refund if the withholding exceeds the
+                                                                  amount of tax due. A copy of any Form W-2G reporting
+ ➢ bonuses;                                                       Colorado withholding must be submitted with the
+                                                                  taxpayer’s return.
+ ➢ certain noncash fringe benefits; and
+
+ ➢ sick pay.
+
+
+                                                             16
+                                                                                                       Revised January 2026
+Part 5: Income Tax Withholding
+
+
+Nonresident withholding and prepayments                        Additional resources
+
+Withholding requirements, or other tax payment                 The following is a list of statutes, regulations, forms,
+requirements, apply specifically to certain types of           and guidance pertaining to individual income tax
+income received or recognized by nonresidents, namely:         withholding. This list is not, and is not intended to be,
+                                                               an exhaustive list of authorities that govern the tax
+ ➢ nonresident real estate withholding (DR 1079); and          treatment of every situation. Taxpayers with specific
+                                                               questions should consult their tax advisors.
+ ➢ nonresident beneficiary withholding (DR 0104BEP)
+
+These types of nonresident withholding and                     Statutes and regulations
+prepayments may be claimed on the applicable line of
+the Colorado Individual Income Tax Return (DR 0104)             ➢ § 39-22-601, C.R.S. Returns.
+that references forms DR 0104BEP, DR 0108, and
+                                                                ➢ § 39-22-604, C.R.S. Withholding tax.
+DR 1079, and not on the line designated for withholding
+from Forms W-2 or 1099. For additional information,             ➢ § 39-22-604.5, C.R.S. Withholding tax – transfers of
+please see Department publication                                 Colorado real property – nonresident transferors.
+Income Tax Topics: Part-Year Residents & Nonresidents.
+                                                                ➢ Rule 39-22-604–1. Colorado Income Tax
+                                                                  Withholding for Wages.
+Withholding from 1099 payments
+                                                                ➢ Rule 39-22-604–2. Colorado Income Tax
+                                                                  Withholding for Gambling Winnings.
+State income tax withholding is not generally required
+with respect to various types of income not mentioned           ➢ Rule 39-22-604–3. Colorado Income Tax
+in this Part 5. However, Colorado income taxes may be             Withholding for Other Payments.
+withheld from other types of income at the recipient’s
+request. Such requests should be directed to the
+person, business, or organization paying the income.
+                                                               Forms and guidance
+Taxpayers commonly request Colorado income tax
+                                                                ➢ Individual Income Tax
+withholding from pension or unemployment
+compensation they receive.
+                                                                ➢ Income Tax Forms for Individuals
+
+A payer who withholds Colorado income tax must
+                                                                ➢ Individual Income Tax Guidance Publications
+report the withholding on the IRS Form 1099 issued to
+the recipient. Taxpayers may claim credit for the               ➢ Colorado Individual Income Tax Return (DR 0104)
+withholding on their Colorado Individual Income Tax
+Return (DR 0104) and may claim a refund if the                  ➢ Income Tax Topics: Part-Year Residents &
+withholding exceeds the amount of tax due. A copy of              Nonresidents
+any Form 1099 reporting Colorado withholding must be
+submitted with the taxpayer’s return.                           ➢ IRS Publication 505, Tax Withholding and
+                                                                  Estimated Tax
+
+
+
+
+                                                          17
+                                                                                                      Revised January 2026
+Part 6: Estimated Tax Payments
+In general, an individual must remit Colorado estimated             High-income taxpayers
+tax payments if his or her total Colorado tax liability,
+less withholding and credits, exceeds $1,000. This Part 6           If the taxpayer’s federal adjusted gross income for the
+discusses the calculation of required quarterly estimated           preceding year was more than $150,000 or, if married
+payments, the remittance of estimated payments, and                 filing separately, more than $75,000, the total required
+the penalty for failure to remit required estimated                 annual payment is the lesser of:
+payments.
+                                                                     ➢ 70% of the taxpayer’s actual net tax liability for
+                                                                       the current tax year;
+Calculating required quarterly payments
+                                                                     ➢ 110% of the taxpayer’s actual net tax liability for
+                                                                       the preceding tax year.
+Taxpayers required to make estimated payments
+typically must make four quarterly payments, each                   Limitation on use of preceding year’s liability
+equal to 25% of their required annual payment. The
+general rules for calculating estimated payments are                Individuals can base their required annual payment on
+discussed in the following sections. Information about              their liability for the prior year only if they filed a
+the annualized income installment method appears                    Colorado income tax return for the prior tax year and
+later in this publication.                                          their prior tax year was a full 12 months.
+
+
+Required annual payment                                             Net Colorado tax liability
+The required annual payment is the total amount a                   For the purpose of calculating required estimated tax
+taxpayer must remit in estimated payments for the tax               payments, a taxpayer’s net Colorado income tax liability
+year, typically in four equal estimated payments. Except            is the total tax determined on the taxpayer’s return or
+for high-income taxpayers, discussed in the following
+                                                                    by any subsequent amendment or assessment minus
+section, the total required annual payment is the lesser of:
+                                                                    certain credits. For this calculation, total tax includes
+                                                                    Colorado tax, alternative minimum tax, and any
+ ➢ 70% of the taxpayer’s net tax liability for the
+   current tax year;                                                recapture of prior year credits. The credits subtracted in
+                                                                    this calculation consist of all credits other than wage
+ ➢ 100% of the taxpayer’s net tax liability for the                 withholding, nonresident real estate withholding,
+   preceding tax year.                                              nonresident beneficiary withholding, sales tax refund
+                                                                    credits, and any payments remitted by the taxpayer.
+
+
+
+
+                                                               18
+                                                                                                           Revised January 2026
+Part 6: Estimated Tax Payments
+
+Annualized income installment method                           Remitting estimated payments
+The annualized income installment method allows                Taxpayers must remit any required quarterly estimated
+taxpayers who do not receive income evenly                     payments by the applicable due dates. Estimated tax
+throughout the year to calculate the amount of each            payments are generally due on April 15, June 15, and
+quarterly estimated payment separately, based upon             September 15 of the tax year, and January 15 of the
+the income actually received in the months preceding           following year. If any due date falls on a Saturday,
+the payment due date. Taxpayers may use the                    Sunday, or legal holiday, the payment will be due on
+annualized income installment method only if they also         the next business day. If a required payment is not
+use the annualized income installment method to                remitted or is underpaid, the Department will first
+compute their federal estimated tax payments.                  credit any subsequent payments toward the amount
+                                                               due, regardless of when the payment is received.
+Taxpayers can use the Annualized Installment Method
+Schedule in Part 4 of Colorado form DR 0204 to
+                                                               Due Dates for Quarterly Estimated Payments
+calculate their required quarterly estimated payments
+using the annualized income installment method. In
+                                                                      Quarter              Due Date
+determining each required quarterly payment amount,
+the taxpayer must calculate their Colorado taxable                       1st               April 15th
+income for the annualization period, which, for
+calendar year filers, runs from January 1st through the                  2nd               June 15th
+end of the month preceding the due date of the
+payment. Generally, a taxpayer must first complete                       3rd            September 15th
+the federal annualized installment schedule
+                                                                         4th      January 15th of the next year
+(Schedule AI of IRS Form 2210 or the Annualized
+Estimated Tax Worksheet from IRS Publication 505) to
+calculate their Colorado taxable income for each               Taxpayers may remit estimated payments through
+annualization period. Taxpayers with business activity         Revenue Online or via Electronic Funds Transfer (EFT).
+both inside and outside Colorado must calculate                Taxpayers remitting estimated payments by check must
+apportionment fractions for each annualization period          include a Colorado Estimated Income Tax Payment
+and may not use estimated apportionment fractions or           Form (DR 0104EP) with their payment to ensure proper
+apportionment fractions from a prior year. Part-year           crediting of their account.
+residents and non-residents will also need to apportion
+their income to determine their Colorado taxable
+income (please see Department publication
+Income Tax Topics: Part-Year Residents & Nonresidents).
+
+Taxpayers must retain records detailing the calculation
+of their quarterly estimated payments and provide
+those records to the Department upon request.
+
+
+
+
+                                                          19
+                                                                                                    Revised January 2026
+Part 6: Estimated Tax Payments
+
+Any taxpayer who jointly files their estimated tax with         Estimated tax penalty
+the IRS must also jointly file estimated tax with the
+State of Colorado. Please exercise care when remitting          If a taxpayer fails to remit required estimated payments
+joint estimated payments and when filing joint returns          or underpays their required estimated tax, the taxpayer
+to ensure that the taxpayers’ Social Security numbers           will owe an estimated tax penalty. The penalty is actually
+are entered in the same order on all submitted forms.           an assessment of interest, calculated on the unpaid or
+The Department credits estimated tax payments to the            underpaid amount, from the due date of the payment
+account associated with the Social Security number              until the date the payment is made or the date the annual
+that is listed first on form DR 0104EP payment voucher.         income tax return is due, whichever is earlier. Annual
+If, by mutual agreement between spouses or in the               interest rates may vary from year to year and are listed in
+case of a surviving spouse, the payment needs to be             the table below. Taxpayers can calculate the estimated
+applied in a manner other than originally requested on          tax penalty they owe using form DR 0204.
+form DR 0104EP, the taxpayer(s) must make a written
+request to the Department prior to the filing of the                           Annual Interest Rates
+Colorado Individual Income Tax Return (DR 0104).
+                                                                 Calendar year      2022     2023    2024    2025     2026
+
+Farmers and fishermen                                            Interest rate        6%      8%      11%     12%      11%
+
+
+Special rules apply to estimated payments for farmers           In calculating the penalty, a taxpayer’s wage
+and fishermen. A taxpayer is considered a farmer or             withholding, nonresident real estate withholding,
+fisherman if at least 2/3 of their gross income is from         nonresident beneficiary withholding, and sales tax
+farming or fishing for the tax year or for the preceding        refund credit are treated as a payment of estimated
+tax year. Please see IRS Publication 505 for assistance         tax, with 25% allocated to each quarter, unless the
+in calculating gross income from farming and fishing.           taxpayer establishes the dates on which the amounts
+                                                                were actually withheld.
+Farmers and fishermen are required to make only one
+estimated payment, due January 15 of the following              Under certain circumstances a taxpayer may be exempt
+tax year, for the entire required annual amount, rather         from the requirement to remit estimated payments. A
+                                                                taxpayer will owe no estimated tax payments and owe
+than four quarterly payments. The required annual
+                                                                no estimated tax penalty if either of the following
+amount for farmers and fishermen is 50% (rather than
+                                                                conditions exist:
+70%) of their net Colorado tax liability for the current
+year. Please see Net Colorado tax liability, earlier in          ➢ The taxpayer’s net Colorado tax liability minus all
+this publication, for instructions in calculating net              credits, withholding, and any sales tax refund is
+Colorado tax liability.                                            less than $1,000.
+
+Additionally, farmers and fishermen are exempt from              ➢ The taxpayer was a full-year resident for the
+the requirement to remit any estimated tax payments                preceding tax year, which consisted of 12 months,
+if they file their Colorado returns and remit full                 and the taxpayer had no net Colorado tax liability
+payment of any tax due by March 1st of the following               for that tax year.
+year.
+                                                                If the tax return is filed and any tax due is paid by
+                                                                January 31 of the following tax year, no penalty will be
+                                                                due for any underpayment of the fourth quarter
+                                                                installment payment.
+
+
+                                                           20
+                                                                                                       Revised January 2026
+Part 6: Estimated Tax Payments
+
+
+Additional resources
+
+The following is a list of statutes, regulations, forms,
+and guidance pertaining to estimated payments for
+individuals. This list is not, and is not intended to be,
+an exhaustive list of authorities that govern the tax
+treatment of every situation. Taxpayers with specific
+questions should consult their tax advisors.
+
+
+Statutes and regulations
+
+ ➢ § 39-22-605, C.R.S. Failure by individual to pay
+   estimate income tax.
+
+ ➢ Rule 39-22-605. Estimated individual income tax.
+
+
+Forms and guidance
+
+ ➢ Individual Income Tax | Estimated Payments
+
+ ➢ Income Tax Forms for Individuals
+
+ ➢ Individual Income Tax Guidance Publications
+
+ ➢ Colorado Estimated Tax Payment Form (DR 0104EP)
+
+ ➢ Computation of Penalty Due Based on
+   Underpayment of Colorado Individual Estimated
+   Tax (DR 0204)
+
+ ➢ Income Tax Topics: Part-Year Residents &
+   Nonresidents
+
+ ➢ IRS Publication 505, Tax Withholding and
+   Estimated Tax
+
+
+
+
+                                                            21
+                                                                 Revised January 2026
+Part 7: Filing and Recordkeeping
+Colorado law imposes requirements on individual                    income tax returns separately must also file their
+income taxpayers for both filing and recordkeeping.                Colorado income tax returns separately.
+Every taxpayer that is subject to Colorado income tax
+must file an annual income tax return and make timely              Taxpayers who file a joint federal return must file a
+payment of any tax due. Additionally, an amended                   joint Colorado return, even if they are not residents of
+return must be filed to correct any errors in, or report           the same state. If only one of the taxpayers included in
+any changes to, the original return. Finally, taxpayers            joint return is a Colorado resident, they must complete
+are required to retain any and all records necessary to            and file a Part-Year Resident/Nonresident Tax
+determine the correct amount of tax they owe.                      Calculation Schedule (DR 0104PN) with their return. For
+                                                                   additional information, please see Department
+This Part 7 outlines filing and recordkeeping                      publication Income Tax Topics: Part-Year Residents &
+requirements applicable to individual income taxpayers.            Nonresidents.
+
+                                                                   Joint and several liability
+Filing
+                                                                   Taxpayers who file a joint return are both responsible
+Each Colorado resident, part-year resident, or                     for the entire tax liability reported on the return and
+nonresident with income from Colorado sources is                   any additional tax resulting from subsequent
+required to file a Colorado return if they are required            adjustments made by the Department. Both taxpayers
+to file a federal income tax return or they incur a                are liable for the full amount of tax due, even if they
+Colorado tax liability. If an individual is not required to        subsequently divorce and the divorce decree states
+file a federal income tax return, they generally are not           that one taxpayer is solely liable for the tax.
+required to file a Colorado income tax return. Please see
+the instructions for IRS Form 1040 for additional                  Innocent spouse relief
+information about federal filing requirements.
+                                                                   A taxpayer who filed joint state and federal income tax
+An individual who is not required to file a Colorado               returns may be relieved of responsibility for the tax
+return may nonetheless file a Colorado return to request           due if their spouse (or former spouse) improperly
+a refund for any wage withholding or refundable credits            reported items or omitted items on the return. If a
+for which they are eligible.                                       taxpayer has been granted innocent spouse relief or
+                                                                   any other relief under section 6015 of the Internal
+Returns may be filed electronically either directly
+                                                                   Revenue Code, that taxpayer is allowed comparable
+through the Department’s Revenue Online filing system
+                                                                   relief from joint and several liability for Colorado
+or through one of the IRS’s e-File options. Taxpayers
+may also elect to file a paper, rather than electronic             income tax for the same tax year.
+return. For additional information about filing options,
+                                                                   Taxpayers must first file IRS Form 8857, Request for
+please visit the IRS website and the
+                                                                   Innocent Spouse Relief with the IRS. A taxpayer that
+Department webpage for online filing.
+                                                                   has been granted relief must then submit a written
+                                                                   request, along with a copy of the IRS final
+Filing status                                                      determination letter, to:
+
+An individual’s filing status for Colorado income tax                  Colorado Department of Revenue
+purposes is the same as their filing status for federal                Innocent Spouse Desk
+income tax purposes. If two taxpayers file a joint                     PO Box 17087
+federal return, they must file a joint Colorado income                 Denver, CO 80217-0087
+tax return. Married taxpayers who file their federal
+
+
+                                                              22
+                                                                                                         Revised January 2026
+Part 7: Filing and Recordkeeping
+
+Original returns                                                Amended returns for federal adjustments
+
+Every resident individual and every nonresident                 An individual is required to file an Amended Colorado
+individual with income from Colorado sources is                 Individual Income Tax Return (DR 0104X) to report any
+required to file a Colorado Individual Income Tax               change to an item or amount determined under the
+Return (DR 0104) if either:                                     Internal Revenue Code that is used to compute
+                                                                Colorado income tax. An amended Colorado return is
+ ➢ the individual is required to file a federal income          required regardless of whether the federal adjustment
+   tax return; or                                               results from and audit or other action by the IRS or
+                                                                from the timely filing of an amended federal return or
+ ➢ the individual has incurred a Colorado tax liability
+                                                                federal refund claim.
+   for the tax year.
+                                                                The amended Colorado return is due within 180 days
+The requirement to file also applies to any part-year
+                                                                after the federal adjustment is finalized. If a taxpayer
+resident who is either required to file a federal income
+                                                                files an amended federal return or a federal refund
+tax return or has incurred a Colorado tax liability for
+                                                                claim, the due date is 180 days after the amended
+the tax year.
+                                                                federal return or refund claim was filed. If the federal
+                                                                adjustment arises from an IRS audit or action, the
+Income tax returns for calendar year filers are due
+                                                                amended Colorado return is due 180 days after all
+April 15th of the next year. All individual income
+                                                                federal adjustments arising from the IRS audit or action
+taxpayers are allowed an automatic six-month
+                                                                have been finally determined. In general, federal
+extension for filing of their income tax returns. If
+                                                                adjustments are finalized for Colorado income tax
+either the regular or extended due date falls on a
+                                                                purposes when all rights to appeal the federal
+Saturday, Sunday, or legal holiday, the due date will be
+                                                                adjustment have been waived or exhausted or the
+extended to the next business day.
+                                                                taxpayer and IRS both sign an agreement with respect
+If an individual fails or refuses to file any required          to the adjustment.
+return, the executive director of the Department may
+                                                                Please see Part 9 of this publication for additional
+file a return on the individual’s behalf with such
+                                                                information regarding the period allowed for
+information as may be available. The assessment of tax
+                                                                assessment.
+based on the executive director’s filing is as good and
+sufficient as an assessment based on a return filed by a
+taxpayer.
+
+
+
+
+                                                           23
+                                                                                                       Revised January 2026
+Part 7: Filing and Recordkeeping
+
+
+Penalties and interest                                            Penalties
+                                                                  If an individual fails to pay any tax by the applicable
+Full payment of Colorado income tax for calendar year             due date, the individual will owe a late payment
+filers is due April 15th of the next year. Interest is due
+                                                                  penalty. The late payment penalty is the greater of five
+on any tax not paid by the applicable due date, along
+                                                                  dollars or 5% of the unpaid tax, plus an additional 0.5%
+with penalty, unless certain conditions, described
+                                                                  for each month the tax remains unpaid, not to exceed
+below, are met.
+                                                                  a total of 12%. However, the penalty is waived if all of
+                                                                  the following conditions are met:
+Interest
+                                                                   ➢ the taxpayer has paid at least 90% of the tax due
+Interest accrues on any late payment of tax from the                 by the original due date, not including any
+original due date of the tax, not including any extension,           extensions;
+to the date the tax is paid. An extension of the time to
+file a return does not similarly extend the time to pay            ➢ the taxpayer files a return by the extended due
+the tax. Interest accrues on any tax balance reported                date; and
+on, but not paid with, a filed return. Interest also
+accrues on any additional tax assessed as the result or an         ➢ the taxpayer pays any tax balance reported on the
+audit or the filing of an amended return.                            return at the time of filing.
+
+The rate of interest accrual depends on the calendar              In addition to the late payment penalty, statute
+year(s) over which the deficiency continues.                      authorizes a number of other penalties for:
+Additionally, a discounted rate is allowed if:
+                                                                   ➢ failure to pay a notice and demand for payment
+ ➢ the taxpayer pays the tax in full prior to the                    (collection penalty);
+   issuance of a notice of deficiency;
+                                                                   ➢ fraudulent or willful failure to file;
+ ➢ the taxpayer pays the tax in full within 30 days of
+   the issuance of a notice of deficiency; or                      ➢ filing a fraudulent, frivolous, or willfully false
+                                                                     return;
+ ➢ within 30 days of the issuance of a notice of
+   deficiency, the taxpayer enters into an agreement               ➢ fraudulent failure to pay tax when due or willful
+   to pay the tax in monthly installments.                           attempt to evade tax;
+
+The discounted and non-discounted, regular interest
+                                                                   ➢ negligence or disregard for laws, rules, or
+rates for recent years are listed in the following table.
+                                                                     regulations, without intent to defraud; and
+
+
+ Calendar year        Discounted rate       Regular rate           ➢ a tax preparer’s penalty for willful or reckless
+                                                                     disregard for applicable laws or rules.
+       2022                   3%                  6%
+
+       2023                   5%                  8%
+
+       2024                   8%                 11%
+
+       2025                   9%                 12%
+
+       2026                   8%                 11%
+
+
+                                                             24
+                                                                                                          Revised January 2026
+Part 7: Filing and Recordkeeping
+
+
+Recordkeeping requirements                                       Statutes and regulations
+
+                                                                  ➢ § 39-21-109, C.R.S. Interest on underpayment, non-
+Every individual who is subject to Colorado income tax
+                                                                    payment, or extensions of time for payment of tax.
+or otherwise required to file a return must keep and
+preserve such books, accounts, and records as may be              ➢ § 39-21-110.5, C.R.S. Rate of interest to be fixed.
+necessary to determine the correct amount of tax.
+Such books, accounts, and records must be kept and                ➢ § 39-21-113, C.R.S. Reports and returns – rule.
+preserved for a period of four years following the due
+                                                                  ➢ § 39-21-119, C.R.S. Filing with executive director –
+date of the return, the filing of a return, or the
+                                                                    when deemed to have been made.
+payment of the tax, whichever occurs later. All such
+books, accounts, and records shall be open for                    ➢ § 39-21-120, C.R.S. Signature and filing
+examination by the Department at any time.                          alternatives for tax returns.
+
+                                                                  ➢ § 39-22-107, C.R.S. Income tax filing status.
+Additional resources                                              ➢ § 39-22-107.5, C.R.S. Income tax filing status –
+                                                                    innocent spouse relief.
+The following is a list of statutes, regulations, forms,
+and guidance pertaining to filing and recordkeeping               ➢ § 39-22-111, C.R.S. Accounting periods and methods.
+requirements. This list is not, and is not intended to
+                                                                  ➢ § 39-22-601, C.R.S. Returns.
+be, an exhaustive list of authorities that govern the tax
+treatment of every situation. Taxpayers with specific             ➢ § 39-22-608, C.R.S. Form, place, and date of filing
+questions should consult their tax advisors.                        return – extension – electronic filing.
+
+                                                                  ➢ § 39-22-609, C.R.S. Payment of tax – applicable when.
+
+                                                                  ➢ § 39-22-621, C.R.S. Interest and penalties.
+
+                                                                  ➢ Rule 39-21-120. Signature and filing alternatives.
+
+                                                                  ➢ Rule 39-22-608. Due date for filing income tax
+                                                                    returns and payments.
+
+                                                                  ➢ Rule 39-22-621.2(j).
+
+                                                                 Forms and guidance
+
+                                                                  ➢ Individual Income Tax
+
+                                                                  ➢ Income Tax Forms for Individuals
+
+                                                                  ➢ Individual Income Tax Guidance Publications
+
+                                                                  ➢ Revenue Online
+
+                                                                  ➢ Colorado Individual Income Tax Return (DR 0104)
+
+                                                                  ➢ Amended Colorado Individual Income Tax Return
+                                                                    (DR 0104X)
+
+
+                                                            25
+                                                                                                      Revised January 2026
+Part 8: Refunds
+Taxpayers may claim refunds for any overpayment of               Carryforward toward next year’s estimated tax
+their income tax liabilities. Generally, an overpayment
+results from prepayments, such as quarterly estimated            A taxpayer who has overpaid their Colorado income tax
+payments and wage withholding, that exceed the                   may elect to carry forward some or all of the
+amount of an individual’s tax. State law prescribes the          overpayment to the following tax year. This election is
+period of time allowed for an individual to claim a              made on the return filed for the tax year of the
+refund for an overpayment of tax. However, statute               overpayment. The amount that is carried forward is
+also provides for the extension of the period for                applied toward the estimated tax due for the first
+refunds under various circumstances.                             quarter of the following year, regardless of whether the
+                                                                 return is filed prior to the due date of the first quarter
+Any refund allowed to a taxpayer may be intercepted              estimated payment or subsequently, under extension.
+and applied toward outstanding debts the taxpayer
+owes to the state or to the IRS.
+                                                                 Refund offsets and intercepts
+Under certain circumstances, the Department may
+issue an IRS Form 1099-G to report a state income tax
+                                                                 Prior to the issuance of a refund, an overpayment of
+refund or credit.
+                                                                 Colorado income tax will first be applied toward any
+                                                                 outstanding debt the taxpayer owes the state. Refunds may
+This Part 8 includes information regarding refund
+                                                                 be applied to state debts including, but not limited to:
+claims, refund offsets and intercepts, relief for
+innocent and injured spouses, the statute of
+                                                                  ➢ state tax liabilities;
+limitations, and IRS Form 1099-G.
+                                                                  ➢ required repayment of unemployment benefits;
+
+Claiming a refund                                                 ➢ unpaid child support debt;
+
+Individuals must file a Colorado Individual Income Tax            ➢ required repayment of public assistance or
+Return (DR 0104) to claim a refund for any overpayment              medical assistance benefits;
+of their Colorado income tax. The Department will not
+issue a refund to any taxpayer who has not filed an               ➢ unpaid loans due to a state institution of higher
+income tax return for the applicable tax year.                      education, CollegeInvest, or the Student Loan
+                                                                    Division of the Department of Higher Education; or
+If an individual identifies an error on their original
+return that results in an overpayment of tax or if an IRS         ➢ judicial fines, fees, costs, surcharges, or
+adjustment reduces the individual’s federal taxable                 restitution.
+income and Colorado income tax liability, the
+                                                                 An overpayment of Colorado individual income tax may
+individual must file an Amended Colorado Individual
+                                                                 also be taken as part of the IRS State Income Tax Levy
+Income Tax Return (DR 0104X) to claim a refund for the
+                                                                 Program (SITLP) and applied toward unpaid federal tax
+overpayment.
+                                                                 liabilities the individual owes.
+For any refund claim made with either an original or
+                                                                 In the event of any refund offset or intercept, the
+amended return, the taxpayer must submit with the
+                                                                 Department will send a notice to the taxpayer advising
+return any required documentation necessary to verify
+                                                                 of the debt to which their overpayment has been
+the claim including, but not limited to, any required
+                                                                 applied.
+schedules, attachments, and W-2s.
+
+
+                                                            26
+                                                                                                        Revised January 2026
+Part 8: Refunds
+
+Injured spouse relief                                           Form 1099-G
+If a refund requested on a joint return is applied              Federal law requires the Department to issue an IRS
+toward an amount owed by just one of the taxpayers              Form 1099-G to report any income tax refund, credit,
+filing the return, the spouse who does not owe the debt         or refund offset granted or allowed to any individual
+(the “injured spouse") may request to receive their             who claimed itemized deductions on their federal
+portion of the refund. Injured spouse claims should be          income tax return for the tax year giving rise to the
+mailed separately from the return to:                           refund, credit, or refund offset. The Department must
+                                                                provide copies of the Form 1099-G both to the taxpayer
+    Colorado Department of Revenue
+                                                                and to the IRS. If the taxpayer claimed the standard
+    Injured Spouse Desk
+                                                                deduction, rather than itemized deductions on their
+    PO Box 17087
+                                                                federal return, no Form 1099-G is required.
+    Denver, CO 80217-0087
+                                                                The state income tax refund, credits, or offsets
+Injured spouse claims submitted to the Department
+                                                                reported in box 2 of Form 1099-G may include:
+must include a copy of the taxpayers’ federal income
+tax return or IRS Form 8379, Injured Spouse Allocation,          ➢ any refund issued to the taxpayer, either via
+and copies of all W-2, W-2G, or any 1099 statements                direct deposit or with a paper check;
+received by both taxpayers included in the joint return.
+                                                                 ➢ any amount carried forward and credited toward
+Please see Innocent spouse relief in Part 7 of this                estimated tax for the following tax year;
+publication for information about relief a taxpayer can
+request if their spouse (or former spouse) improperly            ➢ any amount offset against state income tax debts,
+reported items or omitted items on their joint return.             federal income tax debts, or debts owed to
+                                                                   another state agency; and
+
+Refund rejections                                                ➢ any amount contributed to a charitable
+                                                                   organization with a Voluntary Contributions
+In the event that the Department has, upon review of               Schedule (DR 0104CH).
+any return, rejected either in whole or in part a claim
+for refund made therewith, the Department will mail to          The amount reported in box 2 of Form 1099-G will not
+the taxpayer a notice of refund rejection. The taxpayer         include any state sales tax refund allowed to refund a
+may submit a protest or request a hearing with respect          TABOR surplus because it is a refund of sales tax,
+to the rejected refund claim. Please see Protests and           rather than income tax.
+appeals in Part 9 of this publication for additional
+                                                                An individual who receives a Form 1099-G from the
+information.
+                                                                Department that contains an error can contact the
+                                                                Department at (303)238-7378 to request a correction.
+
+
+
+
+                                                           27
+                                                                                                     Revised January 2026
+Part 8: Refunds
+
+
+Time allowed for refund claims                                    file an original income tax return within four years of
+                                                                  the due date of the return, not including any extension
+An individual must file any claim for refund within the           of the time to file.
+period allowed for filing a claim for refund of federal
+income tax plus one year. The period allowed for filing           Refunds claimed with amended returns
+a claim for refund of federal income tax is affected by
+various factors, including the date the original return is        An individual generally must file an amended return to
+filed, the date any payment of tax was made, any                  claim a refund within four years of the date the original
+agreement for extension between the taxpayer and the              return was filed. If the individual did not file their
+taxing authority, and a number of other factors not               original return timely (by the original due date,
+discussed in this publication. The period for filing a            including extensions), the refund claim allowable with
+claim for refund of Colorado income tax is similarly              the amended return is generally limited to payments
+affected by these factors.                                        made within the four years immediately preceding the
+                                                                  filing of the amended return. In determining the
+In general, the period allowed for claiming a refund of           timeliness of a refund claim, any estimated payments
+federal income tax is three years. Consequently, the              remitted for the tax year are deemed to have been
+period allowed for claiming a refund of Colorado                  paid on the due date of the original return, not
+income tax is generally four years. The application of            including any extensions.
+this time period in various circumstances, as well as
+other factors that may affect the period allowed for              Any refund claim made with an amended return filed
+claiming a refund of Colorado income tax, are                     more than four years after the individual’s original
+discussed in the following sections.                              return is limited to payments made in the three years
+                                                                  immediately preceding the filing of the amended
+A claim for refund of Colorado individual income tax is           return.
+made with the filing of either an original Colorado
+Individual Income Tax Return (DR 0104) or an Amended              Net operating loss and capital loss carrybacks
+Colorado Individual Income Tax Return (DR 0104X).
+                                                                  Under certain circumstances, an individual may carry
+Any request made by an individual to apply an                     back a net operating loss (NOL) or capital loss to a prior
+overpayment toward the estimated tax due for the                  tax year. An individual who carries back an NOL or
+following tax year is a claim for refund subject to the           capital loss for federal income tax purposes must also
+limitations discussed in this Part 8. If the period for           file an amended Colorado return for the tax year to
+claiming a refund has expired and no refund may be                which the loss is carried back. In general, the statute
+claimed, the crediting of any overpayment toward the              of limitations for filing the amended return is
+following year’s estimated tax is similarly prohibited.           determined with respect to the year of the loss, not
+                                                                  the year to which the loss is carried back. For example,
+                                                                  if an individual carries back an NOL from tax year 2020
+Refunds claimed with original returns
+                                                                  to tax year 2015, the taxpayer has four years from the
+An individual may file an original return to claim a              due date of the 2020 Colorado return (including
+refund any time within four years of the due date of              extensions) to file the 2015 amended Colorado return
+the return, not including any extension of the time to            to claim a refund for the carryback of the 2020 NOL.
+file. The claim may include any estimated payments
+made prior to the due date of the return and any other
+allowable credits, to the extent either exceed the tax
+due. No refund is allowed to any taxpayer who fails to
+
+                                                             28
+                                                                                                         Revised January 2026
+Part 8: Refunds
+
+Example #1                                                        Extensions of the period for claiming refunds
+
+An individual files an original return late, on June 20,          If an individual and the IRS enter into an agreement to
+2018, for tax year 2015. The return reports $12,000 of            extend the period allowed for claiming a refund of
+tax, claims $10,000 in estimated payments, and is                 federal income tax, the period for claiming a refund of
+accompanied by a payment of $2,000 for the remaining              Colorado income tax is extended by the same amount
+tax balance. The individual files an amended return on            of time. The individual may file a claim for refund of
+August 15, 2020, reporting a $6,000 decrease in tax and           Colorado income tax at any time within one year
+claiming a refund for the $6,000 reduction in tax.                following the expiration of the period agreed upon by
+                                                                  the taxpayer and the IRS for the claiming of a refund of
+Since the amended return was filed within four years of
+                                                                  federal income tax. In the case of a federal
+the original return, but the original return was not filed
+                                                                  adjustment, an individual may file a claim for refund of
+timely, the refund that may be claimed with the
+                                                                  Colorado income tax at any time within one year of the
+amended return is limited to payments made in the
+                                                                  finalization of the federal adjustment or within the
+four years preceding the filing of the amended return.
+                                                                  time provided under the general statute of limitations
+The estimated payments were made more than four
+                                                                  discussed earlier in this Part 8, whichever is later.
+years prior to the filing of the amended return.
+Therefore, no refund is allowed for any part of the               The period allowed for claiming a refund for Colorado
+estimated payments and the refund allowed to the                  income tax may also be extended by agreement
+taxpayer is limited to the $2,000 of tax paid with the            between the individual and the Colorado Department of
+original return within the four years preceding the               Revenue. Any agreement to extend the period allowed
+filing of the amended return.                                     for assessment will extend the period allowed for filing
+                                                                  a claim for refund by the same amount of time. Unless
+Example #2
+                                                                  the individual fails to file a return or files a false or
+                                                                  fraudulent return with intent to evade tax, the time
+An individual files an original return under extension,
+                                                                  allowed for claiming a refund for any tax year will not
+on October 15, 2016, for tax year 2015. The return
+                                                                  expire prior to the expiration of the time allowed for
+reports $10,000 of tax and claims $6,000 in estimated
+                                                                  the assessment of any deficiency for the same tax year.
+payments. The individual does not remit payment of
+the remaining $4,000 tax balance until May 10, 2019.
+The individual files an amended return November 20,
+2020 reporting a $5,000 decrease in tax and claiming a
+refund for the $5,000 reduction in tax.
+
+Since the amended return was not filed within four
+years of the original return, the refund that may be
+claimed with the amended return is limited to
+payments made in the three years preceding the filing
+of the amended return. The estimated payments were
+made more than three years prior to the filing of the
+amended return. Therefore, no refund is allowed for
+any part of the estimated payments and the refund
+allowed to the individual is limited to the $4,000 of tax
+paid within the three years preceding the filing of the
+amended return.
+
+
+                                                             29
+                                                                                                        Revised January 2026
+Part 8: Refunds
+
+Protective claims                                                 Additional resources
+If your right to a refund is contingent on future events          The following is a list of statutes, regulations, forms,
+and may not be determinable until after the time                  and guidance pertaining to income tax refunds. This list
+period for filing a claim for refund expires, you can file        is not, and is not intended to be, an exhaustive list of
+a protective claim for refund. Protective claims are              authorities that govern the tax treatment of every
+often based on current litigation or expected changes             situation. Taxpayers with specific questions should
+in the tax law, other legislation, or regulations.                consult their tax advisors.
+
+An individual may file a protective claim with an
+                                                                  Statutes and regulations
+Amended Colorado Individual Income Tax Return
+(DR 0104X). The individual should check the applicable
+                                                                   ➢ § 39-21-103, C.R.S. Hearings.
+box on the form to designate it as a protective claim.
+The return should reflect all of the same income,                  ➢ § 39-21-104, C.R.S. Rejection of claims.
+modifications, tax, and credits from the taxpayer’s
+original return or as previously adjusted. The individual          ➢ § 39-21-107, C.R.S. Income tax filing status.
+must also include an attachment identifying and
+describing the contingencies affecting the claim.                  ➢ § 39-21-108, C.R.S. Refunds.
+
+
+Generally, the Department will delay action on the                 ➢ § 39-22-604, C.R.S. Withholding tax.
+protective claim until the contingency is resolved.
+                                                                   ➢ Rule 39-21-103. Hearings.
+Once the contingency is resolved, the individual should
+file an Amended Colorado Individual Income Tax Return              ➢ Rule 39-21-108. Refunds.
+(DR 0104X) reflecting any adjustment to income,
+modifications, tax, or credits resulting from the                  ➢ 26 U.S.C. § 6402. Authority to make credits or
+resolution of the contingency.                                       refunds.
+
+                                                                   ➢ 26 U.S.C. § 6511. Limitations on credit or refund.
+
+                                                                   ➢ 26 U.S.C. § 6513. Time return deemed filed and
+                                                                     tax considered paid.
+
+
+                                                                  Forms and guidance
+
+                                                                   ➢ Individual Income Tax
+
+                                                                   ➢ Income Tax Forms for Individuals
+
+                                                                   ➢ Revenue Online
+
+                                                                   ➢ Colorado Individual Income Tax Return (DR 0104)
+
+                                                                   ➢ Amended Colorado Individual Income Tax Return
+                                                                     (DR 0104X)
+
+                                                                   ➢ Voluntary Contributions Schedule (DR 0104CH)
+
+
+                                                             30
+                                                                                                       Revised January 2026
+Part 9: Assessments
+An assessment of tax may be made either by the filing of          In general, an amended return that reports and
+a return reporting tax due or by the mailing or issuance          assesses any additional tax due must be filed within
+by the Department of a notice and demand for payment              four years of the filing of the original return.
+for any additional tax not reported on the taxpayer’s
+return. In either case, state law prescribes the period of
+                                                                  Assessments resulting from adjustments
+time during which an assessment of tax can be made.
+This Part 9 provides information regarding assessments,
+                                                                  At any time within four years of the filing of an original
+the time period during which assessments can be made,
+                                                                  return, whether filed timely, under extension, or
+and taxpayers’ right to protest and appeal an assessment
+                                                                  otherwise, the Department may examine the return,
+made by the Department.
+                                                                  determine the correct amount of tax, and issue a notice
+                                                                  of deficiency for any additional tax due. Following the
+                                                                  resolution of any protest and request for hearing or, if
+Time period for assessments
+                                                                  the taxpayer files no protest or request within the
+                                                                  prescribed time, the Department will issue a notice of
+In general, any assessment of tax, penalties, and
+                                                                  final determination for any additional tax due.
+interest must be made within one year after the
+expiration of the time allowed for assessing a deficiency
+                                                                  The period allowed for the Department to assess
+in federal income tax. The period allowed for the
+                                                                  additional tax may be extended if there is any change
+assessment of federal income tax is generally three
+                                                                  made to the individual’s federal taxable income. A
+years from the time of filing of the taxpayer’s original
+                                                                  taxpayer is required, as described in Part 7 of this
+return. Consequently, the period allowed for assessment
+                                                                  publication, to file an amended return to report any
+of Colorado income tax is generally four years from the
+                                                                  change to the individual’s federal taxable income. The
+filing of the taxpayer’s original return. If the original
+                                                                  Department may assess additional tax any time within
+return was filed prior to the due date, not including any
+                                                                  one year after the taxpayer timely files the required
+extensions, the original return is considered to be filed
+                                                                  amended return or within the time provided under the
+on the due date.
+                                                                  general statute of limitations discussed above,
+In the case of the filing of a false or fraudulent return         whichever is later. If the taxpayer fails to file the
+with intent to evade tax, the tax due may be assessed             required amended return in a timely manner, the
+and collected at any time.                                        Department may assess additional tax within any of the
+                                                                  following periods of time:
+
+Assessments based on a return                                      ➢ the general statute of limitations discussed above;
+
+The filing of a return by an individual constitutes an             ➢ the one-year period following the date the federal
+assessment with respect to the tax, penalty, and                       adjustments report was filed; or
+interest reported on the return. If an individual has not
+previously filed an original return for the tax period,            ➢ the six-year period after the federal adjustment
+the tax due may be assessed at any time the individual               was finalized (see Part 7 for additional
+files a return. If a taxpayer fails or refuses to file any           information).
+required return, the Department may, at any time, file
+a return on the taxpayer’s behalf with such information           In the case of fraud, the Department may assess
+as may be available, and assess the resulting tax. The            additional tax at any time.
+assessment based on the return filed by the
+Department is as good and sufficient as an assessment
+based on a return filed by the individual.
+
+
+                                                             31
+                                                                                                          Revised January 2026
+Part 9: Assessments
+
+Extensions of the period for assessment                        Protests and appeals
+The period for assessment may be extended by written           An individual who receives a notice of deficiency or
+agreement, by virtue of the extension of the period for        notice of refund rejection may submit a written protest
+assessment of federal tax, or by bankruptcy or other           and request a hearing to dispute the notice. Any
+court proceedings, as discussed below.                         protest or request for hearing must be submitted within
+                                                               30 days of the date of the notice. The protest or
+Written agreements with the Department
+                                                               request for hearing must contain at least the following
+                                                               information:
+The period allowed for assessment may be extended by
+written agreement between an individual and the
+                                                                ➢ the taxpayer’s name, address, and account
+Department made prior to the expiration of the period
+                                                                  number;
+otherwise prescribed by law for assessment. The period
+established in the written agreement may be further             ➢ the tax period(s) involved;
+extended by subsequent agreements in writing made
+before the expiration of the period previously agreed           ➢ the type and amount of tax in dispute; and
+upon.
+                                                                ➢ a summary statement of the findings with which
+Bankruptcy and other court proceedings                            the taxpayer does not agree and the grounds upon
+                                                                  which the taxpayer relies for the purpose of
+The period for assessment is extended during and for              showing the tax is not due.
+six months after any period during which either:
+                                                               The protest or request for hearing must be signed by
+ ➢ the taxpayer's assets are in the control or custody         the taxpayer. A protest or request for hearing may be
+   of a court in any proceeding before any court of            submitted through Revenue Online or by mail, fax, or
+   the United States or any state; or                          email in accordance with instructions included in the
+                                                               notice.
+ ➢ the Department is prohibited from collecting by
+   reason of a bankruptcy case under title 11 of the
+   United States Code.
+
+
+
+
+                                                          32
+                                                                                                    Revised January 2026
+Part 9: Assessments
+
+
+Additional resources                                             Forms and guidance
+
+The following is a list of statutes, regulations, forms,          ➢ Individual Income Tax
+and guidance pertaining to assessments. This list is not,
+                                                                  ➢ Income Tax Forms for Individuals
+and is not intended to be, an exhaustive list of
+authorities that govern the tax treatment of every
+                                                                  ➢ Revenue Online
+situation. Taxpayers with specific questions should
+consult their tax advisors.                                       ➢ Colorado Individual Income Tax Return (DR 0104)
+
+                                                                  ➢ Amended Colorado Individual Income Tax Return
+Statutes and regulations
+                                                                    (DR 0104X)
+ ➢ § 39-21-103, C.R.S. Hearings.
+
+ ➢ § 39-21-104, C.R.S. Rejection of claims.
+
+ ➢ § 39-21-107, C.R.S. Limitations.
+
+ ➢ § 39-22-103, C.R.S. Definitions – construction of
+   terms.
+
+ ➢ § 39-22-601.5, C.R.S. Reporting federal
+   adjustments - definitions.
+
+ ➢ § 39-22-602, C.R.S. Failure to make return –
+   director may make.
+
+ ➢ Rule 39-21-103. Hearings.
+
+ ➢ Rule 39-22-103.1. Assessment.
+
+ ➢ 26 U.S.C. § 6501. Limitations on assessment and
+   collection.
+
+ ➢ 26 U.S.C. § 6513. Time return deemed filed and
+   tax considered paid.
+
+
+
+
+                                                            33
+                                                                                                     Revised January 2026
+
