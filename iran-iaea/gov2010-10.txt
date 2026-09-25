@@ -1,0 +1,540 @@
+                                                                                      Derestricted 3 March 2010
+           Atoms for Peace
+                                        (This document has been derestricted at the meeting of the Board on 3 March 2010)
+
+
+
+Board of Governors
+                                                                                                  GOV/2010/10
+                                                                                               Date: 18 February 2010
+
+
+                                                                                                     Original: English
+
+ For official use only
+ Item 6(c) of the provisional agenda
+ (GOV/2010/1)
+
+
+
+
+     Implementation of the NPT Safeguards
+  Agreement and relevant provisions of Security
+  Council resolutions 1737 (2006), 1747 (2007),
+   1803 (2008) and 1835 (2008) in the Islamic
+                 Republic of Iran
+
+                                       Report by the Director General
+
+
+
+
+1. On 16 November 2009, the Director General reported to the Board of Governors on the
+implementation of the NPT Safeguards Agreement and relevant provisions of relevant Security
+Council resolutions in the Islamic Republic of Iran (Iran) (GOV/2009/74). The Director General
+issued two additional reports on 8 and 10 February 2010 (GOV/INF/2010/1 and GOV/INF/2010/2,
+respectively).
+
+
+
+
+A. Current Enrichment Related Activities
+
+A.1. Natanz: Fuel Enrichment Plant and Pilot Fuel Enrichment Plant
+2. In November 2003, Iran informed the Agency that it would suspend all enrichment related and
+reprocessing activities in Iran. Specifically, Iran announced that it would suspend all activities on the
+site of Natanz, not produce feed material for enrichment processes and not import enrichment related
+items. In February 2004, Iran expanded the scope of that suspension to include the assembly and
+testing of centrifuges, and the domestic manufacture of centrifuge components. In June 2004, Iran
+stopped implementing the expanded voluntary measures in connection with the manufacturing of
+centrifuge components and the assembling and testing of centrifuges. In November 2004, Iran notified
+the Agency that it had decided, “on a voluntary basis and as [a] further confidence building measure,
+to continue and extend its suspension to include all enrichment related and reprocessing activities”. In
+January 2006, Iran informed the Agency that it had decided to resume “R&D activities on the peaceful
+nuclear energy programme which ha[d] been suspended as part of its expanded voluntary and
+GOV/2010/10
+Page 2
+
+
+
+non-legally binding suspension”, which included the activities carried out at the Fuel Enrichment Plant
+(FEP) and the Pilot Fuel Enrichment Plant (PFEP) located at Natanz. Iran restarted enrichment tests at
+PFEP in February 2006; FEP was put into operation in February 2007.
+
+3. There are two cascade halls at FEP: Production Hall A and Production Hall B. According to the
+design information submitted by Iran, eight units (Units A21 to A28) are planned for Production Hall
+A, with 18 cascades planned for each unit. No detailed design information has been provided for
+Production Hall B.
+
+4. On 31 January 2010, Iran was feeding natural UF6 into the 17 cascades of Unit A24, and
+6 cascades of Unit A26, at FEP. One cascade of Unit A24 and one cascade of Unit A26 were under
+vacuum on that date. A number of centrifuges from the remaining 11 cascades of Unit A26 had been
+disconnected. Sixteen cascades of Unit A28 had been installed. Of the remaining 2 cascades of Unit
+A28, all centrifuges had been removed from one cascade and removal of the centrifuges from the other
+cascade was ongoing.1 Installation work in Units A25 and A27 was ongoing. All centrifuges installed
+to date are IR-1 machines with 164 machines per cascade. There has been no installation work on
+centrifuges in Production Hall B.
+
+5. Between 21 November 2009 and 2 December 2009, the Agency conducted a physical inventory
+verification (PIV) at FEP and verified that, as of 22 November 2009, 21 140 kg of natural UF6 had
+been fed into the cascades since February 2007, and a total of 1808 kg of low enriched UF6 had been
+produced. The enrichment level of the low enriched UF6 product, as measured by the Agency, was
+3.47% U-235. The Agency is continuing with its assessment of the PIV and is discussing the results
+with Iran. Iran has estimated that, between 23 November 2009 and 29 January 2010, it produced an
+additional 257 kg of low enriched UF6,2 which would result in a total production of 2065 kg of low
+enriched UF6 since the startup of FEP. The nuclear material at FEP (including the feed, product and
+tails), as well as all installed cascades and the feed and withdrawal stations, are subject to Agency
+containment and surveillance.3
+
+6. The results of the environmental samples taken at FEP as of 21 November 2009 indicate that the
+maximum enrichment level as declared by Iran in the relevant Design Information Questionnaire
+(DIQ) (i.e. less than 5.0% U-235 enrichment) has not been exceeded at that plant.4 Since the last
+report, the Agency has successfully conducted 4 unannounced inspections at FEP, making a total of 35
+such inspections since March 2007.
+
+7. Between 14 and 16 September 2009, the Agency conducted a PIV at the PFEP, the results of
+which confirmed the inventory as declared by Iran, within the measurement uncertainties normally
+associated with such a facility. Between 28 October 2009 and 2 February 2010, a total of
+approximately 113 kg of natural UF6 was fed into a 10-machine IR-2m cascade, a 10-machine IR-4
+cascade, a 20-machine IR-2m cascade and single IR-1, IR-2, IR-2m and IR-4 centrifuges at PFEP.
+
+__________________________________________________________________________________
+1
+    On 29 January 2010, of the 8610 centrifuges which had been installed at FEP, 3772 centrifuges were being fed with UF6.
+2
+ The Agency has confirmed, through independently calibrated operator load cell readings, that, between 23 November 2009
+and 29 January 2010, 2516 kg of UF6 was fed into the cascades, and a total of 159 kg of low enriched UF6 product and
+2098 kg of UF6 tails and dump material was off-loaded into UF6 cylinders. The difference of 259 kg between the input and
+output figures comprises natural, depleted and low enriched UF6 arising mainly from hold-up in the various cold traps and is
+not inconsistent with the design information provided by Iran.
+3
+ In line with normal safeguards practice, small amounts of nuclear material at the facility (e.g. some waste and samples) are
+not under containment and surveillance.
+4
+  These results have shown particles of low enriched uranium (with up to 4.4% U-235 enrichment), natural uranium and
+depleted uranium (down to 0.19% U-235 enrichment).
+                                                                                                        GOV/2010/10
+                                                                                                             Page 3
+
+
+
+8. On 8 February 2010, the Agency received a letter from Iran dated 7 February 2010 referring to
+“the announcement made by H.E. the President of the Islamic Republic of Iran concerning the
+production of the required fuel for the Tehran Research Reactor”, and in that regard, submitting a
+revised version of the DIQ for PFEP. Iran informed the Agency that the “provision of production of
+less than 20% enriched uranium is being foreseen in this revised version of the DIQ”. The DIQ
+provides for the “production of enriched UF6 up to 20%”.5
+
+9. On 8 February 2010 the Agency received a separate letter from Iran, dated 8 February 2010,
+informing the Agency that the operator of FEP intended to transfer low enriched UF6 produced at FEP
+to the feed station of PFEP, and that these activities would be performed on 9 February 2010.6 Iran
+requested that the Agency be present on the site on that date.
+
+10. On 9 February 2010, the Agency wrote to Iran seeking clarification regarding the starting date of
+the process for the production of UF6 enriched up to 20% U-235 and other technical details, and
+requesting that, in light of Article 45 of the Safeguards Agreement, no low enriched uranium be fed
+into the process at PFEP for enriching the material up to 20% U-235 before the necessary additional
+safeguards procedures were in place.
+
+11. On 10 February 2010, when the Agency inspectors arrived at PFEP, they were informed that Iran
+had already begun to feed the low enriched UF6 into one cascade at PFEP the previous evening. They
+were also told that it was expected that the facility would begin to produce up to 20% enriched UF6
+within a few days. As the Board was previously informed,7 there is currently only one cascade
+installed in PFEP that is capable of enriching the UF6 up to 20%.
+
+12. On 14 February 2010, Iran, in the presence of Agency inspectors, moved approximately 1950 kg
+of low enriched UF6 from FEP to the PFEP feed station. The Agency inspectors sealed the cylinder
+containing the material to the feed station. Iran provided the Agency with mass spectrometry results
+which indicate that enrichment levels of up to 19.8% U-235 were obtained at PFEP between 9 and
+11 February 2010.8
+
+13. While the nuclear material at PFEP, as well as the cascade area and the feed and withdrawal
+stations, remain subject to Agency containment and surveillance,3 additional measures need to be put
+in place to ensure the Agency’s continuing ability to verify the non-diversion of the nuclear material at
+PFEP. In a letter to Iran dated 9 February 2010, the Agency requested a meeting to discuss a revised
+safeguards approach for PFEP.
+
+A.2. Qom: Fordow Fuel Enrichment Plant
+14. On 21 September 2009, Iran informed the Agency that it had decided “to construct a new pilot
+fuel enrichment plant”, the Fordow Fuel Enrichment Plant (FFEP), located near the city of Qom. The
+Agency met with Iran between 25 and 28 October 2009, at which time it carried out design
+information verification (DIV) at FFEP, and held discussions with Iran on the chronology of the
+design and construction of FFEP, as well as its status and original purpose. The Agency verified that
+FFEP is being built to contain sixteen cascades, with a total of approximately 3000 centrifuges. Iran
+
+__________________________________________________________________________________
+5
+    GOV/INF/2010/1.
+6
+    On 9 February 2010, Iran transferred approximately 10 kg of low enriched UF6 to PFEP.
+7
+    GOV/INF/2010/2.
+8
+  The results of the environmental samples taken at PFEP from the restart of enrichment testing in February 2006 until
+15 August 2009 have shown particles of low enriched uranium (with up to 4.4% U-235 enrichment), natural uranium and
+depleted uranium (down to 0.27% U-235 enrichment).
+GOV/2010/10
+Page 4
+
+
+
+indicated that it currently planned to install only IR-1 centrifuges at FFEP, but that the facility could
+be reconfigured to contain centrifuges of more advanced types should Iran take a decision to use such
+centrifuges in the future. On 28 October 2009, Iran provided the Agency with an updated DIQ for
+FFEP.
+
+15. In a letter dated 2 December 2009 responding to the Agency’s questions in its letter dated
+6 November 2009 regarding the timing of the decision to build a third enrichment plant in Iran, other
+than PFEP and FEP, Iran stated that “The location [near Qom] originally was considered as a general
+area for passive defence contingency shelters for various utilizations. Then this location was selected
+for the construction of [the] Fuel Enrichment Plant in the second half of 2007”. On
+16 December 2009, the Agency wrote to Iran, pointing out that some of its answers had not fully
+addressed the Agency’s requests for clarifications regarding FFEP. In the letter, the Agency referred
+specifically to the Agency’s request that Iran confirm when the decision to construct a third
+enrichment plant (other than PFEP and FEP) had been taken and reiterated the need for access to
+companies involved in the design and construction of FFEP to confirm Iran’s statement regarding the
+chronology and purpose of the facility. The Agency informed Iran that it had received extensive
+information from a number of sources detailing the design of the facility, which was consistent with
+the design as verified by the Agency during the DIV, and that these sources alleged that design work
+on the facility started in 2006, i.e. at a time when Iran itself accepts that it was bound by the modified
+Code 3.1 to have informed the Agency.
+
+16. In a letter dated 22 January 2010, the Agency asked Iran for a complete DIQ for FFEP, and again
+reiterated its request made in October 2009 for access to relevant design documents and to companies
+involved in the design of the third enrichment plant in Iran. Iran has not yet responded to these
+requests.
+
+17. Since 26 October 2009, the Agency has conducted five DIVs at FFEP. During three of these, the
+Agency took environmental samples. The results of the analyses of the samples taken on
+27 October 2009 from two passivation tanks at FFEP showed the presence of a small number of
+depleted uranium particles that were similar to particles found at Natanz. According to Iran, the tanks
+had been brought to FFEP from the Natanz site. The results of the analyses of the later environmental
+samples are pending. The Agency has verified that the construction of the facility is ongoing, but that
+no centrifuges had been introduced into the facility as of 16 February 2010.
+
+
+
+
+B. Reprocessing Activities
+
+18. The Agency has continued to monitor the use and construction of hot cells at the Tehran
+Research Reactor (TRR) and the Molybdenum, Iodine and Xenon Radioisotope Production (MIX)
+Facility. The Agency carried out an inspection and a DIV at TRR on 11 November 2009, and on
+23 January 2010 at the MIX Facility. There were no indications of ongoing reprocessing related
+activities at those facilities. While Iran has stated that there have been no reprocessing related
+activities in Iran, the Agency can confirm this only with respect to these two facilities, as the measures
+of the Additional Protocol are not currently available to it for Iran.
+                                                                                             GOV/2010/10
+                                                                                                  Page 5
+
+
+
+
+C. Heavy Water Related Projects
+
+19. In resolution 1737 (2006), the Security Council decided in operative paragraph 2 thereof that Iran
+was to suspend certain activities, including “work on all heavy water-related projects, including the
+construction of a research reactor moderated by heavy water, also to be verified by the IAEA”. In that
+resolution, the Council also decided, inter alia, that Iran “shall provide such access and cooperation as
+the IAEA requires to be able to verify the suspension outlined in paragraph 2 and to resolve all
+outstanding issues, as identified in IAEA reports”.
+
+20. As indicated in GOV/2009/74, during a DIV carried out at the Uranium Conversion Facility
+(UCF) at Esfahan on 25 October 2009, the Agency observed a large number of drums said by Iran to
+contain heavy water. In a letter dated 10 November 2009, the Agency asked Iran to confirm the
+number of drums and their contents, and to provide information on the origin of the heavy water. In its
+letter dated 18 November 2009 responding to the Agency, Iran stated that “the origin of the heavy
+water is the Islamic Republic of Iran”.
+
+21. In light of the request of the Security Council that the Agency verify the suspension by Iran, inter
+alia, of all heavy water related projects, and to report on whether Iran has established full and
+sustained suspension thereof, the Agency needs to be able to confirm the contents of the drums, and
+the origin of the heavy water said to be contained in the drums. To that end, in a letter dated
+7 January 2010, the Agency informed Iran that, during the DIV at UCF scheduled for
+17 January 2010, it planned to take samples of the heavy water for destructive analysis. In a letter
+dated 14 January 2010, Iran objected to the taking of such samples, stating that there was no provision
+in the Safeguards Agreement for the sampling of non-nuclear material for destructive analysis. During
+the 17 January 2010 DIV, the Agency counted 756 50-litre drums said by Iran to contain heavy water,
+and weighed a small number of randomly selected drums, but was not permitted to take samples of the
+heavy water to confirm the contents of the drums.
+
+22. On 13 January 2010, the Agency carried out a DIV at the Fuel Manufacturing Plant (FMP). It
+confirmed that no new process equipment had been installed at the facility and that no new assemblies,
+rods or pellets had been produced since May 2009. On 18 January 2010, the Agency received a
+revised DIQ for FMP which included information originally requested by the Agency in June 2009 on
+the design features of the fuel assembly verified by the Agency during its May 2009 inspection at
+FMP.
+
+23. On 8 February 2010, the Agency carried out a DIV at the IR-40 reactor at Arak. The Agency
+verified that the construction of the facility was ongoing. However, as previously indicated to the
+Board, in light of Iran’s refusal to permit the Agency access to the Heavy Water Production Plant
+(HWPP), the Agency has had to rely on satellite imagery to monitor the status of that plant. Based on
+recent images, the HWPP seems to be in operation again. However, it has to be noted that these
+images can only provide information on what was happening at the time the images were taken. In
+accordance with the Security Council’s request that the Agency verify the suspension of heavy water
+related projects in Iran, and particularly in light of the presence at UCF of what Iran has described as
+Iranian origin heavy water, the Agency needs direct access to the HWPP.
+
+24. In a letter dated 15 February 2010, the Agency reiterated its requests that Iran make the necessary
+arrangements to provide the Agency, at the earliest possible date, with access to: the HWPP; the heavy
+water stored at UCF for the purpose of taking samples for destructive analysis; and any other location
+in Iran where heavy water related projects are being carried out.
+GOV/2010/10
+Page 6
+
+
+
+
+D. Other Implementation Issues
+
+D.1. Uranium Conversion
+25. According to the design information provided by Iran and revised as of 12 November 2009, UCF
+will eventually include the following process lines:
+
+•   production of natural UF6 from uranium ore concentrate for further enrichment (completed and
+    operational);
+
+•   production of natural UO2 from uranium ore concentrate for the IR-40 reactor fuel (expected to be
+    completed by March 2010);
+
+•   production of natural uranium metal ingots from UF4 for research and development (R&D)
+    purposes (completed but not yet in operation);
+
+•   production of low enriched UO2 (maximum 5% U-235 enrichment) from UF6 for light water
+    reactor fuel (building under construction);
+
+•   production of low enriched uranium metal (maximum 19.7% U-235 enrichment) from UF6 for
+    R&D purposes (no equipment installed yet);
+
+•   production of depleted UF4 powder from UF6 for further conversion process to uranium metal
+    (building under construction);
+
+•   and production of depleted uranium metal from UF4 for storage and shielding purposes
+    (construction not yet started).
+
+Under cover of a letter dated 11 February 2010, Iran submitted an updated DIQ for UCF which
+included a reference to an additional R&D activity on the conversion of depleted UF6 to depleted
+U3O8.
+
+26. In October 2009, the Agency requested Iran to provide information regarding the layout,
+equipment and installation schedule for an analytical laboratory which Iran had indicated would be
+installed in an underground location in one of the storage areas of UCF. Under cover of a letter dated
+13 December 2009, Iran submitted an updated DIQ for UCF which included, inter alia, the layout of
+the laboratory. On 9 February 2010, the Agency provided comments on the DIQ to Iran, reiterating its
+request that Iran include information related to the equipment and installation schedule for the
+laboratory.
+
+27. On 17 January 2010, the Agency carried out an inspection and a DIV at UCF. At that time, the
+plant was undergoing maintenance. No UF6 has been produced since 10 August 2009; however, since
+that date, five tonnes of uranium in the form of UF6 which had been previously produced but were
+held up in the process were discharged from the process on 15 November 2009. The total amount of
+uranium in the form of UF6 produced at UCF since March 2004 therefore is 371 tonnes (some of
+which has been transferred to FEP and PFEP), which remains subject to Agency containment and
+surveillance. Currently, there are 42 tonnes of uranium in the form of uranium ore concentrate (UOC)
+stored at UCF.
+
+D.2. Design Information
+28. In a letter dated 29 March 2007, Iran informed the Agency that it had decided to suspend the
+implementation of the modified Code 3.1 of the Subsidiary Arrangements General Part, which Iran
+                                                                                                     GOV/2010/10
+                                                                                                          Page 7
+
+
+
+had accepted in 2003. On 30 March 2007, the Agency requested Iran to reconsider its decision.9 The
+Agency reiterated that request in a letter dated 16 October 2008.
+
+29. The modified Code 3.1, to which Iran agreed in 2003, provides for submission to the Agency of
+design information for new facilities as soon as the decision to construct, or to authorize construction
+of, a new facility has been taken. The modified Code 3.1 also provides for the submission of further
+design information as the design is developed early in the project definition, preliminary design,
+construction and commissioning phases.
+
+30. In accordance with Article 39 of Iran’s Safeguards Agreement,10 agreed Subsidiary
+Arrangements cannot be changed unilaterally; nor is there a mechanism in the Safeguards Agreement
+for the suspension of a provision agreed to in Subsidiary Arrangements. Therefore, the modified
+Code 3.1, as agreed to by Iran in 2003, remains in force for Iran.
+
+31. Both in the case of the Darkhovin facility11 and FFEP, Iran did not notify the Agency in a timely
+manner of the decision to construct or to authorize construction of the facilities, as required in the
+modified Code 3.1, and has provided only limited design information. Iran’s actions in this regard are
+inconsistent with its obligation under the Subsidiary Arrangements to its Safeguards Agreement, and
+raise concerns about the completeness of its declarations.
+
+32. In a letter to Iran dated 6 November 2009 referring to Iran’s decision to build FFEP, the Agency
+asked Iran, inter alia, to confirm that it had not taken a decision to construct or to authorize
+construction of any other nuclear facilities, and that there were currently no such facilities in Iran
+which have not been declared to the Agency. In its reply dated 2 December 2009, Iran stated that,
+“The Islamic Republic of Iran will inform the Agency, as it has been done before, on the existence of
+any other nuclear facility in Iran in accordance to the Safeguards Agreement with the Agency
+(INFCIRC/214)”.
+
+33. In a letter dated 2 December 2009, the Agency referred to Iran’s public announcement of its
+intention to build ten new uranium enrichment facilities and to statements reportedly made by Iran that
+the location of five sites had already been decided and that five other plants would be built throughout
+the country, and asked Iran whether the information contained in these reports was correct. The
+Agency further requested that, if a decision to construct new enrichment facilities has been taken by
+Iran, Iran provide the Agency with further information regarding the design and scheduling of the
+construction of such facilities. In its reply dated 17 December 2009, in which Iran referred to its letter
+of 29 March 2007 suspending the implementation of the modified Code 3.1 and reverting to the
+implementation of the version reflected in the Subsidiary Arrangements dated 12 February 1976, Iran
+stated that it would “provide the Agency with the required information if necessary”.
+
+34. Article 45 of Iran’s Safeguards Agreement requires that the Agency be provided with design
+information in respect of a modification relevant for safeguards purposes sufficiently in advance for
+the safeguards procedures to be adjusted when necessary. An increase in the maximum declared
+enrichment level from 5% U-235 to up to 20% U-235 is clearly relevant for safeguards purposes, and,
+accordingly, should have been notified to the Agency with sufficient time for the Agency to adjust the
+existing safeguards procedures at PFEP.
+
+
+__________________________________________________________________________________
+9
+    GOV/2007/22, paras 12–14.
+10
+  Article 39 of the Safeguards Agreement provides, inter alia, that the Subsidiary Arrangements “may be extended or
+changed by agreement between the Government of Iran and the Agency …”.
+11
+     GOV/2009/74, para. 26.
+GOV/2010/10
+Page 8
+
+
+
+35. Iran has not yet resumed implementation of the modified Code 3.1. It remains the only State with
+significant nuclear activities which has a comprehensive safeguards agreement in force but is not
+implementing the provisions of the modified Code 3.1. It is important to note that the absence of such
+early information reduces the time available for the Agency to plan the necessary safeguards
+arrangements, especially for new facilities, and reduces the level of confidence in the absence of other
+nuclear facilities.
+
+D.3. Other Matters
+36. On 8 December 2009, at the request of Iran, seals were detached from 31 containers at the
+Bushehr Nuclear Power Plant (BNPP) so that a technical examination of the fuel assemblies imported
+from the Russian Federation for use at the BNPP could be carried out. Upon completion of the
+technical examination, the fuel assemblies will be re-verified by the Agency, and placed again under
+seal.
+
+37. On 9 January 2010, the Agency conducted a DIV at the Jabr Ibn Hayan Multipurpose Research
+Laboratory (JHL) in Tehran, during which the Agency was informed that pyroprocessing R&D
+activities had been initiated at JHL to study the electrochemical production of uranium metal. In a
+letter dated 3 February 2010, the Agency requested Iran to provide more information regarding these
+activities.
+
+38. Based on satellite imagery, the Agency assesses that uranium recovery activities are continuing
+in the area of the Bandar Abbas Uranium Production Plant.
+
+39. Since early 2008, the Agency has requested that Iran provide access to additional locations
+related, inter alia, to the manufacturing of centrifuges, R&D on uranium enrichment and uranium
+mining and milling (GOV/2008/15, para. 13). Particularly in light of recent developments in, and
+statements by, Iran regarding the planned construction of new nuclear facilities, the Agency requests
+Iran to grant the Agency access to these locations as soon as possible.
+
+
+
+
+E. Possible Military Dimensions
+
+40. In order to confirm, as required by the Safeguards Agreement, that all nuclear material in Iran is
+in peaceful activities, the Agency needs to have confidence in the absence of possible military
+dimensions to Iran’s nuclear programme. Previous reports by the Director General have detailed the
+outstanding issues and the actions required of Iran,12 including, inter alia, that Iran implement the
+Additional Protocol and provide the Agency with the information and access necessary to: resolve
+questions related to the alleged studies; clarify the circumstances of the acquisition of the uranium
+metal document; clarify procurement and R&D activities of military related institutes and companies
+that could be nuclear related; and clarify the production of nuclear related equipment and components
+by companies belonging to the defence industries.
+
+41. The information available to the Agency in connection with these outstanding issues is extensive
+and has been collected from a variety of sources over time. It is also broadly consistent and credible in
+terms of the technical detail, the time frame in which the activities were conducted and the people and
+__________________________________________________________________________________
+12
+  A summary of the issues was provided to the Board in Section E of GOV/2008/15, and most recently in GOV/2009/74,
+para. 31.
+                                                                                             GOV/2010/10
+                                                                                                  Page 9
+
+
+
+organizations involved. Altogether, this raises concerns about the possible existence in Iran of past or
+current undisclosed activities related to the development of a nuclear payload for a missile. These
+alleged activities consist of a number of projects and sub-projects, covering nuclear and missile related
+aspects, run by military related organizations.
+
+42. Among the activities which the Agency has attempted to discuss with Iran are: activities
+involving high precision detonators fired simultaneously; studies on the initiation of high explosives
+and missile re-entry body engineering; a project for the conversion of UO2 to UF4, known as “the
+green salt project”; and various procurement related activities. Specifically, the Agency has, inter alia,
+sought clarification of the following: whether Iran was engaged in undeclared activities for the
+production of UF4 (green salt) involving the Kimia Maadan company; whether Iran’s exploding
+bridgewire detonator activities were solely for civil or conventional military purposes; whether Iran
+developed a spherical implosion system, possibly with the assistance of a foreign expert
+knowledgeable in explosives technology; whether the engineering design and computer modelling
+studies aimed at producing a new design for the payload chamber of a missile were for a nuclear
+payload; and the relationship between various attempts by senior Iranian officials with links to military
+organizations in Iran to obtain nuclear related technology and equipment.
+
+43. The Agency would also like to discuss with Iran: the project and management structure of alleged
+activities related to nuclear explosives; nuclear related safety arrangements for a number of the alleged
+projects; details relating to the manufacture of components for high explosives initiation systems; and
+experiments concerning the generation and detection of neutrons. Addressing these issues is important
+for clarifying the Agency’s concerns about these activities and those described above, which seem to
+have continued beyond 2004.
+
+44. Since August 2008, Iran has declined to discuss the above issues with the Agency or to provide
+any further information and access (to locations and/or people) to address these concerns, asserting
+that the allegations relating to possible military dimensions to its nuclear programme are baseless and
+that the information to which the Agency is referring is based on forgeries.
+
+45. With the passage of time and the possible deterioration in the availability of information, it is
+important that Iran engage with the Agency on these issues, and that the Agency be permitted to visit
+all relevant sites, have access to all relevant equipment and documentation, and be allowed to
+interview relevant persons, without further delay. Iran’s substantive engagement would enable the
+Agency to make progress in its work. Through Iran’s active cooperation, progress has been made in
+the past in certain other areas where questions have been raised; this should also be possible in
+connection with questions about military related dimensions.
+
+
+
+
+F. Summary
+46. While the Agency continues to verify the non-diversion of declared nuclear material in Iran, Iran
+has not provided the necessary cooperation to permit the Agency to confirm that all nuclear material in
+Iran is in peaceful activities.
+
+47. Iran is not implementing the requirements contained in the relevant resolutions of the Board of
+Governors and the Security Council, including implementation of the Additional Protocol, which are
+essential to building confidence in the exclusively peaceful purpose of its nuclear programme and to
+resolve outstanding questions. In particular, Iran needs to cooperate in clarifying outstanding issues
+which give rise to concerns about possible military dimensions to Iran’s nuclear programme, and to
+GOV/2010/10
+Page 10
+
+
+
+implement the modified text of Code 3.1 of the Subsidiary Arrangements General Part on the early
+provision of design information.
+
+48. Contrary to the relevant resolutions of the Board of Governors and the Security Council, Iran has
+continued with the operation of PFEP and FEP at Natanz, and the construction of a new enrichment
+plant at Fordow. Iran has also announced the intention to build ten new enrichment plants. Iran
+recently began feeding low enriched UF6 produced at FEP into one cascade of PFEP with the aim of
+enriching it up to 20% in U-235. The period of notice provided by Iran regarding related changes
+made to PFEP was insufficient for the Agency to adjust the existing safeguards procedures before Iran
+started to feed the material into PFEP. The Agency’s work to verify FFEP and to understand the
+original purpose of the facility and the chronology of its design and construction remain ongoing. Iran
+is not providing access to information such as the original design documentation for FFEP or access to
+companies involved in the design and construction of the plant.
+
+49. Contrary to the relevant resolutions of the Board of Governors and the Security Council, Iran has
+also continued with the construction of the IR-40 reactor and related heavy water activities. The
+Agency has not been permitted to take samples of the heavy water which is stored at UCF, and has not
+been provided with access to the Heavy Water Production Plant.
+
+50. The Director General requests Iran to take steps towards the full implementation of its
+Safeguards Agreement and its other obligations, including the implementation of its Additional
+Protocol.
+
+51. The Director General will continue to report as appropriate.
+

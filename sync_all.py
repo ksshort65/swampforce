@@ -27,7 +27,7 @@ with the catalog or any copy is not byte-identical to its source.
 """
 from __future__ import annotations
 
-import csv, filecmp, io, json, re, shutil, socket, subprocess, sys, tempfile, time, zipfile
+import csv, filecmp, html as html_mod, io, json, re, shutil, socket, subprocess, sys, tempfile, time, zipfile
 from collections import Counter
 from pathlib import Path
 
@@ -391,6 +391,8 @@ def validate_outputs(k, cat):
     allowed = {total, k["first"], k["later"]}
     for name, h in pages_txt.items():
         for m in re.finditer(r"\b(\d{3})(?:</b>)? (?:documented )?(?:cases|claims)\b", h):
+            if re.search(r"\d[\d,]* of $", h[max(0, m.start() - 12):m.start()]):
+                continue  # "346 of 469 cases": a fraction quoted from an outside record (e.g. a CDC cluster), not a catalog count
             check(int(m.group(1)) in allowed, f"{name}: '{m.group(0)}' does not match the catalog ({sorted(allowed)})")
         for m in re.finditer(r"In this site&#x27;s (?:audit|review) of (\d+) cases, (\d+) were never corrected by the original pusher "
                              r"\((\d+) fact-checked only; (\d+) with no fact-check on file\)", h):
@@ -506,6 +508,7 @@ def validate_watch(bs, pages_txt):
                 if "<table" in secblk:
                     check('class="src"' in secblk or "downloads/" in secblk, f"{sec.slug}: a section with a data table has no source link")
     validate_watch2(pages_txt, ws)
+    validate_site_apply(pages_txt, bs)
     st = ws.get("trump-watch.html", {})
     if (OUT / "trump-watch.html").exists():
         h = pages_txt["trump-watch.html"]
@@ -561,6 +564,35 @@ def validate_watch(bs, pages_txt):
         check(not (OUT / slug).exists(), f"{slug} exists but planned sections must not be built yet")
 
 
+def validate_site_apply(pages_txt, bs):
+    """checkpoint-review/site-apply.json: cut rows never render; rows with an overlay show the corrected text, not the old text."""
+    sa_path = W / "checkpoint-review" / "site-apply.json"
+    if not sa_path.exists():
+        return
+    sa = json.loads(sa_path.read_text(encoding="utf-8"))
+    ov = json.loads((SITE / "watch-data" / "site-apply-overlay.json").read_text(encoding="utf-8"))["rows"]
+    st = bs.get("site_apply", {})
+    check(st.get("entries") == len(sa["entries"]) == sa["counts"]["entries"], f"site-apply entries: build saw {st.get('entries')}, file has {len(sa['entries'])} (counts says {sa['counts']['entries']})")
+    ids = {x["id"] for x in sa["entries"]}
+    check(set(ov) <= ids, f"site-apply overlay rows not in site-apply.json: {sorted(set(ov) - ids)}")
+    plain = html_mod.unescape(re.sub(r"<[^>]+>", " ", " ".join(pages_txt.values())))
+    plain = re.sub(r"\s+", " ", plain)
+    def frag(t):
+        t = t.split("|", 1)[-1].split(":", 1)[-1] if "TRUTH:" in t else t
+        return re.sub(r"\s+", " ", t).strip()[:70]
+    by_id = {x["id"]: x for x in sa["entries"]}
+    for i, o in ov.items():
+        old = frag(by_id[i]["old_text"]); new = frag(o["Text"].split("Our view:")[0])
+        kept = re.sub(r"\s+", " ", o["Text"])
+        check(old == new or old in kept or old not in plain, f"site-apply {i}: old text still on the site: {old[:50]}")
+        check(new in plain, f"site-apply {i}: corrected text not found on the site: {new[:50]}")
+    for x in sa["entries"]:
+        if "cut it" in (x.get("verdict") or ""):
+            f = frag(x["old_text"])
+            check(len(f) < 30 or f not in plain, f"site-apply {x['id']} is marked '{x['verdict']}' but its text is on the site: {f[:50]}")
+    check("290" not in ids, "site-apply entry 290 should have been dropped (item now Verified)")
+
+
 def validate_watch2(pages_txt, ws):
     """Checks for the watch2 pages (accountability, energy, voters, Floyd, censorship), trump-watch additions, opinion and balance."""
     allh = "\n".join(pages_txt.values())
@@ -582,12 +614,17 @@ def validate_watch2(pages_txt, ws):
                 check(html_mod.escape(q[:60]) in h or q[:60] in h, f"trump-watch monuments quote missing: {q[:50]}")
     if (OUT / "accountability-fraud.html").exists():
         h = pages_txt["accountability-fraud.html"]
-        check(not re.search(r"(?i)grand total|total fraud[^.]{0,40}\$\d", h), "accountability-fraud: no numeric grand total may be shown")
+        txt = re.sub(r"<[^>]+>", "", h)
+        check(not re.search(r"(?i)(grand total|total fraud)[^.]{0,40}\$\d", txt), "accountability-fraud: no numeric grand total may be shown")
+        check("no single &quot;grand total&quot;" in h, "accountability-fraud: the no-grand-total explanation is missing")
     if (OUT / "accountability-omar.html").exists():
         check("Unresolved" in pages_txt["accountability-omar.html"], "accountability-omar: the verdict label must be Unresolved")
     if (OUT / "voters.html").exists():
         h = pages_txt["voters.html"]
-        check("Hickenlooper" in h and not re.search(r'<img[^>]*(hickenlooper|letter)', h, re.I), "voters: Hickenlooper box must have no letter image")
+        # Sep 24, 2026: the user supplied the letter image; only the redacted (name-blurred) copy may be shown.
+        imgs = re.findall(r'<img[^>]*src="([^"]*(?:hickenlooper|letter)[^"]*)"', h, re.I)
+        check("Hickenlooper" in h and all(s.endswith("-redacted.jpg") for s in imgs), "voters: Hickenlooper letter image must be the redacted copy")
+        check(not (OUT / "images" / "voters" / "hickenlooper-save-act-letter-2026-03-20.jpg").exists(), "voters: unredacted letter image must not be published")
         check("Dear " not in h, "voters: the letter recipient's name must not appear")
         check((OUT / "downloads" / "population-voters.xlsx").exists(), "voters: workbook download missing")
     if (OUT / "unsupported.html").exists():

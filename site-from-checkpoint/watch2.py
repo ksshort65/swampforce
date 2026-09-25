@@ -474,6 +474,31 @@ def build_acc_omar(H):
     return html_out, {"label": "Unresolved (no official finding)", "reported": len(rep)}
 
 
+def refugee_funding_section(H):
+    L = H.src_link
+    CJ23 = "https://acf.gov/sites/default/files/documents/olab/fy-2023-congressional-justification.pdf"
+    CJ24 = "https://acf.gov/sites/default/files/documents/olab/fy-2024-congressional-justification.pdf"
+    CJ25 = "https://acf.gov/sites/default/files/documents/olab/fy-2025-congressional-justification.pdf"
+    OIG = "https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf"
+    rows = [
+        ("HHS Office of Refugee Resettlement (Refugee & Entrant Assistance), budget authority", "FY2021", "$2,221,731,150 final appropriation, plus $1,913,483,405 FY2021 supplemental", L(CJ23, "ACF FY2023 Congressional Justification, p. 40")),
+        ("", "FY2022", "$8,925,214,000 final", L(CJ24, "ACF FY2024 Congressional Justification, p. 43")),
+        ("", "FY2023", "$10,608,154,000 final", L(CJ25, "ACF FY2025 Congressional Justification, p. 45")),
+        ("", "FY2024", "$6,427,214,000 (continuing-resolution level shown in the FY2025 request)", L(CJ25, "ACF FY2025 Congressional Justification, p. 45")),
+        ("HHS Ukraine supplemental appropriations", "FY2022\u201324", "$3.78 billion; about 259,000 Ukrainians paroled, about 135,000 of whom received ORR assistance", L("https://www.gao.gov/products/gao-26-107815", "GAO-26-107815")),
+        ("FEMA shelter grants for released noncitizens (EFSP-H and the Shelter and Services Program)", "FY2023\u201324", "Nearly $1.4 billion awarded (as of Sep 30, 2024): $425 million to the National Board for EFSP-H (FY2023) and about $1 billion to 84 non-federal entities under SSP", L(OIG, "DHS OIG-26-04, Apr 22, 2026")),
+        ("", "Audit result", "The OIG questioned $425 million in EFSP-H costs and $16.5 million in SSP costs and found FEMA did not verify against duplicate funding. DHS terminated the SSP awards. Questioned costs are an audit finding, not a finding of fraud.", L(OIG, "DHS OIG-26-04")),
+        ("State Department refugee processing and resettlement funding", "FY2024 / FY2025", "$2.8 billion (FY2024); $5.1 billion estimated (FY2025)", L("https://www.state.gov/wp-content/uploads/2024/10/Report-Proposed-Refugee-Admissions-for-FY25.pdf", "Report to Congress on Proposed Refugee Admissions for FY2025")),
+        ("CBO projection: 2021\u20132026 immigration surge (8.7 million people)", "2024\u20132034", "Adds $1.2 trillion in revenues and $0.3 trillion in outlays (mandatory spending and interest); net deficit reduction $0.9 trillion. A projection, not an accounting of spending.", L("https://www.cbo.gov/publication/60165", "CBO, July 2024")),
+        ("New York City shelter for asylum seekers", "FY2024", "Hotel Association of NYC contract averaged $156 per room per night; emergency hotel shelter including services averaged $332 per day", L("https://comptroller.nyc.gov/reports/comparing-per-diem-hotel-and-service-costs-for-shelter-for-asylum-seekers/", "NYC Comptroller")),
+    ]
+    trs = "".join(f'<tr><td data-l="Program">{e(a)}</td><td data-l="Period">{e(b)}</td><td data-l="Amount (as published)">{e(c)}</td><td data-l="Primary source">{d}</td></tr>' for a, b, c, d in rows)
+    inner = ('<p>Amounts exactly as published by the agency or office named. Figures come from different programs, levels of government and fiscal years and are not added together. ORR budget authority covers all ORR programs (refugees, unaccompanied children, Cuban/Haitian entrants, Afghan and Ukrainian parolees), not parole alone.</p>'
+             f'<div class="table-wrap"><table class="watch-table"><thead><tr><th>Program</th><th>Period</th><th>Amount (as published)</th><th>Primary source</th></tr></thead><tbody>{trs}</tbody></table></div>')
+    return section("cb-funding", "Taxpayer funding: refugees, parole and shelter", inner), len(rows)
+
+
+
 def build_acc_covid(H):
     text = (ACC / "covid-border.md").read_text(encoding="utf-8")
     md = MD(H); rep = []
@@ -499,12 +524,13 @@ def build_acc_covid(H):
         else:
             r = md.render(lines, rep_sink=rep)
         parts.append(section("cb-" + t.split(".")[0], t, r))
-    body = f'<div class="tile-grid">{"".join(tiles)}</div>' + "".join(parts) + law_chips(H, "covid-border.md") + rep_box(H, rep)
+    fund_html, n_fund = refugee_funding_section(H)
+    body = f'<div class="tile-grid">{"".join(tiles)}</div>' + "".join(parts) + fund_html + law_chips(H, "covid-border.md") + rep_box(H, rep)
     html_out = _acc_page(H, "accountability-covid-border.html", "COVID-19 and the Border: Orders, Title 42 and the Record",
                          "COVID-era orders, CBP encounters and Title 42 expulsions, official COVID-origin assessments and claim checks.",
                          "Federal and state orders, CBP encounter data, official origin assessments and COVID-era claims checked against later official records.",
                          body, charts)
-    return html_out, {"months": len(months), "title42_total": t42, "reported": len(rep)}
+    return html_out, {"months": len(months), "title42_total": t42, "reported": len(rep), "funding_rows": n_fund}
 
 
 def build_acc_hub(H):
@@ -552,6 +578,74 @@ def _copy_img(src, dst_name, width=1200):
 
 def _fig(src, alt, cap):
     return f'<figure class="watch-fig"><img src="{src}" alt="{e(alt)}" loading="lazy" width="1200"><figcaption>{cap}</figcaption></figure>'
+
+
+IAEA = "https://www.iaea.org/sites/default/files/documents/{}.pdf"
+JCPOA_TEXT = "https://2009-2017.state.gov/documents/organization/245317.pdf"
+CPI_ROWS = [  # BLS CPI-U, U.S. city average, all items, not seasonally adjusted (CUUR0000SA0), January of inauguration year
+    ("George W. Bush", "Jan 2001 \u2013 Jan 2009 (8 yrs)", 175.100, 211.143, 8.0, "R 2001\u201307; D 2007\u201309", "50\u201350 in 2001 (control changed twice), D 2001\u201303, R 2003\u201307, D 2007\u201309"),
+    ("Barack Obama", "Jan 2009 \u2013 Jan 2017 (8 yrs)", 211.143, 242.839, 8.0, "D 2009\u201311; R 2011\u201317", "D 2009\u201315; R 2015\u201317"),
+    ("Donald Trump (1st term)", "Jan 2017 \u2013 Jan 2021 (4 yrs)", 242.839, 261.582, 4.0, "R 2017\u201319; D 2019\u201321", "R 2017\u201321"),
+    ("Joe Biden", "Jan 2021 \u2013 Jan 2025 (4 yrs)", 261.582, 317.671, 4.0, "D 2021\u201323; R 2023\u201325", "D 2021\u201325 (50\u201350 with VP tiebreak 2021\u201323)"),
+    ("Donald Trump (2nd term, partial)*", "Jan 2025 \u2013 Aug 2026 (19 mo)", 317.671, 334.980, 19 / 12, "R 2025\u2013", "R 2025\u2013"),
+]
+
+
+def inflation_section(H):
+    rows, labels, vals = [], [], []
+    for who, term, a, b, yrs, house, senate in CPI_ROWS:
+        cum = b / a - 1; ann = (b / a) ** (1 / yrs) - 1
+        labels.append(who.replace(" (2nd term, partial)*", " II*").replace(" (1st term)", " I")); vals.append(round(cum * 100, 1))
+        rows.append(f'<tr><td data-l="President">{e(who)}</td><td data-l="Term">{e(term)}</td><td data-l="CPI-U start \u2192 end">{a:.3f} \u2192 {b:.3f}</td>'
+                    f'<td data-l="Cumulative">{cum * 100:.1f}%</td><td data-l="Average annual">{ann * 100:.1f}%</td><td data-l="House">{e(house)}</td><td data-l="Senate">{e(senate)}</td></tr>')
+    chart = {"id": "chart-cpi-pres", "type": "bar", "labels": labels, "data": vals, "colors": ["#16325c"] * 4 + ["#b45309"], "fmt": "pct"}
+    tbl = ('<div class="table-wrap"><table class="watch-table"><thead><tr><th>President</th><th>Term measured</th><th>CPI-U start \u2192 end</th><th>Cumulative change</th><th>Average annual</th><th>House majority</th><th>Senate majority</th></tr></thead>'
+           f'<tbody>{"".join(rows)}</tbody></table></div>')
+    inner = ('<p>Consumer prices (CPI-U, all items, U.S. city average, not seasonally adjusted) from each inauguration month to the next. Only the price index is shown; no cause is assigned to any president or Congress.</p>'
+             + H.chart_card("chart-cpi-pres", "Cumulative CPI-U change by presidential term (%)", "Inauguration month to next inauguration month; last bar is a partial term")
+             + tbl
+             + '<p class="muted-note">* Partial term: January 2025 to August 2026, the latest month published. Its cumulative figure is not comparable with completed four- and eight-year terms; its average annual rate is annualized from 19 months. '
+               'Average annual = compound rate over the term. Majorities are by Congress; the 2001 Senate was split 50\u201350 and changed control in January and June 2001.</p>'
+             + src_line(H, [("BLS CPI-U series CUUR0000SA0", "https://data.bls.gov/timeseries/CUUR0000SA0"), ("Senate party division", "https://www.senate.gov/history/partydiv.htm"),
+                            ("House party divisions", "https://history.house.gov/Institution/Party-Divisions/Party-Divisions/")]))
+    return section("en-cpi", "Consumer prices by presidential term", inner), chart
+
+
+def iaea_section(H):
+    I = lambda d, lbl=None: H.src_link(IAEA.format(d), lbl or d.upper().replace("GOVINF", "GOV/INF/").replace("GOV-INF-", "GOV/INF/").replace("GOV", "GOV/").replace("//", "/").replace("-", "/"))
+    rows = [
+        ("Feb 2007", "Natanz Fuel Enrichment Plant put into operation.", "", I("gov2010-10", "GOV/2010/10")),
+        ("21 Sep 2009", "Iran informs the IAEA of a new enrichment plant near Qom (Fordow).", "", I("gov2009-74", "GOV/2009/74")),
+        ("22 Nov 2009", "Inventory verification: 21,140 kg natural UF6 fed since Feb 2007; 1,808 kg low-enriched UF6 produced.", "Up to 3.47%", I("gov2010-10", "GOV/2010/10")),
+        ("9\u201310 Feb 2010", "Feeding of low-enriched UF6 begins at the Natanz pilot plant to produce UF6 enriched up to 20%; inspectors arriving 10 Feb are told feeding began the previous evening.", "Up to 20%", I("gov2010-10", "GOV/2010/10")),
+        ("May 2013", "Total produced since 2007: 8,960 kg UF6 up to 5% and 324 kg UF6 up to 20%.", "Up to 5% / 20%", I("gov2013-27", "GOV/2013/27")),
+        ("16 Jan 2016", "JCPOA Implementation Day: IAEA verifies Iran is not enriching above 3.67% and holds no more than 300 kg UF6 enriched up to 3.67% (equal to 202.8 kg of uranium).", "\u2264 3.67%", I("gov-inf-2016-1", "GOV/INF/2016/1") + " " + I("gov2018-47", "GOV/2018/47 (conversion)")),
+        ("Nov 2018", "Stockpile 149.4 kg uranium, under the cap.", "\u2264 3.67%", I("gov2018-47", "GOV/2018/47")),
+        ("May 2019", "Stockpile 174.1 kg uranium, under the cap.", "\u2264 3.67%", I("gov2019-21", "GOV/2019/21")),
+        ("1 Jul 2019", "IAEA verifies the stockpile at 205.0 kg uranium, exceeding the 202.8 kg JCPOA limit.", "\u2264 3.67%", I("govinf2019-8", "GOV/INF/2019/8")),
+        ("8 Jul 2019", "IAEA verifies enrichment above 3.67%; Iran states about 4.5%.", "~4.5% (Iran\u2019s figure)", I("govinf2019-9", "GOV/INF/2019/9")),
+        ("4 Jan 2021", "Enrichment up to 20% resumes.", "Up to 20%", I("gov2021-39", "GOV/2021/39")),
+        ("23 Feb 2021", "Iran stops implementing its JCPOA commitments altogether, including the Additional Protocol; many IAEA verification and monitoring activities end.", "", I("gov2021-10", "GOV/2021/10") + " " + I("gov2025-50", "GOV/2025/50 \u00b66")),
+        ("17 Apr 2021", "Production of UF6 enriched up to 60% begins at the Natanz pilot plant (Iran declared 55.3% for the first product).", "Up to 60%", I("govinf2021-28", "GOV/INF/2021/28")),
+        ("30 Aug 2021", "Total enriched stockpile 2,441.3 kg, including 10.0 kg up to 60%.", "Up to 60%", I("gov2021-39", "GOV/2021/39")),
+        ("Jun 2022", "Iran removes all IAEA JCPOA-related surveillance and monitoring equipment; the IAEA says continuity of knowledge on centrifuges, heavy water and ore concentrate cannot be restored.", "", I("gov2025-50", "GOV/2025/50 \u00b67")),
+        ("13 May 2023", "Total enriched stockpile 4,744.5 kg, including 114.1 kg up to 60%.", "Up to 60%", I("gov2023-24", "GOV/2023/24")),
+        ("12 Jun 2025", "IAEA Board of Governors resolution finds Iran in non-compliance with its safeguards obligations.", "", I("gov2025-38", "GOV/2025/38")),
+        ("13 Jun 2025", "IAEA estimate: total enriched stockpile 9,874.9 kg, including 440.9 kg up to 60% (432.9 kg of it verified). Military attacks on Iranian nuclear facilities took place 13\u201324 June.", "Up to 60%", I("gov2025-50", "GOV/2025/50")),
+        ("Since 13 Jun 2025", "No IAEA access to any safeguarded nuclear facility in Iran except the Bushehr power plant; inspectors withdrawn by end of June; Iran\u2019s law suspending cooperation enacted 2 Jul 2025.", "", I("gov2025-50", "GOV/2025/50")),
+    ]
+    trs = "".join(f'<tr><td data-l="Date">{e(d)}</td><td data-l="What the IAEA recorded">{e(t)}</td><td data-l="Enrichment level">{e(lv) or "\u2014"}</td><td data-l="IAEA report">{src}</td></tr>' for d, t, lv, src in rows)
+    rep = [("Joint Plan of Action (interim deal) took effect 20 Jan 2014; the IAEA report on it (GOV/INF/2014/1) could not be retrieved from iaea.org.", "", "Lead"),
+           ("Oct 26, 2024: stockpile of 6,604.4 kg including 182.3 kg up to 60%, per a confidential IAEA report (GOV/2024/61) as reported by CNN; the report is not posted on iaea.org.", "https://www.cnn.com/2024/11/19/middleeast/iran-nuclear-enrichment-intl-latam", "CNN"),
+           ("Reimposition of UN sanctions (\u201csnapback\u201d) in September 2025 is disputed between the parties; not confirmed here from a primary UN record.", "", "Lead")]
+    inner = ('<p>Dates, enrichment levels, stockpile amounts and inspector access as recorded in IAEA Director General reports to the Board of Governors. Amounts are in kg of uranium unless stated as UF6 (uranium hexafluoride). '
+             f'The 2015 nuclear deal: {H.src_link(JCPOA_TEXT, "Joint Comprehensive Plan of Action, official text (State Department archive)")}. '
+             f'The United States ceased participation on 8 May 2018 ({H.src_link("https://trumpwhitehouse.archives.gov/presidential-actions/ceasing-u-s-participation-jcpoa-taking-additional-action-counter-irans-malign-influence-deny-iran-paths-nuclear-weapon/", "presidential memorandum")}). '
+             f'UN Security Council Resolution 2231 endorsed the deal and set Termination Day ten years after Adoption Day (18 Oct 2025) ({H.src_link("https://undocs.org/S/RES/2231(2015)", "S/RES/2231 (2015)")}).</p>'
+             f'<div class="table-wrap"><table class="watch-table"><thead><tr><th>Date</th><th>What the IAEA recorded</th><th>Enrichment level (U-235)</th><th>IAEA report</th></tr></thead><tbody>{trs}</tbody></table></div>'
+             + rep_box(H, rep, title="Reported, not confirmed by primary record: Iran enrichment items"))
+    return section("ir-iaea", "Iran enrichment: IAEA timeline, 2007\u20132025", inner), len(rows)
+
 
 
 def build_energy(H):
@@ -616,14 +710,16 @@ def build_energy(H):
             continue
         s2.append(section("ir-" + (t.split(".")[0] if t[0].isdigit() else "summary"), ("Iran and fuel prices: " if not t[0].isdigit() else "") + (t if t[0].isdigit() else "plain-English summary"),
                           (_fig(imgs["iran-energy-prices-2026"], "Oil and gasoline prices, Nov 2025 – Sep 2026", "Brent, WTI and U.S. gasoline with the war start (Feb 28, 2026) and key events marked. EIA data.") if not t[0].isdigit() else "") + md.render(lines, rep_sink=rep)))
+    cpi_html, cpi_chart = inflation_section(H); charts.append(cpi_chart)
+    iaea_html, n_iaea = iaea_section(H)
     body = (head("Watch", "Energy: Gas Prices, Refiners and the Iran War",
                  "Why gas costs more than at the 2008 peak even with cheaper crude, where each dollar at the pump goes, and how the 2026 U.S.–Iran conflict moved prices, from EIA, BLS, SEC, Treasury, DOE and regulator records.")
-            + legend() + toc([("en-gas", "Gas vs. oil"), ("en-data", "Data tables"), ("ir-summary", "Iran summary"), ("ir-1", "Timeline"), ("ir-2", "Prices"), ("ir-3", "Hormuz"), ("ir-7", "SPR")])
-            + f'<div class="tile-grid">{"".join(tiles)}</div>' + s1_html + data_html + "".join(s2) + rep_box(H, rep)
+            + legend() + toc([("en-gas", "Gas vs. oil"), ("en-data", "Data tables"), ("en-cpi", "CPI by term"), ("ir-summary", "Iran summary"), ("ir-1", "Timeline"), ("ir-2", "Prices"), ("ir-3", "Hormuz"), ("ir-7", "SPR"), ("ir-iaea", "IAEA enrichment")])
+            + f'<div class="tile-grid">{"".join(tiles)}</div>' + s1_html + data_html + cpi_html + "".join(s2) + iaea_html + rep_box(H, rep)
             + reader_path([("gas-gap.html", "Gas Price Gap Tracker"), ("accountability.html", "Accountability trackers"), ("about.html", "Methodology")]))
     html_out = H.page("energy.html", "Energy: Gas Prices, Refiners and the Iran War · Swamp Force",
                       "Gas vs. oil prices since 2008, pump-price components, refiner profits, official findings, and the 2026 U.S.–Iran conflict's effect on fuel.", body, charts=charts, serious=True)
-    return html_out, {"gas_now": now, "peak_2008": peak, "peak_real_2026": real, "refining_change_cents": refining, "refiner_q2_2026_b": q2_26, "spr_mbbl": spr, "images": len(imgs), "reported": len(rep)}
+    return html_out, {"gas_now": now, "peak_2008": peak, "peak_real_2026": real, "refining_change_cents": refining, "refiner_q2_2026_b": q2_26, "spr_mbbl": spr, "images": len(imgs), "reported": len(rep), "iaea_rows": n_iaea, "cpi_rows": len(CPI_ROWS)}
 
 SECTIONS2.append(Section("energy.html", "Energy", "Gas vs. oil, refiners, the Iran war", [EN / "oil-vs-gas.md", EN / "iran-energy.md", EN / "charts"], build_energy))
 
@@ -655,6 +751,72 @@ def _fmt(v):
     if isinstance(v, (int, float)):
         return f"{int(v):,}"
     return str(v)
+
+
+SCOTUS_SAVE = "https://www.supremecourt.gov/DocketPDF/26/26A308/423264/20260908101245314_DHS%20v%20League%20of%20Women%20Voters%20Stay%20Application.pdf"
+DOJ_16 = "https://www.justice.gov/opa/pr/department-justice-charges-16-individuals-illegal-voting-and-related-election-crimes"
+GA_AUDIT = "https://justthenews.com/sites/default/files/2024-10/FILE_7419.pdf"
+HR22_TEXT = "https://www.congress.gov/bill/119th-congress/house-bill/22/text"
+HR22_GPO = "https://www.govinfo.gov/content/pkg/BILLS-119hr22eh/html/BILLS-119hr22eh.htm"
+USC611 = "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section611&num=0&edition=prelim"
+USC1015 = "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1015&num=0&edition=prelim"
+NJ_0721 = "https://www.nj.gov/governor/news/2026/20260721a.shtml"
+HICK_VERDICTS = {}
+
+
+def hick_letter(H):
+    """Sen. Hickenlooper constituent letter (Mar 20, 2026): redacted image + statement-by-statement check."""
+    from PIL import Image
+    src = WD / "hickenlooper-letter-2026-03-20-redacted.jpg"
+    d = OUT / "images" / "voters"; d.mkdir(parents=True, exist_ok=True)
+    out = d / "hickenlooper-save-act-letter-2026-03-20-redacted.jpg"
+    if not out.exists() or out.stat().st_mtime < src.stat().st_mtime:
+        im = Image.open(src).convert("RGB")
+        im = im.resize((900, round(im.height * 900 / im.width)), Image.LANCZOS)
+        im.save(out, quality=85, optimize=True)
+    L = H.src_link
+    acc = '<span class="chip green">Accurate</span>'
+    mis = '<span class="badge misleading">Rated misleading</span>'
+    uns = '<span class="chip unresolved">Unsupported</span>'
+    rows = [
+        ("\u201cThe SAVE Act would require states to obtain proof of U.S. citizenship when individuals register to vote in a federal election.\u201d", acc, "Accurate",
+         "H.R. 22 amends the NVRA: \u201cthe State shall not accept and process an application to register to vote in an election for Federal office unless the applicant presents documentary proof of United States citizenship with the application.\u201d It applies to new applications.",
+         L(HR22_TEXT, "H.R. 22 text (congress.gov)") + " " + L(HR22_GPO, "engrossed text (GPO)")),
+        ("\u201cIt would also require states to remove non-citizens from existing voter rolls.\u201d", acc, "Accurate",
+         "New NVRA \u00a78(k): \u201cA State shall remove an individual who is not a citizen of the United States from the official list of eligible voters \u2026 at any time upon receipt of documentation or verified information that a registrant is not a United States citizen.\u201d",
+         L(HR22_GPO, "H.R. 22 engrossed text")),
+        ("\u201cState-issued driver\u2019s licenses wouldn\u2019t be sufficient for eligible voters to prove their citizenship.\u201d", acc, "Accurate",
+         "The accepted documents include a REAL ID\u2013compliant ID \u201cthat indicates the applicant is a citizen of the United States,\u201d or a government photo ID \u201cshowing that the applicant\u2019s place of birth was in the United States.\u201d Any other government photo ID counts \u201conly if presented together with\u201d a birth certificate, naturalization certificate or similar record. A standard license that shows neither citizenship nor birthplace is therefore not enough by itself.",
+         L(HR22_GPO, "H.R. 22 engrossed text")),
+        ("\u201cThe bill would not give states any additional funding to implement these new restrictions.\u201d", acc, "Accurate",
+         "The engrossed text contains no appropriation or authorization of appropriations. The only money provision bars federal agencies from charging states a fee for verification responses.",
+         L(HR22_GPO, "H.R. 22 engrossed text")),
+        ("\u201cNoncitizens voting in federal elections is already illegal and punishable under existing law.\u201d", acc, "Accurate",
+         "18 U.S.C. 611 makes it unlawful for an alien to vote in a federal election (fine, up to 1 year). 18 U.S.C. 1015(f) punishes a false claim of citizenship to register or vote (fine, up to 5 years). Both have a narrow exception for a person raised in the U.S. by citizen parents who reasonably believed he or she was a citizen.",
+         L(USC611, "18 U.S.C. 611") + " " + L(USC1015, "18 U.S.C. 1015")),
+        ("\u201cIt\u2019s also incredibly rare for a noncitizen to even attempt to vote in U.S. elections.\u201d", acc, "Accurate",
+         "Official counts are small next to rolls of millions. Georgia\u2019s 2024 citizenship audit \u201cconclusively\u201d found 20 noncitizens on its rolls, with 156 more needing review. DOJ announced charges against 16 people on Sep 18, 2026 (charges are accusations, not findings). DHS SAVE runs flagged 28,635 <i>potential</i> noncitizens among 65M+ records checked; flags are not confirmations. Limits: attempts cannot be measured directly, and no official national count exists.",
+         L(GA_AUDIT, "Georgia SOS statement (copy)") + " " + L(DOJ_16, "DOJ 26-1082") + " " + L(SCOTUS_SAVE, "U.S. filing, No. 26A308")),
+        ("\u201cEven if they did attempt to, we have protections in place to prevent them.\u201d", mis, "Rated misleading",
+         "Protections exist: the federal registration form requires an attestation, signed under penalty of perjury, that the applicant meets each eligibility requirement including citizenship, and HAVA requires states to match a driver\u2019s license number or the last 4 SSN digits. But official records show they have not prevented every case: New Jersey says a Motor Vehicle Commission software error registered about 6,600 people who said they were not citizens, and about 340 of them voted; Georgia found 20 noncitizens already on its rolls.",
+         L("https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title52-section20508&num=0&edition=prelim", "52 U.S.C. 20508") + " " + L("https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title52-section21083&num=0&edition=prelim", "52 U.S.C. 21083") + " " + L(NJ_0721, "NJ Governor, Jul 21, 2026") + " " + L(GA_AUDIT, "Georgia SOS statement (copy)")),
+    ]
+    HICK_VERDICTS.clear()
+    for q, _, v, _, _ in rows:
+        HICK_VERDICTS[q[1:40]] = v
+    trs = "".join(f'<tr><td data-l="Statement">{e(q)}</td><td data-l="Label" style="white-space:nowrap">{b}</td><td data-l="What the record shows">{r} {s}</td></tr>' for q, b, _, r, s in rows)
+    n_acc = sum(1 for r in rows if r[2] == "Accurate")
+    html_ = (f'<div class="fact-box hick-box" id="hick-letter"><p class="fact-tag">{stamp()}</p>'
+             f'<p><b>Sen. John Hickenlooper constituent letter on the SAVE Act (March 20, 2026).</b> {n_acc} of {len(rows)} factual statements Accurate; 1 Rated misleading. '
+             'The bill checked is H.R. 22 (119th Congress), passed by the House Apr 10, 2025 and not enacted. The recipient\u2019s name is blurred.</p>'
+             '<div class="hick-grid" style="display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:1.25rem;align-items:start">'
+             '<figure class="watch-fig" style="margin:0"><a href="images/voters/hickenlooper-save-act-letter-2026-03-20-redacted.jpg">'
+             '<img src="images/voters/hickenlooper-save-act-letter-2026-03-20-redacted.jpg" alt="Letter from Sen. John Hickenlooper dated March 20, 2026 about the SAVE Act; recipient name blurred" loading="lazy" width="900" style="width:100%;height:auto;border:1px solid #d6d3d1"></a>'
+             '<figcaption>The letter as received (recipient name blurred). Click to enlarge.</figcaption></figure>'
+             f'<div class="table-wrap"><table class="watch-table"><thead><tr><th>Statement in the letter</th><th>Label</th><th>What the record shows</th></tr></thead><tbody>{trs}</tbody></table></div>'
+             '</div><style>@media(max-width:760px){.hick-grid{grid-template-columns:1fr!important}}</style></div>')
+    return html_, n_acc
+
 
 
 def build_voters(H):
@@ -700,7 +862,7 @@ def build_voters(H):
              H.tile(f"{last[col['EAVS registered voters, total (as published)']] / 1e6:.1f}M", "Registrations on state rolls, 2024", "EAVS; includes inactive records", src=H.src_link("https://www.eac.gov/sites/default/files/2025-07/2024_EAVS_Report_508.pdf", "EAC EAVS 2024")),
              H.tile(f"{last[col['EAVS removals total']] / 1e6:.1f}M", "Removed from rolls, 2022–24 cycle", "Mostly moves, deaths and unanswered notices", src=H.src_link("https://www.eac.gov/sites/default/files/2025-07/2024_EAVS_Report_508.pdf", "EAC")),
              H.tile(f"{last[col['DHS persons naturalized (FY)']]:,}", "Persons naturalized, FY2024", "DHS Yearbook", src=H.src_link("https://ohss.dhs.gov/system/files/2026-06/2026_0604_ohss_yearbook_naturalizations_fy2024.xlsx", "DHS OHSS")),
-             H.tile("28,635", "Potential noncitizens flagged by DHS SAVE", "While verifying 65M+ voters in 26 states; flags are not confirmations", accent=True)]
+             H.tile("28,635", "Potential noncitizens flagged by DHS SAVE", "Government figure in a court filing; 65M+ voters checked in 26 states; flags are not confirmations", accent=True, src=H.src_link(SCOTUS_SAVE, "U.S. stay application, No. 26A308"))]
     # raw table
     keep = [("Year", "Year"), ("PEP total resident population (July 1)", "PEP population"), ("ACS US citizens (B05001)", "ACS citizens"), ("ACS noncitizens (B05001)", "ACS noncitizens"),
             ("ACS CVAP (citizens 18+, B29001/B05003)", "CVAP"), ("EAVS registered voters, total (as published)", "EAVS registered"), ("CPS registered citizens (thousands)", "CPS registered (thous.)"),
@@ -715,6 +877,12 @@ def build_voters(H):
     drows = "".join("<tr>" + "".join(f'<td data-l="{e(dh[k])}">{e(_fmt(v))}</td>' for k, v in enumerate(r[:6])) + "</tr>" for r in disc if r[0])
     disc_html = f'<div class="table-wrap"><table class="watch-table"><thead><tr>{"".join(f"<th>{e(h)}</th>" for h in dh[:6])}</tr></thead><tbody>{drows}</tbody></table></div>'
     rh, rolls = rows("Noncitizens on rolls")
+    # DOJ/AP cumulative totals (70 charged, ~160 arrests) are not in a primary record: replace with the DOJ release itself.
+    rolls = [list(r) for r in rolls]
+    for r in rolls:
+        if str(r[0]).startswith("National: DOJ prosecutions"):
+            r[1:9] = ["Sep 18, 2026", "Individuals charged in one DOJ announcement (voting by an alien, false citizenship claims to register or vote, related offenses)", "", "", "16", "211M+ active",
+                      "DOJ release 26-1082. Charges are accusations; defendants are presumed innocent. No cumulative DOJ total was found in a primary record.", "DOJ-16"]
     rrows = "".join("<tr>" + "".join(f'<td data-l="{e(rh[k])}">{e(_fmt(v))}</td>' for k, v in enumerate(r[:8])) + "</tr>" for r in rolls if r[0] and r[1] and "secondary" not in str(r[8] or ""))
     rolls_html = f'<div class="table-wrap"><table class="watch-table"><thead><tr>{"".join(f"<th>{e(h)}</th>" for h in rh[:8])}</tr></thead><tbody>{rrows}</tbody></table></div>'
     rep = []
@@ -725,7 +893,7 @@ def build_voters(H):
     fs = dict(MD.sections(fnd))
     md = MD(H)
     def fsec(name, pending=False):
-        lines = fs[name]
+        lines = [l for l in fs[name] if "DOJ charged 70" not in l and "HSI reported 160" not in l]
         if name.startswith("Noncitizens and benefits"):
             lines = [l.replace("**Emergency Medicaid, FY2023.**", "**Emergency Medicaid, FY2023.** \u27e6P\u27e7") for l in lines]
         h = md.render(lines, rep_sink=rep).replace("\u27e6P\u27e7", PENDING).replace("summarized by KFF; It", "summarized by KFF. It")
@@ -759,12 +927,7 @@ def build_voters(H):
     gris = ('<div class="answer-box"><p><b>Colorado Secretary of State Jena Griswold.</b> A television statement that she said dead people and noncitizens "should vote" is <span class="chip unresolved">Unsupported</span>: no record of her saying it was found, and her documented statements describe removing deceased voters with state health and SSA death data and rejecting noncitizen registrations. The claim is listed on <a href="unsupported.html">Unsupported claims</a>.</p>'
             '<p><b>The 2022 postcards (as reported by AP and AFP from the Secretary of State\'s statements).</b> On Sep 27, 2022 her office mailed ERIC-required registration-information postcards (not forms or ballots) to about 30,000 noncitizens; a later count was 31,093. The cause was a Department of Revenue list that lacked the formatting needed to screen out noncitizen license holders. The office said the online system rejects noncitizen licenses and SSNs and that it knew of no recipient who registered. '
             + H.src_link("https://www.cbsnews.com/colorado/news/colorado-30000-noncitizens-vote-registration-mailer/", "AP via CBS Colorado") + " " + H.src_link("https://factcheck.afp.com/doc.afp.com.32LA24U", "AFP Fact Check") + "</p></div>")
-    lf = (PV / "letter-factcheck.md").read_text(encoding="utf-8")
-    claims_tbl = "\n".join(next(l for t, l in MD.sections(lf) if t.startswith("Claim-by-claim"))).split("**Statutes behind")[0].splitlines()
-    n_acc = len(re.findall(r"\| \*\*Accurate\*\*", "\n".join(claims_tbl)))
-    hick = (f'<div class="fact-box hick-box"><p class="fact-tag">{stamp()}</p><p><b>Sen. John Hickenlooper SAVE Act letter (March 20, 2026): {n_acc} claims, all Accurate.</b> '
-            'Each claim in the senator\'s constituent letter was checked against the bill texts (H.R. 22 and the SAVE America Act text in S. 1383), federal statutes and official counts.</p>'
-            f'<details class="watch-details"><summary>The {n_acc} claims and the basis for each</summary>{md.render(claims_tbl, rep_sink=rep)}</details></div>')
+    hick, n_acc = hick_letter(H)
     # download
     dl = OUT / "downloads"; dl.mkdir(exist_ok=True)
     shutil.copy2(PV / "population-voters.xlsx", dl / "population-voters.xlsx")
@@ -782,7 +945,8 @@ def build_voters(H):
                       + H.chart_card("chart-co", "Colorado registrations (EAVS)", "Total incl. inactive")
                       + "</div>" + raw + src_line(H, PV_SRC))
             + section("pv-findings", "Findings in brief", findings, primary=False)
-            + section("pv-rolls", "Noncitizens on voter rolls: official counts", '<p>Official counts are small next to rolls of millions. Flags are not confirmations, and many noncitizen registrations came from government processing errors.</p>' + rolls_html + nj)
+            + section("pv-rolls", "Noncitizens on voter rolls: official counts", '<p>Official counts are small next to rolls of millions. Flags are not confirmations, and many noncitizen registrations came from government processing errors.</p>' + rolls_html
+                      + src_line(H, [("DHS SAVE figure: U.S. stay application, No. 26A308", SCOTUS_SAVE), ("DOJ release 26-1082, Sep 18, 2026", DOJ_16), ("Georgia SOS 2024 citizenship audit statement (copy)", GA_AUDIT), ("Ohio SOS, Jun 3, 2025", "https://www.ohiosos.gov/media-center/press-releases/2025/2025-06-03/")]) + nj)
             + section("pv-disc", "Where official numbers disagree", '<p>Shown side by side; no reconciliation is attempted.</p>' + disc_html + src_line(H, PV_SRC[:1] + PV_SRC[4:6] + [("Census population estimates (Vintage 2025)", "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv")]))
             + section("pv-hum", "Humanitarian and parole programs, Biden period", hum)
             + section("pv-claims", "Claims checked", f'<div class="frames">{harris_card}{reuters_card}</div>{gris}{hick}'
@@ -794,7 +958,7 @@ def build_voters(H):
     html_out = H.page("voters.html", "Voters & Population: the Raw Numbers · Swamp Force",
                       "Population, citizenship, voter registration and removals, naturalization and noncitizens on the rolls, from Census, EAC, DHS, SSA and state records.", body, charts=charts, serious=True)
     return html_out, {"charts": len(charts), "raw_rows": trs.count("<tr>"), "discrepancies": drows.count("<tr>"), "rolls_rows": rrows.count("<tr>"),
-                      "hickenlooper_claims_accurate": n_acc, "harris": "Rated misleading", "reuters_30k": "Rated misleading", "griswold": "Unsupported", "reported": len(rep) + len(rep_quote)}
+                      "hickenlooper_claims_accurate": n_acc, "hickenlooper_verdicts": HICK_VERDICTS, "harris": "Rated misleading", "reuters_30k": "Rated misleading", "griswold": "Unsupported", "reported": len(rep) + len(rep_quote)}
 
 
 SECTIONS2.append(Section("voters.html", "Voters & Population", "Citizenship, registration, removals, claims", [PV / "population-voters.xlsx", PV / "findings.md", PV / "harris-rolls-claim.md", PV / "letter-factcheck.md"], build_voters))

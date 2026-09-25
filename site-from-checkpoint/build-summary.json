@@ -192,7 +192,8 @@
     "accountability-covid-border.html": {
       "months": 36,
       "title42_total": 2912200,
-      "reported": 3
+      "reported": 3,
+      "funding_rows": 10
     },
     "energy.html": {
       "gas_now": 4.478,
@@ -202,14 +203,25 @@
       "refiner_q2_2026_b": 12.705,
       "spr_mbbl": 284.552,
       "images": 4,
-      "reported": 6
+      "reported": 6,
+      "iaea_rows": 19,
+      "cpi_rows": 5
     },
     "voters.html": {
       "charts": 6,
       "raw_rows": 21,
       "discrepancies": 27,
       "rolls_rows": 14,
-      "hickenlooper_claims_accurate": 7,
+      "hickenlooper_claims_accurate": 6,
+      "hickenlooper_verdicts": {
+        "The SAVE Act would require states to ob": "Accurate",
+        "It would also require states to remove ": "Accurate",
+        "State-issued driver\u2019s licenses wouldn\u2019t": "Accurate",
+        "The bill would not give states any addi": "Accurate",
+        "Noncitizens voting in federal elections": "Accurate",
+        "It\u2019s also incredibly rare for a nonciti": "Accurate",
+        "Even if they did attempt to, we have pr": "Rated misleading"
+      },
       "harris": "Rated misleading",
       "reuters_30k": "Rated misleading",
       "griswold": "Unsupported",
