@@ -2,8 +2,8 @@
 import filecmp, os, shutil
 from pathlib import Path
 SRC, DST = Path("/workspace"), Path("/workspace/_gh-backup")
-ROOTS = ["_project-state", "site-from-checkpoint", "journal-pilot", "sync_all.py"]
-EX_DIRS = {".venv", "venv", "raw", "__pycache__", "shots", "node_modules", ".git", "memorials", "subs"}
+ROOTS = ["_project-state", "site-from-checkpoint", "journal-pilot", "sync_all.py", "brand"]
+EX_DIRS = {".venv", "venv", "raw", "raw2", "__pycache__", "shots", "node_modules", ".git", "memorials", "subs"}
 EX_EXT = {".zip", ".mp3", ".mp4", ".m4a", ".wav", ".webm", ".mov", ".bak"}
 MAX = 5 * 1024 * 1024
 def skip(p: Path):

@@ -1027,3 +1027,68 @@ a.src { white-space: nowrap; }
 .av-chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 6px; margin: 10px 0 14px; }
 .av-chip { font-family: var(--sans); font-size: .74rem; font-weight: 700; text-align: center; padding: 7px 4px; border-radius: 8px; background: var(--navy-3); color: #fff; }
 .av-chip.empty { background: #e2e8f0; min-height: 30px; }
+
+/* Journal v2: fact cards, source buttons, Listen bar, icons (journal.py) */
+.jr-card-ic{position:relative;padding-left:5.2rem}
+.jr-card-ic .jr-icon{position:absolute;left:1.1rem;top:1.2rem;width:3.4rem;height:3.4rem;color:var(--red)}
+.jr-quote-view{border-left:4px solid var(--opinion-border);background:var(--opinion-bg)}
+.jr-srcbtn{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.25rem .55rem;margin:.35rem .35rem 0 0;padding:.5rem .8rem;min-height:44px;border-radius:10px;
+  background:var(--navy-3);color:#fff;text-decoration:none;font-size:.86rem;line-height:1.2;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.jr-srcbtn:hover,.jr-srcbtn:focus-visible{background:var(--red);color:#fff}
+.jr-srctype{font-weight:700;letter-spacing:.01em}
+.jr-srcgo{opacity:.85;font-size:.8rem}
+.jr-facts-h{margin:1.4rem 0 .5rem;font-weight:800;color:var(--navy-2);font-size:1.05rem}
+.jr-facts-h span{display:block;font-weight:400;color:var(--muted);font-size:.85rem}
+.jr-facts{display:grid;gap:.6rem}
+.jr-fact{border:1px solid var(--line);border-left:4px solid var(--red);border-radius:var(--radius-sm);background:#fff}
+.jr-fact>summary{list-style:none;cursor:pointer;padding:.8rem 2.4rem .8rem .9rem;position:relative;min-height:44px}
+.jr-fact>summary::-webkit-details-marker{display:none}
+.jr-fact>summary::after{content:"+";position:absolute;right:.9rem;top:.65rem;font-size:1.35rem;font-weight:700;color:var(--navy-3)}
+.jr-fact[open]>summary::after{content:"\2212"}
+.jr-fact-sum{display:block;font-weight:600;color:var(--ink);line-height:1.35}
+.jr-fact-type{display:inline-block;margin-top:.35rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--navy-3);
+  background:#eef2f8;border-radius:999px;padding:.15rem .55rem}
+.jr-fact-body{padding:0 .9rem .9rem;color:#1f2937;line-height:1.55;overflow-wrap:anywhere}
+.jr-fact-body p{margin:.1rem 0 .4rem}
+.jr-listen{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;margin:.2rem 0 1rem}
+.jr-listen[hidden]{display:none}
+.jr-listen-lbl{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-right:.2rem}
+.jr-lbtn{min-height:40px;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--navy-3);background:#fff;color:var(--navy-3);font-weight:700;font-size:.85rem;cursor:pointer}
+.jr-lbtn[data-say="play"]{background:var(--navy-3);color:#fff}
+.jr-lbtn.on{background:var(--red);border-color:var(--red);color:#fff}
+.jr-chart-src{margin:.3rem 0 0}
+.jr-hub-sec{margin-top:1.6rem}
+.jr-hub-sec .jr-h2 span{font-size:.8rem;color:var(--muted);font-weight:600;margin-left:.3rem}
+.jr-hub-card h3{margin:.2rem 0 .35rem;font-size:1.08rem;color:var(--navy-2)}
+.jr-jump{margin:.8rem 0 0}
+.jr-jump a{text-decoration:none}
+@media (max-width:480px){.jr-card-ic{padding-left:1.1rem;padding-top:4.6rem}.jr-card-ic .jr-icon{top:1rem;width:2.8rem;height:2.8rem}}
+
+/* Brand: owner's eagle + SwampForce lockup (assets/brand/, fonts/anton-sub.woff) */
+@font-face{font-family:"SF Anton";src:url("fonts/anton-sub.woff") format("woff");font-display:swap}
+:root{--red:#a51d24;--red-hot:#c62828;--brand-cream:#f2ede3;--brand-red-dk:#6e1216}
+.brand{gap:8px}
+.brand-eagle img{width:auto;height:52px;background:none;border-radius:0;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
+.brand-head{display:none}
+.brand-head img{width:40px;height:40px;background:none;border-radius:50%}
+.brand .brand-mark{display:none}
+.brand-word{font-family:"SF Anton",Impact,"Arial Narrow Bold",sans-serif;font-weight:400;font-size:1.9rem;line-height:1;letter-spacing:.03em;
+  text-transform:uppercase;color:var(--brand-cream);-webkit-text-stroke:1px var(--brand-red-dk);paint-order:stroke fill;
+  text-shadow:0 0 1px var(--brand-red-dk),1px 1px 0 var(--brand-red-dk),-1px -1px 0 var(--brand-red-dk),1px -1px 0 var(--brand-red-dk),-1px 1px 0 var(--brand-red-dk)}
+.brand-word sup{font-family:var(--sans);font-size:.38em;-webkit-text-stroke:0;text-shadow:none;vertical-align:super;margin-left:1px}
+@media (max-width:560px){.brand-eagle{display:none}.brand-head{display:inline-block}.brand-word{font-size:1.45rem}.brand{font-size:inherit;letter-spacing:normal}}
+@media (max-width:330px){.brand-head{display:none}.brand .brand-mark{display:inline-block}.brand-word{font-size:1.2rem}}
+.hero-lockup img{width:min(520px,88%);height:auto;margin:0 0 10px -6px;filter:drop-shadow(0 4px 14px rgba(0,0,0,.45))}
+.sf-banner{background:radial-gradient(ellipse at 30% 40%,#12305a 0%,var(--navy) 70%);border-bottom:3px solid var(--red);border-radius:var(--radius);padding:18px 16px 10px;margin:4px 0 18px;text-align:center}
+.sf-banner img{width:min(620px,100%);height:auto;display:inline-block}
+.foot-stamp{display:inline-block;width:92px;height:92px;border-radius:50%;background:var(--brand-cream);padding:4px;margin-bottom:8px;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.foot-stamp img{width:100%;height:100%}
+.mb-stamp img,.sh-stamp img{width:min(260px,100%);height:auto;margin:0 auto;background:var(--brand-cream);border-radius:50%;padding:6px;box-shadow:0 6px 22px rgba(0,0,0,.35)}
+.jr-card-ic .jr-icon{color:var(--brand-cream);opacity:.85}
+.jr-card .jr-srcbtn{background:var(--red)}
+.jr-card .jr-srcbtn:hover{background:#fff;color:var(--navy)}
+.jr-srcbtn,.jr-fact-type,.jr-lbtn,.jr-listen-lbl,.jr-facts-h{font-family:var(--sans)}
+@media (max-width:600px){.jr-charts{grid-template-columns:minmax(0,1fr)!important}.jr-charts .chart-card{min-width:0}}
+@media (max-width:360px){.mast{gap:6px;padding-left:10px;padding-right:10px}.shop-btn{padding:6px 9px}.nav-toggle{padding:6px 10px}.brand-word{font-size:1.15rem}}
+.mb-stamp img,.sh-stamp img{aspect-ratio:1/1;object-fit:contain;max-height:none;width:min(220px,60vw)}
+@media (max-width:720px){.mb-stamp img,.sh-stamp img{width:150px;max-height:none}}

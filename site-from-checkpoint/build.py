@@ -79,6 +79,11 @@ def nav(active):
             + drop("For Lawmakers", "capitol", LAW_MENU, active))
 
 
+BRAND_ART = ('<picture class="brand-eagle"><source srcset="assets/brand/eagle-mark.webp" type="image/webp"><img src="assets/brand/eagle-mark.png" alt="" width="103" height="120"></picture>'
+             '<picture class="brand-head"><source srcset="assets/brand/eagle-head.webp" type="image/webp"><img src="assets/brand/eagle-head.png" alt="" width="128" height="128"></picture>')
+STAMP_PIC = ('<picture><source srcset="assets/brand/stamp.webp" type="image/webp"><img src="assets/brand/stamp.png" alt="Swamp Force stamp" width="480" height="480" loading="lazy"></picture>')
+
+
 def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, serious=False):
     chart_js = ""
     if charts:
@@ -97,13 +102,16 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{canon}">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{canon}">
 <meta property="og:image" content="{DOMAIN}/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Swamp Force stamp: the eagle, SWAMP FORCE, WE THE PEOPLE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@SwampForce">
 <meta name="theme-color" content="#071528">
@@ -113,7 +121,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="mast">
-    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>Swamp Force<sup>™</sup></span></a>
+    <a class="brand" href="index.html" aria-label="SwampForce home">{BRAND_ART}<span class="brand-mark" aria-hidden="true"></span><span class="brand-word">SwampForce<sup>™</sup></span></a>
     <p class="kicker">Vote the file. Not the feeling.</p>
     <div class="mast-actions">
       <a class="shop-btn" href="store.html">{ico("cart")}<span>Shop</span></a>
@@ -129,7 +137,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
   <div class="footer-inner">
     {shop_foot}
     <div class="foot-grid{' five' if WATCH_MENU else ''}">
-      <div><p class="foot-brand">Swamp Force™</p>
+      <div><a class="foot-stamp" href="store.html" aria-label="Swamp Force store">{STAMP_PIC}</a><p class="foot-brand">Swamp Force™</p>
         <p>A government-source journal. Compare the action to the speech. Opinion is always labeled
         <span class="op-tag">Opinion</span>.</p>
         <p>© 2026 Renee Stewart · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
@@ -397,6 +405,7 @@ def build_home():
     body = f"""
 <section class="hero" style="background-image:url('images/hero-eagle.jpg')">
  <div class="hero-inner">
+  <picture class="hero-lockup"><source srcset="assets/brand/lockup-light.webp" type="image/webp"><img src="assets/brand/lockup-light.png" alt="SwampForce" width="1100" height="583" fetchpriority="high"></picture>
   <p class="hero-kicker">The record, not the rerun</p>
   <h1>Vote the file.<br>Not the feeling.</h1>
   <p class="dek">{ST['total']} claims about a president. Each one checked against the record that settled it.</p>
@@ -460,7 +469,7 @@ def build_home():
   <p>Readers keep this project running. Every store purchase pays for the research, the hosting, and the brief that goes to Congress.</p>
   <a class="btn big" href="store.html">{ico("cart")} Shop the store</a>
  </div>
- <img src="images/logo.png" alt="Swamp Force logo" loading="lazy">
+ <picture class="mb-stamp"><source srcset="assets/brand/stamp.webp" type="image/webp"><img src="assets/brand/stamp.png" alt="Swamp Force stamp: WE THE PEOPLE" width="480" height="480" loading="lazy"></picture>
 </section>
 </div>
 """
@@ -1060,7 +1069,7 @@ def build_store():
   <div><p class="hero-kicker">The Swamp Force store</p><h1>Wear the file.</h1>
   <p class="dek">Official Swamp Force merch. <b>Every purchase funds this project:</b> the research, the hosting, and the brief that goes to Congress.</p>
   <p class="store-trust">Secure checkout by Printify · Printed and shipped on demand</p></div>
-  <img src="images/logo.png" alt="Swamp Force logo">
+  <picture class="sh-stamp"><source srcset="assets/brand/stamp.webp" type="image/webp"><img src="assets/brand/stamp.png" alt="Swamp Force stamp: WE THE PEOPLE" width="480" height="480"></picture>
  </div>
 </section>
 <div class="wrap">

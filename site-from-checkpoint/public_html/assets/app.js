@@ -239,3 +239,36 @@
   handleHash();
   window.addEventListener('hashchange', handleHash);
 })();
+
+/* Journal Listen button: browser speech only (no hosted audio). Hidden when unsupported. */
+(function () {
+  var bar = document.querySelector('.jr-listen');
+  if (!bar || !('speechSynthesis' in window) || typeof SpeechSynthesisUtterance === 'undefined') return;
+  bar.hidden = false;
+  var synth = window.speechSynthesis, play = bar.querySelector('[data-say="play"]');
+  function text() {
+    var root = document.querySelector('.jr-short'); if (!root) return '';
+    var parts = [];
+    root.querySelectorAll('.jr-h1, .jr-card .jr-big, .jr-card blockquote, .jr-card-lbl, .jr-fact-sum, .jr-view-txt').forEach(function (el) {
+      var t = el.textContent.replace(/\u2197/g, '').trim(); if (t) parts.push(t);
+    });
+    var v = root.querySelector('.jr-view-txt');
+    if (v) parts.splice(parts.length - 1, 0, 'Our view.');
+    return parts.join('. ').replace(/\.\s*\./g, '.');
+  }
+  function reset() { play.classList.remove('on'); play.textContent = '\u25b6 Play'; }
+  bar.addEventListener('click', function (ev) {
+    var b = ev.target.closest('[data-say]'); if (!b) return;
+    var a = b.getAttribute('data-say');
+    if (a === 'play') {
+      if (synth.paused) { synth.resume(); play.classList.add('on'); return; }
+      synth.cancel();
+      var u = new SpeechSynthesisUtterance(text()); u.rate = 1; u.lang = 'en-US';
+      u.onend = reset; u.onerror = reset;
+      synth.speak(u); play.classList.add('on'); play.textContent = '\u25b6 Playing';
+    } else if (a === 'pause') {
+      if (synth.speaking && !synth.paused) { synth.pause(); play.textContent = '\u25b6 Resume'; play.classList.remove('on'); }
+    } else { synth.cancel(); reset(); }
+  });
+  window.addEventListener('pagehide', function () { synth.cancel(); });
+})();

@@ -38,6 +38,63 @@
     "journal-they-forgot-who-they-work-for.html",
     "journal-they-work-for-us.html",
     "article-v.html",
+    "journal-we-the-people.html",
+    "journal-they-opened-the-border.html",
+    "journal-what-the-taxpayer-bought.html",
+    "journal-the-hospital-and-the-morgue.html",
+    "journal-they-want-a-new-constitution.html",
+    "journal-the-docket.html",
+    "journal-call-these-first.html",
+    "journal-the-bill-they-sent.html",
+    "journal-they-let-them-walk.html",
+    "journal-who-got-paid.html",
+    "journal-defund-ice-is-the-tell.html",
+    "journal-the-noise.html",
+    "journal-they-sold-the-split.html",
+    "journal-full-time-or-go-home.html",
+    "journal-the-whole-bill.html",
+    "journal-the-pool.html",
+    "journal-sixty-percent.html",
+    "journal-they-dont-debate-they-flag.html",
+    "journal-division-is-the-product.html",
+    "journal-the-record-not-the-rally.html",
+    "journal-the-republic-not-the-caption.html",
+    "journal-they-clipped-the-tape.html",
+    "journal-one-word.html",
+    "journal-the-hire-is-the-country.html",
+    "journal-they-ran-it-anyway.html",
+    "journal-they-called-it-protest.html",
+    "journal-they-hold-it-by-the-blade.html",
+    "journal-they-published-the-replacement.html",
+    "journal-the-recess-blockade.html",
+    "journal-the-funnel.html",
+    "journal-they-dont-write-the-bills.html",
+    "journal-paying-the-taliban.html",
+    "journal-fema-ran-two-jobs.html",
+    "journal-the-7-billion-machine.html",
+    "journal-the-line-in-the-sand.html",
+    "journal-the-uniparty-mirror.html",
+    "journal-how-the-house-was-captured.html",
+    "journal-what-the-democratic-party-became.html",
+    "journal-what-the-republican-party-became.html",
+    "journal-why-the-lobby-should-be-illegal.html",
+    "journal-why-he-became-the-enemy.html",
+    "journal-the-file-on-the-man.html",
+    "journal-what-he-told-them.html",
+    "journal-the-word-that-never-made-the-docket.html",
+    "journal-this-congress-cannot-police-itself.html",
+    "journal-not-a-part-time-job.html",
+    "journal-what-we-can-do.html",
+    "journal-the-debt-they-will-not-close.html",
+    "journal-a-caption-cannot-be-outlawed.html",
+    "journal-the-floor-not-the-feed.html",
+    "journal-the-law-they-dont-mention.html",
+    "journal-the-caption-was-not-the-charge.html",
+    "journal-a-war-on-americans.html",
+    "journal-the-statute-is-the-end.html",
+    "journal-the-media-ledger.html",
+    "journal-the-democrat-ledger.html",
+    "journal-the-republican-ledger.html",
     "404.html"
   ],
   "stats": {
@@ -259,26 +316,311 @@
       "reported": 4
     },
     "journal.html": {
-      "essays": 3
+      "essays": 60
     },
     "journal-find-them.html": {
       "slug": "find-them",
       "verified_words": 464,
-      "visible_words": 221
+      "visible_words": 219
     },
     "journal-they-forgot-who-they-work-for.html": {
       "slug": "that-is-not-why-they-are-elected",
       "verified_words": 347,
-      "visible_words": 228
+      "visible_words": 152
     },
     "journal-they-work-for-us.html": {
       "slug": "they-work-for-us",
       "verified_words": 542,
-      "visible_words": 253
+      "visible_words": 175
     },
     "article-v.html": {
       "group_count": 20,
       "linked_to_official_record": 20
+    },
+    "journal-we-the-people.html": {
+      "slug": "we-the-people",
+      "verified_words": 1830,
+      "visible_words": 123
+    },
+    "journal-they-opened-the-border.html": {
+      "slug": "they-opened-the-border",
+      "verified_words": 867,
+      "visible_words": 121
+    },
+    "journal-what-the-taxpayer-bought.html": {
+      "slug": "what-the-taxpayer-bought",
+      "verified_words": 478,
+      "visible_words": 120
+    },
+    "journal-the-hospital-and-the-morgue.html": {
+      "slug": "the-hospital-and-the-morgue",
+      "verified_words": 545,
+      "visible_words": 125
+    },
+    "journal-they-want-a-new-constitution.html": {
+      "slug": "they-want-a-new-constitution",
+      "verified_words": 436,
+      "visible_words": 134
+    },
+    "journal-the-docket.html": {
+      "slug": "the-docket",
+      "verified_words": 269,
+      "visible_words": 124
+    },
+    "journal-call-these-first.html": {
+      "slug": "call-these-first",
+      "verified_words": 196,
+      "visible_words": 120
+    },
+    "journal-the-bill-they-sent.html": {
+      "slug": "the-bill-they-sent",
+      "verified_words": 337,
+      "visible_words": 124
+    },
+    "journal-they-let-them-walk.html": {
+      "slug": "they-let-them-walk",
+      "verified_words": 250,
+      "visible_words": 129
+    },
+    "journal-who-got-paid.html": {
+      "slug": "who-got-paid",
+      "verified_words": 546,
+      "visible_words": 140
+    },
+    "journal-defund-ice-is-the-tell.html": {
+      "slug": "defund-ice-is-the-tell",
+      "verified_words": 567,
+      "visible_words": 127
+    },
+    "journal-the-noise.html": {
+      "slug": "the-noise",
+      "verified_words": 234,
+      "visible_words": 116
+    },
+    "journal-they-sold-the-split.html": {
+      "slug": "they-sold-the-split",
+      "verified_words": 226,
+      "visible_words": 132
+    },
+    "journal-full-time-or-go-home.html": {
+      "slug": "full-time-or-go-home",
+      "verified_words": 276,
+      "visible_words": 123
+    },
+    "journal-the-whole-bill.html": {
+      "slug": "the-whole-bill",
+      "verified_words": 498,
+      "visible_words": 130
+    },
+    "journal-the-pool.html": {
+      "slug": "the-pool",
+      "verified_words": 334,
+      "visible_words": 122
+    },
+    "journal-sixty-percent.html": {
+      "slug": "sixty-percent",
+      "verified_words": 820,
+      "visible_words": 122
+    },
+    "journal-they-dont-debate-they-flag.html": {
+      "slug": "they-dont-debate-they-flag",
+      "verified_words": 473,
+      "visible_words": 133
+    },
+    "journal-division-is-the-product.html": {
+      "slug": "division-is-the-product",
+      "verified_words": 1004,
+      "visible_words": 122
+    },
+    "journal-the-record-not-the-rally.html": {
+      "slug": "the-record-not-the-rally",
+      "verified_words": 368,
+      "visible_words": 122
+    },
+    "journal-the-republic-not-the-caption.html": {
+      "slug": "the-republic-not-the-caption",
+      "verified_words": 314,
+      "visible_words": 127
+    },
+    "journal-they-clipped-the-tape.html": {
+      "slug": "they-clipped-the-tape",
+      "verified_words": 540,
+      "visible_words": 126
+    },
+    "journal-one-word.html": {
+      "slug": "one-word",
+      "verified_words": 1042,
+      "visible_words": 141
+    },
+    "journal-the-hire-is-the-country.html": {
+      "slug": "the-hire-is-the-country",
+      "verified_words": 801,
+      "visible_words": 129
+    },
+    "journal-they-ran-it-anyway.html": {
+      "slug": "they-ran-it-anyway",
+      "verified_words": 435,
+      "visible_words": 125
+    },
+    "journal-they-called-it-protest.html": {
+      "slug": "they-called-it-protest",
+      "verified_words": 466,
+      "visible_words": 125
+    },
+    "journal-they-hold-it-by-the-blade.html": {
+      "slug": "they-hold-it-by-the-blade",
+      "verified_words": 435,
+      "visible_words": 129
+    },
+    "journal-they-published-the-replacement.html": {
+      "slug": "they-published-the-replacement",
+      "verified_words": 301,
+      "visible_words": 130
+    },
+    "journal-the-recess-blockade.html": {
+      "slug": "the-recess-blockade",
+      "verified_words": 199,
+      "visible_words": 121
+    },
+    "journal-the-funnel.html": {
+      "slug": "the-funnel",
+      "verified_words": 543,
+      "visible_words": 121
+    },
+    "journal-they-dont-write-the-bills.html": {
+      "slug": "they-dont-write-the-bills",
+      "verified_words": 337,
+      "visible_words": 123
+    },
+    "journal-paying-the-taliban.html": {
+      "slug": "paying-the-taliban",
+      "verified_words": 488,
+      "visible_words": 131
+    },
+    "journal-fema-ran-two-jobs.html": {
+      "slug": "fema-ran-two-jobs",
+      "verified_words": 574,
+      "visible_words": 134
+    },
+    "journal-the-7-billion-machine.html": {
+      "slug": "the-7-billion-machine",
+      "verified_words": 1032,
+      "visible_words": 121
+    },
+    "journal-the-line-in-the-sand.html": {
+      "slug": "the-line-in-the-sand",
+      "verified_words": 169,
+      "visible_words": 134
+    },
+    "journal-the-uniparty-mirror.html": {
+      "slug": "the-uniparty-mirror",
+      "verified_words": 218,
+      "visible_words": 135
+    },
+    "journal-how-the-house-was-captured.html": {
+      "slug": "how-the-house-was-captured",
+      "verified_words": 178,
+      "visible_words": 124
+    },
+    "journal-what-the-democratic-party-became.html": {
+      "slug": "what-the-democratic-party-became",
+      "verified_words": 167,
+      "visible_words": 121
+    },
+    "journal-what-the-republican-party-became.html": {
+      "slug": "what-the-republican-party-became",
+      "verified_words": 153,
+      "visible_words": 122
+    },
+    "journal-why-the-lobby-should-be-illegal.html": {
+      "slug": "why-the-lobby-should-be-illegal",
+      "verified_words": 195,
+      "visible_words": 122
+    },
+    "journal-why-he-became-the-enemy.html": {
+      "slug": "why-he-became-the-enemy",
+      "verified_words": 693,
+      "visible_words": 126
+    },
+    "journal-the-file-on-the-man.html": {
+      "slug": "the-file-on-the-man",
+      "verified_words": 429,
+      "visible_words": 140
+    },
+    "journal-what-he-told-them.html": {
+      "slug": "what-he-told-them",
+      "verified_words": 413,
+      "visible_words": 104
+    },
+    "journal-the-word-that-never-made-the-docket.html": {
+      "slug": "the-word-that-never-made-the-docket",
+      "verified_words": 507,
+      "visible_words": 120
+    },
+    "journal-this-congress-cannot-police-itself.html": {
+      "slug": "this-congress-cannot-police-itself",
+      "verified_words": 395,
+      "visible_words": 124
+    },
+    "journal-not-a-part-time-job.html": {
+      "slug": "not-a-part-time-job",
+      "verified_words": 283,
+      "visible_words": 124
+    },
+    "journal-what-we-can-do.html": {
+      "slug": "what-we-can-do",
+      "verified_words": 811,
+      "visible_words": 130
+    },
+    "journal-the-debt-they-will-not-close.html": {
+      "slug": "the-debt-they-will-not-close",
+      "verified_words": 432,
+      "visible_words": 122
+    },
+    "journal-a-caption-cannot-be-outlawed.html": {
+      "slug": "a-caption-cannot-be-outlawed",
+      "verified_words": 378,
+      "visible_words": 120
+    },
+    "journal-the-floor-not-the-feed.html": {
+      "slug": "the-floor-not-the-feed",
+      "verified_words": 487,
+      "visible_words": 122
+    },
+    "journal-the-law-they-dont-mention.html": {
+      "slug": "the-law-they-dont-mention",
+      "verified_words": 381,
+      "visible_words": 123
+    },
+    "journal-the-caption-was-not-the-charge.html": {
+      "slug": "the-caption-was-not-the-charge",
+      "verified_words": 718,
+      "visible_words": 120
+    },
+    "journal-a-war-on-americans.html": {
+      "slug": "a-war-on-americans",
+      "verified_words": 2792,
+      "visible_words": 107
+    },
+    "journal-the-statute-is-the-end.html": {
+      "slug": "the-statute-is-the-end",
+      "verified_words": 689,
+      "visible_words": 123
+    },
+    "journal-the-media-ledger.html": {
+      "slug": "the-media-ledger",
+      "verified_words": 8368,
+      "visible_words": 139
+    },
+    "journal-the-democrat-ledger.html": {
+      "slug": "the-democrat-ledger",
+      "verified_words": 1446,
+      "visible_words": 131
+    },
+    "journal-the-republican-ledger.html": {
+      "slug": "the-republican-ledger",
+      "verified_words": 1270,
+      "visible_words": 123
     }
   },
   "planned_sections": {},

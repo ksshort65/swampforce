@@ -55,12 +55,81 @@ def S(H, key, label=None):
 _LINK = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
 
 
+_BARE = re.compile(r"https?://[^\s<>()\]]+[^\s<>()\].,;:]")
+
+
+def _dom(u):
+    return re.sub(r"^https?://(www\.)?([^/]+).*", r"\2", u)
+
+
 def _inline(s):
+    """Markdown links, bare URLs ('Record: url', '- label — url') all become real links."""
+    keep = []
+    def _hold(html_):
+        keep.append(html_); return f"\x00{len(keep)-1}\x00"
+    s = _LINK.sub(lambda m: _hold(f'<a href="{e(m.group(2))}" target="_blank" rel="noopener">{e(m.group(1), quote=False)}</a>'), s)
+    s = re.sub(r"\[([^\]]+)\]\(/dispatch/([\w-]+)\)", lambda m: _hold(f'<a href="{REDIRECTS[m.group(2)]}">{e(m.group(1), quote=False)}</a>' if m.group(2) in REDIRECTS else e(m.group(1), quote=False)), s)
+    s = _BARE.sub(lambda m: _hold(f'<a class="src" href="{e(m.group(0))}" target="_blank" rel="noopener">{e(_dom(m.group(0)))} ↗</a>'), s)
     s = e(s, quote=False)
-    s = _LINK.sub(lambda m: f'<a href="{m.group(2)}" target="_blank" rel="noopener">{m.group(1)}</a>', s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"(?<![\w*])_(.+?)_(?![\w*])", r"<em>\1</em>", s)
+    s = re.sub("\x00(\\d+)\x00", lambda m: keep[int(m.group(1))], s)
     return s.replace("<strong>Our view:</strong>", '<span class="op-tag">Our view</span>')
+
+
+# checkpoint-review/site-apply.json: rows marked "cut it" (and rows whose old text was corrected elsewhere) never render here
+def _sa_frags():
+    import json as _j
+    p = ROOT / "checkpoint-review" / "site-apply.json"
+    if not p.exists():
+        return []
+    sa = _j.loads(p.read_text(encoding="utf-8"))
+    try:
+        ovr = _j.loads((SITE / "watch-data" / "site-apply-overlay.json").read_text(encoding="utf-8"))["rows"]
+    except Exception:
+        ovr = {}
+    ov = set()
+    for i, o in ovr.items():  # an overlay whose corrected text still contains the old words is not a removal
+        old_t = next((x["old_text"] for x in sa["entries"] if x["id"] == i), "")
+        old_t = old_t.split("|", 1)[-1].split(":", 1)[-1] if "TRUTH:" in old_t else old_t
+        if re.sub(r"\s+", " ", old_t).strip()[:70] not in re.sub(r"\s+", " ", o["Text"]):
+            ov.add(i)
+    out = []
+    for x in sa["entries"]:
+        if "cut it" in (x.get("verdict") or "") or x["id"] in ov:
+            tx = x["old_text"]
+            tx = tx.split("|", 1)[-1].split(":", 1)[-1] if "TRUTH:" in tx else tx
+            f = re.sub(r"\s+", " ", tx).strip()[:70]
+            if len(f) >= 30:
+                out.append((x["id"], f, re.sub(r"\s+", " ", tx).strip()))
+    return out
+
+
+SA_FRAGS = _sa_frags()
+SA_DROPPED = []  # (page slug, site-apply id, first words) for the report
+
+
+def _plain(s):
+    s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", s)
+    s = re.sub(r"\*\*|__|(?<![\w*])_|_(?![\w*])", "", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def sa_hit(text):
+    p = _plain(text)
+    for i, f, full in SA_FRAGS:
+        if f in p or (len(p) >= 30 and p[:60] in f):
+            return i
+    return None
+
+
+def sa_inside(sentence):
+    """A short sentence that sits inside a site-apply cut/corrected passage."""
+    p = _plain(sentence)
+    for i, f, full in SA_FRAGS:
+        if len(p) >= 12 and p in full:
+            return i
+    return None
 
 
 def body_lines(slug):
@@ -84,6 +153,10 @@ def full_html(slug, notes=None):
     notes = notes or {}
     parts = []
     for s in body_lines(slug):
+        hit = sa_hit(s)
+        if hit:
+            SA_DROPPED.append((slug, hit, _plain(s)[:60]))
+            continue
         extra = "".join(f' <span class="jr-note">[{e(n)}]</span>' for k, n in notes.items() if k in s)
         if s.startswith("### "):
             parts.append(f"<h3>{_inline(s[4:])}</h3>")
@@ -94,22 +167,93 @@ def full_html(slug, notes=None):
     return "\n".join(parts)
 
 
-# ───────────────────────── the short visual format ─────────────────────────
-def essay_page(H, *, slug, fname, series, date, headline, card, points, view, full, chart=None, charts=None, after="", related=()):
-    """card: dict(kind='number'|'quote', big, label, src).  points: list of HTML sentences.  view: list of owner sentences."""
+
+# ───────────────────────── source types ─────────────────────────
+_TYPES = [  # (substring of url, label) first match wins
+    ("oig.dhs.gov", "DHS Inspector General report"), ("oig.hhs.gov", "HHS Inspector General report"),
+    ("oig.justice.gov", "DOJ Inspector General report"), ("oig.usaid.gov", "USAID Inspector General report"),
+    ("sigar.mil", "Inspector General report (SIGAR)"), ("GOVPUB-S-PURL", "Inspector General report (SIGAR)"),
+    ("justice.gov/opa/video", "Official video"), ("durhamreport", "DOJ report"), ("justice.gov/pardon", "DOJ pardon record"),
+    ("justice.gov/usao", "U.S. Attorney record"), ("justice.gov", "Justice Department record"),
+    ("dhs.gov", "DHS release"), ("hhs.gov", "HHS release"),
+    ("constitution.congress.gov", "U.S. Constitution"), ("crs-product", "CRS report"), ("crsreports", "CRS report"),
+    ("congressional-record", "Congressional Record"), ("/plaws/", "Public law"), ("congress.gov/bill", "Congress.gov"),
+    ("congress.gov/1", "Congress.gov"), ("congress.gov", "Congress.gov"),
+    ("law.cornell.edu/uscode", "U.S. Code"), ("law.cornell.edu/supct", "Supreme Court opinion"), ("supreme.justia.com", "Supreme Court opinion"),
+    ("supremecourt.gov/opinions", "Supreme Court opinion"), ("supremecourt.gov", "Supreme Court docket"), ("law.justia.com/cases", "Court opinion"),
+    ("clerk.house.gov/Votes", "House vote"), ("clerk.house.gov", "House Clerk record"), ("oversight.house.gov/roundtable", "House Oversight record"),
+    ("oversight.house.gov", "House Oversight release"), ("docs.house.gov", "House hearing transcript"), ("ethics.house.gov", "House Ethics statement"),
+    ("cha.house.gov", "House committee release"), ("lobbyingdisclosure.house.gov", "House disclosure"), ("house.gov", "Member\u2019s official site"),
+    ("senate.gov", "Senate record"), ("cbp.gov", "CBP data"), ("fbi.gov", "FBI data"), ("bjs.ojp.gov", "BJS data"), ("bls.gov", "BLS data"),
+    ("eia.gov", "EIA data"), ("fiscaldata.treasury.gov", "Treasury data"), ("usaspending.gov", "USASpending"), ("foreignassistance.gov", "Foreign aid data"),
+    ("federalregister.gov", "Executive order"), ("whitehouse", "White House record"), ("state.gov", "State Department"), ("iaea.org", "IAEA report"),
+    ("ecfr.gov", "Federal regulation"), ("fec.gov", "FEC"), ("fema.gov", "FEMA release"), ("govdelivery.com", "FEMA release"), ("gao.gov", "GAO report"),
+    ("c-span.org", "C-SPAN video"), ("courtlistener.com", "Court filing"), ("nycourts.gov", "Court record"), ("courts.state.ny.us", "Court record"),
+    ("nysenate.gov", "NY Senate bill"), ("fultonclerk.org", "Court clerk"), ("ocwr.gov", "OCWR record"), ("web.archive.org", "Archived copy"),
+    ("archive.org", "Book (archive.org)"), ("debates.org", "Debate transcript"), ("dsausa.org", "DSA\u2019s own site"), ("bbc.co.uk", "BBC statement"),
+    ("govinfo.gov", "Government record"), ("simonandschuster.com", "Publisher (audio)"),
+]
+
+
+def src_type(url):
+    for k, v in _TYPES:
+        if k in url:
+            return v
+    return W.domain(url) if hasattr(W, "domain") else re.sub(r"^https?://(www\.)?([^/]+).*", r"\2", url)
+
+
+def src_btn(url, label=None):
+    return (f'<a class="jr-srcbtn" href="{e(url)}" target="_blank" rel="noopener"><span class="jr-srctype">{e(label or src_type(url))}</span>'
+            f'<span class="jr-srcgo">Open the record \u2197</span></a>')
+
+
+# ───────────────────────── icons ─────────────────────────
+_IC = {
+    "money": '<circle cx="32" cy="32" r="22"/><path d="M40 24c-2-3-5-4-8-4-5 0-8 3-8 6 0 8 16 4 16 12 0 3-3 6-8 6-4 0-7-1-9-4M32 16v32"/>',
+    "people": '<circle cx="22" cy="22" r="7"/><circle cx="42" cy="22" r="7"/><path d="M8 50c0-9 6-15 14-15s14 6 14 15M28 50c0-9 6-15 14-15s14 6 14 15"/>',
+    "child": '<circle cx="32" cy="18" r="8"/><path d="M20 54V38c0-7 5-11 12-11s12 4 12 11v16M26 54V42M38 54V42"/>',
+    "doc": '<path d="M18 8h20l10 10v38H18z"/><path d="M38 8v10h10M24 30h18M24 38h18M24 46h12"/>',
+    "capitol": '<path d="M10 54h44M14 54V34h36v20M20 34v20M28 34v20M36 34v20M44 34v20M12 34h40l-20-12z"/><path d="M32 22V10M28 12h8"/>',
+    "scale": '<path d="M32 10v44M20 54h24M12 20h40M12 20l-6 16h12zM52 20l-6 16h12zM6 36a6 4 0 0 0 12 0M46 36a6 4 0 0 0 12 0"/>',
+    "shield": '<path d="M32 8l20 8v14c0 12-8 22-20 26C20 52 12 42 12 30V16z"/><path d="M24 32l6 6 12-12"/>',
+    "chart": '<path d="M10 54h44M16 54V34M28 54V24M40 54V40M52 54V16"/>',
+}
+
+
+def icon(name):
+    return (f'<svg class="jr-icon" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" '
+            f'stroke-linecap="round" stroke-linejoin="round">{_IC.get(name, _IC["doc"])}</svg>')
+
+
+LISTEN = ('<div class="jr-listen" hidden><span class="jr-listen-lbl">Listen</span>'
+          '<button type="button" class="jr-lbtn" data-say="play" aria-label="Play the short version aloud">\u25b6 Play</button>'
+          '<button type="button" class="jr-lbtn" data-say="pause" aria-label="Pause">\u275a\u275a Pause</button>'
+          '<button type="button" class="jr-lbtn" data-say="stop" aria-label="Stop">\u25a0 Stop</button></div>')
+
+
+# ───────────────────────── the short visual format (v2) ─────────────────────────
+def essay_page(H, *, slug, fname, series, date, headline, card, facts, view, full, chart="", charts=None, graphic="", after="", related=()):
+    """card: dict(kind='number'|'quote', big, label, url, type).  facts: [(summary, sentence_html, url, type)].
+    view: list of owner sentences.  Every fact card opens its primary record in a new tab."""
+    btn = src_btn(card["url"], card.get("type")) if card.get("url") else ""
     if card["kind"] == "number":
-        c = (f'<div class="jr-card"><div class="jr-big">{e(card["big"])}</div><p class="jr-card-lbl">{card["label"]}</p>'
-             f'<p class="jr-card-src">{card["src"]} {stamp()}</p></div>')
+        c = (f'<div class="jr-card{" jr-card-ic" if card.get("icon") else ""}">{card.get("icon", "")}<div class="jr-big">{e(card["big"])}</div><p class="jr-card-lbl">{e(card["label"])}</p>'
+             f'<p class="jr-card-src">{btn} {stamp() if btn else ""}</p></div>')
     else:
-        c = (f'<figure class="jr-card jr-quote"><blockquote>\u201c{e(card["big"])}\u201d</blockquote>'
-             f'<figcaption class="jr-card-lbl">{card["label"]}</figcaption><p class="jr-card-src">{card["src"]} {stamp()}</p></figure>')
-    pts = "".join(f"<li>{p}</li>" for p in points)
+        is_view = not card.get("url")
+        c = (f'<figure class="jr-card jr-quote{" jr-quote-view" if is_view else ""}"><blockquote>\u201c{e(card["big"])}\u201d</blockquote>'
+             f'<figcaption class="jr-card-lbl">{"<span class=op-tag>Our view</span> " if is_view else ""}{e(card["label"]) if not is_view else "The owner, in the owner\u2019s words"}</figcaption>'
+             f'{("<p class=jr-card-src>" + btn + " " + stamp() + "</p>") if btn else ""}</figure>')
+    fc = "".join(
+        f'<details class="jr-fact"><summary><span class="jr-fact-sum">{e(s)}</span><span class="jr-fact-type">{e(t or src_type(u))}</span></summary>'
+        f'<div class="jr-fact-body"><p>{sent}</p>{src_btn(u, t)}</div></details>'
+        for s, sent, u, t in facts)
     v = " ".join(e(x) for x in view)
-    ch = chart or ""
     rel = "".join(f'<a class="btn ghost-dark sm" href="{h}">{e(t)}</a> ' for h, t in related)
     short = (f'<div class="jr-short" data-visible-words>'
              f'<p class="jr-kicker">Journal · {e(series)} · {e(date)} · 30-second read</p>'
-             f'<h1 class="jr-h1">{e(headline)}</h1>{c}<ul class="jr-points">{pts}</ul>{ch}'
+             f'<h1 class="jr-h1">{e(headline)}</h1>{LISTEN}{c}{graphic}{chart}'
+             f'<p class="jr-facts-h">The record <span>Tap a card for the detail. Each one opens the source.</span></p><div class="jr-facts">{fc}</div>'
              f'<aside class="jr-view"><p><span class="op-tag">Our view</span> <span class="jr-view-who">The owner, in the owner\u2019s words</span></p>'
              f'<p class="jr-view-txt">{v}</p></aside></div>')
     body = (f'<article class="jr-wrap">{short}'
@@ -117,119 +261,35 @@ def essay_page(H, *, slug, fname, series, date, headline, card, points, view, fu
             f'<p class="jr-full-note">The verified text, checked against primary records on {CHECKED}. Passages marked <span class="op-tag">Our view</span> are opinion.</p>'
             f'{full}</div></details>{after}'
             f'<p class="jr-rel"><a class="btn navy sm" href="journal.html">All journal essays</a> {rel}</p></article>')
-    return H.page(fname, f"{headline} · Swamp Force Journal", re.sub("<[^>]+>", "", points[0])[:155], body, charts=charts, serious=True)
+    import html as _h
+    _pl = re.sub(r"\s+", " ", _h.unescape(re.sub(r"<[^>]+>", " ", body)))
+    bad = [(i, f) for i, f, _ in SA_FRAGS if f in _pl]
+    assert not bad, (slug, bad)
+    desc = (card["big"] + " \u2014 " + card["label"]) if card["kind"] == "number" else card["big"]
+    return H.page(fname, f"{headline} · Swamp Force Journal", desc[:155], body, charts=charts, serious=True)
 
 
 def visible_words(html_text):
+    """Words a reader sees before tapping anything: collapsed fact bodies are not counted."""
     m = re.search(r'<div class="jr-short" data-visible-words>(.*?)</aside></div>', html_text, re.S)
-    t = re.sub(r"<canvas[^>]*>.*?</canvas>", " ", m.group(1), flags=re.S)
+    t = m.group(1)
+    t = re.sub(r'<div class="jr-fact-body">.*?</div></details>', " ", t, flags=re.S)
+    t = re.sub(r'<div class="jr-listen".*?</div>', " ", t, flags=re.S)
+    t = re.sub(r"<canvas[^>]*>.*?</canvas>", " ", t, flags=re.S)
     t = re.sub(r'<span class="vstamp".*?</span>', " ", t, flags=re.S)
+    t = re.sub(r'<span class="jr-srcgo">.*?</span>', " ", t, flags=re.S)
     t = re.sub(r"<[^>]+>", " ", t).replace("↗", " ")
     import html as _h
     return words(_h.unescape(t))
 
 
+# ───────────────────────── the short visual format ─────────────────────────
 STATS = {}
 
 
 def _record(fname, slug, html_out):
     orig = "\n".join(body_lines(slug))
     STATS[fname] = {"slug": slug, "verified_words": words(orig), "visible_words": visible_words(html_out)}
-
-
-# ───────────────────────── (a) Find them ─────────────────────────
-def build_find_them(H):
-    slug, fname = "find-them", REDIRECTS["find-them"]
-    txt = (EV / f"{slug}.md").read_text(encoding="utf-8")
-    for must in ("448,000", "32,000", "291,000", "145,000", "450,000", "Find them. All of them."):
-        assert must in txt, f"find-them: '{must}' no longer in the verified text"
-    chart = H.chart_card("chart-uc", "What the Inspector General counted", "Unaccompanied children, FY2019–2023. \"No court notice\" = no notice to appear served as of May 2024. DHS OIG-24-46.")
-    charts = [{"id": "chart-uc", "type": "bar", "horizontal": True,
-               "labels": ["Handed to HHS", "No court notice", "Missed court"],
-               "data": [448000, 291000, 32000], "colors": ["#16325c", "#b45309", "#7c2d12"], "fmt": "int"}]
-    points = [
-        f"DHS\u2019s own Inspector General found ICE handed more than 448,000 children to HHS in 2019\u20132023 and could not account for the location of every child who was released and then missed court. {S(H, 'oig')}",
-        f"More than 32,000 missed court. As of May 2024, more than 291,000 had never been served a notice to appear, so they had no court date at all. {S(H, 'oig', 'OIG-24-46')}",
-        f"DHS said in February 2026 that the prior administration lost more than 450,000 children and that DHS and HHS have found 145,000. Those are DHS\u2019s own figures. {S(H, 'dhs')}",
-        f"Child sex trafficking and forced labor are already federal felonies. {S(H, '1591')} {S(H, '1589')}",
-    ]
-    html_out = essay_page(
-        H, slug=slug, fname=fname, series="The Border", date="Aug 31, 2026", headline="Find them.",
-        card={"kind": "number", "big": "448,000+",
-              "label": "unaccompanied children ICE handed to HHS, 2019\u20132023. The Inspector General found ICE could not account for all who were released and missed court.",
-              "src": S(H, "oig")},
-        points=points, chart=chart, charts=charts,
-        view=["Find them. All of them.", "The search belongs to the agencies charged with the children, not to a protest line at the door.",
-              "The remedy is the search, the warrant, the home visit, and the court date."],
-        full=full_html(slug), related=[("border.html", "The Border"), ("article-v.html", "Article V")])
-    _record(fname, slug, html_out)
-    return html_out, STATS[fname]
-
-
-# ───────────────────────── (b) They forgot who they work for ─────────────────────────
-def build_forgot(H):
-    slug, fname = "that-is-not-why-they-are-elected", REDIRECTS["that-is-not-why-they-are-elected"]
-    txt = (EV / f"{slug}.md").read_text(encoding="utf-8")
-    assert "maximum warfare, everywhere, all the time" in txt and "break their spirit" in txt
-    points = [
-        f"House members are hired to represent a district, and each swears to support and defend the Constitution. {S(H, 'art1')} {S(H, 'oath')}",
-        f"On April 22, 2026, answering about Virginia\u2019s redistricting fight, Leader Jeffries said: \u201cwe are in an era of maximum warfare, everywhere, all the time.\u201d The remark was about congressional maps. {S(H, 'cspan_full')} {S(H, 'cspan_clip')}",
-        "His May 19 words above were about \u201cMAGA extremists,\u201d meaning MAGA Republicans, and in the same breath he named beating them at the ballot box.",
-        f"Retiring Republican Rep. Michael McCaul, describing Congress after 22 years, said it has become \u201cvery vogue and style to demonize the other side of the aisle,\u201d with \u201cinternecine warfare within our own party.\u201d He was describing Congress, not urging anyone to do anything. {S(H, 'mccaul', 'Fox News Rundown, Jul 12, 2026, at about 4:53 and 5:32')}",
-    ]
-    mccaul_box = (
-        '<details class="jr-full"><summary>About the McCaul quote</summary><div class="jr-full-body">'
-        "<p>The New York Times Magazine (Sep 16, 2026) printed two other McCaul lines: \u201cInternecine warfare is what has become vogue\u201d and "
-        "\u201cYou\u2019re elected to fight and kill the other side.\u201d We listened to the full Fox News Rundown exit interview (Jul 12, 2026). "
-        "Neither line is in it. What he said there, about 4:53 into the episode: \u201cit\u2019s very vogue and style to demonize the other side of the aisle and not, you know, almost vilify them.\u201d "
-        "About 5:32: \u201cyou see that more so today now is internecine warfare within our own party, very much in style and vogue to go after your fellow Republican colleagues.\u201d "
-        "The Times lines are <span class=\"jr-note\">reported, not confirmed by primary record</span>, and are not used here. "
-        f"Times are approximate: the podcast file carries ads that can shift them by a few seconds. {S(H, 'mccaul')}</p></div></details>")
-    html_out = essay_page(
-        H, slug=slug, fname=fname, series="The Republic", date="Sep 17, 2026", headline="They forgot who they work for.",
-        card={"kind": "quote", "big": "Our goal is to break them. We will defeat them. We have to beat them electorally, and then we have to break their spirit.",
-              "label": "House Democratic Leader Hakeem Jeffries, May 19, 2026, CAP IDEAS conference, speaking about MAGA Republicans",
-              "src": S(H, "hj_yt")},
-        points=points,
-        view=["An employee does not declare war on the people who pay him.", "Watch the tape."],
-        full=full_html(slug, {"Chief Justice Roberts issued a statement": "Roberts statement not linked here: reported, not confirmed by primary record"}),
-        after=mccaul_box, related=[("journal-they-work-for-us.html", "They work for us"), ("article-v.html", "Article V")])
-    _record(fname, slug, html_out)
-    return html_out, STATS[fname]
-
-
-# ───────────────────────── (c) They work for us + settlements ─────────────────────────
-def build_work_for_us(H):
-    slug, fname = "they-work-for-us", REDIRECTS["they-work-for-us"]
-    ooc_total, ooc_n = 17240854, 264
-    charts = [
-        {"id": "chart-roll83", "type": "bar", "horizontal": True, "stacked": True, "labels": ["Republicans", "Democrats"], "fmt": "int",
-         "datasets": [{"label": "Send it to the Ethics Committee (yea)", "data": [175, 182], "color": "#57534e"},
-                      {"label": "Vote on release now (nay)", "data": [38, 27], "color": "#b45309"}]},
-        {"id": "chart-roll233", "type": "bar", "horizontal": True, "stacked": True, "labels": ["Republicans", "Democrats", "Independent"], "fmt": "int",
-         "datasets": [{"label": "Yea", "data": [209, 210, 1], "color": "#16325c"}, {"label": "Present", "data": [1, 0, 0], "color": "#b45309"}]}]
-    chart = (f'<div class="jr-charts">{H.chart_card("chart-roll83", "Mar 4, 2026: send the release to committee?", "H.Res. 1100 (Mace) · 357 yea, 65 nay, 1 present · Roll Call 83")}'
-             f'{H.chart_card("chart-roll233", "Jun 30, 2026: release the records?", "H.Res. 1399 (Massie) · 420 yea, 0 nay, 1 present · Roll Call 233")}</div>'
-             f'<p class="jr-chart-src">{S(H, "roll83")} {S(H, "roll233")}</p>')
-    points = [
-        f"That total covers every kind of workplace claim under 13 laws, from overtime and family leave to disability, discrimination and harassment. It was not broken down by claim, and a large share of cases came from legislative-branch offices other than the House and Senate. {S(H, 'ooc')}",
-        f"Since the 2018 CAA Reform Act, members must personally repay harassment awards and settlements. {S(H, 'reform')}",
-        f"On March 4, 2026, the House voted 357\u201365 to send a release resolution to committee. On June 30 it passed another, 420\u20130. {S(H, 'roll83', 'Roll 83')} {S(H, 'roll233', 'Roll 233')}",
-        f"On Aug. 31 the workplace-rights office released dollar totals but withheld the list of member names, citing the law\u2019s confidentiality rule. {S(H, 'ocwr1399')}",
-    ]
-    rec = settlements_record(H)
-    html_out = essay_page(
-        H, slug=slug, fname=fname, series="The Republic", date="Aug 24, 2026", headline="They work for us",
-        card={"kind": "number", "big": f"${ooc_total:,}",
-              "label": f"paid from a Treasury account for {ooc_n} workplace awards and settlements in legislative-branch offices, fiscal 1997\u20132017",
-              "src": S(H, "ooc")},
-        points=points, chart=chart, charts=charts,
-        view=["It\u2019s still theft. Why should we pay for what they do wrong?", "They work for us. They do not threaten us and expect us to pay them."],
-        full=full_html(slug, {"chip in now to the @MNFreedomFund": "Post not linked here: reported, not confirmed by primary record",
-                              "told NBC\u2019s Lester Holt": "Interview not linked here: reported, not confirmed by primary record"}),
-        after=rec, related=[("journal-they-forgot-who-they-work-for.html", "They forgot who they work for"), ("article-v.html", "Article V")])
-    _record(fname, slug, html_out)
-    return html_out, STATS[fname]
 
 
 def settlements_record(H):
@@ -313,31 +373,340 @@ def build_article_v(H):
     return html_out, {"group_count": n_group, "linked_to_official_record": n_rec}
 
 
+
+
+# ───────────────────────── the 57 converted essays ─────────────────────────
+import json as _json, importlib.util as _ilu
+_URL = re.compile(r"https?://[^\s)>\]]+")
+
+
+def _spec():
+    sp = _ilu.spec_from_file_location("essays_spec", JD / "essays_spec.py")
+    m = _ilu.module_from_spec(sp); sp.loader.exec_module(m)
+    return m.S
+
+
+FACTS = {x["slug"]: x for x in _json.loads((JD / "essay-facts.json").read_text(encoding="utf-8"))}
+SPEC = _spec()
+for _s in FACTS:
+    REDIRECTS[_s] = f"journal-{_s}.html"
+
+
+def _lite(s):
+    s = e(s, quote=False)
+    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+    return s.replace("<strong>Our view:</strong>", '<span class="op-tag">Our view</span>')
+
+
+def fact_parts(raw):
+    """digest fact -> (verified sentence html, first url). The sentence is the verified text itself, links reduced to their words."""
+    urls = _URL.findall(raw)
+    t = re.sub(r"^\[(in-view|src|rec)\]\s*", "", raw)
+    kind = re.match(r"^\[(in-view|src|rec)\]", raw)
+    kind = kind.group(1) if kind else ""
+    t = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", r"\1", t)
+    t = re.sub(r"\[([^\]]+)\]\((/[^)\s]+)\)", r"\1", t)
+    if kind == "rec":
+        cells = [c.strip() for c in t.split("|")]
+        cells = [c for c in cells if c and not _URL.fullmatch(c)]
+        head, rest = (cells[0], cells[1:]) if cells else ("", [])
+        html_ = f"<strong>{e(head)}.</strong> " + " ".join(_lite(_URL.sub("", c)) for c in rest)
+    else:
+        t = _URL.sub("", t)
+        t = re.sub(r"^-\s*", "", t)
+        t = re.sub(r"\s*[\u2014-]\s*$", "", t.strip())
+        html_ = _lite(t.strip())
+    return html_.strip(), (urls[0] if urls else "")
+
+
+def _sentences(text, n):
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    text = _URL.sub("", re.sub(r"^-\s*", "", text)).replace("**Our view:**", "").strip()
+    text = re.sub(r"^Our view:\s*", "", text)
+    text = text[:1].upper() + text[1:]
+    parts = re.split(r"(?<=[.!?\u201d])\s+(?=[A-Z\u201c\"'0-9])", text)
+    return [p.strip() for p in parts[:n] if p.strip()]
+
+
+def _digits(s):
+    return re.findall(r"\d[\d,.]*", s)
+
+
+CARD_WARN = []
+
+
+def build_generic(slug):
+    def _b(H):
+        d, sp = FACTS[slug], SPEC[slug]
+        fname = REDIRECTS[slug]
+        facts_raw = d["facts"]
+        k, big, label, fi = sp["card"]
+        url = fact_parts(facts_raw[fi])[1] if fi is not None else ""
+        if k == "n":
+            src_txt = re.sub(r"[,\s]", "", facts_raw[fi])
+            miss = [x for x in _digits(big) if re.sub(r"[,]", "", x).rstrip(".") not in src_txt]
+            if miss:
+                CARD_WARN.append((slug, big, miss))
+        card = {"kind": "number" if k == "n" else "quote", "big": big, "label": label, "url": url}
+        if k == "q":
+            norm = lambda x: re.sub(r"\s+", " ", x.replace("\u2019", "'").replace("\u2018", "'")).lower()
+            if norm(big) not in norm((EV / f"{slug}.md").read_text(encoding="utf-8")):
+                CARD_WARN.append((slug, "quote not verbatim", big))
+        facts = []
+        for i, summ in sp["facts"]:
+            sent, u = fact_parts(facts_raw[i])
+            assert u, (slug, i)
+            assert not sa_hit(re.sub("<[^>]+>", "", sent)) and not sa_inside(re.sub("<[^>]+>", "", sent)), ("site-apply cut text in fact", slug, i)
+            facts.append((summ, sent, u, None))
+        vi, vn = sp["view"]
+        view = [x for x in _sentences(d["views"][vi], vn) if not sa_inside(x)]
+        pool = [x for x in _sentences(d["views"][vi], 99)[vn:]]
+        for j, vt in enumerate(d["views"]):
+            if j != vi:
+                pool += _sentences(vt, 99)
+        seen = set(view)
+        # only plain opinion sentences: no figures, quotations or attributed statements (those need a record link)
+        pool = [x for x in pool if not (x in seen or seen.add(x)) and len(x) > 3 and not sa_inside(x)
+                and not re.search(r"\d|[\u201c\u201d\"]|\b(said|says|posted|told|wrote|tweeted|called)\b", x)]
+        chart, charts, graphic = "", None, ""
+        if sp.get("chart"):
+            title, labels, vals, fmt, cfi = sp["chart"]
+            cid = f"chart-{slug}"[:60]
+            chart = H.chart_card(cid, title, "") + f'<p class="jr-chart-src">{src_btn(fact_parts(facts_raw[cfi])[1])}</p>'
+            charts = [{"id": cid, "type": "bar", "labels": labels, "data": vals, "colors": ["#16325c", "#b22234", "#8a9bb5", "#7c2d12"][:len(vals)], **({"fmt": fmt} if fmt else {})}]
+        elif k == "n":
+            card["icon"] = icon(sp.get("icon", "doc"))
+        full = full_html(slug)
+        def _render(v):
+            return essay_page(H, slug=slug, fname=fname, series=d["series"], date=_date(d["date"]), headline=d["title"],
+                              card=card, facts=facts, view=v, full=full, chart=chart, charts=charts, graphic=graphic,
+                              related=[("journal.html#" + _sid(d["series"]), "More in " + d["series"])])
+        html_out = _render(view)
+        # short essays: add more of the owner's own sentences (still inside the labeled Our view box) toward ~120 visible words
+        while visible_words(html_out) < 120 and pool:
+            nxt = pool.pop(0)
+            trial = _render(view + [nxt])
+            if visible_words(trial) > 180:
+                break
+            view, html_out = view + [nxt], trial
+        _record(fname, slug, html_out)
+        return html_out, STATS[fname]
+    return _b
+
+
+def _date(iso):
+    import datetime as _dt
+    try:
+        return _dt.date.fromisoformat(iso).strftime("%b %-d, %Y")
+    except Exception:
+        return iso
+
+
+def _sid(series):
+    return "s-" + re.sub(r"[^a-z]+", "-", series.lower()).strip("-")
+
+
+L.update({
+    "doj_vid": ("Official video: DOJ/DHS/HHS press conference, Jun 11, 2026", "https://www.youtube.com/watch?v=A8vR-XESWHE&t=493s"),
+    "doj_page": ("Justice Department video page", "https://www.justice.gov/opa/video/doj-dhs-hhs-hold-press-conference-efforts-safeguard-unaccompanied-alien-children"),
+    "oig25": ("DHS Inspector General, OIG-25-21", "https://www.oig.dhs.gov/sites/default/files/assets/2025-03/OIG-25-21-Mar25.pdf"),
+    "hhsoig": ("HHS Inspector General, OEI-07-21-00250", "https://oig.hhs.gov/reports/all/2024/gaps-in-sponsor-screening-and-followup-raise-safety-concerns-for-unaccompanied-children/"),
+    "hhs23": ("HHS release, Jun 2, 2023", "https://www.hhs.gov/about/news/2023/06/02/in-newly-released-audit-report-hhs-announces-new-accountability-team-additional-efforts-protect-safety-well-being-unaccompanied-children.html"),
+    "dhs_nov": ("DHS release, Nov 14, 2025", "https://www.dhs.gov/news/2025/11/14/ice-and-state-local-law-enforcement-287g-partners-launch-initiative-protect"),
+    "dhs_jul": ("DHS release, Jul 25, 2025", "https://www.dhs.gov/news/2025/07/25/dhs-leads-efforts-rescue-child-victims-sex-and-labor-trafficking"),
+    "rt": ("House Oversight roundtable page, Jun 30, 2026", "https://oversight.house.gov/roundtable/catch-and-release-lose-and-forget-addressing-the-crisis-of-unaccompanied-alien-children-part-ii/"),
+    "rt_vid": ("Official roundtable video, at about 46:01", "https://www.youtube.com/watch?v=HT3O3njMTEI&t=2761s"),
+    "rt_rel": ("House Oversight release, Jul 1, 2026", "https://oversight.house.gov/release/roundtable-wrap-up-biden-administration-turned-a-blind-eye-to-immigration-crisis/"),
+    "p1": ("Part I hearing transcript, Jul 23, 2025", "https://docs.house.gov/meetings/GO/GO33/20250723/118526/HHRG-119-GO33-Transcript-20250723.pdf"),
+    "hr7123": ("H.R. 7123 text (congress.gov)", "https://www.congress.gov/119/bills/hr7123/BILLS-119hr7123ih.htm"),
+    "hr7123_info": ("H.R. 7123 all info", "https://www.congress.gov/bill/119th-congress/house-bill/7123/all-info"),
+    "pressley": ("Rep. Pressley\u2019s official transcript, Jan 29, 2026", "https://pressley.house.gov/2026/01/29/watch-in-minneapolis-pressley-omar-condemn-ice-violence-renew-calls-to-abolish-rogue-agency/"),
+})
+
+
+def U(key):
+    return L[key][1]
+
+
+# ───────────────────────── (a) Find them ─────────────────────────
+def build_find_them(H):
+    slug, fname = "find-them", REDIRECTS["find-them"]
+    txt = (EV / f"{slug}.md").read_text(encoding="utf-8")
+    for must in ("448,000", "32,000", "291,000", "Find them. All of them."):
+        assert must in txt, f"find-them: '{must}' no longer in the verified text"
+    chart = H.chart_card("chart-uc", "What the Inspector General counted", "Unaccompanied children, FY2019\u20132023. \u201cNo court notice\u201d = no notice to appear served as of May 2024.") \
+        + f'<p class="jr-chart-src">{src_btn(U("oig"), "DHS Inspector General report")}</p>'
+    charts = [{"id": "chart-uc", "type": "bar", "horizontal": True,
+               "labels": ["Handed to HHS", "No court notice", "Missed court"],
+               "data": [448000, 291000, 32000], "colors": ["#16325c", "#b22234", "#7c2d12"], "fmt": "int"}]
+    facts = [
+        ("448,000+ children handed to HHS. ICE could not account for all who missed court.",
+         "DHS\u2019s own Inspector General found ICE transferred more than 448,000 unaccompanied children to HHS in fiscal 2019\u20132023 and could not account for the location of all who were released and then failed to appear in court. More than 32,000 missed court. More than 291,000 had never been served a notice to appear as of May 2024.",
+         U("oig"), "DHS Inspector General report"),
+        ("31,322 addresses on file were blank, undeliverable or incomplete.",
+         "A follow-up audit (March 2025) of the 448,820 children transferred found the addresses for 31,322 were blank, undeliverable, or missing an apartment number.",
+         U("oig25"), "DHS Inspector General report"),
+        ("HHS check-in calls were late, undocumented, or never reached the child.",
+         f"HHS\u2019s Inspector General (2024): 22% of safety and well-being calls were not made on time, 18% were not documented, and 16% of case files lacked sponsor safety-check documentation. HHS\u2019s own 2023 review: in the cases checked, calls reached the child 66% of the time. {H.src_link(U('hhs23'), 'HHS release, 2023')}",
+         U("hhsoig"), "HHS Inspector General report"),
+        ("What \u201clocated\u201d means, and how the count grew.",
+         f"DHS counts a child as located \u201cin-person, in the United States, through visits and door knocks.\u201d It reported 13,000 located in July 2025 {H.src_link(U('dhs_jul'), 'DHS, Jul 2025')} and 145,000 in February 2026 {H.src_link(U('dhs'), 'DHS, Feb 2026')}. On June 11, 2026 the Secretary said he could not yet release a breakdown of what happened to the children found.",
+         U("dhs_nov"), "DHS release"),
+        ("Jun 30, 2026: the House roundtable on these children had zero Democrats present.",
+         f"House Oversight\u2019s Subcommittee on Federal Law Enforcement held a roundtable, \u201cCatch and Release, Lose and Forget\u2026 Part II,\u201d on June 30, 2026 {H.src_link(U('rt'), 'roundtable page')}. At about 46:01 on the official video, Chairman Clay Higgins (R-LA) said: \u201cthere are zero Democrats present.\u201d The committee\u2019s July 1 release says Democrats \u201cfailed to show up\u201d {H.src_link(U('rt_rel'), 'release')}. The record does not give their reason. At the formal Part I hearing on July 23, 2025, the transcript lists five Democrats present {H.src_link(U('p1'), 'transcript')}.",
+         U("rt_vid"), "Official video (House Oversight)"),
+        ("Two House Democrats, on the record: abolish ICE.",
+         f"Rep. Shri Thanedar (D-MI) introduced H.R. 7123, the \u201cAbolish ICE Act,\u201d on January 15, 2026, with no cosponsors {H.src_link(U('hr7123_info'), 'all info')}. Rep. Ayanna Pressley (D-MA), at a January 28, 2026 press conference with Rep. Ilhan Omar (D-MN), per her official transcript: \u201cWe need to abolish ICE.\u201d {H.src_link(U('pressley'), 'Pressley transcript')} We found no Republican bill or statement calling to defund or abolish ICE.",
+         U("hr7123"), "Congress.gov bill text"),
+    ]
+    html_out = essay_page(
+        H, slug=slug, fname=fname, series="The Border", date="Aug 31, 2026", headline="Find them.",
+        card={"kind": "number", "big": "146,000", "icon": icon("child"),
+              "label": "children located so far, DHS Secretary Markwayne Mullin said at a June 11, 2026 DOJ, DHS and HHS press conference. \u201cWe still have nearly 300,000 missing.\u201d",
+              "url": U("doj_vid"), "type": "Official video (DOJ)"},
+        facts=facts, chart=chart, charts=charts,
+        view=["Nobody in Congress will mention these children.",
+              "ICE is the only one looking for them, and some want to defund it for enforcing laws Congress passed.",
+              "Epstein is a closed matter people have known about since the 90s, while these missing children are ignored.",
+              "Find them. All of them."],
+        full=full_html(slug), related=[("border.html", "The Border"), ("article-v.html", "Article V")])
+    _record(fname, slug, html_out)
+    return html_out, STATS[fname]
+
+
+# ───────────────────────── (b) They forgot who they work for ─────────────────────────
+def build_forgot(H):
+    slug, fname = "that-is-not-why-they-are-elected", REDIRECTS["that-is-not-why-they-are-elected"]
+    txt = (EV / f"{slug}.md").read_text(encoding="utf-8")
+    assert "maximum warfare, everywhere, all the time" in txt and "break their spirit" in txt
+    facts = [
+        ("Members are hired to represent a district and swear an oath to the Constitution.",
+         f"House members are hired to represent a district, and each swears to support and defend the Constitution. {H.src_link(U('oath'), '5 U.S.C. \u00a7 3331')}",
+         U("art1"), "U.S. Constitution"),
+        ("Apr 22, 2026: \u201cmaximum warfare, everywhere, all the time.\u201d",
+         f"Answering about Virginia\u2019s redistricting fight, Leader Jeffries said: \u201cwe are in an era of maximum warfare, everywhere, all the time.\u201d The remark was about congressional maps. {H.src_link(U('cspan_clip'), 'C-SPAN clip')}",
+         U("cspan_full"), "C-SPAN video"),
+        ("The May 19 quote was about MAGA Republicans, and the ballot box.",
+         "His May 19 words were about \u201cMAGA extremists,\u201d meaning MAGA Republicans, and in the same breath he named beating them at the ballot box.",
+         U("hj_yt"), "Official video (Jeffries\u2019 YouTube)"),
+        ("A retiring Republican, Rep. Michael McCaul, described the same mood.",
+         "Describing Congress after 22 years, McCaul said it has become \u201cvery vogue and style to demonize the other side of the aisle,\u201d with \u201cinternecine warfare within our own party.\u201d He was describing Congress, not urging anyone to do anything. At about 4:53 and 5:32.",
+         U("mccaul"), "Media interview (audio)"),
+    ]
+    mccaul_box = (
+        '<details class="jr-full"><summary>About the McCaul quote</summary><div class="jr-full-body">'
+        "<p>The New York Times Magazine (Sep 16, 2026) printed two other McCaul lines: \u201cInternecine warfare is what has become vogue\u201d and "
+        "\u201cYou\u2019re elected to fight and kill the other side.\u201d We listened to the full Fox News Rundown exit interview (Jul 12, 2026). "
+        "Neither line is in it. What he said there, about 4:53 into the episode: \u201cit\u2019s very vogue and style to demonize the other side of the aisle and not, you know, almost vilify them.\u201d "
+        "About 5:32: \u201cyou see that more so today now is internecine warfare within our own party, very much in style and vogue to go after your fellow Republican colleagues.\u201d "
+        "The Times lines are <span class=\"jr-note\">reported, not confirmed by primary record</span>, and are not used here. "
+        f"Times are approximate: the podcast file carries ads that can shift them by a few seconds. {S(H, 'mccaul')}</p></div></details>")
+    html_out = essay_page(
+        H, slug=slug, fname=fname, series="The Republic", date="Sep 17, 2026", headline="They forgot who they work for.",
+        card={"kind": "quote", "big": "Our goal is to break them. We will defeat them. We have to beat them electorally, and then we have to break their spirit.",
+              "label": "House Democratic Leader Hakeem Jeffries, May 19, 2026, CAP IDEAS conference, speaking about MAGA Republicans (at 8:41)",
+              "url": U("hj_yt"), "type": "Official video (Jeffries\u2019 YouTube)"},
+        facts=facts,
+        view=["An employee does not declare war on the people who pay him.", "Watch the tape."],
+        full=full_html(slug, {"Chief Justice Roberts issued a statement": "Roberts statement not linked here: reported, not confirmed by primary record"}),
+        after=mccaul_box, related=[("journal-they-work-for-us.html", "They work for us"), ("article-v.html", "Article V")])
+    _record(fname, slug, html_out)
+    return html_out, STATS[fname]
+
+
+# ───────────────────────── (c) They work for us + settlements ─────────────────────────
+def build_work_for_us(H):
+    slug, fname = "they-work-for-us", REDIRECTS["they-work-for-us"]
+    ooc_total, ooc_n = 17240854, 264
+    charts = [
+        {"id": "chart-roll83", "type": "bar", "horizontal": True, "stacked": True, "labels": ["Republicans", "Democrats"], "fmt": "int",
+         "datasets": [{"label": "Send it to the Ethics Committee (yea)", "data": [175, 182], "color": "#57534e"},
+                      {"label": "Vote on release now (nay)", "data": [38, 27], "color": "#b22234"}]},
+        {"id": "chart-roll233", "type": "bar", "horizontal": True, "stacked": True, "labels": ["Republicans", "Democrats", "Independent"], "fmt": "int",
+         "datasets": [{"label": "Yea", "data": [209, 210, 1], "color": "#16325c"}, {"label": "Present", "data": [1, 0, 0], "color": "#b22234"}]}]
+    chart = (f'<div class="jr-charts">{H.chart_card("chart-roll83", "Mar 4, 2026: send the release to committee?", "H.Res. 1100 (Mace) · 357 yea, 65 nay, 1 present · Roll Call 83")}'
+             f'{H.chart_card("chart-roll233", "Jun 30, 2026: release the records?", "H.Res. 1399 (Massie) · 420 yea, 0 nay, 1 present · Roll Call 233")}</div>'
+             f'<p class="jr-chart-src">{src_btn(U("roll83"), "House vote")} {src_btn(U("roll233"), "House vote")}</p>')
+    facts = [
+        ("The total covers every kind of workplace claim, not only harassment.",
+         "That total covers every kind of workplace claim under 13 laws, from overtime and family leave to disability, discrimination and harassment. It was not broken down by claim, and a large share of cases came from legislative-branch offices other than the House and Senate.",
+         U("ooc"), "Office of Compliance record"),
+        ("Since 2018, members must personally repay harassment settlements.",
+         "Since the 2018 CAA Reform Act (Public Law 115-397), members must personally repay harassment awards and settlements.",
+         U("reform"), "Congress.gov"),
+        ("Two House votes: 357\u201365 to send it to committee, then 420\u20130 to release.",
+         f"On March 4, 2026, the House voted 357\u201365 to send a release resolution to committee. On June 30 it passed another, 420\u20130. {H.src_link(U('roll233'), 'Roll 233')}",
+         U("roll83"), "House vote"),
+        ("Aug 31: dollar totals released, member names withheld.",
+         "The workplace-rights office released dollar totals but withheld the list of member names, citing the law\u2019s confidentiality rule.",
+         U("ocwr1399"), "OCWR record"),
+    ]
+    rec = settlements_record(H)
+    html_out = essay_page(
+        H, slug=slug, fname=fname, series="The Republic", date="Aug 24, 2026", headline="They work for us",
+        card={"kind": "number", "big": f"${ooc_total:,}",
+              "label": f"paid from a Treasury account for {ooc_n} workplace awards and settlements in legislative-branch offices, fiscal 1997\u20132017",
+              "url": U("ooc"), "type": "Office of Compliance record"},
+        facts=facts, chart=chart, charts=charts,
+        view=["It\u2019s still theft. Why should we pay for what they do wrong?", "They work for us. They do not threaten us and expect us to pay them."],
+        full=full_html(slug, {"chip in now to the @MNFreedomFund": "Post not linked here: reported, not confirmed by primary record",
+                              "told NBC\u2019s Lester Holt": "Interview not linked here: reported, not confirmed by primary record"}),
+        after=rec, related=[("journal-they-forgot-who-they-work-for.html", "They forgot who they work for"), ("article-v.html", "Article V")])
+    _record(fname, slug, html_out)
+    return html_out, STATS[fname]
+
+
 # ───────────────────────── Journal hub ─────────────────────────
-HUB = [("journal-find-them.html", "Find them.", "The Border", "Aug 31, 2026", "448,000+ children handed to HHS. The Inspector General says ICE could not account for all who missed court."),
+SERIES_ORDER = ["The Border", "The Republic", "Congress", "The Parties", "Democrats", "Republicans", "The Tape", "The Media", "The Remedy"]
+HUB = [("journal-find-them.html", "Find them.", "The Border", "Aug 31, 2026", "146,000 children located so far. The Inspector General says ICE could not account for all who missed court."),
        ("journal-they-forgot-who-they-work-for.html", "They forgot who they work for.", "The Republic", "Sep 17, 2026", "\u201cMaximum warfare.\u201d \u201cBreak their spirit.\u201d The tape, in context."),
        ("journal-they-work-for-us.html", "They work for us", "The Republic", "Aug 24, 2026", "$17.2 million in workplace settlements, two House votes, and the names still withheld."),
        ("article-v.html", "Article V: the states\u2019 way to fix Congress", "The Remedy", "", "34 states apply, 38 ratify. Where the count stands.")]
 
 
+def hub_entries():
+    out = list(HUB)
+    for slug, d in FACTS.items():
+        k, big, label, _ = SPEC[slug]["card"]
+        blurb = f"{big} \u2014 {label}" if k == "n" else f"\u201c{big}\u201d"
+        out.append((REDIRECTS[slug], d["title"], d["series"], _date(d["date"]), blurb))
+    return out
+
+
 def build_hub(H):
-    cards = "".join(
-        f'<a class="jr-hub-card" href="{h}"><p class="jr-kicker">{e(s)}{" · " + e(d) if d else ""} · 30 seconds</p><h2>{e(t)}</h2><p>{e(x)}</p><span class="jr-hub-go">Read \u2192</span></a>'
-        for h, t, s, d, x in HUB)
-    body = ('<div class="jr-wrap">'
+    groups = {}
+    for ent in hub_entries():
+        groups.setdefault(ent[2], []).append(ent)
+    order = [s for s in SERIES_ORDER if s in groups] + [s for s in groups if s not in SERIES_ORDER]
+    secs = []
+    for s in order:
+        cards = "".join(
+            f'<a class="jr-hub-card" href="{h}"><p class="jr-kicker">{e(d) + " · " if d else ""}30 seconds</p><h3>{e(t)}</h3><p>{e(x)}</p><span class="jr-hub-go">Read \u2192</span></a>'
+            for h, t, _, d, x in groups[s])
+        secs.append(f'<section class="jr-hub-sec" id="{_sid(s)}"><h2 class="jr-h2">{e(s)} <span>{len(groups[s])}</span></h2><div class="jr-hub">{cards}</div></section>')
+    jump = "".join(f'<a class="av-chip" href="#{_sid(s)}">{e(s)}</a>' for s in order)
+    n = len(hub_entries()) - 1
+    body = ('<div class="jr-wrap jr-hubwrap">'
+            f'{hero_html("journal")}'
             '<p class="jr-kicker">Swamp Force Journal</p><h1 class="jr-h1">The Journal</h1>'
-            '<p class="jr-lede">Short essays you can read in 30 seconds. One number or quote, the record behind it, and the owner\u2019s view, labeled. The full verified essay is one tap away.</p>'
-            f'<div class="jr-hub">{cards}</div>'
-            '<p class="jr-note">Pilot: 3 essays in the new short format. The other verified essays will follow once the format is approved.</p>'
+            f'<p class="jr-lede">{n} short essays you can read in 30 seconds. One number or quote, the record behind it, and the owner\u2019s view, labeled. Tap any fact to open its source. The full verified essay is one tap away.</p>'
+            f'<nav class="av-chips jr-jump" aria-label="Series">{jump}</nav>'
+            f'{"".join(secs)}'
             '<p class="jr-rel"><a class="btn ghost-dark sm" href="foreword.html">The Republic</a> <a class="btn ghost-dark sm" href="about.html">Methodology</a></p></div>')
-    return H.page("journal.html", "Journal · Swamp Force", "Short visual essays: one number, the primary record, and the owner's labeled view.", body, serious=True), {"essays": len(HUB) - 1}
+    return H.page("journal.html", "Journal · Swamp Force", "Short visual essays: one number, the primary record, and the owner's labeled view.", body, serious=True), {"essays": n}
 
 
-_REQ = [EV / "find-them.md", EV / "that-is-not-why-they-are-elected.md", EV / "they-work-for-us.md"]
+def hero_html(where):
+    """Owner's eagle lockup as the hub hero, on a navy banner (web copies in assets/brand/)."""
+    return ('<div class="sf-banner"><picture><source srcset="assets/brand/lockup-light.webp" type="image/webp">'
+            '<img src="assets/brand/lockup-light.png" alt="SwampForce" width="1100" height="583" decoding="async" fetchpriority="high"></picture></div>') if where else ""
+
+
+_REQ = [EV / "find-them.md", EV / "that-is-not-why-they-are-elected.md", EV / "they-work-for-us.md", JD / "essays_spec.py", JD / "essay-facts.json"]
 SECTIONS_J = [
     Section("journal.html", "Journal", "", _REQ, build_hub, in_menu=False),
     Section(REDIRECTS["find-them"], "Find them.", "", [EV / "find-them.md"], build_find_them, in_menu=False),
     Section(REDIRECTS["that-is-not-why-they-are-elected"], "They forgot who they work for.", "", [EV / "that-is-not-why-they-are-elected.md"], build_forgot, in_menu=False),
     Section(REDIRECTS["they-work-for-us"], "They work for us", "", [EV / "they-work-for-us.md"], build_work_for_us, in_menu=False),
     Section("article-v.html", "Article V", "", [JD / "article-v-states.csv"], build_article_v, in_menu=False),
-]
+] + [Section(REDIRECTS[s], FACTS[s]["title"], "", [EV / f"{s}.md", JD / "essays_spec.py"], build_generic(s), in_menu=False) for s in FACTS]

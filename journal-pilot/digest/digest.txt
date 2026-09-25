@@ -1,0 +1,634 @@
+
+#### 1 we-the-people | We the People. | The Republic | 2026-09-21
+V0: The Constitution does not open with Congress. It opens with the owner. The 535 are the hire. The hire has gone rogue.
+V1: The people are the owner. Congress is the staff. The staff does not get to rewrite the first sentence.
+V2: A nation of this size cannot be overseen on a part-time floor. Oversight is the job. When oversight is skipped, fraud is not an accident. It is the door the staff left open. Medicare, Medicaid, and Social Security are the largest lines on the card. Congress ho
+V3: A republic cannot survive if half of it is taught to hate the other half as a substitute for a budget. Hatred is cheaper than a hearing. It does not require reading the bill. It does not require naming the fraud. It only requires a clip. Vote the facts. This j
+F0: The [Preamble]<constitution.congress.gov/constitution/p> is the country’s own sentence about who holds the power.
+F1: [Article I]<constitution.congress.gov/constitution/a> is the job description.
+F2: [5 U.S.C. § 3331]<law.cornell.edu/uscode/text/5/3331> requires every member to swear, in those words, to support and defend this Constitution “without any mental reservation or purpose of evasion.”
+F3: The [Congressional Budget Office’s historical tables]<cbo.gov/data/budget-economic-data> still show the last surplus in fiscal year 2001.
+F4: The [Treasury’s Debt to the Penny]<fiscaldata.treasury.gov/datasets/debt-to> now prints more than forty trillion dollars.
+F5: The [Declaration of Independence]<archives.gov/founding-docs/declaration-t> is not a statute.
+F6: [Article V]<constitution.congress.gov/constitution/a> is the alter clause.
+F7: [Article I, Section 2]<constitution.congress.gov/constitution/a> puts the whole House up every second year.
+F8: The [Seventeenth Amendment]<constitution.congress.gov/constitution/a> puts the Senate on a six-year clock, one third at a time.
+F9: [Article I, Section 5]<constitution.congress.gov/constitution/a>: each House may “punish its Members for disorderly Behaviour, and, with the Concurrence of two thirds, expel a Member.”
+
+#### 3 they-opened-the-border | They opened the border. | The Border | 2026-09-20
+V0: Millions of encounters. Fentanyl in the morgue. Hotels on the taxpayer. The door was a policy. The policy was Democratic.
+V1: A door that falls shut in a year was a policy, not weather.
+V2: The First Amendment protects [peaceable](https://constitution.congress.gov/constitution/amendment-1/) assembly. It does not protect doxxing an ICE officer, assaulting him, or smashing the building. [18 U.S.C. § 111](https://www.law.cornell.edu/uscode/text/18/1
+V3: Wages, rents, emergency rooms, and hotel bills. Schools added bodies without adding buildings. The American who waited in line, paid FICA, and followed the statute watched the line collapse. That is not xenophobia. That is a queue that stopped meaning anything
+F0: Customs and Border Protection]<cbp.gov/newsroom/stats/southwest-land-bo> publishes the encounters.
+F1: Border Patrol’s count at the Mexico line, from CBP’s own fiscal-year tables from [CBP’s own fiscal-year tables]<cbp.gov/newsroom/stats/southwest-land-bo>: fiscal 2021, 1.66 million.
+F2: [CBP nationwide]<cbp.gov/newsroom/stats/cbp-enforcement-s>: 1.96 million in FY2021, 2.77 million in FY2022, 3.20 million in FY2023, 2.90 million in FY2024.
+F3: [DHS OHSS]<ohss.dhs.gov/khsm/cbp-encounters> splits it: 8.73 million on southwest land, about 2.10 million on the rest of the map.
+F4: [New York City’s Comptroller]<comptroller.nyc.gov/services/for-the-pub> booked the rooms: $1.41 billion in FY2023, $3.70 billion in FY2024, $3.02 billion in FY2025 — $8.13 billion in one city.
+F5: [DHS OIG]<oig.dhs.gov/sites/default/files/assets/2>: FEMA awarded $1.4 billion in Shelter and Services and EFSP-H in FY2023–24, money transferred from CBP.
+F6: [SSI is not Social Security]<ssa.gov/ssi/spotlights/spot-non-citizens>.
+F7: [8 U.S.C. § 1611]<law.cornell.edu/uscode/text/8/1611> already barred most federal benefits for aliens who are not qualified.
+F8: [What the taxpayer bought](/dispatch/what-the-taxpayer-bought) is the rest of that stack: cash cards, phones, clothing, housing, property damage, and the homicide docket.
+F9: [C-SPAN recorded the ask]<c-span.org/clip/joint-session-of-congres>.
+
+#### 4 what-the-taxpayer-bought | What the taxpayer bought | The Border | 2026-09-21
+V0: Cash cards. Phones. Clothing. Housing. Then the rap sheet. The federal grant listed the first four. ICE counted the charges.
+V1: The grant paid for the phone and the hotel. ICE counted the smashed property and the homicide. The taxpayer paid for both.
+F0: [FEMA’s FY2024 Shelter and Services Program]<fema.gov/sites/default/files/documents/f> told applicants what the taxpayer would reimburse for people CBP had released: **shelter**, including hotel rooms at the GSA rate. **Clothing** — shirts, pants, outerwear, underwear, socks, shoes, backpacks, belts. **Cell phone plans** and int
+F1: The [Inspector General]<oig.dhs.gov/sites/default/files/assets/2> later found FEMA could not ensure the **$1.4 billion** in SSP and EFSP-H for fiscal 2023–24 was used as the law required.
+F2: On [February 20, 2024]<nyc.gov/mayors-office/news/2024/02/trans>, the Mayor of New York described a prepaid debit-card pilot for migrant families: 500 families to start, a contract that could reach **$53 million** at scale, the balance loaded for food and baby supplies.
+F3: The [Comptroller]<comptroller.nyc.gov/services/for-the-pub> already booked the rooms: **$8.13 billion** in three fiscal years for asylum-seeker services in one city.
+F4: [ICE’s FY2024 Annual Report]<ice.gov/doclib/eoy/iceAnnualReportFY2024>: the 81,312 criminal noncitizens ERO arrested that year carried 516,050 charges and convictions.
+F5: [CBP]<cbp.gov/newsroom/stats/cbp-enforcement-s> homicide and manslaughter convictions among Border Patrol criminal-alien arrests: three, three, two, three in fiscal 2017–20.
+F6: The [Department of Justice]<justice.gov/usao-mdga/pr/three-venezuela> put Laken Hope Riley on the record: kidnapped and brutally murdered February 22, 2024, in Athens, Georgia, during a morning run.
+F7: Then the morgue.](/dispatch/the-hospital-and-the-morgue).
+F8: [src] FEMA SSP-A FY2024 NOFO — allowable costs — <fema.gov/sites/default/files/documents/f>
+F9: [src] DHS OIG-26-04 — $1.4 billion SSP — <oig.dhs.gov/sites/default/files/assets/2>
+
+#### 5 the-hospital-and-the-morgue | The hospital. Then the morgue. | The Border | 2026-09-20
+V0: Emergency rooms filled, then Americans died. The names of the accused are on ICE letterhead.
+V1: The American who paid FICA waited. The statute had already said who the check was for.
+V2: Defund ICE is a vote to keep that docket on the street. [The hospital bill](https://www.cbo.gov/publication/60805) is already in CMS. The names are already on [ICE letterhead](https://www.ice.gov/news/releases/operation-angels-honor-14-day-nationwide-ice-opera
+F0: That is [42 U.S.C. § 1395dd]<law.cornell.edu/uscode/text/42/1395dd> — EMTALA.
+F1: The statute that was supposed to stop the bill is [8 U.S.C. § 1611]<law.cornell.edu/uscode/text/8/1611>.
+F2: [CBO, October 2, 2024]<cbo.gov/publication/60805>, answering House Budget: from fiscal 2017 through 2023, federal and state governments spent about $27 billion on emergency Medicaid for people ineligible for full Medicaid because of immigration status.
+F3: [DHS]<dhs.gov/news/2026/01/29/dhs-celebrates-o> says he was a Tren de Aragua member, was released into the country in September 2022, was later arrested by NYPD for acting in a manner to injure a child, and was released again.
+F4: [ICE]<ice.gov/news/releases/hsi-baltimore-lend>: Victor Martinez-Hernandez, a Salvadoran national unlawfully present in the United States, was arrested in Tulsa on June 14, 2024.
+F5: The [Harford County State’s Attorney]<harfordcountystatesattorney.org/wp-conte> secured his conviction; he was sentenced to life without parole in August 2025.
+F6: [ICE’s FY2024 Annual Report]<ice.gov/doclib/eoy/iceAnnualReportFY2024>: the 81,312 criminal noncitizens ERO arrested that year carried 516,050 charges and convictions.
+F7: Tony Gonzales]<homeland.house.gov/wp-content/uploads/20>: as of July 21, 2024, about 647,600 noncitizens with criminal convictions or pending criminal charges were on ICE’s non-detained docket.
+F8: [CBP]<cbp.gov/newsroom/stats/cbp-enforcement-s> homicide and manslaughter convictions among Border Patrol criminal-alien arrests: three, three, two, three in FY2017–20.
+F9: [in-view] [The hospital bill]<cbo.gov/publication/60805> is already in CMS.
+
+#### 8 they-want-a-new-constitution | They want a new Constitution. | The Republic | 2026-09-18
+V0: A group running as Democrats wrote it down: replace this country. November 3 is the last easy stop.
+V1: The National Socialist German Workers’ Party, 1920 program: nationalization of all trusts, abolition of income that does not arise from work, and a strong central authority over the state. [The 25 points](https://avalon.law.yale.edu/imt/nsdappro.asp).
+V2: They wrote a replacement country on a PDF. Members who swear this Constitution cannot pretend they did not read it.
+V3: Read the PDF. Read the oath. Then vote as if the document is on the ballot, because for this faction it is.
+F0: That document is on their own site: the [DSA 2026 program PDF]<program.dsausa.org/wp-content/uploads/20>.
+F1: A caucus inside that organization, [Red Star]<redstarcaucus.org/zenith4-points-of-unit>, states that the aim is to abolish capitalism and ultimately to achieve communism.
+F2: [What is Democratic Socialism]<dsausa.org/about-us/what-is-democratic-s>.
+F3: [Workers Deserve More]<program.dsausa.org/> · [PDF, September 2, 2026]<program.dsausa.org/wp-content/uploads/20>.
+F4: [in-view] [The 25 points]<avalon.law.yale.edu/imt/nsdappro.asp>.
+F5: Every Member swears, under [Article VI]<constitution.congress.gov/constitution/a> and [5 U.S.C. § 3331]<law.cornell.edu/uscode/text/5/3331>, to support this Constitution, without mental reservation.
+F6: See [5 U.S.C. § 7311]<law.cornell.edu/uscode/text/5/7311>.
+F7: The [Communist Control Act, 50 U.S.C. § 841]<law.cornell.edu/uscode/text/50/841>, is still on the books.
+F8: Treason is [Article III, Section 3]<constitution.congress.gov/constitution/a> and [18 U.S.C. § 2381]<law.cornell.edu/uscode/text/18/2381>: levying war or adhering to enemies.
+F9: McCormack]<supreme.justia.com/cases/federal/us/395/> and [U.S.
+
+#### 9 the-docket | How a dirty list goes to court. | The Remedy | 2026-09-21
+V0: Congress cannot be sued for being Congress. A dirty voter list into court in 90 days. Step by step.
+V1: The tent does not need a palace. It needs a clean roll and a gavel. Clean the roll. Keep the gavel.
+F0: The Speech or Debate Clause in [Article I, Section 6]<constitution.congress.gov/constitution/a> and the standing rule in [Lujan v.
+F1: Defenders of Wildlife]<supreme.justia.com/cases/federal/us/504/> close that door.
+F2: [52 U.S.C. § 20510]<law.cornell.edu/uscode/text/52/20510> gives an aggrieved person a private right of action under the National Voter Registration Act.
+F3: List maintenance is [52 U.S.C. § 20507]<law.cornell.edu/uscode/text/52/20507>.
+F4: A noncitizen who votes in a federal election commits a crime under [18 U.S.C. § 611]<law.cornell.edu/uscode/text/18/611>.
+F5: Unlawful voting is a deportable offense under [8 U.S.C. § 1227(a)(6)]<law.cornell.edu/uscode/text/8/1227>.
+F6: Bringing in and harboring certain aliens is [8 U.S.C. § 1324]<law.cornell.edu/uscode/text/8/1324>.
+F7: Records of federal grants sit under the Freedom of Information Act, [5 U.S.C. § 552]<law.cornell.edu/uscode/text/5/552>.
+F8: McCormack]<supreme.justia.com/cases/federal/us/395/> and [Luther v.
+F9: Borden]<supreme.justia.com/cases/federal/us/48/1> already said why.
+
+#### 10 call-these-first | Who to call. | The Remedy | 2026-09-22
+V0: Real groups. Real addresses. Not a stranger on a video asking for money.
+V1: The groups that already sue are the path. A clip is not a lawsuit.
+F0: The first envelope is a ninety-day notice under [52 U.S.C. § 20510]<law.cornell.edu/uscode/text/52/20510>, sent to the chief election official of the State, not a class action against the House.
+F1: For dirty voter rolls, start with counsel that already files National Voter Registration Act cases: [Judicial Watch]<judicialwatch.org/>, [America First Legal]<aflegal.org/priority/election-integrity/>, and the [Public Interest Legal Foundation]<publicinterestlegal.org/>.
+F2: For sanctuary ordinances and public-benefit spending past [8 U.S.C. § 1621]<law.cornell.edu/uscode/text/8/1621>, the [Immigration Reform Law Institute]<irli.org/> and [FAIR]<fairus.org/> publish their own dockets.
+F3: Names of noncitizens who voted in a federal race go to the United States Attorney under [18 U.S.C. § 611]<law.cornell.edu/uscode/text/18/611>.
+
+#### 11 the-bill-they-sent | They're spending taxpayer money on illegal immigrants. | The Remedy | 2026-09-20
+V0: Federal law already limits public benefits for illegal immigrants. Governors still paid for hotels, debit cards, and clothes.
+V1: Article VI is the same article as the oath. They swore it. Then they spent past it with taxpayer money.
+V2: The next lever is the legislature that can repeal the post-1996 statute, and the voter who hires that legislature.
+F0: [8 U.S.C. § 1611]<law.cornell.edu/uscode/text/8/1611> makes an alien who is not a qualified alien ineligible for federal public benefits, with narrow exceptions such as emergency medical care and short-term shelter or other aid the Attorney General deems necessary to protect life or safety.
+F1: [8 U.S.C. § 1621]<law.cornell.edu/uscode/text/8/1621> does the same for state and local public benefits unless a state enacted an affirmative law after August 22, 1996.
+F2: In-state tuition has its own bar in [8 U.S.C. § 1623]<law.cornell.edu/uscode/text/8/1623>.
+F3: [Article VI]<constitution.congress.gov/constitution/a> makes the Constitution and federal statutes the supreme law of the land.
+F4: United States]<supreme.justia.com/cases/federal/us/567/> held that federal law occupies the field of alien registration and preempted three of the four Arizona provisions at issue.
+F5: [8 U.S.C. § 1373]<law.cornell.edu/uscode/text/8/1373> forbids a gag on exchanging immigration-status information with federal officials.
+F6: [8 U.S.C. § 1324]<law.cornell.edu/uscode/text/8/1324> is harboring.
+F7: The [Department of Justice has filed complaints]<justice.gov/opa/pr/department-justice-fi> against jurisdictions that give illegal aliens in-state tuition.
+F8: [HHS restored the 1996 welfare restrictions]<hhs.gov/press-room/prwora-hhs-bans-illeg> on its own programs.
+
+#### 12 they-let-them-walk | They let criminals go free. | The Remedy | 2026-09-19
+V0: When a court sends a dangerous defendant home, the statute already said otherwise. This is why the street feels like a siege.
+V1: The statute said shall. The robe said walk. The public paid.
+V2: Oversight is a docket, a retention vote, and a legislature that can repeal cashless-bail experiments that the blood already tested.
+F0: [18 U.S.C. § 3142]<law.cornell.edu/uscode/text/18/3142> directs a court to detain a defendant when no condition of release will reasonably assure the safety of any other person and the community.
+F1: [8 U.S.C. § 1226(c)]<law.cornell.edu/uscode/text/8/1226> says the Attorney General shall take into custody certain criminal aliens.
+F2: If a judge released a defendant who then killed a police officer, the remedy is the record, the appellate court, impeachment or failure to retain under [Article I and Article II]<constitution.congress.gov/browse/essay/a> where those tools apply, and the next election of the district attorney and the bench the state elects.
+F3: The [United States Attorney for the District of Minnesota]<justice.gov/usao-mn/pr/minneapolis-man-s> obtained a twenty-eight-year sentence in the Feeding Our Future fraud.
+
+#### 13 who-got-paid | Who got paid. | The Border | 2026-08-31
+V0: Up to $13 billion in one year. Cartels. Bought lanes. A bank indictment. The door was the product.
+V1: Somebody collected. That is the whole second file. A child does not walk a thousand miles on a vibe. A fee is paid, a route is sold, a sponsor is a customer, and a government that opens the door is the marketing department. This journal will not print a smuggl
+V2: The customer was an open door. The seller was a cartel.
+V3: The political tie that does not need a secret meeting is the term in office. The Democratic Party ran the border from 2021 to 2025. Encounters exploded. Then the same party told the country to defund the only force that knocks on the sponsor's door. Who got pa
+F0: [DHS’s statistics office]<ohss.dhs.gov/khsm/cbp-encounters> counts 8.73 million southwest border encounters in fiscal 2021–24 (fiscal 2021 began in October 2020).
+F1: [Diego Bonillo]<oig.dhs.gov/sites/default/files/assets/p>, 15 years.
+F2: [Leonard Darnell George]<oig.dhs.gov/sites/default/files/assets/p>, 23 years, bribes to pass drugs and people.
+F3: April 29, 2026: [federal prosecutors in Manhattan]<dea.gov/press-releases/2026/04/29/govern> unsealed charges against the governor of Sinaloa and nine other current and former Mexican officials for aiding Sinaloa Cartel trafficking.
+F4: Trump [pardoned Cuellar and his wife]<justice.gov/pardon/media/1419976/dl?inli> on December 2, 2025.
+F5: [src] DOJ — CBP officer Garcia, Sinaloa lane, 9 years — <justice.gov/usao-sdca/pr/ex-cbp-officer->
+F6: [src] DOJ — Cuellar indictment, Mexican bank and Azerbaijan, May 3, 2024 — <justice.gov/archives/opa/pr/us-congressm>
+
+#### 14 defund-ice-is-the-tell | Defund ICE is the tell. | The Border | 2026-08-31
+V0: The party that lost the children now wants the search abolished. That compass does not belong in office or on the ballot.
+V1: Defund ICE is all the proof any American needs that this party is unfit to hold power. Not a vibe. A tell. The Democratic Party ran the border from 2021 to 2025, released tens of thousands of children whom ICE, per its own [inspector general](https://www.oig.d
+V2: To want the search defunded is to approve the room the child is still in.
+V3: They use Epstein survivors as a costume. Epstein is a real file — play it, every name. Using those survivors as a caption while the same party obstructs the locating of open-border children is not solidarity. It is theft of the room. Labor trafficking is traff
+F0: [in-view] The Democratic Party ran the border from 2021 to 2025, released tens of thousands of children whom ICE, per its own [inspector general]<oig.dhs.gov/sites/default/files/assets/2>, could not keep track of, and now treats the only federal force that does the door-to-door as the villain.
+F1: [src] DHS OIG-24-46 — ICE monitoring of unaccompanied children — <oig.dhs.gov/sites/default/files/assets/2>
+F2: [src] DHS — ICE and HSI locating children — <dhs.gov/news/2025/07/25/dhs-leads-effort>
+F3: [src] 18 U.S.C. 1591 — sex trafficking of children — <law.cornell.edu/uscode/text/18/1591>
+F4: [src] 18 U.S.C. 1589 — forced labor — <law.cornell.edu/uscode/text/18/1589>
+
+#### 15 the-noise | The noise. | Congress | 2026-09-02
+V0: Congress talks for a living. The country still does not get a budget. Words without a ledger are the job they invented to keep the job.
+V1: They do not fail at talking. That is the only muscle they kept. Hearings that are not hearings. Floor speeches that never become a vote. A Sunday show that names a villain and never names a line in a statute. That is a shop that stopped delivering the thing it
+V2: If it will not fit on a slide with a dollar sign, it is not a plan. It is noise.
+F0: The 119th still owes twelve money bills by October 1 — a deadline Congress has not met on time for every bill since fiscal 1997, per the [Congressional Research Service]<congress.gov/crs-product/IN12324>.
+F1: [src] CRS — last on-time budget since FY1997 — <crsreports.congress.gov/product/pdf/R/R4>
+
+#### 16 they-sold-the-split | They sold the split. | Congress | 2026-09-02
+V0: Politicians and the panel have no policy, so they sell a neighbor to hate. Division is the product. The statute never makes the caption.
+V1: A country with a real argument argues over a bill. A country being managed argues over a jersey. The panel discovered that a six-second clip outruns a thousand-page stack. That is a business model: keep the temperature up so nobody asks where the money is.
+V2: Politicians learned the same trick because they have no policy that survives a spreadsheet. Medicare for all without a pay-for. A border they called compassion and ran as a cartel lane. A tax cut they will not score honestly either. When the arithmetic is ugly
+V3: Stop selling the split. Debate the statute. The jersey is not the job.
+F0: [src] the Supreme Court's incitement test — incitement — <supreme.justia.com/cases/federal/us/395/>
+
+#### 17 full-time-or-go-home | Full time or go home. | Congress | 2026-09-02
+V0: The legislative branch will spend $7.258 billion this year for a floor that sits fewer days than a school year. They should work the hours or resign.
+V1: No other job in this country pays that, plus a pension after five years of service, plus health coverage, plus an office allowance of roughly $1.85 million to $2.09 million per House office, and then treats call time with donors as the real session. They lectu
+V2: In session means in the building. Work the hours or resign.
+V3: House and Senate rules can require it on day one. A majority writes those rules. Article I, Section 5 already lets a chamber punish and expel. The ballot does the rest. This is not a street. It is an employee policy for people who already took the money. Full 
+F0: [src] FY2026 legislative branch — $7.258 billion — CRS / P.L. 119-37 — <congress.gov/crs-product/R48612>
+F1: [src] Member pay — CRS RL30064 — <congress.gov/crs-product/RL30064>
+F2: [src] Oath of office — 5 U.S.C. § 3331 — <law.cornell.edu/uscode/text/5/3331>
+
+#### 18 the-whole-bill | The whole bill. | Congress | 2026-09-02
+V0: A budget the country can read. Every reconciliation print. The stack, not the clip. How the stack is forced.
+V1: Post the stack. Show the slides. Full time or resign. That is the hearing.
+V2: This is not a street. It is not a new speech crime. It is the job they swore: well and faithfully discharge the duties of the office. They have been discharging a narrative. The country is 300 million people, not a panel.
+F0: [src] How a bill becomes law — Congress.gov — <congress.gov/help/learn-about-the-legisl>
+F1: [src] Congressional Budget Act of 1974 — CRS — <crsreports.congress.gov/product/pdf/R/R4>
+F2: [src] CBO — how it scores legislation — <cbo.gov/about/products>
+F3: [src] Article I — the purse, the rules, punish and expel — <constitution.congress.gov/constitution/a>
+
+#### 22 the-pool | The pool | The Tape | 2026-09-21
+V0: Friday the President said CNN, MS NOW, and Politico are barred from the White House. The caption they sold is why the building is tired of the caption.
+V1: A credential is not a throne. [CNN v. Trump, 2018](https://www.courtlistener.com/docket/16116680/cable-news-network-inc-v-trump/) already said a White House pass is not a toy: process, not a tantrum. The [First Amendment](https://constitution.congress.gov/cons
+V2: The other ledger is the tape. A six-second caption is how they steal an argument. “Mostly peaceful” with a precinct on fire. “Bloodbath” stripped of auto plants. “Fine people” stripped of the condemnation of Nazis in the same answer. [The media ledger](/dispat
+V3: A pool seat is not a verdict, and a caption is not the recording. The tape still cuts in both directions.
+F0: [in-view] Trump, 2018]<courtlistener.com/docket/16116680/cable-> already said a White House pass is not a toy: process, not a tantrum.
+F1: [in-view] The [First Amendment]<constitution.congress.gov/constitution/a> still sits on the desk.
+F2: [in-view] [The media ledger](/dispatch/the-media-ledger) is that file.
+F3: [src] PBS / AP — badges deactivated, Sept. 19 — <pbs.org/newshour/politics/ms-now-cnn-and>
+F4: [src] CNN v. Trump, 2018 — Acosta credentials — <courtlistener.com/docket/16116680/cable->
+F5: [src] First Amendment — <constitution.congress.gov/constitution/a>
+
+#### 23 sixty-percent | The Iranian terrorist regime at 60 percent | The Tape | 2026-09-21
+V0: IAEA: 440.9 kg of uranium enriched up to 60%. The only non-weapon state at that level. Forty-seven years of building the option. The named dead are on the record.
+V1: State’s 2024 terrorism report called Iran the leading state sponsor: Hezbollah, Hamas, the Houthis, and the Iran-aligned militias in Iraq and Syria, funded and armed by the Islamic Revolutionary Guard Corps–Qods Force. That is the network. The 60 percent stock
+V2: The Iranian terrorist regime is at 60 percent. The IAEA counted it. The last step is the short one.
+F0: The **Iranian terrorist regime** — the Islamic Republic, on the State Department’s list of state sponsors of terrorism since [19 January 1984]<state.gov/state-sponsors-of-terrorism/> — is, in the IAEA’s words, “the only NPT non-nuclear-weapon State to have produced and accumulated uranium enriched up to 60% U-235” ([GOV/2026/8]<
+F1: [IAEA GOV/2026/50]<iaea.org/sites/default/files/gov2026-50.>, using Iran’s declarations and inspections through 12 June 2025, counted **440.9 kilograms** of uranium enriched **up to 60 percent U-235** as of 13 June 2025.
+F2: [GOV/2026/8]<iaea.org/sites/default/files/gov2026-8.p> said the Agency had lacked access to verify the previously declared highly enriched uranium for more than eight months.
+F3: On [March 4, 2026]<congress.gov/119/crec/2026/03/04/172/41/>, members called it a “war of choice” on the House floor, several times.
+F4: The [2024 Country Reports on Terrorism]<state.gov/reports/country-reports-on-ter> said Iran’s long-standing money, training, and weapons enabled the attack; the Office of the Director of National Intelligence said Iranian leaders did not have foreknowledge.
+F5: The [White House, 2 March 2026]<whitehouse.gov/articles/2026/03/the-iran>, says **46** Americans were among the Oct. 7 dead.
+F6: [src] IAEA GOV/2026/50 — 440.9 kg up to 60%, as of 13 June 2025 — <iaea.org/sites/default/files/gov2026-50.>
+F7: [src] IAEA GOV/2026/8 — only NPT non-weapon state at 60%; inspectors locked out — <iaea.org/sites/default/files/gov2026-8.p>
+F8: [src] IAEA — Iran file — <iaea.org/topics/iran>
+F9: [src] State Department — state sponsors of terrorism (Iran, 19 Jan 1984) — <state.gov/state-sponsors-of-terrorism/>
+
+#### 24 they-dont-debate-they-flag | They don't debate. They flag. | The Tape | 2026-08-26
+V0: When they cannot beat the tape, they smear the person holding it.
+V1: That accusation is false. There is no such content here. There never was. The Dispatch is a political journal: statutes, C-SPAN, the uncut record. We do not publish the thing he named. He named it anyway, on a loop, under a paying account, after a political ar
+V2: When they cannot beat the tape, they smear the person holding it.
+V3: Reports were filed. The posts were still there. Support did not answer a customer who pays to be on the platform. That is the second story. The first is the smear. The second is a company that will not pull a sex-crime lie used as a political club. Fourteen co
+F0: [in-view] The [First Amendment]<constitution.congress.gov/constitution/a> is not a vibe.
+
+#### 25 division-is-the-product | How did we get here | The Tape | 2026-08-29
+V0: Honest people kept the country standing while a political class learned to treat them as a tap. This is the story of that bargain, and of the man who broke it.
+V1: For a long time the arrangement felt ordinary. People went to work. People paid what was said to be owed. People assumed the people with titles were doing something that corresponded to the titles. The country still opened in the morning: trucks, clinics, clas
+V2: What changed, slowly enough that a busy person could miss it, is who the political club thought those people were. Bureaucrats and career politicians stopped seeing a principal and started seeing a tap. Money came in. Rules went out. When the rules failed, the
+V3: Part of the trick was never teaching how the machine actually runs. Most Americans can name a party. Far fewer can say how a bill becomes a statute, who writes the regulation after the vote, or where the money is authorized versus spent. That ignorance is not 
+F0: [src] Arendt — The Origins of Totalitarianism — <archive.org/details/originsoftotalit0000>
+
+#### 26 the-record-not-the-rally | How to watch a president | The Tape | 2026-08-29
+V0: Pause the clip. Name the job. Read down the names.
+V1: Pause the clip. Name the job. Read down the names.
+V2: That was a class. A party was not required. Six names and one job were. The boxes below are two more jobs — war, and the factories — written the same way. Last line first. That is today. Then read up. That is who opened the wound.
+V3: If a friend only has six seconds, do not send them this whole page. Send them one sentence: Biden opened the border. This term shut it. Then send the link. That is teaching. A longer caption is still a caption.
+F0: [src] Border — CBP — <cbp.gov/newsroom/stats/southwest-land-bo>
+F1: [src] Border, FY1960–2019 — CBP — <cbp.gov/document/stats/us-border-patrol->
+F2: [src] Laken Riley law — <congress.gov/bill/119th-congress/senate->
+
+#### 27 the-republic-not-the-caption | The republic, not the caption | The Republic | 2026-08-26
+V0: We the People, not a television panel and not a six-second clip.
+V1: We the People, not a television panel and not a six-second clip.
+V2: A republic fails in two ordinary ways. Politicians talk for an hour and say nothing — noise as a substitute for a vote. Networks talk for six seconds and call it a verdict — a cut as a substitute for a file. Lazy is the wrong word for the viewer. The edit is l
+F0: The [Constitution]<constitution.congress.gov/> is the operating manual.
+F1: Congress, the President, the courts — employees with listed powers in [Article I]<constitution.congress.gov/constitution/a>, [Article II]<constitution.congress.gov/constitution/a>, and [Article III]<constitution.congress.gov/constitution/a>.
+
+#### 28 they-clipped-the-tape | They clipped the tape | The Tape | 2026-08-25
+V0: A cut sentence is how a country is taught a crime. Read the caption against the recording.
+V1: A political argument in this country is now usually a fight about a sentence that has been removed from the paragraph it lived in. The method is stable enough to teach. A phrase is cut. A caption is written as if the phrase were the whole. The caption is repea
+V2: The table that follows is that homework. The left column is what ran. The right column is what the recording still contains. This journal is not recruiting fans. Hear the rest of the answer — and then, in the last rows, to hear the lines we will not wash, beca
+V3: He said fight like hell on January 6. He said stand back and stand by to the Proud Boys. He tweeted when the looting starts, the shooting starts. Those are on tape. Play them next to the sentences they buried. The country can survive an ugly sentence. It canno
+F0: - [Vandalia rally, March 16, 2024 — bloodbath, the auto plants (C-SPAN, full)]<c-span.org/program/public-affairs-event/>
+F1: - [Charlottesville remarks, Aug. 15, 2017 — White House transcript]<trumpwhitehouse.archives.gov/briefings-s>
+F2: - [Schiff floor parody — C-SPAN]<c-span.org/video/?c4820134/schiffs-parod>
+F3: - [January 6 speech — C-SPAN, full]<c-span.org/video/?507744-1/president-tru>
+F4: - [BBC statement apologising for its edit]<bbc.co.uk/mediacentre/statements/panoram>
+F5: - [Disinfectant briefing — White House archive]<trumpwhitehouse.archives.gov/briefings-s>
+F6: [rec] Bloodbath | They ran: If he loses it will be a bloodbath. He wants another January 6. | The file: Chinese car plants in Mexico. 100% tariff. “They’re not going to sell those cars.” | <c-span.org/program/public-affairs-event/>
+F7: [rec] Dictator | They ran: He said he will be a dictator on day one. | The file: Close the border. Drill, drill, drill. “After that, I’m not a dictator.” | Fox News town hall, Dec. 5, 2023 (broadcast; no official transcript linked)
+F8: [rec] Fine people | They ran: He called neo-Nazis very fine people. | The file: Same remarks: neo-Nazis and white nationalists “should be condemned totally.” | <trumpwhitehouse.archives.gov/briefings-s>
+F9: [rec] Ukraine call | They ran: Schiff read the shakedown: “make up dirt on my political opponent.” | The file: Those lines are not in the call memo. He later called it “part in parody.” | <c-span.org/video/?c4820134/schiffs-parod>
+
+#### 29 one-word | One word | The Tape | 2026-09-21
+V0: Twelve years of the same trick: change one word, teach the country the opposite crime, and put a president through hell for a caption that was never on the file.
+V1: Gaslighting is not a feeling. It is a method. A speaker replaces what happened with a word that cannot survive the file, then repeats the word until the file feels rude to mention. The listener is not argued with. The listener is trained to distrust the thing 
+V2: Once the word sticks, process is the punishment. The House impeached twice. Then four criminal dockets ran at once against the same man. The public paid for the committee. Defense is not free. A presidency can be buried in process without a statute that matche
+V3: Twelve years. One method. Read the warrant. The caption is the gaslight.
+F0: [The Department of Justice]<justice.gov/usao-sdny/pr/manhattan-us-at> charged Nicolás Maduro Moros on **26 March 2020** in the Southern District of New York with narco-terrorism conspiracy under [21 U.S.C. § 960a]<law.cornell.edu/uscode/text/21/960a>.
+F1: [The State Department]<state.gov/nicolas-maduro-moros>: on **3 January 2026** he “was placed in U.S. custody following a military operation in Caracas,” taken to the Metropolitan Detention Center in Brooklyn, and charged in a superseding indictment unsealed that day.
+F2: Kidnapping under [18 U.S.C. § 1201]<law.cornell.edu/uscode/text/18/1201> is the unlawful seizure of a person.
+F3: The same trick ran for twelve years against the man the country hired, and against the people who hired him. **Collusion.** The [Durham report]<justice.gov/storage/durhamreport.pdf> says the FBI opened a full investigation on raw, uncorroborated intelligence and did not have actual evidence of collusion in its holdings when the 
+F4: [Inspector General Horowitz]<oig.justice.gov/sites/default/files/repo> found seventeen inaccuracies and omissions in the Carter Page FISA applications used to surveil a U.S. person tied to a presidential campaign.
+F5: Hawaii]<supremecourt.gov/opinions/17pdf/17-965_h>.
+F6: The pictures were not a 2018 invention. **Mostly peaceful.** A precinct burned. **Insurrection.** [USAO-DC]<justice.gov/usao-dc/48-months-jan-6-atta>: about 1,583 federally charged.
+F7: Oath Keepers and Proud Boys leaders convicted of seditious conspiracy, [18 U.S.C. § 2384]<law.cornell.edu/uscode/text/18/2384>.
+F8: Zero under the insurrection statute, [§ 2383]<law.cornell.edu/uscode/text/18/2383>. **Domestic terrorists.** Parents at school boards.
+F9: Five days later the Attorney General [ordered]<justice.gov/d9/press-releases/attachment> U.S.
+
+#### 30 the-hire-is-the-country | Taxpayer-funded hoaxes | The Tape | 2026-09-21
+V0: They used process as a weapon against an elected president and the people who hired him. Each caption had evidence. The official file later showed the evidence did not hold. Insurrection was never charged. The public paid the bill.
+V1: The people hire the president. Process used as punishment against that hire is process used against the vote. The cases are on the chart. Each row opens the record.
+F0: [rec] Russia collusion — Crossfire Hurricane |   |   | <justice.gov/storage/durhamreport.pdf>
+F1: [rec] First impeachment — abuse of power |   |   | <trumpwhitehouse.archives.gov/wp-content/>
+F2: [rec] Second impeachment — incitement of insurrection |   |   | <justice.gov/usao-dc/48-months-jan-6-atta>
+F3: [rec] Four criminal dockets at once |   |   | <courtlistener.com/docket/67656595/united>
+F4: [src] July 25, 2019 call memorandum — <trumpwhitehouse.archives.gov/wp-content/>
+F5: [src] H.Res. 755 — first impeachment — <congress.gov/bill/116th-congress/house-r>
+F6: [src] H.Res. 24 — second impeachment — <congress.gov/bill/117th-congress/house-r>
+F7: [src] C-SPAN — January 6 speech — <c-span.org/video/?507744-1/president-tru>
+F8: [src] USAO-DC — January 6 tally — <justice.gov/usao-dc/48-months-jan-6-atta>
+F9: [src] 18 U.S.C. § 2383 — insurrection — <law.cornell.edu/uscode/text/18/2383>
+
+#### 31 they-ran-it-anyway | They ran it anyway | The Tape | 2026-09-21
+V0: Crossfire Hurricane had no actual evidence of collusion when it opened. Politicians and networks ran it for the entire first term. That is how a president is poisoned and a nation is divided.
+V1: The country was told the opposite. On March 20, 2017 — two months into the first term — the ranking Democrat on House Intelligence read Steele-dossier allegations into a public hearing, and that same month he said in a television interview that he had “more th
+V2: The file was empty at the opening. They ran it for the whole first term. That is how a presidency is poisoned.
+F0: The [Durham report]<justice.gov/storage/durhamreport.pdf> is the file.
+F1: [Horowitz]<oig.justice.gov/sites/default/files/repo>: seventeen inaccuracies and omissions in those applications.
+F2: [in-view] House Republicans’ censure resolution, H.Res. 630 (October 2019, tabled by the House), put their charge in the [Congressional Record]<congress.gov/congressional-record/volume>: false accusations of collusion spread for more than two years, including that March 2017 claim.
+F3: [in-view] The ledger is [Taxpayer-funded hoaxes](/dispatch/the-hire-is-the-country).
+F4: [src] Durham report — <justice.gov/storage/durhamreport.pdf>
+F5: [src] Barr remarks on the Mueller report — <justice.gov/archives/opa/speech/attorney>
+F6: [src] Horowitz IG — FISA — <oig.justice.gov/sites/default/files/repo>
+F7: [src] Congressional Record — H.Res. 630 — <congress.gov/congressional-record/volume>
+
+#### 32 they-called-it-protest | They called it protest | The Tape | 2026-09-21
+V0: They hate the cleanup because it proves 2020 was not mostly peaceful. The monuments were vandalized. The murder rate was 6.5. The capital is being made a capital again.
+V1: They called it protest. The file is vandalism, encampments, and a murder spike. That is why the cleanup is hated. If 2020 was mostly peaceful, then restoring a statue is an insult. If 2020 was a crime wave with a caption, then [Executive Order 14252](https://w
+V2: The bail was the return ticket. On June 1, 2020, then-Senator Kamala Harris posted: “If you’re able to, chip in now to the @MNFreedomFund to help post bail for those protesting on the ground in Minnesota.” The post is still up on her account. Minneapolis had a
+V3: They hate the cleanup because it proves the caption was the crime. The monuments were never the enemy.
+F0: [in-view] If 2020 was a crime wave with a caption, then [Executive Order 14252]<federalregister.gov/documents/2025/04/03> is the capital doing its job: prevent crime, punish criminals, protect the monuments, take the graffiti off the marble, clear the encampments on National Park Service land.
+F1: [in-view] [EO 14253]<federalregister.gov/documents/2025/04/03> tells Interior to restore federal monuments that were damaged, defaced, or taken down.
+F2: [in-view] The 2020 order that first named that work, [EO 13933]<federalregister.gov/documents/2020/07/02>, was reinstated.
+F3: The [FBI]<fbi.gov/news/press-releases/fbi-releases> now puts the 2025 murder rate at **4.1** per 100,000 — tied with 1955 and 1956, the lowest since national estimates began.
+F4: The FBI’s 2020 rate was **6.5** ([BJS table of FBI data]<bjs.ojp.gov/document/hvus23.pdf>), in a year they called peaceful while a precinct burned.
+F5: [in-view] The rest of the wording, the insured bill, and the clean hands are in [They keep their hands clean](/dispatch/clean-hands).
+F6: [src] EO 14252 — Making the District of Columbia Safe and Beautiful — <federalregister.gov/documents/2025/04/03>
+F7: [src] EO 14253 — Restoring Truth and Sanity to American History — <federalregister.gov/documents/2025/04/03>
+F8: [src] EO 13933 — Protecting American Monuments (2020) — <federalregister.gov/documents/2020/07/02>
+F9: [src] FBI — 2025 crime statistics — <fbi.gov/news/press-releases/fbi-releases>
+
+#### 34 they-hold-it-by-the-blade | They hold it by the blade | The Republic | 2026-08-30
+V0: They did not repeal the Constitution. They learned to use it as a weapon — the clause that shields them, never the duty that binds them.
+V1: The Constitution is not the enemy. The people who hold it by the blade are. They did not repeal Article I. They learned which clauses make a sword and which make a duty, and they only pick up the sword.
+V2: A republic uses the document as a limit on Congress. A syndicate uses it as a costume. Pull it back together by reading the rest of the article — the duty, not just the shield. The file is the hilt. They do not get to keep only the edge.
+F0: [src] Speech or Debate (Art. I §6) is waved at a camera as if the Constitution blessed the cable rant. It blesses the floor. Hutchinson v. Proxmire already said the press release is not the chamber. They hold up the clause anyway so the employee looks untouchable on the feed. <supreme.justia.com/cases/federal/us/443/>
+F1: - Insurrection is the word they ran all day. 18 U.S.C. § 2383 is the statute they did not file; prosecutors charged other felonies instead, including [seditious conspiracy]<law.cornell.edu/uscode/text/18/2384>.
+F2: [src] Article I §6 — Speech or Debate — <constitution.congress.gov/constitution/a>
+F3: [src] Hutchinson v. Proxmire — <supreme.justia.com/cases/federal/us/443/>
+F4: [src] 18 U.S.C. § 2383 — unused on Jan. 6 — <law.cornell.edu/uscode/text/18/2383>
+F5: [src] the Supreme Court's incitement test — <supreme.justia.com/cases/federal/us/395/>
+
+#### 35 they-published-the-replacement | They published the replacement | The Republic | 2026-08-24
+V0: DSA’s 2026 program: a new constitution and a socialist republic. The criminal statutes require force. The charter is still the target.
+V1: That cuts both ways. No one gets to invent a conviction. They do not get to call a new constitution “just policy.”
+V2: A bomb is not required if institutions are captured and throw out the charter.
+V3: A prosecutor still has to prove an agreement to use force. Their paper program does not recite rifles. A felony is not invented here. A rewrite of the Senate, the presidency, the Court, property, and citizenship is not shrugged off. Article V is how Americans 
+F0: [18 U.S.C. § 2384]<law.cornell.edu/uscode/text/18/2384> — seditious conspiracy — is a felony for two or more people who conspire to overthrow the United States by force, levy war against it, or by force hinder federal law.
+F1: [18 U.S.C. § 2385]<law.cornell.edu/uscode/text/18/2385> — the Smith Act — reaches advocating overthrow by force or violence.
+F2: In 2026 the Democratic Socialists of America published [Workers Deserve More]<program.dsausa.org/>.
+F3: Source the law: [Cornell LII, 18 U.S.C. § 2384]<law.cornell.edu/uscode/text/18/2384> and [§ 2385]<law.cornell.edu/uscode/text/18/2385>.
+F4: Source their words: [program.dsausa.org]<program.dsausa.org/>.
+
+#### 36 the-recess-blockade | The recess blockade | Congress | 2026-08-23
+V0: Pro forma gavels. Fake sessions. A president who cannot appoint. Article II, gutted on purpose.
+V1: The Framers wrote the Recess Appointments Clause as a check against a Senate that would not act. Fake sessions are a check against the voters. That is the 2024 mandate dying in an empty room. Track the calendar. Count the days between gavels. The numbers are t
+F0: Noel Canning (2014)]<law.cornell.edu/supct/pdf/12-1281.pdf> held that a recess of fewer than ten days is presumptively too short to trigger the Recess Appointments Clause, and that the Senate is in session when it says it is, if it keeps the ability to do business.
+F1: It turns off [Article II, Section 2, Clause 3]<constitution.congress.gov/constitution/a> on purpose so a president the country just elected cannot staff the government.
+
+#### 37 the-funnel | The funnel | Congress | 2026-09-21
+V0: Taxpayer to agency to NGO. USAID. FEMA. The Endowment. There is no line item that says DNC. There is a pipe. Congress votes the water.
+V1: Federal grant money is not supposed to buy a campaign. [2 CFR 200.450](https://www.ecfr.gov/current/title-2/section-200.450) forbids using the award to lobby. That is the rule. The ecosystem is the rest. [22 U.S.C. § 4411](https://www.law.cornell.edu/uscode/te
+V2: There is no line item that says DNC. There is a funnel. Congress opens it.
+F0: [USASpending]<usaspending.gov/agency/agency-for-intern> is the ledger.
+F1: [ForeignAssistance.gov]<foreignassistance.gov/> is the map.
+F2: [USAID’s Inspector General]<oig.usaid.gov/> is the file on what happens inside the pipe.
+F3: [Cash assistance in the West Bank and Gaza]<oig.usaid.gov/sites/default/files/2026-0>: about **$36 million** in fiscal 2024 to four NGOs, with key fraud risks USAID did not identify.
+F4: [Humanitarian awards in that theater]<oig.usaid.gov/sites/default/files/2026-0>: **$650 million** across eighteen awards, with selective partner vetting that the auditor said could increase the risk of diversion.
+F5: At home the same shape: [DHS OIG-26-04]<oig.dhs.gov/sites/default/files/assets/2> — FEMA awarded nearly **$1.4 billion** in fiscal 2023–24 through the Emergency Food and Shelter Humanitarian program and the Shelter and Services Program to states, cities, and nonprofits.
+F6: [Who got paid](/dispatch/who-got-paid) is the border half of the same pipe.
+F7: [in-view] [2 CFR 200.450]<ecfr.gov/current/title-2/section-200.450> forbids using the award to lobby.
+F8: [in-view] [22 U.S.C. § 4411]<law.cornell.edu/uscode/text/22/4411> created the National Endowment for Democracy.
+F9: [in-view] [The FEC]<fec.gov/introduction-campaign-finance/un> still offers a **$3** checkoff on the 1040 for the Presidential Election Campaign Fund.
+
+#### 38 they-dont-write-the-bills | They don’t write the bills | Congress | 2026-09-21
+V0: The lobbyist drafts. The activist supplies the caption. Congress votes the unread pile. America keeps the harm.
+V1: Congress already admitted the method. The [Lobbying Disclosure Act](https://www.law.cornell.edu/uscode/text/2/1601) — [P.L. 104-65](https://www.congress.gov/104/plaws/publ65/PLAW-104publ65.pdf) — opens with a finding: paid lobbyists influence federal officials
+V2: They were hired to write the law. They vote the lobby’s draft. America is stuck with the harm.
+F0: [Article I, Section 1]<constitution.congress.gov/constitution/a> vests all legislative powers herein granted in a Congress of the United States.
+F1: [in-view] The [Lobbying Disclosure Act]<law.cornell.edu/uscode/text/2/1601> — [P.L. 104-65]<congress.gov/104/plaws/publ65/PLAW-104pu> — opens with a finding: paid lobbyists influence federal officials in the conduct of government, and the public is entitled to know who they are.
+F2: [in-view] The [Senate]<lda.senate.gov/system/public/> and the [House]<lobbyingdisclosure.house.gov/> take the forms.
+F3: [in-view] [Why the lobby should be illegal](/dispatch/why-the-lobby-should-be-illegal) is the argument.
+F4: [in-view] [The $7 billion machine](/dispatch/the-7-billion-machine) is what the hire costs while someone else writes the work.
+F5: [src] Article I, Section 1 — <constitution.congress.gov/constitution/a>
+F6: [src] 2 U.S.C. § 1601 — Lobbying Disclosure Act findings — <law.cornell.edu/uscode/text/2/1601>
+F7: [src] Senate — LDA filings — <lda.senate.gov/system/public/>
+F8: [src] House — lobbying disclosure — <lobbyingdisclosure.house.gov/>
+F9: [src] P.L. 104-65 — Lobbying Disclosure Act of 1995 — <congress.gov/104/plaws/publ65/PLAW-104pu>
+
+#### 39 paying-the-taliban | Paying the Taliban | Congress | 2026-09-21
+V0: An aid partner told SIGAR maybe 30 to 40 percent of donor funds reaches the population. A Senate that will not read the bill still votes the money. That is not leadership.
+V1: That money did not appear by weather. It appeared because Congress appropriated it. [Article I](https://constitution.congress.gov/constitution/article-1/) hired the Senate to write and read the law. A leader who will not read the bill still moves the pile. The
+V2: A Senate that will not read the bill is not leading. It is paying. SIGAR named who collected.
+F0: The [Special Inspector General for Afghanistan Reconstruction]<sigar.mil/Portals/147/Files/Reports/Audi> later put the result on paper.
+F1: After the takeover the United States remained the largest donor. **$3.83 billion** in U.S. humanitarian and development assistance went into that country, about 36 percent of all international aid, per [SIGAR]<govinfo.gov/content/pkg/GOVPUB-S-PURL-gp>.
+F2: [SIGAR 25-16]<sigar.mil/Portals/147/Files/Reports/Audi>: from August 2021 through September 2023, State and USAID funded 86 agreements with public international organizations, total project cost **$3.038 billion**.
+F3: [SIGAR 24-12]<sigar.mil/Portals/147/Files/Reports/Audi>: the United Nations purchased and transported more than **$2.9 billion** in U.S. currency into Afghanistan to run the aid.
+F4: [SIGAR 24-22]<sigar.mil/Portals/147/Files/Reports/Audi>, May 2024: thirty-eight implementing partners paid at least **$10.9 million** of U.S. taxpayer money to the Taliban-controlled government in taxes, utilities, fees, and customs.
+F5: In August 2025 SIGAR called the delivery system [broken]<govinfo.gov/content/pkg/GOVPUB-S-PURL-gp>.
+F6: [in-view] [Article I]<constitution.congress.gov/constitution/a> hired the Senate to write and read the law.
+F7: [in-view] [They don’t write the bills](/dispatch/they-dont-write-the-bills) is the method.
+F8: [src] SIGAR 24-22 — funds benefitting the Taliban — <sigar.mil/Portals/147/Files/Reports/Audi>
+F9: [src] SIGAR 25-16 — PIOs and diversion risk — <sigar.mil/Portals/147/Files/Reports/Audi>
+
+#### 40 fema-ran-two-jobs | FEMA ran two jobs | The Border | 2026-09-21
+V0: North Carolina flood. Maui fire. Americans who paid the tax waited. The same agency awarded $1.4 billion for aliens.
+V1: Say the wire correctly. The Shelter and Services Program was not a check drawn on the Disaster Relief Fund. It was Customs and Border Protection money Congress moved to FEMA. The purse is still one purse. One cabinet. One season. North Carolina after the flood
+V2: The flood and the fire waited. The migrant grant went out.
+F0: On August 29, 2023, [FEMA announced Immediate Needs Funding]<content.govdelivery.com/attachments/USDH>.
+F1: [CRS]<congress.gov/crs-product/R47676> later wrote that FEMA had to restrict obligations to preserve money for immediate response, and that the unobligated DRF balance that morning was **$3.4 billion**.
+F2: [DHS OIG-26-04]<oig.dhs.gov/sites/default/files/assets/2>: Congress directed CBP to transfer **$1.45 billion** to FEMA for Shelter and Services — $800 million in fiscal 2023, $650 million in fiscal 2024.
+F3: [GAO]<gao.gov/products/gao-26-108154> later: after Helene and Milton, many survivors’ calls to FEMA’s helpline went unanswered, and answered calls waited, on average, from about half an hour to more than two hours at the peak.
+F4: [GAO]<gao.gov/products/gao-25-106862>: more than 100 dead, nearly 10,000 displaced, more than 2,000 structures damaged or destroyed.
+F5: FEMA’s own [one-year fact sheet]<fema.gov/fact-sheet/one-year-later-maui->: **$56.1 million** in Individual Assistance to **7,141 people**, within nearly $3 billion in total federal support.
+F6: Temporary housing was still being [extended into 2027]<fema.gov/press-release/20260128/fema-ext>.
+F7: [in-view] [What the taxpayer bought](/dispatch/what-the-taxpayer-bought) is the shopping list.
+F8: [src] FEMA — Immediate Needs Funding, Aug. 29, 2023 — <content.govdelivery.com/attachments/USDH>
+F9: [src] CRS — Disaster Relief Fund, R47676 — <congress.gov/crs-product/R47676>
+
+#### 41 the-7-billion-machine | The $7 billion machine | Congress | 2026-08-22
+V0: FY2026 legislative branch: $7.258 billion. Salary is the decoy. The perks are the bill.
+V1: - They write the second law never shown — riders, notwithstanding clauses, giant unread bills — then say the floor was too busy to read it.
+V2: - Call time is the real session. Donors get the hours. The statute gets the leftover. The country already paid $174,000 so they would not have to work the phones. They work the phones anyway.
+V3: - They set their own pay, their own pension, their own ethics office, then investigate themselves. The STOCK Act of 2012 was a press conference. The trades continued.
+F0: [src] House of Representatives: $2.083 billion. The Members' Representational Allowance alone ran about $1.85 million to $2.09 million per House office in 2025 — staff, travel, district rent. Eighteen permanent aides plus four additional aides are allowed. <congress.gov/crs-product/R40962>
+F1: [18 U.S.C. § 2381]<law.cornell.edu/uscode/text/18/2381> is the same crime in the code.
+F2: [src] FY2026 legislative branch — $7.258 billion — CRS / P.L. 119-37 — <congress.gov/crs-product/R48612>
+F3: [src] Salaries and allowances — CRS RL30064 — <congress.gov/crs-product/RL30064>
+F4: [src] Members' Representational Allowance — CRS — <congress.gov/crs-product/R40962>
+F5: [src] Treason — Art. III §3 / 18 U.S.C. § 2381 — <law.cornell.edu/uscode/text/18/2381>
+F6: [src] Oath of office — 5 U.S.C. § 3331 — <law.cornell.edu/uscode/text/5/3331>
+F7: [src] Article I §9 — appropriations by law — <constitution.congress.gov/constitution/a>
+F8: [src] 27th Amendment — pay after an election — <constitution.congress.gov/constitution/a>
+
+#### 42 the-line-in-the-sand | The line in the sand | Congress | 2026-08-21
+V0: The SAVE Act was the tell. Citizenship to vote. The Senate still sits on it.
+V1: Swamp Force exists because a uniparty that will not require proof of citizenship to vote in a federal election is not confused. It is protecting a system. The Safeguard American Voter Eligibility Act — [H.R. 22](https://www.congress.gov/bill/119th-congress/hou
+V2: The split in this country is not Left vs. Right. It is the Syndicate vs. The public. 535 people do not outrank 300 million. They work here. They do not own it.
+F0: [in-view] The Safeguard American Voter Eligibility Act — [H.R. 22]<congress.gov/bill/119th-congress/house-b>, Senate companion [S. 128]<congress.gov/bill/119th-congress/senate-> — is documentary proof of U.S. citizenship to register, and a purge of non-citizens from the rolls.
+
+#### 43 the-uniparty-mirror | The uniparty mirror | The Parties | 2026-08-20
+V0: Cameras on: a fight. Cameras off: the same surveillance bill, the same blank check.
+V1: They need the country in a jersey. Red versus blue is how a cartel keeps the floor. Behind the cameras, the votes rhyme.
+V2: That is not a sporting event. That is an insulated class protecting surveillance, debt, and lobbyist-written piles of law. When an outsider threatened the gravy train, the fake war got loud and the committees became weapons. A nation fighting itself never look
+F0: Debt-ceiling increases have been a bipartisan ritual for a generation; the [Fiscal Responsibility Act of 2023]<congress.gov/bill/118th-congress/house-b> was only the latest handshake.
+F1: FISA Section 702, the warrantless-surveillance authority, was reauthorized April 20, 2024 as the [Reforming Intelligence and Securing America Act]<congress.gov/bill/118th-congress/house-b>.
+F2: Congress passed a short extension to June 12 ([S. 4465]<congress.gov/bill/119th-congress/senate->); a further extension ([H.R. 9238]<congress.gov/bill/119th-congress/house-b>) failed in the House on June 11.
+
+#### 44 how-the-house-was-captured | How the House was captured | The Parties | 2026-08-29
+V0: Not a movie syndicate. A paying club. Both parties kept the books.
+V1: A protection racket sells a shield and collects dues. Washington does a legal version. Taxes. Donor access. The employee writes a rule a donor wanted, then walks into the firm that asked for it. That is a revolving door. A career path. Not a filed racketeering
+V2: This series is the map. Committees that never shrink. Thousand-page bills nobody reads. A “fight” on television and a handshake on the roll call. Both parties did this. If a lesson only names one jersey, it is a clip. We will name the jobs: leadership PACs, lo
+V3: A republic is principals and agents. A club is dues and protection.
+F0: [src] Lobbying disclosure — Senate — <senate.gov/legislative/Public_Disclosure>
+
+#### 45 what-the-democratic-party-became | What the Democrats became | The Parties | 2026-08-29
+V0: A party of farmers and unions became a party of campuses, agencies, and clips.
+V1: This is not a hate page. It is a history class. Jefferson’s party talked limited government. Jackson’s party talked the common man and still built a spoils machine. The 20th century added unions, the New Deal, and Jim Crow in the same tent. The 1960s split it:
+V2: By the 2020s the brand was agencies, identity memos, and a newsroom that treated the party as weather. Working counties left. The clip stayed. Later lessons: the machines, the 1964–68 break, the donor shift, and what the 2024 loss actually was. We will give th
+V3: A party is a tool. When the tool stops serving the people who built it, name the date.
+F0: [in-view] The 1960s split it: [civil-rights votes]<congress.gov/bill/88th-congress/house-bi> that were right, and a new class of staffers who never left campus.
+
+#### 46 what-the-republican-party-became | What the GOP became | The Parties | 2026-08-29
+V0: Lincoln’s party became a donor club that talks founding and funds the swamp.
+V1: Same rule. Not a hate page. A history class. Lincoln’s party ended slavery and occupied the South. Then it made a deal and left. The 20th century: tariffs, business, Nixon’s map, Reagan’s tax cuts and the debt that came with the talk. Read [Treasury’s debt to 
+V2: 2016 was a revolt inside that club. Some of the club joined. Some of it called the voters names. Later lessons: the southern realignment, the never-ending war caucus, K Street Republicans, and why a majority still cannot close a border they campaign on. If we 
+V3: A jersey is not a receipt. Read the roll call.
+F0: [in-view] Read [Treasury’s debt to the penny]<fiscaldata.treasury.gov/datasets/debt-to>.
+
+#### 47 why-the-lobby-should-be-illegal | Why the lobby should be illegal | Congress | 2026-08-29
+V0: Paid influence is not speech. It is a second government the people did not hire.
+V1: Citizens may walk to the Capitol and tell an employee what they think. That is petition. A firm that is paid to live inside the political club, draft the bill, and hire last year’s staffer is not petition. It is a second government. The first is on the ballot.
+V2: Why it is not banned: the First Amendment covers petition, and the Court has treated money as speech in campaigns. Why it still should be fenced: disclosure is not a fence. The Lobbying Disclosure Act of 1995 is a form. Forms do not stop the door from revolvin
+V3: The people hire Congress. The lobby hires Congress back.
+F0: [src] Lobbying Disclosure Act — P.L. 104-65 — <congress.gov/104/plaws/publ65/PLAW-104pu>
+F1: [src] 2 U.S.C. § 1601 — <law.cornell.edu/uscode/text/2/1601>
+F2: [src] Senate LDA filings — <lda.senate.gov/system/public/>
+
+#### 48 why-he-became-the-enemy | Why they hate Trump | The Parties | 2026-08-30
+V0: They loved the donor. They turned when he stopped writing checks and started closing the problems the political club lived on. Then came the hoaxes — on the taxpayer dime.
+V1: They do not hate him because he is a saint. This journal has already printed the ugly sentences that are on tape, and it will print them again when they belong. They loved him when he was a donor — a businessman writing checks to the political club. That man w
+V2: Hate, in this case, is a product. A newscast that never quite describes a statute still has a plot: he is the plot. Politicians who cannot pass a bill can always pass a monster. Platforms are paid when the feed stays mad. The people who cashed his checks when 
+V3: He never wore the uniform. That is in the record. Then July 13, 2024, in Butler, Pennsylvania, when a rifle tried to close the argument and he stood back up. Another attempt on a golf course. Love of country is not a discharge paper. Sometimes it is a man who 
+F0: - Oil: [EIA’s September 2026 outlook]<eia.gov/outlooks/steo/> has U.S. crude production at a record 13.83 million barrels a day this year, up from 13.66 million in 2025, about 18.5 percent of expected world output.
+F1: - The border as a border: [CBP]<cbp.gov/newsroom/stats/southwest-land-bo> counted 237,538 southwest Border Patrol apprehensions in fiscal 2025, the lowest since 1970; Remain in Mexico in the first; catch-and-release treated as finished rather than as policy.
+F2: [src] Laken Riley Act, Public Law 119-1 — signed January 29, 2025. Congress put its name on it. <congress.gov/bill/119th-congress/senate->
+F3: [src] EIA — U.S. oil record 13.83 mbpd — <eia.gov/outlooks/steo/>
+F4: [src] Durham report — DOJ — <justice.gov/storage/durhamreport.pdf>
+
+#### 49 the-file-on-the-man | The gauntlet | The Parties | 2026-08-29
+V0: Overlapping cases, a rifle, and a newscast. The point was to make a revolt look like a fever.
+V1: A caption is lying when it is not the same sentence as the recording. Bloodbath, in the full answer, was about car plants and a tariff, not a promise of civil war. Fine people, in the same remarks, included a total condemnation of neo-Nazis. Those examples are
+V2: Liking his mouth is not required. The ugly lines that are on tape stay on this site. The jobs that are on paper stay too: USMCA, three justices, the Abraham Accords, no new American war in the first term (our view), Soleimani, Remain in Mexico, the Laken Riley
+V3: What they put him through was not one case. It was a calendar. Two impeachments. A special counsel. Civil and criminal matters in New York. Documents in Florida. Georgia. Gag orders. More than ninety felony counts, overlapping, eating the campaign. A rifle in 
+F0: [src] Durham report — <justice.gov/storage/durhamreport.pdf>
+
+#### 50 what-he-told-them | What he told them | The Parties | 2026-08-29
+V0: Globalists at the UN. The Taliban on the lawn. Iran in public. Not a staffer’s memo.
+F0: The paper underneath is the [Doha agreement of February 29, 2020]<state.gov/wp-content/uploads/2020/02/Agr>: a withdrawal calendar if they cut al-Qaeda.
+F1: [src] UN 2019 — patriots, not globalists — <trumpwhitehouse.archives.gov/briefings-s>
+
+#### 51 the-word-that-never-made-the-docket | The word that never made the docket | The Parties | 2026-08-29
+V0: The word ran all day on television. It never appeared on the indictment. Here is the docket, the bodycam, and the testimony that does not match.
+V1: Trump's speech that day included the words peacefully and patriotically. Splices ran anyway. A building was still breached. A woman was still shot. A journal that only runs one of those facts is wearing a jersey. How we got here is not a secret council. It is 
+F0: Search the federal docket for January 6 defendants charged under [18 U.S.C. § 2383]<law.cornell.edu/uscode/text/18/2383>, the Civil War-era statute titled rebellion or insurrection.
+F1: Some leaders of two groups were charged under a different statute — [seditious conspiracy, § 2384]<law.cornell.edu/uscode/text/18/2384> — which is a real charge with a real trial record.
+F2: [src] 18 U.S.C. § 2383 — unused — <law.cornell.edu/uscode/text/18/2383>
+F3: [src] Ashli Babbitt — DOJ — <justice.gov/usao-dc/pr/department-justic>
+
+#### 52 this-congress-cannot-police-itself | This Congress cannot police itself | The Remedy | 2026-08-29
+V0: Replace them. Term-limit them. They do not get to write their own privileges. A citizen board that also goes home.
+V1: A suspect does not write the criminal code. Congress writes its pay, its pension, its ethics office, and the exceptions that keep the political club comfortable. Then it investigates itself. That is not oversight. That is a club with a gavel. The people who wo
+V2: What the amendment should do, in plain words. One: every seat turns over on a clock — House and Senate — no career. Two: they do not set their own pay, stock rules, or ethics. Those go to a citizen oversight board. The board is term-limited too. No one on it m
+V3: They work for us. They do not get to grade their own homework.
+F0: [src] U.S. Term Limits v. Thornton — <supreme.justia.com/cases/federal/us/514/>
+F1: [src] Article V — how an amendment is made — <constitution.congress.gov/constitution/a>
+F2: [src] STOCK Act (2012) — <congress.gov/112/plaws/publ105/PLAW-112p>
+
+#### 53 not-a-part-time-job | Not a part-time job | Congress | 2026-08-29
+V0: No part-time job on earth pays like this. Full time, or the perks stop.
+V1: No part-time job in America pays $174,000 plus a pension that outlives the seat, FEHB, an office allowance of roughly $1.85 million to $2.09 million, a gym, and $7.258 billion of machine around the chair. It must stop — or they work full time. If Congress is i
+V2: Part-time Congress is full-time lobby. Full-time pay. Full-time work — or the perks end.
+V3: Politics as a jersey will not pass that. The people who would vote away their own calendar will not. The next page is what we can do without becoming them.
+F0: - The official [days-in-session calendars]<congress.gov/days-in-session> show the count.
+F1: [src] FY2026 legislative branch — $7.258 billion — CRS / P.L. 119-37 — <congress.gov/crs-product/R48612>
+F2: [src] Congressional salary — CRS — <congress.gov/crs-product/RL30064>
+F3: [src] Days in session — Congress.gov — <congress.gov/days-in-session>
+
+#### 54 what-we-can-do | What we can do | Congress | 2026-08-30
+V0: Politics will not fix a Congress that writes its own rules. A united people, peaceful, on the record — or it does not happen.
+V1: The record is on the table. Forty trillion. Seven billion for a part-time floor. Two hundred dollars if they file the trade late. They divided a nation so the public would fight the neighbor and never look at Congress. Politics — the jersey, the panel, the cli
+V2: What is left is a united America that stops fighting itself. Arendt: power is people acting in concert. Isolation is how a republic is lost. The villain is not the other jersey. The villain is Congress. If we keep the fight they sold us, they keep the calendar
+V3: - Demand prosecutions where the elements are actually on the paper — STOCK Act, bribery, false statements, the statutes that already exist — not a jersey hunt, not a word the Constitution reserved for war. A caption is not an indictment. We have already refuse
+F0: [src] The First Amendment is the tool they cannot take without eating the document: speech, press, peaceful assembly, petition for a redress of grievances. <constitution.congress.gov/constitution/a> A protest that stays peaceful is the republic working. A riot is their caption. We do not give them the caption.
+F1: [src] First Amendment — speech, press, assembly, petition — <constitution.congress.gov/constitution/a>
+F2: [src] Article I §5 — punish and expel — <constitution.congress.gov/constitution/a>
+F3: [src] Article V — amendments — <constitution.congress.gov/constitution/a>
+
+#### 55 the-debt-they-will-not-close | The debt they will not close | Congress | 2026-08-30
+V0: They have not finished a budget on time since Clinton. Forty trillion. An unread pile is a door for fraud.
+V1: - A continuing resolution copies last year's funding, plus 'anomalies' — exceptions stuffed in by the people who already failed to write a bill. Nobody outside the room can audit an anomaly at 2 a.m.
+V2: - A giant unread bill is a thousand pages dropped hours before the vote. Members vote on a caption. The riders, the earmarks, the contractors, and the quiet increases live in the annex. That is the same trick, done with money.
+V3: - Emergency designations and 'disaster' titles skip the caps. Some disasters are real. The designation is also how a permanent program is hidden inside a one-time word.
+F0: [Debt to the Penny]<fiscaldata.treasury.gov/datasets/debt-to> is the government's own meter.
+F1: [CRS: FY1997 was the last time all regular appropriations were enacted by October 1]<congress.gov/crs-product/IN12324>, while Clinton was still in the building.
+F2: [5 U.S.C. § 3331]<law.cornell.edu/uscode/text/5/3331> is that oath.
+F3: [src] Debt to the Penny — Treasury — <fiscaldata.treasury.gov/datasets/debt-to>
+F4: [src] CRS — last on-time package FY1997 — <congress.gov/crs-product/IN12324>
+
+#### 57 a-caption-cannot-be-outlawed | A caption cannot be outlawed | The Tape | 2026-08-29
+V0: The rhetoric is the abuse. A hate law written by the same people would be the next clip.
+V1: The problem is real. Employees of the people get on a mic and talk like warlords. ‘Maximum warfare.’ A six-second cut on the other side of the aisle. That is emotion bait. It is how a nation is taught to hate its neighbor instead of firing its help. This journ
+V2: The trap is an ‘immediate law’ against anger, hate, and division. Who writes the definitions? The same Congress. Who enforces them? The same desks that already flag a file as radioactive. The next majority will name this site ‘hate’ and the neighbor ‘division.
+V3: The mic stays on the tape. The mute button stays off.
+F0: [src] the Supreme Court's incitement test — incitement — <supreme.justia.com/cases/federal/us/395/>
+F1: [src] Article I, Section 5 — punish and expel — <constitution.congress.gov/constitution/a>
+
+#### 58 the-floor-not-the-feed | The floor, not the feed | The Tape | 2026-08-30
+V0: Speech or Debate is a shield for the chamber. It is not a license for the rant. They write the emotion to stay inside the First Amendment.
+V1: Floor speech is protected even when it is rotten. That is the clause working. The feed, the network, the staged outrage — those are ordinary political speech, judged like anyone else's. They divided a nation with that craft. The villain is not the neighbor who
+F0: [src] Article I §6 — Speech or Debate — <constitution.congress.gov/constitution/a>
+F1: [src] Hutchinson v. Proxmire (1979) — <supreme.justia.com/cases/federal/us/443/>
+F2: [src] Gravel v. United States (1972) — <supreme.justia.com/cases/federal/us/408/>
+F3: [src] the Supreme Court's incitement test — incitement — <supreme.justia.com/cases/federal/us/395/>
+
+#### 59 the-law-they-dont-mention | The law they don't mention | The Tape | 2026-08-29
+V0: Most people were left with a cartoon of how a bill becomes law. The real sequence is longer, and the catch is usually in the annex.
+V1: The most expensive ignorance in American life is not a missed election date. It is not knowing how a law actually becomes a thing that can hurt a citizen. Civics class left most people with a cartoon: a bill, a debate, a signature, a parade. The real sequence 
+V2: Watch the trick when it is working. They pass a statute that sounds like it is best for the nation. Then they pass, or bury, another that voids it. A thousand-page unread bill. A line that begins notwithstanding any other provision. A continuing resolution tha
+V3: This is not an insult aimed at people who were busy. It is a description of an incentive. A clip is easier than Article I. A caption is easier than a rider. If half the country can name a party and almost none can name who writes the regulation after the statu
+F0: [src] How a bill becomes law — Congress.gov — <congress.gov/help/learn-about-the-legisl>
+F1: [src] Omnibus / continuing resolutions — CRS — <crsreports.congress.gov/product/pdf/R/R4>
+
+#### 60 the-caption-was-not-the-charge | The caption was not the charge | The Tape | 2026-09-21
+V0: Insurrection on television. Not on 18 U.S.C. § 2383. A stacked committee. A tape the House held. Lawfare against parents and a former president. Durham already wrote the Russia file.
+V1: A caption can convict a country before a statute is ever read. Russia collusion ran for years. Special Counsel John Durham’s report is the file: the FBI opened Crossfire Hurricane on raw, unanalyzed, uncorroborated intelligence. It did not have actual evidence
+V2: Our view: the hearing that sold the caption was stacked. H.Res. 503 gave the Speaker the appointments. https://www.congress.gov/bill/117th-congress/house-resolution/503 Nancy Pelosi named Liz Cheney and Adam Kinzinger. She rejected the minority leader’s picks,
+F0: The memo stayed on the books until Attorney General Bondi [rescinded it]<justice.gov/ag/media/1388506/dl?inline=> on February 5, 2025.
+F1: [src] Durham report — <justice.gov/storage/durhamreport.pdf>
+F2: [src] 18 U.S.C. § 2383 — insurrection — <law.cornell.edu/uscode/text/18/2383>
+F3: [src] 18 U.S.C. § 2384 — seditious conspiracy — <law.cornell.edu/uscode/text/18/2384>
+F4: [src] USAO-DC — 48 months of January 6 cases — <justice.gov/usao-dc/48-months-jan-6-atta>
+F5: [src] H.Res. 503 — the select committee — <congress.gov/bill/117th-congress/house-r>
+F6: [src] Attorney General memo — Oct. 4, 2021 — <justice.gov/d9/press-releases/attachment>
+F7: [src] Capitol Breach cases — <justice.gov/usao-dc/capitol-breach-cases>
+
+#### 61 a-war-on-americans | A war was waged on Americans | The Tape | 2026-09-22
+V0: Lawfare and lies were used to replace the American argument. The people own this country. That is not allowed.
+F0: [rec] The judge stayed on the case |   |   | <nycourts.gov/ipjudicialethicsopinions/23>
+F1: [rec] Bragg · 34 counts |   |   | <nycourts.gov/LegacyPDFS/press/PDFs/Peopl>
+F2: [rec] She was ordered to pay him |   |   | <courtlistener.com/docket/7649164/stephan>
+F3: State Senator Brad Hoylman, with Assemblymember Linda Rosenthal, sponsored the [Adult Survivors Act]<nysenate.gov/legislation/bills/2021/S66>.
+F4: The $5 million judgment was affirmed, and on June 29, 2026 the Supreme Court declined to hear it; it denied rehearing on August 17, 2026 ([No. 25-573]<supremecourt.gov/search.aspx?filename=/d>).
+F5: [rec] Carroll — she filed the day the window opened |   |   | <courtlistener.com/docket/65895581/carrol>
+F6: [rec] Letitia James · civil fraud |   |   | <iapps.courts.state.ny.us/webcivil/FCASSe>
+F7: [rec] Florida — the documents case |   |   | <courtlistener.com/docket/67490071/united>
+F8: [rec] The District of Columbia |   |   | <courtlistener.com/docket/67656595/united>
+F9: [rec] Georgia — the case was abandoned |   |   | <fultonclerk.org/>
+
+#### 62 the-statute-is-the-end | The statute is how it ends | The Remedy | 2026-09-22
+V0: Assault, a published address, and a threat to a juror are already crimes. The funding file does not name a donor. The charge sheet names the people who did the act.
+V1: A juror is not a target, from either side. Section 1503 does not ask which party is angry. This journal will not assign juror threats to a party without the charging document. In People v. Trump the court kept jurors’ identities from the public because it foun
+V2: Who paid for it. The Prairieland release does not name a donor who bought the weapons. [26 U.S.C. § 6104](https://www.law.cornell.edu/uscode/text/26/6104) keeps most contributor names off the public Form 990. Congress appropriates. An agency writes a grant. A 
+V3: How it ends. Charge the person who did the act. Prairieland is the example. Use the statutes already in the code: § 111, § 119, § 1361, and § 1503. Report an officer’s published address to the department, not to a crowd. Congress holds the purse under Article 
+F0: The [First Amendment]<constitution.congress.gov/constitution/a> says so.
+F1: [DHS, January 8, 2026]<dhs.gov/news/2026/01/08/radical-rhetoric>: from January 20 through December 31, 2025, the department recorded 275 assaults on ICE officers, against 19 in the same stretch of 2024.
+F2: [18 U.S.C. § 111]<law.cornell.edu/uscode/text/18/111> is assault on a federal officer.
+F3: [18 U.S.C. § 119]<law.cornell.edu/uscode/text/18/119> is publishing a covered person’s home address so that another person can threaten or harm him.
+F4: [18 U.S.C. § 1361]<law.cornell.edu/uscode/text/18/1361> is government property.
+F5: [18 U.S.C. § 1503]<law.cornell.edu/uscode/text/18/1503> is influencing, intimidating, or impeding a juror.
+F6: [The Justice Department, June 23, 2026]<justice.gov/opa/pr/leader-antifa-cell-me>: eight people sentenced for rioting, weapons, explosives, material support to terrorists, obstruction, and the attempted murder.
+F7: [in-view] [26 U.S.C. § 6104]<law.cornell.edu/uscode/text/26/6104> keeps most contributor names off the public Form 990.
+F8: [src] DHS — assaults on ICE, 2025 — <dhs.gov/news/2026/01/08/radical-rhetoric>
+F9: [src] DOJ — Prairieland sentences — <justice.gov/opa/pr/leader-antifa-cell-me>
+
+#### 63 the-media-ledger | Manufactured outrage | The Media | 2026-09-22
+V0: The chart of captions sold as fact. Epstein is on it. The crimes were real. The client list, the murder finding, and the one-party scandal were not in the file.
+V1: Psychological warfare, on this page, is not a secret military program and it is not a basement plot. It is a method, and the method is ordinary. A short false sentence is easier to remember than a transcript. If a person hears that sentence every day, for mont
+V2: The correction is long. The lie is six seconds, and it is repeated on the hour. That imbalance is the weapon. After enough repetitions, people defend the caption as if they watched the recording, and they sort a neighbor into an enemy without a statute. The le
+V3: The slogans were not descriptions. They were permission. Fine people. Bloodbath. Dictator. Bleach. Collusion. Threat to democracy. Clear and present danger. Each one was built to move an elected opponent out of politics and into the category of an extinction e
+F0: The department’s [July 2025 memorandum]<justice.gov/opa/media/1407001/dl> said there was no incriminating client list. **Our view:** The victims were then used as a slogan, while the children the government could not account for at the border were treated as a different argument.
+F1: Ohio, 395 U.S. 444]<supreme.justia.com/cases/federal/us/395/> replaced it.
+F2: [5 U.S.C. § 3331]<law.cornell.edu/uscode/text/5/3331> is an oath to the Constitution, without any mental reservation.
+F3: The committee’s own notice of the releases is [here]<cha.house.gov/2024/3/chairman-loudermilk>.
+F4: [“Fight like hell.”]<c-span.org/video/?507744-1/president-tru> [“Stand back and stand by.”]<debates.org/voter-education/debate-trans> [“When the looting starts, the shooting starts.”]<web.archive.org/web/20200531015829/https> The [Access Hollywood tape]<law.justia.com/cases/federal/appellate-c>, which he called [“locker room tal
+F5: I’m not proud of it.”]<debates.org/voter-education/debate-trans> [“I just want to find 11,780 votes.”]<govinfo.gov/app/details/GPO-J6-REPORT> The [December 2022 post]<web.archive.org/web/20221204195550/https>: a fraud that size “allows for the termination of all rules, regulations, and articles, even those found in the Constitut
+F6: [“Poisoning the blood.”]<c-span.org/clip/campaign-2024/donald-tru> [“Vermin.”]<web.archive.org/web/20250525174651/https> He told Bob Woodward on tape, March 19, 2020, [“I wanted to always play it down.”]<simonandschuster.com/p/the-trump-tapes> A journal that hides those is doing the same work as the package that hides “peacefull
+F7: [rec] The client list | They ran: There is a client list. The government is sitting on the names. | The file: Jeffrey Epstein’s crimes are real. He pleaded guilty in Florida in 2008. He was charged again in the Southern District of New York in 2019. Ghislaine Maxwell was convicted and sentenced to twenty years. A July 2025 memor
+F8: [rec] Murdered in the cell | They ran: He was murdered to protect the names. The cameras prove a hit. | The file: The New York City chief medical examiner ruled the death a suicide. The July 2025 Justice Department and FBI memorandum said the review found no evidence he was murdered. The guards falsified logs. Cameras failed. Th
+F9: [rec] Only their party | They ran: It is a Democratic scandal. Or it is a Republican scandal. The channel decides. | The file: **Our view:** The flight logs and the photographs show people from both parties’ worlds. A log records a passenger. It is not a charge. Naming one side and cutting the other is how the outrage was manufa
+
+#### 64 the-democrat-ledger | The Democrat ledger | Democrats | 2026-09-22
+V0: What the party told the country, and what the file shows. Lies, gaslight, and the decision to treat the voter as the enemy.
+V1: A party is allowed to oppose a president. It is not allowed to invent the facts, then govern as if the invention were the law. This page is what Democratic officials said about the country, the voter, and their own record. The captions about Donald Trump — fin
+V2: The betrayal is specific. They told parents they might be domestic terrorists. They told the public the border was secure while CBP counted more than ten million encounters. They told the public a laptop was Russian, then asked to be trusted on everything else
+V3: Opposition is not a license to invent the file.
+F0: [rec] No pardon | They ran: I will not pardon my son. | The file: He pardoned him. | <justice.gov/pardon/pardons-granted-presi>
+F1: [rec] The border is secure | They ran: The border is secure. The border is closed. | The file: CBP nationwide encounters, FY2021–24: 10.83 million. FY2021 began October 1, 2020, under the prior administration. A secure border does not print that number. | <cbp.gov/newsroom/stats/cbp-enforcement-s>
+F2: [rec] Antifa | They ran: Antifa is an idea, not an organization. | The file: **Our view:** An idea does not throw a frozen bottle, publish an officer’s address, or fire on a detention center. On July 4, 2025, people attacked the Prairieland Detention Center. On June 23, 2026, a court sentenced eight of them. One sentence was 100
+F3: [rec] Parents | They ran: School-board parents may be domestic terrorists. | The file: The National School Boards Association letter, then the Attorney General’s October 4, 2021 memo. **Our view:** The apology did not pull the memo. | <justice.gov/d9/press-releases/attachment>
+F4: [rec] Transitory | They ran: Inflation is transitory. Then it is Putin. Then it is greed. | The file: **Our view:** CPI-U peaked at 9.1 percent in June 2022. The cart rose 21.4 percent from January 2021 to January 2025. The cause kept changing. The price did not. | <bls.gov/cpi/>
+F5: [rec] War of choice | They ran: It is a reckless war of choice. | The file: The House floor heard it on March 4, 2026. The post does not mention the fuel. IAEA GOV/2026/50: 440.9 kilograms of uranium enriched up to 60 percent, as of June 13, 2025. A civilian reactor uses 3 to 5 percent. Leaving that number out is the half-truth.
+F6: [rec] Illegal war | They ran: One hundred days of Trump’s illegal war. | The file: Schumer posted that line. Khanna called the war immoral, illegal, and unstrategic. Whether Congress declared it is a separate argument under Article I. It does not erase the inspection. The 60 percent stockpile was already on the IAEA page. | <con
+F7: [rec] SNAP was slashed for billionaires | They ran: Republicans slashed SNAP to pay for tax breaks for billionaires. Millions of children do not know where the next meal is. | The file: Public Law 119-21 changed a work rule. The Congressional Budget Office says able-bodied adults through age 64, and adults whose children are 14 
+F8: [rec] The Court found election interference | They ran: The Supreme Court rebuked Trump’s election interference and blocked restrictions that would make it harder to vote. | The file: The September order is an emergency stay, docket 26A305, on a Postal Service rule, issued before the midterms. It is not a judgment that the Presi
+F9: [rec] Diesel is $6.52 | They ran: A gallon of diesel costs $6.52. That is the whole story. | The file: **Our view:** The number is real. The Energy Information Administration national average for the week of September 21, 2026, was $6.529. The week of January 12 it was $3.459. A true price with the path cut out is still a half-t
+
+#### 65 the-republican-ledger | The Republican ledger | Republicans | 2026-09-22
+V0: What the party promised the country, and what it did. The same standard. The other thumb on the scale.
+V1: The same standard cuts this way. A party that sells itself as the correction does not get to clip the tape, skip the court, or promise a check it will not write. This page is the Republican ledger: the promise, the chant, and the statute that did not follow.
+V2: Older betrayals stay because the country still pays them. Iraq was sold as a certainty about weapons that were not in the ground. “Read my lips” was followed by a tax increase. “Mission accomplished” was a banner, not the end of the war. A party does not get a
+V3: A correction that only runs one direction is not a correction.
+F0: [rec] The returns | They ran: I will release my tax returns. | The file: **Our view:** He did not release them. That broken promise is his. The 2020 publication was a theft. Charles Littlejohn pleaded guilty under 26 U.S.C. § 7213 and was sentenced to five years. The forms Ways and Means later released show income tax paid in 20
+F1: [rec] Balance it | They ran: We are the party of the balance sheet. | The file: **Our view:** The debt rose by trillions in the first term. A party that will not pass twelve appropriations bills does not get the slogan. | <fiscaldata.treasury.gov/datasets/debt-to>
