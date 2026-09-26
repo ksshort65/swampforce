@@ -1365,3 +1365,16 @@ a.src { white-space: nowrap; }
 .sf-fold .sf-opened{display:none}.sf-fold[open] .sf-opened{display:inline}.sf-fold[open] .sf-closed{display:none}
 .tap-hint{font-family:var(--sans);font-size:.75rem;color:var(--muted,#64748b);margin:4px 0 12px}
 a.chart-link{display:block;color:inherit;text-decoration:none}a.chart-link:hover .chart-card,a.chart-link:hover .stat{outline:2px solid var(--red,#b91c1c);outline-offset:2px}
+
+/* Visual pass 2: charts first + clickable cards */
+.sf-charts-first{padding:14px 0 6px}
+.sf-link{cursor:pointer}.sf-link:hover{outline:2px solid var(--red,#b91c1c);outline-offset:2px}
+.sf-anchor{display:block;scroll-margin-top:90px}
+
+/* Lawfare at-a-glance grid */
+.lf-glance{margin:0 0 24px}.lf-glance h2{margin:0 0 6px}
+.lf-grid td,.lf-grid th{font-size:.82rem;min-width:130px}.lf-grid tbody th{min-width:160px}
+.lf-grid tr.sf-link:hover{outline:none;background:#f8fafc}
+.lf-badge{display:inline-block;padding:2px 8px;border-radius:999px;font-weight:800;font-size:.72rem;font-family:var(--sans);white-space:nowrap}
+.lf-usual{background:#dcfce7;color:#14532d}.lf-unusual{background:#fef3c7;color:#92400e}.lf-nd{background:#e5e7eb;color:#4b5563}
+.lf-empty{color:#9ca3af;font-style:italic}

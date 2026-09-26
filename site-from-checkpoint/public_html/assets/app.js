@@ -216,6 +216,7 @@
         opts.scales = horiz ? { x: valAxis, y: catAxis } : { x: catAxis, y: valAxis };
         if (spec.stacked) { valAxis.stacked = true; catAxis.stacked = true; }
       }
+      if (spec.link) el.setAttribute('data-sf-linked', '1');
       charts.push(new Chart(el, { type: type, data: { labels: spec.labels, datasets: datasets }, options: opts }));
     });
   }
@@ -246,6 +247,7 @@
         tp = tp.parentElement ? tp.parentElement.closest('.tab-panel') : null;
       }
       for (var d = el; d; d = d.parentElement) { if (d.tagName === 'DETAILS') d.open = true; }
+      var inner = el.querySelector(':scope > details.sf-fold'); if (inner) inner.open = true;
       if (!el.classList.contains('frame')) setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 120);
     }
   }
@@ -307,3 +309,17 @@
     });
   });
 })();
+
+/* Visual pass: clickable charts and tiles (data-href) open the section with the details behind them. */
+(function () {
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest && e.target.closest('[data-href]');
+    if (!card || e.target.closest('a, button, summary, select, input')) return;
+    if (e.target.tagName === 'CANVAS' && e.target.getAttribute('data-sf-linked') === '1') return;
+    var href = card.getAttribute('data-href');
+    if (location.hash === href) { window.dispatchEvent(new HashChangeEvent('hashchange')); } else { location.hash = href; }
+  });
+  document.querySelectorAll('[data-href]').forEach(function (c) { c.setAttribute('tabindex', '0'); c.setAttribute('role', 'link');
+    c.addEventListener('keydown', function (e) { if (e.key === 'Enter' && e.target === c) location.hash = c.getAttribute('data-href'); }); });
+})();
+

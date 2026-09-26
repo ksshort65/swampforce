@@ -6,7 +6,7 @@ Excluded: header, nav, footer, menus, the 'Why SwampForce exists' box, 'How we v
 from bs4 import BeautifulSoup, NavigableString
 import re
 
-SKIP_ANC_CLASSES = {"menu", "verify-box", "why-box", "why", "site-footer", "chart-card", "mt-rows", "nav-row", "tile-src", "store-embed"}
+SKIP_ANC_CLASSES = {"sf-nofold", "menu", "verify-box", "why-box", "why", "site-footer", "chart-card", "mt-rows", "nav-row", "tile-src", "store-embed"}
 SKIP_TAGS = {"header", "nav", "footer", "select", "details", "summary", "svg", "form", "button", "script", "noscript", "head"}
 
 def _skip(el):
@@ -55,7 +55,7 @@ def fold_lists(soup, h):
     for el in soup.find_all("table"):
         body = el.find("tbody") or el
         rows = [r for r in body.find_all("tr", recursive=False)]
-        if len(rows) > 5 and not _skip(el) and not el.find_parent(class_="ledger"):
+        if len(rows) > 5 and not _skip(el) and "sf-nofold" not in (el.get("class") or []) and not el.find_parent(class_="ledger"):
             host = el.parent if el.parent is not None and "table-wrap" in (el.parent.get("class") or []) else el
             targets.append((host, f"Show the full table ({len(rows)} rows)"))
     for el in soup.find_all(["ul", "ol"]):
@@ -79,9 +79,57 @@ def fold_lists(soup, h):
         h = h[:a] + _wrap_html(label, h[a:b]) + h[b:]
     return h, len(keep)
 
+CHARTS_FIRST = False
+BLOCK_SEL = ".chart-grid, .tile-grid, .jr-charts, details#chart-drawer"
+
+def charts_first(soup, h):
+    """Move the page's existing chart/tile blocks to directly under the page title block (the child of <main>
+    that holds the <h1>). Leaves an anchor where each block was; every card/tile then links back to it."""
+    main = soup.find("main"); h1 = soup.find("h1")
+    if not main or not h1:
+        return h, 0
+    top = h1
+    while top.parent is not None and top.parent is not main:
+        top = top.parent
+    if top.parent is not main:
+        return h, 0
+    blocks = []
+    for b in soup.select(BLOCK_SEL):
+        if b.find_parent(class_=["chart-grid", "tile-grid", "jr-charts"]) or b.find_parent(id="chart-drawer"):
+            continue
+        if b.find_parent(class_=["tab-panel", "ledger", "frame", "verify-box"]) or b.find_parent(["header", "footer", "aside"]):
+            continue
+        if b.name != "details" and b.find_parent("details"):
+            continue
+        if b in top.descendants:
+            continue
+        blocks.append(b)
+    if not blocks:
+        return h, 0
+    ins = _end(h, _offset(h, top), top.name)
+    spans = sorted((_offset(h, b), _end(h, _offset(h, b), b.name)) for b in blocks)
+    if spans[0][0] < ins:
+        return h, 0
+    moved = []
+    for i, (a, b) in enumerate(reversed(spans)):
+        k = len(spans) - i
+        frag = h[a:b]
+        tgt = f"sf-detail-{k}"
+        frag = re.sub(r'<(div|article) class="(chart-card|stat)( [^"]*)?"', lambda m: f'<{m.group(1)} data-href="#{tgt}" class="{m.group(2)}{m.group(3) or ""} sf-link"', frag)
+        moved.insert(0, frag)
+        h = h[:a] + f'<span class="sf-anchor" id="{tgt}"></span>' + h[b:]
+    wrap = "flush" in (main.get("class") or [])
+    band = ('<section class="sf-charts-first">' + ('<div class="wrap">' if wrap else "") + "".join(moved) +
+            '<p class="tap-hint">Tap a chart or tile for the details behind it.</p>' + ("</div>" if wrap else "") + "</section>")
+    h = h[:ins] + band + h[ins:]
+    return h, len(moved)
+
 def apply(name, h):
     if not h.lstrip().lower().startswith("<!doctype html") or "<main" not in h and "<body" not in h:
         return h
     soup = BeautifulSoup(h, "html.parser")
     h, n = fold_lists(soup, h)
+    if CHARTS_FIRST and name not in ("scorecard.html",) and not name.startswith("journal-"):
+        h2, m = charts_first(BeautifulSoup(h, "html.parser"), h)
+        h = h2
     return h

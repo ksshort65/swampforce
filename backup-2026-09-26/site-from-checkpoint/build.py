@@ -1448,6 +1448,8 @@ PDF_NAMES = {"cannon-dismissal": "U.S. v. Trump (S.D. Fla.), dismissal order", "
 
 
 def build_lawfare():
+    import lawfare_grid as LG
+    LG.gaps_md(LAW / "supergrok-gaps.md")
     with (LAW / "lawfare-docket-tracker.csv").open(encoding="utf-8-sig") as fh:
         dockets = list(csv.DictReader(fh))
     with (LAW / "lawfare-rulings.csv").open(encoding="utf-8-sig") as fh:
@@ -1469,6 +1471,7 @@ def build_lawfare():
             for r in by.get(name, []))
         cards.append(f"""<article class="law-card" id="{aid}"><p class="law-no">Docket {i} of {len(dockets)}</p><h2>{e(name)}</h2>
 <div class="status-box"><strong>Status:</strong> {e(c.get("Current_Status") or "—")}</div>
+<details class="sf-fold"><summary class="btn sm sf-fold-btn"><span class="sf-closed">Show the full case record</span><span class="sf-opened">Hide the case record</span></summary>
 <dl class="law-meta"><dt>Court</dt><dd>{e(c.get("Court") or "—")}</dd><dt>Docket</dt><dd>{e(c.get("Docket_Number") or "—")}</dd>
 <dt>Official docket</dt><dd>{linkify(c.get("Official_Docket_URL") or "—")}</dd><dt>Brought by</dt><dd>{e(c.get("Brought_By") or "—")}</dd>
 <dt>Filed</dt><dd>{e(c.get("Filed_Date") or "—")}</dd><dt>Charges / claims</dt><dd>{e(c.get("Charges_or_Claims") or "—")}</dd></dl>
@@ -1476,7 +1479,7 @@ def build_lawfare():
 <details class="law-more"><summary>Key rulings, documented issues &amp; sources</summary>
 <ol class="timeline">{lis or "<li>See the tracker PDF.</li>"}</ol>
 <p><strong>Documented issues.</strong> {e(clean_note(c.get("Documented_Issues") or "—"))}</p>
-<p class="law-src"><strong>Sources.</strong> {linkify(c.get("Sources") or "—")}</p></details></article>""")
+<p class="law-src"><strong>Sources.</strong> {linkify(c.get("Sources") or "—")}</p></details></details></article>""")
     pdfs = sorted((OUT / "lawfare-docs").glob("*.pdf"))
     pdf_list = "".join(f'<li><a href="lawfare-docs/{p.name}">{e(PDF_NAMES.get(p.stem, p.stem))}</a> <span class="muted">PDF · {p.stat().st_size // 1024} KB</span></li>' for p in pdfs)
     body = f"""
@@ -1488,7 +1491,7 @@ def build_lawfare():
 <a class="btn ghost-dark sm" href="downloads/lawfare-rulings.csv">Rulings CSV</a><button type="button" class="btn ghost-dark sm" data-print>{ico("print")} Print</button></div></header>
 <div class="doc-grid"><nav class="doc-toc" aria-label="Dockets"><p class="foot-h">Dockets</p><ol>{"".join(index)}</ol>
 <p class="foot-h">Court opinions (PDF)</p><ul>{pdf_list}</ul></nav>
-<div class="doc-body"><aside class="verify-box" id="how-we-built-this-tracker">
+<div class="doc-body">{LG.section(len(dockets))}<aside class="verify-box" id="how-we-built-this-tracker">
 <h2>How we built this tracker</h2>
 <p>Every fact on this page comes from the court record: the official docket, the charging papers or complaint, and the judges' written rulings and orders. Each case links to those documents so you can read them yourself.</p>
 <p>We don't rely on news reports, commentary or either side's press releases for any status, charge or ruling. If a filing or ruling isn't in the official record yet, we list the status as pending and don't guess.</p>

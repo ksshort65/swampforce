@@ -83,8 +83,8 @@ def section():
 <p class="strip-dek">235 years, both parties, many Congresses. The debt rose in wars and crises and fell in some years between them.</p>
 <a class="chart-link" href="#debt-eras" style="display:block;color:inherit;text-decoration:none"><div class="chart-card"><h3>Total federal debt, {FIRST_Y} to {NOW_TXT}</h3><p class=sub>Dollars, not adjusted for inflation. Log scale: each line is 100 times the one below. Tap the chart for the eras.</p>{svg_chart()}</div></a>
 <p class="period-note">Year-end totals {FIRST_Y}–{LAST_Y} from Treasury (the record date moved from January 1 to July 1, June 30 and then September 30 over time). Today’s figure: {money(NOW)} total public debt outstanding on {NOW_TXT}, Treasury Debt to the Penny. {src}</p>
-<details class="mt-era" open><summary>Debt at the start and end of each era</summary><div class="table-wrap"><table class="rank-table"><thead><tr><th>Era</th><th>Start</th><th class="n">Debt</th><th>End</th><th class="n">Debt</th></tr></thead><tbody>{rows}</tbody></table></div></details>
-<details class="mt-era" id="debt-eras" open><summary>What drove it, era by era</summary>{eras}</details>
+<details class="mt-era"><summary>Debt at the start and end of each era</summary><div class="table-wrap"><table class="rank-table"><thead><tr><th>Era</th><th>Start</th><th class="n">Debt</th><th>End</th><th class="n">Debt</th></tr></thead><tbody>{rows}</tbody></table></div></details>
+<details class="mt-era" id="debt-eras"><summary>What drove it, era by era</summary>{eras}</details>
 <aside class="verify-box" style="padding:18px 20px"><h2 style="font-size:1.2rem;margin-bottom:10px">How Congress let it happen</h2>
 <p>FY1997 was the last time all regular spending bills were enacted by the October 1 start of the fiscal year. Since then Congress has relied on stopgap bills (continuing resolutions) to keep the government funded past October 1. <a href="{CRS}" target="_blank" rel="noopener">CRS, Omnibus Appropriations ↗</a></p>
 <p>From 1982 through FY2024, 36 omnibus spending packages were enacted, carrying 276 of the 525 possible regular spending bills. <a href="{CRS}" target="_blank" rel="noopener">CRS ↗</a></p>
