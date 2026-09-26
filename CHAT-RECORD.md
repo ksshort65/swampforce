@@ -4,7 +4,7 @@ Saved so a rollback cannot be the only copy of what was decided.
 Do not delete site copy unless the owner uses a specific word that means delete.
 Push to GitHub after every change.
 
-Owner: Renee Stewart. Journal: Swamp Force. Repo: https://github.com/ksshort65/swampforce
+Owner: SwampForce Editor. Journal: Swamp Force. Repo: https://github.com/ksshort65/swampforce
 Editor: editor@swampforce.com. Domain wanted: swampforce.com. Host fight: Namecheap, not a censored builder.
 
 ## The collapse

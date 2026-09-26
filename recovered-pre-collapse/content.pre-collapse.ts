@@ -63,8 +63,8 @@ export const SITE = {
 		"The people are the employer. This journal prints the official record. No network. No manufactured drama.",
 	xHandle: "SwampForce",
 	email: "editor@swampforce.com",
-	author: "Renee Stewart",
-	copyright: "© 2026 Renee Stewart. All rights reserved.",
+	author: "SwampForce Editor",
+	copyright: "© 2026 SwampForce Editor. All rights reserved.",
 	mark: "Swamp Force™",
 };
 export const posts: Post[] = [
