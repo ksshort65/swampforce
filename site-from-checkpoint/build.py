@@ -1134,6 +1134,8 @@ def frames_oval():
 def build_scorecard():
     import midterms as M
     import wallet as WV
+    import debt_history as DH
+    DH.write_csv(OUT)
     vs = W.stamp() if hasattr(W, "stamp") else ""
     gop = f"""
 {M.column("R", vs)}
@@ -1195,6 +1197,7 @@ def build_scorecard():
  {chart_card("mt-debt-rate", "Debt added per year of control", f"{M.PERIOD}, trillions of dollars a year")}
 </div>
 <p class="period-note">How it is counted: {M.e(M.DEFINITION)}. Period: {M.e(M.PERIOD_LONG)}; the three totals add up to ${M.T_ALL:.2f}T, every dollar added in that period, with no gap or overlap. Each Congress runs Jan 3 to Jan 3; when Jan 3 was not a business day, Treasury’s figure for the last business day before it is used. Treasury’s daily Debt to the Penny for every boundary except the Jan 3, 1993 start, which is straight-line between Treasury’s Sep 30, 1992 and Sep 30, 1993 totals (daily data begins April 1993). 2008–09 (the crash) fell under Democratic control; 2020 (COVID) under split control. <a href="{M.TREAS_HIST}" target="_blank" rel="noopener">Treasury history ↗</a> · <a href="{M.TREAS_PENNY}" target="_blank" rel="noopener">Debt to the Penny ↗</a> · <a href="{M.PARTYDIV}" target="_blank" rel="noopener">Senate party divisions ↗</a> · <a href="{M.HOUSEDIV}" target="_blank" rel="noopener">House party divisions ↗</a></p>
+{DH.section()}
 <h3 class="strip-h" id="border-harm">Border harm</h3>
 <p class="strip-dek">What the border cost at home. Each figure has its full record in one place; tap to open it.</p>
 <div class="mt-ptrs">{M.border_html()}</div>

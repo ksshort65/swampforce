@@ -236,6 +236,16 @@
       if (el.style.display === 'none') { if (clearBtn) clearBtn.click(); }
       setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 80);
     }
+    /* Target inside a hidden tab or a collapsed <details>: open it, then scroll to it. */
+    if (el) {
+      var tp = el.closest('.tab-panel');
+      while (tp) {
+        if (!tp.classList.contains('active')) { var tb = $('.tabs button[data-tab="' + tp.id + '"]'); if (tb) showTab(tb.closest('.tabs'), tp.id); }
+        tp = tp.parentElement ? tp.parentElement.closest('.tab-panel') : null;
+      }
+      for (var d = el; d; d = d.parentElement) { if (d.tagName === 'DETAILS') d.open = true; }
+      if (!el.classList.contains('frame')) setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 120);
+    }
   }
   handleHash();
   window.addEventListener('hashchange', handleHash);
