@@ -1,0 +1,930 @@
+{
+  "pages": [
+    "index.html",
+    "fake-news.html",
+    "scorecard.html",
+    "betrayal.html",
+    "democrats.html",
+    "republicans.html",
+    "january-6.html",
+    "lawfare.html",
+    "brief.html",
+    "appendix.html",
+    "about.html",
+    "factcheckers.html",
+    "downloads.html",
+    "store.html",
+    "foreword.html",
+    "congress.html",
+    "border.html",
+    "remedy.html",
+    "opinion.html",
+    "unsupported.html",
+    "trump-watch.html",
+    "movement-watch.html",
+    "record-2020.html",
+    "accountability.html",
+    "accountability-fraud.html",
+    "accountability-trading.html",
+    "accountability-minnesota.html",
+    "accountability-omar.html",
+    "accountability-covid-border.html",
+    "energy.html",
+    "voters.html",
+    "record-2020-floyd.html",
+    "censorship.html",
+    "gas-gap.html",
+    "journal.html",
+    "journal-find-them.html",
+    "journal-they-forgot-who-they-work-for.html",
+    "journal-they-work-for-us.html",
+    "article-v.html",
+    "journal-we-the-people.html",
+    "journal-they-opened-the-border.html",
+    "journal-what-the-taxpayer-bought.html",
+    "journal-the-hospital-and-the-morgue.html",
+    "journal-they-want-a-new-constitution.html",
+    "journal-the-docket.html",
+    "journal-call-these-first.html",
+    "journal-the-bill-they-sent.html",
+    "journal-they-let-them-walk.html",
+    "journal-who-got-paid.html",
+    "journal-defund-ice-is-the-tell.html",
+    "journal-the-noise.html",
+    "journal-they-sold-the-split.html",
+    "journal-full-time-or-go-home.html",
+    "journal-the-whole-bill.html",
+    "journal-the-pool.html",
+    "journal-sixty-percent.html",
+    "journal-they-dont-debate-they-flag.html",
+    "journal-division-is-the-product.html",
+    "journal-the-record-not-the-rally.html",
+    "journal-the-republic-not-the-caption.html",
+    "journal-they-clipped-the-tape.html",
+    "journal-one-word.html",
+    "journal-the-hire-is-the-country.html",
+    "journal-they-ran-it-anyway.html",
+    "journal-they-called-it-protest.html",
+    "journal-they-hold-it-by-the-blade.html",
+    "journal-they-published-the-replacement.html",
+    "journal-the-recess-blockade.html",
+    "journal-the-funnel.html",
+    "journal-they-dont-write-the-bills.html",
+    "journal-paying-the-taliban.html",
+    "journal-fema-ran-two-jobs.html",
+    "journal-the-7-billion-machine.html",
+    "journal-the-line-in-the-sand.html",
+    "journal-the-uniparty-mirror.html",
+    "journal-how-the-house-was-captured.html",
+    "journal-what-the-democratic-party-became.html",
+    "journal-what-the-republican-party-became.html",
+    "journal-why-the-lobby-should-be-illegal.html",
+    "journal-why-he-became-the-enemy.html",
+    "journal-the-file-on-the-man.html",
+    "journal-what-he-told-them.html",
+    "journal-the-word-that-never-made-the-docket.html",
+    "journal-this-congress-cannot-police-itself.html",
+    "journal-not-a-part-time-job.html",
+    "journal-what-we-can-do.html",
+    "journal-the-debt-they-will-not-close.html",
+    "journal-a-caption-cannot-be-outlawed.html",
+    "journal-the-floor-not-the-feed.html",
+    "journal-the-law-they-dont-mention.html",
+    "journal-the-caption-was-not-the-charge.html",
+    "journal-a-war-on-americans.html",
+    "journal-the-statute-is-the-end.html",
+    "journal-the-media-ledger.html",
+    "journal-the-democrat-ledger.html",
+    "journal-the-republican-ledger.html",
+    "paper-trail.html",
+    "404.html"
+  ],
+  "stats": {
+    "total": 252,
+    "proven": 179,
+    "misleading": 73,
+    "official": 67,
+    "transcript": 27,
+    "outlet": 64,
+    "factcheck": 94,
+    "never": 159,
+    "first": 142,
+    "later": 110
+  },
+  "corr": {
+    "Never corrected by the pusher": 159,
+    "Appended correction line": 64,
+    "After legal threat / settlement": 5,
+    "Not recorded": 14,
+    "Editor's note": 8,
+    "On-air correction": 2
+  },
+  "never_split": {
+    "fact_checked_only": 152,
+    "no_fact_check": 7
+  },
+  "congress": 48,
+  "site_stats": {
+    "total": 118,
+    "proven": 62,
+    "misleading": 56,
+    "official": 68,
+    "transcript": 25,
+    "outlet": 13,
+    "factcheck": 0,
+    "never": 97,
+    "first": 59,
+    "later": 59,
+    "watch": 131,
+    "never_by_verdict": {
+      "Proven false": 42,
+      "Rated misleading": 55
+    },
+    "corr": {
+      "Never corrected by the pusher": 97,
+      "Not recorded": 9,
+      "After legal threat / settlement": 1,
+      "Editor's note": 3,
+      "Appended correction line": 8
+    },
+    "never_fact_checked_only": 90,
+    "confirmed": 87,
+    "how": {
+      "Words cut or twisted": 28,
+      "Other": 21,
+      "Context left out": 26,
+      "Made up or retracted": 19,
+      "Numbers inflated or misread": 24
+    },
+    "removed": [
+      "187"
+    ],
+    "unsupported_moved": [
+      "102",
+      "246"
+    ],
+    "site_ids": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "131",
+      "133",
+      "134",
+      "135",
+      "136",
+      "137",
+      "138",
+      "139",
+      "140",
+      "141",
+      "142",
+      "143",
+      "144",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149",
+      "150",
+      "151",
+      "152",
+      "153",
+      "154",
+      "155",
+      "156",
+      "157",
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "175",
+      "176",
+      "177",
+      "178",
+      "179",
+      "180",
+      "181",
+      "182",
+      "183",
+      "184",
+      "185",
+      "186",
+      "188",
+      "189",
+      "190",
+      "191",
+      "192",
+      "193",
+      "194",
+      "195",
+      "196",
+      "197",
+      "198",
+      "199",
+      "200",
+      "201",
+      "202",
+      "203",
+      "204",
+      "205",
+      "206",
+      "207",
+      "208",
+      "209",
+      "210",
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216",
+      "217",
+      "218",
+      "219",
+      "220",
+      "221",
+      "222",
+      "223",
+      "224",
+      "225",
+      "226",
+      "227",
+      "228",
+      "229",
+      "230",
+      "231",
+      "232",
+      "233",
+      "234",
+      "235",
+      "236",
+      "237",
+      "238",
+      "239",
+      "240",
+      "241",
+      "242",
+      "243",
+      "244",
+      "245",
+      "247",
+      "248",
+      "249",
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  "dem_rows": 11,
+  "gop_rows": 9,
+  "balance": {
+    "Catalog": {
+      "Media: multiple or unnamed outlets": 8,
+      "Democrat": 70,
+      "Media outlet": 24,
+      "Independent / other": 5,
+      "Anonymous / viral social posts": 10,
+      "Mixed (both sides named)": 1
+    },
+    "All": {
+      "Media: multiple or unnamed outlets": 9,
+      "Democrat": 98,
+      "Media outlet": 26,
+      "Independent / other": 11,
+      "Anonymous / viral social posts": 10,
+      "Mixed (both sides named)": 1,
+      "Republican": 13,
+      "Unattributed / not classified": 13
+    },
+    "Party ledgers": {
+      "Democrat": 11,
+      "Republican": 9
+    },
+    "Trackers & watches": {
+      "Democrat": 17,
+      "Independent / other": 6,
+      "Media outlet": 2,
+      "Media: multiple or unnamed outlets": 1,
+      "Unattributed / not classified": 13,
+      "Republican": 4
+    }
+  },
+  "lawfare": 10,
+  "redirects": 65,
+  "top_methods": [
+    "retracted invention",
+    "omitted context",
+    "policy-scope inflation",
+    "fabrication",
+    "fabrication / false attribution",
+    "misquote / truncation",
+    "false photo/video attribution",
+    "premature \u201cproven\u201d framing"
+  ],
+  "unsupported": 4,
+  "watch": {
+    "trump-watch.html": {
+      "conflicts_verified": 5,
+      "conflicts_reported": 7,
+      "log_verified": 23,
+      "log_reported": 7,
+      "foreign_license_lines": 18,
+      "foreign_license_countries": 9,
+      "foreign_license_total": 59421411.83,
+      "pardon_grants": 165,
+      "gao_violations": 5,
+      "tiles": 9,
+      "salary_confirmed_quarters": 5,
+      "salary_total_primary": 478333.32,
+      "salary_recipient_only": 4,
+      "salary_reported": 6,
+      "schumer_quotes": 7,
+      "pool_contracts": 5,
+      "pool_total": 20052493.07
+    },
+    "movement-watch.html": {
+      "violence_official": 14,
+      "violence_reported": 4,
+      "claims_shown": 3,
+      "elsayed_verified": 9,
+      "elsayed_reported": 6,
+      "piker_verified": 3,
+      "piker_reported": 4,
+      "dsa_verified": 11,
+      "dsa_reported": 3,
+      "dsa_endorsements": 11,
+      "tiles": 4,
+      "omitted": [
+        "log.csv: Piker 'AIPAC boss call was made' post (reported only; original post not located)",
+        "candidates.csv: Hasan Piker AIPAC claim rated Unsupported. Not placed on the Unsupported page: the original post was not located, and that page lists only claims from the reverify review file"
+      ]
+    },
+    "record-2020.html": {
+      "tiles": 6,
+      "claims_rated": 3,
+      "unsupported_on_page": 1,
+      "timeline_items": 8,
+      "framing_cards": 3,
+      "not_supported_items": 9,
+      "draft_sources_used": 48,
+      "omitted": [
+        "R2020-05: on hold: officials' exact wording not yet verified from the original video",
+        "R2020-06: on hold: no named, primary-sourced person who made the claim",
+        "sources.csv row not used (verified=no): USAO Oregon: 74 people facing federal charges (Aug 28, 2020)",
+        "sources.csv row not used (verified=no): DOJ designation of NYC, Portland, Seattle as 'anarchist jurisdictions' (Sept 21, 2020)",
+        "sources.csv row not used (verified=no): AG withdrawal of anarchist-jurisdiction designation (Feb 25, 2021)",
+        "sources.csv row not used (verified=no): Chauvin federal guilty plea DOJ release (archived)",
+        "sources.csv row not used (verified=no): Minnesota disaster declaration request / FEMA denial (July-Aug 2020)"
+      ]
+    },
+    "accountability.html": {
+      "trackers": 5
+    },
+    "accountability-fraud.html": {
+      "fy_points": 22,
+      "fy2025_billion": 185.8,
+      "agencies": 13,
+      "reported": 1,
+      "grand_total": false
+    },
+    "accountability-trading.html": {
+      "transactions": 12646,
+      "late_lines": 2795,
+      "late_members": 63,
+      "top": 10,
+      "reported": 3
+    },
+    "accountability-minnesota.html": {
+      "charged": 108,
+      "convicted": 75,
+      "reported": 4,
+      "nine_billion": "Unresolved"
+    },
+    "accountability-omar.html": {
+      "label": "Unresolved (no official finding)",
+      "reported": 13
+    },
+    "accountability-covid-border.html": {
+      "months": 36,
+      "title42_total": 2912200,
+      "reported": 3,
+      "funding_rows": 10
+    },
+    "energy.html": {
+      "gas_now": 4.478,
+      "peak_2008": 4.114,
+      "peak_real_2026": 6.27,
+      "refining_change_cents": 84.2,
+      "refiner_q2_2026_b": 12.705,
+      "spr_mbbl": 284.552,
+      "images": 4,
+      "reported": 6,
+      "iaea_rows": 19,
+      "cpi_rows": 5
+    },
+    "voters.html": {
+      "charts": 5,
+      "raw_rows": 21,
+      "discrepancies": 27,
+      "rolls_rows": 14,
+      "hickenlooper_claims_accurate": 6,
+      "hickenlooper_verdicts": {
+        "The SAVE Act would require states to ob": "Accurate",
+        "It would also require states to remove ": "Accurate",
+        "State-issued driver\u2019s licenses wouldn\u2019t": "Accurate",
+        "The bill would not give states any addi": "Accurate",
+        "Noncitizens voting in federal elections": "Accurate",
+        "It\u2019s also incredibly rare for a nonciti": "Accurate",
+        "Even if they did attempt to, we have pr": "Rated misleading"
+      },
+      "harris": "Rated misleading",
+      "reuters_30k": "Rated misleading",
+      "griswold": "Unsupported",
+      "reported": 5
+    },
+    "record-2020-floyd.html": {
+      "court_file_rows": 14,
+      "ties_rows": 27,
+      "conflicts": 3,
+      "comparables": 7,
+      "reported": 17
+    },
+    "censorship.html": {
+      "documented_cards": 12,
+      "court_rows": 6,
+      "beliefs": 8,
+      "timeline_events": 65,
+      "timeline_confirmed": 56,
+      "timeline_partial": 4,
+      "timeline_reported": 5,
+      "reported": 11
+    },
+    "gas-gap.html": {
+      "retail": 4.478,
+      "refining_c": 142.3,
+      "unexplained_c": 40.5,
+      "war_premium_c": 56.0,
+      "colorado": 4.257,
+      "images": 3,
+      "reported": 1
+    },
+    "journal.html": {
+      "essays": 60
+    },
+    "journal-find-them.html": {
+      "slug": "find-them",
+      "verified_words": 464,
+      "visible_words": 219
+    },
+    "journal-they-forgot-who-they-work-for.html": {
+      "slug": "that-is-not-why-they-are-elected",
+      "verified_words": 347,
+      "visible_words": 152
+    },
+    "journal-they-work-for-us.html": {
+      "slug": "they-work-for-us",
+      "verified_words": 542,
+      "visible_words": 175
+    },
+    "article-v.html": {
+      "group_count": 20,
+      "linked_to_official_record": 20
+    },
+    "journal-we-the-people.html": {
+      "slug": "we-the-people",
+      "verified_words": 1830,
+      "visible_words": 123
+    },
+    "journal-they-opened-the-border.html": {
+      "slug": "they-opened-the-border",
+      "verified_words": 871,
+      "visible_words": 121
+    },
+    "journal-what-the-taxpayer-bought.html": {
+      "slug": "what-the-taxpayer-bought",
+      "verified_words": 478,
+      "visible_words": 120
+    },
+    "journal-the-hospital-and-the-morgue.html": {
+      "slug": "the-hospital-and-the-morgue",
+      "verified_words": 545,
+      "visible_words": 125
+    },
+    "journal-they-want-a-new-constitution.html": {
+      "slug": "they-want-a-new-constitution",
+      "verified_words": 436,
+      "visible_words": 134
+    },
+    "journal-the-docket.html": {
+      "slug": "the-docket",
+      "verified_words": 269,
+      "visible_words": 124
+    },
+    "journal-call-these-first.html": {
+      "slug": "call-these-first",
+      "verified_words": 196,
+      "visible_words": 120
+    },
+    "journal-the-bill-they-sent.html": {
+      "slug": "the-bill-they-sent",
+      "verified_words": 337,
+      "visible_words": 124
+    },
+    "journal-they-let-them-walk.html": {
+      "slug": "they-let-them-walk",
+      "verified_words": 250,
+      "visible_words": 129
+    },
+    "journal-who-got-paid.html": {
+      "slug": "who-got-paid",
+      "verified_words": 546,
+      "visible_words": 140
+    },
+    "journal-defund-ice-is-the-tell.html": {
+      "slug": "defund-ice-is-the-tell",
+      "verified_words": 567,
+      "visible_words": 127
+    },
+    "journal-the-noise.html": {
+      "slug": "the-noise",
+      "verified_words": 234,
+      "visible_words": 116
+    },
+    "journal-they-sold-the-split.html": {
+      "slug": "they-sold-the-split",
+      "verified_words": 226,
+      "visible_words": 132
+    },
+    "journal-full-time-or-go-home.html": {
+      "slug": "full-time-or-go-home",
+      "verified_words": 276,
+      "visible_words": 123
+    },
+    "journal-the-whole-bill.html": {
+      "slug": "the-whole-bill",
+      "verified_words": 498,
+      "visible_words": 130
+    },
+    "journal-the-pool.html": {
+      "slug": "the-pool",
+      "verified_words": 334,
+      "visible_words": 122
+    },
+    "journal-sixty-percent.html": {
+      "slug": "sixty-percent",
+      "verified_words": 820,
+      "visible_words": 122
+    },
+    "journal-they-dont-debate-they-flag.html": {
+      "slug": "they-dont-debate-they-flag",
+      "verified_words": 473,
+      "visible_words": 133
+    },
+    "journal-division-is-the-product.html": {
+      "slug": "division-is-the-product",
+      "verified_words": 1004,
+      "visible_words": 122
+    },
+    "journal-the-record-not-the-rally.html": {
+      "slug": "the-record-not-the-rally",
+      "verified_words": 368,
+      "visible_words": 122
+    },
+    "journal-the-republic-not-the-caption.html": {
+      "slug": "the-republic-not-the-caption",
+      "verified_words": 314,
+      "visible_words": 127
+    },
+    "journal-they-clipped-the-tape.html": {
+      "slug": "they-clipped-the-tape",
+      "verified_words": 540,
+      "visible_words": 126
+    },
+    "journal-one-word.html": {
+      "slug": "one-word",
+      "verified_words": 1042,
+      "visible_words": 141
+    },
+    "journal-the-hire-is-the-country.html": {
+      "slug": "the-hire-is-the-country",
+      "verified_words": 801,
+      "visible_words": 129
+    },
+    "journal-they-ran-it-anyway.html": {
+      "slug": "they-ran-it-anyway",
+      "verified_words": 435,
+      "visible_words": 125
+    },
+    "journal-they-called-it-protest.html": {
+      "slug": "they-called-it-protest",
+      "verified_words": 466,
+      "visible_words": 125
+    },
+    "journal-they-hold-it-by-the-blade.html": {
+      "slug": "they-hold-it-by-the-blade",
+      "verified_words": 435,
+      "visible_words": 129
+    },
+    "journal-they-published-the-replacement.html": {
+      "slug": "they-published-the-replacement",
+      "verified_words": 301,
+      "visible_words": 130
+    },
+    "journal-the-recess-blockade.html": {
+      "slug": "the-recess-blockade",
+      "verified_words": 199,
+      "visible_words": 121
+    },
+    "journal-the-funnel.html": {
+      "slug": "the-funnel",
+      "verified_words": 543,
+      "visible_words": 121
+    },
+    "journal-they-dont-write-the-bills.html": {
+      "slug": "they-dont-write-the-bills",
+      "verified_words": 337,
+      "visible_words": 123
+    },
+    "journal-paying-the-taliban.html": {
+      "slug": "paying-the-taliban",
+      "verified_words": 488,
+      "visible_words": 131
+    },
+    "journal-fema-ran-two-jobs.html": {
+      "slug": "fema-ran-two-jobs",
+      "verified_words": 574,
+      "visible_words": 134
+    },
+    "journal-the-7-billion-machine.html": {
+      "slug": "the-7-billion-machine",
+      "verified_words": 1032,
+      "visible_words": 121
+    },
+    "journal-the-line-in-the-sand.html": {
+      "slug": "the-line-in-the-sand",
+      "verified_words": 169,
+      "visible_words": 134
+    },
+    "journal-the-uniparty-mirror.html": {
+      "slug": "the-uniparty-mirror",
+      "verified_words": 218,
+      "visible_words": 135
+    },
+    "journal-how-the-house-was-captured.html": {
+      "slug": "how-the-house-was-captured",
+      "verified_words": 178,
+      "visible_words": 124
+    },
+    "journal-what-the-democratic-party-became.html": {
+      "slug": "what-the-democratic-party-became",
+      "verified_words": 167,
+      "visible_words": 121
+    },
+    "journal-what-the-republican-party-became.html": {
+      "slug": "what-the-republican-party-became",
+      "verified_words": 153,
+      "visible_words": 122
+    },
+    "journal-why-the-lobby-should-be-illegal.html": {
+      "slug": "why-the-lobby-should-be-illegal",
+      "verified_words": 195,
+      "visible_words": 122
+    },
+    "journal-why-he-became-the-enemy.html": {
+      "slug": "why-he-became-the-enemy",
+      "verified_words": 693,
+      "visible_words": 126
+    },
+    "journal-the-file-on-the-man.html": {
+      "slug": "the-file-on-the-man",
+      "verified_words": 429,
+      "visible_words": 140
+    },
+    "journal-what-he-told-them.html": {
+      "slug": "what-he-told-them",
+      "verified_words": 413,
+      "visible_words": 104
+    },
+    "journal-the-word-that-never-made-the-docket.html": {
+      "slug": "the-word-that-never-made-the-docket",
+      "verified_words": 507,
+      "visible_words": 120
+    },
+    "journal-this-congress-cannot-police-itself.html": {
+      "slug": "this-congress-cannot-police-itself",
+      "verified_words": 395,
+      "visible_words": 124
+    },
+    "journal-not-a-part-time-job.html": {
+      "slug": "not-a-part-time-job",
+      "verified_words": 283,
+      "visible_words": 124
+    },
+    "journal-what-we-can-do.html": {
+      "slug": "what-we-can-do",
+      "verified_words": 811,
+      "visible_words": 130
+    },
+    "journal-the-debt-they-will-not-close.html": {
+      "slug": "the-debt-they-will-not-close",
+      "verified_words": 432,
+      "visible_words": 122
+    },
+    "journal-a-caption-cannot-be-outlawed.html": {
+      "slug": "a-caption-cannot-be-outlawed",
+      "verified_words": 378,
+      "visible_words": 120
+    },
+    "journal-the-floor-not-the-feed.html": {
+      "slug": "the-floor-not-the-feed",
+      "verified_words": 487,
+      "visible_words": 122
+    },
+    "journal-the-law-they-dont-mention.html": {
+      "slug": "the-law-they-dont-mention",
+      "verified_words": 381,
+      "visible_words": 123
+    },
+    "journal-the-caption-was-not-the-charge.html": {
+      "slug": "the-caption-was-not-the-charge",
+      "verified_words": 718,
+      "visible_words": 120
+    },
+    "journal-a-war-on-americans.html": {
+      "slug": "a-war-on-americans",
+      "verified_words": 2792,
+      "visible_words": 107
+    },
+    "journal-the-statute-is-the-end.html": {
+      "slug": "the-statute-is-the-end",
+      "verified_words": 689,
+      "visible_words": 123
+    },
+    "journal-the-media-ledger.html": {
+      "slug": "the-media-ledger",
+      "verified_words": 8368,
+      "visible_words": 139
+    },
+    "journal-the-democrat-ledger.html": {
+      "slug": "the-democrat-ledger",
+      "verified_words": 1446,
+      "visible_words": 131
+    },
+    "journal-the-republican-ledger.html": {
+      "slug": "the-republican-ledger",
+      "verified_words": 1270,
+      "visible_words": 123
+    },
+    "paper-trail.html": {
+      "laws": 12,
+      "sections": 5
+    }
+  },
+  "planned_sections": {},
+  "site_apply": {
+    "entries": 331,
+    "cut": 97,
+    "overlay": 9,
+    "rows_after": 799
+  }
+}
