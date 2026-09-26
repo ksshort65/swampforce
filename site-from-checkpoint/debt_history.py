@@ -61,11 +61,11 @@ ERAS = [
 def svg_chart():
     W, H, L, R, T, B = 720, 300, 64, 12, 14, 30
     ys = sorted(BY); pts = [(int(BY[y][0][:4]) + int(BY[y][0][5:7]) / 12, BY[y][1]) for y in ys] + [(2026 + 8.8 / 12, NOW)]
-    lo, hi = 6, 14  # log10 $1M .. $100T
+    lo, hi = 4, 14  # log10 $10K .. $100T
     X = lambda t: L + (t - 1790) / (2027 - 1790) * (W - L - R)
     Y = lambda v: T + (hi - math.log10(max(v, 1e4))) / (hi - lo) * (H - T - B)
     grid = "".join(f'<line x1="{L}" x2="{W-R}" y1="{Y(10**k):.1f}" y2="{Y(10**k):.1f}" stroke="#e2e8f0"/><text x="{L-6}" y="{Y(10**k)+4:.1f}" text-anchor="end" font-size="11" fill="#64748b">{t}</text>'
-                   for k, t in [(6, "$1M"), (8, "$100M"), (10, "$10B"), (12, "$1T"), (14, "$100T")])
+                   for k, t in [(4, "$10K"), (6, "$1M"), (8, "$100M"), (10, "$10B"), (12, "$1T"), (14, "$100T")])
     xt = "".join(f'<line x1="{X(y):.1f}" x2="{X(y):.1f}" y1="{H-B}" y2="{H-B+4}" stroke="#94a3b8"/><text x="{X(y):.1f}" y="{H-8}" text-anchor="middle" font-size="11" fill="#64748b">{y}</text>' for y in range(1800, 2021, 40))
     path = "M" + " L".join(f"{X(t):.1f},{Y(v):.1f}" for t, v in pts)
     marks = [(1835, BY[1835][1], "1835: almost zero"), (1866, BY[1866][1], "Civil War"), (1919, BY[1919][1], "WWI"), (1946, BY[1946][1], "WWII"), (2026.7, NOW, f"{money(NOW)}")]

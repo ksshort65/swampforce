@@ -80,6 +80,7 @@ def fold_lists(soup, h):
     return h, len(keep)
 
 CHARTS_FIRST = True
+READ_MORE = True
 BLOCK_SEL = ".chart-grid, .tile-grid, .jr-charts, details#chart-drawer"
 
 def charts_first(soup, h):
@@ -124,6 +125,36 @@ def charts_first(soup, h):
     h = h[:ins] + band + h[ins:]
     return h, len(moved)
 
+READ_SKIP = {"verify-box", "opinion", "jr-view", "frame", "law-card", "stat", "chart-card", "hero", "band-hero", "doc-head", "fr-view", "why", "status-box"}
+
+def read_more(soup, h):
+    """Runs of 4+ consecutive <p> siblings: first paragraph stays visible, the rest fold behind 'Read more'."""
+    spans = []
+    for par in soup.find_all(["div", "section", "article", "main"]):
+        if par.find_parent(["header", "footer", "details", "aside", "nav"]) or par.name in ("header", "footer"):
+            continue
+        cls = set(par.get("class") or [])
+        if cls & READ_SKIP or any("verify" in c or "why" in c for c in cls) or par.find_parent(class_=list(READ_SKIP)):
+            continue
+        run = []
+        kids = [c for c in par.children if getattr(c, "name", None) or (isinstance(c, NavigableString) and c.strip())]
+        for c in kids + [None]:
+            if c is not None and getattr(c, "name", None) == "p" and not (set(c.get("class") or []) & {"opinion-label", "tap-hint", "page-updated", "byline"}):
+                run.append(c); continue
+            if len(run) >= 4:
+                a = _offset(h, run[1]); b = _end(h, _offset(h, run[-1]), "p")
+                spans.append((a, b))
+            run = []
+    spans.sort(); keep = []
+    for sp in spans:
+        if keep and sp[0] < keep[-1][1]:
+            continue
+        keep.append(sp)
+    for a, b in reversed(keep):
+        h = (h[:a] + '<details class="sf-fold sf-more"><summary class="btn sm ghost-dark sf-fold-btn"><span class="sf-closed">Read more</span><span class="sf-opened">Show less</span></summary>'
+             + h[a:b] + "</details>" + h[b:])
+    return h, len(keep)
+
 def apply(name, h):
     if not h.lstrip().lower().startswith("<!doctype html") or "<main" not in h and "<body" not in h:
         return h
@@ -132,4 +163,6 @@ def apply(name, h):
     if CHARTS_FIRST and name not in ("scorecard.html",) and not name.startswith("journal-"):
         h2, m = charts_first(BeautifulSoup(h, "html.parser"), h)
         h = h2
+    if READ_MORE:
+        h, _ = read_more(BeautifulSoup(h, "html.parser"), h)
     return h
