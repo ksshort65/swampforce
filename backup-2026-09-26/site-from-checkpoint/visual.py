@@ -79,7 +79,7 @@ def fold_lists(soup, h):
         h = h[:a] + _wrap_html(label, h[a:b]) + h[b:]
     return h, len(keep)
 
-CHARTS_FIRST = False
+CHARTS_FIRST = True
 BLOCK_SEL = ".chart-grid, .tile-grid, .jr-charts, details#chart-drawer"
 
 def charts_first(soup, h):

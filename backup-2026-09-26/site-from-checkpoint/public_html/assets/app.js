@@ -248,6 +248,7 @@
       }
       for (var d = el; d; d = d.parentElement) { if (d.tagName === 'DETAILS') d.open = true; }
       var inner = el.querySelector(':scope > details.sf-fold'); if (inner) inner.open = true;
+      if (el.classList.contains('sf-anchor')) { var fl = document.querySelectorAll('details.sf-fold'); for (var j = 0; j < fl.length; j++) { if (el.compareDocumentPosition(fl[j]) & 4) { fl[j].open = true; break; } } }
       if (!el.classList.contains('frame')) setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 120);
     }
   }
