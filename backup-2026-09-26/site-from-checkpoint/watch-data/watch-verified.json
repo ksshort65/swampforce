@@ -1,0 +1,131 @@
+{
+  "checked": "2026-09-24",
+  "note": "Figures below were checked by SwampForce against the primary record on the date above. Source folders (/workspace/trump-watch, /workspace/movement-watch) are read-only inputs; this file holds only what was re-checked.",
+  "oge_278e": {
+    "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/%24FILE/Donald-J-Trump-2026-278ANNUAL.pdf",
+    "notice_url": "https://www.oge.gov/web/oge.nsf/Resources/Now+Available:+The+President%E2%80%99s+and+Vice+President%E2%80%99s+certified+annual+financial+disclosure+reports",
+    "received": "2026-06-29",
+    "crypto_lines": [
+      {
+        "line": "21.6",
+        "label": "NFT and meme-coin royalties",
+        "detail": "CIC Digital LLC: license agreement with Celebration Coins (royalties)",
+        "amount": 635068835,
+        "short": "NFT/meme-coin royalties (21.6)"
+      },
+      {
+        "line": "124.3",
+        "label": "World Liberty Financial token-sale proceeds",
+        "detail": "DT Marks DEFI LLC (38.25% of WLF Holdco): token sales, net proceeds",
+        "amount": 236250000,
+        "short": "WLF token sales (124.3)"
+      },
+      {
+        "line": "114",
+        "label": "Stablecoin Holdco (USD1) income",
+        "detail": "DT Marks SC LLC: 38.25% of Stablecoin Holdco LLC",
+        "amount": 196875000,
+        "short": "Stablecoin Holdco (114)"
+      },
+      {
+        "line": "124.2",
+        "label": "WLF Holdco equity-sale proceeds",
+        "detail": "DT Marks DEFI LLC: sale of equity, net proceeds",
+        "amount": 65625000,
+        "short": "WLF equity sale (124.2)"
+      }
+    ],
+    "crypto_other": "Wallet lines 124.4 to 124.12 report further proceeds from token sales distributed by WLF, and line 124.6a validator rewards. The form does not make clear whether these overlap with line 124.3, so SwampForce does not add crypto lines together.",
+    "crypto_holdings": "Bitcoin wallet: over $50,000,000 (line 21.5). Ethereum and USDC wallets: $5,000,001 to $25,000,000 each (lines 21.3, 21.4). Value ranges as reported."
+  },
+  "pardons": {
+    "url": "https://www.justice.gov/pardon/clemency-grants-president-donald-j-trump-2025-present",
+    "page_updated": "2026-09-09",
+    "last_grant": "2026-09-08",
+    "individual_grants": 165,
+    "pardons": 137,
+    "commutations": 28,
+    "excluded": "Two '(Amended)' re-listings of earlier grants are not counted again.",
+    "proclamations": [
+      {
+        "date": "2025-01-20",
+        "label": "Proclamation: January 6, 2021 defendants"
+      },
+      {
+        "date": "2025-11-07",
+        "label": "Proclamation: 2020 election"
+      }
+    ]
+  },
+  "gao_ica": {
+    "index_url": "https://www.gao.gov/legal/appropriations-law/impoundment-control-act",
+    "violations": [
+      {
+        "id": "B-337202",
+        "date": "2025-07-23",
+        "subject": "Head Start (HHS)",
+        "url": "https://www.gao.gov/products/b-337202",
+        "pdf": "https://www.gao.gov/assets/890/880226.pdf",
+        "finding": "Violation of the Impoundment Control Act"
+      },
+      {
+        "id": "B-337208",
+        "date": "2025-07-31",
+        "subject": "Renew America's Schools (DOE)",
+        "url": "https://www.gao.gov/products/b-337208",
+        "pdf": "https://www.gao.gov/assets/890/880526.pdf",
+        "finding": "Violation of the Impoundment Control Act"
+      },
+      {
+        "id": "B-337203",
+        "date": "2025-08-05",
+        "subject": "National Institutes of Health (HHS)",
+        "url": "https://www.gao.gov/products/b-337203",
+        "pdf": "https://www.gao.gov/assets/890/880607.pdf",
+        "finding": "Violation of the Impoundment Control Act"
+      },
+      {
+        "id": "B-337204.1",
+        "date": "2025-09-15",
+        "subject": "FEMA grant programs, FY2025 funds (DHS)",
+        "url": "https://www.gao.gov/products/b-337204.1",
+        "pdf": "https://www.gao.gov/assets/890/881507.pdf",
+        "finding": "Violation for some funds; no violation yet found for others"
+      },
+      {
+        "id": "B-337204.2",
+        "date": "2025-09-29",
+        "subject": "FEMA grant programs, prior-year funds (DHS)",
+        "url": "https://www.gao.gov/products/b-337204.2",
+        "pdf": "https://www.gao.gov/assets/890/881838.pdf",
+        "finding": "Violation of the Impoundment Control Act"
+      }
+    ],
+    "no_violation": [
+      {
+        "id": "B-337233",
+        "date": "2025-07-23",
+        "subject": "Department of the Interior",
+        "url": "https://www.gao.gov/products/b-337233",
+        "finding": "Programmatic delay; not a violation"
+      }
+    ]
+  },
+  "emoluments": {
+    "scotus_order_url": "https://www.supremecourt.gov/orders/courtorders/012521zor_3f14.pdf",
+    "docket_url": "https://www.supremecourt.gov/docket/docketfiles/html/public/20-330.html"
+  },
+  "el_sayed_fec": {
+    "url": "https://www.fec.gov/data/candidate/S6MI00418/",
+    "committees": [
+      "C00902668",
+      "C00961805"
+    ],
+    "coverage": "2025-01-01 to 2026-07-15",
+    "total_receipts": 14514335.93,
+    "cash_on_hand": 2552762.55
+  },
+  "dsa_2019_article_checked": true,
+  "wdm_program_quotes_checked": true,
+  "wdet_quotes_checked": true
+}

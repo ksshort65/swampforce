@@ -1,0 +1,767 @@
+{
+"35": {
+"start": 1857,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+132,
+90
+]
+},
+"36": {
+"start": 1859,
+"house": "Republicans",
+"senate": "Democrats",
+"hs": [
+83,
+116
+]
+},
+"37": {
+"start": 1861,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+44,
+108
+]
+},
+"38": {
+"start": 1863,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+72,
+85
+]
+},
+"39": {
+"start": 1865,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+38,
+136
+]
+},
+"40": {
+"start": 1867,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+47,
+173
+]
+},
+"41": {
+"start": 1869,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+67,
+171
+]
+},
+"42": {
+"start": 1871,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+104,
+136
+]
+},
+"43": {
+"start": 1873,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+88,
+199
+]
+},
+"44": {
+"start": 1875,
+"house": "Democrats",
+"senate": "Republicans",
+"hs": [
+182,
+103
+]
+},
+"45": {
+"start": 1877,
+"house": "Democrats",
+"senate": "Republicans",
+"hs": [
+155,
+136
+]
+},
+"46": {
+"start": 1879,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+141,
+132
+]
+},
+"47": {
+"start": 1881,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+128,
+151
+]
+},
+"48": {
+"start": 1883,
+"house": "Democrats",
+"senate": "Republicans",
+"hs": [
+196,
+117
+]
+},
+"49": {
+"start": 1885,
+"house": "Democrats",
+"senate": "Republicans",
+"hs": [
+182,
+141
+]
+},
+"50": {
+"start": 1887,
+"house": "Democrats",
+"senate": "Republicans",
+"hs": [
+167,
+152
+]
+},
+"51": {
+"start": 1889,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+152,
+179
+]
+},
+"52": {
+"start": 1891,
+"house": "Democrats",
+"senate": "Republicans",
+"hs": [
+238,
+86
+]
+},
+"53": {
+"start": 1893,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+218,
+124
+]
+},
+"54": {
+"start": 1895,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+93,
+254
+]
+},
+"55": {
+"start": 1897,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+124,
+206
+]
+},
+"56": {
+"start": 1899,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+161,
+187
+]
+},
+"57": {
+"start": 1901,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+151,
+200
+]
+},
+"58": {
+"start": 1903,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+176,
+207
+]
+},
+"59": {
+"start": 1905,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+135,
+251
+]
+},
+"60": {
+"start": 1907,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+167,
+223
+]
+},
+"61": {
+"start": 1909,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+172,
+219
+]
+},
+"62": {
+"start": 1911,
+"house": "Democrats",
+"senate": "Republicans",
+"hs": [
+230,
+162
+]
+},
+"63": {
+"start": 1913,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+291,
+134
+]
+},
+"64": {
+"start": 1915,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+230,
+196
+]
+},
+"65": {
+"start": 1917,
+"house": "Republicans",
+"senate": "Democrats",
+"hs": [
+214,
+215
+]
+},
+"66": {
+"start": 1919,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+192,
+240
+]
+},
+"67": {
+"start": 1921,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+132,
+302
+]
+},
+"68": {
+"start": 1923,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+207,
+225
+]
+},
+"69": {
+"start": 1925,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+183,
+247
+]
+},
+"70": {
+"start": 1927,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+194,
+238
+]
+},
+"71": {
+"start": 1929,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+164,
+270
+]
+},
+"72": {
+"start": 1931,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+216,
+218
+]
+},
+"73": {
+"start": 1933,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+313,
+117
+]
+},
+"74": {
+"start": 1935,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+322,
+103
+]
+},
+"75": {
+"start": 1937,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+334,
+88
+]
+},
+"76": {
+"start": 1939,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+262,
+169
+]
+},
+"77": {
+"start": 1941,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+267,
+162
+]
+},
+"78": {
+"start": 1943,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+222,
+209
+]
+},
+"79": {
+"start": 1945,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+244,
+189
+]
+},
+"80": {
+"start": 1947,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+188,
+246
+]
+},
+"81": {
+"start": 1949,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+263,
+171
+]
+},
+"82": {
+"start": 1951,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+235,
+199
+]
+},
+"83": {
+"start": 1953,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+213,
+221
+]
+},
+"84": {
+"start": 1955,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+232,
+203
+]
+},
+"85": {
+"start": 1957,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+232,
+203
+]
+},
+"86": {
+"start": 1959,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+282,
+153
+]
+},
+"87": {
+"start": 1961,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+264,
+173
+]
+},
+"88": {
+"start": 1963,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+258,
+176
+]
+},
+"89": {
+"start": 1965,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+295,
+140
+]
+},
+"90": {
+"start": 1967,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+248,
+187
+]
+},
+"91": {
+"start": 1969,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+243,
+192
+]
+},
+"92": {
+"start": 1971,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+255,
+180
+]
+},
+"93": {
+"start": 1973,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+243,
+192
+]
+},
+"94": {
+"start": 1975,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+291,
+144
+]
+},
+"95": {
+"start": 1977,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+292,
+143
+]
+},
+"96": {
+"start": 1979,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+278,
+157
+]
+},
+"97": {
+"start": 1981,
+"house": "Democrats",
+"senate": "Republicans",
+"hs": [
+243,
+192
+]
+},
+"98": {
+"start": 1983,
+"house": "Democrats",
+"senate": "Republicans",
+"hs": [
+269,
+166
+]
+},
+"99": {
+"start": 1985,
+"house": "Democrats",
+"senate": "Republicans",
+"hs": [
+253,
+181
+]
+},
+"100": {
+"start": 1987,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+258,
+177
+]
+},
+"101": {
+"start": 1989,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+260,
+175
+]
+},
+"102": {
+"start": 1991,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+267,
+167
+]
+},
+"103": {
+"start": 1993,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+258,
+176
+]
+},
+"104": {
+"start": 1995,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+204,
+230
+]
+},
+"105": {
+"start": 1997,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+207,
+226
+]
+},
+"106": {
+"start": 1999,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+211,
+223
+]
+},
+"107": {
+"start": 2001,
+"house": "Republicans",
+"senate": "Democrats",
+"hs": [
+212,
+221
+]
+},
+"108": {
+"start": 2003,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+205,
+229
+]
+},
+"109": {
+"start": 2005,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+202,
+232
+]
+},
+"110": {
+"start": 2007,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+233,
+202
+]
+},
+"111": {
+"start": 2009,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+257,
+178
+]
+},
+"112": {
+"start": 2011,
+"house": "Republicans",
+"senate": "Democrats",
+"hs": [
+193,
+242
+]
+},
+"113": {
+"start": 2013,
+"house": "Republicans",
+"senate": "Democrats",
+"hs": [
+201,
+234
+]
+},
+"114": {
+"start": 2015,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+188,
+247
+]
+},
+"115": {
+"start": 2017,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+194,
+241
+]
+},
+"116": {
+"start": 2019,
+"house": "Democrats",
+"senate": "Republicans",
+"hs": [
+235,
+199
+]
+},
+"117": {
+"start": 2021,
+"house": "Democrats",
+"senate": "Democrats",
+"hs": [
+222,
+212
+]
+},
+"118": {
+"start": 2023,
+"house": "Republicans",
+"senate": "Democrats",
+"hs": [
+213,
+222
+]
+},
+"119": {
+"start": 2025,
+"house": "Republicans",
+"senate": "Republicans",
+"hs": [
+215,
+220
+]
+}
+}
