@@ -73,6 +73,15 @@ def svg_chart():
     return (f'<svg viewBox="0 0 {W} {H}" width="100%" role="img" aria-label="Total federal debt, {FIRST_Y} to {NOW_TXT}, log scale" style="display:block;max-width:100%;height:auto">'
             f'{grid}{xt}<line x1="{L}" x2="{W-R}" y1="{H-B}" y2="{H-B}" stroke="#94a3b8"/><path d="{path}" fill="none" stroke="#0c2340" stroke-width="2.2"/>{mk}</svg>')
 
+def canvas_js():
+    import json
+    ys = sorted(BY)
+    labels = [str(y) for y in ys] + [NOW_TXT]
+    data = [round(BY[y][1] / 1e9, 3) for y in ys] + [round(NOW / 1e9, 3)]
+    spec = {"id": "chart-debt-history", "type": "line", "labels": labels, "data": data, "fmt": "bn", "log": True,
+            "hrefs": ["debt-eras"] * len(data)}
+    return f"<script>window.SF_CHARTS=(window.SF_CHARTS||[]).concat([{json.dumps(spec)}]);</script>"
+
 def section():
     rows = "".join(f'<tr><td>{e(t)}</td><td>{lab(a)}</td><td class="n">{money(val(a))}</td><td>{lab(b)}</td><td class="n">{money(val(b))}</td></tr>' for t, a, b, *_ in ERAS)
     eras = "".join(f'<div class="mt-era-row{" now" if b == "now" else ""}"><div class="mt-era-who"><b>{lab(a)}–{"now" if b == "now" else b}</b><span>{money(val(a))} → {money(val(b))}</span></div>'
@@ -81,7 +90,7 @@ def section():
     return f"""
 <h3 class="strip-h" id="debt-history">The national debt, {FIRST_Y} to today</h3>
 <p class="strip-dek">235 years, both parties, many Congresses. The debt rose in wars and crises and fell in some years between them.</p>
-<a class="chart-link" href="#debt-eras" style="display:block;color:inherit;text-decoration:none"><div class="chart-card"><h3>Total federal debt, {FIRST_Y} to {NOW_TXT}</h3><p class=sub>Dollars, not adjusted for inflation. Log scale: each line is 100 times the one below. Tap the chart for the eras.</p>{svg_chart()}</div></a>
+<div class="chart-card"><h3>Total federal debt, {FIRST_Y} to {NOW_TXT}</h3><p class=sub>Dollars, not adjusted for inflation. Log scale: each line is 10 times the one below. Hover for any year; tap to open the eras.</p><div class="chart-wrap tall"><canvas id="chart-debt-history" role="img" aria-label="Total federal debt, {FIRST_Y} to {NOW_TXT}, log scale"></canvas></div></div>{canvas_js()}
 <p class="period-note">Year-end totals {FIRST_Y}–{LAST_Y} from Treasury (the record date moved from January 1 to July 1, June 30 and then September 30 over time). Today’s figure: {money(NOW)} total public debt outstanding on {NOW_TXT}, Treasury Debt to the Penny. {src}</p>
 <details class="mt-era"><summary>Debt at the start and end of each era</summary><div class="table-wrap"><table class="rank-table"><thead><tr><th>Era</th><th>Start</th><th class="n">Debt</th><th>End</th><th class="n">Debt</th></tr></thead><tbody>{rows}</tbody></table></div></details>
 <details class="mt-era" id="debt-eras"><summary>What drove it, era by era</summary>{eras}</details>

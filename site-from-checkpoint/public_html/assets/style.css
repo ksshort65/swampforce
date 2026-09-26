@@ -1378,3 +1378,27 @@ a.chart-link{display:block;color:inherit;text-decoration:none}a.chart-link:hover
 .lf-badge{display:inline-block;padding:2px 8px;border-radius:999px;font-weight:800;font-size:.72rem;font-family:var(--sans);white-space:nowrap}
 .lf-usual{background:#dcfce7;color:#14532d}.lf-unusual{background:#fef3c7;color:#92400e}.lf-nd{background:#e5e7eb;color:#4b5563}
 .lf-empty{color:#9ca3af;font-style:italic}
+
+/* Site background (Sep 26 2026): Grok Build Capitol-and-eagle image, fixed, with a dark overlay; content panels stay readable */
+body, body.serious { background: #0b1626 url('../images/bg-capitol-eagle.jpg') center center / cover fixed no-repeat; }
+body::before { content: ""; position: fixed; inset: 0; background: rgba(7,21,40,.55); z-index: -1; pointer-events: none; }
+.main { background: rgba(247,244,237,.93); }
+body.serious .main { background: rgba(250,248,243,.95); }
+
+/* Original Grok Build images restored */
+.sf-orig{padding:6px 0 12px}.sf-orig-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.sf-orig-cell img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid #d6d3cb;background:#fff}
+.sf-orig-fig{margin:12px 0 18px}.sf-orig-fig img{width:100%;max-width:880px;height:auto;display:block;border-radius:10px}
+.jr-hub-img{width:100%;height:auto;display:block;border-radius:8px;margin-top:8px}
+
+/* Unverified claims chart */
+.uv-row{display:grid;grid-template-columns:110px 1fr;gap:8px;align-items:center;margin:6px 0}.uv-lbl{font-family:var(--sans);font-size:.8rem;font-weight:700}
+.uv-bars{display:flex;flex-direction:column;gap:3px;min-width:0}.uv-bar{display:block;height:20px;border-radius:5px;color:#fff;font-family:var(--sans);font-size:.72rem;line-height:20px;padding-left:6px;min-width:26px;text-decoration:none;box-sizing:border-box}
+.uv-cat{background:#0c2340}.uv-lead{background:repeating-linear-gradient(45deg,#b45309,#b45309 6px,#d97706 6px,#d97706 12px)}
+.uv-key{font-family:var(--sans);font-size:.75rem;color:#475569}.uv-sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin:0 4px 0 8px}
+.uv-nv{display:inline-block;background:#e5e7eb;color:#374151;font-family:var(--sans);font-size:.68rem;font-weight:800;border-radius:999px;padding:1px 7px;margin-right:4px}
+.uv-list li{margin:6px 0;overflow-wrap:anywhere}
+/* auto charts */
+.ac-card{margin:10px 0 14px}.ac-hit{outline:3px solid #d97706;outline-offset:2px;background:#fff7e6!important;transition:background .3s}
+.ac-fold>summary{font-family:var(--sans);font-weight:700;cursor:pointer;color:#0c2340}
+.uv-ver{background:#b91c1c}

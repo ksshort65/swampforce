@@ -172,11 +172,20 @@
       case 'b': return '$' + v + 'B';
       case 'bn': return '$' + v.toLocaleString('en-US') + 'B';
       case 't': return '$' + v + 'T';
+      case 'usdm': return '$' + v.toLocaleString('en-US') + 'M';
       case 'usd': return '$' + v.toLocaleString('en-US', { maximumFractionDigits: 2 });
       case 'int': return v.toLocaleString('en-US');
       default: return v.toLocaleString('en-US');
     }
   }
+  function sfGo(id) {
+    if (/^https?:|\.html/.test(id)) { location.href = id; return; }
+    var t = document.getElementById(id); if (!t) return;
+    for (var p = t.parentElement; p; p = p.parentElement) if (p.tagName === 'DETAILS') p.open = true;
+    t.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    t.classList.add('ac-hit'); setTimeout(function () { t.classList.remove('ac-hit'); }, 2200);
+  }
+  window.sfGo = sfGo;
   function paint() {
     if (typeof Chart === 'undefined' || !window.SF_CHARTS) return;
     Chart.defaults.font.family = '"Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif';
@@ -191,7 +200,7 @@
       } else {
         var cols = spec.colors || ['#0c2340'];
         var bg = spec.data.map(function (_, i) { return cols[i % cols.length]; });
-        datasets = [{ data: spec.data, backgroundColor: bg, borderWidth: type === 'doughnut' ? 2 : 0, borderColor: '#fff', borderRadius: type === 'bar' ? 6 : 0, maxBarThickness: 44 }];
+        datasets = [{ data: spec.data, backgroundColor: type === 'line' ? 'rgba(12,35,64,.12)' : bg, fill: type === 'line', pointRadius: type === 'line' ? 0 : undefined, pointHitRadius: 8, tension: .2, borderWidth: type === 'doughnut' ? 2 : (type === 'line' ? 2 : 0), borderColor: type === 'line' ? '#0c2340' : '#fff', borderRadius: type === 'bar' ? 6 : 0, maxBarThickness: 44 }];
       }
       var horiz = !!spec.horizontal;
       var opts = {
@@ -202,16 +211,17 @@
           tooltip: { callbacks: { label: function (ctx) {
             var v = ctx.parsed && typeof ctx.parsed === 'object' ? (horiz ? ctx.parsed.x : ctx.parsed.y) : ctx.parsed;
             return (ctx.dataset.label ? ctx.dataset.label + ': ' : (ctx.label ? ctx.label + ': ' : '')) + fmtVal(v, spec.fmt);
-          } } }
+         }, afterLabel: function (ctx) { return spec.tips ? spec.tips[ctx.dataIndex] : ''; } } }
         },
-        onHover: function (ev, els) { if (spec.link) ev.native.target.style.cursor = els.length ? 'pointer' : 'default'; },
-        onClick: function (ev, els) { if (spec.link && els.length) filterTo(spec.link.key, spec.link.values[els[0].index]); }
+        onHover: function (ev, els) { if (spec.link || spec.hrefs) ev.native.target.style.cursor = els.length ? 'pointer' : 'default'; },
+        onClick: function (ev, els) { if (!els.length) return; var i = els[0].index; if (spec.link) filterTo(spec.link.key, spec.link.values[i]); else if (spec.hrefs) sfGo(spec.hrefs[i]); }
       };
       if (type === 'doughnut') { opts.cutout = '62%'; }
       else {
         opts.indexAxis = horiz ? 'y' : 'x';
         var valAxis = { beginAtZero: true, grid: { color: 'rgba(15,23,42,.06)' }, ticks: { font: { size: 11 }, callback: function (v) { return fmtVal(v, spec.fmt); } } };
         if (spec.max != null) valAxis.max = spec.max;
+        if (spec.log) { valAxis.type = 'logarithmic'; valAxis.beginAtZero = false; }
         var catAxis = { grid: { display: false }, ticks: { font: { size: 11 }, autoSkip: false } };
         opts.scales = horiz ? { x: valAxis, y: catAxis } : { x: catAxis, y: valAxis };
         if (spec.stacked) { valAxis.stacked = true; catAxis.stacked = true; }

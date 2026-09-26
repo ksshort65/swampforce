@@ -89,7 +89,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
     chart_js = ""
     if charts:
         chart_js = ('<script src="assets/vendor/chart.umd.min.js" defer></script>\n'
-                    f'<script>window.SF_CHARTS={json.dumps(charts, ensure_ascii=False)};</script>\n')
+                    f'<script>window.SF_CHARTS=(window.SF_CHARTS||[]).concat({json.dumps(charts, ensure_ascii=False)});</script>\n')
     extra = f'<script src="{extra_js}" defer></script>' if extra_js else ""
     canon = f"{DOMAIN}/" if fname == "index.html" else f"{DOMAIN}/{fname}"
     shop_foot = "" if (serious or fname == "store.html") else (
@@ -141,7 +141,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
       <div><a class="foot-stamp" href="store.html" aria-label="Swamp Force store">{STAMP_PIC}</a><p class="foot-brand">Swamp Force™</p>
         <p>A government-source journal. Compare the action to the speech. Opinion is always labeled
         <span class="op-tag">Opinion</span>.</p>
-        <p>© 2026 SwampForce Editor · Last updated: September 26, 2026 · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
+        <p>© 2026 SwampForce Editor · Last updated: September 26, 2026 · Updated weekly. · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
       <div><p class="foot-h">Evidence</p><a href="fake-news.html">Fake News Exposed</a><a href="democrats.html">Democrats</a><a href="republicans.html">Republicans</a><a href="january-6.html">J6</a><a href="lawfare.html">Lawfare</a>{'<a href="unsupported.html">Unsupported claims</a>' if UNSUP else ''}</div>
       <div><p class="foot-h">Read</p><a href="journal.html">Journal</a><a href="scorecard.html">Midterm scorecard</a><a href="betrayal.html">The Betrayal</a><a href="opinion.html">Opinion</a><a href="foreword.html">The Republic</a><a href="congress.html">Congress</a><a href="border.html">The Border</a><a href="remedy.html">The Remedy</a></div>
       {('<div><p class="foot-h">Watch</p>' + "".join(f'<a href="{h}">{e(t)}</a>' for h, t, _ in WATCH_MENU) + '</div>') if WATCH_MENU else ''}
@@ -480,9 +480,10 @@ def load_unsupported():
 
 UNSUP = load_unsupported()
 if UNSUP:
-    EVIDENCE_MENU.append(("unsupported.html", "Unsupported claims", f"{len(UNSUP)} claim{'s' if len(UNSUP) != 1 else ''} we could not support"))
+    EVIDENCE_MENU.append(("unsupported.html", "Unsupported claims", "Claims we could not support"))
 methods = Counter(c["method"] for c in cases if c["method"])
-TOP_METHODS = [m for m, _ in methods.most_common(8)]
+VMETHODS = Counter(c["method"] for c in VCASES if c["method"])
+TOP_METHODS = [m for m, _ in VMETHODS.most_common(8)]
 
 
 def url_of(item):
@@ -493,7 +494,7 @@ SRC = {
     "bls11": ("BLS CPI release, Oct 19, 2011", url_of("656")),
     "bls26": ("BLS CPI release, Sep 11, 2026", url_of("748")),
     "cbp": ("CBP enforcement statistics", url_of("625")),
-    "treas": ("Treasury, Debt to the Penny (Sep 17, 2026)", url_of("756")),
+    "treas": ("Treasury, Debt to the Penny (Sep 24, 2026)", url_of("756")),
     "cbo": ("CBO Budget & Economic Outlook, Feb 2026", url_of("820")),
     "ers": ("USDA ERS farm income forecast, Sep 3, 2026", url_of("405")),
     "nyc": ("NYC Comptroller, asylum-seeker services", url_of("684")),
@@ -534,7 +535,7 @@ def charts_evidence():
         {"id": "chart-term", "type": "bar", "labels": ["First term (2017–21)", "2021 – present"],
          "data": [ST["first"], ST["later"]], "colors": ["#0c2340", "#b91c1c"], "link": {"key": "term", "values": ["first", "later"]}},
         {"id": "chart-methods", "type": "bar", "horizontal": True, "labels": TOP_METHODS,
-         "data": [methods[m] for m in TOP_METHODS], "colors": ["#b91c1c"], "link": {"key": "method", "values": TOP_METHODS}},
+         "data": [VMETHODS[m] for m in TOP_METHODS], "colors": ["#b91c1c"], "link": {"key": "method", "values": TOP_METHODS}},
     ]
 
 
@@ -595,7 +596,7 @@ def home_front():
     blame = "".join([
         tile("252", "Cases in the catalog", "118 verified by SwampForce · 131 still being checked · 3 set aside", accent=True, count=252, src='<a class="src" href="fake-news.html">See the proof →</a>'),
         tile(str(nc), "Never corrected by whoever pushed them", "42 false / 55 misleading · of the 118 verified cases", count=nc, src='<a class="src" href="fake-news.html">The cases →</a>'),
-        tile(str(CONFIRMED_N), "Also confirmed by an approved fact-checker", "62 proven false / 56 misleading · of the 118 verified cases", count=CONFIRMED_N, src='<a class="src" href="factcheckers.html">How we picked our fact-checkers →</a>'),
+        tile(str(CONFIRMED_N), "Also confirmed by an approved fact-checker", f"{sum(1 for c in VCASES if c.get('confirm') and c['evidence'] == 'Proven false')} proven false / {sum(1 for c in VCASES if c.get('confirm') and c['evidence'] != 'Proven false')} misleading · of the {len(VCASES)} verified ({ST['proven']} proven false / {ST['misleading']} misleading overall)", count=CONFIRMED_N, src='<a class="src" href="factcheckers.html">How we picked our fact-checkers →</a>'),
     ])
     return f"""
 <section class="fr-band" id="front">
@@ -702,7 +703,7 @@ def home_front():
  <div class="tile-grid">
   {tile("$174,000", "Base salary, rank-and-file member", "Leaders are paid more.", accent=True, src=src_link(FRONT_SRC["crs_pay"], "CRS RL30064"))}
   {tile("$7.258B", "Legislative branch, fiscal 2026", "Public Law 119-37.", src=src_link(FRONT_SRC["crs_leg"], "CRS R48612"))}
-  {tile(f"${M.DEBT_NOW_T:.2f}T", "National debt", M.AS_OF_TXT + ".", src=S("treas"))}
+  {tile("$40.07T", "National debt", "Sep 24, 2026 (Treasury, Debt to the Penny).", src=S("treas"))}
   {tile("$233–521B", "Federal money lost to fraud, per year", "GAO statistical estimate (FY2018–22 data), not a count of proven cases.", src=src_link(FRONT_SRC["gao_fraud"], "GAO-24-105833"))}
   {tile("FY1997", "Last year all regular spending bills passed on time", "Deadline: October 1.", src=src_link(FRONT_SRC["crs_approps"], "CRS IN12324"))}
   {tile("FY2001", "Last budget surplus", "", src=src_link(FRONT_SRC["cbo_hist"], "CBO historical data"))}
@@ -794,25 +795,23 @@ def betrayal_social_cards():
 
 def why_swampforce_exists_box():
     return """<div class="opinion why-swampforce"><p class="opinion-label">Our View</p><h3>Why SwampForce exists</h3>
-<p>Americans are being told what to think instead of being shown how to check. News networks, politicians of both parties and viral posts push claims that stir up emotion and outrage, and the correction rarely catches up. Over time, people stop asking "Is that true?" and start asking "Whose side is that on?"</p>
-<p>SwampForce was built to change that. We hold every side to the same standard: Republicans, Democrats, news outlets, campaigns and social media. We use the same method for all of them. A case goes on this site only when we have the person's own words and an official record that shows they were false or misleading. We don't pick a side, and we don't force the numbers to come out even. The record decides.</p>
-<p>Every case links to its source, so you don't have to trust us. Read the record yourself and make up your own mind. That's the point: to help Americans think for themselves again.</p>
-<p>Don't judge them by what they tell you. Judge them by what they do. We show you what they actually said and did, straight from the record.</p>
+<p>Don't judge them by what they tell you. Judge them by what they do.</p>
+<p>Both sides show up here because that's what the record shows, not because we made it even. Our government is appeasing the people, not serving them.</p>
+<p>We hold every side to the same standard: Republicans, Democrats, news outlets, campaigns and social media. Every case links to the official record, so you don't have to trust us.</p>
 <p>— SwampForce Editor</p></div>"""
 
 
 def betrayal_verify_box():
     return """<aside class="verify-box" id="how-we-verify">
 <h2>How we verify</h2>
-<p>Every case on this page passed the same test, no matter which party or network it involves. A case needs all of these:</p>
-<p>A named person. We don't accept "a network said" or "Democrats claimed."</p>
-<p>Their exact words, with the date and the show, speech or post where they said them, and a link to the statement itself: a transcript, official video or broadcast captions.</p>
-<p>An official record that shows the words are false or misleading, such as government data, court records, or the outlet's own transcript or correction.</p>
-<p>We search both parties with the same wording, changing only the party name. We never force the numbers to come out even. If the record shows more false claims from one side, we show that.</p>
-<p>Here's what we leave out: opinions, predictions, estimates, paraphrases, claims with no named speaker, and anything that rests only on a fact-checker or watchdog group. If a TV host repeats someone's claim and then gives the correct figure, that's reporting, and the case goes to the person who made the claim. Campaign ads are counted in their own group, separate from the candidate and the party.</p>
-<p>If we can't find the original clip or transcript, the case waits, even if it's widely reported. We removed cases before launch for exactly that reason.</p>
-<p>That's why the numbers may look low. Many claims you've heard about may well be false, but they aren't on this page until we can prove it with the person's own words and an official record. We add new cases as they pass.</p>
-<p>See something wrong? Send us the official record and we'll correct it publicly.</p>
+<ul>
+<li>We use the speaker's exact words, with the date and where they said it</li>
+<li>Proof comes only from official records, such as government data, court filings and original transcripts or video</li>
+<li>Every case links to its source</li>
+<li>We use the same method for every side</li>
+<li>We never force equal counts; the record decides</li>
+<li>If a case can't be proven, it's held back</li>
+</ul>
 </aside>"""
 
 
@@ -859,7 +858,7 @@ def build_home():
 <div class="wrap betrayal-first">
 {betrayal_home()}
 </div>
-<section class="hero" style="background-image:url('images/hero-eagle.jpg')">
+<section class="hero" style="background-image:url('images/bg-capitol-eagle.jpg')">
  <div class="hero-inner">
   <picture class="hero-lockup"><source srcset="assets/brand/lockup-light.webp" type="image/webp"><img src="assets/brand/lockup-light.png" alt="SwampForce" width="1100" height="583" fetchpriority="high"></picture>
   <p class="hero-kicker">The record, not the rerun</p>
@@ -904,7 +903,7 @@ def build_home():
  <div class="chart-grid">
   {chart_card("chart-proof", "Strength of proof", "Strongest proof first")}
   {chart_card("chart-term", "When it ran", "Cases by period")}
-  {chart_card("chart-methods", "How it was done", "Most common methods", tall=True)}
+  {chart_card("chart-methods", "How it was done", f"Most common methods, {len(VCASES)} verified cases", tall=True)}
  </div>
 </section>
 <section class="section-pad">
@@ -984,7 +983,7 @@ def build_fake_news():
  <div class="chart-grid">
   {chart_card("chart-proof", "Strength of proof", "Tap a bar to filter")}
   {chart_card("chart-evidence", "Verdict", "Tap to filter")}
-  {chart_card("chart-methods", "Top methods", "Tap to filter", tall=True)}
+  {chart_card("chart-methods", "Top methods", f"Among the {len(VCASES)} verified cases · tap to filter", tall=True)}
  </div>
 </details>
 <div class="filters" id="filters">
@@ -997,7 +996,7 @@ def build_fake_news():
  </div>
  <div class="chip-bar"><span class="chip-lbl">Verdict</span>{chips_ev}<span class="chip-lbl">Proof</span>{chips_pr}<span class="chip-lbl">Period</span>{chips_t}</div>
  <div class="chip-bar"><span class="chip-lbl">Method</span>{chips_m}</div>
- <p class="result-line"><span id="result-count">{len(cases)} of {len(cases)} cases</span>
+ <p class="result-line"><span id="result-count">{len(cases)} of {len(cases)} cases</span> <span class="muted">· 252 in the catalog; the 3 set aside are listed on <a href="unsupported.html">Unsupported claims</a></span>
   <button type="button" class="linkbtn" id="clear-filters">Clear filters</button>
   <button type="button" class="linkbtn" id="expand-all">Open all</button></p>
 </div>
@@ -1233,7 +1232,7 @@ def build_scorecard():
    {tile(M.tstr("R"), "Added under Republican control", count=M.T["R"], prefix="$", suffix="T", decimals=2, dark=True)}
    {tile(M.tstr("D"), "Added under Democratic control", count=M.T["D"], prefix="$", suffix="T", decimals=2, dark=True)}
    {tile(M.tstr("S"), "Added under a split Congress", count=M.T["S"], prefix="$", suffix="T", decimals=2, dark=True)}
-   {tile(f"${M.DEBT_NOW_T:.2f}T", "Total debt, " + M.AS_OF_TXT, count=M.DEBT_NOW_T, prefix="$", suffix="T", decimals=2, dark=True, accent=True)}
+   {tile("$40.07T", "Total debt, Sep 24, 2026", count=40.07, prefix="$", suffix="T", decimals=2, dark=True, accent=True)}
   </div>
   <p class="hero-note">{M.e(M.FACT_LINE)} Each total is the sum of its Congress-by-Congress rows (open a party tab). <a href="#compare">How it is counted</a> · <a href="#wallet">How did your rep vote? Your wallet</a></p>
  </div>
@@ -1331,7 +1330,7 @@ def build_betrayal():
  <div class="hero-inner">
   <p class="hero-kicker">The narrative spine</p>
   <h1>The Great American Betrayal</h1>
-  <p class="page-updated">Last updated: September 26, 2026</p>
+  <p class="page-updated">Last updated: September 26, 2026 · Updated weekly.</p>
   <p class="dek">How a narrative gets built, why the correction never catches it, and what that does to a self-governing people.</p>
   <div class="stat-rail two">
    {tile("252", "Cases in the catalog", count=252, dark=True, accent=True)}
@@ -1448,7 +1447,8 @@ PDF_NAMES = {"cannon-dismissal": "U.S. v. Trump (S.D. Fla.), dismissal order", "
 
 
 def build_lawfare():
-    import lawfare_grid as LG
+    import lawfare_grid as LG, lawfare_charts as LC
+    CASES_LF = [{"id": c["id"], "claim": c["claim"], "notes": c["notes"], "who": c["who"], "status": c["status"]} for c in cases]
     LG.gaps_md(LAW / "supergrok-gaps.md")
     with (LAW / "lawfare-docket-tracker.csv").open(encoding="utf-8-sig") as fh:
         dockets = list(csv.DictReader(fh))
@@ -1484,14 +1484,14 @@ def build_lawfare():
     pdf_list = "".join(f'<li><a href="lawfare-docs/{p.name}">{e(PDF_NAMES.get(p.stem, p.stem))}</a> <span class="muted">PDF · {p.stat().st_size // 1024} KB</span></li>' for p in pdfs)
     body = f"""
 <header class="doc-head"><p class="doc-kicker">Evidence · Court record</p><h1>Lawfare docket tracker</h1>
-<p class="page-updated">Last updated: September 26, 2026</p>
+<p class="page-updated">Last updated: September 26, 2026 · Updated weekly.</p>
 <p class="doc-lede">{len(dockets)} cases brought against Donald J. Trump: the court, docket number, current status, key rulings and the primary documents. Facts come from court filings and official dockets. The site owner's opinion is at the end, labeled.</p>
 <div class="doc-actions"><a class="btn navy sm" href="downloads/lawfare-tracker.pdf">{ico("down")} Tracker (PDF)</a>
 <a class="btn ghost-dark sm" href="downloads/lawfare-docket-tracker.csv">CSV</a><a class="btn ghost-dark sm" href="downloads/lawfare-docket-tracker.xlsx">Excel</a>
 <a class="btn ghost-dark sm" href="downloads/lawfare-rulings.csv">Rulings CSV</a><button type="button" class="btn ghost-dark sm" data-print>{ico("print")} Print</button></div></header>
 <div class="doc-grid"><nav class="doc-toc" aria-label="Dockets"><p class="foot-h">Dockets</p><ol>{"".join(index)}</ol>
 <p class="foot-h">Court opinions (PDF)</p><ul>{pdf_list}</ul></nav>
-<div class="doc-body">{LG.section(len(dockets))}<aside class="verify-box" id="how-we-built-this-tracker">
+<div class="doc-body">{LC.section(CASES_LF)}{LG.section(len(dockets))}<aside class="verify-box" id="how-we-built-this-tracker">
 <h2>How we built this tracker</h2>
 <p>Every fact on this page comes from the court record: the official docket, the charging papers or complaint, and the judges' written rulings and orders. Each case links to those documents so you can read them yourself.</p>
 <p>We don't rely on news reports, commentary or either side's press releases for any status, charge or ruling. If a filing or ruling isn't in the official record yet, we list the status as pending and don't guess.</p>
@@ -1690,7 +1690,7 @@ def build_congress():
     body = hub_head("Journal · Congress", "The hire holds the purse.", "Article I gives Congress the power of the purse. These are the books it keeps.", "images/chamber.jpg") + f"""
 <div class="wrap">
 <div class="tile-grid">
- {tile(f"${M.DEBT_NOW_T:.2f}T", "National debt", M.AS_OF_TXT + ".", accent=True, count=M.DEBT_NOW_T, prefix="$", suffix="T", decimals=2, src=S("treas"))}
+ {tile("$40.07T", "National debt", "Sep 24, 2026 (Treasury, Debt to the Penny).", accent=True, count=40.07, prefix="$", suffix="T", decimals=2, src=S("treas"))}
  {tile("$1.9T", "Projected deficit, FY2026", "CBO, Feb 2026.", count=1.9, prefix="$", suffix="T", decimals=1, src=S("cbo"))}
  {tile("$1.039T", "Net interest, FY2026", "Up from $970B in FY2025.", count=1.039, prefix="$", suffix="T", decimals=3, src=S("cbo"))}
  {tile(str(ST['total']), "Claims we verified against the record", f"{ST['proven']} proven false / {ST['misleading']} misleading.", count=ST['total'], src='<a class="src" href="fake-news.html">Fake News Exposed</a>')}
@@ -2117,6 +2117,16 @@ def main():
         "foreword.html": build_foreword(), "congress.html": build_congress(), "border.html": build_border(),
         "remedy.html": build_remedy(law_n), "opinion.html": build_opinion(), "404.html": build_404(),
     }
+    import unverified as UV
+    import auto_charts as AC
+    UCASES = [{"id": c["id"], "claim": c["claim"], "who": c["who"], "notes": c["notes"], "status": "Verified by SwampForce" if c["status"] == "verified" else "Still being checked"} for c in cases]
+    pages = {**{k: v for k, v in pages.items() if k != "404.html"}, "unverified.html": page("unverified.html", UV.TITLE + " · Swamp Force", UV.CAPTION, UV.body(UCASES), flush=True), "404.html": pages["404.html"]}
+    import restore as RS, atexit
+    atexit.register(lambda: print("RESTORE", RS.STATS, "AUTOCHARTS", AC.COUNT[0]))
+    RS.copy_images(OUT)
+    for _slug in RS.NEW5:
+        _t, _d, _b = RS.essay(_slug)
+        pages = {**{k: v for k, v in pages.items() if k != "404.html"}, f"journal-{_slug}.html": page(f"journal-{_slug}.html", _t + " · Swamp Force", _d or _t, _b, flush=True), "404.html": pages["404.html"]}
     if UNSUP:
         pages = {**{k: v for k, v in pages.items() if k != "404.html"}, "unsupported.html": build_unsupported(), "404.html": pages["404.html"]}
         with open(OUT / "downloads" / "unsupported-claims.csv", "w", newline="", encoding="utf-8") as fh:
@@ -2142,9 +2152,21 @@ def main():
     for old in ["explainer.html", "pump.html", "pending.html", "republic.html"]:
         (OUT / old).unlink(missing_ok=True)
     import visual as VIS
+    import orig_images as OI
+    OI.copy_all(OUT)
+    shutil.copy2(SITE / "image-src" / "bg-capitol-eagle.jpg", OUT / "images" / "bg-capitol-eagle.jpg")  # site background (Grok Build original)
     for name, h in pages.items():
         h = h.replace("In this site&#x27;s audit of", "In this site&#x27;s review of")
         h = VIS.apply(name, h)
+        h = OI.apply(name, h)
+        h = RS.apply(name, h)
+        h = AC.apply(name, h)
+        if name == "index.html" and '<section class="sf-charts-first"><div class="wrap">' in h:
+            k = h.index('<section class="sf-charts-first"><div class="wrap">') + len('<section class="sf-charts-first"><div class="wrap">')
+            h = h[:k] + UV.home_block(UCASES) + h[k:]
+        if name == "betrayal.html" and "</h1>" in h:
+            k = h.index("</h1>") + 5
+            h = h[:k] + '<p class="fact-line"><a href="unverified.html">' + UV.TITLE + ' →</a></p>' + h[k:]
         h = re.sub(r'(assets/(?:style\.css|app\.js|store\.js))"', r'\1?v=' + ASSET_V + '"', h)  # cache-busting
         (OUT / name).write_text(h, encoding="utf-8")
     # /midterms.html: .htaccess 301s to scorecard.html; this stub covers hosts/previews that ignore .htaccess.
