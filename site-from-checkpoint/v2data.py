@@ -216,7 +216,7 @@ def page(title: str, desc: str, active: str, body: str, extra_js: str = "") -> s
   <div class="footer-inner">
     <p><strong>Swamp Force™</strong> — a government-source journal. Compare the action to the speech.
     Opinion is labeled <span class="badge" style="background:#b45309;color:#fff">Opinion</span>.
-    Author: Renee Stewart · © 2026 · editor@swampforce.com</p>
+    Author: SwampForce Editor · © 2026 · editor@swampforce.com</p>
     <p><a href="about.html">Methodology</a> · <a href="fake-news.html">Fake News</a> ·
     <a href="scorecard.html">Scorecard</a> · <a href="store.html">Store</a> ·
     <a href="downloads.html">Downloads</a></p>

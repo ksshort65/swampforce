@@ -140,7 +140,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
       <div><a class="foot-stamp" href="store.html" aria-label="Swamp Force store">{STAMP_PIC}</a><p class="foot-brand">Swamp Force™</p>
         <p>A government-source journal. Compare the action to the speech. Opinion is always labeled
         <span class="op-tag">Opinion</span>.</p>
-        <p>© 2026 Renee Stewart · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
+        <p>© 2026 SwampForce Editor · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
       <div><p class="foot-h">Evidence</p><a href="fake-news.html">Fake News Exposed</a><a href="democrats.html">Democrats</a><a href="republicans.html">Republicans</a><a href="january-6.html">J6</a><a href="lawfare.html">Lawfare</a>{'<a href="unsupported.html">Unsupported claims</a>' if UNSUP else ''}</div>
       <div><p class="foot-h">Read</p><a href="journal.html">Journal</a><a href="scorecard.html">Scorecard</a><a href="betrayal.html">The Betrayal</a><a href="opinion.html">Opinion</a><a href="foreword.html">The Republic</a><a href="congress.html">Congress</a><a href="border.html">The Border</a><a href="remedy.html">The Remedy</a></div>
       {('<div><p class="foot-h">Watch</p>' + "".join(f'<a href="{h}">{e(t)}</a>' for h, t, _ in WATCH_MENU) + '</div>') if WATCH_MENU else ''}
@@ -1040,7 +1040,7 @@ def build_about():
 <section class="doc-section"><h2>6. Fact and opinion</h2><p>Opinion appears only on the <a href="opinion.html">Opinion page</a> and in blocks labeled <span class="op-tag">Opinion</span> or "Our view." Everything else is sourced on the page.</p></section>
 <section class="doc-section"><h2>7. Corrections</h2><p>Found an error? Email <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> with the case number and the source. Confirmed errors are fixed and noted.</p></section>
 {balance_html}
-<section class="doc-section"><h2>About</h2><p>Swamp Force™ is a government-source journal edited by Renee Stewart. © 2026.</p></section>
+<section class="doc-section"><h2>About</h2><p>Swamp Force™ is a government-source journal edited by the SwampForce Editor. © 2026.</p></section>
 """
     return page("about.html", "Methodology · Swamp Force", "Inclusion rules, proof ranking and correction visibility for the Swamp Force record.", body, serious=True)
 

@@ -120,7 +120,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
       <div><p class="foot-brand">Swamp Force™</p>
         <p>A government-source journal. Compare the action to the speech. Opinion is always labeled
         <span class="op-tag">Opinion</span>.</p>
-        <p>© 2026 Renee Stewart · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
+        <p>© 2026 SwampForce Editor · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
       <div><p class="foot-h">Evidence</p><a href="fake-news.html">Fake News Exposed</a><a href="democrats.html">Democrats</a><a href="republicans.html">Republicans</a><a href="january-6.html">J6</a><a href="lawfare.html">Lawfare</a></div>
       <div><p class="foot-h">Read</p><a href="scorecard.html">Scorecard</a><a href="betrayal.html">The Betrayal</a><a href="foreword.html">The Republic</a><a href="congress.html">Congress</a><a href="border.html">The Border</a><a href="remedy.html">The Remedy</a></div>
       <div><p class="foot-h">For lawmakers</p><a href="brief.html">Staff brief</a><a href="appendix.html">Evidence appendix</a><a href="about.html">Methodology</a><a href="downloads.html">Downloads</a><a href="store.html">Store</a></div>
@@ -889,7 +889,7 @@ def build_about():
 <section class="doc-section"><h2>5. Scorecard</h2><p>Every figure comes from an official source (BLS, CBP, Treasury, CBO, USDA, SSA, CMS, a city comptroller) and is tagged with who held power at the time. Until a figure is confirmed against its source, it is marked <span class="chip gold">Under review</span> and shows no number.</p></section>
 <section class="doc-section"><h2>6. Fact and opinion</h2><p>Opinion appears only in blocks labeled <span class="op-tag">Opinion</span> or "Our view." Everything else is sourced on the page.</p></section>
 <section class="doc-section"><h2>7. Corrections</h2><p>Found an error? Email <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> with the case number and the source. Confirmed errors are fixed and noted.</p></section>
-<section class="doc-section"><h2>About</h2><p>Swamp Force™ is a government-source journal edited by Renee Stewart. © 2026.</p></section>
+<section class="doc-section"><h2>About</h2><p>Swamp Force™ is a government-source journal edited by the SwampForce Editor. © 2026.</p></section>
 """
     return page("about.html", "Methodology · Swamp Force", "Inclusion rules, proof ranking and correction visibility for the Swamp Force record.", body, serious=True)
 

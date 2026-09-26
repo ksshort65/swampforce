@@ -6,7 +6,7 @@ Faithful rebuild note. Source: `repo/src/lib/{content,scorecard,ledgers,pump}.ts
 - **Name:** Swamp Force™ (`SITE.name`) · domain swampforce.com
 - **Kicker (header right):** “Vote the file. Not the feeling.”
 - **Tagline / closer:** government-source journal; compare action to speech
-- **Author / copyright:** Renee Stewart · © 2026
+- **Author / copyright:** SwampForce Editor · © 2026
 
 ## Primary navigation (`site-header.tsx`)
 Sticky header. Two bands: brand+kicker, then nav.
