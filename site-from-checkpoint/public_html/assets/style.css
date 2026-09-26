@@ -1402,3 +1402,6 @@ body.serious .main { background: rgba(250,248,243,.95); }
 .ac-card{margin:10px 0 14px}.ac-hit{outline:3px solid #d97706;outline-offset:2px;background:#fff7e6!important;transition:background .3s}
 .ac-fold>summary{font-family:var(--sans);font-weight:700;cursor:pointer;color:#0c2340}
 .uv-ver{background:#b91c1c}
+.fm-cmp td, .rf-table td { color: #1f2937; } .fm-cmp td a, .rf-table td a { color: #991b1b; }
+.sf-beta-banner { background: #fef3c7; color: #78350f; font: 600 .72rem/1.6 var(--sans, sans-serif); letter-spacing: .06em; text-align: center; padding: 2px 8px; border-bottom: 1px solid #fcd34d; }
+.jr-short-pts { margin: 12px 0 16px; padding-left: 1.2em; font-size: 1.05rem; } .jr-short-pts li { margin: 6px 0; }

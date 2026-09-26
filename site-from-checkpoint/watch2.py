@@ -407,7 +407,11 @@ def build_acc_trading(H):
               "relevance_note": "Sets the 30/45-day reporting deadline. A late filing is a disclosure violation, not insider trading."},
              {"citation": "5 U.S.C. 13106", "topic": "Failure to file or filing false reports", "link": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section13106&num=0&edition=prelim",
               "relevance_note": "Civil penalty for knowing and willful failure to file; no member has been found in violation in the records reviewed."}]
-    body = answer + f'<div class="tile-grid">{"".join(tiles)}</div>' + "".join(parts) + law_chips(H, "none", extra) + rep_box(H, rep)
+    pay = ('<p class="period-note">Members of Congress earn $174,000 a year (unchanged since 2009). Leaders $193,400. Speaker $223,500. '
+           '<a href="https://clerk.house.gov/documents/Salary.pdf" target="_blank" rel="noopener">House Clerk ↗</a> '
+           '<span class="uv-nv">Not yet verified</span> for the 2009, leader and Speaker figures (the Clerk page confirms only the $174,000 base salary). '
+           'Disclosure forms show dollar ranges only. No official total or profit figure is published.</p>')
+    body = answer + f'<div class="tile-grid">{"".join(tiles)}</div>' + pay + "".join(parts) + law_chips(H, "none", extra) + rep_box(H, rep)
     html_out = _acc_page(H, "accountability-trading.html", "Congressional Stock Trading, 2025–2026",
                          "Disclosed trade volume, top traders, late filings and prosecutions, from official House and Senate filings.",
                          "Every figure comes from the official House Clerk and Senate eFD periodic transaction reports, each linked to its filing. Commercial aggregators were not used.",

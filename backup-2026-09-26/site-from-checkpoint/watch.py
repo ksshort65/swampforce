@@ -250,9 +250,12 @@ def court_money_rows(H, sal_total, n_conf):
          "Vacated in full by the Appellate Division, First Dept., on Aug 21, 2025 (liability left in place). Court of Appeals review pending.",
          "Not owed under the current judgment", H.src_link(NY_APPDIV, "App. Div. decision (PDF)")),
         ("E. Jean Carroll judgments", "$5 million (2023) and $83.3 million (2024): $88.3 million.",
-         "Both affirmed by the Second Circuit; rehearing en banc denied Apr 29, 2026. Supreme Court petition in Carroll I pending.",
-         "Owed under the judgments; payment not in the record reviewed",
-         f'{H.src_link("https://law.justia.com/cases/federal/appellate-courts/ca2/23-793/23-793-2024-12-30.html", "2d Cir. 23-793")} {H.src_link("https://ww3.ca2.uscourts.gov/decisions/OPN/24-644_2_opn.pdf", "2d Cir. 24-644")} {H.src_link("https://www.supremecourt.gov/docket/docketfiles/html/public/26-141.html", "No. 26-141")}'),
+         "Both affirmed by the Second Circuit; rehearing en banc denied Apr 29, 2026. Supreme Court petition in Carroll I pending. Carroll II: Supreme Court denied review June 29, 2026; the court ordered the $5,000,000 plus $779,783 interest paid out of his $5,550,000 court deposit.",
+         "Carroll II ordered paid from his deposit; Carroll I payment not in the record reviewed",
+         f'{H.src_link("https://law.justia.com/cases/federal/appellate-courts/ca2/23-793/23-793-2024-12-30.html", "2d Cir. 23-793")} {H.src_link("https://ww3.ca2.uscourts.gov/decisions/OPN/24-644_2_opn.pdf", "2d Cir. 24-644")} {H.src_link("https://storage.courtlistener.com/recap/gov.uscourts.nysd.590045/gov.uscourts.nysd.590045.234.0.pdf", "S.D.N.Y. order, June 30, 2026")} {H.src_link("https://www.supremecourt.gov/docket/docketfiles/html/public/26-141.html", "No. 26-141")}'),
+        ("Trump Foundation (N.Y. Sup. Ct., 2019)", "$2,000,000 to charities, without interest.",
+         "Damages for breach of fiduciary duty/waste; the foundation was dissolved.", "Ordered paid to charities",
+         H.src_link("https://nycourts.gov/reporter/3dseries/2019/2019_29336.htm", "Decision")),
         ("Trump v. IRS settlement (DOJ, May 18, 2026)", "$1.776 billion Anti-Weaponization Fund from the Judgment Fund; $230M administrative claims withdrawn.",
          "DOJ states no money is paid to the President, his sons or the Trump Organization. The President can remove the fund's members.",
          "Not paid to him per DOJ", H.src_link(DOJ_FUND, "DOJ release")),
@@ -459,7 +462,7 @@ def build_trump(H):
 <p>Primary records (White House briefings, agency records and his own post with the check) confirm <b>{usd(s_total, 2)}</b> donated across {len(s_conf)} first-term quarters where the amount is stated. Records for {len(s_named)} more quarters name the recipient but not the amount, so those are not counted. News reports cover most other quarters; they are listed in grey below and not counted.</p>
 <p>The big court judgments are a different story: the $464.6M New York award was thrown out on appeal, the $88.3M Carroll judgments stand, and DOJ says the $1.776B IRS settlement fund pays nothing to him.</p></div>
 <div class="table-wrap"><table class="watch-table"><thead><tr><th>Item</th><th>Amount on paper</th><th>What the record shows</th><th>Kept or owed?</th><th>Source</th></tr></thead><tbody>{cm_rows}</tbody></table></div>
-<p class="muted-note">Full case history: <a href="lawfare.html">Lawfare docket tracker</a>.</p>
+<p class="muted-note">Disclosures list ranges only. No official total net worth, before or after office. Yearly FEC legal-fee totals: not documented; one subset is $8,223,596.48 reported as “legal fees” or “legal expenses” ({H.src_link("https://www.fec.gov/files/legal/murs/8260/8260_04.pdf", "FEC MUR 8260")}). New ventures: value totals not documented. Full case history: <a href="lawfare.html#docket-1">Lawfare docket tracker</a>.</p>
 <h3 class="watch-h3">Salary donations confirmed by a primary record</h3>
 <div class="table-wrap"><table class="watch-table"><thead><tr><th>Quarter</th><th>Recipient</th><th>Purpose</th><th>Amount (primary record)</th><th>Source</th></tr></thead><tbody>{s_trs}</tbody>
 <tfoot><tr><td colspan="3"><b>Total with the amount stated in a primary record</b></td><td class="num"><b>{usd(s_total, 2)}</b></td><td></td></tr></tfoot></table></div>

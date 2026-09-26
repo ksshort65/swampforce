@@ -73,7 +73,7 @@
       f.style.display = ok ? '' : 'none';
       if (ok) shown++;
     });
-    if (countEl) countEl.textContent = shown + ' of ' + frames.length + ' cases';
+    if (countEl) countEl.textContent = shown === frames.length ? 'All cases shown' : shown + ' matching';
     if (empty) empty.hidden = shown !== 0;
     if (qq || Object.keys(sel).some(function (k) { return sel[k] && sel[k].value; })) frames.forEach(function (f) { var d = f.closest('details.sf-fold'); if (d) d.open = true; });
     syncChips();
@@ -172,6 +172,7 @@
       case 'b': return '$' + v + 'B';
       case 'bn': return '$' + v.toLocaleString('en-US') + 'B';
       case 't': return '$' + v + 'T';
+      case 'usdm_raw': return '$' + v + 'M';
       case 'usdm': return '$' + v.toLocaleString('en-US') + 'M';
       case 'usd': return '$' + v.toLocaleString('en-US', { maximumFractionDigits: 2 });
       case 'int': return v.toLocaleString('en-US');

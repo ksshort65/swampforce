@@ -10,7 +10,7 @@ NEW5 = ["a-barcode-is-not-a-lock", "clean-hands", "it-does-not-fit", "the-check-
 MAP = {"index.html": ["index.html"], "pump.html": ["gas-gap.html"], "about.html": ["about.html"], "foreword.html": ["foreword.html"]}
 SC_TABS = {"gop": "tab-gop", "dem": "tab-dem", "split": "tab-split", "oval": "tab-oval", "compare": "tab-compare"}
 NOTE = ('<p class="period-note">From the original edition, restored as written. Figures that changed since are shown at today’s values: '
-        '252 cases in the catalog (118 verified, 131 still being checked, 3 set aside); national debt $40.07T (Treasury, Debt to the Penny, Sep 24, 2026).</p>')
+        '263 cases in the catalog (129 verified, 131 still being checked, 3 set aside); national debt $40.07T (Treasury, Debt to the Penny, Sep 24, 2026).</p>')
 RESTORED = {}
 
 def norm(t):
@@ -25,7 +25,7 @@ def fix_numbers(s):
     s = re.sub(r"\$40\.09(\s*T\b|\s*trillion)", r"$40.07\1", s)
     s = s.replace("Sep 17, 2026", "Sep 24, 2026").replace("September 17, 2026", "September 24, 2026")
     # a 3-digit catalog count that is not today's → today's catalog figure
-    s = re.sub(r"\b(?!(?:252|249|118|131)\b)(\d{3})( (?:documented )?(?:cases|claims))\b", r"252\2", s)
+    s = re.sub(r"\b(?!(?:263|260|129|131)\b)(\d{3})( (?:documented )?(?:cases|claims))\b", r"263\2", s)
     return s
 
 def fix_links(s):
@@ -129,6 +129,40 @@ def copy_images(out):
     for f in (ROOT / "images").iterdir():
         if not (d / f.name).exists(): shutil.copy2(f, d / f.name)
 
+SHORT = {
+ "a-barcode-is-not-a-lock": [
+  "August 2020: Democrats told the country the Postal Service was being dismantled so a ballot would die in a bin. November 12, 2020: CISA called the contest ‘the most secure in American history.’",
+  "The ‘most secure’ sentence was about voting systems: paper backups so a hacked tally can be checked. That is a claim about machines, not the mail.",
+  "CISA did not audit the kitchen. It issued a press release about the tabulator.",
+  "The Intelligent Mail barcode is a routing mark so a sorter knows which bin. Tracking is not identity.",
+  "August 2026: USPS finalized a rule with a federal portal and two unique barcodes per mail voter."],
+ "clean-hands": [
+  "The method is a sentence cut just short of the Supreme Court’s incitement test: they do not say ‘torch the precinct.’ They say create a crowd.",
+  "June 23, 2018, Maxine Waters: “you get out and you create a crowd and you push back on them.” February 9, 2020, Ayanna Pressley: “we will bring the fire.”",
+  "June 1, 2020, Kamala Harris urged donors to a bail fund for protesters in Minnesota. July 9, 2020, Nancy Pelosi on a toppled statue: “People will do what they do.”",
+  "The unrest of May 26 to June 8, 2020 was classified a catastrophe across more than twenty states; the Insurance Information Institute put insured losses at one to two billion dollars.",
+  "The Member keeps clean hands. The city pays."],
+ "it-does-not-fit": [
+  "Medicare for All: about $32 trillion to $34 trillion in extra federal spending over ten years (Urban Institute); at least $32.6 trillion (Mercatus); $25 trillion to $35 trillion (CRFB).",
+  "CBO, fiscal 2026: the Treasury takes in $5.6 trillion, spends $7.4 trillion; the hole is $1.9 trillion.",
+  "Debt held by the public is 101 percent of GDP, heading to 120 percent by 2036; net interest goes from $1.0 trillion to $2.1 trillion.",
+  "$34 trillion over ten years is $3.4 trillion every year, on top of the $7.4 trillion they already cannot pay.",
+  "Congress has never sent a scored Medicare-for-all bill to the President."],
+ "the-check-they-will-not-write": [
+  "The advocates’ own number is $10 trillion to $16 trillion (Darity: $10–12 trillion at Brookings, 2020; $16 trillion ‘the floor,’ 2026).",
+  "H.R. 40 has been introduced since 1989. It does not pay anyone. It studies. Ninety-six cosponsors in 2025.",
+  "California’s task force put up to $1.2 million per person on the table; the 2024 budget set aside $12 million for ‘reparations legislation,’ not payments.",
+  "The Treasury takes in $5.6 trillion in fiscal 2026 and runs a $1.9 trillion deficit.",
+  "The pattern is the product: commission, headline, no check."],
+ "what-they-are-protecting": [
+  "USAID contracts, FY2023: about $6.8 billion obligated; Chemonics took the largest share, more than $1 billion.",
+  "Federal lobbying: a record $4.4 billion in 2024, more than $5 billion in 2025.",
+  "STOCK Act: a $200 late fee and no member prosecuted for insider trading under it.",
+  "In fiscal 2023 the U.S. disbursed $71.9 billion in foreign aid; USAID moved about $43.8 billion (Pew).",
+  "Open Society Foundations: $1.2 billion in 2024 expenditures. That is private money, not USAID. They protect the tap, the lobby, and the ticker."],
+}
+
+
 def essay(slug):
     s = _soup(f"dispatch/{slug}.html")
     title = s.h1.get_text(" ", strip=True) if s.h1 else slug.replace("-", " ").capitalize()
@@ -141,7 +175,9 @@ def essay(slug):
     desc = (s.find("meta", attrs={"name": "description"}) or {}).get("content", "") if s.find("meta", attrs={"name": "description"}) else ""
     RESTORED[slug] = title
     return title, desc, (f'<article class="doc-body jr-essay wrap"><p class="hero-kicker"><a href="journal.html">Journal</a> · From the original edition</p>'
-                         f'<h1>{H.escape(title)}</h1><p class="byline">SwampForce Editor</p>{body}'
+                         f'<h1>{H.escape(title)}</h1><p class="byline">SwampForce Editor</p>'
+                         + (f'<ul class="jr-short-pts">' + "".join(f"<li>{H.escape(x)}</li>" for x in SHORT[slug]) + '</ul>'
+                            f'<details class="jr-full"><summary>Read full essay</summary><div class="jr-full-body">{body}</div></details>' if slug in SHORT else body) +
                          f'<p class="period-note"><a href="journal.html">← All journal essays</a></p></article>')
 
 def apply(name, h):

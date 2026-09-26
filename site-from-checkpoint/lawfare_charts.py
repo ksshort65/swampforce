@@ -67,4 +67,4 @@ def section(cases):
 <div class="chart-wrap tall"><canvas id="chart-lf-cases" role="img" aria-label="Court cases"></canvas></div></div>
 <div class="chart-card"><h3>How public opinion was shaped</h3><p class=sub>{n} claims in our catalog about these cases, by who pushed them. Solid = proven false/misleading (debunked); light = not yet verified (still out there). Tap a bar for their words vs the record.</p>
 <div class="chart-wrap tall"><canvas id="chart-lf-opinion" role="img" aria-label="Claims about each case by group"></canvas></div></div>
-<div class="lf-op-lists">{"".join(lists)}</div>{js}</section>"""
+<p class="tap-hint"><a href="#scrutiny">Scrutiny compared: every president →</a></p><div class="lf-op-lists">{"".join(lists)}</div>{js}</section>"""

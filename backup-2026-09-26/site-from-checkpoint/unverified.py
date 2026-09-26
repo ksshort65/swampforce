@@ -3,7 +3,7 @@ plus SuperGrok research leads not already in the catalog. Uses only existing dat
 import re
 GROUPS = ["Republican", "Democratic", "News outlets", "Campaigns", "Social media"]
 DEM = r"harris|biden|obama|favreau|villaraigosa|pelosi|schiff|newsom|democrat|\(d-|, d-|sen\. (chuck )?schumer|clinton|warren|sanders|aoc|ocasio|swalwell|nadler|waters|hochul|walz|pritzker|whitmer|jean-pierre|psaki|kirby|mayorkas|garland|fauci|karine|jeffries|klain|buttigieg|booker|howard dean|schumer|durbin|el-sayed|carville|baldwin|jayapal|goldman"
-REP = r"republican|\(r-|, r-|gop|trump campaign|mcconnell|mccarthy|johnson \(r|desantis|vance|rnc"
+REP = r"^donald trump|^sean spicer|^kash patel|republican|\(r-|, r-|gop|trump campaign|mcconnell|mccarthy|johnson \(r|desantis|vance|rnc"
 CAMP = r"campaign|super pac|\bpac\b|\bad\b|advert"
 SOC = r"viral|brian tyler cohen|threads|social (media|post)|tiktok|facebook|instagram|reddit|influencer|x user|twitter user|activist"
 def group(who):
@@ -87,16 +87,14 @@ def body(cases):
         lsec.append(f'<h3 class="strip-h" id="uv-leads-{SLUG[g]}">{e(g)}: {len(its)} found by our research</h3>' +
                     (f'<details class="sf-fold"><summary class="btn sm sf-fold-btn"><span class="sf-closed">See all {len(its)}</span><span class="sf-opened">Hide the list</span></summary><ul class="uv-list">{li}</ul></details>' if its else '<p class="muted">None yet.</p>'))
     return f"""<section class="band-hero"><div class="wrap"><p class="hero-kicker">Still being checked</p><h1>{e(TITLE)}</h1><p class="dek">{e(CAPTION)}</p></div></section>
-<div class="wrap">{_bars(cat, ld, "", ver_counts(cases))}{period_block(cases)}{altered_block(cases)}{wapo_block()}
-<p class="period-note">Grouped by the first-named source in the catalog’s “Who pushed it” field. The catalog holds 252 cases: 118 verified, 131 still being checked, 3 set aside. None of the items below has passed our check yet.</p>
+<div class="wrap">{_bars(cat, ld, "", ver_counts(cases))}{media_block(cases)}{onesided_block()}{flawed_block()}{period_block(cases)}{altered_block(cases)}{wapo_block()}
+<p class="period-note">Grouped by the first-named source in the catalog’s “Who pushed it” field. The catalog holds 263 cases: 129 verified, 131 still being checked, 3 set aside. None of the items below has passed our check yet.</p>
 <h2 class="strip-h">In the catalog, still being checked ({sum(cat.values())})</h2>{"".join(sec)}
 <h2 class="strip-h" id="uv-leads">Found by our research, not yet in the catalog ({len(lds)})</h2>
 <p class="period-note">Research leads, not yet in the catalog and not yet checked against an official record. Sources: every saved SuperGrok batch (2015–16, 2017–20, 2021–24 and 2025–26 blocks, the overnight Sep 26 pass, the 2025–26 raw list, and the full SuperGrok conversation: per-period lists, ‘Needs a link’ items and named on-air cases). Items marked HOLD, NEEDS QUOTE LINK or NEEDS SUPERGROK are listed here. Duplicates of catalog cases and of each other were removed.</p>{"".join(lsec)}
 <h2 class="strip-h" id="uv-altered">Altered quotes: words changed, cut or rearranged ({len(alt)})</h2>
 <ul class="uv-list">{"".join(f'<li><span class="uv-nv">Not yet verified</span> <b>{e(g)}</b> · {e(p or "Undated")} · {e(t)}</li>' for g, t, p in alt)}</ul>
-<h2 class="strip-h" id="uv-research-verified">Checked by our research, catalog entry pending ({len(rv)})</h2>
-<p class="period-note">These passed a research check against an official record but are not yet in the 252-case catalog, so they are not in its totals.</p>
-<ul class="uv-list">{"".join(f'<li><span class="uv-nv" style="background:#fee2e2;color:#991b1b">Proven false/misleading (research) · catalog entry pending</span> <b>{e(g)}</b> · {e(p or "Undated")} · {e(t)}</li>' for g, t, p in rv)}</ul></div>"""
+</div>"""
 
 # ---- all saved SuperGrok verification batches (Sep 26, 2026) ----
 PS = Path("/workspace/_project-state")
@@ -240,6 +238,33 @@ def altered_block(cases):
     rows = "".join(f'<div class="uv-row"><span class="uv-lbl">{k}</span><div class="uv-bars"><a class="uv-bar uv-lead" href="#uv-altered" style="width:{max(c.get(k, 0) / mx * 100, 1.5):.1f}%" title="{c.get(k, 0)} altered-quote cases, not yet verified"><b>{c.get(k, 0)}</b></a></div></div>' for k in keys)
     return f'<div class="chart-card uv-card"><h3>Altered quotes</h3><p class="sub">Words changed, cut or rearranged so a person seemed to say something else. Not yet verified. Tap a bar for the list.</p>{rows}</div>'
 
+def onesided_block():
+    return ('<div class="chart-card uv-card" id="uv-one-sided"><h3>One-sided checking.</h3>'
+            '<p class="sub"><b>Only one side is being checked. That gap shapes public opinion.</b> The Washington Post kept a full false-claim count only for Trump; we found no major fact-checker keeping a matching count of false claims made about him.</p>'
+            '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">'
+            '<a href="#uv-wapo" style="display:block;background:#0c2340;color:#fff;border-radius:10px;padding:14px;text-decoration:none"><div style="font-size:1.6rem;font-weight:800">30,573</div><div style="font-family:var(--sans);font-size:.8rem">Claims BY Trump counted (Washington Post)</div></a>'
+            '<div style="background:#e5e7eb;color:#374151;border-radius:10px;padding:14px"><div style="font-size:1.6rem;font-weight:800">None found</div><div style="font-family:var(--sans);font-size:.8rem">Claims ABOUT Trump counted by major fact-checkers</div></div></div></div>')
+
+def flawed_block():
+    """Round 23, /workspace/_project-state/supergrok-leads-2026-09-25.md: DHS v. LWV (26A308), 11:40 AM–11:40 PM ET, Sep 25, 2026."""
+    import json
+    NV = '<span class="uv-nv">Not yet verified (SuperGrok sample)</span>'
+    posts = [("Democracy Docket", "11:44 AM ET", "897,777 views", "https://x.com/DemocracyDocket/status/2103510843866423348"),
+             ("Marc Elias", "11:48 AM ET", "426,517 views", "https://x.com/i/status/2103511976391606444"),
+             ("Marc Elias (Texas post)", "4:23 PM ET", "no view count", "https://x.com/i/status/2103581122085224570"),
+             ("Rep. Ilhan Omar", "3:41 PM ET", "452,005 views", "https://x.com/i/status/2103570490518323329"),
+             ("@ncvpa", "Sep 25", "11 views", None)]
+    li = "".join(f'<li>{NV} <b>{e(w)}</b> · {e(t)} · {e(v)}' + (f' · <a href="{u}" target="_blank" rel="noopener">Post ↗</a>' if u else " · link not given") + "</li>" for w, t, v, u in posts)
+    spec = {"id": "chart-flawed", "type": "bar", "labels": ["Called the Court’s ruling “flawed”", "Called the SAVE database “flawed”"], "data": [0, 5],
+            "colors": ["#94a3b8", "#b91c1c"], "fmt": "int", "hrefs": ["uv-flawed-list", "uv-flawed-list"]}
+    return ('<div class="chart-card uv-card" id="uv-flawed"><h3>The Social Media Weapon: “flawed”</h3>'
+            '<p class="sub">Posts on DHS v. LWV (26A308), 11:40 AM–11:40 PM ET, Sep 25, 2026. Not yet verified (SuperGrok sample). Tap a bar for the posts.</p>'
+            '<div class="chart-wrap"><canvas id="chart-flawed" role="img" aria-label="Posts calling the ruling or the SAVE database flawed"></canvas></div>'
+            '<p class="period-note"><b>Checked against the order:</b> Democracy Docket said the order lets the administration “initiate voter roll purges” (Elias: “registration purges”). '
+            'The Court’s order says the NVRA’s 90-day moratorium “limits the potential impact” and allows “individualized inquiries”; the dissent says it is “too late for States to use SAVE for systematic voter-list maintenance” before the election.</p>'
+            f'<details class="sf-fold" id="uv-flawed-list"><summary class="btn sm sf-fold-btn"><span class="sf-closed">See the 5 posts</span><span class="sf-opened">Hide</span></summary><ul class="uv-list">{li}</ul></details>'
+            f'<script>window.SF_CHARTS=(window.SF_CHARTS||[]).concat([{json.dumps(spec, ensure_ascii=False)}]);</script></div>')
+
 def wapo_block():
     """Washington Post Fact Checker tally, shown separately; not part of any SwampForce or SuperGrok count."""
     import json
@@ -249,3 +274,36 @@ def wapo_block():
             '<p class="sub">Cumulative by year. The Post kept a full count only for Trump. Repeats count every time, so many entries are the same claim said again. Source: Washington Post Fact Checker. Not included in any count on this site.</p>'
             '<div class="chart-wrap"><canvas id="chart-wapo-tally" role="img" aria-label="Washington Post cumulative tally"></canvas></div></div>'
             f'<script>window.SF_CHARTS=(window.SF_CHARTS||[]).concat([{json.dumps(spec)}]);</script>')
+
+NETS = [("CNN", r"\bcnn\b"), ("MSNBC", r"msnbc"), ("NBC", r"\bnbc\b"), ("ABC", r"\babc\b"), ("CBS", r"\bcbs\b"), ("Fox News", r"\bfox\b"),
+        ("New York Times", r"new york times|\bnyt\b"), ("Washington Post", r"washington post"), ("AP", r"associated press|\bap\b"), ("Reuters", r"reuters"),
+        ("Bloomberg", r"bloomberg"), ("Politico", r"politico"), ("NPR", r"\bnpr\b"), ("BuzzFeed", r"buzzfeed"), ("Newsweek", r"newsweek"), ("Time", r"\btime\b magazine|^time\b")]
+
+def _net(t):
+    t = t.lower()
+    for n, rx in NETS:
+        if re.search(rx, t): return n
+    return None
+
+def media_block(cases):
+    from collections import Counter
+    NO = "News outlets"
+    ver = sum(1 for c in cases if str(c.get("status", "")).lower().startswith("verified") and group(c["who"]) == NO)
+    cat = [c for c in catalog_items(cases) if group(c["who"]) == NO]
+    lds, _, alt = all_leads(cases)
+    ld = [t for g, t, _ in lds if g == NO]; al = [t for g, t, _ in alt if g == NO]
+    bars = [("Proven false/misleading", ver, "uv-ver", "fake-news.html"), ("Not yet verified · catalog", len(cat), "uv-cat", "#uv-news"),
+            ("Not yet verified · research leads", len(ld), "uv-lead", "#uv-leads-news"), ("Not yet verified · altered quotes", len(al), "uv-lead", "#uv-altered")]
+    mx = max([b[1] for b in bars] + [1])
+    rows = "".join(f'<div class="uv-row" style="grid-template-columns:210px 1fr"><span class="uv-lbl">{e(l)}</span><div class="uv-bars"><a class="uv-bar {c}" href="{h}" style="width:{max(n / mx * 100, 1.5):.1f}%" title="{n}"><b>{n}</b></a></div></div>' for l, n, c, h in bars)
+    nets = Counter(n for n in [_net(c["who"]) for c in cat] + [_net(t) for t in ld + al] if n)
+    nrows = ""
+    if nets:
+        nm = max(nets.values())
+        nrows = '<h4 style="margin:12px 0 4px;font-family:var(--sans);font-size:.85rem">Not yet verified, by network</h4>' + "".join(
+            f'<div class="uv-row"><span class="uv-lbl">{e(n)}</span><div class="uv-bars"><a class="uv-bar uv-cat" href="#uv-news" style="width:{max(v / nm * 100, 3):.1f}%" title="{v} not yet verified"><b>{v}</b></a></div></div>'
+            for n, v in nets.most_common())
+    MEDIA_NUMS.update(verified=ver, catalog=len(cat), leads=len(ld), altered=len(al), nets=dict(nets.most_common()))
+    return (f'<div class="chart-card uv-card" id="uv-media"><h3>Media claims: how much is unverified</h3><p class="sub">What the news says, but no one has proven.</p>'
+            f'{rows}{nrows}<p class="period-note">Our fact-checker vetting rejected <a href="factcheckers.html#fc-cnn-facts-first-cnn-fact-checks">CNN Facts First</a> and <a href="factcheckers.html#fc-pbs-newshour-fact-checks">PBS NewsHour fact checks</a> as independent confirmation: neither is an IFCN signatory, and we located no fact-check methodology or corrections policy for either.</p><p class="tap-hint">Network = first outlet named in the “Who pushed it” field or the lead. Tap a bar for the list.</p></div>')
+MEDIA_NUMS = {}

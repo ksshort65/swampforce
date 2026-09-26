@@ -39,7 +39,7 @@ def ico(name: str) -> str:
     return (f'<svg class="i" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" '
             f'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{paths[name]}</svg>')
 
-EVIDENCE_MENU = [("fake-news.html", "Fake News Exposed", "252 cases, 118 verified"),
+EVIDENCE_MENU = [("fake-news.html", "Fake News Exposed", "{total} cases, {ver} verified"),
                  ("democrats.html", "Democrats", "Party ledger"),
                  ("republicans.html", "Republicans", "Party ledger"),
                  ("january-6.html", "J6", "The caption vs. the charge"),
@@ -335,7 +335,9 @@ VROW = {r["Item_No"]: r for r in verified}
 ST_CAT = V.stats(CASES_CAT)  # research catalog (build-summary "stats"; checked by sync_all against term-split)
 ST = V.stats(VCASES)  # every headline figure on the site: verified rows only
 ST["watch"] = len(WCASES)
-EVIDENCE_MENU[0] = (EVIDENCE_MENU[0][0], EVIDENCE_MENU[0][1], EVIDENCE_MENU[0][2].format(total=ST["total"]))
+EVIDENCE_MENU[0] = (EVIDENCE_MENU[0][0], EVIDENCE_MENU[0][1], EVIDENCE_MENU[0][2].format(total=len(CASES_CAT), ver=len(VCASES)))
+N_TOT, N_VER, N_W = len(CASES_CAT), len(VCASES), len(WCASES)
+N_SET = N_TOT - N_VER - N_W
 CID = {c["id"] for c in cases}
 # The catalog-wide Congress count (congress-count.json) cannot be re-derived for verified rows only, so the site no longer shows it.
 CONGRESS_N = json.loads((TS / "congress-count.json").read_text())["count"]
@@ -594,8 +596,8 @@ def home_front():
     import midterms as M
     nc = corr["Never corrected by the pusher"]
     blame = "".join([
-        tile("252", "Cases in the catalog", "118 verified by SwampForce · 131 still being checked · 3 set aside", accent=True, count=252, src='<a class="src" href="fake-news.html">See the proof →</a>'),
-        tile(str(nc), "Never corrected by whoever pushed them", "42 false / 55 misleading · of the 118 verified cases", count=nc, src='<a class="src" href="fake-news.html">The cases →</a>'),
+        tile(str(N_TOT), "Cases in the catalog", f"{N_VER} verified by SwampForce · {N_W} still being checked · {N_SET} set aside", accent=True, count=N_TOT, src='<a class="src" href="fake-news.html">See the proof →</a>'),
+        tile(str(nc), "Never corrected by whoever pushed them", f"{NC_EV['Proven false']} false / {NC_EV['Rated misleading']} misleading · of the {N_VER} verified cases", count=nc, src='<a class="src" href="fake-news.html">The cases →</a>'),
         tile(str(CONFIRMED_N), "Also confirmed by an approved fact-checker", f"{sum(1 for c in VCASES if c.get('confirm') and c['evidence'] == 'Proven false')} proven false / {sum(1 for c in VCASES if c.get('confirm') and c['evidence'] != 'Proven false')} misleading · of the {len(VCASES)} verified ({ST['proven']} proven false / {ST['misleading']} misleading overall)", count=CONFIRMED_N, src='<a class="src" href="factcheckers.html">How we picked our fact-checkers →</a>'),
     ])
     return f"""
@@ -609,7 +611,7 @@ def home_front():
  <p class="section-label">1 · Fake news, checked by us against the original record</p>
  <p class="opinion-label">Our view</p>
  <h2 class="section-title attack-h">{e(ATTACK_H)}</h2>
- <p class="fact-line">252 cases in the catalog. 118 verified by us so far as false or misleading; 97 of those never corrected.</p>
+ <p class="fact-line">{N_TOT} cases in the catalog. {N_VER} verified by us so far as false or misleading; {nc} of those never corrected.</p>
  <p class="notfull">{e(NOT_COMPLETE)}</p>
  <div class="tile-grid">{blame}</div>
  {corr_line()}
@@ -796,8 +798,13 @@ def betrayal_social_cards():
 def why_swampforce_exists_box():
     return """<div class="opinion why-swampforce"><p class="opinion-label">Our View</p><h3>Why SwampForce exists</h3>
 <p>Don't judge them by what they tell you. Judge them by what they do.</p>
-<p>Both sides show up here because that's what the record shows, not because we made it even. Our government is appeasing the people, not serving them.</p>
-<p>We hold every side to the same standard: Republicans, Democrats, news outlets, campaigns and social media. Every case links to the official record, so you don't have to trust us.</p>
+<p>We cannot honestly look at these numbers and look away. The official record shows unprecedented government action to interfere in an election, and taxpayer money spent on hoax after hoax. These are the people trusted to oversee our nation.</p>
+<p>Based on the official record and my research, I believe our government no longer serves us. It lies to us and chooses our leaders for us, and the networks go along, airing identical broadcasts dressed up with opinion. This is the Betrayal of America and of every US citizen.</p>
+<p>An election cannot fix deception on this scale. It only continues it. We are no longer represented in Washington.</p>
+<p>Let me be clear: I am not calling for violence. I am calling on every American who loves this country to turn off the noise, boycott the networks and politicians who deceive us, and start digging into the corruption. No one person can expose it all. We are 300 million. They are few.</p>
+<p>Let's take our country back peacefully and patriotically. Expose the corruption and the collusion, and demand an Article V Convention of States to put We the People back in control.</p>
+<p>Trump may not be perfect, but he is one of us: a citizen who wants the corruption to stop.</p>
+<p>This is our only chance. We must act now.</p>
 <p>— SwampForce Editor</p></div>"""
 
 
@@ -863,7 +870,7 @@ def build_home():
   <picture class="hero-lockup"><source srcset="assets/brand/lockup-light.webp" type="image/webp"><img src="assets/brand/lockup-light.png" alt="SwampForce" width="1100" height="583" fetchpriority="high"></picture>
   <p class="hero-kicker">The record, not the rerun</p>
   <h1>Vote the file.<br>Not the feeling.</h1>
-  <p class="dek">252 claims about a president in the catalog; 118 checked by us against the original record so far.</p>
+  <p class="dek">{N_TOT} claims about a president in the catalog; {N_VER} checked by us against the original record so far.</p>
   <div class="hero-ctas">
    <a class="btn" href="scorecard.html">{ico("chart")} Midterm scorecard: helped &amp; hurt</a>
    <a class="btn ghost" href="fake-news.html">{ico("search")} Flip through the cases</a>
@@ -996,7 +1003,7 @@ def build_fake_news():
  </div>
  <div class="chip-bar"><span class="chip-lbl">Verdict</span>{chips_ev}<span class="chip-lbl">Proof</span>{chips_pr}<span class="chip-lbl">Period</span>{chips_t}</div>
  <div class="chip-bar"><span class="chip-lbl">Method</span>{chips_m}</div>
- <p class="result-line"><span id="result-count">{len(cases)} of {len(cases)} cases</span> <span class="muted">· 252 in the catalog; the 3 set aside are listed on <a href="unsupported.html">Unsupported claims</a></span>
+ <p class="result-line"><span id="result-count">All cases shown</span> <span class="muted">· {N_TOT} cases in the catalog; {N_SET} set aside are on <a href="unsupported.html">Unsupported claims</a></span>
   <button type="button" class="linkbtn" id="clear-filters">Clear filters</button>
   <button type="button" class="linkbtn" id="expand-all">Open all</button></p>
 </div>
@@ -1333,8 +1340,8 @@ def build_betrayal():
   <p class="page-updated">Last updated: September 26, 2026 · Updated weekly.</p>
   <p class="dek">How a narrative gets built, why the correction never catches it, and what that does to a self-governing people.</p>
   <div class="stat-rail two">
-   {tile("252", "Cases in the catalog", count=252, dark=True, accent=True)}
-   {tile("118", "Verified by SwampForce", count=118, dark=True)}
+   {tile(str(N_TOT), "Cases in the catalog", count=N_TOT, dark=True, accent=True)}
+   {tile(str(N_VER), "Verified by SwampForce", count=N_VER, dark=True)}
   </div>
  </div>
 </section>
@@ -1447,7 +1454,7 @@ PDF_NAMES = {"cannon-dismissal": "U.S. v. Trump (S.D. Fla.), dismissal order", "
 
 
 def build_lawfare():
-    import lawfare_grid as LG, lawfare_charts as LC
+    import lawfare_grid as LG, lawfare_charts as LC, scrutiny as SCR, referrals as RF, impeach as IMP, nyfraud as NYF
     CASES_LF = [{"id": c["id"], "claim": c["claim"], "notes": c["notes"], "who": c["who"], "status": c["status"]} for c in cases]
     LG.gaps_md(LAW / "supergrok-gaps.md")
     with (LAW / "lawfare-docket-tracker.csv").open(encoding="utf-8-sig") as fh:
@@ -1470,7 +1477,7 @@ def build_lawfare():
             + (f'<div>{linkify(r.get("Opinion URL") or "")}</div>' if r.get("Opinion URL") else "") + "</li>"
             for r in by.get(name, []))
         cards.append(f"""<article class="law-card" id="{aid}"><p class="law-no">Docket {i} of {len(dockets)}</p><h2>{e(name)}</h2>
-<div class="status-box"><strong>Status:</strong> {e(c.get("Current_Status") or "—")}</div>
+<div class="status-box"><strong>Status:</strong> {e(c.get("Current_Status") or "—")}</div>{NYF.section() if i == 1 else ""}
 <details class="sf-fold"><summary class="btn sm sf-fold-btn"><span class="sf-closed">Show the full case record</span><span class="sf-opened">Hide the case record</span></summary>
 <dl class="law-meta"><dt>Court</dt><dd>{e(c.get("Court") or "—")}</dd><dt>Docket</dt><dd>{e(c.get("Docket_Number") or "—")}</dd>
 <dt>Official docket</dt><dd>{linkify(c.get("Official_Docket_URL") or "—")}</dd><dt>Brought by</dt><dd>{e(c.get("Brought_By") or "—")}</dd>
@@ -1491,7 +1498,7 @@ def build_lawfare():
 <a class="btn ghost-dark sm" href="downloads/lawfare-rulings.csv">Rulings CSV</a><button type="button" class="btn ghost-dark sm" data-print>{ico("print")} Print</button></div></header>
 <div class="doc-grid"><nav class="doc-toc" aria-label="Dockets"><p class="foot-h">Dockets</p><ol>{"".join(index)}</ol>
 <p class="foot-h">Court opinions (PDF)</p><ul>{pdf_list}</ul></nav>
-<div class="doc-body">{LC.section(CASES_LF)}{LG.section(len(dockets))}<aside class="verify-box" id="how-we-built-this-tracker">
+<div class="doc-body">{LC.section(CASES_LF)}{LG.section(len(dockets))}{SCR.section()}{IMP.section()}{RF.section()}<aside class="verify-box" id="how-we-built-this-tracker">
 <h2>How we built this tracker</h2>
 <p>Every fact on this page comes from the court record: the official docket, the charging papers or complaint, and the judges' written rulings and orders. Each case links to those documents so you can read them yourself.</p>
 <p>We don't rely on news reports, commentary or either side's press releases for any status, charge or ruling. If a filing or ruling isn't in the official record yet, we list the status as pending and don't guess.</p>
@@ -2164,6 +2171,24 @@ def main():
         if name == "index.html" and '<section class="sf-charts-first"><div class="wrap">' in h:
             k = h.index('<section class="sf-charts-first"><div class="wrap">') + len('<section class="sf-charts-first"><div class="wrap">')
             h = h[:k] + UV.home_block(UCASES) + h[k:]
+        if name == "betrayal.html" and '<p class="section-label">Reader path</p>\n <h2 class="section-title">How a narrative is built</h2>' in h:
+            _t = lambda href, t, d: f'<a class="chart-card" href="{href}" style="display:block;text-decoration:none;color:inherit;padding:12px 14px;margin:0"><b>{t}</b><br><span class="muted" style="font-size:.85rem">{d}</span></a>'
+            _tiles = ('<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0 18px">'
+                      + _t("unverified.html#uv-media", "Media claims: how much is unverified", "What the news says, but no one has proven.")
+                      + _t("unverified.html#uv-one-sided", "One-sided checking", "Only one side is being checked.")
+                      + _t("unverified.html#uv-flawed", "The Social Media Weapon: “flawed”", "Posts on DHS v. LWV, Sep 25, 2026.")
+                      + _t("unverified.html#uv-altered", "Altered quotes", "Words changed, cut or rearranged.") + '</div>')
+            h = h.replace('<p class="section-label">Reader path</p>\n <h2 class="section-title">How a narrative is built</h2>',
+                          '<p class="section-label">Reader path · How a narrative is built</p>\n <h2 class="section-title">We are stripped of our ability to give informed consent when we vote.</h2>' + _tiles, 1)
+        if name == "democrats.html":
+            import biden_sars as BS
+            _m = '<section class="sf-charts-first"><div class="wrap">'
+            if _m in h:
+                k = h.index(_m) + len(_m); h = h[:k] + BS.section() + h[k:]
+            elif "</h1>" in h:
+                k = h.index("</h1>") + 5; h = h[:k] + BS.section() + h[k:]
+            if "chart.umd.min.js" not in h:
+                h = h.replace("</body>", '<script src="assets/vendor/chart.umd.min.js" defer></script>\n</body>', 1)
         if name == "betrayal.html" and "</h1>" in h:
             k = h.index("</h1>") + 5
             h = h[:k] + '<p class="fact-line"><a href="unverified.html">' + UV.TITLE + ' →</a></p>' + h[k:]
@@ -2190,5 +2215,21 @@ def main():
     print(json.dumps(meta, indent=1))
 
 
+# ---- BETA banner: set BETA_BANNER = False before launch to remove it from every page ----
+BETA_BANNER = True
+BETA_HTML = '<div class="sf-beta-banner" role="note">BETA PREVIEW - under review</div>'
+
+
+def apply_beta_banner():
+    import re as _re
+    for f in (p for p in (SITE / "public_html").rglob("*.html") if "docs" not in p.parts):
+        t = f.read_text(encoding="utf-8")
+        t = _re.sub(r'<div class="sf-beta-banner"[^>]*>.*?</div>', "", t)
+        if BETA_BANNER:
+            t = _re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + BETA_HTML, t, count=1)
+        f.write_text(t, encoding="utf-8")
+
+
 if __name__ == "__main__":
     main()
+    apply_beta_banner()

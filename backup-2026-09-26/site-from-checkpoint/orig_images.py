@@ -46,7 +46,9 @@ def apply(name, h):
     def card(mm):
         slug = mm.group(2)
         if slug in ESSAY:
-            f = ESSAY[slug][0][0]
+            from collections import Counter
+            _cnt = Counter(x[0] for v in ESSAY.values() for x in v)
+            f = next((x[0] for x in ESSAY[slug] if _cnt[x[0]] == 1), ESSAY[slug][0][0])  # prefer the essay's own, unshared original image
             return mm.group(0) + f'<img class="jr-hub-img" src="images/{f}" alt="" loading="lazy">'
         return mm.group(0)
     h = re.sub(r'(<a class="jr-hub-card" href="journal-([\w-]+)\.html">)', card, h)
