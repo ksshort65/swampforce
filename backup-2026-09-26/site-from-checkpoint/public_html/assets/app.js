@@ -75,6 +75,7 @@
     });
     if (countEl) countEl.textContent = shown + ' of ' + frames.length + ' cases';
     if (empty) empty.hidden = shown !== 0;
+    if (qq || Object.keys(sel).some(function (k) { return sel[k] && sel[k].value; })) frames.forEach(function (f) { var d = f.closest('details.sf-fold'); if (d) d.open = true; });
     syncChips();
   }
   if (q) q.addEventListener('input', applyFilters);
@@ -96,6 +97,7 @@
   var expandBtn = $('#expand-all');
   if (expandBtn) expandBtn.addEventListener('click', function () {
     var open = expandBtn.getAttribute('data-open') !== '1';
+    if (open) $$('details.sf-fold').forEach(function (d) { if (d.querySelector('.frame')) d.open = true; });
     frames.forEach(function (f) { if (f.style.display !== 'none') f.classList.toggle('open', open); });
     expandBtn.setAttribute('data-open', open ? '1' : '0');
     expandBtn.textContent = open ? 'Close all' : 'Open all';

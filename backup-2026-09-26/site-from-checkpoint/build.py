@@ -2138,8 +2138,10 @@ def main():
     pages["404.html"] = re.sub(r'(href|src)="(?!https?:|mailto:|#|/)', r'\1="/', pages["404.html"])
     for old in ["explainer.html", "pump.html", "pending.html", "republic.html"]:
         (OUT / old).unlink(missing_ok=True)
+    import visual as VIS
     for name, h in pages.items():
         h = h.replace("In this site&#x27;s audit of", "In this site&#x27;s review of")
+        h = VIS.apply(name, h)
         h = re.sub(r'(assets/(?:style\.css|app\.js|store\.js))"', r'\1?v=' + ASSET_V + '"', h)  # cache-busting
         (OUT / name).write_text(h, encoding="utf-8")
     # /midterms.html: .htaccess 301s to scorecard.html; this stub covers hosts/previews that ignore .htaccess.
