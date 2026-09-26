@@ -39,7 +39,7 @@ def ico(name: str) -> str:
     return (f'<svg class="i" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" '
             f'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{paths[name]}</svg>')
 
-EVIDENCE_MENU = [("fake-news.html", "Fake News Exposed", "{total} claim | record cases"),
+EVIDENCE_MENU = [("fake-news.html", "Fake News Exposed", "252 cases, 118 verified"),
                  ("democrats.html", "Democrats", "Party ledger"),
                  ("republicans.html", "Republicans", "Party ledger"),
                  ("january-6.html", "J6", "The caption vs. the charge"),
@@ -593,9 +593,9 @@ def home_front():
     import midterms as M
     nc = corr["Never corrected by the pusher"]
     blame = "".join([
-        tile(str(ST["total"]), "Claims checked against the original record", f"{ST['proven']} proven false / {ST['misleading']} misleading", accent=True, count=ST["total"], src='<a class="src" href="fake-news.html">See the proof →</a>'),
-        tile(str(nc), "Never corrected by whoever pushed them", f"{NC_EV['Proven false']} false / {NC_EV['Rated misleading']} misleading", count=nc, src='<a class="src" href="fake-news.html">The cases →</a>'),
-        tile(str(CONFIRMED_N), "Also confirmed by an approved fact-checker", f"The other {ST['total'] - CONFIRMED_N} rest on our own check of the record.", count=CONFIRMED_N, src='<a class="src" href="factcheckers.html">How we picked our fact-checkers →</a>'),
+        tile("252", "Cases in the catalog", "118 verified by SwampForce · 131 still being checked · 3 set aside", accent=True, count=252, src='<a class="src" href="fake-news.html">See the proof →</a>'),
+        tile(str(nc), "Never corrected by whoever pushed them", "42 false / 55 misleading · of the 118 verified cases", count=nc, src='<a class="src" href="fake-news.html">The cases →</a>'),
+        tile(str(CONFIRMED_N), "Also confirmed by an approved fact-checker", "62 proven false / 56 misleading · of the 118 verified cases", count=CONFIRMED_N, src='<a class="src" href="factcheckers.html">How we picked our fact-checkers →</a>'),
     ])
     return f"""
 <section class="fr-band" id="front">
@@ -608,7 +608,7 @@ def home_front():
  <p class="section-label">1 · Fake news, checked by us against the original record</p>
  <p class="opinion-label">Our view</p>
  <h2 class="section-title attack-h">{e(ATTACK_H)}</h2>
- <p class="fact-line">{ST['total']} news claims we verified as false or misleading. {nc} never corrected.</p>
+ <p class="fact-line">252 cases in the catalog. 118 verified by us so far as false or misleading; 97 of those never corrected.</p>
  <p class="notfull">{e(NOT_COMPLETE)}</p>
  <div class="tile-grid">{blame}</div>
  {corr_line()}
@@ -817,24 +817,15 @@ def betrayal_verify_box():
 
 
 def betrayal_home():
-    n = len(BETRAYAL_FAKE)
     return f"""
 <section class="fr-block" id="betrayal-front">
  <p class="section-label">Front and center</p>
  <h2 class="section-title">The Great American Betrayal</h2>
  {why_swampforce_exists_box()}
- <h3>Fake News: The Great American Betrayal</h3>
- <p class="fr-dek">Deception cases by two-year block, each set against the official record. Counts per side.</p>
- {betrayal_table()}
- <p class="verify-prompt">Why so few? Our standards are strict. <a href="betrayal.html#how-we-verify">See how we verify</a>.</p>
- <p class="notfull">{e(BETRAYAL_NOTE)}</p>
  <p><a class="btn navy big" href="betrayal.html#betrayal-cases">See the full record</a></p>
  <p><a href="censorship.html">Censorship: the record →</a></p>
- <h3>Social Media: The Great American Betrayal</h3>
- <p class="fr-dek">{e(BETRAYAL_SOCIAL_NOTE)}</p>
 </section>
 """
-
 
 def betrayal_cases_section():
     blocks = []
@@ -873,7 +864,7 @@ def build_home():
   <picture class="hero-lockup"><source srcset="assets/brand/lockup-light.webp" type="image/webp"><img src="assets/brand/lockup-light.png" alt="SwampForce" width="1100" height="583" fetchpriority="high"></picture>
   <p class="hero-kicker">The record, not the rerun</p>
   <h1>Vote the file.<br>Not the feeling.</h1>
-  <p class="dek">{ST['total']} claims about a president, each checked by us against the original record.</p>
+  <p class="dek">252 claims about a president in the catalog; 118 checked by us against the original record so far.</p>
   <div class="hero-ctas">
    <a class="btn" href="scorecard.html">{ico("chart")} Midterm scorecard: helped &amp; hurt</a>
    <a class="btn ghost" href="fake-news.html">{ico("search")} Flip through the cases</a>
@@ -1039,10 +1030,63 @@ def build_fake_news():
 
 ENC = [("FY2021", 1956519), ("FY2022", 2766582), ("FY2023", 3201144), ("FY2024", 2901142), ("FY2025", 691906)]
 
+TRUMP_RECORD_CSV = ROOT / "_project-state" / "trump-record-200.csv"
+TRUMP_RECORD_LABELS = ("Verified", "White House claim", "Source being added")
+
+
+def load_trump_record():
+    if not TRUMP_RECORD_CSV.exists():
+        return []
+    with TRUMP_RECORD_CSV.open(encoding="utf-8-sig", newline="") as fh:
+        rows = list(csv.DictReader(fh))
+    assert len(rows) == 175, f"trump-record-200.csv: expected 175 rows, found {len(rows)}"
+    assert set(r["Label"] for r in rows) <= set(TRUMP_RECORD_LABELS)
+    return rows
+
+
+TRUMP_RECORD = load_trump_record()
+
+
+def trump_record_term(term, heading):
+    rows = [r for r in TRUMP_RECORD if r["Term"] == term]
+    counts = Counter(r["Label"] for r in rows)
+    chips = " ".join(f'<span class="record-count {e(label.lower().replace(" ", "-"))}">{e(label)} {counts[label]}</span>' for label in TRUMP_RECORD_LABELS)
+    cats = []
+    for category in sorted({r["Category"] for r in rows}):
+        items = []
+        for r in (x for x in rows if x["Category"] == category):
+            label = r["Label"]
+            if label == "Verified":
+                badge = f'<span class="record-chip verified">Verified</span>'
+                source = src_link(r["Source_URL"], r["Source_Name"]) if r["Source_URL"] else e(r["Source_Name"])
+                meta = f'<span class="record-source">{source}</span>' if source else ""
+            elif label == "White House claim":
+                badge = f'<span class="record-chip wh-claim">White House claim</span>'
+                source = src_link(r["Source_URL"], r["Source_Name"]) if r["Source_URL"] else ""
+                meta = (f'<span class="record-source">{source}</span> ' if source else "") + '<span class="record-note">Results not yet confirmed by independent official data</span>'
+            else:
+                badge = f'<span class="record-chip source-added">Source being added</span>'
+                meta = ""
+            items.append(f'<li class="record-item"><div class="record-item-top"><span>{e(r["Item"])}</span> {badge}</div>{meta}</li>')
+        cats.append(f'<section class="record-category"><h5>{e(category)}</h5><ul>{"".join(items)}</ul></section>')
+    return f'''<section class="record-term" id="record-{"one" if term == "Trump 1" else "two"}">
+<h4>{e(heading)}</h4><div class="record-counts" aria-label="{e(heading)} counts">{chips}</div>
+{"".join(cats)}
+</section>'''
+
+
+def trump_record_section():
+    return f'''<section class="trump-record" id="trumps-record">
+<h3 class="strip-h">Trump's record: what he did</h3>
+<p class="record-intro">Every item is labeled. 'Verified' means a signed law, executive order, court ruling or official data documents the action. The label covers the action itself; results claimed alongside it are checked separately.</p>
+<p class="record-byline">By SwampForce Editor</p>
+{trump_record_term("Trump 1", "Trump 1 (2017–21)")}
+{trump_record_term("Trump 2", "Trump 2 (2025–26)")}
+</section>'''
+
 
 def under(title, why="Being checked against the official source. A number appears here once it is confirmed."):
     return f'<div class="score-mod under"><h3>{e(title)}</h3><p><span class="chip gold">Under review</span> {e(why)}</p></div>'
-
 
 def room(rid, title, control, intro, content, active=False):
     return (f'<section class="tab-panel room{" active" if active else ""}" id="tab-{rid}" aria-label="{e(title)}">'
@@ -1129,7 +1173,7 @@ def build_scorecard():
  <div class="chart-grid">{chart_card("mt-pres", "Debt added by president", "Trillions of dollars, inauguration to inauguration (Treasury)")}</div>
  <p class="period-note">{M.e(M.pres_note())} <a href="{M.TREAS_PENNY}" target="_blank" rel="noopener">Debt to the Penny ↗</a> · <a href="{M.TREAS_HIST}" target="_blank" rel="noopener">Treasury history ↗</a>. Congress, not the president, passes the budget: see who held it under Compare.</p>
 </div>
-<div class="tab-panel" id="desk-trump1">{under("Trump first-term scorecard figures")}</div>
+<div class="tab-panel" id="desk-trump1"><p class="period-note">Trump 1 record items are grouped below by category and label.</p></div>
 <div class="tab-panel" id="desk-trump2">
  <div class="tile-grid">
   {tile("691,906", "CBP encounters, FY2025", "Nationwide.", accent=True, count=691906, src=S("cbp"))}
@@ -1137,6 +1181,7 @@ def build_scorecard():
   {tile("3.4%", "Inflation, August 2026", "12-month CPI, latest reading.", count=3.4, suffix="%", decimals=1, src=S("bls26"))}
  </div>
 </div>
+{trump_record_section()}
 <h3 class="strip-h">His words, in full</h3>
 <p class="strip-dek">Each caption next to the full transcript or official file.</p>
 <div class="ledger">{frames_oval()}</div>
@@ -1285,10 +1330,9 @@ def build_betrayal():
   <h1>The Great American Betrayal</h1>
   <p class="page-updated">Last updated: September 26, 2026</p>
   <p class="dek">How a narrative gets built, why the correction never catches it, and what that does to a self-governing people.</p>
-  <div class="stat-rail four">
-   {tile(str(ST['total']), "Verified cases in the full catalog", count=ST['total'], dark=True, accent=True)}
-   {tile(str(nc), "Never corrected by the pusher", count=nc, dark=True)}
-   {tile(str(ST['official']), "Settled by the official record", count=ST['official'], dark=True)}
+  <div class="stat-rail two">
+   {tile("252", "Cases in the catalog", count=252, dark=True, accent=True)}
+   {tile("118", "Verified by SwampForce", count=118, dark=True)}
   </div>
  </div>
 </section>
@@ -1297,7 +1341,7 @@ def build_betrayal():
 <span class="op-tag">Opinion</span> The site owner's argument is on the <a href="opinion.html">Opinion page</a>, kept apart from the evidence here.</p>
 {why_swampforce_exists_box()}
 {betrayal_verify_box()}
-{betrayal_cases_section()}
+
 <div class="chart-grid">
  {chart_card("chart-corr", "When a claim proved wrong, how was it corrected?", f"All {ST['total']} verified cases")}
  {chart_card("chart-proof", "What settled it", "Tap a bar to see those cases")}
@@ -1309,7 +1353,7 @@ def build_betrayal():
  <p class="section-dek">Tap a section to read it in full. Citations are inline.</p>
  <div class="read-list">{"".join(reads)}</div>
 </section>
-<section class="reader-path"><p>Judge for yourself: <a class="btn navy sm" href="fake-news.html">Open the {ST['total']} verified cases</a> <a class="btn ghost-dark sm" href="brief.html">Staff brief</a></p></section>
+<section class="reader-path" id="betrayal-cases"><p>Judge for yourself: <a class="btn navy sm" href="fake-news.html">Open the {ST['total']} verified cases</a> <a class="btn ghost-dark sm" href="brief.html">Staff brief</a></p></section>
 </div>
 """
     return page("betrayal.html", "The Great American Betrayal · Swamp Force",

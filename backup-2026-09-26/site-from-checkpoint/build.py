@@ -39,7 +39,7 @@ def ico(name: str) -> str:
     return (f'<svg class="i" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" '
             f'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{paths[name]}</svg>')
 
-EVIDENCE_MENU = [("fake-news.html", "Fake News Exposed", "{total} claim | record cases"),
+EVIDENCE_MENU = [("fake-news.html", "Fake News Exposed", "252 cases, 118 verified"),
                  ("democrats.html", "Democrats", "Party ledger"),
                  ("republicans.html", "Republicans", "Party ledger"),
                  ("january-6.html", "J6", "The caption vs. the charge"),
@@ -73,7 +73,8 @@ def nav(active):
         return f'<a href="{h}"{" class=active" if h == active else ""}>{ico(icon)}{e(label)}</a>'
     # Trimmed to 5 (launch, Sep 25, 2026); every page stays reachable from these menus and the footer.
     facts = EVIDENCE_MENU + [("betrayal.html", "The Betrayal", "How a narrative gets built"), ("opinion.html", "Opinion", "Our view, always labeled")]
-    return (a("scorecard.html", "Midterms", "chart") + drop("Fact Checks", "search", facts, active)
+    betrayal_link = f'<a class="nav-betrayal{" active" if active == "betrayal.html" else ""}" href="betrayal.html">{ico("quote")}<span>The Great American Betrayal</span></a>'
+    return (betrayal_link + a("scorecard.html", "Midterms", "chart") + drop("Fact Checks", "search", facts, active)
             + a("congress.html", "Congress", "capitol")
             + drop("Journal", "book", JOURNAL_MENU + WATCH_MENU, active)
             + drop("For Lawmakers", "file", LAW_MENU, active))
@@ -93,7 +94,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
     canon = f"{DOMAIN}/" if fname == "index.html" else f"{DOMAIN}/{fname}"
     shop_foot = "" if (serious or fname == "store.html") else (
         '<div class="foot-shop"><div><strong>Wear the record.</strong> Every purchase funds this project: the research, '
-        'the hosting, the brief.</div><a class="btn" href="store.html">' + ico("cart") + ' Visit the store</a></div>')
+        'the hosting, the brief.</div><a class="btn" href="store.html">' + ico("cart") + ' Shop (coming soon)</a></div>')
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,7 +125,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
     <a class="brand" href="index.html" aria-label="SwampForce home">{BRAND_ART}<span class="brand-mark" aria-hidden="true"></span><span class="brand-word">SwampForce<sup>™</sup></span></a>
     <p class="kicker">Vote the file. Not the feeling.</p>
     <div class="mast-actions">
-      <a class="shop-btn" href="store.html">{ico("cart")}<span>Shop</span></a>
+      <a class="shop-btn" href="store.html">{ico("cart")}<span>Shop <small class="coming-soon">Coming soon</small></span></a>
       <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
     </div>
   </div>
@@ -140,11 +141,11 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
       <div><a class="foot-stamp" href="store.html" aria-label="Swamp Force store">{STAMP_PIC}</a><p class="foot-brand">Swamp Force™</p>
         <p>A government-source journal. Compare the action to the speech. Opinion is always labeled
         <span class="op-tag">Opinion</span>.</p>
-        <p>© 2026 SwampForce Editor · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
+        <p>© 2026 SwampForce Editor · Last updated: September 26, 2026 · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
       <div><p class="foot-h">Evidence</p><a href="fake-news.html">Fake News Exposed</a><a href="democrats.html">Democrats</a><a href="republicans.html">Republicans</a><a href="january-6.html">J6</a><a href="lawfare.html">Lawfare</a>{'<a href="unsupported.html">Unsupported claims</a>' if UNSUP else ''}</div>
       <div><p class="foot-h">Read</p><a href="journal.html">Journal</a><a href="scorecard.html">Midterm scorecard</a><a href="betrayal.html">The Betrayal</a><a href="opinion.html">Opinion</a><a href="foreword.html">The Republic</a><a href="congress.html">Congress</a><a href="border.html">The Border</a><a href="remedy.html">The Remedy</a></div>
       {('<div><p class="foot-h">Watch</p>' + "".join(f'<a href="{h}">{e(t)}</a>' for h, t, _ in WATCH_MENU) + '</div>') if WATCH_MENU else ''}
-      <div><p class="foot-h">For lawmakers</p><a href="brief.html">Staff brief</a><a href="appendix.html">Evidence appendix</a><a href="about.html">Methodology</a><a href="downloads.html">Downloads</a><a href="store.html">Store</a></div>
+      <div><p class="foot-h">For lawmakers</p><a href="brief.html">Staff brief</a><a href="appendix.html">Evidence appendix</a><a href="about.html">Methodology</a><a href="downloads.html">Downloads</a><a href="store.html">Store (coming soon)</a></div>
     </div>
   </div>
 </footer>
@@ -195,7 +196,7 @@ def tile(num, label, sub="", accent=False, count=None, prefix="", suffix="", dec
 
 def shop_strip(text="Carry the record with you."):
     return (f'<aside class="shop-strip"><div><strong>{e(text)}</strong> Purchases fund the research and keep this site online.</div>'
-            f'<a class="btn" href="store.html">{ico("cart")} Shop Swamp Force</a></aside>')
+            f'<a class="btn" href="store.html">{ico("cart")} Shop (coming soon)</a></aside>')
 
 
 def clean_note(s):
@@ -248,7 +249,9 @@ def frame_simple(tag, claim, truth, url, verdict_label="On the record", claim_h=
     row = row or {}
     fact, _, view = truth.partition("Our view:")
     view_html = f'<p class="opinion-inline"><span class="op-tag">Our view</span> {e(view.strip())}</p>' if view.strip() else ""
-    links = src_link(url, row.get("_src_label", "Source")) + "".join(" " + src_link(u, l) for l, u in row.get("_extra", []))
+    statement_links = row.get("_statement_links")
+    links = (" ".join(src_link(u, label) for label, u in statement_links)
+             if statement_links else src_link(url, row.get("_src_label", "Source"))) + "".join(" " + src_link(u, l) for l, u in row.get("_extra", []))
     return f"""<article class="frame open"><div class="frame-head static"><span class="frame-tag">{e(tag)}</span>
 <span class="frame-meta"><span class="badge proven">{e(verdict_label)}</span></span></div>
 <div class="frame-body"><div class="frame-cols"><div class="frame-col claim-side"><h3>{e(claim_h)}</h3><p>{e(claim)}</p></div>
@@ -326,7 +329,7 @@ def _apply_site_fixes(rows):
 
 
 SITE_APPLY = {}
-ASSET_V = "20260926a"
+ASSET_V = "20260926b"
 verified = _apply_site_fixes(verified)
 VROW = {r["Item_No"]: r for r in verified}
 ST_CAT = V.stats(CASES_CAT)  # research catalog (build-summary "stats"; checked by sync_all against term-split)
@@ -590,9 +593,9 @@ def home_front():
     import midterms as M
     nc = corr["Never corrected by the pusher"]
     blame = "".join([
-        tile(str(ST["total"]), "Claims checked against the original record", f"{ST['proven']} proven false / {ST['misleading']} misleading", accent=True, count=ST["total"], src='<a class="src" href="fake-news.html">See the proof →</a>'),
-        tile(str(nc), "Never corrected by whoever pushed them", f"{NC_EV['Proven false']} false / {NC_EV['Rated misleading']} misleading", count=nc, src='<a class="src" href="fake-news.html">The cases →</a>'),
-        tile(str(CONFIRMED_N), "Also confirmed by an approved fact-checker", f"The other {ST['total'] - CONFIRMED_N} rest on our own check of the record.", count=CONFIRMED_N, src='<a class="src" href="factcheckers.html">How we picked our fact-checkers →</a>'),
+        tile("252", "Cases in the catalog", "118 verified by SwampForce · 131 still being checked · 3 set aside", accent=True, count=252, src='<a class="src" href="fake-news.html">See the proof →</a>'),
+        tile(str(nc), "Never corrected by whoever pushed them", "42 false / 55 misleading · of the 118 verified cases", count=nc, src='<a class="src" href="fake-news.html">The cases →</a>'),
+        tile(str(CONFIRMED_N), "Also confirmed by an approved fact-checker", "62 proven false / 56 misleading · of the 118 verified cases", count=CONFIRMED_N, src='<a class="src" href="factcheckers.html">How we picked our fact-checkers →</a>'),
     ])
     return f"""
 <section class="fr-band" id="front">
@@ -605,7 +608,7 @@ def home_front():
  <p class="section-label">1 · Fake news, checked by us against the original record</p>
  <p class="opinion-label">Our view</p>
  <h2 class="section-title attack-h">{e(ATTACK_H)}</h2>
- <p class="fact-line">{ST['total']} news claims we verified as false or misleading. {nc} never corrected.</p>
+ <p class="fact-line">252 cases in the catalog. 118 verified by us so far as false or misleading; 97 of those never corrected.</p>
  <p class="notfull">{e(NOT_COMPLETE)}</p>
  <div class="tile-grid">{blame}</div>
  {corr_line()}
@@ -701,7 +704,7 @@ def home_front():
   {tile("$7.258B", "Legislative branch, fiscal 2026", "Public Law 119-37.", src=src_link(FRONT_SRC["crs_leg"], "CRS R48612"))}
   {tile(f"${M.DEBT_NOW_T:.2f}T", "National debt", M.AS_OF_TXT + ".", src=S("treas"))}
   {tile("$233–521B", "Federal money lost to fraud, per year", "GAO statistical estimate (FY2018–22 data), not a count of proven cases.", src=src_link(FRONT_SRC["gao_fraud"], "GAO-24-105833"))}
-  {tile("FY1997", "Last year all 12 spending bills passed on time", "Deadline: October 1.", src=src_link(FRONT_SRC["crs_approps"], "CRS IN12324"))}
+  {tile("FY1997", "Last year all regular spending bills passed on time", "Deadline: October 1.", src=src_link(FRONT_SRC["crs_approps"], "CRS IN12324"))}
   {tile("FY2001", "Last budget surplus", "", src=src_link(FRONT_SRC["cbo_hist"], "CBO historical data"))}
  </div>
  <div class="fr-cards grid3">
@@ -719,17 +722,149 @@ def home_front():
 """
 
 
+# ───── The Great American Betrayal: deception cases by two-year block ─────
+# Source: watch-data/betrayal-cases.csv (one row per verified case). To add a later block (2017–2018, ...), just add rows
+# with the new Block value; the homepage counts and betrayal.html#betrayal-cases rebuild from the file. Counts are never forced.
+BETRAYAL_CSV = SITE / "watch-data" / "betrayal-cases.csv"
+BETRAYAL_SIDES = ("Republican", "Democratic", "News outlets", "Campaigns")
+BETRAYAL_ALLOWED_SIDES = BETRAYAL_SIDES + ("Social media",)
+BETRAYAL_NOTE = "More cases for each period are added as they are verified against the official record. Counts are not forced to be equal."
+BETRAYAL_SOCIAL_NOTE = "Coming soon"
+
+
+def load_betrayal():
+    with BETRAYAL_CSV.open(encoding="utf-8-sig", newline="") as fh:
+        rows = [{k: (v or "").strip() for k, v in r.items()} for r in csv.DictReader(fh)]
+    ids = [r["Case_ID"] for r in rows]
+    assert len(ids) == len(set(ids)), "betrayal-cases.csv: duplicate Case_ID"
+    for r in rows:
+        assert r["Side"] in BETRAYAL_ALLOWED_SIDES, f"betrayal-cases.csv {r['Case_ID']}: Side must be one of {BETRAYAL_ALLOWED_SIDES}"
+        assert re.fullmatch(r"\d{4}–\d{4}", r["Block"]), f"betrayal-cases.csv {r['Case_ID']}: Block must look like 2015–2016"
+        assert r["Checked_By"] == "SwampForce Editor", f"betrayal-cases.csv {r['Case_ID']}: Checked_By must be SwampForce Editor"
+        if r.get("Type") == "Altered quote":
+            assert r.get("Original_Words"), f"betrayal-cases.csv {r['Case_ID']}: altered quote needs Original_Words"
+    fake = [r for r in rows if r["Side"] in BETRAYAL_SIDES]
+    social = [r for r in rows if r["Side"] == "Social media"]
+    blocks = sorted({r["Block"] for r in fake})
+    counts = {b: {sd: sum(1 for r in fake if r["Block"] == b and r["Side"] == sd) for sd in BETRAYAL_SIDES} for b in blocks}
+    return rows, fake, social, blocks, counts
+
+
+BETRAYAL, BETRAYAL_FAKE, BETRAYAL_SOCIAL_ROWS, BETRAYAL_BLOCKS, BETRAYAL_COUNTS = load_betrayal()
+
+
+def betrayal_table():
+    head = "".join(f'<th class="num">{e(sd)}</th>' for sd in BETRAYAL_SIDES)
+    body = "".join(
+        f'<tr><td data-l="Period"><b>{e(b)}</b></td>'
+        + "".join(f'<td class="num" data-l="{e(sd)}">{BETRAYAL_COUNTS[b][sd]}</td>' for sd in BETRAYAL_SIDES)
+        + f'<td class="num" data-l="Total">{sum(BETRAYAL_COUNTS[b].values())}</td></tr>' for b in BETRAYAL_BLOCKS)
+    return (f'<div class="table-wrap"><table class="watch-table"><thead><tr><th>Period</th>{head}<th class="num">Total</th></tr></thead>'
+            f'<tbody>{body}</tbody></table></div>')
+
+
+def _betrayal_urls(r):
+    return [u.strip() for u in r["Official_URLs"].split(";") if u.strip()]
+
+
+def _betrayal_tag(r):
+    return f'{r["Who"]} ({r["Side"]}) · {r["Date"]} · {r["Where"]}'
+
+
+def betrayal_card(r):
+    urls = _betrayal_urls(r)
+    stmt_urls = [u.strip() for u in (r.get("Statement_URLs") or "").split(";") if u.strip()] or ([r["Statement_URL"]] if r["Statement_URL"] else [])
+    row = {"_src_label": "Statement source", "_statement_links": [("Statement source" if i == 0 else "Second statement source", u) for i, u in enumerate(stmt_urls)],
+           "_extra": [("Official record: " + V.domain(u), u) for u in urls]}
+    tag = _betrayal_tag(r)
+    if r.get("Type") == "Altered quote":
+        links = src_link(r["Statement_URL"], "Statement source") + "".join(" " + src_link(u, "Official record: " + V.domain(u)) for u in urls)
+        return f'''<article class="frame open altered-card"><div class="frame-head static"><span class="frame-tag">{e(tag)}</span>
+<span class="frame-meta"><span class="badge proven">{e(r["Verdict"])}</span></span></div>
+<div class="frame-body"><div class="frame-cols"><div class="frame-col claim-side"><h3>Original words</h3><p>{e(r["Original_Words"])}</p></div>
+<div class="frame-col truth-side"><h3>Altered version</h3><p>{e(r["Statement"])}</p></div></div>
+<div class="altered-record"><h3>What the record shows</h3><p>{e(r["Official_Record"])}</p></div><div class="frame-foot">{links}</div></div></article>'''
+    return frame_simple(tag, "“" + r["Statement"] + "”", r["Official_Record"], r["Statement_URL"], verdict_label=r["Verdict"],
+                        claim_h="What was said", truth_h="What the official record shows", row=row)
+
+
+def betrayal_social_cards():
+    return "".join(f'<div id="case-{e(r["Case_ID"].lower())}">{betrayal_card(r)}</div>' for r in BETRAYAL_SOCIAL_ROWS)
+
+
+def why_swampforce_exists_box():
+    return """<div class="opinion why-swampforce"><p class="opinion-label">Our View</p><h3>Why SwampForce exists</h3>
+<p>Americans are being told what to think instead of being shown how to check. News networks, politicians of both parties and viral posts push claims that stir up emotion and outrage, and the correction rarely catches up. Over time, people stop asking "Is that true?" and start asking "Whose side is that on?"</p>
+<p>SwampForce was built to change that. We hold every side to the same standard: Republicans, Democrats, news outlets, campaigns and social media. We use the same method for all of them. A case goes on this site only when we have the person's own words and an official record that shows they were false or misleading. We don't pick a side, and we don't force the numbers to come out even. The record decides.</p>
+<p>Every case links to its source, so you don't have to trust us. Read the record yourself and make up your own mind. That's the point: to help Americans think for themselves again.</p>
+<p>Don't judge them by what they tell you. Judge them by what they do. We show you what they actually said and did, straight from the record.</p>
+<p>— SwampForce Editor</p></div>"""
+
+
+def betrayal_verify_box():
+    return """<aside class="verify-box" id="how-we-verify">
+<h2>How we verify</h2>
+<p>Every case on this page passed the same test, no matter which party or network it involves. A case needs all of these:</p>
+<p>A named person. We don't accept "a network said" or "Democrats claimed."</p>
+<p>Their exact words, with the date and the show, speech or post where they said them, and a link to the statement itself: a transcript, official video or broadcast captions.</p>
+<p>An official record that shows the words are false or misleading, such as government data, court records, or the outlet's own transcript or correction.</p>
+<p>We search both parties with the same wording, changing only the party name. We never force the numbers to come out even. If the record shows more false claims from one side, we show that.</p>
+<p>Here's what we leave out: opinions, predictions, estimates, paraphrases, claims with no named speaker, and anything that rests only on a fact-checker or watchdog group. If a TV host repeats someone's claim and then gives the correct figure, that's reporting, and the case goes to the person who made the claim. Campaign ads are counted in their own group, separate from the candidate and the party.</p>
+<p>If we can't find the original clip or transcript, the case waits, even if it's widely reported. We removed cases before launch for exactly that reason.</p>
+<p>That's why the numbers may look low. Many claims you've heard about may well be false, but they aren't on this page until we can prove it with the person's own words and an official record. We add new cases as they pass.</p>
+<p>See something wrong? Send us the official record and we'll correct it publicly.</p>
+</aside>"""
+
+
+def betrayal_home():
+    return f"""
+<section class="fr-block" id="betrayal-front">
+ <p class="section-label">Front and center</p>
+ <h2 class="section-title">The Great American Betrayal</h2>
+ {why_swampforce_exists_box()}
+ <p><a class="btn navy big" href="betrayal.html#betrayal-cases">See the full record</a></p>
+ <p><a href="censorship.html">Censorship: the record →</a></p>
+</section>
+"""
+
+def betrayal_cases_section():
+    blocks = []
+    for b in BETRAYAL_BLOCKS:
+        frames = "".join(f'<div id="case-{e(r["Case_ID"].lower())}">{betrayal_card(r)}</div>' for r in BETRAYAL_FAKE if r["Block"] == b)
+        c = BETRAYAL_COUNTS[b]
+        blocks.append(f'<h3 id="block-{b[:4]}">{e(b)}</h3><p class="fact-line">'
+                      + " · ".join(f"{e(sd)} {c[sd]}" for sd in BETRAYAL_SIDES) + "</p>" + frames)
+    return f"""
+<section class="section-pad" id="betrayal-cases">
+ <p class="section-label">Fake News: The Great American Betrayal</p>
+ <h2 class="section-title">{len(BETRAYAL_FAKE)} new verified cases (2015–2026)</h2>
+ <p class="section-dek">Deception cases by two-year block. Each statement is set against the official record. By SwampForce Editor.</p>
+ {betrayal_table()}
+ <p class="notfull">{e(BETRAYAL_NOTE)}</p>
+ <p><a href="censorship.html">Censorship: the record →</a></p>
+ {"".join(blocks)}
+</section>
+<section class="section-pad" id="betrayal-social">
+ <p class="section-label">Social Media: The Great American Betrayal</p>
+ <p class="section-dek">{e(BETRAYAL_SOCIAL_NOTE)}</p>
+</section>
+"""
+
+
 def build_home():
     import midterms as M
     nc = corr["Never corrected by the pusher"]
     picks = [c for c in VCASES if c["proof"] == "Official record" and c["evidence"] == "Proven false"][:3]
     body = f"""
+<div class="wrap betrayal-first">
+{betrayal_home()}
+</div>
 <section class="hero" style="background-image:url('images/hero-eagle.jpg')">
  <div class="hero-inner">
   <picture class="hero-lockup"><source srcset="assets/brand/lockup-light.webp" type="image/webp"><img src="assets/brand/lockup-light.png" alt="SwampForce" width="1100" height="583" fetchpriority="high"></picture>
   <p class="hero-kicker">The record, not the rerun</p>
   <h1>Vote the file.<br>Not the feeling.</h1>
-  <p class="dek">{ST['total']} claims about a president, each checked by us against the original record.</p>
+  <p class="dek">252 claims about a president in the catalog; 118 checked by us against the original record so far.</p>
   <div class="hero-ctas">
    <a class="btn" href="scorecard.html">{ico("chart")} Midterm scorecard: helped &amp; hurt</a>
    <a class="btn ghost" href="fake-news.html">{ico("search")} Flip through the cases</a>
@@ -803,7 +938,7 @@ def build_home():
   <p class="section-label light">The Swamp Force store</p>
   <h2>Wear the file.</h2>
   <p>Readers keep this project running. Every store purchase pays for the research, the hosting, and the brief that goes to Congress.</p>
-  <a class="btn big" href="store.html">{ico("cart")} Shop the store</a>
+  <a class="btn big" href="store.html">{ico("cart")} Shop (coming soon)</a>
  </div>
  <picture class="mb-stamp"><source srcset="assets/brand/stamp.webp" type="image/webp"><img src="assets/brand/stamp.png" alt="Swamp Force stamp: WE THE PEOPLE" width="480" height="480" loading="lazy"></picture>
 </section>
@@ -895,10 +1030,63 @@ def build_fake_news():
 
 ENC = [("FY2021", 1956519), ("FY2022", 2766582), ("FY2023", 3201144), ("FY2024", 2901142), ("FY2025", 691906)]
 
+TRUMP_RECORD_CSV = ROOT / "_project-state" / "trump-record-200.csv"
+TRUMP_RECORD_LABELS = ("Verified", "White House claim", "Source being added")
+
+
+def load_trump_record():
+    if not TRUMP_RECORD_CSV.exists():
+        return []
+    with TRUMP_RECORD_CSV.open(encoding="utf-8-sig", newline="") as fh:
+        rows = list(csv.DictReader(fh))
+    assert len(rows) == 175, f"trump-record-200.csv: expected 175 rows, found {len(rows)}"
+    assert set(r["Label"] for r in rows) <= set(TRUMP_RECORD_LABELS)
+    return rows
+
+
+TRUMP_RECORD = load_trump_record()
+
+
+def trump_record_term(term, heading):
+    rows = [r for r in TRUMP_RECORD if r["Term"] == term]
+    counts = Counter(r["Label"] for r in rows)
+    chips = " ".join(f'<span class="record-count {e(label.lower().replace(" ", "-"))}">{e(label)} {counts[label]}</span>' for label in TRUMP_RECORD_LABELS)
+    cats = []
+    for category in sorted({r["Category"] for r in rows}):
+        items = []
+        for r in (x for x in rows if x["Category"] == category):
+            label = r["Label"]
+            if label == "Verified":
+                badge = f'<span class="record-chip verified">Verified</span>'
+                source = src_link(r["Source_URL"], r["Source_Name"]) if r["Source_URL"] else e(r["Source_Name"])
+                meta = f'<span class="record-source">{source}</span>' if source else ""
+            elif label == "White House claim":
+                badge = f'<span class="record-chip wh-claim">White House claim</span>'
+                source = src_link(r["Source_URL"], r["Source_Name"]) if r["Source_URL"] else ""
+                meta = (f'<span class="record-source">{source}</span> ' if source else "") + '<span class="record-note">Results not yet confirmed by independent official data</span>'
+            else:
+                badge = f'<span class="record-chip source-added">Source being added</span>'
+                meta = ""
+            items.append(f'<li class="record-item"><div class="record-item-top"><span>{e(r["Item"])}</span> {badge}</div>{meta}</li>')
+        cats.append(f'<section class="record-category"><h5>{e(category)}</h5><ul>{"".join(items)}</ul></section>')
+    return f'''<section class="record-term" id="record-{"one" if term == "Trump 1" else "two"}">
+<h4>{e(heading)}</h4><div class="record-counts" aria-label="{e(heading)} counts">{chips}</div>
+{"".join(cats)}
+</section>'''
+
+
+def trump_record_section():
+    return f'''<section class="trump-record" id="trumps-record">
+<h3 class="strip-h">Trump's record: what he did</h3>
+<p class="record-intro">Every item is labeled. 'Verified' means a signed law, executive order, court ruling or official data documents the action. The label covers the action itself; results claimed alongside it are checked separately.</p>
+<p class="record-byline">By SwampForce Editor</p>
+{trump_record_term("Trump 1", "Trump 1 (2017–21)")}
+{trump_record_term("Trump 2", "Trump 2 (2025–26)")}
+</section>'''
+
 
 def under(title, why="Being checked against the official source. A number appears here once it is confirmed."):
     return f'<div class="score-mod under"><h3>{e(title)}</h3><p><span class="chip gold">Under review</span> {e(why)}</p></div>'
-
 
 def room(rid, title, control, intro, content, active=False):
     return (f'<section class="tab-panel room{" active" if active else ""}" id="tab-{rid}" aria-label="{e(title)}">'
@@ -985,7 +1173,7 @@ def build_scorecard():
  <div class="chart-grid">{chart_card("mt-pres", "Debt added by president", "Trillions of dollars, inauguration to inauguration (Treasury)")}</div>
  <p class="period-note">{M.e(M.pres_note())} <a href="{M.TREAS_PENNY}" target="_blank" rel="noopener">Debt to the Penny ↗</a> · <a href="{M.TREAS_HIST}" target="_blank" rel="noopener">Treasury history ↗</a>. Congress, not the president, passes the budget: see who held it under Compare.</p>
 </div>
-<div class="tab-panel" id="desk-trump1">{under("Trump first-term scorecard figures")}</div>
+<div class="tab-panel" id="desk-trump1"><p class="period-note">Trump 1 record items are grouped below by category and label.</p></div>
 <div class="tab-panel" id="desk-trump2">
  <div class="tile-grid">
   {tile("691,906", "CBP encounters, FY2025", "Nationwide.", accent=True, count=691906, src=S("cbp"))}
@@ -993,6 +1181,7 @@ def build_scorecard():
   {tile("3.4%", "Inflation, August 2026", "12-month CPI, latest reading.", count=3.4, suffix="%", decimals=1, src=S("bls26"))}
  </div>
 </div>
+{trump_record_section()}
 <h3 class="strip-h">His words, in full</h3>
 <p class="strip-dek">Each caption next to the full transcript or official file.</p>
 <div class="ledger">{frames_oval()}</div>
@@ -1139,17 +1328,20 @@ def build_betrayal():
  <div class="hero-inner">
   <p class="hero-kicker">The narrative spine</p>
   <h1>The Great American Betrayal</h1>
+  <p class="page-updated">Last updated: September 26, 2026</p>
   <p class="dek">How a narrative gets built, why the correction never catches it, and what that does to a self-governing people.</p>
-  <div class="stat-rail four">
-   {tile(str(ST['total']), "Verified cases", count=ST['total'], dark=True, accent=True)}
-   {tile(str(nc), "Never corrected by the pusher", count=nc, dark=True)}
-   {tile(str(ST['official']), "Settled by the official record", count=ST['official'], dark=True)}
+  <div class="stat-rail two">
+   {tile("252", "Cases in the catalog", count=252, dark=True, accent=True)}
+   {tile("118", "Verified by SwampForce", count=118, dark=True)}
   </div>
  </div>
 </section>
 <div class="wrap">
 <p class="legend"><span class="fact-tag">Fact</span> The case counts, the research and the law cited below are documented.
 <span class="op-tag">Opinion</span> The site owner's argument is on the <a href="opinion.html">Opinion page</a>, kept apart from the evidence here.</p>
+{why_swampforce_exists_box()}
+{betrayal_verify_box()}
+
 <div class="chart-grid">
  {chart_card("chart-corr", "When a claim proved wrong, how was it corrected?", f"All {ST['total']} verified cases")}
  {chart_card("chart-proof", "What settled it", "Tap a bar to see those cases")}
@@ -1161,7 +1353,7 @@ def build_betrayal():
  <p class="section-dek">Tap a section to read it in full. Citations are inline.</p>
  <div class="read-list">{"".join(reads)}</div>
 </section>
-<section class="reader-path"><p>Judge for yourself: <a class="btn navy sm" href="fake-news.html">Open the {ST['total']} verified cases</a> <a class="btn ghost-dark sm" href="brief.html">Staff brief</a></p></section>
+<section class="reader-path" id="betrayal-cases"><p>Judge for yourself: <a class="btn navy sm" href="fake-news.html">Open the {ST['total']} verified cases</a> <a class="btn ghost-dark sm" href="brief.html">Staff brief</a></p></section>
 </div>
 """
     return page("betrayal.html", "The Great American Betrayal · Swamp Force",
@@ -1286,13 +1478,21 @@ def build_lawfare():
     pdf_list = "".join(f'<li><a href="lawfare-docs/{p.name}">{e(PDF_NAMES.get(p.stem, p.stem))}</a> <span class="muted">PDF · {p.stat().st_size // 1024} KB</span></li>' for p in pdfs)
     body = f"""
 <header class="doc-head"><p class="doc-kicker">Evidence · Court record</p><h1>Lawfare docket tracker</h1>
+<p class="page-updated">Last updated: September 26, 2026</p>
 <p class="doc-lede">{len(dockets)} cases brought against Donald J. Trump: the court, docket number, current status, key rulings and the primary documents. Facts come from court filings and official dockets. The site owner's opinion is at the end, labeled.</p>
 <div class="doc-actions"><a class="btn navy sm" href="downloads/lawfare-tracker.pdf">{ico("down")} Tracker (PDF)</a>
 <a class="btn ghost-dark sm" href="downloads/lawfare-docket-tracker.csv">CSV</a><a class="btn ghost-dark sm" href="downloads/lawfare-docket-tracker.xlsx">Excel</a>
 <a class="btn ghost-dark sm" href="downloads/lawfare-rulings.csv">Rulings CSV</a><button type="button" class="btn ghost-dark sm" data-print>{ico("print")} Print</button></div></header>
 <div class="doc-grid"><nav class="doc-toc" aria-label="Dockets"><p class="foot-h">Dockets</p><ol>{"".join(index)}</ol>
 <p class="foot-h">Court opinions (PDF)</p><ul>{pdf_list}</ul></nav>
-<div class="doc-body">{"".join(cards)}
+<div class="doc-body"><aside class="verify-box" id="how-we-built-this-tracker">
+<h2>How we built this tracker</h2>
+<p>Every fact on this page comes from the court record: the official docket, the charging papers or complaint, and the judges' written rulings and orders. Each case links to those documents so you can read them yourself.</p>
+<p>We don't rely on news reports, commentary or either side's press releases for any status, charge or ruling. If a filing or ruling isn't in the official record yet, we list the status as pending and don't guess.</p>
+<p>Each case shows who brought it, the court, the docket number, the charges or claims, key rulings and where it stands today, with the date we last checked.</p>
+<p>The facts and the opinion are kept apart. The site owner's view appears only at the end, clearly labeled.</p>
+<p>Court cases change. When a ruling comes down, we update the status and the date. If you see anything out of date or wrong, send us the court document and we'll correct it publicly.</p>
+</aside>{"".join(cards)}
 <section class="opinion"><p class="opinion-label">Our view · Opinion</p>
 <p>The owner of swampforce.com believes these cases were lawfare: civil, criminal and ballot processes used to hobble Donald Trump's campaign. That is an opinion about motive. It appears here, labeled, so no one mistakes it for the court record above.</p></section>
 </div></div>"""
@@ -1436,32 +1636,26 @@ def build_store():
     body = f"""
 <section class="store-hero">
  <div class="wrap sh-inner">
-  <div><p class="hero-kicker">The Swamp Force store</p><h1>Wear the file.</h1>
-  <p class="dek">Official Swamp Force merch. <b>Every purchase funds this project:</b> the research, the hosting, and the brief that goes to Congress.</p>
-  <p class="store-trust">Secure checkout by Printify · Printed and shipped on demand</p></div>
+  <div><p class="hero-kicker">The Swamp Force store</p><h1>Merch coming soon</h1>
+  <p class="dek">The shop is being prepared. When it opens, purchases will support the research, hosting and staff brief.</p>
+  <p class="store-trust">Coming soon · no products or prices are live yet</p></div>
   <picture class="sh-stamp"><source srcset="assets/brand/stamp.webp" type="image/webp"><img src="assets/brand/stamp.png" alt="Swamp Force stamp: WE THE PEOPLE" width="480" height="480"></picture>
  </div>
 </section>
 <div class="wrap">
-<section id="store-live" class="store-live" hidden>
- <p class="center"><a class="btn big" id="store-open-btn" href="store.html" target="_blank" rel="noopener">{ico("cart")} Open the full store</a></p>
- <div class="store-frame-wrap"><iframe id="store-frame" title="Swamp Force store" loading="lazy"></iframe></div>
- <p class="muted small center">Checkout is handled securely by Printify. If the store does not load above, use the button to open it in a new tab.</p>
-</section>
 <section id="store-placeholder" class="store-soon">
- <h2>The shop opens soon.</h2>
- <p>Want to know the day it opens? Email us and you'll hear first.</p>
+ <h2>Merch coming soon</h2>
+ <p>There are no products, prices or checkout links here yet. We will post the shop here when it is ready.</p>
  <p><a class="btn big" id="notify-btn" href="mailto:editor@swampforce.com?subject=Notify%20me%20when%20the%20Swamp%20Force%20store%20opens">Notify me when it opens</a></p>
- <p class="muted small">Products and prices will appear here when the store opens.</p>
 </section>
 <section class="why-buy">
- <div><h3>Funds the record</h3><p>Merch sales pay for the research, the hosting and the staff brief.</p></div>
- <div><h3>Reader-supported</h3><p>Readers keep this project running. The store is how they do it.</p></div>
- <div><h3>Starts a conversation</h3><p>Wear it, and people ask. Point them to the record, and the record points to its sources.</p></div>
+ <div><h3>Funds the record</h3><p>Future merch sales will help pay for the research, hosting and staff brief.</p></div>
+ <div><h3>Reader-supported</h3><p>The store will be one way readers can support the project.</p></div>
+ <div><h3>Starts a conversation</h3><p>When the shop opens, the record will remain the point of the conversation.</p></div>
 </section>
 </div>"""
-    return page("store.html", "Store · Swamp Force", "Official Swamp Force merch. Every purchase funds the project.", body,
-                extra_js="assets/store.js", flush=True)
+    return page("store.html", "Store · Coming soon · Swamp Force", "Swamp Force merch is coming soon. No products or checkout are live yet.", body,
+                flush=True)
 
 
 def hub_head(kicker, title, dek, img):
@@ -1948,7 +2142,7 @@ def main():
     # /midterms.html: .htaccess 301s to scorecard.html; this stub covers hosts/previews that ignore .htaccess.
     (OUT / "midterms.html").write_text('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Midterm scorecard</title>'
         '<link rel="canonical" href="https://swampforce.com/scorecard.html"><meta http-equiv="refresh" content="0; url=scorecard.html"></head>'
-        '<body><p><a href="scorecard.html">The midterm scorecard has moved here.</a></p></body></html>', encoding="utf-8")
+        '<body><p><a href="scorecard.html">The midterm scorecard has moved here.</a></p><footer>© 2026 SwampForce Editor · Last updated: September 26, 2026</footer></body></html>', encoding="utf-8")
     sb = OUT / "docs" / "staff-brief.html"
     if sb.exists():
         sb.write_text(sb.read_text(encoding="utf-8").replace("<b>Evidence audit:</b>", "<b>Evidence review:</b>"), encoding="utf-8")
