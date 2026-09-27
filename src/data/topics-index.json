@@ -1,0 +1,184 @@
+[
+ {
+  "key": "scorecard",
+  "title": "Midterm Scorecard",
+  "image": "/images/topic-scorecard.jpg",
+  "charts": 10,
+  "items": 255
+ },
+ {
+  "key": "trump-record",
+  "title": "Trump's Record: What He Did",
+  "image": "/images/topic-trump-record.jpg",
+  "charts": 3,
+  "items": 175
+ },
+ {
+  "key": "lawmakers",
+  "title": "For Lawmakers",
+  "image": "/images/topic-lawmakers.jpg",
+  "charts": 2,
+  "items": 28
+ },
+ {
+  "key": "debt",
+  "title": "Debt & Spending",
+  "image": "/images/topic-debt.jpg",
+  "charts": 3,
+  "items": 15
+ },
+ {
+  "key": "biden-family",
+  "title": "Biden Family Records",
+  "image": "/images/topic-biden-family.jpg",
+  "charts": 4,
+  "items": 28
+ },
+ {
+  "key": "border",
+  "title": "The Border",
+  "image": "/images/topic-border.jpg",
+  "charts": 3,
+  "items": 10
+ },
+ {
+  "key": "voters",
+  "title": "Voters & Population",
+  "image": "/images/topic-voters.jpg",
+  "charts": 8,
+  "items": 102
+ },
+ {
+  "key": "energy",
+  "title": "Energy",
+  "image": "/images/topic-energy.jpg",
+  "charts": 6,
+  "items": 189
+ },
+ {
+  "key": "trading",
+  "title": "Congress / Trading",
+  "image": "/images/topic-trading.jpg",
+  "charts": 4,
+  "items": 46
+ },
+ {
+  "key": "trump-watch",
+  "title": "Trump Watch",
+  "image": "/images/topic-trump-watch.jpg",
+  "charts": 6,
+  "items": 153
+ },
+ {
+  "key": "article-v",
+  "title": "Article V",
+  "image": "/images/topic-article-v.jpg",
+  "charts": 1,
+  "items": 23
+ },
+ {
+  "key": "journal",
+  "title": "Journal",
+  "image": "/images/topic-journal.jpg",
+  "charts": 1,
+  "items": 60
+ },
+ {
+  "key": "republic",
+  "title": "The Republic",
+  "image": "/images/topic-republic.jpg",
+  "charts": 1,
+  "items": 3
+ },
+ {
+  "key": "remedy",
+  "title": "The Remedy",
+  "image": "/images/topic-remedy.jpg",
+  "charts": 1,
+  "items": 4
+ },
+ {
+  "key": "movement-watch",
+  "title": "Movement Watch",
+  "image": "/images/topic-movement-watch.jpg",
+  "charts": 1,
+  "items": 68
+ },
+ {
+  "key": "record-2020",
+  "title": "2020: The Record",
+  "image": "/images/topic-record-2020.jpg",
+  "charts": 3,
+  "items": 59
+ },
+ {
+  "key": "protest-funding",
+  "title": "Protest Funding",
+  "image": "/images/topic-protest-funding.jpg",
+  "charts": 1,
+  "items": 7
+ },
+ {
+  "key": "floyd",
+  "title": "George Floyd",
+  "image": "/images/topic-floyd.jpg",
+  "charts": 1,
+  "items": 91
+ },
+ {
+  "key": "accountability",
+  "title": "Accountability Trackers",
+  "image": "/images/topic-accountability.jpg",
+  "charts": 7,
+  "items": 201
+ },
+ {
+  "key": "censorship",
+  "title": "Censorship",
+  "image": "/images/topic-censorship.jpg",
+  "charts": 2,
+  "items": 107
+ },
+ {
+  "key": "gas-gap",
+  "title": "Gas Price Gap",
+  "image": "/images/topic-gas-gap.jpg",
+  "charts": 3,
+  "items": 105
+ },
+ {
+  "key": "paper-trail",
+  "title": "The Paper Trail",
+  "image": "/images/topic-paper-trail.jpg",
+  "charts": 2,
+  "items": 22
+ },
+ {
+  "key": "democrats",
+  "title": "Democrats",
+  "image": "/images/topic-democrats.jpg",
+  "charts": 1,
+  "items": 11
+ },
+ {
+  "key": "republicans",
+  "title": "Republicans",
+  "image": "/images/topic-republicans.jpg",
+  "charts": 1,
+  "items": 9
+ },
+ {
+  "key": "j6",
+  "title": "J6",
+  "image": "/images/topic-j6.jpg",
+  "charts": 1,
+  "items": 12
+ },
+ {
+  "key": "opinion",
+  "title": "Opinion",
+  "image": "/images/topic-opinion.jpg",
+  "charts": 1,
+  "items": 4
+ }
+]
