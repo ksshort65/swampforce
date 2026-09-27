@@ -1,0 +1,1 @@
+window.SF_INCOMING={"betrayal/fabrication": [], "betrayal/false-photo": [], "betrayal/lawfare": [], "betrayal/misquote": [], "betrayal/omitted-context": [], "betrayal/policy-inflation": [], "betrayal/premature-proven": [], "betrayal/retracted": [], "scorecard/democrats": [], "scorecard/oval": [], "scorecard/republicans": [], "scorecard/side-by-side": [], "scorecard/split": []};
