@@ -663,9 +663,18 @@ function Betrayal() {
             <button
               type="button"
               onClick={() => {
-                setNewsMethod(null);
-                setNewsCase(null);
-                setNewsSource(null);
+                if (newsSource) {
+                  setNewsSource(null);
+                  return;
+                }
+                if (newsCase) {
+                  setNewsCase(null);
+                  return;
+                }
+                if (newsMethod) {
+                  setNewsMethod(null);
+                  return;
+                }
                 setLayer("fake");
               }}
               className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
@@ -673,7 +682,7 @@ function Betrayal() {
               Fake News Evidence
             </button>
             <p className="mt-4 max-w-md text-center text-[13px] leading-snug text-white/75">
-              {newsEvidence.line}
+              129 verified cases. Tap a bar.
             </p>
             {newsSource ? (
               <SourcePage
@@ -693,6 +702,7 @@ function Betrayal() {
                     <p className="mt-2 text-[14px] leading-snug text-white/85">{item.said}</p>
                     <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
                     <p className="mt-2 text-[14px] leading-snug text-white/85">{item.record}</p>
+                    <p className="mt-4 text-[14px] leading-snug text-white/85">{item.method}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.sources.map((source) => (
                         <button
@@ -708,44 +718,50 @@ function Betrayal() {
                   </div>
                 ))}
               </div>
-            ) : (
-              <>
-                {newsMethod && (
-                  <MethodDetail
-                    item={{
-                      name: newsMethod,
-                      info: newsMethod,
-                      evidence: (newsEvidence.methods.find((item) => item.name === newsMethod)?.cases ?? []).map((item) => ({
-                        label: item.label,
-                      })),
-                    }}
-                    onOpen={(label) => {
+            ) : newsMethod ? (
+              <div className="mt-8 flex w-full flex-col gap-3">
+                {(newsEvidence.methods.find((item) => item.name === newsMethod)?.cases ?? []).map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => {
                       setNewsSource(null);
-                      setNewsCase(label);
+                      setNewsCase(item.label);
                     }}
-                  />
-                )}
-                <div className="mt-8 grid w-full grid-cols-2 gap-x-8 gap-y-1">
-                  {newsEvidence.methods.map((item) => (
-                    <div key={item.name} className="flex flex-col items-center">
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setNewsSource(null);
-                          setNewsCase(null);
-                          setNewsMethod(item.name);
-                        }}
-                        className="w-full rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1.5 text-[13px] font-semibold text-white"
-                      >
-                        {item.name}
-                      </button>
-                      <span className="text-[18px] leading-none text-[#d4af37]" aria-hidden="true">
-                        ↓
+                    className="w-full rounded-2xl border border-white/35 bg-[#070b12]/75 px-4 py-4 text-left text-[16px] font-semibold text-white"
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <div className="mt-8 flex w-full flex-col gap-2">
+                {[...newsEvidence.methods]
+                  .sort((a, b) => b.cases.length - a.cases.length)
+                  .map((item) => (
+                    <button
+                      key={item.name}
+                      type="button"
+                      onClick={() => {
+                        setNewsSource(null);
+                        setNewsCase(null);
+                        setNewsMethod(item.name);
+                      }}
+                      className="grid grid-cols-[1fr_auto] items-center gap-3 text-left"
+                    >
+                      <span className="relative block h-8 overflow-hidden rounded-full border border-white/35 bg-[#070b12]/75">
+                        <span
+                          className="absolute inset-y-0 left-0 bg-[#3a1214]"
+                          style={{ width: `${(item.cases.length / 21) * 100}%` }}
+                        />
+                        <span className="relative block truncate px-3 py-1 text-[13px] font-semibold text-white">
+                          {item.name}
+                        </span>
                       </span>
-                    </div>
+                      <span className="text-[13px] font-semibold text-white">{item.cases.length}</span>
+                    </button>
                   ))}
-                </div>
-              </>
+              </div>
             )}
           </div>
         )}
