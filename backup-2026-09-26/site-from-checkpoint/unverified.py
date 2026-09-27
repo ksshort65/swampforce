@@ -20,7 +20,7 @@ import json, html as _h
 from pathlib import Path
 e = lambda s: _h.escape(s or "", quote=True)
 CAPTION = "Not yet proven, but already out there shaping public opinion."
-TITLE = "Unverified claims, accusations and deceptions"
+TITLE = "Not Yet Verified"
 RAW = Path("/workspace/_project-state/supergrok-2025-26-raw.md")
 SLUG = {"Republican": "rep", "Democratic": "dem", "News outlets": "news", "Campaigns": "camp", "Social media": "social"}
 
@@ -86,14 +86,11 @@ def body(cases):
         li = "".join(f'<li><span class="uv-nv">Not yet verified (still out there)</span> {e(t)}</li>' for t in its)
         lsec.append(f'<h3 class="strip-h" id="uv-leads-{SLUG[g]}">{e(g)}: {len(its)} found by our research</h3>' +
                     (f'<details class="sf-fold"><summary class="btn sm sf-fold-btn"><span class="sf-closed">See all {len(its)}</span><span class="sf-opened">Hide the list</span></summary><ul class="uv-list">{li}</ul></details>' if its else '<p class="muted">None yet.</p>'))
+    top, _n = nyv_top(cases)
     return f"""<section class="band-hero"><div class="wrap"><p class="hero-kicker">Still being checked</p><h1>{e(TITLE)}</h1><p class="dek">{e(CAPTION)}</p></div></section>
-<div class="wrap">{_bars(cat, ld, "", ver_counts(cases))}{media_block(cases)}{onesided_block()}{flawed_block()}{period_block(cases)}{altered_block(cases)}{wapo_block()}
-<p class="period-note">Grouped by the first-named source in the catalog’s “Who pushed it” field. The catalog holds 263 cases: 129 verified, 131 still being checked, 3 set aside. None of the items below has passed our check yet.</p>
-<h2 class="strip-h">In the catalog, still being checked ({sum(cat.values())})</h2>{"".join(sec)}
-<h2 class="strip-h" id="uv-leads">Found by our research, not yet in the catalog ({len(lds)})</h2>
-<p class="period-note">Research leads, not yet in the catalog and not yet checked against an official record. Sources: every saved SuperGrok batch (2015–16, 2017–20, 2021–24 and 2025–26 blocks, the overnight Sep 26 pass, the 2025–26 raw list, and the full SuperGrok conversation: per-period lists, ‘Needs a link’ items and named on-air cases). Items marked HOLD, NEEDS QUOTE LINK or NEEDS SUPERGROK are listed here. Duplicates of catalog cases and of each other were removed.</p>{"".join(lsec)}
-<h2 class="strip-h" id="uv-altered">Altered quotes: words changed, cut or rearranged ({len(alt)})</h2>
-<ul class="uv-list">{"".join(f'<li><span class="uv-nv">Not yet verified</span> <b>{e(g)}</b> · {e(p or "Undated")} · {e(t)}</li>' for g, t, p in alt)}</ul>
+<div class="wrap">{top}
+<p class="period-note">Grouped by the first-named source. Catalog claims still being checked, research leads, claims reviewed and not tied to a primary record (formerly the Unsupported claims page; <a href="downloads/unsupported-claims.csv">CSV</a>), and items flagged on other pages. None has passed our check yet.</p>
+{media_block(cases)}{onesided_block()}{flawed_block()}{period_block(cases)}{altered_block(cases)}{wapo_block()}
 </div>"""
 
 # ---- all saved SuperGrok verification batches (Sep 26, 2026) ----
@@ -307,3 +304,52 @@ def media_block(cases):
     return (f'<div class="chart-card uv-card" id="uv-media"><h3>Media claims: how much is unverified</h3><p class="sub">What the news says, but no one has proven.</p>'
             f'{rows}{nrows}<p class="period-note">Our fact-checker vetting rejected <a href="factcheckers.html#fc-cnn-facts-first-cnn-fact-checks">CNN Facts First</a> and <a href="factcheckers.html#fc-pbs-newshour-fact-checks">PBS NewsHour fact checks</a> as independent confirmation: neither is an IFCN signatory, and we located no fact-check methodology or corrections policy for either.</p><p class="tap-hint">Network = first outlet named in the “Who pushed it” field or the lead. Tap a bar for the list.</p></div>')
 MEDIA_NUMS = {}
+
+
+# ---- Merged "Not Yet Verified" page (Sep 26, 2026): unsupported.html folded in; one chart of every not-yet-verified item ----
+UNSUP = []  # set by build.py
+NYV_LABEL = "Not yet verified, but already shaping public opinion"
+# Items flagged "Not yet verified" on other pages (who said it, when, source, home page). Detail stays on the home page.
+SITE_ITEMS = [
+    ("Republican", "More than 150 bank reports (SARs) on Biden family transactions", "House Oversight Committee (then minority)", "May 25, 2022",
+     "https://oversight.house.gov/release/comer-probes-hunter-bidens-suspicious-foreign-business-transactions-flagged-by-u-s-banks/", "biden-family.html#biden-bank-reports"),
+    ("Republican", "Over $24M to the Biden family from foreign sources", "House Oversight Committee majority (bank memos)", "2023–2024", "", "biden-family.html#biden-bank-reports"),
+    ("Republican", "Foreign-government hotel profits given to Treasury: $151,470 (2017), $191,538 (2018), $10,577 (2020)", "Trump Organization (as reported in the news)", "2017–2020", "", "biden-family.html"),
+    ("Republican", "Mar-a-Lago is \u201cworth a billion dollars \u2014 or more\u201d", "Donald Trump (news coverage)", "2023", "", "lawfare.html"),
+    ("News outlets", "Congress pay unchanged since 2009; leaders $193,400; Speaker $223,500", "Widely reported figures (the House Clerk page confirms only the $174,000 base salary)", "", "", "accountability-trading.html"),
+    ("News outlets", "Colorado Secretary of State registration postcards reached deceased people and noncitizens (2020)", "CBS4 Denver; Breitbart", "Sep 27, 2020",
+     "https://www.breitbart.com/politics/2020/09/27/colorado-secretary-state-encourages-non-citizens-deceased-register-vote/", "voters.html#co-eric-postcards"),
+    ("News outlets", "About 30,000 noncitizens were mailed registration postcards (2022)", "AP; Fox News (from the office's statements)", "Oct 10, 2022",
+     "https://www.foxnews.com/politics/colorado-secretary-state-says-accidentally-sent-30000-voter-registration-notices-noncitizens", "voters.html#co-eric-postcards"),
+]
+
+def nyv_items(cases):
+    out = {g: [] for g in GROUPS}
+    for c in catalog_items(cases):
+        out[group(c["who"])].append(f'<b>{e(c["claim"])}</b> <span class="muted">· {e(c["who"])}</span> · <a href="fake-news.html#case-{e(c["id"])}">Case {e(c["id"])} →</a>')
+    for g, t, p in all_leads(cases)[0]:
+        out[g].append(f'{e(t)}' + (f' <span class="muted">· {e(p)}</span>' if p else "") + ' · <span class="muted">Research lead</span>')
+    for u in UNSUP:
+        anc = f' id="unsupported-{e(u["id"])}"' if u["id"] else ""
+        links = " ".join(f'<a href="{e(x)}" target="_blank" rel="noopener">Source {i} ↗</a>' for i, x in enumerate(u["urls"], 1))
+        why = f'<details class="sf-fold"><summary class="btn sm sf-fold-btn"><span class="sf-closed">Why it is unproven</span><span class="sf-opened">Hide</span></summary><p>{e(u["reason"])}</p></details>' if u["reason"] else ""
+        out[group(u["who"])].append(f'<span{anc}></span><b>{e(u["claim"])}</b> <span class="muted">· {e(u["who"])}' + (f' · checked {e(u["checked"])}' if u["checked"] else "") + f'</span> {links}{why}')
+    for g, t, who, when, src, home in SITE_ITEMS:
+        out[g].append(f'<b>{e(t)}</b> <span class="muted">· {e(who)}' + (f' · {e(when)}' if when else "") + '</span>'
+                      + (f' <a href="{e(src)}" target="_blank" rel="noopener">Source ↗</a>' if src else "") + f' · <a href="{e(home)}">Details →</a>')
+    return out
+
+def nyv_top(cases):
+    items = nyv_items(cases)
+    n = {g: len(items[g]) for g in GROUPS}; tot = sum(n.values()); mx = max(list(n.values()) + [1])
+    colors = {"Republican": "#b91c1c", "Democratic": "#1d4ed8", "News outlets": "#64748b", "Campaigns": "#7c3aed", "Social media": "#d97706"}
+    rows = "".join(f'<div class="uv-row"><span class="uv-lbl">{e(g)}</span><div class="uv-bars"><a class="uv-bar" href="#nyv-{SLUG[g]}" style="width:{max(n[g] / mx * 100, 3):.1f}%;background:{colors[g]}"><b>{n[g]}</b></a></div></div>' for g in GROUPS)
+    big = (f'<div class="tile-grid nyv-big"><div class="stat"><div class="num">{tot}</div><div class="lbl">Not yet verified</div></div>'
+           + "".join(f'<a class="stat" href="#nyv-{SLUG[g]}" style="text-decoration:none"><div class="num">{n[g]}</div><div class="lbl">{e(g)}</div></a>' for g in GROUPS) + '</div>')
+    chart = (f'<div class="chart-card nyv-chart"><h3>Not yet verified, by who said it</h3><p class="sub">{e(CAPTION)}</p>{rows}'
+             '<p class="sf-tap-note">\U0001F446 Tap the chart to see the evidence behind it.</p></div>')
+    secs = "".join(f'<section class="nyv-group" id="nyv-{SLUG[g]}"><h2 class="strip-h">{e(g)}: {n[g]}</h2>'
+                   + (f'<details class="sf-fold"><summary class="btn sm sf-fold-btn"><span class="sf-closed">See all {n[g]}</span><span class="sf-opened">Hide</span></summary><ul class="uv-list">'
+                      + "".join(f'<li><span class="uv-nv">{NYV_LABEL}</span> {it}</li>' for it in items[g]) + '</ul></details>' if items[g] else '<p class="muted">None yet.</p>')
+                   + '</section>' for g in GROUPS)
+    return big + chart + secs, n

@@ -77,7 +77,7 @@ def nav(active):
     facts = [x for i, x in enumerate(facts) if x[0] not in [y[0] for y in facts[:i]]]
     betrayal_link = f'<a class="nav-betrayal{" active" if active == "betrayal.html" else ""}" href="betrayal.html">{ico("quote")}<span>The Great American Betrayal</span></a>'
     # Order by importance for the Nov 3, 2026 midterms (Sep 26, 2026)
-    return (a("scorecard.html", "Midterms", "chart") + betrayal_link + drop("For Lawmakers", "file", LAW_MENU, active)
+    return (betrayal_link + a("scorecard.html", "Midterms", "chart") + drop("For Lawmakers", "file", LAW_MENU, active)
             + drop("Congress", "capitol", [("congress.html", "Debt & Spending", "The purse, the debt, the members"), ("lawfare.html", "Lawfare", "Every case against Trump"),
                                            ("biden-family.html", "Biden Family Records", "Bank reports, pardons, research in progress"),
                                            ("accountability-trading.html", "Trading", "Disclosed stock trades"), ("trump-watch.html", "Trump Watch", "Money, salary, judgments")], active)
@@ -148,7 +148,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
         <p>A government-source journal. Compare the action to the speech. Opinion is always labeled
         <span class="op-tag">Opinion</span>.</p>
         <p>© 2026 SwampForce Editor · Last updated: September 26, 2026 · Updated weekly. · <a href="mailto:editor@swampforce.com">editor@swampforce.com</a> · <a href="https://x.com/SwampForce" rel="noopener">@SwampForce</a></p></div>
-      <div><p class="foot-h">Evidence</p><a href="fake-news.html">Fake News Exposed</a><a href="democrats.html">Democrats</a><a href="republicans.html">Republicans</a><a href="january-6.html">J6</a><a href="lawfare.html">Lawfare</a>{'<a href="unsupported.html">Unsupported claims</a>' if UNSUP else ''}</div>
+      <div><p class="foot-h">Evidence</p><a href="fake-news.html">Fake News Exposed</a><a href="democrats.html">Democrats</a><a href="republicans.html">Republicans</a><a href="january-6.html">J6</a><a href="lawfare.html">Lawfare</a></div>
       <div><p class="foot-h">Read</p><a href="journal.html">Journal</a><a href="scorecard.html">Midterm scorecard</a><a href="betrayal.html">The Betrayal</a><a href="opinion.html">Opinion</a><a href="foreword.html">The Republic</a><a href="congress.html">Congress</a><a href="border.html">The Border</a><a href="remedy.html">The Remedy</a></div>
       {('<div><p class="foot-h">Watch</p>' + "".join(f'<a href="{h}">{e(t)}</a>' for h, t, _ in WATCH_MENU) + '</div>') if WATCH_MENU else ''}
       <div><p class="foot-h">For lawmakers</p><a href="brief.html">Staff brief</a><a href="appendix.html">Evidence appendix</a><a href="about.html">Methodology</a><a href="downloads.html">Downloads</a><a href="store.html">Store (coming soon)</a></div>
@@ -488,7 +488,7 @@ def load_unsupported():
 
 UNSUP = load_unsupported()
 if UNSUP:
-    EVIDENCE_MENU.append(("unsupported.html", "Unsupported claims", "Claims we could not support"))
+    pass  # unsupported claims live on unverified.html (one "Not Yet Verified" entry)
 methods = Counter(c["method"] for c in cases if c["method"])
 VMETHODS = Counter(c["method"] for c in VCASES if c["method"])
 TOP_METHODS = [m for m, _ in VMETHODS.most_common(8)]
@@ -834,7 +834,7 @@ def betrayal_verify_box():
 </aside>"""
 
 
-QUICK_LINKS = [("scorecard.html", "Midterms", "chart"), ("betrayal.html", "Great American Betrayal", "quote"), ("brief.html", "Lawmakers", "file"),
+QUICK_LINKS = [("betrayal.html", "Great American Betrayal", "quote"), ("scorecard.html", "Midterms", "chart"), ("brief.html", "Lawmakers", "file"),
                ("congress.html", "Debt & Spending", "capitol"), ("lawfare.html", "Lawfare", "scale"), ("biden-family.html", "Biden Family Records", "file"),
                ("border.html", "Border", "chart"), ("voters.html", "Voters", "chart"), ("energy.html", "Energy", "chart"),
                ("fake-news.html", "Fake News", "search"), ("unverified.html#uv-flawed", "Social Media Weapon", "eye"), ("unverified.html", "Not Yet Verified", "eye"),
@@ -958,8 +958,8 @@ def place_moves(name, h):
 def build_home():
     import midterms as M
     _home_moves()
-    tiles = [("scorecard.html", "chart-helped-hurt.jpg", "Midterms", "Who ran Congress. What it cost."),
-             ("betrayal.html", "we-the-people.jpg", "The Great American Betrayal", f"{len(BETRAYAL_FAKE)} new verified cases (2015–2026)"),
+    tiles = [("betrayal.html", "we-the-people.jpg", "The Great American Betrayal", f"{len(BETRAYAL_FAKE)} new verified cases (2015–2026)"),
+             ("scorecard.html", "chart-helped-hurt.jpg", "Midterms", "Who ran Congress. What it cost."),
              ("brief.html", "constitution.jpg", "For Lawmakers", "Staff brief + evidence appendix"),
              ("congress.html", "chart-debt-bars.jpg", "Debt & Spending", "The purse, the debt, the members"),
              ("lawfare.html", "chart-lawfare.jpg", "Lawfare", "10 dockets, key rulings"),
@@ -2108,7 +2108,7 @@ def write_infra(pages):
     red = essay_redirects()
     L = ["Options -Indexes", "DirectoryIndex index.html", "ErrorDocument 404 /404.html", "AddDefaultCharset UTF-8", "",
          "<IfModule mod_alias.c>", "Redirect 301 /explainer.html /betrayal.html", "Redirect 301 /archive.html /index.html",
-         "Redirect 301 /pump.html /scorecard.html", "Redirect 301 /midterms.html /scorecard.html", "Redirect 301 /pending.html /index.html", "Redirect 301 /republic.html /foreword.html"]
+         "Redirect 301 /pump.html /scorecard.html", "Redirect 301 /unsupported.html /unverified.html", "Redirect 301 /midterms.html /scorecard.html", "Redirect 301 /pending.html /index.html", "Redirect 301 /republic.html /foreword.html"]
     for slug, tgt in sorted(red.items()):
         L.append(f"Redirect 301 /dispatch/{slug}.html /{tgt}")
     L += ["RedirectMatch 301 ^/dispatch/?$ /index.html", "</IfModule>", "",
@@ -2164,6 +2164,7 @@ def main():
     }
     import unverified as UV
     import auto_charts as AC
+    UV.UNSUP = UNSUP
     UCASES = [{"id": c["id"], "claim": c["claim"], "who": c["who"], "notes": c["notes"], "status": "Verified by SwampForce" if c["status"] == "verified" else "Still being checked"} for c in cases]
     pages = {**{k: v for k, v in pages.items() if k != "404.html"}, "unverified.html": page("unverified.html", UV.TITLE + " · Swamp Force", UV.CAPTION, UV.body(UCASES), flush=True), "404.html": pages["404.html"]}
     import restore as RS, atexit
@@ -2177,7 +2178,7 @@ def main():
     pages = {**{k: v for k, v in pages.items() if k != "404.html"}, "biden-family.html": page("biden-family.html", "Biden Family Records · Swamp Force", "Biden family bank reports, foreign money by country and pardons, from official records.",
              f'<div class="wrap section-pad"><p class="section-label">Congress</p><h1>Biden Family Records</h1>{_BS.section()}{_ph}</div>'), "404.html": pages["404.html"]}
     if UNSUP:
-        pages = {**{k: v for k, v in pages.items() if k != "404.html"}, "unsupported.html": build_unsupported(), "404.html": pages["404.html"]}
+        build_unsupported()  # keeps the CSV download; the page itself is a redirect (below)
         with open(OUT / "downloads" / "unsupported-claims.csv", "w", newline="", encoding="utf-8") as fh:
             w = csv.writer(fh)
             w.writerow(["Item_ID", "Claim", "Who_Pushed_It", "Reason", "Source_URLs", "Checked"])
@@ -2208,6 +2209,8 @@ def main():
     for name, h in pages.items():
         h = h.replace("In this site&#x27;s audit of", "In this site&#x27;s review of")
         h = place_moves(name, h)
+        h = re.sub(r'href="unsupported\.html(#unsupported-[\w-]+)?"', lambda m: f'href="unverified.html{m.group(1) or "#nyv-rep"}"', h)
+        h = h.replace('">Unsupported claims</a>', '">Not Yet Verified</a>')
         if name != "index.html":
             h = VIS.apply(name, h)
         h = OI.apply(name, h)
@@ -2242,6 +2245,9 @@ def main():
             h = h[:k] + '<p class="fact-line"><a href="unverified.html">' + UV.TITLE + ' →</a></p>' + h[k:]
         h = re.sub(r'(assets/(?:style\.css|app\.js|store\.js))"', r'\1?v=' + ASSET_V + '"', h)  # cache-busting
         (OUT / name).write_text(h, encoding="utf-8")
+    (OUT / "unsupported.html").write_text('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Not Yet Verified</title>'
+        '<link rel="canonical" href="https://swampforce.com/unverified.html"><meta http-equiv="refresh" content="0; url=unverified.html"></head>'
+        '<body><p><a href="unverified.html">Unsupported claims are now on Not Yet Verified.</a></p></body></html>', encoding="utf-8")
     # /midterms.html: .htaccess 301s to scorecard.html; this stub covers hosts/previews that ignore .htaccess.
     (OUT / "midterms.html").write_text('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Midterm scorecard</title>'
         '<link rel="canonical" href="https://swampforce.com/scorecard.html"><meta http-equiv="refresh" content="0; url=scorecard.html"></head>'
