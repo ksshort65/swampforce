@@ -2184,6 +2184,7 @@ function Betrayal() {
   const [newsCase, setNewsCase] = useState<string | null>(null);
   const [newsSource, setNewsSource] = useState<string | null>(null);
   const [saveOn, setSaveOn] = useState(false);
+  const [estimatesOn, setEstimatesOn] = useState(false);
   const [saveRuling, setSaveRuling] = useState(false);
   const [saveBar, setSaveBar] = useState<string | null>(null);
   const [saveSource, setSaveSource] = useState<string | null>(null);
@@ -2299,7 +2300,7 @@ function Betrayal() {
             ))}
           </div>
         )}
-        {layer === "fake" && !saveOn && !deception && (
+        {layer === "fake" && !saveOn && !deception && !estimatesOn && (
           <div className="flex flex-col items-center px-6 pt-16">
             <button
               type="button"
@@ -2369,6 +2370,20 @@ function Betrayal() {
                   className="h-44 w-full rounded-2xl border border-white/30 object-cover"
                 />
               </button>
+              <button
+                type="button"
+                onClick={() => setEstimatesOn(true)}
+                className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
+              >
+                <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
+                  Estimates
+                </span>
+                <img
+                  src="/images/topic-estimates.jpg"
+                  alt=""
+                  className="h-44 w-full rounded-2xl border border-white/30 object-cover"
+                />
+              </button>
               {DECEPTION.map((item) => (
                 <button
                   key={item.id}
@@ -2398,6 +2413,26 @@ function Betrayal() {
                 </span>
               </a>
             </div>
+          </div>
+        )}
+        {layer === "fake" && estimatesOn && (
+          <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
+            <button
+              type="button"
+              onClick={() => setEstimatesOn(false)}
+              className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
+            >
+              Estimates
+            </button>
+            <ul className="mt-8 w-full list-disc rounded-2xl border border-white/20 bg-[#070b12]/85 py-4 pr-5 pl-9 text-left text-[15px] leading-snug text-white/85">
+              <li className="font-semibold text-white">Estimated scale — not verified</li>
+              <li>Numbers this large cannot possibly be verified by the SwampForce Editor alone. These are outside estimates, not counts.</li>
+              <li>Millions of negative items about Trump in every two-year block since 2015.</li>
+              <li>Peak years: 2016–17 and 2020–21.</li>
+              <li>Most misleading copies spread on social media and memes (estimated 60–80%).</li>
+              <li>A few hundred false storylines, reused again and again.</li>
+              <li>Only the 260 cases on this page are counted and sourced.</li>
+            </ul>
           </div>
         )}
         {layer === "fake" && saveOn && !saveRuling && (
@@ -3290,6 +3325,10 @@ function Betrayal() {
                 }
                 if (saveOn) {
                   setSaveOn(false);
+                  return;
+                }
+                if (estimatesOn) {
+                  setEstimatesOn(false);
                   return;
                 }
                 setLayer(LAYERS[layer].back);
