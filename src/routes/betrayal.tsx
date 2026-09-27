@@ -1672,6 +1672,7 @@ function Betrayal() {
             >
               Back
             </button>
+            {(newsMethod || newsCase || newsSource) && (
             <button
               type="button"
               onClick={() => {
@@ -1699,6 +1700,7 @@ function Betrayal() {
                 ? EVIDENCE_CHARTS.find((item) => item.id === newsMethod)?.title
                 : "Fake News Evidence"}
             </button>
+            )}
             {newsSource ? (
               <div className="mt-8 w-full">
                 <SourcePage
