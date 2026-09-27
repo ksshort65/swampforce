@@ -1140,32 +1140,121 @@ function NewsCaseDetail({ row, onSource }: { row: NewsCaseRow; onSource: (href: 
   );
 }
 
-function NewsScaleNote() {
-  const [open, setOpen] = useState(false);
+const LAYER_TILE = "flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0";
+const LAYER_TILE_IMG = "h-44 w-full rounded-2xl border border-white/30 object-cover";
+
+function LayerTileImage({ src, label }: { src: string; label: string }) {
+  const ref = useRef<HTMLImageElement>(null);
+  const [missing, setMissing] = useState(false);
+  useEffect(() => {
+    const img = ref.current;
+    if (img && img.complete && img.naturalWidth === 0) setMissing(true);
+  }, [src]);
+  if (missing) {
+    return (
+      <span aria-hidden="true" className="flex h-44 w-full items-center justify-center rounded-2xl border border-white/30 bg-[#0b1220] px-5 text-center text-[16px] font-semibold leading-snug tracking-wide text-white/85">
+        {label}
+      </span>
+    );
+  }
+  return <img ref={ref} src={src} alt="" onError={() => setMissing(true)} className={LAYER_TILE_IMG} />;
+}
+
+function LayerTiles({ tiles }: { tiles: { key: string; label: string; image: string; onOpen: () => void }[] }) {
   return (
-    <div className="mx-auto mt-6 flex w-full max-w-xl flex-col items-center">
-      <button
-        type="button"
-        aria-expanded={open}
-        onClick={() => setOpen(!open)}
-        className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-1.5 text-[15px] font-semibold text-white"
-      >
-        Estimated scale (not verified)
-      </button>
-      {open ? (
-        <ul className="mt-4 w-full list-disc rounded-2xl border border-white/20 bg-[#070b12]/85 py-4 pr-5 pl-9 text-left text-[15px] leading-snug text-white/85">
-          <li className="font-semibold text-white">Estimated scale — not verified</li>
-          <li>Numbers this large cannot possibly be verified by the SwampForce Editor alone. These are outside estimates, not counts.</li>
-          <li>Millions of negative items about Trump in every two-year block since 2015.</li>
-          <li>Peak years: 2016–17 and 2020–21.</li>
-          <li>Most misleading copies spread on social media and memes (estimated 60–80%).</li>
-          <li>A few hundred false storylines, reused again and again.</li>
-          <li>Only the 260 cases on this page are counted and sourced.</li>
-        </ul>
-      ) : null}
+    <div className="mt-8 flex w-full flex-wrap items-end justify-center gap-10">
+      {tiles.map((tile) => (
+        <button key={tile.key} type="button" onClick={tile.onOpen} className={LAYER_TILE}>
+          <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">{tile.label}</span>
+          <LayerTileImage src={tile.image} label={tile.label} />
+        </button>
+      ))}
     </div>
   );
 }
+
+function LayerChart({
+  title,
+  line,
+  labels,
+  data,
+  colors,
+  type,
+  horizontal,
+  keys,
+  bullets,
+  center,
+  onPick,
+}: {
+  title: string;
+  line: string;
+  labels: string[];
+  data: number[];
+  colors: string[];
+  type: "bar" | "doughnut";
+  horizontal: boolean;
+  keys?: { label: string; color: string; index: number }[];
+  bullets: string[];
+  center?: { big: string; small: string; onOpen: () => void };
+  onPick: (index: number) => void;
+}) {
+  const height = type === "doughnut" ? 300 : horizontal ? Math.max(200, labels.length * 46 + 50) : 300;
+  const lines = keys ?? labels.map((label, index) => ({ label: `${label} · ${data[index]}`, color: colors[index] ?? colors[0], index }));
+  return (
+    <section className="w-full">
+      <p className="mt-2 text-center text-[15px] text-white/75">{line}</p>
+      <div className={NEWS_CARD}>
+        <div className="relative w-full" style={{ height }}>
+          <LawChart title={title} labels={labels} data={data} colors={colors} type={type} horizontal={horizontal} onPick={onPick} />
+          {center ? (
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <button
+                type="button"
+                onClick={center.onOpen}
+                className="pointer-events-auto flex flex-col items-center rounded-full border-0 bg-transparent px-4 py-3"
+              >
+                <span className="text-[30px] leading-none font-bold text-white">{center.big}</span>
+                <span className="mt-1 text-[15px] font-semibold text-white underline decoration-[#d4af37] underline-offset-4">{center.small}</span>
+              </button>
+            </div>
+          ) : null}
+        </div>
+        <ul className="mt-4 flex flex-col gap-1">
+          {lines.map((key) => (
+            <li key={key.label}>
+              <button
+                type="button"
+                onClick={() => onPick(key.index)}
+                className="flex min-h-11 w-full items-center gap-3 rounded-xl border-0 bg-transparent px-2 py-2 text-left text-[15px] font-semibold text-white hover:bg-white/5"
+              >
+                <span className="inline-block h-4 w-4 shrink-0 rounded-sm" style={{ background: key.color }} />
+                {key.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {bullets.length ? (
+        <ul className="mt-4 list-disc pl-5 text-left text-[15px] leading-snug text-white/80">
+          {bullets.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      ) : null}
+    </section>
+  );
+}
+
+const LAYER_ROW =
+  "w-full rounded-3xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] font-semibold leading-snug text-white";
+
+const NEWS_DIM_TILES: Record<string, string> = {
+  status: "/images/tile-verdict-status.jpg",
+  proof: "/images/tile-strength-of-proof.jpg",
+  network: "/images/tile-by-network.jpg",
+  party: "/images/tile-by-party.jpg",
+  person: "/images/tile-by-journalist.jpg",
+};
 
 function NewsPeriodLayers({
   path,
@@ -1232,13 +1321,14 @@ function NewsPeriodLayers({
     return (
       <div className="w-full">
         <NewsHeading title={period.key} line={`${period.range} · ${newsCasesLine(periodRows.length)}`} />
-        <div className="mx-auto mt-8 grid w-full max-w-xl grid-cols-1 gap-3">
-          {NEWS_DIMS.map((item) => (
-            <button key={item.key} type="button" onClick={() => onPath([period.key, item.key])} className={NEWS_DOOR}>
-              {item.title}
-            </button>
-          ))}
-        </div>
+        <LayerTiles
+          tiles={NEWS_DIMS.map((item) => ({
+            key: item.key,
+            label: item.title,
+            image: NEWS_DIM_TILES[item.key],
+            onOpen: () => onPath([period.key, item.key]),
+          }))}
+        />
       </div>
     );
   }
@@ -1269,7 +1359,6 @@ function NewsPeriodLayers({
           </button>
         ))}
       </div>
-      <NewsScaleNote />
     </div>
   );
 }
@@ -1933,6 +2022,7 @@ function LawChart({
           responsive: true,
           maintainAspectRatio: false,
           indexAxis: type === "bar" && horizontal ? "y" : "x",
+          interaction: type === "bar" ? { mode: "index", intersect: false, axis: horizontal ? "y" : "x" } : undefined,
           plugins: { legend: { display: false } },
           scales: type === "doughnut" ? {} : {
             x: horizontal
@@ -1962,7 +2052,49 @@ function lawLocal(href: string) {
   return at >= 0 ? href.slice(at) : href;
 }
 
+const LAW_TILES: Record<string, string> = {
+  status: "/images/tile-case-status.jpg",
+  period: "/images/tile-cases-by-period.jpg",
+  who: "/images/tile-who-brought.jpg",
+  court: "/images/tile-which-courts.jpg",
+  impeach: "/images/tile-impeachments.jpg",
+  referrals: "/images/tile-doj-referrals.jpg",
+  deception: "/images/tile-lawfare-deception.jpg",
+};
+
 function LawfareScreen({
+  pick,
+  caseId,
+  href,
+  onPick,
+  onCase,
+  onSource,
+  onBack,
+}: {
+  pick: string | null;
+  caseId: string | null;
+  href: string | null;
+  onPick: (value: string) => void;
+  onCase: (value: string) => void;
+  onSource: (value: string) => void;
+  onBack: () => void;
+}) {
+  const chart = pick && !pick.includes(":") && !caseId && !href ? lawfareCases.charts.find((item) => item.id === pick) : undefined;
+  return (
+    <>
+      <button
+        type="button"
+        onClick={onBack}
+        className="border-0 bg-transparent p-0 text-center text-[18px] font-semibold tracking-wide text-white"
+      >
+        {chart ? chart.title : "Lawfare Evidence"}
+      </button>
+      <LawfareLayer pick={pick} caseId={caseId} href={href} onPick={onPick} onCase={onCase} onSource={onSource} />
+    </>
+  );
+}
+
+function LawfareLayer({
   pick,
   caseId,
   href,
@@ -2088,8 +2220,9 @@ function LawfareScreen({
       <div className="mt-8 flex w-full flex-col gap-3">
         <p className="text-center text-[16px] font-semibold text-white">Deception about Lawfare · {rows.length}</p>
         {rows.map((row) => (
-          <button key={row.id} type="button" onClick={() => onCase(row.id)} className={NEWS_DOOR + " text-left"}>
+          <button key={row.id} type="button" onClick={() => onCase(row.id)} className={LAYER_ROW}>
             {row.who} · {row.began}
+            <span className="mt-1 block font-normal text-white/80">{row.statusLabel}</span>
           </button>
         ))}
       </div>
@@ -2102,7 +2235,7 @@ function LawfareScreen({
         <div className="mt-8 flex w-full flex-col gap-3">
           <p className="text-center text-[16px] font-semibold text-white">{chart.labels[index]} · {chart.data[index]}</p>
           {row ? (
-            <button type="button" onClick={() => onCase(row.name)} className={NEWS_DOOR + " text-left"}>
+            <button type="button" onClick={() => onCase(row.name)} className={LAYER_ROW}>
               {row.name} · {row.note}
             </button>
           ) : <p className="text-[15px] text-white">Not on record.</p>}
@@ -2116,64 +2249,100 @@ function LawfareScreen({
         <div className="mt-8 flex w-full flex-col gap-3">
           <p className="text-center text-[16px] font-semibold text-white">{label} · {chart.data[index]}</p>
           {rows.map((row) => (
-            <button key={row.name} type="button" onClick={() => onCase(row.name)} className={NEWS_DOOR + " text-left"}>
-              {row.name} · {row.group} · {row.outcome}
+            <button key={row.name} type="button" onClick={() => onCase(row.name)} className={LAYER_ROW}>
+              {row.name}
+              <span className="mt-1 block font-normal text-white/80">{row.group} · {row.outcome}</span>
             </button>
           ))}
         </div>
       );
     }
-    const ids = chart.caseIds[index] ?? [];
+  }
+  if (chart && pick && pick.includes(":")) {
+    const all = pick.endsWith(":all");
+    const ids = all ? file.cases.map((item) => item.id) : (chart.caseIds[index] ?? []);
     const rows = ids.map((id) => file.cases.find((item) => item.id === id)).filter((item): item is (typeof file.cases)[number] => !!item);
     return (
       <div className="mt-8 flex w-full flex-col gap-3">
-        <p className="text-center text-[16px] font-semibold text-white">{chart.labels[index]} · {rows.length}</p>
+        <p className="text-center text-[16px] font-semibold text-white">{all ? "All cases" : chart.labels[index]} · {rows.length}</p>
         {rows.length === 0 ? <p className="text-center text-[15px] text-white/80">Not on record.</p> : null}
         {rows.map((row) => (
-          <button key={row.id} type="button" onClick={() => onCase(row.id)} className={NEWS_DOOR + " text-left"}>
-            {row.caseName} · {row.court} · {row.statusLabel}
+          <button key={row.id} type="button" onClick={() => onCase(row.id)} className={LAYER_ROW}>
+            {row.shortName}
+            <span className="mt-1 block font-normal text-white/80">{row.shortStatus}</span>
           </button>
         ))}
       </div>
     );
   }
+  if (chart) {
+    return (
+      <LayerChart
+        title={chart.title}
+        line={file.asOf}
+        labels={chart.labels}
+        data={chart.data}
+        colors={chart.labels.map((_, bar) => chart.colors[bar] ?? chart.colors[0])}
+        type={chart.type === "doughnut" ? "doughnut" : "bar"}
+        horizontal={chart.horizontal}
+        bullets={chart.bullets.slice(0, 3)}
+        center={chart.id === "status" ? { big: String(file.cases.length), small: "Cases", onOpen: () => onPick("status:all") } : undefined}
+        onPick={(bar) => onPick(`${chart.id}:${bar}`)}
+      />
+    );
+  }
   return (
-    <div className="mt-6 flex w-full flex-col gap-8">
-      {file.charts.map((item) => (
-        <section key={item.id}>
-          <h2 className="text-center text-[16px] font-semibold text-white">{item.title}</h2>
-          <p className="mt-1 text-center text-[15px] text-white/80">{file.asOf}</p>
-          <div className={item.type === "doughnut" ? "relative mt-4 h-72" : item.horizontal ? "relative mt-4 h-[640px]" : "relative mt-4 h-72"}>
-            <LawChart
-              title={item.title}
-              labels={item.labels}
-              data={item.data}
-              colors={item.colors}
-              type={item.type === "doughnut" ? "doughnut" : "bar"}
-              horizontal={item.horizontal}
-              onPick={(bar) => onPick(`${item.id}:${bar}`)}
-            />
-          </div>
-          <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
-            {(item.keys ?? item.labels.map((label, bar) => ({ label: `${label} · ${item.data[bar]}`, color: item.colors[bar] ?? item.colors[0] }))).map((key) => (
-              <li key={key.label} className="flex items-center gap-2 text-[15px] text-white">
-                <span className="inline-block h-3 w-3 shrink-0" style={{ background: key.color }} />
-                {key.label}
-              </li>
-            ))}
-          </ul>
-          <ul className="mt-2 list-disc pl-5 text-[15px] leading-snug text-white/80">
-            {item.bullets.slice(0, 3).map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
-        </section>
-      ))}
-      <button type="button" onClick={() => onPick("deception")} className={NEWS_DOOR}>
-        Deception about Lawfare (6)
-      </button>
-    </div>
+    <LayerTiles
+      tiles={[
+        ...file.charts.map((item) => ({
+          key: item.id,
+          label: item.title,
+          image: LAW_TILES[item.id] ?? `/images/tile-${item.id}.jpg`,
+          onOpen: () => onPick(item.id),
+        })),
+        { key: "deception", label: "Deception about Lawfare", image: LAW_TILES.deception, onOpen: () => onPick("deception") },
+      ]}
+    />
   );
+}
+
+const CHECKER_TABLE = ((factCheckerVetting as unknown as { table?: string[][] }[]).find((section) => section.table)?.table ?? []).map(
+  (row) => ({ name: row[0], owner: row[1], ifcn: row[2], outcome: row[3], confirms: row[4] }),
+);
+const CHECKER_GROUPS = ["Approved", "Approved with caution", "Rejected"];
+const CHECKER_COLORS = ["#16a34a", "#f59e0b", "#dc2626"];
+const CHECKER_TILES = ["/images/tile-approved.jpg", "/images/tile-approved-caution.jpg", "/images/tile-rejected.jpg"];
+const CHECKER_DATA = CHECKER_GROUPS.map((group) => CHECKER_TABLE.filter((row) => row.outcome === group).length);
+const CHECKER_MARK = / ?(link|source \d+) ↗/g;
+
+function checkerDetail(name: string) {
+  const row = CHECKER_TABLE.find((item) => item.name === name);
+  const section = factCheckerVetting.find((item) => row && item.title === `${row.name} ${row.outcome}`);
+  const bullets: string[] = [];
+  const links: { label: string; href: string }[] = [];
+  let next = 0;
+  (section?.paras ?? []).forEach((para) => {
+    const topic = para.includes(":") ? para.slice(0, para.indexOf(":")) : "Source";
+    for (const found of para.matchAll(CHECKER_MARK)) {
+      const link = section?.links[next];
+      next += 1;
+      if (link) links.push({ label: found[1] === "link" ? topic : `${topic} · ${found[1]}`, href: link.href });
+    }
+    const text = para.replace(CHECKER_MARK, "").trim();
+    if (text) bullets.push(text);
+  });
+  (section?.links ?? []).slice(next).forEach((link) => links.push(link));
+  const seen = new Set<string>();
+  return {
+    row,
+    bullets,
+    links: links.filter((link) => {
+      const key = link.label + link.href;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    }),
+  };
 }
 
 function Betrayal() {
@@ -2197,6 +2366,24 @@ function Betrayal() {
   const [aside, setAside] = useState<null | "standard" | "record">(null);
   const [deception, setDeception] = useState<string | null>(null);
   const [spot, setSpot] = useState<null | "cable" | "trump" | "podcasts" | "cspan">(null);
+  const [checkerPick, setCheckerPick] = useState<string | null>(null);
+  const [checkerName, setCheckerName] = useState<string | null>(null);
+  const [checkerHref, setCheckerHref] = useState<string | null>(null);
+  const checkerBack = () => {
+    if (checkerHref) {
+      setCheckerHref(null);
+      return true;
+    }
+    if (checkerName) {
+      setCheckerName(null);
+      return true;
+    }
+    if (checkerPick) {
+      setCheckerPick(null);
+      return true;
+    }
+    return false;
+  };
   const newsBack = () => {
     if (newsSource) {
       setNewsSource(null);
@@ -2224,6 +2411,25 @@ function Betrayal() {
       return;
     }
     setLayer("fake");
+  };
+  const lawBack = () => {
+    if (lawHref) {
+      setLawHref(null);
+      return;
+    }
+    if (lawCase) {
+      setLawCase(null);
+      return;
+    }
+    if (lawPick && lawPick.includes(":")) {
+      setLawPick(lawPick.slice(0, lawPick.indexOf(":")));
+      return;
+    }
+    if (lawPick) {
+      setLawPick(null);
+      return;
+    }
+    setLawOn(false);
   };
   const newsMine = !!newsMethod && (newsMethod.startsWith("chart-term") || newsMethod.startsWith("chart-evidence:never"));
   const buttons = layer === "root" ? ["Fake News", "Lawfare"] : LAYERS[layer].buttons;
@@ -2390,6 +2596,9 @@ function Betrayal() {
                   type="button"
                   onClick={() => {
                     setSpot(null);
+                    setCheckerPick(null);
+                    setCheckerName(null);
+                    setCheckerHref(null);
                     setDeception(item.id);
                   }}
                   className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
@@ -3065,6 +3274,7 @@ function Betrayal() {
               onPick={setLawPick}
               onCase={setLawCase}
               onSource={setLawHref}
+              onBack={lawBack}
             />
           </div>
         )}
@@ -3084,6 +3294,7 @@ function Betrayal() {
             <button
               type="button"
               onClick={() => {
+                if (checkerBack()) return;
                 if (spot) {
                   setSpot(null);
                   return;
@@ -3095,8 +3306,85 @@ function Betrayal() {
             >
               {spot === "cable" ? "Cable news" : spot === "trump" ? "Trump TV" : spot === "podcasts" ? "Podcasts" : spot === "cspan" ? "C-SPAN" : DECEPTION.find((item) => item.id === deception)?.title}
             </button>
-            {deception === "checkers" ? (
+            {deception === "checkers" && checkerHref ? (
+              <div className="w-full">
+                <SourcePage
+                  label={checkerName ? (checkerDetail(checkerName).links.find((link) => link.href === checkerHref)?.label ?? checkerHref) : checkerHref}
+                  href={checkerHref}
+                />
+              </div>
+            ) : deception === "checkers" && checkerName ? (
+              (() => {
+                const detail = checkerDetail(checkerName);
+                const color = CHECKER_COLORS[CHECKER_GROUPS.indexOf(detail.row?.outcome ?? "")] ?? "#a3a3a3";
+                return (
+                  <div className="mt-8 w-full rounded-2xl border border-white/20 bg-[#070b12]/85 px-5 py-5 text-left">
+                    <span className="inline-block rounded-full border-2 px-4 py-1.5 text-[18px] font-bold" style={{ borderColor: color, color }}>
+                      {detail.row?.outcome ?? "Not on record"}
+                    </span>
+                    <p className="mt-4 text-[20px] font-semibold text-white">{checkerName}</p>
+                    <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+                      {detail.bullets.length ? detail.bullets.map((line) => <li key={line} className="mt-2">{line}</li>) : <li>Not on record</li>}
+                    </ul>
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {detail.links.map((link) => (
+                        <button
+                          key={link.label + link.href}
+                          type="button"
+                          onClick={() => setCheckerHref(link.href)}
+                          className="min-h-11 w-fit rounded-full border border-[#d4af37]/70 bg-[#070b12]/80 px-4 py-2 text-[15px] font-semibold text-white"
+                        >
+                          {link.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })()
+            ) : deception === "checkers" && checkerPick ? (
+              (() => {
+                const rows = checkerPick === "all" ? CHECKER_TABLE : CHECKER_TABLE.filter((row) => row.outcome === checkerPick);
+                return (
+                  <div className="mt-8 flex w-full flex-col gap-3">
+                    <p className="text-center text-[18px] font-semibold text-white">
+                      {checkerPick === "all" ? "All fact-checkers tested" : checkerPick} · {rows.length}
+                    </p>
+                    {rows.map((row) => (
+                      <button key={row.name} type="button" onClick={() => setCheckerName(row.name)} className={LAYER_ROW}>
+                        <span className="flex items-center gap-2">
+                          <span className="inline-block h-3 w-3 shrink-0 rounded-sm" style={{ background: CHECKER_COLORS[CHECKER_GROUPS.indexOf(row.outcome)] }} />
+                          {row.name}
+                        </span>
+                        <span className="mt-1 block font-normal text-white/80">{row.owner}</span>
+                        <span className="mt-1 block font-normal text-[#d4af37]">Confirms {row.confirms} of our cases</span>
+                      </button>
+                    ))}
+                  </div>
+                );
+              })()
+            ) : deception === "checkers" ? (
               <div className="mt-8 w-full text-left">
+                <p className="text-center text-[18px] font-semibold tracking-wide text-white">Who Is Fact-Checking the Fact-Checkers?</p>
+                <LayerChart
+                  title="Who Is Fact-Checking the Fact-Checkers?"
+                  line="16 fact-checkers, same 7 tests · Evidence as of Sep. 24, 2026"
+                  labels={CHECKER_GROUPS}
+                  data={CHECKER_DATA}
+                  colors={CHECKER_COLORS}
+                  type="doughnut"
+                  horizontal={false}
+                  bullets={["A fact-checker is never our proof, only a second confirmation.", "Same 7 tests for every checker, left and right."]}
+                  center={{ big: String(CHECKER_TABLE.length), small: "Tested", onOpen: () => setCheckerPick("all") }}
+                  onPick={(index) => setCheckerPick(CHECKER_GROUPS[index])}
+                />
+                <LayerTiles
+                  tiles={CHECKER_GROUPS.map((group, index) => ({
+                    key: group,
+                    label: group,
+                    image: CHECKER_TILES[index],
+                    onOpen: () => setCheckerPick(group),
+                  }))}
+                />
                 {factCheckerVetting.map((section) => (
                   <section key={section.title} className="mt-8">
                     <h2 className="text-[16px] font-semibold text-white">{section.title}</h2>
@@ -3235,19 +3523,7 @@ function Betrayal() {
               aria-label="Back"
               onClick={() => {
                 if (layer === "lawfare" && lawOn) {
-                  if (lawHref) {
-                    setLawHref(null);
-                    return;
-                  }
-                  if (lawCase) {
-                    setLawCase(null);
-                    return;
-                  }
-                  if (lawPick) {
-                    setLawPick(null);
-                    return;
-                  }
-                  setLawOn(false);
+                  lawBack();
                   return;
                 }
                 if (source) {
@@ -3266,6 +3542,7 @@ function Betrayal() {
                   setSpot(null);
                   return;
                 }
+                if (checkerBack()) return;
                 if (deception) {
                   setDeception(null);
                   setLayer("fake");
