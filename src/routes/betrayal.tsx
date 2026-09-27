@@ -1065,8 +1065,48 @@ function PeriodChart({
   }, [key]);
   return (
     <div className="relative w-full" style={{ height: horizontal ? Math.max(240, labels.length * 38 + 60) : 320 }}>
-      <canvas ref={canvasRef} aria-label={title} />
+      <canvas
+        ref={canvasRef}
+        aria-label={title}
+        onClick={(event) => {
+          const canvas = canvasRef.current;
+          const Chart = (window as unknown as { Chart?: { getChart: (el: HTMLCanvasElement) => PeriodChartApi | undefined } }).Chart;
+          const chart = canvas && Chart ? Chart.getChart(canvas) : undefined;
+          if (!canvas || !chart) return;
+          const box = canvas.getBoundingClientRect();
+          const x = event.clientX - box.left;
+          const y = event.clientY - box.top;
+          const onLabel = horizontal ? x < chart.chartArea.left : y > chart.chartArea.bottom;
+          if (!onLabel) return;
+          const at = Math.round(horizontal ? chart.scales.y.getValueForPixel(y) : chart.scales.x.getValueForPixel(x));
+          if (at >= 0 && at < labels.length) pickRef.current(at);
+        }}
+      />
     </div>
+  );
+}
+
+type PeriodChartApi = {
+  chartArea: { left: number; bottom: number };
+  scales: Record<string, { getValueForPixel: (px: number) => number }>;
+};
+
+function PeriodKeys({ labels, data, colors, onPick }: { labels: string[]; data: number[]; colors: string[]; onPick: (index: number) => void }) {
+  return (
+    <ul className="mt-4 flex flex-col gap-1">
+      {labels.map((label, index) => (
+        <li key={label}>
+          <button
+            type="button"
+            onClick={() => onPick(index)}
+            className="flex min-h-11 w-full items-center gap-3 rounded-xl border-0 bg-transparent px-2 py-2 text-left text-[15px] font-semibold text-white hover:bg-white/5"
+          >
+            <span className="inline-block h-4 w-4 shrink-0 rounded-sm" style={{ background: colors[index] ?? colors[0] }} />
+            {label} · {data[index]}
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -1339,6 +1379,12 @@ function NewsPeriodLayers({
             horizontal
             onPick={(index) => open(groups[index].label)}
           />
+          <PeriodKeys
+            labels={groups.map((item) => item.label)}
+            data={groups.map((item) => item.count)}
+            colors={colors}
+            onPick={(index) => open(groups[index].label)}
+          />
         </div>
         <div className="mt-6 flex w-full flex-col gap-2">
           {groups.map((item) => (
@@ -1382,6 +1428,12 @@ function NewsPeriodLayers({
           data={periods.map((item) => item.count)}
           colors={periods.map(() => "#d4af37")}
           horizontal={false}
+          onPick={(index) => onPath([periods[index].key])}
+        />
+        <PeriodKeys
+          labels={periods.map((item) => item.key)}
+          data={periods.map((item) => item.count)}
+          colors={periods.map(() => "#d4af37")}
           onPick={(index) => onPath([periods[index].key])}
         />
       </div>
