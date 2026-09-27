@@ -68,7 +68,7 @@ const LAYERS: Record<Exclude<Layer, "root">, { back: Layer; title: string; butto
   impeach: {
     back: "lawfare",
     title: "Impeachments",
-    buttons: ["First, 2019", "Second, 2021"],
+    buttons: ["First, 2019", "Second, 2021", "Clinton, 1998"],
   },
   citizen: {
     back: "lawfare",
@@ -1149,7 +1149,7 @@ function NewsCaseDetail({ row, onSource }: { row: NewsCaseRow; onSource: (href: 
 const LAYER_TILE = "flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0";
 const LAYER_TILE_IMG = "h-44 w-full rounded-2xl border border-white/30 object-cover";
 
-function LayerTileImage({ src, label }: { src: string; label: string }) {
+function LayerTileImage({ src, label, square }: { src: string; label: string; square?: boolean }) {
   const ref = useRef<HTMLImageElement>(null);
   const [missing, setMissing] = useState(false);
   useEffect(() => {
@@ -1158,21 +1158,21 @@ function LayerTileImage({ src, label }: { src: string; label: string }) {
   }, [src]);
   if (missing) {
     return (
-      <span aria-hidden="true" className="flex h-44 w-full items-center justify-center rounded-2xl border border-white/30 bg-[#0b1220] px-5 text-center text-[16px] font-semibold leading-snug tracking-wide text-white/85">
+      <span aria-hidden="true" className={(square ? "h-52 w-52" : "h-44 w-full") + " flex items-center justify-center rounded-2xl border border-white/30 bg-[#0b1220] px-5 text-center text-[16px] font-semibold leading-snug tracking-wide text-white/85"}>
         {label}
       </span>
     );
   }
-  return <img ref={ref} src={src} alt="" onError={() => setMissing(true)} className={LAYER_TILE_IMG} />;
+  return <img ref={ref} src={src} alt="" onError={() => setMissing(true)} className={square ? "h-52 w-52 rounded-2xl border border-white/30 object-cover" : LAYER_TILE_IMG} />;
 }
 
-function LayerTiles({ tiles }: { tiles: { key: string; label: string; image: string; onOpen: () => void }[] }) {
+function LayerTiles({ tiles, square }: { tiles: { key: string; label: string; image: string; onOpen: () => void }[]; square?: boolean }) {
   return (
     <div className="mt-8 flex w-full flex-wrap items-end justify-center gap-10">
       {tiles.map((tile) => (
-        <button key={tile.key} type="button" onClick={tile.onOpen} className={LAYER_TILE}>
+        <button key={tile.key} type="button" onClick={tile.onOpen} className={square ? "flex w-52 flex-col items-center gap-3 border-0 bg-transparent p-0" : LAYER_TILE}>
           <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">{tile.label}</span>
-          <LayerTileImage src={tile.image} label={tile.label} />
+          <LayerTileImage src={tile.image} label={tile.label} square={square} />
         </button>
       ))}
     </div>
@@ -2086,6 +2086,17 @@ function lawLocal(href: string) {
   return at >= 0 ? href.slice(at) : href;
 }
 
+const LAW_HOME: Record<string, string> = {
+  "Trump Trials": "/images/topic-trials.jpg",
+  Impeachments: "/images/topic-impeach.jpg",
+  "US Citizen Lawfare": "/images/topic-citizen.jpg",
+  "Politicians' bail funds": "/images/topic-bail.jpg",
+  "Scrutiny compared": "/images/topic-scrutiny.jpg",
+  "Assassination attempts": "/images/topic-attempts.jpg",
+  "First 100 days": "/images/topic-first100.jpg",
+  "Lawfare Evidence": "/images/topic-law-evidence.jpg",
+};
+
 const LAW_TILES: Record<string, string> = {
   status: "/images/tile-case-status.jpg",
   period: "/images/tile-cases-by-period.jpg",
@@ -2135,6 +2146,7 @@ function LawfareLayer({
   onPick,
   onCase,
   onSource,
+  onImpeach,
 }: {
   pick: string | null;
   caseId: string | null;
@@ -2142,6 +2154,7 @@ function LawfareLayer({
   onPick: (value: string) => void;
   onCase: (value: string) => void;
   onSource: (value: string) => void;
+  onImpeach?: (file: "2019" | "2021" | "clinton") => void;
 }) {
   const file = lawfareCases;
   const chart = pick ? file.charts.find((item) => item.id === pick.split(":")[0]) : undefined;
@@ -2189,6 +2202,15 @@ function LawfareLayer({
               {source.label}
             </button>
           ))}
+          {row?.name === "Trump" ? (
+            <>
+              <button type="button" onClick={() => onImpeach?.("2019")} className={NEWS_DOOR + " w-fit"}>First, 2019</button>
+              <button type="button" onClick={() => onImpeach?.("2021")} className={NEWS_DOOR + " w-fit"}>Second, 2021</button>
+            </>
+          ) : null}
+          {row?.name === "Clinton" ? (
+            <button type="button" onClick={() => onImpeach?.("clinton")} className={NEWS_DOOR + " w-fit"}>Clinton record</button>
+          ) : null}
         </div>
       </div>
     );
@@ -2336,6 +2358,7 @@ function LawfareLayer({
         })),
         { key: "deception", label: "Deception about Lawfare", image: LAW_TILES.deception, onOpen: () => onPick("deception") },
       ]}
+      square
     />
   );
 }
@@ -2501,6 +2524,7 @@ function LawTopic({
   onPick,
   onCase,
   onSource,
+  onImpeach,
 }: {
   layer: Layer;
   pick: string | null;
@@ -2509,6 +2533,7 @@ function LawTopic({
   onPick: (value: string) => void;
   onCase: (value: string) => void;
   onSource: (value: string) => void;
+  onImpeach?: (file: "2019" | "2021" | "clinton") => void;
 }) {
   const topic = LAW_TOPICS[layer];
   if (!topic) return null;
@@ -2521,7 +2546,7 @@ function LawTopic({
     return (
       <div className="w-full">
         {chart ? <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{chart.title}</p> : null}
-        <LawfareLayer pick={base} caseId={caseId} href={href} onPick={onPick} onCase={onCase} onSource={onSource} />
+        <LawfareLayer pick={base} caseId={caseId} href={href} onPick={onPick} onCase={onCase} onSource={onSource} onImpeach={onImpeach} />
       </div>
     );
   }
@@ -2565,6 +2590,155 @@ function LawTopic({
   );
 }
 
+function ImpeachRecord({
+  file,
+  onOpen,
+}: {
+  file: "2019" | "2021" | "clinton" | "public";
+  onOpen: (next: "2019" | "2021" | "clinton" | "public") => void;
+}) {
+  const link = (href: string, label: string) => (
+    <a key={href} href={href} target="_blank" rel="noopener noreferrer" className={NEWS_DOOR + " text-left"}>
+      {label}
+    </a>
+  );
+  const viewer = (href: string, label: string) => (
+    <div className="mt-4 w-full">
+      <p className="text-[15px] font-semibold text-white">{label}</p>
+      <iframe title={label} src={href} className="mt-2 h-[70vh] w-full rounded-xl border border-white/25 bg-white" />
+    </div>
+  );
+  if (file === "public") {
+    return (
+      <div className="mt-8 w-full text-left">
+        <p className="text-[15px] leading-snug text-white/85">
+          The public does not vote on House rules. Article I, Section 5 says each House determines the rules of its proceedings. A rule against deceiving the public is not in the Code of Official Conduct. These are the lawful ways to press for one.
+        </p>
+        <ul className="mt-4 list-disc pl-5 text-[15px] leading-snug text-white/85">
+          <li>Vote. Representatives are chosen every second year. Article I, Section 2. The House adopts its rules at the opening of each Congress. The members who win that election cast the vote.</li>
+          <li>Ask your representative, in writing, to offer that rule, and to certify a sworn ethics complaint. A person who is not a member cannot force the Ethics Committee to open a case alone. Committee Rule 15 says information from a non-member may be transmitted only if a member certifies in writing that the member believes it is submitted in good faith and warrants the committee’s review.</li>
+          <li>The same procedures say the committee shall not accept, and shall return, a complaint filed within 60 days before an election in which the person named is a candidate.</li>
+          <li>Expulsion of a member takes the concurrence of two-thirds. Article I, Section 5.</li>
+          <li>A duty the Constitution does not impose can be added only by amendment. Article V.</li>
+          <li>A lawsuit over words spoken in an impeachment trial is barred by the Speech or Debate Clause. Article I, Section 6: for any speech or debate in either House, members shall not be questioned in any other place.</li>
+        </ul>
+        <div className="mt-4 flex flex-col gap-2">
+          {link("https://constitution.congress.gov/browse/article-1/section-5/", "Article I, Section 5")}
+          {link("https://constitution.congress.gov/browse/article-1/section-2/", "Article I, Section 2")}
+          {link("https://constitution.congress.gov/browse/article-1/section-6/", "Article I, Section 6")}
+          {link("https://constitution.congress.gov/browse/article-5/", "Article V")}
+          {link("https://ethics.house.gov/file-a-complaint/", "House Ethics: how to submit information")}
+          {link("https://ethics.house.gov/manual/committee-procedures/", "Committee procedures, including Rule 15")}
+        </div>
+      </div>
+    );
+  }
+  const rules = (
+    <>
+      <p className="mt-6 text-[16px] font-semibold text-white">Oath, ethics, and the criminal code</p>
+      <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+        <li>No United States Code was located that a court has held was violated when House managers played a shortened video in the 2021 trial. No judgment finding a crime was located. This page does not invent one.</li>
+        <li>18 U.S.C. § 1001(c) says the false-statement law, inside the legislative branch, applies only to administrative matters, or to an investigation or review conducted under the authority of a committee, subcommittee, commission, or office of Congress. A floor presentation in an impeachment trial is not those two things on the face of the statute.</li>
+        <li>Article I, Section 6 says that for any speech or debate in either House, members shall not be questioned in any other place. That clause is why a criminal case over these words was not found. It is not itself a code that says the edit was lawful.</li>
+        <li>Article VI requires Senators and Representatives to bind themselves by oath or affirmation to support the Constitution. The words administered are the oath in 5 U.S.C. § 3331: support and defend the Constitution, bear true faith and allegiance to it, and well and faithfully discharge the duties of the office. Those words do not say “do not deceive the public.”</li>
+        <li>House Rule XXIII, clause 1, says a member, delegate, resident commissioner, officer, or employee of the House shall behave at all times in a manner that shall reflect creditably on the House. It does not say a member may not deceive the public.</li>
+        <li>The Code of Ethics for Government Service is H. Con. Res. 175, 85th Congress, passed July 11, 1958. The House Ethics Committee prints it as a concurrent resolution, not a criminal statute. Item 2 says uphold the Constitution, laws, and regulations and never be a party to their evasion. Item 9 says expose corruption wherever discovered. Item 10 says: “Uphold these principles, ever conscious that public office is a public trust.” No sentence on that page says members must not deceive the public.</li>
+        <li>No House rule was located that makes members fiduciaries who must not deceive the American people who pay them. There is no House code of ethics that says members may not deceive the American people who pay them.</li>
+      </ul>
+      <div className="mt-4 flex flex-col gap-2">
+        {link("https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1001&num=0&edition=prelim", "18 U.S.C. § 1001")}
+        {link("https://constitution.congress.gov/browse/article-1/section-6/", "Speech or Debate, Article I, Section 6")}
+        {link("https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section3331&num=0&edition=prelim", "Oath, 5 U.S.C. § 3331")}
+        {link("https://constitution.congress.gov/browse/article-6/", "Oath, Article VI")}
+        {link("https://ethics.house.gov/wp-content/uploads/2025/03/Committee-Rules-for-the-119th-Congress.pdf", "House Rule XXIII, in the 119th Congress rules")}
+        {link("https://ethics.house.gov/manual/code-of-ethics-for-government-service-2/", "Code of Ethics for Government Service")}
+      </div>
+      <button type="button" onClick={() => onOpen("public")} className={NEWS_DOOR + " mt-4 text-left"}>
+        How the public can require an ethics rule
+      </button>
+    </>
+  );
+  if (file === "2019") {
+    return (
+      <div className="mt-8 w-full text-left">
+        <p className="text-[15px] leading-snug text-white/85">
+          First impeachment of Donald J. Trump. The House adopted H. Res. 755 on December 18, 2019. Article I is abuse of power. Article II is obstruction of Congress. The Senate trial ran in January and February 2020. The words below are the official articles. The Senate’s compiled trial record is S. Doc. 116-18. The edited January 6 tape is not part of this impeachment. It is in the Second, 2021 file.
+        </p>
+        <div className="mt-4 flex flex-col gap-2">
+          {link("/impeachment-docs/hres-755.pdf", "H. Res. 755, the articles, in this file")}
+          {link("https://www.govinfo.gov/content/pkg/CDOC-116sdoc18/pdf/CDOC-116sdoc18-vol1.pdf", "S. Doc. 116-18, Volume I, Senate trial record")}
+          {link("https://www.govinfo.gov/content/pkg/CDOC-116sdoc18/pdf/CDOC-116sdoc18-vol2.pdf", "S. Doc. 116-18, Volume II")}
+          {link("https://www.govinfo.gov/content/pkg/CDOC-116sdoc18/pdf/CDOC-116sdoc18-vol3.pdf", "S. Doc. 116-18, Volume III")}
+          {link("https://www.govinfo.gov/content/pkg/CRPT-116hrpt335/pdf/CRPT-116hrpt335.pdf", "H. Rept. 116-335, House Intelligence inquiry report")}
+          {link("https://www.govinfo.gov/collection/impeachment-related-publications", "GovInfo impeachment collection, hearing record")}
+          {link("https://www.c-span.org/congress/?chamber=house&date=2019-11-13", "C-SPAN, House, November 13, 2019")}
+          {link("https://www.c-span.org/congress/?chamber=house&date=2019-11-19", "C-SPAN, House, November 19, 2019")}
+          {link("https://www.c-span.org/congress/?chamber=house&date=2019-11-20", "C-SPAN, House, November 20, 2019")}
+          {link("https://www.c-span.org/congress/?chamber=house&date=2019-12-18", "C-SPAN, House vote, December 18, 2019")}
+          {link("https://www.c-span.org/congress/?chamber=senate&date=2020-01-22", "C-SPAN, Senate trial, January 22, 2020")}
+        </div>
+        {viewer("/impeachment-docs/hres-755.pdf", "H. Res. 755")}
+        {rules}
+      </div>
+    );
+  }
+  if (file === "clinton") {
+    return (
+      <div className="mt-8 w-full text-left">
+        <p className="text-[15px] leading-snug text-white/85">
+          Impeachment of William Jefferson Clinton. The House adopted H. Res. 611 on December 19, 1998. Article I concerns grand-jury testimony. Article II concerns obstruction of justice. The Senate tried the articles in January and February 1999 and did not convict. Conviction takes two-thirds. Article I, Section 3. The official transcript is Senate Document 106-4, four volumes. The January 6 tape is not part of this trial.
+        </p>
+        <div className="mt-4 flex flex-col gap-2">
+          {link("/impeachment-docs/hres-611.pdf", "H. Res. 611, the articles, in this file")}
+          {link("https://www.govinfo.gov/content/pkg/CDOC-106sdoc4/pdf/CDOC-106sdoc4-vol1.pdf", "S. Doc. 106-4, Volume I, preliminary proceedings")}
+          {link("https://www.govinfo.gov/content/pkg/CDOC-106sdoc4/pdf/CDOC-106sdoc4-vol2.pdf", "S. Doc. 106-4, Volume II, floor trial proceedings")}
+          {link("https://www.govinfo.gov/content/pkg/CDOC-106sdoc4/pdf/CDOC-106sdoc4-vol3.pdf", "S. Doc. 106-4, Volume III, depositions and affidavits")}
+          {link("https://www.govinfo.gov/content/pkg/CDOC-106sdoc4/pdf/CDOC-106sdoc4-vol4.pdf", "S. Doc. 106-4, Volume IV, statements of senators")}
+          {link("https://www.c-span.org/congress/?chamber=senate&date=1999-01-14", "C-SPAN, Senate, January 14, 1999")}
+          {link("https://www.c-span.org/congress/?chamber=senate&date=1999-02-12", "C-SPAN, Senate, February 12, 1999")}
+        </div>
+        {viewer("/impeachment-docs/hres-611.pdf", "H. Res. 611")}
+        {rules}
+      </div>
+    );
+  }
+  return (
+    <div className="mt-8 w-full text-left">
+      <p className="text-[15px] leading-snug text-white/85">
+        Second impeachment of Donald J. Trump. The House adopted H. Res. 24 on January 13, 2021. One article: incitement of insurrection. The Senate trial ran February 9 to 13, 2021. The Senate did not convict. The daily Congressional Record is the official transcript of what was said, and of the videos the Record chose to print. Those five days are in this file.
+      </p>
+      <p className="mt-4 text-[16px] font-semibold text-white">The tapes</p>
+      <p className="mt-2 text-[15px] leading-snug text-white/85">
+        A minute-and-second start time is not printed in the Congressional Record. What is printed is the place in the day’s debate, and the words of the video.
+      </p>
+      <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+        <li>February 9, 2021. Congressional Record, Senate, pages S590 to S591. Lead manager Jamie Raskin said, “I will show you.” The Record then prints “(Video footage of 1–6–2021.)” The printed footage includes: “When we fight, we fight like hell. And if you don’t fight like hell, you’re not going to have a country anymore.” The word “peacefully” does not appear in that day’s Senate Record.</li>
+        <li>H. Res. 24 quotes “if you don’t fight like hell you’re not going to have a country anymore.” The article does not contain the word “peacefully.”</li>
+        <li>C-SPAN’s page for a clip of that February 9 video lists the length as 13 minutes, 3 seconds. C-SPAN says the clip, title, and description were not created by C-SPAN. That figure is the length of the clip. It is not a clock time in the Senate day.</li>
+        <li>February 12, 2021. Congressional Record, Senate, page S671. Mr. Counsel David Schoen played a video. The Record prints “(Text of video presentations.)” and then the remarks, including: “I know that everyone here will soon be marching over to the Capitol Building to peacefully and patriotically make your voices heard.” He said they showed the walk to the Capitol and cut off what followed: to cheer on members, “peacefully and patriotically.” He said, “so they edited it down.”</li>
+        <li>Earlier that day, Mr. Counsel Michael van der Veen said the January 6 remarks “explicitly encouraged those in attendance to exercise their rights ‘peacefully and patriotically.’”</li>
+        <li>The Record does not print one uninterrupted play of the entire Ellipse speech. It prints the passage the February 9 transcript left out, and counsel saying the managers edited it down. A frame time for the first second of that defense tape was not located.</li>
+      </ul>
+      <div className="mt-4 flex flex-col gap-2">
+        {link("/impeachment-docs/hres-24.pdf", "H. Res. 24, the article, in this file")}
+        {link("/impeachment-docs/crec-2021-02-09-senate.pdf", "Congressional Record, February 9, 2021, the managers’ video")}
+        {link("/impeachment-docs/crec-2021-02-10-senate.pdf", "Congressional Record, February 10, 2021")}
+        {link("/impeachment-docs/crec-2021-02-11-senate.pdf", "Congressional Record, February 11, 2021")}
+        {link("/impeachment-docs/crec-2021-02-12-senate.pdf", "Congressional Record, February 12, 2021, the defense tape")}
+        {link("/impeachment-docs/crec-2021-02-13-senate.pdf", "Congressional Record, February 13, 2021")}
+        {link("https://www.govinfo.gov/app/details/CDOC-117sdoc2", "S. Doc. 117-2, trial briefs and papers")}
+        {link("https://www.c-span.org/program/us-senate/senate-impeachment-trial-day-1-impeachment-managers-constitutionality-arguments/589005", "C-SPAN, February 9, 2021, full Senate day")}
+        {link("https://www.c-span.org/clip/us-senate/user-clip-raskin---house-impeachment-video-evidence/4944581", "C-SPAN user clip of the managers’ video, 13 minutes 3 seconds")}
+        {link("https://www.c-span.org/congress/?chamber=senate&date=2021-02-12", "C-SPAN, February 12, 2021, defense")}
+        {link("https://www.c-span.org/video/?c4945671/attorney-president-trump-calls-impeachment-trial-divisive-unconstituional", "C-SPAN clip, van der Veen and Schoen, February 12")}
+      </div>
+      {viewer("/impeachment-docs/crec-2021-02-09-senate.pdf", "February 9, 2021, Senate Record")}
+      {viewer("/impeachment-docs/crec-2021-02-12-senate.pdf", "February 12, 2021, Senate Record")}
+      {rules}
+    </div>
+  );
+}
+
 function Betrayal() {
   const [layer, setLayer] = useState<Layer>("root");
   const [method, setMethod] = useState<string | null>(null);
@@ -2596,6 +2770,8 @@ function Betrayal() {
   const [topicPick, setTopicPick] = useState<string | null>(null);
   const [topicCase, setTopicCase] = useState<string | null>(null);
   const [topicHref, setTopicHref] = useState<string | null>(null);
+  const [impeachFile, setImpeachFile] = useState<null | "2019" | "2021" | "clinton" | "public">(null);
+  const [impeachFrom, setImpeachFrom] = useState<null | "2019" | "2021" | "clinton">(null);
   const topicBack = () => {
     if (topicHref) {
       setTopicHref(null);
@@ -2705,7 +2881,7 @@ function Betrayal() {
       />
       <div className="pointer-events-none fixed inset-0 bg-[#070b12]/70" />
       <div className="relative z-10">
-        {layer !== "fake" && layer !== "root" && layer !== "types" && layer !== "mechanics" && layer !== "evidence" && layer !== "bail" && !lawOn && (
+        {layer !== "fake" && layer !== "root" && layer !== "types" && layer !== "mechanics" && layer !== "evidence" && layer !== "bail" && layer !== "lawfare" && !lawOn && (
         <nav
           aria-label="Betrayal"
           className="relative flex min-h-14 items-center justify-center bg-[#070b12]/90 px-6 py-2"
@@ -2728,6 +2904,12 @@ function Betrayal() {
                 key={label}
                 type="button"
                 onClick={() => {
+                  if (label === "First, 2019" || label === "Second, 2021" || label === "Clinton, 1998") {
+                    setImpeachFrom(null);
+                    setImpeachFile(label === "First, 2019" ? "2019" : label === "Second, 2021" ? "2021" : "clinton");
+                    setLayer("impeach");
+                    return;
+                  }
                   if (label === "Lawfare Evidence") {
                     setLawPick(null);
                     setLawCase(null);
@@ -3544,6 +3726,45 @@ function Betrayal() {
             )}
           </div>
         )}
+        {layer === "lawfare" && !lawOn && (
+          <div className="mx-auto flex max-w-5xl flex-col items-center px-6 pt-16 pb-24">
+            <button
+              type="button"
+              onClick={() => setLayer("root")}
+              className="border-0 bg-transparent p-0 text-[15px] font-semibold tracking-wide text-white"
+            >
+              Lawfare
+            </button>
+            <div className="mt-8 flex max-w-5xl flex-wrap items-end justify-center gap-8">
+              {LAYERS.lawfare.buttons.map((label) => (
+                <button
+                  key={label}
+                  type="button"
+                  onClick={() => {
+                    if (label === "Lawfare Evidence") {
+                      setLawPick(null);
+                      setLawCase(null);
+                      setLawHref(null);
+                      setLawOn(true);
+                      return;
+                    }
+                    setLawOn(false);
+                    setTopicPick(null);
+                    setTopicCase(null);
+                    setTopicHref(null);
+                    setImpeachFile(null);
+                    const next = NEXT[label];
+                    if (next) setLayer(next);
+                  }}
+                  className="flex w-52 flex-col items-center gap-3 border-0 bg-transparent p-0"
+                >
+                  <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">{label}</span>
+                  <img src={LAW_HOME[label]} alt="" className="h-52 w-52 rounded-2xl border border-white/30 object-cover" />
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
         {layer === "lawfare" && lawOn && (
           <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
             <LawfareScreen
@@ -3568,7 +3789,7 @@ function Betrayal() {
             </button>
           </div>
         )}
-        {LAW_TOPICS[layer] && !lawOn && (
+        {LAW_TOPICS[layer] && !lawOn && !impeachFile && (
           <div className={layer === "bail" ? "mx-auto flex max-w-3xl flex-col items-center px-6 pb-24" : "mx-auto flex max-w-3xl flex-col items-center px-6 pt-6 pb-24"}>
             <LawTopic
               layer={layer}
@@ -3578,6 +3799,31 @@ function Betrayal() {
               onPick={setTopicPick}
               onCase={setTopicCase}
               onSource={setTopicHref}
+              onImpeach={(file) => {
+                setImpeachFrom(null);
+                setImpeachFile(file);
+              }}
+            />
+          </div>
+        )}
+        {layer === "impeach" && impeachFile && (
+          <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
+            <button
+              type="button"
+              onClick={() => {
+                if (impeachFile === "public") setImpeachFile(impeachFrom);
+                else setImpeachFile(null);
+              }}
+              className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
+            >
+              {impeachFile === "2019" ? "First, 2019" : impeachFile === "2021" ? "Second, 2021" : impeachFile === "clinton" ? "Clinton, 1998" : "How the public can require an ethics rule"}
+            </button>
+            <ImpeachRecord
+              file={impeachFile}
+              onOpen={(next) => {
+                if (impeachFile === "2019" || impeachFile === "2021" || impeachFile === "clinton") setImpeachFrom(impeachFile);
+                setImpeachFile(next);
+              }}
             />
           </div>
         )}
@@ -3832,6 +4078,11 @@ function Betrayal() {
               type="button"
               aria-label="Back"
               onClick={() => {
+                if (impeachFile) {
+                  if (impeachFile === "public") setImpeachFile(impeachFrom);
+                  else setImpeachFile(null);
+                  return;
+                }
                 if (layer === "lawfare" && lawOn) {
                   lawBack();
                   return;
