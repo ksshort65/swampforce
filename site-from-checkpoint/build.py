@@ -72,10 +72,14 @@ def nav(active):
     def a(h, label, icon):
         return f'<a href="{h}"{" class=active" if h == active else ""}>{ico(icon)}{e(label)}</a>'
     # Trimmed to 5 (launch, Sep 25, 2026); every page stays reachable from these menus and the footer.
-    facts = EVIDENCE_MENU + [("betrayal.html", "The Betrayal", "How a narrative gets built"), ("opinion.html", "Opinion", "Our view, always labeled")]
+    facts = EVIDENCE_MENU + [("betrayal.html", "The Betrayal", "How a narrative gets built"), ("unverified.html", "Not Yet Verified", "Claims no one has proven"),
+                             ("unverified.html#uv-flawed", "Social Media Weapon", "How a word spreads"), ("opinion.html", "Opinion", "Our view, always labeled")]
+    facts = [x for i, x in enumerate(facts) if x[0] not in [y[0] for y in facts[:i]]]
     betrayal_link = f'<a class="nav-betrayal{" active" if active == "betrayal.html" else ""}" href="betrayal.html">{ico("quote")}<span>The Great American Betrayal</span></a>'
     return (betrayal_link + a("scorecard.html", "Midterms", "chart") + drop("Fact Checks", "search", facts, active)
-            + a("congress.html", "Congress", "capitol")
+            + drop("Congress", "capitol", [("congress.html", "Congress", "Members and votes"), ("accountability-trading.html", "Trading", "Disclosed stock trades"),
+                                           ("lawfare.html", "Lawfare", "Every case against Trump"), ("trump-watch.html", "Trump Watch", "Money, salary, judgments"),
+                                           ("democrats.html#biden-foreign-by-country", "Democrats / Foreign Money", "Bank reports and payments by country")], active)
             + drop("Journal", "book", JOURNAL_MENU + WATCH_MENU, active)
             + drop("For Lawmakers", "file", LAW_MENU, active))
 
@@ -799,13 +803,15 @@ def why_swampforce_exists_box():
     return """<div class="opinion why-swampforce"><p class="opinion-label">Our View</p><h3>Why SwampForce exists</h3>
 <p>Don't judge them by what they tell you. Judge them by what they do.</p>
 <p>We cannot honestly look at these numbers and look away. The official record shows unprecedented government action to interfere in an election, and taxpayer money spent on hoax after hoax. These are the people trusted to oversee our nation.</p>
+<details class="sf-fold why-more"><summary class="btn sm sf-fold-btn"><span class="sf-closed">Read more</span><span class="sf-opened">Show less</span></summary>
 <p>Based on the official record and my research, I believe our government no longer serves us. It lies to us and chooses our leaders for us, and the networks go along, airing identical broadcasts dressed up with opinion. This is the Betrayal of America and of every US citizen.</p>
 <p>An election cannot fix deception on this scale. It only continues it. We are no longer represented in Washington.</p>
 <p>Let me be clear: I am not calling for violence. I am calling on every American who loves this country to turn off the noise, boycott the networks and politicians who deceive us, and start digging into the corruption. No one person can expose it all. We are 300 million. They are few.</p>
 <p>Let's take our country back peacefully and patriotically. Expose the corruption and the collusion, and demand an Article V Convention of States to put We the People back in control.</p>
 <p>Trump may not be perfect, but he is one of us: a citizen who wants the corruption to stop.</p>
 <p>This is our only chance. We must act now.</p>
-<p>— SwampForce Editor</p></div>"""
+<p>— SwampForce Editor</p>
+</details></div>"""
 
 
 def betrayal_verify_box():
@@ -820,6 +826,19 @@ def betrayal_verify_box():
 <li>If a case can't be proven, it's held back</li>
 </ul>
 </aside>"""
+
+
+QUICK_LINKS = [("betrayal.html", "The Great American Betrayal", "quote"), ("fake-news.html", "Fake News", "search"),
+               ("unverified.html#uv-flawed", "Social Media Weapon", "eye"), ("unverified.html", "Not Yet Verified", "eye"),
+               ("lawfare.html", "Lawfare", "scale"), ("scorecard.html", "Midterms", "chart"),
+               ("accountability-trading.html", "Congress / Trading", "capitol"), ("scorecard.html#compare", "Scorecard", "chart"),
+               ("trump-watch.html", "Trump Watch", "eye"), ("democrats.html#biden-foreign-by-country", "Democrats / Foreign Money", "file"),
+               ("journal.html", "Journal", "book"), ("article-v.html", "For Lawmakers / Article V", "file")]
+
+
+def quick_grid():
+    cells = "".join(f'<a class="sf-quick-btn" href="{h}">{ico(i)}<span>{e(t)}</span></a>' for h, t, i in QUICK_LINKS)
+    return f'<nav class="sf-quick wrap" aria-label="Main sections">{cells}</nav>'
 
 
 def betrayal_home():
@@ -862,9 +881,7 @@ def build_home():
     nc = corr["Never corrected by the pusher"]
     picks = [c for c in VCASES if c["proof"] == "Official record" and c["evidence"] == "Proven false"][:3]
     body = f"""
-<div class="wrap betrayal-first">
-{betrayal_home()}
-</div>
+{quick_grid()}
 <section class="hero" style="background-image:url('images/bg-capitol-eagle.jpg')">
  <div class="hero-inner">
   <picture class="hero-lockup"><source srcset="assets/brand/lockup-light.webp" type="image/webp"><img src="assets/brand/lockup-light.png" alt="SwampForce" width="1100" height="583" fetchpriority="high"></picture>
@@ -879,6 +896,9 @@ def build_home():
   <a class="hero-down" href="#front">Midterms · Tuesday, Nov 3, 2026 ↓</a>
  </div>
 </section>
+<div class="wrap betrayal-first">
+{betrayal_home()}
+</div>
 <div class="wrap">
 <aside class="pull-view" aria-label="Our View"><p class="opinion-label">Our View</p>
  <blockquote><p>{e(PEOPLE_VIEW)}</p></blockquote></aside>
@@ -2225,8 +2245,11 @@ def apply_beta_banner():
     for f in (p for p in (SITE / "public_html").rglob("*.html") if "docs" not in p.parts):
         t = f.read_text(encoding="utf-8")
         t = _re.sub(r'<div class="sf-beta-banner"[^>]*>.*?</div>', "", t)
-        if BETA_BANNER:
-            t = _re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + BETA_HTML, t, count=1)
+        if BETA_BANNER:  # inside the sticky header so it stays on screen while scrolling; pages without the header get it after <body>
+            if _re.search(r'<header class="site-header"[^>]*>', t):
+                t = _re.sub(r'(<header class="site-header"[^>]*>)', lambda m: m.group(1) + BETA_HTML, t, count=1)
+            else:
+                t = _re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + BETA_HTML, t, count=1)
         f.write_text(t, encoding="utf-8")
 
 

@@ -1405,3 +1405,15 @@ body.serious .main { background: rgba(250,248,243,.95); }
 .fm-cmp td, .rf-table td { color: #1f2937; } .fm-cmp td a, .rf-table td a { color: #991b1b; }
 .sf-beta-banner { background: #fef3c7; color: #78350f; font: 600 .72rem/1.6 var(--sans, sans-serif); letter-spacing: .06em; text-align: center; padding: 2px 8px; border-bottom: 1px solid #fcd34d; }
 .jr-short-pts { margin: 12px 0 16px; padding-left: 1.2em; font-size: 1.05rem; } .jr-short-pts li { margin: 6px 0; }
+/* Beta banner sits inside the sticky header (toggle: BETA_BANNER in build.py) */
+.site-header .sf-beta-banner { position: relative; z-index: 1; font-size: .74rem; padding: 3px 8px; }
+/* Hero: keep the whole eagle (head at ~9% from the image top, ~70% across) in view at every width */
+.hero { background-position: 70% 0; }
+/* Homepage quick buttons: big, easy to tap */
+.sf-quick { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; padding-top: 18px; padding-bottom: 18px; }
+.sf-quick-btn { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 14px 16px; background: #0c2340; color: #fff; border-radius: 12px;
+  font: 800 1.12rem/1.25 var(--sans, sans-serif); text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,.25); border: 2px solid #b91c1c; }
+.sf-quick-btn:hover, .sf-quick-btn:focus { background: #b91c1c; }
+.sf-quick-btn svg { width: 28px; height: 28px; flex: none; }
+.why-more > summary { margin: 4px 0 8px; }
+.sf-quick.wrap { margin-top: 16px; margin-bottom: 16px; }
