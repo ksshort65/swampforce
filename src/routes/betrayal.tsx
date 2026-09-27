@@ -2404,14 +2404,6 @@ function Betrayal() {
                   />
                 </button>
               ))}
-              <a
-                href="/great-american-betrayal.html"
-                className="flex h-44 w-64 items-center justify-center rounded-2xl border border-white/30 bg-[#070b12] p-0"
-              >
-                <span className="text-center text-[16px] font-semibold tracking-wide text-white">
-                  bot copy
-                </span>
-              </a>
             </div>
           </div>
         )}
