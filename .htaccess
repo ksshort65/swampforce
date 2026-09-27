@@ -1,0 +1,99 @@
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+AddDefaultCharset UTF-8
+
+<IfModule mod_alias.c>
+Redirect 301 /explainer.html /betrayal.html
+Redirect 301 /archive.html /index.html
+Redirect 301 /pump.html /scorecard.html
+Redirect 301 /unsupported.html /unverified.html
+Redirect 301 /midterms.html /scorecard.html
+Redirect 301 /pending.html /index.html
+Redirect 301 /republic.html /foreword.html
+Redirect 301 /dispatch/a-barcode-is-not-a-lock.html /congress.html
+Redirect 301 /dispatch/a-caption-cannot-be-outlawed.html /journal-a-caption-cannot-be-outlawed.html
+Redirect 301 /dispatch/a-war-on-americans.html /journal-a-war-on-americans.html
+Redirect 301 /dispatch/call-these-first.html /journal-call-these-first.html
+Redirect 301 /dispatch/clean-hands.html /foreword.html
+Redirect 301 /dispatch/defund-ice-is-the-tell.html /journal-defund-ice-is-the-tell.html
+Redirect 301 /dispatch/division-is-the-product.html /journal-division-is-the-product.html
+Redirect 301 /dispatch/fema-ran-two-jobs.html /journal-fema-ran-two-jobs.html
+Redirect 301 /dispatch/find-them.html /journal-find-them.html
+Redirect 301 /dispatch/full-time-or-go-home.html /journal-full-time-or-go-home.html
+Redirect 301 /dispatch/how-the-house-was-captured.html /journal-how-the-house-was-captured.html
+Redirect 301 /dispatch/it-does-not-fit.html /congress.html
+Redirect 301 /dispatch/not-a-part-time-job.html /journal-not-a-part-time-job.html
+Redirect 301 /dispatch/one-word.html /journal-one-word.html
+Redirect 301 /dispatch/paying-the-taliban.html /journal-paying-the-taliban.html
+Redirect 301 /dispatch/sixty-percent.html /journal-sixty-percent.html
+Redirect 301 /dispatch/that-is-not-why-they-are-elected.html /journal-they-forgot-who-they-work-for.html
+Redirect 301 /dispatch/the-7-billion-machine.html /journal-the-7-billion-machine.html
+Redirect 301 /dispatch/the-bill-they-sent.html /journal-the-bill-they-sent.html
+Redirect 301 /dispatch/the-caption-was-not-the-charge.html /journal-the-caption-was-not-the-charge.html
+Redirect 301 /dispatch/the-check-they-will-not-write.html /congress.html
+Redirect 301 /dispatch/the-debt-they-will-not-close.html /journal-the-debt-they-will-not-close.html
+Redirect 301 /dispatch/the-democrat-ledger.html /journal-the-democrat-ledger.html
+Redirect 301 /dispatch/the-docket.html /journal-the-docket.html
+Redirect 301 /dispatch/the-file-on-the-man.html /journal-the-file-on-the-man.html
+Redirect 301 /dispatch/the-floor-not-the-feed.html /journal-the-floor-not-the-feed.html
+Redirect 301 /dispatch/the-funnel.html /journal-the-funnel.html
+Redirect 301 /dispatch/the-hire-is-the-country.html /journal-the-hire-is-the-country.html
+Redirect 301 /dispatch/the-hospital-and-the-morgue.html /journal-the-hospital-and-the-morgue.html
+Redirect 301 /dispatch/the-law-they-dont-mention.html /journal-the-law-they-dont-mention.html
+Redirect 301 /dispatch/the-line-in-the-sand.html /journal-the-line-in-the-sand.html
+Redirect 301 /dispatch/the-media-ledger.html /journal-the-media-ledger.html
+Redirect 301 /dispatch/the-noise.html /journal-the-noise.html
+Redirect 301 /dispatch/the-pool.html /journal-the-pool.html
+Redirect 301 /dispatch/the-recess-blockade.html /journal-the-recess-blockade.html
+Redirect 301 /dispatch/the-record-not-the-rally.html /journal-the-record-not-the-rally.html
+Redirect 301 /dispatch/the-republic-not-the-caption.html /journal-the-republic-not-the-caption.html
+Redirect 301 /dispatch/the-republican-ledger.html /journal-the-republican-ledger.html
+Redirect 301 /dispatch/the-statute-is-the-end.html /journal-the-statute-is-the-end.html
+Redirect 301 /dispatch/the-uniparty-mirror.html /journal-the-uniparty-mirror.html
+Redirect 301 /dispatch/the-whole-bill.html /journal-the-whole-bill.html
+Redirect 301 /dispatch/the-word-that-never-made-the-docket.html /journal-the-word-that-never-made-the-docket.html
+Redirect 301 /dispatch/they-called-it-protest.html /journal-they-called-it-protest.html
+Redirect 301 /dispatch/they-clipped-the-tape.html /journal-they-clipped-the-tape.html
+Redirect 301 /dispatch/they-dont-debate-they-flag.html /journal-they-dont-debate-they-flag.html
+Redirect 301 /dispatch/they-dont-write-the-bills.html /journal-they-dont-write-the-bills.html
+Redirect 301 /dispatch/they-hold-it-by-the-blade.html /journal-they-hold-it-by-the-blade.html
+Redirect 301 /dispatch/they-let-them-walk.html /journal-they-let-them-walk.html
+Redirect 301 /dispatch/they-opened-the-border.html /journal-they-opened-the-border.html
+Redirect 301 /dispatch/they-published-the-replacement.html /journal-they-published-the-replacement.html
+Redirect 301 /dispatch/they-ran-it-anyway.html /journal-they-ran-it-anyway.html
+Redirect 301 /dispatch/they-sold-the-split.html /journal-they-sold-the-split.html
+Redirect 301 /dispatch/they-want-a-new-constitution.html /journal-they-want-a-new-constitution.html
+Redirect 301 /dispatch/they-work-for-us.html /journal-they-work-for-us.html
+Redirect 301 /dispatch/this-congress-cannot-police-itself.html /journal-this-congress-cannot-police-itself.html
+Redirect 301 /dispatch/we-the-people.html /journal-we-the-people.html
+Redirect 301 /dispatch/what-he-told-them.html /journal-what-he-told-them.html
+Redirect 301 /dispatch/what-the-democratic-party-became.html /journal-what-the-democratic-party-became.html
+Redirect 301 /dispatch/what-the-republican-party-became.html /journal-what-the-republican-party-became.html
+Redirect 301 /dispatch/what-the-taxpayer-bought.html /journal-what-the-taxpayer-bought.html
+Redirect 301 /dispatch/what-they-are-protecting.html /congress.html
+Redirect 301 /dispatch/what-we-can-do.html /journal-what-we-can-do.html
+Redirect 301 /dispatch/who-got-paid.html /journal-who-got-paid.html
+Redirect 301 /dispatch/why-he-became-the-enemy.html /journal-why-he-became-the-enemy.html
+Redirect 301 /dispatch/why-the-lobby-should-be-illegal.html /journal-why-the-lobby-should-be-illegal.html
+RedirectMatch 301 ^/dispatch/?$ /index.html
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^.]+)$ $1.html [L]
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType application/javascript "access plus 7 days"
+ExpiresByType image/jpeg "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+</IfModule>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>

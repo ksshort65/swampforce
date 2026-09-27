@@ -1,0 +1,1 @@
+/* The merch shop is intentionally offline until products are ready. */

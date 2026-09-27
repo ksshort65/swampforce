@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://swampforce.com/sitemap.xml

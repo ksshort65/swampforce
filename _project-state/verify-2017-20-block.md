@@ -1,0 +1,42 @@
+# SuperGrok fact-check verification — 2017–2020 block
+
+Checked 2026-09-26 12:38 PM MDT. Only the supplied URLs were opened, plus direct official links found on those pages. No site files were edited; only this project-state report and the leads append were changed.
+
+## Catalog duplicate check
+
+Search scope: `/workspace/site-from-checkpoint`, excluding `public_html`, `shots`, and `_snap*`, including `watch-data`.
+
+| Search lead | Matches in allowed catalog scope |
+|---|---|
+| Spicer | None |
+| largest audience | None |
+| perfect call | None |
+| 6% | Broad, unrelated hits in `journal-data/essays_spec.py`, `journal.py`, `midterms.py`, `review-queue/censorship-candidates.csv`, `watch-data/betrayal-cases.csv`, `watch.py`, and `watch2.py`; no COVID 6% case |
+| CDC | Broad references in `INVENTORY.md`, `balance-report.md`, `balance.py`, `journal-data/essay-facts.json`, and `watch2.py`; no matching 2017–20 case |
+| Schiff | Related material in `INVENTORY.md`, `balance-report.md`, `balance.py`, `build.py`, `journal-data/essay-facts.json`, and `journal-data/essays_spec.py`; the exact “more than circumstantial” lead is in `journal-data/essay-facts.json` |
+| circumstantial | `journal-data/essay-facts.json` contains the exact “more than circumstantial evidence” wording |
+| Nunes | None |
+| 45 nations | None |
+| tax cut | Broad references in `grokgap.py`, `journal-data/essay-facts.json`, and `midterms.py`; no Biden 2019 “all tax cuts” case |
+
+## Results
+
+| Case | Verdict | Exact quote / claim found | Qualifying official sentence or number | Links | In catalog? |
+|---|---|---|---|---|---|
+| 1. Spicer, Jan. 21, 2017 | **VERIFIED-MISLEADING** | White House: “This was the largest audience to ever witness an inauguration — period — both in person and around the globe.” | WMATA’s official post, reproduced on the supplied FactCheck page: “Metro Ridership: As of 11am, 193k trips taken so far today. (11am 1/20/13 = 317k, 11am 1/20/09 = 513k, 11am 1/20/05 = 197k) #wmata.” The page also reports Metro full-day figures of **570,557** (2017), **782,000** (2013), and **1.1 million** (2009). This disproves “largest” on the in-person/transit comparison, but no official comprehensive worldwide audience count was located, so the global-total part is not independently verified. | https://trumpwhitehouse.archives.gov/briefings-statements/statement-press-secretary-sean-spicer/ ; https://www.factcheck.org/2017/01/the-facts-on-crowd-size/ ; WMATA post linked on that page: https://twitter.com/wmata/status/822482330346487810?ref_src=twsrc%5Etfw (X returned 403 to the fetcher) | No |
+| 2. Trump CIA speech, Jan. 21, 2017 | **HOLD** | FactCheck quote: “looked like a million-and-a-half people” and “went all the way back to the Washington Monument.” | No qualifying government/court/agency crowd estimate is linked or supplied. The listed page says the National Park Service does not make official estimates. | https://www.factcheck.org/2017/01/the-facts-on-crowd-size/ | No |
+| 3. Trump NYT interview, Dec. 28, 2017 | **HOLD** | Supplied page’s claim: “tremendous collusion on behalf of the Russians and the Democrats.” | No direct official sentence on the “Democrats” portion was established. The listed Barr page was blocked by an access challenge; under the requested rule, “no collusion” is not treated as a direct contradiction of this broader wording. | https://www.washingtonpost.com/news/fact-checker/wp/2017/12/29/in-a-30-minute-interview-president-trump-made-24-false-or-misleading-claims/ ; https://www.justice.gov/archives/opa/speech/attorney-general-william-p-barr-delivers-remarks-release-report-investigation-russian | No |
+| 4. Nunes memo, Feb. 2, 2018 | **HOLD** | NBC’s memo text: “The ‘dossier’ compiled by Christopher Steele (Steele dossier) on behalf of the Democratic National Committee (DNC) and the Hillary Clinton campaign formed an essential part of the Carter Page FISA application.” | No official Inspector General or other qualifying government record is linked on the supplied NBC page. | https://www.nbcnews.com/politics/politics-news/house-intelligence-committee-memo-read-full-transcript-gop-memo-n844116 | No |
+| 5. Schiff, Mar. 22, 2017 | **HOLD** | Lead wording: “more than circumstantial evidence.” No statement link was supplied. | No statement link, so there is no permitted primary quote/source to verify in this pass. | None supplied; catalog’s related entry is `journal-data/essay-facts.json` | **Yes — related/exact wording** |
+| 6. Trump “perfect call,” 2019 | **HOLD** | Lead wording: “perfect call.” | The listed Washington Post page did not provide an accessible official call memo link, and no memo was opened. Judgment-heavy claim remains unresolved under the stated rule. | https://www.washingtonpost.com/politics/2019/12/16/president-trump-has-made-false-or-misleading-claims-over-days | No |
+| 7. CDC “only 6%,” Aug. 30, 2020 | **VERIFIED-FALSE** | FactCheck quote: “This week the CDC quietly updated the Covid number to admit that only 6% of all the 153,504 deaths recorded actually died from Covid. That’s 9,210 deaths. The other 94% had 2 to 3 other serious illnesses and the overwhelming majority were of very advanced age.” | CDC MMWR: “COVID-19 was reported as the underlying cause of death or a contributing cause of death for an estimated **377,883 (11.3%)** of those deaths.” CDC’s linked mortality page explains: “For over 5% of these deaths, COVID-19 was the only cause mentioned on the death certificate,” and for deaths with additional conditions there were “on average, **4.0 additional conditions or causes per death**.” The companion MMWR says **5.5%** of 378,048 COVID-19 death certificates listed COVID-19 without codes for other conditions. The 6% figure was never a claim that only 6% of deaths were caused by COVID-19. | https://www.factcheck.org/2020/09/cdc-did-not-admit-only-6-of-recorded-deaths-from-covid-19/ ; https://www.cdc.gov/nchs/blog/posts/2021/03/new-journal-articles-look-at-provisional-2020-covid-19-death-data.html ; direct CDC links found there: https://www.cdc.gov/mmwr/volumes/70/wr/mm7014e1.htm ; https://www.cdc.gov/mmwr/volumes/70/wr/mm7014e2.htm ; CDC explanation linked by FactCheck: https://www.cdc.gov/nchs/nvss/vsrr/covid_weekly/index.htm?fbclid=IwAR3xvPBE9Q6NXcwqMIGtg439k100XtMfvy-9YBimKZMOSSRpCwiitPLS3vs#Comorbidities | No |
+| 8. Trump 2020 “won/stolen” | **HOLD** | No statement link or exact quote supplied. | No permitted primary statement/source. | None supplied | No |
+| 9. Biden, Apr. 29, 2019 tax cuts | **HOLD** | FactCheck quote: “all of” the tax cuts signed into law by Trump “went to folks at the top and corporations that pay no taxes.” | The listed page cites the non-governmental Tax Policy Center (65% of households paid less; 82% of middle-income earners received a tax cut), but provides no JCT/CBO official table link. Under the rule requiring a qualifying government record, hold. | https://www.factcheck.org/2020/08/bidens-greatest-hits/ | No exact case (only broad “tax cut” hits) |
+| 10. Biden, Apr. 5, 2020, “45 nations” | **HOLD** | FactCheck quote: “45 nations had already moved” to restrict travel from China “before the president moved.” Biden added: “We started off awfully slow.” | The listed page points to Council on Foreign Relations/Think Global Health, not a government/court/agency record; no permitted official contradiction was found. | https://www.factcheck.org/2020/08/bidens-greatest-hits/ | No |
+| 11. Biden CNN town hall, Sept. 2020 | **HOLD** | FactCheck quote: “all the people would still be alive. All the people — I’m not making this up, just look at the data. Look at the data.” Also: “if you just wore this mask ... you would save between now and January, another hundred thousand lives.” | The listed page says the “all” claim has no supporting research and that the 100,000 projection came from IHME, not CDC Director Robert Redfield. However, the page does not link the IHME source or Redfield’s official testimony; under the requested rule this remains HOLD. | https://www.factcheck.org/2020/09/factchecking-bidens-town-hall/ | No |
+
+### Notes on access and source discipline
+
+- The exact DOJ Barr URL returned an access-challenge page; it was not bypassed.
+- The WMATA X URL is the direct agency link embedded on the listed crowd-size page; the fetcher received HTTP 403, so the reproduced agency text on FactCheck was used for the 11 a.m. figure.
+- The CDC MMWR links were followed only because the listed CDC blog directly linked them.

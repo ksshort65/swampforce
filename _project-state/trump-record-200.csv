@@ -1,0 +1,176 @@
+ID,Term,Category,Item,Label,Source_Name,Source_URL,Merged_From
+TR-001,Trump 1,Paycheck & taxes,"Signed the Tax Cuts and Jobs Act into law on Dec. 22, 2017.",Verified,"Congress.gov: H.R. 1 (115th), Tax Cuts and Jobs Act, P.L. 115-97",https://www.congress.gov/bill/115th-congress/house-bill/1,1
+TR-002,Trump 1,Paycheck & taxes,The 2017 tax law lowered most individual income tax rates through 2025.,Verified,"Congress.gov: H.R. 1 (115th), Tax Cuts and Jobs Act, P.L. 115-97",https://www.congress.gov/bill/115th-congress/house-bill/1,2
+TR-003,Trump 1,Paycheck & taxes,The 2017 tax law roughly doubled the standard deduction.,Verified,"Congress.gov: H.R. 1 (115th), Tax Cuts and Jobs Act, P.L. 115-97",https://www.congress.gov/bill/115th-congress/house-bill/1,3
+TR-004,Trump 1,Paycheck & taxes,"The 2017 tax law raised the child tax credit from $1,000 to $2,000 per child.",Verified,"Congress.gov: H.R. 1 (115th), Tax Cuts and Jobs Act, P.L. 115-97",https://www.congress.gov/bill/115th-congress/house-bill/1,4
+TR-005,Trump 1,Jobs & economy,"Before COVID (2019), unemployment rates for Black, Hispanic and Asian workers reached the lowest levels recorded in those BLS series at the time; overall unemployment hit 3.5% in Feb. 2020, the lowest since 1969.",Verified,BLS: civilian unemployment rate chart (includes race/ethnicity series),https://www.bls.gov/charts/employment-situation/civilian-unemployment-rate.htm,12;13;165;166
+TR-006,Trump 1,Energy,The U.S. was a net energy exporter during this period.,Source being added,,,18
+TR-007,Trump 1,Health & VA,FDA sped up approvals of generic drugs.,Source being added,,,24;176
+TR-008,Trump 1,Health & VA,Required drug-price transparency.,Source being added,,,25
+TR-009,Trump 1,Border & immigration,"Created the Migrant Protection Protocols (""Remain in Mexico"").",Source being added,,,33
+TR-010,Trump 1,Law & justice,"Signed the First Step Act (2018), changing federal sentencing and prison-credit rules.",Verified,"Congress.gov: H.R. 5682 (115th), First Step Act, P.L. 115-391",https://www.congress.gov/bill/115th-congress/house-bill/5682,38
+TR-011,Trump 1,Health & VA,"Signed the VA MISSION Act (2018), consolidating the Veterans Choice program and expanding community care.",Verified,"Congress.gov: S. 2372 (115th), VA MISSION Act, P.L. 115-182",https://www.congress.gov/bill/115th-congress/senate-bill/2372,39
+TR-012,Trump 1,Health & VA,VA wait times fell during a period.,Source being added,,,40
+TR-013,Trump 1,Health & VA,"Signed the Right to Try Act (2018), expanding access to experimental drugs for terminally ill patients.",Verified,"Congress.gov: S. 204 (115th), Right to Try Act",https://www.congress.gov/bill/115th-congress/senate-bill/204,42
+TR-014,Trump 1,Paycheck & taxes,"The 2017 tax law created Opportunity Zones, tax incentives for investment in designated low-income census tracts.",Verified,"Congress.gov: H.R. 1 (115th), Tax Cuts and Jobs Act, P.L. 115-97",https://www.congress.gov/bill/115th-congress/house-bill/1,46;167
+TR-015,Trump 1,Health & VA,HHS issued conscience-protection rules for health workers (2019).,Verified,Federal Register: Protecting Statutory Conscience Rights in Health Care,https://www.federalregister.gov/documents/2019/05/21/2019-09667/protecting-statutory-conscience-rights-in-health-care-delegations-of-authority,55;169
+TR-016,Trump 1,Health & VA,Reinstated the Mexico City Policy on overseas abortion funding (Jan. 2017).,Verified,"Federal Register: Presidential memorandum, The Mexico City Policy",https://www.federalregister.gov/documents/2017/01/25/2017-01843/the-mexico-city-policy,56
+TR-017,Trump 1,Health & VA,HHS changed Title X family-planning grant rules (2019).,Verified,"Federal Register: Title X rule, Compliance With Statutory Program Integrity Requirements",https://www.federalregister.gov/documents/2019/03/04/2019-03461/compliance-with-statutory-program-integrity-requirements,57
+TR-018,Trump 1,Jobs & economy,Signed EO 13771 requiring agencies to repeal two regulations for each new one.,Verified,"Federal Register: EO 13771, Reducing Regulation and Controlling Regulatory Costs",https://www.federalregister.gov/documents/2017/02/03/2017-02451/reducing-regulation-and-controlling-regulatory-costs,58
+TR-019,Trump 1,Energy,"EPA and the Army Corps narrowed the federal definition of ""waters of the United States"" (Navigable Waters Protection Rule, 2020).",Verified,Federal Register: Navigable Waters Protection Rule,https://www.federalregister.gov/documents/2020/04/21/2020-02500/the-navigable-waters-protection-rule-definition-of-waters-of-the-united-states,59
+TR-020,Trump 1,Energy,EPA repealed the Clean Power Plan and replaced it with the Affordable Clean Energy rule (2019).,Verified,Federal Register: Repeal of the Clean Power Plan / ACE rule,https://www.federalregister.gov/documents/2019/07/08/2019-13507/repeal-of-the-clean-power-plan-emission-guidelines-for-greenhouse-gas-emissions-from-existing,60
+TR-021,Trump 1,Jobs & economy,"The FCC repealed the 2015 net neutrality rules (""Restoring Internet Freedom"" order).",Verified,Federal Register: FCC Restoring Internet Freedom order,https://www.federalregister.gov/documents/2018/02/22/2018-03464/restoring-internet-freedom,61
+TR-022,Trump 1,Jobs & economy,Council on Environmental Quality revised NEPA regulations (2020) to streamline environmental reviews.,Verified,"Federal Register: CEQ NEPA regulations update, July 16, 2020",https://www.federalregister.gov/documents/2020/07/16/2020-15179/update-to-the-regulations-implementing-the-procedural-provisions-of-the-national-environmental,62
+TR-023,Trump 1,Paycheck & taxes,The 2017 tax law cut the corporate income tax rate from 35% to 21%.,Verified,"Congress.gov: H.R. 1 (115th), Tax Cuts and Jobs Act, P.L. 115-97",https://www.congress.gov/bill/115th-congress/house-bill/1,65
+TR-024,Trump 1,Jobs & economy,Stock market indexes (including the S&P 500) reached record highs during the term.,Source being added,,,66;164
+TR-025,Trump 1,Trade,"Signed the United States-Mexico-Canada Agreement (USMCA) implementation law, replacing NAFTA (Jan. 2020).",Verified,"Congress.gov: H.R. 5430 (116th), USMCA Implementation Act",https://www.congress.gov/bill/116th-congress/house-bill/5430,72
+TR-026,Trump 1,Trade,Signed the Phase One trade agreement with China (Jan. 2020).,Source being added,,,73
+TR-027,Trump 1,Trade,Imposed Section 232 tariffs on steel (25%) and aluminum (10%) imports (March 2018).,Verified,"Federal Register: Proclamation, Adjusting Imports of Steel Into the United States (2018)",https://www.federalregister.gov/documents/2018/03/15/2018-05478/adjusting-imports-of-steel-into-the-united-states,74;159
+TR-028,Trump 1,Family & other,Signed the 2018 farm bill (Agriculture Improvement Act).,Verified,"Congress.gov: H.R. 2 (115th), Agriculture Improvement Act of 2018",https://www.congress.gov/bill/115th-congress/house-bill/2,77
+TR-029,Trump 1,Energy,The 2017 tax law required oil and gas lease sales in the Arctic National Wildlife Refuge coastal plain.,Verified,"Congress.gov: H.R. 1 (115th), Tax Cuts and Jobs Act, P.L. 115-97",https://www.congress.gov/bill/115th-congress/house-bill/1,81
+TR-030,Trump 1,Energy,Issued presidential memoranda advancing the Keystone XL and Dakota Access pipelines (Jan. 2017).,Verified,"Federal Register: Presidential memorandum on Keystone XL, Jan. 24, 2017",https://www.federalregister.gov/documents/2017/01/30/2017-02035/construction-of-the-keystone-xl-pipeline,84
+TR-031,Trump 1,Military & foreign policy,Created the U.S. Space Force through the FY2020 defense authorization law.,Verified,"Congress.gov: S. 1790 (116th), NDAA for FY2020, P.L. 116-92",https://www.congress.gov/bill/116th-congress/senate-bill/1790,91
+TR-032,Trump 1,Law & justice,"Appointed Supreme Court Justices Neil Gorsuch, Brett Kavanaugh and Amy Coney Barrett.",Verified,Supreme Court: current members,https://www.supremecourt.gov/about/biographies.aspx,95
+TR-033,Trump 1,Law & justice,White House says a record number of federal judges were confirmed.,White House claim,,,96
+TR-034,Trump 1,Health & VA,"Operation Warp Speed funded and sped development and manufacturing of COVID-19 vaccines, authorized in Dec. 2020.",Source being added,,,101;102;189
+TR-035,Trump 1,Border & immigration,Built border barrier segments and tested wall prototypes.,Source being added,,,103;181
+TR-036,Trump 1,Border & immigration,Implemented asylum cooperative agreements with Central American countries (2019 rule).,Verified,Federal Register: Asylum Cooperative Agreements rule,https://www.federalregister.gov/documents/2019/11/19/2019-25137/implementing-bilateral-and-multilateral-asylum-cooperative-agreements-under-the-immigration-and,104
+TR-037,Trump 1,Border & immigration,"DHS expanded the ""public charge"" test for green-card applicants (2019 rule).",Verified,Federal Register: Inadmissibility on Public Charge Grounds,https://www.federalregister.gov/documents/2019/08/14/2019-17142/inadmissibility-on-public-charge-grounds,105
+TR-038,Trump 1,Border & immigration,Issued travel restrictions on nationals of several countries (Proclamation 9645); the Supreme Court upheld it in Trump v. Hawaii (2018).,Verified,"Supreme Court: Trump v. Hawaii, No. 17-965",https://www.supremecourt.gov/opinions/17pdf/17-965_h315.pdf,109
+TR-039,Trump 1,Military & foreign policy,"Brokered the Abraham Accords normalizing relations between Israel and the UAE and Bahrain (Sept. 2020), later joined by Morocco and Sudan.",Verified,State Department: The Abraham Accords,https://www.state.gov/the-abraham-accords,116;193;194;195
+TR-040,Trump 1,Military & foreign policy,Recognized Jerusalem as Israel's capital and moved the U.S. embassy there (proclamation Dec. 2017; embassy opened May 2018).,Verified,Federal Register: Proclamation recognizing Jerusalem,https://www.federalregister.gov/documents/2017/12/11/2017-26832/recognizing-jerusalem-as-the-capital-of-the-state-of-israel-and-relocating-the-united-states-embassy,117;196
+TR-041,Trump 1,Military & foreign policy,Recognized Israeli sovereignty over the Golan Heights (March 2019).,Verified,Federal Register: Proclamation recognizing the Golan Heights,https://www.federalregister.gov/documents/2019/03/28/2019-06199/recognizing-the-golan-heights-as-part-of-the-state-of-israel,118;196
+TR-042,Trump 1,Military & foreign policy,"Withdrew from the Iran nuclear deal (May 2018) and reimposed sanctions (""maximum pressure"").",Source being added,,,119;197
+TR-043,Trump 1,Military & foreign policy,Ordered the strike that killed Iranian general Qassem Soleimani (Jan. 2020).,Source being added,,,120
+TR-044,Trump 1,Military & foreign policy,U.S. forces killed ISIS leader Abu Bakr al-Baghdadi in a raid (Oct. 2019).,Source being added,,,121
+TR-045,Trump 1,Military & foreign policy,ISIS lost the last of its territorial caliphate (March 2019).,Source being added,,,122
+TR-046,Trump 1,Military & foreign policy,Pressed NATO allies to increase defense spending.,Source being added,,,128
+TR-047,Trump 1,Trade,Withdrew the U.S. from the Trans-Pacific Partnership (Jan. 2017).,Verified,"Federal Register: Presidential memorandum, TPP withdrawal",https://www.federalregister.gov/documents/2017/01/25/2017-01845/withdrawal-of-the-united-states-from-the-trans--pacific-partnership-negotiations-and-agreement,129
+TR-048,Trump 1,Military & foreign policy,Withdrew from the Paris climate agreement (effective Nov. 2020).,Source being added,,,130
+TR-049,Trump 1,Military & foreign policy,Withdrew from the INF missile treaty (2019).,Source being added,,,131
+TR-050,Trump 1,Border & immigration,Used tariff threats against Mexico to press for migration enforcement (2019).,Source being added,,,134
+TR-051,Trump 1,Family & other,Created the 1776 Commission on civics education (EO 13958).,Verified,Federal Register: EO 13958,https://www.federalregister.gov/documents/2020/11/05/2020-24793/establishing-the-presidents-advisory-1776-commission,139
+TR-052,Trump 1,Jobs & economy,Signed EO 13801 to expand apprenticeship programs.,Verified,"Federal Register: EO 13801, Expanding Apprenticeships in America",https://www.federalregister.gov/documents/2017/06/20/2017-13012/expanding-apprenticeships-in-america,140
+TR-053,Trump 1,Family & other,Charter schools grew during this period.,Source being added,,,142
+TR-054,Trump 1,Family & other,Supported D.C. Opportunity Scholarships.,Source being added,,,143
+TR-055,Trump 1,Family & other,Signed EO 13798 on free speech and religious liberty.,Verified,Federal Register: EO 13798,https://www.federalregister.gov/documents/2017/05/09/2017-09574/promoting-free-speech-and-religious-liberty,144
+TR-056,Trump 1,Family & other,Protected faith-based adoption and foster-care providers.,Source being added,,,145
+TR-057,Trump 1,Law & justice,ATF rolled back some firearm rules.,Source being added,,,146
+TR-058,Trump 1,Paycheck & taxes,Opportunity Zone funds deployed investment in designated tracts.,Source being added,,,147
+TR-059,Trump 1,Trade,Imposed Section 301 tariffs on imports from China.,Source being added,,,158
+TR-060,Trump 1,Family & other,Education Department issued a Title IX rule (2020) adding due-process protections in campus sexual-misconduct cases.,Verified,Federal Register: 2020 Title IX rule,https://www.federalregister.gov/documents/2020/05/19/2020-10512/nondiscrimination-on-the-basis-of-sex-in-education-programs-or-activities-receiving-federal,170
+TR-061,Trump 1,Family & other,"USDA relaxed school-lunch rules on milk, whole grains and sodium (2018).",Verified,Federal Register: USDA child nutrition flexibilities rule,https://www.federalregister.gov/documents/2018/12/12/2018-26762/child-nutrition-programs-flexibilities-for-milk-whole-grains-and-sodium-requirements,171
+TR-062,Trump 1,Jobs & economy,Stopped the expanded EEOC pay-data reporting rule.,Source being added,,,172
+TR-063,Trump 1,Health & VA,Pushed interstate sale of health insurance.,Source being added,,,173
+TR-064,Trump 1,Family & other,EPA rescinded regulations.,Source being added,,,178
+TR-065,Trump 1,Border & immigration,MS-13 arrests increased.,Source being added,,,182
+TR-066,Trump 1,Border & immigration,ICE focused enforcement on noncitizens with criminal records.,Source being added,,,183
+TR-067,Trump 1,Border & immigration,Border crossings dropped about 41% in one early period.,Source being added,,,184
+TR-068,Trump 1,Border & immigration,"Signed the 2018 omnibus spending law, which included about $1.6 billion for border barrier construction.",Verified,"Congress.gov: H.R. 1625 (115th), Consolidated Appropriations Act, 2018",https://www.congress.gov/bill/115th-congress/house-bill/1625,185
+TR-069,Trump 1,Health & VA,"Signed COVID relief laws: the Families First Coronavirus Response Act and the CARES Act (payments, expanded unemployment benefits, Paycheck Protection Program loans).",Verified,"Congress.gov: H.R. 748 (116th), CARES Act, P.L. 116-136",https://www.congress.gov/bill/116th-congress/house-bill/748,186;187;188
+TR-070,Trump 1,Military & foreign policy,White House cites a first-term tally of hostages and detainees released.,White House claim,,,190
+TR-071,Trump 1,Military & foreign policy,Approved sales of Javelin anti-tank missiles to Ukraine.,Source being added,,,191
+TR-072,Trump 1,Military & foreign policy,Took a negotiating posture on the New START arms treaty.,Source being added,,,192
+TR-073,Trump 1,Military & foreign policy,Designated Iran's Islamic Revolutionary Guard Corps a Foreign Terrorist Organization (April 2019).,Verified,Federal Register: State Dept. designation of the IRGC,https://www.federalregister.gov/documents/2019/04/15/2019-07415/in-the-matter-of-the-designation-of-the-islamic-revolutionary-guard-corps-and-other-aliases-as-a,198
+TR-074,Trump 1,Military & foreign policy,Redesignated North Korea a state sponsor of terrorism (Nov. 2017).,Source being added,,,199
+TR-075,Trump 1,Military & foreign policy,Won UN Security Council votes for new North Korea sanctions (2017).,Source being added,,,200
+TR-076,Trump 2,Paycheck & taxes,"Signed the 2025 budget reconciliation law (""One Big Beautiful Bill,"" P.L. 119-21) on July 4, 2025.",Verified,GovInfo: P.L. 119-21 (2025 reconciliation law) text,https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm,5
+TR-077,Trump 2,Paycheck & taxes,The 2025 law made the 2017 individual tax rates permanent.,Verified,GovInfo: P.L. 119-21 (2025 reconciliation law) text,https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm,6
+TR-078,Trump 2,Paycheck & taxes,"The 2025 law created a federal income tax deduction for tip income (up to $25,000, tax years 2025–2028, phased out at higher incomes).",Verified,GovInfo: P.L. 119-21 (2025 reconciliation law) text,https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm,7
+TR-079,Trump 2,Paycheck & taxes,"The 2025 law created a federal income tax deduction for overtime premium pay (up to $12,500, or $25,000 joint, tax years 2025–2028).",Verified,GovInfo: P.L. 119-21 (2025 reconciliation law) text,https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm,8
+TR-080,Trump 2,Paycheck & taxes,"Promoted as ""no tax on Social Security""; the 2025 law instead added a temporary extra $6,000 deduction for people 65 and older (2025–2028). Needs rewording before publishing.",Source being added,,,9
+TR-081,Trump 2,Paycheck & taxes,"The 2025 law created ""Trump Accounts,"" tax-advantaged savings accounts for children.",Verified,GovInfo: P.L. 119-21 (2025 reconciliation law) text,https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm,10
+TR-082,Trump 2,Paycheck & taxes,"The 2017 law capped the state and local tax (SALT) deduction at $10,000; the 2025 law temporarily raised the cap.",Verified,GovInfo: P.L. 119-21 (2025 reconciliation law) text,https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm,11
+TR-083,Trump 2,Jobs & economy,White House says total employment reached a record level in 2026.,White House claim,,,14
+TR-084,Trump 2,Jobs & economy,White House says private-sector job gains in the second term.,White House claim,,,15
+TR-085,Trump 2,Jobs & economy,White House says manufacturing and factory-construction jobs expanded.,White House claim,,,16;162
+TR-086,Trump 2,Energy,Gasoline costs fell as a share of household income.,Source being added,,,17
+TR-087,Trump 2,Energy,Expanded LNG export approvals and drilling.,Source being added,,,19
+TR-088,Trump 2,Energy,"Signed EO 14154, which directed an end to federal policies favoring electric vehicles (the ""EV mandate"").",Verified,"Federal Register: EO 14154, Unleashing American Energy",https://www.federalregister.gov/documents/2025/01/29/2025-01956/unleashing-american-energy,20
+TR-089,Trump 2,Jobs & economy,White House says fraud crackdowns stopped improper federal payments.,White House claim,,,88;89;21
+TR-090,Trump 2,Energy,Rolled back fuel-economy (CAFE) and vehicle-emission rules.,Source being added,,,21
+TR-091,Trump 2,Health & VA,"Signed EO 14297 directing ""most-favored-nation"" drug pricing; White House announced deals with drugmakers.",Verified,Federal Register: EO 14297,https://www.federalregister.gov/documents/2025/05/15/2025-08876/delivering-most-favored-nation-prescription-drug-pricing-to-american-patients,22
+TR-092,Trump 2,Health & VA,White House says insulin and prescription-drug negotiations lowered prices.,White House claim,,,23
+TR-093,Trump 2,Health & VA,White House says insurers agreed to cut prior-authorization requirements.,White House claim,,,26
+TR-094,Trump 2,Law & justice,"FBI data show the 2025 murder rate was about 4.1 per 100,000, tied with 1955–56 as the lowest on record; violent crime fell about 9.3%.",Verified,FBI Crime Data Explorer,https://cde.ucr.cjis.gov/,27
+TR-095,Trump 2,Law & justice,White House says violent crime fell in the first half of 2026.,White House claim,,,28
+TR-096,Trump 2,Health & VA,Fentanyl overdose deaths fell about 22% from 2024 to 2025 (CDC data; causes are mixed).,Source being added,,,29
+TR-097,Trump 2,Border & immigration,Designated drug cartels as Foreign Terrorist Organizations (EO 14157); White House credits military strikes with reducing fentanyl flows.,Verified,Federal Register: EO 14157,https://www.federalregister.gov/documents/2025/01/29/2025-02004/designating-cartels-and-other-organizations-as-foreign-terrorist-organizations-and-specially,30
+TR-098,Trump 2,Border & immigration,White House says catch-and-release has ended.,White House claim,,,31
+TR-099,Trump 2,Border & immigration,"Signed the Laken Riley Act, requiring detention of certain noncitizens charged with theft-related or violent crimes.",Verified,"Congress.gov: S. 5 (119th), Laken Riley Act",https://www.congress.gov/bill/119th-congress/senate-bill/5,32
+TR-100,Trump 2,Border & immigration,ICE arrests increased in 2026.,Source being added,,,34
+TR-101,Trump 2,Border & immigration,White House says the illegal-immigrant population has declined.,White House claim,,,35
+TR-102,Trump 2,Border & immigration,White House says the asylum grant rate fell to about 7%.,White House claim,,,36
+TR-103,Trump 2,Border & immigration,Signed EO 14159 directing expanded interior immigration enforcement.,Verified,"Federal Register: EO 14159, Protecting the American People Against Invasion",https://www.federalregister.gov/documents/2025/01/29/2025-02006/protecting-the-american-people-against-invasion,37
+TR-104,Trump 2,Health & VA,Signed an executive order on veterans' access to benefits.,Source being added,,,41
+TR-105,Trump 2,Family & other,The 2025 law expanded SNAP work requirements for able-bodied adults.,Verified,GovInfo: P.L. 119-21 (2025 reconciliation law) text,https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm,43
+TR-106,Trump 2,Family & other,White House says SNAP enrollment has declined.,White House claim,,,44
+TR-107,Trump 2,Paycheck & taxes,The 2025 law tightened eligibility rules for some noncitizens for certain federal tax credits.,Verified,GovInfo: P.L. 119-21 (2025 reconciliation law) text,https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm,45
+TR-108,Trump 2,Family & other,Signed EO 14191 to expand school choice; the 2025 law created a federal tax credit for scholarship donations.,Verified,Federal Register: EO 14191,https://www.federalregister.gov/documents/2025/02/03/2025-02233/expanding-educational-freedom-and-opportunity-for-families,47
+TR-109,Trump 2,Family & other,"Signed EO 14201 restricting participation in women's sports to biological females, and moved to enforce Title IX accordingly.",Verified,"Federal Register: EO 14201, Keeping Men Out of Women's Sports",https://www.federalregister.gov/documents/2025/02/11/2025-02513/keeping-men-out-of-womens-sports,48;49
+TR-110,Trump 2,Family & other,Signed EO 14190 limiting federal support for K-12 instruction on certain race and gender topics.,Verified,Federal Register: EO 14190,https://www.federalregister.gov/documents/2025/02/03/2025-02232/ending-radical-indoctrination-in-k-12-schooling,50
+TR-111,Trump 2,Family & other,Signed EO 14151 ending federal DEI programs.,Verified,Federal Register: EO 14151,https://www.federalregister.gov/documents/2025/01/29/2025-01953/ending-radical-and-wasteful-government-dei-programs-and-preferencing,51
+TR-112,Trump 2,Family & other,Designated English the official language of the United States (EO 14224).,Verified,Federal Register: EO 14224,https://www.federalregister.gov/documents/2025/03/06/2025-03694/designating-english-as-the-official-language-of-the-united-states,52
+TR-113,Trump 2,Health & VA,Changed childhood vaccine recommendations.,Source being added,,,53;54
+TR-114,Trump 2,Jobs & economy,White House says federal permitting has been sped up.,White House claim,,,63
+TR-115,Trump 2,Paycheck & taxes,The 2025 law restored 100% bonus depreciation and immediate expensing of domestic research costs for businesses.,Verified,GovInfo: P.L. 119-21 (2025 reconciliation law) text,https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm,64
+TR-116,Trump 2,Jobs & economy,"White House cites foreign and corporate investment pledges of $11–19 trillion (including Apple, Amazon and UAE announcements); pledges are announcements, not completed investment.",White House claim,,,67;163
+TR-117,Trump 2,Jobs & economy,Federal government took an equity stake in Intel; White House cites related AI investment.,White House claim,,,68
+TR-118,Trump 2,Jobs & economy,"Signed the GENIUS Act, a federal framework for payment stablecoins.",Verified,"Congress.gov: S. 1582 (119th), GENIUS Act",https://www.congress.gov/bill/119th-congress/senate-bill/1582,69
+TR-119,Trump 2,Jobs & economy,"Ended regulators' practice of discouraging banks from serving crypto firms (""Operation Choke Point 2.0"").",Source being added,,,70
+TR-120,Trump 2,Jobs & economy,Regulators issued guidance on crypto exchange-traded products.,Source being added,,,71
+TR-121,Trump 2,Trade,"Imposed ""reciprocal"" tariffs on many trading partners (EO 14257); the legal authority has been litigated.",Verified,Federal Register: EO 14257,https://www.federalregister.gov/documents/2025/04/07/2025-06063/regulating-imports-with-a-reciprocal-tariff-to-rectify-trade-practices-that-contribute-to-large-and,75
+TR-122,Trump 2,Trade,Tightened Buy American rules.,Source being added,,,76
+TR-123,Trump 2,Family & other,Signed executive orders affecting ranchers and livestock producers.,Source being added,,,78
+TR-124,Trump 2,Family & other,Signed executive orders expanding hunting and fishing access.,Source being added,,,79
+TR-125,Trump 2,Family & other,"Advanced water projects, including California's Sites Reservoir.",Source being added,,,80
+TR-126,Trump 2,Energy,Expanded federal coal leasing.,Source being added,,,82
+TR-127,Trump 2,Energy,Pushed new federal financing for nuclear power.,Source being added,,,83
+TR-128,Trump 2,Energy,Rescinded prior climate-related executive orders (EO 14148).,Verified,"Federal Register: EO 14148, Initial Rescissions of Harmful Executive Orders and Actions",https://www.federalregister.gov/documents/2025/01/28/2025-01901/initial-rescissions-of-harmful-executive-orders-and-actions,85
+TR-129,Trump 2,Energy,Created the National Energy Dominance Council (EO 14213).,Verified,Federal Register: EO 14213,https://www.federalregister.gov/documents/2025/02/20/2025-02928/establishing-the-national-energy-dominance-council,86
+TR-130,Trump 2,Jobs & economy,"Reduced the federal civilian workforce through reductions in force and buyouts, and wound down USAID.",Source being added,,,87;99
+TR-131,Trump 2,Jobs & economy,Cut IRS information-technology spending.,Source being added,,,90
+TR-132,Trump 2,Military & foreign policy,"Announced moving U.S. Space Command headquarters to Huntsville, Alabama.",Source being added,,,92
+TR-133,Trump 2,Military & foreign policy,Increased defense spending.,Source being added,,,93
+TR-134,Trump 2,Military & foreign policy,Pushed domestic sourcing of munitions.,Source being added,,,94
+TR-135,Trump 2,Law & justice,Signed an executive order on mail-in voting and election procedures; the claim that the Supreme Court allowed it needs checking.,Source being added,,,97
+TR-136,Trump 2,Jobs & economy,"Moved to reclassify policy-influential federal jobs as at-will (""Schedule F"" / Schedule Policy/Career).",Source being added,,,98
+TR-137,Trump 2,Law & justice,"Pardoned or commuted sentences of people convicted in the Jan. 6, 2021 Capitol cases.",Verified,Federal Register: Proclamation granting Jan. 6 pardons and commutations,https://www.federalregister.gov/documents/2025/01/29/2025-01950/granting-pardons-and-commutation-of-sentences-for-certain-offenses-relating-to-the-events-at-or-near,100
+TR-138,Trump 2,Border & immigration,"Pressured sanctuary jurisdictions, including through federal funding.",Source being added,,,106
+TR-139,Trump 2,Border & immigration,Took action on H-1B visa program integrity.,Source being added,,,107
+TR-140,Trump 2,Border & immigration,Tightened foreign-student visa rules.,Source being added,,,108
+TR-141,Trump 2,Border & immigration,Pushed wider E-Verify use.,Source being added,,,110
+TR-142,Trump 2,Border & immigration,Signed EO 14160 seeking to limit birthright citizenship; it has been challenged in court.,Verified,Federal Register: EO 14160,https://www.federalregister.gov/documents/2025/01/29/2025-02007/protecting-the-meaning-and-value-of-american-citizenship,111
+TR-143,Trump 2,Border & immigration,Invoked the Alien Enemies Act against Tren de Aragua members (March 2025); its use has been litigated.,Verified,Federal Register: Proclamation invoking the Alien Enemies Act,https://www.federalregister.gov/documents/2025/03/20/2025-04865/invocation-of-the-alien-enemies-act-regarding-the-invasion-of-the-united-states-by-tren-de-aragua,112
+TR-144,Trump 2,Border & immigration,Revoked visas at large scale.,Source being added,,,113
+TR-145,Trump 2,Border & immigration,Suspended the U.S. refugee admissions program (EO 14163).,Verified,Federal Register: EO 14163,https://www.federalregister.gov/documents/2025/01/30/2025-02011/realigning-the-united-states-refugee-admissions-program,114
+TR-146,Trump 2,Law & justice,FBI captured fugitives from its Ten Most Wanted list.,Source being added,,,115
+TR-147,Trump 2,Military & foreign policy,Operation to capture Venezuela's Nicolás Maduro.,Source being added,,,123
+TR-148,Trump 2,Military & foreign policy,Ordered strikes on Iranian nuclear sites (June 2025).,Source being added,,,124
+TR-149,Trump 2,Military & foreign policy,Ordered strikes on Houthi forces in Yemen.,Source being added,,,125
+TR-150,Trump 2,Military & foreign policy,Put forward a Gaza plan and ceasefire framework.,Source being added,,,126
+TR-151,Trump 2,Military & foreign policy,White House claims eight wars were settled.,White House claim,,,127
+TR-152,Trump 2,Military & foreign policy,Began withdrawing the U.S. from the World Health Organization (EO 14155).,Verified,Federal Register: EO 14155,https://www.federalregister.gov/documents/2025/01/29/2025-01957/withdrawing-the-united-states-from-the-world-health-organization,132
+TR-153,Trump 2,Military & foreign policy,Cut U.S. funding to UNRWA.,Source being added,,,133
+TR-154,Trump 2,Trade,Threatened tariffs on Canada.,Source being added,,,135
+TR-155,Trump 2,Trade,Imposed tariffs on critical minerals.,Source being added,,,136
+TR-156,Trump 2,Trade,Stepped up Jones Act enforcement.,Source being added,,,137
+TR-157,Trump 2,Family & other,Signed executive orders on forest management and timber.,Source being added,,,138
+TR-158,Trump 2,Family & other,The 2025 law made Pell Grants available for some short-term job-training programs.,Verified,GovInfo: P.L. 119-21 (2025 reconciliation law) text,https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm,141
+TR-159,Trump 2,Family & other,Supported federal recognition of the Lumbee Tribe.,Source being added,,,148
+TR-160,Trump 2,Family & other,Updated the federal list of recognized tribes.,Source being added,,,149
+TR-161,Trump 2,Family & other,First Lady launched an AI education challenge.,Source being added,,,150
+TR-162,Trump 2,Family & other,Set a timeline for returning astronauts to the Moon.,Source being added,,,151
+TR-163,Trump 2,Military & foreign policy,Adjusted use of the Defense Production Act.,Source being added,,,152
+TR-164,Trump 2,Family & other,Changed how the White House press pool is selected.,Source being added,,,153
+TR-165,Trump 2,Law & justice,Commuted sentences of political allies.,Source being added,,,154
+TR-166,Trump 2,Border & immigration,Curbed Optional Practical Training for foreign students.,Source being added,,,155
+TR-167,Trump 2,Border & immigration,Pushed biometric entry-exit tracking.,Source being added,,,156
+TR-168,Trump 2,Border & immigration,Expanded ICE detainer policy for jails.,Source being added,,,157
+TR-169,Trump 2,Trade,Raised tariffs on aluminum and steel to 50% (June 2025) and imposed a 50% copper tariff (Aug. 2025).,Verified,"Federal Register: Proclamation, Adjusting Imports of Aluminum and Steel (June 2025)",https://www.federalregister.gov/documents/2025/06/09/2025-10524/adjusting-imports-of-aluminum-and-steel-into-the-united-states,160
+TR-170,Trump 2,Trade,Imposed a 25% tariff on imported automobiles and parts (2025).,Verified,"Federal Register: Proclamation, Adjusting Imports of Automobiles and Automobile Parts",https://www.federalregister.gov/documents/2025/04/03/2025-05930/adjusting-imports-of-automobiles-and-automobile-parts-into-the-united-states,161
+TR-171,Trump 2,Paycheck & taxes,Discussed expanding tax-free savings options.,Source being added,,,168
+TR-172,Trump 2,Family & other,Limited student-loan forgiveness.,Source being added,,,174
+TR-173,Trump 2,Health & VA,"The 2025 law barred Medicaid payments for one year to certain abortion providers, including Planned Parenthood.",Verified,GovInfo: P.L. 119-21 (2025 reconciliation law) text,https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm,175
+TR-174,Trump 2,Jobs & economy,Named an appointee to lead air-traffic-control modernization.,Source being added,,,177
+TR-175,Trump 2,Family & other,Expanded access to public lands and forests.,Source being added,,,179;180
