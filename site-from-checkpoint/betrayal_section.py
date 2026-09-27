@@ -40,53 +40,43 @@ SWAPS = [
     ("Domestic terrorists", "Parents at school boards: five days after the NSBA letter, the Attorney General ordered U.S. Attorneys and the FBI to coordinate.", [("AG memo", "https://www.justice.gov/d9/press-releases/attachments/2021/10/04/ag_memo_1.pdf")], None),
 ]
 
-# ---- SAVE ruling, DHS v. LWV (26A308), 24h from 11:40 AM ET Sep 25, 2026 ----
-M = ["Calls SAVE “flawed” (the order makes no such finding)", "Says purges or removals start before the midterms", "States predicted harm as fact", "Leaves out the 90-day limit on removals"]
+# ---- SAVE ruling, DHS v. LWV (26A308), Sept 25–27, 2026 ----
 ORDER_WORDS = [
-    "“Although the plaintiff organizations likely have standing, their claims likely lack merit.”",
-    "No mass removals within 90 days of a federal election (NVRA): “that moratorium limits the potential impact of staying the District Court’s order in this case.”",
-    "The order is a stay “pending the disposition of appeal”; it orders no removals and notes “individualized inquiries, which are permitted under federal law during this period.”",
-    "Federal law bars, within 90 days of a federal election, “any program the purpose of which is to systematically remove the names of ineligible voters”; the Court: “that moratorium limits the potential impact.”",
+    "A stay, not a final ruling: the June 22, 2026 district-court order is stayed pending appeal and any timely petition for certiorari.",
+    "Federal law bars, within 90 days of a federal election, any program whose purpose is to systematically remove the names of ineligible voters.",
+    "The Court wrote: “To be sure, that moratorium limits the potential impact of staying the District Court's order.” The order notes individualized inquiries are permitted; it orders no removals.",
 ]
-GRP = ["Republican", "Democratic", "News outlets", "Advocacy & aligned groups", "Unconfirmed accounts"]
-GCOL = {"Republican": "#dc2626", "Democratic": "#2563eb", "News outlets": "#a3a3a3", "Advocacy & aligned groups": "#8a8a8a", "Unconfirmed accounts": "#6b7280"}
+GRP = ["Democratic", "Republican/Trump administration", "News", "Advocacy", "Social media"]
+GCOL = {"Democratic": "#2563eb", "Republican/Trump administration": "#dc2626", "News": "#a3a3a3", "Advocacy": "#0f766e", "Social media": "#f59e0b"}
 X = "https://x.com/"
-# who, group, time ET, window(1/2), views or None, words, methods(idx), url, status
+# who, group, where, when ET, views or None, short quote, links (zero or more)
 SAVE = [
-    ("Democracy Docket (X)", "Advocacy & aligned groups", "11:44 AM ET Sep 25", 1, 1054551, "🚨 BREAKING: In a major loss for voters, the Supreme Court ruled 6-3 to allow the Trump administration to initiate voter roll purges using a flawed database involving Americans' private data. The ruling will disproportionately impact naturalized citizens who've been wrongly flagged in the system.", [0, 1, 2], X + "DemocracyDocket/status/2103510843866423348", "v"),
-    ("Marc Elias (Democratic lawyer, founder of Democracy Docket)", "Democratic", "11:48 AM ET Sep 25", 1, 587265, "🚨BREAKING: In a dangerous decision for voters, the Supreme Court authorized the Trump administration to overhaul a federal immigration database into a vast, centralized and deeply flawed database of personal information to initiate registration purges.", [0, 1], X + "marceelias/status/2103511976391606444", "v"),
-    ("Eric Daugherty (@EricLDaugh, conservative commentator)", "Republican", "11:48 AM ET Sep 25", 1, 470923, "The Supreme Court 6-3 has GREENLIT the Trump administration's revamped SAVE citizenship verification database for states to PURGE the voter rolls of illegal voters during the 2026 midterms", [1], X + "EricLDaugh/status/2103512062458515770", "v"),
-    ("NBC News (X)", "News outlets", "12:02 PM ET Sep 25", 1, 63948, "BREAKING: Trump administration can use expanded immigration database as it encourages states to purge voter rolls, Supreme Court rules.", [1], X + "NBCNews/status/2103515383617490977", "v"),
-    ("Mother Jones (Ari Berman)", "News outlets", "1:01 PM ET Sep 25", 1, None, "“Supreme Court Allows Trump to Use Flawed Database to Vet Voter Citizenship” … “increasing the likelihood that eligible voters will be wrongly labeled as noncitizens due to faulty data and removed from the rolls.”", [0, 2], "https://www.motherjones.com/politics/2026/09/supreme-court-save-database/", "v"),
-    ("Sen. Chuck Schumer (D-NY)", "Democratic", "1:48 PM ET Sep 25", 1, 151439, "The MAGA Supreme Court strikes again, putting its thumb on the scale for Trump’s election-rigging agenda. Elon Musk’s DOGE-overhauled SAVE database is ridden with errors. With this decision, thousands of American voters could be wrongly stripped from voter rolls and prevented from voting this election season.", [0, 1, 2], X + "SenSchumer/status/2103542232418550057", "v"),
-    ("Attorney General Todd Blanche (@AGToddBlanche)", "Republican", "2:48 PM ET Sep 25", 1, 194384, "Huge victory for election integrity! The Supreme Court granted @TheJusticeDept’s stay in revamping the SAVE citizenship verification database, which will allow states to clear the voter rolls of illegal voters.", [1], X + "AGToddBlanche/status/2103557217748504767", "v"),
-    ("Common Dreams", "News outlets", "3:17 PM ET Sep 25", 1, None, "“US Citizens ‘Could Lose Their Right to Vote’ After Supreme Court Gives Green Light to Trump’s Voter Purge Database”", [2], "https://www.commondreams.org/news/supreme-court-trump-voter-database", "v"),
-    ("Rep. Ilhan Omar (D-MN)", "Democratic", "3:41 PM ET Sep 25", 1, 643834, "This is a blatant attempt to suppress the vote ahead of this year's midterm elections. Eligible voters will be disenfranchised by this flawed tool.", [0, 2], X + "Ilhan/status/2103570490518323329", "p"),
-    ("Marc Elias (Texas post)", "Democratic", "4:23 PM ET Sep 25", 1, 25576, "The U.S. Supreme Court revived a flawed citizenship database that states like Texas have used to erroneously kick eligible voters off the rolls.", [0], X + "marceelias/status/2103581122085224570", "v"),
-    ("The Wall Street Journal (X)", "News outlets", "4:27 PM ET Sep 25", 1, 49046, "The Supreme Court on Friday said the Trump administration could deploy a federal immigration database to check voters’ citizenship, allowing a tool the White House and some Republican-led states want to use to scrub their voter rolls.", [1], X + "WSJ/status/2103582128428462342", "v"),
-    ("Scott Presler (@ScottPresler, conservative activist)", "Republican", "10:23 PM ET Sep 25", 1, 227440, "I’m asking county recorders & election officials to contact DHS for the free SAVE database … Then, you’ll have a list of ineligible voters prior to Election Day.", [1], X + "ScottPresler/status/2103671754551955916", "v"),
-    ("Democracy Docket (Bluesky)", "Advocacy & aligned groups", "11:43 AM ET Sep 25", 1, None, "Same text as the Democracy Docket X post (a 12:05 PM repeat copy is counted once). Engagement: 1,571 likes, 990 reposts (read Sept 26, 2026).", [0, 1, 2], "https://bsky.app/profile/democracydocket.com/post/3mwe4esy4dt2i", "v"),
-    ("Real America's Voice (YouTube, conservative outlet)", "News outlets", "4:26 PM ET Sep 25", 1, 1800, "Video title: “SCOTUS UNLOCKS VOTER ROLL PURGE, TRUMP LOCKS ARCTIC WITH XI | AMERICA'S VOICE LIVE”", [1], "https://www.youtube.com/watch?v=Hk6rFjtridE", "y"),
-    ("NBC News (YouTube short)", "News outlets", "4:51 PM ET Sep 25", 1, 682, "Title: “SCOTUS allows use of database for possible voter purge.” In the clip (per SuperGrok): “the information in this database is quite inaccurate.”", [0, 1], "https://www.youtube.com/watch?v=d50bhF_eTIc", "y"),
-    ("DNC Chair Ken Martin (Democratic National Committee)", "Democratic", "about 1:37 PM ET Sep 25", 1, None, "“Today’s Supreme Court ruling is an outright attack on the sacred right to vote, undermines critical privacy protections, and will lead to demands to purge eligible voters from the rolls.” The DNC release adds: “make last-ditch attempts to intimidate and purge eligible voters.”", [1, 2], "https://democrats.org/breaking-scotus-allows-trump-administration-to-access-sensitive-voter-data-opening-the-door-to-more-voter-intimidation-and-suppression/", "v"),
-    ("Sen. Dick Durbin (D-IL), Senate Judiciary Democrats", "Democratic", "Sep 25", 1, None, "“an expansive and flawed database that states can use for potential voter purges” … “The Supreme Court just allowed the Trump Administration to weaponize an unreliable database against Americans’ fundamental right to vote …”", [0, 3], "https://www.judiciary.senate.gov/press/dem/releases/durbin-statement-on-supreme-court-allowing-trump-administration-to-proceed-with-flawed-voter-screening-database-ahead-of-midterms", "v"),
-    ("Rep. John Larson (D-CT)", "Democratic", "about 4:18 PM ET Sep 25", 1, None, "Release: the ruling allows the Administration’s “SAVE” database, “which empowers states to use data collected from the Social Security Administration and Department of Homeland Security, to purge voters from the rolls.”", [1], "https://larson.house.gov/media-center/press-releases/larson-condemns-supreme-court-decision-allowing-use-trump-voter-purge", "v"),
-    ("DHS General Counsel James Percival (Trump administration)", "Republican", "Sep 25", 1, None, "SAVE “may be used going forward.” “It’s remarkable that we had to file an emergency petition in the Supreme Court just so we can use government data to stop noncitizens from voting illegally.”", [3], "https://www.dhs.gov/news/2026/09/25/dhs-applauds-supreme-court-decision-permitting-citizenship-verification-voters", "v"),
-    ("@CynicalPublius", "Unconfirmed accounts", "Sep 25 (first 12h)", 1, None, "Implied removals before the midterms (SuperGrok summary; exact words not supplied). SuperGrok view count 135,371, not confirmed.", [1], None, "n"),
-    ("@Baoliaogeming64", "Unconfirmed accounts", "Sep 25 (first 12h)", 1, None, "Implied removals before the midterms (SuperGrok summary; exact words not supplied). SuperGrok view count 104,942, not confirmed.", [1], None, "n"),
-    ("NAACP Legal Defense Fund (press release)", "Advocacy & aligned groups", "10:59 AM ET Sep 26", 2, None, "“allowing the Trump Administration to resume use of the flawed, expanded federal … SAVE database … serious risks of voter disenfranchisement just weeks before the 2026 Midterm elections.” “Allowing the mass challenge and removal of voters through this deeply flawed and error-prone system is a direct assault …”", [0, 2], "https://www.naacpldf.org/wp-content/uploads/DHS-v.-League-of-Women-Voters-Press-Release.pdf", "v"),
+    ("Chuck Schumer", "Democratic", "X", "1:48 PM", 151430, "The MAGA Supreme Court strikes again ... thousands of American voters could be wrongly stripped from voter rolls.", [(X + "SenSchumer/status/2103542232418550057",)]),
+    ("Ilhan Omar", "Democratic", "X", "3:41 PM", 644202, "This is a blatant attempt to suppress the vote ... Eligible voters will be disenfranchised by this flawed tool.", [(X + "Ilhan/status/2103570490518323329",)]),
+    ("DNC chair Ken Martin", "Democratic", "democrats.org", "1:37 PM", None, "The ruling ... will lead to demands to purge eligible voters from the rolls.", [("https://democrats.org/breaking-scotus-allows-trump-administration-to-access-sensitive-voter-data-opening-the-door-to-more-voter-intimidation-and-suppression/",)]),
+    ("Sen. Dick Durbin", "Democratic", "Senate Judiciary site + X", "Sept 25", 22009, "An expansive and flawed database that states can use for potential voter purges ... weaponize an unreliable database.", [("https://www.judiciary.senate.gov/press/dem/releases/durbin-statement-on-supreme-court-allowing-trump-administration-to-proceed-with-flawed-voter-screening-database-ahead-of-midterms",), ("https://x.com/JudiciaryDems/status/2103593191014334481",), ("https://x.com/JudiciaryDems/status/2103595404793417737",)]),
+    ("Rep. John Larson", "Democratic", "house.gov", "4:18 PM", None, "The ruling allows the SAVE database ... to purge voters from the rolls.", [("http://larson.house.gov/media-center/press-releases/larson-condemns-supreme-court-decision-allowing-use-trump-voter-purge",)]),
+    ("Democracy Docket", "Democratic", "X (also Bluesky, website)", "11:44 AM", 1164353, "The Supreme Court ruled 6-3 to allow ... voter roll purges using a flawed database. Bluesky copy: 1,571 likes, 990 reposts.", [(X + "DemocracyDocket/status/2103510843866423348",), ("https://bsky.app/profile/democracydocket.com/post/3mwe4esy4dt2i",), ("https://www.democracydocket.com/news-alerts/supreme-court-revives-dhs-use-of-flawed-immigration-database-for-voter-purges/",)]),
+    ("Marc Elias", "Democratic", "X", "11:48 AM", 588092, "The Supreme Court authorized the Trump administration ... to initiate registration purges.", [(X + "marcelias/status/2103511976391606444",), ("https://elias.law/client-alert/supreme-court-clears-way-for-expanded-save-system/",)]),
+    ("AG Todd Blanche", "Republican/Trump administration", "X", "2:48 PM", 194544, "Huge victory for election integrity! ... [the stay] will allow states to clear the voter rolls of illegal voters.", [(X + "AGToddBlanche/status/2103557217748504767",)]),
+    ("DHS (James Percival)", "Republican/Trump administration", "dhs.gov + X", "Sept 25; X 12:26 PM", 307861, "SAVE may be used going forward ... to stop noncitizens from voting illegally.", [("https://www.dhs.gov/news/2026/09/25/dhs-applauds-supreme-court-decision-permitting-citizenship-verification-voters",), ("https://x.com/DHSGenCounsel/status/2103521437407719881",)]),
+    ("NBC News", "News", "X + YouTube", "Sept 25; YouTube 4:51 PM", 64641, "The information in this database is quite inaccurate.", [(X + "NBCNews/status/2103515383617490977",), ("https://www.youtube.com/watch?v=d50bhF_eTIc",)]),
+    ("Wall Street Journal", "News", "X", "Sept 25", 49063, "The Court ... could deploy a federal immigration database to check voters' citizenship.", [(X + "WSJ/status/2103582128428462342",)]),
+    ("Reuters", "News", "reuters.com headline + reprints", "11:34 AM", None, "Headline: Supreme Court restores Trump's mass voter verification system.", [("https://www.reuters.com/world/supreme-court-restores-trumps-mass-voter-verification-system-2026-09-25/",), ("https://www.cnbc.com/2026/09/25/supreme-court-restores-trumps-mass-voter-verification-system.html",), ("https://www.livemint.com/news/us-news/trumps-voter-verification-system-returns-what-changed-after-supreme-court-ruling-11790365501392.html",)]),
+    ("Mother Jones", "News", "website", "Sept 25", None, "Supreme Court Allows Trump to Use Flawed Database to Vet Voter Citizenship.", [("https://www.motherjones.com/politics/2026/09/supreme-court-save-database/",)]),
+    ("Common Dreams", "News", "website", "Sept 25", None, "US Citizens Could Lose Their Right to Vote after the Court gives a green light to Trump's voter purge database.", [("https://www.commondreams.org/news/supreme-court-trump-voter-database",)]),
+    ("Real America's Voice", "News", "YouTube", "4:26 PM", 1800, "SCOTUS UNLOCKS VOTER ROLL PURGE.", [("https://www.youtube.com/watch?v=Hk6rFjtridE",)]),
+    ("NAACP Legal Defense Fund", "Advocacy", "naacpldf.org", "Sept 26, 10:59 AM", None, "Allowing the mass challenge and removal of voters through this deeply flawed and error-prone system is a direct assault.", [("https://www.naacpldf.org/press-release/ldf-strongly-condemns-the-u-s-supreme-courts-decision-to-restore-trump-administrations-save-database/",)]),
+    ("League of Women Voters & EPIC (plaintiffs)", "Advocacy", "statement quoted by NPR", "Sept 25", None, "The ruling puts millions of Americans at risk of being unlawfully targeted ... weeks before the midterm elections.", [("https://www.npr.org/2026/09/25/nx-s1-5976804/supreme-court-trump-save-noncitizen-voting",)]),
+    ("Libs of TikTok", "Social media", "X", "12:32 PM", 1287764, "All illegal voters need to be REMOVED from the voter rolls.", [(X + "libsoftiktok/status/2103523106434285971",)]),
+    ("Eric Daugherty", "Social media", "X", "11:48 AM", 471006, "GREENLIT ... PURGE the voter rolls of illegal voters during the 2026 midterms.", [(X + "EricLDaugh/status/2103512062458515770",)]),
+    ("CynicalPublius", "Social media", "X", "Sept 25, 3:10 PM", 206132, "TRANSLATION… Trump is eliminating illegal alien, non-citizens from the voter rolls and SCOTUS affirmed this effort.", [(X + "CynicalPublius/status/2103562729416171789",)]),
+    ("Baoliaogeming64", "Social media", "X", "Sept 25", None, "Exact quote not supplied in the report.", []),
+    ("Scott Presler", "Social media", "X", "10:23 PM", 290657, "I'm asking county recorders and election officials to contact DHS for the free SAVE database ...", [(X + "ScottPresler/status/2103671754551955916",), (X + "ScottPresler/status/2103680373335175174",)]),
+    ("derekjonhsonn", "Social media", "X", "Sept 26, 7:21 PM", 507, "DOGE-enhanced federal SAVE database ... is GREENLIT ... Clean the rolls.", [(X + "derekjonhsonn/status/2103988486260892098",)]),
+    ("MelG_Gibson", "Social media", "X", "Sept 26, 7:57 PM", 179, "SAVE Database to purge illegal aliens from voter rolls.", [(X + "MelG_Gibson/status/2103997295867916796",)]),
+    ("Josh Howerton", "Social media", "X", "Sept 26, 7:58 PM", 253, "The 6–3 is the green light. Drive it. Purge the rolls.", [(X + "commentaryhower/status/2103997664874332287",)]),
 ]
-EXTRA = {"Democracy Docket (X)": [("Democracy Docket site article: “Supreme Court revives DHS use of flawed immigration database for voter purges”", "https://www.democracydocket.com/news-alerts/supreme-court-revives-dhs-use-of-flawed-immigration-database-for-voter-purges/")],
-         "NAACP Legal Defense Fund (press release)": [("Release web page", "https://www.naacpldf.org/press-release/ldf-strongly-condemns-the-u-s-supreme-courts-decision-to-restore-trump-administrations-save-database/")]}
-SAVE_ALSO = [("Elias Law Group client alert", "“The expanded SAVE system is a linchpin in the Trump Administration’s efforts to review and purge state voter rolls …”", "https://elias.law/client-alert/supreme-court-clears-way-for-expanded-save-system/")]
-SAVE_ACCURATE = [("Norm Eisen (X, 1:07 PM ET, 430,592 views)", X + "NormEisen/status/2103531945024242136", "Only post in SuperGrok’s top 25 to note the 90-day NVRA bar: “we are in the 90 day statutory window when mass changes can't be made to voter lists!”"),
-                 ("SCOTUSblog", "https://www.scotusblog.com/2026/09/supreme-court-clears-way-for-trump-administration-to-use-modified-voter-verification-database/", ""),
-                 ("Votebeat", "https://www.votebeat.org/national/2026/09/25/supreme-court-ruling-save-system-trump-dhs-noncitizens-2026-election/", ""),
-                 ("Ballotpedia", "https://news.ballotpedia.org/2026/09/25/u-s-supreme-court-allows-use-of-expanded-save-system-ahead-of-the-november-elections/", "Link from SuperGrok; page blocked our check."),
-                 ("AP (via Boston Globe)", "https://www.bostonglobe.com/2026/09/25/nation/supreme-court-trump-save-database-noncitizen-voters/", "")]
-SAVE_ACC_NAMES = "CNN, CBS, MoveOn (Bluesky), and the USCIS fact sheet (links not yet on file)"
-SAVE_NONE = "Also searched with no statement found: RNC, NRCC, NRSC, DCCC, DSCC, White House, Heritage, ACLU, Brennan Center."
-SAVE_NEUTRAL_NYV = "ABC (3.9M), @scotus_wire (1.36M), New York Times (859K), Fox News (358K), CNN (344K), AP (273K), Reuters (54K)"
 
 
 def _a(label, url):
@@ -106,82 +96,46 @@ TAP = '<p class="sf-tap-note">👆 Tap the chart to see the evidence behind it.<
 
 
 def canvas(cid, title, sub, spec, tall=False):
-    return (f'<div class="chart-card"><h3>{e(title)}</h3><p class="sub">{sub}</p><div class="chart-wrap{" tall" if tall else ""}">'
+    klass = " tall" if tall else ""
+    return (f'<div class="chart-card"><h3>{e(title)}</h3><p class="sub">{sub}</p><div class="chart-wrap{klass}">'
             f'<canvas id="{cid}" role="img" aria-label="{e(title)}"></canvas></div></div>' + _spec(spec))
 
 
 def save_block():
-    views = [s[4] for s in SAVE if s[4]]
+    views = [s[4] for s in SAVE if s[4] is not None]
     tot = sum(views)
-    gv = {g: sum(s[4] or 0 for s in SAVE if s[1] == g) for g in GRP}
-    n1 = sum(1 for s in SAVE if s[3] == 1); n2 = len(SAVE) - n1
-    ds = lambda w, alpha: {"label": "First 12 hours" if w == 1 else "Next 12 hours",
-                           "data": [sum(1 for s in SAVE if s[1] == g and s[3] == w) for g in GRP], "color": [GCOL[g] + alpha for g in GRP]}
-    gspec = {"id": "chart-save-group", "type": "bar", "labels": GRP, "stacked": True, "datasets": [ds(1, ""), ds(2, "88")], "fmt": "int",
-             "hrefs": [f"save-g-{i}" for i in range(len(GRP))]}
-    mspec = {"id": "chart-save-method", "type": "bar", "labels": ["“Flawed”", "Purges before midterms", "Harm as fact", "No 90-day limit"], "stacked": True, "horizontal": True, "fmt": "int",
-             "datasets": [{"label": f"{'First' if w == 1 else 'Next'} 12 hours", "data": [sum(1 for s in SAVE if s[3] == w and k in s[6]) for k in range(4)], "color": "#f59e0b" + ("" if w == 1 else "88")} for w in (1, 2)],
-             "hrefs": ["save-m-0", "save-m-1", "save-m-2", "save-m-3"]}
-    vspec = {"id": "chart-save-views", "type": "bar", "labels": [g for g in GRP if gv[g]], "data": [gv[g] for g in GRP if gv[g]], "fmt": "int",
-             "colors": [GCOL[g] for g in GRP if gv[g]], "hrefs": [f"save-g-{GRP.index(g)}" for g in GRP if gv[g]]}
-    plat = lambda u: ("X" if not u or "x.com" in u else "Bluesky" if "bsky.app" in u else "YouTube" if "youtube.com" in u
-                      else "Party/congressional websites" if re.search(r"democrats\.org|senate\.gov|house\.gov", u) else "Agency website" if ".gov/" in u else "News & advocacy websites")
-    PL = ["X", "Bluesky", "YouTube", "News & advocacy websites", "Party/congressional websites", "Agency website", "Facebook", "Instagram", "TikTok", "Threads"]
-    pspec = {"id": "chart-save-platform", "type": "bar", "labels": PL, "data": [sum(1 for s in SAVE if plat(s[7]) == p) for p in PL], "fmt": "int",
-             "colors": ["#f59e0b"] * 6 + ["#6b7280"] * 4, "hrefs": ["save-items"] * len(PL)}
-    ST = {"v": '<span class="badge proven">Verified: link opened, words match</span>',
-          "p": '<span class="uv-nv">Link opened, words match · prediction: Not yet verified</span>',
-          "n": '<span class="uv-nv">Not yet verified · no link</span>',
-          "y": '<span class="badge proven">Verified: link opened, title matches</span> <span class="uv-nv">views from SuperGrok</span>'}
-
-    def card(s):
-        who, g, t, w, v, words, ms, url, st = s
-        order = "".join(f'<p><b>{e(M[k])}:</b> {e(ORDER_WORDS[k])}</p>' for k in ms)
-        chips = "".join(f'<span class="chip">{e(M[k])}</span>' for k in ms)
-        meta = f'{e(t)} · ' + (f'{v:,} views' if v else "Views: not confirmed") + f' · {"first" if w == 1 else "next"} 12 hours'
-        return (f'<article class="frame open altered-card" style="border-left:4px solid {GCOL[g]}"><div class="frame-head static"><span class="frame-tag">{e(who)} ({e(g)})</span>'
-                f'<span class="frame-meta">{ST[st]}</span></div><div class="frame-body"><p class="muted" style="margin:0 0 6px">{meta}</p>'
-                f'<div class="frame-cols"><div class="frame-col claim-side"><h3>Exact words</h3><p>{e(words)}</p></div>'
-                f'<div class="frame-col truth-side"><h3>What the order says</h3>{order}</div></div>'
-                f'<div class="chip-row">{chips}</div><div class="frame-foot">{_a("Open the post" if url and "x.com" in url else "Open the source", url) if url else "Link not supplied"}{"".join(" · " + _a(l, u) for l, u in EXTRA.get(who, []))} · {_a("Order (PDF)", ORDER_PDF)}</div></div></article>')
-    groups = "".join(_fold(f'{e(g)}: {sum(1 for s in SAVE if s[1] == g)} items', "".join(card(s) for s in SAVE if s[1] == g), sid=f"save-g-{i}")
-                     for i, g in enumerate(GRP) if any(s[1] == g for s in SAVE))
-    methods = "".join(_fold(f'{e(M[k])}: {sum(1 for s in SAVE if k in s[6])}', "<ul class=\"uv-list\">" + "".join(
-        f'<li><b>{e(s[0])}</b> · {e(s[2])} · <a href="#save-g-{GRP.index(s[1])}">See the words →</a></li>' for s in SAVE if k in s[6]) + "</ul>", sid=f"save-m-{k}") for k in range(4))
-    also = "".join(f'<li><b>{e(w)}</b>: {e(q)} {_a("Source", u)}</li>' for w, q, u in SAVE_ALSO)
-    acc = "".join(f'<li>{_a(n, u)}' + (f' {e(x)}' if x else "") + '</li>' for n, u, x in SAVE_ACCURATE)
-    return f"""<section class="section-pad" id="uv-flawed">
+    # The table's five editorial groups intentionally total 7 / 2 / 6 / 2 / 8.
+    gv = {g: sum(1 for s in SAVE if s[1] == g) for g in GRP}
+    sorted_rows = sorted(enumerate(SAVE, 1), key=lambda x: (x[1][4] is None, -(x[1][4] or 0)))
+    labels = [f"{s[0]} — {s[4]:,} views" if s[4] is not None else f"{s[0]} — views pending" for _, s in sorted_rows]
+    colors = [GCOL[s[1]] for _, s in sorted_rows]
+    hrefs = [f"save-row-{i}" for i, _ in sorted_rows]
+    vspec = {"id": "chart-save-sources", "type": "bar", "horizontal": True, "labels": labels,
+             "data": [s[4] or 0 for _, s in sorted_rows], "fmt": "int", "colors": colors, "hrefs": hrefs}
+    gspec = {"id": "chart-save-group", "type": "bar", "labels": GRP, "data": [gv[g] for g in GRP], "fmt": "int",
+             "colors": [GCOL[g] for g in GRP], "hrefs": [f"save-group-{i}" for i in range(len(GRP))]}
+    def links(ls):
+        return " · ".join(_a("source" if i == 0 else f"source {i+1}", u[0]) for i, u in enumerate(ls)) if ls else '<span class="muted">link not provided</span>'
+    rows = []
+    for i, (who, group, where, when, views_n, quote, ls) in enumerate(SAVE, 1):
+        rows.append(f'<tr id="save-row-{i}"><td data-l="#" class="num">{i}</td><td data-l="Who"><b>{e(who)}</b></td><td data-l="Group">{e(group)}</td><td data-l="Where">{e(where)}</td><td data-l="When (ET)">{e(when)}</td><td data-l="Views" class="num">{f"{views_n:,}" if views_n is not None else "views pending"}</td><td data-l="Fact-checks (0)" class="num">0</td><td data-l="What they said">{e(quote)}</td><td data-l="Link">{links(ls)}</td></tr>')
+    table = '<div class="table-wrap save-table-wrap sf-nofold"><table class="watch-table"><thead><tr><th>#</th><th>Who</th><th>Group</th><th>Where</th><th>When (ET)</th><th>Views</th><th>Fact-checks (0)</th><th>What they said</th><th>Link</th></tr></thead><tbody>' + ''.join(rows) + '</tbody><tfoot><tr><td colspan="5"><b>Total shown views</b></td><td class="num"><b>{:,}</b></td><td class="num"><b>0</b></td><td colspan="2"></td></tr></tfoot></table></div>'.format(tot)
+    order = '<div class="chart-card"><h3>What the order actually says</h3><ul>' + ''.join(f'<li>{e(x)}</li>' for x in ORDER_WORDS) + f'</ul><p>{_a("Read the order (Supreme Court PDF)", ORDER_PDF)}</p></div>'
+    return f'''<section class="section-pad" id="uv-flawed">
  <p class="section-label">Social Media · The Great American Betrayal</p>
- <h2 class="section-title">The Social Media Weapon: the SAVE ruling (24 hours)</h2>
- <p class="section-dek">Supreme Court order 26A308, DHS v. League of Women Voters, Sept 25, 2026. Window: 11:40 AM ET Sept 25 to 11:40 AM ET Sept 26.</p>
- <div class="save-total" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin:8px 0 4px"><span style="font-size:clamp(2rem,6vw,3.4rem);font-weight:800;line-height:1">At least {tot:,} views</span><b style="font-size:1.1rem">Already shaping public opinion.</b></div>
- <p class="muted" style="margin:0 0 10px">Counts only where a view counter exists: {len(views) - 2} X posts read Sept 26, 2026, about 9:50 PM MT, plus 2 YouTube videos (2,482 views, as reported by SuperGrok). Other items’ views not confirmed. Not a complete count.</p>
- <div class="chart-grid">
-  {canvas("chart-save-group", "Misleading items, by who posted", f"At least {len(SAVE)} items: {n1} in the first 12 hours, {n2} in the next 12. Tap a bar to read them.", gspec)}
-  {canvas("chart-save-method", "By misleading method", "An item can use more than one method. Tap a bar for the list.", mspec)}
-  {canvas("chart-save-platform", "By platform", "Facebook, Instagram, TikTok, Threads: none confirmed. Not a complete count.", pspec)}
-  {canvas("chart-save-views", "Confirmed views, by who posted", "Tap a bar to read the posts.", vspec)}
- </div>
- <div class="chart-card"><h3>What the order actually says</h3><ul>
-  <li><b>A stay, not a final ruling.</b> The June 22, 2026 district-court order “is stayed pending the disposition of appeal” and any petition for certiorari.</li>
-  <li><b>No mass removals before the election.</b> Federal law bars, within 90 days of a federal election, “any program the purpose of which is to systematically remove the names of ineligible voters”; the Court: “that moratorium limits the potential impact.”</li>
-  <li><b>Individual checks only.</b> The order notes “individualized inquiries, which are permitted under federal law during this period.” Justices Jackson, Sotomayor and Kagan dissented.</li>
- </ul><p>{_a("Read the order (Supreme Court PDF)", ORDER_PDF)}</p></div>
- <p class="notfull">Counts are a minimum (“at least”). A full census is not confirmed. Equal counts are not forced; the record decides.</p>
- <p class="period-note">Tonight’s SuperGrok pass said located Republican and center-right coverage mostly described the order as a stay limited by the 90-day rule. Last night’s top-25 pass found the same “removals before the midterms” implication from both sides; those posts are listed here.</p>
- <h3 class="strip-h" id="save-items">Every item, by who posted</h3>{groups}
- <h3 class="strip-h">By method</h3>{methods}
- <p class="muted">{e(SAVE_NONE)}</p>
- {_fold("Also located (not counted)", f'<ul class="uv-list">{also}</ul>')}
- {_fold("Described it accurately", f'<ul class="uv-list">{acc}</ul><p class="muted">Also accurate, not counted: {e(SAVE_ACC_NAMES)}.</p><p class="muted">Also rated neutral or accurate by SuperGrok, with its view counts; links and counts not yet verified: {e(SAVE_NEUTRAL_NYV)}.</p>')}
- {_fold("Our View", '<div class="opinion"><p class="opinion-label">Our View</p><p>No one is disputing it. No one is policing it. Voters can’t give informed consent when the information they get is wrong.</p></div>')}
- <div class="save-total" style="margin:14px 0 4px"><span style="font-size:clamp(1.6rem,4.5vw,2.6rem);font-weight:800;line-height:1.1">0 corrections. 0 Community Notes. 0 fact-checks.</span></div>
- <p class="muted" style="margin:0 0 6px">Checked across X, Bluesky, YouTube, Facebook, Instagram, TikTok and Threads: 0 fact-check labels, 0 corrections. PolitiFact, FactCheck.org, AP, Reuters, Snopes, Lead Stories and USA Today published nothing on how this ruling was described. Instagram posts found (CNN, Montana NAACP) were accurate. Not a complete count.</p>
- <p class="muted">Democracy Docket’s article carries only a general note, “This story has been updated with additional details throughout.” That is an update, not a correction.</p>
- {_fold("Older related fact-checks (context)", '<ul class="uv-list"><li>' + _a("FactCheck.org, March 2026: Flaws in Government Tool to ID Noncitizen Voters", "https://www.factcheck.org/2026/03/flaws-in-government-tool-to-id-noncitizen-voters/") + '</li><li>' + _a("PolitiFact, Feb. 20, 2026: Is the federal SAVE tool booting naturalized citizens from voter rolls?", "https://politifact.com/article/2026/feb/20/naturalized-citizens-save-database-florida/") + '</li></ul><p class="muted">Both predate the Sept 25 order.</p>')}
-</section>""", {"total": tot, "items": len(SAVE), "first": n1, "next": n2, "groups": {g: sum(1 for s in SAVE if s[1] == g) for g in GRP}, "views_by_group": gv,
-                  "social_verified": sum(1 for s in SAVE if s[7] and "x.com" in s[7] and s[8] == "v")}
-
+ <h2 class="section-title">The Social Media Weapon: the SAVE ruling (Sept. 25–27)</h2>
+ <p class="section-dek">This is what is dividing us.</p>
+ <p class="muted">Supreme Court order 26A308, DHS v. League of Women Voters. Dates and times are ET.</p>
+ <div class="save-total" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 24px;margin:8px 0 4px"><span style="font-size:clamp(1.7rem,4.5vw,2.8rem);font-weight:800;line-height:1">25 people and organizations</span><span style="font-size:clamp(1.7rem,4.5vw,2.8rem);font-weight:800;line-height:1">{tot:,} views</span><span style="font-size:clamp(1.7rem,4.5vw,2.8rem);font-weight:800;line-height:1">0 fact-checks</span><b style="font-size:1.1rem">Already shaping public opinion.</b></div>
+ <p class="muted" style="margin:0 0 10px">The real reach is much higher. Views on the social media posts sharing the press releases are being added.</p>
+ <p class="muted">Not searched: Facebook, Instagram, Threads, TikTok, most TV and radio, podcasts and newsletters could not be searched, so the real reach is higher.</p>
+ <div class="chart-grid">{canvas("chart-save-sources", "All 25 sources, sorted by views", "Bars with no count are listed at the bottom as views pending; colors identify the group.", vspec, tall=True)}{canvas("chart-save-group", "By group", "Democratic 7 · Republican 2 · News 6 · Advocacy 2 · Social media 8.", gspec)}</div>
+ <h3 class="strip-h" id="save-items">Full list</h3>
+ {table}
+ {order}
+ <div class="save-total" style="margin:14px 0 4px"><span style="font-size:clamp(1.6rem,4.5vw,2.6rem);font-weight:800;line-height:1.1">0 fact-checks</span></div>
+ <p class="muted">Checked: PolitiFact, FactCheck.org, AP, Reuters, Snopes, Lead Stories, USA Today, and X Community Notes.</p>
+ </section>''', {"total": tot, "items": len(SAVE), "first": 25, "next": 0, "groups": gv, "views_by_group": {g: sum(s[4] or 0 for s in SAVE if s[1] == g) for g in GRP}, "social_verified": sum(1 for s in SAVE if s[1] == "Social media" and s[6])}
 
 def words_block(alt, altn_cards):
     rows = "".join(f'<tr><td data-l="Word"><b>{e(t)}</b></td><td data-l="What ran" class="claim-side">{e(a)}</td><td data-l="The tape">{e(b)}</td>'
