@@ -4,6 +4,7 @@ import { DECEPTION } from "../data/deception";
 import newsEvidence from "../data/fake-news-evidence.json";
 import factCheckerVetting from "../data/fact-checker-vetting.json";
 import fakeNewsCases from "../data/fake-news-cases.json";
+import lawfareCases from "../data/lawfare-cases.json";
 
 export const Route = createFileRoute("/betrayal")({ component: Betrayal });
 
@@ -47,6 +48,7 @@ const LAYERS: Record<Exclude<Layer, "root">, { back: Layer; title: string; butto
       "Scrutiny compared",
       "Assassination attempts",
       "First 100 days",
+      "Lawfare Evidence",
     ],
   },
   trials: {
@@ -1893,6 +1895,287 @@ function SaveChart({
   );
 }
 
+function LawChart({
+  title,
+  labels,
+  data,
+  colors,
+  type,
+  horizontal,
+  onPick,
+}: {
+  title: string;
+  labels: string[];
+  data: number[];
+  colors: string[];
+  type: "bar" | "doughnut";
+  horizontal: boolean;
+  onPick: (index: number) => void;
+}) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const chartRef = useRef<{ destroy: () => void } | null>(null);
+  const pickRef = useRef(onPick);
+  pickRef.current = onPick;
+  const key = JSON.stringify([title, labels, data, colors, type, horizontal]);
+  useEffect(() => {
+    let dead = false;
+    loadChartJs().then(() => {
+      if (dead || !canvasRef.current) return;
+      const Chart = (window as unknown as { Chart: new (el: HTMLCanvasElement, cfg: object) => { destroy: () => void } }).Chart;
+      chartRef.current?.destroy();
+      chartRef.current = new Chart(canvasRef.current, {
+        type,
+        data: {
+          labels,
+          datasets: [{ data, backgroundColor: colors, borderWidth: 0, borderRadius: type === "bar" ? 6 : 0, maxBarThickness: 28 }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          indexAxis: type === "bar" && horizontal ? "y" : "x",
+          plugins: { legend: { display: false } },
+          scales: type === "doughnut" ? {} : {
+            x: horizontal
+              ? { beginAtZero: true, ticks: { color: "#e8e0d0", font: { size: 15 } } }
+              : { grid: { display: false }, ticks: { color: "#e8e0d0", font: { size: 15 } } },
+            y: horizontal
+              ? { grid: { display: false }, ticks: { color: "#e8e0d0", font: { size: 15 } } }
+              : { beginAtZero: true, ticks: { color: "#e8e0d0", font: { size: 15 } } },
+          },
+          onClick: (_event: unknown, elements: { index: number }[]) => {
+            if (elements.length) pickRef.current(elements[0].index);
+          },
+        },
+      });
+    });
+    return () => {
+      dead = true;
+      chartRef.current?.destroy();
+    };
+  }, [key]);
+  return <canvas ref={canvasRef} aria-label={title} />;
+}
+
+function lawLocal(href: string) {
+  const mark = "/lawfare-docs/";
+  const at = href.indexOf(mark);
+  return at >= 0 ? href.slice(at) : href;
+}
+
+function LawfareScreen({
+  pick,
+  caseId,
+  href,
+  onPick,
+  onCase,
+  onSource,
+}: {
+  pick: string | null;
+  caseId: string | null;
+  href: string | null;
+  onPick: (value: string) => void;
+  onCase: (value: string) => void;
+  onSource: (value: string) => void;
+}) {
+  const file = lawfareCases;
+  const chart = pick ? file.charts.find((item) => item.id === pick.split(":")[0]) : undefined;
+  const index = pick && pick.includes(":") ? Number(pick.split(":")[1]) : -1;
+  if (href) {
+    return (
+      <SourcePage
+        label={href}
+        href={lawLocal(href)}
+      />
+    );
+  }
+  if (caseId && pick === "deception") {
+    const row = fakeNewsCases.find((item) => item.id === caseId);
+    if (!row) return <p className="mt-8 text-[15px] text-white">Not on record.</p>;
+    return (
+      <div className="mt-8 w-full text-left">
+        <p className="text-[16px] font-semibold text-white">{row.who}</p>
+        <p className="mt-2 text-[15px] text-white/85">{row.began}</p>
+        <p className="mt-4 text-[16px] font-semibold text-white">What they said</p>
+        <p className="mt-2 text-[15px] leading-snug text-white/85">{row.said}</p>
+        <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
+        <p className="mt-2 text-[15px] leading-snug text-white/85">{row.record}</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {row.sources.map((source) => (
+            <button key={source.href} type="button" onClick={() => onSource(source.href)} className={NEWS_DOOR + " w-fit"}>
+              {source.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  if (caseId && chart?.id === "impeach") {
+    const row = chart.rows?.find((item) => item.name === caseId);
+    return (
+      <div className="mt-8 w-full text-left">
+        <p className="text-[16px] font-semibold text-white">{row?.name ?? "Not on record."}</p>
+        <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+          <li>Impeachments: {row?.note ?? "Not on record."}</li>
+        </ul>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {(chart.sources ?? []).map((source) => (
+            <button key={source.href} type="button" onClick={() => onSource(source.href)} className={NEWS_DOOR + " w-fit"}>
+              {source.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  if (caseId && chart?.id === "referrals") {
+    const row = Object.values(chart.rowsByLabel ?? {}).flat().find((item) => item.name === caseId);
+    return (
+      <div className="mt-8 w-full text-left">
+        <p className="text-[16px] font-semibold text-white">{row?.name ?? "Not on record."}</p>
+        <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+          <li>Group: {row?.group ?? "Not on record."}</li>
+          <li>Referred: {row?.referred ?? "Not on record."}</li>
+          <li>Outcome: {row?.outcome ?? "Not on record."}</li>
+          <li>{row?.detail ?? "Not on record."}</li>
+          {row && "flag" in row && row.flag ? <li>{row.flag}</li> : null}
+        </ul>
+        {row?.href && row.href !== "Not on record" ? (
+          <button type="button" onClick={() => onSource(row.href)} className={NEWS_DOOR + " mt-4 w-fit"}>
+            Open the source
+          </button>
+        ) : (
+          <p className="mt-4 text-[15px] text-white/80">Not on record.</p>
+        )}
+      </div>
+    );
+  }
+  if (caseId) {
+    const row = file.cases.find((item) => item.id === caseId);
+    if (!row) return <p className="mt-8 text-[15px] text-white">Not on record.</p>;
+    return (
+      <div className="mt-8 w-full text-left">
+        <p className="text-[16px] font-semibold text-white">{row.caseName}</p>
+        <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+          <li>Court: {row.court}</li>
+          <li>Docket: {row.docketNumber}</li>
+          <li>Who brought it: {row.broughtBy}</li>
+          <li>Filed: {row.filedDate}</li>
+          <li>Charges: {row.charges}</li>
+          <li>Current status: {row.currentStatus}</li>
+          <li>Outcome: {row.outcome}</li>
+        </ul>
+        <p className="mt-4 text-[16px] font-semibold text-white">Key rulings</p>
+        <ul className="mt-2 list-disc pl-5 text-[15px] leading-snug text-white/85">
+          {row.rulings.length ? row.rulings.map((item) => (
+            <li key={item.date + item.summary}>{item.date} · {item.court} · {item.summary}</li>
+          )) : <li>{row.keyRulings}</li>}
+        </ul>
+        <div className="mt-4 flex flex-col gap-2">
+          {row.links.map((link) => (
+            <button key={link.href} type="button" onClick={() => onSource(link.href)} className={NEWS_DOOR + " text-left"}>
+              {link.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  if (pick === "deception") {
+    const rows = file.deceptionIds
+      .map((id) => fakeNewsCases.find((item) => item.id === id))
+      .filter((item): item is (typeof fakeNewsCases)[number] => !!item);
+    return (
+      <div className="mt-8 flex w-full flex-col gap-3">
+        <p className="text-center text-[16px] font-semibold text-white">Deception about Lawfare · {rows.length}</p>
+        {rows.map((row) => (
+          <button key={row.id} type="button" onClick={() => onCase(row.id)} className={NEWS_DOOR + " text-left"}>
+            {row.who} · {row.began}
+          </button>
+        ))}
+      </div>
+    );
+  }
+  if (chart && index >= 0) {
+    if (chart.id === "impeach") {
+      const row = chart.rows?.[index];
+      return (
+        <div className="mt-8 flex w-full flex-col gap-3">
+          <p className="text-center text-[16px] font-semibold text-white">{chart.labels[index]} · {chart.data[index]}</p>
+          {row ? (
+            <button type="button" onClick={() => onCase(row.name)} className={NEWS_DOOR + " text-left"}>
+              {row.name} · {row.note}
+            </button>
+          ) : <p className="text-[15px] text-white">Not on record.</p>}
+        </div>
+      );
+    }
+    if (chart.id === "referrals") {
+      const label = chart.labels[index];
+      const rows = (chart.rowsByLabel as Record<string, { name: string; group: string; outcome: string }[]>)[label] ?? [];
+      return (
+        <div className="mt-8 flex w-full flex-col gap-3">
+          <p className="text-center text-[16px] font-semibold text-white">{label} · {chart.data[index]}</p>
+          {rows.map((row) => (
+            <button key={row.name} type="button" onClick={() => onCase(row.name)} className={NEWS_DOOR + " text-left"}>
+              {row.name} · {row.group} · {row.outcome}
+            </button>
+          ))}
+        </div>
+      );
+    }
+    const ids = chart.caseIds[index] ?? [];
+    const rows = ids.map((id) => file.cases.find((item) => item.id === id)).filter((item): item is (typeof file.cases)[number] => !!item);
+    return (
+      <div className="mt-8 flex w-full flex-col gap-3">
+        <p className="text-center text-[16px] font-semibold text-white">{chart.labels[index]} · {rows.length}</p>
+        {rows.length === 0 ? <p className="text-center text-[15px] text-white/80">Not on record.</p> : null}
+        {rows.map((row) => (
+          <button key={row.id} type="button" onClick={() => onCase(row.id)} className={NEWS_DOOR + " text-left"}>
+            {row.caseName} · {row.court} · {row.statusLabel}
+          </button>
+        ))}
+      </div>
+    );
+  }
+  return (
+    <div className="mt-6 flex w-full flex-col gap-8">
+      {file.charts.map((item) => (
+        <section key={item.id}>
+          <h2 className="text-center text-[16px] font-semibold text-white">{item.title}</h2>
+          <p className="mt-1 text-center text-[15px] text-white/80">{file.asOf}</p>
+          <div className={item.type === "doughnut" ? "relative mt-4 h-72" : item.horizontal ? "relative mt-4 h-[640px]" : "relative mt-4 h-72"}>
+            <LawChart
+              title={item.title}
+              labels={item.labels}
+              data={item.data}
+              colors={item.colors}
+              type={item.type === "doughnut" ? "doughnut" : "bar"}
+              horizontal={item.horizontal}
+              onPick={(bar) => onPick(`${item.id}:${bar}`)}
+            />
+          </div>
+          <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+            {(item.keys ?? item.labels.map((label, bar) => ({ label: `${label} · ${item.data[bar]}`, color: item.colors[bar] ?? item.colors[0] }))).map((key) => (
+              <li key={key.label} className="flex items-center gap-2 text-[15px] text-white">
+                <span className="inline-block h-3 w-3 shrink-0" style={{ background: key.color }} />
+                {key.label}
+              </li>
+            ))}
+          </ul>
+          <ul className="mt-2 list-disc pl-5 text-[15px] leading-snug text-white/80">
+            {item.bullets.slice(0, 3).map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+        </section>
+      ))}
+      <button type="button" onClick={() => onPick("deception")} className={NEWS_DOOR}>
+        Deception about Lawfare (6)
+      </button>
+    </div>
+  );
+}
+
 function Betrayal() {
   const [layer, setLayer] = useState<Layer>("root");
   const [method, setMethod] = useState<string | null>(null);
@@ -1905,6 +2188,10 @@ function Betrayal() {
   const [saveBar, setSaveBar] = useState<string | null>(null);
   const [saveSource, setSaveSource] = useState<string | null>(null);
   const [saveHref, setSaveHref] = useState<string | null>(null);
+  const [lawOn, setLawOn] = useState(false);
+  const [lawPick, setLawPick] = useState<string | null>(null);
+  const [lawCase, setLawCase] = useState<string | null>(null);
+  const [lawHref, setLawHref] = useState<string | null>(null);
   const [outcome, setOutcome] = useState(false);
   const [aside, setAside] = useState<null | "standard" | "record">(null);
   const [deception, setDeception] = useState<string | null>(null);
@@ -1949,7 +2236,7 @@ function Betrayal() {
       />
       <div className="pointer-events-none fixed inset-0 bg-[#070b12]/70" />
       <div className="relative z-10">
-        {layer !== "fake" && layer !== "root" && layer !== "types" && layer !== "mechanics" && layer !== "evidence" && layer !== "bail" && (
+        {layer !== "fake" && layer !== "root" && layer !== "types" && layer !== "mechanics" && layer !== "evidence" && layer !== "bail" && !lawOn && (
         <nav
           aria-label="Betrayal"
           className="relative flex min-h-14 items-center justify-center bg-[#070b12]/90 px-6 py-2"
@@ -1969,6 +2256,14 @@ function Betrayal() {
                 key={label}
                 type="button"
                 onClick={() => {
+                  if (label === "Lawfare Evidence") {
+                    setLawPick(null);
+                    setLawCase(null);
+                    setLawHref(null);
+                    setLawOn(true);
+                    return;
+                  }
+                  setLawOn(false);
                   const next = NEXT[label];
                   if (next) setLayer(next);
                 }}
@@ -2734,6 +3029,18 @@ function Betrayal() {
             )}
           </div>
         )}
+        {layer === "lawfare" && lawOn && (
+          <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
+            <LawfareScreen
+              pick={lawPick}
+              caseId={lawCase}
+              href={lawHref}
+              onPick={setLawPick}
+              onCase={setLawCase}
+              onSource={setLawHref}
+            />
+          </div>
+        )}
         {layer === "bail" && (
           <div className="flex flex-col items-center px-6 pt-16">
             <button
@@ -2900,6 +3207,22 @@ function Betrayal() {
               type="button"
               aria-label="Back"
               onClick={() => {
+                if (layer === "lawfare" && lawOn) {
+                  if (lawHref) {
+                    setLawHref(null);
+                    return;
+                  }
+                  if (lawCase) {
+                    setLawCase(null);
+                    return;
+                  }
+                  if (lawPick) {
+                    setLawPick(null);
+                    return;
+                  }
+                  setLawOn(false);
+                  return;
+                }
                 if (source) {
                   setSource(null);
                   return;
