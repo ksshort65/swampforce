@@ -1417,3 +1417,21 @@ body.serious .main { background: rgba(250,248,243,.95); }
 .sf-quick-btn svg { width: 28px; height: 28px; flex: none; }
 .why-more > summary { margin: 4px 0 8px; }
 .sf-quick.wrap { margin-top: 16px; margin-bottom: 16px; }
+/* Section pills under the nav (replaces the homepage button grid) */
+.sf-pills { border-top: 1px solid rgba(255,255,255,.12); }
+.sf-pills-in { max-width: var(--max); margin: 0 auto; padding: 6px 18px 8px; display: flex; flex-wrap: wrap; gap: 6px; max-height: 76px; overflow: hidden; }
+.sf-pill { display: inline-block; padding: 4px 11px; border-radius: 999px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.28);
+  color: #fff; font: 700 .84rem/1.35 var(--sans, sans-serif); text-decoration: none; white-space: nowrap; }
+.sf-pill:hover, .sf-pill:focus { background: #b91c1c; border-color: #b91c1c; }
+@media (max-width: 760px) { .sf-pills-in { flex-wrap: nowrap; overflow-x: auto; max-height: none; -webkit-overflow-scrolling: touch; scrollbar-width: thin; } }
+/* Beta review notes */
+#sf-notes-open { margin-left: 12px; font: 700 .85rem/1.3 var(--sans, sans-serif); padding: 1px 10px; border-radius: 999px; border: 1px solid #b45309; background: #fff; color: #78350f; cursor: pointer; }
+.sf-note-btn { float: right; margin-left: 10px; font: 700 .85rem/1.3 var(--sans, sans-serif); letter-spacing: 0; text-transform: none; padding: 3px 10px; border-radius: 999px; border: 1px solid #94a3b8; background: #fff; color: #334155; cursor: pointer; position: relative; }
+.sf-note-btn.has-note::after { content: ""; position: absolute; top: -3px; right: -3px; width: 11px; height: 11px; border-radius: 50%; background: #facc15; border: 1px solid #a16207; }
+.sf-note-box { background: #fffbeb; border: 2px solid #f59e0b; border-radius: 10px; padding: 12px; margin: 8px 0 14px; font: 1.05rem/1.45 var(--sans, sans-serif); color: #1f2937; }
+.sf-note-box textarea { width: 100%; font: 1.1rem/1.45 var(--sans, sans-serif); padding: 8px; border: 1px solid #d6d3cb; border-radius: 6px; box-sizing: border-box; }
+.sf-note-h { font-weight: 800; margin: 0 0 6px; }
+.sf-note-actions button, .sf-np-actions button, .sf-np-top button { font: 700 1rem/1.3 var(--sans, sans-serif); padding: 7px 14px; margin: 8px 8px 0 0; border-radius: 8px; border: 1px solid #0c2340; background: #0c2340; color: #fff; cursor: pointer; }
+#sf-notes-panel { position: fixed; top: 60px; right: 12px; width: min(560px, calc(100vw - 24px)); max-height: calc(100vh - 80px); overflow: auto; z-index: 200; background: #fff; color: #1f2937; border: 2px solid #f59e0b; border-radius: 12px; padding: 16px; box-shadow: 0 12px 40px rgba(0,0,0,.35); font: 1.08rem/1.5 var(--sans, sans-serif); }
+.sf-np-top { display: flex; justify-content: space-between; align-items: center; font-size: 1.2rem; }
+.sf-np-list h3 { margin: 14px 0 6px; font-size: 1.1rem; } .sf-np-item { border-left: 4px solid #facc15; padding: 4px 10px; margin: 6px 0; } .sf-np-item p { margin: 2px 0 0; }

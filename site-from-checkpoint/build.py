@@ -134,6 +134,7 @@ def page(fname, title, desc, body, *, charts=None, extra_js="", flush=False, ser
     </div>
   </div>
   <nav class="nav-row" id="site-nav" aria-label="Primary">{nav(fname)}</nav>
+  {quick_grid()}
 </header>
 <main id="main" class="main{' flush' if flush else ''}">
 {body}
@@ -828,17 +829,17 @@ def betrayal_verify_box():
 </aside>"""
 
 
-QUICK_LINKS = [("betrayal.html", "The Great American Betrayal", "quote"), ("fake-news.html", "Fake News", "search"),
+QUICK_LINKS = [("betrayal.html", "Betrayal", "quote"), ("fake-news.html", "Fake News", "search"),
                ("unverified.html#uv-flawed", "Social Media Weapon", "eye"), ("unverified.html", "Not Yet Verified", "eye"),
                ("lawfare.html", "Lawfare", "scale"), ("scorecard.html", "Midterms", "chart"),
                ("accountability-trading.html", "Congress / Trading", "capitol"), ("scorecard.html#compare", "Scorecard", "chart"),
-               ("trump-watch.html", "Trump Watch", "eye"), ("democrats.html#biden-foreign-by-country", "Democrats / Foreign Money", "file"),
-               ("journal.html", "Journal", "book"), ("article-v.html", "For Lawmakers / Article V", "file")]
+               ("trump-watch.html", "Trump Watch", "eye"), ("democrats.html#biden-foreign-by-country", "Foreign Money", "file"),
+               ("journal.html", "Journal", "book"), ("article-v.html", "Article V", "file")]
 
 
 def quick_grid():
-    cells = "".join(f'<a class="sf-quick-btn" href="{h}">{ico(i)}<span>{e(t)}</span></a>' for h, t, i in QUICK_LINKS)
-    return f'<nav class="sf-quick wrap" aria-label="Main sections">{cells}</nav>'
+    cells = "".join(f'<a class="sf-pill" href="{h}">{e(t)}</a>' for h, t, i in QUICK_LINKS)
+    return f'<nav class="sf-pills" aria-label="Main sections"><div class="sf-pills-in">{cells}</div></nav>'
 
 
 def betrayal_home():
@@ -881,7 +882,6 @@ def build_home():
     nc = corr["Never corrected by the pusher"]
     picks = [c for c in VCASES if c["proof"] == "Official record" and c["evidence"] == "Proven false"][:3]
     body = f"""
-{quick_grid()}
 <section class="hero" style="background-image:url('images/bg-capitol-eagle.jpg')">
  <div class="hero-inner">
   <picture class="hero-lockup"><source srcset="assets/brand/lockup-light.webp" type="image/webp"><img src="assets/brand/lockup-light.png" alt="SwampForce" width="1100" height="583" fetchpriority="high"></picture>
@@ -2235,6 +2235,29 @@ def main():
     print(json.dumps(meta, indent=1))
 
 
+
+def dedupe_journal_images():
+    """Each journal page shows a picture once: the first (top) copy stays, pointed at the original Grok Build file; later repeats are removed."""
+    import re as _re, os as _os
+    orig = SITE / "image-src" / "original-site" / "images"
+    fixed = 0
+    for f in sorted((SITE / "public_html").glob("journal-*.html")):
+        t = f.read_text(encoding="utf-8"); seen = set(); changed = False
+        def one(m):
+            nonlocal changed
+            src = _re.search(r'src="([^"]+)"', m.group(0)).group(1); base = _os.path.basename(src)
+            if base in seen:
+                changed = True; return ""
+            seen.add(base)
+            if (orig / base).exists() and src != "images/" + base:
+                changed = True; return m.group(0).replace(src, "images/" + base)
+            return m.group(0)
+        t2 = _re.sub(r'<figure[^>]*>\s*(?:<picture>.*?</picture>|<img[^>]*>)\s*(?:<figcaption>.*?</figcaption>)?\s*</figure>|<img class="jr-hub-img"[^>]*>', one, t, flags=_re.S)
+        if changed:
+            f.write_text(t2, encoding="utf-8"); fixed += 1
+    print("JOURNAL_IMG_DEDUPE", fixed)
+
+
 # ---- BETA banner: set BETA_BANNER = False before launch to remove it from every page ----
 BETA_BANNER = True
 BETA_HTML = '<div class="sf-beta-banner" role="note">BETA PREVIEW - under review</div>'
@@ -2245,14 +2268,18 @@ def apply_beta_banner():
     for f in (p for p in (SITE / "public_html").rglob("*.html") if "docs" not in p.parts):
         t = f.read_text(encoding="utf-8")
         t = _re.sub(r'<div class="sf-beta-banner"[^>]*>.*?</div>', "", t)
+        t = _re.sub(r'<script src="(?:\.\./)*assets/notes\.js" defer></script>', "", t)
         if BETA_BANNER:  # inside the sticky header so it stays on screen while scrolling; pages without the header get it after <body>
             if _re.search(r'<header class="site-header"[^>]*>', t):
                 t = _re.sub(r'(<header class="site-header"[^>]*>)', lambda m: m.group(1) + BETA_HTML, t, count=1)
             else:
                 t = _re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + BETA_HTML, t, count=1)
+            _rel = "../" * (len(f.relative_to(SITE / "public_html").parts) - 1)
+            t = t.replace("</body>", f'<script src="{_rel}assets/notes.js" defer></script></body>', 1)  # review-notes tool, beta only
         f.write_text(t, encoding="utf-8")
 
 
 if __name__ == "__main__":
     main()
+    dedupe_journal_images()
     apply_beta_banner()
