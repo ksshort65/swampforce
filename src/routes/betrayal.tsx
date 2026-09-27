@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { DECEPTION } from "../data/deception";
+import newsEvidence from "../data/fake-news-evidence.json";
 
 export const Route = createFileRoute("/betrayal")({ component: Betrayal });
 
-type Layer = "root" | "fake" | "mechanics" | "types" | "lawfare" | "trials" | "impeach" | "citizen" | "bail";
+type Layer = "root" | "fake" | "mechanics" | "types" | "evidence" | "lawfare" | "trials" | "impeach" | "citizen" | "bail";
 
 const LAYERS: Record<Exclude<Layer, "root">, { back: Layer; title: string; buttons: string[] }> = {
   fake: {
@@ -26,6 +27,11 @@ const LAYERS: Record<Exclude<Layer, "root">, { back: Layer; title: string; butto
   mechanics: {
     back: "fake",
     title: "Understanding the Mechanics of Fake News",
+    buttons: [],
+  },
+  evidence: {
+    back: "fake",
+    title: "Fake News Evidence",
     buttons: [],
   },
   lawfare: {
@@ -507,6 +513,9 @@ function Betrayal() {
   const [layer, setLayer] = useState<Layer>("root");
   const [method, setMethod] = useState<string | null>(null);
   const [source, setSource] = useState<string | null>(null);
+  const [newsMethod, setNewsMethod] = useState<string | null>(null);
+  const [newsCase, setNewsCase] = useState<string | null>(null);
+  const [newsSource, setNewsSource] = useState<string | null>(null);
   const [outcome, setOutcome] = useState(false);
   const [aside, setAside] = useState<null | "standard" | "record">(null);
   const [deception, setDeception] = useState<string | null>(null);
@@ -522,7 +531,7 @@ function Betrayal() {
       />
       <div className="pointer-events-none fixed inset-0 bg-[#070b12]/70" />
       <div className="relative z-10">
-        {layer !== "fake" && layer !== "root" && layer !== "types" && layer !== "mechanics" && layer !== "bail" && (
+        {layer !== "fake" && layer !== "root" && layer !== "types" && layer !== "mechanics" && layer !== "evidence" && layer !== "bail" && (
         <nav
           aria-label="Betrayal"
           className="relative flex min-h-14 items-center justify-center bg-[#070b12]/90 px-6 py-2"
@@ -607,6 +616,25 @@ function Betrayal() {
               </button>
               <button
                 type="button"
+                onClick={() => {
+                  setNewsMethod(null);
+                  setNewsCase(null);
+                  setNewsSource(null);
+                  setLayer("evidence");
+                }}
+                className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
+              >
+                <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
+                  Fake News Evidence
+                </span>
+                <img
+                  src="/images/topic-fake-news.jpg"
+                  alt=""
+                  className="h-44 w-full rounded-2xl border border-white/30 object-cover"
+                />
+              </button>
+              <button
+                type="button"
                 onClick={() => setLayer("types")}
                 className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
               >
@@ -628,6 +656,97 @@ function Betrayal() {
                 </span>
               </a>
             </div>
+          </div>
+        )}
+        {layer === "evidence" && (
+          <div className="mx-auto flex max-w-xl flex-col items-center px-6 pt-10 pb-24">
+            <button
+              type="button"
+              onClick={() => {
+                setNewsMethod(null);
+                setNewsCase(null);
+                setNewsSource(null);
+                setLayer("fake");
+              }}
+              className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
+            >
+              Fake News Evidence
+            </button>
+            <p className="mt-4 max-w-md text-center text-[13px] leading-snug text-white/75">
+              {newsEvidence.line}
+            </p>
+            {newsSource ? (
+              <SourcePage
+                label={
+                  newsEvidence.methods
+                    .flatMap((item) => item.cases)
+                    .flatMap((item) => item.sources)
+                    .find((item) => item.href === newsSource)?.label ?? newsSource
+                }
+                href={newsSource}
+              />
+            ) : newsCase ? (
+              <div className="mt-8 w-full border border-white/20 bg-[#070b12]/80 px-4 py-4 text-left">
+                {newsEvidence.methods.flatMap((item) => item.cases).filter((item) => item.label === newsCase).map((item) => (
+                  <div key={item.id}>
+                    <p className="text-[16px] font-semibold text-white">What they said</p>
+                    <p className="mt-2 text-[14px] leading-snug text-white/85">{item.said}</p>
+                    <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
+                    <p className="mt-2 text-[14px] leading-snug text-white/85">{item.record}</p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {item.sources.map((source) => (
+                        <button
+                          key={source.href}
+                          type="button"
+                          onClick={() => setNewsSource(source.href)}
+                          className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[12px] font-semibold text-white"
+                        >
+                          {source.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <>
+                {newsMethod && (
+                  <MethodDetail
+                    item={{
+                      name: newsMethod,
+                      info: newsMethod,
+                      evidence: (newsEvidence.methods.find((item) => item.name === newsMethod)?.cases ?? []).map((item) => ({
+                        label: item.label,
+                      })),
+                    }}
+                    onOpen={(label) => {
+                      setNewsSource(null);
+                      setNewsCase(label);
+                    }}
+                  />
+                )}
+                <div className="mt-8 grid w-full grid-cols-2 gap-x-8 gap-y-1">
+                  {newsEvidence.methods.map((item) => (
+                    <div key={item.name} className="flex flex-col items-center">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setNewsSource(null);
+                          setNewsCase(null);
+                          setNewsMethod(item.name);
+                        }}
+                        className="w-full rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1.5 text-[13px] font-semibold text-white"
+                      >
+                        {item.name}
+                      </button>
+                      <span className="text-[18px] leading-none text-[#d4af37]" aria-hidden="true">
+                        ↓
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         )}
         {layer === "mechanics" && (
@@ -1075,6 +1194,18 @@ function Betrayal() {
                 }
                 if (layer === "mechanics" && method) {
                   setMethod(null);
+                  return;
+                }
+                if (newsSource) {
+                  setNewsSource(null);
+                  return;
+                }
+                if (newsCase) {
+                  setNewsCase(null);
+                  return;
+                }
+                if (newsMethod) {
+                  setNewsMethod(null);
                   return;
                 }
                 setLayer(LAYERS[layer].back);
