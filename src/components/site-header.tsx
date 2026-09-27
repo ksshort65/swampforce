@@ -75,6 +75,17 @@ function NavMenu({ label, slugs }: { label: string; slugs: readonly string[] }) 
     );
   }
 
+  if (label === "Scorecard") {
+    return (
+      <Link
+        to="/scorecard"
+        className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:text-sage"
+      >
+        {label}
+      </Link>
+    );
+  }
+
   if (!slugs.length) {
     return (
       <span className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase">

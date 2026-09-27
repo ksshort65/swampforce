@@ -3326,7 +3326,7 @@ export const NAV_MENUS = [
 	{ label: "Border", slugs: [] as string[] },
 	{ label: "Remedy", slugs: [] as string[] },
 	{ label: "J6", slugs: ["january-6"] },
-	{ label: "Scorecard", slugs: ["they-called-it-protest"] },
+	{ label: "Scorecard", slugs: [] as string[] },
 	{ label: "Pump", slugs: [] as string[] },
 	{ label: "Foreword", slugs: [] as string[] },
 ] as const;
