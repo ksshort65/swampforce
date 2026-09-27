@@ -1,0 +1,11 @@
+# SuperGrok: Biden family SARs (received 2026-09-26 4:28 PM MT)
+- FinCEN/Treasury official SAR total: not documented.
+- House Oversight number: "more than 150" / "at least 150". First release (May 25, 2022) attributes it to media reports.
+  - https://oversight.house.gov/release/comer-probes-hunter-bidens-suspicious-foreign-business-transactions-flagged-by-u-s-banks/ (5/25/2022): "More than 150 international business transactions tied to Hunter or James Biden were flagged by U.S. banks in SARs filed with the U.S. Department of the Treasury."
+  - https://oversight.house.gov/release/comer-blasts-the-treasury-department-for-refusing-to-provide-the-biden-familys-suspicious-activity-reports/ (9/3/2022): "at least 150 suspicious activity reports"
+- Banks: "six different banks" (hearing) https://www.congress.gov/event/118th-congress/house-event/116254/text ; not named in full.
+- Separate Oversight bank memos (not SAR totals): over $10M, later over $20M / over $24M foreign sources; $3M China, $5M Northern International/CEFC-related, $3.5M Baturina, $40,000 check to Joe Biden.
+- SAR naming Joe Biden personally: not documented. Closest (11/17/2022): commingled accounts; "red flags were raised by banks" https://oversight.house.gov/release/icymi-comer-reveals-evidence-of-president-bidens-involvement-in-his-familys-business-schemes/
+- Treasury in-camera access 3/14/2023: https://oversight.house.gov/release/comer-treasury-department-caves-provides-access-to-biden-family-their-associates-sars/
+- Charges vs Joe Biden: not documented. Hunter: D. Del. 1:23-cr-00061 (gun), C.D. Cal. 2:23-CR-00599 (tax) https://www.justice.gov/d9/2023-09/23-cr-00061%20(Indictment).pdf
+- No House impeachment vote. Pardons: Hunter 12/1/2024 (offenses 1/1/2014 to 12/1/2024); James B., Sara Jones Biden and others 1/19/2025. https://www.justice.gov/pardon/pardons-granted-president-joseph-biden-2021-2025

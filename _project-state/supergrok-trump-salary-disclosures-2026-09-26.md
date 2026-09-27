@@ -1,0 +1,6 @@
+# SuperGrok: Trump salary donations, disclosures (received 2026-09-26 4:58 PM MT)
+- Salary $400,000/yr. 2017 Q1: $78,333 check to Interior/NPS (Antietam) https://trumpwhitehouse.archives.gov/briefings-statements/press-briefing-press-secretary-sean-spicer-040317/
+- 2017 Q2 Education https://trumpwhitehouse.archives.gov/articles/president-donald-j-trump-donate-salary-department-education/ ; Q3 HHS opioids https://trumpwhitehouse.archives.gov/briefings-statements/press-briefing-press-secretary-sarah-sanders-113017/ ; Q4 DOT https://trumpwhitehouse.archives.gov/briefings-statements/press-briefing-press-secretary-sarah-sanders-secretary-transportation-elaine-chao/ (amounts not stated)
+- 2018-2020 and 2025-26 quarterly amounts: not documented in the pages retrieved.
+- OGE 278e: ranges only, no official foreign-income total. https://extapps2.oge.gov/201/Presiden.nsf/President%20and%20Vice%20President%20Index?OpenView | https://www.whitehouse.gov/disclosures/
+- Treasury profit donations: news-reported $151,470 (2017), $191,538 (2018), $10,577 (2020); NOT official. Pledge letter https://oversight.house.gov/release/oversight-committee-requests-documents-trump-organizations-treatment-foreign-government-payments/
