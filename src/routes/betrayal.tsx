@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { DECEPTION } from "../data/deception";
 import newsEvidence from "../data/fake-news-evidence.json";
@@ -509,6 +509,321 @@ function MethodDetail({
   );
 }
 
+const NEWS_MARKS: Record<string, { evidence: string; proof: string; term: string }> = {
+  "1": { evidence: "Proven false", proof: "Original transcript/video", term: "first" },
+  "2": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "9": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "10": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "11": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "12": { evidence: "Proven false", proof: "Original transcript/video", term: "first" },
+  "13": { evidence: "Rated misleading", proof: "Original transcript/video", term: "first" },
+  "14": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "15": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "16": { evidence: "Proven false", proof: "Official record", term: "later" },
+  "17": { evidence: "Proven false", proof: "Outlet's own correction", term: "later" },
+  "18": { evidence: "Proven false", proof: "Outlet's own correction", term: "later" },
+  "20": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "23": { evidence: "Rated misleading", proof: "Original transcript/video", term: "first" },
+  "24": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "25": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "26": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "27": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "31": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "32": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "33": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "35": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "36": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "41": { evidence: "Proven false", proof: "Outlet's own correction", term: "first" },
+  "42": { evidence: "Proven false", proof: "Primary document or record search", term: "later" },
+  "43": { evidence: "Proven false", proof: "Primary document or record search", term: "later" },
+  "44": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "45": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "46": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "47": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "48": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "50": { evidence: "Proven false", proof: "Outlet's own correction", term: "first" },
+  "52": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "54": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "55": { evidence: "Rated misleading", proof: "Primary document or record search", term: "later" },
+  "56": { evidence: "Rated misleading", proof: "Original transcript/video", term: "first" },
+  "57": { evidence: "Proven false", proof: "Original transcript/video", term: "first" },
+  "60": { evidence: "Proven false", proof: "Outlet's own correction", term: "first" },
+  "66": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "69": { evidence: "Proven false", proof: "Outlet's own correction", term: "first" },
+  "72": { evidence: "Proven false", proof: "Outlet's own correction", term: "first" },
+  "78": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "79": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "82": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "84": { evidence: "Proven false", proof: "Original transcript/video", term: "first" },
+  "85": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "86": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "90": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "93": { evidence: "Proven false", proof: "Original transcript/video", term: "first" },
+  "94": { evidence: "Rated misleading", proof: "Original transcript/video", term: "first" },
+  "99": { evidence: "Proven false", proof: "Primary document or record search", term: "later" },
+  "101": { evidence: "Proven false", proof: "Outlet's own correction", term: "later" },
+  "105": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "111": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "112": { evidence: "Proven false", proof: "Original transcript/video", term: "first" },
+  "113": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "114": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "118": { evidence: "Proven false", proof: "Outlet's own correction", term: "later" },
+  "119": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "125": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "126": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "127": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "128": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "130": { evidence: "Proven false", proof: "Original transcript/video", term: "later" },
+  "131": { evidence: "Proven false", proof: "Official record", term: "later" },
+  "134": { evidence: "Proven false", proof: "Primary document or record search", term: "later" },
+  "139": { evidence: "Proven false", proof: "Primary document or record search", term: "later" },
+  "140": { evidence: "Proven false", proof: "Primary document or record search", term: "later" },
+  "141": { evidence: "Proven false", proof: "Primary document or record search", term: "later" },
+  "142": { evidence: "Proven false", proof: "Primary document or record search", term: "later" },
+  "146": { evidence: "Proven false", proof: "Outlet's own correction", term: "later" },
+  "154": { evidence: "Proven false", proof: "Official record", term: "later" },
+  "155": { evidence: "Proven false", proof: "Official record", term: "later" },
+  "156": { evidence: "Proven false", proof: "Primary document or record search", term: "later" },
+  "157": { evidence: "Proven false", proof: "Primary document or record search", term: "later" },
+  "166": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "168": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "169": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "172": { evidence: "Proven false", proof: "Original transcript/video", term: "first" },
+  "173": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "177": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "180": { evidence: "Proven false", proof: "Official record", term: "later" },
+  "183": { evidence: "Proven false", proof: "Official record", term: "later" },
+  "184": { evidence: "Proven false", proof: "Outlet's own correction", term: "later" },
+  "185": { evidence: "Proven false", proof: "Official record", term: "later" },
+  "189": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "191": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "192": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "194": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "199": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "200": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "201": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "202": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "203": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "204": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "205": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "206": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "207": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "209": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "210": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "211": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "212": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "214": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "215": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "216": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "217": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "218": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "219": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "220": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "221": { evidence: "Rated misleading", proof: "Original transcript/video", term: "later" },
+  "222": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "223": { evidence: "Proven false", proof: "Primary document or record search", term: "later" },
+  "225": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "226": { evidence: "Proven false", proof: "Outlet's own correction", term: "first" },
+  "229": { evidence: "Proven false", proof: "Outlet's own correction", term: "first" },
+  "233": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "252": { evidence: "Proven false", proof: "Official record", term: "later" },
+  "253": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "254": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "255": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "256": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "257": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "258": { evidence: "Rated misleading", proof: "Official record", term: "first" },
+  "259": { evidence: "Proven false", proof: "Official record", term: "first" },
+  "260": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "261": { evidence: "Proven false", proof: "Official record", term: "later" },
+  "262": { evidence: "Proven false", proof: "Official record", term: "later" },
+  "263": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+  "264": { evidence: "Rated misleading", proof: "Official record", term: "later" },
+};
+
+const EVIDENCE_CHARTS = [
+  {
+    id: "chart-evidence",
+    title: "Verdict",
+    type: "doughnut",
+    horizontal: false,
+    labels: ["Proven false", "Rated misleading"],
+    data: [69, 60],
+    colors: ["#166534", "#b45309"],
+    key: "evidence",
+    values: ["Proven false", "Rated misleading"],
+    bullets: [
+      "Tap to filter",
+      "129 news claims we verified as false or misleading. 108 never corrected.",
+      "94 of the 129 verified cases were also confirmed by an approved fact-checker.",
+    ],
+  },
+  {
+    id: "chart-proof",
+    title: "Strength of proof",
+    type: "bar",
+    horizontal: true,
+    labels: ["Official record", "Transcript / video", "Outlet's own correction", "Primary document / record search"],
+    data: [79, 25, 13, 12],
+    colors: ["#14532d", "#1e3a5f", "#7c2d12", "#57534e"],
+    key: "proof",
+    values: ["Official record", "Original transcript/video", "Outlet's own correction", "Primary document or record search"],
+    bullets: ["Tap a bar to filter", "Original transcript/video", "Outlet's own correction"],
+  },
+  {
+    id: "chart-term",
+    title: "Period",
+    type: "bar",
+    horizontal: false,
+    labels: ["First term (2017–21)", "2021 – present"],
+    data: [65, 64],
+    colors: ["#0c2340", "#b91c1c"],
+    key: "term",
+    values: ["first", "later"],
+    bullets: ["First term", "2021 – present", "Among the 129 verified cases · tap to filter"],
+  },
+  {
+    id: "chart-methods",
+    title: "Top methods",
+    type: "bar",
+    horizontal: true,
+    labels: [
+      "omitted context",
+      "misquote / truncation",
+      "fabrication / false attribution",
+      "premature “proven” framing",
+      "retracted invention",
+      "policy-scope inflation",
+      "false attribution of words/intent / omitted context",
+      "retracted invention / misquote / truncation",
+    ],
+    data: [14, 8, 8, 5, 5, 5, 4, 2],
+    colors: ["#b91c1c"],
+    key: "method",
+    values: [
+      "omitted context",
+      "misquote / truncation",
+      "fabrication / false attribution",
+      "premature “proven” framing",
+      "retracted invention",
+      "policy-scope inflation",
+      "false attribution of words/intent / omitted context",
+      "retracted invention / misquote / truncation",
+    ],
+    bullets: [
+      "Among the 129 verified cases · tap to filter",
+      "The charts: tap a bar to filter",
+      "Tap a chart or tile for the details behind it.",
+    ],
+  },
+] as const;
+
+function loadChartJs() {
+  if (typeof window === "undefined") return Promise.resolve();
+  const w = window as Window & { Chart?: unknown };
+  if (w.Chart) return Promise.resolve();
+  return new Promise<void>((resolve) => {
+    const found = document.querySelector('script[src="/assets/vendor/chart.umd.min.js"]');
+    if (found) {
+      found.addEventListener("load", () => resolve(), { once: true });
+      if ((window as Window & { Chart?: unknown }).Chart) resolve();
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = "/assets/vendor/chart.umd.min.js";
+    script.onload = () => resolve();
+    document.head.appendChild(script);
+  });
+}
+
+function EvidenceChart({
+  spec,
+  onPick,
+}: {
+  spec: (typeof EVIDENCE_CHARTS)[number];
+  onPick: (index: number) => void;
+}) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const chartRef = useRef<{ destroy: () => void } | null>(null);
+  const pickRef = useRef(onPick);
+  pickRef.current = onPick;
+  useEffect(() => {
+    let dead = false;
+    loadChartJs().then(() => {
+      if (dead || !canvasRef.current) return;
+      const Chart = (window as unknown as { Chart: new (el: HTMLCanvasElement, cfg: object) => { destroy: () => void } }).Chart;
+      const horiz = spec.horizontal;
+      const bg = spec.data.map((_, index) => spec.colors[index % spec.colors.length]);
+      chartRef.current?.destroy();
+      chartRef.current = new Chart(canvasRef.current, {
+        type: spec.type,
+        data: {
+          labels: [...spec.labels],
+          datasets: [
+            {
+              data: [...spec.data],
+              backgroundColor: bg,
+              borderWidth: spec.type === "doughnut" ? 2 : 0,
+              borderColor: "#fff",
+              borderRadius: spec.type === "bar" ? 6 : 0,
+              maxBarThickness: 44,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 900, easing: "easeOutQuart" },
+          cutout: spec.type === "doughnut" ? "62%" : undefined,
+          indexAxis: spec.type === "bar" && horiz ? "y" : "x",
+          plugins: {
+            legend: { display: false },
+            tooltip: { callbacks: { label: (ctx: { label?: string; parsed: number | { x: number; y: number } }) => {
+              const value = typeof ctx.parsed === "object" ? (horiz ? ctx.parsed.x : ctx.parsed.y) : ctx.parsed;
+              return `${ctx.label ?? ""}: ${value}`;
+            } } },
+          },
+          scales: spec.type === "doughnut" ? undefined : {
+            x: horiz
+              ? { beginAtZero: true, grid: { color: "rgba(15,23,42,.06)" }, ticks: { color: "#e8e0d0" } }
+              : { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false } },
+            y: horiz
+              ? { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false } }
+              : { beginAtZero: true, grid: { color: "rgba(15,23,42,.06)" }, ticks: { color: "#e8e0d0" } },
+          },
+          onClick: (_event: unknown, elements: { index: number }[]) => {
+            if (elements.length) pickRef.current(elements[0].index);
+          },
+        },
+      });
+    });
+    return () => {
+      dead = true;
+      chartRef.current?.destroy();
+    };
+  }, [spec]);
+  return (
+    <figure className="w-full">
+      <div className={spec.id === "chart-methods" ? "relative h-80" : spec.horizontal ? "relative h-56" : "relative h-64"}>
+        <canvas ref={canvasRef} aria-label={spec.title} />
+      </div>
+      <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+        {spec.labels.map((label, index) => (
+          <li key={label} className="flex items-center gap-2 text-[13px] text-white">
+            <span className="inline-block h-3 w-3" style={{ background: spec.colors[index % spec.colors.length] }} />
+            {label}
+          </li>
+        ))}
+      </ul>
+      <ul className="mt-2 list-disc pl-5 text-[13px] leading-snug text-white/80">
+        {spec.bullets.map((line) => (
+          <li key={line}>{line}</li>
+        ))}
+      </ul>
+    </figure>
+  );
+}
+
 function Betrayal() {
   const [layer, setLayer] = useState<Layer>("root");
   const [method, setMethod] = useState<string | null>(null);
@@ -659,7 +974,7 @@ function Betrayal() {
           </div>
         )}
         {layer === "evidence" && (
-          <div className="mx-auto flex max-w-xl flex-col items-center px-6 pt-10 pb-24">
+          <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-10 pb-24">
             <button
               type="button"
               onClick={() => {
@@ -681,28 +996,45 @@ function Betrayal() {
             >
               Fake News Evidence
             </button>
-            <p className="mt-4 max-w-md text-center text-[13px] leading-snug text-white/75">
-              129 verified cases. Tap a bar.
-            </p>
+            {(newsSource || newsCase || newsMethod) && (
+              <button
+                type="button"
+                onClick={() => {
+                  if (newsSource) {
+                    setNewsSource(null);
+                    return;
+                  }
+                  if (newsCase) {
+                    setNewsCase(null);
+                    return;
+                  }
+                  setNewsMethod(null);
+                }}
+                className="fixed top-12 left-14 z-30 rounded-full border border-white/35 bg-[#070b12]/80 px-3 py-1 text-[12px] leading-none font-semibold text-white"
+              >
+                Back
+              </button>
+            )}
             {newsSource ? (
-              <SourcePage
-                label={
-                  newsEvidence.methods
-                    .flatMap((item) => item.cases)
-                    .flatMap((item) => item.sources)
-                    .find((item) => item.href === newsSource)?.label ?? newsSource
-                }
-                href={newsSource}
-              />
+              <div className="mt-6 w-full">
+                <SourcePage
+                  label={
+                    newsEvidence.methods
+                      .flatMap((item) => item.cases)
+                      .flatMap((item) => item.sources)
+                      .find((item) => item.href === newsSource)?.label ?? newsSource
+                  }
+                  href={newsSource}
+                />
+              </div>
             ) : newsCase ? (
-              <div className="mt-8 w-full border border-white/20 bg-[#070b12]/80 px-4 py-4 text-left">
+              <div className="mt-6 w-full border border-white/20 bg-[#070b12]/80 px-4 py-4 text-left">
                 {newsEvidence.methods.flatMap((item) => item.cases).filter((item) => item.label === newsCase).map((item) => (
                   <div key={item.id}>
-                    <p className="text-[16px] font-semibold text-white">What they said</p>
+                    <p className="mt-4 text-[16px] font-semibold text-white">What they said</p>
                     <p className="mt-2 text-[14px] leading-snug text-white/85">{item.said}</p>
                     <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
                     <p className="mt-2 text-[14px] leading-snug text-white/85">{item.record}</p>
-                    <p className="mt-4 text-[14px] leading-snug text-white/85">{item.method}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.sources.map((source) => (
                         <button
@@ -719,48 +1051,55 @@ function Betrayal() {
                 ))}
               </div>
             ) : newsMethod ? (
-              <div className="mt-8 flex w-full flex-col gap-3">
-                {(newsEvidence.methods.find((item) => item.name === newsMethod)?.cases ?? []).map((item) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    onClick={() => {
-                      setNewsSource(null);
-                      setNewsCase(item.label);
-                    }}
-                    className="w-full rounded-2xl border border-white/35 bg-[#070b12]/75 px-4 py-4 text-left text-[16px] font-semibold text-white"
-                  >
-                    {item.label}
-                  </button>
-                ))}
+              <div className="mt-6 w-full">
+                {(() => {
+                  const [chartId, indexText] = newsMethod.split(":");
+                  const spec = EVIDENCE_CHARTS.find((item) => item.id === chartId);
+                  const index = Number(indexText);
+                  const value = spec?.values[index];
+                  const cases = newsEvidence.methods.flatMap((item) => item.cases).filter((item) => {
+                    const mark = NEWS_MARKS[item.id];
+                    if (!spec || value == null || !mark) return false;
+                    if (spec.key === "evidence") return mark.evidence === value;
+                    if (spec.key === "proof") return mark.proof === value;
+                    if (spec.key === "term") return mark.term === value;
+                    return item.method === value;
+                  });
+                  return (
+                    <>
+                      <p className="text-center text-[16px] font-semibold text-white">{cases.length}</p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {cases.map((item) => (
+                          <button
+                            key={item.id}
+                            type="button"
+                            onClick={() => {
+                              setNewsSource(null);
+                              setNewsCase(item.label);
+                            }}
+                            className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[12px] font-semibold text-white"
+                          >
+                            {item.label}
+                          </button>
+                        ))}
+                      </div>
+                    </>
+                  );
+                })()}
               </div>
             ) : (
-              <div className="mt-8 flex w-full flex-col gap-2">
-                {[...newsEvidence.methods]
-                  .sort((a, b) => b.cases.length - a.cases.length)
-                  .map((item) => (
-                    <button
-                      key={item.name}
-                      type="button"
-                      onClick={() => {
-                        setNewsSource(null);
-                        setNewsCase(null);
-                        setNewsMethod(item.name);
-                      }}
-                      className="grid grid-cols-[1fr_auto] items-center gap-3 text-left"
-                    >
-                      <span className="relative block h-8 overflow-hidden rounded-full border border-white/35 bg-[#070b12]/75">
-                        <span
-                          className="absolute inset-y-0 left-0 bg-[#3a1214]"
-                          style={{ width: `${(item.cases.length / 21) * 100}%` }}
-                        />
-                        <span className="relative block truncate px-3 py-1 text-[13px] font-semibold text-white">
-                          {item.name}
-                        </span>
-                      </span>
-                      <span className="text-[13px] font-semibold text-white">{item.cases.length}</span>
-                    </button>
-                  ))}
+              <div className="mt-8 flex w-full max-w-3xl flex-col gap-10">
+                {EVIDENCE_CHARTS.map((spec) => (
+                  <EvidenceChart
+                    key={spec.id}
+                    spec={spec}
+                    onPick={(index) => {
+                      setNewsSource(null);
+                      setNewsCase(null);
+                      setNewsMethod(`${spec.id}:${index}`);
+                    }}
+                  />
+                ))}
               </div>
             )}
           </div>
