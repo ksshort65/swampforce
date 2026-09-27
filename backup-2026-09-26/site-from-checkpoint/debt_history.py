@@ -78,9 +78,28 @@ def canvas_js():
     ys = sorted(BY)
     labels = [str(y) for y in ys] + [NOW_TXT]
     data = [round(BY[y][1] / 1e9, 3) for y in ys] + [round(NOW / 1e9, 3)]
-    spec = {"id": "chart-debt-history", "type": "line", "labels": labels, "data": data, "fmt": "bn", "log": True,
-            "hrefs": ["debt-eras"] * len(data)}
+    spec = history_spec("chart-debt-history", "debt-eras")
     return f"<script>window.SF_CHARTS=(window.SF_CHARTS||[]).concat([{json.dumps(spec)}]);</script>"
+
+MARKERS = [("Civil War", 1861), ("WWI", 1917), ("Depression", 1930), ("WWII", 1941), ("1980s", 1981), ("2001+", 2001), ("2008", 2008), ("COVID", 2020)]
+
+def history_spec(cid, target):
+    ys = sorted(BY)
+    labels = [str(y) for y in ys] + [NOW_TXT]
+    data = [round(BY[y][1] / 1e9, 3) for y in ys] + [round(NOW / 1e9, 3)]
+    return {"id": cid, "type": "line", "labels": labels, "data": data, "fmt": "bn", "log": True, "autoskip": True,
+            "markers": [{"label": l, "at": y} for l, y in MARKERS if y in BY], "hrefs": [target] * len(data)}
+
+def headline_card(cid="chart-debt-home", target="debt-home-more", more_href="scorecard.html#debt-history"):
+    """Homepage headline: full history, era markers; tap opens the details."""
+    import json
+    return (f'<div class="chart-card"><h3>National debt, {FIRST_Y} to today (Treasury)</h3><p class=sub>{money(NOW)} on {NOW_TXT}. Log scale; dashed lines mark the eras.</p>'
+            f'<div class="chart-wrap tall"><canvas id="{cid}" role="img" aria-label="National debt, {FIRST_Y} to today"></canvas></div></div>'
+            f'<details class="sf-fold" id="{target}"><summary class="btn sm sf-fold-btn"><span class="sf-closed">See the details</span><span class="sf-opened">Hide the details</span></summary>'
+            f'<p class="period-note">Year-end totals {FIRST_Y}–{LAST_Y}, Treasury Historical Debt Outstanding; {NOW_TXT}, Treasury Debt to the Penny. '
+            f'Eras: ' + " · ".join(f"{l} ({y})" for l, y in MARKERS) + f'. <a href="{more_href}">Era by era, with sources →</a> · '
+            f'<a href="{DS_HIST}" target="_blank" rel="noopener">Treasury ↗</a></p></details>'
+            f"<script>window.SF_CHARTS=(window.SF_CHARTS||[]).concat([{json.dumps(history_spec(cid, target))}]);</script>")
 
 def section():
     rows = "".join(f'<tr><td>{e(t)}</td><td>{lab(a)}</td><td class="n">{money(val(a))}</td><td>{lab(b)}</td><td class="n">{money(val(b))}</td></tr>' for t, a, b, *_ in ERAS)
@@ -90,7 +109,7 @@ def section():
     return f"""
 <h3 class="strip-h" id="debt-history">The national debt, {FIRST_Y} to today</h3>
 <p class="strip-dek">235 years, both parties, many Congresses. The debt rose in wars and crises and fell in some years between them.</p>
-<div class="chart-card"><h3>Total federal debt, {FIRST_Y} to {NOW_TXT}</h3><p class=sub>Dollars, not adjusted for inflation. Log scale: each line is 10 times the one below. Hover for any year; tap to open the eras.</p><div class="chart-wrap tall"><canvas id="chart-debt-history" role="img" aria-label="Total federal debt, {FIRST_Y} to {NOW_TXT}, log scale"></canvas></div></div>{canvas_js()}
+<div class="chart-card"><h3>National debt, {FIRST_Y} to today (Treasury)</h3><p class=sub>Dollars, not adjusted for inflation. Log scale: each line is 10 times the one below. Hover for any year; tap to open the eras.</p><div class="chart-wrap tall"><canvas id="chart-debt-history" role="img" aria-label="Total federal debt, {FIRST_Y} to {NOW_TXT}, log scale"></canvas></div></div>{canvas_js()}
 <p class="period-note">Year-end totals {FIRST_Y}–{LAST_Y} from Treasury (the record date moved from January 1 to July 1, June 30 and then September 30 over time). Today’s figure: {money(NOW)} total public debt outstanding on {NOW_TXT}, Treasury Debt to the Penny. {src}</p>
 <details class="mt-era"><summary>Debt at the start and end of each era</summary><div class="table-wrap"><table class="rank-table"><thead><tr><th>Era</th><th>Start</th><th class="n">Debt</th><th>End</th><th class="n">Debt</th></tr></thead><tbody>{rows}</tbody></table></div></details>
 <details class="mt-era" id="debt-eras"><summary>What drove it, era by era</summary>{eras}</details>

@@ -16,37 +16,37 @@ CHECKED = "Sep 24, 2026"
 
 # Debt added while each arrangement held Congress. ONE computed value, used by every tile, drop-down, chart and share line.
 # Rows: one per Congress (change in total public debt outstanding over that Congress, $ billions), rebuilt by
-# scripts/debt_by_control.py from Treasury. Period: Jan 3, 1993 (103rd Congress) to the as-of date. Re-checked Sep 25, 2026
+# scripts/debt_by_control.py from Treasury. Period: Mar 4, 1857 (35th Congress) to the as-of date (Sep 24, 2026).
 # against the FiscalData API (debt_to_penny + debt_outstanding): all 17 rows reproduce to $0.1B.
 from decimal import Decimal as _D, ROUND_HALF_UP as _HU
 import datetime as _dt
-START_CONGRESS = 103
+START_CONGRESS = 35  # 1857: first Congress with both of today's parties (Treasury data runs to 1790)
 ROWS = [r for r in DEBT["rows"] if r[0] >= START_CONGRESS]
 AS_OF = _dt.date.fromisoformat(DEBT["as_of"])
 AS_OF_TXT = AS_OF.strftime("%b %-d, %Y")
-LEVEL_START_B = _D(str(DEBT["levels_B"]["start"]))  # Jan 3, 1993 (straight-line between Treasury Sep 30, 1992 and Sep 30, 1993)
+LEVEL_START_B = _D(str(DEBT["levels_B"]["start"]))  # Mar 4, 1857 (straight-line between Treasury fiscal-year-end figures)
 LEVEL_END_B = _D(str(DEBT["levels_B"]["end"]))      # Debt to the Penny, as-of date
-# the rows must run back to back with no gap or overlap, 1993 to the as-of date
-assert ROWS[0][1] == 1993 and ROWS[-1][2] == AS_OF.year and all(a[2] == b[1] for a, b in zip(ROWS, ROWS[1:])), "debt rows gap/overlap"
+# the rows must run back to back with no gap or overlap, 1857 to the as-of date
+assert ROWS[0][1] == 1857 and ROWS[-1][2] == AS_OF.year and all(a[2] == b[1] for a, b in zip(ROWS, ROWS[1:])), "debt rows gap/overlap"
 assert [r[0] for r in ROWS] == list(range(START_CONGRESS, START_CONGRESS + len(ROWS))), "debt rows: missing/duplicate Congress"
 TOT_B = {k: sum((_D(str(r[4])) for r in ROWS if r[3] == k), _D("0")) for k in ("R", "D", "S")}
 ALL_B = sum(TOT_B.values())
-assert abs(ALL_B - (LEVEL_END_B - LEVEL_START_B)) <= _D("0.3"), (ALL_B, LEVEL_END_B - LEVEL_START_B)  # categories cover the whole period
+assert abs(ALL_B - (LEVEL_END_B - LEVEL_START_B)) <= _D("0.05") * len(ROWS), (ALL_B, LEVEL_END_B - LEVEL_START_B)  # each row rounded to $0.1B  # categories cover the whole period
 
 
 def _t2(b):  # $ billions (Decimal) -> trillions, 2 decimals, half-up (never float-rounded)
     return float((b / 1000).quantize(_D("0.01"), rounding=_HU))
 
 
-T = {k: _t2(v) for k, v in TOT_B.items()}  # R 11.00, D 9.57, S 15.37 (Jan 1993 to Sep 17, 2026)
+T = {k: _t2(v) for k, v in TOT_B.items()}  # computed from the rows, Mar 4, 1857 to the as-of date
 MODERN = T  # kept for older callers: same number, same period
 T_ALL = _t2(ALL_B)          # 35.94: debt added over the period, all three together
 DEBT_NOW_T = _t2(LEVEL_END_B)  # 40.09: total debt on the as-of date
-PERIOD = f"Jan 3, 1993 to {AS_OF_TXT}"
-PERIOD_LONG = f"{PERIOD} (103rd to 119th Congress)"
+PERIOD = f"Mar 4, 1857 to {AS_OF_TXT}"
+PERIOD_LONG = f"{PERIOD} (35th to 119th Congress)"
 DEFINITION = ("Change in total public debt outstanding over each two-year Congress, credited to the party that held both "
               "the House and the Senate; “split” when they differed")
-FACT_LINE = f"Debt added {PERIOD_LONG}, by which party controlled both chambers of Congress. Treasury figures."
+FACT_LINE = f"Debt added {PERIOD_LONG}, by which party controlled both chambers of Congress. Treasury figures; before 1993 the per-Congress split is approximate (fiscal-year-end figures)."
 
 
 def tstr(k):
@@ -54,17 +54,24 @@ def tstr(k):
 
 
 def _cong_years(r):
-    a = _dt.date(r[1], 1, 3)
-    b = _dt.date(r[2], 1, 3) if r[2] != AS_OF.year or r[0] != ROWS[-1][0] else AS_OF
+    a = _dt.date(r[1], 3, 4) if r[0] <= 73 else _dt.date(r[1], 1, 3)
+    b = (_dt.date(r[2], 3, 4) if r[0] + 1 <= 73 else _dt.date(r[2], 1, 3)) if r[2] != AS_OF.year or r[0] != ROWS[-1][0] else AS_OF
     return (b - a).days / 365.25
 
 
 YEARS = {k: round(sum(_cong_years(r) for r in ROWS if r[3] == k), 1) for k in ("R", "D", "S")}
-PERIODS = {
-    "R": "1995–2001 · 2003–07 · 2015–19 · 2025–now",
-    "D": "1993–95 · 2007–11 · 2021–23",
-    "S": "2001–03 · 2011–15 · 2019–21 · 2023–25",
-}
+def _runs(k):
+    out, cur = [], None
+    for r in ROWS:
+        if r[3] == k:
+            end = "now" if r is ROWS[-1] else r[2]
+            if cur and cur[1] == r[1]: cur[1] = end
+            else:
+                cur = [r[1], end]; out.append(cur)
+    return out
+
+
+PERIODS = {k: f"{sum(1 for r in ROWS if r[3] == k)} Congresses, {len(_runs(k))} separate stretches since 1857" for k in ("R", "D", "S")}
 
 
 def _ord(n):
@@ -73,17 +80,17 @@ def _ord(n):
 
 def rows_table(k):
     """Drop-down under each debt tile: every Congress credited to k; the rows add up to the tile exactly."""
-    rr = "".join(f'<tr><td>{_ord(r[0])} Congress</td><td>{r[1]}–{"now" if r is ROWS[-1] else r[2]}</td><td class="n">${_D(str(r[4])):,.1f}B</td></tr>'
+    rr = "".join(f'<tr><td>{_ord(r[0])} Congress</td><td>{r[1]}–{"now" if r is ROWS[-1] else r[2]}</td><td class="n">${_D(str(r[5])):,.1f}B</td><td class="n">${_D(str(r[4])):,.1f}B</td></tr>'
                  for r in ROWS if r[3] == k)
     return (f'<details class="mt-rows"><summary>Congress by Congress: {tstr(k)}</summary>'
-            f'<table class="mt-rows-t"><thead><tr><th>Congress</th><th>Years</th><th class="n">Debt added</th></tr></thead><tbody>{rr}</tbody>'
-            f'<tfoot><tr><td colspan="2">Total, {e(PERIOD)}</td><td class="n">${TOT_B[k]:,.1f}B = {tstr(k)}</td></tr></tfoot></table>'
+            f'<table class="mt-rows-t"><thead><tr><th>Congress</th><th>Years</th><th class="n">Debt inherited</th><th class="n">Debt added</th></tr></thead><tbody>{rr}</tbody>'
+            f'<tfoot><tr><td colspan="3">Total, {e(PERIOD)}</td><td class="n">${TOT_B[k]:,.1f}B = {tstr(k)}</td></tr></tfoot></table>'
             f'<p class="period-note">{e(DEFINITION)}. <a href="{TREAS_PENNY}" target="_blank" rel="noopener">Debt to the Penny ↗</a> · '
             f'<a href="{PARTYDIV}" target="_blank" rel="noopener">Senate party divisions ↗</a> · '
             f'<a href="{HOUSEDIV}" target="_blank" rel="noopener">House party divisions ↗</a></p></details>')
 
 
-BIGGEST = max(DEBT["rows"], key=lambda r: r[4])  # (116, 2019, 2021, 'S', 5818.5)
+BIGGEST = max(ROWS, key=lambda r: r[4])
 
 # (headline, chip, detail sentence, url, source type)
 COLS = {
@@ -254,7 +261,7 @@ OUR_VIEW = ["No oversight. A $40 trillion card. Full-time pay for a part-time fl
             "A Republican president with a Democratic Congress is not an excuse. The $40 trillion is both of them."]
 
 # Debt added by president, inauguration to inauguration (Treasury). Rebuilt by scripts/debt_by_president.py.
-PRES = json.load(open(HERE / "midterm-data" / "debt_by_president.json"))["rows"]
+PRES = [dict(r, added_T=round(r["added_B"] / 1000, 2)) for r in json.load(open(HERE / "midterm-data" / "debt_by_president_full.json"))["rows"]]  # scripts/debt_by_president_full.py, 1857 on
 
 
 def pres_chart():
@@ -263,7 +270,7 @@ def pres_chart():
 
 
 def pres_note():
-    r = round(sum(x["added_T"] for x in PRES if x["party"] == "R"), 2)
-    d = round(sum(x["added_T"] for x in PRES if x["party"] == "D"), 2)
-    return (f"Since 1981: Republican presidents ${r:.2f}T, Democratic presidents ${d:.2f}T. Inauguration day to inauguration day; "
-            "*Trump II through Sep 17, 2026. Before April 1993, straight-line between Treasury year-end figures.")
+    r = sum(x["added_B"] for x in PRES if x["party"] == "R") / 1000
+    d = sum(x["added_B"] for x in PRES if x["party"] == "D") / 1000
+    return (f"Since 1857 (Buchanan): Republican presidents ${r:.2f}T, Democratic presidents ${d:.2f}T. Inauguration day to inauguration day; "
+            f"*Trump II through {AS_OF_TXT}. Before April 1993, straight-line between Treasury fiscal-year-end figures (approximate). Andrew Johnson counted as a Democrat.")

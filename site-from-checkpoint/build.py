@@ -639,7 +639,7 @@ def home_front():
  <p class="fr-dek">Laws by which party held Congress, with the debt added under each. Tap a party to open its room.</p>
  <p class="fact-line">{M.e(M.FACT_LINE)}</p>
  {M.compare_grid().replace('href="#', 'href="scorecard.html#')}
- <div class="chart-grid two">{chart_card("mt-debt-all", f"Debt added by who ran Congress, {M.PERIOD}", "Trillions of dollars")}
+ <div class="chart-grid two"><div>{__import__("debt_history").headline_card()}</div>
   <div class="fr-cards">
    {_lcard("scorecard.html#wallet", "Your wallet", "How did your rep vote?", "Eight laws that changed what a household keeps: tips and overtime, child credit, stimulus checks, insulin, ACA, minimum wage. Each opens the roll call.")}
    {_lcard("scorecard.html", "Midterm scorecard", "Helped and hurt, party by party", "Republicans · Democrats · Split · Compare · The Oval.")}
@@ -1198,8 +1198,9 @@ def build_scorecard():
   {chart_card("sc-enc-all", "CBP encounters, FY2021–25", "The White House changed hands during FY2025 (red)")}
  </div>
  <p class="period-note">Sources: {S("bls11")} · {S("bls22")} · {S("bls26")} · {S("cbp")}</p>
- <div class="chart-grid">{chart_card("mt-pres", "Debt added by president", "Trillions of dollars, inauguration to inauguration (Treasury)")}</div>
- <p class="period-note">{M.e(M.pres_note())} <a href="{M.TREAS_PENNY}" target="_blank" rel="noopener">Debt to the Penny ↗</a> · <a href="{M.TREAS_HIST}" target="_blank" rel="noopener">Treasury history ↗</a>. Congress, not the president, passes the budget: see who held it under Compare.</p>
+ <details class="sf-fold"><summary class="btn sm sf-fold-btn"><span class="sf-closed">See the president view</span><span class="sf-opened">Hide the president view</span></summary>
+ <div class="chart-grid">{chart_card("mt-pres", "Debt added by president, since 1857", "Trillions of dollars, inauguration to inauguration (Treasury). Main view: who controlled Congress, under Compare.")}</div>
+ <p class="period-note">{M.e(M.pres_note())} <a href="{M.TREAS_PENNY}" target="_blank" rel="noopener">Debt to the Penny ↗</a> · <a href="{M.TREAS_HIST}" target="_blank" rel="noopener">Treasury history ↗</a>. Congress, not the president, passes the budget: see who held it under Compare.</p></details>
 </div>
 <div class="tab-panel" id="desk-trump1"><p class="period-note">Trump 1 record items are grouped below by category and label.</p></div>
 <div class="tab-panel" id="desk-trump2">
@@ -1215,15 +1216,16 @@ def build_scorecard():
 <div class="ledger">{frames_oval()}</div>
 """
     compare = f"""
+{DH.section()}
 <h3 class="strip-h">Helped and hurt, side by side</h3>
 <p class="strip-dek">Tap a box to open that column. ▲ helped · ▼ hurt. Each line is a law or an official number.</p>
 {M.compare_grid()}
 <div class="chart-grid">
- {chart_card("mt-debt-all", f"Who added ${M.T_ALL:.2f} trillion since 1993", f"Debt added while each arrangement held Congress, {M.PERIOD} (trillions)")}
+ {chart_card("mt-debt-all", f"Who added ${M.T_ALL:.2f} trillion since 1857", f"Debt added while each arrangement held Congress, {M.PERIOD} (trillions)")}
  {chart_card("mt-debt-rate", "Debt added per year of control", f"{M.PERIOD}, trillions of dollars a year")}
 </div>
-<p class="period-note">How it is counted: {M.e(M.DEFINITION)}. Period: {M.e(M.PERIOD_LONG)}; the three totals add up to ${M.T_ALL:.2f}T, every dollar added in that period, with no gap or overlap. Each Congress runs Jan 3 to Jan 3; when Jan 3 was not a business day, Treasury’s figure for the last business day before it is used. Treasury’s daily Debt to the Penny for every boundary except the Jan 3, 1993 start, which is straight-line between Treasury’s Sep 30, 1992 and Sep 30, 1993 totals (daily data begins April 1993). 2008–09 (the crash) fell under Democratic control; 2020 (COVID) under split control. <a href="{M.TREAS_HIST}" target="_blank" rel="noopener">Treasury history ↗</a> · <a href="{M.TREAS_PENNY}" target="_blank" rel="noopener">Debt to the Penny ↗</a> · <a href="{M.PARTYDIV}" target="_blank" rel="noopener">Senate party divisions ↗</a> · <a href="{M.HOUSEDIV}" target="_blank" rel="noopener">House party divisions ↗</a></p>
-{DH.section()}
+<p class="period-note">How it is counted: {M.e(M.DEFINITION)}. Period: {M.e(M.PERIOD_LONG)}; the three totals add up to ${M.T_ALL:.2f}T, every dollar added in that period, with no gap or overlap. Starts with the 35th Congress (1857), the first with both of today’s parties; Treasury’s data runs back to 1790. Congresses began Mar 4 until 1933 and Jan 3 since 1935. Method: Treasury Debt to the Penny (daily) from April 1993; before that, straight-line between Treasury fiscal-year-end figures, so the pre-1993 per-Congress split is approximate. Each Congress row shows the debt it inherited and the debt added. <a href="{M.TREAS_HIST}" target="_blank" rel="noopener">Treasury history ↗</a> · <a href="{M.TREAS_PENNY}" target="_blank" rel="noopener">Debt to the Penny ↗</a> · <a href="{M.PARTYDIV}" target="_blank" rel="noopener">Senate party divisions ↗</a> · <a href="{M.HOUSEDIV}" target="_blank" rel="noopener">House party divisions ↗</a></p>
+
 <h3 class="strip-h" id="border-harm">Border harm</h3>
 <p class="strip-dek">What the border cost at home. Each figure has its full record in one place; tap to open it.</p>
 <div class="mt-ptrs">{M.border_html()}</div>

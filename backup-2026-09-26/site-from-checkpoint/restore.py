@@ -22,6 +22,8 @@ def sh(t):
     w = t.split(); return {" ".join(w[i:i + 3]) for i in range(max(len(w) - 2, 1))}
 
 def fix_numbers(s):
+    import midterms as _M  # one set of debt-by-Congress numbers (1857 to today)
+    s = re.sub(r"\$10\.96 \+ \$12\.65 \+ \$16\.48 = \$40\.09", f"${_M.T['R']:.2f} + ${_M.T['D']:.2f} + ${_M.T['S']:.2f} = ${_M.T_ALL:.2f}", s)
     s = re.sub(r"\$40\.09(\s*T\b|\s*trillion)", r"$40.07\1", s)
     s = s.replace("Sep 17, 2026", "Sep 24, 2026").replace("September 17, 2026", "September 24, 2026")
     # a 3-digit catalog count that is not today's → today's catalog figure

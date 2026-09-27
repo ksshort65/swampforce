@@ -235,7 +235,17 @@
         if (spec.stacked) { valAxis.stacked = true; catAxis.stacked = true; }
       }
       if (spec.link) el.setAttribute('data-sf-linked', '1');
-      charts.push(new Chart(el, { type: type, data: { labels: spec.labels, datasets: datasets }, options: opts }));
+      if (spec.autoskip && opts.scales) { var ca = horiz ? opts.scales.y : opts.scales.x; ca.ticks.autoSkip = true; ca.ticks.maxTicksLimit = 12; ca.ticks.maxRotation = 0; }
+      var plugs = [];
+      if (spec.markers) plugs.push({ id: 'sfMarkers', afterDatasetsDraw: function (c) { /* era markers: dashed line + label at a category */
+        var x = c.scales.x, y = c.chartArea, ctx = c.ctx; ctx.save();
+        spec.markers.forEach(function (m, i) {
+          var idx = spec.labels.indexOf(String(m.at)); if (idx < 0) return; var px = x.getPixelForValue(idx);
+          ctx.strokeStyle = 'rgba(165,29,36,.55)'; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.moveTo(px, y.top); ctx.lineTo(px, y.bottom); ctx.stroke(); ctx.setLineDash([]);
+          ctx.fillStyle = '#7f1d1d'; ctx.font = 'bold 11px system-ui, sans-serif'; var right = px > y.right - 70; ctx.textAlign = right ? 'right' : 'left';
+          ctx.fillText(m.label, right ? px - 3 : px + 3, y.top + 12 + (i % 3) * 13);
+        }); ctx.restore(); } });
+      charts.push(new Chart(el, { type: type, data: { labels: spec.labels, datasets: datasets }, options: opts, plugins: plugs }));
     });
   }
   if (document.readyState === 'complete') paint(); else window.addEventListener('load', paint);

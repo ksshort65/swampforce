@@ -16,7 +16,7 @@ def start(n):
     y=1789+2*(n-1)
     return dt.date(y,3,4) if n<=73 else dt.date(y,1,3)
 tot={'R':0,'D':0,'S':0}; rows=[]
-END=dt.date(2026,9,17)
+END=dt.date(2026,9,24)
 for n in range(35,120):
     s=start(n); e=start(n+1) if n<119 else END
     def val(d):
@@ -28,10 +28,10 @@ for n in range(35,120):
     elif h==se=='Republicans': k='R'
     elif h==se=='Democrats': k='D'
     else: k='S'
-    tot[k]+=v1-v0; rows.append((n,s.year,e.year,k,round((v1-v0)/1e9,1)))
+    tot[k]+=v1-v0; rows.append((n,s.year,e.year,k,round((v1-v0)/1e9,1),round(v0/1e9,1)))  # 6th = debt inherited at the start ($B)
 # levels_B: start (Jan 3, 1993) and end figures so midterms.py can prove the rows cover the whole site period (1993 to as-of)
-LEV={"start":round(interp(dt.date(1993,1,3))/1e9,1),"end":round(daily(END)[0]/1e9,1),"start_date":"1993-01-03","end_date":END.isoformat(),
-     "start_note":"straight-line between Treasury Historical Debt Outstanding Sep 30, 1992 and Sep 30, 1993","end_note":"Treasury Debt to the Penny, total public debt outstanding"}
-import json as J; J.dump({"as_of":"2026-09-17","rows":rows,"levels_B":LEV,"totals_T":{k:round(v/1e12,3) for k,v in tot.items()}},open("/workspace/site-from-checkpoint/midterm-data/debt_by_control.json","w"),indent=0)
+LEV={"start":round(interp(dt.date(1857,3,4))/1e9,1),"end":round(daily(END)[0]/1e9,1),"start_date":"1857-03-04","end_date":END.isoformat(),
+     "start_note":"straight-line between Treasury Historical Debt Outstanding fiscal-year-end figures (FY1856/FY1857)","end_note":"Treasury Debt to the Penny, total public debt outstanding"}
+import json as J; J.dump({"as_of":END.isoformat(),"rows":rows,"levels_B":LEV,"totals_T":{k:round(v/1e12,3) for k,v in tot.items()}},open("/workspace/site-from-checkpoint/midterm-data/debt_by_control.json","w"),indent=0)
 print({k:round(v/1e12,3) for k,v in tot.items()}, 'sum',round(sum(tot.values())/1e12,3))
 print('1993-01-20 interp',interp(dt.date(1993,1,20))/1e12, '1981-01-20',interp(dt.date(1981,1,20))/1e12,'1989-01-20',interp(dt.date(1989,1,20))/1e12,'1977-01-20',interp(dt.date(1977,1,20))/1e12)
