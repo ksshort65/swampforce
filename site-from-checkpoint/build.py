@@ -583,6 +583,10 @@ def _our_view(text, title="Our view · Opinion", draft=False):
     return f'<aside class="opinion fr-view"><p class="opinion-label">{d}{e(title)}</p><p>{e(text)}</p></aside>'
 
 
+def _fold(label, inner, cls=""):  # homepage: text lives behind a tap-to-open button
+    return f'<details class="sf-fold home-fold {cls}"><summary class="btn sm sf-fold-btn"><span class="sf-closed">{label}</span><span class="sf-opened">Show less</span></summary>{inner}</details>'
+
+
 def _lcard(href, kicker, title, text, flag=""):
     f = f'<span class="fr-flag">{e(flag)}</span>' if flag else ""
     return f'<a class="fr-card" href="{href}"><span class="fr-k">{e(kicker)}</span><strong>{e(title)}</strong><span>{e(text)}</span>{f}</a>'
@@ -621,7 +625,7 @@ def home_front():
  <div class="tile-grid">{blame}</div>
  {corr_line()}
  <p class="fn-view">* <b class="fn-label">Our view:</b> The lie gets the headline. The correction gets a footnote nobody sees.</p>
- {_our_view(SCALE_VIEW, title="Our View")}
+ {_fold("Our View", _our_view(SCALE_VIEW, title="Our View"))}
  <p class="watch-line">{ST['watch']} more are rated false by fact-checkers and are still being checked. <a href="fake-news.html#still-checking">See the full list.</a></p>
  <div class="chart-grid two">{chart_card("chart-evidence", f"Verdict on the {ST['total']} verified claims", "Tap a slice to open those cases")}
   <div class="fr-cards">
@@ -630,7 +634,7 @@ def home_front():
    {_lcard("unsupported.html", "Held back", "Unsupported claims", "Claims we could not tie to a primary record. Kept apart, not counted.")}
   </div></div>
  {_ev(("All cases, with sources", "fake-news.html"), ("How evidence is ranked", "about.html"), ("How we picked our fact-checkers", "factcheckers.html"))}
- {_our_view(ADULTS_VIEW)}
+ {_fold("Our view · Opinion", _our_view(ADULTS_VIEW))}
 </section>
 
 <section class="fr-block" id="front-votes">
@@ -677,7 +681,7 @@ def home_front():
   {chart_card("sc-enc-all", "CBP encounters by fiscal year", "The White House changed hands during FY2025 (red)", tall=True)}
  </div>
  {_ev(("BLS CPI-U (CUUR0000SA0)", FRONT_SRC["cpi_series"]), ("BLS June 2022 release", SRC["bls22"][1]), ("CBP enforcement statistics", SRC["cbp"][1]), ("DHS OHSS encounters", FRONT_SRC["ohss"]), ("Border charts", "border.html"))}
- <h3 class="fr-h3">What taxpayers paid (official figures; not added together)</h3>
+ {_fold("What taxpayers paid · 2020 · Keep the dates straight", f'''<h3 class="fr-h3">What taxpayers paid (official figures; not added together)</h3>
  <ul class="fr-list">
   <li><b>$1.4 billion</b> in FEMA shelter grants (Shelter and Services Program and EFSP-H), fiscal 2023–24, moved from CBP. The Inspector General found FEMA could not ensure it was used as the law required, and questioned <b>$425 million</b>. “Questioned costs” is an audit term; it is not a finding of fraud. <a href="{FRONT_SRC['oig2604']}" target="_blank" rel="noopener">DHS OIG-26-04 ↗</a> · <a href="journal-fema-ran-two-jobs.html">FEMA ran two jobs →</a></li>
   <li><b>$8.13 billion</b> for asylum-seeker services in New York City over three fiscal years. <a href="{SRC['nyc'][1]}" target="_blank" rel="noopener">NYC Comptroller ↗</a> · <a href="journal-what-the-taxpayer-bought.html">What the taxpayer bought →</a></li>
@@ -691,7 +695,7 @@ def home_front():
   <li>Large foundations fund national organizing groups, per their own IRS Form 990 filings. Example: Ford Foundation “core support for the Movement for Black Lives,” $1.65 million in 2021, through Common Counsel Foundation. <a href="{FRONT_SRC['ford990']}" target="_blank" rel="noopener">Ford Foundation 990 ↗</a></li>
   <li>We found <b>no primary record</b> (court finding, prosecution, government report, IRS filing or company admission) that people attending the 2020 protests were paid to attend. We do not claim it.</li>
  </ul>
- <div class="fact-box"><p class="fact-tag">Keep the dates straight</p><p>COVID lockdowns and the 2020 job losses came before Jan 20, 2021. The CARES Act (2020) passed with both parties' votes; the American Rescue Plan (2021, the $1,400 checks) passed with Democratic votes only. Both are spending by Congress. <a href="scorecard.html#wallet-checks">Both votes, by party →</a></p></div>
+ <div class="fact-box"><p class="fact-tag">Keep the dates straight</p><p>COVID lockdowns and the 2020 job losses came before Jan 20, 2021. The CARES Act (2020) passed with both parties' votes; the American Rescue Plan (2021, the $1,400 checks) passed with Democratic votes only. Both are spending by Congress. <a href="scorecard.html#wallet-checks">Both votes, by party →</a></p></div>''')}
 </section>
 
 <section class="fr-block" id="front-lawfare">
@@ -845,9 +849,9 @@ def quick_grid():
 def betrayal_home():
     return f"""
 <section class="fr-block" id="betrayal-front">
+ {why_swampforce_exists_box()}
  <p class="section-label">Front and center</p>
  <h2 class="section-title">The Great American Betrayal</h2>
- {why_swampforce_exists_box()}
  <p><a class="btn navy big" href="betrayal.html#betrayal-cases">See the full record</a></p>
  <p><a href="censorship.html">Censorship: the record →</a></p>
 </section>
@@ -901,8 +905,7 @@ def build_home():
  </div>
 </section>
 <div class="wrap">
-<aside class="pull-view" aria-label="Our View"><p class="opinion-label">Our View</p>
- <blockquote><p>{e(PEOPLE_VIEW)}</p></blockquote></aside>
+{_fold("Our View", f'<aside class="pull-view" aria-label="Our View"><p class="opinion-label">Our View</p><blockquote><p>{e(PEOPLE_VIEW)}</p></blockquote></aside>')}
 {home_front()}
 <a class="mt-home" href="scorecard.html">
  <span class="mt-home-k">Midterm scorecard</span>
@@ -915,7 +918,7 @@ def build_home():
  <span class="mt-home-note">{M.e(M.FACT_LINE)}</span>
  <span class="mt-home-go">Helped and hurt, party by party →</span>
 </a>
-<section class="lawmaker-band">
+{_fold("For lawmakers &amp; staff: brief + evidence appendix", f'''<section class="lawmaker-band">
  <div class="lb-copy"><p class="section-label light">For lawmakers &amp; staff</p>
   <h2>A two-page brief. A full evidence appendix. Every citation ranked.</h2>
   <p>Written for a hearing room. Each case is ranked by the strength of its proof, from the official record down to an independent fact-check.</p>
@@ -924,7 +927,7 @@ def build_home():
   <a class="btn ghost" href="about.html">How evidence is ranked</a></div>
   <p class="small">{e(PDF_NOTE)}</p></div>
  <a class="lb-doc" href="brief.html"><img src="images/brief-p1.jpg" alt="First page of the Swamp Force staff brief" loading="lazy"></a>
-</section>
+</section>''')}
 <section class="section-pad">
  <p class="section-label">The evidence at a glance</p>
  <h2 class="section-title">Tap any bar to open those cases.</h2>
@@ -934,13 +937,13 @@ def build_home():
   {chart_card("chart-methods", "How it was done", f"Most common methods, {len(VCASES)} verified cases", tall=True)}
  </div>
 </section>
-<section class="section-pad">
+{_fold("Flip a case: what they said vs. the record", f'''<section class="section-pad">
  <p class="section-label">Flip a case</p>
  <h2 class="section-title">What they said. What the record shows.</h2>
  <div class="ledger">{"".join(case_card(c) for c in picks)}</div>
  <p class="center"><a class="btn navy" href="fake-news.html">See all {ST['total']} verified cases</a></p>
-</section>
-<section class="section-pad">
+</section>''')}
+{_fold("Pick a door", f'''<section class="section-pad">
  <p class="section-label">Explore</p>
  <h2 class="section-title">Pick a door.</h2>
  <div class="cards">
@@ -951,16 +954,16 @@ def build_home():
   {explore_card("lawfare.html", "images/capitol.jpg", "Lawfare", "Ten dockets, their key rulings, and the court PDFs.", ["Court record"])}
   {explore_card("border.html", "images/card-eagle.jpg", "The Border", "CBP encounters by fiscal year, from CBP's own table.", ["Chart"])}
  </div>
-</section>
-<section class="spine">
+</section>''')}
+{_fold("Our view: The Great American Betrayal", f'''<section class="spine">
  <div class="spine-copy"><p class="opinion-label">Our view · Opinion</p>
   <h2>The Great American Betrayal</h2>
   <p>Free elections assume citizens can give informed consent. Push false claims, amplify them, and leave them standing after the record corrects them, and that consent is poisoned.</p>
   <p class="spine-fact"><b>On the record:</b> {nc} of {ST['total']} verified cases were never corrected by whoever pushed them.</p>
   <a class="btn" href="opinion.html#the-great-american-betrayal">Read the argument</a></div>
  <div class="spine-media" style="background-image:url('images/flag-wave.jpg')"></div>
-</section>
-<section class="merch-band">
+</section>''')}
+{_fold("The Swamp Force store · Wear the file · Shop (coming soon)", f'''<section class="merch-band">
  <div class="mb-inner">
   <p class="section-label light">The Swamp Force store</p>
   <h2>Wear the file.</h2>
@@ -968,7 +971,7 @@ def build_home():
   <a class="btn big" href="store.html">{ico("cart")} Shop (coming soon)</a>
  </div>
  <picture class="mb-stamp"><source srcset="assets/brand/stamp.webp" type="image/webp"><img src="assets/brand/stamp.png" alt="Swamp Force stamp: WE THE PEOPLE" width="480" height="480" loading="lazy"></picture>
-</section>
+</section>''', cls="store-line")}
 </div>
 """
     return page("index.html", "Swamp Force — Vote the file. Not the feeling.",

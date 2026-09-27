@@ -1468,4 +1468,6 @@ th{background:#1c1c1c!important;color:#e8e0d0!important} td{border-color:#2a2a2a
 @media(min-width:800px){.gb-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}}
 .gb-card{background:#141414;text-decoration:none;color:#ece8dc;border-radius:8px;overflow:hidden}
 .gb-card img{width:100%;height:auto;display:block}
+.home-fold{margin:14px 0}.home-fold>summary.btn{min-height:40px}.home-fold[open]>summary{margin-bottom:12px}
+.store-line>summary.btn{background:transparent!important;color:#e8e0d0!important;border:1px solid #2a2a2a!important;font-size:11px!important}
 .gb-card h3{font:700 1.2rem ui-sans-serif,system-ui;text-transform:uppercase;padding:0 1rem;color:#ece8dc}
