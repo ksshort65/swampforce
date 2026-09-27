@@ -17,6 +17,12 @@ function Home() {
         >
           The Great American Betrayal
         </Link>
+        <Link
+          to="/topics"
+          className="ml-8 text-[15px] font-semibold tracking-wide text-white"
+        >
+          Topics
+        </Link>
       </nav>
     </main>
   );
