@@ -728,6 +728,70 @@ const EVIDENCE_CHARTS = [
   },
 ] as const;
 
+type EvidenceSpec = {
+  id: string;
+  title: string;
+  type: "bar" | "doughnut";
+  horizontal: boolean;
+  labels: string[];
+  data: number[];
+  colors: readonly string[];
+  key: string;
+  values: string[];
+  bullets: string[];
+};
+
+const EV_CASES = newsEvidence.methods.flatMap((item) => item.cases);
+const EV_OTHER = "__other";
+
+function evidenceMatch(key: string, values: string[], value: string, item: (typeof EV_CASES)[number]) {
+  const mark = NEWS_MARKS[item.id];
+  if (key === "method") return value === EV_OTHER ? !values.includes(item.method) : item.method === value;
+  if (!mark) return false;
+  if (key === "evidence") return mark.evidence === value;
+  if (key === "proof") return mark.proof === value;
+  if (key === "term") return mark.term === value;
+  return false;
+}
+
+const EV_TOTAL = EV_CASES.length;
+const EV_NEVER = fakeNewsCases.filter((row) => row.status === "Verified" && row.correction.startsWith("Never corrected"));
+const EV_NEVER_FALSE = EV_NEVER.filter((row) => row.evidence === "Proven false").length;
+const EV_NEVER_MISLEADING = EV_NEVER.filter((row) => row.evidence === "Rated misleading").length;
+const EV_CONFIRMED = fakeNewsCases.filter(
+  (row) =>
+    row.status === "Verified" &&
+    ((factCheckerVetting as unknown as { table?: string[][] }[]).find((section) => section.table)?.table ?? []).some(
+      (checker) => checker[0] === row.alsoConfirmedBy && checker[3].startsWith("Approved"),
+    ),
+).length;
+
+const EVIDENCE_LIVE: EvidenceSpec[] = EVIDENCE_CHARTS.map((spec) => {
+  const labels: string[] = [...spec.labels];
+  const values: string[] = [...spec.values];
+  if (spec.key === "method") {
+    labels.push("All other methods");
+    values.push(EV_OTHER);
+  }
+  const data = values.map((value) => EV_CASES.filter((item) => evidenceMatch(spec.key, [...spec.values], value, item)).length);
+  const bullets =
+    spec.id === "chart-evidence"
+      ? [
+          "Tap to filter",
+          `${EV_TOTAL} news claims we verified as false or misleading. ${EV_NEVER.length} never corrected.`,
+          `${EV_CONFIRMED} of the ${EV_TOTAL} verified cases were also confirmed by an approved fact-checker.`,
+        ]
+      : spec.bullets.map((line) => line.replace("Among the 129 verified cases", `Among the ${EV_TOTAL} verified cases`));
+  return { ...spec, labels, values, data, bullets, colors: spec.colors };
+});
+
+const EVIDENCE_TITLES: Record<string, string> = {
+  "chart-term": "Fake News Cases by Two-Year Period",
+  "chart-methods": "Verified Fake News Cases by Method of Deception",
+  "chart-proof": "Verified Fake News Cases by Strength of Proof",
+  "chart-evidence": "Verified Fake News Cases by Verdict",
+};
+
 const PILL_GRAPHIC: Record<string, string> = {
   "chart-term": "/images/pill-time.jpg",
   "chart-methods": "/images/pill-methods.jpg",
@@ -758,7 +822,7 @@ function EvidenceChart({
   onPick,
   onNever,
 }: {
-  spec: (typeof EVIDENCE_CHARTS)[number];
+  spec: EvidenceSpec;
   onPick: (index: number) => void;
   onNever?: () => void;
 }) {
@@ -823,6 +887,8 @@ function EvidenceChart({
   }, [spec]);
   return (
     <figure className="w-full">
+      <p className="text-center text-[18px] font-semibold tracking-wide text-white">{EVIDENCE_TITLES[spec.id]}</p>
+      <p className="mt-1 mb-3 text-center text-[15px] text-white/75">Jan 1, 2015 – Sept 27, 2026 · {spec.data.reduce((sum, value) => sum + value, 0)} cases in this chart</p>
       <div className={spec.id === "chart-methods" ? "relative h-80" : spec.horizontal ? "relative h-56" : "relative h-64"}>
         <canvas ref={canvasRef} aria-label={spec.title} />
         {spec.id === "chart-evidence" ? (
@@ -832,7 +898,7 @@ function EvidenceChart({
               onClick={onNever}
               className="pointer-events-auto flex flex-col items-center border-0 bg-transparent p-0"
             >
-              <span className="text-[28px] font-bold text-white">108</span>
+              <span className="text-[28px] font-bold text-white">{EV_NEVER.length}</span>
               <span className="text-[15px] font-semibold text-white underline decoration-[#d4af37] underline-offset-4">Never corrected</span>
             </button>
           </div>
@@ -840,9 +906,15 @@ function EvidenceChart({
       </div>
       <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
         {spec.labels.map((label, index) => (
-          <li key={label} className="flex items-center gap-2 text-[15px] text-white">
-            <span className="inline-block h-3 w-3" style={{ background: spec.colors[index % spec.colors.length] }} />
-            {label}
+          <li key={label}>
+            <button
+              type="button"
+              onClick={() => pickRef.current(index)}
+              className="flex min-h-11 items-center gap-2 border-0 bg-transparent p-0 text-left text-[15px] text-white underline decoration-white/30 underline-offset-4"
+            >
+              <span className="inline-block h-3 w-3" style={{ background: spec.colors[index % spec.colors.length] }} />
+              {label} · {spec.data[index]}
+            </button>
           </li>
         ))}
         {spec.id === "chart-evidence" ? (
@@ -852,7 +924,7 @@ function EvidenceChart({
               onClick={onNever}
               className="border-0 bg-transparent p-0 text-[15px] text-white underline decoration-[#d4af37] underline-offset-4"
             >
-              108 Never corrected · 49 false / 59 misleading
+              {EV_NEVER.length} Never corrected · {EV_NEVER_FALSE} false / {EV_NEVER_MISLEADING} misleading
             </button>
           </li>
         ) : null}
@@ -1329,6 +1401,14 @@ function NewsScaleNote() {
   );
 }
 
+const DIM_TITLES: Record<string, string> = {
+  status: "by Verdict / Status",
+  proof: "by Strength of Proof",
+  network: "by Network / Outlet",
+  party: "by Political Party",
+  person: "by Journalist / Person",
+};
+
 function NewsPeriodLayers({
   path,
   onPath,
@@ -1367,8 +1447,8 @@ function NewsPeriodLayers({
     return (
       <div className="w-full">
         <NewsHeading
-          title={names ? value : dim.title}
-          line={`${period.key} · ${names ? `${dim.title} · ` : ""}${newsCasesLine(names ? groupRows.length : periodRows.length)}`}
+          title={names ? `${period.key}: ${value} Cases by Name` : `${period.key}: Fake News Cases ${DIM_TITLES[dim.key] ?? dim.title}`}
+          line={`${period.range} · ${newsCasesLine(names ? groupRows.length : periodRows.length)}`}
         />
         <div className={NEWS_CARD}>
           <PeriodChart
@@ -1385,13 +1465,6 @@ function NewsPeriodLayers({
             colors={colors}
             onPick={(index) => open(groups[index].label)}
           />
-        </div>
-        <div className="mt-6 flex w-full flex-col gap-2">
-          {groups.map((item) => (
-            <button key={item.label} type="button" onClick={() => open(item.label)} className={`${NEWS_DOOR} text-left`}>
-              {item.label} · {item.count}
-            </button>
-          ))}
         </div>
       </div>
     );
@@ -1418,7 +1491,7 @@ function NewsPeriodLayers({
   return (
     <div className="w-full">
       <NewsHeading
-        title="Cases by time period"
+        title="Fake News Cases by Two-Year Period"
         line={`Jan 1, 2015 – Sept 27, 2026 · ${newsCasesLine(NEWS_CASES.length)} (verified, fact-checked, not yet verified)`}
       />
       <div className={NEWS_CARD}>
@@ -1436,13 +1509,6 @@ function NewsPeriodLayers({
           colors={periods.map(() => "#d4af37")}
           onPick={(index) => onPath([periods[index].key])}
         />
-      </div>
-      <div className="mx-auto mt-6 grid w-full max-w-xl grid-cols-2 gap-3">
-        {periods.map((item) => (
-          <button key={item.key} type="button" onClick={() => onPath([item.key])} className={NEWS_DOOR}>
-            {item.key} · {item.count}
-          </button>
-        ))}
       </div>
       <NewsScaleNote />
     </div>
@@ -2001,6 +2067,8 @@ function SaveChart({
   tall,
   keys,
   onPick,
+  onKey,
+  line,
 }: {
   title: string;
   labels: string[];
@@ -2010,6 +2078,8 @@ function SaveChart({
   tall: boolean;
   keys: { label: string; color: string }[];
   onPick: (index: number) => void;
+  onKey?: (label: string) => void;
+  line?: string;
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const chartRef = useRef<{ destroy: () => void } | null>(null);
@@ -2055,14 +2125,21 @@ function SaveChart({
   return (
     <figure className="w-full rounded-2xl border border-[#d4af37] bg-[#070b12] px-4 py-4">
       <p className="text-center text-[16px] font-semibold text-white">{title}</p>
+      {line ? <p className="mt-1 text-center text-[15px] text-white/75">{line}</p> : null}
       <div className={tall ? "relative mt-4 h-[720px]" : "relative mt-4 h-64"}>
         <canvas ref={canvasRef} aria-label={title} />
       </div>
       <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
         {keys.map((item) => (
-          <li key={item.label} className="flex items-center gap-2 text-[15px] text-white">
-            <span className="inline-block h-3 w-3" style={{ background: item.color }} />
-            {item.label}
+          <li key={item.label}>
+            <button
+              type="button"
+              onClick={() => (onKey ? onKey(item.label) : pickRef.current(labels.indexOf(item.label)))}
+              className="flex min-h-11 items-center gap-2 border-0 bg-transparent p-0 text-left text-[15px] text-white underline decoration-white/30 underline-offset-4"
+            >
+              <span className="inline-block h-3 w-3" style={{ background: item.color }} />
+              {item.label}
+            </button>
           </li>
         ))}
       </ul>
@@ -2397,7 +2474,6 @@ const CHECKER_TABLE = ((factCheckerVetting as unknown as { table?: string[][] }[
 );
 const CHECKER_GROUPS = ["Approved", "Approved with caution", "Rejected"];
 const CHECKER_COLORS = ["#16a34a", "#f59e0b", "#dc2626"];
-const CHECKER_TILES = ["/images/tile-approved.jpg", "/images/tile-approved-caution.jpg", "/images/tile-rejected.jpg"];
 const CHECKER_DATA = CHECKER_GROUPS.map((group) => CHECKER_TABLE.filter((row) => row.outcome === group).length);
 const CHECKER_MARK = / ?(link|source \d+) ↗/g;
 
@@ -2571,12 +2647,12 @@ function CardLayers({
   const groups = newsCountBy(rows, CARD_DIM);
   return (
     <div className="w-full">
-      <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{card}: Verdict / status</p>
+      <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{card}: Fake News Cases by Verdict / Status</p>
       {rows.length === 0 ? (
         <ChartSlot line="Jan 1, 2015 – Sept 27, 2026" />
       ) : (
         <LayerChart
-          title={`${card}: Verdict / status`}
+          title={`${card}: Fake News Cases by Verdict / Status`}
           line={`Jan 1, 2015 – Sept 27, 2026 · ${newsCasesLine(rows.length)}`}
           labels={groups.map((item) => item.label)}
           data={groups.map((item) => item.count)}
@@ -2710,6 +2786,39 @@ function LawTopic({
   );
 }
 
+const ALL_STATUS = ["Verified", "Fact-checked", "Not yet verified"];
+const ALL_STATUS_COLORS = ["#166534", "#1d4ed8", "#a3a3a3"];
+
+function AllCasesLayer({ status, onStatus, onCase }: { status: string | null; onStatus: (value: string) => void; onCase: (id: string) => void }) {
+  if (status) {
+    const rows = status === "all" ? NEWS_CASES : NEWS_CASES.filter((row) => row.status === status);
+    return (
+      <div className="w-full">
+        <NewsHeading title={status === "all" ? "All Fake News Cases" : `${status} Fake News Cases`} line={`Jan 1, 2015 – Sept 27, 2026 · ${newsCasesLine(rows.length)}`} />
+        <NewsCaseList rows={rows} onCase={onCase} />
+      </div>
+    );
+  }
+  const data = ALL_STATUS.map((item) => NEWS_CASES.filter((row) => row.status === item).length);
+  return (
+    <div className="w-full">
+      <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">All Fake News Cases by Verification Status</p>
+      <LayerChart
+        title="All Fake News Cases by Verification Status"
+        line={`Jan 1, 2015 – Sept 27, 2026 · ${newsCasesLine(NEWS_CASES.length)}`}
+        labels={ALL_STATUS}
+        data={data}
+        colors={ALL_STATUS_COLORS}
+        type="doughnut"
+        horizontal={false}
+        bullets={[`${NEWS_CASES.length} cases = the agreed 252 plus 8 added later.`]}
+        center={{ big: String(NEWS_CASES.length), small: "All cases", onOpen: () => onStatus("all") }}
+        onPick={(index) => onStatus(ALL_STATUS[index])}
+      />
+    </div>
+  );
+}
+
 function Betrayal() {
   const [layer, setLayer] = useState<Layer>("root");
   const [method, setMethod] = useState<string | null>(null);
@@ -2838,7 +2947,7 @@ function Betrayal() {
     }
     setLawOn(false);
   };
-  const newsMine = !!newsMethod && (newsMethod.startsWith("chart-term") || newsMethod.startsWith("chart-evidence:never"));
+  const newsMine = !!newsMethod && (newsMethod.startsWith("chart-term") || newsMethod.startsWith("chart-evidence:never") || newsMethod === "all" || newsMethod.startsWith("all:"));
   const buttons = layer === "root" ? ["Fake News", "Lawfare"] : LAYERS[layer].buttons;
 
   return (
@@ -3172,7 +3281,8 @@ function Betrayal() {
                           Social media · {SAVE_GROUP_DATA[index]}
                         </p>
                         <SaveChart
-                          title="Social media by party lean"
+                          title="SAVE Ruling: Social Media Posts by Party Lean"
+                          line="as of Sept. 27, 2026, 1:06 PM MT"
                           labels={SAVE_LEAN_LABELS}
                           data={SAVE_LEAN_DATA}
                           colors={SAVE_LEAN_COLORS}
@@ -3181,16 +3291,6 @@ function Betrayal() {
                           keys={SAVE_LEAN_KEYS}
                           onPick={(pick) => setSaveBar(`lean:${pick}`)}
                         />
-                        {SAVE_LEAN_LABELS.map((label, pick) => (
-                          <button
-                            key={label}
-                            type="button"
-                            onClick={() => setSaveBar(`lean:${pick}`)}
-                            className="w-full rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-2 text-[15px] font-semibold text-white"
-                          >
-                            {label} · {SAVE_LEAN_DATA[pick]}
-                          </button>
-                        ))}
                       </>
                     );
                   }
@@ -3227,13 +3327,15 @@ function Betrayal() {
               <div className="mt-8 flex w-full flex-col items-center gap-8">
                 <div className="grid w-full grid-cols-2 gap-6 text-center">
                   <p className="text-[28px] font-bold text-white">{SAVE_ROWS.length}<span className="mt-1 block text-[16px] font-semibold">people and organizations</span></p>
-                  <p className="text-[28px] font-bold text-white"><span className="block text-[16px] font-semibold">At least</span>5,727,760<span className="mt-1 block text-[16px] font-semibold">views</span></p>
+                  <p className="text-[28px] font-bold text-white"><span className="block text-[16px] font-semibold">At least</span>{SAVE_ROWS.reduce((sum, row) => sum + row.viewCount, 0).toLocaleString("en-US")}<span className="mt-1 block text-[16px] font-semibold">views</span></p>
                   <p className="text-[28px] font-bold text-white">0<span className="mt-1 block text-[16px] font-semibold">fact-checks</span></p>
                   <p className="text-[16px] font-semibold text-white">Already shaping public opinion.</p>
                 </div>
                 <p className="text-[15px] text-white/80">as of Sept. 27, 2026, 1:06 PM MT</p>
                 <SaveChart
-                  title={`All ${SAVE_ROWS.length} sources, sorted by views`}
+                  title={`SAVE Ruling: All ${SAVE_ROWS.length} Sources by Views`}
+                  line="as of Sept. 27, 2026, 1:06 PM MT"
+                  onKey={(label) => setSaveBar(`group:${SAVE_GROUP_LABELS.indexOf(label)}`)}
                   labels={SAVE_SOURCE_LABELS}
                   data={SAVE_SOURCE_DATA}
                   colors={SAVE_SOURCE_COLORS}
@@ -3243,7 +3345,9 @@ function Betrayal() {
                   onPick={(index) => setSaveBar(`sources:${index}`)}
                 />
                 <SaveChart
-                  title="By group"
+                  title="SAVE Ruling: Sources by Group"
+                  line="as of Sept. 27, 2026, 1:06 PM MT"
+                  onKey={(label) => setSaveBar(`group:${SAVE_GROUP_LABELS.indexOf(label)}`)}
                   labels={SAVE_GROUP_LABELS}
                   data={SAVE_GROUP_DATA}
                   colors={SAVE_GROUP_COLORS}
@@ -3265,7 +3369,7 @@ function Betrayal() {
               className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
             >
               {newsMethod && !newsMethod.includes(":") && !newsCase && !newsSource
-                ? EVIDENCE_CHARTS.find((item) => item.id === newsMethod)?.title
+                ? EVIDENCE_LIVE.find((item) => item.id === newsMethod)?.title
                 : "Fake News Evidence"}
             </button>
             )}
@@ -3323,6 +3427,15 @@ function Betrayal() {
                   setNewsCase(id);
                 }}
               />
+            ) : newsMethod && (newsMethod === "all" || newsMethod.startsWith("all:")) ? (
+              <AllCasesLayer
+                status={newsMethod.startsWith("all:") ? newsMethod.slice(4) : null}
+                onStatus={(status) => setNewsMethod(`all:${status}`)}
+                onCase={(id) => {
+                  setNewsSource(null);
+                  setNewsCase(id);
+                }}
+              />
             ) : newsMethod && newsMethod.startsWith("chart-evidence:never") ? (
               <NewsNeverList
                 which={newsMethod === "chart-evidence:never" ? null : newsMethod.slice("chart-evidence:never:".length)}
@@ -3337,16 +3450,9 @@ function Betrayal() {
                 {(() => {
                   const chartId = newsMethod.slice(0, newsMethod.indexOf(":"));
                   const index = Number(newsMethod.slice(newsMethod.indexOf(":") + 1));
-                  const spec = EVIDENCE_CHARTS.find((item) => item.id === chartId);
+                  const spec = EVIDENCE_LIVE.find((item) => item.id === chartId);
                   const value = spec?.values[index];
-                  const cases = newsEvidence.methods.flatMap((item) => item.cases).filter((item) => {
-                    const mark = NEWS_MARKS[item.id];
-                    if (!spec || value == null || !mark) return false;
-                    if (spec.key === "evidence") return mark.evidence === value;
-                    if (spec.key === "proof") return mark.proof === value;
-                    if (spec.key === "term") return mark.term === value;
-                    return item.method === value;
-                  });
+                  const cases = EV_CASES.filter((item) => !!spec && value != null && evidenceMatch(spec.key, spec.values.filter((entry) => entry !== EV_OTHER), value, item));
                   return (
                     <>
                       <p className="text-center text-[16px] font-semibold text-white">
@@ -3373,7 +3479,7 @@ function Betrayal() {
               </div>
             ) : newsMethod ? (
               <div className="mt-8 w-full">
-                {EVIDENCE_CHARTS.filter((item) => item.id === newsMethod).map((spec) => (
+                {EVIDENCE_LIVE.filter((item) => item.id === newsMethod).map((spec) => (
                   <div key={spec.id} className="w-full rounded-2xl border border-[#d4af37] bg-[#070b12] px-4 py-4">
                     <EvidenceChart
                       spec={spec}
@@ -3392,8 +3498,20 @@ function Betrayal() {
                 ))}
               </div>
             ) : (
+              <>
+              <button
+                type="button"
+                onClick={() => {
+                  setNewsSource(null);
+                  setNewsCase(null);
+                  setNewsMethod("all");
+                }}
+                className={NEWS_DOOR + " mt-8 w-full max-w-xl"}
+              >
+                All cases · {NEWS_CASES.length}
+              </button>
               <div className="mt-8 flex max-w-5xl flex-wrap items-end justify-center gap-8">
-                {EVIDENCE_CHARTS.map((spec) => (
+                {EVIDENCE_LIVE.map((spec) => (
                   <button
                     key={spec.id}
                     type="button"
@@ -3415,6 +3533,7 @@ function Betrayal() {
                   </button>
                 ))}
               </div>
+              </>
             )}
           </div>
         )}
@@ -3831,14 +3950,6 @@ function Betrayal() {
                   bullets={["A fact-checker is never our proof, only a second confirmation.", "Same 7 tests for every checker, left and right."]}
                   center={{ big: String(CHECKER_TABLE.length), small: "Tested", onOpen: () => setCheckerPick("all") }}
                   onPick={(index) => setCheckerPick(CHECKER_GROUPS[index])}
-                />
-                <LayerTiles
-                  tiles={CHECKER_GROUPS.map((group, index) => ({
-                    key: group,
-                    label: group,
-                    image: CHECKER_TILES[index],
-                    onOpen: () => setCheckerPick(group),
-                  }))}
                 />
                 {factCheckerVetting.map((section) => (
                   <section key={section.title} className="mt-8">
