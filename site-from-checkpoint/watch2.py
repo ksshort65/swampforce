@@ -956,7 +956,19 @@ def build_voters(H):
             + ' · Lead source: ' + H.src_link("https://www.breitbart.com/politics/2020/09/27/colorado-secretary-state-encourages-non-citizens-deceased-register-vote/", "Breitbart, Sep 27, 2020")
             + ' · ' + H.src_link("https://www.cbsnews.com/colorado/news/colorado-secretary-state-explains-voter-registration-postcards/", "CBS4 follow-up, Sep 27, 2020") + '</p>'
             '<p><b>The 2022 postcards (as reported by AP and AFP from the Secretary of State\'s statements).</b> On Sep 27, 2022 her office mailed ERIC-required registration-information postcards (not forms or ballots) to about 30,000 noncitizens; a later count was 31,093. The cause was a Department of Revenue list that lacked the formatting needed to screen out noncitizen license holders. The office said the online system rejects noncitizen licenses and SSNs and that it knew of no recipient who registered. '
-            + H.src_link("https://www.cbsnews.com/colorado/news/colorado-30000-noncitizens-vote-registration-mailer/", "AP via CBS Colorado") + " " + H.src_link("https://factcheck.afp.com/doc.afp.com.32LA24U", "AFP Fact Check") + "</p></details></div>")
+            + H.src_link("https://www.cbsnews.com/colorado/news/colorado-30000-noncitizens-vote-registration-mailer/", "AP via CBS Colorado") + " " + H.src_link("https://factcheck.afp.com/doc.afp.com.32LA24U", "AFP Fact Check") + " " + H.src_link("https://www.foxnews.com/politics/colorado-secretary-state-says-accidentally-sent-30000-voter-registration-notices-noncitizens", "Fox News, Oct 10, 2022") + " <span class=\"uv-nv\">Not yet verified</span> (no Secretary of State release on the 2022 mailing was found on coloradosos.gov)</p></details></div>")
+    _SOS24 = "https://www.coloradosos.gov/pubs/newsRoom/pressReleases/2024/"
+    pw_card = ('<div class="answer-box case-card" id="co-bios-passwords"><p class="opinion-label">Case · Voting-equipment passwords</p>'
+               '<h3>Colorado Secretary of State website posted partial voting-equipment passwords (June–Oct 2024)</h3>'
+               '<p><span class="badge proven">Verified (official record)</span> The office\'s own releases, an outside investigation, the Denver District Attorney and a court ruling confirm it.</p>'
+               '<details class="sf-fold"><summary class="btn sm sf-fold-btn"><span class="sf-closed">See the record</span><span class="sf-opened">Hide</span></summary>'
+               '<ul class="uv-list">'
+               '<li><b>What was posted:</b> a spreadsheet on the Department\'s website with a hidden tab holding partial BIOS passwords (one of two passwords) for some voting-system components. A former staff member created it; storing passwords this way broke Department policy.</li>'
+               '<li><b>How long and how many:</b> posted June 21, 2024 and taken down Oct 24, 2024, when a voting-machine vendor told the office; 34 of 64 counties affected. County clerks were told Oct 29; all affected active equipment had new passwords by Oct 31, with no settings found changed.</li>'
+               '<li><b>What the office said, and the outcome:</b> Secretary Griswold: \u201cI am regretful for this error.\u201d The outside investigation (Baird Quinn LLC, Dec 9, 2024) found the passwords were posted \u201cmistakenly, unknowingly and unintentionally\u201d and made seven recommendations, which the office committed to adopt. The Denver DA found no criminal violation (published \u201cin error and not \u2018knowingly\u2019\u201d). On Nov 5, 2024 a Denver District Court judge denied a petition over it (Libertarian Party v. Griswold), finding no evidence of compromised components.</li>'
+               '</ul><p>Official records: ' + H.src_link(_SOS24 + "PR20241029Passwords.html", "SOS statement, Oct 29, 2024") + " " + H.src_link(_SOS24 + "PR20241104Passwords.html", "SOS update, Nov 4, 2024")
+               + " " + H.src_link(_SOS24 + "PR20241105Lawsuit.html", "Court ruling (SOS release), Nov 5, 2024") + " " + H.src_link(_SOS24 + "PR20241209InvestigationReport.html", "Baird Quinn report (SOS release), Dec 9, 2024")
+               + " " + H.src_link(_SOS24 + "PR20241220Investigation.html", "Denver DA finding (SOS release), Dec 20, 2024") + "</p></details></div>")
     hick, n_acc = hick_letter(H)
     # download
     dl = OUT / "downloads"; dl.mkdir(exist_ok=True)
@@ -979,7 +991,7 @@ def build_voters(H):
                       + src_line(H, [("DHS SAVE figure: U.S. stay application, No. 26A308", SCOTUS_SAVE), ("DOJ release 26-1082, Sep 18, 2026", DOJ_16), ("Georgia SOS 2024 citizenship audit statement (copy)", GA_AUDIT), ("Ohio SOS, Jun 3, 2025", "https://www.ohiosos.gov/media-center/press-releases/2025/2025-06-03/")]) + nj)
             + section("pv-disc", "Where official numbers disagree", '<p>Shown side by side; no reconciliation is attempted.</p>' + disc_html + src_line(H, PV_SRC[:1] + PV_SRC[4:6] + [("Census population estimates (Vintage 2025)", "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv")]))
             + section("pv-hum", "Humanitarian and parole programs, Biden period", hum)
-            + section("pv-claims", "Claims checked", f'<div class="frames">{harris_card}{reuters_card}</div>{co_card}'
+            + section("pv-claims", "Claims checked", f'<div class="frames">{harris_card}{reuters_card}</div>{co_card}{pw_card}'
                       + rep_box(H, rep_quote, title="Reported, not confirmed by primary record: the Harris quote", intro="Transcriptions of a clip by two outlets; no official transcript or unedited video transcript was located."), primary=False)
             + section("pv-jw", "Judicial Watch voter-roll cases: court records vs. claims", jw)
             + rep_box(H, rep)
