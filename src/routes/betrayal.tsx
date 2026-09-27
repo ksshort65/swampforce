@@ -2455,7 +2455,7 @@ function Betrayal() {
               className="mt-8 flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
             >
               <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
-                SCOTUS SAVE Ruling
+                SCOTUS SAVE RULING 24 HOUR TRACKING
               </span>
               <img
                 src="/images/topic-scotus-save.jpg"
