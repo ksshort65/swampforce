@@ -2765,7 +2765,99 @@ const CARD_CASES: Record<string, { note?: string; match: (row: NewsCaseRow) => b
   YouTube: { note: "Case text or source says it ran on YouTube", match: (row) => newsClass(row).platforms.includes("YouTube") },
   Rumble: { note: "Case text or source says it ran on Rumble", match: (row) => newsClass(row).platforms.includes("Rumble") },
   Twitter: { note: "Case text or source says it ran on X (Twitter)", match: (row) => newsClass(row).platforms.includes("X/Twitter") },
+  "Viral / anonymous accounts": { match: (row) => row.networkName === "Viral / anonymous accounts" },
+  "Named social accounts": { match: (row) => row.networkGroup === "Social Media" && row.networkName !== "Viral / anonymous accounts" },
+  "MSM Networks": { match: (row) => row.networkGroup === "MSM Networks" },
+  "Cable Networks": { match: (row) => row.networkGroup === "Cable Networks" },
+  "Public Broadcasting": { match: (row) => row.networkGroup === "Public Broadcasting" },
+  "Print / web news": { match: (row) => row.networkGroup === "Print/Web news" },
+  Campaigns: { match: (row) => row.party === "Campaigns" },
 };
+
+const SAVE_CARD = "SAVE ruling posts: by party lean";
+const SAVE_SOCIAL = SAVE_ROWS.filter((row) => row.group === "Social media");
+
+const EXTRA_TILES: Record<string, { name: string; image: string }[]> = {
+  social: [
+    { name: SAVE_CARD, image: "/images/tile-social-save-lean.jpg" },
+    { name: "Viral / anonymous accounts", image: "/images/tile-social-viral.jpg" },
+    { name: "Named social accounts", image: "/images/tile-social-named.jpg" },
+  ],
+  network: [
+    { name: "MSM Networks", image: "/images/tile-net-msm.jpg" },
+    { name: "Cable Networks", image: "/images/tile-net-cable-group.jpg" },
+    { name: "Public Broadcasting", image: "/images/tile-net-public.jpg" },
+    { name: "Print / web news", image: "/images/tile-net-print.jpg" },
+  ],
+  politicians: [{ name: "Campaigns", image: "/images/tile-pol-campaigns.jpg" }],
+};
+
+function SaveRowDetail({ id, onSource }: { id: string; onSource: (href: string) => void }) {
+  const row = SAVE_ROWS.find((item) => item.id === id);
+  if (!row) return <p className="mt-8 text-[15px] text-white">Not on record.</p>;
+  return (
+    <div className="mt-8 w-full text-left">
+      <p className="text-[18px] font-semibold text-white">{row.who}</p>
+      <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+        <li>Party lean: {row.lean ?? "Not yet identified"}</li>
+        {row.leanNote ? <li>{row.leanNote}</li> : null}
+        <li>Where: {row.where}</li>
+        <li>When: {row.when}</li>
+        <li>Views: {row.views}</li>
+      </ul>
+      <p className="mt-4 text-[16px] font-semibold text-white">What they posted</p>
+      <p className="mt-2 text-[15px] leading-snug text-white/85">{row.said}</p>
+      {row.record ? (
+        <>
+          <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
+          <p className="mt-2 text-[15px] leading-snug text-white/85">{row.record}</p>
+        </>
+      ) : null}
+      <div className="mt-4 flex flex-wrap gap-2">
+        {row.links.map((link) => (
+          <button key={link.href} type="button" onClick={() => onSource(link.href)} className={NEWS_DOOR + " w-fit"}>
+            {link.label.replace(" ↗", "")}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SaveLeanLayers({ slice, onSlice, onCase }: { slice: string | null; onSlice: (value: string) => void; onCase: (id: string) => void }) {
+  if (slice) {
+    const list = slice === "all" ? SAVE_SOCIAL : SAVE_SOCIAL.filter((row) => (row.lean ?? "Not yet identified") === slice);
+    return (
+      <div className="mt-6 flex w-full flex-col gap-3">
+        <p className="text-center text-[18px] font-semibold text-white">{slice === "all" ? "All social media accounts" : slice} · {list.length}</p>
+        {list.map((row) => (
+          <button key={row.id} type="button" onClick={() => onCase(row.id)} className={LAYER_ROW}>
+            {row.who}
+            <span className="mt-1 block font-normal text-white/80">{row.where} · {row.views}{row.viewCount ? " views" : ""}</span>
+          </button>
+        ))}
+      </div>
+    );
+  }
+  const data = SAVE_LEAN_LABELS.map((lean) => SAVE_SOCIAL.filter((row) => (row.lean ?? "Not yet identified") === lean).length);
+  return (
+    <div className="w-full">
+      <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">SAVE Ruling Posts: Social Media Accounts by Party Lean</p>
+      <LayerChart
+        title="SAVE Ruling Posts: Social Media Accounts by Party Lean"
+        line={`Views as recorded in the Social Media Weapon file · ${SAVE_SOCIAL.length} accounts`}
+        labels={SAVE_LEAN_LABELS}
+        data={data}
+        colors={SAVE_LEAN_COLORS}
+        type="doughnut"
+        horizontal={false}
+        bullets={["Same records as the Social Media Weapon tile."]}
+        center={{ big: String(SAVE_SOCIAL.length), small: "Accounts", onOpen: () => onSlice("all") }}
+        onPick={(index) => onSlice(SAVE_LEAN_LABELS[index])}
+      />
+    </div>
+  );
+}
 
 function newsClass(row: NewsCaseRow): { role: string; platforms: string[] } {
   const found = (row as { classification?: { role: string; platforms: string[] } }).classification;
@@ -2784,6 +2876,7 @@ function CardLayers({
   onSlice: (value: string) => void;
   onSource: (href: string) => void;
 }) {
+  if (card === SAVE_CARD) return <SaveLeanLayers slice={slice} onSlice={onSlice} onCase={onCase} />;
   const spec = CARD_CASES[card];
   const rows = spec ? NEWS_CASES.filter(spec.match) : [];
   if (slice) {
@@ -4619,7 +4712,13 @@ function Betrayal() {
             >
               {card ? card : spot === "cable" ? "Cable news" : spot === "trump" ? "Trump TV" : spot === "podcasts" ? "Podcasts" : spot === "cspan" ? "C-SPAN" : DECEPTION.find((item) => item.id === deception)?.title}
             </button>
-            {card && cardHref ? (
+            {card === SAVE_CARD && cardHref ? (
+              <div className="w-full">
+                <SourcePage label={SAVE_ROWS.flatMap((row) => row.links).find((item) => item.href === cardHref)?.label.replace(" ↗", "") ?? cardHref} href={cardHref} />
+              </div>
+            ) : card === SAVE_CARD && cardCase ? (
+              <SaveRowDetail id={cardCase} onSource={setCardHref} />
+            ) : card && cardHref ? (
               <div className="w-full">
                 <SourcePage label={NEWS_CASES.flatMap((row) => row.sources).find((item) => item.href === cardHref)?.label ?? cardHref} href={cardHref} />
               </div>
@@ -4809,6 +4908,7 @@ function Betrayal() {
             ) : spot === "podcasts" ? (
               <p className="mt-8 text-center text-[15px] text-white/75">No podcast list is on file yet.</p>
             ) : (
+            <>
             <div className="mt-8 flex max-w-5xl flex-wrap items-end justify-center gap-6">
               {(spot === "cable"
                 ? (DECEPTION.find((item) => item.id === deception)?.stations ?? [])
@@ -4836,6 +4936,22 @@ function Betrayal() {
                 </button>
               ))}
             </div>
+            {!spot && deception && EXTRA_TILES[deception] ? (
+              <LayerTiles
+                tiles={EXTRA_TILES[deception].map((extra) => ({
+                  key: extra.name,
+                  label: extra.name,
+                  image: extra.image,
+                  onOpen: () => {
+                    setCardSlice(null);
+                    setCardCase(null);
+                    setCardHref(null);
+                    setCard(extra.name);
+                  },
+                }))}
+              />
+            ) : null}
+            </>
             )}
           </div>
         ) : null}
