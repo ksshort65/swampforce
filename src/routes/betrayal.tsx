@@ -778,18 +778,18 @@ function EvidenceChart({
           indexAxis: spec.type === "bar" && horiz ? "y" : "x",
           plugins: {
             legend: { display: false },
-            tooltip: { callbacks: { label: (ctx: { label?: string; parsed: number | { x: number; y: number } }) => {
+            tooltip: { titleFont: { size: 15 }, bodyFont: { size: 15 }, callbacks: { label: (ctx: { label?: string; parsed: number | { x: number; y: number } }) => {
               const value = typeof ctx.parsed === "object" ? (horiz ? ctx.parsed.x : ctx.parsed.y) : ctx.parsed;
               return `${ctx.label ?? ""}: ${value}`;
             } } },
           },
           scales: spec.type === "doughnut" ? undefined : {
             x: horiz
-              ? { beginAtZero: true, grid: { color: "rgba(15,23,42,.06)" }, ticks: { color: "#e8e0d0" } }
-              : { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false } },
+              ? { beginAtZero: true, grid: { color: "rgba(15,23,42,.06)" }, ticks: { color: "#e8e0d0", font: { size: 15 } } }
+              : { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false, font: { size: 15 } } },
             y: horiz
-              ? { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false } }
-              : { beginAtZero: true, grid: { color: "rgba(15,23,42,.06)" }, ticks: { color: "#e8e0d0" } },
+              ? { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false, font: { size: 15 } } }
+              : { beginAtZero: true, grid: { color: "rgba(15,23,42,.06)" }, ticks: { color: "#e8e0d0", font: { size: 15 } } },
           },
           onClick: (_event: unknown, elements: { index: number }[]) => {
             if (elements.length) pickRef.current(elements[0].index);
@@ -804,18 +804,18 @@ function EvidenceChart({
   }, [spec]);
   return (
     <figure className="w-full">
-      <div className={spec.id === "chart-methods" ? "relative h-80" : spec.horizontal ? "relative h-56" : "relative h-64"}>
+      <div className={spec.id === "chart-methods" ? "relative h-[28rem]" : spec.horizontal ? "relative h-80" : "relative h-96"}>
         <canvas ref={canvasRef} aria-label={spec.title} />
       </div>
-      <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+      <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
         {spec.labels.map((label, index) => (
-          <li key={label} className="flex items-center gap-2 text-[13px] text-white">
+          <li key={label} className="flex items-center gap-2 text-[15px] text-white">
             <span className="inline-block h-3 w-3" style={{ background: spec.colors[index % spec.colors.length] }} />
             {label}
           </li>
         ))}
       </ul>
-      <ul className="mt-2 list-disc pl-5 text-[13px] leading-snug text-white/80">
+      <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/80">
         {spec.bullets.map((line) => (
           <li key={line}>{line}</li>
         ))}
@@ -974,134 +974,155 @@ function Betrayal() {
           </div>
         )}
         {layer === "evidence" && (
-          <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-10 pb-24">
-            <button
-              type="button"
-              onClick={() => {
-                if (newsSource) {
-                  setNewsSource(null);
-                  return;
-                }
-                if (newsCase) {
-                  setNewsCase(null);
-                  return;
-                }
-                if (newsMethod) {
-                  setNewsMethod(null);
-                  return;
-                }
-                setLayer("fake");
-              }}
-              className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
-            >
-              Fake News Evidence
-            </button>
-            {(newsSource || newsCase || newsMethod) && (
-              <button
-                type="button"
-                onClick={() => {
-                  if (newsSource) {
-                    setNewsSource(null);
-                    return;
-                  }
-                  if (newsCase) {
-                    setNewsCase(null);
-                    return;
-                  }
-                  setNewsMethod(null);
-                }}
-                className="fixed top-12 left-14 z-30 rounded-full border border-white/35 bg-[#070b12]/80 px-3 py-1 text-[12px] leading-none font-semibold text-white"
-              >
-                Back
-              </button>
-            )}
-            {newsSource ? (
-              <div className="mt-6 w-full">
-                <SourcePage
-                  label={
-                    newsEvidence.methods
-                      .flatMap((item) => item.cases)
-                      .flatMap((item) => item.sources)
-                      .find((item) => item.href === newsSource)?.label ?? newsSource
-                  }
-                  href={newsSource}
-                />
-              </div>
-            ) : newsCase ? (
-              <div className="mt-6 w-full border border-white/20 bg-[#070b12]/80 px-4 py-4 text-left">
-                {newsEvidence.methods.flatMap((item) => item.cases).filter((item) => item.label === newsCase).map((item) => (
-                  <div key={item.id}>
-                    <p className="mt-4 text-[16px] font-semibold text-white">What they said</p>
-                    <p className="mt-2 text-[14px] leading-snug text-white/85">{item.said}</p>
-                    <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
-                    <p className="mt-2 text-[14px] leading-snug text-white/85">{item.record}</p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {item.sources.map((source) => (
+          <div className="mx-auto flex max-w-3xl flex-col px-6 pt-10 pb-24">
+            {(() => {
+              const allCases = newsEvidence.methods.flatMap((item) => item.cases);
+              const [chartId, indexText] = (newsMethod ?? "").split(":");
+              const spec = EVIDENCE_CHARTS.find((item) => item.id === chartId);
+              const picked = indexText != null && indexText !== "" ? Number(indexText) : null;
+              const value = spec && picked != null ? spec.values[picked] : undefined;
+              const cases =
+                spec && value != null
+                  ? allCases.filter((item) => {
+                      const mark = NEWS_MARKS[item.id];
+                      if (!mark) return false;
+                      if (spec.key === "evidence") return mark.evidence === value;
+                      if (spec.key === "proof") return mark.proof === value;
+                      if (spec.key === "term") return mark.term === value;
+                      return item.method === value;
+                    })
+                  : [];
+              const caseHeading = spec && picked != null ? `${spec.labels[picked]} · ${cases.length}` : "";
+              const backClass =
+                "self-start border-0 bg-transparent p-0 text-left text-[16px] font-semibold tracking-wide text-white";
+              const pillClass =
+                "w-full rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1.5 text-[15px] font-semibold text-white";
+              const cardClass = "mt-6 w-full rounded-2xl border border-[#d4af37] bg-[#070b12]/90 p-5";
+
+              if (newsSource) {
+                return (
+                  <>
+                    <button type="button" onClick={() => setNewsSource(null)} className={backClass}>
+                      ← Case
+                    </button>
+                    <SourcePage
+                      label={
+                        allCases.flatMap((item) => item.sources).find((item) => item.href === newsSource)?.label ??
+                        newsSource
+                      }
+                      href={newsSource}
+                    />
+                  </>
+                );
+              }
+
+              if (newsCase) {
+                return (
+                  <>
+                    <button type="button" onClick={() => setNewsCase(null)} className={backClass}>
+                      ← {caseHeading || "Cases"}
+                    </button>
+                    <div className="mt-6 w-full rounded-2xl border border-white/20 bg-[#070b12]/80 px-5 py-5 text-left">
+                      {allCases.filter((item) => item.label === newsCase).map((item) => (
+                        <div key={item.id}>
+                          <p className="text-[16px] font-semibold text-white">Who</p>
+                          <p className="mt-2 text-[15px] leading-snug text-white/85">{item.who}</p>
+                          <p className="mt-4 text-[16px] font-semibold text-white">Date</p>
+                          <p className="mt-2 text-[15px] leading-snug text-white/85">{item.date}</p>
+                          <p className="mt-4 text-[16px] font-semibold text-white">What they said</p>
+                          <p className="mt-2 text-[15px] leading-snug text-white/85">{item.said}</p>
+                          <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
+                          <p className="mt-2 text-[15px] leading-snug text-white/85">{item.record}</p>
+                          <div className="mt-4 flex flex-wrap gap-2">
+                            {item.sources.map((source) => (
+                              <button
+                                key={source.href}
+                                type="button"
+                                onClick={() => setNewsSource(source.href)}
+                                className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1.5 text-[15px] font-semibold text-white"
+                              >
+                                {source.label}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                );
+              }
+
+              if (spec && picked != null) {
+                return (
+                  <>
+                    <button type="button" onClick={() => setNewsMethod(spec.id)} className={backClass}>
+                      ← {spec.title}
+                    </button>
+                    <p className="mt-6 text-center text-[22px] font-bold tracking-wide text-[#d4af37]">{caseHeading}</p>
+                    <div className="mt-6 flex w-full flex-col gap-2">
+                      {cases.map((item) => (
                         <button
-                          key={source.href}
+                          key={item.id}
                           type="button"
-                          onClick={() => setNewsSource(source.href)}
-                          className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[12px] font-semibold text-white"
+                          onClick={() => {
+                            setNewsSource(null);
+                            setNewsCase(item.label);
+                          }}
+                          className="w-full rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-2 text-left text-[15px] leading-snug font-semibold text-white"
                         >
-                          {source.label}
+                          {item.label}
                         </button>
                       ))}
                     </div>
+                  </>
+                );
+              }
+
+              if (spec) {
+                return (
+                  <>
+                    <button type="button" onClick={() => setNewsMethod(null)} className={backClass}>
+                      ← {spec.title}
+                    </button>
+                    <div className={cardClass}>
+                      <EvidenceChart
+                        key={spec.id}
+                        spec={spec}
+                        onPick={(index) => {
+                          setNewsSource(null);
+                          setNewsCase(null);
+                          setNewsMethod(`${spec.id}:${index}`);
+                        }}
+                      />
+                    </div>
+                  </>
+                );
+              }
+
+              return (
+                <>
+                  <button type="button" onClick={() => setLayer("fake")} className={backClass}>
+                    ← Fake News Evidence
+                  </button>
+                  <div className="mx-auto mt-8 grid w-full max-w-xl grid-cols-2 gap-x-8 gap-y-4">
+                    {EVIDENCE_CHARTS.map((item) => (
+                      <button
+                        key={item.id}
+                        type="button"
+                        onClick={() => {
+                          setNewsSource(null);
+                          setNewsCase(null);
+                          setNewsMethod(item.id);
+                        }}
+                        className={pillClass}
+                      >
+                        {item.title}
+                      </button>
+                    ))}
                   </div>
-                ))}
-              </div>
-            ) : newsMethod ? (
-              <div className="mt-6 w-full">
-                {(() => {
-                  const [chartId, indexText] = newsMethod.split(":");
-                  const spec = EVIDENCE_CHARTS.find((item) => item.id === chartId);
-                  const index = Number(indexText);
-                  const value = spec?.values[index];
-                  const cases = newsEvidence.methods.flatMap((item) => item.cases).filter((item) => {
-                    const mark = NEWS_MARKS[item.id];
-                    if (!spec || value == null || !mark) return false;
-                    if (spec.key === "evidence") return mark.evidence === value;
-                    if (spec.key === "proof") return mark.proof === value;
-                    if (spec.key === "term") return mark.term === value;
-                    return item.method === value;
-                  });
-                  return (
-                    <>
-                      <p className="text-center text-[16px] font-semibold text-white">{cases.length}</p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {cases.map((item) => (
-                          <button
-                            key={item.id}
-                            type="button"
-                            onClick={() => {
-                              setNewsSource(null);
-                              setNewsCase(item.label);
-                            }}
-                            className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[12px] font-semibold text-white"
-                          >
-                            {item.label}
-                          </button>
-                        ))}
-                      </div>
-                    </>
-                  );
-                })()}
-              </div>
-            ) : (
-              <div className="mt-8 flex w-full max-w-3xl flex-col gap-10">
-                {EVIDENCE_CHARTS.map((spec) => (
-                  <EvidenceChart
-                    key={spec.id}
-                    spec={spec}
-                    onPick={(index) => {
-                      setNewsSource(null);
-                      setNewsCase(null);
-                      setNewsMethod(`${spec.id}:${index}`);
-                    }}
-                  />
-                ))}
-              </div>
-            )}
+                </>
+              );
+            })()}
           </div>
         )}
         {layer === "mechanics" && (
