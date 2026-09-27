@@ -1435,3 +1435,4 @@ body.serious .main { background: rgba(250,248,243,.95); }
 #sf-notes-panel { position: fixed; top: 60px; right: 12px; width: min(560px, calc(100vw - 24px)); max-height: calc(100vh - 80px); overflow: auto; z-index: 200; background: #fff; color: #1f2937; border: 2px solid #f59e0b; border-radius: 12px; padding: 16px; box-shadow: 0 12px 40px rgba(0,0,0,.35); font: 1.08rem/1.5 var(--sans, sans-serif); }
 .sf-np-top { display: flex; justify-content: space-between; align-items: center; font-size: 1.2rem; }
 .sf-np-list h3 { margin: 14px 0 6px; font-size: 1.1rem; } .sf-np-item { border-left: 4px solid #facc15; padding: 4px 10px; margin: 6px 0; } .sf-np-item p { margin: 2px 0 0; }
+.sf-tap-note { margin: 6px 0 2px; font: 700 .875rem/1.4 var(--sans, sans-serif); color: #0c2340; background: #fef3c7; border-left: 4px solid #b45309; padding: 4px 10px; border-radius: 4px; }

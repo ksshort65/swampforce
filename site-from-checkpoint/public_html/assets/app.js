@@ -194,6 +194,13 @@
     window.SF_CHARTS.forEach(function (spec) {
       var el = document.getElementById(spec.id);
       if (!el) return;
+      (function () { /* one shared label under every chart */
+        var box = el.closest('.chart-wrap') || el.parentNode;
+        if (box && !(box.nextElementSibling && box.nextElementSibling.classList.contains('sf-tap-note'))) {
+          var n = document.createElement('p'); n.className = 'sf-tap-note'; n.textContent = '\uD83D\uDC46 Tap the chart to see the evidence behind it.';
+          box.insertAdjacentElement('afterend', n);
+        }
+      })();
       var type = spec.type === 'groupbar' ? 'bar' : spec.type;
       var datasets;
       if (spec.datasets) {
