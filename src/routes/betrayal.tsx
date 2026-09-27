@@ -809,15 +809,526 @@ function EvidenceChart({
       </div>
       <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
         {spec.labels.map((label, index) => (
-          <li key={label} className="flex items-center gap-2 text-[13px] text-white">
+          <li key={label} className="flex items-center gap-2 text-[15px] text-white">
             <span className="inline-block h-3 w-3" style={{ background: spec.colors[index % spec.colors.length] }} />
             {label}
           </li>
         ))}
       </ul>
-      <ul className="mt-2 list-disc pl-5 text-[13px] leading-snug text-white/80">
+      <ul className="mt-2 list-disc pl-5 text-[15px] leading-snug text-white/80">
         {spec.bullets.map((line) => (
           <li key={line}>{line}</li>
+        ))}
+      </ul>
+    </figure>
+  );
+}
+
+const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: string; views: string; said: string; links: { label: string; href: string }[] }[] = [
+  {
+    "id": "save-row-1",
+    "who": "Chuck Schumer",
+    "group": "Democratic",
+    "where": "X",
+    "when": "1:48 PM",
+    "views": "151,430",
+    "said": "The MAGA Supreme Court strikes again ... thousands of American voters could be wrongly stripped from voter rolls.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/SenSchumer/status/2103542232418550057"
+      }
+    ]
+  },
+  {
+    "id": "save-row-2",
+    "who": "Ilhan Omar",
+    "group": "Democratic",
+    "where": "X",
+    "when": "3:41 PM",
+    "views": "644,202",
+    "said": "This is a blatant attempt to suppress the vote ... Eligible voters will be disenfranchised by this flawed tool.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/Ilhan/status/2103570490518323329"
+      }
+    ]
+  },
+  {
+    "id": "save-row-3",
+    "who": "DNC chair Ken Martin",
+    "group": "Democratic",
+    "where": "democrats.org",
+    "when": "1:37 PM",
+    "views": "views not published",
+    "said": "The ruling ... will lead to demands to purge eligible voters from the rolls.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://democrats.org/breaking-scotus-allows-trump-administration-to-access-sensitive-voter-data-opening-the-door-to-more-voter-intimidation-and-suppression/"
+      }
+    ]
+  },
+  {
+    "id": "save-row-4",
+    "who": "Sen. Dick Durbin",
+    "group": "Democratic",
+    "where": "Senate Judiciary site + X",
+    "when": "Sept 25",
+    "views": "22,009",
+    "said": "An expansive and flawed database that states can use for potential voter purges ... weaponize an unreliable database.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://www.judiciary.senate.gov/press/dem/releases/durbin-statement-on-supreme-court-allowing-trump-administration-to-proceed-with-flawed-voter-screening-database-ahead-of-midterms"
+      },
+      {
+        "label": "source 2 ↗",
+        "href": "https://x.com/JudiciaryDems/status/2103593191014334481"
+      },
+      {
+        "label": "source 3 ↗",
+        "href": "https://x.com/JudiciaryDems/status/2103595404793417737"
+      }
+    ]
+  },
+  {
+    "id": "save-row-5",
+    "who": "Rep. John Larson",
+    "group": "Democratic",
+    "where": "house.gov",
+    "when": "4:18 PM",
+    "views": "views not published",
+    "said": "The ruling allows the SAVE database ... to purge voters from the rolls.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "http://larson.house.gov/media-center/press-releases/larson-condemns-supreme-court-decision-allowing-use-trump-voter-purge"
+      }
+    ]
+  },
+  {
+    "id": "save-row-6",
+    "who": "Democracy Docket",
+    "group": "Democratic",
+    "where": "X (also Bluesky, website)",
+    "when": "11:44 AM",
+    "views": "1,164,353",
+    "said": "The Supreme Court ruled 6-3 to allow ... voter roll purges using a flawed database. Bluesky copy: 1,571 likes, 990 reposts.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/DemocracyDocket/status/2103510843866423348"
+      },
+      {
+        "label": "source 2 ↗",
+        "href": "https://bsky.app/profile/democracydocket.com/post/3mwe4esy4dt2i"
+      },
+      {
+        "label": "source 3 ↗",
+        "href": "https://www.democracydocket.com/news-alerts/supreme-court-revives-dhs-use-of-flawed-immigration-database-for-voter-purges/"
+      }
+    ]
+  },
+  {
+    "id": "save-row-7",
+    "who": "Marc Elias",
+    "group": "Democratic",
+    "where": "X",
+    "when": "11:48 AM",
+    "views": "588,092",
+    "said": "The Supreme Court authorized the Trump administration ... to initiate registration purges.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/marcelias/status/2103511976391606444"
+      },
+      {
+        "label": "source 2 ↗",
+        "href": "https://elias.law/client-alert/supreme-court-clears-way-for-expanded-save-system/"
+      }
+    ]
+  },
+  {
+    "id": "save-row-8",
+    "who": "AG Todd Blanche",
+    "group": "Republican/Trump administration",
+    "where": "X",
+    "when": "2:48 PM",
+    "views": "194,544",
+    "said": "Huge victory for election integrity! ... [the stay] will allow states to clear the voter rolls of illegal voters.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/AGToddBlanche/status/2103557217748504767"
+      }
+    ]
+  },
+  {
+    "id": "save-row-9",
+    "who": "DHS (James Percival)",
+    "group": "Republican/Trump administration",
+    "where": "dhs.gov + X",
+    "when": "Sept 25; X 12:26 PM",
+    "views": "307,861",
+    "said": "SAVE may be used going forward ... to stop noncitizens from voting illegally.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://www.dhs.gov/news/2026/09/25/dhs-applauds-supreme-court-decision-permitting-citizenship-verification-voters"
+      },
+      {
+        "label": "source 2 ↗",
+        "href": "https://x.com/DHSGenCounsel/status/2103521437407719881"
+      }
+    ]
+  },
+  {
+    "id": "save-row-10",
+    "who": "NBC News",
+    "group": "News",
+    "where": "X + YouTube",
+    "when": "Sept 25; YouTube 4:51 PM",
+    "views": "64,641",
+    "said": "The information in this database is quite inaccurate.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/NBCNews/status/2103515383617490977"
+      },
+      {
+        "label": "source 2 ↗",
+        "href": "https://www.youtube.com/watch?v=d50bhF_eTIc"
+      }
+    ]
+  },
+  {
+    "id": "save-row-11",
+    "who": "Wall Street Journal",
+    "group": "News",
+    "where": "X",
+    "when": "Sept 25",
+    "views": "49,063",
+    "said": "The Court ... could deploy a federal immigration database to check voters' citizenship.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/WSJ/status/2103582128428462342"
+      }
+    ]
+  },
+  {
+    "id": "save-row-12",
+    "who": "Reuters",
+    "group": "News",
+    "where": "reuters.com headline + reprints",
+    "when": "11:34 AM",
+    "views": "views not published",
+    "said": "Headline: Supreme Court restores Trump's mass voter verification system.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://www.reuters.com/world/supreme-court-restores-trumps-mass-voter-verification-system-2026-09-25/"
+      },
+      {
+        "label": "source 2 ↗",
+        "href": "https://www.cnbc.com/2026/09/25/supreme-court-restores-trumps-mass-voter-verification-system.html"
+      },
+      {
+        "label": "source 3 ↗",
+        "href": "https://www.livemint.com/news/us-news/trumps-voter-verification-system-returns-what-changed-after-supreme-court-ruling-11790365501392.html"
+      }
+    ]
+  },
+  {
+    "id": "save-row-13",
+    "who": "Mother Jones",
+    "group": "News",
+    "where": "website",
+    "when": "Sept 25",
+    "views": "views not published",
+    "said": "Supreme Court Allows Trump to Use Flawed Database to Vet Voter Citizenship.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://www.motherjones.com/politics/2026/09/supreme-court-save-database/"
+      }
+    ]
+  },
+  {
+    "id": "save-row-14",
+    "who": "Common Dreams",
+    "group": "News",
+    "where": "website",
+    "when": "Sept 25",
+    "views": "views not published",
+    "said": "US Citizens Could Lose Their Right to Vote after the Court gives a green light to Trump's voter purge database.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://www.commondreams.org/news/supreme-court-trump-voter-database"
+      }
+    ]
+  },
+  {
+    "id": "save-row-15",
+    "who": "Real America's Voice",
+    "group": "News",
+    "where": "YouTube",
+    "when": "4:26 PM",
+    "views": "1,800",
+    "said": "SCOTUS UNLOCKS VOTER ROLL PURGE.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://www.youtube.com/watch?v=Hk6rFjtridE"
+      }
+    ]
+  },
+  {
+    "id": "save-row-16",
+    "who": "NAACP Legal Defense Fund",
+    "group": "Advocacy",
+    "where": "naacpldf.org",
+    "when": "Sept 26, 10:59 AM",
+    "views": "views not published",
+    "said": "Allowing the mass challenge and removal of voters through this deeply flawed and error-prone system is a direct assault.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://www.naacpldf.org/press-release/ldf-strongly-condemns-the-u-s-supreme-courts-decision-to-restore-trump-administrations-save-database/"
+      }
+    ]
+  },
+  {
+    "id": "save-row-17",
+    "who": "League of Women Voters & EPIC (plaintiffs)",
+    "group": "Advocacy",
+    "where": "statement quoted by NPR",
+    "when": "Sept 25",
+    "views": "views not published",
+    "said": "The ruling puts millions of Americans at risk of being unlawfully targeted ... weeks before the midterm elections.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://www.npr.org/2026/09/25/nx-s1-5976804/supreme-court-trump-save-noncitizen-voting"
+      }
+    ]
+  },
+  {
+    "id": "save-row-18",
+    "who": "Libs of TikTok",
+    "group": "Social media",
+    "where": "X",
+    "when": "12:32 PM",
+    "views": "1,287,764",
+    "said": "All illegal voters need to be REMOVED from the voter rolls.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/libsoftiktok/status/2103523106434285971"
+      }
+    ]
+  },
+  {
+    "id": "save-row-19",
+    "who": "Eric Daugherty",
+    "group": "Social media",
+    "where": "X",
+    "when": "11:48 AM",
+    "views": "471,006",
+    "said": "GREENLIT ... PURGE the voter rolls of illegal voters during the 2026 midterms.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/EricLDaugh/status/2103512062458515770"
+      }
+    ]
+  },
+  {
+    "id": "save-row-20",
+    "who": "CynicalPublius",
+    "group": "Social media",
+    "where": "X",
+    "when": "Sept 25, 3:10 PM",
+    "views": "206,132",
+    "said": "TRANSLATION… Trump is eliminating illegal alien, non-citizens from the voter rolls and SCOTUS affirmed this effort.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/CynicalPublius/status/2103562729416171789"
+      }
+    ]
+  },
+  {
+    "id": "save-row-21",
+    "who": "Baoliaogeming64",
+    "group": "Social media",
+    "where": "X",
+    "when": "Sept 25, 12:13 PM",
+    "views": "158,326",
+    "said": "Chinese-language post (2,362 likes, 481 reposts); in English: The Supreme Court, by a 6-3 absolute advantage, officially gave the green light! Approved the Trump administration's fully upgraded SAVE citizenship-verification database! This means every state in the country finally has an imperial sword and can freely and drastically clean illegal voters from the voter rolls!",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/Baoliaogeming64/status/2103518355567100142"
+      }
+    ]
+  },
+  {
+    "id": "save-row-22",
+    "who": "Scott Presler",
+    "group": "Social media",
+    "where": "X",
+    "when": "10:23 PM",
+    "views": "290,657",
+    "said": "I'm asking county recorders and election officials to contact DHS for the free SAVE database ...",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/ScottPresler/status/2103671754551955916"
+      },
+      {
+        "label": "source 2 ↗",
+        "href": "https://x.com/ScottPresler/status/2103680373335175174"
+      }
+    ]
+  },
+  {
+    "id": "save-row-23",
+    "who": "derekjonhsonn",
+    "group": "Social media",
+    "where": "X",
+    "when": "Sept 26, 7:21 PM",
+    "views": "507",
+    "said": "DOGE-enhanced federal SAVE database ... is GREENLIT ... Clean the rolls.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/derekjonhsonn/status/2103988486260892098"
+      }
+    ]
+  },
+  {
+    "id": "save-row-24",
+    "who": "MelG_Gibson",
+    "group": "Social media",
+    "where": "X",
+    "when": "Sept 26, 7:57 PM",
+    "views": "179",
+    "said": "SAVE Database to purge illegal aliens from voter rolls.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/MelG_Gibson/status/2103997295867916796"
+      }
+    ]
+  },
+  {
+    "id": "save-row-25",
+    "who": "Josh Howerton",
+    "group": "Social media",
+    "where": "X",
+    "when": "Sept 26, 7:58 PM",
+    "views": "253",
+    "said": "The 6–3 is the green light. Drive it. Purge the rolls.",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/commentaryhower/status/2103997664874332287"
+      }
+    ]
+  }
+];
+
+const SAVE_SOURCE_IDS = ["save-row-18","save-row-6","save-row-2","save-row-7","save-row-19","save-row-9","save-row-22","save-row-20","save-row-8","save-row-21","save-row-1","save-row-10","save-row-11","save-row-4","save-row-15","save-row-23","save-row-25","save-row-24","save-row-3","save-row-5","save-row-12","save-row-13","save-row-14","save-row-16","save-row-17"];
+const SAVE_SOURCE_LABELS = ["Libs of TikTok — 1,287,764 views","Democracy Docket — 1,164,353 views","Ilhan Omar — 644,202 views","Marc Elias — 588,092 views","Eric Daugherty — 471,006 views","DHS (James Percival) — 307,861 views","Scott Presler — 290,657 views","CynicalPublius — 206,132 views","AG Todd Blanche — 194,544 views","Baoliaogeming64 — 158,326 views","Chuck Schumer — 151,430 views","NBC News — 64,641 views","Wall Street Journal — 49,063 views","Sen. Dick Durbin — 22,009 views","Real America's Voice — 1,800 views","derekjonhsonn — 507 views","Josh Howerton — 253 views","MelG_Gibson — 179 views","DNC chair Ken Martin — views not published","Rep. John Larson — views not published","Reuters — views not published","Mother Jones — views not published","Common Dreams — views not published","NAACP Legal Defense Fund — views not published","League of Women Voters & EPIC (plaintiffs) — views not published"];
+const SAVE_SOURCE_DATA = [1287764,1164353,644202,588092,471006,307861,290657,206132,194544,158326,151430,64641,49063,22009,1800,507,253,179,0,0,0,0,0,0,0];
+const SAVE_SOURCE_COLORS = ["#f59e0b","#2563eb","#2563eb","#2563eb","#f59e0b","#dc2626","#f59e0b","#f59e0b","#dc2626","#f59e0b","#2563eb","#a3a3a3","#a3a3a3","#2563eb","#a3a3a3","#f59e0b","#f59e0b","#f59e0b","#2563eb","#2563eb","#a3a3a3","#a3a3a3","#a3a3a3","#0f766e","#0f766e"];
+const SAVE_GROUP_LABELS = ["Democratic","Republican/Trump administration","News","Advocacy","Social media"];
+const SAVE_GROUP_DATA = [7,2,6,2,8];
+const SAVE_GROUP_COLORS = ["#2563eb","#dc2626","#a3a3a3","#0f766e","#f59e0b"];
+const SAVE_KEYS = [
+  { label: "Democratic", color: "#2563eb" },
+  { label: "Republican/Trump administration", color: "#dc2626" },
+  { label: "News", color: "#a3a3a3" },
+  { label: "Advocacy", color: "#0f766e" },
+  { label: "Social media", color: "#f59e0b" },
+];
+
+function SaveChart({
+  title,
+  labels,
+  data,
+  colors,
+  horizontal,
+  tall,
+  keys,
+  onPick,
+}: {
+  title: string;
+  labels: string[];
+  data: number[];
+  colors: string[];
+  horizontal: boolean;
+  tall: boolean;
+  keys: { label: string; color: string }[];
+  onPick: (index: number) => void;
+}) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const chartRef = useRef<{ destroy: () => void } | null>(null);
+  const pickRef = useRef(onPick);
+  pickRef.current = onPick;
+  useEffect(() => {
+    let dead = false;
+    loadChartJs().then(() => {
+      if (dead || !canvasRef.current) return;
+      const Chart = (window as unknown as { Chart: new (el: HTMLCanvasElement, cfg: object) => { destroy: () => void } }).Chart;
+      const bg = data.map((_, index) => colors[index % colors.length]);
+      chartRef.current?.destroy();
+      chartRef.current = new Chart(canvasRef.current, {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [{ data, backgroundColor: bg, borderWidth: 0, borderRadius: 6, maxBarThickness: 28 }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          indexAxis: horizontal ? "y" : "x",
+          plugins: { legend: { display: false } },
+          scales: {
+            x: horizontal
+              ? { beginAtZero: true, ticks: { color: "#e8e0d0" } }
+              : { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false } },
+            y: horizontal
+              ? { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false } }
+              : { beginAtZero: true, ticks: { color: "#e8e0d0" } },
+          },
+          onClick: (_event: unknown, elements: { index: number }[]) => {
+            if (elements.length) pickRef.current(elements[0].index);
+          },
+        },
+      });
+    });
+    return () => {
+      dead = true;
+      chartRef.current?.destroy();
+    };
+  }, [title, labels, data, colors, horizontal]);
+  return (
+    <figure className="w-full rounded-2xl border border-[#d4af37] bg-[#070b12] px-4 py-4">
+      <p className="text-center text-[16px] font-semibold text-white">{title}</p>
+      <div className={tall ? "relative mt-4 h-[720px]" : "relative mt-4 h-64"}>
+        <canvas ref={canvasRef} aria-label={title} />
+      </div>
+      <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+        {keys.map((item) => (
+          <li key={item.label} className="flex items-center gap-2 text-[15px] text-white">
+            <span className="inline-block h-3 w-3" style={{ background: item.color }} />
+            {item.label}
+          </li>
         ))}
       </ul>
     </figure>
@@ -831,6 +1342,10 @@ function Betrayal() {
   const [newsMethod, setNewsMethod] = useState<string | null>(null);
   const [newsCase, setNewsCase] = useState<string | null>(null);
   const [newsSource, setNewsSource] = useState<string | null>(null);
+  const [saveOn, setSaveOn] = useState(false);
+  const [saveBar, setSaveBar] = useState<string | null>(null);
+  const [saveSource, setSaveSource] = useState<string | null>(null);
+  const [saveHref, setSaveHref] = useState<string | null>(null);
   const [outcome, setOutcome] = useState(false);
   const [aside, setAside] = useState<null | "standard" | "record">(null);
   const [deception, setDeception] = useState<string | null>(null);
@@ -901,7 +1416,7 @@ function Betrayal() {
             ))}
           </div>
         )}
-        {layer === "fake" && (
+        {layer === "fake" && !saveOn && (
           <div className="flex flex-col items-center px-6 pt-16">
             <button
               type="button"
@@ -910,7 +1425,7 @@ function Betrayal() {
             >
               Fake News
             </button>
-            <div className="mt-8 flex items-end justify-center gap-10">
+            <div className="mt-8 flex flex-wrap items-end justify-center gap-10">
               <button
                 type="button"
                 onClick={() => {
@@ -950,6 +1465,26 @@ function Betrayal() {
               </button>
               <button
                 type="button"
+                onClick={() => {
+                  setNewsMethod(null);
+                  setNewsCase(null);
+                  setNewsSource(null);
+                  setSaveBar(null);
+                  setSaveSource(null);
+                  setSaveHref(null);
+                  setSaveOn(true);
+                }}
+                className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
+              >
+                <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
+                  The Social Media Weapon: The SAVE Ruling
+                </span>
+                <span className="flex h-44 w-full items-center justify-center rounded-2xl border border-[#d4af37] bg-[#070b12] px-3 text-center text-[16px] font-semibold text-white">
+                  SAVE
+                </span>
+              </button>
+              <button
+                type="button"
                 onClick={() => setLayer("types")}
                 className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
               >
@@ -973,8 +1508,145 @@ function Betrayal() {
             </div>
           </div>
         )}
+        {layer === "fake" && saveOn && (
+          <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
+            <button
+              type="button"
+              onClick={() => {
+                if (saveHref) {
+                  setSaveHref(null);
+                  return;
+                }
+                if (saveSource) {
+                  setSaveSource(null);
+                  return;
+                }
+                if (saveBar) {
+                  setSaveBar(null);
+                  return;
+                }
+                setSaveOn(false);
+              }}
+              className="fixed top-12 left-14 z-30 rounded-full border border-white/35 bg-[#070b12]/80 px-3 py-1 text-[15px] leading-none font-semibold text-white"
+            >
+              Back
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                if (saveHref) {
+                  setSaveHref(null);
+                  return;
+                }
+                if (saveSource) {
+                  setSaveSource(null);
+                  return;
+                }
+                if (saveBar) {
+                  setSaveBar(null);
+                  return;
+                }
+                setSaveOn(false);
+              }}
+              className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
+            >
+              The Social Media Weapon: The SAVE Ruling
+            </button>
+            {saveHref ? (
+              <div className="mt-8 w-full">
+                <SourcePage
+                  label={
+                    SAVE_ROWS.flatMap((row) => row.links).find((link) => link.href === saveHref)?.label ?? saveHref
+                  }
+                  href={saveHref}
+                />
+              </div>
+            ) : saveSource ? (
+              <div className="mt-8 w-full">
+                {SAVE_ROWS.filter((row) => row.id === saveSource).map((row) => (
+                  <div key={row.id} className="w-full text-left">
+                    <p className="text-[16px] font-semibold text-white">{row.who}</p>
+                    <p className="mt-2 text-[15px] leading-snug text-white/85">{row.said}</p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {row.links.map((link) => (
+                        <button
+                          key={link.href}
+                          type="button"
+                          onClick={() => setSaveHref(link.href)}
+                          className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[15px] font-semibold text-white"
+                        >
+                          {link.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : saveBar ? (
+              <div className="mt-8 flex w-full flex-col gap-3">
+                {(() => {
+                  const [kind, indexText] = saveBar.split(":");
+                  const index = Number(indexText);
+                  const rows = kind === "sources"
+                    ? SAVE_ROWS.filter((row) => row.id === SAVE_SOURCE_IDS[index])
+                    : SAVE_ROWS.filter((row) => row.group === SAVE_GROUP_LABELS[index]);
+                  const heading = kind === "sources" ? SAVE_SOURCE_LABELS[index] : `${SAVE_GROUP_LABELS[index]} · ${SAVE_GROUP_DATA[index]}`;
+                  return (
+                    <>
+                      <p className="text-center text-[16px] font-semibold text-white">{heading}</p>
+                      {rows.map((row) => (
+                        <button
+                          key={row.id}
+                          type="button"
+                          onClick={() => {
+                            if (row.links.length === 1) setSaveHref(row.links[0].href);
+                            else setSaveSource(row.id);
+                          }}
+                          className="w-full rounded-3xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] font-semibold leading-snug text-white"
+                        >
+                          {row.who} · {row.when} · {row.views}
+                          <span className="mt-1 block font-normal">{row.said}</span>
+                        </button>
+                      ))}
+                    </>
+                  );
+                })()}
+              </div>
+            ) : (
+              <div className="mt-8 flex w-full flex-col items-center gap-8">
+                <div className="grid w-full grid-cols-2 gap-6 text-center">
+                  <p className="text-[28px] font-bold text-white">25<span className="mt-1 block text-[16px] font-semibold">people and organizations</span></p>
+                  <p className="text-[28px] font-bold text-white">5,715,771<span className="mt-1 block text-[16px] font-semibold">views</span></p>
+                  <p className="text-[28px] font-bold text-white">0<span className="mt-1 block text-[16px] font-semibold">fact-checks</span></p>
+                  <p className="text-[16px] font-semibold text-white">Already shaping public opinion.</p>
+                </div>
+                <p className="text-[15px] text-white/80">as of Sept. 27, 2026, 12:38 PM MT</p>
+                <SaveChart
+                  title="All 25 sources, sorted by views"
+                  labels={SAVE_SOURCE_LABELS}
+                  data={SAVE_SOURCE_DATA}
+                  colors={SAVE_SOURCE_COLORS}
+                  horizontal
+                  tall
+                  keys={SAVE_KEYS}
+                  onPick={(index) => setSaveBar(`sources:${index}`)}
+                />
+                <SaveChart
+                  title="By group"
+                  labels={SAVE_GROUP_LABELS}
+                  data={SAVE_GROUP_DATA}
+                  colors={SAVE_GROUP_COLORS}
+                  horizontal={false}
+                  tall={false}
+                  keys={SAVE_KEYS}
+                  onPick={(index) => setSaveBar(`group:${index}`)}
+                />
+              </div>
+            )}
+          </div>
+        )}
         {layer === "evidence" && (
-          <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-10 pb-24">
+          <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
             <button
               type="button"
               onClick={() => {
@@ -986,6 +1658,35 @@ function Betrayal() {
                   setNewsCase(null);
                   return;
                 }
+                if (newsMethod && newsMethod.includes(":")) {
+                  setNewsMethod(newsMethod.slice(0, newsMethod.indexOf(":")));
+                  return;
+                }
+                if (newsMethod) {
+                  setNewsMethod(null);
+                  return;
+                }
+                setLayer("fake");
+              }}
+              className="fixed top-12 left-14 z-30 rounded-full border border-white/35 bg-[#070b12]/80 px-3 py-1 text-[15px] leading-none font-semibold text-white"
+            >
+              Back
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                if (newsSource) {
+                  setNewsSource(null);
+                  return;
+                }
+                if (newsCase) {
+                  setNewsCase(null);
+                  return;
+                }
+                if (newsMethod && newsMethod.includes(":")) {
+                  setNewsMethod(newsMethod.slice(0, newsMethod.indexOf(":")));
+                  return;
+                }
                 if (newsMethod) {
                   setNewsMethod(null);
                   return;
@@ -994,29 +1695,12 @@ function Betrayal() {
               }}
               className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
             >
-              Fake News Evidence
+              {newsMethod && !newsMethod.includes(":") && !newsCase && !newsSource
+                ? EVIDENCE_CHARTS.find((item) => item.id === newsMethod)?.title
+                : "Fake News Evidence"}
             </button>
-            {(newsSource || newsCase || newsMethod) && (
-              <button
-                type="button"
-                onClick={() => {
-                  if (newsSource) {
-                    setNewsSource(null);
-                    return;
-                  }
-                  if (newsCase) {
-                    setNewsCase(null);
-                    return;
-                  }
-                  setNewsMethod(null);
-                }}
-                className="fixed top-12 left-14 z-30 rounded-full border border-white/35 bg-[#070b12]/80 px-3 py-1 text-[12px] leading-none font-semibold text-white"
-              >
-                Back
-              </button>
-            )}
             {newsSource ? (
-              <div className="mt-6 w-full">
+              <div className="mt-8 w-full">
                 <SourcePage
                   label={
                     newsEvidence.methods
@@ -1028,20 +1712,22 @@ function Betrayal() {
                 />
               </div>
             ) : newsCase ? (
-              <div className="mt-6 w-full border border-white/20 bg-[#070b12]/80 px-4 py-4 text-left">
-                {newsEvidence.methods.flatMap((item) => item.cases).filter((item) => item.label === newsCase).map((item) => (
+              <div className="mt-8 w-full text-left">
+                {newsEvidence.methods.flatMap((item) => item.cases).filter((item) => item.id === newsCase).map((item) => (
                   <div key={item.id}>
+                    <p className="text-[16px] font-semibold text-white">{item.who}</p>
+                    <p className="mt-2 text-[15px] text-white/85">{item.date}</p>
                     <p className="mt-4 text-[16px] font-semibold text-white">What they said</p>
-                    <p className="mt-2 text-[14px] leading-snug text-white/85">{item.said}</p>
+                    <p className="mt-2 text-[15px] leading-snug text-white/85">{item.said}</p>
                     <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
-                    <p className="mt-2 text-[14px] leading-snug text-white/85">{item.record}</p>
+                    <p className="mt-2 text-[15px] leading-snug text-white/85">{item.record}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.sources.map((source) => (
                         <button
                           key={source.href}
                           type="button"
                           onClick={() => setNewsSource(source.href)}
-                          className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[12px] font-semibold text-white"
+                          className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[15px] font-semibold text-white"
                         >
                           {source.label}
                         </button>
@@ -1050,12 +1736,12 @@ function Betrayal() {
                   </div>
                 ))}
               </div>
-            ) : newsMethod ? (
-              <div className="mt-6 w-full">
+            ) : newsMethod && newsMethod.includes(":") ? (
+              <div className="mt-8 w-full">
                 {(() => {
-                  const [chartId, indexText] = newsMethod.split(":");
+                  const chartId = newsMethod.slice(0, newsMethod.indexOf(":"));
+                  const index = Number(newsMethod.slice(newsMethod.indexOf(":") + 1));
                   const spec = EVIDENCE_CHARTS.find((item) => item.id === chartId);
-                  const index = Number(indexText);
                   const value = spec?.values[index];
                   const cases = newsEvidence.methods.flatMap((item) => item.cases).filter((item) => {
                     const mark = NEWS_MARKS[item.id];
@@ -1067,7 +1753,9 @@ function Betrayal() {
                   });
                   return (
                     <>
-                      <p className="text-center text-[16px] font-semibold text-white">{cases.length}</p>
+                      <p className="text-center text-[16px] font-semibold text-white">
+                        {spec ? `${spec.labels[index]} · ${spec.data[index]}` : ""}
+                      </p>
                       <div className="mt-4 flex flex-wrap gap-2">
                         {cases.map((item) => (
                           <button
@@ -1075,11 +1763,11 @@ function Betrayal() {
                             type="button"
                             onClick={() => {
                               setNewsSource(null);
-                              setNewsCase(item.label);
+                              setNewsCase(item.id);
                             }}
-                            className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[12px] font-semibold text-white"
+                            className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[15px] font-semibold text-white"
                           >
-                            {item.label}
+                            {item.who} · {item.date}
                           </button>
                         ))}
                       </div>
@@ -1087,18 +1775,36 @@ function Betrayal() {
                   );
                 })()}
               </div>
+            ) : newsMethod ? (
+              <div className="mt-8 w-full">
+                {EVIDENCE_CHARTS.filter((item) => item.id === newsMethod).map((spec) => (
+                  <div key={spec.id} className="w-full rounded-2xl border border-[#d4af37] bg-[#070b12] px-4 py-4">
+                    <EvidenceChart
+                      spec={spec}
+                      onPick={(index) => {
+                        setNewsSource(null);
+                        setNewsCase(null);
+                        setNewsMethod(`${spec.id}:${index}`);
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
             ) : (
-              <div className="mt-8 flex w-full max-w-3xl flex-col gap-10">
+              <div className="mt-8 grid w-full max-w-xl grid-cols-1 gap-3">
                 {EVIDENCE_CHARTS.map((spec) => (
-                  <EvidenceChart
+                  <button
                     key={spec.id}
-                    spec={spec}
-                    onPick={(index) => {
+                    type="button"
+                    onClick={() => {
                       setNewsSource(null);
                       setNewsCase(null);
-                      setNewsMethod(`${spec.id}:${index}`);
+                      setNewsMethod(spec.id);
                     }}
-                  />
+                    className="w-full rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-2 text-[16px] font-semibold text-white"
+                  >
+                    {spec.title}
+                  </button>
                 ))}
               </div>
             )}
@@ -1559,8 +2265,28 @@ function Betrayal() {
                   setNewsCase(null);
                   return;
                 }
+                if (newsMethod && newsMethod.includes(":")) {
+                  setNewsMethod(newsMethod.slice(0, newsMethod.indexOf(":")));
+                  return;
+                }
                 if (newsMethod) {
                   setNewsMethod(null);
+                  return;
+                }
+                if (saveHref) {
+                  setSaveHref(null);
+                  return;
+                }
+                if (saveSource) {
+                  setSaveSource(null);
+                  return;
+                }
+                if (saveBar) {
+                  setSaveBar(null);
+                  return;
+                }
+                if (saveOn) {
+                  setSaveOn(false);
                   return;
                 }
                 setLayer(LAYERS[layer].back);
