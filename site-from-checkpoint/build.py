@@ -76,12 +76,13 @@ def nav(active):
                              ("unverified.html#uv-flawed", "Social Media Weapon", "How a word spreads"), ("opinion.html", "Opinion", "Our view, always labeled")]
     facts = [x for i, x in enumerate(facts) if x[0] not in [y[0] for y in facts[:i]]]
     betrayal_link = f'<a class="nav-betrayal{" active" if active == "betrayal.html" else ""}" href="betrayal.html">{ico("quote")}<span>The Great American Betrayal</span></a>'
-    return (betrayal_link + a("scorecard.html", "Midterms", "chart") + drop("Fact Checks", "search", facts, active)
-            + drop("Congress", "capitol", [("congress.html", "Congress", "Members and votes"), ("accountability-trading.html", "Trading", "Disclosed stock trades"),
-                                           ("lawfare.html", "Lawfare", "Every case against Trump"), ("trump-watch.html", "Trump Watch", "Money, salary, judgments"),
-                                           ("democrats.html#biden-foreign-by-country", "Democrats / Foreign Money", "Bank reports and payments by country")], active)
-            + drop("Journal", "book", JOURNAL_MENU + WATCH_MENU, active)
-            + drop("For Lawmakers", "file", LAW_MENU, active))
+    # Order by importance for the Nov 3, 2026 midterms (Sep 26, 2026)
+    return (a("scorecard.html", "Midterms", "chart") + betrayal_link + drop("For Lawmakers", "file", LAW_MENU, active)
+            + drop("Congress", "capitol", [("congress.html", "Debt & Spending", "The purse, the debt, the members"), ("lawfare.html", "Lawfare", "Every case against Trump"),
+                                           ("biden-family.html", "Biden Family Records", "Bank reports, pardons, research in progress"),
+                                           ("accountability-trading.html", "Trading", "Disclosed stock trades"), ("trump-watch.html", "Trump Watch", "Money, salary, judgments")], active)
+            + drop("Fact Checks", "search", facts, active)
+            + drop("Journal", "book", JOURNAL_MENU + WATCH_MENU, active))
 
 
 BRAND_ART = ('<picture class="brand-eagle"><source srcset="assets/brand/eagle-mark.webp" type="image/webp"><img src="assets/brand/eagle-mark.png" alt="" width="103" height="120"></picture>'
@@ -833,12 +834,12 @@ def betrayal_verify_box():
 </aside>"""
 
 
-QUICK_LINKS = [("betrayal.html", "Betrayal", "quote"), ("fake-news.html", "Fake News", "search"),
-               ("unverified.html#uv-flawed", "Social Media Weapon", "eye"), ("unverified.html", "Not Yet Verified", "eye"),
-               ("lawfare.html", "Lawfare", "scale"), ("scorecard.html", "Midterms", "chart"),
-               ("accountability-trading.html", "Congress / Trading", "capitol"), ("scorecard.html#compare", "Scorecard", "chart"),
-               ("trump-watch.html", "Trump Watch", "eye"), ("democrats.html#biden-foreign-by-country", "Foreign Money", "file"),
-               ("journal.html", "Journal", "book"), ("article-v.html", "Article V", "file")]
+QUICK_LINKS = [("scorecard.html", "Midterms", "chart"), ("betrayal.html", "Great American Betrayal", "quote"), ("brief.html", "Lawmakers", "file"),
+               ("congress.html", "Debt & Spending", "capitol"), ("lawfare.html", "Lawfare", "scale"), ("biden-family.html", "Biden Family Records", "file"),
+               ("border.html", "Border", "chart"), ("voters.html", "Voters", "chart"), ("energy.html", "Energy", "chart"),
+               ("fake-news.html", "Fake News", "search"), ("unverified.html#uv-flawed", "Social Media Weapon", "eye"), ("unverified.html", "Not Yet Verified", "eye"),
+               ("accountability-trading.html", "Congress / Trading", "capitol"), ("trump-watch.html", "Trump Watch", "eye"),
+               ("article-v.html", "Article V", "file"), ("journal.html", "Journal", "book"), ("store.html", "Store", "cart")]
 
 
 def quick_grid():
@@ -850,7 +851,6 @@ def betrayal_home():
     return f"""
 <section class="fr-block" id="betrayal-front">
  {why_swampforce_exists_box()}
- <p class="section-label">Front and center</p>
  <h2 class="section-title">The Great American Betrayal</h2>
  <p><a class="btn navy big" href="betrayal.html#betrayal-cases">See the full record</a></p>
  <p><a href="censorship.html">Censorship: the record →</a></p>
@@ -881,44 +881,30 @@ def betrayal_cases_section():
 """
 
 
-def build_home():
+HOME_MOVES = {}  # page -> HTML moved off the homepage (Sep 26, 2026: each topic lives on its nav page)
+
+
+def _home_moves():
     import midterms as M
     nc = corr["Never corrected by the pusher"]
-    picks = [c for c in VCASES if c["proof"] == "Official record" and c["evidence"] == "Proven false"][:3]
-    body = f"""
-<div class="wrap betrayal-first">
-{betrayal_home()}
-</div>
-<section class="hero gb-hero">
- <img class="bg" src="images/hero-capitol.jpg" alt="Eagle on the Capitol in the swamp" fetchpriority="high">
- <div class="shade"></div>
- <div class="copy">
-  <p class="kicker">The record, not the rerun</p>
-  <h1>Vote the file.<br>Not the feeling.</h1>
-  <p class="dek">{N_TOT} claims about a president in the catalog; {N_VER} checked by us against the original record so far.</p>
-  <div class="hero-ctas">
-   <a class="btn" href="scorecard.html">{ico("chart")} Midterm scorecard: helped &amp; hurt</a>
-   <a class="btn ghost" href="fake-news.html">{ico("search")} Flip through the cases</a>
-   <a class="btn ghost" href="brief.html">{ico("capitol")} For lawmakers: staff brief</a>
-  </div>
-  <a class="hero-down" href="#front">Midterms · Tuesday, Nov 3, 2026 ↓</a>
- </div>
-</section>
-<div class="wrap">
-{_fold("Our View", f'<aside class="pull-view" aria-label="Our View"><p class="opinion-label">Our View</p><blockquote><p>{e(PEOPLE_VIEW)}</p></blockquote></aside>')}
-{home_front()}
-<a class="mt-home" href="scorecard.html">
- <span class="mt-home-k">Midterm scorecard</span>
- <span class="mt-home-h">Who ran Congress. What it cost.</span>
- <span class="mt-home-bars">
-  <span class="mt-hb gop"><b>{M.tstr("R")}</b> Republican control</span>
-  <span class="mt-hb dem"><b>{M.tstr("D")}</b> Democratic control</span>
-  <span class="mt-hb split"><b>{M.tstr("S")}</b> Split Congress</span>
- </span>
- <span class="mt-home-note">{M.e(M.FACT_LINE)}</span>
- <span class="mt-home-go">Helped and hurt, party by party →</span>
-</a>
-{_fold("For lawmakers &amp; staff: brief + evidence appendix", f'''<section class="lawmaker-band">
+    hf = home_front()
+    sec = {m.group(1): m.group(0) for m in re.finditer(r'<section class="[^"]*" id="([\w-]+)">.*?\n</section>', hf, re.S)}
+    blame = sec["front-blame"]
+    adults = re.search(r'\n \{?<details class="sf-fold home-fold ">.*?</details>\n</section>$', blame, re.S)
+    folds = re.findall(r'<details class="sf-fold home-fold ">.*?</details>', blame, re.S)
+    scale_fold, adults_fold = folds[0], folds[-1]
+    blame = blame.replace(scale_fold, "").replace(adults_fold, "")
+    blame = re.sub(r'<div class="chart-card"><h3>Verdict on the.*?</canvas></div></div>', "", blame, flags=re.S)
+    blame = re.sub(r'<p class="notfull">.*?</p>', "", blame, flags=re.S)
+    blame = re.sub(r'<h2 class="section-title attack-h">.*?</h2>', "", blame, flags=re.S).replace('<p class="opinion-label">Our view</p>\n \n', "")
+    votes = sec["front-votes"]
+    votes = re.sub(r'<div class="chart-grid two"><div>.*?</div>\n  <div class="fr-cards">', '<div class="fr-cards">', votes, flags=re.S)
+    k = votes.index('<p class="fact-line">'); k2 = votes.index('<div class="fr-cards">')
+    votes = votes[:k] + votes[k2:]
+    back = sec["front-go-back"]
+    back = re.sub(r'\s*<div class="chart-card"><h3>12-month inflation readings.*?</canvas></div></div>', "", back, flags=re.S)
+    back = re.sub(r'\s*<div class="chart-card"><h3>CBP encounters by fiscal year.*?</canvas></div></div>', "", back, flags=re.S)
+    law_band = f"""<section class="lawmaker-band">
  <div class="lb-copy"><p class="section-label light">For lawmakers &amp; staff</p>
   <h2>A two-page brief. A full evidence appendix. Every citation ranked.</h2>
   <p>Written for a hearing room. Each case is ranked by the strength of its proof, from the official record down to an independent fact-check.</p>
@@ -926,44 +912,12 @@ def build_home():
   <a class="btn ghost" href="appendix.html">{ico("file")} Evidence appendix</a>
   <a class="btn ghost" href="about.html">How evidence is ranked</a></div>
   <p class="small">{e(PDF_NOTE)}</p></div>
- <a class="lb-doc" href="brief.html"><img src="images/brief-p1.jpg" alt="First page of the Swamp Force staff brief" loading="lazy"></a>
-</section>''')}
-<section class="section-pad">
- <p class="section-label">The evidence at a glance</p>
- <h2 class="section-title">Tap any bar to open those cases.</h2>
- <div class="chart-grid">
-  {chart_card("chart-proof", "Strength of proof", "Strongest proof first")}
-  {chart_card("chart-term", "When it ran", "Cases by period")}
-  {chart_card("chart-methods", "How it was done", f"Most common methods, {len(VCASES)} verified cases", tall=True)}
- </div>
-</section>
-{_fold("Flip a case: what they said vs. the record", f'''<section class="section-pad">
- <p class="section-label">Flip a case</p>
- <h2 class="section-title">What they said. What the record shows.</h2>
- <div class="ledger">{"".join(case_card(c) for c in picks)}</div>
- <p class="center"><a class="btn navy" href="fake-news.html">See all {ST['total']} verified cases</a></p>
-</section>''')}
-{_fold("Pick a door", f'''<section class="section-pad">
- <p class="section-label">Explore</p>
- <h2 class="section-title">Pick a door.</h2>
- <div class="cards">
-  {explore_card("fake-news.html", "images/chamber.jpg", "Fake News Exposed", f"{ST['total']} verified claims, each set against the original record.", ["Proven false", "Filter + search"])}
-  {explore_card("scorecard.html", "images/capitol.jpg", "Midterm Scorecard", "Helped and hurt under Republican, Democratic and split control, with the debt added under each.", ["Helped · Hurt", "Debt by control"])}
-  {explore_card("betrayal.html", "images/flag-wave.jpg", "The Great American Betrayal", "How a narrative gets built, and why the correction never catches up.", ["Opinion labeled"])}
-  {explore_card("january-6.html", "images/chamber.jpg", "J6", "What the television said, set against the charging statute.", ["§ 2383"])}
-  {explore_card("lawfare.html", "images/capitol.jpg", "Lawfare", "Ten dockets, their key rulings, and the court PDFs.", ["Court record"])}
-  {explore_card("border.html", "images/card-eagle.jpg", "The Border", "CBP encounters by fiscal year, from CBP's own table.", ["Chart"])}
- </div>
-</section>''')}
-{_fold("Our view: The Great American Betrayal", f'''<section class="spine">
- <div class="spine-copy"><p class="opinion-label">Our view · Opinion</p>
-  <h2>The Great American Betrayal</h2>
-  <p>Free elections assume citizens can give informed consent. Push false claims, amplify them, and leave them standing after the record corrects them, and that consent is poisoned.</p>
-  <p class="spine-fact"><b>On the record:</b> {nc} of {ST['total']} verified cases were never corrected by whoever pushed them.</p>
-  <a class="btn" href="opinion.html#the-great-american-betrayal">Read the argument</a></div>
- <div class="spine-media" style="background-image:url('images/flag-wave.jpg')"></div>
-</section>''')}
-{_fold("The Swamp Force store · Wear the file · Shop (coming soon)", f'''<section class="merch-band">
+</section>"""
+    spine = f"""<section class="fr-block spine-moved">
+ {_fold("Our view · Opinion: The Great American Betrayal", f'<div class="spine-copy"><p class="opinion-label">Our view · Opinion</p><h2>The Great American Betrayal</h2><p>Free elections assume citizens can give informed consent. Push false claims, amplify them, and leave them standing after the record corrects them, and that consent is poisoned.</p><p class="spine-fact"><b>On the record:</b> {nc} of {ST["total"]} verified cases were never corrected by whoever pushed them.</p><a class="btn" href="opinion.html#the-great-american-betrayal">Read the argument</a></div>')}
+ {_fold("Our View", f'<aside class="pull-view" aria-label="Our View"><p class="opinion-label">Our View</p><blockquote><p>{e(PEOPLE_VIEW)}</p></blockquote></aside>')}
+</section>"""
+    merch = f"""<section class="merch-band">
  <div class="mb-inner">
   <p class="section-label light">The Swamp Force store</p>
   <h2>Wear the file.</h2>
@@ -971,12 +925,70 @@ def build_home():
   <a class="btn big" href="store.html">{ico("cart")} Shop (coming soon)</a>
  </div>
  <picture class="mb-stamp"><source srcset="assets/brand/stamp.webp" type="image/webp"><img src="assets/brand/stamp.png" alt="Swamp Force stamp: WE THE PEOPLE" width="480" height="480" loading="lazy"></picture>
-</section>''', cls="store-line")}
-</div>
+</section>"""
+    fc = {c["id"]: c for c in front_charts()}
+    HOME_MOVES.update({
+        "fake-news.html": (blame, []),
+        "scorecard.html": (sec["front"] + votes, []),
+        "energy.html": (sec["front-costs"], []),
+        "record-2020.html": (back, [fc["fr-cart"]]),
+        "lawfare.html": (sec["front-lawfare"], []),
+        "congress.html": (sec["front-congress"].replace("\n</section>", "\n " + adults_fold + "\n</section>"), []),
+        "brief.html": (law_band, []),
+        "betrayal.html": (spine, []),
+        "store.html": (merch, []),
+    })
+
+
+def place_moves(name, h):
+    if name not in HOME_MOVES or "</main>" not in h:
+        return h
+    body, specs = HOME_MOVES[name]
+    blk = f'<div class="wrap sf-moved">{body}</div>'
+    k = h.rindex("</main>")
+    h = h[:k] + blk + h[k:]
+    if specs:
+        js = f'<script>window.SF_CHARTS=(window.SF_CHARTS||[]).concat({json.dumps(specs, ensure_ascii=False)});</script>\n'
+        if "chart.umd.min.js" not in h:
+            js = '<script src="assets/vendor/chart.umd.min.js" defer></script>\n' + js
+        h = h.replace("</body>", js + "</body>", 1)
+    return h
+
+
+def build_home():
+    import midterms as M
+    _home_moves()
+    tiles = [("scorecard.html", "chart-helped-hurt.jpg", "Midterms", "Who ran Congress. What it cost."),
+             ("betrayal.html", "we-the-people.jpg", "The Great American Betrayal", f"{len(BETRAYAL_FAKE)} new verified cases (2015–2026)"),
+             ("brief.html", "constitution.jpg", "For Lawmakers", "Staff brief + evidence appendix"),
+             ("congress.html", "chart-debt-bars.jpg", "Debt & Spending", "The purse, the debt, the members"),
+             ("lawfare.html", "chart-lawfare.jpg", "Lawfare", "10 dockets, key rulings"),
+             ("biden-family.html", "chamber.jpg", "Biden Family Records", "Bank reports, pardons, research in progress"),
+             ("border.html", "chart-border.jpg", "The Border", "Encounters by fiscal year"),
+             ("voters.html", "signs.jpg", "Voters", "Voters & population: the raw numbers"),
+             ("energy.html", "chart-pump-flow.jpg", "Energy", "Gas, insurance, medicine: who actually sets the price?"),
+             ("fake-news.html", "chart-one-word-ledger.jpg", "Fake News", f"{ST['total']} verified cases"),
+             ("unverified.html", "chart-blame.jpg", "Not Yet Verified", "Claims no one has proven")]
+    cells = "".join(f'<a class="gb-card" href="{h}"><img src="images/{img}" alt="" loading="lazy"><h3>{e(t)}</h3><p class="gb-sub">{e(d)}</p></a>' for h, img, t, d in tiles)
+    body = f"""
+<section class="hero gb-hero top">
+ <img class="bg" src="images/hero-capitol-top.jpg" alt="Eagle on the Capitol in the swamp" fetchpriority="high">
+ <div class="shade"></div>
+ <div class="copy">
+  <p class="kicker">The record, not the rerun</p>
+  <h1>Vote the file.<br>Not the feeling.</h1>
+  <p class="dek">{N_TOT} claims about a president in the catalog; {N_VER} checked by us against the original record so far.</p>
+  <a class="hero-down" href="#front">Midterms · Tuesday, Nov 3, 2026 ↓</a>
+ </div>
+</section>
+<script>(function(){{var h=document.querySelector('.site-header');if(h)document.documentElement.style.setProperty('--hh',h.offsetHeight+'px')}})();</script>
+<div class="wrap betrayal-first">{why_swampforce_exists_box()}</div>
+<section class="sf-charts-first"><div class="wrap home-tiles" id="front"><div class="gb-grid">{cells}</div></div></section>
+<div class="wrap"><p class="center"><a class="btn sm store-line" href="store.html">The Swamp Force store · Wear the file · Shop (coming soon)</a></p></div>
 """
     return page("index.html", "Swamp Force — Vote the file. Not the feeling.",
                 f"{ST['total']} claims about President Trump, each checked by Swamp Force against the original record. Staff brief and evidence appendix for lawmakers.",
-                body, charts=charts_evidence() + front_charts(), flush=True)
+                body, flush=True)
 
 
 def build_fake_news():
@@ -2160,6 +2172,10 @@ def main():
     for _slug in RS.NEW5:
         _t, _d, _b = RS.essay(_slug)
         pages = {**{k: v for k, v in pages.items() if k != "404.html"}, f"journal-{_slug}.html": page(f"journal-{_slug}.html", _t + " · Swamp Force", _d or _t, _b, flush=True), "404.html": pages["404.html"]}
+    import biden_sars as _BS
+    _ph = "".join(f'<section class="doc-section"><h2>{t}</h2><p><span class="uv-nv">Research in progress</span></p></section>' for t in ("House investigation bank records", "Pardons and Biden family connections", "The laptop: accountability"))
+    pages = {**{k: v for k, v in pages.items() if k != "404.html"}, "biden-family.html": page("biden-family.html", "Biden Family Records · Swamp Force", "Biden family bank reports, foreign money by country and pardons, from official records.",
+             f'<div class="wrap section-pad"><p class="section-label">Congress</p><h1>Biden Family Records</h1>{_BS.section()}{_ph}</div>'), "404.html": pages["404.html"]}
     if UNSUP:
         pages = {**{k: v for k, v in pages.items() if k != "404.html"}, "unsupported.html": build_unsupported(), "404.html": pages["404.html"]}
         with open(OUT / "downloads" / "unsupported-claims.csv", "w", newline="", encoding="utf-8") as fh:
@@ -2187,10 +2203,13 @@ def main():
     import visual as VIS
     import orig_images as OI
     OI.copy_all(OUT)
-    shutil.copy2(SITE / "image-src" / "bg-capitol-eagle.jpg", OUT / "images" / "bg-capitol-eagle.jpg")  # site background (Grok Build original)
+    shutil.copy2(SITE / "image-src" / "bg-capitol-eagle.jpg", OUT / "images" / "bg-capitol-eagle.jpg")
+    shutil.copy2(SITE / "image-src" / "hero-capitol-top.jpg", OUT / "images" / "hero-capitol-top.jpg")  # Grok Build hero with sky above, so the nav can sit over it without cutting the eagle  # site background (Grok Build original)
     for name, h in pages.items():
         h = h.replace("In this site&#x27;s audit of", "In this site&#x27;s review of")
-        h = VIS.apply(name, h)
+        h = place_moves(name, h)
+        if name != "index.html":
+            h = VIS.apply(name, h)
         h = OI.apply(name, h)
         h = RS.apply(name, h)
         h = AC.apply(name, h)
@@ -2206,13 +2225,16 @@ def main():
                       + _t("unverified.html#uv-altered", "Altered quotes", "Words changed, cut or rearranged.") + '</div>')
             h = h.replace('<p class="section-label">Reader path</p>\n <h2 class="section-title">How a narrative is built</h2>',
                           '<p class="section-label">Reader path · How a narrative is built</p>\n <h2 class="section-title">We are stripped of our ability to give informed consent when we vote.</h2>' + _tiles, 1)
+        if name == "biden-family.html" and "chart.umd.min.js" not in h:
+            h = h.replace("</body>", '<script src="assets/vendor/chart.umd.min.js" defer></script>\n</body>', 1)
         if name == "democrats.html":
             import biden_sars as BS
             _m = '<section class="sf-charts-first"><div class="wrap">'
+            _bl = '<p class="fact-line"><a href="biden-family.html">Biden family bank reports and foreign money: Biden Family Records →</a></p>'
             if _m in h:
-                k = h.index(_m) + len(_m); h = h[:k] + BS.section() + h[k:]
+                k = h.index(_m) + len(_m); h = h[:k] + _bl + h[k:]
             elif "</h1>" in h:
-                k = h.index("</h1>") + 5; h = h[:k] + BS.section() + h[k:]
+                k = h.index("</h1>") + 5; h = h[:k] + _bl + h[k:]
             if "chart.umd.min.js" not in h:
                 h = h.replace("</body>", '<script src="assets/vendor/chart.umd.min.js" defer></script>\n</body>', 1)
         if name == "betrayal.html" and "</h1>" in h:

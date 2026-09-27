@@ -1470,4 +1470,14 @@ th{background:#1c1c1c!important;color:#e8e0d0!important} td{border-color:#2a2a2a
 .gb-card img{width:100%;height:auto;display:block}
 .home-fold{margin:14px 0}.home-fold>summary.btn{min-height:40px}.home-fold[open]>summary{margin-bottom:12px}
 .store-line>summary.btn{background:transparent!important;color:#e8e0d0!important;border:1px solid #2a2a2a!important;font-size:11px!important}
+/* homepage: nav over the eagle */
+body:has(.gb-hero.top) .site-header,body:has(.gb-hero.top) .nav-row,body:has(.gb-hero.top) .sf-pills{background:transparent!important;border-color:transparent!important}
+body:has(.gb-hero.top) .site-header{background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.35))!important}
+.gb-hero.top{margin-top:calc(-1 * var(--hh,150px));min-height:0;aspect-ratio:1792/1528;max-height:none}
+.gb-hero.top img.bg{object-position:70% 100%}
+.gb-hero.top .copy{min-height:0;height:100%;box-sizing:border-box}
+.sf-pills-in{max-height:none!important}
+.home-tiles .gb-card img{aspect-ratio:16/10;object-fit:cover}
+.gb-sub{padding:0 1rem 1rem;margin:0;font:13px/1.4 ui-sans-serif,system-ui;color:#a39e93}
+.store-line{background:transparent!important;color:#e8e0d0!important;border:1px solid #2a2a2a!important;font-size:11px!important}
 .gb-card h3{font:700 1.2rem ui-sans-serif,system-ui;text-transform:uppercase;padding:0 1rem;color:#ece8dc}
