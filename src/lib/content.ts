@@ -74,7 +74,7 @@ export const posts: Post[] = [
 		dek: "The Constitution does not open with Congress. It opens with the owner. The 535 are the hire. The hire has gone rogue.",
 		date: "2026-09-21",
 		category: "Dispatch",
-		readMinutes: 6,
+		readMinutes: 4,
 		image: "/images/hero-capitol.jpg",
 		imageAlt: "The Capitol — the people are the employer",
 		featured: true,
@@ -99,103 +99,51 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "The Constitution of the United States does not open with Congress, a president, a party, or a panel. It opens with three words. The [Preamble](https://constitution.congress.gov/constitution/preamble/): “We the People of the United States… do ordain and establish this Constitution for the United States of America.” The people made the government. The government did not make the people.",
+				text: 'The Constitution does not open with Congress. The [Preamble](https://constitution.congress.gov/constitution/preamble/): “We the People of the United States… do ordain and establish this Constitution.” The people made the government.',
 			},
 			{
 				type: "q",
-				text: "The people are the owner. Congress is the staff. The staff does not get to rewrite the first sentence.",
+				text: 'The people are the owner. Congress is the staff.',
+			},
+			{
+				type: "p",
+				text: '[Article I](https://constitution.congress.gov/constitution/article-1/) is the job description: the purse, a declaration of war, and uniform rules of naturalization. What is not on the list stayed with the states and the people. The oath, [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331), is to support this Constitution “without any mental reservation or purpose of evasion.”',
+			},
+			{
+				type: "p",
+				text: 'Three hundred million people hired 535 clerks. They work part of the year on a full-year salary. The [Congressional Budget Office](https://www.cbo.gov/data/budget-economic-data) shows the last surplus in fiscal year 2001. The [Treasury’s Debt to the Penny](https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny) prints more than forty trillion dollars. A chamber that will not pass twelve appropriations bills by October 1 is refusing the calendar it wrote.',
+			},
+			{
+				type: "p",
+				text: 'The daily product is a caption. One word is swapped. Six seconds are cut from a speech. Hatred does not require reading the bill. The file does.',
 			},
 			{
 				type: "h",
-				text: "The job is a list",
+				text: 'Alter or abolish',
 			},
 			{
 				type: "p",
-				text: "[Article I](https://constitution.congress.gov/constitution/article-1/) is the job description. It lists what Congress may do. The purse, a declaration of war, and uniform rules of naturalization are on that list. What is not on the list stayed with the states and with the people. A member who talks as if the country is a possession is not reading the paper he swore to.",
-			},
-			{
-				type: "p",
-				text: "The oath is not a photograph. [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331) requires every member to swear to support and defend this Constitution “without any mental reservation or purpose of evasion.” Mental reservation is the legal name for crossing your fingers. An employee who takes that oath and then treats the people who pay him as a faction to be broken has left the job while keeping the paycheck.",
-			},
-			{
-				type: "h",
-				text: "How the hire goes rogue",
-			},
-			{
-				type: "p",
-				text: "Three hundred million people hired 535 clerks. Those clerks work part of the year on a full-year salary. They vote on bills they have not read. They have not closed a fiscal year on time as the appropriations calendar requires. The [Congressional Budget Office’s historical tables](https://www.cbo.gov/data/budget-economic-data) still show the last surplus in fiscal year 2001. The [Treasury’s Debt to the Penny](https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny) now prints more than forty trillion dollars. That is a staff that will not do the work it was hired to do.",
-			},
-			{
-				type: "p",
-				text: "A nation of this size cannot be overseen on a part-time floor. Oversight is the job. When oversight is skipped, fraud is the door the staff left open. Medicare, Medicaid, and Social Security are the largest lines on the card. Congress holds those lines. A chamber that will not pass twelve appropriations bills by October 1, year after year, is refusing the calendar it wrote for itself.",
-			},
-			{
-				type: "h",
-				text: "The daily product is a caption",
-			},
-			{
-				type: "p",
-				text: "Washington’s daily product is a caption. One word is swapped. Six seconds are cut from a speech. Kidnapped instead of arrested. Insurrection instead of a docket that never charged it. A republic cannot survive if half of it is taught to hate the other half as a substitute for a budget. Hatred does not require reading the bill. The file does: the statute, the inspector general, the Treasury table, the tape in full.",
-			},
-			{
-				type: "h",
-				text: "Alter or abolish",
-			},
-			{
-				type: "p",
-				text: "The [Declaration of Independence](https://www.archives.gov/founding-docs/declaration-transcript) is not a statute. It is the country’s statement of right. It names why governments exist, and what a people may do when a government stops doing that work. The National Archives prints the sentence in full:",
+				text: 'The [Declaration of Independence](https://www.archives.gov/founding-docs/declaration-transcript) names the right:',
 			},
 			{
 				type: "q",
-				text: "That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed, — That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as to them shall seem most likely to effect their Safety and Happiness.",
+				text: 'That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government… as to them shall seem most likely to effect their Safety and Happiness.',
 			},
 			{
 				type: "p",
-				text: "Destructive of these ends means a government that no longer secures life, liberty, and the pursuit of happiness, and no longer draws just power from consent. The Constitution is the form the people ordained so they would not need a second revolution every time the hire failed. The right sits in the Declaration. The machinery sits in the Constitution.",
+				text: 'The machinery is [Article V](https://constitution.congress.gov/constitution/article-5/). Two thirds of both Houses, or the legislatures of two thirds of the states, may propose an amendment. Three fourths of the states ratify. That is thirty-four applications and thirty-eight ratifications. It is not a street.',
 			},
 			{
 				type: "h",
-				text: "Alter the charter — Article V",
+				text: 'Remove the hire',
 			},
 			{
 				type: "p",
-				text: "[Article V](https://constitution.congress.gov/constitution/article-5/) is how the charter is altered. Two thirds of both Houses may propose an amendment. Or the legislatures of two thirds of the states may apply, and Congress “shall call a Convention for proposing Amendments.” Either proposal becomes part of the Constitution when three fourths of the states ratify. A term limit, a budget rule, or a narrower grant of power takes thirty-four state applications and thirty-eight ratifications. It does not take a street.",
-			},
-			{
-				type: "h",
-				text: "Remove the hire",
-			},
-			{
-				type: "p",
-				text: "[Article I, Section 2](https://constitution.congress.gov/constitution/article-1/#article-1-section-2) puts the whole House up every second year. That is the recall the Framers wrote for the chamber closest to the people. The [Seventeenth Amendment](https://constitution.congress.gov/constitution/amendment-17/) puts the Senate on a six-year clock, one third at a time. There is no federal recall of a sitting member between elections. The Constitution did not forget that tool. It refused it. The two-year House is the tool it chose instead. [Article I, Section 5](https://constitution.congress.gov/constitution/article-1/#article-1-section-5): each House may “punish its Members for disorderly Behaviour, and, with the Concurrence of two thirds, expel a Member.” [Article II, Section 4](https://constitution.congress.gov/constitution/article-2/#article-2-section-4): the President, Vice President, and all civil officers “shall be removed from Office on Impeachment for, and Conviction of, Treason, Bribery, or other high Crimes and Misdemeanors.” The [Fourteenth Amendment, Section 3](https://constitution.congress.gov/constitution/amendment-14/#amendment-14-section-3) bars from federal or state office any person who, having taken an oath to support the Constitution, engaged in insurrection or rebellion against it. Those are removals written in the charter. They run through a chamber, a trial, or a disqualification. They do not run through a crowd.",
-			},
-			{
-				type: "h",
-				text: "Petition",
-			},
-			{
-				type: "p",
-				text: "The [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) forbids Congress from abridging “the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.” Peaceably is in the sentence. Petition is the legal name for a demand the hire has to receive. A million signatures on a term-limits petition that a chamber then ignores is not proof that the right is empty. It is proof that the hire is ignoring the right. The next election is how that file is closed.",
-			},
-			{
-				type: "h",
-				text: "What the people kept",
-			},
-			{
-				type: "p",
-				text: "The [Ninth Amendment](https://constitution.congress.gov/constitution/amendment-9/): “The enumeration in the Constitution, of certain rights, shall not be construed to deny or disparage others retained by the people.” The [Tenth Amendment](https://constitution.congress.gov/constitution/amendment-10/): “The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people.” Those two sentences are the remainder. They do not create a street procedure. They say the list in Article I is a list, not a blank check, and that rights the paper did not name were not thereby surrendered.",
-			},
-			{
-				type: "h",
-				text: "The line the charter drew",
-			},
-			{
-				type: "p",
-				text: "The Constitution does not authorize a private war on the government it created. [Article III, Section 3](https://constitution.congress.gov/constitution/article-3/#article-3-section-3) defines treason as levying war against the United States, or adhering to their enemies. [Article IV, Section 4](https://constitution.congress.gov/constitution/article-4/#article-4-section-4) requires the United States to guarantee every state a republican form of government and, on application, to protect a state against domestic violence. Assembly in the First Amendment is peaceable assembly. The Declaration named a right of a people. The Constitution turned that right into elections, expulsion, impeachment, petition, and Article V.",
+				text: '[Article I, Section 2](https://constitution.congress.gov/constitution/article-1/#article-1-section-2) puts the whole House up every second year. There is no federal recall of a sitting member between elections. [Article I, Section 5](https://constitution.congress.gov/constitution/article-1/#article-1-section-5): two thirds may expel a member. [Article II, Section 4](https://constitution.congress.gov/constitution/article-2/#article-2-section-4): impeachment for treason, bribery, or other high crimes and misdemeanors. The [Fourteenth Amendment, Section 3](https://constitution.congress.gov/constitution/amendment-14/#amendment-14-section-3) bars from office a person who took the oath and then engaged in insurrection. [Article III, Section 3](https://constitution.congress.gov/constitution/article-3/#article-3-section-3) defines treason as levying war against the United States. The [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) protects peaceable assembly and the right to petition. The [Ninth](https://constitution.congress.gov/constitution/amendment-9/) and [Tenth](https://constitution.congress.gov/constitution/amendment-10/) Amendments say the Article I list is not a blank check.',
 			},
 			{
 				type: "q",
-				text: "We the People own and operate this country. The 535 work here. Actions, not words. Alter the charter by Article V. Remove the hire by the vote, the expulsion, and the oath. That is how a country is taken back.",
+				text: 'We the People own this country. The 535 work here. Alter the charter by Article V. Remove the hire by the vote, the expulsion, and the oath.',
 			},
 		],
 	},
@@ -252,7 +200,7 @@ export const posts: Post[] = [
 		dek: "Millions of encounters. Fentanyl in the morgue. Hotels on the taxpayer. The door was a policy. The policy was Democratic.",
 		date: "2026-09-20",
 		category: "Dispatch",
-		readMinutes: 5,
+		readMinutes: 4,
 		image: "/images/essay-defund-ice.jpg",
 		imageAlt: "The border was a policy. The policy had a party.",
 		featured: true,
@@ -262,56 +210,36 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "The southwest border is not a mystery. [U.S. Customs and Border Protection](https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters) publishes the encounters. U.S. Border Patrol’s count at the Mexico line, from CBP’s own fiscal-year tables as compiled by [Pew from that file](https://www.pewresearch.org/short-reads/2026/02/02/migrant-encounters-at-the-us-mexico-border-are-at-their-lowest-level-in-more-than-50-years/): fiscal 2021, 1.66 million. Fiscal 2022, 2.21 million. Fiscal 2023, 2.05 million. Fiscal 2024, 1.53 million. That is more than seven million encounters in four fiscal years. Some people are counted more than once. The pile is still the pile. Fiscal 2025, after the Oval changed: 237,538. The lowest since 1970. A door that can close that fast was a door that had been held open.",
+				text: 'The door is a count, not a mood. Border Patrol at the Mexico line, [CBP](https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters) as compiled by [Pew](https://www.pewresearch.org/short-reads/2026/02/02/migrant-encounters-at-the-us-mexico-border-are-at-their-lowest-level-in-more-than-50-years/): 1.66 million in fiscal 2021, 2.21 million in 2022, 2.05 million in 2023, 1.53 million in 2024. More than seven million in four years. Fiscal 2025, after the Oval changed: 237,538. The lowest since 1970.',
 			},
 			{
 				type: "p",
-				text: "The Rio Grande was not the only door. [CBP nationwide](https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics): 1.96 million in FY2021, 2.77 million in FY2022, 3.20 million in FY2023, 2.90 million in FY2024. That is 10.83 million encounters in four years — southwest land, the northern line, airports, seaports, Miami and every other sector CBP counts. [DHS OHSS](https://ohss.dhs.gov/khsm/cbp-encounters) splits it: 8.73 million on southwest land, about 2.10 million on the rest of the map. [House Homeland](https://homeland.house.gov/2024/10/24/startling-stats-factsheet-fiscal-year-2024-ends-with-nearly-3-million-inadmissible-encounters-10-8-million-total-encounters-since-fy2021/): more than half a million on the northern border in those four years; northern encounters in FY2024 were up more than 600 percent from FY2021. FY2025 nationwide fell to 691,906.",
+				text: '[Nationwide](https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics): 10.83 million encounters in those four years — southwest land, the northern line, airports, and seaports. [DHS](https://ohss.dhs.gov/khsm/cbp-encounters): 8.73 million on southwest land, about 2.10 million everywhere else. [House Homeland](https://homeland.house.gov/2024/10/24/startling-stats-factsheet-fiscal-year-2024-ends-with-nearly-3-million-inadmissible-encounters-10-8-million-total-encounters-since-fy2021/): more than half a million on the northern border. FY2025 nationwide fell to 691,906.',
 			},
 			{
 				type: "img",
 				src: "/images/chart-border-toll.jpg",
-				alt: "What Americans still pay — encounters, hospitals, hotels, fentanyl, missing children, the criminal docket",
+				alt: 'What Americans still pay — encounters, hospitals, hotels, fentanyl, missing children, the criminal docket',
 			},
 			{
 				type: "p",
-				text: "Then they were moved. Texas [TDEM invoices](https://abc13.com/post/souther-border-texas-gov-greg-abbott-migrant-crisis-flights/14453558/): $124.6 million through January 10, 2024, to bus and fly more than 103,100 people to New York, Chicago, Denver, Washington, Philadelphia, Los Angeles. [New York City’s Comptroller](https://comptroller.nyc.gov/services/for-the-public/accounting-for-asylum-seeker-services/fiscal-impacts) booked the rooms: $1.41 billion in FY2023, $3.70 billion in FY2024, $3.02 billion in FY2025 — $8.13 billion in one city. Chicago’s leaders put food and shelter at about $434 million from July 2022 to July 2024. Denver: $216 million to $340 million. [DHS OIG](https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf): FEMA awarded $1.4 billion in Shelter and Services and EFSP-H in FY2023–24, money transferred from CBP. Schools, emergency rooms, and hotel corridors were the community line. [8 U.S.C. § 1621](https://www.law.cornell.edu/uscode/text/8/1621) already said who may receive a state or local public benefit.",
+				text: 'Texas [bused and flew](https://abc13.com/post/souther-border-texas-gov-greg-abbott-migrant-crisis-flights/14453558/) more than 103,100 people at a cost of $124.6 million. New York City’s [Comptroller](https://comptroller.nyc.gov/services/for-the-public/accounting-for-asylum-seeker-services/fiscal-impacts): $8.13 billion in three fiscal years. [DHS OIG](https://www.oig.dhs.gov/sites/default/files/assets/2026-04/OIG-26-04-Apr26.pdf): FEMA moved $1.4 billion from CBP into shelter grants. [8 U.S.C. § 1621](https://www.law.cornell.edu/uscode/text/8/1621) already said who may receive a state or local public benefit.',
 			},
 			{
 				type: "q",
-				text: "A door that falls shut in a year was a policy, not weather.",
+				text: 'A door that falls shut in a year was a policy, not weather.',
 			},
 			{
 				type: "p",
-				text: "Who held the gavel when it opened: Democrats ran the White House from January 2021 to January 2025. They ran both the House and the Senate from January 2021 to January 2023. They ended Remain in Mexico. They ended the Title 42 public-health expulsion on May 11, 2023. They ran parole programs that turned a crossing into a status, a status into a Social Security number, and a number into a welfare check. [SSI is not Social Security](https://www.ssa.gov/ssi/spotlights/spot-non-citizens.htm). It is general revenue. SSA’s own spotlight lists parole, asylum, and refugee as doors into that check. [8 U.S.C. § 1611](https://www.law.cornell.edu/uscode/text/8/1611) already barred most federal benefits for aliens who are not qualified. Congress and the agencies built the exception, then called it compassion. [What the taxpayer bought](/dispatch/what-the-taxpayer-bought) is the rest of that stack: cash cards, phones, clothing, housing, property damage, and the homicide docket.",
+				text: 'Democrats held the White House from January 2021 to January 2025, and both chambers from January 2021 to January 2023. They ended Remain in Mexico. They ended Title 42 on May 11, 2023. Parole turned a crossing into a status, a status into a Social Security number, and a number into a check. [SSI is not Social Security](https://www.ssa.gov/ssi/spotlights/spot-non-citizens.htm). [8 U.S.C. § 1611](https://www.law.cornell.edu/uscode/text/8/1611) already barred most federal benefits. On February 24, 2026, the President asked who would stand if the first duty is American citizens, not illegal aliens. [Republicans stood. Democrats stayed seated.](https://www.c-span.org/clip/joint-session-of-congress/user-clip-the-first-duty-of-the-american-government/5194380)',
 			},
 			{
 				type: "p",
-				text: "February 24, 2026. Joint session. The President asked every legislator to stand if they agreed with this sentence: the first duty of the American government is to protect American citizens, not illegal aliens. [C-SPAN recorded the ask](https://www.c-span.org/clip/joint-session-of-congress/user-clip-the-first-duty-of-the-american-government/5194380). Republicans stood. Democrats stayed seated. The [full address](https://www.c-span.org/program/joint-session-of-congress/2026-state-of-the-union-address/673636) is on the same tape. That is the party that opened the door, on camera, declining to say the people they work for come first.",
+				text: 'Peaceable assembly is the [First Amendment](https://constitution.congress.gov/constitution/amendment-1/). Assault on an officer is [18 U.S.C. § 111](https://www.law.cornell.edu/uscode/text/18/111). Publishing his address is [18 U.S.C. § 119](https://www.law.cornell.edu/uscode/text/18/119). [DHS](https://www.dhs.gov/news/2026/01/08/radical-rhetoric-sanctuary-politicians-leads-unprecedented-1300-increase-assaults): 275 assaults on ICE officers in 2025, against 19 in the same stretch of 2024. [DOJ](https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice) sentenced an Antifa cell for the July 4, 2025 attack on the Prairieland Detention Center.',
 			},
 			{
 				type: "p",
-				text: "The First Amendment protects [peaceable](https://constitution.congress.gov/constitution/amendment-1/) assembly. It does not protect doxxing an ICE officer, assaulting him, or smashing the building. [18 U.S.C. § 111](https://www.law.cornell.edu/uscode/text/18/111) is assault on a federal officer. [18 U.S.C. § 119](https://www.law.cornell.edu/uscode/text/18/119) is publishing his home address to threaten him. [18 U.S.C. § 1361](https://www.law.cornell.edu/uscode/text/18/1361) is government property. [DHS](https://www.dhs.gov/news/2026/01/08/radical-rhetoric-sanctuary-politicians-leads-unprecedented-1300-increase-assaults): 275 assaults on ICE officers from January 20 through December 31, 2025, against 19 in the same stretch of 2024. 66 vehicular attacks against 2. [DOJ](https://www.justice.gov/opa/pr/leader-antifa-cell-members-north-texas-sentenced-100-years-prison-terrorist-attack-ice): Prairieland Detention Center, July 4, 2025 — an Antifa cell sentenced for attacking the facility. [Minnesota](https://www.justice.gov/usao-mn/pr/15-members-direct-action-minnesota-minneapolis-based-direct-action-group-antifa-ties): 15 indicted for assaulting federal officers and destroying government property. Sanctuary rhetoric is in the DHS file. That is unrest. It is not a rally.",
-			},
-			{
-				type: "h",
-				text: "What every household paid",
-			},
-			{
-				type: "p",
-				text: "Fentanyl. [CDC / NCHS](https://www.cdc.gov/nchs/blog/posts/2026/03/most-common-drugs-in-u-s-overdose-deaths-2017-2023.html): fentanyl was the leading drug in overdose deaths every year from 2017 through 2023. Deaths involving fentanyl rose from 27,542 in 2017 to 73,944 in 2022. That is not a panel. That is a morgue table. Most of that powder is walked or driven across the same line CBP counts. Schools, first responders, and parents paid in funerals.",
-			},
-			{
-				type: "p",
-				text: "Children. [DHS](https://www.dhs.gov/news/2026/02/24/making-america-safe-again-state-dhs-under-president-trump-and-secretary-noem) stated that the prior administration lost more than 450,000 unaccompanied children at that border. A later search found 145,000. The rest is still a missing-persons file. [DHS OIG-24-46](https://www.oig.dhs.gov/sites/default/files/assets/2024-08/OIG-24-46-Aug24.pdf) already counted hundreds of thousands without a Notice to Appear. Sex trafficking of children is already [18 U.S.C. § 1591](https://www.law.cornell.edu/uscode/text/18/1591). The open door fed the crime.",
-			},
-			{
-				type: "p",
-				text: "Wages, rents, emergency rooms, and hotel bills. Cities put people in rooms the statute did not authorize. [8 U.S.C. § 1621](https://www.law.cornell.edu/uscode/text/8/1621) already said who may receive a state or local public benefit. Governors spent anyway. Schools added bodies without adding buildings. The American who waited in line, paid FICA, and followed the statute watched the line collapse. That is not xenophobia. That is a queue that stopped meaning anything.",
-			},
-			{
-				type: "p",
-				text: "This disaster has a party. Democrats held the Oval and, for two years, both chambers, while the encounters ran past two million a year. Republicans who voted to keep the door shut were not the authors of the parole memos. When the Oval changed, the number fell to a fifty-year low. [CBP](https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters) counted the door. [CDC](https://www.cdc.gov/nchs/blog/posts/2026/03/most-common-drugs-in-u-s-overdose-deaths-2017-2023.html) counted the morgue. The [inspector general](https://www.oig.dhs.gov/sites/default/files/assets/2024-08/OIG-24-46-Aug24.pdf) counted the children without a Notice to Appear. That is the record of a door, and of who held it open.",
+				text: '[CDC](https://www.cdc.gov/nchs/blog/posts/2026/03/most-common-drugs-in-u-s-overdose-deaths-2017-2023.html): fentanyl deaths rose from 27,542 in 2017 to 73,944 in 2022. [DHS](https://www.dhs.gov/news/2026/02/24/making-america-safe-again-state-dhs-under-president-trump-and-secretary-noem) said the prior administration lost more than 450,000 unaccompanied children. A later search found 145,000. [OIG-24-46](https://www.oig.dhs.gov/sites/default/files/assets/2024-08/OIG-24-46-Aug24.pdf) counted hundreds of thousands without a Notice to Appear. Sex trafficking of a child is [18 U.S.C. § 1591](https://www.law.cornell.edu/uscode/text/18/1591). The rest of the bill is [what the taxpayer bought](/dispatch/what-the-taxpayer-bought).',
 			},
 		],
 	},
@@ -465,7 +393,7 @@ export const posts: Post[] = [
 		dek: "Careful words. A crowd takes the hint. Cities burn. Insurers counted a billion. The Member still has the chair.",
 		date: "2026-09-16",
 		category: "Dispatch",
-		readMinutes: 4,
+		readMinutes: 3,
 		image: "/images/essay-the-noise.jpg",
 		imageAlt: "Empty chamber. The shrug is the policy.",
 		featured: true,
@@ -483,63 +411,31 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "The method is not a memo that says “burn it.” The method is a sentence cut just short of [the Supreme Court's incitement test](https://supreme.justia.com/cases/federal/us/395/444/). That test: speech is punishable as incitement only if it is meant to cause imminent lawless action and is likely to cause it. So they do not say “torch the precinct at eight.” They say create a crowd. They should not let up. Bring the fire. People will do what they do. The crowd hears the rest. The Member keeps clean hands. The city pays.",
+				text: 'The sentence stops one word short of [the incitement test](https://supreme.justia.com/cases/federal/us/395/444/). Speech is punishable only if it is meant to cause imminent lawless action and is likely to. They do not say torch the precinct. They say create a crowd. The crowd hears the rest. The member keeps the chair.',
 			},
 			{
 				type: "q",
-				text: "They never light the match. They narrate the room until someone else does. Then they call it weather.",
-			},
-			{
-				type: "h",
-				text: "The wording",
+				text: 'They never light the match. They narrate the room until someone else does.',
 			},
 			{
 				type: "p",
-				text: "On June 23, 2018, Representative Maxine Waters told a Los Angeles rally: if anybody from that Cabinet is seen in a restaurant, a department store, or a gasoline station, “you get out and you create a crowd and you push back on them.” [The tape](https://www.realclearpolitics.com/video/2018/06/26/maxine_waters_pelosi_and_schumer_dont_really_say_im_out_of_line.html). She did not say assault. She said crowd.",
+				text: 'Maxine Waters, June 23, 2018: if you see them in a restaurant, a department store, or a gas station, “you get out and you create a crowd and you push back on them.” [The tape](https://www.realclearpolitics.com/video/2018/06/26/maxine_waters_pelosi_and_schumer_dont_really_say_im_out_of_line.html).',
 			},
 			{
 				type: "p",
-				text: "On February 9, 2020, Representative Ayanna Pressley said: “If you don’t see the light, then we will bring the fire.” [The tape](https://www.realclearpolitics.com/video/2020/02/09/ayanna_pressley_threatens_if_you_dont_see_the_light_then_we_will_bring_the_fire.html). She did not name a block. She named a method.",
+				text: 'Ayanna Pressley, February 9, 2020: “If you don’t see the light, then we will bring the fire.” [The tape](https://www.realclearpolitics.com/video/2020/02/09/ayanna_pressley_threatens_if_you_dont_see_the_light_then_we_will_bring_the_fire.html).',
 			},
 			{
 				type: "p",
-				text: "On June 1, 2020, then-Senator Kamala Harris posted: “If you’re able to, chip in now to the @MNFreedomFund to help post bail for those protesting on the ground in Minnesota.” [Her post is still up.](https://x.com/KamalaHarris/status/1267555018128965643) Sixteen days later, on CBS, she said they are not going to stop before Election Day, not after, “they’re not going to let up, and they should not, and we should not.” [The Late Show posted the segment.](https://www.youtube.com/watch?v=NTg1ynIPGls) She named protest. Minneapolis had already seen a precinct burn. She did not say stop the arson. She said they should not let up. Then she pointed donors at a bail fund so the people in the street could return to the street.",
+				text: 'Kamala Harris, June 1, 2020: chip in to the Minnesota Freedom Fund “to help post bail for those protesting on the ground in Minnesota.” [The post](https://x.com/KamalaHarris/status/1267555018128965643). Sixteen days later, on CBS: they should not let up, before Election Day or after. [The segment](https://www.youtube.com/watch?v=NTg1ynIPGls). The Third Precinct had already burned. She did not say stop the arson.',
 			},
 			{
 				type: "p",
-				text: "On July 9, 2020, Speaker Nancy Pelosi was asked about a Columbus statue pulled down and thrown in Baltimore’s harbor. She said, “People will do what they do.”",
+				text: 'Nancy Pelosi, July 9, 2020, on a Columbus statue thrown in Baltimore’s harbor: “People will do what they do.” Cynthia Johnson of Detroit, December 8, 2020: “This is just a warning to you Trumpers… And for those of you who are soldiers, you know how to do it. Do it right. Make them pay.” [AP](https://apnews.com/article/donald-trump-media-michigan-social-media-elections-553da610af99fee8c0119330dbac57d4). The next day she said soldiers of Christ. The House stripped her committees. No prosecutor took the words into court.',
 			},
 			{
 				type: "p",
-				text: "On December 8, 2020, Michigan State Representative Cynthia Johnson of Detroit posted: “This is just a warning to you Trumpers. Be careful. Walk lightly. We ain’t playing with you. … And for those of you who are soldiers, you know how to do it. Do it right. Be in order. Make them pay.” [AP](https://apnews.com/article/donald-trump-media-michigan-social-media-elections-553da610af99fee8c0119330dbac57d4) · [MLive](https://www.mlive.com/public-interest/2020/12/michigan-lawmaker-who-faced-death-threats-punished-for-warning-trumpers-in-viral-video.html). She had been threatened with lynching. That is in the record. The next day she said “soldiers” meant soldiers of Christ. The first tape still says “you know how to do it.” The House stripped her committees. No prosecutor took that incitement test into court.",
-			},
-			{
-				type: "h",
-				text: "The bill",
-			},
-			{
-				type: "p",
-				text: "Property Claim Services has tracked insured civil-disorder losses since 1950. It classified May 26 through June 8, 2020 as a catastrophe, the first time a civil-disorder event was counted across more than twenty states. The Insurance Information Institute put the insured range at $1 billion to $2 billion. The prior record, the 1992 Los Angeles riots, was $775 million on the same books. City overtime, National Guard pay, and a shop with no policy are not in that number. Those land on the taxpayer.",
-			},
-			{
-				type: "p",
-				text: "The people who said create a crowd, bring the fire, they should not let up, people will do what they do, did not receive an invoice. They kept the chair. Speech or Debate in [Article I, Section 6](https://constitution.congress.gov/constitution/article-1/) covers words on the floor. The incitement test covers the rally and the talk show if no prosecutor can prove imminence. The arsonist, if caught, is a local case. The Member is a national brand. That is the split: rage is delegated. Liability is not.",
-			},
-			{
-				type: "p",
-				text: "The sentence is built to stop one word short of that test, so the member is not charged, while the arson and the assault remain crimes that prosecutors left unfiled. That decision did not create a right.",
-			},
-			{
-				type: "h",
-				text: "The cover",
-			},
-			{
-				type: "p",
-				text: "The First Amendment protects “the right of the people peaceably to assemble.” That word is in the [text](https://constitution.congress.gov/constitution/amendment-1/). It is not a mood. It is the condition. A march that stays on the sidewalk is the right. A police station on fire is a crime. A panel is not required to tell which one is on the screen.",
-			},
-			{
-				type: "p",
-				text: "On the night of May 28, 2020, the Minneapolis Third Precinct was abandoned and burned. CNN put a Kenosha fire on the screen under the caption “fiery but mostly peaceful protests.” If ninety-nine people walk and one person lights the precinct, the record is that a precinct burned. Peaceable assembly is the right in the First Amendment. A burning precinct is not assembly.",
+				text: 'Property Claim Services counted May 26 through June 8, 2020 as a catastrophe across more than twenty states. Insured losses: $1 billion to $2 billion. The 1992 Los Angeles riots were $775 million on the same books. The people who said create a crowd did not get the invoice. [Article I, Section 6](https://constitution.congress.gov/constitution/article-1/) covers words on the floor. The [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) protects peaceable assembly. A precinct on fire is not assembly. On May 28, 2020, the Minneapolis Third Precinct burned. A caption called a fire mostly peaceful.',
 			},
 		],
 	},
@@ -549,7 +445,7 @@ export const posts: Post[] = [
 		dek: "A group running as Democrats wrote it down: replace this country. November 3 is the last easy stop.",
 		date: "2026-09-18",
 		category: "Dispatch",
-		readMinutes: 4,
+		readMinutes: 3,
 		image: "/images/constitution.jpg",
 		imageAlt: "Empty House. Waiting is not the job.",
 		featured: true,
@@ -573,31 +469,23 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "The Democratic Socialists of America published a 2026 program that calls for drafting a new constitution and building a democratic socialist republic. That document is on their own site: the [DSA 2026 program PDF](https://program.dsausa.org/wp-content/uploads/2026/07/WDM-Program.pdf). A caucus inside that organization, [Red Star](https://redstarcaucus.org/zenith4-points-of-unity/), states that the aim is to abolish capitalism and ultimately to achieve communism. Those are their words. This journal does not need a reporter to translate them.",
+				text: 'The Democratic Socialists of America published a 2026 program that calls for a new constitution and a democratic socialist republic. [Their PDF](https://program.dsausa.org/wp-content/uploads/2026/09/WDM-Program.pdf). [Workers Deserve More](https://program.dsausa.org/). Their own page: working people should run the economy and society to meet human needs, not to make profits. [What is Democratic Socialism](https://www.dsausa.org/about-us/what-is-democratic-socialism/). [Red Star](https://redstarcaucus.org/zenith4-points-of-unity/), a caucus inside that organization, states the aim is to abolish capitalism and ultimately to achieve communism.',
 			},
 			{
 				type: "p",
-				text: "On their own page they state the belief in one line: working people should run both the economy and society democratically to meet human needs, not to make profits for a few. [What is Democratic Socialism](https://www.dsausa.org/about-us/what-is-democratic-socialism/). The program states the goal in their words: win the battle for democracy, draft a new constitution, and create a democratic socialist republic. [Workers Deserve More](https://program.dsausa.org/) · [PDF, September 2, 2026](https://program.dsausa.org/wp-content/uploads/2026/09/WDM-Program.pdf).",
-			},
-			{
-				type: "p",
-				text: "The National Socialist German Workers’ Party, 1920 program: nationalization of all trusts, abolition of income that does not arise from work, and a strong central authority over the state. [The 25 points](https://avalon.law.yale.edu/imt/nsdappro.asp).",
+				text: 'The 1920 program of the National Socialist German Workers’ Party called for nationalization of trusts, abolition of income that does not arise from work, and a strong central authority. [The 25 points](https://avalon.law.yale.edu/imt/nsdappro.asp). The documents sit next to each other. They do not need a narrator.',
 			},
 			{
 				type: "q",
-				text: "They wrote a replacement country on a PDF. Members who swear this Constitution cannot pretend they did not read it.",
+				text: 'They wrote a replacement country on a PDF. A member who swears this Constitution cannot pretend the page was not published.',
 			},
 			{
 				type: "p",
-				text: "Every Member swears, under [Article VI](https://constitution.congress.gov/constitution/article-6/) and [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331), to support this Constitution, without mental reservation. A faction that writes “new constitution” has announced a reservation. Federal law already bars a person from holding a federal position if that person advocates the overthrow of our constitutional form of government. See [5 U.S.C. § 7311](https://www.law.cornell.edu/uscode/text/5/7311). The [Communist Control Act, 50 U.S.C. § 841](https://www.law.cornell.edu/uscode/text/50/841), is still on the books. Pamphlets are not treason. Treason is [Article III, Section 3](https://constitution.congress.gov/constitution/article-3/) and [18 U.S.C. § 2381](https://www.law.cornell.edu/uscode/text/18/2381): levying war or adhering to enemies. That word stays intact. The oath stays on the page.",
+				text: 'The oath is [Article VI](https://constitution.congress.gov/constitution/article-6/) and [5 U.S.C. § 3331](https://www.law.cornell.edu/uscode/text/5/3331): support this Constitution, without mental reservation. [5 U.S.C. § 7311](https://www.law.cornell.edu/uscode/text/5/7311) bars a federal job to a person who advocates overthrow of the constitutional form of government. The [Communist Control Act, 50 U.S.C. § 841](https://www.law.cornell.edu/uscode/text/50/841), is still on the books. A pamphlet is not treason. Treason is [Article III, Section 3](https://constitution.congress.gov/constitution/article-3/) and [18 U.S.C. § 2381](https://www.law.cornell.edu/uscode/text/18/2381).',
 			},
 			{
 				type: "p",
-				text: "A seated Member cannot be bounced at the clerk because a district dislikes the platform. [Powell v. McCormack](https://supreme.justia.com/cases/federal/us/395/486/) and [U.S. Term Limits v. Thornton](https://supreme.justia.com/cases/federal/us/514/779/) closed that door. A Member of Congress cannot be recalled under current federal law. [Article I, Section 5](https://constitution.congress.gov/browse/essay/artI-S5-C2-2-1/ALDE_00013580/) leaves expulsion to a two-thirds vote of the House. [H.J.Res. 105 in the 104th Congress](https://www.congress.gov/bill/104th-congress/house-joint-resolution-105/text) would have given districts a recall. It died. [Article V](https://constitution.congress.gov/constitution/article-5/) is the remaining door: two-thirds of the state legislatures apply, and Congress shall call a convention. Until the states walk it, the lawful instruments are the purse, the Guarantee Clause in [Article IV, Section 4](https://constitution.congress.gov/browse/article-4/section-4/), and the next election.",
-			},
-			{
-				type: "p",
-				text: "Members of the House are hired to represent a district. The tape is the record of what they said instead.",
+				text: '[Powell v. McCormack](https://supreme.justia.com/cases/federal/us/395/486/) and [U.S. Term Limits v. Thornton](https://supreme.justia.com/cases/federal/us/514/779/) closed the door on extra qualifications. Expulsion is a two-thirds vote under [Article I, Section 5](https://constitution.congress.gov/browse/essay/artI-S5-C2-2-1/ALDE_00013580/). A recall amendment, [H.J.Res. 105 in the 104th Congress](https://www.congress.gov/bill/104th-congress/house-joint-resolution-105/text), died. [Article V](https://constitution.congress.gov/constitution/article-5/) is the remaining door.',
 			},
 		],
 	},
@@ -1136,7 +1024,7 @@ export const posts: Post[] = [
 		dek: "IAEA: 440.9 kg of uranium enriched up to 60%. The only non-weapon state at that level. Forty-seven years of building the option. The named dead are on the record.",
 		date: "2026-09-21",
 		category: "Dispatch",
-		readMinutes: 6,
+		readMinutes: 4,
 		image: "/images/chart-iran.jpg",
 		imageAlt: "The Iranian terrorist regime at 60 percent enrichment, 1979–2026",
 		series: "Fake News Exposed",
@@ -1154,40 +1042,36 @@ export const posts: Post[] = [
 			{
 				type: "img",
 				src: "/images/chart-iran.jpg",
-				alt: "The Iranian terrorist regime at 60 percent. Forty-seven years on the option.",
+				alt: 'The Iranian terrorist regime at 60 percent. Forty-seven years on the option.',
 			},
 			{
 				type: "p",
-				text: "Name the government. The **Iranian terrorist regime** — the Islamic Republic, on the State Department’s list of state sponsors of terrorism since [19 January 1984](https://www.state.gov/state-sponsors-of-terrorism/) — is the only non-nuclear-weapon state on earth enriching uranium to 60 percent. [IAEA GOV/2026/50](https://www.iaea.org/sites/default/files/gov2026-50.pdf), using Iran’s declarations and inspections through 12 June 2025, counted **440.9 kilograms** of uranium enriched **up to 60 percent U-235** as of 13 June 2025. A civilian reactor burns about 3 to 5 percent. The 2015 deal capped the regime at 3.67 percent. Weapons-grade is about 90 percent. The climb from 5 to 60 is the long one. The climb from 60 to 90 is the short one. There is no commercial grid that runs on 60 percent.",
+				text: 'The Islamic Republic has been on the State Department’s list of state sponsors of terrorism since [19 January 1984](https://www.state.gov/state-sponsors-of-terrorism/). It is the only non-nuclear-weapon state enriching uranium to 60 percent. [IAEA GOV/2026/50](https://www.iaea.org/sites/default/files/gov2026-50.pdf): **440.9 kilograms** enriched **up to 60 percent** as of 13 June 2025. A civilian reactor burns about 3 to 5 percent. The 2015 deal capped Iran at 3.67 percent. Weapons-grade is about 90. There is no commercial grid that runs on 60 percent.',
 			},
 			{
 				type: "p",
-				text: "Director General Grossi, [3 March 2025](https://www.iaea.org/newscenter/statements/iaea-director-general-grossis-introductory-statement-to-the-board-of-governors-3-march-2025): Iran is the only non-nuclear-weapon state enriching to that level. [GOV/2026/8](https://www.iaea.org/sites/default/files/gov2026-8.pdf) said the same, and added that the Agency has not had access to verify the previously declared highly enriched uranium for months. After the June 2025 strikes the inspectors have not seen the material. That is a different sentence from the 440.9 kilograms. The 440.9 kilograms is the last verified count, on the page, before the door closed. Denying the 60 percent is denying the inspection that already happened.",
+				text: 'Director General Grossi, [3 March 2025](https://www.iaea.org/newscenter/statements/iaea-director-general-grossis-introductory-statement-to-the-board-of-governors-3-march-2025): Iran is the only non-weapon state at that level. [GOV/2026/8](https://www.iaea.org/sites/default/files/gov2026-8.pdf): inspectors have not had access to verify that stock for months. The 440.9 kilograms is the last verified count, before the door closed.',
 			},
 			{
 				type: "p",
-				text: "House Democrats are posting the other sentence and leaving the number out. Hakeem Jeffries called it a reckless war of choice. On [March 4, 2026](https://www.congress.gov/119/crec/2026/03/04/172/41/CREC-2026-03-04-house.pdf), members said war of choice on the House floor. Chuck Schumer posted “100 days of Trump’s illegal war.” Ro Khanna called it immoral, illegal, and unstrategic. Whether Congress authorized the force is a real question under Article I. It is not a finding that the uranium was not there. The slogan works by omission. That half-truth is posted for power.",
+				text: 'Hakeem Jeffries called the force a reckless war of choice. Members said the same on the [House floor, March 4, 2026](https://www.congress.gov/119/crec/2026/03/04/172/41/CREC-2026-03-04-house.pdf). Chuck Schumer posted “100 days of Trump’s illegal war.” Ro Khanna called it immoral, illegal, and unstrategic. Whether Congress authorized the force is a real question under Article I. It is not a finding that the uranium was not there.',
 			},
 			{
 				type: "p",
-				text: "Forty-seven years is 1979 to 2026. The Islamic Republic inherited a civilian nuclear start and built a concealed one. Natanz was revealed in 2002. The Security Council began resolutions in 2006. Twenty percent enrichment arrived in 2010. The 2015 deal pulled the cap to 3.67 percent. The United States left the deal in 2018. Sixty percent production began in 2021. The IAEA has not confirmed a finished bomb. It has confirmed the option: a stock of highly enriched uranium no other non-weapon state holds, at a site the inspectors can no longer enter. That is the file. It is not a mood.",
+				text: 'Natanz was revealed in 2002. Twenty percent enrichment arrived in 2010. The 2015 cap was 3.67 percent. Sixty percent production began in 2021. The IAEA has not confirmed a finished bomb. It has confirmed a stock no other non-weapon state holds.',
 			},
 			{
 				type: "img",
 				src: "/images/chart-iran-dead.jpg",
-				alt: "Named deaths by the Iranian terrorist regime and its proxies",
+				alt: 'Named deaths by the Iranian terrorist regime and its proxies',
 			},
 			{
 				type: "p",
-				text: "The same regime has killed on its own letterhead and through proxies. There is no honest single worldwide body count, because a proxy war does not come with a receipt for every name. The named files are enough. Hezbollah’s truck bomb at the Beirut barracks, 23 October 1983: **241** U.S. Marines, sailors, and soldiers. The AMIA Jewish community center in Buenos Aires, 1994: **85** dead; Argentine courts and the United States attributed the attack to Hezbollah acting with Iran. Khobar Towers, 1996: **19** U.S. airmen. In Iraq, 2003–11, the Pentagon’s assessed number for U.S. personnel killed by Iran-backed militants is **603** — explosively formed penetrators and the rest of the IRGC toolkit; State’s deputy spokesman put that on the record in April 2019. On 7 October 2023 Hamas murdered about **1,200** people in Israel. The [2024 Country Reports on Terrorism](https://www.state.gov/reports/country-reports-on-terrorism-2024) said Iran’s long-standing money, training, and weapons enabled the attack; the Office of the Director of National Intelligence said Iranian leaders did not have foreknowledge. Both sentences stay. The [White House, 2 March 2026](https://www.whitehouse.gov/articles/2026/03/the-iranian-regimes-decades-of-terrorism-against-american-citizens/), counted **46** Americans among the Oct. 7 dead. Tower 22 in Jordan, January 2024: an Iran-backed militia killed **three** U.S. soldiers.",
-			},
-			{
-				type: "p",
-				text: "State’s 2024 terrorism report called Iran the leading state sponsor: Hezbollah, Hamas, the Houthis, and the Iran-aligned militias in Iraq and Syria, funded and armed by the Islamic Revolutionary Guard Corps–Qods Force. That is the network. The 60 percent stock is the option the network has been building for forty-seven years. A power plant does not need it. A bomb is one short step from it. The inspectors cannot see it now. The last number they were allowed to write down is still on the page.",
+				text: 'Beirut barracks, 23 October 1983: **241** U.S. service members. AMIA, Buenos Aires, 1994: **85**. Khobar Towers, 1996: **19** U.S. airmen. Iraq, 2003–11: the Pentagon’s assessed number for U.S. personnel killed by Iran-backed militants is **603**. Hamas, 7 October 2023: about **1,200** dead in Israel. The [2024 terrorism report](https://www.state.gov/reports/country-reports-on-terrorism-2024) said Iran’s money, training, and weapons enabled the attack. The intelligence community said Iranian leaders did not have foreknowledge. Both sentences stay. The [White House, 2 March 2026](https://www.whitehouse.gov/articles/2026/03/the-iranian-regimes-decades-of-terrorism-against-american-citizens/): **46** Americans among the October 7 dead. Tower 22, January 2024: **three** U.S. soldiers.',
 			},
 			{
 				type: "q",
-				text: "The Iranian terrorist regime is at 60 percent. The IAEA counted it. The last step is the short one.",
+				text: 'The Iranian terrorist regime is at 60 percent. The IAEA counted it. The last step is the short one.',
 			},
 		],
 	},
@@ -1197,7 +1081,7 @@ export const posts: Post[] = [
 		dek: "When they cannot beat the tape, they smear the person holding it.",
 		date: "2026-08-26",
 		category: "Dispatch",
-		readMinutes: 3,
+		readMinutes: 2,
 		image: "/images/essay-eagle.jpg",
 		imageAlt: "Angry eagle over the Capitol in the swamp",
 		series: "Fake News Exposed",
@@ -1205,44 +1089,20 @@ export const posts: Post[] = [
 		body: [
 			{
 				type: "p",
-				text: "This journal exists to play the tape. Today the tape is the platform. A man did not answer a claim. He walked the replies, fourteen times, and tagged this site with a child-sex smear — the kind of label designed to make advertisers, hosts, and ordinary readers run without reading a sentence."
-			},
-			{
-				type: "p",
-				text: "That accusation is false. There is no such content here. There never was. The Dispatch is a political journal: statutes, C-SPAN, the uncut record. We do not publish the thing he named. He named it anyway, on a loop, under a paying account, after a political argument."
+				text: 'A man did not answer a claim. He walked the replies fourteen times and tagged this site with a child-sex smear. That accusation is false. There is no such content here. The work is statutes, C-SPAN, and the uncut record.',
 			},
 			{
 				type: "q",
-				text: "When they cannot beat the tape, they smear the person holding it."
+				text: 'When they cannot beat the tape, they smear the person holding it.',
 			},
 			{
 				type: "p",
-				text: "Reports were filed. The posts were still there. Support did not answer a customer who pays to be on the platform. That is the second story. The first is the smear. The second is a company that will not pull a sex-crime lie used as a political club. Fourteen copies is not a misunderstanding. It is a method: flood, flag, wait for the robot, wait for the human who never comes."
-			},
-			{
-				type: "h",
-				text: "What this has to do with the founding"
+				text: 'Reports were filed. The posts stayed. Support did not answer a paying customer. Fourteen copies is a method: flood, flag, and wait for a queue that never comes.',
 			},
 			{
 				type: "p",
-				text: "A republic only works if people can argue in the open. The [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) is not a vibe. It is the rule that speech answers speech — not a poison tag hoped a trust-and-safety queue will treat as gospel. Television already taught half the country that a six-second caption is a verdict. This is the same move on a reply thread: skip the Constitution, skip the clip, skip the statute. Attach the worst word in the language to a citizen and go to bed."
+				text: 'The [First Amendment](https://constitution.congress.gov/constitution/amendment-1/) is speech answering speech. A poison tag is the shortcut around the clip and the statute. This journal will not print his handle, return the smear, or stop the work.',
 			},
-			{
-				type: "p",
-				text: "Politicians talk for an hour and say nothing. This is the opposite: one word, fourteen times, meant to end the talking. Division is not an accident when the incentive is to make the other side untouchable. Hate is the shortcut around proof."
-			},
-			{
-				type: "h",
-				text: "What we will not do"
-			},
-			{
-				type: "p",
-				text: "We will not print his handle as a trophy. We will not return a smear. We will not beg a timeline that already rewarded him with our attention. Screenshots go in a folder. Reports stay filed. The work stays the work: the republic, the tape, the table. If X wants a paying customer to believe the product is a public square, it can take a sex-crime lie off a political journal in less than fourteen tries. Until then, this is the lead. Not because the word is ours. Because the method is the country we are trying to save — a country where proof is optional and a flag is enough."
-			},
-			{
-				type: "q",
-				text: "They work for us. The networks do not. The queue does not. The tape is the record anyway.",
-			}
 		]
 	},
 	{
@@ -1251,7 +1111,7 @@ export const posts: Post[] = [
 		dek: "Honest people kept the country standing while a political class learned to treat them as a tap. This is the story of that bargain, and of the man who broke it.",
 		date: "2026-08-29",
 		category: "Dispatch",
-		readMinutes: 7,
+		readMinutes: 3,
 		image: "/images/essay-eagle.jpg",
 		imageAlt: "Angry eagle over the Capitol in the swamp",
 		featured: true,
@@ -1282,40 +1142,24 @@ export const posts: Post[] = [
 	body: [
 			{
 				type: "p",
-				text: "For a long time the arrangement felt ordinary. People went to work. People paid what was said to be owed. People assumed the people with titles were doing something that corresponded to the titles. The country still opened in the morning: trucks, clinics, classrooms, harvests. That is not a small thing. A nation is a set of habits more than it is a set of speeches, and the habits were being kept by people who did not live inside the political club."
+				text: 'People went to work, paid the bill, and assumed the title matched the job. What changed is who the political club thought those people were. They stopped seeing a principal and started seeing a tap. When the rules failed, the explanation was that the public had not been patient enough.',
 			},
 			{
 				type: "p",
-				text: "What changed, slowly enough that a busy person could miss it, is who the political club thought those people were. Bureaucrats and career politicians stopped seeing a principal and started seeing a tap. Money came in. Rules went out. When the rules failed, the explanation was always that the public had not been patient enough, or educated enough, or kind enough. The people who wrote the rules graded their own ethics, exempted themselves from the statutes they passed, and sat for interviews about how dangerous it was that anyone had noticed."
+				text: 'A six-second clip is easier than Article I. The name of the bill made the news. The catch lived in the annex. When this journal published a file, a stranger walked the replies fourteen times and hung a child-sex smear on the work. There is no such content here. Reports were filed. The posts stayed.',
 			},
 			{
 				type: "p",
-				text: "Part of the trick was never teaching how the machine actually runs. Most Americans can name a party. Far fewer can say how a bill becomes a statute, who writes the regulation after the vote, or where the money is authorized versus spent. That ignorance is not a personality flaw. It was convenient. A six-second clip is easier than Article I. A caption is easier than a rider. For every law they advertised as best for the nation, there was often a quiet twin — a giant unread bill, a notwithstanding clause, an agency rewrite — that took back what the camera had just celebrated. The name of the bill made the news. The catch lived in the annex."
+				text: 'Donald Trump is not a saint. Lines that are on tape stay on tape: fight like hell; stand back and stand by; when the looting starts, the shooting starts. The club took his checks, then spent public money trying to bury him after he stopped being a donor. [July 13, 2024, Butler, Pennsylvania](https://www.fbi.gov/news/press-releases/fbi-releases-photographs-in-connection-with-attempted-assassination-of-former-president-trump): a rifle, and he got up. Another attempt on a golf course.',
 			},
 			{
 				type: "p",
-				text: "When people did get angry, the response was not a debate. It was a label. This journal learned that the cheap way. We published a file. A stranger walked the replies, fourteen times, and hung a child-sex smear on the work. There is no such content here. There never was. Reports were filed through the platform's own tools. The posts stayed. Support did not answer a paying customer. A conspiracy is not required. A queue that never comes is enough, and a country too tired to check. The argument moves from what is on the recording to whether the person holding the recording deserves to be heard."
+				text: 'ABC, CBS, and NBC evaluative coverage of his 2025 term was counted [92 percent negative](https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage) in the first hundred days. [Gallup](https://news.gallup.com/poll/695762/trust-media-new-low.aspx) put trust in mass media at 28 percent. A [Science paper](https://www.science.org/doi/10.1126/science.adu5584) found that ranking a feed by likes and shares pumps anger. Outrage is a business. A law takes twenty minutes. A clip takes six seconds.',
 			},
 			{
 				type: "p",
-				text: "That is the climate a former donor walked into. Donald Trump is not a saint, and this page will not pretend he is. Ugly lines that are on tape stay on this site: fight like hell; stand back and stand by; when the looting starts, the shooting starts. The political club loved him when he wrote the checks. They turned when he stopped being a donor and started closing the problems they lived on — then spent taxpayer money on hoax after hoax to bury him. He never wore the uniform. Then [July 13, 2024, in Butler, Pennsylvania](https://www.fbi.gov/news/press-releases/fbi-releases-photographs-in-connection-with-attempted-assassination-of-former-president-trump), when a rifle tried to end the argument and he got up. Another attempt on a golf course. A family that still walks through threats. He is a man who put his body where the club would not put theirs, and then went back to the jobs they had called impossible: a border that actually closed, employees who discovered they could be fired, deals the consultants said were theater.",
+				text: 'Hannah Arendt wrote that the ideal subject of a lie is the person for whom fact and fiction no longer differ. [The Origins of Totalitarianism](https://archive.org/details/originsoftotalit0000aren). The record is how a public argument comes back. The statute, the table, and the tape stay here, including the parts that cut against him.',
 			},
-			{
-				type: "p",
-				text: "None of that required liking his manners. It required noticing that the people attacking him were not offering a better statute. They were offering a feeling. ABC, CBS, and NBC ran evaluative coverage of his 2025 term that the Media Research Center counted as 92 percent negative in the first hundred days https://www.newsbusters.org/blogs/nb/rich-noyes/2025/04/28/tv-news-assaults-2nd-trump-admin-92-negative-coverage A conservative scorekeeper can be discounted. Then watch a week of those broadcasts. Gallup, in the same season, found trust in mass media at 28 percent, a record low https://news.gallup.com/poll/695762/trust-media-new-low.aspx Independent researchers showed that ranking a feed by likes and shares pumps anger at the other side https://www.science.org/doi/10.1126/science.adu5584 This is not a basement plot. It is a business. Outrage is cheap to make and expensive to unwind. A law takes twenty minutes to read. A clip takes six seconds. The person on a clock loses to the person on a cut."
-			},
-			{
-				type: "p",
-				text: "Who they are, if the word is going to mean anything: news desks that need a villain every night; elected employees who cannot pass a bill so they pass a monster; platforms paid when the feed stays mad; consultants who write the caption; flag accounts that will not watch the tape. If a name cannot be tied to a paycheck, a vote, or a share button, park it. Fog is how the real they hide. A foreign government that wants a loud, split America does not have to invent the split. It only has to boost it."
-			},
-			{
-				type: "p",
-				text: "Hannah Arendt saw the method before the present caption. In The Origins of Totalitarianism she wrote that the ideal subject is not the convinced partisan — it is the person for whom the distinction between fact and fiction, true and false, no longer exists. Love of Congress is not required. Inability to read a statute is. In Eichmann in Jerusalem she named the other half: evil as thoughtlessness, a career, a man who was only doing his job. The neighbor in the other jersey is not that. The functionary who files the unread pile is. Power, she argued, is people acting in concert. Isolation is how a republic is lost. The record is how concert comes back."
-			},
-			{
-				type: "p",
-				text: "Swamp Force exists because that arrangement is no longer tolerable, and because complaining on a feed is not the same as teaching. The statute, the table, and the tape stay here, including the parts that cut against the man we think is standing in the gap. The country still does not run without the people who clock in. The political club knows it. The work of this journal is to put the record in public — and to stand with the work he is actually doing while they try to bury him under a caption. The next pages are slower on purpose.",
-			}
 		]
 	},
 	{
