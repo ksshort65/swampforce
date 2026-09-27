@@ -4846,9 +4846,9 @@ function Betrayal() {
                     <div className="mt-3 flex flex-wrap gap-2">
                       {section.links
                         .filter((link) => link.href.startsWith("http"))
-                        .map((link) => (
+                        .map((link, linkIndex) => (
                           <a
-                            key={link.href}
+                            key={`${link.href}-${linkIndex}`}
                             href={link.href}
                             target="_blank"
                             rel="noopener noreferrer"
