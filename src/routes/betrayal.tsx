@@ -8,7 +8,7 @@ import lawfareCases from "../data/lawfare-cases.json";
 
 export const Route = createFileRoute("/betrayal")({ component: Betrayal });
 
-type Layer = "root" | "fake" | "mechanics" | "types" | "evidence" | "lawfare" | "trials" | "impeach" | "citizen" | "bail";
+type Layer = "root" | "fake" | "mechanics" | "types" | "evidence" | "lawfare" | "trials" | "impeach" | "citizen" | "bail" | "scrutiny" | "attempts" | "first100";
 
 const LAYERS: Record<Exclude<Layer, "root">, { back: Layer; title: string; buttons: string[] }> = {
   fake: {
@@ -80,6 +80,9 @@ const LAYERS: Record<Exclude<Layer, "root">, { back: Layer; title: string; butto
     title: "Politicians' bail funds",
     buttons: [],
   },
+  scrutiny: { back: "lawfare", title: "Scrutiny compared", buttons: [] },
+  attempts: { back: "lawfare", title: "Assassination attempts", buttons: [] },
+  first100: { back: "lawfare", title: "First 100 days", buttons: [] },
 };
 
 const NEXT: Record<string, Layer> = {
@@ -90,6 +93,9 @@ const NEXT: Record<string, Layer> = {
   Impeachments: "impeach",
   "US Citizen Lawfare": "citizen",
   "Politicians' bail funds": "bail",
+  "Scrutiny compared": "scrutiny",
+  "Assassination attempts": "attempts",
+  "First 100 days": "first100",
 };
 
 const METHODS: {
@@ -1256,6 +1262,33 @@ const NEWS_DIM_TILES: Record<string, string> = {
   person: "/images/tile-by-journalist.jpg",
 };
 
+function NewsScaleNote() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="mx-auto mt-6 flex w-full max-w-xl flex-col items-center">
+      <button
+        type="button"
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+        className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-1.5 text-[15px] font-semibold text-white"
+      >
+        Estimated scale (not verified)
+      </button>
+      {open ? (
+        <ul className="mt-4 w-full list-disc rounded-2xl border border-white/20 bg-[#070b12]/85 py-4 pr-5 pl-9 text-left text-[15px] leading-snug text-white/85">
+          <li className="font-semibold text-white">Estimated scale — not verified</li>
+          <li>Numbers this large cannot possibly be verified by the SwampForce Editor alone. These are outside estimates, not counts.</li>
+          <li>Millions of negative items about Trump in every two-year block since 2015.</li>
+          <li>Peak years: 2016–17 and 2020–21.</li>
+          <li>Most misleading copies spread on social media and memes (estimated 60–80%).</li>
+          <li>A few hundred false storylines, reused again and again.</li>
+          <li>Only the 260 cases on this page are counted and sourced.</li>
+        </ul>
+      ) : null}
+    </div>
+  );
+}
+
 function NewsPeriodLayers({
   path,
   onPath,
@@ -1359,6 +1392,7 @@ function NewsPeriodLayers({
           </button>
         ))}
       </div>
+      <NewsScaleNote />
     </div>
   );
 }
@@ -2354,7 +2388,17 @@ const CARD_CASES: Record<string, { note?: string; match: (row: NewsCaseRow) => b
   Fox: { match: (row) => row.networkName.includes("Fox") },
   CNN: { match: (row) => row.networkName === "CNN" },
   "MS NOW": { note: "Listed as MSNBC in our case file", match: (row) => row.networkName === "MSNBC" || row.networkName === "MS NOW" },
+  Anchors: { note: "Named anchor or host in the case text", match: (row) => newsClass(row).role === "Anchor" },
+  Correspondents: { note: "Named correspondent or reporter in the case text", match: (row) => newsClass(row).role === "Correspondent / reporter" },
+  YouTube: { note: "Case text or source says it ran on YouTube", match: (row) => newsClass(row).platforms.includes("YouTube") },
+  Rumble: { note: "Case text or source says it ran on Rumble", match: (row) => newsClass(row).platforms.includes("Rumble") },
+  Twitter: { note: "Case text or source says it ran on X (Twitter)", match: (row) => newsClass(row).platforms.includes("X/Twitter") },
 };
+
+function newsClass(row: NewsCaseRow): { role: string; platforms: string[] } {
+  const found = (row as { classification?: { role: string; platforms: string[] } }).classification;
+  return found ?? { role: "Not classified", platforms: [] };
+}
 const CARD_DIM = NEWS_DIMS[0];
 
 function CardLayers({
@@ -2384,7 +2428,7 @@ function CardLayers({
     <div className="w-full">
       <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{card}: Verdict / status</p>
       {rows.length === 0 ? (
-        <p className="mt-6 text-center text-[16px] text-white/80">Not on record</p>
+        <ChartSlot line="Jan 1, 2015 – Sept 27, 2026" />
       ) : (
         <LayerChart
           title={`${card}: Verdict / status`}
@@ -2397,6 +2441,124 @@ function CardLayers({
           bullets={spec?.note ? [spec.note] : []}
           center={{ big: String(rows.length), small: rows.length === 1 ? "Case" : "Cases", onOpen: () => onSlice("all") }}
           onPick={(index) => onSlice(groups[index].label)}
+        />
+      )}
+    </div>
+  );
+}
+
+function ChartSlot({ line }: { line: string }) {
+  return (
+    <section className="w-full">
+      <p className="mt-2 text-center text-[15px] text-white/75">{line}</p>
+      <div className={NEWS_CARD + " flex min-h-[200px] items-center justify-center"}>
+        <p className="text-center text-[16px] font-semibold text-white/80">Evidence coming soon</p>
+      </div>
+    </section>
+  );
+}
+
+const LAW_TOPICS: Partial<Record<Layer, { chart: string; group?: string; fixed?: string }>> = {
+  trials: { chart: "Trump Trials: How Each Stands Now", group: "Trump Trials" },
+  impeach: { chart: "Impeachments by President", fixed: "impeach" },
+  citizen: { chart: "US Citizen Lawfare: How Each Stands Now", group: "US Citizen Lawfare" },
+  bail: { chart: "Politicians' Bail Funds", group: "Politicians' bail funds" },
+  scrutiny: { chart: "Scrutiny Compared", group: "Scrutiny compared" },
+  attempts: { chart: "Assassination Attempts", group: "Assassination attempts" },
+  first100: { chart: "First 100 Days", group: "First 100 days" },
+};
+
+const LAW_SUB: Record<string, { pick: string | null; caseId: string | null }> = {
+  "NY civil fraud": { pick: null, caseId: "lw-1" },
+  "Manhattan criminal": { pick: null, caseId: "lw-2" },
+  "Classified documents": { pick: null, caseId: "lw-3" },
+  "Jan. 6 federal": { pick: null, caseId: "lw-4" },
+  Georgia: { pick: null, caseId: "lw-5" },
+  "State ballot cases": { pick: null, caseId: "lw-6" },
+  Carroll: { pick: null, caseId: "lw-7" },
+  Immunity: { pick: null, caseId: "lw-8" },
+  "First, 2019": { pick: "impeach:trump", caseId: "Trump" },
+  "Second, 2021": { pick: "impeach:trump", caseId: "Trump" },
+  Fischer: { pick: null, caseId: "lw-9" },
+  "Committee referrals": { pick: "referrals", caseId: null },
+};
+
+const LAW_STATUS_COLORS = ["#1e3a5f", "#d4af37", "#b45309", "#b91c1c", "#166534", "#57534e", "#0f766e", "#7c3aed"];
+
+function lawPickFix(pick: string | null) {
+  if (pick === "impeach:trump") {
+    const chart = lawfareCases.charts.find((item) => item.id === "impeach");
+    return `impeach:${chart ? chart.labels.indexOf("Trump") : -1}`;
+  }
+  return pick;
+}
+
+function LawTopic({
+  layer,
+  pick,
+  caseId,
+  href,
+  onPick,
+  onCase,
+  onSource,
+}: {
+  layer: Layer;
+  pick: string | null;
+  caseId: string | null;
+  href: string | null;
+  onPick: (value: string) => void;
+  onCase: (value: string) => void;
+  onSource: (value: string) => void;
+}) {
+  const topic = LAW_TOPICS[layer];
+  if (!topic) return null;
+  const file = lawfareCases;
+  const fixedPick = lawPickFix(pick);
+  const shared = pick && (pick.startsWith("impeach") || pick.startsWith("referrals"));
+  if (href || caseId || shared || topic.fixed) {
+    const base = fixedPick ?? topic.fixed ?? null;
+    const chart = base && !base.includes(":") && !caseId && !href ? file.charts.find((item) => item.id === base) : undefined;
+    return (
+      <div className="w-full">
+        {chart ? <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{chart.title}</p> : null}
+        <LawfareLayer pick={base} caseId={caseId} href={href} onPick={onPick} onCase={onCase} onSource={onSource} />
+      </div>
+    );
+  }
+  const rows = file.cases.filter((item) => item.group === topic.group);
+  if (pick) {
+    const label = pick.slice(2);
+    const list = label === "all" ? rows : rows.filter((item) => item.shortStatus === label);
+    return (
+      <div className="mt-6 flex w-full flex-col gap-3">
+        <p className="text-center text-[18px] font-semibold text-white">{label === "all" ? `${topic.chart.split(":")[0]} · all cases` : label} · {list.length}</p>
+        {list.map((row) => (
+          <button key={row.id} type="button" onClick={() => onCase(row.id)} className={LAYER_ROW}>
+            {row.shortName}
+            <span className="mt-1 block font-normal text-white/80">{row.shortStatus}</span>
+          </button>
+        ))}
+      </div>
+    );
+  }
+  const labels = [...new Set(rows.map((item) => item.shortStatus))];
+  return (
+    <div className="w-full">
+      <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{topic.chart}</p>
+      {rows.length === 0 ? (
+        <ChartSlot line={file.asOf} />
+      ) : (
+        <LayerChart
+          title={topic.chart}
+          line={file.asOf}
+          labels={labels}
+          data={labels.map((label) => rows.filter((item) => item.shortStatus === label).length)}
+          colors={labels.map((_, index) => LAW_STATUS_COLORS[index % LAW_STATUS_COLORS.length])}
+          type="doughnut"
+          horizontal={false}
+          bullets={[]}
+          center={{ big: String(rows.length), small: rows.length === 1 ? "Case" : "Cases", onOpen: () => onPick("g:all") }}
+          onPick={(index) => onPick(`g:${labels[index]}`)}
         />
       )}
     </div>
@@ -2431,6 +2593,25 @@ function Betrayal() {
   const [cardSlice, setCardSlice] = useState<string | null>(null);
   const [cardCase, setCardCase] = useState<string | null>(null);
   const [cardHref, setCardHref] = useState<string | null>(null);
+  const [topicPick, setTopicPick] = useState<string | null>(null);
+  const [topicCase, setTopicCase] = useState<string | null>(null);
+  const [topicHref, setTopicHref] = useState<string | null>(null);
+  const topicBack = () => {
+    if (topicHref) {
+      setTopicHref(null);
+      return true;
+    }
+    if (topicCase) {
+      setTopicCase(null);
+      return true;
+    }
+    if (topicPick) {
+      const base = topicPick.split(":")[0];
+      setTopicPick(base === "referrals" && topicPick.includes(":") ? base : null);
+      return true;
+    }
+    return false;
+  };
   const cardBack = () => {
     if (cardHref) {
       setCardHref(null);
@@ -2532,7 +2713,10 @@ function Betrayal() {
           {layer !== "root" && (
           <button
             type="button"
-            onClick={() => setLayer(LAYERS[layer].back)}
+            onClick={() => {
+              if (topicBack()) return;
+              setLayer(LAYERS[layer].back);
+            }}
               className="absolute left-6 border-0 bg-transparent p-0 text-[15px] font-semibold tracking-wide text-white"
             >
               {LAYERS[layer].title}
@@ -2552,6 +2736,16 @@ function Betrayal() {
                     return;
                   }
                   setLawOn(false);
+                  const sub = LAW_SUB[label];
+                  if (sub) {
+                    setTopicHref(null);
+                    setTopicPick(sub.pick);
+                    setTopicCase(sub.caseId);
+                    return;
+                  }
+                  setTopicPick(null);
+                  setTopicCase(null);
+                  setTopicHref(null);
                   const next = NEXT[label];
                   if (next) setLayer(next);
                 }}
@@ -3374,6 +3568,19 @@ function Betrayal() {
             </button>
           </div>
         )}
+        {LAW_TOPICS[layer] && !lawOn && (
+          <div className={layer === "bail" ? "mx-auto flex max-w-3xl flex-col items-center px-6 pb-24" : "mx-auto flex max-w-3xl flex-col items-center px-6 pt-6 pb-24"}>
+            <LawTopic
+              layer={layer}
+              pick={topicPick}
+              caseId={topicCase}
+              href={topicHref}
+              onPick={setTopicPick}
+              onCase={setTopicCase}
+              onSource={setTopicHref}
+            />
+          </div>
+        )}
         {(layer === "fake" || layer === "types") && deception ? (
           <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
             <button
@@ -3703,6 +3910,7 @@ function Betrayal() {
                   setEstimatesOn(false);
                   return;
                 }
+                if (topicBack()) return;
                 setLayer(LAYERS[layer].back);
               }}
               className="rounded-full border border-white/35 bg-[#070b12]/80 px-3 py-1 text-[12px] leading-none font-semibold text-white"
