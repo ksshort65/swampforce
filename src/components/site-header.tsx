@@ -75,10 +75,18 @@ function NavMenu({ label, slugs }: { label: string; slugs: readonly string[] }) 
     );
   }
 
-  if (label === "Scorecard") {
+  if (label === "Scorecard" || label === "Pump" || label === "Foreword" || label === "Archive") {
+    const to =
+      label === "Scorecard"
+        ? "/scorecard"
+        : label === "Pump"
+          ? "/pump"
+          : label === "Foreword"
+            ? "/foreword"
+            : "/archive";
     return (
       <Link
-        to="/scorecard"
+        to={to}
         className="inline-flex min-h-11 shrink-0 items-center px-2.5 font-display text-sm font-semibold tracking-wide text-fg uppercase no-underline hover:text-sage"
       >
         {label}

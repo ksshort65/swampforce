@@ -1,11 +1,8 @@
-import { createFileRoute, notFound, redirect } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 import { getPost, SITE } from "@/lib/content";
 import { essayHead } from "@/lib/share-head";
 
 export const Route = createFileRoute("/find-them")({
-  beforeLoad: () => {
-    throw redirect({ to: "/" });
-  },
   component: FindThem,
   loader: () => {
     const post = getPost("find-them");

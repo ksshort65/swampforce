@@ -34,9 +34,31 @@ export function DispatchIndex() {
           </p>
           <div className="mt-5 flex flex-wrap gap-3 pb-2">
             <Button asChild>
-              <Link to="/dispatch/$slug" params={{ slug: "a-war-on-americans" }}>
-                Lawfare
+              <Link to="/scorecard">Scorecard</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/dispatch/$slug" params={{ slug: "the-media-ledger" }}>
+                Fake News
               </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/dispatch/$slug" params={{ slug: "the-democrat-ledger" }}>
+                Democrats
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/dispatch/$slug" params={{ slug: "they-opened-the-border" }}>
+                Border
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/pump">Pump</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/foreword">Foreword</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/archive">Archive</Link>
             </Button>
           </div>
         </div>

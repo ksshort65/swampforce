@@ -1,4 +1,4 @@
-import { createFileRoute, Link, redirect } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { OpenChart } from "@/components/open-chart";
 import {
   ADMINS,
@@ -13,9 +13,6 @@ import {
 } from "@/lib/pump";
 
 export const Route = createFileRoute("/pump")({
-  beforeLoad: () => {
-    throw redirect({ to: "/" });
-  },
   component: PumpPage,
   head: () => ({
     meta: [

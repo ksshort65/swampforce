@@ -1,17 +1,13 @@
-import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { NarrativeFrames } from "@/components/narrative-frames";
 import { EraCompare } from "@/components/era-compare";
 import { LawfareLedger, SloganChart } from "@/components/lawfare-ledger";
-import { getPost, nextInSeries, SITE, FAKE_NEWS_SLUGS } from "@/lib/content";
+import { getPost, nextInSeries, SITE } from "@/lib/content";
 import { nextChapter } from "@/lib/flow";
 import { essayHead } from "@/lib/share-head";
 
 export const Route = createFileRoute("/dispatch/$slug")({
-  beforeLoad: ({ params }) => {
-    if ((FAKE_NEWS_SLUGS as readonly string[]).includes(params.slug)) return;
-    throw redirect({ to: "/" });
-  },
   component: EssayPage,
   loader: ({ params }) => {
     const post = getPost(params.slug);

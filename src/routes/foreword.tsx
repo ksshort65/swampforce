@@ -1,10 +1,7 @@
-import { createFileRoute, Link, redirect } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SITE } from "@/lib/content";
 
 export const Route = createFileRoute("/foreword")({
-  beforeLoad: () => {
-    throw redirect({ to: "/" });
-  },
  component: ForewordPage,
  head: () => ({
   meta: [

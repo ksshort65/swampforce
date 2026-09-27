@@ -3321,14 +3321,39 @@ export const NAV_MENUS = [
 	{ label: "Republicans", slugs: ["the-republican-ledger"] },
 	{
 		label: "Congress",
-		slugs: ["the-law-they-dont-mention", "the-floor-not-the-feed", "a-caption-cannot-be-outlawed"],
+		slugs: [
+			"the-noise",
+			"full-time-or-go-home",
+			"they-dont-write-the-bills",
+			"the-line-in-the-sand",
+			"paying-the-taliban",
+			"the-debt-they-will-not-close",
+			"the-recess-blockade",
+			"a-barcode-is-not-a-lock",
+			"the-law-they-dont-mention",
+			"the-floor-not-the-feed",
+			"a-caption-cannot-be-outlawed",
+		],
 	},
-	{ label: "Border", slugs: [] as string[] },
-	{ label: "Remedy", slugs: [] as string[] },
+	{
+		label: "Border",
+		slugs: [
+			"they-opened-the-border",
+			"what-the-taxpayer-bought",
+			"fema-ran-two-jobs",
+			"find-them",
+			"defund-ice-is-the-tell",
+		],
+	},
+	{
+		label: "Remedy",
+		slugs: ["they-let-them-walk", "the-bill-they-sent", "the-statute-is-the-end"],
+	},
 	{ label: "J6", slugs: ["january-6"] },
 	{ label: "Scorecard", slugs: [] as string[] },
 	{ label: "Pump", slugs: [] as string[] },
 	{ label: "Foreword", slugs: [] as string[] },
+	{ label: "Archive", slugs: [] as string[] },
 ] as const;
 export const LEAD_SERIES = "The Republic";
 /** Duplicates and drafts. URLs still resolve. Not in the nav. */
