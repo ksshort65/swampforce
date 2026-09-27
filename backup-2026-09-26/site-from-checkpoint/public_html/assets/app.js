@@ -197,7 +197,7 @@
   function paint() {
     if (typeof Chart === 'undefined' || !window.SF_CHARTS) return;
     Chart.defaults.font.family = '"Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif';
-    Chart.defaults.color = '#334155';
+    Chart.defaults.color = '#ece8dc'; Chart.defaults.borderColor = '#2a2a2a';
     window.SF_CHARTS.forEach(function (spec) {
       var el = document.getElementById(spec.id);
       if (!el) return;

@@ -26,6 +26,10 @@ def copy_all(out):
     for f in ALL:
         shutil.copy2(SRC / f, d / f)  # exact originals (capitol.jpg / chamber.jpg / logo.png swapped back to the original files)
 
+GB_TITLES = {"journal-call-these-first.html": "Who to call.", "journal-fema-ran-two-jobs.html": "FEMA ran two jobs", "journal-the-docket.html": "How a dirty list goes to court.", "journal-one-word.html": "One word", "journal-paying-the-taliban.html": "Paying the Taliban", "journal-the-hire-is-the-country.html": "Taxpayer-funded hoaxes", "journal-the-caption-was-not-the-charge.html": "The caption was not the charge", "journal-the-funnel.html": "The funnel"}
+def _gbgrid(items):  # Grok Build homepage "The dispatch" card grid (same images, titles, order)
+    cells = "".join(f'<a class="gb-card" href="{html.escape(h or "images/" + f)}"><img src="images/{f}" alt="{_alt(f, a)}" loading="lazy">' + (f'<h3>{html.escape(GB_TITLES[h])}</h3>' if h in GB_TITLES else '') + '</a>' for f, a, h in items)
+    return f'<section class="sf-orig gb-dispatch"><div class="wrap"><p class="kicker">The dispatch</p><h2>Publishing now</h2></div><div class="gb-grid">{cells}</div></section>'
 def _grid(items, title):
     cells = "".join(f'<a class="sf-orig-cell" href="{html.escape(h or "images/" + f)}"><img src="images/{f}" alt="{_alt(f, a)}" loading="lazy"></a>' for f, a, h in items)
     return f'<section class="sf-orig"><div class="wrap"><p class="tap-hint">{title}</p><div class="sf-orig-grid">{cells}</div></div></section>'
@@ -60,10 +64,11 @@ def apply(name, h):
             h = h[:k] + _grid([(f, a, "") for f, a, _ in orphans], "Images from original essays that are not on the site yet.") + h[k:]
     # homepage and scorecard: the original page's images, placed under the charts band / hero
     if name in ("index.html", "scorecard.html"):
-        items = _uniq([(f, a, _j(x)) for f, a, x in USAGE[name] if not (name == "index.html" and f == "chamber.jpg")])
+        items = [(f, a, _j(x)) for f, a, x in USAGE[name]]
+        items = [it for i, it in enumerate(items) if it not in items[:i]] if name == "index.html" else _uniq(items)
         if name == "scorecard.html":
             items = _uniq(items + [(f, a, "") for f, a, _ in USAGE["pump.html"]] + [(f, "", "") for f in UNUSED])
-        g = _grid(items, "From the original SwampForce build. Tap an image to open it." if name == "scorecard.html" else "From the original SwampForce build. Tap an image for the story.")
+        g = _grid(items, "From the original SwampForce build. Tap an image to open it.") if name == "scorecard.html" else _gbgrid(items)
         k = h.find('<section class="sf-charts-first">')
         if k != -1:
             k = h.index("</section>", k) + 10

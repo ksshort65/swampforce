@@ -885,10 +885,11 @@ def build_home():
 <div class="wrap betrayal-first">
 {betrayal_home()}
 </div>
-<section class="hero" style="background-image:url('images/bg-capitol-eagle.jpg')">
- <div class="hero-inner">
-  <picture class="hero-lockup"><source srcset="assets/brand/lockup-light.webp" type="image/webp"><img src="assets/brand/lockup-light.png" alt="SwampForce" width="1100" height="583" fetchpriority="high"></picture>
-  <p class="hero-kicker">The record, not the rerun</p>
+<section class="hero gb-hero">
+ <img class="bg" src="images/hero-capitol.jpg" alt="Eagle on the Capitol in the swamp" fetchpriority="high">
+ <div class="shade"></div>
+ <div class="copy">
+  <p class="kicker">The record, not the rerun</p>
   <h1>Vote the file.<br>Not the feeling.</h1>
   <p class="dek">{N_TOT} claims about a president in the catalog; {N_VER} checked by us against the original record so far.</p>
   <div class="hero-ctas">
@@ -2285,3 +2286,4 @@ if __name__ == "__main__":
     main()
     dedupe_journal_images()
     apply_beta_banner()
+    import gbtheme; gbtheme.run()  # Grok Build look

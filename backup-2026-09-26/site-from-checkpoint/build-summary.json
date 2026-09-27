@@ -19,6 +19,12 @@
     "border.html",
     "remedy.html",
     "opinion.html",
+    "unverified.html",
+    "journal-a-barcode-is-not-a-lock.html",
+    "journal-clean-hands.html",
+    "journal-it-does-not-fit.html",
+    "journal-the-check-they-will-not-write.html",
+    "journal-what-they-are-protecting.html",
     "unsupported.html",
     "trump-watch.html",
     "movement-watch.html",
@@ -100,19 +106,19 @@
     "404.html"
   ],
   "stats": {
-    "total": 252,
-    "proven": 179,
-    "misleading": 73,
-    "official": 67,
+    "total": 263,
+    "proven": 186,
+    "misleading": 77,
+    "official": 78,
     "transcript": 27,
     "outlet": 64,
     "factcheck": 94,
-    "never": 159,
-    "first": 142,
-    "later": 110
+    "never": 170,
+    "first": 148,
+    "later": 115
   },
   "corr": {
-    "Never corrected by the pusher": 159,
+    "Never corrected by the pusher": 170,
     "Appended correction line": 64,
     "After legal threat / settlement": 5,
     "Not recorded": 14,
@@ -120,41 +126,41 @@
     "On-air correction": 2
   },
   "never_split": {
-    "fact_checked_only": 152,
+    "fact_checked_only": 163,
     "no_fact_check": 7
   },
   "congress": 48,
   "site_stats": {
-    "total": 118,
-    "proven": 62,
-    "misleading": 56,
-    "official": 68,
+    "total": 129,
+    "proven": 69,
+    "misleading": 60,
+    "official": 79,
     "transcript": 25,
     "outlet": 13,
     "factcheck": 0,
-    "never": 97,
-    "first": 59,
-    "later": 59,
+    "never": 108,
+    "first": 65,
+    "later": 64,
     "watch": 131,
     "never_by_verdict": {
-      "Proven false": 42,
-      "Rated misleading": 55
+      "Proven false": 49,
+      "Rated misleading": 59
     },
     "corr": {
-      "Never corrected by the pusher": 97,
+      "Never corrected by the pusher": 108,
       "Not recorded": 9,
       "After legal threat / settlement": 1,
       "Editor's note": 3,
       "Appended correction line": 8
     },
-    "never_fact_checked_only": 90,
-    "confirmed": 87,
+    "never_fact_checked_only": 101,
+    "confirmed": 94,
     "how": {
-      "Words cut or twisted": 28,
-      "Other": 21,
+      "Words cut or twisted": 29,
+      "Other": 27,
       "Context left out": 26,
-      "Made up or retracted": 19,
-      "Numbers inflated or misread": 24
+      "Made up or retracted": 20,
+      "Numbers inflated or misread": 27
     },
     "removed": [
       "187"
@@ -412,7 +418,18 @@
       "250",
       "251",
       "252",
-      "253"
+      "253",
+      "254",
+      "255",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260",
+      "261",
+      "262",
+      "263",
+      "264"
     ]
   },
   "dem_rows": 11,
@@ -420,21 +437,23 @@
   "balance": {
     "Catalog": {
       "Media: multiple or unnamed outlets": 8,
-      "Democrat": 70,
+      "Democrat": 76,
       "Media outlet": 24,
       "Independent / other": 5,
-      "Anonymous / viral social posts": 10,
-      "Mixed (both sides named)": 1
+      "Anonymous / viral social posts": 11,
+      "Mixed (both sides named)": 1,
+      "Republican": 2,
+      "Unattributed / not classified": 2
     },
     "All": {
       "Media: multiple or unnamed outlets": 9,
-      "Democrat": 98,
+      "Democrat": 104,
       "Media outlet": 26,
       "Independent / other": 11,
-      "Anonymous / viral social posts": 10,
+      "Anonymous / viral social posts": 11,
       "Mixed (both sides named)": 1,
-      "Republican": 13,
-      "Unattributed / not classified": 13
+      "Republican": 15,
+      "Unattributed / not classified": 15
     },
     "Party ledgers": {
       "Democrat": 11,
@@ -452,14 +471,14 @@
   "lawfare": 10,
   "redirects": 65,
   "top_methods": [
-    "retracted invention",
     "omitted context",
-    "policy-scope inflation",
-    "fabrication",
-    "fabrication / false attribution",
     "misquote / truncation",
-    "false photo/video attribution",
-    "premature \u201cproven\u201d framing"
+    "fabrication / false attribution",
+    "premature \u201cproven\u201d framing",
+    "retracted invention",
+    "policy-scope inflation",
+    "false attribution of words/intent / omitted context",
+    "retracted invention / misquote / truncation"
   ],
   "unsupported": 4,
   "watch": {

@@ -16,17 +16,17 @@ Raw counts only. Rules:
 
 | Side | Catalog | Party ledgers | Trackers & watches | All |
 |---|---|---|---|---|
-| Republican | 0 | 9 | 4 | 13 |
-| Democrat | 70 | 11 | 17 | 98 |
+| Republican | 2 | 9 | 4 | 15 |
+| Democrat | 76 | 11 | 17 | 104 |
 | Mixed (both sides named) | 1 | 0 | 0 | 1 |
 | Independent / other | 5 | 0 | 6 | 11 |
 | Media outlet | 24 | 0 | 2 | 26 |
 | Media: multiple or unnamed outlets | 8 | 0 | 1 | 9 |
-| Anonymous / viral social posts | 10 | 0 | 0 | 10 |
-| Unattributed / not classified | 0 | 0 | 13 | 13 |
-| **Total** | **118** | **20** | **43** | **181** |
+| Anonymous / viral social posts | 11 | 0 | 0 | 11 |
+| Unattributed / not classified | 2 | 0 | 13 | 15 |
+| **Total** | **129** | **20** | **43** | **192** |
 
-Catalog cases that name a Democrat anywhere in the pusher field: 75. Cases that name a Republican anywhere: 1.
+Catalog cases that name a Democrat anywhere in the pusher field: 81. Cases that name a Republican anywhere: 4.
 The catalog's inclusion rule covers only claims about President Trump or his administration that are unfavorable to him or them (Methodology, section 1).
 
 ## Media outlets by name (all areas)
@@ -58,10 +58,11 @@ The catalog's inclusion rule covers only claims about President Trump or his adm
 |---|---|---|
 | Republican | Claim set against the record (no label) | 9 |
 | Republican | Disproven | 2 |
+| Republican | Proven false | 2 |
 | Republican | Disproven as stated | 1 |
 | Republican | Unresolved | 1 |
-| Democrat | Rated misleading | 51 |
-| Democrat | Proven false | 23 |
+| Democrat | Rated misleading | 53 |
+| Democrat | Proven false | 27 |
 | Democrat | Claim set against the record (no label) | 11 |
 | Democrat | Accurate | 7 |
 | Democrat | Consistent with the record | 1 |
@@ -83,10 +84,11 @@ The catalog's inclusion rule covers only claims about President Trump or his adm
 | Media outlet | Unresolved | 1 |
 | Media: multiple or unnamed outlets | Proven false | 5 |
 | Media: multiple or unnamed outlets | Rated misleading | 4 |
-| Anonymous / viral social posts | Proven false | 9 |
+| Anonymous / viral social posts | Proven false | 10 |
 | Anonymous / viral social posts | Rated misleading | 1 |
 | Unattributed / not classified | Not supported by the record | 7 |
 | Unattributed / not classified | Unresolved | 3 |
+| Unattributed / not classified | Rated misleading | 2 |
 | Unattributed / not classified | Disproven | 1 |
 | Unattributed / not classified | Proven | 1 |
 | Unattributed / not classified | Unsupported | 1 |
@@ -261,3 +263,14 @@ The catalog's inclusion rule covers only claims about President Trump or his adm
 | 233 | Media outlet | The Daily Beast | Proven false |
 | 252 | Media outlet | TIME | Proven false |
 | 253 | Media outlet | NPR | Rated misleading |
+| 254 | Republican | Donald Trump | Proven false |
+| 255 | Republican | Donald Trump | Proven false |
+| 256 | Democrat | Hillary Clinton | Proven false |
+| 257 | Democrat | Hillary Clinton | Proven false |
+| 258 | Unattributed / not classified | Sean Spicer, White House press secretary (R) | Rated misleading |
+| 259 | Anonymous / viral social posts | Viral | Proven false |
+| 260 | Democrat | Joe Biden | Rated misleading |
+| 261 | Democrat | Joe Biden | Proven false |
+| 262 | Democrat | Joe Biden | Proven false |
+| 263 | Democrat | Joe Biden | Rated misleading |
+| 264 | Unattributed / not classified | Kash Patel, FBI Director (R administration) | Rated misleading |
