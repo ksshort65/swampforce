@@ -342,7 +342,7 @@ def nyv_items(cases):
 def nyv_top(cases):
     items = nyv_items(cases)
     n = {g: len(items[g]) for g in GROUPS}; tot = sum(n.values()); mx = max(list(n.values()) + [1])
-    colors = {"Republican": "#b91c1c", "Democratic": "#1d4ed8", "News outlets": "#64748b", "Campaigns": "#7c3aed", "Social media": "#d97706"}
+    colors = {"Republican": "#dc2626", "Democratic": "#2563eb", "News outlets": "#a3a3a3", "Campaigns": "#a855f7", "Social media": "#f59e0b"}
     rows = "".join(f'<div class="uv-row"><span class="uv-lbl">{e(g)}</span><div class="uv-bars"><a class="uv-bar" href="#nyv-{SLUG[g]}" style="width:{max(n[g] / mx * 100, 3):.1f}%;background:{colors[g]}"><b>{n[g]}</b></a></div></div>' for g in GROUPS)
     big = (f'<div class="tile-grid nyv-big"><div class="stat"><div class="num">{tot}</div><div class="lbl">Not yet verified</div></div>'
            + "".join(f'<a class="stat" href="#nyv-{SLUG[g]}" style="text-decoration:none"><div class="num">{n[g]}</div><div class="lbl">{e(g)}</div></a>' for g in GROUPS) + '</div>')

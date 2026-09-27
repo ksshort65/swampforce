@@ -67,6 +67,7 @@ select option{background:#141414;color:#ece8dc}
 .muted,.sub,.small{color:#b5afa3}
 .fr-k,.linkbtn,.flip-hint,p.control,.why-buy h3{color:#f87171!important}
 .answer-tag{color:#e8e0d0!important}
+.mt-hb.split,.mt-split,.mt-split .mt-debt,.split,.wv-split{background:#737373!important}
 .gb-card h3{font:700 1.2rem ui-sans-serif,system-ui;text-transform:uppercase;padding:0 1rem;color:#ece8dc}
 """
 
@@ -114,4 +115,13 @@ def run():
             f.write_text(n, encoding="utf-8")
     js = OUT / "assets" / "app.js"
     j = js.read_text(encoding="utf-8").replace("Chart.defaults.color = '#334155';", "Chart.defaults.color = '#ece8dc'; Chart.defaults.borderColor = '#2a2a2a';")
+    # Party colours on every chart (Karen, Sep 26, 2026): Republican red, Democratic blue, everything else neutral
+    PARTY = """function sfPartyCol(l){l=String(l||'');if(/^(republican|gop)|\\(R-|\\bR-[A-Z]{2}\\)/i.test(l))return '#dc2626';if(/^democrat|\\(D-|\\bD-[A-Z]{2}\\)/i.test(l))return '#2563eb';if(/^social/i.test(l))return '#f59e0b';if(/^(split|mixed|independent|news outlet|media|campaign|social media)/i.test(l))return ({s:'#8a8a8a',m:'#8a8a8a',i:'#8a8a8a',n:'#a3a3a3',c:'#a855f7'})[l[0].toLowerCase()]||(/social/i.test(l)?'#f59e0b':'#a3a3a3');return null}
+function sfParty(spec){try{if(spec.labels&&!spec.datasets){var cs=spec.labels.map(sfPartyCol);if(cs.some(Boolean)){var base=spec.colors||[];spec.colors=spec.labels.map(function(l,i){return cs[i]||base[i%Math.max(base.length,1)]||'#8a8a8a'})}}
+(spec.datasets||[]).forEach(function(d){var c=sfPartyCol(String(d.label||'').split(' · ')[0]);if(c){var a=(d.color||'').length===9?(d.color||'').slice(7):'';d.color=c+a}})}catch(e){}}
+"""
+    j = re.sub(r"^function sfPartyCol.*?\n\(spec\.datasets[^\n]*\n", "", j, flags=re.S | re.M)
+    if "sfParty(spec);" not in j:
+        j = j.replace("window.SF_CHARTS.forEach(function (spec) {", "window.SF_CHARTS.forEach(function (spec) { sfParty(spec);", 1)
+    j = PARTY + j
     js.write_text(j, encoding="utf-8")

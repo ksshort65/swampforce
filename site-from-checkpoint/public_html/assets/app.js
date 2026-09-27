@@ -1,3 +1,6 @@
+function sfPartyCol(l){l=String(l||'');if(/^(republican|gop)|\(R-|\bR-[A-Z]{2}\)/i.test(l))return '#dc2626';if(/^democrat|\(D-|\bD-[A-Z]{2}\)/i.test(l))return '#2563eb';if(/^social/i.test(l))return '#f59e0b';if(/^(split|mixed|independent|news outlet|media|campaign|social media)/i.test(l))return ({s:'#8a8a8a',m:'#8a8a8a',i:'#8a8a8a',n:'#a3a3a3',c:'#a855f7'})[l[0].toLowerCase()]||(/social/i.test(l)?'#f59e0b':'#a3a3a3');return null}
+function sfParty(spec){try{if(spec.labels&&!spec.datasets){var cs=spec.labels.map(sfPartyCol);if(cs.some(Boolean)){var base=spec.colors||[];spec.colors=spec.labels.map(function(l,i){return cs[i]||base[i%Math.max(base.length,1)]||'#8a8a8a'})}}
+(spec.datasets||[]).forEach(function(d){var c=sfPartyCol(String(d.label||'').split(' · ')[0]);if(c){var a=(d.color||'').length===9?(d.color||'').slice(7):'';d.color=c+a}})}catch(e){}}
 /* Open every page at the very top (no restored scroll position). A link to a specific section (#anchor) still opens that section. */
 (function () {
   try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
@@ -198,7 +201,7 @@
     if (typeof Chart === 'undefined' || !window.SF_CHARTS) return;
     Chart.defaults.font.family = '"Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif';
     Chart.defaults.color = '#ece8dc'; Chart.defaults.borderColor = '#2a2a2a';
-    window.SF_CHARTS.forEach(function (spec) {
+    window.SF_CHARTS.forEach(function (spec) { sfParty(spec);
       var el = document.getElementById(spec.id);
       if (!el) return;
       (function () { /* one shared label under every chart */
