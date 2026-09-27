@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { DECEPTION } from "../data/deception";
 import newsEvidence from "../data/fake-news-evidence.json";
+import factCheckerVetting from "../data/fact-checker-vetting.json";
 
 export const Route = createFileRoute("/betrayal")({ component: Betrayal });
 
@@ -643,36 +644,8 @@ const NEWS_MARKS: Record<string, { evidence: string; proof: string; term: string
 
 const EVIDENCE_CHARTS = [
   {
-    id: "chart-evidence",
-    title: "Verdict",
-    type: "doughnut",
-    horizontal: false,
-    labels: ["Proven false", "Rated misleading"],
-    data: [69, 60],
-    colors: ["#166534", "#b45309"],
-    key: "evidence",
-    values: ["Proven false", "Rated misleading"],
-    bullets: [
-      "Tap to filter",
-      "129 news claims we verified as false or misleading. 108 never corrected.",
-      "94 of the 129 verified cases were also confirmed by an approved fact-checker.",
-    ],
-  },
-  {
-    id: "chart-proof",
-    title: "Strength of proof",
-    type: "bar",
-    horizontal: true,
-    labels: ["Official record", "Transcript / video", "Outlet's own correction", "Primary document / record search"],
-    data: [79, 25, 13, 12],
-    colors: ["#14532d", "#1e3a5f", "#7c2d12", "#57534e"],
-    key: "proof",
-    values: ["Official record", "Original transcript/video", "Outlet's own correction", "Primary document or record search"],
-    bullets: ["Tap a bar to filter", "Original transcript/video", "Outlet's own correction"],
-  },
-  {
     id: "chart-term",
-    title: "Period",
+    title: "Time Period",
     type: "bar",
     horizontal: false,
     labels: ["First term (2017–21)", "2021 – present"],
@@ -684,7 +657,7 @@ const EVIDENCE_CHARTS = [
   },
   {
     id: "chart-methods",
-    title: "Top methods",
+    title: "Methods of Deception",
     type: "bar",
     horizontal: true,
     labels: [
@@ -716,7 +689,42 @@ const EVIDENCE_CHARTS = [
       "Tap a chart or tile for the details behind it.",
     ],
   },
+  {
+    id: "chart-proof",
+    title: "Strength of proof",
+    type: "bar",
+    horizontal: true,
+    labels: ["Official record", "Transcript / video", "Outlet's own correction", "Primary document / record search"],
+    data: [79, 25, 13, 12],
+    colors: ["#14532d", "#1e3a5f", "#7c2d12", "#57534e"],
+    key: "proof",
+    values: ["Official record", "Original transcript/video", "Outlet's own correction", "Primary document or record search"],
+    bullets: ["Tap a bar to filter", "Original transcript/video", "Outlet's own correction"],
+  },
+  {
+    id: "chart-evidence",
+    title: "Verdict",
+    type: "doughnut",
+    horizontal: false,
+    labels: ["Proven false", "Rated misleading"],
+    data: [69, 60],
+    colors: ["#166534", "#b45309"],
+    key: "evidence",
+    values: ["Proven false", "Rated misleading"],
+    bullets: [
+      "Tap to filter",
+      "129 news claims we verified as false or misleading. 108 never corrected.",
+      "94 of the 129 verified cases were also confirmed by an approved fact-checker.",
+    ],
+  },
 ] as const;
+
+const PILL_GRAPHIC: Record<string, string> = {
+  "chart-term": "/images/pill-time.jpg",
+  "chart-methods": "/images/pill-methods.jpg",
+  "chart-proof": "/images/pill-proof.jpg",
+  "chart-evidence": "/images/pill-verdict.jpg",
+};
 
 function loadChartJs() {
   if (typeof window === "undefined") return Promise.resolve();
@@ -806,6 +814,12 @@ function EvidenceChart({
     <figure className="w-full">
       <div className={spec.id === "chart-methods" ? "relative h-80" : spec.horizontal ? "relative h-56" : "relative h-64"}>
         <canvas ref={canvasRef} aria-label={spec.title} />
+        {spec.id === "chart-evidence" ? (
+          <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
+            <span className="text-[28px] font-bold text-white">108</span>
+            <span className="text-[15px] font-semibold text-white">Never corrected</span>
+          </div>
+        ) : null}
       </div>
       <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
         {spec.labels.map((label, index) => (
@@ -814,6 +828,9 @@ function EvidenceChart({
             {label}
           </li>
         ))}
+        {spec.id === "chart-evidence" ? (
+          <li className="text-[15px] text-white">108 Never corrected · 49 false / 59 misleading</li>
+        ) : null}
       </ul>
       <ul className="mt-2 list-disc pl-5 text-[15px] leading-snug text-white/80">
         {spec.bullets.map((line) => (
@@ -1343,6 +1360,7 @@ function Betrayal() {
   const [newsCase, setNewsCase] = useState<string | null>(null);
   const [newsSource, setNewsSource] = useState<string | null>(null);
   const [saveOn, setSaveOn] = useState(false);
+  const [saveRuling, setSaveRuling] = useState(false);
   const [saveBar, setSaveBar] = useState<string | null>(null);
   const [saveSource, setSaveSource] = useState<string | null>(null);
   const [saveHref, setSaveHref] = useState<string | null>(null);
@@ -1416,7 +1434,7 @@ function Betrayal() {
             ))}
           </div>
         )}
-        {layer === "fake" && !saveOn && (
+        {layer === "fake" && !saveOn && !deception && (
           <div className="flex flex-col items-center px-6 pt-16">
             <button
               type="button"
@@ -1472,31 +1490,40 @@ function Betrayal() {
                   setSaveBar(null);
                   setSaveSource(null);
                   setSaveHref(null);
+                  setSaveRuling(false);
                   setSaveOn(true);
                 }}
                 className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
               >
                 <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
-                  The Social Media Weapon: The SAVE Ruling
-                </span>
-                <span className="flex h-44 w-full items-center justify-center rounded-2xl border border-[#d4af37] bg-[#070b12] px-3 text-center text-[16px] font-semibold text-white">
-                  SAVE
-                </span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setLayer("types")}
-                className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
-              >
-                <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
-                  Types of Deception
+                  Social Media Weapon
                 </span>
                 <img
-                  src="/images/topic-types.jpg"
+                  src="/images/topic-save.jpg"
                   alt=""
                   className="h-44 w-full rounded-2xl border border-white/30 object-cover"
                 />
               </button>
+              {DECEPTION.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => {
+                    setSpot(null);
+                    setDeception(item.id);
+                  }}
+                  className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
+                >
+                  <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
+                    {item.title}
+                  </span>
+                  <img
+                    src={item.image}
+                    alt=""
+                    className="h-44 w-full rounded-2xl border border-white/30 object-cover"
+                  />
+                </button>
+              ))}
               <a
                 href="/great-american-betrayal.html"
                 className="flex h-44 w-64 items-center justify-center rounded-2xl border border-white/30 bg-[#070b12] p-0"
@@ -1508,7 +1535,37 @@ function Betrayal() {
             </div>
           </div>
         )}
-        {layer === "fake" && saveOn && (
+        {layer === "fake" && saveOn && !saveRuling && (
+          <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
+            <button
+              type="button"
+              onClick={() => setSaveOn(false)}
+              className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
+            >
+              Social Media Weapon
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setSaveBar(null);
+                setSaveSource(null);
+                setSaveHref(null);
+                setSaveRuling(true);
+              }}
+              className="mt-8 flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
+            >
+              <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
+                SCOTUS SAVE Ruling
+              </span>
+              <img
+                src="/images/topic-scotus-save.jpg"
+                alt=""
+                className="h-44 w-full rounded-2xl border border-white/30 object-cover"
+              />
+            </button>
+          </div>
+        )}
+        {layer === "fake" && saveOn && saveRuling && (
           <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
             <button
               type="button"
@@ -1525,28 +1582,7 @@ function Betrayal() {
                   setSaveBar(null);
                   return;
                 }
-                setSaveOn(false);
-              }}
-              className="fixed top-12 left-14 z-30 rounded-full border border-white/35 bg-[#070b12]/80 px-3 py-1 text-[15px] leading-none font-semibold text-white"
-            >
-              Back
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                if (saveHref) {
-                  setSaveHref(null);
-                  return;
-                }
-                if (saveSource) {
-                  setSaveSource(null);
-                  return;
-                }
-                if (saveBar) {
-                  setSaveBar(null);
-                  return;
-                }
-                setSaveOn(false);
+                setSaveRuling(false);
               }}
               className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
             >
@@ -1647,31 +1683,6 @@ function Betrayal() {
         )}
         {layer === "evidence" && (
           <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
-            <button
-              type="button"
-              onClick={() => {
-                if (newsSource) {
-                  setNewsSource(null);
-                  return;
-                }
-                if (newsCase) {
-                  setNewsCase(null);
-                  return;
-                }
-                if (newsMethod && newsMethod.includes(":")) {
-                  setNewsMethod(newsMethod.slice(0, newsMethod.indexOf(":")));
-                  return;
-                }
-                if (newsMethod) {
-                  setNewsMethod(null);
-                  return;
-                }
-                setLayer("fake");
-              }}
-              className="fixed top-12 left-14 z-30 rounded-full border border-white/35 bg-[#070b12]/80 px-3 py-1 text-[15px] leading-none font-semibold text-white"
-            >
-              Back
-            </button>
             {(newsMethod || newsCase || newsSource) && (
             <button
               type="button"
@@ -1793,7 +1804,7 @@ function Betrayal() {
                 ))}
               </div>
             ) : (
-              <div className="mt-8 grid w-full max-w-xl grid-cols-1 gap-3">
+              <div className="mt-8 flex max-w-5xl flex-wrap items-end justify-center gap-8">
                 {EVIDENCE_CHARTS.map((spec) => (
                   <button
                     key={spec.id}
@@ -1803,9 +1814,16 @@ function Betrayal() {
                       setNewsCase(null);
                       setNewsMethod(spec.id);
                     }}
-                    className="w-full rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-2 text-[16px] font-semibold text-white"
+                    className="flex w-52 flex-col items-center gap-3 border-0 bg-transparent p-0"
                   >
-                    {spec.title}
+                    <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
+                      {spec.title}
+                    </span>
+                    <img
+                      src={PILL_GRAPHIC[spec.id]}
+                      alt=""
+                      className="h-52 w-52 rounded-2xl border border-white/30 object-cover"
+                    />
                   </button>
                 ))}
               </div>
@@ -2094,7 +2112,7 @@ function Betrayal() {
             </button>
           </div>
         )}
-        {layer === "types" && deception ? (
+        {(layer === "fake" || layer === "types") && deception ? (
           <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
             <button
               type="button"
@@ -2104,12 +2122,67 @@ function Betrayal() {
                   return;
                 }
                 setDeception(null);
+                setLayer("fake");
               }}
               className="border-0 bg-transparent p-0 text-[15px] font-semibold tracking-wide text-white"
             >
               {spot === "cable" ? "Cable news" : spot === "trump" ? "Trump TV" : spot === "podcasts" ? "Podcasts" : spot === "cspan" ? "C-SPAN" : DECEPTION.find((item) => item.id === deception)?.title}
             </button>
-            {spot === "trump" ? (
+            {deception === "checkers" ? (
+              <div className="mt-8 w-full text-left">
+                {factCheckerVetting.map((section) => (
+                  <section key={section.title} className="mt-8">
+                    <h2 className="text-[16px] font-semibold text-white">{section.title}</h2>
+                    {section.paras.map((paragraph) => (
+                      <p key={paragraph} className="mt-3 text-[15px] leading-snug text-white/85">
+                        {paragraph}
+                      </p>
+                    ))}
+                    {"table" in section && section.table ? (
+                      <div className="mt-4 overflow-x-auto">
+                        <table className="w-full border-collapse text-left text-[15px] text-white/85">
+                          <thead>
+                            <tr>
+                              {["Fact-checker", "Owner / lean", "IFCN status (Sep 24, 2026)", "Outcome", "Cases it confirms"].map((heading) => (
+                                <th key={heading} className="border-b border-white/25 px-2 py-2 font-semibold text-white">
+                                  {heading}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {section.table.map((row) => (
+                              <tr key={row[0]}>
+                                {row.map((cell) => (
+                                  <td key={cell} className="border-b border-white/10 px-2 py-2 align-top">
+                                    {cell}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    ) : null}
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {section.links
+                        .filter((link) => link.href.startsWith("http"))
+                        .map((link) => (
+                          <a
+                            key={link.href}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-full border border-[#d4af37]/70 bg-[#070b12]/80 px-3 py-1.5 text-[15px] font-semibold text-white"
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                    </div>
+                  </section>
+                ))}
+              </div>
+            ) : spot === "trump" ? (
               <div className="mt-8 max-w-xl text-left">
                 <p className="text-[16px] font-semibold text-white">TRUMP TV: The Essentials Station</p>
                 <p className="mt-3 text-[15px] leading-snug text-white/85">
@@ -2179,48 +2252,7 @@ function Betrayal() {
             </div>
             )}
           </div>
-        ) : layer === "types" ? (
-          <div className="flex flex-col items-center px-6 pt-16">
-            <button
-              type="button"
-              onClick={() => {
-                setDeception(null);
-                setLayer("fake");
-              }}
-              className="border-0 bg-transparent p-0 text-[15px] font-semibold tracking-wide text-white"
-            >
-              {LAYERS[layer].title}
-            </button>
-            <div className="mt-10 flex max-w-5xl flex-wrap items-end justify-center gap-8">
-              {DECEPTION.map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => {
-                    setSpot(null);
-                    setDeception(item.id);
-                  }}
-                  className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
-                >
-                  <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
-                    {item.title}
-                  </span>
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="h-44 w-full rounded-2xl border border-white/30 object-cover"
-                  />
-                </button>
-              ))}
-            </div>
-          </div>
         ) : null}
-        <Link
-          to="/"
-          className="fixed top-5 left-14 z-20 rounded-full border border-white/35 bg-[#070b12]/80 px-3 py-1 text-[12px] leading-none font-semibold text-white"
-        >
-          Back
-        </Link>
         <div className="fixed top-5 left-5 z-20 flex flex-col items-center gap-2">
           {layer === "root" ? (
             <Link
@@ -2253,6 +2285,7 @@ function Betrayal() {
                 }
                 if (deception) {
                   setDeception(null);
+                  setLayer("fake");
                   return;
                 }
                 if (layer === "mechanics" && method) {
@@ -2285,6 +2318,10 @@ function Betrayal() {
                 }
                 if (saveBar) {
                   setSaveBar(null);
+                  return;
+                }
+                if (saveRuling) {
+                  setSaveRuling(false);
                   return;
                 }
                 if (saveOn) {
