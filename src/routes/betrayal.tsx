@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { DECEPTION } from "../data/deception";
 import newsEvidence from "../data/fake-news-evidence.json";
 import factCheckerVetting from "../data/fact-checker-vetting.json";
+import fakeNewsCases from "../data/fake-news-cases.json";
 
 export const Route = createFileRoute("/betrayal")({ component: Betrayal });
 
@@ -747,9 +748,11 @@ function loadChartJs() {
 function EvidenceChart({
   spec,
   onPick,
+  onNever,
 }: {
   spec: (typeof EVIDENCE_CHARTS)[number];
   onPick: (index: number) => void;
+  onNever?: () => void;
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const chartRef = useRef<{ destroy: () => void } | null>(null);
@@ -816,8 +819,14 @@ function EvidenceChart({
         <canvas ref={canvasRef} aria-label={spec.title} />
         {spec.id === "chart-evidence" ? (
           <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
-            <span className="text-[28px] font-bold text-white">108</span>
-            <span className="text-[15px] font-semibold text-white">Never corrected</span>
+            <button
+              type="button"
+              onClick={onNever}
+              className="pointer-events-auto flex flex-col items-center border-0 bg-transparent p-0"
+            >
+              <span className="text-[28px] font-bold text-white">108</span>
+              <span className="text-[15px] font-semibold text-white underline decoration-[#d4af37] underline-offset-4">Never corrected</span>
+            </button>
           </div>
         ) : null}
       </div>
@@ -829,7 +838,15 @@ function EvidenceChart({
           </li>
         ))}
         {spec.id === "chart-evidence" ? (
-          <li className="text-[15px] text-white">108 Never corrected · 49 false / 59 misleading</li>
+          <li className="text-[15px] text-white">
+            <button
+              type="button"
+              onClick={onNever}
+              className="border-0 bg-transparent p-0 text-[15px] text-white underline decoration-[#d4af37] underline-offset-4"
+            >
+              108 Never corrected · 49 false / 59 misleading
+            </button>
+          </li>
         ) : null}
       </ul>
       <ul className="mt-2 list-disc pl-5 text-[15px] leading-snug text-white/80">
@@ -841,21 +858,452 @@ function EvidenceChart({
   );
 }
 
-const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: string; views: string; said: string; links: { label: string; href: string }[] }[] = [
+type NewsCaseRow = (typeof fakeNewsCases)[number];
+
+const NEWS_CASES: NewsCaseRow[] = fakeNewsCases;
+
+const NEWS_PERIODS = [
+  { key: "2015–16", range: "Jan 1, 2015 – Dec 31, 2016" },
+  { key: "2017–18", range: "Jan 1, 2017 – Dec 31, 2018" },
+  { key: "2019–20", range: "Jan 1, 2019 – Dec 31, 2020" },
+  { key: "2021–22", range: "Jan 1, 2021 – Dec 31, 2022" },
+  { key: "2023–24", range: "Jan 1, 2023 – Dec 31, 2024" },
+  { key: "2025–26", range: "Jan 1, 2025 – Sept 27, 2026" },
+  { key: "Date unknown", range: "No date on file" },
+];
+
+const NEWS_NYI = "Not yet identified";
+
+const NEWS_DIMS: {
+  key: string;
+  title: string;
+  order?: string[];
+  colors: Record<string, string>;
+  fallback: string;
+  get: (row: NewsCaseRow) => string;
+  sub?: (row: NewsCaseRow) => string;
+  subTitle?: string;
+}[] = [
+  {
+    key: "status",
+    title: "Verdict / status",
+    order: ["Verified · Proven false", "Verified · Rated misleading", "Fact-checked", "Not yet verified"],
+    colors: {
+      "Verified · Proven false": "#166534",
+      "Verified · Rated misleading": "#b45309",
+      "Fact-checked": "#1e3a5f",
+      "Not yet verified": "#57534e",
+    },
+    fallback: "#57534e",
+    get: (row) => (row.status === "Verified" ? row.statusLabel : row.status),
+  },
+  {
+    key: "proof",
+    title: "Strength of proof",
+    order: ["Official record", "Original transcript/video", "Outlet's own correction", "Primary document or record search", "Not yet rated"],
+    colors: {
+      "Official record": "#14532d",
+      "Original transcript/video": "#1e3a5f",
+      "Outlet's own correction": "#7c2d12",
+      "Primary document or record search": "#78716c",
+      "Not yet rated": "#3f3f46",
+    },
+    fallback: "#3f3f46",
+    get: (row) => NEWS_MARKS[row.id]?.proof ?? "Not yet rated",
+  },
+  {
+    key: "network",
+    title: "By network/outlet",
+    order: [
+      "Cable Networks",
+      "MSM Networks",
+      "Public Broadcasting",
+      "Podcasts",
+      "Social Media",
+      "Print/Web news",
+      "Politicians/Officials",
+      "Advocacy groups",
+      NEWS_NYI,
+    ],
+    colors: {
+      "Cable Networks": "#b91c1c",
+      "MSM Networks": "#1d4ed8",
+      "Public Broadcasting": "#0f766e",
+      Podcasts: "#7c3aed",
+      "Social Media": "#f59e0b",
+      "Print/Web news": "#a3a3a3",
+      "Politicians/Officials": "#7c2d12",
+      "Advocacy groups": "#14532d",
+      [NEWS_NYI]: "#57534e",
+    },
+    fallback: "#57534e",
+    get: (row) => row.networkGroup,
+    sub: (row) => row.networkName,
+    subTitle: "Outlets and names",
+  },
+  {
+    key: "party",
+    title: "By political party",
+    order: ["Republican", "Democratic", "News outlets", "Campaigns", "Social media", "Advocacy groups", NEWS_NYI],
+    colors: {
+      Republican: "#b91c1c",
+      Democratic: "#1d4ed8",
+      "News outlets": "#a3a3a3",
+      Campaigns: "#7c3aed",
+      "Social media": "#f59e0b",
+      "Advocacy groups": "#0f766e",
+      [NEWS_NYI]: "#57534e",
+    },
+    fallback: "#57534e",
+    get: (row) => row.party,
+  },
+  {
+    key: "person",
+    title: "By journalist/person",
+    colors: { [NEWS_NYI]: "#57534e" },
+    fallback: "#7c2d12",
+    get: (row) => row.person,
+  },
+];
+
+function newsCountBy(rows: NewsCaseRow[], dim: (typeof NEWS_DIMS)[number], useSub = false) {
+  const counts = new Map<string, number>();
+  rows.forEach((row) => {
+    const value = useSub && dim.sub ? dim.sub(row) : dim.get(row);
+    counts.set(value, (counts.get(value) ?? 0) + 1);
+  });
+  const entries = [...counts.entries()].map(([label, count]) => ({ label, count }));
+  if (dim.order && !useSub) {
+    const order = dim.order;
+    return entries.sort((a, b) => order.indexOf(a.label) - order.indexOf(b.label));
+  }
+  return entries.sort((a, b) => {
+    if (a.label === NEWS_NYI) return 1;
+    if (b.label === NEWS_NYI) return -1;
+    return b.count - a.count || a.label.localeCompare(b.label);
+  });
+}
+
+function newsPath(value: string | null): string[] {
+  if (!value) return [];
+  try {
+    const parsed = JSON.parse(value);
+    return Array.isArray(parsed) ? parsed.map(String) : [];
+  } catch {
+    return [];
+  }
+}
+
+function PeriodChart({
+  title,
+  labels,
+  data,
+  colors,
+  horizontal,
+  onPick,
+}: {
+  title: string;
+  labels: string[];
+  data: number[];
+  colors: string[];
+  horizontal: boolean;
+  onPick: (index: number) => void;
+}) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const chartRef = useRef<{ destroy: () => void } | null>(null);
+  const pickRef = useRef(onPick);
+  pickRef.current = onPick;
+  const key = JSON.stringify([title, labels, data, colors, horizontal]);
+  useEffect(() => {
+    let dead = false;
+    loadChartJs().then(() => {
+      if (dead || !canvasRef.current) return;
+      const Chart = (window as unknown as { Chart: new (el: HTMLCanvasElement, cfg: object) => { destroy: () => void } }).Chart;
+      chartRef.current?.destroy();
+      chartRef.current = new Chart(canvasRef.current, {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [{ data, backgroundColor: colors, borderWidth: 0, borderRadius: 6, maxBarThickness: 44 }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 700, easing: "easeOutQuart" },
+          indexAxis: horizontal ? "y" : "x",
+          plugins: {
+            legend: { display: false },
+            tooltip: { titleFont: { size: 15 }, bodyFont: { size: 15 } },
+          },
+          scales: {
+            x: horizontal
+              ? { beginAtZero: true, grid: { color: "rgba(255,255,255,.08)" }, ticks: { color: "#e8e0d0", precision: 0, font: { size: 15 } } }
+              : { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false, font: { size: 15 } } },
+            y: horizontal
+              ? { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false, font: { size: 15 } } }
+              : { beginAtZero: true, grid: { color: "rgba(255,255,255,.08)" }, ticks: { color: "#e8e0d0", precision: 0, font: { size: 15 } } },
+          },
+          onClick: (_event: unknown, elements: { index: number }[]) => {
+            if (elements.length) pickRef.current(elements[0].index);
+          },
+        },
+      });
+    });
+    return () => {
+      dead = true;
+      chartRef.current?.destroy();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
+  return (
+    <div className="relative w-full" style={{ height: horizontal ? Math.max(240, labels.length * 38 + 60) : 320 }}>
+      <canvas ref={canvasRef} aria-label={title} />
+    </div>
+  );
+}
+
+function NewsHeading({ title, line }: { title: string; line: string }) {
+  return (
+    <>
+      <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{title}</p>
+      <p className="mt-1 text-center text-[15px] text-white/75">{line}</p>
+    </>
+  );
+}
+
+function newsCasesLine(count: number) {
+  return `${count} ${count === 1 ? "case" : "cases"}`;
+}
+
+const NEWS_DOOR =
+  "w-full rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-2 text-[15px] font-semibold leading-snug text-white";
+const NEWS_CARD = "mt-6 w-full rounded-2xl border border-[#d4af37] bg-[#070b12] px-4 py-4";
+
+function NewsCaseList({ rows, onCase }: { rows: NewsCaseRow[]; onCase: (id: string) => void }) {
+  return (
+    <div className="mt-6 flex w-full flex-col gap-2">
+      {rows.map((row) => (
+        <button
+          key={row.id}
+          type="button"
+          onClick={() => onCase(row.id)}
+          className="w-full rounded-3xl border border-white/35 bg-[#070b12]/75 px-4 py-2 text-left text-[15px] font-semibold leading-snug text-white"
+        >
+          {row.who} · {row.began}
+          <span className="mt-1 block font-normal text-white/80">{row.statusLabel}</span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function NewsCaseDetail({ row, onSource }: { row: NewsCaseRow; onSource: (href: string) => void }) {
+  return (
+    <div className="w-full">
+      <NewsHeading title={`Case #${row.id}`} line={`${row.period} · ${row.began}`} />
+      <div className="mt-6 w-full rounded-2xl border border-white/20 bg-[#070b12]/85 px-5 py-5 text-left">
+        <span className="inline-block rounded-full border border-[#d4af37] px-3 py-1 text-[15px] font-semibold text-[#d4af37]">
+          {row.statusLabel}
+        </span>
+        <p className="mt-4 text-[16px] font-semibold text-white">Who</p>
+        <p className="mt-1 text-[15px] leading-snug text-white/85">{row.who}</p>
+        <p className="mt-4 text-[16px] font-semibold text-white">Date</p>
+        <p className="mt-1 text-[15px] leading-snug text-white/85">
+          Began {row.began} · Ended {row.ended}
+        </p>
+        <p className="mt-4 text-[16px] font-semibold text-white">What they said</p>
+        <p className="mt-1 text-[15px] leading-snug text-white/85">{row.said}</p>
+        <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
+        <p className="mt-1 whitespace-pre-line text-[15px] leading-snug text-white/85">{row.record}</p>
+        {row.correction ? (
+          <>
+            <p className="mt-4 text-[16px] font-semibold text-white">Correction</p>
+            <p className="mt-1 text-[15px] leading-snug text-white/85">{row.correction}</p>
+          </>
+        ) : null}
+        <div className="mt-4 flex flex-wrap gap-2">
+          {row.sources.map((item) => (
+            <button
+              key={item.href}
+              type="button"
+              onClick={() => onSource(item.href)}
+              className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1.5 text-[15px] font-semibold text-white"
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function NewsPeriodLayers({
+  path,
+  onPath,
+  onCase,
+}: {
+  path: string[];
+  onPath: (path: string[]) => void;
+  onCase: (id: string) => void;
+}) {
+  const period = path[0] != null ? NEWS_PERIODS.find((item) => item.key === path[0]) : undefined;
+  const dim = path[1] != null ? NEWS_DIMS.find((item) => item.key === path[1]) : undefined;
+  const value = path[2];
+  const subValue = path[3];
+  const periodRows = period ? NEWS_CASES.filter((row) => row.period === period.key) : NEWS_CASES;
+  const groupRows = dim && value != null ? periodRows.filter((row) => dim.get(row) === value) : periodRows;
+  const valueRows = dim && dim.sub && subValue != null ? groupRows.filter((row) => dim.sub?.(row) === subValue) : groupRows;
+
+  if (period && dim && value != null && (!dim.sub || subValue != null)) {
+    return (
+      <div className="w-full">
+        <NewsHeading
+          title={subValue ?? value}
+          line={`${period.key} · ${subValue != null ? value : dim.title} · ${newsCasesLine(valueRows.length)}`}
+        />
+        <NewsCaseList rows={valueRows} onCase={onCase} />
+      </div>
+    );
+  }
+  if (period && dim) {
+    const names = value != null;
+    const groups = newsCountBy(names ? groupRows : periodRows, dim, names);
+    const open = (label: string) => onPath(names ? [period.key, dim.key, value, label] : [period.key, dim.key, label]);
+    const colors = groups.map((item) =>
+      names ? (item.label === NEWS_NYI ? "#57534e" : (dim.colors[value] ?? dim.fallback)) : (dim.colors[item.label] ?? dim.fallback),
+    );
+    return (
+      <div className="w-full">
+        <NewsHeading
+          title={names ? value : dim.title}
+          line={`${period.key} · ${names ? `${dim.title} · ` : ""}${newsCasesLine(names ? groupRows.length : periodRows.length)}`}
+        />
+        <div className={NEWS_CARD}>
+          <PeriodChart
+            title={`${period.key} ${dim.title} ${value ?? ""}`}
+            labels={groups.map((item) => item.label)}
+            data={groups.map((item) => item.count)}
+            colors={colors}
+            horizontal
+            onPick={(index) => open(groups[index].label)}
+          />
+        </div>
+        <div className="mt-6 flex w-full flex-col gap-2">
+          {groups.map((item) => (
+            <button key={item.label} type="button" onClick={() => open(item.label)} className={`${NEWS_DOOR} text-left`}>
+              {item.label} · {item.count}
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  if (period) {
+    return (
+      <div className="w-full">
+        <NewsHeading title={period.key} line={`${period.range} · ${newsCasesLine(periodRows.length)}`} />
+        <div className="mx-auto mt-8 grid w-full max-w-xl grid-cols-1 gap-3">
+          {NEWS_DIMS.map((item) => (
+            <button key={item.key} type="button" onClick={() => onPath([period.key, item.key])} className={NEWS_DOOR}>
+              {item.title}
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  const periods = NEWS_PERIODS.map((item) => ({
+    ...item,
+    count: NEWS_CASES.filter((row) => row.period === item.key).length,
+  })).filter((item) => item.count > 0 || item.key !== "Date unknown");
+  return (
+    <div className="w-full">
+      <NewsHeading
+        title="Cases by time period"
+        line={`Jan 1, 2015 – Sept 27, 2026 · ${newsCasesLine(NEWS_CASES.length)} (verified, fact-checked, not yet verified)`}
+      />
+      <div className={NEWS_CARD}>
+        <PeriodChart
+          title="Cases by time period"
+          labels={periods.map((item) => item.key)}
+          data={periods.map((item) => item.count)}
+          colors={periods.map(() => "#d4af37")}
+          horizontal={false}
+          onPick={(index) => onPath([periods[index].key])}
+        />
+      </div>
+      <div className="mx-auto mt-6 grid w-full max-w-xl grid-cols-2 gap-3">
+        {periods.map((item) => (
+          <button key={item.key} type="button" onClick={() => onPath([item.key])} className={NEWS_DOOR}>
+            {item.key} · {item.count}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const NEWS_NEVER = NEWS_CASES.filter((row) => row.status === "Verified" && row.correction.startsWith("Never corrected"));
+const NEWS_NEVER_FALSE = NEWS_NEVER.filter((row) => row.evidence === "Proven false");
+const NEWS_NEVER_MISLEADING = NEWS_NEVER.filter((row) => row.evidence === "Rated misleading");
+
+function NewsNeverList({
+  which,
+  onWhich,
+  onCase,
+}: {
+  which: string | null;
+  onWhich: (which: string) => void;
+  onCase: (id: string) => void;
+}) {
+  if (which === "false" || which === "misleading") {
+    const rows = which === "false" ? NEWS_NEVER_FALSE : NEWS_NEVER_MISLEADING;
+    return (
+      <div className="w-full">
+        <NewsHeading
+          title={`Never corrected · ${which === "false" ? "False" : "Misleading"} (${rows.length})`}
+          line={`Verified cases · ${newsCasesLine(rows.length)}`}
+        />
+        <NewsCaseList rows={rows} onCase={onCase} />
+      </div>
+    );
+  }
+  return (
+    <div className="w-full">
+      <NewsHeading
+        title={`Never corrected · ${NEWS_NEVER.length}`}
+        line={`Verified cases never corrected by whoever pushed them · ${NEWS_NEVER_FALSE.length} false / ${NEWS_NEVER_MISLEADING.length} misleading`}
+      />
+      <div className="mx-auto mt-6 grid w-full max-w-xl grid-cols-2 gap-3">
+        <button type="button" onClick={() => onWhich("false")} className={NEWS_DOOR}>
+          False ({NEWS_NEVER_FALSE.length})
+        </button>
+        <button type="button" onClick={() => onWhich("misleading")} className={NEWS_DOOR}>
+          Misleading ({NEWS_NEVER_MISLEADING.length})
+        </button>
+      </div>
+      <NewsCaseList rows={NEWS_NEVER} onCase={onCase} />
+    </div>
+  );
+}
+
+const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: string; views: string; viewCount: number; lean?: string; leanNote?: string; record?: string; said: string; links: { label: string; href: string }[] }[] = [
   {
     "id": "save-row-1",
     "who": "Chuck Schumer",
     "group": "Democratic",
     "where": "X",
     "when": "1:48 PM",
-    "views": "151,430",
+    "views": "156,874",
     "said": "The MAGA Supreme Court strikes again ... thousands of American voters could be wrongly stripped from voter rolls.",
     "links": [
       {
         "label": "source ↗",
         "href": "https://x.com/SenSchumer/status/2103542232418550057"
       }
-    ]
+    ],
+    "viewCount": 156874
   },
   {
     "id": "save-row-2",
@@ -863,14 +1311,15 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Democratic",
     "where": "X",
     "when": "3:41 PM",
-    "views": "644,202",
+    "views": "675,404",
     "said": "This is a blatant attempt to suppress the vote ... Eligible voters will be disenfranchised by this flawed tool.",
     "links": [
       {
         "label": "source ↗",
         "href": "https://x.com/Ilhan/status/2103570490518323329"
       }
-    ]
+    ],
+    "viewCount": 675404
   },
   {
     "id": "save-row-3",
@@ -885,7 +1334,8 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source ↗",
         "href": "https://democrats.org/breaking-scotus-allows-trump-administration-to-access-sensitive-voter-data-opening-the-door-to-more-voter-intimidation-and-suppression/"
       }
-    ]
+    ],
+    "viewCount": 0
   },
   {
     "id": "save-row-4",
@@ -893,7 +1343,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Democratic",
     "where": "Senate Judiciary site + X",
     "when": "Sept 25",
-    "views": "22,009",
+    "views": "22,224 (18,793 + 3,431)",
     "said": "An expansive and flawed database that states can use for potential voter purges ... weaponize an unreliable database.",
     "links": [
       {
@@ -908,7 +1358,8 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source 3 ↗",
         "href": "https://x.com/JudiciaryDems/status/2103595404793417737"
       }
-    ]
+    ],
+    "viewCount": 22224
   },
   {
     "id": "save-row-5",
@@ -923,15 +1374,16 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source ↗",
         "href": "http://larson.house.gov/media-center/press-releases/larson-condemns-supreme-court-decision-allowing-use-trump-voter-purge"
       }
-    ]
+    ],
+    "viewCount": 0
   },
   {
     "id": "save-row-6",
     "who": "Democracy Docket",
-    "group": "Democratic",
+    "group": "Social media",
     "where": "X (also Bluesky, website)",
     "when": "11:44 AM",
-    "views": "1,164,353",
+    "views": "1,069,121",
     "said": "The Supreme Court ruled 6-3 to allow ... voter roll purges using a flawed database. Bluesky copy: 1,571 likes, 990 reposts.",
     "links": [
       {
@@ -946,15 +1398,17 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source 3 ↗",
         "href": "https://www.democracydocket.com/news-alerts/supreme-court-revives-dhs-use-of-flawed-immigration-database-for-voter-purges/"
       }
-    ]
+    ],
+    "viewCount": 1069121,
+    "lean": "Leans Democratic"
   },
   {
     "id": "save-row-7",
     "who": "Marc Elias",
-    "group": "Democratic",
+    "group": "Social media",
     "where": "X",
     "when": "11:48 AM",
-    "views": "588,092",
+    "views": "611,144",
     "said": "The Supreme Court authorized the Trump administration ... to initiate registration purges.",
     "links": [
       {
@@ -965,7 +1419,9 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source 2 ↗",
         "href": "https://elias.law/client-alert/supreme-court-clears-way-for-expanded-save-system/"
       }
-    ]
+    ],
+    "viewCount": 611144,
+    "lean": "Leans Democratic"
   },
   {
     "id": "save-row-8",
@@ -973,14 +1429,15 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Republican/Trump administration",
     "where": "X",
     "when": "2:48 PM",
-    "views": "194,544",
+    "views": "198,581",
     "said": "Huge victory for election integrity! ... [the stay] will allow states to clear the voter rolls of illegal voters.",
     "links": [
       {
         "label": "source ↗",
         "href": "https://x.com/AGToddBlanche/status/2103557217748504767"
       }
-    ]
+    ],
+    "viewCount": 198581
   },
   {
     "id": "save-row-9",
@@ -988,7 +1445,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Republican/Trump administration",
     "where": "dhs.gov + X",
     "when": "Sept 25; X 12:26 PM",
-    "views": "307,861",
+    "views": "310,523",
     "said": "SAVE may be used going forward ... to stop noncitizens from voting illegally.",
     "links": [
       {
@@ -999,7 +1456,8 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source 2 ↗",
         "href": "https://x.com/DHSGenCounsel/status/2103521437407719881"
       }
-    ]
+    ],
+    "viewCount": 310523
   },
   {
     "id": "save-row-10",
@@ -1007,7 +1465,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "News",
     "where": "X + YouTube",
     "when": "Sept 25; YouTube 4:51 PM",
-    "views": "64,641",
+    "views": "64,278",
     "said": "The information in this database is quite inaccurate.",
     "links": [
       {
@@ -1018,7 +1476,8 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source 2 ↗",
         "href": "https://www.youtube.com/watch?v=d50bhF_eTIc"
       }
-    ]
+    ],
+    "viewCount": 64278
   },
   {
     "id": "save-row-11",
@@ -1026,14 +1485,15 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "News",
     "where": "X",
     "when": "Sept 25",
-    "views": "49,063",
+    "views": "49,754",
     "said": "The Court ... could deploy a federal immigration database to check voters' citizenship.",
     "links": [
       {
         "label": "source ↗",
         "href": "https://x.com/WSJ/status/2103582128428462342"
       }
-    ]
+    ],
+    "viewCount": 49754
   },
   {
     "id": "save-row-12",
@@ -1056,7 +1516,8 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source 3 ↗",
         "href": "https://www.livemint.com/news/us-news/trumps-voter-verification-system-returns-what-changed-after-supreme-court-ruling-11790365501392.html"
       }
-    ]
+    ],
+    "viewCount": 0
   },
   {
     "id": "save-row-13",
@@ -1071,7 +1532,8 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source ↗",
         "href": "https://www.motherjones.com/politics/2026/09/supreme-court-save-database/"
       }
-    ]
+    ],
+    "viewCount": 0
   },
   {
     "id": "save-row-14",
@@ -1086,7 +1548,8 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source ↗",
         "href": "https://www.commondreams.org/news/supreme-court-trump-voter-database"
       }
-    ]
+    ],
+    "viewCount": 0
   },
   {
     "id": "save-row-15",
@@ -1101,7 +1564,8 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source ↗",
         "href": "https://www.youtube.com/watch?v=Hk6rFjtridE"
       }
-    ]
+    ],
+    "viewCount": 1800
   },
   {
     "id": "save-row-16",
@@ -1116,7 +1580,8 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source ↗",
         "href": "https://www.naacpldf.org/press-release/ldf-strongly-condemns-the-u-s-supreme-courts-decision-to-restore-trump-administrations-save-database/"
       }
-    ]
+    ],
+    "viewCount": 0
   },
   {
     "id": "save-row-17",
@@ -1131,7 +1596,8 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source ↗",
         "href": "https://www.npr.org/2026/09/25/nx-s1-5976804/supreme-court-trump-save-noncitizen-voting"
       }
-    ]
+    ],
+    "viewCount": 0
   },
   {
     "id": "save-row-18",
@@ -1139,14 +1605,16 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "12:32 PM",
-    "views": "1,287,764",
+    "views": "1,362,243",
     "said": "All illegal voters need to be REMOVED from the voter rolls.",
     "links": [
       {
         "label": "source ↗",
         "href": "https://x.com/libsoftiktok/status/2103523106434285971"
       }
-    ]
+    ],
+    "viewCount": 1362243,
+    "lean": "Leans Republican"
   },
   {
     "id": "save-row-19",
@@ -1154,14 +1622,16 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "11:48 AM",
-    "views": "471,006",
+    "views": "476,667",
     "said": "GREENLIT ... PURGE the voter rolls of illegal voters during the 2026 midterms.",
     "links": [
       {
         "label": "source ↗",
         "href": "https://x.com/EricLDaugh/status/2103512062458515770"
       }
-    ]
+    ],
+    "viewCount": 476667,
+    "lean": "Leans Republican"
   },
   {
     "id": "save-row-20",
@@ -1169,14 +1639,16 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "Sept 25, 3:10 PM",
-    "views": "206,132",
+    "views": "213,129",
     "said": "TRANSLATION… Trump is eliminating illegal alien, non-citizens from the voter rolls and SCOTUS affirmed this effort.",
     "links": [
       {
         "label": "source ↗",
         "href": "https://x.com/CynicalPublius/status/2103562729416171789"
       }
-    ]
+    ],
+    "viewCount": 213129,
+    "lean": "Leans Republican"
   },
   {
     "id": "save-row-21",
@@ -1184,14 +1656,17 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "Sept 25, 12:13 PM",
-    "views": "158,326",
+    "views": "178,183",
     "said": "Chinese-language post (2,362 likes, 481 reposts); in English: The Supreme Court, by a 6-3 absolute advantage, officially gave the green light! Approved the Trump administration's fully upgraded SAVE citizenship-verification database! This means every state in the country finally has an imperial sword and can freely and drastically clean illegal voters from the voter rolls!",
     "links": [
       {
         "label": "source ↗",
         "href": "https://x.com/Baoliaogeming64/status/2103518355567100142"
       }
-    ]
+    ],
+    "viewCount": 178183,
+    "lean": "Not yet identified",
+    "leanNote": "X About page: based in United States; joined Dec 2020; verified since Dec 2022; 1 username change (Jul 2021); connected via US App Store."
   },
   {
     "id": "save-row-22",
@@ -1199,7 +1674,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "10:23 PM",
-    "views": "290,657",
+    "views": "327,657 (post 1: 263,910; post 2: 63,747)",
     "said": "I'm asking county recorders and election officials to contact DHS for the free SAVE database ...",
     "links": [
       {
@@ -1210,7 +1685,9 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "label": "source 2 ↗",
         "href": "https://x.com/ScottPresler/status/2103680373335175174"
       }
-    ]
+    ],
+    "viewCount": 327657,
+    "lean": "Leans Republican"
   },
   {
     "id": "save-row-23",
@@ -1218,14 +1695,17 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "Sept 26, 7:21 PM",
-    "views": "507",
+    "views": "532",
     "said": "DOGE-enhanced federal SAVE database ... is GREENLIT ... Clean the rolls.",
     "links": [
       {
         "label": "source ↗",
         "href": "https://x.com/derekjonhsonn/status/2103988486260892098"
       }
-    ]
+    ],
+    "viewCount": 532,
+    "lean": "Leans Republican",
+    "leanNote": "Self-describes as pro-Trump/MAGA. Not yet verified."
   },
   {
     "id": "save-row-24",
@@ -1233,39 +1713,72 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "Sept 26, 7:57 PM",
-    "views": "179",
+    "views": "574",
     "said": "SAVE Database to purge illegal aliens from voter rolls.",
     "links": [
       {
         "label": "source ↗",
         "href": "https://x.com/MelG_Gibson/status/2103997295867916796"
       }
-    ]
+    ],
+    "viewCount": 574,
+    "lean": "Leans Republican",
+    "leanNote": "Self-describes as pro-Trump/MAGA. Not yet verified."
   },
   {
     "id": "save-row-25",
-    "who": "Josh Howerton",
+    "who": "Josh Howerton (commentaryhower)",
     "group": "Social media",
     "where": "X",
     "when": "Sept 26, 7:58 PM",
-    "views": "253",
+    "views": "278",
     "said": "The 6–3 is the green light. Drive it. Purge the rolls.",
     "links": [
       {
         "label": "source ↗",
         "href": "https://x.com/commentaryhower/status/2103997664874332287"
       }
-    ]
+    ],
+    "viewCount": 278,
+    "lean": "Not yet identified"
+  },
+  {
+    "id": "save-row-26",
+    "who": "@AsFoundX",
+    "group": "Social media",
+    "where": "X",
+    "when": "Sept 27, 2026, 10:29 AM ET",
+    "views": "11,989",
+    "said": "SUPREME COURT GREENLIGHTS DOGE VOTER ROLL CLEANUP… approved the DOGE-enhanced SAVE database… designed to purge",
+    "links": [
+      {
+        "label": "source ↗",
+        "href": "https://x.com/AsFoundX/status/2104216742008418370"
+      }
+    ],
+    "viewCount": 11989,
+    "lean": "Not yet identified",
+    "record": "Order only stays the lower-court ruling pending appeal; approves no cleanup."
   }
 ];
 
-const SAVE_SOURCE_IDS = ["save-row-18","save-row-6","save-row-2","save-row-7","save-row-19","save-row-9","save-row-22","save-row-20","save-row-8","save-row-21","save-row-1","save-row-10","save-row-11","save-row-4","save-row-15","save-row-23","save-row-25","save-row-24","save-row-3","save-row-5","save-row-12","save-row-13","save-row-14","save-row-16","save-row-17"];
-const SAVE_SOURCE_LABELS = ["Libs of TikTok — 1,287,764 views","Democracy Docket — 1,164,353 views","Ilhan Omar — 644,202 views","Marc Elias — 588,092 views","Eric Daugherty — 471,006 views","DHS (James Percival) — 307,861 views","Scott Presler — 290,657 views","CynicalPublius — 206,132 views","AG Todd Blanche — 194,544 views","Baoliaogeming64 — 158,326 views","Chuck Schumer — 151,430 views","NBC News — 64,641 views","Wall Street Journal — 49,063 views","Sen. Dick Durbin — 22,009 views","Real America's Voice — 1,800 views","derekjonhsonn — 507 views","Josh Howerton — 253 views","MelG_Gibson — 179 views","DNC chair Ken Martin — views not published","Rep. John Larson — views not published","Reuters — views not published","Mother Jones — views not published","Common Dreams — views not published","NAACP Legal Defense Fund — views not published","League of Women Voters & EPIC (plaintiffs) — views not published"];
-const SAVE_SOURCE_DATA = [1287764,1164353,644202,588092,471006,307861,290657,206132,194544,158326,151430,64641,49063,22009,1800,507,253,179,0,0,0,0,0,0,0];
-const SAVE_SOURCE_COLORS = ["#f59e0b","#2563eb","#2563eb","#2563eb","#f59e0b","#dc2626","#f59e0b","#f59e0b","#dc2626","#f59e0b","#2563eb","#a3a3a3","#a3a3a3","#2563eb","#a3a3a3","#f59e0b","#f59e0b","#f59e0b","#2563eb","#2563eb","#a3a3a3","#a3a3a3","#a3a3a3","#0f766e","#0f766e"];
 const SAVE_GROUP_LABELS = ["Democratic","Republican/Trump administration","News","Advocacy","Social media"];
-const SAVE_GROUP_DATA = [7,2,6,2,8];
 const SAVE_GROUP_COLORS = ["#2563eb","#dc2626","#a3a3a3","#0f766e","#f59e0b"];
+const SAVE_SOCIAL_INDEX = SAVE_GROUP_LABELS.indexOf("Social media");
+const SAVE_BY_VIEWS = [...SAVE_ROWS].sort((a, b) => b.viewCount - a.viewCount);
+const SAVE_SOURCE_IDS = SAVE_BY_VIEWS.map((row) => row.id);
+const SAVE_SOURCE_LABELS = SAVE_BY_VIEWS.map(
+  (row) => `${row.who} — ${row.viewCount ? `${row.viewCount.toLocaleString("en-US")} views` : "views not published"}`,
+);
+const SAVE_SOURCE_DATA = SAVE_BY_VIEWS.map((row) => row.viewCount);
+const SAVE_SOURCE_COLORS = SAVE_BY_VIEWS.map((row) => SAVE_GROUP_COLORS[SAVE_GROUP_LABELS.indexOf(row.group)] ?? "#a3a3a3");
+const SAVE_GROUP_DATA = SAVE_GROUP_LABELS.map((group) => SAVE_ROWS.filter((row) => row.group === group).length);
+const SAVE_LEAN_LABELS = ["Leans Democratic","Leans Republican","Not yet identified"];
+const SAVE_LEAN_COLORS = ["#2563eb","#dc2626","#a3a3a3"];
+const SAVE_LEAN_DATA = SAVE_LEAN_LABELS.map(
+  (lean) => SAVE_ROWS.filter((row) => row.group === "Social media" && row.lean === lean).length,
+);
+const SAVE_LEAN_KEYS = SAVE_LEAN_LABELS.map((label, index) => ({ label, color: SAVE_LEAN_COLORS[index] }));
 const SAVE_KEYS = [
   { label: "Democratic", color: "#2563eb" },
   { label: "Republican/Trump administration", color: "#dc2626" },
@@ -1314,14 +1827,14 @@ function SaveChart({
           responsive: true,
           maintainAspectRatio: false,
           indexAxis: horizontal ? "y" : "x",
-          plugins: { legend: { display: false } },
+          plugins: { legend: { display: false }, tooltip: { titleFont: { size: 15 }, bodyFont: { size: 15 } } },
           scales: {
             x: horizontal
-              ? { beginAtZero: true, ticks: { color: "#e8e0d0" } }
-              : { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false } },
+              ? { beginAtZero: true, ticks: { color: "#e8e0d0", font: { size: 15 } } }
+              : { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false, font: { size: 15 } } },
             y: horizontal
-              ? { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false } }
-              : { beginAtZero: true, ticks: { color: "#e8e0d0" } },
+              ? { grid: { display: false }, ticks: { color: "#e8e0d0", autoSkip: false, font: { size: 15 } } }
+              : { beginAtZero: true, ticks: { color: "#e8e0d0", font: { size: 15 } } },
           },
           onClick: (_event: unknown, elements: { index: number }[]) => {
             if (elements.length) pickRef.current(elements[0].index);
@@ -1368,6 +1881,35 @@ function Betrayal() {
   const [aside, setAside] = useState<null | "standard" | "record">(null);
   const [deception, setDeception] = useState<string | null>(null);
   const [spot, setSpot] = useState<null | "cable" | "trump" | "podcasts" | "cspan">(null);
+  const newsBack = () => {
+    if (newsSource) {
+      setNewsSource(null);
+      return;
+    }
+    if (newsCase) {
+      setNewsCase(null);
+      return;
+    }
+    if (newsMethod && newsMethod.startsWith("chart-term:")) {
+      const path = newsPath(newsMethod.slice("chart-term:".length));
+      setNewsMethod(path.length > 1 ? `chart-term:${JSON.stringify(path.slice(0, -1))}` : "chart-term");
+      return;
+    }
+    if (newsMethod && newsMethod.startsWith("chart-evidence:never")) {
+      setNewsMethod(newsMethod === "chart-evidence:never" ? "chart-evidence" : "chart-evidence:never");
+      return;
+    }
+    if (newsMethod && newsMethod.includes(":")) {
+      setNewsMethod(newsMethod.slice(0, newsMethod.indexOf(":")));
+      return;
+    }
+    if (newsMethod) {
+      setNewsMethod(null);
+      return;
+    }
+    setLayer("fake");
+  };
+  const newsMine = !!newsMethod && (newsMethod.startsWith("chart-term") || newsMethod.startsWith("chart-evidence:never"));
   const buttons = layer === "root" ? ["Fake News", "Lawfare"] : LAYERS[layer].buttons;
 
   return (
@@ -1578,6 +2120,10 @@ function Betrayal() {
                   setSaveSource(null);
                   return;
                 }
+                if (saveBar && saveBar.startsWith("lean:")) {
+                  setSaveBar(`group:${SAVE_SOCIAL_INDEX}`);
+                  return;
+                }
                 if (saveBar) {
                   setSaveBar(null);
                   return;
@@ -1602,7 +2148,20 @@ function Betrayal() {
                 {SAVE_ROWS.filter((row) => row.id === saveSource).map((row) => (
                   <div key={row.id} className="w-full text-left">
                     <p className="text-[16px] font-semibold text-white">{row.who}</p>
+                    <p className="mt-1 text-[15px] text-white/75">
+                      {row.group}
+                      {row.lean ? ` · ${row.lean}` : ""} · {row.where} · {row.when} · {row.views}
+                      {row.viewCount ? " views" : ""}
+                    </p>
+                    {row.leanNote && <p className="mt-1 text-[15px] text-white/75">{row.leanNote}</p>}
+                    <p className="mt-4 text-[16px] font-semibold text-white">What they said</p>
                     <p className="mt-2 text-[15px] leading-snug text-white/85">{row.said}</p>
+                    {row.record && (
+                      <>
+                        <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
+                        <p className="mt-2 text-[15px] leading-snug text-white/85">{row.record}</p>
+                      </>
+                    )}
                     <div className="mt-4 flex flex-wrap gap-2">
                       {row.links.map((link) => (
                         <button
@@ -1623,10 +2182,45 @@ function Betrayal() {
                 {(() => {
                   const [kind, indexText] = saveBar.split(":");
                   const index = Number(indexText);
+                  if (kind === "group" && index === SAVE_SOCIAL_INDEX) {
+                    return (
+                      <>
+                        <p className="text-center text-[16px] font-semibold text-white">
+                          Social media · {SAVE_GROUP_DATA[index]}
+                        </p>
+                        <SaveChart
+                          title="Social media by party lean"
+                          labels={SAVE_LEAN_LABELS}
+                          data={SAVE_LEAN_DATA}
+                          colors={SAVE_LEAN_COLORS}
+                          horizontal={false}
+                          tall={false}
+                          keys={SAVE_LEAN_KEYS}
+                          onPick={(pick) => setSaveBar(`lean:${pick}`)}
+                        />
+                        {SAVE_LEAN_LABELS.map((label, pick) => (
+                          <button
+                            key={label}
+                            type="button"
+                            onClick={() => setSaveBar(`lean:${pick}`)}
+                            className="w-full rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-2 text-[15px] font-semibold text-white"
+                          >
+                            {label} · {SAVE_LEAN_DATA[pick]}
+                          </button>
+                        ))}
+                      </>
+                    );
+                  }
                   const rows = kind === "sources"
                     ? SAVE_ROWS.filter((row) => row.id === SAVE_SOURCE_IDS[index])
-                    : SAVE_ROWS.filter((row) => row.group === SAVE_GROUP_LABELS[index]);
-                  const heading = kind === "sources" ? SAVE_SOURCE_LABELS[index] : `${SAVE_GROUP_LABELS[index]} · ${SAVE_GROUP_DATA[index]}`;
+                    : kind === "lean"
+                      ? SAVE_ROWS.filter((row) => row.group === "Social media" && row.lean === SAVE_LEAN_LABELS[index])
+                      : SAVE_ROWS.filter((row) => row.group === SAVE_GROUP_LABELS[index]);
+                  const heading = kind === "sources"
+                    ? SAVE_SOURCE_LABELS[index]
+                    : kind === "lean"
+                      ? `Social media · ${SAVE_LEAN_LABELS[index]} · ${SAVE_LEAN_DATA[index]}`
+                      : `${SAVE_GROUP_LABELS[index]} · ${SAVE_GROUP_DATA[index]}`;
                   return (
                     <>
                       <p className="text-center text-[16px] font-semibold text-white">{heading}</p>
@@ -1634,13 +2228,11 @@ function Betrayal() {
                         <button
                           key={row.id}
                           type="button"
-                          onClick={() => {
-                            if (row.links.length === 1) setSaveHref(row.links[0].href);
-                            else setSaveSource(row.id);
-                          }}
+                          onClick={() => setSaveSource(row.id)}
                           className="w-full rounded-3xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] font-semibold leading-snug text-white"
                         >
                           {row.who} · {row.when} · {row.views}
+                          {row.lean === "Leans Republican" && row.leanNote ? " · Lean not yet verified" : ""}
                           <span className="mt-1 block font-normal">{row.said}</span>
                         </button>
                       ))}
@@ -1651,14 +2243,14 @@ function Betrayal() {
             ) : (
               <div className="mt-8 flex w-full flex-col items-center gap-8">
                 <div className="grid w-full grid-cols-2 gap-6 text-center">
-                  <p className="text-[28px] font-bold text-white">25<span className="mt-1 block text-[16px] font-semibold">people and organizations</span></p>
-                  <p className="text-[28px] font-bold text-white">5,715,771<span className="mt-1 block text-[16px] font-semibold">views</span></p>
+                  <p className="text-[28px] font-bold text-white">{SAVE_ROWS.length}<span className="mt-1 block text-[16px] font-semibold">people and organizations</span></p>
+                  <p className="text-[28px] font-bold text-white"><span className="block text-[16px] font-semibold">At least</span>5,727,760<span className="mt-1 block text-[16px] font-semibold">views</span></p>
                   <p className="text-[28px] font-bold text-white">0<span className="mt-1 block text-[16px] font-semibold">fact-checks</span></p>
                   <p className="text-[16px] font-semibold text-white">Already shaping public opinion.</p>
                 </div>
-                <p className="text-[15px] text-white/80">as of Sept. 27, 2026, 12:38 PM MT</p>
+                <p className="text-[15px] text-white/80">as of Sept. 27, 2026, 1:06 PM MT</p>
                 <SaveChart
-                  title="All 25 sources, sorted by views"
+                  title={`All ${SAVE_ROWS.length} sources, sorted by views`}
                   labels={SAVE_SOURCE_LABELS}
                   data={SAVE_SOURCE_DATA}
                   colors={SAVE_SOURCE_COLORS}
@@ -1686,25 +2278,7 @@ function Betrayal() {
             {(newsMethod || newsCase || newsSource) && (
             <button
               type="button"
-              onClick={() => {
-                if (newsSource) {
-                  setNewsSource(null);
-                  return;
-                }
-                if (newsCase) {
-                  setNewsCase(null);
-                  return;
-                }
-                if (newsMethod && newsMethod.includes(":")) {
-                  setNewsMethod(newsMethod.slice(0, newsMethod.indexOf(":")));
-                  return;
-                }
-                if (newsMethod) {
-                  setNewsMethod(null);
-                  return;
-                }
-                setLayer("fake");
-              }}
+              onClick={newsBack}
               className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
             >
               {newsMethod && !newsMethod.includes(":") && !newsCase && !newsSource
@@ -1719,10 +2293,18 @@ function Betrayal() {
                     newsEvidence.methods
                       .flatMap((item) => item.cases)
                       .flatMap((item) => item.sources)
-                      .find((item) => item.href === newsSource)?.label ?? newsSource
+                      .find((item) => item.href === newsSource)?.label ??
+                    NEWS_CASES.flatMap((item) => item.sources).find((item) => item.href === newsSource)?.label ??
+                    newsSource
                   }
                   href={newsSource}
                 />
+              </div>
+            ) : newsCase && newsMine ? (
+              <div className="w-full">
+                {NEWS_CASES.filter((row) => row.id === newsCase).map((row) => (
+                  <NewsCaseDetail key={row.id} row={row} onSource={setNewsSource} />
+                ))}
               </div>
             ) : newsCase ? (
               <div className="mt-8 w-full text-left">
@@ -1749,6 +2331,24 @@ function Betrayal() {
                   </div>
                 ))}
               </div>
+            ) : newsMethod && (newsMethod === "chart-term" || newsMethod.startsWith("chart-term:")) ? (
+              <NewsPeriodLayers
+                path={newsMethod === "chart-term" ? [] : newsPath(newsMethod.slice("chart-term:".length))}
+                onPath={(path) => setNewsMethod(`chart-term:${JSON.stringify(path)}`)}
+                onCase={(id) => {
+                  setNewsSource(null);
+                  setNewsCase(id);
+                }}
+              />
+            ) : newsMethod && newsMethod.startsWith("chart-evidence:never") ? (
+              <NewsNeverList
+                which={newsMethod === "chart-evidence:never" ? null : newsMethod.slice("chart-evidence:never:".length)}
+                onWhich={(which) => setNewsMethod(`chart-evidence:never:${which}`)}
+                onCase={(id) => {
+                  setNewsSource(null);
+                  setNewsCase(id);
+                }}
+              />
             ) : newsMethod && newsMethod.includes(":") ? (
               <div className="mt-8 w-full">
                 {(() => {
@@ -1798,6 +2398,11 @@ function Betrayal() {
                         setNewsSource(null);
                         setNewsCase(null);
                         setNewsMethod(`${spec.id}:${index}`);
+                      }}
+                      onNever={() => {
+                        setNewsSource(null);
+                        setNewsCase(null);
+                        setNewsMethod("chart-evidence:never");
                       }}
                     />
                   </div>
@@ -2292,6 +2897,10 @@ function Betrayal() {
                   setMethod(null);
                   return;
                 }
+                if (layer === "evidence") {
+                  newsBack();
+                  return;
+                }
                 if (newsSource) {
                   setNewsSource(null);
                   return;
@@ -2314,6 +2923,10 @@ function Betrayal() {
                 }
                 if (saveSource) {
                   setSaveSource(null);
+                  return;
+                }
+                if (saveBar && saveBar.startsWith("lean:")) {
+                  setSaveBar(`group:${SAVE_SOCIAL_INDEX}`);
                   return;
                 }
                 if (saveBar) {
