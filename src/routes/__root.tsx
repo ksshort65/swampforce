@@ -18,7 +18,7 @@ export const Route = createRootRoute({
           "Both parties failed. They do not represent the American people. No surplus since Clinton. Fraud door open.",
       },
       { name: "theme-color", content: "#0b0b0b" },
-      { name: "author", content: "Renee Stewart" },
+      { name: "author", content: "SwampForce Editor" },
       { property: "og:url", content: "https://swampforce.grok.me/" },
       { property: "og:title", content: "Both parties failed. — Swamp Force" },
       {
