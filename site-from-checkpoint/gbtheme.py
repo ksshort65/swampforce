@@ -57,6 +57,16 @@ body:has(.gb-hero.top) .site-header{background:linear-gradient(rgba(0,0,0,.72),r
 .home-tiles .gb-card img{aspect-ratio:16/10;object-fit:cover}
 .gb-sub{padding:0 1rem 1rem;margin:0;font:13px/1.4 ui-sans-serif,system-ui;color:#a39e93}
 .store-line{background:transparent!important;color:#e8e0d0!important;border:1px solid #2a2a2a!important;font-size:11px!important}
+/* filter chips + selects: readable on black */
+.chip.btnchip{background:#141414!important;color:#ece8dc!important;border:1px solid #8a857a!important}
+.chip.btnchip:hover{border-color:#e8e0d0!important}
+.chip.btnchip.active,.chip.btnchip[aria-pressed="true"]{background:#e8e0d0!important;color:#0b0b0b!important;border-color:#e8e0d0!important}
+.chip-lbl{color:#c9c3b6!important}
+select,input,textarea{background:#141414!important;color:#ece8dc!important;border:1px solid #8a857a!important}
+select option{background:#141414;color:#ece8dc}
+.muted,.sub,.small{color:#b5afa3}
+.fr-k,.linkbtn,.flip-hint,p.control,.why-buy h3{color:#f87171!important}
+.answer-tag{color:#e8e0d0!important}
 .gb-card h3{font:700 1.2rem ui-sans-serif,system-ui;text-transform:uppercase;padding:0 1rem;color:#ece8dc}
 """
 
@@ -79,16 +89,22 @@ def _dark(c):  # light panel -> Grok Build card (tinted panels keep a faint hue)
         return "#%02x%02x%02x" % tuple(int(x * .16) for x in v[:3])
     return "#141414"
 
+def _light(c):  # dark text -> readable on black (tinted colours keep their hue)
+    v = _rgb(c)
+    if v and max(v[:3]) - min(v[:3]) > 40:
+        return "#%02x%02x%02x" % tuple(int(255 - (255 - x) * .4) for x in v[:3])
+    return "#ece8dc"
+
 def run():
     css = (OUT / "assets" / "style.css").read_text(encoding="utf-8")
     for k, v in VARS.items():
         css = re.sub(r"(\n\s*" + re.escape(k) + r"\s*:)[^;]*;", lambda m: m.group(1) + " " + v + ";", css, count=1)
     css = re.sub(r"(background(?:-color)?\s*:\s*)(" + LIGHT + ")", r"\1#141414", css)
     css = re.sub(r"((?<![-\w])background(?:-image)?\s*:)([^;}]*gradient[^;}]*)", lambda m: m.group(1) + re.sub(r"#[0-9a-fA-F]{3,6}\b|rgba?\([^)]*\)", lambda k: _dark(k.group(0)) if _lum(k.group(0)) > .72 else k.group(0), m.group(2)), css)
-    css = re.sub(r"((?<![-\w])color\s*:\s*)var\(--(navy|navy-2|cream)\)", r"\1var(--ink)", css)
+    css = re.sub(r"((?<![-\w])color\s*:\s*)var\(--(navy|navy-2|navy-3|navy-glow|cream|line)\)", r"\1var(--ink)", css)
     css = re.sub(r"((?<![-\w])color\s*:\s*)(" + DARKTXT + ")", r"\1#ece8dc", css)
     css = re.sub(r"((?<![-\w])background(?:-color)?\s*:\s*)(#[0-9a-fA-F]{3,6}\b|rgba?\([^)]*\))", lambda m: m.group(1) + (_dark(m.group(2)) if _lum(m.group(2)) > .72 else m.group(2)), css)
-    css = re.sub(r"((?<![-\w])color\s*:\s*)(#[0-9a-fA-F]{3,6}\b|rgba?\([^)]*\))", lambda m: m.group(1) + ("#ece8dc" if _lum(m.group(2)) < .3 and not _alpha_low(m.group(2)) else m.group(2)), css)
+    css = re.sub(r"((?<![-\w])color\s*:\s*)(#[0-9a-fA-F]{3,6}\b|rgba?\([^)]*\))", lambda m: m.group(1) + (_light(m.group(2)) if _lum(m.group(2)) < .38 and not _alpha_low(m.group(2)) else m.group(2)), css)
     (OUT / "assets" / "grokbuild.css").write_text(css + EXTRA, encoding="utf-8")
     for f in OUT.rglob("*.html"):
         t = f.read_text(encoding="utf-8")
