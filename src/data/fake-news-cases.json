@@ -321,7 +321,12 @@
   "networkName": "ABC News",
   "network": "ABC News",
   "party": "News outlets",
-  "person": "George Stephanopoulos"
+  "person": "George Stephanopoulos",
+  "classification": {
+   "role": "Anchor",
+   "platforms": [],
+   "basis": "Case names George Stephanopoulos in an ABC News interview he conducted as host."
+  }
  },
  {
   "id": "17",
@@ -409,7 +414,14 @@
   "networkName": "Not yet identified",
   "network": "Not yet identified",
   "party": "News outlets",
-  "person": "Kamala Harris"
+  "person": "Kamala Harris",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Kamala Harris tweet.”"
+  }
  },
  {
   "id": "23",
@@ -601,7 +613,14 @@
   "networkName": "Biden campaign",
   "network": "Not yet identified",
   "party": "Campaigns",
-  "person": "Joe Biden"
+  "person": "Joe Biden",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Joe Biden (X post and statements).”"
+  }
  },
  {
   "id": "32",
@@ -661,7 +680,14 @@
   "networkName": "Keith Ellison",
   "network": "Not yet identified",
   "party": "Democratic",
-  "person": "Keith Ellison"
+  "person": "Keith Ellison",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Rep. Keith Ellison (tweet).”"
+  }
  },
  {
   "id": "35",
@@ -1265,7 +1291,12 @@
   "networkName": "Der Spiegel",
   "network": "Der Spiegel",
   "party": "News outlets",
-  "person": "Claas Relotius"
+  "person": "Claas Relotius",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case text: “Der Spiegel reporter Claas Relotius.”"
+  }
  },
  {
   "id": "72",
@@ -1293,7 +1324,12 @@
   "networkName": "The Washington Post",
   "network": "The Washington Post",
   "party": "News outlets",
-  "person": "Paulina Firozi"
+  "person": "Paulina Firozi",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names Paulina Firozi’s Washington Post piece."
+  }
  },
  {
   "id": "78",
@@ -1421,7 +1457,14 @@
   "networkName": "The New York Times",
   "network": "The New York Times",
   "party": "News outlets",
-  "person": "Jonathan Weisman"
+  "person": "Jonathan Weisman",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “June 2017 tweet.”"
+  }
  },
  {
   "id": "85",
@@ -1581,7 +1624,14 @@
   "networkName": "Democratic National Committee",
   "network": "Not yet identified",
   "party": "Democratic",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “celebrity/journalist retweets.”"
+  }
  },
  {
   "id": "99",
@@ -1709,7 +1759,14 @@
   "networkName": "Kamala Harris",
   "network": "Not yet identified",
   "party": "Democratic",
-  "person": "Kamala Harris"
+  "person": "Kamala Harris",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Source: Washington Post on the Harris tax tweet."
+  }
  },
  {
   "id": "112",
@@ -1837,7 +1894,14 @@
   "networkName": "White House (@WhiteHouse under Biden)",
   "network": "Not yet identified",
   "party": "Democratic",
-  "person": "Joe Biden"
+  "person": "Joe Biden",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Source: the @WhiteHouse post on x.com."
+  }
  },
  {
   "id": "119",
@@ -1905,7 +1969,14 @@
   "networkName": "Harris-Walz campaign",
   "network": "Not yet identified",
   "party": "Campaigns",
-  "person": "Kamala Harris"
+  "person": "Kamala Harris",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “tweet labeled ‘Fact’.”"
+  }
  },
  {
   "id": "126",
@@ -2069,7 +2140,14 @@
   "networkName": "Tristan Snell",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Tristan Snell"
+  "person": "Tristan Snell",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “commentator/attorney on X.”"
+  }
  },
  {
   "id": "134",
@@ -2165,7 +2243,14 @@
   "networkName": "Viral / anonymous accounts",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Viral X posts.”"
+  }
  },
  {
   "id": "141",
@@ -2197,7 +2282,14 @@
   "networkName": "Viral / anonymous accounts",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “X, Facebook, and Threads users.”"
+  }
  },
  {
   "id": "142",
@@ -2229,7 +2321,14 @@
   "networkName": "Viral / anonymous accounts",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Threads, Facebook, and X users.”"
+  }
  },
  {
   "id": "146",
@@ -2261,7 +2360,12 @@
   "networkName": "The Guardian",
   "network": "The Guardian",
   "party": "News outlets",
-  "person": "Aaron Glantz"
+  "person": "Aaron Glantz",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names Aaron Glantz’s Guardian story."
+  }
  },
  {
   "id": "154",
@@ -2325,7 +2429,14 @@
   "networkName": "Viral / anonymous accounts",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “X posts with misleading captions.”"
+  }
  },
  {
   "id": "156",
@@ -2357,7 +2468,14 @@
   "networkName": "Viral / anonymous accounts",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “X amplifiers.”"
+  }
  },
  {
   "id": "157",
@@ -2549,7 +2667,14 @@
   "networkName": "Kamala Harris",
   "network": "Not yet identified",
   "party": "Democratic",
-  "person": "Kamala Harris"
+  "person": "Kamala Harris",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Harris/Casey tweets.”"
+  }
  },
  {
   "id": "177",
@@ -3697,7 +3822,12 @@
   "networkName": "CNBC",
   "network": "CNBC",
   "party": "News outlets",
-  "person": "Kevin Breuninger"
+  "person": "Kevin Breuninger",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names Kevin Breuninger’s CNBC story."
+  }
  },
  {
   "id": "229",
@@ -3725,7 +3855,12 @@
   "networkName": "Associated Press",
   "network": "Associated Press",
   "party": "News outlets",
-  "person": "Nicholas Riccardi"
+  "person": "Nicholas Riccardi",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names Nicholas Riccardi’s AP story."
+  }
  },
  {
   "id": "233",
@@ -3785,7 +3920,12 @@
   "networkName": "TIME",
   "network": "TIME",
   "party": "News outlets",
-  "person": "Callum Sutherland"
+  "person": "Callum Sutherland",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names TIME’s Callum Sutherland and Olivia-Anne Cleary."
+  }
  },
  {
   "id": "253",
@@ -3813,7 +3953,12 @@
   "networkName": "NPR",
   "network": "NPR",
   "party": "News outlets",
-  "person": "David Folkenflik"
+  "person": "David Folkenflik",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names David Folkenflik’s NPR story."
+  }
  },
  {
   "id": "254",
@@ -3845,7 +3990,14 @@
   "networkName": "Donald Trump",
   "network": "Not yet identified",
   "party": "Republican",
-  "person": "Donald Trump"
+  "person": "Donald Trump",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Twitter post.”"
+  }
  },
  {
   "id": "255",
@@ -4001,7 +4153,14 @@
   "networkName": "Viral / anonymous accounts",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Donald Trump"
+  "person": "Donald Trump",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “shared by Donald Trump on Twitter.”"
+  }
  },
  {
   "id": "260",
@@ -4189,7 +4348,14 @@
   "networkName": "Jon Favreau",
   "network": "Not yet identified",
   "party": "Democratic",
-  "person": "Jon Favreau"
+  "person": "Jon Favreau",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Source: PolitiFact, “Democrats mistakenly tweeted.”"
+  }
  },
  {
   "id": "4",
@@ -4333,7 +4499,12 @@
   "networkName": "ABC News",
   "network": "ABC News",
   "party": "News outlets",
-  "person": "Brian Ross"
+  "person": "Brian Ross",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names Brian Ross’s ABC News special report."
+  }
  },
  {
   "id": "19",
@@ -4389,7 +4560,14 @@
   "networkName": "NBC News",
   "network": "NBC News",
   "party": "News outlets",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “NBC News (June 2017 tweet).”"
+  }
  },
  {
   "id": "22",
@@ -4445,7 +4623,14 @@
   "networkName": "The New York Times",
   "network": "The New York Times",
   "party": "News outlets",
-  "person": "Jake Silverstein"
+  "person": "Jake Silverstein",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “retweeted 2014 photos.”"
+  }
  },
  {
   "id": "29",
@@ -4473,7 +4658,14 @@
   "networkName": "Antonio Villaraigosa",
   "network": "Not yet identified",
   "party": "Democratic",
-  "person": "Antonio Villaraigosa"
+  "person": "Antonio Villaraigosa",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Tweet expressing horror.”"
+  }
  },
  {
   "id": "30",
@@ -4529,7 +4721,12 @@
   "networkName": "MSNBC",
   "network": "MSNBC",
   "party": "News outlets",
-  "person": "Lawrence O’Donnell"
+  "person": "Lawrence O’Donnell",
+  "classification": {
+   "role": "Anchor",
+   "platforms": [],
+   "basis": "Case names Lawrence O’Donnell on his MSNBC broadcast."
+  }
  },
  {
   "id": "37",
@@ -4557,7 +4754,12 @@
   "networkName": "TIME",
   "network": "TIME",
   "party": "News outlets",
-  "person": "Zeke Miller"
+  "person": "Zeke Miller",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case text: “pool reporter Zeke Miller.”"
+  }
  },
  {
   "id": "38",
@@ -4837,7 +5039,12 @@
   "networkName": "MSNBC",
   "network": "MSNBC",
   "party": "News outlets",
-  "person": "Nicolle Wallace"
+  "person": "Nicolle Wallace",
+  "classification": {
+   "role": "Anchor",
+   "platforms": [],
+   "basis": "Case names Nicolle Wallace on MSNBC."
+  }
  },
  {
   "id": "63",
@@ -4865,7 +5072,12 @@
   "networkName": "NBC News",
   "network": "NBC News",
   "party": "News outlets",
-  "person": "Chuck Todd"
+  "person": "Chuck Todd",
+  "classification": {
+   "role": "Anchor",
+   "platforms": [],
+   "basis": "Case names Chuck Todd on NBC Meet the Press."
+  }
  },
  {
   "id": "64",
@@ -4893,7 +5105,14 @@
   "networkName": "The Washington Post",
   "network": "The Washington Post",
   "party": "News outlets",
-  "person": "Dave Weigel"
+  "person": "Dave Weigel",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case names Dave Weigel, Washington Post. Case text: “Dec. 8, 2017 tweet.”"
+  }
  },
  {
   "id": "65",
@@ -5005,7 +5224,12 @@
   "networkName": "Yahoo News",
   "network": "Yahoo News",
   "party": "News outlets",
-  "person": "Hunter Walker"
+  "person": "Hunter Walker",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names Hunter Walker, Yahoo News, questioning Trump in the Oval Office."
+  }
  },
  {
   "id": "71",
@@ -5061,7 +5285,12 @@
   "networkName": "CNN",
   "network": "CNN",
   "party": "News outlets",
-  "person": "Pamela Brown"
+  "person": "Pamela Brown",
+  "classification": {
+   "role": "Anchor",
+   "platforms": [],
+   "basis": "Case names CNN segments by Anderson Cooper and Michael Smerconish (also Pamela Brown)."
+  }
  },
  {
   "id": "74",
@@ -5241,7 +5470,12 @@
   "networkName": "CNN",
   "network": "CNN",
   "party": "News outlets",
-  "person": "Jeff Zeleny"
+  "person": "Jeff Zeleny",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names Jeff Zeleny, CNN."
+  }
  },
  {
   "id": "83",
@@ -5637,7 +5871,14 @@
   "networkName": "AFP",
   "network": "AFP",
   "party": "News outlets",
-  "person": "Bernie Sanders"
+  "person": "Bernie Sanders",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Sen. Bernie Sanders (tweet later deleted).”"
+  }
  },
  {
   "id": "107",
@@ -5669,7 +5910,12 @@
   "networkName": "Newsweek",
   "network": "Newsweek",
   "party": "News outlets",
-  "person": "Jessica Kwong"
+  "person": "Jessica Kwong",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names Newsweek’s Jessica Kwong; source says the reporter was fired."
+  }
  },
  {
   "id": "108",
@@ -5701,7 +5947,14 @@
   "networkName": "BBC",
   "network": "BBC",
   "party": "News outlets",
-  "person": "James Landale"
+  "person": "James Landale",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “BBC Diplomatic Correspondent James Landale.” Source: HuffPost UK on the BBC tweet."
+  }
  },
  {
   "id": "109",
@@ -5729,7 +5982,14 @@
   "networkName": "San Francisco Chronicle",
   "network": "San Francisco Chronicle",
   "party": "News outlets",
-  "person": "Tal Kopan"
+  "person": "Tal Kopan",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case names Tal Kopan (San Francisco Chronicle) and NBC’s Ken Dilanian. Case text: “Ken Dilanian initial tweets.”"
+  }
  },
  {
   "id": "110",
@@ -5897,7 +6157,14 @@
   "networkName": "James Carville",
   "network": "Not yet identified",
   "party": "Democratic",
-  "person": "James Carville"
+  "person": "James Carville",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "YouTube"
+   ],
+   "basis": "Case text: “Carville’s YouTube title.”"
+  }
  },
  {
   "id": "122",
@@ -6265,7 +6532,14 @@
   "networkName": "Viral / anonymous accounts",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “X @LiveOnTheChat (creator).”"
+  }
  },
  {
   "id": "148",
@@ -6293,7 +6567,14 @@
   "networkName": "Viral / anonymous accounts",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Threads/X/Instagram/TikTok/Facebook.”"
+  }
  },
  {
   "id": "149",
@@ -6353,7 +6634,14 @@
   "networkName": "Viral / anonymous accounts",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Facebook/X/Instagram posts.”"
+  }
  },
  {
   "id": "151",
@@ -6465,7 +6753,14 @@
   "networkName": "Viral / anonymous accounts",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Instagram / Facebook / X posts.”"
+  }
  },
  {
   "id": "159",
@@ -6493,7 +6788,14 @@
   "networkName": "Viral / anonymous accounts",
   "network": "Not yet identified",
   "party": "Social media",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “X / Instagram / Threads posts.”"
+  }
  },
  {
   "id": "160",
@@ -6773,7 +7075,14 @@
   "networkName": "Kamala Harris",
   "network": "Not yet identified",
   "party": "Democratic",
-  "person": "Kamala Harris"
+  "person": "Kamala Harris",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “Harris tweet.”"
+  }
  },
  {
   "id": "175",
@@ -7325,7 +7634,12 @@
   "networkName": "NPR",
   "network": "NPR",
   "party": "News outlets",
-  "person": "Philip Ewing"
+  "person": "Philip Ewing",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names Philip Ewing’s NPR story."
+  }
  },
  {
   "id": "230",
@@ -7749,7 +8063,12 @@
   "networkName": "CNBC",
   "network": "CNBC",
   "party": "News outlets",
-  "person": "John Harwood"
+  "person": "John Harwood",
+  "classification": {
+   "role": "Correspondent / reporter",
+   "platforms": [],
+   "basis": "Case names John Harwood’s CNBC report."
+  }
  },
  {
   "id": "247",
@@ -7861,7 +8180,14 @@
   "networkName": "CBS News",
   "network": "CBS News",
   "party": "News outlets",
-  "person": "Not yet identified"
+  "person": "Not yet identified",
+  "classification": {
+   "role": "Not classified",
+   "platforms": [
+    "X/Twitter"
+   ],
+   "basis": "Case text: “CBS 60 Minutes tweeted.”"
+  }
  },
  {
   "id": "251",
