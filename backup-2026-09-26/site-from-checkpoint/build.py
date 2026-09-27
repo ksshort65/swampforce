@@ -837,7 +837,7 @@ def betrayal_verify_box():
 QUICK_LINKS = [("betrayal.html", "Great American Betrayal", "quote"), ("scorecard.html", "Midterms", "chart"), ("brief.html", "Lawmakers", "file"),
                ("congress.html", "Debt & Spending", "capitol"), ("lawfare.html", "Lawfare", "scale"), ("biden-family.html", "Biden Family Records", "file"),
                ("border.html", "Border", "chart"), ("voters.html", "Voters", "chart"), ("energy.html", "Energy", "chart"),
-               ("fake-news.html", "Fake News", "search"), ("unverified.html#uv-flawed", "Social Media Weapon", "eye"), ("unverified.html", "Not Yet Verified", "eye"),
+               ("fake-news.html", "Fake News", "search"), ("betrayal.html#uv-flawed", "Social Media Weapon", "eye"), ("unverified.html", "Not Yet Verified", "eye"),
                ("accountability-trading.html", "Congress / Trading", "capitol"), ("trump-watch.html", "Trump Watch", "eye"),
                ("article-v.html", "Article V", "file"), ("journal.html", "Journal", "book"), ("store.html", "Store", "cart")]
 
@@ -935,7 +935,6 @@ def _home_moves():
         "lawfare.html": (sec["front-lawfare"], []),
         "congress.html": (sec["front-congress"].replace("\n</section>", "\n " + adults_fold + "\n</section>"), []),
         "brief.html": (law_band, []),
-        "betrayal.html": (spine, []),
         "store.html": (merch, []),
     })
 
@@ -2156,7 +2155,7 @@ def main():
     law_html, law_n = build_lawfare()
     pages = {
         "index.html": build_home(), "fake-news.html": build_fake_news(), "scorecard.html": build_scorecard(),
-        "betrayal.html": build_betrayal(), "democrats.html": dem_html, "republicans.html": gop_html,
+        "betrayal.html": "", "democrats.html": dem_html, "republicans.html": gop_html,
         "january-6.html": build_j6(), "lawfare.html": law_html, "brief.html": build_brief(), "appendix.html": build_appendix(),
         "about.html": build_about(), "factcheckers.html": build_factcheckers(), "downloads.html": build_downloads(), "store.html": build_store(),
         "foreword.html": build_foreword(), "congress.html": build_congress(), "border.html": build_border(),
@@ -2166,6 +2165,11 @@ def main():
     import auto_charts as AC
     UV.UNSUP = UNSUP
     UCASES = [{"id": c["id"], "claim": c["claim"], "who": c["who"], "notes": c["notes"], "status": "Verified by SwampForce" if c["status"] == "verified" else "Still being checked"} for c in cases]
+    import betrayal_section as BSEC
+    BSEC.G = globals()
+    _bet, _bbrief, BETRAYAL_SAVE = BSEC.build(UV, UCASES)
+    pages["betrayal.html"] = _bet
+    pages = {**{k: v for k, v in pages.items() if k != "404.html"}, "betrayal-brief.html": _bbrief, "404.html": pages["404.html"]}
     pages = {**{k: v for k, v in pages.items() if k != "404.html"}, "unverified.html": page("unverified.html", UV.TITLE + " · Swamp Force", UV.CAPTION, UV.body(UCASES), flush=True), "404.html": pages["404.html"]}
     import restore as RS, atexit
     atexit.register(lambda: print("RESTORE", RS.STATS, "AUTOCHARTS", AC.COUNT[0]))
@@ -2211,6 +2215,7 @@ def main():
         h = place_moves(name, h)
         h = re.sub(r'href="unsupported\.html(#unsupported-[\w-]+)?"', lambda m: f'href="unverified.html{m.group(1) or "#nyv-rep"}"', h)
         h = h.replace('">Unsupported claims</a>', '">Not Yet Verified</a>')
+        h = re.sub(r'href="unverified\.html#uv-(flawed|one-sided|wapo|media|altered)', r'href="betrayal.html#uv-\1', h)
         if name != "index.html":
             h = VIS.apply(name, h)
         h = OI.apply(name, h)
@@ -2240,9 +2245,6 @@ def main():
                 k = h.index("</h1>") + 5; h = h[:k] + _bl + h[k:]
             if "chart.umd.min.js" not in h:
                 h = h.replace("</body>", '<script src="assets/vendor/chart.umd.min.js" defer></script>\n</body>', 1)
-        if name == "betrayal.html" and "</h1>" in h:
-            k = h.index("</h1>") + 5
-            h = h[:k] + '<p class="fact-line"><a href="unverified.html">' + UV.TITLE + ' →</a></p>' + h[k:]
         h = re.sub(r'(assets/(?:style\.css|app\.js|store\.js))"', r'\1?v=' + ASSET_V + '"', h)  # cache-busting
         (OUT / name).write_text(h, encoding="utf-8")
     (OUT / "unsupported.html").write_text('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Not Yet Verified</title>'

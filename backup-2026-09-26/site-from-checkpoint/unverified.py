@@ -90,7 +90,8 @@ def body(cases):
     return f"""<section class="band-hero"><div class="wrap"><p class="hero-kicker">Still being checked</p><h1>{e(TITLE)}</h1><p class="dek">{e(CAPTION)}</p></div></section>
 <div class="wrap">{top}
 <p class="period-note">Grouped by the first-named source. Catalog claims still being checked, research leads, claims reviewed and not tied to a primary record (formerly the Unsupported claims page; <a href="downloads/unsupported-claims.csv">CSV</a>), and items flagged on other pages. None has passed our check yet.</p>
-{media_block(cases)}{onesided_block()}{flawed_block()}{period_block(cases)}{altered_block(cases)}{wapo_block()}
+{period_block(cases)}
+<p class="fact-line">Media claims, one-sided checking, the Social Media Weapon and altered quotes: <a href="betrayal.html#betrayal-charts">The Great American Betrayal →</a></p>
 </div>"""
 
 # ---- all saved SuperGrok verification batches (Sep 26, 2026) ----

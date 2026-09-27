@@ -160,7 +160,7 @@ def apply(name, h):
         return h
     soup = BeautifulSoup(h, "html.parser")
     h, n = fold_lists(soup, h)
-    if CHARTS_FIRST and name not in ("scorecard.html",) and not name.startswith("journal-"):
+    if CHARTS_FIRST and name not in ("scorecard.html", "betrayal.html", "betrayal-brief.html") and not name.startswith("journal-"):
         h2, m = charts_first(BeautifulSoup(h, "html.parser"), h)
         h = h2
     if READ_MORE:
