@@ -882,6 +882,9 @@ def build_home():
     nc = corr["Never corrected by the pusher"]
     picks = [c for c in VCASES if c["proof"] == "Official record" and c["evidence"] == "Proven false"][:3]
     body = f"""
+<div class="wrap betrayal-first">
+{betrayal_home()}
+</div>
 <section class="hero" style="background-image:url('images/bg-capitol-eagle.jpg')">
  <div class="hero-inner">
   <picture class="hero-lockup"><source srcset="assets/brand/lockup-light.webp" type="image/webp"><img src="assets/brand/lockup-light.png" alt="SwampForce" width="1100" height="583" fetchpriority="high"></picture>
@@ -896,9 +899,6 @@ def build_home():
   <a class="hero-down" href="#front">Midterms · Tuesday, Nov 3, 2026 ↓</a>
  </div>
 </section>
-<div class="wrap betrayal-first">
-{betrayal_home()}
-</div>
 <div class="wrap">
 <aside class="pull-view" aria-label="Our View"><p class="opinion-label">Our View</p>
  <blockquote><p>{e(PEOPLE_VIEW)}</p></blockquote></aside>

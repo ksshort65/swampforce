@@ -1,3 +1,10 @@
+/* Open every page at the very top (no restored scroll position). A link to a specific section (#anchor) still opens that section. */
+(function () {
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+  function top() { if (!location.hash) window.scrollTo(0, 0); }
+  top(); document.addEventListener('DOMContentLoaded', top); window.addEventListener('load', function () { top(); setTimeout(top, 0); });
+  window.addEventListener('pageshow', top);
+})();
 (function () {
   'use strict';
   var $ = function (s, r) { return (r || document).querySelector(s); };
