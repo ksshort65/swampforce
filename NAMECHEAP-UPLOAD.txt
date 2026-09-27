@@ -1,0 +1,8 @@
+NAMECHEAP upload
+================
+1. Hosting List -> your hosting -> File Manager -> public_html
+2. Upload swampforce.zip
+3. Extract. index.html must sit INSIDE public_html (not in a subfolder).
+4. DNS — see NAMECHEAP-DNS.txt (do not upload that file).
+
+Keep Proton and Fourthwall rows. Only change @ and www.

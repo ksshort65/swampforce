@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Swamp Force</title>
+<meta name="description" content="Vote the facts. Not emotion. Not a hatred a party or a network manufactured. This journal uses documented government sources. No other opinion. No manufactured drama."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://swampforce.com/"/>
+<link rel="icon" href="/favicon-32.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://swampforce.com/"/>
+<meta property="og:title" content="Swamp Force"/>
+<meta property="og:description" content="Vote the facts. Not emotion. Not a hatred a party or a network manufactured. This journal uses documented government sources. No other opinion. No manufactured drama."/>
+<meta property="og:image" content="https://swampforce.com/og.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Swamp Force"/>
+<meta name="twitter:image" content="https://swampforce.com/og.jpg"/>
+<meta name="twitter:site" content="@SwampForce"/>
+<style>
+:root { --bg:#0b0b0b; --fg:#ece8dc; --muted:#a39e93; --sage:#e8e0d0; --line:#2a2a2a; --surface:#141414; }
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;overflow-x:hidden}
+a{color:var(--sage)}
+img{max-width:100%;height:auto;display:block}
+header{position:sticky;top:0;background:#0b0b0b;border-bottom:1px solid var(--line);z-index:50}
+.ticker{text-align:center;font:600 12px/1.4 ui-sans-serif,system-ui;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);padding:.5rem 1.5rem;border-bottom:1px solid var(--line);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;max-width:72rem;margin:0 auto;padding:.5rem 1.5rem}
+.mark{font:700 16px ui-sans-serif,system-ui;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0}
+nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;margin-left:auto}
+nav a,details.score summary,details.archive summary{margin:0;padding:.75rem .55rem;font:600 14px ui-sans-serif,system-ui;letter-spacing:.08em;text-transform:uppercase;color:#ddd;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;flex-shrink:0;cursor:pointer;list-style:none}
+details.score,details.archive{position:relative}
+details.score .drop,details.archive .drop{position:absolute;right:0;top:100%;background:#0b0b0b;border:1px solid #2a2a2a;min-width:16rem;padding:.4rem;z-index:80;max-height:70vh;overflow-y:auto}
+details.archive .drop{min-width:20rem}
+details.score .drop a,details.archive .drop a{display:block;padding:.75rem .8rem;min-height:auto}
+details.archive .drop .series{padding:.6rem .8rem .2rem;font:600 11px ui-sans-serif,system-ui;letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+select.essays{background:#0b0b0b;color:#e8e0d0;border:1px solid #e8e0d0;padding:.7rem .8rem;font:600 13px ui-sans-serif,system-ui;text-transform:uppercase;min-width:12rem;min-height:44px}
+.hero{position:relative;min-height:78vh}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;max-width:none}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.4),transparent)}
+.hero .copy{position:relative;max-width:72rem;margin:0 auto;min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem 1.5rem 2.5rem}
+.kicker{font:600 11px ui-sans-serif,system-ui;letter-spacing:.28em;text-transform:uppercase;color:var(--sage)}
+h1{font:700 clamp(2.2rem,7vw,4.6rem)/.95 ui-sans-serif,system-ui;letter-spacing:.04em;text-transform:uppercase;margin:.4rem 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--sage);color:#121212;text-decoration:none;padding:.85rem 1rem;font:700 12px ui-sans-serif,system-ui;letter-spacing:.14em;text-transform:uppercase;margin:.5rem .5rem 0 0;min-height:44px}
+.btn.out{background:transparent;border:1px solid #ccc;color:#fff}
+.panel{display:none;margin-top:1.6rem}
+.panel:target{display:block}
+.featured{display:grid;gap:2rem;grid-template-columns:1fr;align-items:center;max-width:72rem;margin:0 auto;padding:3rem 1.5rem 1rem}
+@media(min-width:800px){.featured{grid-template-columns:1.15fr .85fr}}
+.featured img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
+.featured h2{font:700 clamp(1.8rem,4vw,3rem)/1.05 ui-sans-serif,system-ui;text-transform:uppercase;letter-spacing:.04em;margin:.4rem 0}
+.menu-row{max-width:72rem;margin:0 auto;padding:0 1rem 3rem}
+.wrap p, main.wrap p{font-size:1.2rem;line-height:2;margin:0 0 1.65em;letter-spacing:.015em;word-spacing:.04em}
+.dek{font-size:1.32rem;line-height:1.7;margin:0 0 2.2em;color:#ddd}
+.wrap ul{font-size:1.12rem;line-height:1.85;margin:0 0 2em 1.3em;padding:0}
+.wrap li{margin:0 0 1em}
+q, blockquote{display:block;font-size:1.35rem;line-height:1.55;margin:1.7rem 0;color:#eee}
+.grid{display:grid;gap:1.2rem;grid-template-columns:repeat(2,minmax(0,1fr));max-width:72rem;margin:0 auto;padding:2rem 1rem}
+@media(min-width:800px){.grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}}
+.card{background:var(--surface);text-decoration:none;color:var(--fg);border-radius:8px;overflow:hidden}
+.card h3{font:700 1.2rem ui-sans-serif,system-ui;text-transform:uppercase;padding:0 1rem}
+.card p{padding:0 1rem 1rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:2rem 1rem;color:var(--muted);font-size:.9rem}
+footer .f{max-width:72rem;margin:0 auto;display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.btns{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.5rem;margin:1.5rem 0}
+.btns .btn{margin:0;width:100%;text-align:center;font-size:12px;letter-spacing:.04em;padding:.9rem .2rem;line-height:1.15}
+</style>
+</head>
+<body>
+<header>
+ <div class="ticker">Vote the file. Not the feeling.</div>
+ <div class="bar">
+  <a class="mark" href="/">Swamp Force™</a>
+  <nav>
+   <details class="score">
+    <summary>Scorecard</summary>
+    <div class="drop"><a href="/scorecard.html#gop-charts">GOP</a><a href="/scorecard.html#dem-charts">Dem</a><a href="/scorecard.html#split-charts">Split</a><a href="/scorecard.html#oval-charts">Oval</a><a href="/scorecard.html#compare-charts">Compare</a></div>
+   </details>
+   <a href="/pump.html">Pump</a>
+   <a href="/foreword.html">Foreword</a>
+   <details class="archive">
+    <summary>Archive</summary>
+    <div class="drop"><p class="series">The Republic</p><a href="/dispatch/we-the-people.html">We the People.</a><a href="/dispatch/that-is-not-why-they-are-elected.html">They forgot who they work for.</a><a href="/dispatch/clean-hands.html">They keep their hands clean.</a><a href="/dispatch/they-want-a-new-constitution.html">They want a new Constitution.</a><a href="/dispatch/they-let-them-walk.html">They let criminals go free.</a><p class="series">The Search</p><a href="/dispatch/they-opened-the-border.html">They opened the border.</a><a href="/dispatch/what-the-taxpayer-bought.html">What the taxpayer bought</a><a href="/dispatch/fema-ran-two-jobs.html">FEMA ran two jobs</a><a href="/dispatch/the-hospital-and-the-morgue.html">The hospital. Then the morgue.</a><a href="/dispatch/find-them.html">Find them.</a><a href="/dispatch/who-got-paid.html">Who got paid.</a><a href="/dispatch/defund-ice-is-the-tell.html">Defund ICE is the tell.</a><p class="series">The Hearing</p><a href="/dispatch/the-noise.html">The noise.</a><a href="/dispatch/full-time-or-go-home.html">Full time or go home.</a><a href="/dispatch/it-does-not-fit.html">It does not fit.</a><p class="series">The Ballot</p><a href="/dispatch/a-barcode-is-not-a-lock.html">A barcode is not a lock.</a><p class="series">The Iranian terrorist regime at 60 percent</p><a href="/dispatch/sixty-percent.html">The Iranian terrorist regime at 60 percent</a><p class="series">The Clip</p><a href="/dispatch/the-pool.html">The pool</a><a href="/dispatch/the-caption-was-not-the-charge.html">The caption was not the charge</a><a href="/dispatch/they-dont-debate-they-flag.html">They don't debate. They flag.</a><a href="/dispatch/they-clipped-the-tape.html">They clipped the tape</a><a href="/dispatch/one-word.html">One word</a><a href="/dispatch/the-hire-is-the-country.html">Taxpayer-funded hoaxes</a><a href="/dispatch/they-ran-it-anyway.html">They ran it anyway</a><a href="/dispatch/they-called-it-protest.html">They called it protest</a><a href="/dispatch/they-work-for-us.html">They work for us</a><p class="series">The Job</p><a href="/dispatch/the-7-billion-machine.html">The $7 billion machine</a><a href="/dispatch/they-dont-write-the-bills.html">They don’t write the bills</a><a href="/dispatch/paying-the-taliban.html">Paying the Taliban</a><a href="/dispatch/the-funnel.html">The funnel</a><a href="/dispatch/why-the-lobby-should-be-illegal.html">Why the lobby should be illegal</a><a href="/dispatch/the-debt-they-will-not-close.html">The debt they will not close</a><p class="series">The Parties</p><a href="/dispatch/what-the-democratic-party-became.html">What the Democrats became</a><a href="/dispatch/what-the-republican-party-became.html">What the GOP became</a><p class="series">The Target</p><a href="/dispatch/why-he-became-the-enemy.html">Why they hate Trump</a><a href="/archive.html">Full archive →</a></div>
+   </details>
+  </nav>
+ </div>
+</header>
+
+<section class="hero">
+ <img class="bg" src="/images/hero-capitol.jpg" alt="Eagle on the Capitol in the swamp"/>
+ <div class="shade"></div>
+ <div class="copy">
+  <p class="kicker">The journal · publishing</p>
+  <h1>We the People.</h1>
+  <p>The Constitution does not open with Congress. It opens with the owner. The 535 are the hire. The hire has gone rogue. Vote the file. Not the feeling.</p>
+  <div>
+   <a class="btn" href="/dispatch/we-the-people.html">The lead</a>
+   <a class="btn out" href="/scorecard.html">Scorecard</a>
+  </div>
+ </div>
+</section>
+<section class="featured">
+ <a href="/dispatch/we-the-people.html"><img src="/images/hero-capitol.jpg" alt="The Capitol — the people are the employer"/></a>
+ <div>
+  <p class="kicker">The lead</p>
+  <h2>We the People.</h2>
+  <p>The Constitution does not open with Congress. It opens with the owner. The 535 are the hire. The hire has gone rogue.</p>
+  <a class="btn" href="/dispatch/we-the-people.html">We the People.</a>
+ </div>
+</section>
+<section class="pad">
+ <p class="kicker">The dispatch</p>
+ <h2>Publishing now</h2>
+ <div class="grid"><a class="card" href="/dispatch/call-these-first.html"><img src="/images/chamber.jpg" alt="The House. Call counsel. The docket is open."/><h3>Who to call.</h3><p>Real groups. Real addresses. Not a stranger on a video asking for a money.</p></a><a class="card" href="/dispatch/fema-ran-two-jobs.html"><img src="/images/chart-fema-two-jobs.jpg" alt="FEMA: Immediate Needs Funding for Americans. $1.4 billion for aliens. $425 million questioned."/><h3>FEMA ran two jobs</h3><p>The disaster fund hit Immediate Needs Funding for Americans. The same agency awarded $1.4 billion for aliens. The Inspector General could not verify $425 million of that pile was even used as humanitarian aid.</p></a><a class="card" href="/dispatch/the-docket.html"><img src="/images/chamber.jpg" alt="Empty House. The docket is the other election."/><h3>How a dirty list goes to court.</h3><p>Congress cannot be sued for being Congress. A dirty voter list into court in 90 days. Step by step.</p></a><a class="card" href="/dispatch/one-word.html"><img src="/images/chart-one-word-ledger.jpg" alt="Twelve years of one-word swaps: the caption versus the file"/><h3>One word</h3><p>Twelve years of the same trick: change one word, teach the country the opposite crime, and put a president through hell for a caption that was never on the file.</p></a><a class="card" href="/dispatch/paying-the-taliban.html"><img src="/images/chart-paying-taliban.jpg" alt="SIGAR: U.S. aid after Kabul benefited the Taliban. Congress voted the unread pile."/><h3>Paying the Taliban</h3><p>SIGAR: maybe 30 to 40 percent of donor funds reaches the population. A Senate that will not read the bill still votes the money. That is not leadership.</p></a><a class="card" href="/dispatch/the-hire-is-the-country.html"><img src="/images/chart-lawfare.jpg" alt="Lawfare against the hire: the caption, the evidence they used, the file that closed it"/><h3>Taxpayer-funded hoaxes</h3><p>They used process as a weapon against an elected president and the people who hired him. Each caption had evidence. The official file later showed the evidence did not hold. Insurrection was never charged. The public paid the bill.</p></a><a class="card" href="/dispatch/the-caption-was-not-the-charge.html"><img src="/images/chamber.jpg" alt="The House chamber"/><h3>The caption was not the charge</h3><p>Insurrection on television. Not on 18 U.S.C. § 2383. A stacked committee. A tape the House held. Lawfare against parents and a former president. Durham already wrote the Russia file.</p></a><a class="card" href="/dispatch/the-funnel.html"><img src="/images/chart-funnel.jpg" alt="The funnel: taxpayer to agency to NGO — USAID, FEMA, NED"/><h3>The funnel</h3><p>Taxpayer to agency to NGO. USAID. FEMA. The Endowment. There is no line item that says DNC. There is a pipe. Congress votes the water.</p></a></div>
+ <p><a class="btn" href="/archive.html">The archive</a></p>
+</section>
+<section class="pad">
+ <p class="kicker">Midterms</p>
+ <h2>The scorecard</h2>
+ <p>Vote the facts. Every number is a government file.</p>
+ <div class="grid" style="padding-left:0;padding-right:0"><a class="card" href="/scorecard.html#gop-charts" style="padding:1.1rem"><h3 style="padding:0">GOP</h3><p style="padding:0">Helped, hurt, the bills.</p></a><a class="card" href="/scorecard.html#dem-charts" style="padding:1.1rem"><h3 style="padding:0">Dem</h3><p style="padding:0">Helped, hurt, the information war.</p></a><a class="card" href="/scorecard.html#split-charts" style="padding:1.1rem"><h3 style="padding:0">Split</h3><p style="padding:0">When they split the gavel.</p></a><a class="card" href="/scorecard.html#oval-charts" style="padding:1.1rem"><h3 style="padding:0">Oval</h3><p style="padding:0">Four administrations.</p></a><a class="card" href="/scorecard.html#compare-charts" style="padding:1.1rem"><h3 style="padding:0">Compare</h3><p style="padding:0">Charts or Read.</p></a></div>
+</section>
+
+<footer>
+ <div class="f">
+  <div>
+   <strong>Swamp Force™</strong>
+   <p>Vote the facts. Not emotion. Not a hatred a party or a network manufactured. This journal uses documented government sources. No other opinion. No manufactured drama.</p>
+   <p>Government sources only. Compare the action to the speech. That is the first step.</p>
+  </div>
+  <div>
+   <a href="/scorecard.html">Scorecard</a><br/>
+   <a href="/pump.html">Pump</a><br/>
+   <a href="/foreword.html">Foreword</a><br/>
+   <a href="/archive.html">Archive</a><br/>
+   <a href="https://x.com/SwampForce">@SwampForce</a><br/>
+   <a href="mailto:editor@swampforce.com">editor@swampforce.com</a>
+  </div>
+ </div>
+ <p style="max-width:72rem;margin:1rem auto 0">© 2026 Renee Stewart. All rights reserved. · Renee Stewart</p>
+</footer>
+</body></html>
