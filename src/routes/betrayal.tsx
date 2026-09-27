@@ -2345,6 +2345,64 @@ function checkerDetail(name: string) {
   };
 }
 
+const CARD_CASES: Record<string, { note?: string; match: (row: NewsCaseRow) => boolean }> = {
+  Democrats: { match: (row) => row.party === "Democratic" },
+  Republicans: { match: (row) => row.party === "Republican" },
+  ABC: { match: (row) => row.networkName === "ABC News" },
+  CBS: { match: (row) => row.networkName === "CBS News" },
+  NBC: { match: (row) => row.networkName === "NBC News" },
+  Fox: { match: (row) => row.networkName.includes("Fox") },
+  CNN: { match: (row) => row.networkName === "CNN" },
+  "MS NOW": { note: "Listed as MSNBC in our case file", match: (row) => row.networkName === "MSNBC" || row.networkName === "MS NOW" },
+};
+const CARD_DIM = NEWS_DIMS[0];
+
+function CardLayers({
+  card,
+  slice,
+  onSlice,
+  onCase,
+}: {
+  card: string;
+  slice: string | null;
+  onSlice: (value: string) => void;
+  onCase: (id: string) => void;
+}) {
+  const spec = CARD_CASES[card];
+  const rows = spec ? NEWS_CASES.filter(spec.match) : [];
+  if (slice) {
+    const list = slice === "all" ? rows : rows.filter((row) => CARD_DIM.get(row) === slice);
+    return (
+      <div className="w-full">
+        <NewsHeading title={slice === "all" ? `${card} · all cases` : slice} line={`${card} · ${newsCasesLine(list.length)}`} />
+        <NewsCaseList rows={list} onCase={onCase} />
+      </div>
+    );
+  }
+  const groups = newsCountBy(rows, CARD_DIM);
+  return (
+    <div className="w-full">
+      <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{card}: Verdict / status</p>
+      {rows.length === 0 ? (
+        <p className="mt-6 text-center text-[16px] text-white/80">Not on record</p>
+      ) : (
+        <LayerChart
+          title={`${card}: Verdict / status`}
+          line={`Jan 1, 2015 – Sept 27, 2026 · ${newsCasesLine(rows.length)}`}
+          labels={groups.map((item) => item.label)}
+          data={groups.map((item) => item.count)}
+          colors={groups.map((item) => CARD_DIM.colors[item.label] ?? CARD_DIM.fallback)}
+          type="doughnut"
+          horizontal={false}
+          bullets={spec?.note ? [spec.note] : []}
+          center={{ big: String(rows.length), small: rows.length === 1 ? "Case" : "Cases", onOpen: () => onSlice("all") }}
+          onPick={(index) => onSlice(groups[index].label)}
+        />
+      )}
+    </div>
+  );
+}
+
 function Betrayal() {
   const [layer, setLayer] = useState<Layer>("root");
   const [method, setMethod] = useState<string | null>(null);
@@ -2369,6 +2427,29 @@ function Betrayal() {
   const [checkerPick, setCheckerPick] = useState<string | null>(null);
   const [checkerName, setCheckerName] = useState<string | null>(null);
   const [checkerHref, setCheckerHref] = useState<string | null>(null);
+  const [card, setCard] = useState<string | null>(null);
+  const [cardSlice, setCardSlice] = useState<string | null>(null);
+  const [cardCase, setCardCase] = useState<string | null>(null);
+  const [cardHref, setCardHref] = useState<string | null>(null);
+  const cardBack = () => {
+    if (cardHref) {
+      setCardHref(null);
+      return true;
+    }
+    if (cardCase) {
+      setCardCase(null);
+      return true;
+    }
+    if (cardSlice) {
+      setCardSlice(null);
+      return true;
+    }
+    if (card) {
+      setCard(null);
+      return true;
+    }
+    return false;
+  };
   const checkerBack = () => {
     if (checkerHref) {
       setCheckerHref(null);
@@ -2599,6 +2680,10 @@ function Betrayal() {
                     setCheckerPick(null);
                     setCheckerName(null);
                     setCheckerHref(null);
+                    setCard(null);
+                    setCardSlice(null);
+                    setCardCase(null);
+                    setCardHref(null);
                     setDeception(item.id);
                   }}
                   className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
@@ -3294,7 +3379,7 @@ function Betrayal() {
             <button
               type="button"
               onClick={() => {
-                if (checkerBack()) return;
+                if (checkerBack() || cardBack()) return;
                 if (spot) {
                   setSpot(null);
                   return;
@@ -3304,9 +3389,21 @@ function Betrayal() {
               }}
               className="border-0 bg-transparent p-0 text-[15px] font-semibold tracking-wide text-white"
             >
-              {spot === "cable" ? "Cable news" : spot === "trump" ? "Trump TV" : spot === "podcasts" ? "Podcasts" : spot === "cspan" ? "C-SPAN" : DECEPTION.find((item) => item.id === deception)?.title}
+              {card ? card : spot === "cable" ? "Cable news" : spot === "trump" ? "Trump TV" : spot === "podcasts" ? "Podcasts" : spot === "cspan" ? "C-SPAN" : DECEPTION.find((item) => item.id === deception)?.title}
             </button>
-            {deception === "checkers" && checkerHref ? (
+            {card && cardHref ? (
+              <div className="w-full">
+                <SourcePage label={NEWS_CASES.flatMap((row) => row.sources).find((item) => item.href === cardHref)?.label ?? cardHref} href={cardHref} />
+              </div>
+            ) : card && cardCase ? (
+              <div className="w-full">
+                {NEWS_CASES.filter((row) => row.id === cardCase).map((row) => (
+                  <NewsCaseDetail key={row.id} row={row} onSource={setCardHref} />
+                ))}
+              </div>
+            ) : card ? (
+              <CardLayers card={card} slice={cardSlice} onSlice={setCardSlice} onCase={setCardCase} />
+            ) : deception === "checkers" && checkerHref ? (
               <div className="w-full">
                 <SourcePage
                   label={checkerName ? (checkerDetail(checkerName).links.find((link) => link.href === checkerHref)?.label ?? checkerHref) : checkerHref}
@@ -3497,6 +3594,12 @@ function Betrayal() {
                     if (card.name === "Trump TV") setSpot("trump");
                     if (card.name === "Podcasts") setSpot("podcasts");
                     if (card.name === "C-SPAN") setSpot("cspan");
+                    if (CARD_CASES[card.name]) {
+                      setCardSlice(null);
+                      setCardCase(null);
+                      setCardHref(null);
+                      setCard(card.name);
+                    }
                   }}
                   className="flex w-44 flex-col items-center gap-2 border-0 bg-transparent p-0"
                 >
@@ -3538,11 +3641,11 @@ function Betrayal() {
                   setOutcome(false);
                   return;
                 }
+                if (checkerBack() || cardBack()) return;
                 if (spot) {
                   setSpot(null);
                   return;
                 }
-                if (checkerBack()) return;
                 if (deception) {
                   setDeception(null);
                   setLayer("fake");
