@@ -1,4 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import topicsIndex from "../data/topics-index.json";
+
+const TOPICS = topicsIndex as { key: string; title: string }[];
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -17,12 +20,22 @@ function Home() {
         >
           The Great American Betrayal
         </Link>
-        <Link
-          to="/topics"
-          className="ml-8 text-[15px] font-semibold tracking-wide text-white"
-        >
-          Topics
-        </Link>
+      </nav>
+      <nav
+        aria-label="Topics"
+        className="absolute top-14 bottom-0 left-0 z-10 flex max-w-[16rem] flex-col overflow-y-auto bg-[#070b12]/80 px-6 pb-6"
+      >
+        {TOPICS.map((topic) => (
+          <Link
+            key={topic.key}
+            to="/topics"
+            search={{ t: topic.key }}
+            data-home-topic={topic.key}
+            className="py-2 text-[15px] font-semibold tracking-wide text-white"
+          >
+            {topic.title}
+          </Link>
+        ))}
       </nav>
     </main>
   );

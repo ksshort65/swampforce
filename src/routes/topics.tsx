@@ -1,8 +1,13 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import topicsIndex from "../data/topics-index.json";
 
-export const Route = createFileRoute("/topics")({ component: Topics });
+export const Route = createFileRoute("/topics")({
+  validateSearch: (search: Record<string, unknown>): { t?: string } => ({
+    t: typeof search.t === "string" ? search.t : undefined,
+  }),
+  component: Topics,
+});
 
 type Source = { label: string; href: string; local?: string; sectionLevel?: boolean };
 type See = { label: string; topic?: string; app?: string };
@@ -528,63 +533,6 @@ function SeeButtons({ see, onTopic }: { see: See[]; onTopic: (key: string) => vo
   );
 }
 
-function TopicsMenu({ onOpen }: { onOpen: (key: string) => void }) {
-  return (
-    <div className="mx-auto flex max-w-6xl flex-col items-center px-6 pt-10 pb-24">
-      <Link to="/" className="text-[18px] font-semibold tracking-wide text-white no-underline">
-        Topics
-      </Link>
-      <p className="mt-1 text-center text-[15px] text-white/75">
-        {INDEX.length} topics from the older site
-      </p>
-      <div className="mt-8 flex w-full flex-wrap items-end justify-center gap-8">
-        {INDEX.map((t) => (
-          <button
-            key={t.key}
-            type="button"
-            data-topic={t.key}
-            onClick={() => onOpen(t.key)}
-            className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
-          >
-            <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
-              {t.title}
-            </span>
-            <TileImage src={t.image} label={t.title} />
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function TileImage({ src, label }: { src: string; label: string }) {
-  const ref = useRef<HTMLImageElement>(null);
-  const [missing, setMissing] = useState(false);
-  useEffect(() => {
-    const img = ref.current;
-    if (img && img.complete && img.naturalWidth === 0) setMissing(true);
-  }, [src]);
-  if (missing) {
-    return (
-      <span
-        aria-hidden="true"
-        className="flex h-44 w-full items-center justify-center rounded-2xl border border-white/30 bg-[#0b1220] px-5 text-center text-[18px] font-semibold leading-snug tracking-wide text-white/90"
-      >
-        {label}
-      </span>
-    );
-  }
-  return (
-    <img
-      ref={ref}
-      src={src}
-      alt=""
-      onError={() => setMissing(true)}
-      className="h-44 w-full rounded-2xl border border-white/30 object-cover"
-    />
-  );
-}
-
 function frameTitle(frame: Frame, data: TopicData | null): string {
   if (!data) return TITLES[frame.topic] ?? "";
   switch (frame.k) {
@@ -608,7 +556,16 @@ function frameTitle(frame: Frame, data: TopicData | null): string {
 }
 
 function Topics() {
-  const [stack, setStack] = useState<Frame[]>([]);
+  // Every topic is opened from its own button on Home (the cover page); Home is the only top menu.
+  const { t } = Route.useSearch();
+  const navigate = useNavigate();
+  const start = (key?: string): Frame[] => (key && TITLES[key] ? [{ k: "topic", topic: key }] : []);
+  const [stack, setStack] = useState<Frame[]>(() => start(t));
+  useEffect(() => {
+    setStack(start(t));
+    if (!t || !TITLES[t]) navigate({ to: "/" });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [t]);
   const top = stack.length ? stack[stack.length - 1] : null;
   const parent = stack.length > 1 ? stack[stack.length - 2] : null;
   const data = useTopic(top ? top.topic : null);
@@ -618,10 +575,14 @@ function Topics() {
     if (typeof window !== "undefined") window.scrollTo(0, 0);
   };
   const back = () => {
+    if (stack.length <= 1) {
+      navigate({ to: "/" });
+      return;
+    }
     setStack((s) => s.slice(0, -1));
     if (typeof window !== "undefined") window.scrollTo(0, 0);
   };
-  const backLabel = parent ? frameTitle(parent, parentData) : "Topics";
+  const backLabel = parent ? frameTitle(parent, parentData) : "Home";
   const shortBack = backLabel.length > 42 ? `${backLabel.slice(0, 40).trimEnd()}…` : backLabel;
 
   return (
@@ -646,9 +607,17 @@ function Topics() {
             >
               ‹ {shortBack}
             </button>
+            {parent ? (
+              <Link
+                to="/"
+                data-home
+                className="ml-auto shrink-0 pl-4 text-[15px] font-semibold tracking-wide text-white no-underline"
+              >
+                Home
+              </Link>
+            ) : null}
           </nav>
         ) : null}
-        {!top ? <TopicsMenu onOpen={(key) => push({ k: "topic", topic: key })} /> : null}
         {top && !data ? (
           <p className="px-6 pt-16 text-center text-[15px] text-white/80">Loading…</p>
         ) : null}
