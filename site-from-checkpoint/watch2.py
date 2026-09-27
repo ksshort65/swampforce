@@ -943,8 +943,20 @@ def build_voters(H):
                               record_src=H.src_link("https://www.usatoday.com/story/news/politics/elections/2026/09/23/30000-noncitizens-may-have-been-added-to-voter-rolls/91907784007/", "Reuters via USA Today") + " " + H.src_link("https://www.nj.gov/governor/news/2026/20260721a.shtml", "NJ Governor"),
                               nuance="Cumulative over 26 years in 12 states, any immigration status, and nothing about voting.", verdict_html='<span class="badge misleading">Rated misleading</span>')
     gris = ('<div class="answer-box"><p><b>Colorado Secretary of State Jena Griswold.</b> A television statement that she said dead people and noncitizens "should vote" is <span class="chip unresolved">Unsupported</span>: no record of her saying it was found, and her documented statements describe removing deceased voters with state health and SSA death data and rejecting noncitizen registrations. The claim is listed on <a href="unsupported.html">Unsupported claims</a>.</p>'
+'</div>')
+    co_card = ('<div class="answer-box case-card" id="co-eric-postcards"><p class="opinion-label">Case · Voter-registration postcards</p>'
+            '<h3>Colorado Secretary of State registration postcards reached deceased people and noncitizens (Sept 2020)</h3>'
+            '<p><span class="uv-nv">Not yet verified</span> The mailing is confirmed by the Secretary of State\'s own letter; that it reached deceased people and noncitizens is reported by CBS4 and Breitbart, not by an official record.</p>'
+            '<details class="sf-fold"><summary class="btn sm sf-fold-btn"><span class="sf-closed">See the record</span><span class="sf-opened">Hide</span></summary>'
+            '<ul class="uv-list">'
+            '<li><b>What was sent (official):</b> a mailing inviting potentially eligible but unregistered Coloradans to register, required at least once every two years under the state\'s contract with the Electronic Registration Information Center (ERIC). Secretaries Gessler (2012, 2014) and Williams (2016, 2018) sent the same mailing.</li>'
+            '<li><b>How the list was built (official):</b> ERIC starts from all Coloradans with a driver\'s license, removes those already registered, and screens out people on state or federal deceased lists, in group homes, incarcerated for a felony, or who showed a noncitizen credential. The list is not a public record.</li>'
+            '<li><b>What was reported:</b> CBS4 found about a dozen cards that reached deceased people and noncitizens. The office said the card is not a ballot, lists the voting qualifications in bold, and that mailings are not always 100% correct.</li>'
+            '</ul><p>Official record: ' + H.src_link("https://www.coloradosos.gov/pubs/newsRoom/pressReleases/2020/LegislativeAuditCommitteeHearingOnElectionIntegrity.pdf", "Secretary of State letter to the Legislative Audit Committee, Dec 14, 2020 (Q6–Q10)")
+            + ' · Lead source: ' + H.src_link("https://www.breitbart.com/politics/2020/09/27/colorado-secretary-state-encourages-non-citizens-deceased-register-vote/", "Breitbart, Sep 27, 2020")
+            + ' · ' + H.src_link("https://www.cbsnews.com/colorado/news/colorado-secretary-state-explains-voter-registration-postcards/", "CBS4 follow-up, Sep 27, 2020") + '</p>'
             '<p><b>The 2022 postcards (as reported by AP and AFP from the Secretary of State\'s statements).</b> On Sep 27, 2022 her office mailed ERIC-required registration-information postcards (not forms or ballots) to about 30,000 noncitizens; a later count was 31,093. The cause was a Department of Revenue list that lacked the formatting needed to screen out noncitizen license holders. The office said the online system rejects noncitizen licenses and SSNs and that it knew of no recipient who registered. '
-            + H.src_link("https://www.cbsnews.com/colorado/news/colorado-30000-noncitizens-vote-registration-mailer/", "AP via CBS Colorado") + " " + H.src_link("https://factcheck.afp.com/doc.afp.com.32LA24U", "AFP Fact Check") + "</p></div>")
+            + H.src_link("https://www.cbsnews.com/colorado/news/colorado-30000-noncitizens-vote-registration-mailer/", "AP via CBS Colorado") + " " + H.src_link("https://factcheck.afp.com/doc.afp.com.32LA24U", "AFP Fact Check") + "</p></details></div>")
     hick, n_acc = hick_letter(H)
     # download
     dl = OUT / "downloads"; dl.mkdir(exist_ok=True)
@@ -967,7 +979,7 @@ def build_voters(H):
                       + src_line(H, [("DHS SAVE figure: U.S. stay application, No. 26A308", SCOTUS_SAVE), ("DOJ release 26-1082, Sep 18, 2026", DOJ_16), ("Georgia SOS 2024 citizenship audit statement (copy)", GA_AUDIT), ("Ohio SOS, Jun 3, 2025", "https://www.ohiosos.gov/media-center/press-releases/2025/2025-06-03/")]) + nj)
             + section("pv-disc", "Where official numbers disagree", '<p>Shown side by side; no reconciliation is attempted.</p>' + disc_html + src_line(H, PV_SRC[:1] + PV_SRC[4:6] + [("Census population estimates (Vintage 2025)", "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv")]))
             + section("pv-hum", "Humanitarian and parole programs, Biden period", hum)
-            + section("pv-claims", "Claims checked", f'<div class="frames">{harris_card}{reuters_card}</div>'
+            + section("pv-claims", "Claims checked", f'<div class="frames">{harris_card}{reuters_card}</div>{co_card}'
                       + rep_box(H, rep_quote, title="Reported, not confirmed by primary record: the Harris quote", intro="Transcriptions of a clip by two outlets; no official transcript or unedited video transcript was located."), primary=False)
             + section("pv-jw", "Judicial Watch voter-roll cases: court records vs. claims", jw)
             + rep_box(H, rep)
