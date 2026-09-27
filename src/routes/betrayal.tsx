@@ -1138,6 +1138,33 @@ function NewsCaseDetail({ row, onSource }: { row: NewsCaseRow; onSource: (href: 
   );
 }
 
+function NewsScaleNote() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="mx-auto mt-6 flex w-full max-w-xl flex-col items-center">
+      <button
+        type="button"
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+        className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-1.5 text-[15px] font-semibold text-white"
+      >
+        Estimated scale (not verified)
+      </button>
+      {open ? (
+        <ul className="mt-4 w-full list-disc rounded-2xl border border-white/20 bg-[#070b12]/85 py-4 pr-5 pl-9 text-left text-[15px] leading-snug text-white/85">
+          <li className="font-semibold text-white">Estimated scale — not verified</li>
+          <li>Numbers this large cannot possibly be verified by the SwampForce Editor alone. These are outside estimates, not counts.</li>
+          <li>Millions of negative items about Trump in every two-year block since 2015.</li>
+          <li>Peak years: 2016–17 and 2020–21.</li>
+          <li>Most misleading copies spread on social media and memes (estimated 60–80%).</li>
+          <li>A few hundred false storylines, reused again and again.</li>
+          <li>Only the 260 cases on this page are counted and sourced.</li>
+        </ul>
+      ) : null}
+    </div>
+  );
+}
+
 function NewsPeriodLayers({
   path,
   onPath,
@@ -1240,6 +1267,7 @@ function NewsPeriodLayers({
           </button>
         ))}
       </div>
+      <NewsScaleNote />
     </div>
   );
 }
