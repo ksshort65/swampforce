@@ -49,6 +49,8 @@ const LAYERS: Record<Exclude<Layer, "root">, { back: Layer; title: string; butto
       "Assassination attempts",
       "First 100 days",
       "Lawfare Evidence",
+      "House",
+      "Senate",
     ],
   },
   trials: {
@@ -2095,7 +2097,274 @@ const LAW_HOME: Record<string, string> = {
   "Assassination attempts": "/images/topic-attempts.jpg",
   "First 100 days": "/images/topic-first100.jpg",
   "Lawfare Evidence": "/images/topic-law-evidence.jpg",
+  House: "/images/topic-house-ethics.jpg",
+  Senate: "/images/topic-senate-ethics.jpg",
 };
+
+const HOUSE_CODE_PAGES = ["01", "02", "03"].map((page) => `/ethics-docs/house-pages/page-${page}.jpg`);
+const SENATE_CODE_PAGES = Array.from({ length: 63 }, (_, index) => `/ethics-docs/senate-pages/page-${String(index + 1).padStart(2, "0")}.jpg`);
+
+function EthicsGroupChart({
+  title,
+  labels,
+  series,
+}: {
+  title: string;
+  labels: string[];
+  series: { label: string; color: string; data: number[] }[];
+}) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const chartRef = useRef<{ destroy: () => void } | null>(null);
+  const key = JSON.stringify([title, labels, series]);
+  useEffect(() => {
+    let dead = false;
+    loadChartJs().then(() => {
+      if (dead || !canvasRef.current) return;
+      const Chart = (window as unknown as { Chart: new (el: HTMLCanvasElement, cfg: object) => { destroy: () => void } }).Chart;
+      chartRef.current?.destroy();
+      const wide = labels.length > 4;
+      chartRef.current = new Chart(canvasRef.current, {
+        type: "bar",
+        data: {
+          labels,
+          datasets: series.map((item) => ({
+            label: item.label,
+            data: item.data,
+            backgroundColor: item.color,
+            borderWidth: 0,
+            borderRadius: 6,
+            maxBarThickness: 22,
+          })),
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          indexAxis: wide ? "y" : "x",
+          plugins: { legend: { display: false }, tooltip: { titleFont: { size: 15 }, bodyFont: { size: 15 } } },
+          scales: {
+            x: wide
+              ? { beginAtZero: true, ticks: { color: "#e8e0d0", font: { size: 15 } } }
+              : { grid: { display: false }, ticks: { color: "#e8e0d0", font: { size: 15 } } },
+            y: wide
+              ? { grid: { display: false }, ticks: { color: "#e8e0d0", font: { size: 15 } } }
+              : { beginAtZero: true, ticks: { color: "#e8e0d0", font: { size: 15 } } },
+          },
+        },
+      });
+    });
+    return () => {
+      dead = true;
+      chartRef.current?.destroy();
+    };
+  }, [key]);
+  return (
+    <figure className="mt-4 w-full rounded-2xl border border-[#d4af37] bg-[#070b12] px-4 py-4">
+      <p className="text-center text-[16px] font-semibold text-white">{title}</p>
+      <div className={labels.length > 4 ? "relative mt-4 h-[420px]" : "relative mt-4 h-80"}>
+        <canvas ref={canvasRef} aria-label={title} />
+      </div>
+      <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+        {series.map((item) => (
+          <li key={item.label} className="flex items-center gap-2 text-[15px] text-white">
+            <span className="inline-block h-3 w-3" style={{ background: item.color }} />
+            {item.label}
+          </li>
+        ))}
+      </ul>
+    </figure>
+  );
+}
+
+function EthicsSummary({ which }: { which: "house" | "senate" }) {
+  const link = (href: string, label: string) => (
+    <a key={href} href={href} target="_blank" rel="noopener noreferrer" className={NEWS_DOOR + " text-left"}>
+      {label}
+    </a>
+  );
+  if (which === "senate") {
+    return (
+      <div className="mt-6 w-full text-left">
+        <p className="text-[16px] font-semibold text-white">The rules</p>
+        <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+          <li>Rule 34. Public financial disclosure. The Ethics in Government Act’s disclosure title is a Senate rule.</li>
+          <li>Rule 35. No gift unless the rule allows it. A gift under $50 may be accepted, and gifts from one source must stay under $100 in a year. A gift from a registered lobbyist, a foreign agent, or an entity that retains one is not allowed under that exception.</li>
+          <li>Rule 36. Outside earned income. The Ethics in Government Act limit is a Senate rule.</li>
+          <li>Rule 37. No pay that comes from improperly using a Senate position. No paid outside work that conflicts with official duties. Officers and employees report that work when it starts and each May 15.</li>
+          <li>Rule 38. No unofficial office account.</li>
+          <li>Rule 39. A Senator whose term is ending may not take government funds for foreign travel after the stated cutoff unless the Senate or the President authorizes it.</li>
+          <li>Rule 40. Franking, and Senate radio and television studios.</li>
+          <li>Rule 41. An officer or employee may not receive, solicit, hold, or distribute funds for a federal campaign. A Senator may designate three assistants and must file that designation.</li>
+          <li>Rule 42. No refusal to hire, firing, or discrimination in Senate employment because of race, color, religion, sex, national origin, age, or physical handicap.</li>
+          <li>Rule 43. A Senator may ask an executive or independent agency for information, status, a meeting, a judgment, or reconsideration.</li>
+        </ul>
+        <div className="mt-4 flex flex-col gap-2">
+          {link("/ethics-docs/senate-code-of-official-conduct.pdf", "Senate Code of Official Conduct, in this file")}
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div className="mt-6 w-full text-left">
+      <p className="text-[16px] font-semibold text-white">The rules</p>
+      <p className="mt-2 text-[15px] leading-snug text-white/85">
+        House Rule XXIII is the Code of Official Conduct. These are the main lines. The full text is on the Code of Official Conduct tile.
+      </p>
+      <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+        <li>Behave in a way that reflects creditably on the House, and follow the spirit and the letter of the rules.</li>
+        <li>No pay that comes from improperly using a House position. No gifts or honoraria except where Rule XXV allows them.</li>
+        <li>Campaign money stays separate from personal money and is not converted to personal use.</li>
+        <li>No employee who is not doing the work, and no relative on the payroll, with a narrow exception for jobs that began before the 113th Congress.</li>
+        <li>No employment discrimination, including sexual harassment. No sexual relationship with a supervised House employee. Spouses are excepted.</li>
+        <li>After a qualifying conviction, refrain from committee business and from voting. After a qualifying felony charge, resign committees and step aside from party leadership.</li>
+        <li>No private flight paid with personal, official, or campaign funds except the listed exceptions. No earmark traded for a vote. An earmark request must certify that the Member and spouse have no financial interest in it.</li>
+        <li>No service as an officer or director of a public company. No retaliation for truthful information given to the ethics offices or to law enforcement. No willful public naming of a protected whistleblower except as the rule allows.</li>
+      </ul>
+      <div className="mt-4 flex flex-col gap-2">
+        {link("/ethics-docs/house-rules-119.pdf#page=42", "House Rule XXIII, in this file")}
+      </div>
+    </div>
+  );
+}
+
+function EthicsRecord({ which }: { which: "house" | "senate" }) {
+  const link = (href: string, label: string) => (
+    <a key={href} href={href} target="_blank" rel="noopener noreferrer" className={NEWS_DOOR + " text-left"}>
+      {label}
+    </a>
+  );
+  if (which === "senate") {
+    return (
+      <div className="mt-6 w-full text-left">
+        <p className="text-[15px] leading-snug text-white/85">
+          These are the Select Committee on Ethics annual reports required by the Honest Leadership and Open Government Act. The reports give counts. They do not name the person, and they do not attach the complaint or the investigation file.
+        </p>
+        <EthicsGroupChart
+          title="Senate ethics allegations, 2023–2025"
+          labels={["2023", "2024", "2025"]}
+          series={[
+            { label: "Alleged violations received", color: "#d4af37", data: [145, 158, 181] },
+            { label: "Dismissed: no jurisdiction, or no violation even if true", color: "#8a8175", data: [112, 142, 150] },
+            { label: "Dismissed: not enough facts", color: "#c4b48a", data: [20, 7, 10] },
+            { label: "Preliminary inquiry", color: "#e8e0d0", data: [19, 15, 27] },
+            { label: "Adjudicatory review", color: "#2563eb", data: [0, 1, 0] },
+            { label: "Letter of admonition", color: "#0f766e", data: [1, 1, 0] },
+            { label: "Disciplinary sanction", color: "#dc2626", data: [0, 0, 0] },
+          ]}
+        />
+        <p className="mt-6 text-[16px] font-semibold text-white">2023 report, printed January 31, 2024</p>
+        <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+          <li>145 alleged violations received. Six more were carried in from earlier years.</li>
+          <li>112 dismissed for lack of jurisdiction, or because no Senate rule would be violated even if the allegation were true.</li>
+          <li>20 dismissed because the complaint did not state facts of a material violation.</li>
+          <li>19 preliminary inquiries. That number includes the 6 matters carried in.</li>
+          <li>0 adjudicatory reviews. That is the stage at which the committee tries a charge.</li>
+          <li>12 of the inquiries were then dismissed for lack of substantial merit, or as inadvertent, technical, or de minimis.</li>
+          <li>1 letter of admonition. The report does not name the person and does not include the letter.</li>
+          <li>0 disciplinary sanctions.</li>
+        </ul>
+        <p className="mt-6 text-[16px] font-semibold text-white">2024 report, printed January 28, 2025</p>
+        <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+          <li>158 alleged violations received. Six more were carried in.</li>
+          <li>142 dismissed for lack of jurisdiction, or because no rule would be violated even if true.</li>
+          <li>7 dismissed for lack of facts.</li>
+          <li>15 preliminary inquiries, including the 6 carried in.</li>
+          <li>1 adjudicatory review.</li>
+          <li>8 inquiries dismissed for lack of substantial merit, or as inadvertent, technical, or de minimis.</li>
+          <li>1 letter of admonition. The report does not name the person and does not include the letter.</li>
+          <li>0 disciplinary sanctions.</li>
+        </ul>
+        <p className="mt-6 text-[16px] font-semibold text-white">2025 report, printed January 31, 2026</p>
+        <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+          <li>181 alleged violations received. Five more were carried in.</li>
+          <li>150 dismissed for lack of jurisdiction, or because no rule would be violated even if true.</li>
+          <li>10 dismissed for lack of facts.</li>
+          <li>27 preliminary inquiries, including the 5 carried in.</li>
+          <li>0 adjudicatory reviews.</li>
+          <li>18 inquiries dismissed for lack of substantial merit, or as inadvertent, technical, or de minimis.</li>
+          <li>0 letters of admonition.</li>
+          <li>0 disciplinary sanctions.</li>
+        </ul>
+        <p className="mt-6 text-[16px] font-semibold text-white">What is not in the public record</p>
+        <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+          <li>There is no outside office for the Senate comparable to the House Office of Congressional Conduct. Six Senators receive the complaints.</li>
+          <li>The statute requires numbers. It does not require names, the complaint, or the investigative file.</li>
+          <li>The committee has not published an investigation document for these allegations. The annual reports are the official public record of them.</li>
+        </ul>
+        <p className="mt-6 text-[16px] font-semibold text-white">Official documents</p>
+        <div className="mt-3 flex flex-col gap-2">
+          {link("https://www.congress.gov/118/crec/2024/01/31/170/18/CREC-2024-01-31-pt1-PgS306-4.pdf", "Congressional Record, January 31, 2024, the 2023 report")}
+          {link("https://www.congress.gov/119/crec/2025/01/28/171/18/CREC-2025-01-28-senate.pdf", "Congressional Record, January 28, 2025, the 2024 report")}
+          {link("https://www.ethics.senate.gov/public/index.cfm?a=files.serve&File_id=65D869B2-5C90-4C08-B49E-6689611DA08D", "Select Committee on Ethics, 2025 annual report")}
+          {link("https://www.congress.gov/congressional-record/volume-172/issue-21/senate-section/article/S374-1", "Congressional Record, January 31, 2026, the 2025 report")}
+          {link("https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section4723&num=0&edition=prelim", "2 U.S.C. § 4723, the annual-report statute")}
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div className="mt-6 w-full text-left">
+      <p className="text-[15px] leading-snug text-white/85">
+        The House does not publish a complaints-received total in the Senate’s categories. These figures are from the Committee on Ethics Summary of Activities for the 118th Congress, adopted January 2, 2025, and from the Office of Congressional Ethics Fourth Quarter 2024 report. A citizen letter is not an opened investigation.
+      </p>
+      <EthicsGroupChart
+        title="House Committee on Ethics, 118th Congress"
+        labels={["Matters open", "Newly opened", "Carried in", "Outside referrals", "Subcommittees", "Public resolutions", "Confidential resolutions", "Reports to the House"]}
+        series={[{ label: "118th Congress", color: "#d4af37", data: [41, 29, 12, 15, 3, 9, 12, 5] }]}
+      />
+      <EthicsGroupChart
+        title="Office of Congressional Ethics, 118th Congress"
+        labels={["Reviews begun", "Sent on for further review", "Stopped in the first phase", "Dismissed after a second review"]}
+        series={[{ label: "118th Congress", color: "#c4b48a", data: [23, 9, 8, 6] }]}
+      />
+      <ul className="mt-6 list-disc pl-5 text-[15px] leading-snug text-white/85">
+        <li>41 investigative matters were open in the Congress: 12 carried in from the 117th, and 29 begun in the 118th.</li>
+        <li>The outside office referred 15 matters: 9 for further review and 6 with a recommendation to dismiss every allegation. None was sent as a tie.</li>
+        <li>The committee impaneled 3 investigative subcommittees: George Santos, Sheila Cherfilus-McCormick, and Henry Cuellar. It held 19 subcommittee meetings, authorized 108 subpoenas, and reviewed over 1,469,945 pages.</li>
+        <li>It filed 5 reports with the House, about 1,688 pages. It publicly addressed 20 matters and resolved 12 more. Nine matters were still pending on January 2, 2025.</li>
+        <li>12 resolutions were confidential. Most investigations under Committee Rule 18(a) stay confidential. The committee generally announces a case only when it votes to impanel a subcommittee.</li>
+        <li>The committee did not seek a House sanction in any matter in the 118th Congress. Since 2008 it has recommended one censure, recommended three reprimands, and issued 16 reprovals. It says an admonishment is not a formal sanction.</li>
+        <li>Sending substantial evidence of a crime to federal or state authorities takes the approval of the House or a two-thirds vote of the committee.</li>
+        <li>From February 2009 through the 118th Congress, the outside office began 258 investigations: 111 referred for further review, 139 terminated or dismissed, 1 unresolved, and 7 lost because the office lost jurisdiction. It received about 29,751 communications in the 118th Congress and about 88,010 since 2009. Those totals include requests for information.</li>
+      </ul>
+      <p className="mt-6 text-[16px] font-semibold text-white">The 20 matters the committee publicly addressed</p>
+      <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
+        <li>Sanford Bishop Jr. Dismissed on December 30, 2024.</li>
+        <li>Jamaal Bowman. The House censured him on December 7, 2023. The committee then said further review would be moot and took no further action. That censure was a House vote, not a committee sanction.</li>
+        <li>Sheila Cherfilus-McCormick. The investigative subcommittee had not finished when the Congress ended.</li>
+        <li>Henry Cuellar. The investigative subcommittee had not finished when the Congress ended.</li>
+        <li>Matt Gaetz. The committee found he did not violate federal sex-trafficking laws. It did find sexual misconduct, illegal drug use, a House gift-rule violation, special favors, and an attempt to obstruct the investigation. He resigned on November 14, 2024. The committee filed a report with dissenting views on December 23, 2024.</li>
+        <li>Bill Huizenga. The committee voted that a sanction was not merited, sent a private letter, and on June 5, 2024 filed a report taking no further action.</li>
+        <li>Wesley Hunt. Dismissed on December 30, 2024.</li>
+        <li>Ronny Jackson. Dismissed on December 30, 2024.</li>
+        <li>Mike Kelly. Not completed when the Congress ended.</li>
+        <li>Doug Lamborn. He did not seek reelection. The committee lost jurisdiction on January 3, 2025.</li>
+        <li>Michael McCaul. The committee voted not to impanel a subcommittee. On December 23, 2024 it filed a report taking no further action.</li>
+        <li>Cory Mills. Not completed when the Congress ended.</li>
+        <li>Alex Mooney. Dismissed on December 30, 2024.</li>
+        <li>Troy Nehls. Not completed when the Congress ended.</li>
+        <li>Alexandria Ocasio-Cortez. Not completed when the Congress ended.</li>
+        <li>Andy Ogles. Not completed when the Congress ended. The committee said it would continue under Rule 18(a).</li>
+        <li>George Santos. On November 16, 2023 the committee adopted the subcommittee report and referred substantial evidence of potential federal crimes to the Department of Justice. It did not seek a House sanction. The House later expelled him by its own vote.</li>
+        <li>Adam Schiff. The House directed an investigation. The committee did not reach consensus on the investigative steps.</li>
+        <li>Victoria Spartz. The committee voted not to impanel a subcommittee. On November 12, 2024 it filed a report taking no further action. That report is H. Rept. 118-731.</li>
+        <li>A referral from the January 6 select committee. The committee did not reach consensus on the investigative steps.</li>
+      </ul>
+      <p className="mt-6 text-[16px] font-semibold text-white">Official documents</p>
+      <p className="mt-2 text-[15px] leading-snug text-white/85">
+        The Summary of Activities is the committee’s own account of all 20 public matters. The 12 confidential resolutions are not published. The outside office does not publish reviews it stops in the first phase, or dismissals the committee accepts.
+      </p>
+      <div className="mt-3 flex flex-col gap-2">
+        {link("https://ethics.house.gov/wp-content/uploads/2025/01/Committee-Report.pdf", "Committee on Ethics, Summary of Activities, 118th Congress, January 2, 2025")}
+        {link("https://www.congress.gov/committee-report/118th-congress/house-report/973", "H. Rept. 118-973, the same summary on Congress.gov")}
+        {link("https://ethics.house.gov/committee-reports/matter-allegations-relating-representative-george-santos-0/", "Committee report, George Santos, November 16, 2023")}
+        {link("https://www.congress.gov/committee-report/118th-congress/house-report/274", "H. Rept. 118-274, George Santos")}
+        {link("https://ethics.house.gov/committee-reports/in-the-matter-of-allegations-relating-to-representative-victoria-spartz/", "Committee report, Victoria Spartz, H. Rept. 118-731, November 12, 2024")}
+        {link("https://conduct.house.gov/sites/evo-subsites/oce.house.gov/files/evo-media-document/oce-fourth-quarter-2024-report_vf.pdf", "Office of Congressional Ethics, Fourth Quarter 2024 report")}
+        {link("https://conduct.house.gov/docs/investigations", "Office of Congressional Conduct, public investigations index")}
+      </div>
+    </div>
+  );
+}
 
 const LAW_TILES: Record<string, string> = {
   status: "/images/tile-case-status.jpg",
@@ -2196,21 +2465,35 @@ function LawfareLayer({
         <ul className="mt-3 list-disc pl-5 text-[15px] leading-snug text-white/85">
           <li>Impeachments: {row?.note ?? "Not on record."}</li>
         </ul>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {(chart.sources ?? []).map((source) => (
-            <button key={source.href} type="button" onClick={() => onSource(source.href)} className={NEWS_DOOR + " w-fit"}>
-              {source.label}
-            </button>
-          ))}
+        <div className="mt-6 flex flex-wrap items-end justify-center gap-8">
           {row?.name === "Trump" ? (
             <>
-              <button type="button" onClick={() => onImpeach?.("2019")} className={NEWS_DOOR + " w-fit"}>First, 2019</button>
-              <button type="button" onClick={() => onImpeach?.("2021")} className={NEWS_DOOR + " w-fit"}>Second, 2021</button>
+              {(
+                [
+                  ["First impeachment, 2019", "/images/tile-impeach-2019.jpg", () => onImpeach?.("2019")],
+                  ["Second impeachment, 2021", "/images/tile-impeach-2021.jpg", () => onImpeach?.("2021")],
+                  ["House list of impeachments", "/images/tile-impeach-list.jpg", () => onSource("https://history.house.gov/Institution/Impeachment/Impeachment-List/")],
+                  ["How federal impeachment works", "/images/tile-impeach-works.jpg", () => onSource("https://www.usa.gov/impeachment")],
+                ] as const
+              ).map(([label, src, open]) => (
+                <button key={label} type="button" onClick={open} className="flex w-52 flex-col items-center gap-3 border-0 bg-transparent p-0">
+                  <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">{label}</span>
+                  <img src={src} alt="" className="h-52 w-52 rounded-2xl border border-white/30 object-cover" />
+                </button>
+              ))}
             </>
-          ) : null}
-          {row?.name === "Clinton" ? (
-            <button type="button" onClick={() => onImpeach?.("clinton")} className={NEWS_DOOR + " w-fit"}>Clinton record</button>
-          ) : null}
+          ) : (
+            <>
+              {(chart.sources ?? []).map((source) => (
+                <button key={source.href} type="button" onClick={() => onSource(source.href)} className={NEWS_DOOR + " w-fit"}>
+                  {source.label}
+                </button>
+              ))}
+              {row?.name === "Clinton" ? (
+                <button type="button" onClick={() => onImpeach?.("clinton")} className={NEWS_DOOR + " w-fit"}>Clinton record</button>
+              ) : null}
+            </>
+          )}
         </div>
       </div>
     );
@@ -2739,6 +3022,166 @@ function ImpeachRecord({
   );
 }
 
+const PERIOD_TILE: Record<string, string> = {
+  "2015–16": "/images/tile-period-2015.jpg",
+  "2017–18": "/images/tile-period-2017.jpg",
+  "2019–20": "/images/tile-period-2019.jpg",
+  "2021–22": "/images/tile-period-2021.jpg",
+  "2023–24": "/images/tile-period-2023.jpg",
+  "2025–26": "/images/tile-period-2025.jpg",
+};
+
+const PROOF_TILE: Record<string, string> = {
+  "Official record": "/images/tile-proof-record.jpg",
+  "Original transcript/video": "/images/tile-proof-transcript.jpg",
+  "Outlet's own correction": "/images/tile-proof-correction.jpg",
+  "Primary document or record search": "/images/tile-proof-primary.jpg",
+};
+
+function proofSlice(index: number) {
+  const spec = EVIDENCE_CHARTS.find((item) => item.id === "chart-proof");
+  const value = spec?.values[index];
+  const cases = newsEvidence.methods.flatMap((item) => item.cases).filter((item) => value != null && NEWS_MARKS[item.id]?.proof === value);
+  return { spec, value, cases };
+}
+
+function ProofLayers({
+  method,
+  onMethod,
+  onCase,
+}: {
+  method: string;
+  onMethod: (next: string) => void;
+  onCase: (id: string) => void;
+}) {
+  const parts = method.split(":");
+  const index = Number(parts[1]);
+  const period = parts.length > 2 ? parts.slice(2).join(":") : null;
+  const { spec, value, cases } = proofSlice(index);
+  const label = spec?.labels[index] ?? "Strength of proof";
+  const rows = cases.map((item) => ({ item, file: NEWS_CASES.find((row) => row.id === item.id) }));
+  if (period) {
+    const picked = rows.filter((row) => (row.file?.period ?? "Date unknown") === period);
+    return (
+      <div className="w-full">
+        <p className="text-center text-[16px] font-semibold text-white">{period} · {picked.length}</p>
+        <LayerTiles
+          square
+          tiles={picked.map(({ item }) => ({
+            key: item.id,
+            label: item.label,
+            image: PROOF_TILE[value ?? ""] ?? "/images/tile-strength-of-proof.jpg",
+            onOpen: () => onCase(item.id),
+          }))}
+        />
+      </div>
+    );
+  }
+  const groups = NEWS_PERIODS.map((item) => ({
+    key: item.key,
+    count: rows.filter((row) => (row.file?.period ?? "Date unknown") === item.key).length,
+  })).filter((item) => item.count > 0);
+  return (
+    <div className="w-full">
+      <p className="text-center text-[16px] font-semibold text-white">{label} · {cases.length}</p>
+      <LayerTiles
+        square
+        tiles={groups.map((item) => ({
+          key: item.key,
+          label: item.key,
+          image: PERIOD_TILE[item.key] ?? "/images/pill-time.jpg",
+          onOpen: () => onMethod(`chart-proof:${index}:${item.key}`),
+        }))}
+      />
+    </div>
+  );
+}
+
+function ProofCase({ id, onSource }: { id: string; onSource: (href: string) => void }) {
+  const item = newsEvidence.methods.flatMap((entry) => entry.cases).find((entry) => entry.id === id);
+  const file = NEWS_CASES.find((row) => row.id === id);
+  if (!item) return <p className="mt-8 text-[15px] text-white">Not on record.</p>;
+  const correction = (file?.correction ?? "").trim();
+  const never = correction.toLowerCase().startsWith("never");
+  const unknown = !correction || correction === "Unknown";
+  const retracted = !never && !unknown;
+  const status = file?.evidence === "Proven false"
+    ? "False"
+    : file?.evidence === "Rated misleading"
+      ? "Rated misleading"
+      : (file?.evidence ?? "Not on record");
+  const where = correction === "Editor's note at bottom of article"
+    ? "An editor's note at the bottom of the article."
+    : correction === "Appended correction line"
+      ? "A correction line added to the story."
+      : correction === "On-air correction"
+        ? "Said on the air."
+        : correction === "Retraction after legal threat/settlement"
+          ? "After a legal threat or a settlement."
+          : correction;
+  const accountability = /legal|settlement/i.test(correction)
+    ? "A retraction after a legal threat or settlement is on this record. No criminal finding is on this record."
+    : never
+      ? "No accountability."
+      : retracted
+        ? "No accountability beyond the correction on this record."
+        : "Accountability is not on this record.";
+  return (
+    <div className="mt-8 w-full text-left">
+      <div className="rounded-2xl border border-[#d4af37] bg-[#070b12] px-5 py-4">
+        <p className="text-[18px] font-bold tracking-wide text-white">{status}</p>
+        <p className="mt-2 text-[16px] font-semibold text-white">
+          {never ? "Not retracted." : unknown ? "Retraction: not on record." : "Retracted."}
+        </p>
+        {retracted ? (
+          <>
+            <p className="mt-2 text-[16px] leading-snug text-white">Where: {where}</p>
+            <p className="mt-2 text-[16px] leading-snug text-white">Who made it: {item.who}</p>
+            <p className="mt-2 text-[16px] leading-snug text-white">The record does not show that this retraction reached as large an audience as the claim.</p>
+          </>
+        ) : null}
+        <p className="mt-2 text-[16px] font-semibold text-white">{accountability}</p>
+      </div>
+      <p className="mt-6 text-[16px] font-semibold text-white">{item.who}</p>
+      <p className="mt-2 text-[15px] text-white/85">{item.date}</p>
+      <p className="mt-4 text-[16px] font-semibold text-white">Who said it</p>
+      <p className="mt-1 text-[15px] leading-snug text-white/85">{item.who}</p>
+      <p className="mt-4 text-[16px] font-semibold text-white">What they said</p>
+      <p className="mt-1 text-[15px] leading-snug text-white/85">{item.said}</p>
+      <p className="mt-4 text-[16px] font-semibold text-white">What the document states</p>
+      <p className="mt-1 whitespace-pre-line text-[15px] leading-snug text-white/85">{item.record}</p>
+      <p className="mt-4 text-[16px] font-semibold text-white">Times stated</p>
+      <p className="mt-1 text-[15px] leading-snug text-white/85">Not on record.</p>
+      <p className="mt-4 text-[16px] font-semibold text-white">Duration of the claim</p>
+      <p className="mt-1 text-[15px] leading-snug text-white/85">
+        {file ? `${file.duration}. Began ${file.began}. Ended ${file.ended}.` : item.date}
+      </p>
+      <p className="mt-4 text-[16px] font-semibold text-white">What the record does to the claim</p>
+      <p className="mt-1 text-[15px] leading-snug text-white/85">
+        {file?.evidence ?? "Not on record."} The document text above is the check. This page does not add a finding the record does not state.
+      </p>
+      <p className="mt-4 text-[16px] font-semibold text-white">Accountability</p>
+      <p className="mt-1 text-[15px] leading-snug text-white/85">{accountability}</p>
+      <p className="mt-4 text-[16px] font-semibold text-white">How the retraction was made</p>
+      <p className="mt-1 text-[15px] leading-snug text-white/85">
+        {never ? "No retraction is on this record." : unknown ? "How any retraction was made is not on this record." : where}
+      </p>
+      <div className="mt-4 flex flex-wrap gap-2">
+        {item.sources.map((source) => (
+          <button
+            key={source.href}
+            type="button"
+            onClick={() => onSource(source.href)}
+            className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[15px] font-semibold text-white"
+          >
+            {source.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function Betrayal() {
   const [layer, setLayer] = useState<Layer>("root");
   const [method, setMethod] = useState<string | null>(null);
@@ -2772,6 +3215,7 @@ function Betrayal() {
   const [topicHref, setTopicHref] = useState<string | null>(null);
   const [impeachFile, setImpeachFile] = useState<null | "2019" | "2021" | "clinton" | "public">(null);
   const [impeachFrom, setImpeachFrom] = useState<null | "2019" | "2021" | "clinton">(null);
+  const [ethicsDoc, setEthicsDoc] = useState<null | "house-menu" | "senate-menu" | "house" | "senate" | "house-summary" | "senate-summary" | "house-record" | "senate-record">(null);
   const topicBack = () => {
     if (topicHref) {
       setTopicHref(null);
@@ -2834,6 +3278,11 @@ function Betrayal() {
     if (newsMethod && newsMethod.startsWith("chart-term:")) {
       const path = newsPath(newsMethod.slice("chart-term:".length));
       setNewsMethod(path.length > 1 ? `chart-term:${JSON.stringify(path.slice(0, -1))}` : "chart-term");
+      return;
+    }
+    if (newsMethod && newsMethod.startsWith("chart-proof:")) {
+      const parts = newsMethod.split(":");
+      setNewsMethod(parts.length > 2 ? parts.slice(0, 2).join(":") : "chart-proof");
       return;
     }
     if (newsMethod && newsMethod.startsWith("chart-evidence:never")) {
@@ -3301,9 +3750,15 @@ function Betrayal() {
               onClick={newsBack}
               className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
             >
-              {newsMethod && !newsMethod.includes(":") && !newsCase && !newsSource
-                ? EVIDENCE_CHARTS.find((item) => item.id === newsMethod)?.title
-                : "Fake News Evidence"}
+              {newsMethod === "chart-proof" && !newsCase && !newsSource
+                ? "Strength of proof"
+                : newsMethod?.startsWith("chart-proof:") && !newsCase && !newsSource
+                  ? newsMethod.split(":").length > 2
+                    ? newsMethod.split(":").slice(2).join(":")
+                    : (EVIDENCE_CHARTS.find((item) => item.id === "chart-proof")?.labels[Number(newsMethod.split(":")[1])] ?? "Strength of proof")
+                  : newsMethod && !newsMethod.includes(":") && !newsCase && !newsSource
+                    ? EVIDENCE_CHARTS.find((item) => item.id === newsMethod)?.title
+                    : "Fake News Evidence"}
             </button>
             )}
             {newsSource ? (
@@ -3320,6 +3775,8 @@ function Betrayal() {
                   href={newsSource}
                 />
               </div>
+            ) : newsCase && newsMethod?.startsWith("chart-proof") ? (
+              <ProofCase id={newsCase} onSource={setNewsSource} />
             ) : newsCase && newsMine ? (
               <div className="w-full">
                 {NEWS_CASES.filter((row) => row.id === newsCase).map((row) => (
@@ -3364,6 +3821,19 @@ function Betrayal() {
               <NewsNeverList
                 which={newsMethod === "chart-evidence:never" ? null : newsMethod.slice("chart-evidence:never:".length)}
                 onWhich={(which) => setNewsMethod(`chart-evidence:never:${which}`)}
+                onCase={(id) => {
+                  setNewsSource(null);
+                  setNewsCase(id);
+                }}
+              />
+            ) : newsMethod && newsMethod.startsWith("chart-proof:") ? (
+              <ProofLayers
+                method={newsMethod}
+                onMethod={(next) => {
+                  setNewsSource(null);
+                  setNewsCase(null);
+                  setNewsMethod(next);
+                }}
                 onCase={(id) => {
                   setNewsSource(null);
                   setNewsCase(id);
@@ -3726,7 +4196,7 @@ function Betrayal() {
             )}
           </div>
         )}
-        {layer === "lawfare" && !lawOn && (
+        {layer === "lawfare" && !lawOn && !ethicsDoc && (
           <div className="mx-auto flex max-w-5xl flex-col items-center px-6 pt-16 pb-24">
             <button
               type="button"
@@ -3741,6 +4211,14 @@ function Betrayal() {
                   key={label}
                   type="button"
                   onClick={() => {
+                    if (label === "House") {
+                      setEthicsDoc("house-menu");
+                      return;
+                    }
+                    if (label === "Senate") {
+                      setEthicsDoc("senate-menu");
+                      return;
+                    }
                     if (label === "Lawfare Evidence") {
                       setLawPick(null);
                       setLawCase(null);
@@ -3763,6 +4241,80 @@ function Betrayal() {
                 </button>
               ))}
             </div>
+          </div>
+        )}
+        {layer === "lawfare" && !lawOn && ethicsDoc && (
+          <div className="mx-auto flex max-w-3xl flex-col items-center px-6 pt-16 pb-24">
+            <button
+              type="button"
+              onClick={() => {
+                if (ethicsDoc === "house-menu" || ethicsDoc === "senate-menu") setEthicsDoc(null);
+                else if (ethicsDoc === "house" || ethicsDoc === "house-summary" || ethicsDoc === "house-record") setEthicsDoc("house-menu");
+                else setEthicsDoc("senate-menu");
+              }}
+              className="border-0 bg-transparent p-0 text-center text-[16px] font-semibold tracking-wide text-white"
+            >
+              {ethicsDoc === "house-menu"
+                ? "House"
+                : ethicsDoc === "senate-menu"
+                  ? "Senate"
+                  : ethicsDoc === "house" || ethicsDoc === "senate"
+                    ? "Code of Official Conduct"
+                    : ethicsDoc === "house-record" || ethicsDoc === "senate-record"
+                      ? "Record of ethics complaints"
+                      : "Summary"}
+            </button>
+            {ethicsDoc === "house-menu" || ethicsDoc === "senate-menu" ? (
+              <div className="mt-8 flex flex-wrap items-end justify-center gap-8">
+                {(ethicsDoc === "house-menu"
+                  ? [
+                      ["house", "Code of Official Conduct", "/images/topic-house-code.jpg"],
+                      ["house-summary", "Summary", "/images/topic-house-summary.jpg"],
+                      ["house-record", "Record of ethics complaints", "/images/topic-house-record.jpg"],
+                    ]
+                  : [
+                      ["senate", "Code of Official Conduct", "/images/topic-senate-code.jpg"],
+                      ["senate-summary", "Summary", "/images/topic-senate-summary.jpg"],
+                      ["senate-record", "Record of ethics complaints", "/images/topic-senate-record.jpg"],
+                    ]
+                ).map(([key, label, src]) => (
+                  <button
+                    key={key}
+                    type="button"
+                    onClick={() => setEthicsDoc(key as "house" | "senate" | "house-summary" | "senate-summary" | "house-record" | "senate-record")}
+                    className="flex w-52 flex-col items-center gap-3 border-0 bg-transparent p-0"
+                  >
+                    <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">{label}</span>
+                    <img src={src} alt="" className="h-52 w-52 rounded-2xl border border-white/30 object-cover" />
+                  </button>
+                ))}
+              </div>
+            ) : ethicsDoc === "house-summary" || ethicsDoc === "senate-summary" ? (
+              <EthicsSummary which={ethicsDoc === "house-summary" ? "house" : "senate"} />
+            ) : ethicsDoc === "house-record" || ethicsDoc === "senate-record" ? (
+              <EthicsRecord which={ethicsDoc === "house-record" ? "house" : "senate"} />
+            ) : (
+              <div className="mt-6 w-full text-left">
+                <p className="text-[15px] leading-snug text-white/85">
+                  {ethicsDoc === "house"
+                    ? "Rule XXIII, the Code of Official Conduct, from the Rules of the House of Representatives, 119th Congress. Clerk of the House, January 16, 2025. These are the official pages. Rule XXIII begins on the first page."
+                    : "The Senate Code of Official Conduct, Rules 34 through 43 of the Standing Rules of the Senate. Select Committee on Ethics, October 2021. These are the official pages."}
+                </p>
+                <div className="mt-4 flex flex-col gap-4">
+                  {(ethicsDoc === "house" ? HOUSE_CODE_PAGES : SENATE_CODE_PAGES).map((src) => (
+                    <img key={src} src={src} alt="" className="w-full rounded-xl border border-white/25 bg-white" />
+                  ))}
+                </div>
+                <a
+                  href={ethicsDoc === "house" ? "https://rules.house.gov/sites/evo-subsites/republicans-rules.house.gov/files/documents/houserules119thupdated.pdf" : "https://www.ethics.senate.gov/public/index.cfm/senate-code-of-official-conduct"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={NEWS_DOOR + " mt-4 inline-block w-fit"}
+                >
+                  Open the official source
+                </a>
+              </div>
+            )}
           </div>
         )}
         {layer === "lawfare" && lawOn && (
