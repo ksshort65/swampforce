@@ -2872,13 +2872,15 @@ function CardLayers({
   slice,
   onSlice,
   onSource,
+  onCase,
 }: {
   card: string;
   slice: string | null;
   onSlice: (value: string) => void;
   onSource: (href: string) => void;
+  onCase?: (id: string) => void;
 }) {
-  if (card === SAVE_CARD) return <SaveLeanLayers slice={slice} onSlice={onSlice} onCase={onCase} />;
+  if (card === SAVE_CARD) return <SaveLeanLayers slice={slice} onSlice={onSlice} onCase={onCase ?? (() => {})} />;
   const spec = CARD_CASES[card];
   const rows = spec ? NEWS_CASES.filter(spec.match) : [];
   if (slice) {
@@ -4731,7 +4733,7 @@ function Betrayal() {
                 ))}
               </div>
             ) : card ? (
-              <CardLayers card={card} slice={cardSlice} onSlice={setCardSlice} onSource={setCardHref} />
+              <CardLayers card={card} slice={cardSlice} onSlice={setCardSlice} onSource={setCardHref} onCase={setCardCase} />
             ) : deception === "checkers" && checkerHref ? (
               <div className="w-full">
                 <SourcePage
