@@ -785,7 +785,7 @@ function TopicView({
     const sectionLevel = sources.length > 0 && sources.every((s) => s.sectionLevel);
     return (
       <div className="w-full" data-level="item">
-        <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{it.title}</p>
+        <h1 className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{it.title}</h1>
         <p className="mt-1 text-center text-[15px] text-white/75">{TITLES[t] ?? t}</p>
         <article className="mt-6 w-full rounded-2xl border border-white/25 bg-[#070b12]/85 px-4 py-4 text-left">
           {it.label ? (
