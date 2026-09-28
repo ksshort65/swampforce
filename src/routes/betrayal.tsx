@@ -1102,19 +1102,11 @@ const NEWS_DOOR =
   "w-full rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-2 text-[15px] font-semibold leading-snug text-white";
 const NEWS_CARD = "mt-6 w-full rounded-2xl border border-[#d4af37] bg-[#070b12] px-4 py-4";
 
-function NewsCaseList({ rows, onCase }: { rows: NewsCaseRow[]; onCase: (id: string) => void }) {
+function NewsCaseList({ rows, onSource }: { rows: NewsCaseRow[]; onSource: (href: string) => void }) {
   return (
-    <div className="mt-6 flex w-full flex-col gap-2">
+    <div className="mt-6 flex w-full flex-col gap-4 text-left">
       {rows.map((row) => (
-        <button
-          key={row.id}
-          type="button"
-          onClick={() => onCase(row.id)}
-          className="w-full rounded-3xl border border-white/35 bg-[#070b12]/75 px-4 py-2 text-left text-[15px] font-semibold leading-snug text-white"
-        >
-          {row.who} · {row.began}
-          <span className="mt-1 block font-normal text-white/80">{row.statusLabel}</span>
-        </button>
+        <OrganizedNews key={row.id} row={row} onSource={onSource} />
       ))}
     </div>
   );
@@ -1124,7 +1116,7 @@ function claimClip(sources: { label: string; href: string }[]) {
   const video = sources.find((item) => /youtube\.com|youtu\.be|c-span\.org|rumble\.com|vimeo\.com/i.test(item.href));
   if (video) return { title: "Video of it being said", source: video };
   const publication = sources.find((item) => (
-    /abcnews\.com|cbsnews\.com|nbcnews\.com|cnn\.com\/20|washingtonpost\.com|nytimes\.com|politico\.com|apnews\.com|cnbc\.com|npr\.org|theguardian\.com|axios\.com|usatoday\.com|newsweek\.com|foxnews\.com|msnbc\.com|thehill\.com|buzzfeednews\.com|reuters\.com/i.test(item.href)
+    /abcnews\.com|cbsnews\.com|nbcnews\.com|cnn\.com\/20|washingtonpost\.com|nytimes\.com|politico\.com|apnews\.com|cnbc\.com|npr\.org|theguardian\.com|axios\.com|usatoday\.com|newsweek\.com|foxnews\.com|msnbc\.com|thehill\.com|buzzfeednews\.com|reuters\.com|x\.com|twitter\.com|instagram\.com|tiktok\.com|facebook\.com|truthsocial\.com/i.test(item.href)
     && !/fact-check|factcheck|politifact|\/legal\//i.test(item.href)
   ));
   if (publication) return { title: "The publication", source: publication };
@@ -1162,39 +1154,8 @@ function NewsCaseDetail({ row, onSource }: { row: NewsCaseRow; onSource: (href: 
   return (
     <div className="w-full">
       <NewsHeading title={`Case #${row.id}`} line={`${row.period} · ${row.began}`} />
-      <div className="mt-6 w-full rounded-2xl border border-white/20 bg-[#070b12]/85 px-5 py-5 text-left">
-        <span className="inline-block rounded-full border border-[#d4af37] px-3 py-1 text-[15px] font-semibold text-[#d4af37]">
-          {row.statusLabel}
-        </span>
-        <p className="mt-4 text-[16px] font-semibold text-white">Who</p>
-        <p className="mt-1 text-[15px] leading-snug text-white/85">{row.who}</p>
-        <p className="mt-4 text-[16px] font-semibold text-white">Date</p>
-        <p className="mt-1 text-[15px] leading-snug text-white/85">
-          Began {row.began} · Ended {row.ended}
-        </p>
-        <p className="mt-4 text-[16px] font-semibold text-white">What they said</p>
-        <p className="mt-1 text-[15px] leading-snug text-white/85">{row.said}</p>
-        <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
-        <p className="mt-1 whitespace-pre-line text-[15px] leading-snug text-white/85">{row.record}</p>
-        {row.correction ? (
-          <>
-            <p className="mt-4 text-[16px] font-semibold text-white">Correction</p>
-            <p className="mt-1 text-[15px] leading-snug text-white/85">{row.correction}</p>
-          </>
-        ) : null}
-        <ClaimSaid sources={row.sources} onSource={onSource} />
-        <div className="mt-4 flex flex-wrap gap-2">
-          {row.sources.map((item) => (
-            <button
-              key={item.href}
-              type="button"
-              onClick={() => onSource(item.href)}
-              className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1.5 text-[15px] font-semibold text-white"
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
+      <div className="mt-6">
+        <OrganizedNews row={row} onSource={onSource} />
       </div>
     </div>
   );
@@ -1346,11 +1307,11 @@ function NewsScaleNote() {
 function NewsPeriodLayers({
   path,
   onPath,
-  onCase,
+  onSource,
 }: {
   path: string[];
   onPath: (path: string[]) => void;
-  onCase: (id: string) => void;
+  onSource: (href: string) => void;
 }) {
   const period = path[0] != null ? NEWS_PERIODS.find((item) => item.key === path[0]) : undefined;
   const dim = path[1] != null ? NEWS_DIMS.find((item) => item.key === path[1]) : undefined;
@@ -1367,7 +1328,7 @@ function NewsPeriodLayers({
           title={subValue ?? value}
           line={`${period.key} · ${subValue != null ? value : dim.title} · ${newsCasesLine(valueRows.length)}`}
         />
-        <NewsCaseList rows={valueRows} onCase={onCase} />
+        <NewsCaseList rows={valueRows} onSource={onSource} />
       </div>
     );
   }
@@ -1458,11 +1419,11 @@ const NEWS_NEVER_MISLEADING = NEWS_NEVER.filter((row) => row.evidence === "Rated
 function NewsNeverList({
   which,
   onWhich,
-  onCase,
+  onSource,
 }: {
   which: string | null;
   onWhich: (which: string) => void;
-  onCase: (id: string) => void;
+  onSource: (href: string) => void;
 }) {
   if (which === "false" || which === "misleading") {
     const rows = which === "false" ? NEWS_NEVER_FALSE : NEWS_NEVER_MISLEADING;
@@ -1472,7 +1433,7 @@ function NewsNeverList({
           title={`Never corrected · ${which === "false" ? "False" : "Misleading"} (${rows.length})`}
           line={`Verified cases · ${newsCasesLine(rows.length)}`}
         />
-        <NewsCaseList rows={rows} onCase={onCase} />
+        <NewsCaseList rows={rows} onSource={onSource} />
       </div>
     );
   }
@@ -1490,7 +1451,7 @@ function NewsNeverList({
           Misleading ({NEWS_NEVER_MISLEADING.length})
         </button>
       </div>
-      <NewsCaseList rows={NEWS_NEVER} onCase={onCase} />
+      <NewsCaseList rows={NEWS_NEVER} onSource={onSource} />
     </div>
   );
 }
@@ -2764,12 +2725,12 @@ function CardLayers({
   card,
   slice,
   onSlice,
-  onCase,
+  onSource,
 }: {
   card: string;
   slice: string | null;
   onSlice: (value: string) => void;
-  onCase: (id: string) => void;
+  onSource: (href: string) => void;
 }) {
   const spec = CARD_CASES[card];
   const rows = spec ? NEWS_CASES.filter(spec.match) : [];
@@ -2778,7 +2739,7 @@ function CardLayers({
     return (
       <div className="w-full">
         <NewsHeading title={slice === "all" ? `${card} · all cases` : slice} line={`${card} · ${newsCasesLine(list.length)}`} />
-        <NewsCaseList rows={list} onCase={onCase} />
+        <NewsCaseList rows={list} onSource={onSource} />
       </div>
     );
   }
@@ -3114,6 +3075,74 @@ function methodStatus(id: string) {
   };
 }
 
+function OrganizedCase({
+  who,
+  said,
+  status,
+  retracted,
+  how,
+  audience,
+  duration,
+  record,
+  sources,
+  onSource,
+}: {
+  who: string;
+  said: string;
+  status: string;
+  retracted: string;
+  how: string;
+  audience: string;
+  duration: string;
+  record?: string;
+  sources: { label: string; href: string }[];
+  onSource: (href: string) => void;
+}) {
+  return (
+    <article className="rounded-2xl border border-white/25 bg-[#070b12]/85 px-4 py-4">
+      <p className="text-[16px] font-semibold text-white">{status}</p>
+      <p className="mt-2 text-[15px] leading-snug text-white">{retracted}</p>
+      <p className="mt-2 text-[15px] leading-snug text-white">Method of retraction: {how}</p>
+      <p className="mt-2 text-[15px] leading-snug text-white">Audience: {audience}</p>
+      <p className="mt-2 text-[15px] leading-snug text-white">How long it was repeated: {duration}</p>
+      <p className="mt-2 text-[15px] leading-snug text-white">By whom: {who}</p>
+      <p className="mt-2 text-[15px] leading-snug text-white/85">{said}</p>
+      {record ? (
+        <>
+          <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
+          <p className="mt-1 whitespace-pre-line text-[15px] leading-snug text-white/85">{record}</p>
+        </>
+      ) : null}
+      <ClaimSaid sources={sources} onSource={onSource} />
+      <div className="mt-3 flex flex-col gap-2">
+        {sources.map((source) => (
+          <button key={source.href} type="button" onClick={() => onSource(source.href)} className={NEWS_DOOR + " text-left"}>
+            {source.label}
+          </button>
+        ))}
+      </div>
+    </article>
+  );
+}
+
+function OrganizedNews({ row, onSource }: { row: NewsCaseRow; onSource: (href: string) => void }) {
+  const line = methodStatus(row.id);
+  return (
+    <OrganizedCase
+      who={row.who}
+      said={row.said}
+      status={line.status}
+      retracted={line.retracted}
+      how={line.how}
+      audience={line.audience}
+      duration={line.duration}
+      record={row.record}
+      sources={row.sources}
+      onSource={onSource}
+    />
+  );
+}
+
 function MethodLayers({
   method,
   onMethod,
@@ -3137,26 +3166,8 @@ function MethodLayers({
       <div className="mt-6 flex w-full flex-col gap-4 text-left">
         <p className="text-center text-[16px] font-semibold text-white">{label} · {cases.length}</p>
         {cases.map((item) => {
-          const line = methodStatus(item.id);
-          return (
-            <article key={item.id} className="rounded-2xl border border-white/25 bg-[#070b12]/85 px-4 py-4">
-              <p className="text-[16px] font-semibold text-white">{line.status}</p>
-              <p className="mt-2 text-[15px] leading-snug text-white">{line.retracted}</p>
-              <p className="mt-2 text-[15px] leading-snug text-white">Method of retraction: {line.how}</p>
-              <p className="mt-2 text-[15px] leading-snug text-white">Audience: {line.audience}</p>
-              <p className="mt-2 text-[15px] leading-snug text-white">How long it was repeated: {line.duration}</p>
-              <p className="mt-2 text-[15px] leading-snug text-white">By whom: {item.who}</p>
-              <p className="mt-2 text-[15px] leading-snug text-white/85">{item.said}</p>
-              <ClaimSaid sources={item.sources} onSource={onSource} />
-              <div className="mt-3 flex flex-col gap-2">
-                {item.sources.map((source) => (
-                  <button key={source.href} type="button" onClick={() => onSource(source.href)} className={NEWS_DOOR + " text-left"}>
-                    {source.label}
-                  </button>
-                ))}
-              </div>
-            </article>
-          );
+          const row = NEWS_CASES.find((file) => file.id === item.id);
+          return row ? <OrganizedNews key={item.id} row={row} onSource={onSource} /> : null;
         })}
       </div>
     );
@@ -3202,32 +3213,24 @@ function proofSlice(index: number) {
 function ProofLayers({
   method,
   onMethod,
-  onCase,
+  onSource,
 }: {
   method: string;
   onMethod: (next: string) => void;
-  onCase: (id: string) => void;
+  onSource: (href: string) => void;
 }) {
   const parts = method.split(":");
   const index = Number(parts[1]);
   const period = parts.length > 2 ? parts.slice(2).join(":") : null;
-  const { spec, value, cases } = proofSlice(index);
+  const { spec, cases } = proofSlice(index);
   const label = spec?.labels[index] ?? "Strength of proof";
   const rows = cases.map((item) => ({ item, file: NEWS_CASES.find((row) => row.id === item.id) }));
   if (period) {
-    const picked = rows.filter((row) => (row.file?.period ?? "Date unknown") === period);
+    const picked = rows.map((row) => row.file).filter((row): row is NewsCaseRow => !!row && row.period === period);
     return (
       <div className="w-full">
-        <p className="text-center text-[16px] font-semibold text-white">{period} · {picked.length}</p>
-        <LayerTiles
-          square
-          tiles={picked.map(({ item }) => ({
-            key: item.id,
-            label: item.label,
-            image: PROOF_TILE[value ?? ""] ?? "/images/tile-strength-of-proof.jpg",
-            onOpen: () => onCase(item.id),
-          }))}
-        />
+        <p className="text-center text-[16px] font-semibold text-white">{label} · {period} · {picked.length}</p>
+        <NewsCaseList rows={picked} onSource={onSource} />
       </div>
     );
   }
@@ -3783,26 +3786,23 @@ function Betrayal() {
                       {row.viewCount ? " views" : ""}
                     </p>
                     {row.leanNote && <p className="mt-1 text-[15px] text-white/75">{row.leanNote}</p>}
-                    <p className="mt-4 text-[16px] font-semibold text-white">What they said</p>
-                    <p className="mt-2 text-[15px] leading-snug text-white/85">{row.said}</p>
+                    <OrganizedCase
+                      who={row.who}
+                      said={row.said}
+                      status="Not rated on the fake-news case file."
+                      retracted="Retraction: not on this record."
+                      how="Not on this record."
+                      audience="Whether any retraction reached the same audience as the claim is not on this record."
+                      duration={`${row.when}. How long it was repeated is not on this record.`}
+                      sources={row.links}
+                      onSource={setSaveHref}
+                    />
                     {row.record && (
                       <>
                         <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
                         <p className="mt-2 text-[15px] leading-snug text-white/85">{row.record}</p>
                       </>
                     )}
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {row.links.map((link) => (
-                        <button
-                          key={link.href}
-                          type="button"
-                          onClick={() => setSaveHref(link.href)}
-                          className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[15px] font-semibold text-white"
-                        >
-                          {link.label}
-                        </button>
-                      ))}
-                    </div>
                   </div>
                 ))}
               </div>
@@ -3975,19 +3975,13 @@ function Betrayal() {
               <NewsPeriodLayers
                 path={newsMethod === "chart-term" ? [] : newsPath(newsMethod.slice("chart-term:".length))}
                 onPath={(path) => setNewsMethod(`chart-term:${JSON.stringify(path)}`)}
-                onCase={(id) => {
-                  setNewsSource(null);
-                  setNewsCase(id);
-                }}
+                onSource={setNewsSource}
               />
             ) : newsMethod && newsMethod.startsWith("chart-evidence:never") ? (
               <NewsNeverList
                 which={newsMethod === "chart-evidence:never" ? null : newsMethod.slice("chart-evidence:never:".length)}
                 onWhich={(which) => setNewsMethod(`chart-evidence:never:${which}`)}
-                onCase={(id) => {
-                  setNewsSource(null);
-                  setNewsCase(id);
-                }}
+                onSource={setNewsSource}
               />
             ) : newsMethod && newsMethod.startsWith("chart-methods:") ? (
               <MethodLayers
@@ -4010,10 +4004,7 @@ function Betrayal() {
                   setNewsCase(null);
                   setNewsMethod(next);
                 }}
-                onCase={(id) => {
-                  setNewsSource(null);
-                  setNewsCase(id);
-                }}
+                onSource={setNewsSource}
               />
             ) : newsMethod && newsMethod.includes(":") ? (
               <div className="mt-8 w-full">
@@ -4035,21 +4026,10 @@ function Betrayal() {
                       <p className="text-center text-[16px] font-semibold text-white">
                         {spec ? `${spec.labels[index]} · ${spec.data[index]}` : ""}
                       </p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {cases.map((item) => (
-                          <button
-                            key={item.id}
-                            type="button"
-                            onClick={() => {
-                              setNewsSource(null);
-                              setNewsCase(item.id);
-                            }}
-                            className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[15px] font-semibold text-white"
-                          >
-                            {item.who} · {item.date}
-                          </button>
-                        ))}
-                      </div>
+                      <NewsCaseList
+                        rows={cases.map((item) => NEWS_CASES.find((row) => row.id === item.id)).filter((row): row is NewsCaseRow => !!row)}
+                        onSource={setNewsSource}
+                      />
                     </>
                   );
                 })()}
@@ -4598,7 +4578,7 @@ function Betrayal() {
                 ))}
               </div>
             ) : card ? (
-              <CardLayers card={card} slice={cardSlice} onSlice={setCardSlice} onCase={setCardCase} />
+              <CardLayers card={card} slice={cardSlice} onSlice={setCardSlice} onSource={setCardHref} />
             ) : deception === "checkers" && checkerHref ? (
               <div className="w-full">
                 <SourcePage
