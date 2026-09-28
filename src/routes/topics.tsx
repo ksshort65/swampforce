@@ -156,6 +156,8 @@ function loadChartJs() {
 const CARD = "mt-4 w-full rounded-2xl border border-[#d4af37] bg-[#070b12] px-4 py-4";
 const ROW =
   "w-full rounded-3xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] font-semibold leading-snug text-white";
+const NEWS_DOOR =
+  "w-full rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-2 text-[15px] font-semibold leading-snug text-white";
 const PILL =
   "w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-2 text-left text-[15px] font-semibold leading-snug text-white";
 
@@ -358,7 +360,7 @@ function ChartCard({
   onBar: (index: number, ds?: number) => void;
   onAll: () => void;
 }) {
-  const [showKeys, setShowKeys] = useState(chart.labels.length <= 30);
+  const [showKeys, setShowKeys] = useState(true);
   return (
     <section className="mt-10 w-full" data-chart={chart.id}>
       <h2 className="text-center text-[18px] font-semibold tracking-wide text-white">
@@ -783,8 +785,9 @@ function TopicView({
     const sectionLevel = sources.length > 0 && sources.every((s) => s.sectionLevel);
     return (
       <div className="w-full" data-level="item">
-        <Heading title={it.title} />
-        <div className="mt-6 w-full rounded-2xl border border-white/20 bg-[#070b12]/85 px-5 py-5 text-left">
+        <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{it.title}</p>
+        <p className="mt-1 text-center text-[15px] text-white/75">{TITLES[t] ?? t}</p>
+        <article className="mt-6 w-full rounded-2xl border border-white/25 bg-[#070b12]/85 px-4 py-4 text-left">
           {it.label ? (
             <span className="inline-block rounded-full border border-[#d4af37] px-3 py-1 text-[15px] font-semibold text-[#d4af37]">
               {it.label}
@@ -811,14 +814,14 @@ function TopicView({
             {sectionLevel ? "Sources listed for this section" : "Source"}
           </p>
           {sources.length ? (
-            <div className="mt-2 flex flex-wrap gap-2">
+            <div className="mt-3 flex flex-col gap-2">
               {sources.map((s, i) => (
                 <button
                   key={s.href + i}
                   type="button"
                   data-source
                   onClick={() => push({ k: "source", topic: t, item: frame.item, source: i })}
-                  className={PILL}
+                  className={NEWS_DOOR + " text-left"}
                 >
                   {s.label}
                 </button>
@@ -829,7 +832,7 @@ function TopicView({
               No source link was listed for this item on the older site.
             </p>
           )}
-        </div>
+        </article>
       </div>
     );
   }
