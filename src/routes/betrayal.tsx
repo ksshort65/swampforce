@@ -1120,6 +1120,44 @@ function NewsCaseList({ rows, onCase }: { rows: NewsCaseRow[]; onCase: (id: stri
   );
 }
 
+function claimClip(sources: { label: string; href: string }[]) {
+  const video = sources.find((item) => /youtube\.com|youtu\.be|c-span\.org|rumble\.com|vimeo\.com/i.test(item.href));
+  if (video) return { title: "Video of it being said", source: video };
+  const publication = sources.find((item) => (
+    /abcnews\.com|cbsnews\.com|nbcnews\.com|cnn\.com\/20|washingtonpost\.com|nytimes\.com|politico\.com|apnews\.com|cnbc\.com|npr\.org|theguardian\.com|axios\.com|usatoday\.com|newsweek\.com|foxnews\.com|msnbc\.com|thehill\.com|buzzfeednews\.com|reuters\.com/i.test(item.href)
+    && !/fact-check|factcheck|politifact|\/legal\//i.test(item.href)
+  ));
+  if (publication) return { title: "The publication", source: publication };
+  const transcript = sources.find((item) => /rev\.com|transcript/i.test(item.href));
+  if (transcript) return { title: "Transcript of what was said. No video is on this record.", source: transcript };
+  return null;
+}
+
+function ClaimSaid({
+  sources,
+  onSource,
+}: {
+  sources: { label: string; href: string }[];
+  onSource: (href: string) => void;
+}) {
+  const clip = claimClip(sources);
+  if (!clip) {
+    return (
+      <p className="mt-4 text-[15px] font-semibold leading-snug text-white">
+        No video of this claim is on this record. The publication of the claim is not on this record.
+      </p>
+    );
+  }
+  return (
+    <div className="mt-4">
+      <p className="text-[16px] font-semibold text-white">{clip.title}</p>
+      <button type="button" onClick={() => onSource(clip.source.href)} className={NEWS_DOOR + " mt-2 text-left"}>
+        {clip.title}
+      </button>
+    </div>
+  );
+}
+
 function NewsCaseDetail({ row, onSource }: { row: NewsCaseRow; onSource: (href: string) => void }) {
   return (
     <div className="w-full">
@@ -1144,6 +1182,7 @@ function NewsCaseDetail({ row, onSource }: { row: NewsCaseRow; onSource: (href: 
             <p className="mt-1 text-[15px] leading-snug text-white/85">{row.correction}</p>
           </>
         ) : null}
+        <ClaimSaid sources={row.sources} onSource={onSource} />
         <div className="mt-4 flex flex-wrap gap-2">
           {row.sources.map((item) => (
             <button
@@ -2460,6 +2499,7 @@ function LawfareLayer({
         <p className="mt-2 text-[15px] leading-snug text-white/85">{row.said}</p>
         <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
         <p className="mt-2 text-[15px] leading-snug text-white/85">{row.record}</p>
+        <ClaimSaid sources={row.sources} onSource={onSource} />
         <div className="mt-4 flex flex-wrap gap-2">
           {row.sources.map((source) => (
             <button key={source.href} type="button" onClick={() => onSource(source.href)} className={NEWS_DOOR + " w-fit"}>
@@ -3107,6 +3147,7 @@ function MethodLayers({
               <p className="mt-2 text-[15px] leading-snug text-white">How long it was repeated: {line.duration}</p>
               <p className="mt-2 text-[15px] leading-snug text-white">By whom: {item.who}</p>
               <p className="mt-2 text-[15px] leading-snug text-white/85">{item.said}</p>
+              <ClaimSaid sources={item.sources} onSource={onSource} />
               <div className="mt-3 flex flex-col gap-2">
                 {item.sources.map((source) => (
                   <button key={source.href} type="button" onClick={() => onSource(source.href)} className={NEWS_DOOR + " text-left"}>
@@ -3279,6 +3320,7 @@ function ProofCase({ id, onSource }: { id: string; onSource: (href: string) => v
       <p className="mt-1 text-[15px] leading-snug text-white/85">
         {never ? "No retraction is on this record." : unknown ? "How any retraction was made is not on this record." : where}
       </p>
+      <ClaimSaid sources={item.sources} onSource={onSource} />
       <div className="mt-4 flex flex-wrap gap-2">
         {item.sources.map((source) => (
           <button
@@ -3913,6 +3955,7 @@ function Betrayal() {
                     <p className="mt-2 text-[15px] leading-snug text-white/85">{item.said}</p>
                     <p className="mt-4 text-[16px] font-semibold text-white">What the record shows</p>
                     <p className="mt-2 text-[15px] leading-snug text-white/85">{item.record}</p>
+                    <ClaimSaid sources={item.sources} onSource={setNewsSource} />
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.sources.map((source) => (
                         <button
