@@ -67,7 +67,8 @@ type Frame =
   | { k: "bar"; topic: string; chart: string; index: number; ds?: number }
   | { k: "all"; topic: string; chart: string }
   | { k: "list"; topic: string; section: string }
-  | { k: "item"; topic: string; item: string }
+  | { k: "stat"; topic: string; stat: number }
+  | { k: "statlist"; topic: string; stat: number }
   | { k: "source"; topic: string; item: string; source: number };
 
 const INDEX = topicsIndex as { key: string; title: string; image: string }[];
@@ -512,31 +513,8 @@ function ItemCard({ data, id, push }: { data: TopicData; id: string; push: (f: F
   const t = data.key;
   if (!it) return null;
   const openTopic = (key: string) => push({ k: "topic", topic: key });
-  if (it.dup) {
-    const dup = it.dup;
-    return (
-      <article
-        data-item={id}
-        className="rounded-2xl border border-white/25 bg-[#070b12]/85 px-4 py-4"
-      >
-        <p className="text-[16px] font-semibold text-white">{it.title}</p>
-        <p className="mt-2 text-[15px] leading-snug text-white">
-          This record is already on file in {TITLES[dup.topic] ?? dup.topic}. It is shown there
-          once.
-        </p>
-        <div className="mt-3 flex flex-col gap-2">
-          <button
-            type="button"
-            data-dup
-            onClick={() => push({ k: "item", topic: dup.topic, item: dup.item })}
-            className={NEWS_DOOR + " text-left"}
-          >
-            Open it in {TITLES[dup.topic] ?? dup.topic}
-          </button>
-        </div>
-      </article>
-    );
-  }
+  // A record already on file in another topic is shown there only, in that topic's own flow.
+  if (it.dup) return null;
   const sources = it.sources ?? [];
   const sectionLevel = sources.length > 0 && sources.every((s) => s.sectionLevel);
   return (
@@ -629,8 +607,9 @@ function frameTitle(frame: Frame, data: TopicData | null): string {
     }
     case "list":
       return data.sections.find((s) => s.id === frame.section)?.title ?? "";
-    case "item":
-      return data.items[frame.item]?.title ?? "";
+    case "stat":
+    case "statlist":
+      return data.stats[frame.stat]?.label ?? "";
     case "source":
       return data.items[frame.item]?.sources?.[frame.source]?.label ?? "Source";
   }
@@ -722,7 +701,6 @@ function TopicView({
   push: (f: Frame) => void;
 }) {
   const t = data.key;
-  const openItem = (id: string) => push({ k: "item", topic: t, item: id });
   const openTopic = (key: string) => push({ k: "topic", topic: key });
 
   if (frame.k === "topic") {
@@ -732,22 +710,26 @@ function TopicView({
         {data.intro ? (
           <p className="mt-4 text-center text-[15px] leading-snug text-white/85">{data.intro}</p>
         ) : null}
-        {data.stats.length ? (
+        {data.stats.some((s) => !data.items[s.item]?.dup) ? (
           <div className="mt-6 grid w-full grid-cols-2 gap-3">
-            {data.stats.map((s) => (
-              <button
-                key={s.item}
-                type="button"
-                data-stat
-                onClick={() => openItem(s.item)}
-                className="rounded-2xl border border-white/25 bg-[#070b12]/85 px-3 py-3 text-left"
-              >
-                <span className="block text-[26px] leading-tight font-bold text-white">
-                  {s.big}
-                </span>
-                <span className="mt-1 block text-[15px] leading-snug text-white/80">{s.label}</span>
-              </button>
-            ))}
+            {data.stats.map((s, si) =>
+              data.items[s.item]?.dup ? null : (
+                <button
+                  key={s.item}
+                  type="button"
+                  data-stat
+                  onClick={() => push({ k: "stat", topic: t, stat: si })}
+                  className="rounded-2xl border border-white/25 bg-[#070b12]/85 px-3 py-3 text-left"
+                >
+                  <span className="block text-[26px] leading-tight font-bold text-white">
+                    {s.big}
+                  </span>
+                  <span className="mt-1 block text-[15px] leading-snug text-white/80">
+                    {s.label}
+                  </span>
+                </button>
+              ),
+            )}
           </div>
         ) : null}
         {data.charts.map((c) => (
@@ -799,7 +781,7 @@ function TopicView({
         : section
           ? (data.sections.find((x) => x.id === section)?.items ?? [])
           : (c.bars[index] ?? []);
-    const count = new Set(ids).size;
+    const count = new Set(ids.filter((id) => data.items[id] && !data.items[id].dup)).size;
     const label = index == null ? c.title : c.labels[index];
     const value = index != null ? barLine(c, index) : "";
     return (
@@ -884,37 +866,47 @@ function TopicView({
       </div>
     );
   }
-  if (frame.k === "item") {
-    const it = data.items[frame.item];
-    if (!it) return <p className="text-[15px]">Not on file.</p>;
-    if (it.dup) {
-      const dup = it.dup;
-      return (
-        <div className="w-full" data-level="item">
-          <Heading title={it.title} />
-          <p className="mt-6 text-center text-[15px] text-white/85">
-            This record is already on file in {TITLES[dup.topic] ?? dup.topic}. It is shown there
-            once.
-          </p>
-          <div className="mt-4 flex justify-center">
+  if (frame.k === "stat") {
+    // Same step as Mechanics: the stat box opens its square tile, then "All N cases" opens the list.
+    const st = data.stats[frame.stat];
+    if (!st) return <p className="text-[15px]">Not on file.</p>;
+    const count = data.items[st.item] && !data.items[st.item].dup ? 1 : 0;
+    return (
+      <div className="w-full" data-level="tile">
+        <Heading title={st.label} line={`${data.title} · ${st.big}`} />
+        <div className="mt-6 flex flex-col items-center gap-3">
+          <span
+            aria-hidden="true"
+            className="flex h-52 w-52 flex-col items-center justify-center rounded-2xl border border-white/30 bg-[#0b1220] px-5 text-center text-[16px] font-semibold leading-snug tracking-wide text-white/85"
+          >
+            <span className="text-[26px] font-bold text-white">{st.big}</span>
+            <span className="mt-1">{st.label}</span>
+          </span>
+        </div>
+        <div className="mt-8 flex justify-center">
+          {count ? (
             <button
               type="button"
-              data-dup
-              onClick={() => push({ k: "item", topic: dup.topic, item: dup.item })}
-              className={PILL}
+              data-all
+              onClick={() => push({ k: "statlist", topic: t, stat: frame.stat })}
+              className={NEWS_DOOR + " w-fit"}
             >
-              Open it in {TITLES[dup.topic] ?? dup.topic}
+              All {count} {count === 1 ? "case" : "cases"}
             </button>
-          </div>
+          ) : (
+            <p className="text-center text-[15px] text-white/80">Not on file.</p>
+          )}
         </div>
-      );
-    }
+      </div>
+    );
+  }
+  if (frame.k === "statlist") {
+    const st = data.stats[frame.stat];
+    if (!st) return <p className="text-[15px]">Not on file.</p>;
     return (
-      <div className="w-full" data-level="item">
-        <Heading title={it.title} line={TITLES[t] ?? t} />
-        <div className="mt-6 w-full">
-          <ItemCard data={data} id={frame.item} push={push} />
-        </div>
+      <div className="w-full" data-level="list">
+        <Heading title={st.label} line={`${data.title} · ${recLine(1)}`} />
+        <ItemCards data={data} ids={[st.item]} push={push} />
       </div>
     );
   }
