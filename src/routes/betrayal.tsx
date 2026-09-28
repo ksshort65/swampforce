@@ -2047,8 +2047,6 @@ function SaveChart({
           responsive: true,
           maintainAspectRatio: false,
           indexAxis: horizontal ? "y" : "x",
-          // Tap anywhere on a bar's row: bars for small counts (e.g. 278 views next to 1.36M) are too thin to hit otherwise.
-          interaction: { mode: "nearest", axis: horizontal ? "y" : "x", intersect: false },
           plugins: { legend: { display: false }, tooltip: { titleFont: { size: 15 }, bodyFont: { size: 15 } } },
           scales: {
             x: horizontal
