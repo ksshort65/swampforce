@@ -672,17 +672,17 @@ const EVIDENCE_CHARTS = [
     type: "bar",
     horizontal: true,
     labels: [
-      "omitted context",
-      "misquote / truncation",
-      "fabrication / false attribution",
-      "premature “proven” framing",
-      "retracted invention",
-      "policy-scope inflation",
-      "false attribution of words/intent / omitted context",
-      "retracted invention / misquote / truncation",
+      "Omitted context",
+      "Misquote / truncation",
+      "Fabrication / false attribution",
+      "Premature “proven” framing",
+      "Retracted invention",
+      "Policy-scope inflation",
+      "False attribution of words or intent",
+      "Retracted invention / misquote / truncation",
     ],
     data: [14, 8, 8, 5, 5, 5, 4, 2],
-    colors: ["#b91c1c"],
+    colors: ["#b91c1c", "#1d4ed8", "#b45309", "#7c3aed", "#0f766e", "#ca8a04", "#be185d", "#3f6212"],
     key: "method",
     values: [
       "omitted context",
@@ -842,9 +842,22 @@ function EvidenceChart({
       </div>
       <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
         {spec.labels.map((label, index) => (
-          <li key={label} className="flex items-center gap-2 text-[15px] text-white">
-            <span className="inline-block h-3 w-3" style={{ background: spec.colors[index % spec.colors.length] }} />
-            {label}
+          <li key={label}>
+            {spec.id === "chart-methods" ? (
+              <button
+                type="button"
+                onClick={() => onPick(index)}
+                className="flex min-h-11 items-center gap-2 border-0 bg-transparent p-0 text-left text-[15px] font-semibold text-white"
+              >
+                <span className="inline-block h-4 w-4 shrink-0 rounded-sm" style={{ background: spec.colors[index % spec.colors.length] }} />
+                {label} · {spec.data[index]}
+              </button>
+            ) : (
+              <span className="flex items-center gap-2 text-[15px] text-white">
+                <span className="inline-block h-3 w-3" style={{ background: spec.colors[index % spec.colors.length] }} />
+                {label}
+              </span>
+            )}
           </li>
         ))}
         {spec.id === "chart-evidence" ? (
@@ -3022,6 +3035,106 @@ function ImpeachRecord({
   );
 }
 
+const METHOD_TILE: Record<string, string> = {
+  "omitted context": "/images/tile-method-omitted.jpg",
+  "misquote / truncation": "/images/tile-method-misquote.jpg",
+  "fabrication / false attribution": "/images/tile-method-fabrication.jpg",
+  "premature “proven” framing": "/images/tile-method-premature.jpg",
+  "retracted invention": "/images/tile-method-retracted.jpg",
+  "policy-scope inflation": "/images/tile-method-policy.jpg",
+  "false attribution of words/intent / omitted context": "/images/tile-method-intent.jpg",
+  "retracted invention / misquote / truncation": "/images/tile-method-mixed.jpg",
+};
+
+function methodStatus(id: string) {
+  const file = NEWS_CASES.find((row) => row.id === id);
+  const correction = (file?.correction ?? "").trim();
+  const never = correction.toLowerCase().startsWith("never");
+  const unknown = !correction || correction === "Unknown";
+  const where = correction === "Editor's note at bottom of article"
+    ? "An editor's note at the bottom of the article."
+    : correction === "Appended correction line"
+      ? "A correction line added to the story."
+      : correction === "On-air correction"
+        ? "Said on the air."
+        : correction === "Retraction after legal threat/settlement"
+          ? "After a legal threat or a settlement."
+          : correction;
+  return {
+    file,
+    status: file?.evidence === "Proven false" ? "Proven false" : file?.evidence === "Rated misleading" ? "Rated misleading" : (file?.evidence ?? "Not on record"),
+    retracted: never ? "Not retracted." : unknown ? "Retraction: not on record." : "Retracted.",
+    how: never ? "None. It was not retracted." : unknown ? "Not on record." : where,
+    audience: never
+      ? "Not retracted, so there is no retraction audience to compare with the claim."
+      : unknown
+        ? "Whether any retraction reached the same audience as the claim is not on this record."
+        : "The record does not show that this retraction reached the same audience as the claim.",
+    duration: file ? `${file.duration}. Began ${file.began}. Ended ${file.ended}.` : "Not on record.",
+  };
+}
+
+function MethodLayers({
+  method,
+  onMethod,
+  onSource,
+}: {
+  method: string;
+  onMethod: (next: string) => void;
+  onSource: (href: string) => void;
+}) {
+  const parts = method.split(":");
+  const index = Number(parts[1]);
+  const open = parts[2] === "list";
+  const spec = EVIDENCE_CHARTS.find((item) => item.id === "chart-methods");
+  if (!spec) return null;
+  const value = spec.values[index];
+  const label = spec.labels[index];
+  const cases = newsEvidence.methods.flatMap((item) => item.cases).filter((item) => item.method === value);
+  const image = METHOD_TILE[value] ?? "/images/pill-methods.jpg";
+  if (open) {
+    return (
+      <div className="mt-6 flex w-full flex-col gap-4 text-left">
+        <p className="text-center text-[16px] font-semibold text-white">{label} · {cases.length}</p>
+        {cases.map((item) => {
+          const line = methodStatus(item.id);
+          return (
+            <article key={item.id} className="rounded-2xl border border-white/25 bg-[#070b12]/85 px-4 py-4">
+              <p className="text-[16px] font-semibold text-white">{line.status}</p>
+              <p className="mt-2 text-[15px] leading-snug text-white">{line.retracted}</p>
+              <p className="mt-2 text-[15px] leading-snug text-white">Method of retraction: {line.how}</p>
+              <p className="mt-2 text-[15px] leading-snug text-white">Audience: {line.audience}</p>
+              <p className="mt-2 text-[15px] leading-snug text-white">How long it was repeated: {line.duration}</p>
+              <p className="mt-2 text-[15px] leading-snug text-white">By whom: {item.who}</p>
+              <p className="mt-2 text-[15px] leading-snug text-white/85">{item.said}</p>
+              <div className="mt-3 flex flex-col gap-2">
+                {item.sources.map((source) => (
+                  <button key={source.href} type="button" onClick={() => onSource(source.href)} className={NEWS_DOOR + " text-left"}>
+                    {source.label}
+                  </button>
+                ))}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    );
+  }
+  return (
+    <div className="w-full">
+      <div className="flex flex-col items-center gap-3">
+        <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">{label}</span>
+        <img src={image} alt="" className="h-52 w-52 rounded-2xl border border-white/30 object-cover" />
+      </div>
+      <div className="mt-8 flex justify-center">
+        <button type="button" onClick={() => onMethod(`chart-methods:${index}:list`)} className={NEWS_DOOR}>
+          All {cases.length} cases
+        </button>
+      </div>
+    </div>
+  );
+}
+
 const PERIOD_TILE: Record<string, string> = {
   "2015–16": "/images/tile-period-2015.jpg",
   "2017–18": "/images/tile-period-2017.jpg",
@@ -3278,6 +3391,11 @@ function Betrayal() {
     if (newsMethod && newsMethod.startsWith("chart-term:")) {
       const path = newsPath(newsMethod.slice("chart-term:".length));
       setNewsMethod(path.length > 1 ? `chart-term:${JSON.stringify(path.slice(0, -1))}` : "chart-term");
+      return;
+    }
+    if (newsMethod && newsMethod.startsWith("chart-methods:")) {
+      const parts = newsMethod.split(":");
+      setNewsMethod(parts.length > 2 ? `chart-methods:${parts[1]}` : "chart-methods");
       return;
     }
     if (newsMethod && newsMethod.startsWith("chart-proof:")) {
@@ -3756,6 +3874,8 @@ function Betrayal() {
                   ? newsMethod.split(":").length > 2
                     ? newsMethod.split(":").slice(2).join(":")
                     : (EVIDENCE_CHARTS.find((item) => item.id === "chart-proof")?.labels[Number(newsMethod.split(":")[1])] ?? "Strength of proof")
+                : newsMethod?.startsWith("chart-methods:") && !newsCase && !newsSource
+                  ? (EVIDENCE_CHARTS.find((item) => item.id === "chart-methods")?.labels[Number(newsMethod.split(":")[1])] ?? "Methods of Deception")
                   : newsMethod && !newsMethod.includes(":") && !newsCase && !newsSource
                     ? EVIDENCE_CHARTS.find((item) => item.id === newsMethod)?.title
                     : "Fake News Evidence"}
@@ -3824,6 +3944,19 @@ function Betrayal() {
                 onCase={(id) => {
                   setNewsSource(null);
                   setNewsCase(id);
+                }}
+              />
+            ) : newsMethod && newsMethod.startsWith("chart-methods:") ? (
+              <MethodLayers
+                method={newsMethod}
+                onMethod={(next) => {
+                  setNewsSource(null);
+                  setNewsCase(null);
+                  setNewsMethod(next);
+                }}
+                onSource={(href) => {
+                  setNewsCase(null);
+                  setNewsSource(href);
                 }}
               />
             ) : newsMethod && newsMethod.startsWith("chart-proof:") ? (
@@ -3895,6 +4028,21 @@ function Betrayal() {
                         setNewsMethod("chart-evidence:never");
                       }}
                     />
+                    {spec.id === "chart-methods" ? (
+                      <LayerTiles
+                        square
+                        tiles={spec.labels.map((label, index) => ({
+                          key: spec.values[index],
+                          label,
+                          image: METHOD_TILE[spec.values[index]] ?? "/images/pill-methods.jpg",
+                          onOpen: () => {
+                            setNewsSource(null);
+                            setNewsCase(null);
+                            setNewsMethod(`${spec.id}:${index}`);
+                          },
+                        }))}
+                      />
+                    ) : null}
                   </div>
                 ))}
               </div>
