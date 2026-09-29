@@ -1,0 +1,350 @@
+[
+  {
+    "id": "sh-harris-kavanaugh",
+    "senator": "Kamala Harris",
+    "party": "Democratic",
+    "hearing": "Senate Judiciary Committee, Brett Kavanaugh confirmation",
+    "date": "Sept. 6, 2018 hearing. Posted Sept. 7, 2018.",
+    "method": "Contextomy",
+    "where": "Not spoken in the hearing. She posted an edited clip of it.",
+    "said": "An 11-second clip of Kavanaugh saying filling out the form would make them complicit in abortion-inducing drugs, presented as his own description of birth control.",
+    "record": "PolitiFact: the hearing sentence began with 'They said.' He was quoting Priests for Life, in an answer to Sen. Ted Cruz. He did not give his own definition of birth control. PolitiFact rated the clip False.",
+    "duration": "11 seconds",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "PolitiFact",
+        "href": "https://www.politifact.com/factchecks/2018/sep/10/kamala-harris/brett-kavanaugh-birth-control-abortion-inducing/"
+      }
+    ]
+  },
+  {
+    "id": "sh-sessions-franken",
+    "senator": "Jeff Sessions",
+    "party": "Republican",
+    "hearing": "Senate Judiciary Committee, Attorney General confirmation",
+    "date": "Jan. 10, 2017",
+    "method": "Omission",
+    "where": "Spoken in the hearing.",
+    "said": "Asked about campaign contacts with the Russian government, Sessions said he 'did not have communications with the Russians.'",
+    "record": "PolitiFact: the question was about the Trump campaign. Sessions later said two meetings with Ambassador Sergey Kislyak were in his capacity as a senator, not as a campaign surrogate. PolitiFact called the answer less than totally candid, and said it was not clear the statement was intentionally false.",
+    "duration": "One answer",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "Hearing transcript",
+        "href": "https://www.usatoday.com/story/news/politics/onpolitics/2017/06/13/what-did-al-franken-ask-jeff-sessions-during-his-confirmation-hearing/102819246/"
+      },
+      {
+        "label": "PolitiFact",
+        "href": "https://www.politifact.com/article/2017/mar/02/context-what-jeff-sessions-told-al-franken-about-m/"
+      }
+    ]
+  },
+  {
+    "id": "sh-feinstein-horowitz",
+    "senator": "Dianne Feinstein",
+    "party": "Democratic",
+    "hearing": "Senate Judiciary Committee, DOJ Inspector General Michael Horowitz",
+    "date": "Dec. 11, 2019",
+    "method": "Omission",
+    "where": "Spoken in the hearing.",
+    "said": "'This was not a politically motivated investigation. There is no deep state. Simply put, the FBI investigation was motivated by facts, not bias.'",
+    "record": "Horowitz told the same committee he found no documentary or testimonial evidence that political bias influenced the decision to open the investigation. He also found serious errors in the Carter Page FISA applications and said the FBI misled the court. The sentence omits that half.",
+    "duration": "One statement",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "NPR hearing recording",
+        "href": "https://www.npr.org/transcripts/787192542"
+      }
+    ]
+  },
+  {
+    "id": "sh-schmitt-smith",
+    "senator": "Eric Schmitt",
+    "party": "Republican",
+    "hearing": "Senate Judiciary Committee, Jack Smith",
+    "date": "Sept. 29, 2026",
+    "method": "False attribution",
+    "where": "Spoken in the hearing. The official transcript is not posted yet. This is from the live report.",
+    "said": "He accused Jack Smith of perjury for denying that he attended an Atlanta Hawks game in February 2024, and said that would have put Smith in Atlanta with Fani Willis. He said, 'I think you've already perjured yourself.'",
+    "record": "Smith said he went to see the Iowa Hawkeyes women's team play Maryland. Iowa's athletics site records that game on Feb. 3, 2024, at Xfinity Center in College Park, Maryland, not Atlanta. The New York Times reported that Sen. Amy Klobuchar put the Hawks and Hawkeyes mix-up on the record in the same hearing.",
+    "duration": "One exchange",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "New York Times live",
+        "href": "https://www.nytimes.com/live/2026/09/29/us/trump-jack-smith-senate-testimony"
+      },
+      {
+        "label": "Iowa athletics, Feb. 3, 2024",
+        "href": "https://hawkeyesports.com/news/2024/02/03/hawkeyes-outlast-terps"
+      }
+    ]
+  },
+  {
+    "id": "sh-not-2383",
+    "senator": "The charge",
+    "party": "The record",
+    "hearing": "January 6 prosecutions, including the Jack Smith indictment",
+    "date": "DOJ tally as of Jan. 6, 2025. Smith report, January 2025.",
+    "method": "Falsehood",
+    "where": "This is the charge record. It is not a sentence from today's hearing.",
+    "said": "That January 6 defendants, or Donald Trump, were charged with insurrection.",
+    "record": "The Department of Justice tally of about 1,583 January 6 defendants lists assault on officers, weapons, seditious conspiracy, property crimes, and trespass. It does not list insurrection, 18 U.S.C. § 2383. About 18 defendants were charged with seditious conspiracy, 18 U.S.C. § 2384. That is a different statute. Jack Smith wrote that he did not charge Trump under § 2383, and that no one had been charged under that statute in more than a century.",
+    "duration": "The charge was never brought",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "DOJ, 48 months",
+        "href": "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol"
+      },
+      {
+        "label": "Why Smith did not charge it",
+        "href": "https://www.theatlantic.com/ideas/archive/2025/01/jack-smith-trump-charges/681306/"
+      }
+    ]
+  },
+  {
+    "id": "sh-schmitt-dirtbag",
+    "senator": "Eric Schmitt",
+    "party": "Republican",
+    "hearing": "Senate Judiciary Committee, Jack Smith",
+    "date": "Sept. 29, 2026",
+    "method": "Inflammatory",
+    "where": "Spoken in the hearing. The official transcript is not posted yet.",
+    "said": "After accusing Jack Smith of perjury, he called him a 'dirtbag.'",
+    "record": "The New York Times reported the word. A slur is not a charge and not a fact. The perjury accusation is filed separately under False attribution.",
+    "duration": "One sentence",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "New York Times live",
+        "href": "https://www.nytimes.com/live/2026/09/29/us/trump-jack-smith-senate-testimony"
+      }
+    ]
+  },
+  {
+    "id": "sh-kennedy-throw-up",
+    "senator": "John Kennedy",
+    "party": "Republican",
+    "hearing": "Senate Judiciary Committee, Jack Smith",
+    "date": "Sept. 29, 2026",
+    "method": "Inflammatory",
+    "where": "Spoken in the hearing. The official transcript is not posted yet.",
+    "said": "'You make me want to throw up in my mouth.'",
+    "record": "CNN reported the sentence during questioning about phone records. It states no fact. It is counted because it was said.",
+    "duration": "One sentence",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "CNN live",
+        "href": "https://www.cnn.com/2026/09/29/politics/live-news/jack-smith-testifies-senate"
+      }
+    ]
+  },
+  {
+    "id": "sh-grassley-weapon",
+    "senator": "Chuck Grassley",
+    "party": "Republican",
+    "hearing": "Senate Judiciary Committee, Jack Smith",
+    "date": "Sept. 29, 2026",
+    "method": "Inflammatory",
+    "where": "Opening remarks. The official transcript is not posted yet.",
+    "said": "'Mr. Smith's operation was a partisan weapon that broke the rules, lied to the court and engaged in bad faith throughout.'",
+    "record": "CNN reported the sentence. 'Partisan weapon' and 'bad faith' are labels. 'Lied to the court' names no lie, so that half is not yet a fact on this chart.",
+    "duration": "Opening remarks",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "CNN live",
+        "href": "https://www.cnn.com/2026/09/29/politics/live-news/jack-smith-testifies-senate"
+      }
+    ]
+  },
+  {
+    "id": "sh-coons-insurrectionists",
+    "senator": "Chris Coons",
+    "party": "Democratic",
+    "hearing": "Senate Judiciary Committee, Jack Smith",
+    "date": "Sept. 29, 2026",
+    "method": "Falsehood",
+    "where": "Spoken in the hearing. PBS published the word. The official transcript is not posted yet.",
+    "said": "He recounted January 6 as the day 'insurrectionists' tried to overturn what he called a free and fair election.",
+    "record": "No January 6 defendant was charged under 18 U.S.C. § 2383, the insurrection statute. Jack Smith did not charge it. 'Insurrectionist' names a crime that was not charged. Coons spoke during questioning. He was not the senator who followed Chairman Grassley.",
+    "duration": "One recounting",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "PBS, Coons questioning",
+        "href": "https://www.youtube.com/watch?v=xbyH6RlV5hE"
+      },
+      {
+        "label": "DOJ, 48 months",
+        "href": "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol"
+      }
+    ]
+  },
+  {
+    "id": "sh-durbin-mob",
+    "senator": "Dick Durbin",
+    "party": "Democratic",
+    "hearing": "Senate Judiciary Committee, Jack Smith",
+    "date": "Sept. 29, 2026",
+    "method": "Falsehood",
+    "where": "Opening statement. He spoke after Chairman Grassley. The official transcript is not posted yet.",
+    "said": "He described the January 6 attack. Published reports quote 'a mob of Trump's supporters.' On the live hearing he was also heard to say 'armed insurrectionist.'",
+    "record": "He spoke after Chairman Grassley, from a seat in the Senate. That is a position of trust. The words count because they shape public opinion, whether the line is a lie or only inflammatory. No one was charged under 18 U.S.C. § 2383. About 180 people were charged with a dangerous or deadly weapon. 'No one was armed' is not the charge sheet.",
+    "duration": "Opening statement",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "Los Angeles Times",
+        "href": "https://www.latimes.com/world-nation/story/2026-09-29/ex-special-counsel-smith-tells-senators-he-wont-be-silenced-by-trumps-threats-of-prosecution"
+      },
+      {
+        "label": "DOJ, 48 months",
+        "href": "https://www.justice.gov/usao-dc/48-months-jan-6-attack-us-capitol"
+      }
+    ]
+  },
+  {
+    "id": "sh-kennedy-clause",
+    "senator": "John Kennedy",
+    "party": "Republican",
+    "hearing": "Senate Judiciary Committee, Jack Smith",
+    "date": "Sept. 29, 2026",
+    "method": "Falsehood",
+    "where": "Spoken in the hearing. A published account quotes the exchange.",
+    "said": "'Well, then you had to know it violated the Speech and Debate Clause.' He also said Smith did not tell the judge he was seeking phone records of members of Congress.",
+    "record": "A sitting senator said this from a position of trust, so it counts. It shapes public opinion. Smith's team told Congress they were aware of no Supreme Court or D.C. Circuit case holding that non-content toll records from a third party violate the Speech or Debate Clause. Smith answered that, in seeking non-disclosure orders, they did not disclose.",
+    "duration": "One exchange",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "Mediaite",
+        "href": "https://www.mediaite.com/media/news/gop-senator-gets-a-scolding-after-telling-jack-smith-you-make-me-want-to-throw-up-in-my-mouth/"
+      },
+      {
+        "label": "House Judiciary toll-records report",
+        "href": "https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/evo-media-document/2026-09-23-jack-smith-toll-records-report.pdf"
+      }
+    ]
+  },
+  {
+    "id": "sh-booker-assault",
+    "senator": "Cory Booker",
+    "party": "Democratic",
+    "hearing": "Senate Judiciary Committee, Jack Smith",
+    "date": "Sept. 29, 2026",
+    "method": "Inflammatory",
+    "where": "Spoken in the hearing. PBS published the questioning.",
+    "said": "He called the conduct 'the biggest assault on our democratic traditions in over a century,' and said the president 'incited a riot which 7 Republicans said he did.'",
+    "record": "A sitting senator said this from a position of trust, so it counts. It shapes public opinion. Smith told him the investigation found Trump caused the violence and sought to exploit it. The federal cases were dismissed. No one was charged under 18 U.S.C. § 2383. The number '7 Republicans' is his count, not a separate record on this chart.",
+    "duration": "One round of questions",
+    "views": "691 on the PBS clip",
+    "likes": "51 on the PBS clip",
+    "sources": [
+      {
+        "label": "PBS NewsHour",
+        "href": "https://www.youtube.com/watch?v=gcwPqWYc7LU"
+      }
+    ]
+  },
+  {
+    "id": "sh-committee",
+    "senator": "The committee",
+    "party": "12 Republican, 10 Democratic",
+    "hearing": "Senate Judiciary Committee, Jack Smith",
+    "date": "Roster as of Sept. 29, 2026",
+    "method": "The committee",
+    "where": "Official committee roster. Not a sentence from the hearing.",
+    "said": "22 members. Chairman Chuck Grassley and 11 Republicans. Ranking Member Dick Durbin and 9 Democrats.",
+    "record": "Republicans: Grassley, Cornyn, Lee, Cruz, Hawley, Tillis, Kennedy, Blackburn, Schmitt, Britt, Moody, and Graham of South Carolina. Democrats: Durbin, Whitehouse, Klobuchar, Coons, Blumenthal, Hirono, Booker, Padilla, Welch, and Schiff. The committee did not publish a roll call. The only member the chair said was not in the room is Ted Cruz, when his turn came. The others are not marked absent.",
+    "duration": "One hearing",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "Senate Judiciary roster",
+        "href": "https://www.judiciary.senate.gov/about/members"
+      }
+    ]
+  },
+  {
+    "id": "sh-cruz-absent",
+    "senator": "Ted Cruz",
+    "party": "Republican",
+    "hearing": "Senate Judiciary Committee, Jack Smith",
+    "date": "Sept. 29, 2026",
+    "method": "The committee",
+    "where": "The chair said it when Cruz's turn came. PBS recorded the gavel.",
+    "said": "'Cruz isn't here.' The chair called Senator Kennedy instead.",
+    "record": "He is on the committee. He was not in the room for his turn. There is no roll call showing whether he came later. No other member is marked absent, because the record does not say they were gone.",
+    "duration": "His turn",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "PBS, Kennedy's turn",
+        "href": "https://www.youtube.com/watch?v=OzEAWoZbzXg"
+      }
+    ]
+  },
+  {
+    "id": "sh-kennedy-cutoff",
+    "senator": "John Kennedy",
+    "party": "Republican",
+    "hearing": "Senate Judiciary Committee, Jack Smith",
+    "date": "Sept. 29, 2026",
+    "method": "Grandstanding",
+    "where": "Spoken in the hearing. Ranking Member Durbin objected on the record.",
+    "said": "He cut Jack Smith off, including 'You didn't tell him, did you?' He asked if Smith believed in the tooth fairy and the Easter Bunny. He would not let him finish.",
+    "record": "Durbin told the chairman the hearing was of constitutional importance and that the witness should be allowed to complete a sentence. That courtesy, he said, had been given to witnesses from both parties. Grassley then ended Kennedy's time. This is a sitting member using the chair to talk over the witness. It shapes what the public hears.",
+    "duration": "One round of questions",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "Mediaite",
+        "href": "https://www.mediaite.com/media/news/gop-senator-gets-a-scolding-after-telling-jack-smith-you-make-me-want-to-throw-up-in-my-mouth/"
+      }
+    ]
+  },
+  {
+    "id": "sh-smith-doubt",
+    "senator": "Jack Smith, the witness",
+    "party": "Witness",
+    "hearing": "Senate Judiciary Committee",
+    "date": "Sept. 29, 2026",
+    "method": "The witness",
+    "where": "His opening. He was allowed to read it.",
+    "said": "His team 'developed proof beyond a reasonable doubt that President Trump engaged in serious crimes against our nation.'",
+    "record": "Beyond a reasonable doubt is a verdict. There was no verdict. The election case was dropped after the 2024 election. On July 15, 2024, Judge Aileen Cannon dismissed the documents case and held that his appointment as special counsel violated the Constitution. The Justice Department appealed. In 2025 the appeal was dropped, so no appeals court affirmed or reversed that holding. He also told this committee he would bring the same charges again. A House referral said his earlier testimony on toll records was misleading. His lawyers said he answered the toll-record questions truthfully. That dispute is not settled on this chart.",
+    "duration": "Opening statement",
+    "views": "Not published",
+    "likes": "Not published",
+    "sources": [
+      {
+        "label": "Judge Cannon's dismissal",
+        "href": "https://www.nytimes.com/2024/07/15/us/politics/trump-document-case-dismissed.html"
+      },
+      {
+        "label": "Appeal dropped",
+        "href": "https://courthousenews.com/doj-drops-appeal-in-trump-classified-documents-case-ending-jack-smiths-cases/"
+      }
+    ]
+  }
+]

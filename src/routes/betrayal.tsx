@@ -4,6 +4,8 @@ import { DECEPTION } from "../data/deception";
 import newsEvidence from "../data/fake-news-evidence.json";
 import factCheckerVetting from "../data/fact-checker-vetting.json";
 import fakeNewsCases from "../data/fake-news-cases.json";
+import senateHearings from "../data/senate-hearings.json";
+import politicalStatements from "../data/political-statements.json";
 import lawfareCases from "../data/lawfare-cases.json";
 
 export const Route = createFileRoute("/betrayal")({ component: Betrayal });
@@ -1276,7 +1278,12 @@ function EvidenceChart({
           cutout: spec.type === "doughnut" ? "62%" : undefined,
           indexAxis: spec.type === "bar" && horiz ? "y" : "x",
           plugins: {
-            legend: { display: false },
+            legend: {
+              display: spec.type === "doughnut",
+              position: "right",
+              labels: { color: "#e8e0d0", font: { size: 15 }, boxWidth: 14 },
+              onClick: (_event: unknown, item: { index: number }) => pickRef.current(item.index),
+            },
             tooltip: { callbacks: { label: (ctx: { label?: string; parsed: number | { x: number; y: number } }) => {
               const value = typeof ctx.parsed === "object" ? (horiz ? ctx.parsed.x : ctx.parsed.y) : ctx.parsed;
               return `${ctx.label ?? ""}: ${value}`;
@@ -1312,36 +1319,6 @@ function EvidenceChart({
           </div>
         ) : null}
       </div>
-      <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
-        {spec.labels.map((label, index) => (
-          <li key={label}>
-            {spec.id === "chart-methods" ? (
-              <button
-                type="button"
-                onClick={() => onPick(index)}
-                className="flex min-h-11 items-center gap-2 border-0 bg-transparent p-0 text-left text-[15px] font-semibold text-white"
-              >
-                <span className="inline-block h-4 w-4 shrink-0 rounded-sm" style={{ background: spec.colors[index % spec.colors.length] }} />
-                {label} · {spec.data[index]}
-              </button>
-            ) : (
-              <button
-                type="button"
-                onClick={() => onPick(index)}
-                className="flex min-h-11 items-center gap-2 border-0 bg-transparent p-0 text-left text-[15px] font-semibold text-white"
-              >
-                <span className="inline-block h-3 w-3" style={{ background: spec.colors[index % spec.colors.length] }} />
-                {label}{spec.id === "chart-evidence" ? ` · ${spec.data[index]}` : ""}
-              </button>
-            )}
-          </li>
-        ))}
-      </ul>
-      <ul className="mt-2 list-disc pl-5 text-[15px] leading-snug text-white/80">
-        {spec.bullets.map((line) => (
-          <li key={line}>{line}</li>
-        ))}
-      </ul>
     </figure>
   );
 }
@@ -1712,6 +1689,7 @@ function LayerChart({
   center,
   onPick,
   namesOnChart,
+  colorKey,
 }: {
   title: string;
   line: string;
@@ -1725,16 +1703,18 @@ function LayerChart({
   center?: { big: string; small: string; onOpen: () => void };
   onPick: (index: number) => void;
   namesOnChart?: boolean;
+  colorKey?: boolean;
 }) {
-  const height = namesOnChart ? 460 : type === "doughnut" ? 300 : horizontal ? Math.max(200, labels.length * 46 + 50) : 300;
+  const named = colorKey ? false : Boolean(namesOnChart) || (type === "doughnut" && labels.length <= 8);
+  const showKey = Boolean(colorKey) || (type === "doughnut" && !named);
+  const height = named ? 460 : type === "doughnut" ? 300 : horizontal ? Math.max(200, labels.length * 46 + 50) : 300;
   const lines = keys ?? labels.map((label, index) => ({ label: `${label} · ${data[index]}`, color: colors[index] ?? colors[0], index }));
-  const showKey = !namesOnChart || labels.length > 12;
   return (
     <section className="w-full">
       <p className="mt-2 text-center text-[15px] text-white/75">{line}</p>
       <div className={NEWS_CARD}>
         <div className="relative w-full" style={{ height }}>
-          <LawChart title={title} labels={labels} data={data} colors={colors} type={type} horizontal={horizontal} onPick={onPick} namesOnChart={namesOnChart} />
+          <LawChart title={title} labels={labels} data={data} colors={colors} type={type} horizontal={horizontal} onPick={onPick} namesOnChart={named} />
           {center ? (
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
               <button
@@ -1765,13 +1745,6 @@ function LayerChart({
         </ul>
         ) : null}
       </div>
-      {bullets.length ? (
-        <ul className="mt-4 list-disc pl-5 text-left text-[15px] leading-snug text-white/80">
-          {bullets.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      ) : null}
     </section>
   );
 }
@@ -1990,7 +1963,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Democratic",
     "where": "X",
     "when": "1:48 PM",
-    "views": "156,874",
+    "views": "160,876",
     "said": "The MAGA Supreme Court strikes again ... thousands of American voters could be wrongly stripped from voter rolls.",
     "links": [
       {
@@ -1998,7 +1971,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/SenSchumer/status/2103542232418550057"
       }
     ],
-    "viewCount": 156874
+    "viewCount": 160876
   },
   {
     "id": "save-row-2",
@@ -2006,7 +1979,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Democratic",
     "where": "X",
     "when": "3:41 PM",
-    "views": "675,404",
+    "views": "687,316",
     "said": "This is a blatant attempt to suppress the vote ... Eligible voters will be disenfranchised by this flawed tool.",
     "links": [
       {
@@ -2014,7 +1987,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/Ilhan/status/2103570490518323329"
       }
     ],
-    "viewCount": 675404
+    "viewCount": 687316
   },
   {
     "id": "save-row-3",
@@ -2038,7 +2011,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Democratic",
     "where": "Senate Judiciary site + X",
     "when": "Sept 25",
-    "views": "22,224 (18,793 + 3,431)",
+    "views": "22,515 (19,008 + 3,507)",
     "said": "An expansive and flawed database that states can use for potential voter purges ... weaponize an unreliable database.",
     "links": [
       {
@@ -2054,7 +2027,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/JudiciaryDems/status/2103595404793417737"
       }
     ],
-    "viewCount": 22224
+    "viewCount": 22515
   },
   {
     "id": "save-row-5",
@@ -2078,7 +2051,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X (also Bluesky, website)",
     "when": "11:44 AM",
-    "views": "1,069,121",
+    "views": "1,078,666",
     "said": "The Supreme Court ruled 6-3 to allow ... voter roll purges using a flawed database. Bluesky copy: 1,571 likes, 990 reposts.",
     "links": [
       {
@@ -2094,7 +2067,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://www.democracydocket.com/news-alerts/supreme-court-revives-dhs-use-of-flawed-immigration-database-for-voter-purges/"
       }
     ],
-    "viewCount": 1069121,
+    "viewCount": 1078666,
     "lean": "Leans Democratic"
   },
   {
@@ -2103,7 +2076,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "11:48 AM",
-    "views": "611,144",
+    "views": "620,822",
     "said": "The Supreme Court authorized the Trump administration ... to initiate registration purges.",
     "links": [
       {
@@ -2115,7 +2088,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://elias.law/client-alert/supreme-court-clears-way-for-expanded-save-system/"
       }
     ],
-    "viewCount": 611144,
+    "viewCount": 620822,
     "lean": "Leans Democratic"
   },
   {
@@ -2124,7 +2097,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Republican/Trump administration",
     "where": "X",
     "when": "2:48 PM",
-    "views": "198,581",
+    "views": "203,188",
     "said": "Huge victory for election integrity! ... [the stay] will allow states to clear the voter rolls of illegal voters.",
     "links": [
       {
@@ -2132,7 +2105,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/AGToddBlanche/status/2103557217748504767"
       }
     ],
-    "viewCount": 198581
+    "viewCount": 203188
   },
   {
     "id": "save-row-9",
@@ -2140,7 +2113,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Republican/Trump administration",
     "where": "dhs.gov + X",
     "when": "Sept 25; X 12:26 PM",
-    "views": "310,523",
+    "views": "318,429",
     "said": "SAVE may be used going forward ... to stop noncitizens from voting illegally.",
     "links": [
       {
@@ -2152,7 +2125,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/DHSGenCounsel/status/2103521437407719881"
       }
     ],
-    "viewCount": 310523
+    "viewCount": 318429
   },
   {
     "id": "save-row-10",
@@ -2160,7 +2133,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "News",
     "where": "X + YouTube",
     "when": "Sept 25; YouTube 4:51 PM",
-    "views": "64,278",
+    "views": "64,662",
     "said": "The information in this database is quite inaccurate.",
     "links": [
       {
@@ -2172,7 +2145,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://www.youtube.com/watch?v=d50bhF_eTIc"
       }
     ],
-    "viewCount": 64278
+    "viewCount": 64662
   },
   {
     "id": "save-row-11",
@@ -2180,7 +2153,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "News",
     "where": "X",
     "when": "Sept 25",
-    "views": "49,754",
+    "views": "50,883",
     "said": "The Court ... could deploy a federal immigration database to check voters' citizenship.",
     "links": [
       {
@@ -2188,7 +2161,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/WSJ/status/2103582128428462342"
       }
     ],
-    "viewCount": 49754
+    "viewCount": 50883
   },
   {
     "id": "save-row-12",
@@ -2252,7 +2225,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "News",
     "where": "YouTube",
     "when": "4:26 PM",
-    "views": "1,800",
+    "views": "2,078",
     "said": "SCOTUS UNLOCKS VOTER ROLL PURGE.",
     "links": [
       {
@@ -2260,7 +2233,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://www.youtube.com/watch?v=Hk6rFjtridE"
       }
     ],
-    "viewCount": 1800
+    "viewCount": 2078
   },
   {
     "id": "save-row-16",
@@ -2300,7 +2273,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "12:32 PM",
-    "views": "1,362,243",
+    "views": "1,370,076",
     "said": "All illegal voters need to be REMOVED from the voter rolls.",
     "links": [
       {
@@ -2308,7 +2281,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/libsoftiktok/status/2103523106434285971"
       }
     ],
-    "viewCount": 1362243,
+    "viewCount": 1370076,
     "lean": "Leans Republican"
   },
   {
@@ -2317,7 +2290,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "11:48 AM",
-    "views": "476,667",
+    "views": "482,237",
     "said": "GREENLIT ... PURGE the voter rolls of illegal voters during the 2026 midterms.",
     "links": [
       {
@@ -2325,7 +2298,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/EricLDaugh/status/2103512062458515770"
       }
     ],
-    "viewCount": 476667,
+    "viewCount": 482237,
     "lean": "Leans Republican"
   },
   {
@@ -2334,7 +2307,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "Sept 25, 3:10 PM",
-    "views": "213,129",
+    "views": "215,689",
     "said": "TRANSLATION… Trump is eliminating illegal alien, non-citizens from the voter rolls and SCOTUS affirmed this effort.",
     "links": [
       {
@@ -2342,7 +2315,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/CynicalPublius/status/2103562729416171789"
       }
     ],
-    "viewCount": 213129,
+    "viewCount": 215689,
     "lean": "Leans Republican"
   },
   {
@@ -2351,7 +2324,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "Sept 25, 12:13 PM",
-    "views": "178,183",
+    "views": "185,386",
     "said": "Chinese-language post (2,362 likes, 481 reposts); in English: The Supreme Court, by a 6-3 absolute advantage, officially gave the green light! Approved the Trump administration's fully upgraded SAVE citizenship-verification database! This means every state in the country finally has an imperial sword and can freely and drastically clean illegal voters from the voter rolls!",
     "links": [
       {
@@ -2359,7 +2332,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/Baoliaogeming64/status/2103518355567100142"
       }
     ],
-    "viewCount": 178183,
+    "viewCount": 185386,
     "lean": "Not yet identified",
     "leanNote": "X About page: based in United States; joined Dec 2020; verified since Dec 2022; 1 username change (Jul 2021); connected via US App Store."
   },
@@ -2369,7 +2342,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "10:23 PM",
-    "views": "327,657 (post 1: 263,910; post 2: 63,747)",
+    "views": "355,118 (post 1: 290,875; post 2: 64,243)",
     "said": "I'm asking county recorders and election officials to contact DHS for the free SAVE database ...",
     "links": [
       {
@@ -2381,7 +2354,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/ScottPresler/status/2103680373335175174"
       }
     ],
-    "viewCount": 327657,
+    "viewCount": 355118,
     "lean": "Leans Republican"
   },
   {
@@ -2390,7 +2363,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "Sept 26, 7:21 PM",
-    "views": "532",
+    "views": "548",
     "said": "DOGE-enhanced federal SAVE database ... is GREENLIT ... Clean the rolls.",
     "links": [
       {
@@ -2398,7 +2371,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/derekjonhsonn/status/2103988486260892098"
       }
     ],
-    "viewCount": 532,
+    "viewCount": 548,
     "lean": "Leans Republican",
     "leanNote": "Self-describes as pro-Trump/MAGA. Not yet verified."
   },
@@ -2408,7 +2381,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "Sept 26, 7:57 PM",
-    "views": "574",
+    "views": "756",
     "said": "SAVE Database to purge illegal aliens from voter rolls.",
     "links": [
       {
@@ -2416,7 +2389,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/MelG_Gibson/status/2103997295867916796"
       }
     ],
-    "viewCount": 574,
+    "viewCount": 756,
     "lean": "Leans Republican",
     "leanNote": "Self-describes as pro-Trump/MAGA. Not yet verified."
   },
@@ -2426,7 +2399,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "Sept 26, 7:58 PM",
-    "views": "278",
+    "views": "293",
     "said": "The 6–3 is the green light. Drive it. Purge the rolls.",
     "links": [
       {
@@ -2434,7 +2407,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/commentaryhower/status/2103997664874332287"
       }
     ],
-    "viewCount": 278,
+    "viewCount": 293,
     "lean": "Not yet identified"
   },
   {
@@ -2443,7 +2416,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
     "group": "Social media",
     "where": "X",
     "when": "Sept 27, 2026, 10:29 AM ET",
-    "views": "11,989",
+    "views": "33,102",
     "said": "SUPREME COURT GREENLIGHTS DOGE VOTER ROLL CLEANUP… approved the DOGE-enhanced SAVE database… designed to purge",
     "links": [
       {
@@ -2451,7 +2424,7 @@ const SAVE_ROWS: { id: string; who: string; group: string; where: string; when: 
         "href": "https://x.com/AsFoundX/status/2104216742008418370"
       }
     ],
-    "viewCount": 11989,
+    "viewCount": 33102,
     "lean": "Not yet identified",
     "record": "Order only stays the lower-court ruling pending appeal; approves no cleanup."
   }
@@ -3299,6 +3272,123 @@ function newsClass(row: NewsCaseRow): { role: string; platforms: string[] } {
 }
 const CARD_DIM = NEWS_DIMS[0];
 
+function savePostsFor(card: string) {
+  if (card === "X") {
+    return SAVE_ROWS.filter((row) => row.where.includes("X")).map((row) => ({
+      who: row.who,
+      views: row.views,
+      said: row.said,
+      href: row.links[0]?.href,
+      group: row.group,
+    }));
+  }
+  if (card === "YouTube") {
+    return [
+      { who: "NBC News", views: "4,146", said: "SCOTUS allows use of database for possible voter purge.", href: "https://www.youtube.com/watch?v=d50bhF_eTIc", group: "News" },
+      { who: "Real America's Voice", views: "2,078", said: "SCOTUS UNLOCKS VOTER ROLL PURGE.", href: "https://www.youtube.com/watch?v=Hk6rFjtridE", group: "News" },
+    ];
+  }
+  return [];
+}
+
+function PersonCharts({
+  rows,
+  slice,
+  onSlice,
+  onSource,
+}: {
+  rows: NewsCaseRow[];
+  slice: string | null;
+  onSlice: (value: string) => void;
+  onSource: (href: string) => void;
+}) {
+  const partyColor: Record<string, string> = {
+    Democratic: "#1d4ed8",
+    Republican: "#b91c1c",
+    "News outlets": "#a16207",
+    "Social media": "#6d28d9",
+    Campaigns: "#0f766e",
+    "Advocacy groups": "#14532d",
+    "Not yet identified": "#52525b",
+  };
+  if (slice?.startsWith("party|") || slice?.startsWith("method|")) {
+    const [kind, name, person] = slice.split("|");
+    const matched = rows.filter((row) => (kind === "party" ? row.party : bucketOf(row.method)) === name);
+    if (!person) {
+      const map = new Map<string, number>();
+      matched.forEach((row) => {
+        const who = row.person && row.person !== "Not yet identified" ? row.person : "Not yet identified";
+        map.set(who, (map.get(who) ?? 0) + 1);
+      });
+      const people = [...map.entries()].sort((a, b) => b[1] - a[1]);
+      return (
+        <div className="mt-6 flex w-full flex-col gap-2">
+          <p className="text-center text-[18px] font-semibold text-white">{name} · {matched.length}</p>
+          <p className="text-center text-[15px] text-white/80">By person.</p>
+          {people.map(([who, count]) => (
+            <button key={who} type="button" onClick={() => onSlice(`${kind}|${name}|${who}`)} className="w-full rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] font-semibold text-white">
+              {who} · {count}
+            </button>
+          ))}
+        </div>
+      );
+    }
+    const list = matched.filter((row) => (row.person && row.person !== "Not yet identified" ? row.person : "Not yet identified") === person);
+    return (
+      <div className="mt-6 flex w-full flex-col gap-2">
+        <p className="text-center text-[18px] font-semibold text-white">{person} · {list.length}</p>
+        {list.map((row) => (
+          <button key={row.id} type="button" onClick={() => row.sources[0] && onSource(row.sources[0].href)} className="w-full rounded-2xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] leading-snug text-white">
+            <span className="block font-semibold">{row.person}</span>
+            <span className="block">{row.network}</span>
+            <span className="block">Method of deception: {row.method}</span>
+            <span className="block">{row.said}</span>
+          </button>
+        ))}
+      </div>
+    );
+  }
+  const partyMap = new Map<string, number>();
+  const methodMap = new Map<string, number>();
+  rows.forEach((row) => {
+    partyMap.set(row.party, (partyMap.get(row.party) ?? 0) + 1);
+    const method = bucketOf(row.method);
+    methodMap.set(method, (methodMap.get(method) ?? 0) + 1);
+  });
+  const parties = [...partyMap.entries()].sort((a, b) => b[1] - a[1]);
+  const methods = [...methodMap.entries()].sort((a, b) => b[1] - a[1]);
+  return (
+    <div className="mt-6 flex w-full flex-col gap-8">
+      <LayerChart
+        title="By political party"
+        line="Tap a color. The people are behind it."
+        labels={parties.map(([label]) => label)}
+        data={parties.map(([, count]) => count)}
+        colors={parties.map(([label]) => partyColor[label] ?? "#334155")}
+        keys={parties.map(([label, count], index) => ({ label: `${label} · ${count}`, color: partyColor[label] ?? "#334155", index }))}
+        type="doughnut"
+        horizontal={false}
+        bullets={[]}
+        colorKey
+        onPick={(index) => onSlice(`party|${parties[index][0]}`)}
+      />
+      <LayerChart
+        title="By method of deception"
+        line="Tap a color. The people are behind it."
+        labels={methods.map(([label]) => label)}
+        data={methods.map(([, count]) => count)}
+        colors={methods.map(([label]) => BUCKET_COLOR[label] ?? "#334155")}
+        keys={methods.map(([label, count], index) => ({ label: `Method of deception: ${label} · ${count}`, color: BUCKET_COLOR[label] ?? "#334155", index }))}
+        type="doughnut"
+        horizontal={false}
+        bullets={[]}
+        colorKey
+        onPick={(index) => onSlice(`method|${methods[index][0]}`)}
+      />
+    </div>
+  );
+}
+
 function CardLayers({
   card,
   slice,
@@ -3312,6 +3402,31 @@ function CardLayers({
 }) {
   const spec = CARD_CASES[card];
   const rows = spec ? NEWS_CASES.filter(spec.match) : [];
+  const savePosts = savePostsFor(card);
+  if (slice?.startsWith("party|") || slice?.startsWith("method|")) {
+    return <PersonCharts rows={rows} slice={slice} onSlice={onSlice} onSource={onSource} />;
+  }
+  if (slice?.startsWith("save:")) {
+    const group = slice.slice(5);
+    const posts = savePosts.filter((post) => post.group === group);
+    return (
+      <div className="mt-6 flex w-full flex-col gap-2">
+        <p className="text-center text-[18px] font-semibold text-white">{card} · {group}</p>
+        <p className="text-center text-[15px] leading-snug text-white/80">This list is only {group}. The view count was read on the post.</p>
+        {posts.map((post) => (
+          <button
+            key={post.who + post.said}
+            type="button"
+            onClick={() => post.href && onSource(post.href)}
+            className="w-full rounded-3xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] font-semibold leading-snug text-white"
+          >
+            {post.who} · {post.views} views
+            <span className="mt-1 block font-normal">{post.said}</span>
+          </button>
+        ))}
+      </div>
+    );
+  }
   if (slice) {
     const [status, groupName = "", outletName = ""] = slice.split("|");
     const list = status === "all" ? rows : rows.filter((row) => CARD_DIM.get(row) === status);
@@ -3328,23 +3443,29 @@ function CardLayers({
     );
   }
   const groups = newsCountBy(rows, CARD_DIM);
+  const saveGroups = SAVE_GROUP_LABELS.map((label) => ({
+    label,
+    count: savePosts.filter((post) => post.group === label).length,
+  })).filter((item) => item.count > 0);
+  for (const item of saveGroups) groups.push({ label: item.label, count: item.count });
   return (
     <div className="w-full">
+      <PersonCharts rows={rows} slice={null} onSlice={onSlice} onSource={onSource} />
       <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{card}: Verdict / status</p>
-      {rows.length === 0 ? (
+      {groups.length === 0 ? (
         <ChartSlot line="Jan 1, 2015 – Sept 27, 2026" />
       ) : (
         <LayerChart
           title={`${card}: Verdict / status`}
-          line={`Jan 1, 2015 – Sept 27, 2026 · ${newsCasesLine(rows.length)}`}
+          line={`Jan 1, 2015 – Sept 27, 2026 · ${newsCasesLine(rows.length + savePosts.length)}`}
           labels={groups.map((item) => item.label)}
           data={groups.map((item) => item.count)}
-          colors={groups.map((item) => CARD_DIM.colors[item.label] ?? CARD_DIM.fallback)}
+          colors={groups.map((item) => CARD_DIM.colors[item.label] ?? SAVE_GROUP_COLORS[SAVE_GROUP_LABELS.indexOf(item.label)] ?? CARD_DIM.fallback)}
           type="doughnut"
           horizontal={false}
-          bullets={spec?.note ? [spec.note] : []}
-          center={{ big: String(rows.length), small: rows.length === 1 ? "Case" : "Cases", onOpen: () => onSlice("all") }}
-          onPick={(index) => onSlice(groups[index].label)}
+          bullets={[]}
+          center={{ big: String(rows.length + savePosts.length), small: "On the chart", onOpen: () => onSlice("all") }}
+          onPick={(index) => onSlice(saveGroups.some((item) => item.label === groups[index].label) ? `save:${groups[index].label}` : groups[index].label)}
         />
       )}
     </div>
@@ -4314,8 +4435,586 @@ function ProofCase({ id, onSource }: { id: string; onSource: (href: string) => v
   );
 }
 
+function FrontMaster({ onOpen }: { onOpen: (group: string) => void }) {
+  const dim = NEWS_DIMS.find((item) => item.key === "network")!;
+  const groups = newsCountBy(NEWS_CASES, dim);
+  return (
+    <LayerChart
+      title="Fake News"
+      line=""
+      labels={groups.map((item) => item.label)}
+      data={groups.map((item) => item.count)}
+      colors={groups.map((item) => dim.colors[item.label] ?? dim.fallback)}
+      type="doughnut"
+      horizontal={false}
+      bullets={[]}
+      colorKey
+      center={{ big: String(NEWS_CASES.length), small: "Cases", onOpen: () => undefined }}
+      onPick={(index) => onOpen(groups[index].label)}
+    />
+  );
+}
+
+function FrontOutlets({ group, onOpen }: { group: string; onOpen: (name: string) => void }) {
+  const rows = NEWS_CASES.filter((row) => row.networkGroup === group);
+  const counts = new Map<string, number>();
+  rows.forEach((row) => counts.set(row.networkName, (counts.get(row.networkName) ?? 0) + 1));
+  const names = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  return (
+    <LayerChart
+      title={group}
+      line={`${group}. ${rows.length} cases. Tap a name.`}
+      labels={names.map(([label]) => label)}
+      data={names.map(([, count]) => count)}
+      colors={names.map((_, index) => ["#1e3a5f", "#7c2d12", "#14532d", "#b91c1c", "#0f766e", "#7c3aed", "#f59e0b", "#a3a3a3"][index % 8])}
+      type="doughnut"
+      horizontal={false}
+      bullets={[]}
+      colorKey
+      center={{ big: String(rows.length), small: "Cases", onOpen: () => undefined }}
+      onPick={(index) => onOpen(names[index][0])}
+    />
+  );
+}
+
+function FrontTyped({ group, onOpen }: { group: string; onOpen: (id: string) => void }) {
+  const rows = NEWS_CASES.filter((row) => row.networkGroup === group);
+  const methods = new Map<string, NewsCaseRow[]>();
+  rows.forEach((row) => {
+    const list = methods.get(row.method) ?? [];
+    list.push(row);
+    methods.set(row.method, list);
+  });
+  const ordered = [...methods.entries()].sort((a, b) => b[1].length - a[1].length);
+  return (
+    <div className="mt-6 flex w-full flex-col gap-6">
+      <p className="text-center text-[22px] font-bold text-white">Fake News · Evidence type: {group}</p>
+      <p className="text-center text-[16px] text-white/85">{rows.length} cases. Each group below is the method of deception.</p>
+      {ordered.map(([method, list]) => (
+        <div key={method}>
+          <p className="text-center text-[18px] font-semibold text-white">Method of deception: {method} · {list.length}</p>
+          <div className="mt-2 flex flex-col gap-2">
+            {list.map((row) => (
+              <button
+                key={row.id}
+                type="button"
+                onClick={() => onOpen(row.id)}
+                className="w-full rounded-2xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] leading-snug text-white"
+              >
+                <span className="block font-semibold">{row.networkName}</span>
+                <span className="mt-1 block">{row.who} · {row.began}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function FrontList({ group, name, onOpen }: { group: string; name: string; onOpen: (id: string) => void }) {
+  const rows = NEWS_CASES.filter((row) => row.networkGroup === group && row.networkName === name);
+  const methods = new Map<string, number>();
+  rows.forEach((row) => methods.set(row.method, (methods.get(row.method) ?? 0) + 1));
+  const methodLine = [...methods.entries()].sort((a, b) => b[1] - a[1]).map(([label, count]) => `${label} · ${count}`).join(" · ");
+  return (
+    <div className="mt-6 flex w-full flex-col gap-2">
+      <p className="text-center text-[18px] font-semibold text-white">{name}</p>
+      <p className="text-center text-[16px] font-semibold text-white">{group} · {rows.length}</p>
+      <p className="text-center text-[15px] leading-snug text-white/85">Method of deception: {methodLine || "Not on record"}</p>
+      {rows.map((row) => (
+        <button
+          key={row.id}
+          type="button"
+          onClick={() => onOpen(row.id)}
+          className="w-full rounded-2xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] leading-snug text-white"
+        >
+          <span className="block font-semibold">Method of deception: {row.method}</span>
+          <span className="mt-1 block">{row.who} · {row.began}</span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+const AIRINGS: Record<string, { speaker: string; outlet: string; when: string; duration: string; views: string; likes: string; href: string }[]> = {
+  "25": [{ speaker: "Adam Schiff", outlet: "CNN", when: "Feb. 17, 2019", duration: "8 minutes 35 seconds", views: "Not published", likes: "Not published", href: "https://www.cnn.com/videos/politics/2019/02/17/sotu-schiff-full.cnn" }],
+  "26": [{ speaker: "James Comey", outlet: "The Washington Post", when: "Dec. 9, 2019", duration: "One op-ed", views: "Not published", likes: "Not published", href: "https://www.washingtonpost.com/opinions/james-comey-the-truth-is-finally-out-the-fbi-fulfilled-its-mission/2019/12/09/614df00c-1aad-11ea-8d58-5ac3600967a1_story.html" }],
+  "52": [{ speaker: "Keith Ellison", outlet: "CBS", when: "Jan. 29, 2017", duration: "One interview", views: "Not published", likes: "Not published", href: "https://www.cbsnews.com/news/democratic-congressman-blasts-president-trumps-religiously-based-ban/" }],
+  "85": [{ speaker: "Marshall Cohen", outlet: "CNN", when: "Dec. 11, 2019", duration: "One article", views: "Not published", likes: "Not published", href: "https://www.cnn.com/2019/12/11/politics/justice-department-inspector-general-senate-hearing" }],
+};
+
+function FrontCase({ id, onSource }: { id: string; onSource: (href: string) => void }) {
+  const row = NEWS_CASES.find((item) => item.id === id);
+  if (!row) return null;
+  const airings = AIRINGS[id] ?? [{
+    speaker: row.person,
+    outlet: row.networkName,
+    when: row.began,
+    duration: row.duration,
+    views: "Not published",
+    likes: "Not published",
+    href: row.sources[0]?.href ?? "",
+  }];
+  return (
+    <div className="mt-8 w-full text-left text-[15px] leading-snug">
+      <p className="text-center text-[18px] font-semibold text-white">Method of deception: {row.method}</p>
+      <p className="mt-1 text-center text-white/75">{row.who}</p>
+      <p className="mt-1 text-center text-white/75">{row.began} · {row.evidence}</p>
+      <p className="mt-4 text-white/85">One claim. Each airing counts once against the speaker and once against the outlet. A repeat is a new airing. Views and likes are entered only when they were read on that post.</p>
+      {airings.map((airing) => (
+        <button
+          key={airing.href + airing.when}
+          type="button"
+          onClick={() => airing.href && onSource(airing.href)}
+          className="mt-3 w-full rounded-3xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] leading-snug text-white"
+        >
+          <span className="block font-semibold">{airing.speaker} · {airing.outlet}</span>
+          <span className="mt-1 block">{airing.when} · {airing.duration}</span>
+          <span className="mt-1 block">Views {airing.views} · Likes {airing.likes}</span>
+        </button>
+      ))}
+      <p className="mt-4 font-semibold">What they said</p>
+      <p className="mt-1 text-white/85">{row.said}</p>
+      <p className="mt-4 font-semibold">What the record shows</p>
+      <p className="mt-1 text-white/85">{row.record}</p>
+      <div className="mt-4 flex flex-col gap-2">
+        {row.sources.map((source) => (
+          <button
+            key={source.href}
+            type="button"
+            onClick={() => onSource(source.href)}
+            className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[15px] font-semibold text-white"
+          >
+            {source.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const OFFICES = ["Senators", "House", "POTUS", "Cabinet", "Networks", "Journalists", "Influencers", "Foreign nations", "Viral posts", "Late night", "The View", "Bill Maher", "Former or candidates", "Trump and family", "FBI, DOJ, AG", "Fact-checkers", "No deceptive statement"];
+const OFF_THE_PAGE = new Set(["sh-not-2383", "sh-committee", "sh-cruz-absent", "sh-smith-doubt"]);
+const NEWS_GROUPS = new Set(["Print/Web news", "MSM Networks", "Cable Networks", "Public Broadcasting"]);
+const FOREIGN_COUNTRY: Record<string, string> = {
+  BBC: "United Kingdom",
+  "The Guardian": "United Kingdom",
+  "The Telegraph (UK)": "United Kingdom",
+  Reuters: "United Kingdom",
+  "Der Spiegel": "Germany",
+  AFP: "France",
+};
+
+function onTheMicrophone(row: (typeof senateHearings)[number]) {
+  return !OFF_THE_PAGE.has(row.id);
+}
+
+function outletCases() {
+  return fakeNewsCases.filter((row) => NEWS_GROUPS.has(row.networkGroup) && !FOREIGN_COUNTRY[row.network]);
+}
+
+function foreignCases() {
+  return fakeNewsCases.filter((row) => FOREIGN_COUNTRY[row.network]);
+}
+
+function influencerCases() {
+  return fakeNewsCases.filter((row) => row.networkGroup === "Social Media");
+}
+
+function journalistCases() {
+  const officials = new Set(
+    fakeNewsCases.filter((row) => row.networkGroup === "Politicians/Officials").map((row) => row.person),
+  );
+  return fakeNewsCases.filter(
+    (row) =>
+      NEWS_GROUPS.has(row.networkGroup) &&
+      row.person &&
+      row.person !== "Not yet identified" &&
+      !officials.has(row.person),
+  );
+}
+
+const OFFICIAL_VIRAL = new Set(["259", "89", "95", "144", "181"]);
+
+function viralCases() {
+  return fakeNewsCases.filter((row) => /viral/i.test(`${row.who} ${row.said}`));
+}
+
+function trumpCases() {
+  const family = /trump|melania|ivanka|barron|jared kushner|tiffany trump/i;
+  return fakeNewsCases.filter(
+    (row) => !["254", "255", "259"].includes(row.id) && family.test(`${row.said} ${row.who}`),
+  );
+}
+
+function justiceCases() {
+  return fakeNewsCases.filter((row) => ["26", "264"].includes(row.id));
+}
+
+function formerCases() {
+  return fakeNewsCases.filter((row) => {
+    if (row.person === "Not yet identified") return false;
+    const blob = `${row.who} ${row.party}`;
+    if (row.party === "Campaigns") return true;
+    if (/former president|former vermont|gubernatorial candidate/i.test(blob)) return true;
+    return /campaign/i.test(row.who) && row.networkGroup === "Politicians/Officials";
+  });
+}
+
+const BUCKET_COLOR: Record<string, string> = {
+  "Omitted context": "#1d4ed8",
+  "Misquote / truncation": "#b91c1c",
+  Fabrication: "#7c2d12",
+  "False photo or video": "#6d28d9",
+  "Premature proven framing": "#a16207",
+  "Retracted invention": "#0f766e",
+  "Policy-scope inflation": "#14532d",
+  Inflammatory: "#9f1239",
+  Other: "#334155",
+  "No deceptive statement": "#a3a3a3",
+};
+
+function bucketOf(method: string) {
+  const text = method.toLowerCase();
+  if (/no deceptive/.test(text)) return "No deceptive statement";
+  if (/photo|video/.test(text)) return "False photo or video";
+  if (/retract/.test(text)) return "Retracted invention";
+  if (/misquote|truncat|contextomy/.test(text)) return "Misquote / truncation";
+  if (/proven|premature/.test(text)) return "Premature proven framing";
+  if (/policy|scope inflation/.test(text)) return "Policy-scope inflation";
+  if (/inflam|grandstand/.test(text)) return "Inflammatory";
+  if (/fabricat|false attribution|falsehood|attribution/.test(text)) return "Fabrication";
+  if (/omit|context/.test(text)) return "Omitted context";
+  return "Other";
+}
+
+const HOUSE_MEMBERS = new Set([
+  "Nancy Pelosi",
+  "Alexandria Ocasio-Cortez",
+  "Hakeem Jeffries",
+  "Jerrold Nadler",
+  "Maxine Waters",
+  "Eric Swalwell",
+  "Diana DeGette",
+  "Debbie Wasserman Schultz",
+  "Adam Schiff",
+]);
+
+function toNewsRow(row: (typeof fakeNewsCases)[number] | (typeof politicalStatements)[number]) {
+  return {
+    id: row.id,
+    person: "person" in row && row.person && row.person !== "Not yet identified" ? row.person : "Not yet identified",
+    network: row.network,
+    views: "views" in row && row.views ? row.views : "Not on record",
+    likes: "likes" in row && row.likes ? row.likes : "Not on record",
+    method: row.method,
+    duration: row.duration,
+    bucket: bucketOf(row.method),
+  };
+}
+
+function categoryRows(method: string) {
+  if (method === "Senators") {
+    const kept = senateHearings.filter(onTheMicrophone);
+    const also = senateHearings.filter((row) => OFF_THE_PAGE.has(row.id));
+    return [...kept, ...also].map((row) => ({
+      id: row.id,
+      person: row.senator,
+      network: row.hearing,
+      views: row.views,
+      likes: row.likes,
+      method: row.method,
+      duration: row.duration,
+      bucket: bucketOf(row.method),
+    }));
+  }
+  if (method === "House") {
+    return [
+      ...fakeNewsCases.filter((row) => HOUSE_MEMBERS.has(row.person)).map(toNewsRow),
+      ...politicalStatements.filter((row) => row.office === "House").map(toNewsRow),
+    ];
+  }
+  if (method === "POTUS") {
+    return [
+      ...fakeNewsCases.filter((row) => row.person === "Joe Biden" || row.person === "Donald Trump").map(toNewsRow),
+      ...politicalStatements.filter((row) => row.office === "POTUS").map(toNewsRow),
+    ];
+  }
+  if (method === "Cabinet") {
+    return fakeNewsCases.filter((row) => row.person === "Pete Buttigieg").map(toNewsRow);
+  }
+  if (method === "No deceptive statement") {
+    return politicalStatements.filter((row) => row.office === "No deceptive statement").map(toNewsRow);
+  }
+  const source =
+    method === "Networks"
+      ? outletCases()
+      : method === "Journalists"
+        ? journalistCases()
+        : method === "Influencers"
+          ? influencerCases()
+          : method === "Foreign nations"
+            ? foreignCases()
+            : method === "Viral posts"
+              ? viralCases()
+              : method === "Former or candidates"
+                ? formerCases()
+                : method === "Trump and family"
+                  ? trumpCases()
+                  : method === "FBI, DOJ, AG"
+                    ? justiceCases()
+                    : [];
+  const extra = method === "Former or candidates" ? politicalStatements.filter((row) => row.office === "Former or candidates") : [];
+  return [...source.map(toNewsRow), ...extra.map(toNewsRow)];
+}
+
+function repeatCount(rows: ReturnType<typeof categoryRows>, person: string) {
+  if (person === "Not yet identified") return "Not one person";
+  return String(rows.filter((row) => row.person === person).length);
+}
+
+function SenateChart({ onOpen }: { onOpen: (method: string) => void }) {
+  const shown = [
+    categoryRows("Senators").length,
+    categoryRows("House").length,
+    categoryRows("POTUS").length,
+    categoryRows("Cabinet").length,
+    outletCases().length,
+    journalistCases().length,
+    influencerCases().length,
+    foreignCases().length,
+    viralCases().length,
+    0,
+    0,
+    0,
+    formerCases().length,
+    trumpCases().length,
+    justiceCases().length,
+    16,
+    politicalStatements.filter((row) => row.office === "No deceptive statement").length,
+  ];
+  const colors = ["#7c2d12", "#1e3a5f", "#14532d", "#b91c1c", "#1d4ed8", "#a16207", "#6d28d9", "#0f766e", "#9f1239", "#c2410c", "#be185d", "#7f1d1d", "#365314", "#991b1b", "#1e293b", "#166534", "#a3a3a3"];
+  return (
+    <LayerChart
+      title="Public trust"
+      line="These statements are here because they shaped public opinion. The speaker held a microphone from a position of public trust. A fact-checker is not required for that."
+      labels={OFFICES}
+      data={shown}
+      colors={colors}
+      type="doughnut"
+      horizontal={false}
+      bullets={[]}
+      center={{ big: String(shown.reduce((sum, count) => sum + count, 0)), small: "Counted", onOpen: () => undefined }}
+      onPick={(index) => onOpen(OFFICES[index])}
+    />
+  );
+}
+
+function CategoryChart({ method, onOpen }: { method: string; onOpen: (bucket: string) => void }) {
+  if (method === "Fact-checkers") {
+    return (
+      <LayerChart
+        title="Fact-checkers"
+        line="Who checks them: Swamp Force, same 7 tests, Sep. 24, 2026. Approved is the only pass. Caution means use only after our own research. Rejected means do not use."
+        labels={CHECKER_GROUPS}
+        data={CHECKER_DATA}
+        colors={CHECKER_COLORS}
+        keys={CHECKER_GROUPS.map((label, index) => ({ label: `${label} · ${CHECKER_DATA[index]}`, color: CHECKER_COLORS[index], index }))}
+        type="doughnut"
+        horizontal={false}
+        bullets={[]}
+        colorKey
+        center={{ big: "16", small: "Tested", onOpen: () => undefined }}
+        onPick={(index) => onOpen(CHECKER_GROUPS[index])}
+      />
+    );
+  }
+  const rows = categoryRows(method);
+  const order = Object.keys(BUCKET_COLOR);
+  const labels = order.filter((label) => rows.some((row) => row.bucket === label));
+  const data = labels.map((label) => rows.filter((row) => row.bucket === label).length);
+  if (!labels.length) {
+    return <p className="mt-8 text-center text-[15px] text-white/80">None yet. A name is added only after a full check of the public record.</p>;
+  }
+  return (
+    <LayerChart
+      title={method}
+      line="Tap a color. The evidence is behind the chart."
+      labels={labels}
+      data={data}
+      colors={labels.map((label) => BUCKET_COLOR[label])}
+      keys={labels.map((label, index) => ({ label: `${label === "No deceptive statement" ? "No deceptive statement" : `Method of deception: ${label}`} · ${data[index]}`, color: BUCKET_COLOR[label], index }))}
+      type="doughnut"
+      horizontal={false}
+      bullets={[]}
+      colorKey
+      center={{ big: String(rows.length), small: "On record", onOpen: () => undefined }}
+      onPick={(index) => onOpen(labels[index])}
+    />
+  );
+}
+
+function EvidenceList({ method, bucket, onOpen }: { method: string; bucket: string; onOpen: (id: string) => void }) {
+  if (method === "Fact-checkers") {
+    const rows = CHECKER_TABLE.filter((row) => row.outcome === bucket);
+    return (
+      <div className="mt-6 flex w-full flex-col gap-2">
+        <p className="text-center text-[18px] font-semibold text-white">{bucket} · {rows.length}</p>
+        <p className="text-center text-[15px] text-white/80">A fact-checker is never the proof. Where one was used, we checked the original record ourselves.</p>
+        {rows.map((row) => (
+          <button
+            key={row.name}
+            type="button"
+            onClick={() => onOpen(`fc:${row.name}`)}
+            className="w-full rounded-2xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] leading-snug text-white"
+          >
+            <span className="block font-semibold">{row.name}</span>
+            <span className="block">{row.owner}</span>
+            <span className="block">Reliable: {row.outcome}</span>
+            <span className="block">{row.ifcn}</span>
+            <span className="block">Our own research: required. Confirms {row.confirms} of our cases, and only as a second look.</span>
+          </button>
+        ))}
+      </div>
+    );
+  }
+  const all = categoryRows(method);
+  const rows = all.filter((row) => row.bucket === bucket);
+  return (
+    <div className="mt-6 flex w-full flex-col gap-2">
+      <p className="text-center text-[18px] font-semibold text-white">{bucket === "No deceptive statement" ? `No deceptive statement · ${rows.length}` : `Method of deception: ${bucket} · ${rows.length}`}</p>
+      {rows.map((row) => (
+        <button
+          key={row.id}
+          type="button"
+          onClick={() => onOpen(row.id)}
+          className="w-full rounded-2xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] leading-snug text-white"
+        >
+          <span className="block font-semibold">{row.person}</span>
+          <span className="block">{row.network}</span>
+          <span className="block">Views {row.views} · Likes {row.likes}</span>
+          <span className="block font-semibold">Shaped public opinion. Said from a position of public trust.</span>
+          <span className="block font-semibold">{row.method === "No deceptive statement" ? "No deceptive statement" : `Method of deception: ${row.method}`}</span>
+          <span className="block">Duration {row.duration} · Repeated {repeatCount(all, row.person)}</span>
+          {method === "Viral posts" ? (
+            <span className="block">{OFFICIAL_VIRAL.has(row.id) ? "Leads to a public official" : "Does not lead to a public official"}</span>
+          ) : null}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function PoliticalCase({ id, onSource }: { id: string; onSource: (href: string) => void }) {
+  const row = politicalStatements.find((item) => item.id === id);
+  if (!row) return null;
+  return (
+    <div className="mt-8 w-full text-left text-[15px] leading-snug">
+      <p className="text-center text-[18px] font-semibold text-white">{row.person}</p>
+      <p className="mt-1 text-center text-white/75">{row.network} · {row.began}</p>
+      <p className="mt-3 text-white/85">Shaped public opinion. Said from a position of public trust.</p>
+      <p className="mt-4 font-semibold">Method of deception: {row.method}</p>
+      <p className="mt-4 font-semibold">What they said</p>
+      <p className="mt-1 text-white/85">{row.said}</p>
+      <p className="mt-4 font-semibold">What the record shows</p>
+      <p className="mt-1 text-white/85">{row.record}</p>
+      <div className="mt-4 flex flex-col gap-2">
+        {row.sources.map((source) => (
+          <button key={source.href} type="button" onClick={() => onSource(source.href)} className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[15px] font-semibold text-white">
+            {source.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function CheckerPage({ name }: { name: string }) {
+  const row = CHECKER_TABLE.find((item) => item.name === name);
+  const section = factCheckerVetting.find((item) => row && item.title.startsWith(name));
+  return (
+    <div className="mt-8 w-full text-left text-[15px] leading-snug">
+      <p className="text-center text-[18px] font-semibold text-white">{name}</p>
+      <p className="mt-3 text-white/85">Reliable: {row?.outcome ?? "Not on record"}. A fact-checker is never the proof. Where this one was used, the original record was checked first.</p>
+      {(section?.paras ?? []).map((paragraph) => (
+        <p key={paragraph} className="mt-3 text-white/85">{paragraph.replace(CHECKER_MARK, "")}</p>
+      ))}
+    </div>
+  );
+}
+
+function NewsCase({ id, onSource }: { id: string; onSource: (href: string) => void }) {
+  const row = fakeNewsCases.find((item) => item.id === id);
+  if (!row) return null;
+  return (
+    <div className="mt-8 w-full text-left text-[15px] leading-snug">
+      <p className="text-center text-[18px] font-semibold text-white">{row.who}</p>
+      <p className="mt-1 text-center text-white/75">{row.network} · {row.began}</p>
+      <p className="mt-3 text-white/85">Shaped public opinion. Said from a position of public trust.</p>
+      <p className="mt-4 font-semibold">What they said</p>
+      <p className="mt-1 text-white/85">{row.said}</p>
+      <p className="mt-4 font-semibold">What the record shows</p>
+      <p className="mt-1 text-white/85">{row.record}</p>
+      <div className="mt-4 flex flex-col gap-2">
+        {row.sources.map((source) => (
+          <button
+            key={source.href}
+            type="button"
+            onClick={() => onSource(source.href)}
+            className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[15px] font-semibold text-white"
+          >
+            {source.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SenateCase({ id, onSource }: { id: string; onSource: (href: string) => void }) {
+  const row = senateHearings.find((item) => item.id === id);
+  if (!row) return null;
+  return (
+    <div className="mt-8 w-full text-left text-[15px] leading-snug">
+      <p className="text-center text-[18px] font-semibold text-white">{row.senator}</p>
+      <p className="mt-1 text-center text-white/75">{row.hearing}</p>
+      <p className="mt-3 text-white/85">Shaped public opinion. Said from a position of public trust.</p>
+      <p className="mt-1 text-center text-white/75">{row.date} · {row.method}</p>
+      <p className="mt-3 text-white/85">{row.where}</p>
+      <p className="mt-3">Duration {row.duration} · Views {row.views} · Likes {row.likes}</p>
+      <p className="mt-4 font-semibold">What they said</p>
+      <p className="mt-1 text-white/85">{row.said}</p>
+      <p className="mt-4 font-semibold">What the record shows</p>
+      <p className="mt-1 text-white/85">{row.record}</p>
+      <div className="mt-4 flex flex-col gap-2">
+        {row.sources.map((source) => (
+          <button
+            key={source.href}
+            type="button"
+            onClick={() => onSource(source.href)}
+            className="w-fit rounded-full border border-white/35 bg-[#070b12]/75 px-3 py-1 text-[15px] font-semibold text-white"
+          >
+            {source.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function Betrayal() {
   const [layer, setLayer] = useState<Layer>("root");
+  const [frontGroup, setFrontGroup] = useState<string | null>(null);
+  const [frontName, setFrontName] = useState<string | null>(null);
+  const [frontCase, setFrontCase] = useState<string | null>(null);
+  const [frontHref, setFrontHref] = useState<string | null>(null);
+  const [frontCode, setFrontCode] = useState<null | "menu" | "press" | "congress">(null);
+  const [senateOn, setSenateOn] = useState(false);
+  const [senateMethod, setSenateMethod] = useState<string | null>(null);
+  const [senateId, setSenateId] = useState<string | null>(null);
+  const [senateCase, setSenateCase] = useState<string | null>(null);
+  const [senateSlice, setSenateSlice] = useState<string | null>(null);
   const [method, setMethod] = useState<string | null>(null);
   const [source, setSource] = useState<string | null>(null);
   const [ruleName, setRuleName] = useState<string | null>(null);
@@ -4345,6 +5044,7 @@ function Betrayal() {
   const [checkerHref, setCheckerHref] = useState<string | null>(null);
   const [card, setCard] = useState<string | null>(null);
   const [cardSlice, setCardSlice] = useState<string | null>(null);
+  const [topicSlice, setTopicSlice] = useState<string | null>(null);
   const [cardCase, setCardCase] = useState<string | null>(null);
   const [cardHref, setCardHref] = useState<string | null>(null);
   const [topicPick, setTopicPick] = useState<string | null>(null);
@@ -4370,6 +5070,11 @@ function Betrayal() {
     return false;
   };
   const cardBack = () => {
+    if (topicSlice) {
+      const parts = topicSlice.split("|");
+      setTopicSlice(parts.length > 2 ? parts.slice(0, 2).join("|") : null);
+      return true;
+    }
     if (cardHref) {
       setCardHref(null);
       return true;
@@ -4553,29 +5258,121 @@ function Betrayal() {
         </nav>
         )}
         {layer === "root" && (
-          <div className="flex flex-col items-center px-6 pt-16">
-            <div className="mt-8 flex items-start justify-center gap-10">
-            {(
-              [
-                ["Fake News", "/images/topic-fake-news.jpg", "fake"],
-                ["Lawfare", "/images/topic-lawfare.jpg", "lawfare"],
-              ] as const
-            ).map(([label, src, next]) => (
+          <div className="mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-10 pb-24">
+            {!frontHref && !frontCode && !frontCase && !frontName && !frontGroup && (
               <button
-                key={label}
                 type="button"
-                onClick={() => setLayer(next)}
+                onClick={() => {
+                  setSource(null);
+                  setMethod(null);
+                  setLayer("mechanics");
+                }}
                 className="flex w-64 flex-col items-center gap-3 border-0 bg-transparent p-0"
               >
-                <span className="text-[18px] font-semibold tracking-wide text-white">{label}</span>
-                <img
-                  src={src}
-                  alt=""
-                  className="h-44 w-full rounded-2xl border border-white/30 object-cover"
-                />
+                <span className="text-center text-[16px] font-semibold leading-snug tracking-wide text-white">
+                  Understanding the Mechanics of Fake News
+                </span>
+                <img src="/images/topic-mechanics.jpg" alt="" className="h-44 w-full rounded-2xl border border-white/30 object-cover" />
               </button>
-            ))}
-            </div>
+            )}
+            <button
+              type="button"
+              onClick={() => {
+                if (frontHref) { setFrontHref(null); return; }
+                if (frontCase) { setFrontCase(null); return; }
+                if (frontName) { setFrontName(null); return; }
+                if (frontGroup) { setFrontGroup(null); return; }
+                if (frontCode === "press" || frontCode === "congress") { setFrontCode("menu"); return; }
+                if (frontCode) { setFrontCode(null); return; }
+              }}
+              className="border-0 bg-transparent p-0 text-center text-[28px] font-bold tracking-wide text-white"
+            >
+              Fake News
+            </button>
+            <p className="mt-1 text-center text-[15px] text-white/70">The Great American Betrayal</p>
+            <p className="mt-4 max-w-md text-center text-[15px] leading-snug text-white/75">
+              {frontCode ? "The codes are documents, not cases. Tap a part." : "This chart is Fake News. It is not Lawfare. A case is counted once, by where it was said."}
+            </p>
+            {frontHref ? (
+              <SourcePage label="Open the source" href={frontHref} />
+            ) : frontCode === "press" ? (
+              <div className="mt-8 w-full text-left text-[15px] leading-snug">
+                <p className="text-center text-[18px] font-semibold">Press codes</p>
+                <p className="mt-4">The Society of Professional Journalists code and the Radio Television Digital News Association code are voluntary. They are not a law.</p>
+                <p className="mt-3">The FCC news-distortion policy covers a licensed over-the-air station. It does not cover cable, a newspaper, or a social media post. 47 U.S.C. § 326 bars the FCC from censoring a broadcast. It does not require a news report to be true.</p>
+                <div className="mt-4 flex flex-col gap-2">
+                  <button type="button" onClick={() => setFrontHref("https://www.spj.org/spj-code-of-ethics/")} className="w-fit rounded-full border border-white/35 px-3 py-1 text-left font-semibold">SPJ Code of Ethics</button>
+                  <button type="button" onClick={() => setFrontHref("https://www.rtdna.org/ethics")} className="w-fit rounded-full border border-white/35 px-3 py-1 text-left font-semibold">RTDNA Code of Ethics</button>
+                  <button type="button" onClick={() => setFrontHref("https://www.fcc.gov/broadcast-news-distortion")} className="w-fit rounded-full border border-white/35 px-3 py-1 text-left font-semibold">FCC news distortion policy</button>
+                  <button type="button" onClick={() => setFrontHref("https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title47-section326&num=0&edition=prelim")} className="w-fit rounded-full border border-white/35 px-3 py-1 text-left font-semibold">47 U.S.C. § 326</button>
+                </div>
+              </div>
+            ) : frontCode === "congress" ? (
+              <div className="mt-8 w-full text-left text-[15px] leading-snug">
+                <p className="text-center text-[18px] font-semibold">Congressional conduct</p>
+                <p className="mt-4">House Rule XXIII is the Code of Official Conduct. The Senate Code of Official Conduct is in the Senate rules. Neither code states a rule that a member must not deceive the public.</p>
+                <div className="mt-4 flex flex-col gap-2">
+                  <button type="button" onClick={() => setFrontHref("/ethics-docs/house-rules-119.pdf")} className="w-fit rounded-full border border-white/35 px-3 py-1 text-left font-semibold">House Code of Official Conduct</button>
+                  <button type="button" onClick={() => setFrontHref("/ethics-docs/senate-code-of-official-conduct.pdf")} className="w-fit rounded-full border border-white/35 px-3 py-1 text-left font-semibold">Senate Code of Official Conduct</button>
+                </div>
+              </div>
+            ) : frontCode === "menu" ? (
+              <LayerChart
+                title="The codes"
+                line="Two parts. Tap one."
+                labels={["Press codes", "Congressional conduct"]}
+                data={[2, 2]}
+                colors={["#1e3a5f", "#7c2d12"]}
+                type="doughnut"
+                horizontal={false}
+                bullets={[]}
+                center={{ big: "2", small: "Parts", onOpen: () => undefined }}
+                onPick={(index) => setFrontCode(index === 0 ? "press" : "congress")}
+              />
+            ) : frontCase ? (
+              <FrontCase id={frontCase} onSource={setFrontHref} />
+            ) : frontName && frontGroup ? (
+              <FrontList group={frontGroup} name={frontName} onOpen={setFrontCase} />
+            ) : frontGroup ? (
+              <FrontTyped group={frontGroup} onOpen={setFrontCase} />
+            ) : (
+              <>
+              <FrontMaster onOpen={setFrontGroup} />
+              <div className="mt-8 flex w-full max-w-5xl flex-wrap items-end justify-center gap-6">
+                {DECEPTION.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => {
+                      setSpot(null);
+                      setTilePath([]);
+                      setCheckerPick(null);
+                      setCheckerName(null);
+                      setCheckerHref(null);
+                      setCard(null);
+                      setCardSlice(null);
+                      setCardCase(null);
+                      setCardHref(null);
+                      setDeception(item.id);
+                      setLayer("fake");
+                    }}
+                    className="flex w-40 flex-col items-center gap-2 border-0 bg-transparent p-0"
+                  >
+                    <span className="text-center text-[15px] font-semibold text-white">{item.title}</span>
+                    <img src={item.image} alt="" className="h-28 w-full rounded-2xl border border-white/30 object-cover" />
+                  </button>
+                ))}
+              </div>
+              <div className="mt-10 flex gap-6">
+                <button type="button" onClick={() => setLayer("lawfare")} className="border-0 bg-transparent p-0 text-[15px] font-semibold text-white/70 underline decoration-white/30 underline-offset-4">Lawfare is a separate section</button>
+                <button type="button" onClick={() => setFrontCode("menu")} className="border-0 bg-transparent p-0 text-[15px] font-semibold text-white/70 underline decoration-white/30 underline-offset-4">The codes</button>
+              </div>
+              <p className="mt-10 max-w-3xl text-center text-[16px] leading-snug text-white">
+                The American people across the political spectrum have been betrayed by everyone holding a microphone. None are required to uphold a code of conduct and none are held accountable for deceptive forms of speech and outright lies. This behavior has stripped informed consent from we the people. It is called psychological warfare. No one is checking the fact checkers who are the same people, publications and networks that circulated the deceptive speech. So the fact checkers are not to be trusted either.
+              </p>
+              <p className="mt-4 text-center text-[13px] font-semibold tracking-wide text-[#d4af37]">From the editor</p>
+              </>
+            )}
           </div>
         )}
         {layer === "fake" && !saveOn && !deception && !estimatesOn && (
@@ -4869,7 +5666,7 @@ function Betrayal() {
                           className="w-full rounded-3xl border border-white/35 bg-[#070b12]/75 px-4 py-3 text-left text-[15px] font-semibold leading-snug text-white"
                         >
                           {row.who} · {row.when} · {row.views}
-                          {row.lean === "Leans Republican" && row.leanNote ? " · Lean not yet verified" : ""}
+                          {row.lean === "Leans Republican" && row.leanNote ? " · Party lean not checked" : ""}
                           <span className="mt-1 block font-normal">{row.said}</span>
                         </button>
                       ))}
@@ -4881,11 +5678,18 @@ function Betrayal() {
               <div className="mt-8 flex w-full flex-col items-center gap-8">
                 <div className="grid w-full grid-cols-2 gap-6 text-center">
                   <p className="text-[28px] font-bold text-white">{SAVE_ROWS.length}<span className="mt-1 block text-[16px] font-semibold">people and organizations</span></p>
-                  <p className="text-[28px] font-bold text-white"><span className="block text-[16px] font-semibold">At least</span>5,727,760<span className="mt-1 block text-[16px] font-semibold">views</span></p>
+                  <p className="text-[28px] font-bold text-white"><span className="block text-[16px] font-semibold">At least</span>5,852,640<span className="mt-1 block text-[16px] font-semibold">views</span></p>
                   <p className="text-[28px] font-bold text-white">0<span className="mt-1 block text-[16px] font-semibold">fact-checks</span></p>
                   <p className="text-[16px] font-semibold text-white">Already shaping public opinion.</p>
                 </div>
-                <p className="text-[15px] text-white/80">as of Sept. 27, 2026, 1:06 PM MT</p>
+                <p className="text-center text-[18px] font-semibold text-white">50 hours.</p>
+                <p className="max-w-xl text-center text-[15px] leading-snug text-white/85">
+                  The order was reported Sept. 25, 2026, at 12:59 PM ET. These view counts were read again Sept. 29, 2026, at 3:15 AM MT. That is 88 hours. The chart total is 5,852,640. Fact-checks on the posts: 0.
+                </p>
+                <p className="max-w-xl text-center text-[15px] leading-snug text-white/85">
+                  The comments called the order a purge or a green light to clean the rolls. The order paused a lower-court block on the SAVE database. It did not approve a purge.
+                </p>
+                <p className="text-[15px] text-white/80">as of Sept. 29, 2026, 3:15 AM MT</p>
                 <SaveChart
                   title={`All ${SAVE_ROWS.length} sources, sorted by views`}
                   labels={SAVE_SOURCE_LABELS}
@@ -5672,6 +6476,30 @@ function Betrayal() {
             <button
               type="button"
               onClick={() => {
+                if (deception === "politicians" && senateOn && frontHref) {
+                  setFrontHref(null);
+                  return;
+                }
+                if (senateCase) {
+                  setSenateCase(null);
+                  return;
+                }
+                if (senateSlice) {
+                  setSenateSlice(null);
+                  return;
+                }
+                if (senateId) {
+                  setSenateId(null);
+                  return;
+                }
+                if (senateMethod) {
+                  setSenateMethod(null);
+                  return;
+                }
+                if (senateOn) {
+                  setSenateOn(false);
+                  return;
+                }
                 if (checkerBack() || cardBack()) return;
                 if (tilePath.length) {
                   setTilePath(tilePath.slice(0, -1));
@@ -5687,7 +6515,7 @@ function Betrayal() {
               }}
               className="border-0 bg-transparent p-0 text-[15px] font-semibold tracking-wide text-white"
             >
-              {card ? card : spot === "cable" ? "Cable news" : spot === "trump" ? "Trump TV" : spot === "podcasts" ? "Podcasts" : spot === "cspan" ? "C-SPAN" : DECEPTION.find((item) => item.id === deception)?.title}
+              {senateOn ? "Public trust" : card ? card : spot === "cable" ? "Cable news" : spot === "trump" ? "Trump TV" : spot === "podcasts" ? "Podcasts" : spot === "cspan" ? "C-SPAN" : DECEPTION.find((item) => item.id === deception)?.title}
             </button>
             {card && cardHref ? (
               <div className="w-full">
@@ -5887,8 +6715,30 @@ function Betrayal() {
               </div>
             ) : spot === "podcasts" ? (
               <p className="mt-8 text-center text-[15px] text-white/75">No podcast list is on file yet.</p>
+            ) : deception === "politicians" && senateOn && frontHref ? (
+              <SourcePage label="Open the source" href={frontHref} />
+            ) : deception === "politicians" && senateCase && senateCase.startsWith("ps-") ? (
+              <PoliticalCase id={senateCase} onSource={setFrontHref} />
+            ) : deception === "politicians" && senateCase && senateCase.startsWith("sh-") ? (
+              <SenateCase id={senateCase} onSource={setFrontHref} />
+            ) : deception === "politicians" && senateCase && senateCase.startsWith("fc:") ? (
+              <CheckerPage name={senateCase.slice(3)} />
+            ) : deception === "politicians" && senateCase ? (
+              <NewsCase id={senateCase} onSource={setFrontHref} />
+            ) : deception === "politicians" && senateSlice && senateMethod ? (
+              <EvidenceList method={senateMethod} bucket={senateSlice} onOpen={setSenateCase} />
+            ) : deception === "politicians" && senateMethod ? (
+              <CategoryChart method={senateMethod} onOpen={setSenateSlice} />
+            ) : deception === "politicians" && senateOn ? (
+              <SenateChart onOpen={setSenateMethod} />
+            ) : topicSlice && TILE_CASE[deception] ? (
+              <PersonCharts rows={NEWS_CASES.filter(TILE_CASE[deception])} slice={topicSlice} onSlice={setTopicSlice} onSource={setCardHref} />
             ) : (
-            <div className="mt-8 flex max-w-5xl flex-wrap items-end justify-center gap-6">
+            <div className="mt-8 w-full">
+              {TILE_CASE[deception] ? (
+                <PersonCharts rows={NEWS_CASES.filter(TILE_CASE[deception])} slice={null} onSlice={setTopicSlice} onSource={setCardHref} />
+              ) : null}
+              <div className="mt-8 flex max-w-5xl flex-wrap items-end justify-center gap-6">
               {(spot === "cable"
                 ? (DECEPTION.find((item) => item.id === deception)?.stations ?? [])
                 : (DECEPTION.find((item) => item.id === deception)?.categories ?? [])
@@ -5897,6 +6747,15 @@ function Betrayal() {
                   key={card.name}
                   type="button"
                   onClick={() => {
+                    if (card.name === "Public trust") {
+                      setSenateMethod(null);
+                      setSenateId(null);
+                      setSenateCase(null);
+                      setSenateSlice(null);
+                      setFrontHref(null);
+                      setSenateOn(true);
+                      return;
+                    }
                     if (card.name === "Cable news") setSpot("cable");
                     if (card.name === "Trump TV") setSpot("trump");
                     if (card.name === "Podcasts") setSpot("podcasts");
@@ -5914,6 +6773,7 @@ function Betrayal() {
                   <img src={card.image} alt="" className="h-28 w-full rounded-2xl border border-white/30 object-cover" />
                 </button>
               ))}
+              </div>
             </div>
             )}
           </div>
@@ -5976,6 +6836,30 @@ function Betrayal() {
                 }
                 if (spot) {
                   setSpot(null);
+                  return;
+                }
+                if (deception === "politicians" && senateOn && frontHref) {
+                  setFrontHref(null);
+                  return;
+                }
+                if (senateCase) {
+                  setSenateCase(null);
+                  return;
+                }
+                if (senateSlice) {
+                  setSenateSlice(null);
+                  return;
+                }
+                if (senateId) {
+                  setSenateId(null);
+                  return;
+                }
+                if (senateMethod) {
+                  setSenateMethod(null);
+                  return;
+                }
+                if (senateOn) {
+                  setSenateOn(false);
                   return;
                 }
                 if (deception) {

@@ -64,6 +64,7 @@ export const DECEPTION: {
     categories: [
       { name: "Democrats", image: "/images/cat-democrats.jpg" },
       { name: "Republicans", image: "/images/cat-republicans.jpg" },
+      { name: "Public trust", image: "/images/topic-senate-record.jpg" },
     ],
     rows: [],
   },
