@@ -8220,5 +8220,341 @@
   "network": "HarperCollins UK",
   "party": "News outlets",
   "person": "Andrew Lownie"
+ },
+ {
+  "id": "265",
+  "who": "Viral posts on Facebook, Instagram, and Threads",
+  "began": "Jan 21, 2025",
+  "ended": "Jan 22, 2025 (PolitiFact)",
+  "duration": "1 day until PolitiFact",
+  "said": "After the inauguration, Meta forced users to follow Trump and Vance on Facebook, Instagram, and Threads.",
+  "record": "Official government accounts were transferred from the Biden administration to the Trump administration. Meta said users were not made to follow those accounts. PolitiFact rated the claim False.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Proven false",
+  "method": "fabrication / false attribution",
+  "alsoConfirmedBy": "PolitiFact",
+  "sources": [
+   {
+    "label": "PolitiFact",
+    "href": "https://www.politifact.com/factchecks/2025/jan/22/social-media/no-meta-isnt-forcing-users-to-follow-trump-heres-h/"
+   }
+  ],
+  "year": 2025,
+  "period": "2025–26",
+  "status": "Verified",
+  "statusLabel": "Verified · Proven false",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "Facebook",
+  "party": "Social media",
+  "person": "Not yet identified"
+ },
+ {
+  "id": "266",
+  "who": "Viral Facebook posts",
+  "began": "Feb 23, 2025",
+  "ended": "Dec 29, 2025 (PolitiFact roundup)",
+  "duration": "months of recirculation",
+  "said": "Trump was going to sign an order giving some taxpayers a $5,000 DOGE dividend.",
+  "record": "PolitiFact found no White House announcement or order for a $5,000 DOGE dividend. A private proposal was not an official payment.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Proven false",
+  "method": "fabrication",
+  "alsoConfirmedBy": "PolitiFact",
+  "sources": [
+   {
+    "label": "PolitiFact",
+    "href": "https://www.politifact.com/article/2025/dec/29/2025-politifact-top-10-most-read-fact-checks/"
+   }
+  ],
+  "year": 2025,
+  "period": "2025–26",
+  "status": "Verified",
+  "statusLabel": "Verified · Proven false",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "Facebook",
+  "party": "Social media",
+  "person": "Not yet identified"
+ },
+ {
+  "id": "267",
+  "who": "Viral Facebook posts",
+  "began": "Apr 16, 2025",
+  "ended": "Apr 18, 2025 (PolitiFact)",
+  "duration": "2 days until PolitiFact",
+  "said": "Former Rep. Liz Cheney wrote a viral letter telling Democrats how to take steps against the Trump administration.",
+  "record": "PolitiFact found Cheney did not write that letter.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Proven false",
+  "method": "fabrication / false attribution",
+  "alsoConfirmedBy": "PolitiFact",
+  "sources": [
+   {
+    "label": "PolitiFact",
+    "href": "https://www.politifact.com/factchecks/2025/apr/18/facebook-posts/liz-cheney-didnt-pen-a-viral-open-letter-to-democr/"
+   }
+  ],
+  "year": 2025,
+  "period": "2025–26",
+  "status": "Verified",
+  "statusLabel": "Verified · Proven false",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "Facebook",
+  "party": "Social media",
+  "person": "Not yet identified"
+ },
+ {
+  "id": "268",
+  "who": "Viral Facebook posts",
+  "began": "Mar 28, 2025",
+  "ended": "Apr 4, 2025 (PolitiFact)",
+  "duration": "about a week until PolitiFact",
+  "said": "The Cleveland Clinic said millions of COVID-vaccinated people will die within five years.",
+  "record": "PolitiFact found the Cleveland Clinic did not say that.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Proven false",
+  "method": "false attribution",
+  "alsoConfirmedBy": "PolitiFact",
+  "sources": [
+   {
+    "label": "PolitiFact",
+    "href": "https://www.politifact.com/factchecks/2025/apr/04/facebook-posts/cleveland-clinic-didnt-say-millions-of-people-with/"
+   }
+  ],
+  "year": 2025,
+  "period": "2025–26",
+  "status": "Verified",
+  "statusLabel": "Verified · Proven false",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "Facebook",
+  "party": "Social media",
+  "person": "Not yet identified"
+ },
+ {
+  "id": "269",
+  "who": "Viral Facebook posts",
+  "began": "Mar 28, 2025",
+  "ended": "Apr 4, 2025 (PolitiFact)",
+  "duration": "about a week until PolitiFact",
+  "said": "Trump ordered military attacks on tunnels under the Vatican.",
+  "record": "PolitiFact found Trump did not order military attacks on Vatican tunnels.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Proven false",
+  "method": "fabrication",
+  "alsoConfirmedBy": "PolitiFact",
+  "sources": [
+   {
+    "label": "PolitiFact",
+    "href": "https://www.politifact.com/factchecks/2025/apr/04/facebook-posts/no-donald-trump-no-ordeno-ataques-militares-a-tune/"
+   }
+  ],
+  "year": 2025,
+  "period": "2025–26",
+  "status": "Verified",
+  "statusLabel": "Verified · Proven false",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "Facebook",
+  "party": "Social media",
+  "person": "Not yet identified"
+ },
+ {
+  "id": "270",
+  "who": "Viral social media posts, including Facebook",
+  "began": "May 21, 2025",
+  "ended": "May 21, 2025 (PolitiFact)",
+  "duration": "same day as the fact-check",
+  "said": "A video showed the emir of Qatar saying he regretted inviting Trump, and calling him a robber.",
+  "record": "PolitiFact identified the video as a deepfake. The emir did not say that.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Proven false",
+  "method": "false video",
+  "alsoConfirmedBy": "PolitiFact",
+  "sources": [
+   {
+    "label": "PolitiFact",
+    "href": "https://www.politifact.com/factchecks/2025/may/21/social-media/qatar-emir-trump-deepfake-ai-video/"
+   }
+  ],
+  "year": 2025,
+  "period": "2025–26",
+  "status": "Verified",
+  "statusLabel": "Verified · Proven false",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "Facebook",
+  "party": "Social media",
+  "person": "Not yet identified"
+ },
+ {
+  "id": "271",
+  "who": "Instagram posts",
+  "began": "Nov 13, 2024",
+  "ended": "Nov 14, 2024 (PolitiFact)",
+  "duration": "1 day until PolitiFact",
+  "said": "A photo showed Joe Biden in a MAGA hat meeting Trump at the White House on November 13, 2024.",
+  "record": "Trump did visit the White House that day. PolitiFact found this photo was not an authentic picture of the meeting. A detector called it likely AI-generated.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Proven false",
+  "method": "false photo",
+  "alsoConfirmedBy": "PolitiFact",
+  "sources": [
+   {
+    "label": "PolitiFact",
+    "href": "https://www.politifact.com/factchecks/2024/nov/14/instagram-posts/image-of-joe-biden-in-maga-hat-is-not-authentic-im/"
+   }
+  ],
+  "year": 2024,
+  "period": "2023–24",
+  "status": "Verified",
+  "statusLabel": "Verified · Proven false",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "Instagram",
+  "party": "Social media",
+  "person": "Not yet identified"
+ },
+ {
+  "id": "272",
+  "who": "A TikTok video, also shared on X and Instagram",
+  "began": "Jan 14, 2025",
+  "ended": "Jan 17, 2025 (PolitiFact)",
+  "duration": "3 days until PolitiFact",
+  "said": "Trump posted on X that he was purchasing TikTok for $2.7 billion.",
+  "record": "PolitiFact searched Trump's X account and found no such post. The screenshot was fake. The TikTok video had 2.7 million views by January 17, 2025.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Proven false",
+  "method": "fabrication / false attribution",
+  "alsoConfirmedBy": "PolitiFact",
+  "sources": [
+   {
+    "label": "PolitiFact",
+    "href": "https://www.politifact.com/factchecks/2025/jan/17/tiktok-posts/no-donald-trump-didnt-post-on-x-that-he-is-purchas/"
+   }
+  ],
+  "year": 2025,
+  "period": "2025–26",
+  "status": "Verified",
+  "statusLabel": "Verified · Proven false",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "TikTok",
+  "party": "Social media",
+  "person": "Not yet identified"
+ },
+ {
+  "id": "273",
+  "who": "TikTok posts",
+  "began": "Mar 4, 2025",
+  "ended": "Apr 3, 2025 (PolitiFact)",
+  "duration": "about a month until PolitiFact",
+  "said": "Trump approved a law requiring a chip implanted in every foreigner.",
+  "record": "PolitiFact found Trump did not approve that law.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Proven false",
+  "method": "fabrication",
+  "alsoConfirmedBy": "PolitiFact",
+  "sources": [
+   {
+    "label": "PolitiFact",
+    "href": "https://www.politifact.com/factchecks/2025/apr/03/tiktok-posts/donald-trump-no-aprobo-una-ley-exigiendo-la-implan/"
+   }
+  ],
+  "year": 2025,
+  "period": "2025–26",
+  "status": "Verified",
+  "statusLabel": "Verified · Proven false",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "TikTok",
+  "party": "Social media",
+  "person": "Not yet identified"
+ },
+ {
+  "id": "274",
+  "who": "TikTok posts",
+  "began": "Mar 9, 2025",
+  "ended": "Mar 10, 2025 (PolitiFact)",
+  "duration": "1 day until PolitiFact",
+  "said": "A cut clip showed Trump saying he became president because the 2024 election was rigged.",
+  "record": "The words are his. In the full C-SPAN video he was talking about the 2020 election, which he lost, not about 2024. PolitiFact rated the framed claim false as a confession about 2024.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Rated misleading",
+  "method": "misquote / truncation",
+  "alsoConfirmedBy": "PolitiFact",
+  "sources": [
+   {
+    "label": "PolitiFact",
+    "href": "https://www.politifact.com/factchecks/2025/mar/10/social-media/trump-didnt-say-he-became-president-because-of-the/"
+   }
+  ],
+  "year": 2025,
+  "period": "2025–26",
+  "status": "Verified",
+  "statusLabel": "Verified · Rated misleading",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "TikTok",
+  "party": "Social media",
+  "person": "Not yet identified"
+ },
+ {
+  "id": "275",
+  "who": "TikTok videos and posts on X, including the hashtag trumpisdead",
+  "began": "Aug 31, 2025",
+  "ended": "Sep 2, 2025 (PolitiFact)",
+  "duration": "about 2 days until PolitiFact",
+  "said": "Trump had died, or had a stroke, over Labor Day 2025.",
+  "record": "PolitiFact reported he was alive. One TikTok making the stroke claim had more than 3 million views before it was taken down. The hashtag trumpisdead trended on X.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Proven false",
+  "method": "fabrication",
+  "alsoConfirmedBy": "PolitiFact",
+  "sources": [
+   {
+    "label": "PolitiFact",
+    "href": "https://www.politifact.com/article/2025/sep/02/Donald-Trump-Died-Rumor-False-misinformation/"
+   }
+  ],
+  "year": 2025,
+  "period": "2025–26",
+  "status": "Verified",
+  "statusLabel": "Verified · Proven false",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "TikTok",
+  "party": "Social media",
+  "person": "Not yet identified"
+ },
+ {
+  "id": "276",
+  "who": "Social media posts presenting a fake clip of the Rumble show Triggered",
+  "began": "Feb 25, 2025",
+  "ended": "Feb 27, 2025 (FactCheck.org)",
+  "duration": "2 days until FactCheck.org",
+  "said": "Donald Trump Jr. said on his Rumble show that the United States should have sent weapons to Russia instead of Ukraine.",
+  "record": "FactCheck.org found the audio does not match the February 25, 2025 Rumble episode. His spokesperson said the audio was AI-generated.",
+  "correction": "Never corrected — fact-checked only",
+  "evidence": "Proven false",
+  "method": "fabrication",
+  "alsoConfirmedBy": "FactCheck.org",
+  "sources": [
+   {
+    "label": "FactCheck.org",
+    "href": "https://www.factcheck.org/2025/02/posts-share-bogus-audio-of-donald-trump-jr-supporting-arms-for-russia-not-ukraine/"
+   }
+  ],
+  "year": 2025,
+  "period": "2025–26",
+  "status": "Verified",
+  "statusLabel": "Verified · Proven false",
+  "networkGroup": "Social Media",
+  "networkName": "Viral / anonymous accounts",
+  "network": "Rumble",
+  "party": "Social media",
+  "person": "Not yet identified"
  }
 ]

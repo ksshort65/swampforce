@@ -1,0 +1,1379 @@
+import { useEffect, useState } from "react";
+import { named, InteractiveChart, KeptRead, firstLine } from "@/components/interactive-chart";
+import {
+  AT_HOME,
+  COVID_CELL,
+  DEALS,
+  OTHER_OVALS,
+  RAIL_FILE,
+  SUITS,
+  TERM_COMPARE,
+} from "@/lib/restored-files";
+import { Link } from "@tanstack/react-router";
+import {
+  BORDER,
+  BORDER_MOVE,
+  BORDER_HARM,
+  BENEFITS,
+  WORKER,
+  OVAL,
+  OVAL_LINKS,
+  OVAL_NOW,
+  ENCOUNTERS,
+  CPI_PEAK,
+  ALIENS,
+  DEBT_WHY,
+  THE_LOSS,
+  CHARTS,
+  COMPARE_CHARTS,
+  COMPARE_WIDE,
+  DEBT_MATH,
+  DEBT_NOW,
+  DEBT_TALLY,
+  DRIVERS,
+  HOAXES,
+  LAWS,
+  MAJORITY,
+  OBAMA_TERMS,
+  PRICES,
+  PURSE,
+  RECORD,
+  HEARING_ABSENCE,
+  SCORE_TABS,
+  TAB_CHARTS,
+  SCORE_UPDATED,
+  PAPERS,
+  FAKE_NEWS,
+  FRAMES,
+  WARFARE,
+  FUNNEL,
+  OVAL_DESKS,
+  FARM,
+} from "@/lib/scorecard";
+
+type TabId = (typeof SCORE_TABS)[number]["id"];
+type Mode = "charts" | "read";
+
+function FarmBars() {
+  const max = Math.max(...FARM.rows.map((r) => Math.max(r.y2025, r.y2026)));
+  const fileMax = Math.max(FARM.filings.y2024, FARM.filings.y2025);
+  return (
+    <div className="mt-8 rounded-md border border-border bg-surface p-5 sm:p-7">
+      <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+        The wealth ledger · farmers first
+      </p>
+      <h3 className="mt-2 font-display text-2xl font-bold tracking-wide uppercase sm:text-3xl">
+        The farm broke. The paycheck did not.
+      </h3>
+      <p className="mt-4 max-w-3xl text-base leading-relaxed">
+        USDA’s September 3, 2026 forecast puts the cost of farming up $21.2
+        billion in 2026 and the direct government check up $19.5 billion. Net
+        farm income still falls $4.3 billion, to $158.4 billion. The check is
+        not a crop. Congress voted it. In the twelve months ending December 31,
+        2025, the courts counted 315 Chapter 12 cases. A year earlier the count
+        was 216.
+      </p>
+      <div className="mt-6 flex gap-4 font-display text-[11px] tracking-[0.14em] text-muted uppercase">
+        <span className="inline-flex items-center gap-2">
+          <span className="inline-block h-2 w-6 bg-[#3a3a3a]" /> 2025
+        </span>
+        <span className="inline-flex items-center gap-2">
+          <span className="inline-block h-2 w-6 bg-[#c53030]" /> 2026 forecast
+        </span>
+      </div>
+      <div className="mt-5 space-y-6">
+        {FARM.rows.map((r) => (
+          <div key={r.k}>
+            <p className="font-display text-sm font-bold tracking-wide uppercase">
+              {r.k}
+            </p>
+            {(
+              [
+                ["2025", r.y2025, "bg-[#3a3a3a]"],
+                ["2026", r.y2026, "bg-[#c53030]"],
+              ] as const
+            ).map(([year, n, color]) => (
+              <div key={year} className="mt-2 flex items-center gap-3">
+                <div className="h-7 flex-1 rounded-sm bg-ink">
+                  <div
+                    className={`flex h-7 items-center rounded-sm ${color}`}
+                    style={{ width: `${Math.max(8, (n / max) * 100)}%` }}
+                  >
+                    <span className="px-2 font-display text-xs font-bold text-white">
+                      ${n.toFixed(1)}B
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+            <p className="mt-2 text-sm leading-relaxed text-muted">{r.note}</p>
+          </div>
+        ))}
+      </div>
+      <p className="mt-4 text-sm leading-relaxed text-muted">
+        The 2026 bars are the dollars USDA printed. The 2025 bars are that
+        dollar plus or minus the change USDA printed in the same sentence.
+      </p>
+      <a
+        href={FARM.incomeHref}
+        target="_blank"
+        rel="noreferrer"
+        className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+      >
+        USDA — farm income forecast →
+      </a>
+
+      <div className="mt-8 border-t border-border pt-6">
+        <p className="font-display text-sm font-bold tracking-wide uppercase">
+          Chapter 12. Family farmers and fishermen.
+        </p>
+        <div className="mt-3 flex gap-4 font-display text-[11px] tracking-[0.14em] text-muted uppercase">
+          <span className="inline-flex items-center gap-2">
+            <span className="inline-block h-2 w-6 bg-[#3a3a3a]" /> 2024
+          </span>
+          <span className="inline-flex items-center gap-2">
+            <span className="inline-block h-2 w-6 bg-[#c53030]" /> 2025
+          </span>
+        </div>
+        {(
+          [
+            ["2024", FARM.filings.y2024],
+            ["2025", FARM.filings.y2025],
+          ] as const
+        ).map(([year, n]) => (
+          <div key={year} className="mt-2">
+            <div className="h-7 rounded-sm bg-ink">
+              <div
+                className={`flex h-7 items-center rounded-sm ${year === "2025" ? "bg-[#c53030]" : "bg-[#3a3a3a]"}`}
+                style={{ width: `${Math.max(12, (n / fileMax) * 100)}%` }}
+              >
+                <span className="px-2 font-display text-xs font-bold text-white">
+                  {n} filings
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+        <p className="mt-3 text-sm leading-relaxed text-muted">
+          Ninety-nine more families used the farmer bankruptcy in one year.
+          Chapter 12 is not every farm that closed. A farm that lives on an
+          off-farm job often cannot file it.
+        </p>
+        <p className="mt-2 text-sm leading-relaxed">
+          <a
+            href={FARM.filings.href2024}
+            className="text-sage underline decoration-sage underline-offset-2"
+            target="_blank"
+            rel="noreferrer"
+          >
+            U.S. Courts, Table F-2, 2024
+          </a>
+          {" · "}
+          <a
+            href={FARM.filings.href2025}
+            className="text-sage underline decoration-sage underline-offset-2"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Table F-2, 2025
+          </a>
+        </p>
+      </div>
+
+      <p className="mt-6 text-base leading-relaxed">{FARM.loans.k}</p>
+      <a
+        href={FARM.loans.href}
+        target="_blank"
+        rel="noreferrer"
+        className="mt-2 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+      >
+        Kansas City Fed →
+      </a>
+
+      <div className="mt-8 border-t border-border pt-6">
+        <p className="font-display text-sm font-bold tracking-wide uppercase">
+          The people who voted it
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          {FARM.hire.map((h) =>
+            h.k === "The trade" ? (
+              <div
+                key={h.k}
+                className="block rounded-md border border-border bg-ink p-4 text-fg"
+              >
+                <p className="font-display text-xs font-bold tracking-[0.16em] text-sage uppercase">
+                  {h.k}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed">{h.v}</p>
+                <a
+                  href={h.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 inline-block text-sm text-sage underline"
+                >
+                  STOCK Act
+                </a>
+                <p className="mt-3 text-sm leading-relaxed">
+                  H.R. 7008, the Stop Insider Trading Act. The House passed it on July 22, 2026. The Senate placed it on the calendar on August 6, 2026. It is still not a law.
+                </p>
+                <a
+                  href="/hr7008-eh.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 inline-block text-sm text-sage underline"
+                >
+                  Copy of the legislation
+                </a>
+              </div>
+            ) : (
+            <a
+              key={h.k}
+              href={h.href}
+              target="_blank"
+              rel="noreferrer"
+              className="block rounded-md border border-border bg-ink p-4 text-fg no-underline hover:border-sage"
+            >
+              <p className="font-display text-xs font-bold tracking-[0.16em] text-sage uppercase">
+                {h.k}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed">{h.v}</p>
+            </a>
+            ),
+          )}
+        </div>
+        <p className="mt-4 text-sm leading-relaxed text-muted">
+          This page does not invent a portfolio return. It prints the salary,
+          the pension formula, and the statute that left the trade legal. A
+          member who owns qualifying acres can also receive the same USDA
+          payment the chamber voted. The disclosure shows an asset range. It
+          does not stop the check.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function ChartStack({ tab }: { tab: TabId }) {
+  return (
+    <div className="space-y-8">
+      {tab === "oval" || tab === "compare" ? (
+        <>
+        <div className="rounded-md border border-border bg-surface p-5">
+          <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+            {ENCOUNTERS.k}
+          </p>
+          <p className="mt-3 text-base leading-relaxed">{ENCOUNTERS.v}</p>
+          <a
+            href={ENCOUNTERS.href}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+          >
+            CBP — nationwide encounters →
+          </a>
+        </div>
+        <div className="rounded-md border border-border bg-surface p-5">
+          <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+            {CPI_PEAK.k}
+          </p>
+          <p className="mt-3 text-base leading-relaxed">{CPI_PEAK.v}</p>
+          <a
+            href={CPI_PEAK.href}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+          >
+            BLS — Consumer Price Index →
+          </a>
+        </div>
+        </>
+      ) : null}
+      {TAB_CHARTS[tab].map((c) =>
+        c.src === "/images/chart-debt-bars.jpg" ? (
+          <figure key={c.src}>
+            <p className="mb-3 text-base leading-relaxed">
+              This chart is interactive. Choose a block and it opens the proof.
+            </p>
+            <p className="mb-3 font-display text-sm font-semibold tracking-wide text-sage uppercase">
+              {c.title}
+            </p>
+            <a
+              href="https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/"
+              target="_blank"
+              rel="noreferrer"
+              title="Treasury — historical debt outstanding"
+              className="block"
+            >
+              <img
+                src={c.src}
+                alt={c.title}
+                className="h-auto w-full rounded-md border border-border hover:opacity-90"
+              />
+            </a>
+            <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
+              {c.sources.map((s, i) => (
+                <span key={s.href}>
+                  {i > 0 ? " · " : null}
+                  <a
+                    href={s.href}
+                    className="text-sage underline decoration-sage underline-offset-2"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {s.label}
+                  </a>
+                </span>
+              ))}
+            </figcaption>
+          </figure>
+        ) : (
+          <figure key={c.src}>
+            <p className="mb-3 font-display text-sm font-semibold tracking-wide text-sage uppercase">
+              {c.title}
+            </p>
+            <img
+              src={c.src}
+              alt={c.title}
+              className="h-auto w-full rounded-md border border-border"
+            />
+            <figcaption className="mt-2 text-[12px] leading-relaxed text-muted">
+              {c.sources.map((s, i) => (
+                <span key={s.href}>
+                  {i > 0 ? " · " : null}
+                  <a
+                    href={s.href}
+                    className="text-sage underline decoration-sage underline-offset-2"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {s.label}
+                  </a>
+                </span>
+              ))}
+            </figcaption>
+          </figure>
+        ),
+      )}
+    </div>
+  );
+}
+
+function BillList({
+  rows,
+  tone,
+}: {
+  rows: { k: string; bill: string; href: string }[];
+  tone: "plus" | "minus";
+}) {
+  return (
+    <ul className="mt-3 space-y-3">
+      {rows.map((p) => (
+        <li key={p.href + p.k}>
+          <a
+            href={p.href}
+            target="_blank"
+            rel="noreferrer"
+            className={
+              tone === "plus"
+                ? "block min-h-14 rounded-md border border-border bg-surface px-4 py-4 text-fg no-underline hover:border-sage"
+                : "block min-h-14 rounded-md border border-[#c53030]/50 bg-surface px-4 py-4 text-fg no-underline hover:border-[#c53030]"
+            }
+          >
+            <p className="text-base font-medium leading-snug">{named(p.k)}</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">{named(p.bill)}</p>
+            <p className="mt-2 font-display text-[11px] tracking-[0.12em] text-sage uppercase">
+              The record →
+            </p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function PartyFile({ col }: { col: (typeof RECORD)[number] }) {
+  const tally = DEBT_TALLY.find((t) =>
+    col.id === "gop" ? t.who.startsWith("Republican") : t.who.startsWith("Democratic"),
+  );
+  return (
+    <div>
+      <p className="font-display text-xl font-bold tracking-[0.18em] text-sage uppercase">
+        {col.party}
+      </p>
+      {tally ? (
+        <p className="mt-3 font-display text-3xl font-bold tracking-wide">
+          {tally.added}
+        </p>
+      ) : null}
+      <p className="mt-3 text-sm leading-relaxed text-muted">{col.control}</p>
+      <p className="mt-2 text-sm leading-relaxed">{col.debt}</p>
+      {col.id === "dem" ? (
+        <div className="mt-8">
+          <p className="font-display text-xs font-semibold tracking-[0.2em] text-[#c53030] uppercase">
+            {HEARING_ABSENCE.k}
+          </p>
+          <p className="mt-3 text-sm leading-relaxed">{HEARING_ABSENCE.v}</p>
+          <a
+            href={HEARING_ABSENCE.href}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+          >
+            Senate — how to find a hearing →
+          </a>
+          <BillList rows={HEARING_ABSENCE.rows} tone="minus" />
+        </div>
+      ) : null}
+      <figure className="mt-6">
+        <img
+          src="/images/chart-policy.jpg"
+          alt="Policy — success and failure"
+          className="h-auto w-full rounded-md border border-border"
+        />
+      </figure>
+      <div className="mt-8 grid gap-8 md:grid-cols-2">
+        <div>
+          <p className="font-display text-xs font-semibold tracking-[0.2em] uppercase">
+            Helped
+          </p>
+          <BillList rows={col.plus} tone="plus" />
+        </div>
+        <div>
+          <p className="font-display text-xs font-semibold tracking-[0.2em] text-[#c53030] uppercase">
+            Hurt
+          </p>
+          <BillList rows={col.minus} tone="minus" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function AliensFile() {
+  return (
+    <div className="space-y-6">
+      <p className="font-display text-xl font-bold tracking-wide uppercase">{ALIENS.k}</p>
+      <p className="text-base leading-relaxed">{ALIENS.v}</p>
+      <figure>
+        <img
+          src="/images/chart-aliens.jpg"
+          alt="The invasion bill — taxpayer cost and eligibility"
+          className="h-auto w-full rounded-md border border-border"
+        />
+      </figure>
+      <ul className="grid gap-3 sm:grid-cols-2">
+        {ALIENS.costs.map((c) => (
+          <li key={c.href}>
+            <a
+              href={c.href}
+              target="_blank"
+              rel="noreferrer"
+              className="block min-h-24 rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
+            >
+              <p className="font-display text-2xl font-bold tracking-wide">{c.amt}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{c.k}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <ul className="space-y-3">
+        {ALIENS.doors.map((d) => (
+          <li key={d.href}>
+            <a
+              href={d.href}
+              target="_blank"
+              rel="noreferrer"
+              className="block rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
+            >
+              <p className="font-display text-sm font-bold tracking-wide uppercase">{d.k}</p>
+              <p className="mt-2 text-sm leading-relaxed">{d.v}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function HoaxesFile() {
+  return (
+    <div className="mt-8 rounded-md border-2 border-sage bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        Information war
+      </p>
+      <p className="mt-3 text-base leading-relaxed">
+        They ran captions against the people and against a president they
+        did not hire. Each caption had evidence. The official file later
+        showed the evidence did not hold. The public paid for the
+        investigation, the committee, and the special counsel. That is a
+        taxpayer-funded assault on an elected president and on the
+        Americans who hired him.
+      </p>
+      <ul className="mt-5 space-y-5">
+        {HOAXES.map((h) => (
+          <li key={h.href}>
+            <p className="font-display text-sm font-semibold tracking-wide uppercase">
+              {h.k}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed">{h.v}</p>
+            <a
+              href={h.href}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+            >
+              The file →
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-5">
+        <Link
+          to="/dispatch/$slug"
+          params={{ slug: "the-hire-is-the-country" }}
+          className="font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+        >
+          The essay →
+        </Link>
+      </p>
+    </div>
+  );
+}
+
+function BorderFile() {
+  return (
+    <div className="mt-5 rounded-md border-2 border-sage bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {BORDER.k}
+      </p>
+      <p className="mt-3 text-base leading-relaxed">{BORDER.v}</p>
+      <ul className="mt-4 space-y-2">
+        {BORDER.links.map((l) => (
+          <li key={l.href}>
+            <a
+              href={l.href}
+              target="_blank"
+              rel="noreferrer"
+              className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+            >
+              {l.label} →
+            </a>
+          </li>
+        ))}
+        <li>
+          <Link
+            to="/dispatch/$slug"
+            params={{ slug: "they-opened-the-border" }}
+            className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+          >
+            The essay →
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function BorderMove() {
+  return (
+    <div className="mt-5 rounded-md border border-border bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {BORDER_MOVE.k}
+      </p>
+      <p className="mt-3 text-base leading-relaxed">{BORDER_MOVE.v}</p>
+      <ul className="mt-4 space-y-3">
+        {BORDER_MOVE.items.map((b) => (
+          <li key={b.k}>
+            <a
+              href={b.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-fg no-underline"
+            >
+              <p className="font-display text-sm font-semibold tracking-wide uppercase">
+                {b.k} · {b.amt}
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{b.note}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function BorderHarm() {
+  return (
+    <div className="mt-5 rounded-md border-2 border-sage bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {BORDER_HARM.k}
+      </p>
+      <p className="mt-3 text-base leading-relaxed">{BORDER_HARM.v}</p>
+      <ul className="mt-4 space-y-3">
+        {BORDER_HARM.items.map((b) => (
+          <li key={b.k}>
+            <a
+              href={b.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-fg no-underline"
+            >
+              <p className="font-display text-sm font-semibold tracking-wide uppercase">
+                {b.k} · {b.amt}
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{b.note}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-4">
+        <Link
+          to="/dispatch/$slug"
+          params={{ slug: "the-hospital-and-the-morgue" }}
+          className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+        >
+          The essay →
+        </Link>
+      </p>
+    </div>
+  );
+}
+
+function BenefitsStack() {
+  return (
+    <div className="mt-5 rounded-md border-2 border-sage bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {BENEFITS.k}
+      </p>
+      <p className="mt-2 font-display text-3xl font-bold tracking-wide">
+        {BENEFITS.stack} a month
+      </p>
+      <p className="mt-2 text-sm leading-relaxed text-muted">{BENEFITS.v}</p>
+      <ul className="mt-4 space-y-3">
+        {BENEFITS.items.map((b) => (
+          <li key={b.k}>
+            <a
+              href={b.href}
+              target="_blank"
+              rel="noreferrer"
+              className="block text-fg no-underline hover:text-sage"
+            >
+              <p className="font-display text-lg font-bold tracking-wide uppercase">
+                {b.k} · {b.amt}
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{b.note}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function WorkerFile() {
+  return (
+    <div className="mt-5 rounded-md border border-border bg-surface p-5">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {WORKER.k}
+      </p>
+      <p className="mt-2 text-sm leading-relaxed">{WORKER.v}</p>
+      <ul className="mt-4 space-y-3">
+        {WORKER.items.map((b) => (
+          <li key={b.k}>
+            <a
+              href={b.href}
+              target="_blank"
+              rel="noreferrer"
+              className="block text-fg no-underline hover:text-sage"
+            >
+              <p className="font-display text-lg font-bold tracking-wide uppercase">
+                {b.k} · {b.amt}
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{b.note}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function OvalFile({ cardsOnly = false }: { cardsOnly?: boolean }) {
+  return (
+    <div className="space-y-8">
+      <div className="rounded-md border border-border bg-surface p-5">
+        <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+          {ENCOUNTERS.k}
+        </p>
+        <p className="mt-3 text-base leading-relaxed">{ENCOUNTERS.v}</p>
+        <a
+          href={ENCOUNTERS.href}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+        >
+          CBP — nationwide encounters →
+        </a>
+      </div>
+      <div className="rounded-md border border-border bg-surface p-5">
+        <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+          {CPI_PEAK.k}
+        </p>
+        <p className="mt-3 text-base leading-relaxed">{CPI_PEAK.v}</p>
+        <a
+          href={CPI_PEAK.href}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+        >
+          BLS — Consumer Price Index →
+        </a>
+      </div>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {OVAL.map((row) => (
+          <div key={row.who} className="rounded-md border border-border bg-surface p-5">
+            <p className="font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase">
+              {row.who}
+            </p>
+            <p className="mt-1 text-sm text-muted">{row.when}</p>
+            <p className="mt-4 font-display text-3xl font-bold tracking-wide">{row.enc}</p>
+            <p className="mt-1 text-sm text-muted">{row.note}</p>
+            <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.cpi}</p>
+            <p className="mt-1 text-sm text-muted">
+              CPI peak — highest 12-month rise in prices that Oval (groceries, rent, fuel)
+            </p>
+            <p className="mt-4 font-display text-2xl font-bold tracking-wide">{row.gas}</p>
+            <p className="mt-1 text-sm text-muted">highest EIA weekly gasoline</p>
+          </div>
+        ))}
+      </div>
+      <a
+        href={OVAL_NOW.href}
+        target="_blank"
+        rel="noreferrer"
+        className="block rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
+      >
+        <p className="font-display text-xs font-semibold tracking-[0.16em] text-sage uppercase">
+          {OVAL_NOW.who} · {OVAL_NOW.when}
+        </p>
+        <p className="mt-3 font-display text-2xl font-bold tracking-wide">{OVAL_NOW.enc}</p>
+        <p className="mt-2 text-sm leading-relaxed text-muted">{OVAL_NOW.note}</p>
+      </a>
+      {cardsOnly ? null : (
+        <>
+      <figure>
+        <img
+          src="/images/chart-oval.jpg"
+          alt="The Oval — encounters and the CPI peak"
+          className="h-auto w-full rounded-md border border-border"
+        />
+      </figure>
+      <figure>
+        <img
+          src="/images/chart-pump-admins.jpg"
+          alt="The gallon — four administrations"
+          className="h-auto w-full rounded-md border border-border"
+        />
+      </figure>
+      <figure>
+        <img
+          src="/images/chart-crime.jpg"
+          alt="Murder rate by administration"
+          className="h-auto w-full rounded-md border border-border"
+        />
+      </figure>
+        </>
+      )}
+      <ul className="space-y-2">
+        {OVAL_LINKS.map((l) => (
+          <li key={l.href}>
+            <a
+              href={l.href}
+              target="_blank"
+              rel="noreferrer"
+              className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+            >
+              {l.label} →
+            </a>
+          </li>
+        ))}
+        <li>
+          <Link
+            to="/pump"
+            className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+          >
+            The pump →
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function PriceLinks() {
+  return (
+    <div className="mt-5 rounded-md border border-border bg-surface p-4">
+      <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+        {PRICES.k}
+      </p>
+      <p className="mt-2 text-sm leading-relaxed text-muted">{PRICES.v}</p>
+      <ul className="mt-3 space-y-2">
+        {PRICES.links.map((l) => (
+          <li key={l.href}>
+            <a
+              href={l.href}
+              target="_blank"
+              rel="noreferrer"
+              className="font-display text-xs font-semibold tracking-[0.12em] text-sage uppercase no-underline hover:text-fg"
+            >
+              {l.label} →
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function RestoredFiles() {
+  return (
+    <div className="mt-16 space-y-4">
+      <InteractiveChart
+        title="The Oval desks"
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={OVAL_DESKS.map((d) => ({
+          id: d.id,
+          name: d.k,
+          line: firstLine(d.v),
+          read: <KeptRead said={d.k} record={d.v} links={[]} />,
+        }))}
+      />
+      <InteractiveChart
+        title="The papers"
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={PAPERS.map((p) => ({
+          id: p.k,
+          name: p.k,
+          line: firstLine(p.paper),
+          href: p.href,
+          proof: "The record",
+          read: (
+            <KeptRead
+              said={p.caption}
+              record={p.paper}
+              links={[
+                { label: "The record", href: p.href },
+                ...(p.extra ?? []),
+              ]}
+            />
+          ),
+        }))}
+      />
+      <InteractiveChart
+        title="The caption versus the file"
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={[...FAKE_NEWS, ...FRAMES].map((f) => ({
+          id: f.tag,
+          name: f.tag,
+          line: firstLine(f.tape),
+          href: f.href,
+          proof: "The record",
+          read: (
+            <KeptRead
+              said={f.they}
+              record={f.tape}
+              links={f.href ? [{ label: "The record", href: f.href }] : []}
+            />
+          ),
+        }))}
+      />
+      <InteractiveChart
+        title={WARFARE.k}
+        subtitle="The claim is the row. The short version is a few lines. The file keeps every sentence."
+        rows={[
+          { id: "war", name: "Psychological warfare", record: WARFARE.war },
+          { id: "gas", name: "Gaslighting", record: WARFARE.gas },
+          { id: "clip", name: "The cut tape", record: WARFARE.clip },
+          { id: "frame", name: "The one-word swap", record: WARFARE.frame },
+        ].map((row) => ({
+          id: row.id,
+          name: row.name,
+          line: firstLine(row.record),
+          read: <KeptRead said={row.name} record={row.record} links={[]} />,
+        }))}
+      />
+      <InteractiveChart
+        title={FUNNEL.k}
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={[
+          {
+            id: "funnel",
+            name: FUNNEL.k,
+            line: firstLine(FUNNEL.line),
+            href: FUNNEL.href,
+            proof: "The record",
+            read: (
+              <KeptRead
+                said={FUNNEL.line}
+                record={FUNNEL.v}
+                links={[{ label: "The record", href: FUNNEL.href }]}
+              />
+            ),
+          },
+          ...FUNNEL.pipes.map((pipe) => ({
+            id: pipe.k,
+            name: `${pipe.k} — ${pipe.amt}`,
+            line: firstLine(pipe.note),
+            href: pipe.href,
+            proof: "The record",
+            read: (
+              <KeptRead
+                said={pipe.note}
+                record={`${pipe.k}. ${pipe.amt}. ${pipe.note}`}
+                links={[{ label: "The record", href: pipe.href }]}
+              />
+            ),
+          })),
+        ]}
+      />
+      <InteractiveChart
+        title={RAIL_FILE.k}
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={RAIL_FILE.rows.map((row) => ({
+          id: row.k,
+          name: row.k,
+          line: firstLine(row.record),
+          href: row.href,
+          proof: "The record",
+          read: <KeptRead said={row.said} record={row.record} links={row.links} />,
+        }))}
+      />
+      <InteractiveChart
+        title={COVID_CELL.k}
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={COVID_CELL.rows.map((row) => ({
+          id: row.k,
+          name: row.k,
+          line: firstLine(row.record),
+          href: row.href,
+          proof: "The record",
+          read: <KeptRead said={row.said} record={row.record} links={row.links} />,
+        }))}
+      />
+      <InteractiveChart
+        title="The lawsuits"
+        subtitle="The claim is the row. The short version is a few lines. The record opens the document."
+        rows={SUITS.map((row) => ({
+          id: row.k,
+          name: row.k,
+          line: firstLine(row.record),
+          href: row.href,
+          proof: "The record",
+          read: <KeptRead said={row.said} record={row.record} links={row.links} />,
+        }))}
+      />
+      <InteractiveChart
+        title="The signed deals"
+        subtitle="Only agreements with a statute or a State Department text. A pledge is not a deal."
+        rows={DEALS.map((row) => ({
+          id: row.k,
+          name: row.k,
+          line: firstLine(row.record),
+          href: row.href,
+          proof: "The record",
+          read: (
+            <KeptRead
+              said={row.said}
+              note={row.when}
+              record={row.record}
+              links={[{ label: "The record", href: row.href }]}
+            />
+          ),
+        }))}
+      />
+      <InteractiveChart
+        title="What reached the house — the statutes"
+        subtitle="Only public laws. A press-conference total is not on this chart."
+        rows={[...AT_HOME, ...OTHER_OVALS].map((row) => ({
+          id: row.k,
+          name: row.k,
+          line: firstLine(row.record),
+          href: row.href,
+          proof: "The record",
+          read: (
+            <KeptRead
+              said={row.said}
+              record={row.record}
+              links={[{ label: "The record", href: row.href }]}
+            />
+          ),
+        }))}
+      />
+      <InteractiveChart
+        title="Four Ovals, three measures"
+        subtitle="The peak, not the average. Each line opens the agency table."
+        rows={TERM_COMPARE.map((row) => ({
+          id: row.k,
+          name: row.k,
+          line: firstLine(row.record),
+          href: row.href,
+          proof: "The record",
+          read: (
+            <KeptRead
+              said={row.said}
+              record={row.record}
+              links={[{ label: "The record", href: row.href }]}
+            />
+          ),
+        }))}
+      />
+    </div>
+  );
+}
+
+export function MidtermScorecard() {
+  const [tab, setTab] = useState<TabId | null>(null);
+  const [mode, setMode] = useState<Mode>("charts");
+  const gop = RECORD.find((r) => r.id === "gop");
+  const dem = RECORD.find((r) => r.id === "dem");
+  const split = DEBT_TALLY.find((t) => t.who.toLowerCase().includes("split"));
+
+  useEffect(() => {
+    const apply = () => {
+      const raw = window.location.hash.replace("#", "");
+      const [id, m] = raw.split("-") as [string, string | undefined];
+      if (SCORE_TABS.some((f) => f.id === id)) {
+        setTab(id as TabId);
+        if (m === "read" || m === "charts") setMode(m);
+      }
+    };
+    apply();
+    window.addEventListener("hashchange", apply);
+    return () => window.removeEventListener("hashchange", apply);
+  }, []);
+
+  const pickTab = (id: TabId) => {
+    setTab(id);
+    setMode("charts");
+    window.history.replaceState(null, "", `#${id}-charts`);
+  };
+  const pickMode = (m: Mode) => {
+    setMode(m);
+    if (tab) window.history.replaceState(null, "", `#${tab}-${m}`);
+  };
+
+  return (
+    <section className="border-b border-border">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+          Congressional scorecard · {SCORE_UPDATED}
+        </p>
+        <h2 className="mt-2 max-w-3xl font-display text-3xl font-bold tracking-wide uppercase sm:text-5xl">
+          Both parties have failed the American people.
+        </h2>
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
+          Do not vote on emotion. Do not vote on a hatred a party or a
+          network manufactured. Vote the facts. Every number on this
+          page is a government file.
+        </p>
+        <FarmBars />
+        <div className="mt-8 grid grid-cols-5 gap-2">
+          {SCORE_TABS.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              onClick={() => pickTab(f.id)}
+              className={
+                tab === f.id
+                  ? "flex min-h-16 min-w-0 items-center justify-center rounded-md border-2 border-sage bg-sage px-1 py-4 text-center font-display text-[12px] font-bold leading-tight tracking-wide text-black uppercase sm:text-base"
+                  : "flex min-h-16 min-w-0 items-center justify-center rounded-md border-2 border-sage bg-surface px-1 py-4 text-center font-display text-[12px] font-bold leading-tight tracking-wide text-fg uppercase hover:bg-ink sm:text-base"
+              }
+            >
+              {f.k}
+            </button>
+          ))}
+        </div>
+
+        {tab ? (
+          <div className="mt-4 grid grid-cols-2 gap-2">
+            {(
+              [
+                ["charts", "Charts"],
+                ["read", "Read"],
+              ] as const
+            ).map(([id, label]) => (
+              <button
+                key={id}
+                type="button"
+                onClick={() => pickMode(id)}
+                className={
+                  mode === id
+                    ? "flex min-h-14 items-center justify-center rounded-md border-2 border-sage bg-sage px-2 py-3 font-display text-sm font-bold tracking-wide text-black uppercase"
+                    : "flex min-h-14 items-center justify-center rounded-md border-2 border-sage bg-surface px-2 py-3 font-display text-sm font-bold tracking-wide text-fg uppercase hover:bg-ink"
+                }
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        ) : null}
+
+        {tab && mode === "charts" ? (
+          <div className="mt-10">
+            <ChartStack tab={tab} />
+          </div>
+        ) : null}
+
+        {tab === "gop" && mode === "read" && gop ? (
+          <div className="mt-10">
+            <PartyFile col={gop} />
+          </div>
+        ) : null}
+
+        {tab === "dem" && mode === "read" && dem ? (
+          <div className="mt-10">
+            <PartyFile col={dem} />
+            <div className="mt-8">
+              <HoaxesFile />
+            </div>
+            <div className="mt-8">
+              <AliensFile />
+              <BorderFile />
+              <BorderMove />
+              <BorderHarm />
+              <BenefitsStack />
+              <WorkerFile />
+            </div>
+          </div>
+        ) : null}
+
+        {tab === "split" && mode === "read" ? (
+          <div className="mt-10 space-y-6">
+            {split ? (
+              <>
+                <p className="font-display text-xl font-bold tracking-wide uppercase">
+                  Split
+                </p>
+                <p className="font-display text-3xl font-bold tracking-wide">
+                  {split.added}
+                </p>
+                <p className="text-sm leading-relaxed text-muted">{split.when}</p>
+              </>
+            ) : null}
+            <p className="text-sm leading-relaxed">
+              {DEBT_NOW.asOf}: {DEBT_NOW.total}. {DEBT_MATH}
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {DRIVERS.map((d) => (
+                <a
+                  key={d.k}
+                  href={d.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block min-h-28 rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
+                >
+                  <p className="font-display text-lg font-bold tracking-wide uppercase">
+                    {d.k}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{d.v}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {tab === "oval" && mode === "read" ? (
+          <div className="mt-10">
+            <OvalFile />
+          </div>
+        ) : null}
+
+        {tab === "compare" && mode === "read" ? (
+          <div className="mt-10 space-y-10">
+            <div>
+              <p className="font-display text-xs font-semibold tracking-[0.22em] text-sage uppercase">
+                Side by side
+              </p>
+              <h3 className="mt-2 font-display text-3xl font-bold tracking-wide uppercase">
+                Helped · Hurt
+              </h3>
+            </div>
+            {gop ? <PartyFile col={gop} /> : null}
+            {dem ? <PartyFile col={dem} /> : null}
+            <div className="rounded-md border border-border bg-surface p-5">
+              <p className="font-display text-xs font-semibold tracking-[0.2em] text-sage uppercase">
+                {PURSE.k}
+              </p>
+              <p className="mt-3 text-base leading-relaxed">{PURSE.v}</p>
+              <a
+                href={PURSE.href}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-flex min-h-11 items-center font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+              >
+                Article I →
+              </a>
+            </div>
+            <OvalFile cardsOnly />
+            <AliensFile />
+            <HoaxesFile />
+            <div className="grid gap-4 md:grid-cols-3">
+              {MAJORITY.map((m) => (
+                <a
+                  key={m.who}
+                  href={m.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block rounded-md border border-border bg-surface p-5 text-fg no-underline hover:border-sage"
+                >
+                  <p className="font-display text-sm font-bold tracking-wide uppercase">
+                    {m.who}
+                  </p>
+                  <p className="mt-2 text-xs leading-relaxed text-muted">{m.when}</p>
+                  <p className="mt-3 text-sm leading-relaxed">{m.could}</p>
+                  <p className="mt-2 text-sm leading-relaxed">{m.did}</p>
+                </a>
+              ))}
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {DEBT_TALLY.map((row) => {
+                const n = Number(row.added.replace(/[^0-9.]/g, ""));
+                const pct = Math.round((n / 40.09) * 100);
+                return (
+                  <div
+                    key={row.who}
+                    className="rounded-md border border-border bg-surface p-5"
+                  >
+                    <p className="font-display text-xs font-semibold leading-snug tracking-wide text-sage uppercase">
+                      {row.who}
+                    </p>
+                    <p className="mt-2 font-display text-4xl font-bold tracking-wide">
+                      {row.added}
+                    </p>
+                    <div className="mt-4 h-3 w-full rounded-sm bg-ink">
+                      <div
+                        className="h-3 rounded-sm bg-sage"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                    <p className="mt-2 font-display text-xs tracking-[0.12em] text-muted uppercase">
+                      {pct}% of the $40.09T
+                    </p>
+                    <p className="mt-3 text-xs leading-relaxed text-muted">{row.when}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="text-sm leading-relaxed text-muted">
+              {DEBT_NOW.asOf}: {DEBT_NOW.total}. {DEBT_MATH}
+            </p>
+            <figure>
+              <img
+                src="/images/chart-debt-why.jpg"
+                alt="The debt — the driver, and what each party voted"
+                className="h-auto w-full rounded-md border border-border"
+              />
+            </figure>
+            <p className="text-base leading-relaxed">{DEBT_WHY.v}</p>
+            <p className="text-sm leading-relaxed">{DEBT_WHY.pay}</p>
+            <p className="text-sm leading-relaxed">
+              Republicans: {DEBT_WHY.gop}
+            </p>
+            <p className="text-sm leading-relaxed">
+              Democrats: {DEBT_WHY.dem}
+            </p>
+            <div className="mt-6">
+              <p className="font-display text-sm font-bold tracking-[0.16em] text-sage uppercase">
+                {THE_LOSS.k}
+              </p>
+              <div className="mt-3 grid gap-3">
+                {THE_LOSS.rows.map((row) => (
+                  <a
+                    key={row.k}
+                    href={row.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block rounded-md border border-border bg-surface px-4 py-4 text-fg no-underline hover:border-sage"
+                  >
+                    <p className="font-display text-xs font-semibold tracking-[0.14em] text-sage uppercase">
+                      {row.k}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed">{row.v}</p>
+                    <p className="mt-2 font-display text-[11px] tracking-[0.12em] text-sage uppercase">
+                      The record →
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </div>
+            <p>
+              <a
+                href={DEBT_WHY.payHref}
+                target="_blank"
+                rel="noreferrer"
+                className="font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+              >
+                CRS — member pay →
+              </a>
+              {" · "}
+              <a
+                href={DEBT_WHY.ethicsHref}
+                target="_blank"
+                rel="noreferrer"
+                className="font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+              >
+                2 U.S.C. § 1415 →
+              </a>
+              {" · "}
+              <a
+                href={DEBT_WHY.href}
+                target="_blank"
+                rel="noreferrer"
+                className="font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:text-fg"
+              >
+                GAO fraud →
+              </a>
+            </p>
+            {OBAMA_TERMS.map((term) => (
+              <div key={term.who} className="rounded-md border border-border bg-surface p-5">
+                <p className="font-display text-xl font-bold tracking-wide uppercase">
+                  {term.who}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{term.majority}</p>
+                <div className="mt-6 grid gap-8 md:grid-cols-2">
+                  <div>
+                    <p className="font-display text-xs font-semibold tracking-[0.2em] uppercase">
+                      Helped
+                    </p>
+                    <BillList rows={term.plus} tone="plus" />
+                  </div>
+                  <div>
+                    <p className="font-display text-xs font-semibold tracking-[0.2em] text-[#c53030] uppercase">
+                      Hurt
+                    </p>
+                    <BillList rows={term.minus} tone="minus" />
+                  </div>
+                </div>
+              </div>
+            ))}
+            <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {LAWS.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block min-h-11 rounded-md border border-border bg-surface px-4 py-3 font-display text-xs font-semibold tracking-wide text-sage uppercase no-underline hover:border-sage hover:text-fg"
+                  >
+                    {l.k} →
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+        <RestoredFiles />
+      </div>
+    </section>
+  );
+}

@@ -20,6 +20,12 @@ function Home() {
         >
           The Great American Betrayal
         </Link>
+        <Link
+          to="/scorecard"
+          className="ml-6 text-[15px] font-semibold tracking-wide text-white"
+        >
+          ORIGINAL SCORECARD
+        </Link>
       </nav>
       <nav
         aria-label="Topics"
