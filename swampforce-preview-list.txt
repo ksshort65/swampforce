@@ -1,0 +1,97 @@
+SWAMP FORCE PREVIEW - WHAT'S MISSING, WHAT'S WRONG, AND SUGGESTED IMPROVEMENTS TO THE LAYERS
+Built from branch Jackson-Betrayal-Donuts, commit a64a1f7 (Sep 29, 2026)
+Nothing below has been changed. Each item is listed for Karen to decide.
+
+HOW TO PUT THIS ON NAMECHEAP
+- Upload everything in this zip (including the hidden .htaccess file) into the domain's top folder (public_html), or into the top folder of a subdomain.
+- It will NOT work inside a subfolder like yoursite.com/preview/, because every page asks for its files starting from the domain root (/assets, /images).
+- The .htaccess file lets links like /betrayal, /topics and /scorecard open directly, and sends unknown addresses to the site's own "Not Found" page.
+- The zip is about 68 MB, over the 25 MB goal. Almost all of that is pictures and documents (images 47 MB, ethics-docs 13 MB, old-site 7.5 MB, lawfare-docs 4.8 MB, impeachment-docs 2.6 MB). Nothing was removed to make it smaller.
+
+=====================================================================
+1. MISSING
+=====================================================================
+Pictures that the pages ask for but that do not exist (a dark box with the title shows instead):
+- cat-truth.jpg
+- tile-approved.jpg
+- tile-approved-caution.jpg
+- tile-rejected.jpg
+- tile-verdict-status.jpg
+- tile-strength-of-proof.jpg
+- tile-by-network.jpg
+- tile-by-party.jpg
+- tile-by-journalist.jpg
+
+Tiles with no evidence yet (each shows an empty chart with 0 and "Evidence coming soon"):
+- Estimates
+- Politicians' bail funds
+- Scrutiny compared
+- Assassination attempts
+- First 100 days
+
+Groups with nothing in them:
+- Fox News: 0 fake-news cases
+- MS NOW: 0 fake-news cases
+- Podcasts: the list is empty
+- Trump TV and C-SPAN: no cases
+
+Records that are counted but not listed one by one:
+- In Lawfare Evidence, the referrals count and the impeachment count have no case list behind them, so tapping them cannot show individual items.
+
+Pages that links point to but that do not exist:
+- /dispatch (linked from the Scorecard page)
+- /dispatch/<name> and /pump (linked from the Midterm Scorecard)
+
+The phone "install app" page (the part that normally comes from the web server) is not in this preview. The app icon file is included.
+
+=====================================================================
+2. WRONG (or does not match)
+=====================================================================
+Charts that do not work:
+- Fake News Evidence chart: tapping any of its 9 slices does nothing. This was already like this on the earlier build.
+- House and Senate: the back arrow (<-) jumps all the way back to the Betrayal start page and leaves the House menu open.
+
+Fake news records (272 cases):
+- 131 are marked "Still being checked" (69 fact-checked, 62 not yet verified).
+- 13 have the correction listed as "Unknown".
+- 50 just say "See the linked record".
+- 109 do not name the person.
+- Cases 1, 20 and 32 are grouped as Politicians/Officials but their party says "News outlets".
+- Cases 19 and 27 have the party "Not yet identified".
+- Cases 163 and 169 are grouped as a cable network but their party says Democratic. They are shown as "Not yet grouped" until you decide.
+
+Numbers that do not agree between pages:
+- The Lawmakers page says Democrats 76 and Republicans 2 (verified cases only). The Betrayal charts say 110 and 4 (all cases).
+
+Links in the records that are broken:
+- Case 215: CNBC link (March 11, 2024), page not found
+- Case 218: White House link (2021), page not found
+- lw-1: swampforce.com/lawfare-docs/ny-1st-dept-civil-fraud.pdf, not found online (a copy is in this zip and the Lawfare cards use it)
+- Case 6: money.cnn.com link, server error
+- 12 Washington Post links and 3 web.archive.org links would not load during the check (they may be fine; they could not be confirmed)
+- Many other sites refused the automatic check (they block robots); those were not counted as broken.
+
+Small technical note:
+- Opening the Topics page with a topic already in the address (for example /topics?t=voters) shows one hidden error in the browser's console. The page still shows the right topic.
+
+=====================================================================
+3. SUGGESTED IMPROVEMENTS TO THE LAYERS (for Karen to decide - none were made)
+=====================================================================
+- Decide whether tapping a tile should open only the chart. Right now the chart is on top and all the existing text is still below it.
+- Decide the groups used on the charts:
+  * "Networks" = cable plus major broadcast networks
+  * "Journalists" = print/web plus public broadcasting
+  * Prosecutors marked (D) counted as Democratic politicians
+  * Special Counsel Jack Smith and the House Jan. 6 Committee as their own groups
+- Social Media Weapon: the "News" group mixes TV networks with newspapers, and "Democratic" includes the DNC chair. Decide if that is right.
+- Decide whether the Fake News chart should also count the 26 Social Media Weapon posts.
+- Every chart made in this round uses only the labels already written in that tile. Please check each one:
+  Mechanics, FCC rules, Journalist code of ethics, Ethics codes, Cable news, Fact-checkers (by verdict), Impeachments (by the labels in the record), Senate (by the yearly report counts as given).
+- On the deception tiles, your chart (by verdict) and the new chart (by who said it) now both show. Decide whether to keep both.
+- The chart on "The Fake News Betrayal" layer was added back as a new piece. Decide whether to keep it.
+- The five empty tiles need you to say what belongs in them before anything is looked up.
+- Fix the Fake News Evidence slices and the House/Senate back arrow (both were already broken).
+- Add the 9 missing pictures listed above.
+- Settle the 76/2 versus 110/4 difference so every page counts the same way.
+- Fill in the missing names, corrections and parties in the fake news records.
+- Either build the /dispatch and /pump pages or remove the links to them.
