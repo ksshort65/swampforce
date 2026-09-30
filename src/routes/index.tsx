@@ -30,19 +30,19 @@ function Home() {
         <ul className="mx-auto grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           <li>
             <Link to="/betrayal-status" data-home-betrayal data-tile className={TILE}>
-              <TileImage />
+              <TileImage src="/images/tile-home-betrayal.jpg" />
               <TileTitle title="The Great American Betrayal" />
             </Link>
           </li>
           <li>
             <Link to="/scorecard" data-home-scorecard data-tile className={TILE}>
-              <TileImage />
+              <TileImage src="/images/tile-home-scorecard.jpg" />
               <TileTitle title="ORIGINAL SCORECARD" />
             </Link>
           </li>
           <li>
             <Link to="/research" data-home-research data-tile className={TILE}>
-              <TileImage />
+              <TileImage src="/images/tile-home-research.jpg" />
               <TileTitle title="Requires Further Research" />
             </Link>
           </li>
