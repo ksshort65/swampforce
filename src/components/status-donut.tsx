@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from "react";
-import { STATUS_INFO, STATUS_ORDER, statusOf, type Status } from "@/lib/verification";
+import { STATUS_INFO, STATUS_ORDER, percents, statusOf, type Status } from "@/lib/verification";
 
-export type StatusEntry = { id: string; label?: string };
+export type StatusEntry = { id: string; label?: string; status?: string };
 
 /**
  * Layer 2: a donut of verification status (Green Verified, Red Debunked,
@@ -21,7 +21,8 @@ export function StatusDonut({
 }) {
   const [pick, setPick] = useState<Status | null>(null);
   const groups: Record<Status, StatusEntry[]> = { verified: [], debunked: [], research: [] };
-  for (const e of entries) groups[statusOf(e.label).status].push(e);
+  for (const e of entries) groups[statusOf(e.label, e.status).status].push(e);
+  const pct = percents(STATUS_ORDER.map((s) => groups[s].length));
   const total = entries.length;
   const R = 70;
   const C = 2 * Math.PI * R;
@@ -30,7 +31,7 @@ export function StatusDonut({
   const labelsIn = (s: Status) => {
     const m = new Map<string, number>();
     for (const e of groups[s]) {
-      const l = statusOf(e.label).label;
+      const l = statusOf(e.label, e.status).label;
       m.set(l, (m.get(l) ?? 0) + 1);
     }
     return [...m.entries()];
@@ -92,7 +93,10 @@ export function StatusDonut({
                 <span className="inline-block h-4 w-4 shrink-0 rounded-sm" style={{ background: STATUS_INFO[s].color }} />
                 <span>
                   {STATUS_INFO[s].name}
-                  <span className="font-normal text-white/80"> · {groups[s].length}</span>
+                  <span className="font-normal text-white/80">
+                    {" "}
+                    · {groups[s].length} · <span data-status-pct={s}>{pct[STATUS_ORDER.indexOf(s)]}%</span>
+                  </span>
                 </span>
               </button>
             </li>
@@ -133,3 +137,4 @@ export function StatusDonut({
     </section>
   );
 }
+

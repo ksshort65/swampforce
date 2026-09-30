@@ -1,9 +1,13 @@
 // Layer 3: entries with poor or missing source data, found automatically from
 // the data as written. Nothing is added or guessed; each entry lists why it is here.
+// "Status: Research" = the entry maps to Yellow (Needs Research) under the site-wide mapping.
 
-export type Reason = "no-link" | "dead-link" | "unknown" | "see-linked" | "no-person";
+import { statusOf } from "@/lib/verification";
+
+export type Reason = "status-research" | "no-link" | "dead-link" | "unknown" | "see-linked" | "no-person";
 
 export const REASONS: { key: Reason; name: string }[] = [
+  { key: "status-research", name: "Status: Research" },
   { key: "no-link", name: "No source link" },
   { key: "dead-link", name: "Dead link" },
   { key: "unknown", name: "Says \u201cUnknown\u201d" },
@@ -42,8 +46,10 @@ function check(
   text: string[],
   dead: Record<string, string>,
   person?: string | null,
+  research?: boolean,
 ): ResearchEntry | null {
   const reasons: Reason[] = [];
+  if (research) reasons.push("status-research");
   const links = base.links.filter((l) => l.href);
   if (!links.length) reasons.push("no-link");
   const deadLinks = links.filter((l) => dead[l.href]).map((l) => ({ href: l.href, why: dead[l.href] }));
@@ -59,6 +65,7 @@ type TopicItem = {
   lines?: string[];
   more?: string[];
   label?: string;
+  status?: string;
   sources?: Link[];
   dup?: unknown;
 };
@@ -82,6 +89,8 @@ export function topicEntries(
       },
       strings([it.title, it.lines, it.more, it.label]),
       dead,
+      undefined,
+      statusOf(it.label, it.status).status === "research",
     );
     if (e) out.push(e);
   }
@@ -104,6 +113,7 @@ export function fakeNewsEntries(cases: AnyRec[], dead: Record<string, string>) {
       strings(rest),
       dead,
       typeof c.person === "string" ? c.person : "",
+      statusOf(typeof c.statusLabel === "string" ? c.statusLabel : undefined).status === "research",
     );
     if (e) out.push(e);
   }

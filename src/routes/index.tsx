@@ -6,50 +6,46 @@ const TOPICS = topicsIndex as { key: string; title: string; image?: string }[];
 
 export const Route = createFileRoute("/")({ component: Home });
 
+const TILE =
+  "relative block aspect-square w-full overflow-hidden rounded-2xl border border-white/30 bg-[#0b1220] no-underline";
+
+function TileTitle({ title }: { title: string }) {
+  return (
+    <span className="absolute inset-x-0 bottom-0 bg-[#070b12]/80 px-3 py-2 text-[15px] leading-snug font-semibold tracking-wide text-white">
+      {title}
+    </span>
+  );
+}
+
 function Home() {
   return (
     <main className="fixed inset-0 bg-[#070b12]">
       <img
         src="/images/hero-capitol.jpg"
         alt=""
-        className="absolute inset-x-0 top-14 block h-[calc(100%-3.5rem)] w-full object-cover object-top"
+        className="absolute inset-0 block h-full w-full object-cover object-top"
       />
-      <nav className="absolute inset-x-0 top-0 z-10 flex h-14 items-center overflow-x-auto bg-[#070b12] px-6 whitespace-nowrap">
-        <Link
-          to="/betrayal"
-          className="text-[15px] font-semibold tracking-wide text-white"
-        >
-          The Great American Betrayal
-        </Link>
-        <Link
-          to="/scorecard"
-          className="ml-6 text-[15px] font-semibold tracking-wide text-white"
-        >
-          ORIGINAL SCORECARD
-        </Link>
-        <Link
-          to="/research"
-          data-home-research
-          className="ml-6 text-[15px] font-semibold tracking-wide text-[#e3b21f]"
-        >
-          Requires Further Research
-        </Link>
-      </nav>
-      {/* Layer 1: her topics as a grid of square Topic Tiles over the hero image. */}
-      <nav
-        aria-label="Topics"
-        className="absolute inset-x-0 top-14 bottom-0 z-10 overflow-y-auto px-4 pt-6 pb-10"
-      >
-        <div className="mx-auto mb-4 flex max-w-5xl justify-center">
-          <Link
-            to="/research"
-            data-home-research-tile
-            className="rounded-full border border-[#e3b21f] bg-[#070b12]/90 px-5 py-2.5 text-[15px] font-semibold text-white no-underline"
-          >
-            Requires Further Research
-          </Link>
-        </div>
+      {/* Layer 1: tiles only. Her three top links are now tiles, then her topics. */}
+      <nav aria-label="Topics" className="absolute inset-0 z-10 overflow-y-auto px-4 pt-6 pb-10">
         <ul className="mx-auto grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          <li>
+            <Link to="/betrayal-status" data-home-betrayal data-tile className={TILE}>
+              <TileImage />
+              <TileTitle title="The Great American Betrayal" />
+            </Link>
+          </li>
+          <li>
+            <Link to="/scorecard" data-home-scorecard data-tile className={TILE}>
+              <TileImage />
+              <TileTitle title="ORIGINAL SCORECARD" />
+            </Link>
+          </li>
+          <li>
+            <Link to="/research" data-home-research data-tile className={TILE}>
+              <TileImage />
+              <TileTitle title="Requires Further Research" />
+            </Link>
+          </li>
           {TOPICS.map((topic) => (
             <li key={topic.key}>
               <Link
@@ -57,12 +53,10 @@ function Home() {
                 search={{ t: topic.key }}
                 data-home-topic={topic.key}
                 data-tile
-                className="relative block aspect-square w-full overflow-hidden rounded-2xl border border-white/30 bg-[#0b1220] no-underline"
+                className={TILE}
               >
                 <TileImage src={topic.image} />
-                <span className="absolute inset-x-0 bottom-0 bg-[#070b12]/80 px-3 py-2 text-[15px] leading-snug font-semibold tracking-wide text-white">
-                  {topic.title}
-                </span>
+                <TileTitle title={topic.title} />
               </Link>
             </li>
           ))}

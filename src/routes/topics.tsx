@@ -17,6 +17,7 @@ type Item = {
   lines?: string[];
   more?: string[];
   label?: string;
+  status?: string;
   sources?: Source[];
   see?: See[];
   dup?: { topic: string; item: string };
@@ -701,7 +702,7 @@ function TopicView({
           line="Tap a slice or a key line to see its evidence"
           entries={Object.entries(data.items)
             .filter(([, it]) => !it.dup)
-            .map(([id, it]) => ({ id, label: it.label }))}
+            .map(([id, it]) => ({ id, label: it.label, status: it.status }))}
           renderCards={(ids) => <ItemCards data={data} ids={ids} push={push} />}
         />
         {data.stats.some((s) => !data.items[s.item]?.dup) ? (

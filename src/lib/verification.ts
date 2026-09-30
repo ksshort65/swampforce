@@ -28,18 +28,55 @@ export const LABEL_MAP: Record<string, { status: Status; clear: boolean }> = {
   "Not yet verified (Reported only)": { status: "research", clear: true },
   "Not yet verified (White House claim)": { status: "research", clear: true },
   "Not yet verified (Part reported)": { status: "research", clear: true },
-  // Not clearly one of the three: Yellow, and listed as a question.
-  "Rated misleading": { status: "research", clear: false },
-  "On the record": { status: "research", clear: false },
-  "Consistent with the record": { status: "research", clear: false },
-  Opinion: { status: "research", clear: false },
-  "Our view": { status: "research", clear: false },
-  [NO_LABEL]: { status: "research", clear: false },
+  // Karen's rules (Sep 30, 2026):
+  "On the record": { status: "verified", clear: true },
+  "Consistent with the record": { status: "verified", clear: true },
+  "Rated misleading": { status: "debunked", clear: true },
+  Opinion: { status: "research", clear: true },
+  "Our view": { status: "research", clear: true },
+  // The Great American Betrayal (Fake News cases, statusLabel):
+  "Verified \u00b7 Proven false": { status: "debunked", clear: true },
+  "Verified \u00b7 Rated misleading": { status: "debunked", clear: true },
+  "Fact-checked \u00b7 Not yet verified": { status: "research", clear: true },
+  // No label at all (every such Topic entry now also carries status "Research").
+  [NO_LABEL]: { status: "research", clear: true },
 };
 
-export function statusOf(label: string | undefined): { status: Status; clear: boolean; label: string } {
+/** The explicit `status` field written on an entry ("Verified", "Debunked" or "Research"). */
+export const STATUS_FIELD: Record<string, Status> = {
+  Verified: "verified",
+  Debunked: "debunked",
+  Research: "research",
+};
+
+export function statusOf(
+  label: string | undefined,
+  status?: string,
+): { status: Status; clear: boolean; label: string } {
+  // An explicit status field on the entry wins over its label.
+  if (status && STATUS_FIELD[status]) {
+    return { status: STATUS_FIELD[status], clear: true, label: label && label.trim() ? label : `Status: ${status}` };
+  }
   const key = label && label.trim() ? label : NO_LABEL;
   const hit = LABEL_MAP[key];
   // A label not in the map is not guessed at: Yellow, and it is a question.
   return hit ? { ...hit, label: key } : { status: "research", clear: false, label: key };
+}
+
+/** Whole-number percentages that always add up to exactly 100 (largest remainder). */
+export function percents(counts: number[]): number[] {
+  const total = counts.reduce((a, b) => a + b, 0);
+  if (!total) return counts.map(() => 0);
+  const raw = counts.map((c) => (c * 100) / total);
+  const out = raw.map(Math.floor);
+  let left = 100 - out.reduce((a, b) => a + b, 0);
+  const order = raw.map((r, i) => [r - Math.floor(r), i] as const).sort((a, b) => b[0] - a[0]);
+  for (const [, i] of order) {
+    if (left <= 0) break;
+    if (counts[i] > 0) {
+      out[i] += 1;
+      left -= 1;
+    }
+  }
+  return out;
 }

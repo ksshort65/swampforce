@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BetrayalRouteImport } from './routes/betrayal'
+import { Route as BetrayalStatusRouteImport } from './routes/betrayal-status'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as ScorecardRouteImport } from './routes/scorecard'
 import { Route as TopicsRouteImport } from './routes/topics'
@@ -23,6 +24,11 @@ const IndexRoute = IndexRouteImport.update({
 const BetrayalRoute = BetrayalRouteImport.update({
   id: '/betrayal',
   path: '/betrayal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BetrayalStatusRoute = BetrayalStatusRouteImport.update({
+  id: '/betrayal-status',
+  path: '/betrayal-status',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResearchRoute = ResearchRouteImport.update({
@@ -44,6 +50,7 @@ const TopicsRoute = TopicsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/betrayal': typeof BetrayalRoute
+  '/betrayal-status': typeof BetrayalStatusRoute
   '/research': typeof ResearchRoute
   '/scorecard': typeof ScorecardRoute
   '/topics': typeof TopicsRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/betrayal': typeof BetrayalRoute
+  '/betrayal-status': typeof BetrayalStatusRoute
   '/research': typeof ResearchRoute
   '/scorecard': typeof ScorecardRoute
   '/topics': typeof TopicsRoute
@@ -59,21 +67,42 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/betrayal': typeof BetrayalRoute
+  '/betrayal-status': typeof BetrayalStatusRoute
   '/research': typeof ResearchRoute
   '/scorecard': typeof ScorecardRoute
   '/topics': typeof TopicsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/betrayal' | '/research' | '/scorecard' | '/topics'
+  fullPaths:
+    | '/'
+    | '/betrayal'
+    | '/betrayal-status'
+    | '/research'
+    | '/scorecard'
+    | '/topics'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/betrayal' | '/research' | '/scorecard' | '/topics'
-  id: '__root__' | '/' | '/betrayal' | '/research' | '/scorecard' | '/topics'
+  to:
+    | '/'
+    | '/betrayal'
+    | '/betrayal-status'
+    | '/research'
+    | '/scorecard'
+    | '/topics'
+  id:
+    | '__root__'
+    | '/'
+    | '/betrayal'
+    | '/betrayal-status'
+    | '/research'
+    | '/scorecard'
+    | '/topics'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BetrayalRoute: typeof BetrayalRoute
+  BetrayalStatusRoute: typeof BetrayalStatusRoute
   ResearchRoute: typeof ResearchRoute
   ScorecardRoute: typeof ScorecardRoute
   TopicsRoute: typeof TopicsRoute
@@ -93,6 +122,13 @@ declare module '@tanstack/react-router' {
       path: '/betrayal'
       fullPath: '/betrayal'
       preLoaderRoute: typeof BetrayalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/betrayal-status': {
+      id: '/betrayal-status'
+      path: '/betrayal-status'
+      fullPath: '/betrayal-status'
+      preLoaderRoute: typeof BetrayalStatusRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/research': {
@@ -122,6 +158,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BetrayalRoute: BetrayalRoute,
+  BetrayalStatusRoute: BetrayalStatusRoute,
   ResearchRoute: ResearchRoute,
   ScorecardRoute: ScorecardRoute,
   TopicsRoute: TopicsRoute,
