@@ -64,6 +64,7 @@ export const DECEPTION: {
     categories: [
       { name: "Democrats", image: "/images/cat-democrats.jpg" },
       { name: "Republicans", image: "/images/cat-republicans.jpg" },
+      { name: "Public trust", image: "/images/topic-senate-record.jpg" },
     ],
     rows: [],
   },
@@ -72,9 +73,14 @@ export const DECEPTION: {
     title: "Social media warfare",
     image: "/images/deception-social.jpg",
     categories: [
+      { name: "Facebook", image: "/images/cat-facebook.jpg" },
+      { name: "Instagram", image: "/images/cat-instagram.jpg" },
+      { name: "TikTok", image: "/images/cat-tiktok.jpg" },
+      { name: "X", image: "/images/cat-twitter.jpg" },
+      { name: "Threads", image: "/images/cat-threads.jpg" },
+      { name: "Truth Social", image: "/images/cat-truth.jpg" },
       { name: "YouTube", image: "/images/cat-youtube.jpg" },
       { name: "Rumble", image: "/images/cat-rumble.jpg" },
-      { name: "Twitter", image: "/images/cat-twitter.jpg" },
     ],
     rows: [],
   },

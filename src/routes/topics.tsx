@@ -64,8 +64,8 @@ type TopicData = {
 type Frame =
   | { k: "topic"; topic: string }
   | { k: "tile"; topic: string; chart: string; index?: number }
-  | { k: "bar"; topic: string; chart: string; index: number; ds?: number }
-  | { k: "all"; topic: string; chart: string }
+  | { k: "bar"; topic: string; chart: string; index: number; ds?: number; group?: string }
+  | { k: "all"; topic: string; chart: string; group?: string }
   | { k: "list"; topic: string; section: string }
   | { k: "stat"; topic: string; stat: number }
   | { k: "statlist"; topic: string; stat: number }
@@ -498,9 +498,8 @@ function ItemCards({
   ids: string[];
   push: (f: Frame) => void;
 }) {
-  // Same as the Mechanics list: every case is shown as its full card, one under another.
   return (
-    <div className="mt-6 flex w-full flex-col gap-4 text-left">
+    <div className="mt-4 flex w-full flex-col text-left">
       {Array.from(new Set(ids)).map((id) =>
         data.items[id] ? <ItemCard key={id} data={data} id={id} push={push} /> : null,
       )}
@@ -508,62 +507,48 @@ function ItemCards({
   );
 }
 
+function oneLine(text: string) {
+  const clean = text.replace(/\s+/g, " ").trim();
+  const at = clean.indexOf(". ");
+  if (at >= 40 && at <= 220) return clean.slice(0, at + 1);
+  return clean.length > 180 ? `${clean.slice(0, 177)}...` : clean;
+}
+
 function ItemCard({ data, id, push }: { data: TopicData; id: string; push: (f: Frame) => void }) {
   const it = data.items[id];
   const t = data.key;
-  if (!it) return null;
+  if (!it || it.dup) return null;
   const openTopic = (key: string) => push({ k: "topic", topic: key });
-  // A record already on file in another topic is shown there only, in that topic's own flow.
-  if (it.dup) return null;
   const sources = it.sources ?? [];
-  const sectionLevel = sources.length > 0 && sources.every((s) => s.sectionLevel);
+  const line = it.lines?.[0] ?? it.more?.[0] ?? "";
+  const rest = [...(it.lines ?? []).slice(1), ...(it.more ?? [])];
   return (
-    <article
-      data-item={id}
-      className="rounded-2xl border border-white/25 bg-[#070b12]/85 px-4 py-4 text-left"
-    >
-      <p className="text-[16px] font-semibold text-white">{it.title}</p>
-      {it.label ? (
-        <span className="inline-block rounded-full border border-[#d4af37] px-3 py-1 text-[15px] font-semibold text-[#d4af37]">
-          {it.label}
-        </span>
-      ) : null}
-      {it.lines && it.lines.length ? <Bullets lines={it.lines} /> : null}
-      {it.more && it.more.length ? (
-        <Toggle label={it.essay ? "Read the full essay" : "Read more"}>
-          <Bullets lines={it.more} />
+    <article data-item={id} className="border-b border-white/15 py-4 text-left">
+      <p className="text-[16px] font-semibold leading-snug text-white">{it.title}</p>
+      {it.label ? <p className="mt-1 text-[15px] text-white/70">{it.label}</p> : null}
+      {line ? <p className="mt-2 text-[15px] leading-snug text-white">{oneLine(line)}</p> : null}
+      {rest.length ? (
+        <Toggle label="Read more">
+          <Bullets lines={rest} />
         </Toggle>
       ) : null}
       {it.fake ? (
-        <div className="mt-4">
-          <p className="text-[15px] text-white/85">The full case (#{it.fake}) is in Fake News.</p>
-          <Link to="/betrayal" className={`${PILL} mt-2 inline-block no-underline`}>
-            Open Fake News · The Great American Betrayal
-          </Link>
-        </div>
+        <Link to="/betrayal" className="mt-2 inline-block text-[15px] font-semibold text-[#d4af37] underline decoration-[#d4af37]/40 underline-offset-2">
+          Open Fake News
+        </Link>
       ) : null}
       {it.see ? <SeeButtons see={it.see} onTopic={openTopic} /> : null}
-      <p className="mt-5 text-[16px] font-semibold text-white">
-        {sectionLevel ? "Sources listed for this section" : "Source"}
-      </p>
-      {sources.length ? (
-        <div className="mt-3 flex flex-col gap-2">
-          {sources.map((s, i) => (
-            <button
-              key={s.href + i}
-              type="button"
-              data-source
-              onClick={() => push({ k: "source", topic: t, item: id, source: i })}
-              className={NEWS_DOOR + " text-left"}
-            >
-              {s.label}
-            </button>
-          ))}
-        </div>
+      {sources[0] ? (
+        <button
+          type="button"
+          data-source
+          onClick={() => push({ k: "source", topic: t, item: id, source: 0 })}
+          className="mt-2 border-0 bg-transparent p-0 text-left text-[15px] font-semibold text-[#d4af37] underline decoration-[#d4af37]/40 underline-offset-2"
+        >
+          {sources[0].label}
+        </button>
       ) : (
-        <p className="mt-2 text-[15px] text-white/75">
-          No source link was listed for this item on the older site.
-        </p>
+        <p className="mt-2 text-[15px] text-white/70">No source link was listed for this item.</p>
       )}
     </article>
   );
@@ -736,8 +721,8 @@ function TopicView({
           <ChartCard
             key={c.id}
             chart={c}
-            onBar={(index) => push({ k: "tile", topic: t, chart: c.id, index })}
-            onAll={() => push({ k: "tile", topic: t, chart: c.id })}
+            onBar={(index) => push({ k: "bar", topic: t, chart: c.id, index })}
+            onAll={() => push({ k: "all", topic: t, chart: c.id })}
           />
         ))}
         {data.links.length ? (
@@ -831,14 +816,35 @@ function TopicView({
         : (c.bars[frame.index] ?? []);
     const title = frame.k === "all" ? c.title : c.labels[frame.index];
     const value = frame.k === "bar" ? barLine(c, frame.index) : "";
+    const labels = [...new Set(ids.map((id) => data.items[id]?.label).filter((label): label is string => !!label))];
+    if (!frame.group && labels.length > 1) {
+      return (
+        <div className="w-full" data-level="list">
+          <Heading title={title} line={`${c.title}${value && frame.k === "bar" ? ` · ${value}` : ""} · ${recLine(ids.length)}`} />
+          <div className="mt-6 flex flex-col gap-2">
+            {labels.map((label) => (
+              <button
+                key={label}
+                type="button"
+                onClick={() => push(frame.k === "bar" ? { ...frame, group: label } : { ...frame, group: label })}
+                className={NEWS_DOOR + " text-left"}
+              >
+                {label} · {ids.filter((id) => data.items[id]?.label === label).length}
+              </button>
+            ))}
+          </div>
+        </div>
+      );
+    }
+    const shown = frame.group ? ids.filter((id) => data.items[id]?.label === frame.group) : ids;
     return (
       <div className="w-full" data-level="list">
         <Heading
-          title={title}
-          line={`${c.title}${value && frame.k === "bar" ? ` · ${value}` : ""} · ${recLine(ids.length)}`}
+          title={frame.group ? `${title} · ${frame.group}` : title}
+          line={`${c.title}${value && frame.k === "bar" ? ` · ${value}` : ""} · ${recLine(shown.length)}`}
         />
-        {ids.length ? (
-          <ItemCards data={data} ids={ids} push={push} />
+        {shown.length ? (
+          <ItemCards data={data} ids={shown} push={push} />
         ) : (
           <p className="mt-6 text-center text-[15px] text-white/80">
             No record is listed behind this bar on the older site.
