@@ -5,6 +5,7 @@ import newsEvidence from "../data/fake-news-evidence.json";
 import factCheckerVetting from "../data/fact-checker-vetting.json";
 import fakeNewsCases from "../data/fake-news-cases.json";
 import lawfareCases from "../data/lawfare-cases.json";
+import houseEthicsMatters from "../data/house-ethics-matters.json";
 
 export const Route = createFileRoute("/betrayal")({ component: Betrayal });
 
@@ -2468,6 +2469,7 @@ function LawfareScreen({
       >
         {chart ? chart.title : "Lawfare Evidence"}
       </button>
+      {!pick && !caseId && !href ? <TileDonut spec={DONUTS.lawEvidence} /> : null}
       <LawfareLayer pick={pick} caseId={caseId} href={href} onPick={onPick} onCase={onCase} onSource={onSource} />
     </>
   );
@@ -3392,6 +3394,269 @@ function ProofCase({ id, onSource }: { id: string; onSource: (href: string) => v
   );
 }
 
+// ---- Tile donuts: added for each tile. Numbers are counted from the evidence listed under the tile. ----
+type DonutItem = { key: string; title: string; lines: string[]; sources: { label: string; href: string }[] };
+type DonutGroup = { label: string; color: string; items: DonutItem[] };
+type DonutSpec = { id: string; title: string; unit: string; groups: DonutGroup[] };
+
+const DONUT_ORDER = [
+  "Republican politicians",
+  "Democratic politicians",
+  "Networks",
+  "Journalists",
+  "Social media",
+  "Campaigns",
+  "Advocacy groups",
+  "Not yet grouped: Democratic politician on a network",
+  "Not yet identified",
+];
+
+const DONUT_COLORS: Record<string, string> = {
+  "Republican politicians": "#dc2626",
+  "Democratic politicians": "#2563eb",
+  Networks: "#a3a3a3",
+  Journalists: "#0f766e",
+  "Social media": "#f59e0b",
+  Campaigns: "#7c3aed",
+  "Advocacy groups": "#be185d",
+  "Not yet grouped: Democratic politician on a network": "#7c2d12",
+  "Not yet identified": "#57534e",
+};
+
+const DONUT_OTHER_COLORS = ["#d4af37", "#0f766e", "#7c3aed", "#1e3a5f", "#b45309", "#be185d", "#14532d", "#78716c"];
+
+function donutNewsGroup(row: NewsCaseRow) {
+  if (row.networkGroup === "Politicians/Officials") {
+    if (row.party === "Republican") return "Republican politicians";
+    if (row.party === "Democratic") return "Democratic politicians";
+    return row.party;
+  }
+  if (row.networkGroup === "Cable Networks" || row.networkGroup === "MSM Networks") {
+    return row.party === "Democratic" ? "Not yet grouped: Democratic politician on a network" : "Networks";
+  }
+  if (row.networkGroup === "Print/Web news" || row.networkGroup === "Public Broadcasting") return "Journalists";
+  if (row.networkGroup === "Social Media") return "Social media";
+  if (row.networkGroup === "Advocacy groups") return "Advocacy groups";
+  return NEWS_NYI;
+}
+
+function donutNewsItem(row: NewsCaseRow): DonutItem {
+  return {
+    key: `case-${row.id}`,
+    title: row.who,
+    lines: [
+      `Case ${row.id} · ${row.began}`,
+      `Where: ${row.networkName}`,
+      `What was said: ${row.said}`,
+      `The record: ${row.record}`,
+      `Correction: ${row.correction}`,
+      `Status: ${row.statusLabel}`,
+    ],
+    sources: row.sources,
+  };
+}
+
+function donutGroups(pairs: { group: string; item: DonutItem }[], order: string[], colors: Record<string, string>) {
+  const labels = [...order, ...[...new Set(pairs.map((pair) => pair.group))].filter((label) => !order.includes(label))];
+  let other = 0;
+  return labels
+    .map((label) => ({
+      label,
+      color: colors[label] ?? DONUT_OTHER_COLORS[other++ % DONUT_OTHER_COLORS.length],
+      items: pairs.filter((pair) => pair.group === label).map((pair) => pair.item),
+    }))
+    .filter((group) => group.items.length > 0);
+}
+
+function donutNews(id: string, title: string, rows: NewsCaseRow[]): DonutSpec {
+  return {
+    id,
+    title,
+    unit: "fake news cases",
+    groups: donutGroups(rows.map((row) => ({ group: donutNewsGroup(row), item: donutNewsItem(row) })), DONUT_ORDER, DONUT_COLORS),
+  };
+}
+
+function donutCardRows(deceptionId: string) {
+  const entry = DECEPTION.find((item) => item.id === deceptionId);
+  const names = [...(entry?.categories ?? []), ...(entry?.stations ?? [])].map((card) => card.name).filter((name) => CARD_CASES[name]);
+  return NEWS_CASES.filter((row) => names.some((name) => CARD_CASES[name].match(row)));
+}
+
+type LawCaseRow = (typeof lawfareCases.cases)[number];
+
+function donutLawGroup(row: LawCaseRow) {
+  const who = lawfareCases.charts.find((chart) => chart.id === "who");
+  const index = who ? who.caseIds.findIndex((ids) => ids.includes(row.id)) : -1;
+  const label = who && index >= 0 ? who.labels[index] : NEWS_NYI;
+  if (label.includes("(D)")) return "Democratic politicians";
+  if (label.includes("(R)")) return "Republican politicians";
+  return label;
+}
+
+function donutLawItem(row: LawCaseRow): DonutItem {
+  return {
+    key: row.id,
+    title: row.caseName,
+    lines: [
+      `Brought by: ${row.broughtBy}`,
+      `Court: ${row.court}`,
+      `Filed: ${row.filedDate}`,
+      `Status now: ${row.currentStatus}`,
+    ],
+    sources: row.links.filter((link) => link.href.startsWith("http")).map((link) => ({ label: link.label, href: lawLocal(link.href) })),
+  };
+}
+
+function donutLaw(id: string, title: string, rows: LawCaseRow[], news: NewsCaseRow[] = []): DonutSpec {
+  const pairs = [
+    ...rows.map((row) => ({ group: donutLawGroup(row), item: donutLawItem(row) })),
+    ...news.map((row) => ({ group: donutNewsGroup(row), item: donutNewsItem(row) })),
+  ];
+  return {
+    id,
+    title,
+    unit: news.length ? "court cases and deception cases" : "court cases",
+    groups: donutGroups(pairs, DONUT_ORDER, DONUT_COLORS),
+  };
+}
+
+const HOUSE_SUMMARY_HREF = "https://ethics.house.gov/wp-content/uploads/2025/01/Committee-Report.pdf";
+
+function donutHouse(): DonutSpec {
+  const pairs = houseEthicsMatters.matters.map((matter, index) => ({
+    group: matter.party === "Republican" ? "Republican politicians" : matter.party === "Democratic" ? "Democratic politicians" : "Jan. 6 select committee referral (no Member named)",
+    item: {
+      key: `house-${index}`,
+      title: matter.name ? `Rep. ${matter.name} (${matter.party})` : "January 6 select committee referral",
+      lines: [matter.line],
+      sources: [
+        { label: "Committee on Ethics, Summary of Activities, 118th Congress", href: HOUSE_SUMMARY_HREF },
+        ...(matter.bioguide
+          ? [{ label: `Biographical Directory of Congress: ${matter.name}`, href: `https://bioguide.congress.gov/search/bio/${matter.bioguide}` }]
+          : []),
+      ],
+    },
+  }));
+  return { id: "house", title: "House", unit: "House Ethics matters", groups: donutGroups(pairs, DONUT_ORDER, DONUT_COLORS) };
+}
+
+const SAVE_COLOR_OF: Record<string, string> = Object.fromEntries(SAVE_GROUP_LABELS.map((label, index) => [label, SAVE_GROUP_COLORS[index]]));
+
+function donutSave(): DonutSpec {
+  const pairs = SAVE_ROWS.map((row) => ({
+    group: row.group,
+    item: {
+      key: row.id,
+      title: row.who,
+      lines: [
+        `Where: ${row.where}`,
+        `When: ${row.when}`,
+        `Views: ${row.views}`,
+        `What was said: ${row.said}`,
+        ...(row.record ? [`The record: ${row.record}`] : []),
+      ],
+      sources: row.links,
+    },
+  }));
+  return { id: "save", title: "Social Media Weapon", unit: "posts", groups: donutGroups(pairs, SAVE_GROUP_LABELS, SAVE_COLOR_OF) };
+}
+
+const LAW_DECEPTION_ROWS = lawfareCases.deceptionIds
+  .map((id) => NEWS_CASES.find((row) => row.id === id))
+  .filter((row): row is NewsCaseRow => !!row);
+
+const DONUTS: Record<string, DonutSpec> = {
+  fake: donutNews("fake", "Fake News", NEWS_CASES),
+  evidence: donutNews("evidence", "Fake News Evidence", NEWS_CASES),
+  save: donutSave(),
+  network: donutNews("network", "Network deception", donutCardRows("network")),
+  journalists: donutNews("journalists", "Journalists", donutCardRows("journalists")),
+  politicians: donutNews("politicians", "Politicians deceptions", donutCardRows("politicians")),
+  social: donutNews("social", "Social media warfare", donutCardRows("social")),
+  lawfare: donutLaw("lawfare", "Lawfare", lawfareCases.cases),
+  trials: donutLaw("trials", "Trump Trials", lawfareCases.cases.filter((row) => row.group === "Trump Trials")),
+  citizen: donutLaw("citizen", "US Citizen Lawfare", lawfareCases.cases.filter((row) => row.group === "US Citizen Lawfare")),
+  lawEvidence: donutLaw("lawEvidence", "Lawfare Evidence", lawfareCases.cases, LAW_DECEPTION_ROWS),
+  house: donutHouse(),
+};
+
+function TileDonut({ spec }: { spec?: DonutSpec }) {
+  const [pick, setPick] = useState<string | null>(null);
+  const openRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (pick) openRef.current?.scrollIntoView({ block: "start" });
+  }, [pick]);
+  if (!spec) return null;
+  const groups = spec.groups;
+  const total = groups.reduce((sum, group) => sum + group.items.length, 0);
+  const shown = pick === "all" ? groups : groups.filter((group) => group.label === pick);
+  return (
+    <div className="w-full" data-donut={spec.id} data-donut-total={total}>
+      <p className="mt-6 text-center text-[18px] font-semibold tracking-wide text-white">{spec.title}</p>
+      <LayerChart
+        title={spec.title}
+        line={`${total} ${spec.unit} · tap a slice or key line`}
+        labels={groups.map((group) => group.label)}
+        data={groups.map((group) => group.items.length)}
+        colors={groups.map((group) => group.color)}
+        type="doughnut"
+        horizontal={false}
+        bullets={[]}
+        center={{ big: String(total), small: "All", onOpen: () => setPick("all") }}
+        onPick={(index) => setPick(groups[index].label)}
+      />
+      {pick ? (
+        <section ref={openRef} data-donut-evidence={pick} className="mt-6 w-full scroll-mt-16 text-left">
+          <button type="button" data-donut-back onClick={() => setPick(null)} className={NEWS_DOOR + " w-fit"}>
+            Back
+          </button>
+          <h2 className="mt-4 text-center text-[20px] font-bold leading-snug text-white">
+            {pick === "all" ? `${spec.title}: all ${total} ${spec.unit}` : `${spec.title} · ${pick}: ${shown[0]?.items.length ?? 0} ${spec.unit}`}
+          </h2>
+          {shown.map((group) => (
+            <div key={group.label} className="mt-6">
+              <p className="flex items-center gap-2 text-[17px] font-semibold text-white">
+                <span className="inline-block h-4 w-4 shrink-0 rounded-sm" style={{ background: group.color }} />
+                {group.label} · {group.items.length}
+              </p>
+              <div className="mt-3 flex flex-col gap-3">
+                {group.items.map((item) => (
+                  <article key={item.key} data-donut-item={item.key} className="w-full rounded-2xl border border-white/35 bg-[#070b12]/85 px-4 py-3 text-[15px] leading-snug text-white">
+                    <p className="font-semibold">{item.title}</p>
+                    {item.lines.map((line, index) => (
+                      <p key={index} className="mt-1 text-white/85">
+                        {line}
+                      </p>
+                    ))}
+                    {item.sources.length ? (
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {item.sources.map((source, index) => (
+                          <a
+                            key={`${source.href}-${index}`}
+                            href={source.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-full border border-[#d4af37]/70 bg-[#070b12]/80 px-3 py-1.5 text-[13px] font-semibold text-white"
+                          >
+                            {source.label}
+                          </a>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="mt-1 text-white/60">No source link on file</p>
+                    )}
+                  </article>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      ) : null}
+    </div>
+  );
+}
+
 function Betrayal() {
   const [layer, setLayer] = useState<Layer>("root");
   const [method, setMethod] = useState<string | null>(null);
@@ -3636,6 +3901,9 @@ function Betrayal() {
             >
               Fake News
             </button>
+            <div className="w-full max-w-xl">
+              <TileDonut spec={DONUTS.fake} />
+            </div>
             <div className="mt-8 flex flex-wrap items-end justify-center gap-10">
               <button
                 type="button"
@@ -3770,6 +4038,7 @@ function Betrayal() {
             >
               Social Media Weapon
             </button>
+            <TileDonut spec={DONUTS.save} />
             <button
               type="button"
               onClick={() => {
@@ -3975,6 +4244,7 @@ function Betrayal() {
                     : "Fake News Evidence"}
             </button>
             )}
+            {!newsMethod && !newsCase && !newsSource ? <TileDonut spec={DONUTS.evidence} /> : null}
             {newsSource ? (
               <div className="mt-8 w-full">
                 <SourcePage
@@ -4428,6 +4698,9 @@ function Betrayal() {
             >
               Lawfare
             </button>
+            <div className="w-full max-w-xl">
+              <TileDonut spec={DONUTS.lawfare} />
+            </div>
             <div className="mt-8 flex max-w-5xl flex-wrap items-end justify-center gap-8">
               {LAYERS.lawfare.buttons.map((label) => (
                 <button
@@ -4487,6 +4760,7 @@ function Betrayal() {
                       ? "Record of ethics complaints"
                       : "Summary"}
             </button>
+            {ethicsDoc === "house-menu" ? <TileDonut spec={DONUTS.house} /> : null}
             {ethicsDoc === "house-menu" || ethicsDoc === "senate-menu" ? (
               <div className="mt-8 flex flex-wrap items-end justify-center gap-8">
                 {(ethicsDoc === "house-menu"
@@ -4566,6 +4840,7 @@ function Betrayal() {
         )}
         {LAW_TOPICS[layer] && !lawOn && !impeachFile && (
           <div className={layer === "bail" ? "mx-auto flex max-w-3xl flex-col items-center px-6 pb-24" : "mx-auto flex max-w-3xl flex-col items-center px-6 pt-6 pb-24"}>
+            {(layer === "trials" || layer === "citizen") && !topicPick && !topicCase && !topicHref ? <TileDonut spec={DONUTS[layer]} /> : null}
             <LawTopic
               layer={layer}
               pick={topicPick}
@@ -4619,6 +4894,11 @@ function Betrayal() {
             >
               {card ? card : spot === "cable" ? "Cable news" : spot === "trump" ? "Trump TV" : spot === "podcasts" ? "Podcasts" : spot === "cspan" ? "C-SPAN" : DECEPTION.find((item) => item.id === deception)?.title}
             </button>
+            {!card && !spot && deception !== "checkers" ? (
+              <div className="w-full max-w-xl">
+                <TileDonut spec={DONUTS[deception]} />
+              </div>
+            ) : null}
             {card && cardHref ? (
               <div className="w-full">
                 <SourcePage label={NEWS_CASES.flatMap((row) => row.sources).find((item) => item.href === cardHref)?.label ?? cardHref} href={cardHref} />

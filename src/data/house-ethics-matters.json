@@ -1,0 +1,125 @@
+{
+ "note": "The 20 matters the House Committee on Ethics publicly addressed in the 118th Congress, as listed on the House Record of ethics complaints page. Party and Bioguide ID for each Member from the Biographical Directory of the United States Congress (bioguide.congress.gov).",
+ "matters": [
+  {
+   "name": "Sanford Bishop Jr.",
+   "party": "Democratic",
+   "bioguide": "B000490",
+   "line": "Sanford Bishop Jr. Dismissed on December 30, 2024."
+  },
+  {
+   "name": "Jamaal Bowman",
+   "party": "Democratic",
+   "bioguide": "B001223",
+   "line": "Jamaal Bowman. The House censured him on December 7, 2023. The committee then said further review would be moot and took no further action. That censure was a House vote, not a committee sanction."
+  },
+  {
+   "name": "Sheila Cherfilus-McCormick",
+   "party": "Democratic",
+   "bioguide": "C001127",
+   "line": "Sheila Cherfilus-McCormick. The investigative subcommittee had not finished when the Congress ended."
+  },
+  {
+   "name": "Henry Cuellar",
+   "party": "Democratic",
+   "bioguide": "C001063",
+   "line": "Henry Cuellar. The investigative subcommittee had not finished when the Congress ended."
+  },
+  {
+   "name": "Matt Gaetz",
+   "party": "Republican",
+   "bioguide": "G000578",
+   "line": "Matt Gaetz. The committee found he did not violate federal sex-trafficking laws. It did find sexual misconduct, illegal drug use, a House gift-rule violation, special favors, and an attempt to obstruct the investigation. He resigned on November 14, 2024. The committee filed a report with dissenting views on December 23, 2024."
+  },
+  {
+   "name": "Bill Huizenga",
+   "party": "Republican",
+   "bioguide": "H001058",
+   "line": "Bill Huizenga. The committee voted that a sanction was not merited, sent a private letter, and on June 5, 2024 filed a report taking no further action."
+  },
+  {
+   "name": "Wesley Hunt",
+   "party": "Republican",
+   "bioguide": "H001095",
+   "line": "Wesley Hunt. Dismissed on December 30, 2024."
+  },
+  {
+   "name": "Ronny Jackson",
+   "party": "Republican",
+   "bioguide": "J000304",
+   "line": "Ronny Jackson. Dismissed on December 30, 2024."
+  },
+  {
+   "name": "Mike Kelly",
+   "party": "Republican",
+   "bioguide": "K000376",
+   "line": "Mike Kelly. Not completed when the Congress ended."
+  },
+  {
+   "name": "Doug Lamborn",
+   "party": "Republican",
+   "bioguide": "L000564",
+   "line": "Doug Lamborn. He did not seek reelection. The committee lost jurisdiction on January 3, 2025."
+  },
+  {
+   "name": "Michael McCaul",
+   "party": "Republican",
+   "bioguide": "M001157",
+   "line": "Michael McCaul. The committee voted not to impanel a subcommittee. On December 23, 2024 it filed a report taking no further action."
+  },
+  {
+   "name": "Cory Mills",
+   "party": "Republican",
+   "bioguide": "M001216",
+   "line": "Cory Mills. Not completed when the Congress ended."
+  },
+  {
+   "name": "Alex Mooney",
+   "party": "Republican",
+   "bioguide": "M001195",
+   "line": "Alex Mooney. Dismissed on December 30, 2024."
+  },
+  {
+   "name": "Troy Nehls",
+   "party": "Republican",
+   "bioguide": "N000026",
+   "line": "Troy Nehls. Not completed when the Congress ended."
+  },
+  {
+   "name": "Alexandria Ocasio-Cortez",
+   "party": "Democratic",
+   "bioguide": "O000172",
+   "line": "Alexandria Ocasio-Cortez. Not completed when the Congress ended."
+  },
+  {
+   "name": "Andy Ogles",
+   "party": "Republican",
+   "bioguide": "O000175",
+   "line": "Andy Ogles. Not completed when the Congress ended. The committee said it would continue under Rule 18(a)."
+  },
+  {
+   "name": "George Santos",
+   "party": "Republican",
+   "bioguide": "S001222",
+   "line": "George Santos. On November 16, 2023 the committee adopted the subcommittee report and referred substantial evidence of potential federal crimes to the Department of Justice. It did not seek a House sanction. The House later expelled him by its own vote."
+  },
+  {
+   "name": "Adam Schiff",
+   "party": "Democratic",
+   "bioguide": "S001150",
+   "line": "Adam Schiff. The House directed an investigation. The committee did not reach consensus on the investigative steps."
+  },
+  {
+   "name": "Victoria Spartz",
+   "party": "Republican",
+   "bioguide": "S000929",
+   "line": "Victoria Spartz. The committee voted not to impanel a subcommittee. On November 12, 2024 it filed a report taking no further action. That report is H. Rept. 118-731."
+  },
+  {
+   "name": null,
+   "party": null,
+   "bioguide": null,
+   "line": "A referral from the January 6 select committee. The committee did not reach consensus on the investigative steps."
+  }
+ ]
+}
