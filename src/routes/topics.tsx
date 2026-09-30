@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import topicsIndex from "../data/topics-index.json";
+import { StatusDonut } from "@/components/status-donut";
 
 export const Route = createFileRoute("/topics")({
   validateSearch: (search: Record<string, unknown>): { t?: string } => ({
@@ -695,6 +696,14 @@ function TopicView({
         {data.intro ? (
           <p className="mt-4 text-center text-[15px] leading-snug text-white/85">{data.intro}</p>
         ) : null}
+        <StatusDonut
+          title={`${data.title}: Verification Status`}
+          line="Tap a slice or a key line to see its evidence"
+          entries={Object.entries(data.items)
+            .filter(([, it]) => !it.dup)
+            .map(([id, it]) => ({ id, label: it.label }))}
+          renderCards={(ids) => <ItemCards data={data} ids={ids} push={push} />}
+        />
         {data.stats.some((s) => !data.items[s.item]?.dup) ? (
           <div className="mt-6 grid w-full grid-cols-2 gap-3">
             {data.stats.map((s, si) =>

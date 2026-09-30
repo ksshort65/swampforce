@@ -1,0 +1,16 @@
+{
+ "checked": "September 30, 2026, 1:48 AM MDT",
+ "note": "Links that answered 404/410 or whose site name did not resolve, from an automatic check of every source link in the Topic tiles, Fake News cases, Lawfare cases, political statements and Senate hearings. Sites that refused the automatic check (401/403/429) or timed out are not listed as dead.",
+ "checkedCount": 1484,
+ "dead": {
+  "https://supreme.justia.com/cases/federal/us/601/100/": "HTTP 404 (page not found)",
+  "https://www.cnbc.com/2024/03/11/trump-cnbc-squawk-box-interview.html": "HTTP 404 (page not found)",
+  "https://www.dhs.gov/news/2025/07/25/dhs-leads-efforts-to-rescue-child-victims-of-sex-and-labor-trafficking": "HTTP 404 (page not found)",
+  "https://www.fbi.gov/news/press-releases/fbi-releases-photographs-in-connection-with-attempted-assassination-of-former-president-trump": "HTTP 404 (page not found)",
+  "https://www.pbs.org/newshour/politics/ms-now-cnn-and-politico-say-their-journalists-were-denied-access-to-the-white-house-after-trump-ban": "HTTP 404 (page not found)",
+  "https://www.sigar.mil/Portals/147/Files/Reports/Audits-and-Inspections/Inspection-Reports/SIGAR-24-12-IP.pdf": "The site's name did not resolve (site not found)",
+  "https://www.sigar.mil/Portals/147/Files/Reports/Audits-and-Inspections/Performance-Audits/SIGAR-24-22-AR.pdf": "The site's name did not resolve (site not found)",
+  "https://www.sigar.mil/Portals/147/Files/Reports/Audits-and-Inspections/Performance-Audits/SIGAR-25-16-AR.pdf": "The site's name did not resolve (site not found)",
+  "https://www.whitehouse.gov/cea/written-materials/2021/09/23/what-is-the-average-federal-individual-income-tax-rate-on-the-wealthiest-americans/": "HTTP 404 (page not found)"
+ }
+}
