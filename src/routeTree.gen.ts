@@ -15,6 +15,8 @@ import { Route as BetrayalStatusRouteImport } from './routes/betrayal-status'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as ScorecardRouteImport } from './routes/scorecard'
 import { Route as TopicsRouteImport } from './routes/topics'
+import { Route as DispatchIndexRouteImport } from './routes/dispatch.index'
+import { Route as DispatchSlugRouteImport } from './routes/dispatch.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +48,16 @@ const TopicsRoute = TopicsRouteImport.update({
   path: '/topics',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DispatchIndexRoute = DispatchIndexRouteImport.update({
+  id: '/dispatch/',
+  path: '/dispatch/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DispatchSlugRoute = DispatchSlugRouteImport.update({
+  id: '/dispatch/$slug',
+  path: '/dispatch/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +66,8 @@ export interface FileRoutesByFullPath {
   '/research': typeof ResearchRoute
   '/scorecard': typeof ScorecardRoute
   '/topics': typeof TopicsRoute
+  '/dispatch/$slug': typeof DispatchSlugRoute
+  '/dispatch/': typeof DispatchIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +76,8 @@ export interface FileRoutesByTo {
   '/research': typeof ResearchRoute
   '/scorecard': typeof ScorecardRoute
   '/topics': typeof TopicsRoute
+  '/dispatch/$slug': typeof DispatchSlugRoute
+  '/dispatch': typeof DispatchIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +87,8 @@ export interface FileRoutesById {
   '/research': typeof ResearchRoute
   '/scorecard': typeof ScorecardRoute
   '/topics': typeof TopicsRoute
+  '/dispatch/$slug': typeof DispatchSlugRoute
+  '/dispatch/': typeof DispatchIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +99,8 @@ export interface FileRouteTypes {
     | '/research'
     | '/scorecard'
     | '/topics'
+    | '/dispatch/$slug'
+    | '/dispatch/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +109,8 @@ export interface FileRouteTypes {
     | '/research'
     | '/scorecard'
     | '/topics'
+    | '/dispatch/$slug'
+    | '/dispatch'
   id:
     | '__root__'
     | '/'
@@ -97,6 +119,8 @@ export interface FileRouteTypes {
     | '/research'
     | '/scorecard'
     | '/topics'
+    | '/dispatch/$slug'
+    | '/dispatch/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +130,8 @@ export interface RootRouteChildren {
   ResearchRoute: typeof ResearchRoute
   ScorecardRoute: typeof ScorecardRoute
   TopicsRoute: typeof TopicsRoute
+  DispatchSlugRoute: typeof DispatchSlugRoute
+  DispatchIndexRoute: typeof DispatchIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,6 +178,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TopicsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dispatch/': {
+      id: '/dispatch/'
+      path: '/dispatch'
+      fullPath: '/dispatch/'
+      preLoaderRoute: typeof DispatchIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dispatch/$slug': {
+      id: '/dispatch/$slug'
+      path: '/dispatch/$slug'
+      fullPath: '/dispatch/$slug'
+      preLoaderRoute: typeof DispatchSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -162,6 +202,8 @@ const rootRouteChildren: RootRouteChildren = {
   ResearchRoute: ResearchRoute,
   ScorecardRoute: ScorecardRoute,
   TopicsRoute: TopicsRoute,
+  DispatchSlugRoute: DispatchSlugRoute,
+  DispatchIndexRoute: DispatchIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

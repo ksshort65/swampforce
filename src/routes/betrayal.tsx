@@ -4104,15 +4104,34 @@ function FilterRow({
   );
 }
 
+function PolitiFactScorecard() {
+  return (
+    <div className="mt-8 w-full text-left text-[15px] leading-snug text-white">
+      <p className="text-[18px] font-semibold">PolitiFact Facebook scorecard</p>
+      <p className="mt-4">4,008 rated False.</p>
+      <p className="mt-2">1,439 Pants on Fire.</p>
+      <p className="mt-2">5,447 posts.</p>
+      <p className="mt-4">These posts were rated false and they were on Facebook, so people saw them. That is the test. A false post that reached people shaped public opinion, so it is on this chart.</p>
+      <a href="https://www.politifact.com/facebook-fact-checks/" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block font-semibold text-[#d4af37] underline decoration-[#d4af37]/40 underline-offset-2">Open the scorecard</a>
+    </div>
+  );
+}
 function OneChart({
   filter,
   onFilter,
-  onOpen,
 }: {
   filter: NewsFilter;
   onFilter: (next: NewsFilter) => void;
-  onOpen: (bucket: string) => void;
 }) {
+  const [pick, setPick] = useState<string | null>(null);
+  const openRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (pick) openRef.current?.scrollIntoView({ block: "start" });
+  }, [pick]);
+  const filterKey = JSON.stringify(filter);
+  useEffect(() => {
+    setPick(null);
+  }, [filterKey]);
   const rows = filteredOne(filter);
   const whole = allOneRows().length;
   const labelOf = (row: (typeof rows)[number]) =>
@@ -4130,6 +4149,9 @@ function OneChart({
   const scorecard = filter.bars === "method" && filter.verdict === "All" && filter.time === "All" && filter.proof === "All" && filter.topic === "All";
   const shown = scorecard ? [...bars, { label: "PolitiFact Facebook scorecard", count: 5447, color: "#e11d48" }] : bars;
   const total = rows.length + (scorecard ? 5447 : 0);
+  const toggle = (label: string) => setPick(pick === label ? null : label);
+  const picked = pick === "all" ? rows : pick ? rows.filter((row) => labelOf(row) === pick) : [];
+  const pickedCount = pick === "all" ? total : shown.find((item) => item.label === pick)?.count ?? 0;
   const title = filter.bars === "topic"
     ? "Fake News Evidence by Topic"
     : filter.bars === "person"
@@ -4148,11 +4170,50 @@ function OneChart({
         colors={shown.map((item) => item.color)}
         type="doughnut"
         horizontal={false}
-        namesOnChart
-        center={{ big: String(total), small: "On the chart", onOpen: () => undefined }}
+        center={{ big: String(total), small: "On the chart", onOpen: () => toggle("all") }}
         bullets={scorecard ? ["A false post that reached people is on this chart. That is the test: did it shape public opinion.", "5,447 Facebook posts were rated false: 4,008 False and 1,439 Pants on Fire. Tap that slice for the source."] : ["Every case is in this chart once.", "Topics, persons, deception types, and the mechanics list are cuts of the same cases."]}
-        onPick={(index) => onOpen(shown[index].label)}
+        onPick={(index) => toggle(shown[index].label)}
+        colorKey
       />
+      {pick ? (
+        <section ref={openRef} data-one-evidence={pick} className="mt-6 w-full scroll-mt-16 text-left">
+          <button type="button" data-one-close onClick={() => setPick(null)} className={NEWS_DOOR + " w-fit"}>
+            Close
+          </button>
+          <h2 className="mt-4 text-center text-[20px] font-bold leading-snug text-white">
+            {pick === "all" ? `${title}: all ${total}` : `${title} · ${pick}: ${pickedCount}`}
+          </h2>
+          {pick === "PolitiFact Facebook scorecard" || (pick === "all" && scorecard) ? <PolitiFactScorecard /> : null}
+          <div className="mt-6 flex flex-col gap-3">
+            {picked.map((row, index) => (
+              <article key={`${row.who}-${row.date}-${index}`} data-one-item className="w-full [overflow-wrap:anywhere] rounded-2xl border border-white/35 bg-[#070b12]/85 px-4 py-3 text-[15px] leading-snug text-white">
+                <p className="font-semibold">{row.who}</p>
+                <p className="mt-1 text-white/70">
+                  {row.date}{row.outlet && row.outlet !== "Not yet identified" ? ` · ${row.outlet}` : ""} · {row.evidence}
+                </p>
+                <p className="mt-1 text-white/85">{shortLine(row.record || row.said)}</p>
+                {row.sources.length ? (
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {row.sources.map((source, at) => (
+                      <a
+                        key={`${source.href}-${at}`}
+                        href={source.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-full border border-[#d4af37]/70 bg-[#070b12]/80 px-3 py-1.5 text-[13px] font-semibold text-white"
+                      >
+                        {source.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="mt-1 text-white/60">No source link on file</p>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
       <FilterRow
         label="Bars"
         options={["Deception method", "Topic", "Person", "Mechanics"]}
@@ -6183,14 +6244,7 @@ function Betrayal() {
                 ))}
               </div>
             ) : newsMethod === "one:PolitiFact Facebook scorecard" ? (
-              <div className="mt-8 w-full text-left text-[15px] leading-snug text-white">
-                <p className="text-[18px] font-semibold">PolitiFact Facebook scorecard</p>
-                <p className="mt-4">4,008 rated False.</p>
-                <p className="mt-2">1,439 Pants on Fire.</p>
-                <p className="mt-2">5,447 posts.</p>
-                <p className="mt-4">These posts were rated false and they were on Facebook, so people saw them. That is the test. A false post that reached people shaped public opinion, so it is on this chart.</p>
-                <a href="https://www.politifact.com/facebook-fact-checks/" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block font-semibold text-[#d4af37] underline decoration-[#d4af37]/40 underline-offset-2">Open the scorecard</a>
-              </div>
+              <PolitiFactScorecard />
             ) : newsMethod && newsMethod.startsWith("one:") ? (
               <SamePath
                 title={`${newsMethod.slice(4).split(":")[0]}${newsFilter.verdict !== "All" || newsFilter.time !== "All" || newsFilter.proof !== "All" ? ` · ${[newsFilter.verdict, newsFilter.time, newsFilter.proof].filter((item) => item !== "All").join(" · ")}` : ""}`}
@@ -6327,11 +6381,6 @@ function Betrayal() {
                 <OneChart
                   filter={newsFilter}
                   onFilter={setNewsFilter}
-                  onOpen={(bucket) => {
-                    setNewsSource(null);
-                    setNewsCase(null);
-                    setNewsMethod(`one:${bucket}`);
-                  }}
                 />
               </div>
             )}
@@ -7188,7 +7237,7 @@ function Betrayal() {
           </div>
         ) : null}
         <div className="fixed top-5 left-5 z-20 flex flex-col items-center gap-2">
-          {layer === "root" ? (
+          {layer === "root" || (layer === "lawfare" && !lawOn && ethicsDoc) ? (
             <Link
               to="/"
               aria-label="Back"
