@@ -1,26 +1,30 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import cases from "../data/fake-news-cases.json";
 import { StatusDonut } from "@/components/status-donut";
+import { DataGate } from "@/components/data-gate";
+import { EntryCard } from "@/components/entry-card";
+import {
+  entriesIn,
+  entryLabel,
+  isFullCase,
+  toNewsCase,
+  type Database,
+  type DbEntry,
+  type NewsCase,
+} from "@/lib/database";
 
 export const Route = createFileRoute("/betrayal-status")({ component: BetrayalStatus });
 
-type Case = {
-  id: string;
-  who: string;
-  said: string;
-  record: string;
-  correction: string;
-  evidence: string;
-  statusLabel: string;
-  began: string;
-  sources: { label: string; href: string }[];
-};
-
-const CASES = cases as unknown as Case[];
-const BY_ID: Record<string, Case> = Object.fromEntries(CASES.map((c) => [c.id, c]));
+type Case = NewsCase;
 
 // Layer 2 for The Great American Betrayal tile: the Fake News cases by verification status.
 function BetrayalStatus() {
+  return <DataGate>{(db) => <BetrayalStatusPage db={db} />}</DataGate>;
+}
+
+function BetrayalStatusPage({ db }: { db: Database }) {
+  // Every entry whose category is "betrayal" in data/database.json, counted live.
+  const entries = entriesIn(db, "betrayal");
+  const byId: Record<string, DbEntry> = Object.fromEntries(entries.map((e) => [e.id, e]));
   return (
     <main className="min-h-screen bg-[#070b12] text-white">
       <nav className="sticky top-0 z-20 flex min-h-14 items-center bg-[#070b12]/95 px-4 py-2">
@@ -39,14 +43,18 @@ function BetrayalStatus() {
         <h1 className="text-center text-[18px] font-semibold tracking-wide text-white">
           The Great American Betrayal
         </h1>
-        <p className="mt-1 text-center text-[15px] text-white/75">Fake News cases · {CASES.length}</p>
+        <p className="mt-1 text-center text-[15px] text-white/75">Fake News cases · {entries.length}</p>
         <StatusDonut
           title="The Great American Betrayal: Verification Status"
           line="Tap a slice or a key line to see its evidence"
-          entries={CASES.map((c) => ({ id: c.id, label: c.statusLabel }))}
+          entries={entries.map((e) => ({ id: e.id, label: entryLabel(e), status: e.status }))}
           renderCards={(ids) => (
             <div className="mt-4 flex w-full flex-col text-left">
-              {ids.map((id) => (BY_ID[id] ? <CaseCard key={id} c={BY_ID[id]} /> : null))}
+              {ids.map((id) => {
+                const e = byId[id];
+                if (!e) return null;
+                return isFullCase(e) ? <CaseCard key={id} c={toNewsCase(e)} /> : <EntryCard key={id} e={e} />;
+              })}
             </div>
           )}
         />

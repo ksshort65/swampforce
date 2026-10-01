@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import topicsIndex from "../data/topics-index.json";
 import { StatusDonut } from "@/components/status-donut";
+import { entriesIn, useDatabase, type Database } from "@/lib/database";
 
 export const Route = createFileRoute("/topics")({
   validateSearch: (search: Record<string, unknown>): { t?: string } => ({
@@ -75,43 +76,62 @@ type Frame =
 
 const INDEX = topicsIndex as { key: string; title: string; image: string }[];
 const TITLES: Record<string, string> = Object.fromEntries(INDEX.map((t) => [t.key, t.title]));
-const LOADERS = import.meta.glob("../data/topics/*.json", { import: "default" }) as Record<
-  string,
-  () => Promise<TopicData>
->;
 const CACHE: Record<string, TopicData> = {};
 
-function loadTopic(key: string): Promise<TopicData> {
-  if (CACHE[key]) return Promise.resolve(CACHE[key]);
-  const loader = LOADERS[`../data/topics/${key}.json`];
-  if (!loader) return Promise.reject(new Error(`No topic ${key}`));
-  return loader().then((data) => {
-    CACHE[key] = data;
-    return data;
-  });
+/**
+ * A topic as the page uses it, built from data/database.json: her charts, lists and stat boxes,
+ * plus every entry whose category is this topic. An entry placed on a chart bar or list in its
+ * "layers" (and not yet listed there) is added to that bar or list.
+ */
+function buildTopic(db: Database, key: string): TopicData | null {
+  if (CACHE[key]) return CACHE[key];
+  const shell = db.topics[key];
+  if (!shell) return null;
+  const items: Record<string, Item> = {};
+  const charts = (shell.charts as unknown as Chart[]).map((c) => ({
+    ...c,
+    bars: c.bars.map((b) => [...b]),
+    center: c.center ? { ...c.center, items: [...c.center.items] } : undefined,
+  }));
+  const sections = (shell.sections as unknown as Section[]).map((x) => ({ ...x, items: [...x.items] }));
+  for (const e of entriesIn(db, key)) {
+    items[e.id] = {
+      ...(e.record as Partial<Item>),
+      title: e.headline,
+      sources: e.sources,
+      status: e.status,
+    };
+    for (const [chartId, at] of e.layers?.charts ?? []) {
+      const c = charts.find((x) => x.id === chartId);
+      if (!c) continue;
+      if (at === "all") {
+        if (c.center && !c.center.items.includes(e.id)) c.center.items.push(e.id);
+      } else if (c.bars[at] && !c.bars[at].includes(e.id)) c.bars[at].push(e.id);
+    }
+    for (const sectionId of e.layers?.lists ?? []) {
+      const x = sections.find((y) => y.id === sectionId);
+      if (x && !x.items.includes(e.id)) x.items.push(e.id);
+    }
+  }
+  for (const [k, ref] of Object.entries(shell.refs ?? {})) items[k] = ref as unknown as Item;
+  const data: TopicData = {
+    key: shell.key,
+    title: shell.title,
+    intro: shell.intro,
+    range: shell.range,
+    stats: shell.stats,
+    charts,
+    sections,
+    items,
+    links: shell.links,
+  };
+  CACHE[key] = data;
+  return data;
 }
 
 function useTopic(key: string | null) {
-  const [data, setData] = useState<TopicData | null>(key && CACHE[key] ? CACHE[key] : null);
-  useEffect(() => {
-    let live = true;
-    if (!key) {
-      setData(null);
-      return;
-    }
-    if (CACHE[key]) {
-      setData(CACHE[key]);
-      return;
-    }
-    setData(null);
-    loadTopic(key).then((d) => {
-      if (live) setData(d);
-    });
-    return () => {
-      live = false;
-    };
-  }, [key]);
-  return data;
+  const { db } = useDatabase();
+  return useMemo(() => (db && key ? buildTopic(db, key) : null), [db, key]);
 }
 
 function fmtVal(v: number | null | undefined, fmt?: string) {
@@ -607,7 +627,8 @@ function Topics() {
   const { t } = Route.useSearch();
   const navigate = useNavigate();
   const start = (key?: string): Frame[] => (key && TITLES[key] ? [{ k: "topic", topic: key }] : []);
-  const [stack, setStack] = useState<Frame[]>(() => start(t));
+  // Starts empty, the same as the prerendered page; the topic opens right after the page loads.
+  const [stack, setStack] = useState<Frame[]>([]);
   useEffect(() => {
     setStack(start(t));
     if (!t || !TITLES[t]) navigate({ to: "/" });
@@ -615,6 +636,7 @@ function Topics() {
   }, [t]);
   const top = stack.length ? stack[stack.length - 1] : null;
   const parent = stack.length > 1 ? stack[stack.length - 2] : null;
+  const { error: dbError, retry: dbRetry } = useDatabase();
   const data = useTopic(top ? top.topic : null);
   const parentData = useTopic(parent ? parent.topic : null);
   const push = (f: Frame) => {
@@ -666,7 +688,16 @@ function Topics() {
           </nav>
         ) : null}
         {top && !data ? (
-          <p className="px-6 pt-16 text-center text-[15px] text-white/80">Loading…</p>
+          dbError ? (
+            <div className="px-6 pt-16 text-center" data-db-error>
+              <p className="text-[16px] font-semibold text-white">{dbError}</p>
+              <button type="button" onClick={dbRetry} className={`${PILL} mx-auto mt-4`}>
+                Try again
+              </button>
+            </div>
+          ) : (
+            <p className="px-6 pt-16 text-center text-[15px] text-white/80">Loading…</p>
+          )
         ) : null}
         {top && data ? (
           <div className="mx-auto flex max-w-3xl flex-col items-center px-5 pt-6 pb-24">

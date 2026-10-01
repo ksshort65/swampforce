@@ -1,9 +1,19 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import topicsIndex from "../data/topics-index.json";
 import linkCheck from "../data/link-check.json";
 import {
+  entriesIn,
+  entryStatus,
+  hasTopic,
+  isFullCase,
+  toNewsCase,
+  useDatabase,
+  type Database,
+} from "@/lib/database";
+import {
   REASONS,
+  plainEntries,
   fakeNewsEntries,
   lawfareEntries,
   statementEntries,
@@ -15,32 +25,37 @@ import {
 export const Route = createFileRoute("/research")({ component: Research });
 
 const INDEX = topicsIndex as { key: string; title: string }[];
-const TOPIC_LOADERS = import.meta.glob("../data/topics/*.json", { import: "default" }) as Record<
-  string,
-  () => Promise<{ key: string; title: string; items: Record<string, never> }>
->;
 const DEAD = (linkCheck as { dead: Record<string, string> }).dead;
 
-async function loadAll(): Promise<ResearchEntry[]> {
-  const [fake, statements, senate, lawfare, ...topics] = await Promise.all([
-    import("../data/fake-news-cases.json").then((m) => m.default as unknown as Record<string, unknown>[]),
-    import("../data/political-statements.json").then((m) => m.default as unknown as Record<string, unknown>[]),
-    import("../data/senate-hearings.json").then((m) => m.default as unknown as Record<string, unknown>[]),
-    import("../data/lawfare-cases.json").then(
-      (m) => (m.default as unknown as { cases: Record<string, unknown>[] }).cases,
-    ),
-    ...INDEX.map((t) => {
-      const load = TOPIC_LOADERS[`../data/topics/${t.key}.json`];
-      return load ? load() : Promise.resolve(null);
-    }),
-  ]);
+/** Everything on this page is worked out from data/database.json each time the page opens. */
+function collect(db: Database): ResearchEntry[] {
   const out: ResearchEntry[] = [];
-  for (const t of topics) if (t) out.push(...topicEntries(t, DEAD));
-  out.push(...fakeNewsEntries(fake, DEAD));
-  out.push(...lawfareEntries(lawfare, DEAD));
+  const topicKeys = new Set(Object.keys(db.topics));
+  for (const t of INDEX) {
+    const shell = db.topics[t.key];
+    if (!shell) continue;
+    const items: Record<string, never> = {};
+    for (const e of entriesIn(db, t.key)) {
+      (items as Record<string, unknown>)[e.id] = { ...e.record, title: e.headline, sources: e.sources, status: e.status };
+    }
+    out.push(...topicEntries({ key: t.key, title: shell.title, items }, DEAD));
+  }
+  const betrayal = entriesIn(db, "betrayal");
+  out.push(...fakeNewsEntries(betrayal.filter(isFullCase).map((e) => toNewsCase(e) as unknown as Record<string, unknown>), DEAD));
+  out.push(
+    ...plainEntries(
+      betrayal
+        .filter((e) => !isFullCase(e))
+        .map((e) => ({ ...e, research: entryStatus(e) === "research", noTopic: false })),
+      "Fake News cases",
+      "fake",
+      DEAD,
+    ),
+  );
+  out.push(...lawfareEntries(db.tables.lawfareCases.cases as unknown as Record<string, unknown>[], DEAD));
   out.push(
     ...statementEntries(
-      statements,
+      db.tables.politicalStatements as unknown as Record<string, unknown>[],
       "Political statements",
       "statements",
       "person",
@@ -50,11 +65,22 @@ async function loadAll(): Promise<ResearchEntry[]> {
   );
   out.push(
     ...statementEntries(
-      senate,
+      db.tables.senateHearings as unknown as Record<string, unknown>[],
       "Senate hearings",
       "senate",
       "senator",
       (r) => `${String(r.senator ?? "")} \u00b7 ${String(r.hearing ?? "")}`,
+      DEAD,
+    ),
+  );
+  // No category, or a category that is not a tile: always listed here.
+  out.push(
+    ...plainEntries(
+      db.entries
+        .filter((e) => !hasTopic(e) || (e.category !== "betrayal" && !topicKeys.has(e.category as string)))
+        .map((e) => ({ ...e, research: entryStatus(e) === "research", noTopic: true })),
+      "No topic chosen",
+      "unassigned",
       DEAD,
     ),
   );
@@ -65,18 +91,10 @@ const PILL =
   "rounded-full border px-4 py-2 text-left text-[15px] font-semibold leading-snug text-white";
 
 function Research() {
-  const [all, setAll] = useState<ResearchEntry[] | null>(null);
+  const { db, error, retry } = useDatabase();
+  const all = useMemo(() => (db ? collect(db) : null), [db]);
   const [reason, setReason] = useState<Reason | null>(null);
   const [where, setWhere] = useState<string | null>(null);
-  useEffect(() => {
-    let live = true;
-    loadAll().then((e) => {
-      if (live) setAll(e);
-    });
-    return () => {
-      live = false;
-    };
-  }, []);
   const places = useMemo(() => {
     const m = new Map<string, { name: string; n: number }>();
     for (const e of all ?? []) {
@@ -103,7 +121,20 @@ function Research() {
           Entries with poor or missing source data, listed automatically from the records as written.
         </p>
         {!all ? (
-          <p className="mt-10 text-center text-[15px] text-white/80">Loading…</p>
+          error ? (
+            <div className="mt-10 text-center" data-db-error>
+              <p className="text-[16px] font-semibold">{error}</p>
+              <button
+                type="button"
+                onClick={retry}
+                className={`${PILL} mt-4 border-white/35 bg-[#070b12]/75`}
+              >
+                Try again
+              </button>
+            </div>
+          ) : (
+            <p className="mt-10 text-center text-[15px] text-white/80">Loading…</p>
+          )
         ) : (
           <>
             <p className="mt-6 text-center text-[30px] font-bold" data-research-total={all.length}>

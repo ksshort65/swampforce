@@ -40,7 +40,7 @@ function rowPage(key){
  var s=S[key],root=document.getElementById("app");
  var nav=el("div",{"class":"nav"},[el("a",{href:"index.html",text:"\u2190 Back"}),el("span")]);
  var row=el("div",{"class":"row"});
- s.charts.forEach(function(c){row.appendChild(oval("chart.html?s="+key+"&c="+c.id,c.label,c.lead||(c.images&&c.images[0])||null));});
+ s.charts.forEach(function(c){row.appendChild(oval(key==="betrayal"?"betrayal":"scorecard",c.label,c.lead||(c.images&&c.images[0])||null));});
  root.appendChild(nav);root.appendChild(el("h1",{text:s.title}));root.appendChild(row);
 }
 

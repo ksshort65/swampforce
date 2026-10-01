@@ -4,10 +4,18 @@
 
 import { statusOf } from "@/lib/verification";
 
-export type Reason = "status-research" | "no-link" | "dead-link" | "unknown" | "see-linked" | "no-person";
+export type Reason =
+  | "status-research"
+  | "no-topic"
+  | "no-link"
+  | "dead-link"
+  | "unknown"
+  | "see-linked"
+  | "no-person";
 
 export const REASONS: { key: Reason; name: string }[] = [
   { key: "status-research", name: "Status: Research" },
+  { key: "no-topic", name: "No topic chosen" },
   { key: "no-link", name: "No source link" },
   { key: "dead-link", name: "Dead link" },
   { key: "unknown", name: "Says \u201cUnknown\u201d" },
@@ -47,9 +55,11 @@ function check(
   dead: Record<string, string>,
   person?: string | null,
   research?: boolean,
+  noTopic?: boolean,
 ): ResearchEntry | null {
   const reasons: Reason[] = [];
   if (research) reasons.push("status-research");
+  if (noTopic) reasons.push("no-topic");
   const links = base.links.filter((l) => l.href);
   if (!links.length) reasons.push("no-link");
   const deadLinks = links.filter((l) => dead[l.href]).map((l) => ({ href: l.href, why: dead[l.href] }));
@@ -167,6 +177,37 @@ export function lawfareEntries(cases: AnyRec[], dead: Record<string, string>) {
       },
       text,
       dead,
+    );
+    if (e) out.push(e);
+  }
+  return out;
+}
+
+/**
+ * Entries saved with admin.html that are not on a topic tile: those with no category
+ * (always listed here) and Fake News entries that have only a headline, link and status.
+ */
+export function plainEntries(
+  entries: { id: string; headline: string; sources: Link[]; research: boolean; noTopic: boolean }[],
+  where: string,
+  whereKey: string,
+  dead: Record<string, string>,
+) {
+  const out: ResearchEntry[] = [];
+  for (const it of entries) {
+    const e = check(
+      {
+        id: `${whereKey}:${it.id}`,
+        where,
+        whereKey,
+        title: it.headline,
+        links: it.sources.map((s) => ({ label: s.label, href: s.href })),
+      },
+      [it.headline],
+      dead,
+      undefined,
+      it.research,
+      it.noTopic,
     );
     if (e) out.push(e);
   }
