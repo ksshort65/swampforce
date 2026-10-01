@@ -10,8 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArchiveRouteImport } from './routes/archive'
 import { Route as BetrayalRouteImport } from './routes/betrayal'
 import { Route as BetrayalStatusRouteImport } from './routes/betrayal-status'
+import { Route as ForewordRouteImport } from './routes/foreword'
+import { Route as PumpRouteImport } from './routes/pump'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as ScorecardRouteImport } from './routes/scorecard'
 import { Route as TopicsRouteImport } from './routes/topics'
@@ -23,6 +26,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArchiveRoute = ArchiveRouteImport.update({
+  id: '/archive',
+  path: '/archive',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BetrayalRoute = BetrayalRouteImport.update({
   id: '/betrayal',
   path: '/betrayal',
@@ -31,6 +39,16 @@ const BetrayalRoute = BetrayalRouteImport.update({
 const BetrayalStatusRoute = BetrayalStatusRouteImport.update({
   id: '/betrayal-status',
   path: '/betrayal-status',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForewordRoute = ForewordRouteImport.update({
+  id: '/foreword',
+  path: '/foreword',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PumpRoute = PumpRouteImport.update({
+  id: '/pump',
+  path: '/pump',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResearchRoute = ResearchRouteImport.update({
@@ -61,8 +79,11 @@ const DispatchSlugRoute = DispatchSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/archive': typeof ArchiveRoute
   '/betrayal': typeof BetrayalRoute
   '/betrayal-status': typeof BetrayalStatusRoute
+  '/foreword': typeof ForewordRoute
+  '/pump': typeof PumpRoute
   '/research': typeof ResearchRoute
   '/scorecard': typeof ScorecardRoute
   '/topics': typeof TopicsRoute
@@ -71,8 +92,11 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/archive': typeof ArchiveRoute
   '/betrayal': typeof BetrayalRoute
   '/betrayal-status': typeof BetrayalStatusRoute
+  '/foreword': typeof ForewordRoute
+  '/pump': typeof PumpRoute
   '/research': typeof ResearchRoute
   '/scorecard': typeof ScorecardRoute
   '/topics': typeof TopicsRoute
@@ -82,8 +106,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/archive': typeof ArchiveRoute
   '/betrayal': typeof BetrayalRoute
   '/betrayal-status': typeof BetrayalStatusRoute
+  '/foreword': typeof ForewordRoute
+  '/pump': typeof PumpRoute
   '/research': typeof ResearchRoute
   '/scorecard': typeof ScorecardRoute
   '/topics': typeof TopicsRoute
@@ -94,8 +121,11 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/archive'
     | '/betrayal'
     | '/betrayal-status'
+    | '/foreword'
+    | '/pump'
     | '/research'
     | '/scorecard'
     | '/topics'
@@ -104,8 +134,11 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/archive'
     | '/betrayal'
     | '/betrayal-status'
+    | '/foreword'
+    | '/pump'
     | '/research'
     | '/scorecard'
     | '/topics'
@@ -114,8 +147,11 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/archive'
     | '/betrayal'
     | '/betrayal-status'
+    | '/foreword'
+    | '/pump'
     | '/research'
     | '/scorecard'
     | '/topics'
@@ -125,8 +161,11 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArchiveRoute: typeof ArchiveRoute
   BetrayalRoute: typeof BetrayalRoute
   BetrayalStatusRoute: typeof BetrayalStatusRoute
+  ForewordRoute: typeof ForewordRoute
+  PumpRoute: typeof PumpRoute
   ResearchRoute: typeof ResearchRoute
   ScorecardRoute: typeof ScorecardRoute
   TopicsRoute: typeof TopicsRoute
@@ -143,6 +182,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/archive': {
+      id: '/archive'
+      path: '/archive'
+      fullPath: '/archive'
+      preLoaderRoute: typeof ArchiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/betrayal': {
       id: '/betrayal'
       path: '/betrayal'
@@ -155,6 +201,20 @@ declare module '@tanstack/react-router' {
       path: '/betrayal-status'
       fullPath: '/betrayal-status'
       preLoaderRoute: typeof BetrayalStatusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/foreword': {
+      id: '/foreword'
+      path: '/foreword'
+      fullPath: '/foreword'
+      preLoaderRoute: typeof ForewordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pump': {
+      id: '/pump'
+      path: '/pump'
+      fullPath: '/pump'
+      preLoaderRoute: typeof PumpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/research': {
@@ -197,8 +257,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArchiveRoute: ArchiveRoute,
   BetrayalRoute: BetrayalRoute,
   BetrayalStatusRoute: BetrayalStatusRoute,
+  ForewordRoute: ForewordRoute,
+  PumpRoute: PumpRoute,
   ResearchRoute: ResearchRoute,
   ScorecardRoute: ScorecardRoute,
   TopicsRoute: TopicsRoute,

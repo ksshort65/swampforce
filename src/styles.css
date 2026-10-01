@@ -6,7 +6,9 @@
   --color-fg: #ece8dc;
   --color-muted: #a39e93;
   --color-sage: #e8e0d0;
+  --color-sage-fg: #121212;
   --color-border: rgb(236 232 220 / 0.14);
+  --color-border-strong: rgb(236 232 220 / 0.28);
   --font-display: "Arial Narrow", "Arial", sans-serif;
 }
 

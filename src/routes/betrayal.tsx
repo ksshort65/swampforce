@@ -5656,7 +5656,8 @@ function Betrayal() {
           aria-label="Betrayal"
           className="relative flex min-h-14 items-center justify-center bg-[#070b12]/90 px-6 py-2"
         >
-          {layer !== "root" && (
+          {/* layer is never "root" inside this nav (checked above), so the button always shows, as before. */}
+          {(
           <button
             type="button"
             onClick={() => {

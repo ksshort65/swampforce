@@ -60,6 +60,13 @@ function Home() {
               </Link>
             </li>
           ))}
+          <li>
+            {/* Latest Dispatches. Karen supplies public/images/dispatch-tile.png; until then TileImage shows the dark box with the title. */}
+            <Link to="/dispatch" data-home-dispatch data-tile className={TILE}>
+              <TileImage src="/images/dispatch-tile.png" />
+              <TileTitle title="Latest Dispatches" />
+            </Link>
+          </li>
         </ul>
       </nav>
     </main>

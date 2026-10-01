@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 import { ESSAYS, essayDate, essayDek, essaySeries } from "@/lib/dispatch";
 
 export const Route = createFileRoute("/dispatch/")({
@@ -6,8 +7,6 @@ export const Route = createFileRoute("/dispatch/")({
   head: () => ({ meta: [{ title: "The Dispatch — Swamp Force" }] }),
 });
 
-const DOOR =
-  "rounded-full border border-white/35 bg-[#070b12]/75 px-4 py-2 text-[15px] font-semibold leading-snug text-white no-underline";
 
 function DispatchIndex() {
   return (
@@ -33,19 +32,34 @@ function DispatchIndex() {
             The midterms are a vote on the people in office and the people running to replace them. Judge them by
             the official record. Not by a speech. Not by a headline. The files here are government sources.
           </p>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <Link to="/scorecard" className={DOOR}>
-              Scorecard
-            </Link>
-            <Link to="/dispatch/$slug" params={{ slug: "the-media-ledger" }} className={DOOR}>
-              Fake News
-            </Link>
-            <Link to="/dispatch/$slug" params={{ slug: "the-democrat-ledger" }} className={DOOR}>
-              Democrats
-            </Link>
-            <Link to="/dispatch/$slug" params={{ slug: "they-opened-the-border" }} className={DOOR}>
-              Border
-            </Link>
+          <div className="mt-5 flex flex-wrap gap-3 pb-2">
+            <Button asChild>
+              <Link to="/scorecard">Scorecard</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/dispatch/$slug" params={{ slug: "the-media-ledger" }}>
+                Fake News
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/dispatch/$slug" params={{ slug: "the-democrat-ledger" }}>
+                Democrats
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/dispatch/$slug" params={{ slug: "they-opened-the-border" }}>
+                Border
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/pump">Pump</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/foreword">Foreword</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/archive">Archive</Link>
+            </Button>
           </div>
         </div>
       </section>
